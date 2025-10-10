@@ -57,7 +57,6 @@ const,
 
     };
 
-
   // Smooth scrolling;
   useEffect(() => {/* TODO: Fix JSX expression */}
         }

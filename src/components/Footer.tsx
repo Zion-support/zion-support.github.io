@@ -61,7 +61,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
   ];
 
-
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
     { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },

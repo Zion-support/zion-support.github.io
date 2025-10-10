@@ -1,6 +1,5 @@
 
 
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -184,14 +183,7 @@ Most Popular;
   hover:text-slate-900'`
                   }`}
         {/* CTA Section */}
-        
-          
-          
-          
-          
-          
-          
-          
+
           "
           <section className="text-center"></section>"
           <div className="cyber-card p-12 max-w-4xl mx-auto"></div>"
@@ -213,7 +205,5 @@ Ready to See the Future?"
   );
 };
 
-
 export default PagePage;
-
 

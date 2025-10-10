@@ -1,7 +1,6 @@
 // PerformanceEnhancer utility
 // This file contains utility functions and configurations
 
-
 interface PerformanceMetrics {lcp: number;}
   fid: number;
   cls: number;
@@ -40,7 +39,6 @@ class PerformanceEnhancer {private config: OptimizationConfig;}
   entry:', entry.name, entry.duration);
           });
         });
-        
 
         observer.observe({ entryTypes: ['measure', 'navigation'] });
       } catch (error) {console.warn('PerformanceObserver not supported:', error);}
@@ -57,6 +55,4 @@ class PerformanceEnhancer {private config: OptimizationConfig;}
 }
 
 export default PerformanceEnhancer;
-
-
 

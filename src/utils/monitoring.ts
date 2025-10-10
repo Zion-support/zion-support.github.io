@@ -233,4 +233,3 @@ class MonitoringService {
 const monitoring = new MonitoringService()
 export default monitoring;`
 
-

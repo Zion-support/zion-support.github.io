@@ -1,11 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 'use client';
 import React, { useState } from 'react';
@@ -657,28 +655,12 @@ $4}
               </div>"
               <h1 className="text-4xl font-bold text-white mb-6 neon-text"></h1>
 // Quote Request Submitted!
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </h1>"
               <p className="text-xl text-gray-300 mb-8"></p>
                 Thank you for your interest in our services. We've received your quote request;
 // and will get back to you within 24 hours with a detailed proposal.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>"
               <div className="bg-slate-800/50 rounded-lg p-6 mb-8"></div>"
                 <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>"
@@ -703,14 +685,7 @@ $4}
                   href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 
 // >
-                  
-          
-          
-          
-          
-          
-          
-          
+
           "
           <Phone className="w-5 h-5 mr-2" /></Phone>
 // Contact Us;
@@ -720,14 +695,7 @@ $4}
                   href="/" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 
 // >
-                  
-          
-          
-          
-          
-          
-          
-          
+
           "
           <ArrowRight className="w-4 h-4 mr-2" /></ArrowRight>
 // Back to Home;
@@ -773,15 +741,7 @@ $4}
                       <label className="block text-sm font-medium text-gray-300 mb-2">
 
 // Full Name *
-                      
-          
-          
-          
-          
-          
-          
-          
-          
+
           </label>
 
                       <input
@@ -792,28 +752,12 @@ type="text" name="name"
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your full name"
 
 //                       />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
+
           </div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Email Address *
-                      
-          
-          
-          
-          
-          
-          
-          
-          
+
           </label>
 
                       <input
@@ -824,15 +768,7 @@ type="email" name="email"
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your email"
 
 //                       />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
+
           </div>
                   </div>"
                   <div className="grid grid-cols-1,"
@@ -849,15 +785,7 @@ type="text" name="company"
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your company name"
 
 // />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
+
           </div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
@@ -871,30 +799,14 @@ type="tel" name="phone"
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your phone number"
 
 // />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
+
           </div>
                   </div>
                   {/* Project Information */}
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Service Type *
-                    
-          
-          
-          
-          
-          
-          
-          
-          
+
           </label>
 
                     <select
@@ -904,14 +816,7 @@ type="tel" name="phone"
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 
 //                     >
-                      
-          
-          
-          
-          
-          
-          
-          
+
           "
           <option value="">Select a service type</option>
                       {serviceTypes.map((type, index) => ()}
@@ -932,14 +837,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 
 // >
-                        
-          
-          
-          
-          
-          
-          
-          
+
           "
           <option value="">Select project size</option>
                         {projectSizes.map((size, index) => ()}
@@ -958,14 +856,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 
 // >
-                        
-          
-          
-          
-          
-          
-          
-          
+
           "
           <option value="">Select timeline</option>
                         {timelines.map((timeline, index) => ()}
@@ -985,14 +876,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 
 // >
-                      
-          
-          
-          
-          
-          
-          
-          
+
           "
           <option value="">Select budget range</option>
                       {budgetRanges.map((range, index) => ()}
@@ -1003,15 +887,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Project Description *
-                    
-          
-          
-          
-          
-          
-          
-          
-          
+
           </label>
 
                     <textarea
@@ -1022,15 +898,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Describe your project requirements and goals..."
 
 //                     />
-                  
-          
-          
-          
-          
-          
-          
-          
-          
+
           </div>
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
@@ -1044,15 +912,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Any specific technical requirements, integrations, or constraints..."
 
 // />
-                  
-          
-          
-          
-          
-          
-          
-          
-          
+
           </div>
 
                   <button
@@ -1064,28 +924,12 @@ type="submit" disabled={isSubmitting}
           <div className="flex items-center justify-center"></div>"
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
 // Submitting...
-                      
-          
-          
-          
-          
-          
-          
-          
-          
+
           </div>
                     ) : ()
 // 'Request Quote'
                     )}
-                  
-          
-          
-          
-          
-          
-          
-          
-          
+
           </button>
                 </form>
               </div>
@@ -1131,15 +975,7 @@ type="submit" disabled={isSubmitting}
                 <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?</h3>"
                 <p className="text-gray-300 text-sm mb-4"></p>
 // For urgent inquiries or immediate assistance, contact us directly.
-                
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
         </section>
       </main>
@@ -1150,7 +986,5 @@ type="submit" disabled={isSubmitting}
   );
 };
 
-
 export default RequestQuotePage;
-
 

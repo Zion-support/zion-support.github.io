@@ -1141,14 +1141,7 @@ const originalFetch = window.fetch;
       error =>
 //         !error.resolved &&
 //         Date.now() - new Date(error.context.timestamp).getTime() 
-          
-          
-          
-          
-          
-          
-          
-          
+
           < 300000 // Last 5 minutes);
     if (recentErrors.length > 5) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -1301,6 +1294,4 @@ export {/* TODO: Fix JSX expression */}
   type ErrorContext,
   type ErrorHandlerConfig;
 };
-
-
 

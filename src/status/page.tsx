@@ -1,6 +1,5 @@
 
 
-
 import { Link } from 'react-router-dom';
 
 import { Star, Phone } from 'lucide-react';
@@ -28,14 +27,7 @@ const Status: React.FC = () => {
               to="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
 
 // >
-              
-          
-          
-          
-          
-          
-          
-          
+
           "
           <Phone className="w-5 h-5 mr-2" /></Phone>
 // Get Free Consultation;
@@ -57,7 +49,5 @@ const Status: React.FC = () => {
   );
 };
 
-
 export default StatusPage;
-
 

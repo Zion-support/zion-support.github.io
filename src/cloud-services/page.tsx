@@ -1,6 +1,5 @@
 
 
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -77,7 +76,6 @@ const CloudServicesPage: React.FC = () => {
   ];
   return (<div>Coming Soon</div>)
   )
-    
 
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -146,27 +144,10 @@ const CloudServicesPage: React.FC = () => {
         <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12"></section>"
           <h2 className="text-3xl font-bold text-white mb-4"></h2>
 // Ready to Transform Your Infrastructure?
-          
-          
-          
-          
-          
-          
-          
-          
-          
+
           </h2>"
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto"></p>
 // Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.
-          
-          
-          
-          
-          
-          
-          
-          
-          
 
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -190,7 +171,5 @@ const CloudServicesPage: React.FC = () => {
   );
 };
 
-
 export default CloudServicesPage;
-
 

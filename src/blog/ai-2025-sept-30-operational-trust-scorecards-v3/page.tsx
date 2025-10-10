@@ -95,9 +95,5 @@ const Pagetsx: React.FC = () => {
 }
 export default Pagetsx;"
 
-
-
-
 export default Ai2025Sept30OperationalTrustScorecardsV3Page;
-
 

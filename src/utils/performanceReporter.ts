@@ -456,5 +456,3 @@ if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
 }
 export default performanceReporter;`
 
-
-

@@ -33,13 +33,7 @@ export class SecurityManager {// TODO: Add content;}
 }
     return input;
 //       .replace(/[
-          
-          
-          
-          
-          
-          
-          
+
           )
           <>]/g, '')
       .replace(/javascrip)
@@ -126,6 +120,4 @@ const validRequests = requests.filter((tim)
   }
 }
 export default SecurityManager.getInstance()
-
-
 

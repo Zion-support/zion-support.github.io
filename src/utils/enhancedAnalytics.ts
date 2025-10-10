@@ -412,5 +412,3 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 // Export singleton instance;
 export default analytics;
 
-
-

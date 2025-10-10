@@ -1,6 +1,5 @@
 
 
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, Phone } from 'lucide-react';
@@ -50,14 +49,7 @@ const,
               to="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
 
 // >
-              
-          
-          
-          
-          
-          
-          
-          
+
           "
           <Phone className="w-5 h-5 mr-2" /></Phone>
 // Get Free Consultation;
@@ -114,14 +106,11 @@ Ready to Transform Your Business?"
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               Get a free consultation and discover how our solutions can revolutionize your operations.
 
-
       </main>
       <Footer /></Footer>
     </div>
   );
 };
 
-
 export default ServicePage;
-
 

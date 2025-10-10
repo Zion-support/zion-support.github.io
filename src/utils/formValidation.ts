@@ -151,14 +151,6 @@ export const _validationRules = {// TODO: Add content;}
    */
   custo,
   m: 
-          
-          
-          
-          
-          
-          
-          
-          
 
           <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({// TODO: Add content;}
 };
@@ -185,14 +177,7 @@ export const _validationRules = {// TODO: Add content;}
       const hasLowerCase = /[a-z]/.test(value);
       const hasNumber = /[0-9]/.test(value);
       const hasSpecialChar = /[!@#$%^&*(),.?":{}|
-          
-          
-          
-          
-          
-          
-          
-          
+
           <>]/.test(value)
       const hasMinLength = value.length >= 8;
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;
@@ -345,13 +330,7 @@ export function sanitizeInput(input: string): string {// TODO: Add content;}
   return input;
 //     .trim()
 //     .replace(/[
-          
-          
-          
-          
-          
-          
-          
+
           )
           <>]/g, '') // Remove potential HTML tags;
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -
@@ -392,6 +371,4 @@ export function debounce;
     timeout = setTimeout(later, wait)
   }
 }"`
-
-
 

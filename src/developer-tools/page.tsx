@@ -1,11 +1,9 @@
 import React from 'react';
 
-
 import { Link } from 'react-router-dom';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
 const DeveloperToolsPage: React.FC = () => {
@@ -425,27 +423,10 @@ $4}
           <div className="max-w-4xl mx-auto text-center"></div>"
             <h2 className="text-3xl font-bold text-white mb-6"></h2>
 // Ready to Supercharge Your Development?
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           </h2>"
             <p className="text-xl text-purple-100 mb-8"></p>
 // Join thousands of developers who have accelerated their productivity with our AI-powered tools.
-            
-          
-          
-          
-          
-          
-          
-          
-          
 
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -470,7 +451,5 @@ $4}
   );
 };
 
-
 export default DeveloperToolsPage;
-
 

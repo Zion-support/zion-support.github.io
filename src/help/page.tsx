@@ -2,12 +2,10 @@ import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Downloa
 'use client';
 import React, { useState } from 'react';
 
-
 import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 const HelpPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -388,15 +386,7 @@ const categories = [
   n: Users,
       responseTim,
   e: 'Community driven'
-                
-          
-          
-          
-          
-          
-          
-          
-          
+
           <MessageSquare className="w-5 h-5 mr-2" /></MessageSquare>
 // Contact Support;
 
@@ -411,6 +401,4 @@ const categories = [
       <Footer /></Footer>
     </>
 export default HelpPage;
-
-
 

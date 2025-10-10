@@ -44,19 +44,9 @@ export const Link: React.FC;
       {...props}
 // >
       {children}
-    
-          
-          
-          
-          
-          
-          
-          
-          
+
           </a>
   )
 }
 export default Link;
-
-
 

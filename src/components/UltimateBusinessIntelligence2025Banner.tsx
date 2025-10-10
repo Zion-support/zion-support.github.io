@@ -157,7 +157,6 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
   );
 export default UltimateBusinessIntelligence2025Banner;
 
-
 'use client';
 import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
@@ -223,15 +222,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   e: 'Service',
                   {tag}
             {/* CTA Buttons */}
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           <div className="flex flex-col,"
   sm:flex-row items-center justify-center gap-6"></div>
                 href={currentContent.url}"
@@ -255,14 +246,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   l: 'Success Rate' },
             {/* TODO: Fix JSX expression */}
   l: 'Data Points Processed' }].map((stat, index) => ()
-            
-          
-          
-          
-          
-          
-          
-          
+
           "
           <div key={index} className="text-center"></div>"
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>"
@@ -272,6 +256,4 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
 };
 
 export default UltimateBusinessIntelligence2025Banner;"
-
-
 

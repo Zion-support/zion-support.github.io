@@ -80,7 +80,6 @@ export interface CacheEntry {// TODO: Add content;}
 };
   data: unknown,
 
-
   timestam,
   p: number;,
     expiresA,
@@ -562,6 +561,4 @@ const data = await this.parseResponse;
 }
 // Export singleton instance;
 export const apiInterceptor = APIInterceptor.getInstance();
-
-
 

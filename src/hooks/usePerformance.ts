@@ -46,7 +46,6 @@ export const usePerformance = () => {
     optimize};
 };
 
-
 'use client';
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -183,6 +182,4 @@ export const _usePerformance = () => {// TODO: Add content;}
   }, []);
   return { metrics, isMonitoring };
 };
-
-
 

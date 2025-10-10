@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 interface PerformanceMetrics {// TODO: Add content;}
 
 };
@@ -388,15 +387,7 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   hover:text-white"
 // >
 //
-        
-          
-          
-          
-          
-          
-          
-          
-          
+
           </button>
       </div>"
       <div className="space-y-1"></div>"
@@ -451,6 +442,4 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
 };
 
 export default EnhancedPerformanceMonitor;"
-
-
 

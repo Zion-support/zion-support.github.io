@@ -38,14 +38,7 @@ const MicroSAASCard: React.FC;
 
 const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
     
@@ -127,6 +120,4 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
 };
 
 export default MicroSAASCard;"`
-
-
 

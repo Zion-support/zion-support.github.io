@@ -140,7 +140,6 @@ readingTimereadingTime: '45 min read',
     </section>);
 export default UltimateBusinessIntelligenceShowcase2025
 
-
 'use client';
 import React, { useState } from 'react';
         return (import { Link } from 'react-router-dom';)
@@ -212,15 +211,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
       categor,
   y: 'resource',
               {/* Badge */}
-                
-          
-          
-          
-          
-          
-          
-          
-          
+
           <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>"
                 <span className="text-green-400 font-semibold text-sm"></span>
                   {item.featured ? 'FEATURED' : 'NEW'}
@@ -264,15 +255,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
                     strokeWidth={2}"
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
 // />
-                
-          
-          
-          
-          
-          
-          
-          
-          
+
           </svg>"
                 to="/services""
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl,"
@@ -280,6 +263,4 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
 >Learn More</Link>
     </section>);
 export default UltimateBusinessIntelligenceShowcase2025;
-
-
 

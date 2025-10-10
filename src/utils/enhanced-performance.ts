@@ -336,7 +336,6 @@ export const performanceMonitor = new PerformanceMonitor();
 
 export default PerformanceMonitor;
 
-
 import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
 import type {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -417,6 +416,4 @@ export function runWhenIdle(callbac)
     setTimeout(callback, 0);
 * Default performance monitor instance;
 export const performanceMonitor = new PerformanceMonitor();
-
-
 

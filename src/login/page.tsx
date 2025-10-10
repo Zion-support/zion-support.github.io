@@ -1,11 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 'use client';
 import React, { useState } from 'react';
@@ -199,15 +197,7 @@ type="email" name="email"
 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your email"
 
 //                     />
-                  
-          
-          
-          
-          
-          
-          
-          
-          
+
           </div>
                 </div>
 
@@ -339,15 +329,6 @@ type={showPassword ? 'text' : 'password'}
 className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your password"
 
 //                     />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
 
           <button
 type="button" onClick={() => setShowPassword(!showPassword)}
@@ -371,14 +352,7 @@ type="checkbox" name="rememberMe"
   focus:ring-cyan-400,"
   focus:ring-2"
 // />
-                    
-          
-          
-          
-          
-          
-          
-          
+
           "
           <span className="ml-2 text-sm text-gray-300">Remember me</span>
                   </label>
@@ -388,15 +362,7 @@ type="checkbox" name="rememberMe"
 
 // >
 //                     Forgot password?
-                  
-          
-          
-          
-          
-          
-          
-          
-          
+
           </a>
                 </div>
 
@@ -409,28 +375,12 @@ type="submit" disabled={isLoading}
           <div className="flex items-center justify-center"></div>"
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
 // Signing In...
-                    
-          
-          
-          
-          
-          
-          
-          
-          
+
           </div>
                   ) : ()
 // 'Sign In'
                   )}
-                
-          
-          
-          
-          
-          
-          
-          
-          
+
           </button>
               </form>"
               <div className="mt-8 text-center"></div>"
@@ -480,15 +430,7 @@ type="submit" disabled={isLoading}
                 <p className="text-xl text-gray-300 mb-8"></p>
 // Sign in to manage your AI services, view analytics, and access all your;
 //                   enterprise solutions in one place.
-                
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
               </div>"
               <div className="space-y-6"></div>
@@ -523,28 +465,12 @@ type="submit" disabled={isLoading}
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div>"
                 <h3 className="text-lg font-semibold text-white mb-3"></h3>
 // New to Zion Tech Group?
-                
-          
-          
-          
-          
-          
-          
-          
-          
+
           </h3>"
                 <p className="text-gray-300 mb-4"></p>
 // Join thousands of businesses already using our AI and IT solutions;
 //                   to transform their operations.
-                
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
 
                 <a
@@ -567,7 +493,5 @@ type="submit" disabled={isLoading}
   );
 };
 
-
 export default LoginPage;
-
 

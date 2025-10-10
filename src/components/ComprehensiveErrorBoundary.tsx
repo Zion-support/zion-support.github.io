@@ -210,15 +210,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
           </h1>"
             <p className="text-gray-300 mb-6"></p>
 // We encountered an unexpected error. Our team has been notified and is working to fix it.
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>"
             <div className="bg-gray-800 rounded-lg p-4 mb-6 text-left"></div>"
               <h3 className="text-white font-semibold mb-2">Error,
@@ -271,15 +263,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                 <summary className="text-white cursor-pointer,"
   hover:text-cyan-400"></summary>
 // Technical Details (Development)
-                
-          
-          
-          
-          
-          
-          
-          
-          
+
           </summary>"
                 <pre className="mt-2 p-4 bg-gray-900 rounded text-xs text-gray-300 overflow-auto"></pre>
 
@@ -298,7 +282,4 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 }
 
 export default ComprehensiveErrorBoundary;"`
-
-
-
 

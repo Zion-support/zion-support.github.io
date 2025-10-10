@@ -2,12 +2,10 @@ import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, A
 'use client';
 import React, { useState } from 'react';
 
-
 import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 const MarketplacePage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('products');
@@ -435,15 +433,7 @@ const categories = [
   s: ['100 qubits', '24/7 access', 'API integration', 'Expert support'],
       vendo,
   r: 'QuantumCloud',
-                
-          
-          
-          
-          
-          
-          
-          
-          
+
           <ShoppingCart className="w-5 h-5 mr-2" /></ShoppingCart>
 // Start Shopping;
 
@@ -457,6 +447,4 @@ const categories = [
                 Email Us;
       <Footer /></Footer>
 export default MarketplacePage;
-
-
 

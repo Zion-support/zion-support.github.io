@@ -117,13 +117,7 @@ export function sanitizeInput(inpu)
 }
   return input;
 //     .replace(/[
-          
-          
-          
-          
-          
-          
-          
+
           )
           <>]/g, '') // Remove;
           < and >
@@ -175,6 +169,4 @@ export default {securityHeaders}
   validateEmail,
   validateUrl,
   generateSecureToken;"
-
-
 

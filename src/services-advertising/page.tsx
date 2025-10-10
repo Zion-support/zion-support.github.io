@@ -1,6 +1,5 @@
 
 
-
 import { Link } from 'react-router-dom';
 
 import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react';
@@ -55,16 +54,7 @@ AI-Powered Advertising Solutions;"
 // Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy,
 //               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven;
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
-            
-          
-          
-          
-          
-          
-          
-          
 
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
@@ -237,7 +227,5 @@ Ready to Transform Your Advertising?
   );
 };
 
-
 export default ServicesAdvertisingPage;
-
 

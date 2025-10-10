@@ -753,15 +753,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   y: Arial, sans-serif;`
     ``
     notification.innerHTML = `
-      
-          
-          
-          
-          
-          
-          
-          
-          
 
           <div style="display: flex; justify-content: space-between; align-items: center;"><div><strong>${error.severity} Error</strong><p style="margin: 5px 0 0 0; font-size: 14px;">${error.message}</p></div><button onclick="this.parentElement.parentElement.remove()" style="
           background: none;,
@@ -819,27 +810,13 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
 }
 
     return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
 
   )
       error.type === ErrorType.NETWORK &&
 // error.retryCount! 
-          
-          
-          
-          
-          
-          
-          
-          
+
           < this.config.maxRetries &&
       error.severity !== ErrorSeverity.CRITICAL)
   }
@@ -1137,16 +1114,6 @@ export class ErrorBoundary extends React.Component;
       return (
 this.props.fallback || (
 
-          
-          
-          
-          
-          
-          
-          
-          
-          
-
           <div style={{ padding: '20px', textAlign: 'center' }}><h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
               onClick={() => this.setState({ hasError: false, error: undefined })}
 
@@ -1258,6 +1225,4 @@ export const useErrorHandler = () => {/* TODO: Fix JSX expression */}
   }
 }
 export default ErrorHandler;"`
-
-
 

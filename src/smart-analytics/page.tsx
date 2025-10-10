@@ -149,8 +149,6 @@ $4}
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
 
-
-
 import { Link } from 'react-router-dom';
 const SmartAnalyticsPage: React.FC = () => {
   const features = [];
@@ -173,10 +171,8 @@ const SmartAnalyticsPage: React.FC = () => {
       description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
       benefit: 'Discover hidden opportunities',
 
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 const PagePage: React.FC = () => {
   return (
@@ -242,16 +238,7 @@ const PagePage: React.FC = () => {
                   }`}
                   Get Started;
         {/* CTA Section */}
-        
-          
-          
-          
-          
-          
-          
-          
 
-          
           <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Data?
@@ -285,7 +272,5 @@ const PagePage: React.FC = () => {
   );
 };
 
-
 export default SmartAnalyticsPage;
-
 

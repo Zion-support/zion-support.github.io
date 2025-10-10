@@ -73,15 +73,7 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
                 <FileWarning />Prevent Regressions</h3>
               <p className='text-white/90'></p>
 // We implement v2 runbooks in 46 weeks with audits and training.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             </div>
             <Link></Link>
@@ -99,9 +91,5 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
     </main>)
 }
 
-
-
-
 export default AgentReleaseRunbooksV22026Page;
-
 

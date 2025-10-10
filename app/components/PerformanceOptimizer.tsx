@@ -1,12 +1,6 @@
 'use client';
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
-=======
-
-import React, { useEffect } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;

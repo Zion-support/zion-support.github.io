@@ -5,7 +5,6 @@
  */
 interface Props {
 
-
   children: ReactNode;
 
   fallback?: ReactNode;
@@ -664,7 +663,4 @@ const styles = {// TODO: Add content;}
   r: '#999'
   }
 };
-
-
-
 

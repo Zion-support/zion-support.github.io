@@ -278,15 +278,7 @@ export function sanitizeHTML(html: string): string {// TODO: Add content;}
 }
   // Remove script tags;
 let clean = html.replace(/
-          
-          
-          
-          
-          
-          
-          
 
-          
           <script[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
 
   // Remove event handlers;
@@ -495,15 +487,6 @@ export const ValidationRulesBuilder = {// TODO: Add content;}
 }
   required: 
 
-          
-          
-          
-          
-          
-          
-          
-          
-
           <T>(): ValidationRule<T> => ({// TODO: Add content;}
 
 };
@@ -623,14 +606,6 @@ class DataValidator {
   }),
   custo,
   m: 
-          
-          
-          
-          
-          
-          
-          
-          
 
           <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({// TODO: Add content;}
 
@@ -718,6 +693,4 @@ export const dataValidator = DataValidator.getInstance();
   rules = ValidationRulesBuilder;
 }
 export const dataValidator = DataValidator.getInstance()"`
-
-
 

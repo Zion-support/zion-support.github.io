@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 interface SEOProps {// TODO: Add content;}
 
 }
@@ -55,7 +54,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     if (!metaDescription) {/* TODO: Fix JSX expression */}
     }
     metaDescription.setAttribute('content', description);
-    
 
           <Helmet>
       {/* Basic Meta Tags */}
@@ -94,14 +92,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
           <link rel="preconnect" href="http,"
   s:// www.googletagmanager.com" /></link>
       {/* DNS Prefetch */}
-      
-          
-          
-          
-          
-          
-          
-          
+
           "
           <link rel="dns-prefetch" href="// fonts.googleapis.com" /></link>"
           <link rel="dns-prefetch" href="// www.google-analytics.com" /></link>"
@@ -111,6 +102,4 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 };
 
 export default EnhancedSEO;"`
-
-
 

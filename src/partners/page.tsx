@@ -2,12 +2,10 @@ import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail
 'use client';
 import React from 'react';
 
-
 import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 
 const PartnersPage: React.FC = () => {
   const partnerTypes = [
@@ -284,15 +282,7 @@ const PagePage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
 // We work with industry-leading technology partners to deliver comprehensive solutions;
 //               that drive innovation and business success.
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
           </div>
           {/* Partner Types */}"
@@ -318,15 +308,7 @@ const PagePage: React.FC = () => {
           {/* Partnership Benefits */}"
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Why Partner With Us?
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           </h2>"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -367,14 +349,7 @@ const PagePage: React.FC = () => {
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 
 // >
-                
-          
-          
-          
-          
-          
-          
-          
+
           "
           <Handshake className="w-5 h-5 mr-2" /></Handshake>
 // Become a Partner;
@@ -392,7 +367,5 @@ const PagePage: React.FC = () => {
   );
 };
 
-
 export default PartnersPage;
-
 

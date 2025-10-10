@@ -12,14 +12,7 @@ export const generateSitemap = (pages: Array;)
 }
   const baseUrl = 'https://ziontechgroup.com';
   let sitemap = '
-          
-          
-          
-          
-          
-          
-          
-          
+
           <?xml version="1.0" encoding="UTF-8"?>
 ';
   sitemap += '<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
@@ -27,14 +20,7 @@ export const generateSitemap = (pages: Array;)
   pages.forEach(page => {// TODO: Add content;}
 }
     sitemap += `  
-          
-          
-          
-          
-          
-          
-          
-          
+
           <url>
 `;
     sitemap += `    <loc>${baseUrl}${page.path}</loc>
@@ -53,5 +39,4 @@ export const generateStaticSitemap = () => {// TODO: Add content;}
 }
   return generateSitemap(getAllPages());
 };
-
 

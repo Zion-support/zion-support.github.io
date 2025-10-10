@@ -1,6 +1,5 @@
 
 
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -55,16 +54,7 @@ const SustainabilityTechPage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
 // Build a sustainable future with our green technology solutions. From renewable energy to circular economy,
             we help you reduce environmental impact while driving business growth.
-          
-          
-          
-          
-          
-          
-          
-          
 
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -110,7 +100,5 @@ const SustainabilityTechPage: React.FC = () => {
   );
 };
 
-
 export default SustainabilityTechPage;
-
 

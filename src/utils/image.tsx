@@ -85,7 +85,6 @@ $4})
 };
 export default Image;
 
-
 'use client';
 import React, { useState, useCallback } from 'react';
 const,
@@ -171,14 +170,7 @@ quality = 75,
 }
 
     return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
 
   )
@@ -188,15 +180,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
 // >
-        
-          
-          
-          
-          
-          
-          
-          
-          
+
           <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
     )
@@ -220,6 +204,4 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
   )
 }
 export default Image;"`
-
-
 

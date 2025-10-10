@@ -270,4 +270,3 @@ logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' });
   component: this.constructor.name,
 ...context;
 
-

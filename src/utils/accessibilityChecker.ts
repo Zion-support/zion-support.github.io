@@ -320,15 +320,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
         this.addIssue({
           type: 'empty-alt-without-role',
           codeExample: '
-          
 
-          
-          
-          
-          
-          
-          
-          
           "
           <img src="..." alt="Description of image" />'
         })
@@ -370,15 +362,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
         this.addIssue({
           type: 'skipped-heading-level',
           codeExample: '
-          
 
-          
-          
-          
-          
-          
-          
-          
           "
           <img src="..." alt="" role="presentation" />'
         })
@@ -537,15 +521,7 @@ $4});
         this.addIssue({
           type: 'generic-link-text',
           codeExample: '
-          
 
-          
-          
-          
-          
-          
-          
-          
           "
           <Link to="..." aria-label="Description">...</Link>'
         }
@@ -625,13 +601,7 @@ const target = link.getAttribute('target')
           type: 'button-no-text',
 
             '
-          
-          
-          
-          
-          
-          
-          
+
           "
           <Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>'
         }
@@ -698,15 +668,7 @@ const target = link.getAttribute('target')
         this.addIssue({
           type: 'form-no-label',
           codeExample: '
-          
 
-          
-          
-          
-          
-          
-          
-          
           "
           <button aria-label="Close dialog"></button>'
         })
@@ -757,13 +719,6 @@ const target = link.getAttribute('target')
     });
           codeExample: '
 
-          
-          
-          
-          
-          
-          
-          
           "
           <label for="email">Emai,"
   l:</label><input id="email" name="email" />'
@@ -887,15 +842,7 @@ $4});
         this.addIssue({
           type: 'click-without-keyboard',
           codeExample: '
-          
 
-          
-          
-          
-          
-          
-          
-          
           "
           <button tabindex="0">Accessible button</button>'
         }
@@ -965,14 +912,6 @@ $4});
           type: 'invalid-aria-role',
           codeExample: '
 
-          
-          
-          
-          
-          
-          
-          
-          
           <button onClick={handleClick}>Click me</button>'
         }
   )
@@ -1300,6 +1239,4 @@ const score = Math.max(0, 100 - totalPenalty);
     }
   }
 }"`
-
-
 

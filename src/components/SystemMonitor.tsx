@@ -69,7 +69,6 @@ interface SystemMetrics {
     saveData: boolean;
 interface SystemMonitorProps {
 
-
 'use client';
 /**
  * System Monitor Component;
@@ -613,14 +612,7 @@ className={`h-2 rounded-full ${}
                   }`}
                   style={/* TODO: Fix JSX expression */}`
   h: `${Math.min(metrics.memory.percentage, 100)}%` }}
-          
-          
-          
-          
-          
-          
-          
-          
+
           "
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>"
           <div className="space-y-2 max-h-64 overflow-y-auto"></div>
@@ -649,5 +641,4 @@ className={`h-2 rounded-full ${}
                     <span className="capitalize">{category}</span>
 
 export default SystemMonitor;
-
 

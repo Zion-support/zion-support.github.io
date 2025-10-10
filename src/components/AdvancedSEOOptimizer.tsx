@@ -141,7 +141,6 @@ const,
     }
   }, [structuredData]);
 
-
   useEffect(() => {/* TODO: Fix JSX expression */}
           });
         }
@@ -200,9 +199,7 @@ const,
   );
 };
 
-
 export default AdvancedSEOOptimizer;
 
 }"
-
 

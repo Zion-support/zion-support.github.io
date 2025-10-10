@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 interface ResponsiveContainerProps {// TODO: Add content;}
 
 };
@@ -70,14 +69,7 @@ const,
   O: Add content;}
 }
     return fallback || 
-          
-          
-          
-          
-          
-          
-          
-          
+
           <div className={className}>{children}</div>;
   }
   const getResponsiveClasses = () => {/* TODO: Fix JSX expression */}
@@ -161,5 +153,4 @@ export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
 };
 
 export default ResponsiveContainer;
-
 

@@ -43,7 +43,6 @@ export interface ErrorBoundaryConfig {// TODO: Add content;}
    * Custom error messages by error type;
    */,
 
-
   customMessages: Record;
 
           <string, string>;
@@ -117,14 +116,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {// TODO: Add cont
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {// TODO: Add content;}
 }
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
 
   )
@@ -138,14 +130,7 @@ className="w-6 h-6 text-red-600""
             stroke="currentColor""
             viewBox="0 0 24 24"
 // >
-            
-          
-          
-          
-          
-          
-          
-          
+
           "
           <path strokeLinecap="round""
               strokeLinejoin="round"
@@ -189,14 +174,7 @@ className="w-6 h-6 text-red-600""
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {// TODO: Add content;}
 }
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
 
   )
@@ -210,14 +188,7 @@ className="w-6 h-6 text-yellow-600""
             stroke="currentColor""
             viewBox="0 0 24 24"
 // >
-            
-          
-          
-          
-          
-          
-          
-          
+
           "
           <path strokeLinecap="round""
               strokeLinejoin="round"
@@ -249,14 +220,7 @@ className="w-6 h-6 text-yellow-600""
 function NotFoundFallback(): JSX.Element {// TODO: Add content;}
 }
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
 
   )
@@ -346,6 +310,4 @@ export function formatErrorForLogging(error: Error): Record;
 
   }
 }"
-
-
 

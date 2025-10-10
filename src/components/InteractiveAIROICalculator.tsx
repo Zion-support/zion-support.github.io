@@ -34,15 +34,7 @@ const,
   focus:ring-blue-500,
   focus:border-transparent'
 // />
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </div>
 Expected Efficiency Gain (%)
                   type='range'
@@ -77,5 +69,4 @@ Expected Efficiency Gain (%)
   );
 
 export default InteractiveAIROICalculator;
-
 

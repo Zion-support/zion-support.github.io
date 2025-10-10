@@ -134,14 +134,7 @@ export function validatePassword(passwor)
   const hasLowerCase = /[a-z]/.test(password)
   const hasNumbers = /\d/.test(password)
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|
-          
-          
-          
-          
-          
-          
-          
-          
+
           <>]/.test(password);
   if (!hasUpperCase) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -187,13 +180,7 @@ export function sanitizeHTML(inpu)
   return input;
     .replace(/&/g, '&amp;')
     .replace(/
-          
-          
-          
-          
-          
-          
-          
+
           )
           </g, '&lt;')
     .replace(/>/g, '&gt;')"
@@ -378,6 +365,4 @@ export const isValidCreditCard = (car)
   d: string) => validateCreditCard(card).isValid;
 export const isValidJSON = (jso)
   n: string) => validateJSON(json).isValid;"`
-
-
 

@@ -84,14 +84,7 @@ const,
       featured ? 'ring-2 ring-indigo-200' : ''
     }`}></article>
       {/* Image/Visual Header */}
-      
-          
-          
-          
-          
-          
-          
-          
+
           `
           <div className={`h-48 bg-gradient-to-br ${getCategoryColor(category)} flex items-center justify-center relative`}></div>
         <div className="text-center text-white"></div>"
@@ -177,6 +170,4 @@ const,
 };
 
 export default ContentPreviewCard;"`
-
-
 

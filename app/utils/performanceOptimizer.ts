@@ -203,7 +203,6 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
             this.metrics.renderTime = entry.duration;
           }
 
-
       observer.observe({ entryTypes: ['measure'] });
       this.observers.push(observer);
     } catch (error) {
@@ -441,7 +440,6 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
           img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
         }
       }
-
 
   images.forEach((img) => imageObserver.observe(img));
 };

@@ -116,5 +116,3 @@ export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
   return config.app.environment === 'development';
 export default config;
 
-
-

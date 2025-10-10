@@ -609,14 +609,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
   private isDownloadLink(link: HTMLAnchorElement): boolean {// TODO: Add content;}
 }
     return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
 
   )
@@ -844,6 +837,4 @@ let label = id || className || text?.substring(0, 50) || tagName;
 // Export singleton instance;
 export const advancedAnalytics = AdvancedAnalytics.getInstance()
 export default advancedAnalytics;`
-
-
 

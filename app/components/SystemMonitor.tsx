@@ -1,31 +1,13 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-    }
-  ];
-
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced systemmonitor solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-        </div>
+const SystemMonitor: React.FC = () => {
+  return (
+    <div className="p-4 bg-gray-100 rounded-lg">
+      <h3 className="text-lg font-semibold text-gray-900 mb-2">SystemMonitor</h3>
+      <p className="text-gray-600">This is a placeholder component for SystemMonitor.</p>
     </div>
   );
 };
 
-export default SystemMonitorPage;
+export default SystemMonitor;

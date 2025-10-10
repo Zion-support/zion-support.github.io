@@ -115,5 +115,3 @@ analytics.trackPerformance(
     trackUserAction,
     measureOperation;)`
 
-
-

@@ -579,15 +579,6 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
 
   get: 
 
-          
-          
-          
-          
-          
-          
-          
-          
-
           <T>(path: string, options?: RequestInit) =>
       cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'GET' }),
     post: <T>(path: string, body: unknown, options?: RequestInit) =>
@@ -614,14 +605,6 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
       }),
     pu,
   t: 
-          
-          
-          
-          
-          
-          
-          
-          
 
           <T>(path: string, body: unknown, options?: RequestInit) =>
       cache.fetch<T>(`${baseUrl}${path}`, {// TODO: Add content;}
@@ -647,14 +630,7 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
       }),
     delet,
   e: 
-          
-          
-          
-          
-          
-          
-          
-          
+
           <T>(pat)
   h: string, options?: RequestInit) =>`
       cache.fetch<T>(`${baseUrl}${path}`, {/* TODO: Fix JSX expression */})
@@ -674,6 +650,4 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
   }
 }
 export default ApiCache;`
-
-
 

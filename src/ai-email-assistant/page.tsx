@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -55,15 +54,7 @@ import Footer from '../components/Footer';
               <p className="text-gray-300"></p>
 // AI-powered email responses that understand context and tone, automatically generating;
 //                 professional replies based on your communication style.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             </div>"
             <div className="cyber-card hologram-card p-6"></div>"
@@ -72,15 +63,7 @@ import Footer from '../components/Footer';
               <p className="text-gray-300"></p>
 // Automatically schedule meetings, set reminders, and manage your calendar based on;
 //                 email content and your availability preferences.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             </div>"
             <div className="cyber-card hologram-card p-6"></div>"
@@ -89,15 +72,7 @@ import Footer from '../components/Footer';
               <p className="text-gray-300"></p>
 // AI analyzes email importance and urgency, automatically organizing your inbox;
 //                 with smart priority levels and categorization.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             </div>"
             <div className="cyber-card hologram-card p-6"></div>"
@@ -106,15 +81,7 @@ import Footer from '../components/Footer';
               <p className="text-gray-300"></p>
                 Automated follow-up sequences for sales, customer service, and project management;
 // with personalized timing and content.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             </div>"
             <div className="cyber-card hologram-card p-6"></div>"
@@ -123,15 +90,7 @@ import Footer from '../components/Footer';
               <p className="text-gray-300"></p>
 // Track email performance, response times, and engagement metrics with detailed;
 //                 analytics and insights.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             </div>"
             <div className="cyber-card hologram-card p-6"></div>"
@@ -140,15 +99,7 @@ import Footer from '../components/Footer';
               <p className="text-gray-300"></p>
 // Bank-level encryption and security protocols ensure your email data remains;
 //                 private and protected at all times.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             </div>
           </div>
@@ -211,28 +162,11 @@ import Footer from '../components/Footer';
         <section className="text-center"></section>"
           <h2 className="text-3xl font-bold text-white mb-8 neon-text"></h2>
 // Ready to Transform Your Email Workflow?
-          
-          
-          
-          
-          
-          
-          
-          
-          
+
           </h2>"
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
 // Contact us today to schedule a free demo and see how our AI Email Assistant;
 //             can revolutionize your business communication.
-          
-          
-          
-          
-          
-          
-          
-          
-          
 
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
@@ -259,7 +193,5 @@ import Footer from '../components/Footer';
   );
 };
 
-
 export default PagePage;
-
 

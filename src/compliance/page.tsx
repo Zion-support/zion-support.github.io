@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
 
-
-
 import { Link } from 'react-router-dom';
 
 import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
@@ -54,7 +52,6 @@ const CompliancePage: React.FC = () => {
     }
   return (<div>Coming Soon</div>)
   )
-    
 
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
@@ -66,14 +63,7 @@ const CompliancePage: React.FC = () => {
                 to="/privacy" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
 
 // >
-                
-          
-          
-          
-          
-          
-          
-          
+
           "
           <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
 // Back to Privacy Policy;
@@ -94,15 +84,7 @@ const CompliancePage: React.FC = () => {
 // At Zion Tech Group, we maintain the highest standards of compliance and security.
                 Our certifications and adherence to industry standards ensure your data is protected;
 //                 and our services meet the most stringent requirements.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             {/* Certifications Grid */}"
             <div className="grid grid-cols-1,
@@ -157,7 +139,5 @@ Compliance Areas;"
   );
 };
 
-
 export default CompliancePage;
-
 

@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-
 const FAQPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
@@ -168,7 +167,6 @@ $4];
     </>
 
 export default FAQPage;
-
 
 import { Link } from 'react-router-dom';
 
@@ -338,15 +336,7 @@ const toggleItem = (inde)
           </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
 // Find answers to common questions about our AI and IT services, pricing, and support.
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
 
             {/* Search Bar */}
@@ -363,15 +353,7 @@ type="text" placeholder="Search FAQs..."
   focus:ring-2,"
   focus:ring-cyan-400/20"
 // />
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           </div>
           {/* FAQ Content */}"
           <div className="max-w-4xl mx-auto"></div>
@@ -387,14 +369,7 @@ type="text" placeholder="Search FAQs..."
 }
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
-                      
-          
-          
-          
-          
-          
-          
-          
+
           "
           <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50"></div>
                         <button></button>
@@ -402,14 +377,7 @@ type="text" placeholder="Search FAQs..."
                           className="w-full px-6 py-4 text-left flex items-center justify-between,"
   hover:bg-slate-700/50 transition-colors"
 // >
-                          
-          
-          
-          
-          
-          
-          
-          
+
           "
           <span className="text-white font-medium pr-4">{item.question}</span>
                           {isOpen ? ()}"
@@ -448,9 +416,5 @@ type="text" placeholder="Search FAQs..."
     </>
 export default FAQPage;
 
-
-
-
 export default FaqPage;
-
 

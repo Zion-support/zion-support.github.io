@@ -53,7 +53,6 @@ export const createLazyComponent = <P extends object>(</P>importFunc</P>: () => 
 
 export default LazyComponent;
 
-
 import LoadingSpinner from './LoadingSpinner';
 interface LazyComponentProps {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -76,15 +75,7 @@ export const _withLazyLoading = {};
 }
   return (prop)
   s: P) => ()
-    
-          
-          
-          
-          
-          
-          
-          
-          
+
           <Suspense fallback={fallback || <LoadingSpinner />}>
       <Component {...props} /></Component>
     </Suspense>
@@ -98,14 +89,7 @@ const,
 }
 //   children,
   fallback = 
-          
-          
-          
-          
-          
-          
-          
-          
+
           <LoadingSpinner />,
   delay = 0,
   threshold = 0.1,
@@ -159,15 +143,7 @@ const,
         </Suspense>
       ) : ()
 // fallback)}
-    
-          
-          
-          
-          
-          
-          
-          
-          
+
           </div>
   );
 };
@@ -197,15 +173,7 @@ export const createLazyComponent = {};
   const LazyComponent = lazy(importFunction);
   return (prop)
   s: P) => ()
-    
-          
-          
-          
-          
-          
-          
-          
-          
+
           <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} /></LazyComponent>
     </Suspense>
@@ -255,5 +223,4 @@ const imagePreloads = [
 };
 
 export default LazyComponent;
-
 

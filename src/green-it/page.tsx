@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-
 const GreenITPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('solutions');
 
@@ -328,7 +327,6 @@ valuevalue: '100%',
 
 export default GreenITPage;
 
-
 import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
@@ -599,15 +597,7 @@ const tabs = [
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
 // Transform your IT infrastructure into a sustainable, environmentally friendly system;
               that reduces costs while protecting our planet.
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>"
             <div className="flex flex-wrap justify-center gap-4"></div>"
               <div className="flex items-center text-green-400"></div>"
@@ -647,14 +637,7 @@ const tabs = [
   hover:bg-slate-700/50 border-2 border-transparent'`
                   }`}
 //                 >
-                  
-          
-          
-          
-          
-          
-          
-          
+
           "
           <tab.icon className="w-5 h-5 mr-2" /></tab>"
                   <span className="font-medium">{tab.name}</span>
@@ -754,16 +737,7 @@ Benefits of Green IT;"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
 // Start your journey towards sustainable IT operations. Get a free environmental;
               assessment and discover how much you can save while protecting the planet.
-            
-          
-          
-          
-          
-          
-          
-          
 
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Assessment;
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
@@ -778,7 +752,5 @@ Benefits of Green IT;"
   );
 };
 
-
 export default GreenItPage;
-
 

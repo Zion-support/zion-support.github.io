@@ -1,6 +1,5 @@
 
 
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -27,15 +26,7 @@ const BusinessAppsPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
 
 // Why Choose Our Business Apps?
-          
-          
-          
-          
-          
-          
-          
-          
-          
+
           </h2>"
 <div className="text-4xl mb-4">🚀</div>"
               <h3 className="text-xl font-bold text-white mb-3">AI-Powered</h3>"
@@ -100,6 +91,4 @@ className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 round
 </div>);
 }
 export default BusinessAppsPage;
-
-
 

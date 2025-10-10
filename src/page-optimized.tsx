@@ -25,14 +25,7 @@ const ContentShowcase = lazy(() =>
 export default function OptimizedHomePage() {// TODO: Add content;}
 }
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
     
@@ -59,15 +52,7 @@ export default function OptimizedHomePage() {// TODO: Add content;}
 // Transform your enterprise with AI-powered solutions that deliver 300% ROI,
 //                 70% cost reduction, and 90% efficiency gains. Expert AI consulting,
 //                 autonomous systems, and digital transformation services.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -85,5 +70,4 @@ View Success Stories;
   );
 
 }
-
 

@@ -55,5 +55,3 @@ const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression 
   return { reportWebVitals }
 }
 
-
-
