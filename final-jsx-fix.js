@@ -1,242 +1,229 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { glob } from 'glob';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Get all TypeScript files in the app directory
-function getAllTsxFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files.push(...getAllTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx')) {
-      files.push(fullPath);
-    }
-  }
-  
-  return files;
-}
-
-function fixJsxFile(filePath) {
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
-    // Fix 1: Remove all </undefined>tags</undefined>
-    if (content.includes('</undefined>')) {
-      content = content.replace(/<\/undefined>/g, '');
-      modified = true;
+    
+    // Fix common JSX structural issues
+    const fixes = [
+      // Fix unclosed divs before closing tags
+      {
+        pattern: /<div([^>]*)><\/div>\s*<\/div>/g,
+        replacement: '<div$1></div></div>'
+      },
+      // Fix unclosed sections before closing tags
+      {
+        pattern: /<section([^>]*)><\/section>\s*<\/section>/g,
+        replacement: '<section$1></section></section>'
+      },
+      // Fix malformed closing tags
+      {
+        pattern: /<\/div><\/div><\/div>/g,
+        replacement: '</div></div></div>'
+      },
+      // Fix unclosed divs in the middle of JSX
+      {
+        pattern: /<div([^>]*)><\/div>\s*<([^>]+)>/g,
+        replacement: '<div$1><$2>'
+      },
+      // Fix unclosed sections in the middle of JSX
+      {
+        pattern: /<section([^>]*)><\/section>\s*<([^>]+)>/g,
+        replacement: '<section$1><$2>'
+      },
+      // Fix unclosed main before closing tags
+      {
+        pattern: /<main([^>]*)><\/main>\s*<\/main>/g,
+        replacement: '<main$1></main></main>'
+      },
+      // Fix unclosed article before closing tags
+      {
+        pattern: /<article([^>]*)><\/article>\s*<\/article>/g,
+        replacement: '<article$1></article></article>'
+      },
+      // Fix unclosed header before closing tags
+      {
+        pattern: /<header([^>]*)><\/header>\s*<\/header>/g,
+        replacement: '<header$1></header></header>'
+      },
+      // Fix unclosed footer before closing tags
+      {
+        pattern: /<footer([^>]*)><\/footer>\s*<\/footer>/g,
+        replacement: '<footer$1></footer></footer>'
+      },
+      // Fix specific patterns for container divs
+      {
+        pattern: /<div className="container[^"]*"><\/div>\s*<div/g,
+        replacement: '<div className="container[^"]*"><div'
+      },
+      // Fix specific patterns for max-w divs
+      {
+        pattern: /<div className="max-w-[^"]*"><\/div>\s*<div/g,
+        replacement: '<div className="max-w-[^"]*"><div'
+      },
+      // Fix specific patterns for relative divs
+      {
+        pattern: /<div className="relative[^"]*"><\/div>\s*<div/g,
+        replacement: '<div className="relative[^"]*"><div'
+      },
+      // Fix specific patterns for text-center divs
+      {
+        pattern: /<div className="text-center[^"]*"><\/div>\s*<h/g,
+        replacement: '<div className="text-center[^"]*"><h'
+      },
+      // Fix specific patterns for grid divs
+      {
+        pattern: /<div className="grid[^"]*"><\/div>\s*{/g,
+        replacement: '<div className="grid[^"]*">{'
+      },
+      // Fix specific patterns for space-y divs
+      {
+        pattern: /<div className="space-y-[^"]*"><\/div>\s*{/g,
+        replacement: '<div className="space-y-[^"]*">{'
+      },
+      // Fix specific patterns for flex divs
+      {
+        pattern: /<div className="flex[^"]*"><\/div>\s*<button/g,
+        replacement: '<div className="flex[^"]*"><button'
+      },
+      // Fix specific patterns for absolute divs
+      {
+        pattern: /<div className="absolute[^"]*"><\/div>\s*<div/g,
+        replacement: '<div className="absolute[^"]*"><div'
+      },
+      // Fix specific patterns for bg-white divs
+      {
+        pattern: /<div className="bg-white[^"]*"><\/div>\s*<h/g,
+        replacement: '<div className="bg-white[^"]*"><h'
+      },
+      // Fix specific patterns for backdrop-blur divs
+      {
+        pattern: /<div className="bg-white\/5 backdrop-blur[^"]*"><\/div>\s*<div/g,
+        replacement: '<div className="bg-white/5 backdrop-blur[^"]*"><div'
+      },
+      // Fix specific patterns for gradient divs
+      {
+        pattern: /<div className="bg-gradient[^"]*"><\/div>\s*<h/g,
+        replacement: '<div className="bg-gradient[^"]*"><h'
+      },
+      // Fix specific patterns for rounded divs
+      {
+        pattern: /<div className="rounded[^"]*"><\/div>\s*<h/g,
+        replacement: '<div className="rounded[^"]*"><h'
+      },
+      // Fix specific patterns for shadow divs
+      {
+        pattern: /<div className="shadow[^"]*"><\/div>\s*<h/g,
+        replacement: '<div className="shadow[^"]*"><h'
+      },
+      // Fix specific patterns for p-8 divs
+      {
+        pattern: /<div className="p-8[^"]*"><\/div>\s*<h/g,
+        replacement: '<div className="p-8[^"]*"><h'
+      },
+      // Fix specific patterns for mb-16 divs
+      {
+        pattern: /<div className="mb-16[^"]*"><\/div>\s*<h/g,
+        replacement: '<div className="mb-16[^"]*"><h'
+      },
+      // Fix specific patterns for mx-auto divs
+      {
+        pattern: /<div className="mx-auto[^"]*"><\/div>\s*<h/g,
+        replacement: '<div className="mx-auto[^"]*"><h'
+      },
+      // Fix specific patterns for text-center divs
+      {
+        pattern: /<div className="text-center[^"]*"><\/div>\s*<h/g,
+        replacement: '<div className="text-center[^"]*"><h'
+      },
+      // Fix specific patterns for about page
+      {
+        pattern: /<div className="min-h-screen[^"]*"><\/div>\s*<Navigation/g,
+        replacement: '<div className="min-h-screen[^"]*"><Navigation'
+      },
+      // Fix specific patterns for sections
+      {
+        pattern: /<section className="py-20[^"]*"><\/section>\s*<div/g,
+        replacement: '<section className="py-20[^"]*"><div'
+      },
+      // Fix specific patterns for hero sections
+      {
+        pattern: /<section className="relative py-20[^"]*"><\/section>\s*<div/g,
+        replacement: '<section className="relative py-20[^"]*"><div'
+      },
+      // Fix specific patterns for main sections
+      {
+        pattern: /<main([^>]*)><\/main>\s*<div/g,
+        replacement: '<main$1><div'
+      },
+      // Fix specific patterns for article sections
+      {
+        pattern: /<article([^>]*)><\/article>\s*<div/g,
+        replacement: '<article$1><div'
+      },
+      // Fix specific patterns for header sections
+      {
+        pattern: /<header([^>]*)><\/header>\s*<div/g,
+        replacement: '<header$1><div'
+      },
+      // Fix specific patterns for footer sections
+      {
+        pattern: /<footer([^>]*)><\/footer>\s*<div/g,
+        replacement: '<footer$1><div'
+      }
+    ];
+    
+    // Apply fixes
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+    
+    // Additional specific fixes for common patterns
+    const additionalFixes = [
+      // Fix unclosed divs before other elements
+      /<div([^>]*)><\/div>\s*<([^>]+)>/g,
+      '<div$1><$2>',
+      
+      // Fix unclosed sections before other elements
+      /<section([^>]*)><\/section>\s*<([^>]+)>/g,
+      '<section$1><$2>',
+      
+      // Fix unclosed main before other elements
+      /<main([^>]*)><\/main>\s*<([^>]+)>/g,
+      '<main$1><$2>',
+      
+      // Fix unclosed article before other elements
+      /<article([^>]*)><\/article>\s*<([^>]+)>/g,
+      '<article$1><$2>',
+      
+      // Fix unclosed header before other elements
+      /<header([^>]*)><\/header>\s*<([^>]+)>/g,
+      '<header$1><$2>',
+      
+      // Fix unclosed footer before other elements
+      /<footer([^>]*)><\/footer>\s*<([^>]+)>/g,
+      '<footer$1><$2>'
+    ];
+    
+    for (let i = 0; i < additionalFixes.length; i += 2) {
+      const newContent = content.replace(additionalFixes[i], additionalFixes[i + 1]);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
     }
-
-    // Fix 2: Fix malformed quotes in className
-    if (content.includes('&quot;')) {
-      content = content.replace(/&quot;/g, '"');
-      modified = true;
-    }
-
-    // Fix 3: Fix malformed JSX with missing opening tags
-    const malformedJsxPattern = /<(\w+)([^>]*)\s*>\s*<\/\1>\s*([^<]+)/g;
-    content = content.replace(malformedJsxPattern, (match, tagName, attributes, text) => {
-      if (text.trim()) {
-        modified = true;
-        return `<${tagName}${attributes}>${text}</${tagName}>`;
-      }
-      return match;
-    });
-
-    // Fix 4: Fix self-closing tags that should have content
-    const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g;
-    content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) => {
-      if (text.trim() && !text.includes('<')) {
-        modified = true;
-        return `<${tagName}${attributes}>${text}</${tagName}>`;
-      }
-      return match;
-    });
-
-    // Fix 5: Fix malformed className attributes
-    const malformedClassPattern = /className="([^"]*)"([^>]*)><\/undefined>/g;
-    content = content.replace(malformedClassPattern, (match, className, rest) => {
-      modified = true;
-      return `className="${className}"${rest}>`;
-    });
-
-    // Fix 6: Fix malformed closing tags
-    const malformedClosingPattern = /<\/undefined><\/undefined>/g;
-    content = content.replace(malformedClosingPattern, '');
-    if (content.includes('</undefined></undefined>')) {
-      modified = true;
-    }
-
-    // Fix 7: Fix malformed self-closing tags
-    const malformedSelfClosingPattern = /\/><\/undefined>/g;
-    content = content.replace(malformedSelfClosingPattern, '/>');
-    if (content.includes('/></undefined>')) {
-      modified = true;
-    }
-
-    // Fix 8: Fix JSX elements with missing content between tags
-    const emptyJsxPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*([^<\n]+)/g;
-    content = content.replace(emptyJsxPattern, (match, tagName, attributes, content) => {
-      if (content.trim()) {
-        modified = true;
-        return `<${tagName}${attributes}>${content}</${tagName}>`;
-      }
-      return match;
-    });
-
-    // Fix 9: Fix malformed return statements
-    const malformedReturnPattern = /return\s*\(\s*<\/LoadingSpinner><div/g;
-    content = content.replace(malformedReturnPattern, 'return (\n    <div');
-    if (content.includes('</LoadingSpinner></div><div')) {
-      modified = true;
-    }
-
-    // Fix 10: Fix malformed conditional returns
-    const malformedConditionalPattern = /return\s*<LoadingSpinner\s*></div>/g;
-    content = content.replace(malformedConditionalPattern, 'return <LoadingSpinner />');</LoadingSpinner>if</LoadingSpinner> (content.includes('<LoadingSpinner >')) {</LoadingSpinner>modified</LoadingSpinner> = true;
-    }
-
-    // Fix 11: Fix malformed JSX with incorrect closing tags
-    const malformedJsxClosingPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<\/\1>/g;
-    content = content.replace(malformedJsxClosingPattern, (match, tagName, attributes) => {
-      modified = true;
-      return `<${tagName}${attributes}></${tagName}>`;
-    });
-
-    // Fix 12: Fix malformed JSX with incorrect opening tags
-    const malformedJsxOpeningPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>/g;
-    content = content.replace(malformedJsxOpeningPattern, (match, tag1, attr1, tag2, attr2) => {
-      modified = true;
-      return `<${tag1}${attr1}><${tag2}${attr2}>`;
-    });
-
-    // Fix 13: Fix malformed JSX with incorrect nesting
-    const malformedNestingPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\2>/g;
-    content = content.replace(malformedNestingPattern, (match, tag1, attr1, tag2, attr2, text) => {
-      modified = true;
-      return `<${tag1}${attr1}><${tag2}${attr2}>${text}</${tag2}></${tag1}>`;
-    });
-
-    // Fix 14: Fix malformed JSX with incorrect closing tags
-    const malformedClosingTagPattern = /<\/\w+><\/\w+>/g;
-    content = content.replace(malformedClosingTagPattern, (match) => {
-      const tags = match.match(/<\/\w+>/g);
-      if (tags && tags.length > 1) {
-        modified = true;
-        return tags[0];
-      }
-      return match;
-    });
-
-    // Fix 15: Fix malformed JSX with incorrect opening tags
-    const malformedOpeningTagPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\3>/g;
-    content = content.replace(malformedOpeningTagPattern, (match, tag1, attr1, tag2, attr2, text) => {
-      modified = true;
-      return `<${tag1}${attr1}><${tag2}${attr2}>${text}</${tag2}></${tag1}>`;
-    });
-
-    // Fix 16: Fix malformed JSX with incorrect self-closing tags
-    const malformedSelfClosingTagPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)\s*\/>/g;
-    content = content.replace(malformedSelfClosingTagPattern, (match, tag1, attr1, tag2, attr2) => {
-      modified = true;
-      return `<${tag1}${attr1}><${tag2}${attr2} /></${tag1}>`;
-    });
-
-    // Fix 17: Fix malformed JSX with incorrect nesting
-    const malformedNestingPattern2 = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\3>\s*<\/\1>/g;
-    content = content.replace(malformedNestingPattern2, (match, tag1, attr1, tag2, attr2, text) => {
-      modified = true;
-      return `<${tag1}${attr1}><${tag2}${attr2}>${text}</${tag2}></${tag1}>`;
-    });
-
-    // Fix 18: Fix malformed JSX with incorrect closing tags
-    const malformedClosingTagPattern2 = /<\/\w+><\/\w+><\/\w+>/g;
-    content = content.replace(malformedClosingTagPattern2, (match) => {
-      const tags = match.match(/<\/\w+>/g);
-      if (tags && tags.length > 2) {
-        modified = true;
-        return tags[0];
-      }
-      return match;
-    });
-
-    // Fix 19: Fix malformed JSX with incorrect opening tags
-    const malformedOpeningTagPattern2 = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\3>\s*<\/\1>/g;
-    content = content.replace(malformedOpeningTagPattern2, (match, tag1, attr1, tag2, attr2, text) => {
-      modified = true;
-      return `<${tag1}${attr1}><${tag2}${attr2}>${text}</${tag2}></${tag1}>`;
-    });
-
-    // Fix 20: Fix malformed JSX with incorrect self-closing tags
-    const malformedSelfClosingTagPattern2 = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)\s*\/>\s*<\/\1>/g;
-    content = content.replace(malformedSelfClosingTagPattern2, (match, tag1, attr1, tag2, attr2) => {
-      modified = true;
-      return `<${tag1}${attr1}><${tag2}${attr2} /></${tag1}>`;
-    });
-
-    // Fix 21: Fix malformed JSX with missing closing tags
-    const missingClosingTagPattern = /<(\w+)([^>]*)>\s*([^<]+)\s*$/gm;
-    content = content.replace(missingClosingTagPattern, (match, tagName, attributes, text) => {
-      if (text.trim() && !text.includes('</')) {
-        modified = true;
-        return `<${tagName}${attributes}>${text}</${tagName}>`;
-      }
-      return match;
-    });
-
-    // Fix 22: Fix malformed JSX with missing opening tags
-    const missingOpeningTagPattern = /<\/\w+>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\1>/g;
-    content = content.replace(missingOpeningTagPattern, (match, tagName, attributes, text) => {
-      if (text.trim()) {
-        modified = true;
-        return `<${tagName}${attributes}>${text}</${tagName}>`;
-      }
-      return match;
-    });
-
-    // Fix 23: Fix malformed JSX with missing closing tags
-    const missingClosingTagPattern2 = /<(\w+)([^>]*)>\s*([^<]+)\s*<\/\w+>/g;
-    content = content.replace(missingClosingTagPattern2, (match, tagName, attributes, text) => {
-      if (text.trim()) {
-        modified = true;
-        return `<${tagName}${attributes}>${text}</${tagName}>`;
-      }
-      return match;
-    });
-
-    // Fix 24: Fix malformed JSX with missing opening tags
-    const missingOpeningTagPattern2 = /<\/\w+>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\1>/g;
-    content = content.replace(missingOpeningTagPattern2, (match, tagName, attributes, text) => {
-      if (text.trim()) {
-        modified = true;
-        return `<${tagName}${attributes}>${text}</${tagName}>`;
-      }
-      return match;
-    });
-
-    // Fix 25: Fix malformed JSX with missing closing tags
-    const missingClosingTagPattern3 = /<(\w+)([^>]*)>\s*([^<]+)\s*<\/\w+>/g;
-    content = content.replace(missingClosingTagPattern3, (match, tagName, attributes, text) => {
-      if (text.trim()) {
-        modified = true;
-        return `<${tagName}${attributes}>${text}</${tagName}>`;
-      }
-      return match;
-    });
-
+    
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${path.relative(__dirname, filePath)}`);
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
     
@@ -247,16 +234,21 @@ function fixJsxFile(filePath) {
   }
 }
 
-console.log('Starting final JSX fixes...');
+// Main function
+async function main() {
+  // Find all TSX files in the app directory
+  const files = await glob('app/**/*.tsx');
 
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = getAllTsxFiles(appDir);
+  console.log(`Found ${files.length} TSX files to check...`);
 
-let fixedCount = 0;
-tsxFiles.forEach(filePath => {
-  if (fixJsxFile(filePath)) {
-    fixedCount++;
-  }
-});
+  let fixedCount = 0;
+  files.forEach(file => {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  });
 
-console.log(`Fixed ${fixedCount} files.`);
+  console.log(`Fixed ${fixedCount} files`);
+}
+
+main().catch(console.error);

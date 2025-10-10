@@ -76,15 +76,12 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
 
         case 'skeleton':
           return (</div>
-            <div className='space-y-2' role='status' aria-label='Loading'></div>
-              <div
+            <div className='space-y-2' role='status' aria-label='Loading'><div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-              /></div>
-              <div
+              /><div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
                 style={{ width: '75%' }}
-              /></div>
-              <div
+              /><div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
                 style={{ width: '50%' }}
               /></div>
@@ -121,8 +118,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     }, [fullScreen, className]);
 
     return (</div>
-      <div className={containerClasses}></div>
-        <div className='text-center'>
+      <div className={containerClasses}><div className='text-center'>
           {renderSpinner}
           {text && (</div>
             <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>

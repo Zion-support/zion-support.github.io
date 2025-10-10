@@ -90,8 +90,7 @@ const AIBlockchainSolutionsPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>AI Blockchain Solutions - Zion Tech Group</title>
         <meta name="description" content="Build the future with our AI Blockchain Solutions. Smart contracts, DeFi platforms, and decentralized applications powered by artificial intelligence." />
         <meta name="keywords" content="AI blockchain, smart contracts, DeFi, NFT, decentralized applications, blockchain AI, Web3" />
@@ -223,9 +222,7 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-amber-600 transition-all duration-300">
                   Schedule Demo
                 </button>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
       </main>
 

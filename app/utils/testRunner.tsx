@@ -999,18 +999,15 @@ export class TestRunner {/* TODO: Fix JSX expression */}
 </head>
 <body>
     <h2 id="heading-test-results">Test Results</h2>
-    <div class="summary"></div>
-        <h3 id="heading-summary">Summary<p>Total: ${this.results.length}</p>
+    <div class="summary"><h3 id="heading-summary">Summary<p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests">${this.results</div>
-    <div class="summary"></div>
-        <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
+    <div class="summary"><h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${this.results</div>
           .map()</div>
     result => `}</div>
-            <div class="test ${result.status}"></div>
-                <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
+            <div class="test ${result.status}"><h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
             </div>
 
@@ -1027,8 +1024,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         ${this.results}
           .map()
             result => `}</div>
-            <div class="test ${result.status}"></div>
-                <h4 id="heading-${result.name}">${result.name}</h4>
+            <div class="test ${result.status}"><h4 id="heading-${result.name}">${result.name}</h4>
                 <p>Status: ${result.status}</p>)
                 <p>Duration: ${result.duration}ms</p>)
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''})
@@ -1175,8 +1171,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
 </head>
 <body></body>
     <h1>Test Results</h1>
-    <div class="summary"></div>
-        <h2>Summary</h2>
+    <div class="summary"><h2>Summary</h2>
         <p>Tota,
   l: ${this.results.length}</p>
         <p>Passe,
@@ -1190,8 +1185,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     </div>"
     <div class="tests"></div>
         ${/* TODO: Fix JSX expression */}"
-            <div class="test ${result.status}"></div>
-                <h3>${result.name}</h3>
+            <div class="test ${result.status}"><h3>${result.name}</h3>
                 <p>Statu,
   s: ${result.status}</p>
                 <p>Duratio,

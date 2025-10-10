@@ -90,8 +90,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>AI Customer Support Chatbot - Zion Tech Group</title>
         <meta name="description" content="Transform your customer support with our AI Customer Support Chatbot. 24/7 availability, natural language processing, and intelligent escalation for better customer experience." />
         <meta name="keywords" content="AI chatbot, customer support chatbot, virtual assistant, customer service automation, AI support bot" />
@@ -223,9 +222,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-all duration-300">
                   Schedule Demo
                 </button>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
       </main>
 

@@ -69,9 +69,7 @@ const EnhancedHeroPage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-            </div>
-          </div>
-        </div>
+            </div></div></div>
       </section>
 
       {/* Features Section */}
@@ -142,9 +140,7 @@ const EnhancedHeroPage: React.FC = () => {
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
-            </div>
-          </div>
-        </div>
+            </div></div></div>
       </section>
     </div>
   );

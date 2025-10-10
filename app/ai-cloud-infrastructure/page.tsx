@@ -96,8 +96,7 @@ const AICloudInfrastructurePage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>AI Cloud Infrastructure - Zion Tech Group</title>
         <meta name="description" content="Build scalable and intelligent cloud infrastructure with our AI-powered solutions. Automated scaling, optimization, and management for better performance and cost efficiency." />
         <meta name="keywords" content="AI cloud infrastructure, cloud management, hybrid cloud, cloud optimization, cloud security, cloud migration" />
@@ -229,9 +228,7 @@ const AICloudInfrastructurePage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-sky-600 transition-all duration-300">
                   Schedule Demo
                 </button>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
       </main>
 

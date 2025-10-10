@@ -104,18 +104,17 @@ description: 'Create game assets, characters, and environments instantly',
     <>
       <Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
-<meta name="description" content="Transform text into stunning 3D models with our AI-powered 3D generation technology. Create game assets, architectural models, and more in seconds." />
-
+        <meta name="description" content="Transform text into stunning 3D models with our AI-powered 3D generation technology. Create game assets, architectural models, and more in seconds." />
       </Helmet>
 
       <Navigation />
-{/* Hero Section */}
+      {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-        <div className="relative max-w-7xl mx-auto text-center"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI 3D</h1>
+            AI 3D
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Generation
             </span>
@@ -125,8 +124,7 @@ description: 'Create game assets, characters, and environments instantly',
             Generate high-quality 3D assets from simple text descriptions in seconds.
 
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"><button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
               Try AI 3D Generator
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
@@ -139,15 +137,14 @@ description: 'Create game assets, characters, and environments instantly',
 
       {/* Features Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Powerful 3D Generation Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI-powered 3D generation technology combines cutting-edge machine learning 
               with intuitive design tools to create professional-quality 3D models.
-
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center">
@@ -163,9 +160,7 @@ description: 'Create game assets, characters, and environments instantly',
 
 {/* Applications Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-4">
+        <div className="max-w-7xl mx-auto"><div className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-4">
               Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -290,9 +285,9 @@ description: 'Create game assets, characters, and environments instantly',
             </div>
           </div>
         </section>
-      </main>
 
-      <Footer />
+        <Footer />
+      </main>
     </>
   );
 };

@@ -157,9 +157,7 @@ export default function CaseStudiesPage() {
                       <div className="flex items-center text-sm text-gray-300">
                         <DollarSign className="w-4 h-4 mr-2" />
                         Budget: {study.budget}
-                      </div>
-                    </div>
-                  </div>
+                      </div></div></div>
 
                   <div className="space-y-4">
                     <div>
@@ -213,9 +211,7 @@ export default function CaseStudiesPage() {
                 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                   Schedule Consultation
                 </button>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
       </div>
 

@@ -276,10 +276,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   if (process.env['NODE_ENV'] === 'development') {
     return (
-      <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div>
-        <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
-        <div className='text-xs space-y-1'></div>
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
+      <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'><h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
+        <div className='text-xs space-y-1'><div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
           <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
           <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
           <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
@@ -292,8 +290,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               : 'N/A'}</div>
         </div>
         {_recommendations.length > 0 && (
-          <div className='mt-2'></div>
-            <h4 className='font-semibold text-xs text-red-600'>
+          <div className='mt-2'><h4 className='font-semibold text-xs text-red-600'>
               Recommendations:
             </h4>
             <ul className='text-xs text-red-600'>

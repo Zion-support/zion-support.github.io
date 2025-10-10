@@ -4,8 +4,7 @@ import Navigation from '../components/Navigation';
 
 const Header: React.FC = () => {
   return (
-    <>
-      <Navigation />
+    <Navigation />
       {/* Spacer to prevent content from going under fixed header */}
       <div className="h-16 lg:h-20" />
     </>

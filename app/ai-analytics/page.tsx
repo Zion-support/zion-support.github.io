@@ -90,8 +90,7 @@ const AIAnalyticsPage: React.FC = () => {
   ],
 
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Transform your data into actionable insights with our AI Analytics solution. Advanced analytics, real-time monitoring, and predictive modeling for better business decisions." />
         <meta name="keywords" content="AI analytics, business intelligence, data analysis, predictive analytics, real-time monitoring, data visualization" />
@@ -223,9 +222,7 @@ const AIAnalyticsPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
                   Schedule Demo
                 </button>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
       </main>
 

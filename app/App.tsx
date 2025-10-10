@@ -72,7 +72,7 @@ const App: React.FC = () => {
     <ErrorBoundary>
       <HelmetProvider>
         <BrowserRouter>
-          <div className="App"></div>
+          <div className="App">
             <PerformanceMonitor />
             <AccessibilityEnhancer />
             <Suspense fallback={<AppLoadingSpinner />}>
@@ -128,7 +128,7 @@ const App: React.FC = () => {
               <Route path="/support" element={<SupportPage />} />
               <Route path="/status" element={<StatusPage />} />
               <Route path="/consultation" element={<ConsultationPage />} />
-            </Routes>
+              </Routes>
             </Suspense>
           </div>
         </BrowserRouter>

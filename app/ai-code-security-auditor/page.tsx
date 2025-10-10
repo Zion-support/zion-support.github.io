@@ -96,8 +96,7 @@ const AICodeSecurityAuditorPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>AI Code Security Auditor - Zion Tech Group</title>
         <meta name="description" content="Secure your code with our AI Code Security Auditor. Automated vulnerability detection, security analysis, and compliance checking for better code security." />
         <meta name="keywords" content="AI code security, security auditing, vulnerability detection, code analysis, security compliance, secure coding" />
@@ -229,9 +228,7 @@ const AICodeSecurityAuditorPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300">
                   Schedule Demo
                 </button>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
       </main>
 

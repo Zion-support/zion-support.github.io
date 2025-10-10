@@ -25,9 +25,7 @@ const PagePage: React.FC = () => {
             >
               Get Started Today
             </a>
-          </div>
-        </div>
-      </div>
+          </div></div></div>
     </div>
   );
 };

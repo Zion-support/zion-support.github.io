@@ -51,8 +51,7 @@ const MicroSaasPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group | Affordable AI & IT Tools</title>
         <meta name="description" content="Discover our micro SaaS solutions - affordable, scalable AI and IT tools designed for growing businesses. Start with low monthly costs." />
         <meta name="keywords" content="micro SaaS, SaaS solutions, business tools, AI tools, affordable software, subscription software" />
@@ -213,9 +212,7 @@ const MicroSaasPage: React.FC = () => {
               >
                 Contact Sales
               </Link>
-            </div>
-          </div>
-        </div>
+            </div></div></div>
       </div>
     </>
   );

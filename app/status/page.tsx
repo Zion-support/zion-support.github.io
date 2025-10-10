@@ -216,9 +216,7 @@ export default function StatusPage() {
                   <div className="flex justify-between">
                     <span className="text-gray-400">Last Incident:</span>
                     <span className="text-white">{service.lastIncident}</span>
-                  </div>
-                </div>
-              </div>
+                  </div></div></div>
             ))}
           </div>
         </div>
@@ -299,9 +297,7 @@ export default function StatusPage() {
                 <Activity className="w-6 h-6 text-white" />
               </div>
               <div className="text-3xl font-bold text-white mb-2">1.2M</div>
-              <div className="text-gray-400">Requests Today</div>
-            </div>
-          </div>
+              <div className="text-gray-400">Requests Today</div></div></div>
         </div>
       </section>
 

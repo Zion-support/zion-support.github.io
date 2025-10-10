@@ -25,10 +25,7 @@ const preloadComponents = () => {
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>
+    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"><div className="h-4 bg-gray-200 rounded mb-2"><div className="h-4 bg-gray-200 rounded w-5/6"></div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = () => {
@@ -53,8 +50,7 @@ const HomePage: React.FC = () => {
     }
   }, []);
   return (
-    <>
-      <SEOOptimizer
+    <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
@@ -1047,9 +1043,7 @@ const HomePage: React.FC = () => {
                         Monday - Friday: 9:00 AM - 6:00 PM EST<br />
                         24/7 Emergency Support Available
                       </p>
-                    </div>
-                  </div>
-                </div>
+                    </div></div></div>
               </div>
               
               {/* Quick Contact Form */}
@@ -1135,9 +1129,7 @@ const HomePage: React.FC = () => {
                     Send Message
                   </button>
                 </form>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
       </main>
       {/* Footer */}

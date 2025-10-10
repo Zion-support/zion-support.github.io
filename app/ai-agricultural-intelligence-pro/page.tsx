@@ -85,8 +85,7 @@ title: 'Crop Monitoring',
   ];
 
   return (
-    <>
-      <Helmet>
+    <Helmet>
 <title>AI Agricultural Intelligence Pro - Zion Tech Group | Smart Farming</title>
         <meta name="description" content="Transform agriculture with AI-powered intelligence solutions. Crop monitoring, precision farming, and smart agriculture technology for modern farmers." />
         <meta name="keywords" content="AI agriculture, smart farming, precision agriculture, crop monitoring, agricultural intelligence, farming technology" />

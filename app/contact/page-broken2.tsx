@@ -100,8 +100,7 @@ phone: '',
   ];
 
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." />
         <meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch" />
@@ -178,9 +177,7 @@ phone: '',
                         className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="your@email.com"
                       />
-                    </div>
-                  </div>
-                </div>
+                    </div></div></div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -214,9 +211,7 @@ phone: '',
                         className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="+1 (555) 123-4567"
                       />
-                    </div>
-                  </div>
-                </div>
+                    </div></div></div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -264,13 +259,10 @@ phone: '',
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      <span>Sending...</span>
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"><span>Sending...</span>
                     </>
                   ) : (
-                    <>
-                      <Send className="w-5 h-5" />
+                    <Send className="w-5 h-5" />
                       <span>Send Message</span>
                     </>
                   )}
@@ -344,12 +336,8 @@ phone: '',
                     <div>
                       <h3 className="text-lg font-semibold text-white">Business Hours</h3>
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                    </div></div></div>
+              </div></div></div>
         </section>
       </div>
 </div>

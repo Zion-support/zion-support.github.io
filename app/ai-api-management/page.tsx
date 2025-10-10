@@ -90,8 +90,7 @@ const AIAPIManagementPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>AI API Management - Zion Tech Group</title>
         <meta name="description" content="Streamline and secure your API infrastructure with our AI API Management solution. Advanced security, performance optimization, and intelligent monitoring." />
         <meta name="keywords" content="AI API management, API gateway, API security, microservices, API monitoring, API optimization" />
@@ -223,9 +222,7 @@ const AIAPIManagementPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-all duration-300">
                   Schedule Demo
                 </button>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
       </main>
 

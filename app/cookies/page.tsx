@@ -6,24 +6,19 @@ import Footer from '../components/Footer';
 
 const CookiesPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>Cookie Policy - Zion Tech Group</title>
         <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about how we use cookies on our website." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
-        <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"><Navigation />
         
         <main className="pt-20">
-          <div className="container mx-auto px-4 py-16"></div>
-            <div className="max-w-4xl mx-auto"></div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+          <div className="container mx-auto px-4 py-16"><div className="max-w-[^"]*"><h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                 Cookie Policy</h1>
               </h1>
               
-              <div className="prose prose-lg max-w-none"></div>
-                <p className="text-xl text-gray-600 mb-8">
+              <div className="prose prose-lg max-w-none"><p className="text-xl text-gray-600 mb-8">
                   Last updated: {new Date().toLocaleDateString()}
                 </p>
                 
@@ -41,9 +36,7 @@ const CookiesPage: React.FC = () => {
                 <p className="text-gray-700 mb-6">
                   You can control and/or delete cookies as you wish through your browser settings.
                 </p>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </main>
         
         <Footer />

@@ -142,9 +142,7 @@ export default function APIDocsPage() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
-            </div>
-          </div>
-        </div>
+            </div></div></div>
       </section>
 
       {/* Quick Start */}
@@ -183,9 +181,7 @@ export default function APIDocsPage() {
               <button className="text-purple-400 hover:text-purple-300 font-medium">
                 Start Building →
               </button>
-            </div>
-          </div>
-        </div>
+            </div></div></div>
       </section>
 
       {/* API Endpoints */}
@@ -224,13 +220,11 @@ export default function APIDocsPage() {
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
                         >
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
-                            <>
-                              <Check className="w-4 h-4" />
+                            <Check className="w-4 h-4" />
                               Copied!
                             </>
                           ) : (
-                            <>
-                              <Copy className="w-4 h-4" />
+                            <Copy className="w-4 h-4" />
                               Copy
                             </>
                           )}

@@ -406,9 +406,7 @@ const Navigation: React.FC = () => {
                 <div className="flex items-center space-x-2 text-gray-400">
                   <MapPin className="w-4 h-4" />
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-              </div>
-            </div>
+                </div></div></div>
           </div>
         )}
       </div>

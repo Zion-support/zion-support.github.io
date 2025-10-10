@@ -90,8 +90,7 @@ const AIContentWriterPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>AI Content Writer - Zion Tech Group</title>
         <meta name="description" content="Transform your content creation with our AI Content Writer. Generate high-quality blog posts, social media content, and marketing copy with AI assistance." />
         <meta name="keywords" content="AI content writer, content creation, blog writing, social media content, marketing copy, content AI" />
@@ -223,9 +222,7 @@ const AIContentWriterPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                   Schedule Demo
                 </button>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
       </main>
 

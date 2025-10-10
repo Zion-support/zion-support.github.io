@@ -90,8 +90,7 @@ const AIContentGenerationPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>AI Content Generation - Zion Tech Group</title>
         <meta name="description" content="Transform your content creation with our AI Content Generation solutions. Automated blog posts, social media content, and marketing materials for better engagement." />
         <meta name="keywords" content="AI content generation, content creation, blog writing, social media content, marketing automation, content AI" />
@@ -223,9 +222,7 @@ const AIContentGenerationPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-all duration-300">
                   Schedule Demo
                 </button>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
       </main>
 

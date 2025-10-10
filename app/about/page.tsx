@@ -62,7 +62,7 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Mission Section */}
-<section className="py-20 bg-slate-800/50">
+        <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -110,13 +110,12 @@ const AboutPage: React.FC = () => {
                       <div className="text-2xl font-bold">AI Dashboard</div>
                       <div className="text-sm text-gray-300">Real-time Analytics</div>
                     </div>
-
                   </div>
                 </div>
               </div>
             </div>
           </div>
-</section>
+        </section>
 
         {/* Values Section */}
         <section className="py-16 px-4 bg-slate-800/50">
@@ -146,9 +145,7 @@ const AboutPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Excellence</h3>
                 <p className="text-gray-300">We deliver exceptional results that exceed expectations.</p>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
 
         {/* CTA Section */}

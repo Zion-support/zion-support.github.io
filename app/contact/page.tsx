@@ -123,9 +123,7 @@ const ContactPage: React.FC = () => {
                           className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                           placeholder="your@email.com"
                         />
-                      </div>
-                    </div>
-                  </div>
+                      </div></div></div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -201,22 +199,17 @@ const ContactPage: React.FC = () => {
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
                   >
                     {isLoading ? (
-                      <>
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                        <span>Sending...</span>
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"><span>Sending...</span>
                       </>
                     ) : (
-                      <>
-                        <Send className="w-5 h-5 mr-2" />
+                      <Send className="w-5 h-5 mr-2" />
                         Send Message
                       </>
                     )}
                   </button>
                 </form>
               )}
-            </div>
-          </div>
-        </div>
+            </div></div></div>
       </div>
     </div>
   );

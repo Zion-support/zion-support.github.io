@@ -90,8 +90,7 @@ const AIAutomationPage: React.FC = () => {
   ];
 
   return (</div>
-    <>
-      <Helmet>
+    <Helmet>
         <title>AI Automation - Zion Tech Group</title>
         <meta name="description" content="Transform your business with AI Automation solutions. Intelligent process automation, workflow optimization, and smart decision-making for better efficiency." />
         <meta name="keywords" content="AI automation, process automation, workflow optimization, business automation, intelligent automation, RPA" />
@@ -223,9 +222,7 @@ const AIAutomationPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-all duration-300">
                   Schedule Demo
                 </button>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
       </main>
 

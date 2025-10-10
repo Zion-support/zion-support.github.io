@@ -90,8 +90,7 @@ const AIAutonomousSystemsPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>AI Autonomous Systems - Zion Tech Group</title>
         <meta name="description" content="Build intelligent autonomous systems with our AI technology. Self-managing, adaptive, and goal-oriented systems for various industries and applications." />
         <meta name="keywords" content="AI autonomous systems, autonomous vehicles, smart manufacturing, robotics, self-managing systems, adaptive AI" />
@@ -223,9 +222,7 @@ const AIAutonomousSystemsPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-violet-600 transition-all duration-300">
                   Schedule Demo
                 </button>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
       </main>
 

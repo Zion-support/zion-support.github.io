@@ -123,8 +123,7 @@ const AIClimateSolutionsProPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>AI Climate Solutions Pro - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI-powered climate solutions for sustainability, carbon reduction, and environmental management. Advanced analytics and optimization for climate action." />
         <meta name="keywords" content="AI climate solutions, sustainability, carbon reduction, environmental management, climate analytics, green technology" />
@@ -256,9 +255,7 @@ const AIClimateSolutionsProPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300">
                   Schedule Demo
                 </button>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
       </main>
 

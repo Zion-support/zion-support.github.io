@@ -167,8 +167,7 @@ const Sidebar: React.FC = () => {
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
               </div>
-              <div></div>
-                <h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
+              <div><h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
                 <p className="text-xs text-cyan-400">AI & IT Solutions</p>
               </div>
             </Link>

@@ -90,8 +90,7 @@ const AIContentStudioPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>AI Content Studio - Zion Tech Group</title>
         <meta name="description" content="Create stunning content with our AI Content Studio. Advanced design tools, content generation, and collaboration features for better content creation." />
         <meta name="keywords" content="AI content studio, content creation, design tools, content generation, marketing automation, content AI" />
@@ -223,9 +222,7 @@ const AIContentStudioPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-rose-600 transition-all duration-300">
                   Schedule Demo
                 </button>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
       </main>
 

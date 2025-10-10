@@ -48,8 +48,7 @@ company: 'DataFlow Inc',
 
 return (
 
-    <>
-      <Helmet>
+    <Helmet>
         <title>Demo - Zion Tech Group | See Our Solutions in Action</title>
         <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
         <meta name="keywords" content="demo, AI demo, technology demo, Zion Tech Group, interactive demo" />
@@ -100,9 +99,7 @@ return (
                       </div>
                       <div className="ml-4">
                         <Play className="w-6 h-6 text-cyan-400" />
-                      </div>
-                    </div>
-                  </div>
+                      </div></div></div>
                 ))}
               </div>
 
@@ -132,9 +129,7 @@ return (
                       </li>
                     ))}
                   </ul>
-                </div>
-              </div>
-            </div>
+                </div></div></div>
           </div>
         </section>
 

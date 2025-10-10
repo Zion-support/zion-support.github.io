@@ -91,9 +91,7 @@ export default function SupportPage() {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
 
         {/* Contact Support */}
@@ -151,9 +149,7 @@ export default function SupportPage() {
                 <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Response Time</h3>
                 <p className="text-gray-300">Within 2 hours for critical issues</p>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
       </div>
 

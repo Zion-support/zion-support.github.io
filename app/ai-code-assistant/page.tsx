@@ -96,8 +96,7 @@ const AICodeAssistantPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>AI Code Assistant - Zion Tech Group</title>
         <meta name="description" content="Boost your coding productivity with our AI Code Assistant. Intelligent code generation, debugging, and optimization for faster, better software development." />
         <meta name="keywords" content="AI code assistant, code generation, debugging, programming, software development, code optimization, AI coding" />
@@ -229,9 +228,7 @@ const AICodeAssistantPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
                   Schedule Demo
                 </button>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
       </main>
 

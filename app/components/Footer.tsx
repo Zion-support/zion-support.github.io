@@ -236,9 +236,7 @@ const Footer: React.FC = memo(() => {
               <div className="flex items-center text-sm text-gray-300">
                 <Clock className="w-4 h-4 mr-2" />
                 <span>{contactInfo.hours}</span>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -255,9 +253,7 @@ const Footer: React.FC = memo(() => {
               <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
               </a>
-            </div>
-          </div>
-        </div>
+            </div></div></div>
       </div>
     </footer>
   );

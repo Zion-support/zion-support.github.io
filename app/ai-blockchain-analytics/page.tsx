@@ -90,8 +90,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>AI Blockchain Analytics - Zion Tech Group</title>
         <meta name="description" content="Unlock the power of blockchain data with our AI-powered analytics platform. Comprehensive insights for DeFi, NFT, and crypto markets with real-time intelligence." />
         <meta name="keywords" content="blockchain analytics, crypto analytics, DeFi analytics, NFT analytics, blockchain intelligence, crypto data, blockchain AI" />
@@ -223,9 +222,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-all duration-300">
                   Schedule Demo
                 </button>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </section>
       </main>
 

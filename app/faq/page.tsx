@@ -38,8 +38,7 @@ const FAQPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <Helmet>
         <title>Frequently Asked Questions - Zion Tech Group</title>
         <meta name="description" content="Find answers to common questions about our AI and IT solutions, services, development process, and how we can help transform your business." />
       </Helmet>
@@ -93,9 +92,7 @@ const FAQPage: React.FC = () => {
                 >
                   Free Consultation
                 </a>
-              </div>
-            </div>
-          </div>
+              </div></div></div>
         </div>
       </div>
     </>
