@@ -131,61 +131,39 @@ const Navigation: React.FC = () => {
 { name: 'AI Smart Calendar', path: '/ai-smart-calendar', description: 'Intelligent scheduling and time management', icon: '📅', popular: true },
         { name: 'AI Content Writer', path: '/ai-content-writer', description: 'Advanced content generation', icon: '✍️', popular: true },
         { name: 'AI Video Generator', path: '/ai-video-generator', description: 'AI-powered video creation', icon: '🎥', popular: true },
-        { name: 'AI CRM Assistant', path: '/ai-crm-assistant', description: 'Intelligent customer relationship management', icon: '👥', popular: true },
-        { name: 'AI Quantum Financial Oracle', path: '/ai-quantum-financial-oracle', description: 'Quantum-powered financial analysis', icon: '⚛️', popular: true },
-        { name: 'AI 3D Generation Studio', path: '/ai-3d-generation', description: 'AI-powered 3D model generation', icon: '🎨', popular: true },
-        { name: 'AI Mobile App Builder', path: '/ai-mobile-app-builder', description: 'AI-powered mobile app development', icon: '📱', popular: true },
-        { name: 'AI Logo Designer Pro', path: '/ai-logo-designer', description: 'AI-powered logo design', icon: '🎨', popular: true }
-{ name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true }
-=======
+        { name: 'AI CRM Assistant', path: '/ai-crm-assistant', description: 'Intelligent customer relationship management', icon: '👥', popular: true }
+
+
+
+
+
+        { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
+        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite', icon: '✍️', popular: true },
+        { name: 'AI Financial Advisor', path: '/ai-financial-advisor', description: 'Personalized financial planning', icon: '💰', popular: false },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Visual workflow builder', icon: '⚡', popular: true },
         { name: 'AI Smart Calendar', path: '/ai-smart-calendar', description: 'Intelligent scheduling and time management', icon: '📅', popular: true },
         { name: 'AI Content Writer', path: '/ai-content-writer', description: 'Advanced content generation', icon: '✍️', popular: true },
         { name: 'AI Video Generator', path: '/ai-video-generator', description: 'AI-powered video creation', icon: '🎥', popular: true },
-        { name: 'AI CRM Assistant', path: '/ai-crm-assistant', description: 'Intelligent customer relationship management', icon: '👥', popular: true }
->>>>>>> cursor/website-audit-and-update-with-deployment-006d
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f31a
-=======
->>>>>>> origin/main
-      ]
-    },
-    {
-      title: 'AI Services',
-      icon: Brain,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      hoverColor: 'hover:bg-purple-500/20',
-      services: [
-{ name: 'AI Quantum Computing Platform', path: '/ai-quantum-computing', description: 'Revolutionary quantum solutions', icon: '⚛️', popular: true },
-        { name: 'AI Autonomous Vehicle Systems', path: '/ai-autonomous-systems', description: 'Advanced autonomous technology', icon: '🚗', popular: true },
-        { name: 'AI Space Exploration Platform', path: '/ai-space-technology-pro', description: 'Space mission optimization', icon: '🚀', popular: true },
-        { name: 'AI Climate Intelligence', path: '/ai-climate-solutions-pro', description: 'Environmental monitoring', icon: '🌍', popular: true },
-        { name: 'AI Drug Discovery Platform', path: '/ai-drug-discovery-pro', description: 'Pharmaceutical research', icon: '💊', popular: true },
-        { name: 'AI Workflow Automation Platform', path: '/ai-workflow-automation', description: 'Business process automation', icon: '⚡', popular: true },
-        { name: 'AI Customer Support Suite', path: '/ai-customer-support', description: 'Advanced 24/7 support', icon: '🤖', popular: true },
-        { name: 'AI Data Analytics Platform', path: '/ai-data-analytics', description: 'ML-powered analytics', icon: '📊', popular: true }
-=======
-=======
->>>>>>> origin/main
+
+
+        { name: 'AI Workflow Automation Platform', path: '/ai-workflow-automation', description: 'End-to-end business process automation', icon: '⚡', popular: true },
+        { name: 'AI Customer Support Suite', path: '/ai-customer-support', description: 'Advanced 24/7 customer support', icon: '🤖', popular: true },
+        { name: 'AI Data Analytics Platform', path: '/ai-data-analytics', description: 'Advanced analytics with ML predictions', icon: '📊', popular: true },
+        { name: 'AI Content Generation Studio', path: '/ai-content-generation', description: 'Complete content creation suite', icon: '✍️', popular: true },
+        { name: 'AI Healthcare Solutions', path: '/ai-healthcare', description: 'Medical AI and diagnosis support', icon: '🏥', popular: true },
+        { name: 'AI Fintech Platform', path: '/ai-fintech', description: 'Financial AI and fraud detection', icon: '💳', popular: true },
+
         { name: 'AI Computer Vision Platform', path: '/ai-computer-vision', description: 'Advanced image recognition', icon: '👁️', popular: true },
         { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform', icon: '🧠', popular: true },
         { name: 'AI Quantum Computing', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: true },
         { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro', description: 'Advanced pharmaceutical AI', icon: '💊', popular: true },
         { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro', description: 'Environmental AI solutions', icon: '🌱', popular: true },
-{ name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro', description: 'Pharmaceutical research acceleration', icon: '🧬', popular: true },
-        { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro', description: 'Environmental monitoring & optimization', icon: '🌍', popular: true },
-        { name: 'AI Space Technology Pro', path: '/ai-space-technology-pro', description: 'Space exploration & satellite management', icon: '🚀', popular: true },
-        { name: 'AI Financial Crime Detection', path: '/ai-financial-crime-detection-pro', description: 'Real-time fraud detection', icon: '🛡️', popular: true },
-        { name: 'AI Healthcare Solutions', path: '/ai-healthcare', description: 'Medical AI and diagnostics', icon: '🏥', popular: true },
-        { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Image recognition & analysis', icon: '👁️', popular: true },
-        { name: 'AI Machine Learning', path: '/ai-ml-platform', description: 'ML model development & deployment', icon: '🤖', popular: true },
-        { name: 'AI Quantum Computing', path: '/ai-quantum-computing', description: 'Quantum algorithms & computing', icon: '⚛️', popular: false },
-=======
+
         { name: 'AI Space Technology Pro', path: '/ai-space-technology-pro', description: 'Space exploration AI', icon: '🚀', popular: true },
         { name: 'AI Neural Memory Assistant', path: '/ai-neural-memory-assistant', description: 'Advanced AI with persistent memory', icon: '🧠', popular: true },
         { name: 'AI Holographic Workspace', path: '/ai-holographic-workspace', description: 'Immersive 3D collaboration', icon: '🥽', popular: false },
         { name: 'AI Fashion Design Studio', path: '/ai-fashion-design', description: 'AI-powered fashion design', icon: '👗', popular: true }
->>>>>>> origin/main
+
       ]
     },
     {
@@ -195,25 +173,21 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-blue-500/10',
       hoverColor: 'hover:bg-blue-500/20',
       services: [
-{ name: 'Custom Software Development', path: '/custom-development', description: 'Tailored software solutions', icon: '💻', popular: true }
-=======
-=======
->>>>>>> origin/main
+
+
+        { name: 'Cloud Migration & Setup', path: '/cloud-migration', description: 'Seamless cloud migration', icon: '☁️', popular: true },
+        { name: 'Enterprise Cybersecurity Suite', path: '/cybersecurity', description: 'Comprehensive security solutions', icon: '🛡️', popular: true },
+        { name: 'IT Infrastructure Design', path: '/it-infrastructure', description: 'Scalable infrastructure architecture', icon: '🏗️', popular: true },
+        { name: '24/7 IT Support & Monitoring', path: '/it-support', description: 'Round-the-clock technical support', icon: '🔄', popular: true },
+        { name: 'Custom Software Development', path: '/custom-development', description: 'Tailored software solutions', icon: '💻', popular: true },
+
         { name: 'DevOps & CI/CD Implementation', path: '/devops-cicd', description: 'Streamlined development processes', icon: '⚙️', popular: true },
         { name: 'Database Management & Optimization', path: '/database-management', description: 'Performance tuning & security', icon: '🗄️', popular: true },
         { name: 'Network Design & Implementation', path: '/network-design', description: 'Secure network infrastructure', icon: '🌐', popular: true },
         { name: 'AI Infrastructure Monitoring', path: '/ai-infrastructure-monitoring', description: 'Intelligent infrastructure monitoring', icon: '📊', popular: true },
         { name: 'Blockchain Integration Services', path: '/blockchain-integration-services', description: 'Web3 and blockchain solutions', icon: '⛓️', popular: true },
         { name: 'AI API Management', path: '/ai-api-management', description: 'Intelligent API management', icon: '🔗', popular: true },
-{ name: 'Cloud Migration & Setup', path: '/cloud-migration', description: 'Seamless cloud migration with zero downtime', icon: '☁️', popular: true },
-        { name: 'Cybersecurity Suite', path: '/cybersecurity', description: 'Comprehensive security solutions', icon: '🔒', popular: true },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure', description: 'Scalable infrastructure architecture', icon: '🏗️', popular: true },
-        { name: '24/7 IT Support', path: '/it-support', description: 'Round-the-clock technical support', icon: '🛠️', popular: true },
-        { name: 'Custom Development', path: '/custom-development', description: 'Tailored software solutions', icon: '💻', popular: true },
-        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'Automated deployment pipelines', icon: '🔄', popular: true },
-        { name: 'Database Management', path: '/database-management', description: 'Database optimization & maintenance', icon: '🗄️', popular: true },
-        { name: 'Network Design', path: '/network-design', description: 'Secure network architecture', icon: '🌐', popular: false },
-=======
+
         { name: 'Smart Contract Security Audit', path: '/smart-contract-security-audit', description: 'Blockchain security auditing', icon: '🔒', popular: true },
         { name: 'AI IT Operations (AIOps)', path: '/ai-ops', description: 'AI-powered IT operations', icon: '🤖', popular: true },
         { name: 'Healthcare IT Solutions', path: '/healthcare-it', description: 'HIPAA-compliant healthcare IT', icon: '🏥', popular: true },
@@ -221,7 +195,7 @@ const Navigation: React.FC = () => {
         { name: 'Edge Computing Solutions', path: '/edge-computing', description: 'Low-latency edge infrastructure', icon: '📡', popular: true },
         { name: '5G Network Implementation', path: '/5g-implementation', description: 'High-speed 5G networks', icon: '📶', popular: false },
         { name: 'IoT Platform Development', path: '/iot-platform', description: 'Comprehensive IoT solutions', icon: '🌐', popular: true }
->>>>>>> origin/main
+
       ]
     },
     {
@@ -238,28 +212,12 @@ const Navigation: React.FC = () => {
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices', icon: '📡', popular: true },
         { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences', icon: '🥽', popular: true },
         { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions', icon: '🏙️', popular: true },
-{ name: 'AI Autonomous Systems', path: '/ai-autonomous-systems', description: 'AI-powered autonomous systems', icon: '🤖', popular: true },
-        { name: 'AI Blockchain Solutions', path: '/ai-blockchain-solutions', description: 'AI-powered blockchain technology', icon: '⛓️', popular: true },
-        { name: 'AI Holographic Workspace', path: '/ai-holographic-workspace', description: 'Immersive 3D collaboration', icon: '🥽', popular: false },
-        { name: 'AI Energy Management', path: '/ai-energy', description: 'Smart energy optimization', icon: '⚡', popular: true },
-        { name: 'AI Music Composition', path: '/ai-music-composition', description: 'AI-powered music creation', icon: '🎵', popular: true },
-        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization', icon: '🔄', popular: true },
-{ name: 'AI Holographic Workspace', path: '/ai-holographic-workspace', description: '3D holographic interfaces', icon: '🥽', popular: true },
-        { name: 'AI Neural Memory Assistant', path: '/ai-neural-memory-assistant', description: 'Cognitive enhancement AI', icon: '🧠', popular: true },
-        { name: 'AI Quantum Financial Oracle', path: '/ai-quantum-financial-oracle', description: 'Quantum financial predictions', icon: '⚛️', popular: true },
-        { name: 'AI Space Technology Pro', path: '/ai-space-technology-pro', description: 'Space exploration AI', icon: '🚀', popular: true },
-        { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro', description: 'Environmental AI solutions', icon: '🌍', popular: true },
-        { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro', description: 'Pharmaceutical AI research', icon: '💊', popular: true },
-        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions', icon: '⛓️', popular: false },
-        { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences', icon: '🥽', popular: false }
-=======
-        { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping', icon: '🧪', popular: true },
+{ name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping', icon: '🧪', popular: true },
         { name: 'AI Financial Crime Detection Pro', path: '/ai-financial-crime-detection-pro', description: 'Advanced fraud detection', icon: '🔍', popular: true },
         { name: 'AI Supply Chain Optimization Pro', path: '/ai-supply-chain-optimization-pro', description: 'Intelligent supply chain', icon: '📦', popular: true },
         { name: 'AI Energy Grid Management Pro', path: '/ai-energy-pro', description: 'Smart energy solutions', icon: '⚡', popular: true },
         { name: 'AI Agricultural Intelligence Pro', path: '/ai-agricultural-intelligence-pro', description: 'Smart farming solutions', icon: '🌾', popular: true }
->>>>>>> cursor/website-audit-and-update-with-deployment-006d
-=======
+
         { name: 'Quantum Computing Solutions', path: '/ai-quantum-computing', description: 'Quantum algorithms & computing', icon: '⚛️', popular: false },
         { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-operating intelligent systems', icon: '🤖', popular: true },
         { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized applications & smart contracts', icon: '⛓️', popular: true },
@@ -268,7 +226,7 @@ const Navigation: React.FC = () => {
         { name: 'Smart Cities', path: '/smart-cities', description: 'Intelligent urban infrastructure', icon: '🏙️', popular: false },
         { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization & automation', icon: '🔄', popular: true },
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and experimental technologies', icon: '🧪', popular: false },
->>>>>>> cursor/website-audit-and-update-with-deployment-f31a
+
       ]
     }
   ];
@@ -284,9 +242,7 @@ const Navigation: React.FC = () => {
   ];
 
   return (
-isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20 neon-glow' : 'bg-transparent'
-    }`}>
-=======
+
     <>
       {/* Header */}
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -339,12 +295,40 @@ className="text-white hover:text-cyan-400 transition-colors duration-200 font-me
               Services
             </Link>
             <Link 
+              to="/micro-saas" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+              onClick={closeAllMenus}
+            >
+              Micro SAAS
+            </Link>
+            <Link 
+              to="/ai-services" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+              onClick={closeAllMenus}
+            >
+              AI Services
+            </Link>
+            <Link 
+              to="/it-services" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+              onClick={closeAllMenus}
+            >
+              IT Services
+            </Link>
+            <Link 
+              to="/case-studies" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+              onClick={closeAllMenus}
+            >
+              Case Studies
+            </Link>
+            <Link 
               to="/pricing" 
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
               onClick={closeAllMenus}
             >
               Pricing
-=======
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
@@ -356,47 +340,85 @@ className="text-white hover:text-cyan-400 transition-colors duration-200 font-me
                 <span className="text-white font-bold text-xl cyber-text">Zion Tech Group</span>
                 <span className="text-cyan-400 text-xs font-medium">AI & IT Solutions</span>
               </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-f31a
+
             </Link>
             <Link 
-              to="/team" 
+to="/blog" 
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
               onClick={closeAllMenus}
             >
-              Team
+              Blog
             </Link>
-            <Link 
-              to="/careers" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+                aria-expanded={servicesOpen}
+                aria-haspopup="true"
+              >
+                <span>Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
+                  <div className="grid grid-cols-2 gap-6 px-6">
+                    {serviceCategories.map((category, index) => (
+                      <div key={index} className="space-y-3">
+                        <div className="flex items-center space-x-2 mb-3">
+                          <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
+                            <category.icon className={`w-4 h-4 ${category.color}`} />
+                          </div>
+                          <h3 className="font-semibold text-gray-900 text-sm">{category.title}</h3>
+                        </div>
+                        <div className="space-y-2">
+                          {category.services.slice(0, 6).map((service, serviceIndex) => (
+                            <Link
+                              key={serviceIndex}
+                              to={service.path}
+                              className="block px-3 py-2 text-sm text-gray-600 hover:bg-cyan-400/20 hover:text-cyan-600 rounded-lg transition-colors"
+                              onClick={closeAllMenus}
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="border-t border-gray-200 mt-6 pt-4 px-6">
+                    <Link
+                      to="/services"
+                      className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
+                      onClick={closeAllMenus}
+                    >
+                      View All Services
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <Link
+              to="/contact"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
-              Careers
+              Contact
             </Link>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              {/* Main Links */}
-              <div className="flex items-center space-x-6">
-                {mainLinks.map((link, index) => (
-                  <Link
-                    key={index}
-                    to={link.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium flex items-center space-x-1"
-                    onClick={closeAllMenus}
-                  >
-                    <link.icon className="w-4 h-4" />
-                    <span>{link.name}</span>
-                  </Link>
-                ))}
-              </div>
-
-className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center cyber-button neon-glow"
+            
+            {/* CTA Button */}
+            <Link
+              to="/contact"
+              className="neon-button hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center"
               onClick={closeAllMenus}
             >
               Get Started
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
-=======
+
             {/* CTA Buttons */}
             <div className="flex items-center space-x-4">
               <Link
@@ -422,7 +444,7 @@ className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hove
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-006d
+
           </div>
 
           {/* Mobile Menu Buttons */}
@@ -471,6 +493,27 @@ className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hove
                 Services
               </Link>
               <Link 
+                to="/micro-saas" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Micro SAAS
+              </Link>
+              <Link 
+                to="/ai-services" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                AI Services
+              </Link>
+              <Link 
+                to="/it-services" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                IT Services
+              </Link>
+              <Link 
                 to="/pricing" 
                 className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
                 onClick={closeAllMenus}
@@ -494,10 +537,10 @@ className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hove
 
               {/* Mobile Services */}
               <div>
-=======
+
               {/* Services Dropdown */}
               <div className="relative group">
->>>>>>> cursor/website-audit-and-update-with-deployment-f31a
+
                 <button
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium flex items-center space-x-1"
                   onMouseEnter={() => setServicesOpen(true)}

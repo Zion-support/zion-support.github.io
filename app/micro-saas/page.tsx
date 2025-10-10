@@ -345,45 +345,204 @@ name: 'AI Holographic Workspace',
       features: ['3D Workspace', 'Holographic UI', 'Spatial Computing', 'Collaborative Environment', 'Virtual Meetings', 'AR Integration'],
       popular: true,
       rating: 4.7,
-      users: '400+',
-      trial: '7-day free trial'
-    },
-    { 
-      name: 'AI Autonomous Systems Pro', 
-      href: '/ai-autonomous-systems', 
-      icon: Settings, 
-      category: 'Autonomous AI', 
-      price: '$4,200/mo',
-      description: 'Self-managing systems with advanced AI decision-making and autonomous operations',
-      features: ['Autonomous Operations', 'Self-Healing Systems', 'Predictive Maintenance', 'Intelligent Monitoring', 'Adaptive Learning', 'Risk Management'],
-      popular: true,
-      rating: 4.8,
-      users: '300+',
-      trial: '21-day free trial'
-    },
-    { 
-      name: 'AI Blockchain Solutions Pro', 
-      href: '/ai-blockchain-solutions', 
-      icon: Shield, 
-      category: 'Blockchain AI', 
-      price: '$3,800/mo',
-      description: 'Advanced blockchain integration with AI-powered smart contracts and DeFi protocols',
-      features: ['Smart Contracts', 'DeFi Integration', 'NFT Marketplace', 'Cross-chain Operations', 'Token Economics', 'Governance Systems'],
-      popular: false,
-      rating: 4.6,
-      users: '250+',
+users: '1,200+',
       trial: '14-day free trial'
     },
     { 
-      name: 'AI Energy Grid Management', 
-      href: '/ai-energy', 
-      icon: Zap, 
-      category: 'Energy AI', 
-      price: '$6,500/mo',
-      description: 'Intelligent energy distribution and optimization for smart cities and utilities',
-      features: ['Grid Optimization', 'Demand Forecasting', 'Renewable Integration', 'Load Balancing', 'Energy Trading', 'Carbon Tracking'],
-      popular: false,
+      name: 'AI Mobile App Builder Pro', 
+      href: '/ai-mobile-app-builder', 
+      icon: Smartphone, 
+      category: 'Development', 
+      price: '$399/mo',
+      description: 'AI-powered mobile app development with automated coding, testing, and deployment',
+      features: ['Auto Code Generation', 'UI/UX Design', 'Cross-platform Development', 'Automated Testing', 'App Store Optimization', 'Performance Monitoring'],
+      popular: true,
+      rating: 4.8,
+      users: '2,300+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-hr-assistant',
+      capabilities: ['50% faster hiring process', '80% reduction in HR admin time', 'Automated compliance tracking', 'Employee satisfaction insights']
+    },
+
+    // New Innovative Services
+    { 
+      name: 'AI Voice Assistant Pro', 
+      href: '/ai-voice-assistant', 
+      icon: Brain, 
+      category: 'AI Tools', 
+      price: '$149/mo',
+      description: 'Advanced voice AI assistant with natural language processing, multi-language support, and custom voice training',
+      features: ['Natural Language Processing', 'Multi-language Support', 'Custom Voice Training', 'Voice Commands', 'Text-to-Speech', 'Speech Recognition', 'Voice Analytics', 'Integration APIs'],
+      popular: true,
+      rating: 4.8,
+      users: '3,200+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-voice-assistant',
+      capabilities: ['95% voice recognition accuracy', 'Support for 50+ languages', 'Real-time voice processing', 'Custom voice cloning']
+    },
+    { 
+      name: 'AI Document Scanner Pro', 
+      href: '/ai-document-scanner', 
+      icon: FileText, 
+      category: 'Document Management', 
+      price: '$79/mo',
+      description: 'Intelligent document scanning with OCR, data extraction, and automated organization. Perfect for businesses handling large volumes of documents.',
+      features: ['Advanced OCR Technology', 'Data Extraction', 'Document Classification', 'Auto Organization', 'Search & Retrieval', 'Cloud Storage', 'Batch Processing', 'API Integration'],
+      popular: true,
       rating: 4.7,
+      users: '2,100+',
+      trial: '10-day free trial',
+      link: 'https://ziontechgroup.com/ai-document-scanner',
+      capabilities: ['99% OCR accuracy', 'Process 1000+ docs/hour', 'Auto data extraction', 'Smart document sorting']
+    },
+    { 
+      name: 'AI Meeting Transcriber Pro', 
+      href: '/ai-meeting-transcriber', 
+      icon: Video, 
+      category: 'Communication', 
+      price: '$99/mo',
+      description: 'Real-time meeting transcription with AI-powered insights, action items extraction, and meeting summaries',
+      features: ['Real-time Transcription', 'Speaker Identification', 'Action Items Extraction', 'Meeting Summaries', 'Search & Playback', 'Multi-language Support', 'Integration with Calendars', 'Analytics Dashboard'],
+      popular: true,
+      rating: 4.9,
+      users: '4,500+',
+      trial: '7-day free trial',
+      link: 'https://ziontechgroup.com/ai-meeting-transcriber',
+      capabilities: ['98% transcription accuracy', 'Real-time processing', 'Auto action item detection', 'Meeting insights & analytics']
+    },
+    { 
+      name: 'AI Website Builder Pro', 
+      href: '/ai-website-builder', 
+      icon: Globe, 
+      category: 'Web Development', 
+      price: '$199/mo',
+      description: 'AI-powered website builder with drag-and-drop interface, automatic SEO optimization, and responsive design',
+      features: ['Drag & Drop Builder', 'AI Design Suggestions', 'Auto SEO Optimization', 'Responsive Design', 'E-commerce Integration', 'Analytics Dashboard', 'Custom Domain', 'SSL Certificate'],
+      popular: true,
+      rating: 4.8,
+      users: '5,200+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-website-builder',
+      capabilities: ['Build websites in minutes', 'Auto SEO optimization', 'Mobile-first design', 'E-commerce ready']
+    },
+    { 
+      name: 'AI Data Visualizer Pro', 
+      href: '/ai-data-visualizer', 
+      icon: BarChart, 
+      category: 'Analytics', 
+      price: '$129/mo',
+      description: 'Intelligent data visualization with automatic chart generation, interactive dashboards, and AI-powered insights',
+      features: ['Auto Chart Generation', 'Interactive Dashboards', 'AI Insights', 'Real-time Data', 'Custom Visualizations', 'Export Options', 'Collaboration Tools', 'API Integration'],
+      popular: true,
+      rating: 4.7,
+      users: '2,800+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-data-visualizer',
+      capabilities: ['Auto chart recommendations', 'Interactive dashboards', 'AI-powered insights', 'Real-time data updates']
+    },
+    { 
+      name: 'AI Email Signature Manager', 
+      href: '/ai-email-signature-manager', 
+      icon: Mail, 
+      category: 'Email Tools', 
+      price: '$39/mo',
+      description: 'Professional email signature management with AI-powered design suggestions and team-wide deployment',
+      features: ['Signature Templates', 'AI Design Suggestions', 'Team Management', 'Brand Consistency', 'Mobile Optimization', 'Analytics Tracking', 'Easy Deployment', 'Custom Fields'],
+      popular: false,
+      rating: 4.6,
+      users: '1,400+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-email-signature-manager',
+      capabilities: ['Professional signatures', 'Brand consistency', 'Team-wide deployment', 'Mobile optimization']
+    },
+    { 
+      name: 'AI Password Generator Pro', 
+      href: '/ai-password-generator', 
+      icon: Lock, 
+      category: 'Security', 
+      price: '$29/mo',
+      description: 'Advanced password generator with security analysis, breach monitoring, and secure storage',
+      features: ['Smart Password Generation', 'Security Analysis', 'Breach Monitoring', 'Secure Storage', 'Multi-device Sync', 'Team Sharing', '2FA Integration', 'Password History'],
+      popular: true,
+      rating: 4.8,
+      users: '6,800+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-password-generator',
+      capabilities: ['Military-grade encryption', 'Real-time breach monitoring', 'Cross-platform sync', 'Team password sharing']
+users: '900+',
+      trial: '30-day free trial'
+    },
+    { 
+      name: 'AI NLP Processing Suite', 
+      href: '/ai-nlp', 
+      icon: FileText, 
+      category: 'Language', 
+      price: '$199/mo',
+      description: 'Advanced natural language processing with sentiment analysis and language translation',
+      features: ['Sentiment Analysis', 'Language Translation', 'Text Summarization', 'Entity Recognition', 'Language Generation', 'Conversation AI'],
+      popular: true,
+      rating: 4.7,
+      users: '2,600+',
+      trial: '14-day free trial'
+    }
+  ];
+
+  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Creative', 'Computer Vision', 'Manufacturing', 'Insurance', 'Testing', 'Education', 'Health', 'Analytics', 'Industrial', 'Language', 'Design'];
+      icon: Palette, 
+      category: 'Design', 
+      price: '$79/mo',
+      description: 'AI-powered logo design with brand analysis, multiple variations, and professional quality output',
+      features: ['AI Logo Generation', 'Brand Analysis', 'Multiple Variations', 'High-res Export', 'Vector Format', 'Brand Guidelines', 'Color Palette', 'Font Suggestions'],
+      popular: true,
+      rating: 4.7,
+      users: '3,600+',
+      trial: '7-day free trial',
+      link: 'https://ziontechgroup.com/ai-logo-designer',
+      capabilities: ['Unlimited logo variations', 'Professional quality', 'Brand consistency', 'Multiple file formats']
+    },
+    { 
+      name: 'AI Invoice Designer Pro', 
+      href: '/ai-invoice-designer', 
+      icon: FileText, 
+      category: 'Business', 
+      price: '$59/mo',
+      description: 'Professional invoice design with AI-powered templates, automated calculations, and payment tracking',
+      features: ['AI Template Generation', 'Auto Calculations', 'Payment Tracking', 'Tax Integration', 'Client Portal', 'Recurring Invoices', 'Multi-currency', 'Analytics Dashboard'],
+      popular: true,
+      rating: 4.8,
+      users: '2,300+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-invoice-designer',
+      capabilities: ['Professional templates', 'Auto calculations', 'Payment tracking', 'Multi-currency support']
+    },
+    { 
+      name: 'AI Social Media Scheduler', 
+      href: '/ai-social-media-scheduler', 
+      icon: Smartphone, 
+      category: 'Social Media', 
+      price: '$89/mo',
+      description: 'Intelligent social media scheduling with optimal timing, content suggestions, and performance analytics',
+      features: ['Optimal Timing', 'Content Suggestions', 'Multi-platform Posting', 'Analytics Dashboard', 'Hashtag Research', 'Engagement Tracking', 'Auto Posting', 'Team Collaboration'],
+      popular: true,
+      rating: 4.7,
+      users: '4,100+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-social-media-scheduler',
+      capabilities: ['Optimal posting times', 'Content recommendations', 'Multi-platform management', 'Engagement analytics']
+    },
+
+    // Advanced AI-Powered Micro SAAS Services
+    { 
+      name: 'AI Quantum Analytics Pro', 
+      href: '/ai-quantum-analytics', 
+      icon: BarChart, 
+      category: 'Analytics', 
+      price: '$1,299/mo',
+      description: 'Revolutionary quantum-powered analytics with ultra-fast data processing and predictive insights',
+      features: ['Quantum Data Processing', 'Ultra-fast Analytics', 'Predictive Modeling', 'Real-time Insights', 'Quantum Machine Learning', 'Advanced Visualization', 'API Integration', 'Custom Dashboards'],
+      popular: true,
+      rating: 4.9,
+
       users: '180+',
       trial: '30-day free trial'
     },
@@ -397,12 +556,149 @@ name: 'AI Holographic Workspace',
       features: ['Satellite Operations', 'Space Mission Planning', 'Astronomical Data Analysis', 'Orbital Mechanics', 'Space Weather', 'Mission Control'],
       popular: false,
       rating: 4.9,
-      users: '120+',
-      trial: '30-day free trial'
+users: '25+',
+      trial: '60-day free trial',
+      link: 'https://ziontechgroup.com/ai-space-mission-planner',
+      capabilities: ['99.9% mission success rate', 'Optimal trajectory planning', 'Real-time space monitoring', 'Advanced orbital calculations']
     },
     { 
-      name: 'AI Climate Solutions Pro', 
-      href: '/ai-climate-solutions-pro', 
+      name: 'AI Climate Prediction Engine', 
+      href: '/ai-climate-prediction', 
+      icon: Globe, 
+      category: 'Climate Tech', 
+      price: '$799/mo',
+      description: 'Advanced climate modeling and prediction with AI-powered environmental analysis and sustainability planning',
+      features: ['Climate Modeling', 'Weather Prediction', 'Environmental Analysis', 'Carbon Tracking', 'Sustainability Planning', 'Risk Assessment', 'Real-time Monitoring', 'Policy Recommendations'],
+      popular: true,
+      rating: 4.8,
+      users: '280+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-climate-prediction',
+      capabilities: ['95% prediction accuracy', 'Real-time climate monitoring', 'Carbon footprint optimization', 'Sustainability insights']
+    },
+    { 
+      name: 'AI Quantum Security Vault', 
+      href: '/ai-quantum-security-vault', 
+      icon: Shield, 
+      category: 'Security', 
+      price: '$1,499/mo',
+      description: 'Quantum-resistant security vault with unbreakable encryption and advanced threat protection',
+      features: ['Quantum Encryption', 'Zero-knowledge Architecture', 'Advanced Threat Detection', 'Biometric Authentication', 'Multi-factor Security', 'Audit Logging', 'Compliance Tools', 'API Security'],
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-quantum-security-vault',
+      capabilities: ['Unbreakable quantum encryption', 'Zero-knowledge security', 'Advanced threat protection', 'Compliance automation']
+    },
+    { 
+      name: 'AI Molecular Designer Pro', 
+      href: '/ai-molecular-designer', 
+      icon: FileText, 
+      category: 'Science', 
+      price: '$1,999/mo',
+      description: 'AI-powered molecular design and drug discovery with advanced chemistry modeling and simulation',
+      features: ['Molecular Modeling', 'Drug Design', 'Chemical Simulation', 'Property Prediction', 'Reaction Planning', 'Toxicity Analysis', 'Patent Search', 'Collaboration Tools'],
+      popular: false,
+      rating: 4.9,
+      users: '80+',
+      trial: '45-day free trial',
+      link: 'https://ziontechgroup.com/ai-molecular-designer',
+      capabilities: ['90% accuracy in predictions', 'Faster drug discovery', 'Chemical property analysis', 'Patent-safe designs']
+    },
+    { 
+      name: 'AI Holographic Workspace Pro', 
+      href: '/ai-holographic-workspace', 
+      icon: Globe, 
+      category: 'Productivity', 
+      price: '$899/mo',
+      description: 'Immersive 3D workspace with AI-powered collaboration, virtual meetings, and spatial computing',
+      features: ['3D Workspace', 'Virtual Collaboration', 'Spatial Computing', 'AI Gestures', 'Mixed Reality', 'Real-time Translation', 'Virtual Whiteboarding', 'Immersive Presentations'],
+      popular: true,
+      rating: 4.7,
+      users: '200+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-holographic-workspace',
+      capabilities: ['Immersive 3D collaboration', 'Spatial computing', 'AI-powered gestures', 'Mixed reality integration']
+    },
+    { 
+      name: 'AI Neural Interface Pro', 
+      href: '/ai-neural-interface', 
+      icon: Brain, 
+      category: 'AI Tools', 
+      price: '$1,799/mo',
+      description: 'Advanced neural interface with brain-computer interaction, thought-to-text, and cognitive enhancement',
+      features: ['Brain-Computer Interface', 'Thought-to-Text', 'Cognitive Enhancement', 'Neural Training', 'Mind Mapping', 'Memory Augmentation', 'Focus Optimization', 'Mental Health Monitoring'],
+      popular: false,
+      rating: 4.8,
+      users: '90+',
+      trial: '45-day free trial',
+      link: 'https://ziontechgroup.com/ai-neural-interface',
+      capabilities: ['Direct brain interaction', 'Thought-to-text conversion', 'Cognitive enhancement', 'Mental health insights']
+    },
+    { 
+      name: 'AI Quantum Computing Cloud', 
+      href: '/ai-quantum-computing-cloud', 
+      icon: Cpu, 
+      category: 'Computing', 
+      price: '$3,999/mo',
+      description: 'Access to quantum computing power with AI optimization and hybrid classical-quantum algorithms',
+      features: ['Quantum Computing Access', 'Hybrid Algorithms', 'AI Optimization', 'Quantum Simulation', 'Error Correction', 'Performance Monitoring', 'API Integration', 'Custom Development'],
+      popular: true,
+      rating: 4.9,
+      users: '60+',
+      trial: '60-day free trial',
+      link: 'https://ziontechgroup.com/ai-quantum-computing-cloud',
+      capabilities: ['Quantum computing access', 'Hybrid algorithms', 'AI optimization', 'Quantum simulation']
+    },
+    { 
+      name: 'AI Autonomous Vehicle Fleet', 
+      href: '/ai-autonomous-vehicle-fleet', 
+      icon: Truck, 
+      category: 'Transportation', 
+      price: '$4,999/mo',
+      description: 'AI-powered autonomous vehicle fleet management with real-time coordination and safety monitoring',
+      features: ['Fleet Management', 'Autonomous Navigation', 'Real-time Coordination', 'Safety Monitoring', 'Route Optimization', 'Weather Adaptation', 'Maintenance Prediction', 'Performance Analytics'],
+      popular: false,
+      rating: 4.9,
+      users: '40+',
+      trial: '90-day free trial',
+      link: 'https://ziontechgroup.com/ai-autonomous-vehicle-fleet',
+      capabilities: ['99.9% safety record', 'Real-time fleet coordination', 'Weather-adaptive navigation', 'Predictive maintenance']
+    },
+    { 
+      name: 'AI Holographic Design Studio', 
+      href: '/ai-holographic-design-studio', 
+      icon: Palette, 
+      category: 'Design', 
+      price: '$699/mo',
+      description: 'Immersive 3D design studio with AI-powered creativity tools and holographic visualization',
+      features: ['3D Design Tools', 'Holographic Visualization', 'AI Creativity Assistant', 'Real-time Collaboration', 'Material Simulation', 'Lighting Analysis', 'Animation Tools', 'Export Options'],
+      popular: true,
+      rating: 4.8,
+      users: '180+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-holographic-design-studio',
+      capabilities: ['Immersive 3D design', 'Holographic visualization', 'AI creativity assistance', 'Real-time collaboration']
+    },
+    { 
+      name: 'AI Quantum Machine Learning', 
+      href: '/ai-quantum-machine-learning', 
+      icon: Brain, 
+      category: 'AI Tools', 
+      price: '$1,899/mo',
+      description: 'Quantum-enhanced machine learning with exponential speedup and advanced pattern recognition',
+      features: ['Quantum ML Algorithms', 'Exponential Speedup', 'Pattern Recognition', 'Quantum Neural Networks', 'Optimization Problems', 'Feature Selection', 'Model Training', 'Performance Analytics'],
+      popular: true,
+      rating: 4.9,
+      users: '110+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-quantum-machine-learning',
+      capabilities: ['Exponential speedup', 'Advanced pattern recognition', 'Quantum neural networks', 'Optimization solutions']
+    },
+    { 
+      name: 'AI Space Debris Tracker', 
+      href: '/ai-space-debris-tracker',
       icon: Globe, 
       category: 'Environmental AI', 
       price: '$3,200/mo',
@@ -428,10 +724,10 @@ name: 'AI Holographic Workspace',
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Quantum AI', 'Cognitive AI', 'Immersive Tech', 'Autonomous AI', 'Blockchain AI', 'Energy AI', 'Space Tech', 'Environmental AI', 'Pharma AI'];
->>>>>>> origin/main
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f31a
+
+
+  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media', 'Space Tech', 'Climate Tech', 'Science', 'Computing', 'Transportation', 'Optimization', 'Education'];
+
 
   if (!isLoaded) {
     return (
@@ -443,9 +739,9 @@ name: 'AI Holographic Workspace',
 
   return (
 <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 matrix-bg">
-=======
+
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 cyber-grid-enhanced quantum-particles">
->>>>>>> cursor/website-audit-and-update-with-deployment-006d
+
       {/* Header */}
       <div className="relative overflow-hidden quantum-field">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -466,7 +762,7 @@ name: 'AI Holographic Workspace',
               </div>
               <div className="holographic-card px-6 py-3 rounded-lg">
                 <span className="text-pink-400 font-semibold">99.9% Uptime</span>
->>>>>>> origin/main
+
               </div>
             </div>
           </div>
@@ -495,7 +791,7 @@ name: 'AI Holographic Workspace',
               key={service.name}
 className={`futuristic-card hover-lift p-8 ${
                 service.popular ? 'ring-2 ring-purple-500 neon-glow-purple' : ''
->>>>>>> origin/main
+
               }`}
             >
               {/* Animated Background */}
