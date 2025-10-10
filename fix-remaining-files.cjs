@@ -1,10 +1,21 @@
-'use client';
+const fs = require('fs');
+const path = require('path');
+
+// Get remaining files with syntax errors
+const filesWithErrors = [
+  'app/ai-design-studio/page.tsx',
+  'app/ai-document-processor/page.tsx',
+  'app/ai-document-scanner/page.tsx'
+];
+
+// Template for a properly formatted page
+const createPageTemplate = (title, description, icon, color) => `'use client';
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const AIDocumentScannerPage: React.FC = () => {
+const ${title.replace(/\s+/g, '')}Page: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -47,25 +58,25 @@ const AIDocumentScannerPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-${color}-900 to-slate-900">
       <Navigation />
       
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
-        <section className={`text-center mb-16 transition-all duration-1000 ${
+        <section className={\`text-center mb-16 transition-all duration-1000 \${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
-          <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6">
-            <Scan className="w-4 h-4 text-green-400" />
-            <span className="text-green-400 text-sm font-medium">AI Document Scanner</span>
+        }\`}>
+          <div className="inline-flex items-center space-x-2 bg-${color}-500/10 border border-${color}-500/20 rounded-full px-4 py-2 mb-6">
+            <${icon} className="w-4 h-4 text-${color}-400" />
+            <span className="text-${color}-400 text-sm font-medium">${title}</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            AI Document Scanner
+            ${title}
           </h1>
           
-          <p className="text-xl md:text-2xl text-green-400 mb-8 font-medium">
-            Advanced Document Scanning
+          <p className="text-xl md:text-2xl text-${color}-400 mb-8 font-medium">
+            ${description}
           </p>
           
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
@@ -92,7 +103,7 @@ const AIDocumentScannerPage: React.FC = () => {
           {/* Key Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="hologram-card-enhanced p-6 text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">50%</div>
+              <div className="text-3xl font-bold text-${color}-400 mb-2">50%</div>
               <div className="text-gray-300">Efficiency Gain</div>
             </div>
             <div className="hologram-card-enhanced p-6 text-center">
@@ -115,7 +126,7 @@ const AIDocumentScannerPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="hologram-card-enhanced p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl mb-4 text-green-400">
+                <div className="text-4xl mb-4 text-${color}-400">
                   <feature.icon className="w-10 h-10" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
@@ -142,7 +153,7 @@ const AIDocumentScannerPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="hologram-card-enhanced p-6 hover:scale-105 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-br from-${color}-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <p className="text-lg text-white font-medium">{benefit}</p>
@@ -184,4 +195,34 @@ const AIDocumentScannerPage: React.FC = () => {
   );
 };
 
-export default AIDocumentScannerPage;
+export default ${title.replace(/\s+/g, '')}Page;`;
+
+// Configuration for each page
+const pageConfigs = {
+  'app/ai-design-studio/page.tsx': { title: 'AI Design Studio', description: 'Creative Design Solutions', icon: 'Star', color: 'purple' },
+  'app/ai-document-processor/page.tsx': { title: 'AI Document Processor', description: 'Intelligent Document Processing', icon: 'FileText', color: 'blue' },
+  'app/ai-document-scanner/page.tsx': { title: 'AI Document Scanner', description: 'Advanced Document Scanning', icon: 'Scan', color: 'green' }
+};
+
+// Fix each file that exists
+let fixedCount = 0;
+let notFoundCount = 0;
+filesWithErrors.forEach(filePath => {
+  if (fs.existsSync(filePath)) {
+    const config = pageConfigs[filePath];
+    if (config) {
+      const content = createPageTemplate(config.title, config.description, config.icon, config.color);
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      fixedCount++;
+    } else {
+      console.log(`No config found for: ${filePath}`);
+    }
+  } else {
+    console.log(`File not found: ${filePath}`);
+    notFoundCount++;
+  }
+});
+
+console.log(`\nFixed ${fixedCount} files out of ${filesWithErrors.length} total files.`);
+console.log(`Not found: ${notFoundCount} files.`);

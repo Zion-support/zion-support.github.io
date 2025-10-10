@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// Get all files with syntax errors
+// Get all files with syntax errors that actually exist
 const filesWithErrors = [
   'app/ai-climate-solutions-pro/page.tsx',
   'app/ai-cloud-infrastructure/page.tsx',
@@ -23,7 +23,6 @@ const filesWithErrors = [
   'app/ai-cybersecurity-suite/page.tsx',
   'app/ai-data-analytics/page.tsx',
   'app/ai-data-visualization/page.tsx',
-  'app/ai-deep-learning/page.tsx',
   'app/ai-devops/page.tsx',
   'app/ai-document-analysis/page.tsx',
   'app/ai-document-processing/page.tsx',
@@ -275,7 +274,6 @@ const pageConfigs = {
   'app/ai-cybersecurity-suite/page.tsx': { title: 'AI Cybersecurity Suite', description: 'Comprehensive Security Suite', icon: 'Shield', color: 'red' },
   'app/ai-data-analytics/page.tsx': { title: 'AI Data Analytics', description: 'Intelligent Data Analysis', icon: 'BarChart', color: 'blue' },
   'app/ai-data-visualization/page.tsx': { title: 'AI Data Visualization', description: 'Advanced Data Visualization', icon: 'BarChart', color: 'purple' },
-  'app/ai-deep-learning/page.tsx': { title: 'AI Deep Learning', description: 'Advanced Deep Learning', icon: 'Brain', color: 'indigo' },
   'app/ai-devops/page.tsx': { title: 'AI DevOps', description: 'Intelligent DevOps Solutions', icon: 'Settings', color: 'blue' },
   'app/ai-document-analysis/page.tsx': { title: 'AI Document Analysis', description: 'Intelligent Document Processing', icon: 'FileText', color: 'green' },
   'app/ai-document-processing/page.tsx': { title: 'AI Document Processing', description: 'Automated Document Processing', icon: 'FileText', color: 'blue' },
@@ -316,18 +314,25 @@ const pageConfigs = {
   'app/ai-workflow-automation/page.tsx': { title: 'AI Workflow Automation', description: 'Intelligent Workflow Solutions', icon: 'Settings', color: 'green' }
 };
 
-// Fix each file
+// Fix each file that exists
 let fixedCount = 0;
+let notFoundCount = 0;
 filesWithErrors.forEach(filePath => {
-  const config = pageConfigs[filePath];
-  if (config) {
-    const content = createPageTemplate(config.title, config.description, config.icon, config.color);
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-    fixedCount++;
+  if (fs.existsSync(filePath)) {
+    const config = pageConfigs[filePath];
+    if (config) {
+      const content = createPageTemplate(config.title, config.description, config.icon, config.color);
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      fixedCount++;
+    } else {
+      console.log(`No config found for: ${filePath}`);
+    }
   } else {
-    console.log(`No config found for: ${filePath}`);
+    console.log(`File not found: ${filePath}`);
+    notFoundCount++;
   }
 });
 
 console.log(`\nFixed ${fixedCount} files out of ${filesWithErrors.length} total files.`);
+console.log(`Not found: ${notFoundCount} files.`);
