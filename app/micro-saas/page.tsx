@@ -3,7 +3,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
 
 interface MicroSaasProduct {
@@ -17,474 +16,283 @@ interface MicroSaasProduct {
   popular: boolean;
   category: string;
 }
-=======
-import { Zap, CheckCircle, ArrowRight, Star, Users, Shield, Cloud, BarChart3, Target, Rocket } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
 
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts: MicroSaasProduct[] = [
     {
-<<<<<<< HEAD
-      id: '1',
+      id: 'analytics-dashboard',
       icon: '📊',
-=======
-      icon: BarChart3,
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence and predictive analytics for small to medium businesses',
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Mobile app', 'API integration'],
-      price: '$99/month',
-      users: 'Up to 50 users',
-<<<<<<< HEAD
+      title: 'Analytics Dashboard',
+      description: 'Real-time analytics and insights for your business data',
+      features: [
+        'Real-time data visualization',
+        'Custom reports and metrics',
+        'Data export capabilities',
+        'Team collaboration tools',
+        'Mobile responsive design'
+      ],
+      price: '$29/month',
+      users: 'Up to 10 users',
       popular: true,
       category: 'Analytics'
     },
     {
-      id: '2',
-      icon: '👥',
-=======
-      popular: false
-    },
-    {
-      icon: Users,
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-      title: 'AI-Powered CRM',
-      description: 'Intelligent customer relationship management with automated lead scoring and personalized interactions',
-      features: ['Lead management', 'Email automation', 'Sales forecasting', 'Integration APIs', 'Custom fields'],
-      price: '$149/month',
-      users: 'Up to 100 users',
-<<<<<<< HEAD
-      popular: false,
-      category: 'CRM'
-    },
-    {
-      id: '3',
-      icon: '🔒',
-=======
-      popular: true
-    },
-    {
-      icon: Shield,
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-      title: 'Security Monitoring Suite',
-      description: 'Comprehensive cybersecurity monitoring and threat detection for growing businesses',
-      features: ['Threat detection', 'Vulnerability scanning', 'Compliance reporting', '24/7 monitoring', 'Incident response'],
-      price: '$199/month',
-      users: 'Up to 200 users',
-<<<<<<< HEAD
-      popular: false,
-      category: 'Security'
-    },
-    {
-      id: '4',
-      icon: '☁️',
-=======
-      popular: false
-    },
-    {
-      icon: Cloud,
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-      title: 'Cloud Infrastructure Manager',
-      description: 'Automated cloud resource management and cost optimization for multi-cloud environments',
-      features: ['Resource optimization', 'Cost tracking', 'Auto-scaling', 'Multi-cloud support', 'Backup management'],
-      price: '$299/month',
+      id: 'appointment-scheduler',
+      icon: '📅',
+      title: 'Appointment Scheduler',
+      description: 'Streamline your booking process with automated scheduling',
+      features: [
+        'Calendar integration',
+        'Automated reminders',
+        'Payment processing',
+        'Multi-timezone support',
+        'Custom booking forms'
+      ],
+      price: '$19/month',
       users: 'Unlimited users',
-<<<<<<< HEAD
       popular: false,
-      category: 'Infrastructure'
+      category: 'Scheduling'
     },
     {
-      id: '5',
-      icon: '📧',
-      title: 'Email Marketing Automation',
-      description: 'AI-driven email campaigns with advanced segmentation and personalization',
-      features: ['Email templates', 'A/B testing', 'Segmentation', 'Analytics', 'Integration tools'],
+      id: 'chat-analytics',
+      icon: '💬',
+      title: 'Chat Analytics',
+      description: 'Analyze customer conversations and improve support quality',
+      features: [
+        'Sentiment analysis',
+        'Response time tracking',
+        'Customer satisfaction scores',
+        'Team performance metrics',
+        'Integration with popular chat platforms'
+      ],
+      price: '$39/month',
+      users: 'Up to 25 users',
+      popular: false,
+      category: 'Communication'
+    },
+    {
+      id: 'content-generator',
+      icon: '✍️',
+      title: 'AI Content Generator',
+      description: 'Generate high-quality content using artificial intelligence',
+      features: [
+        'Multiple content types',
+        'SEO optimization',
+        'Brand voice customization',
+        'Content templates',
+        'Bulk content generation'
+      ],
+      price: '$49/month',
+      users: 'Up to 5 users',
+      popular: true,
+      category: 'Content'
+    },
+    {
+      id: 'document-processor',
+      icon: '📄',
+      title: 'Document Processor',
+      description: 'Automate document processing and data extraction',
+      features: [
+        'OCR text recognition',
+        'Data extraction',
+        'Document classification',
+        'Batch processing',
+        'API integration'
+      ],
       price: '$79/month',
-      users: 'Up to 25,000 contacts',
+      users: 'Up to 15 users',
+      popular: false,
+      category: 'Automation'
+    },
+    {
+      id: 'email-marketing',
+      icon: '📧',
+      title: 'Email Marketing',
+      description: 'Create and manage email campaigns with advanced automation',
+      features: [
+        'Drag-and-drop editor',
+        'Email automation',
+        'A/B testing',
+        'Subscriber management',
+        'Analytics and reporting'
+      ],
+      price: '$35/month',
+      users: 'Up to 1,000 subscribers',
       popular: false,
       category: 'Marketing'
-    },
-    {
-      id: '6',
-      icon: '💬',
-      title: 'Customer Support Chatbot',
-      description: 'Intelligent chatbot solution for 24/7 customer support and lead generation',
-      features: ['Natural language processing', 'Multi-channel support', 'Knowledge base', 'Analytics', 'Custom training'],
-      price: '$129/month',
-      users: 'Unlimited conversations',
-      popular: false,
-      category: 'Support'
-=======
-      popular: false
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
     }
   ];
 
-  const benefits = [
-    'No upfront costs or setup fees',
-    'Quick deployment in 24-48 hours',
-    'Scalable solutions that grow with you',
-    'Regular updates and new features',
-    '24/7 technical support',
-    'Easy integration with existing tools',
-    'Free trial for all products',
-    'Cancel anytime, no long-term contracts'
-  ];
+  const categories = ['All', 'Analytics', 'Scheduling', 'Communication', 'Content', 'Automation', 'Marketing'];
 
-<<<<<<< HEAD
-  const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];
-
-  const stats = [
-    {
-      icon: Users,
-      value: '10,000+',
-      label: 'Active Users',
-      description: 'Growing community of satisfied customers'
-    },
-    {
-      icon: TrendingUp,
-      value: '99.9%',
-      label: 'Uptime',
-      description: 'Reliable service you can count on'
-    },
-    {
-      icon: Star,
-      value: '4.8/5',
-      label: 'Rating',
-      description: 'Highly rated by our customers'
-    },
-    {
-      icon: Zap,
-      value: '24/7',
-      label: 'Support',
-      description: 'Always here when you need us'
-=======
   const features = [
     {
       icon: Zap,
-      title: 'Lightning Fast Setup',
-      description: 'Get up and running in minutes with our streamlined onboarding process'
+      title: 'Quick Setup',
+      description: 'Get started in minutes with our easy-to-use interface'
     },
     {
-      icon: Target,
-      title: 'Focused Solutions',
-      description: 'Each micro SaaS is designed to solve specific business challenges effectively'
+      icon: Shield,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security with 99.9% uptime guarantee'
     },
     {
-      icon: Rocket,
-      title: 'Rapid Innovation',
-      description: 'Frequent updates and new features based on user feedback and market needs'
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
+      icon: Cloud,
+      title: 'Cloud-Based',
+      description: 'Access your tools from anywhere with cloud infrastructure'
+    },
+    {
+      icon: BarChart3,
+      title: 'Analytics',
+      description: 'Comprehensive analytics and reporting for all tools'
     }
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
-        <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
-        <meta name="description" content="Discover our collection of micro SaaS solutions designed for small to medium businesses. AI-powered tools for analytics, CRM, security, and more." />
-        <meta name="keywords" content="micro SaaS, business tools, AI analytics, CRM, security monitoring, cloud management, small business software" />
-=======
-        <title>Micro SaaS Solutions - Zion Tech Group | Focused AI & IT Tools</title>
-        <meta name="description" content="Discover our micro SaaS solutions - focused, affordable AI and IT tools designed for specific business needs. Quick deployment, scalable, and cost-effective." />
-        <meta name="keywords" content="micro SaaS, AI tools, business software, CRM, analytics, security monitoring, cloud management" />
-        <meta property="og:title" content="Micro SaaS Solutions - Zion Tech Group" />
-        <meta property="og:description" content="Focused AI and IT tools for specific business needs" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/micro-saas" />
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
+        <title>Micro SaaS Solutions - Zion Tech Group | Specialized Business Tools</title>
+        <meta name="description" content="Discover our collection of specialized micro SaaS solutions designed to solve specific business problems efficiently." />
+        <meta name="keywords" content="micro SaaS, business tools, specialized software, productivity tools, business automation" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Micro <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">SaaS</span> Solutions
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-              Ready-to-use business tools that solve specific problems. No complex setup, no long-term commitments - just powerful solutions that work.
-            </p>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <stat.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-gray-400 text-sm">{stat.label}</div>
-                  <div className="text-gray-500 text-xs mt-1">{stat.description}</div>
-                </div>
-              ))}
-            </div>
+      {/* Hero Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Micro SaaS Solutions
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Discover our collection of specialized micro SaaS tools designed to solve specific 
+            business problems efficiently and cost-effectively.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center">
+              Explore Solutions
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+              View Pricing
+            </button>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Category Filter */}
-        <section className="py-8 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    category === 'All'
-                      ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                  }`}
-                >
-                  {category}
-                </button>
-=======
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Micro SaaS Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Focused, affordable AI and IT tools designed for specific business needs. 
-              Quick deployment, scalable, and cost-effective solutions for growing businesses.
+      {/* Features */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Why Choose Our Micro SaaS Tools
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Specialized solutions that focus on solving specific business problems.
             </p>
           </div>
-        </section>
 
-        {/* Features Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Micro SaaS?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-slate-900" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-gradient-to-br from-cyan-400/20 to-purple-400/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-cyan-400" />
                 </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-              ))}
-            </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Products Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Our Micro SaaS Products</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose from our collection of specialized business tools designed to solve specific challenges.
-              </p>
-            </div>
+      {/* Products Grid */}
+      <section className="py-16 px-4 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Our Micro SaaS Products
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose from our collection of specialized business tools.
+            </p>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasProducts.map((product) => (
-                <div
-                  key={product.id}
-                  className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-                    product.popular
-                      ? 'border-purple-400 shadow-2xl shadow-purple-500/25 scale-105'
-                      : 'border-white/20'
-                  } hover:border-purple-400 transition-all duration-300 group`}
-                >
-                  {product.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-                        <Star className="w-4 h-4 fill-current" />
-=======
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Micro SaaS Products</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {microSaasProducts.map((product, index) => (
-                <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group ${
-                  product.popular ? 'border-cyan-400/50 ring-2 ring-cyan-400/20' : 'border-slate-700'
-                }`}>
-                  {product.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
-                        <Star className="w-3 h-3 fill-current" />
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-                        Most Popular
-                      </div>
-                    </div>
-                  )}
-<<<<<<< HEAD
-
-                  <div className="text-center mb-6">
-                    <div className="text-4xl mb-4">{product.icon}</div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
-                      {product.title}
-                    </h3>
-                    <p className="text-gray-300 text-sm mb-4">{product.description}</p>
-                    <div className="flex items-center justify-center gap-2 mb-4">
-                      <span className="text-2xl font-bold text-white">{product.price}</span>
-                      <span className="text-gray-400 text-sm">{product.users}</span>
-                    </div>
-                    <div className="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">
-                      {product.category}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {microSaasProducts.map((product) => (
+              <div
+                key={product.id}
+                className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 ${
+                  product.popular ? 'border-purple-400/50 ring-2 ring-purple-400/20' : 'border-slate-700'
+                }`}
+              >
+                {product.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
+                      <Star className="w-3 h-3 fill-current" />
+                      Popular
                     </div>
                   </div>
+                )}
 
-                  <ul className="space-y-3 mb-8">
-                    {product.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="flex flex-col gap-3">
-                    <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 transform hover:scale-105">
-                      Start Free Trial
-                    </button>
-                    <button className="w-full py-2 px-6 rounded-lg font-semibold transition-all duration-300 bg-white/10 text-white border border-white/20 hover:bg-white/20">
-                      Learn More
-                    </button>
-                  </div>
-=======
-                  
-                  <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-400/20 to-purple-400/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <product.icon className="w-8 h-8 text-cyan-400" />
+                <div className="text-center mb-6">
+                  <div className="text-4xl mb-4">{product.icon}</div>
+                  <h3 className="text-xl font-bold text-white mb-2">{product.title}</h3>
+                  <p className="text-gray-300 mb-4">{product.description}</p>
+                  <div className="flex items-center justify-center gap-4 text-sm text-gray-400">
+                    <div className="flex items-center gap-1">
+                      <Users className="w-4 h-4" />
+                      <span>{product.users}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                      {product.title}
-                    </h3>
-                    <p className="text-gray-300 text-sm mb-4">{product.description}</p>
-                    <div className="text-3xl font-bold text-cyan-400 mb-1">{product.price}</div>
-                    <div className="text-gray-400 text-sm">{product.users}</div>
+                    <div className="text-2xl font-bold text-cyan-400">{product.price}</div>
                   </div>
-                  
-                  <ul className="space-y-3 mb-6">
-                    {product.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-3">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <button className={`w-full py-3 px-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center gap-2 ${
-                    product.popular
-                      ? 'bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 hover:from-cyan-300 hover:to-purple-300'
-                      : 'bg-slate-700 text-white hover:bg-slate-600 border border-slate-600'
-                  }`}>
-                    Start Free Trial
+                </div>
+
+                <ul className="space-y-2 mb-6">
+                  {product.features.map((feature, index) => (
+                    <li key={index} className="flex items-center gap-2 text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex gap-2">
+                  <button className="flex-1 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 font-semibold py-2 px-4 rounded-lg hover:from-cyan-300 hover:to-purple-300 transition-all duration-200 flex items-center justify-center gap-2">
+                    Try Free
                     <ArrowRight className="w-4 h-4" />
                   </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
+                  <button className="border border-slate-600 text-gray-300 px-4 py-2 rounded-lg hover:bg-slate-700 transition-all duration-200">
+                    Learn More
+                  </button>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Benefits Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Why Choose Our Micro SaaS Solutions?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We've designed our micro SaaS products to be simple, powerful, and accessible to businesses of all sizes.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-=======
-            <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">Benefits of Micro SaaS</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-                    <span className="text-gray-300">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+      {/* CTA Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Need a Custom Micro SaaS Solution?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            We can create a specialized tool tailored to your specific business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 font-semibold py-3 px-8 rounded-lg hover:from-cyan-300 hover:to-purple-300 transition-all duration-200 flex items-center justify-center gap-2">
+              <MessageSquare className="w-5 h-5" />
+              Discuss Your Needs
+            </button>
+            <button className="border border-cyan-400 text-cyan-400 font-semibold py-3 px-8 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200">
+              View Portfolio
+            </button>
           </div>
-        </section>
-<<<<<<< HEAD
-
-        {/* How It Works */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">How It Works</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Getting started with our micro SaaS solutions is simple and straightforward.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">1</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Choose Your Solution</h3>
-                <p className="text-gray-300">Browse our collection and select the micro SaaS product that fits your needs.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">2</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Start Free Trial</h3>
-                <p className="text-gray-300">Sign up for a free trial and explore all features without any commitment.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">3</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Scale & Grow</h3>
-                <p className="text-gray-300">Upgrade when you're ready and scale your usage as your business grows.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-
-        {/* CTA Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Choose the micro SaaS solution that fits your business needs. 
-                Start with a free trial and scale as you grow.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-                >
-                  <Zap className="w-5 h-5" />
-                  Start Free Trial
-                </Link>
-                <Link
-                  to="/pricing"
-                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
-                >
-                  View All Plans
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+    </div>
   );
 };
 
