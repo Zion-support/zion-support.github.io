@@ -147,8 +147,7 @@ const PerformanceMonitor: React.FC = () => {
   // Log metrics in development
   useEffect(() => {
     if (process.env.NODE_ENV === 'development') {
-      console.log('Performance Metrics:', metrics);
-    }
+      }
   }, [metrics]);
 
   return null; // This component doesn't render anything

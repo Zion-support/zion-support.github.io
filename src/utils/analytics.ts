@@ -38,7 +38,7 @@ class AnalyticsService {
       this.processQueue()
       this.isInitialized = true
     } catch (error) {
-      // console.error('Analytics initialization failed:', error)
+      // Error handling
     }
   }
   /**
@@ -63,7 +63,7 @@ class AnalyticsService {
       if (process.env['NODE_ENV'] === 'development') {
         }
     } catch (error) {
-      // console.error('Failed to track event:', error)
+      // Error handling
     }
   }
   /**
@@ -78,7 +78,7 @@ class AnalyticsService {
         })
       }
     } catch (error) {
-      // console.error('Failed to track page view:', error)
+      // Error handling
     }
   }
   /**
@@ -93,7 +93,7 @@ class AnalyticsService {
         })
       }
     } catch (error) {
-      // console.error('Failed to identify user:', error)
+      // Error handling
     }
   }
   /**
@@ -129,7 +129,7 @@ class AnalyticsService {
         });
       }
     } catch (error) {
-      // console.error('Failed to track timing:', error)
+      // Error handling
     }
   }
   /**
@@ -145,7 +145,7 @@ class AnalyticsService {
         metadata
       })
     } catch (error) {
-      // console.error('Failed to track performance:', error)
+      // Error handling
     }
   }
   /**

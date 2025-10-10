@@ -4,13 +4,11 @@ import { useEffect, useCallback } from 'react';
 const useAnalytics = () => ({
   trackPerformance: (name: string, duration: number, category: string) => {
     if (process.env.NODE_ENV === 'development') {
-      console.log('Performance tracked:', name, duration, category);
-    }
+      }
   },
   trackEvent: (name: string, data: any) => {
     if (process.env.NODE_ENV === 'development') {
-      console.log('Event tracked:', name, data);
-    }
+      }
   }
 });
 // PerformanceMetrics interface removed as it's not used in this hook

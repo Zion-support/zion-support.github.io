@@ -1,7 +1,10 @@
 import React from 'react';
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { metadata } from './page-minimal-metadata';
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-744e
 
 export default function HomePage() {
   return (

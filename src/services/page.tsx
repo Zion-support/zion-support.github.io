@@ -211,7 +211,7 @@ const ServicesPage: React.FC = () => {
                 <div key={index} className="cyber-card group">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">
-                      <service.icon className="w-6 h-6 text-purple-400" />
+                      {React.createElement(service.icon, { className: "w-6 h-6 text-purple-400" })}
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white">{service.title}</h3>
@@ -259,7 +259,7 @@ const ServicesPage: React.FC = () => {
                 <div key={index} className="cyber-card group">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
-                      <service.icon className="w-6 h-6 text-blue-400" />
+                      {React.createElement(service.icon, { className: "w-6 h-6 text-blue-400" })}
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white">{service.title}</h3>
@@ -302,7 +302,7 @@ const ServicesPage: React.FC = () => {
                 <div key={index} className="cyber-card group">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mr-4">
-                      <service.icon className="w-6 h-6 text-green-400" />
+                      {React.createElement(service.icon, { className: "w-6 h-6 text-green-400" })}
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white">{service.title}</h3>

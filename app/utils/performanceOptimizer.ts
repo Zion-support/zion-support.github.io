@@ -73,8 +73,7 @@ export const measurePerformance = (name: string, fn: () => void) => {
   const end = performance.now();
   
   if (process.env.NODE_ENV === 'development') {
-    console.log(`${name} took ${end - start} milliseconds`);
-  }
+    }
 };
 
 export const getDeviceInfo = () => {

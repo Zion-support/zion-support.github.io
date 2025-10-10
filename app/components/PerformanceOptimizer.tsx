@@ -107,15 +107,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           if (entry.entryType === 'largest-contentful-paint') {
             // LCP measurement - could be sent to analytics
             if (process.env.NODE_ENV === 'development') {
-              console.log('LCP:', entry.startTime);
-            }
+              }
           }
           if (entry.entryType === 'first-input') {
             const fidEntry = entry as any;
             // FID measurement - could be sent to analytics
             if (process.env.NODE_ENV === 'development') {
-              console.log('FID:', fidEntry.processingStart - entry.startTime);
-            }
+              }
           }
         });
       });

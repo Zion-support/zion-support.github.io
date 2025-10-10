@@ -145,8 +145,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         }
 
         if (enableConsoleLogging) {
-          console.log(`Web Vital ${metric.name}:`, metric);
-        }
+          }
       } catch (error) {
         reportError(error, 'WebVitalsReporting');
       }
@@ -202,8 +201,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         }
 
         if (enableConsoleLogging) {
-          console.log('Resource timing:', resources);
-        }
+          }
       } catch (error) {
         reportError(error, 'ResourceTiming');
       }
@@ -241,8 +239,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
           }
 
           if (enableConsoleLogging) {
-            console.log('Memory usage:', performanceMetrics.memoryUsage);
-          }
+            }
         }
       } catch (error) {
         reportError(error, 'MemoryMonitoring');
@@ -273,8 +270,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
           };
 
           if (enableConsoleLogging) {
-            console.log('Network info:', performanceMetrics.networkInfo);
-          }
+            }
         }
       } catch (error) {
         reportError(error, 'NetworkMonitoring');
@@ -301,8 +297,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         });
 
         if (enableConsoleLogging) {
-          console.log('Long tasks:', entries);
-        }
+          }
       } catch (error) {
         reportError(error, 'LongTaskMonitoring');
       }
@@ -330,8 +325,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         });
 
         if (enableConsoleLogging) {
-          console.log('Layout shifts:', entries);
-        }
+          }
       } catch (error) {
         reportError(error, 'LayoutShiftMonitoring');
       }
@@ -352,8 +346,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         performanceMetrics.userTiming = userTiming;
 
         if (enableConsoleLogging) {
-          console.log('User timing:', userTiming);
-        }
+          }
       } catch (error) {
         reportError(error, 'UserTiming');
       }
@@ -396,8 +389,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         }
 
         if (enableConsoleLogging) {
-          console.log('Performance summary:', summary);
-        }
+          }
       } catch (error) {
         reportError(error, 'PerformanceSummary');
       }

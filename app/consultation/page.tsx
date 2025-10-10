@@ -87,7 +87,6 @@ const ConsultationPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Consultation request submitted:', formData);
     alert('Thank you! We\'ll contact you within 24 hours to schedule your free consultation.');
   };
 
