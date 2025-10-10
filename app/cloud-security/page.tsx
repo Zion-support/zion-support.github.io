@@ -53,12 +53,7 @@ const CloudSecurityPage: React.FC = () => {
           <h1 className="text-5xl font-bold text-white mb-6"></h1>
             Cloud Security
   </
-<<<<<<< HEAD
-
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
-=======
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
             Transform your business with our advanced cloud security solutions. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
@@ -137,11 +132,7 @@ const CloudSecurityPage: React.FC = () => {
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
               <Mail className="mr-2 h-5 w-5" />
-<<<<<<< HEAD
-              Email Us;
-=======
               Email Us
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
   </
           </div>
         </div>

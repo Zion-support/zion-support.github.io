@@ -6,32 +6,28 @@ import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
-// import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
-import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package, Heart, DollarSign as Dollar, Award as Trophy, Rocket as Launch, Layers as Stack, Workflow as Process, BarChart3 as Analytics, MessageSquare as Chat, Headphones as Support, Monitor as Screen, HardDrive as Storage, Wifi as Network, Printer as Print, Router as Gateway, Package as Box, Eye, Mic } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package, Heart, Eye, Mic } from 'lucide-react';
 
-// import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
-import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package, Heart, DollarSign as Dollar, Award as Trophy, Rocket as Launch, Layers as Stack, Workflow as Process, BarChart3 as Analytics, MessageSquare as Chat, Headphones as Support, Monitor as Screen, HardDrive as Storage, Wifi as Network, Printer as Print, Router as Gateway, Package as Box, Eye, Mic } from 'lucide-react';
-import { usePageTracking, useEventTracking } from './components/EnhancedAnalytics';
-
-
-// Dynamically import heavy components for better performance;
+// Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
-// Preload critical components;
-const preloadComponents = () => {if (typeof window !== 'undefined') {
-    // Preload critical components after initial render;
+// Preload critical components
+const preloadComponents = () => {
+  if (typeof window !== 'undefined') {
+    // Preload critical components after initial render
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');}, 100);
+      import('./components/ContentCarousel');
+    }, 100);
   }
-}
+};
 
-// Loading skeleton component;
-const ServiceCardSkeleton: React.FC = memo(() => (,
+// Loading skeleton component
+const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
@@ -51,16 +47,19 @@ const HomePage: React.FC = () => {
   useEffect(() => {
     preloadComponents();
     setIsLoaded(true);
-    // Trigger visibility animation;
+    // Trigger visibility animation
     const timer = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timer);}, []);
+    return () => clearTimeout(timer);
+  }, []);
   
-  // Analytics tracking for phone clicks - optimized;
-  const handlePhoneClick = useCallback(() => {if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag;
-      gtag('event', 'phone_click', {)
+  // Analytics tracking for phone clicks - optimized
+  const handlePhoneClick = useCallback(() => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}).gtag;
+      gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'main_phone_number',})
+        event_label: 'main_phone_number'
+      });
     }
   }, []);
 
@@ -74,7 +73,8 @@ const HomePage: React.FC = () => {
       features: ['Natural language processing', 'Multi-language support', 'Sentiment analysis', 'CRM integration', 'Real-time learning'],
       benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions'],
       category: 'Customer Service',
-      popular: true;,},
+      popular: true
+    },
     {icon: FileText,
       title: 'AI Content Generation',
       description: 'Automated content creation using advanced language models for blogs, social media, and marketing',
@@ -83,7 +83,8 @@ const HomePage: React.FC = () => {
       features: ['Blog post generation', 'Social media content', 'Email marketing campaigns', 'SEO optimization', 'Brand voice customization'],
       benefits: ['Save 80% content creation time', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing'],
       category: 'Content',
-      popular: true;,},
+      popular: true
+    },
     {icon: BarChart3,
       title: 'AI Data Analytics',
       description: 'Advanced analytics and business intelligence powered by machine learning algorithms',
@@ -92,7 +93,7 @@ const HomePage: React.FC = () => {
       features: ['Predictive analytics', 'Real-time dashboards', 'Automated reporting', 'Anomaly detection', 'Custom data models'],
       benefits: ['Data-driven insights', 'Predictive forecasting', 'Automated reporting', 'ROI optimization'],
       category: 'Analytics',
-      popular: false;,},
+      popular: false},
     {icon: Eye,
       title: 'AI Computer Vision',
       description: 'Image and video analysis solutions for quality control, security, and automation',
@@ -101,7 +102,7 @@ const HomePage: React.FC = () => {
       features: ['Object detection and recognition', 'Quality control automation', 'Facial recognition systems', 'Video analytics', 'Real-time processing'],
       benefits: ['Automated quality control', 'Enhanced security', 'Real-time monitoring', 'Cost reduction'],
       category: 'Computer Vision',
-      popular: false;,},
+      popular: false},
     {icon: Mic,
       title: 'AI Voice Processing',
       description: 'Speech recognition, synthesis, and voice analytics for customer interactions',
@@ -110,7 +111,7 @@ const HomePage: React.FC = () => {
       features: ['Speech-to-text conversion', 'Voice synthesis', 'Voice biometrics', 'Call analytics', 'Multi-language support'],
       benefits: ['Improved accessibility', 'Voice automation', 'Call quality insights', 'Multi-language support'],
       category: 'Voice AI',
-      popular: false;,},
+      popular: false},
     {icon: Workflow,
       title: 'AI Workflow Automation',
       description: 'Intelligent process automation that learns and optimizes business workflows',
@@ -119,7 +120,7 @@ const HomePage: React.FC = () => {
       features: ['Process mining', 'Workflow optimization', 'Task automation', 'Exception handling', 'Performance monitoring'],
       benefits: ['Process efficiency', 'Error reduction', 'Cost savings', 'Scalable automation'],
       category: 'Automation',
-      popular: true;,},
+      popular: true},
     {icon: Heart,
       title: 'AI Healthcare Solutions',
       description: 'Medical AI for diagnosis assistance, drug discovery, and patient care optimization',
@@ -128,7 +129,7 @@ const HomePage: React.FC = () => {
       features: ['Medical image analysis', 'Drug discovery algorithms', 'Patient risk assessment', 'Treatment recommendations', 'Clinical trial optimization', 'Diagnostic assistance', 'Patient monitoring', 'Drug interaction checking'],
       benefits: ['Improved diagnosis accuracy', 'Faster drug development', 'Better patient outcomes', 'Cost reduction', 'Faster treatment decisions', 'Reduced medical errors'],
       category: 'Healthcare',
-      popular: false;,},
+      popular: false},
     {icon: DollarSign,
       title: 'AI Financial Services',
 description: 'Advanced AI for fraud detection, algorithmic trading, and financial risk management Intelligent financial analysis, fraud detection, and investment optimization',
@@ -136,14 +137,14 @@ description: 'Advanced AI for fraud detection, algorithmic trading, and financia
       marketPrice: '$1200-4000/month',
       features: ['Fraud detection algorithms', 'Algorithmic trading systems', 'Credit risk assessment', 'Market prediction models', 'Regulatory compliance', 'Investment portfolio optimization', 'Algorithmic trading'],
       benefits: ['Reduced fraud losses', 'Better trading performance', 'Risk mitigation', 'Compliance automation', 'Better risk management', 'Optimized investments'],
-      popular: true;,},
+      popular: true},
     {icon: Globe,
 description: 'AI-powered solutions for product recommendations, pricing, and customer experience Intelligent supply chain management with predictive analytics and demand forecasting',
       price: '$449/month',
       marketPrice: '$800-2500/month',
       features: ['Personalized recommendations', 'Dynamic pricing optimization', 'Inventory management', 'Customer behavior analysis', 'Conversion optimization', 'Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier risk assessment', 'Quality prediction'],
       benefits: ['Increased sales', 'Better customer experience', 'Optimized pricing', 'Reduced inventory costs', 'Reduced inventory costs', 'Improved delivery times', 'Better demand planning', 'Risk mitigation'],
-      popular: false;,},
+      popular: false},
     {icon: Shield,
       title: 'AI Cybersecurity',
       description: 'Advanced AI-powered security solutions for threat detection and prevention',
@@ -152,7 +153,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Behavioral anomaly detection', 'Threat intelligence analysis', 'Automated incident response', 'Vulnerability assessment', 'Security orchestration', 'Real-time threat monitoring', 'AI-powered risk scoring', 'Automated security patching'],
       benefits: ['Proactive threat detection', 'Faster incident response', 'Reduced security risks', 'Compliance automation'],
       category: 'Cybersecurity',
-      popular: true;,},
+      popular: true},
     {icon: Cpu,
       title: 'AI Edge Computing',
       description: 'Distributed AI processing for real-time decision making at the edge',
@@ -161,7 +162,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Edge AI model deployment', 'Real-time processing', 'Low-latency inference', 'Offline capability', 'Resource optimization', 'IoT device integration', 'Predictive maintenance', 'Energy efficiency optimization'],
       benefits: ['Ultra-low latency', 'Offline operation', 'Reduced bandwidth usage', 'Real-time decisions'],
       category: 'Edge Computing',
-      popular: false;,},
+      popular: false},
     {icon: Heart,
       title: 'AI Healthcare Solutions',
       description: 'Medical AI for diagnosis assistance, drug discovery, and patient care optimization',
@@ -170,7 +171,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Medical image analysis', 'Drug discovery algorithms', 'Patient risk assessment', 'Treatment recommendations', 'Clinical trial optimization', 'Diagnostic assistance', 'Patient monitoring', 'Drug interaction checking'],
       benefits: ['Improved diagnosis accuracy', 'Faster drug development', 'Better patient outcomes', 'Cost reduction'],
       category: 'Healthcare',
-      popular: false;,},
+      popular: false},
     {icon: DollarSign,
       title: 'AI Financial Services',
       description: 'Intelligent financial analysis, fraud detection, and investment optimization',
@@ -179,7 +180,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Algorithmic trading systems', 'Credit risk assessment', 'Market prediction models', 'Regulatory compliance', 'Investment portfolio optimization', 'Real-time fraud detection', 'Risk management', 'Financial forecasting'],
       benefits: ['Better risk management', 'Optimized investments', 'Reduced fraud losses', 'Compliance automation'],
       category: 'Financial Services',
-      popular: true;,},
+      popular: true},
     {icon: Globe,
       title: 'AI E-commerce Solutions',
       description: 'Intelligent supply chain management with predictive analytics and demand forecasting',
@@ -188,7 +189,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier risk assessment', 'Quality prediction', 'Price optimization', 'Customer behavior analysis', 'Supply chain visibility'],
       benefits: ['Reduced inventory costs', 'Improved delivery times', 'Better demand planning', 'Risk mitigation'],
       category: 'E-commerce',
-      popular: false;,},
+      popular: false},
     {icon: Users,
       title: 'AI HR Solutions',
       description: 'Intelligent human resources management with AI-powered recruitment and analytics',
@@ -197,7 +198,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['AI-powered resume screening', 'Candidate matching algorithms', 'Employee performance analytics', 'Predictive attrition modeling', 'Skills gap analysis', 'Automated interview scheduling', 'Employee sentiment analysis', 'Workforce planning'],
       benefits: ['Faster hiring process', 'Better candidate matching', 'Reduced HR workload', 'Data-driven insights'],
       category: 'Human Resources',
-      popular: true;,},
+      popular: true},
     {icon: FileText,
       title: 'AI Document Processing',
       description: 'Intelligent document analysis, extraction, and processing with OCR and NLP',
@@ -206,7 +207,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['OCR and text extraction', 'Document classification', 'Data extraction and validation', 'Contract analysis', 'Invoice processing', 'Compliance checking', 'Multi-language support', 'Automated workflows'],
       benefits: ['90% faster document processing', 'Reduced manual errors', 'Automated data entry', 'Better compliance'],
       category: 'Document Processing',
-      popular: true;,},
+      popular: true},
     {icon: BarChart3,
       title: 'AI Predictive Analytics',
       description: 'Advanced predictive modeling and forecasting for business intelligence',
@@ -215,7 +216,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Predictive modeling', 'Time series forecasting', 'Anomaly detection', 'Customer lifetime value prediction', 'Churn prediction', 'Sales forecasting', 'Risk assessment', 'Performance optimization'],
       benefits: ['Data-driven decisions', 'Predictive insights', 'Risk mitigation', 'Performance optimization'],
       category: 'Predictive Analytics',
-      popular: true;,},
+      popular: true},
     {icon: Mic,
       title: 'AI Voice Solutions',
       description: 'Advanced speech recognition, synthesis, and voice analytics for customer interactions',
@@ -224,7 +225,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Speech-to-text conversion', 'Voice synthesis', 'Voice biometrics', 'Call analytics', 'Multi-language support', 'Real-time transcription', 'Voice emotion analysis', 'Automated call routing'],
       benefits: ['Improved accessibility', 'Voice automation', 'Call quality insights', 'Multi-language support'],
       category: 'Voice AI',
-      popular: false;,},
+      popular: false},
     {icon: Eye,
       title: 'AI Computer Vision',
       description: 'Image and video analysis solutions for quality control, security, and automation',
@@ -233,7 +234,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Object detection and recognition', 'Quality control automation', 'Facial recognition systems', 'Video analytics', 'Real-time processing', 'Medical image analysis', 'Autonomous vehicle vision', 'Industrial inspection'],
       benefits: ['Automated quality control', 'Enhanced security', 'Real-time monitoring', 'Cost reduction'],
       category: 'Computer Vision',
-      popular: false;,},
+      popular: false},
     {icon: Brain,
       title: 'AI Quantum Computing Solutions',
       description: 'Quantum-enhanced AI algorithms for complex optimization and machine learning problems',
@@ -242,7 +243,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Quantum machine learning algorithms', 'Optimization problem solving', 'Cryptographic security enhancement', 'Drug discovery acceleration', 'Financial modeling optimization', 'Climate simulation and analysis', 'Quantum neural networks', 'Hybrid classical-quantum processing'],
       benefits: ['Exponential speed improvements', 'Breakthrough problem solving', 'Future-proof technology', 'Competitive advantage'],
       category: 'Quantum AI',
-      popular: false;,},
+      popular: false},
     {icon: Cpu,
       title: 'AI Autonomous Systems',
       description: 'Self-operating AI systems for robotics, vehicles, and industrial automation',
@@ -251,7 +252,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Autonomous vehicle AI', 'Robotic process automation', 'Smart manufacturing systems', 'Predictive maintenance AI', 'Autonomous drone operations', 'Smart city infrastructure', 'Industrial IoT integration', 'Real-time decision making'],
       benefits: ['24/7 autonomous operation', 'Reduced human intervention', 'Improved efficiency', 'Cost optimization'],
       category: 'Autonomous Systems',
-      popular: false;,},
+      popular: false},
     {icon: Link,
       title: 'AI Blockchain Solutions',
       description: 'Decentralized AI applications with blockchain integration for secure, transparent operations',
@@ -260,7 +261,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Decentralized AI model training', 'Blockchain-based data verification', 'Smart contract AI integration', 'Cryptocurrency trading algorithms', 'NFT generation and analysis', 'DeFi protocol optimization', 'Supply chain transparency', 'Secure multi-party computation'],
       benefits: ['Enhanced security', 'Transparent operations', 'Decentralized control', 'Innovation leadership'],
       category: 'Blockchain AI',
-      popular: false;,},
+      popular: false},
     {icon: Server,
       title: 'AI Edge Computing',
       description: 'Distributed AI processing for real-time decision making at the edge of networks',
@@ -269,7 +270,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Edge AI model deployment', 'Real-time processing', 'Low-latency inference', 'Offline capability', 'Resource optimization', 'IoT device integration', 'Predictive maintenance', 'Energy efficiency optimization'],
       benefits: ['Ultra-low latency', 'Offline operation', 'Reduced bandwidth usage', 'Real-time decisions'],
       category: 'Edge Computing',
-      popular: false;,},
+      popular: false},
     {icon: Monitor,
       title: 'AI Holographic Workspace',
       description: 'Immersive 3D workspace with AI-powered collaboration and visualization tools',
@@ -278,7 +279,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['3D holographic interfaces', 'AI-powered spatial computing', 'Virtual collaboration tools', 'Immersive data visualization', 'Gesture and voice control', 'Real-time 3D rendering', 'Multi-user virtual environments', 'AR/VR integration'],
       benefits: ['Immersive experience', 'Enhanced collaboration', '3D data visualization', 'Future workspace'],
       category: 'Immersive Tech',
-      popular: false;,},
+      popular: false},
     {icon: Box,
       title: 'AI 3D Generation',
       description: 'AI-powered 3D content creation and modeling for games, architecture, and manufacturing',
@@ -287,7 +288,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['AI 3D model generation', 'Text-to-3D conversion', 'Automated texture mapping', '3D animation creation', 'Architectural visualization', 'Product design automation', 'Virtual reality content', '3D printing optimization'],
       benefits: ['Faster 3D creation', 'Cost reduction', 'Creative automation', 'Professional quality'],
       category: '3D Technology',
-      popular: false;,},
+      popular: false},
     {icon: Zap,
       title: 'AI 5G Implementation',
       description: '5G network optimization and AI-powered connectivity solutions for ultra-fast communication',
@@ -296,7 +297,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['5G network optimization', 'AI-powered traffic management', 'Edge computing integration', 'IoT device management', 'Network slicing automation', 'Real-time performance monitoring', 'Predictive network maintenance', 'Ultra-low latency applications'],
       benefits: ['Ultra-fast connectivity', 'Network optimization', 'IoT enablement', 'Future-ready infrastructure'],
       category: '5G Technology',
-      popular: false;,},
+      popular: false},
     {icon: Heart,
       title: 'AI Drug Discovery Pro',
       description: 'Advanced AI platform for pharmaceutical research, drug discovery, and clinical trial optimization',
@@ -305,7 +306,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Molecular design and optimization', 'Drug-target interaction prediction', 'Clinical trial design optimization', 'Side effect prediction', 'Drug repurposing analysis', 'Biomarker discovery', 'Regulatory compliance assistance', 'Real-world evidence analysis'],
       benefits: ['Faster drug development', 'Reduced research costs', 'Better success rates', 'Life-saving innovations'],
       category: 'Pharmaceutical AI',
-      popular: false;,},
+      popular: false},
     {icon: Globe,
       title: 'AI Climate Solutions Pro',
       description: 'AI-powered climate modeling, carbon tracking, and environmental impact optimization',
@@ -314,7 +315,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Climate change modeling', 'Carbon footprint tracking', 'Renewable energy optimization', 'Environmental impact assessment', 'Weather prediction enhancement', 'Sustainability planning', 'Green technology recommendations', 'ESG reporting automation'],
       benefits: ['Environmental impact', 'Sustainability optimization', 'Climate resilience', 'Green innovation'],
       category: 'Climate Tech',
-      popular: false;,},
+      popular: false},
     {icon: DollarSign,
       title: 'AI Financial Crime Detection Pro',
       description: 'Advanced AI system for detecting money laundering, fraud, and financial crimes in real-time',
@@ -323,7 +324,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Real-time transaction monitoring', 'Money laundering detection', 'Sanctions screening', 'Risk scoring and profiling', 'Regulatory compliance automation', 'Cross-border transaction analysis', 'Behavioral pattern recognition', 'Investigation case management'],
       benefits: ['Enhanced security', 'Regulatory compliance', 'Risk mitigation', 'Cost savings'],
       category: 'Financial Security',
-      popular: false;,},
+      popular: false},
     {icon: BarChart3,
       title: 'AI Agricultural Intelligence Pro',
       description: 'Smart farming solutions with AI-powered crop monitoring, yield optimization, and precision agriculture',
@@ -332,7 +333,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Crop health monitoring', 'Yield prediction and optimization', 'Precision irrigation systems', 'Pest and disease detection', 'Soil analysis and recommendations', 'Weather-based farming decisions', 'Automated equipment control', 'Supply chain optimization'],
       benefits: ['Increased crop yields', 'Resource optimization', 'Sustainable farming', 'Cost reduction'],
       category: 'AgTech',
-      popular: false;,},
+      popular: false},
     {icon: Zap,
       title: 'AI Energy Grid Management Pro',
       description: 'Intelligent energy grid optimization with AI-powered demand forecasting and renewable integration',
@@ -341,7 +342,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Smart grid optimization', 'Renewable energy integration', 'Demand response management', 'Energy storage optimization', 'Grid stability monitoring', 'Predictive maintenance', 'Carbon footprint reduction', 'Real-time energy trading'],
       benefits: ['Grid efficiency', 'Renewable integration', 'Cost optimization', 'Sustainability'],
       category: 'Energy Tech',
-      popular: false;,}]
+      popular: false}]
 
   // Real IT Services with actual capabilities and pricing;
   const itServices = [
@@ -353,7 +354,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Cloud architecture design', 'Multi-cloud strategies', 'Cost optimization', 'Disaster recovery', 'Auto-scaling solutions', 'Security compliance'],
       benefits: ['99.9% uptime guarantee', 'Cost reduction up to 40%', 'Scalable infrastructure', 'Expert migration support'],
       category: 'Cloud',
-      popular: true;,},
+      popular: true},
     {icon: Shield,
       title: 'Cybersecurity Solutions',
       description: 'Comprehensive security services including threat detection, compliance, and incident response',
@@ -362,7 +363,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Threat detection & response', 'Vulnerability assessments', 'Penetration testing', 'Security monitoring', 'Compliance management', 'Employee training'],
       benefits: ['24/7 security monitoring', 'Reduced security incidents', 'Compliance assurance', 'Expert security team'],
       category: 'Security',
-      popular: true;,},
+      popular: true},
     {icon: Settings,
       title: 'DevOps & CI/CD',
       description: 'Modern development operations with automated deployment, monitoring, and infrastructure as code',
@@ -371,7 +372,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['CI/CD pipeline setup', 'Infrastructure as Code', 'Container orchestration', 'Monitoring & logging', 'Automated testing', 'Deployment automation'],
       benefits: ['Faster deployments', 'Reduced downtime', 'Improved code quality', 'Automated workflows'],
       category: 'DevOps',
-      popular: false;,},
+      popular: false},
     {icon: Database,
       title: 'Database Management',
       description: 'Expert database design, optimization, and management for all major database systems',
@@ -380,21 +381,21 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Database design & optimization', 'Performance tuning', 'Backup & recovery', 'Data migration', 'Security hardening', 'Monitoring & maintenance'],
       benefits: ['Improved performance', 'Data security', 'Automated backups', 'Expert DBA support'],
       category: 'Database',
-      popular: false;,},
+      popular: false},
     {description: 'Modern web applications with responsive design, SEO optimization, and performance tuning Native and cross-platform mobile applications for iOS and Android with modern frameworks',
       price: '$3,500/project',
       marketPrice: '$5000-25000/project',
       features: ['React/Next.js development', 'Responsive design', 'SEO optimization', 'Performance optimization', 'E-commerce solutions', 'CMS integration', 'Native iOS & Android development', 'Cross-platform solutions (React Native', 'Flutter)', 'UI/UX design', 'App store optimization', 'Push notifications', 'Offline functionality'],
       benefits: ['Modern web presence', 'Better user experience', 'SEO optimization', 'Mobile responsiveness', 'Native performance', 'Cross-platform compatibility', 'Modern UI/UX', 'App store success'],
       category: 'Mobile Development',
-      popular: true;,},
+      popular: true},
     {description: 'Custom API development, third-party integrations, and microservices architecture Modern web applications and e-commerce platforms with advanced features and optimization',
       price: '$1,500/month',
       marketPrice: '$2500-8000/month',
       features: ['RESTful API development', 'GraphQL APIs', 'Third-party integrations', 'Microservices architecture', 'API documentation', 'Rate limiting & security', 'Responsive web design', 'E-commerce platforms', 'Progressive Web Apps (PWA)', 'SEO optimization', 'Performance optimization', 'Payment integration'],
       benefits: ['Seamless integrations', 'Scalable architecture', 'Better performance', 'Developer-friendly APIs', 'Modern web presence', 'Mobile-first design', 'SEO optimization', 'Fast loading times'],
       category: 'API Development',
-      popular: false;,},
+      popular: false},
     {icon: Monitor,
       title: 'IT Support & Helpdesk',
       description: '24/7 technical support and helpdesk services for all IT-related issues',
@@ -403,7 +404,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['24/7 technical support', 'Remote assistance', 'Hardware & software troubleshooting', 'User training', 'Ticket management', 'Knowledge base', 'Proactive monitoring', 'Incident response'],
       benefits: ['Quick issue resolution', 'Expert support', 'User satisfaction', 'Reduced downtime'],
       category: 'Support',
-      popular: true;,},
+      popular: true},
     {icon: Database,
       title: 'Data Analytics & BI',
       description: 'Business intelligence and data analytics solutions for informed decision making',
@@ -412,7 +413,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Data warehouse design', 'ETL processes', 'Business intelligence dashboards', 'Data visualization', 'Predictive analytics', 'Real-time reporting', 'Data governance', 'Custom analytics solutions'],
       benefits: ['Data-driven insights', 'Better decision making', 'Competitive advantage', 'ROI optimization'],
       category: 'Analytics',
-      popular: false;,},
+      popular: false},
     {icon: Smartphone,
       title: 'Mobile App Development',
       description: 'Native and cross-platform mobile applications for iOS and Android',
@@ -421,7 +422,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Native iOS & Android development', 'Cross-platform solutions (React Native, Flutter)', 'UI/UX design', 'App store optimization', 'Push notifications', 'Offline functionality', 'API integration', 'Performance optimization'],
       benefits: ['Native performance', 'Cross-platform compatibility', 'Modern UI/UX', 'App store success'],
       category: 'Mobile Development',
-      popular: true;,},
+      popular: true},
     {icon: Code,
       title: 'Custom Software Development',
       description: 'Tailored software solutions built to meet specific business requirements',
@@ -430,7 +431,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Custom application development', 'Legacy system modernization', 'API development', 'Database design', 'Cloud integration', 'Security implementation', 'Performance optimization', 'Maintenance and support'],
       benefits: ['Tailored solutions', 'Competitive advantage', 'Scalable architecture', 'Long-term support'],
       category: 'Software Development',
-      popular: true;,},
+      popular: true},
     {icon: Wifi,
       title: 'Network Infrastructure',
       description: 'Complete network design, implementation, and management solutions',
@@ -439,7 +440,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Network design and architecture', 'Wireless network setup', 'Network security implementation', 'Performance monitoring', 'Bandwidth optimization', 'Disaster recovery planning', 'Network documentation', 'Ongoing maintenance'],
       benefits: ['Reliable connectivity', 'Enhanced security', 'Optimized performance', 'Scalable infrastructure'],
       category: 'Networking',
-      popular: false;,},
+      popular: false},
     {icon: Package,
       title: 'IT Asset Management',
       description: 'Comprehensive IT asset lifecycle management and optimization',
@@ -448,7 +449,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Asset inventory and tracking', 'License management', 'Lifecycle planning', 'Cost optimization', 'Compliance reporting', 'Vendor management', 'Asset disposal', 'Performance monitoring'],
       benefits: ['Cost optimization', 'Compliance assurance', 'Better asset utilization', 'Reduced risks'],
       category: 'Asset Management',
-      popular: false;,},
+      popular: false},
     {icon: Lock,
       title: 'IT Security Services',
       description: 'Comprehensive cybersecurity services including assessment, implementation, and monitoring',
@@ -457,7 +458,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Security assessment and auditing', 'Vulnerability management', 'Penetration testing', 'Security awareness training', 'Incident response planning', 'Compliance management', 'Security monitoring', 'Threat intelligence'],
       benefits: ['Enhanced security posture', 'Risk mitigation', 'Compliance assurance', 'Proactive protection'],
       category: 'Security',
-      popular: true;,},
+      popular: true},
     {icon: Calendar,
       title: 'IT Project Management',
       description: 'Professional IT project management and implementation services',
@@ -466,7 +467,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Project planning and execution', 'Resource allocation', 'Timeline management', 'Risk assessment', 'Quality assurance', 'Stakeholder communication', 'Change management', 'Project documentation'],
       benefits: ['On-time delivery', 'Budget control', 'Quality assurance', 'Risk mitigation'],
       category: 'Project Management',
-      popular: false;,},
+      popular: false},
     {icon: Brain,
       title: 'AI Integration Services',
       description: 'Complete AI model integration and deployment services for existing business systems',
@@ -475,7 +476,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['AI model deployment and integration', 'API development and management', 'Data pipeline creation', 'Model monitoring and maintenance', 'Performance optimization', 'Scalability planning', 'Security implementation', 'Training and support'],
       benefits: ['Seamless AI integration', 'Faster deployment', 'Better performance', 'Ongoing support'],
       category: 'AI Integration',
-      popular: true;,},
+      popular: true},
     {icon: Link,
       title: 'Blockchain Development',
       description: 'Custom blockchain solutions including smart contracts, DeFi protocols, and NFT platforms',
@@ -484,7 +485,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Smart contract development', 'DeFi protocol creation', 'NFT marketplace development', 'Cryptocurrency wallet integration', 'Blockchain consulting', 'Security auditing', 'Token economics design', 'Cross-chain integration'],
       benefits: ['Innovation leadership', 'Decentralized solutions', 'Enhanced security', 'Future-proof technology'],
       category: 'Blockchain',
-      popular: false;,},
+      popular: false},
     {icon: Wifi,
       title: 'IoT Development',
       description: 'Internet of Things solutions for connected devices, sensors, and smart systems',
@@ -493,7 +494,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['IoT device development', 'Sensor integration', 'Data collection and analysis', 'Real-time monitoring', 'Edge computing solutions', 'Cloud platform integration', 'Security implementation', 'Scalability planning'],
       benefits: ['Connected solutions', 'Real-time insights', 'Automation enablement', 'Cost optimization'],
       category: 'IoT',
-      popular: false;,},
+      popular: false},
     {icon: ShoppingCart,
       title: 'E-commerce Development',
       description: 'Complete e-commerce platforms with advanced features and optimization',
@@ -502,7 +503,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Custom e-commerce platforms', 'Payment gateway integration', 'Inventory management', 'Order processing automation', 'Customer portal development', 'Mobile commerce solutions', 'SEO optimization', 'Analytics and reporting'],
       benefits: ['Online presence', 'Revenue generation', 'Customer experience', 'Business growth'],
       category: 'E-commerce',
-      popular: true;,},
+      popular: true},
     {icon: Code,
       title: 'Advanced API Development',
       description: 'Enterprise-grade API development with microservices architecture and advanced security',
@@ -511,7 +512,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['RESTful and GraphQL APIs', 'Microservices architecture', 'API gateway implementation', 'Rate limiting and throttling', 'Authentication and authorization', 'API documentation', 'Versioning and lifecycle management', 'Performance monitoring'],
       benefits: ['Scalable architecture', 'Better integration', 'Enhanced security', 'Developer experience'],
       category: 'API Development',
-      popular: false;,},
+      popular: false},
     {icon: Database,
       title: 'Data Engineering',
       description: 'Advanced data pipeline development and big data processing solutions',
@@ -520,7 +521,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Data pipeline development', 'ETL/ELT processes', 'Big data processing', 'Data warehouse design', 'Real-time data streaming', 'Data quality management', 'Cloud data solutions', 'Performance optimization'],
       benefits: ['Data-driven insights', 'Scalable processing', 'Better performance', 'Cost optimization'],
       category: 'Data Engineering',
-      popular: false;,},
+      popular: false},
     {icon: Shield,
       title: 'Advanced Cybersecurity',
       description: 'Next-generation security solutions including threat hunting, incident response, and compliance',
@@ -529,7 +530,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Threat hunting and analysis', 'Incident response planning', 'Security orchestration', 'Compliance management', 'Penetration testing', 'Security awareness training', 'Zero-trust architecture', 'Advanced threat protection'],
       benefits: ['Enhanced security posture', 'Proactive protection', 'Compliance assurance', 'Risk mitigation'],
       category: 'Cybersecurity',
-      popular: true;,},
+      popular: true},
     {icon: Cloud,
       title: 'Cloud Migration Advanced',
       description: 'Zero-downtime cloud migration with advanced optimization and cost management',
@@ -538,7 +539,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Zero-downtime migration', 'Application modernization', 'Cloud cost optimization', 'Performance tuning', 'Disaster recovery setup', 'Multi-cloud strategies', 'Security implementation', 'Ongoing optimization'],
       benefits: ['Seamless migration', 'Cost reduction', 'Better performance', 'Scalability'],
       category: 'Cloud Migration',
-      popular: true;,},
+      popular: true},
     {icon: Settings,
       title: 'Advanced DevOps & SRE',
       description: 'Site reliability engineering with advanced monitoring, automation, and incident management',
@@ -547,7 +548,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Site reliability engineering', 'Advanced monitoring setup', 'Incident management', 'Automation implementation', 'Performance optimization', 'Capacity planning', 'Disaster recovery', 'Team training'],
       benefits: ['Higher reliability', 'Faster incident response', 'Better performance', 'Reduced downtime'],
       category: 'DevOps',
-      popular: false;,},
+      popular: false},
     {icon: Cpu,
       title: 'MLOps & AI Operations',
       description: 'Machine learning operations with model deployment, monitoring, and lifecycle management',
@@ -556,7 +557,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['ML model deployment', 'Model monitoring and management', 'A/B testing frameworks', 'Data pipeline automation', 'Model versioning', 'Performance tracking', 'Automated retraining', 'Scalability management'],
       benefits: ['Faster ML deployment', 'Better model performance', 'Automated operations', 'Scalable AI'],
       category: 'MLOps',
-      popular: false;,},
+      popular: false},
     {icon: Link,
       title: 'Enterprise Integration',
       description: 'Complex system integration with legacy systems, APIs, and third-party services',
@@ -565,7 +566,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Legacy system integration', 'API integration', 'Data synchronization', 'Workflow automation', 'System architecture design', 'Performance optimization', 'Security implementation', 'Ongoing maintenance'],
       benefits: ['Unified systems', 'Better efficiency', 'Data consistency', 'Reduced complexity'],
       category: 'Integration',
-      popular: false;,},
+      popular: false},
     {icon: Zap,
       title: 'Performance Optimization',
       description: 'Application and infrastructure performance optimization with advanced monitoring and tuning',
@@ -574,7 +575,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Performance analysis', 'Code optimization', 'Database tuning', 'Infrastructure optimization', 'Caching strategies', 'CDN implementation', 'Load testing', 'Continuous monitoring'],
       benefits: ['Faster applications', 'Better user experience', 'Cost reduction', 'Scalability'],
       category: 'Performance',
-      popular: true;,},
+      popular: true},
     {icon: Shield,
       title: 'Disaster Recovery Advanced',
       description: 'Comprehensive business continuity planning with advanced backup and recovery solutions',
@@ -583,7 +584,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Business continuity planning', 'Backup strategy design', 'Recovery testing', 'RTO/RPO optimization', 'Multi-site replication', 'Cloud backup solutions', 'Incident response planning', 'Regular testing and updates'],
       benefits: ['Business continuity', 'Risk mitigation', 'Fast recovery', 'Peace of mind'],
       category: 'Disaster Recovery',
-      popular: false;,},
+      popular: false},
     {icon: CheckCircle,
       title: 'Compliance Automation',
       description: 'Automated compliance management for GDPR, HIPAA, SOC2, and other regulatory requirements',
@@ -592,7 +593,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Compliance assessment', 'Policy automation', 'Audit trail management', 'Risk assessment', 'Documentation automation', 'Training management', 'Monitoring and alerting', 'Regular reporting'],
       benefits: ['Regulatory compliance', 'Reduced risk', 'Automated processes', 'Cost savings'],
       category: 'Compliance',
-      popular: false;,},
+      popular: false},
     {icon: TrendingUp,
       title: 'Cloud Cost Optimization',
       description: 'Advanced cloud cost management with automated optimization and cost reduction strategies',
@@ -601,7 +602,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Cost analysis and monitoring', 'Resource optimization', 'Automated scaling', 'Reserved instance management', 'Spot instance utilization', 'Cost allocation and reporting', 'Budget alerts and controls', 'Continuous optimization'],
       benefits: ['Significant cost savings', 'Better resource utilization', 'Automated optimization', 'Budget control'],
       category: 'Cost Optimization',
-      popular: true;,},
+      popular: true},
     {icon: Shield,
       title: 'Security Automation',
       description: 'Automated security operations with AI-powered threat detection and response',
@@ -610,7 +611,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Automated threat detection', 'Incident response automation', 'Security orchestration', 'Vulnerability management', 'Compliance monitoring', 'Security analytics', 'Threat intelligence integration', 'Automated remediation'],
       benefits: ['Faster response times', 'Reduced manual work', 'Better security posture', 'Cost efficiency'],
       category: 'Security Automation',
-      popular: false;,},
+      popular: false},
     {icon: BarChart3,
       title: 'Data Visualization & BI',
       description: 'Advanced business intelligence solutions with interactive dashboards and real-time analytics',
@@ -619,7 +620,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Interactive dashboards', 'Real-time analytics', 'Custom visualizations', 'Data storytelling', 'Self-service BI', 'Mobile BI solutions', 'Advanced reporting', 'Data governance'],
       benefits: ['Better insights', 'Data-driven decisions', 'Self-service analytics', 'Improved performance'],
       category: 'Business Intelligence',
-      popular: true;,},
+      popular: true},
     {icon: Settings,
       title: 'Workflow Automation',
       description: 'Business process automation with intelligent workflows and integration capabilities',
@@ -628,7 +629,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Process mapping and analysis', 'Workflow automation', 'Integration development', 'Exception handling', 'Performance monitoring', 'User training', 'Continuous improvement', 'Scalability planning'],
       benefits: ['Process efficiency', 'Error reduction', 'Cost savings', 'Better productivity'],
       category: 'Automation',
-      popular: true;,},
+      popular: true},
     {icon: Shield,
       title: 'Cloud-Native Security',
       description: 'Specialized security solutions for cloud-native applications and containerized environments',
@@ -637,7 +638,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Container security', 'Kubernetes security', 'Cloud security posture management', 'Identity and access management', 'Network security', 'Data protection', 'Compliance monitoring', 'Incident response'],
       benefits: ['Cloud-native protection', 'Container security', 'Compliance assurance', 'Scalable security'],
       category: 'Cloud Security',
-      popular: false;,}]
+      popular: false}]
 
   // Real Micro SaaS Services with actual capabilities and pricing;
   const microSaasServices = [
@@ -1208,11 +1209,13 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
     {icon: <Shield className="w-8 h-8 text-purple-500" />, value: '24/7', label: 'Support Available' ,},
     {icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5★', label: 'Client Rating' ,}]
 
-  return(<React.Fragment>)</React.Fragment>
-      <SEOOptimizer;
+  return (
+    <React.Fragment>
+      <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}canonicalUrl="https: //ziontechgroup.com",
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+        canonicalUrl="https://ziontechgroup.com"
         structuredData={{
           '@context': 'https://schema.org',
           '@type': 'TechCompany',
@@ -1231,103 +1234,125 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
             'Automation',
             'Business Intelligence'
           ],
-          contactPoint: {,
+          contactPoint: {
             '@type': 'ContactPoint',
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en',},
-          address: {,
+            availableLanguage: 'en'
+          },
+          address: {
             '@type': 'PostalAddress',
             streetAddress: '364 E Main St STE 1008',
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US',}}}
+            addressCountry: 'US'
+          }
+        }}
       />
-      <PerformanceOptimizer;
-        enableImageOptimization={true}enableLazyLoading={true}enablePreloading={true}enableCodeSplitting={true}/>
-      <AccessibilityEnhancer;
-        enableKeyboardNavigation={true}enableScreenReaderSupport={true}enableHighContrast={true}enableFocusManagement={true}/>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">{/* Navigation */</div>} <Navigation />
-        {/* Skip to main content for accessibility */} <a;
+      <PerformanceOptimizer
+        enableImageOptimization={true}
+        enableLazyLoading={true}
+        enablePreloading={true}
+        enableCodeSplitting={true}
+      />
+      <AccessibilityEnhancer
+        enableKeyboardNavigation={true}
+        enableScreenReaderSupport={true}
+        enableHighContrast={true}
+        enableFocusManagement={true}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">
+        {/* Navigation */}
+        <Navigation />
+        {/* Skip to main content for accessibility */}
+        <a
           href="#main-content"
-          className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">,
-          Skip to main content;
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
+        >
+          Skip to main content
         </a>
         
         {/* Content Promotion Banner */} <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
           <ContentPromotionBanner />
         </Suspense>
         
-        <main id="main-content" className="container mx-auto px-4 py-16 pt-24 quantum-energy-field" role="main">{/* Hero Section */</main>} <section;
-className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holographic-card-enhanced quantum-pulse-enhanced ${
-              isLoaded && isVisible;
+        <main id="main-content" className="container mx-auto px-4 py-16 pt-24 quantum-energy-field" role="main">
+          {/* Hero Section */}
+          <section
+            className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holographic-card-enhanced quantum-pulse-enhanced ${
+              isLoaded && isVisible
                 ? 'opacity-100 translate-y-0' 
-                : 'opacity-0 translate-y-8'}`}
+                : 'opacity-0 translate-y-8'
+            }`}
             aria-labelledby="hero-heading"
           >
             <div className="max-w-6xl mx-auto">
-              <h1;
+              <h1
                 id="hero-heading" 
-                className="text-5xl md: text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch-enhanced neon-text-enhanced",
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch-enhanced neon-text-enhanced"
                 data-text="Zion Tech Group"
-              >Zion Tech Group;</h1>
+              >
+                Zion Tech Group
               </h1>
-              <p className="text-xl md: text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced neon-glow" role="doc-subtitle">,</p>
-                Advanced AI and IT Solutions;
-              </p>
-              <p className="text-base sm: text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">,</p>
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced neon-glow" role="doc-subtitle">
+                Advanced AI and IT Solutions
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
                 Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
                 startups, and enterprises worldwide with proven results and 24/7 expert support.
               </p>
-              {/* Key Benefits */} <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 px-4">,</div>
-                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm: p-6 hover:scale-105 transition-all duration-300">,</div>
-                  <div className="text-2xl sm: text-3xl mb-3">🚀</div>,
-                  <h3 className="font-bold text-white mb-3 text-base sm: text-lg">AI-Powered Solutions</h3>,
+              {/* Key Benefits */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 px-4">
+                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl mb-3">🚀</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
                 </div>
-                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm: p-6 hover:scale-105 transition-all duration-300">,</div>
-                  <div className="text-2xl sm: text-3xl mb-3">⚡</div>,
-                  <h3 className="font-bold text-white mb-3 text-base sm: text-lg">Proven Results</h3>,
+                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl mb-3">⚡</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
                 </div>
-                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm: p-6 hover:scale-105 transition-all duration-300">,</div>
-                  <div className="text-2xl sm: text-3xl mb-3">🔒</div>,
-                  <h3 className="font-bold text-white mb-3 text-base sm: text-lg">Enterprise Security</h3>,
-                  <p className="text-xs sm: text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>,
+                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl mb-3">🔒</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
                 </div>
-                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm: p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">,</div>
-                  <div className="text-2xl sm: text-3xl mb-3">🌐</div>,
-                  <h3 className="font-bold text-white mb-3 text-base sm: text-lg">Global Reach</h3>,
-                  <p className="text-xs sm: text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>,
+                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
+                  <div className="text-2xl sm:text-3xl mb-3">🌐</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Global Reach</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
                 </div>
               </div>
-              {/* CTA Buttons */} <div className="mt-12 flex flex-col sm: flex-row gap-4 justify-center items-center">,</div>
-                <a;
-                  href="tel: +13024640950",
-                  onClick={handlePhoneClick}className="cyber-button-enhanced w-full sm: w-auto text-center",
+              {/* CTA Buttons */}
+              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a
+                  href="tel:+13024640950"
+                  onClick={handlePhoneClick}
+                  className="cyber-button-enhanced w-full sm:w-auto text-center"
                   aria-label="Call us at (302) 464-0950"
                 >
-                  📞 Call: (302) 464-0950;,
+                  📞 Call: (302) 464-0950
                 </a>
-                <a;
-                  href="mailto: kleber@ziontechgroup.com",
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300">,
-                  📧 Email Us;
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >
+                  📧 Email Us
                 </a>
-                <a;
+                <a
                   href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-indigo-600 transition-all duration-300">,
-                  Get Free Consultation;
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+                >
+                  Get Free Consultation
                 </a>
               </div>
-              {/* Contact Info */} <div className="mt-8 text-center">
-                <p className="text-gray-300 text-sm mb-2">📍 364 E Main St STE 1008, Middletown, DE 19709;</p>
-                </p>
-                <p className="text-gray-300 text-sm">⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available;,</p>
-                </p>
+              {/* Contact Info */}
+              <div className="mt-8 text-center">
+                <p className="text-gray-300 text-sm mb-2">📍 364 E Main St STE 1008, Middletown, DE 19709</p>
+                <p className="text-gray-300 text-sm">⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available</p>
               </div>
             </div>
           </section>

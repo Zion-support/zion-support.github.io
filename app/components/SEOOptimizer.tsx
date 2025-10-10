@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-'use client';
-interface SEOOptimizerProps {title: string;,}
-  description: string;,
-  keywords?: string[]
-=======
 'use client';
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -13,7 +6,6 @@ interface SEOOptimizerProps {
   title: string;
   description: string;
   keywords?: string[];
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
   canonicalUrl?: string;
   structuredData?: object;}const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
   title,
@@ -35,11 +27,6 @@ interface SEOOptimizerProps {
       <meta property="og: type" content="website" />,
       <meta property="og: url" content={canonicalUrl,}/>
       
-<<<<<<< HEAD
-      {/* Twitter Card */} <meta name="twitter: card" content="summary_large_image" />,
-      <meta name="twitter: title" content={title,}/>
-      <meta name="twitter: description" content={description,}/>
-=======
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
@@ -51,7 +38,6 @@ interface SEOOptimizerProps {
           {JSON.stringify(structuredData)}
         </script>
       )}
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
     </Helmet>
   );
 };

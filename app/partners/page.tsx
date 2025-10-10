@@ -1,30 +1,5 @@
 'use client';
-<<<<<<< HEAD
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-
-const PartnersPage: React.FC = () => {,
-  const partners = [
-import {ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight}}from 'lucide-react';
-
-interface Partner {id: string;,}
-  name: string;,
-  logo: string;,
-  description: string;,
-  category: string;,
-  website: string;,
-  tier: 'preferred' | 'certified' | 'strategic';,}const PartnersPage: React.FC = () => {,
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedTier, setSelectedTier] = useState('all');
-
-<<<<<<< HEAD
-  const partners: Partner[] = [,
-=======
   const partners: Partner[] = [
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
     {
       id: '1',
       name: 'Microsoft',
@@ -142,29 +117,16 @@ const PartnersPage: React.FC = () => {
       icon: CheckCircle;,}];
   const categories = ['All', 'Cloud & AI', 'Hardware & AI', 'Business Software', 'IT Management']
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return(<>)
-      <Helmet />
-        <title>Partners | Zion Tech Group</title>
-        <meta name="description" content="Learn about our technology partnerships and how they benefit our clients with certified expertise and priority support." />
-        <meta name="keywords" content="partners, technology partnerships, Microsoft, AWS, Google Cloud, NVIDIA, certified expertise" />
-=======
   return (
     <>
       <Helmet></Helmet>
         <title></titl>Partners | Zion Tech Group</title>
         <meta name="description" content="Learn about our technology partnerships and how they benefit our clients with certified expertise and priority support." /></meta>
         <meta name="keywords" content="partners, technology partnerships, Microsoft, AWS, Google Cloud, NVIDIA, certified expertise" /></meta>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
       </Helmet>
 
       <Navigation /></Navigation>
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 =======
   const tiers = [
     {
@@ -224,28 +186,6 @@ const PartnersPage: React.FC = () => {
         {/* Partners Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
-                Our Technology Partners;
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We work with leading technology companies to deliver the best solutions for our clients.</p>
-              </p>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4 mb-12">{categories.map((category) => (</div>
-                <button;
-                  key={category}className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover: bg-white/20 transition-all duration-300",
-                >{category</button>} </button>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,</div>
-              {partners.map((partner, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-cyan-400/30 transition-all duration-300">,</div>
-                  <div className="aspect-video bg-white/10 rounded-xl mb-4 flex items-center justify-center">
-                    <div className="text-4xl opacity-50">🏢</div>
-=======
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <section className="py-20 px-4"></section>
@@ -275,7 +215,6 @@ const PartnersPage: React.FC = () => {
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"></div>
                   <div className="aspect-video bg-white/10 rounded-xl mb-4 flex items-center justify-center"></div>
                     <div className="text-4xl opacity-50"></di>🏢</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2"></h>{partner.name}</h3>
 =======
@@ -312,8 +251,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Partnership Tiers */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -330,7 +267,6 @@ const PartnersPage: React.FC = () => {
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                     <p className="text-gray-400 text-sm">{tier.requirements}</p>
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
                   </div>
                   <div className="space-y-3">
                     {tier.benefits.map((benefit, benefitIndex) => (
@@ -346,8 +282,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -390,7 +324,6 @@ const PartnersPage: React.FC = () => {
                   Download Partnership Guide
                 </button>
               </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
             </div>
           </div>
         </section>
@@ -421,24 +354,6 @@ const PartnersPage: React.FC = () => {
       case 'preferred':
         return <Award className="w-4 h-4" /></Award>;
       case 'certified':
-<<<<<<< HEAD
-        return <CheckCircle className="w-4 h-4" />;
-      default: return <Handshake className="w-4 h-4" />;,}};
-
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
-      <Helmet />
-        <title>Partners - Zion Tech Group | Strategic Partnerships</title>
-        <meta name="description" content="Meet our strategic partners and learn about our technology partnerships that enable us to deliver cutting-edge AI and IT solutions." />
-        <meta name="keywords" content="partners, partnerships, strategic partners, technology partners, AI partners, cloud partners" />
-      </Helmet>
-
-      {/* Hero Section */} <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">,</h1>
-            Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Partners</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We work with industry leaders to deliver the best AI and IT solutions.</p>
-=======
         return <CheckCircle className="w-4 h-4" /></CheckCircle>;
       default:
         return <Handshake className="w-4 h-4" /></Handshake>;
@@ -461,29 +376,11 @@ const PartnersPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
             We work with industry leaders to deliver the best AI and IT solutions. 
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
             Our strategic partnerships enable us to provide comprehensive, cutting-edge technology.
           </p>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Partnership Benefits */} <section className="py-16 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Why Partner With Us?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">We offer comprehensive partnership programs that benefit both our partners and our clients;</p>
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,</div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Handshake className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Strategic Collaboration</h3>
-              <p className="text-gray-300">Work together to develop innovative solutions that benefit both organizations and their customers.</p>
-=======
       {/* Partnership Benefits */}
       <section className="py-16 px-4 bg-white/5"></section>
         <div className="max-w-7xl mx-auto"></div>
@@ -502,7 +399,6 @@ const PartnersPage: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-4"></h>Strategic Collaboration</h3>
               <p className="text-gray-300"></p>
                 Work together to develop innovative solutions that benefit both organizations and their customers.
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               </p>
             </div>
 
@@ -510,14 +406,9 @@ const PartnersPage: React.FC = () => {
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>
                 <Users className="w-8 h-8 text-white" /></Users>
               </div>
-<<<<<<< HEAD
-              <h3 className="text-xl font-bold text-white mb-4">Joint Go-to-Market</h3>
-              <p className="text-gray-300">Leverage our combined expertise and market presence to reach new customers and expand market share.</p>
-=======
               <h3 className="text-xl font-bold text-white mb-4"></h>Joint Go-to-Market</h3>
               <p className="text-gray-300"></p>
                 Leverage our combined expertise and market presence to reach new customers and expand market share.
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               </p>
             </div>
 
@@ -525,39 +416,15 @@ const PartnersPage: React.FC = () => {
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>
                 <Award className="w-8 h-8 text-white" /></Award>
               </div>
-<<<<<<< HEAD
-              <h3 className="text-xl font-bold text-white mb-4">Certification Programs</h3>
-              <p className="text-gray-300">Access to training, certification, and technical resources to stay ahead of technology trends.</p>
-=======
               <h3 className="text-xl font-bold text-white mb-4"></h>Certification Programs</h3>
               <p className="text-gray-300"></p>
                 Access to training, certification, and technical resources to stay ahead of technology trends.
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               </p>
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Partners Grid */} <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md: flex-row gap-4 mb-12">,</div>
-            <select;
-              value={selectedCategory}onChange={(e) => setSelectedCategory(e.target.value)}className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500",
-            >
-              {categories.map(category => ()
-                <option key={category}value={category}>
-                  {category === 'all' ? 'All Categories' : category} </option>
-              ))}
-            </select>
-            <select;
-              value={selectedTier}onChange={(e) => setSelectedTier(e.target.value)}className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500",
-            >
-              {tiers.map(tier => ()
-                <option key={tier}value={tier}>
-                  {tier === 'all' ? 'All Tiers' : tier.charAt(0).toUpperCase() + tier.slice(1)} </option>
-=======
       {/* Partners Grid */}
       <section className="py-16 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
@@ -582,36 +449,10 @@ const PartnersPage: React.FC = () => {
                 <option key={tier} value={tier}></option>
                   {tier === 'all' ? 'All Tiers' : tier.charAt(0).toUpperCase() + tier.slice(1)}
                 </option>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               ))}
             </select>
           </div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>
-            {filteredPartners.map((partner) => (
-              <div key={partner.id}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 border border-white/20">,</div>
-                <div className="flex items-center justify-between mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-gray-500 to-gray-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">{partner.name.charAt(0)</span>}</span>
-                  </div>
-                  <div className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getTierColor(partner.tier)}flex items-center gap-1`}>{getTierIcon(partner.tier)</div>}{partner.tier.charAt(0).toUpperCase() + partner.tier.slice(1)}
-                  </div>
-                </div>
-
-                <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
-                <p className="text-gray-300 text-sm mb-4">{partner.category</p>}</p>
-                <p className="text-gray-300 mb-6">{partner.description</p>}</p>
-
-                <div className="flex items-center justify-between">
-                  <a;
-                    href={partner.website}target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover: text-blue-300 font-medium transition-colors flex items-center gap-2",
-                  >
-                    Visit Website;
-                    <ExternalLink className="w-4 h-4" />
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {filteredPartners.map((partner) => (
               <div key={partner.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 border border-white/20"></div>
@@ -638,7 +479,6 @@ const PartnersPage: React.FC = () => {
                   ></a>
                     Visit Website
                     <ExternalLink className="w-4 h-4" /></ExternalLink>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                   </a>
                 </div>
               </div>
@@ -652,21 +492,6 @@ const PartnersPage: React.FC = () => {
           )} </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Partnership Tiers */} <section className="py-16 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Partnership Tiers</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">We offer different partnership levels to meet the needs of various organizations;</p>
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,</div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center">
-                  <CheckCircle className="w-6 h-6 text-white" />
-=======
       {/* Partnership Tiers */}
       <section className="py-16 px-4 bg-white/5"></section>
         <div className="max-w-7xl mx-auto"></div>
@@ -682,7 +507,6 @@ const PartnersPage: React.FC = () => {
               <div className="flex items-center gap-3 mb-6"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center"></div>
                   <CheckCircle className="w-6 h-6 text-white" /></CheckCircle>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                 </div>
                 <h3 className="text-2xl font-bold text-white"></h>Certified Partner</h3>
               </div>
@@ -763,23 +587,6 @@ const PartnersPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* CTA Section */} <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,</h2>
-              Become Our Partner;
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">Join our partner ecosystem and help us deliver innovative AI and IT solutions to businesses worldwide.</p>
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">,</button>
-                Apply for Partnership;
-                <ArrowRight className="inline-block ml-2 w-5 h-5" />
-              </button>
-              <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">,</button>
-                Learn More;
-=======
       {/* CTA Section */}
       <section className="py-20 px-4"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
@@ -797,7 +604,6 @@ const PartnersPage: React.FC = () => {
               </button>
               <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
                 Learn More
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               </button>
             </div>
           </div>

@@ -1,49 +1,54 @@
 #!/bin/bash
 
-# Script to fix syntax errors in TypeScript/TSX files
-echo "Fixing syntax errors in TypeScript/TSX files..."
+echo "Fixing common syntax errors..."
 
-# Find all .tsx and .ts files with syntax errors (excluding .backup files)
-files_with_errors=$(find /workspace/src -name "*.tsx" -o -name "*.ts" | grep -v ".backup")
+# Find all TypeScript/TSX files
+find app/ -name "*.tsx" -o -name "*.ts" | while read file; do
+  echo "Processing: $file"
+  
+  # Create a temporary file
+  temp_file=$(mktemp)
+  
+  # Fix common syntax errors
+  sed -E '
+    # Fix malformed JSX fragments
+    s/<>([^<]*)$/<>$1<\/>/
+    
+    # Fix malformed Helmet tags
+    s/<Helmet \/>/<Helmet>/
+    s/<\/Helmet>/<\/Helmet>/
+    
+    # Fix malformed className attributes with spaces
+    s/className="([^"]*): ([^"]*)"/className="$1:$2"/g
+    
+    # Fix malformed closing tags
+    s/<\/div>;$/<\/div>/g
+    s/<\/section>;$/<\/section>/g
+    s/<\/h1>;$/<\/h1>/g
+    s/<\/h2>;$/<\/h2>/g
+    s/<\/h3>;$/<\/h3>/g
+    s/<\/p>;$/<\/p>/g
+    
+    # Fix malformed function calls
+    s/\);};$/);/g
+    s/\);};$/);/g
+    
+    # Fix malformed array syntax
+    s/,\s*\]/]/g
+    s/,\s*}/}/g
+    
+    # Fix malformed object syntax
+    s/,\s*}/}/g
+    
+    # Fix malformed JSX attributes
+    s/className="([^"]*),\s*([^"]*)"/className="$1 $2"/g
+    
+    # Fix malformed closing tags with semicolons
+    s/<\/[^>]+>;$/&/g
+  ' "$file" > "$temp_file"
+  
+  # Replace the original file
+  mv "$temp_file" "$file"
+done
 
-for file in $files_with_errors; do
-    echo "Checking: $file"
-    
-    # Fix common import syntax errors
-    sed -i 's/import, React, from '\''rea, c, t'\'';/import React from '\''react'\'';/g' "$file"
-    sed -i 's/import, React, { useSta, t, e, useEffe, c, t } fr, o, m '\''rea, c, t'\'';/import React, { useState, useEffect } from '\''react'\'';/g' "$file"
-    sed -i 's/import, React, { useEffe, c, t } fr, o, m '\''rea, c, t'\'';/import React, { useEffect } from '\''react'\'';/g' "$file"
-    sed -i 's/import, React, { useSta, t, e } fr, o, m '\''rea, c, t'\'';/import React, { useState } from '\''react'\'';/g' "$file"
-    sed -i 's/import, React, { useRef } fr, o, m '\''rea, c, t'\'';/import React, { useRef } from '\''react'\'';/g' "$file"
-    sed -i 's/import, React, { useMemo } fr, o, m '\''rea, c, t'\'';/import React, { useMemo } from '\''react'\'';/g' "$file"
-    sed -i 's/import, React, { useCallback } fr, o, m '\''rea, c, t'\'';/import React, { useCallback } from '\''react'\'';/g' "$file"
-    
-    # Fix other common syntax errors
-    sed -i 's/interface, /interface /g' "$file"
-    sed -i 's/const, /const /g' "$file"
-    sed -i 's/let, /let /g' "$file"
-    sed -i 's/var, /var /g' "$file"
-    sed -i 's/function, /function /g' "$file"
-    sed -i 's/export, /export /g' "$file"
-    sed -i 's/import, /import /g' "$file"
-    sed -i 's/from, /from /g' "$file"
-    sed -i 's/class, /class /g' "$file"
-    sed -i 's/type, /type /g' "$file"
-    
-    # Fix className syntax errors
-    sed -i 's/classNam, e=/className=/g' "$file"
-    sed -i 's/classNa, m, e=/className=/g' "$file"
-    
-    # Fix other common patterns
-    sed -i 's/useSta, t, e/useState/g' "$file"
-    sed -i 's/useEffe, c, t/useEffect/g' "$file"
-    sed -i 's/useRef/useRef/g' "$file"
-    sed -i 's/useMemo/useMemo/g' "$file"
-    sed -i 's/useCallback/useCallback/g' "$file"
-    
-    # Fix React.FC syntax
-    sed -i 's/Rea, c, t\.FC/React.FC/g' "$file"
-    sed -i 's/React\.FC/React.FC/g' "$file"
-    sed -i '/^/d' "$file"
-    sed -i '/^/d' "$file"
-    sed -i '/^    
+echo "Syntax errors fixed!"

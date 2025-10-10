@@ -1,17 +1,5 @@
 'use client';
-<<<<<<< HEAD
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Link}}from 'react-router-dom';
-import {Search, Phone, Mail, MessageCircle, Clock, CheckCircle, ArrowRight}}from 'lucide-react';
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const SupportPage: React.FC = () => {,
-=======
 const SupportPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 =======
 const SupportPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
@@ -47,23 +35,10 @@ const SupportPage: React.FC = () => {
 
   const faqs = [
     {
-<<<<<<< HEAD
-      question: 'How do I get started with your AI services?',
-<<<<<<< HEAD
-      answer: 'Getting started is easy! Contact our team for a free consultation where we assess your needs and create a customized implementation plan.',},
-    {question: 'What is your typical project timeline?',
-      answer: 'Project timelines vary based on complexity, but most AI implementations take 4-12 weeks from start to finish.'},
-    {question: 'Do you provide ongoing support?',
-      answer: 'Yes, we offer comprehensive support packages including monitoring, maintenance, and optimization services.'},
-    {question: 'What technologies do you work with?',
-      answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'}];
-=======
       answer: 'Getting started is easy! Contact our team for a free consultation where we assess your needs and create a customized implementation plan.'
-=======
       category: 'General',
       question: 'How do I get started with Zion Tech Group services?',
       answer: 'Getting started is easy! Contact our sales team through the contact form or call us directly. We\'ll schedule a consultation to understand your needs and recommend the best solutions.'
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
     },
     {
       category: 'Technical',
@@ -91,13 +66,6 @@ const SupportPage: React.FC = () => {
       answer: 'Security is our top priority. We implement enterprise-grade security measures, comply with industry standards, and provide regular security audits and updates.'
     }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
   const supportChannels = [
@@ -120,10 +88,6 @@ const SupportPage: React.FC = () => {
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-<<<<<<< HEAD
-  return(<>)
-      <Helmet />
-=======
   const supportChannels = [
     {
       icon: Phone,
@@ -196,27 +160,9 @@ const SupportPage: React.FC = () => {
       <Helmet>
         <title>Support - Zion Tech Group</title>
         <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. 24/7 support available." />
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
-                Support Center;
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get the help you need to make the most of your AI and IT solutions.</p>
-              </p>
-              
-              <div className="max-w-md mx-auto relative mb-8">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input;
-                  type="text"
-                  placeholder="Search for help..."
-                  value={searchTerm}onChange={(e) => setSearchTerm(e.target.value)}className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500",
-=======
   return (
     <>
       <Helmet></Helmet>
@@ -241,20 +187,10 @@ const SupportPage: React.FC = () => {
                   value={searchTerm}
                   onChange={(e) =></input> setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                 />
               </div>
             </div>
 
-<<<<<<< HEAD
-            <div className="mb-12">
-              <div className="relative max-w-2xl mx-auto">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input;
-                  type="text"
-                  placeholder="Search for help..."
-                  value={searchQuery}onChange={(e) => setSearchQuery(e.target.value)}className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20",
-=======
             <div className="mb-12"></div>
               <div className="relative max-w-2xl mx-auto"></div>
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Search>
@@ -264,24 +200,10 @@ const SupportPage: React.FC = () => {
                   value={searchQuery}
                   onChange={(e) =></input> setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20"
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                 />
               </div>
             </div>
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-16">,</div>
-              {supportChannels.map((channel, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-cyan-400/30 transition-all duration-300 text-center">,</div>
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <channel.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-gray-300 mb-4">{channel.description</p>}</p>
-                  <div className="text-cyan-400 font-semibold mb-2">{channel.contact</div>}</div>
-                  <div className="text-sm text-gray-400 flex items-center justify-center">
-                    <Clock className="w-4 h-4 mr-2" />
-                    {channel.availability} </div>
-=======
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"></div>
               {supportChannels.map((channel, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 text-center"></div>
@@ -294,7 +216,6 @@ const SupportPage: React.FC = () => {
                     <Clock className="w-4 h-4 mr-2" /></Clock>
                     {channel.availability}
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                 </div>
               ))}
             </div>
@@ -304,23 +225,6 @@ const SupportPage: React.FC = () => {
                 ))}
               </div>
             </h2>
-<<<<<<< HEAD
-            <p className="text-xl text-gray-300 mb-8">Our support team is here to help you succeed with our AI and IT solutions.</p>
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
-              <h2 className="text-3xl font-bold text-white mb-4">Still Need Help?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Our technical team is here to help you succeed. Contact us for personalized assistance.</p>
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover: from-cyan-600 hover:to-purple-600 transition-all duration-300">,</button>
-                  Contact Support;
-                </button>
-                <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover: bg-white/20 transition-all duration-300">,</button>
-                  Schedule Call;
-=======
             <p className="text-xl text-gray-300 mb-8"></p>
               Our support team is here to help you succeed with our AI and IT solutions.
             </p>
@@ -334,7 +238,6 @@ const SupportPage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"></button>
-=======
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -509,19 +412,12 @@ const SupportPage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
                   Contact Support
                   <MessageCircle className="w-5 h-5" />
                 </button>
-<<<<<<< HEAD
-                <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300"></button>
-                  Schedule Call
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
                 <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 px-8 py-4 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2">
                   Schedule Call
                   <Phone className="w-5 h-5" />
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
                 </button>
               </div>
             </div>
@@ -529,19 +425,11 @@ const SupportPage: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">,</button>
-                Contact Support;
-              </button>
-              <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">,</button>
-                View Documentation;
-=======
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 Contact Support
               </button>
               <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
                 View Documentation
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               </button>
             </div>
           </div>
