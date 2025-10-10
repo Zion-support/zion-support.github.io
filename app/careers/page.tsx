@@ -3,6 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Star, Users, Heart, Award, MapPin, Clock, CheckCircle } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const openPositions = [
@@ -129,8 +130,6 @@ const CareersPage: React.FC = () => {
 
                 </div>
               ))}
-            </div>
-
             </div>
           </div>
         </section>
