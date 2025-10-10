@@ -4,7 +4,6 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
 
   const aiServices = [
     {
-<<<<<<< HEAD
       id: 1,
       name: 'AI-Powered Business Intelligence',
       description: 'Advanced AI analytics platform that transforms raw data into actionable business insights',
@@ -114,7 +113,7 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
         'Automated campaign optimization',
         'Real-time performance tracking',
         'Predictive customer behavior'
-=======
+      ],
       category: 'AI Automation & Workflow',
       icon: Zap,
       color: 'text-yellow-400',
@@ -352,7 +351,6 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
           link: 'https://ziontechgroup.com/ai-quantum-computing',
           popular: false
         }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-804c
       ]
     },
     {
@@ -978,7 +976,6 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
                 <div className={`p-3 rounded-lg bg-gradient-to-r ${service.color} text-white`}>
                   {service.icon}
                 </div>
-<<<<<<< HEAD
                 <div className="flex items-center space-x-2">
                   {service.popular && (
                     <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
@@ -1010,10 +1007,6 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {capability}
                     </li>
-=======
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300 relative">
                       {service.popular && (
                         <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                           Popular
@@ -1061,7 +1054,6 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
                         </a>
                       </div>
                     </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-804c
                   ))}
                 </ul>
               </div>

@@ -1,7 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { 
   ChevronDown, 
   Phone, 
@@ -78,7 +77,8 @@ import {
   ChefHat,
   Rocket,
   Sprout,
-  Scale
+  Scale,
+  Mic
 } from 'lucide-react';
 import Sidebar from './Sidebar';
 
@@ -189,11 +189,6 @@ const Navigation: React.FC = () => {
         { name: 'Business Intelligence', path: '/business-intelligence' }
       ]
     }
-<<<<<<< HEAD
-  };
-
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
   };
 
   const microSAASServices = [
@@ -240,8 +235,6 @@ const Navigation: React.FC = () => {
     { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe, price: '$1,800/mo' },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, price: '$1,500/mo' },
     { name: 'Robotics Solutions', href: '/robotics', icon: Settings, price: '$3,500/mo' }
-=======
->>>>>>> origin/main
   ];
 
   return (

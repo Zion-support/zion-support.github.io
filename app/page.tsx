@@ -69,7 +69,6 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
-<<<<<<< HEAD
   // Contact information
   const contactInfo = {
     phone: '+1 302 464 0950',
@@ -216,7 +215,6 @@ const HomePage: React.FC = () => {
       freeTrial: '7 days'
     },
     {
->>>>>>> cursor/website-audit-and-update-with-deployment-74f7
       title: 'AI Task Manager Pro',
       description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',
       icon: '✅',
@@ -4450,8 +4448,6 @@ const HomePage: React.FC = () => {
     }
   ];
 
-=======
->>>>>>> origin/main
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg particle-system">
@@ -4879,10 +4875,8 @@ const HomePage: React.FC = () => {
         </Suspense>
       </main>
 
-<<<<<<< HEAD
-        {/* Footer */}
-        <Footer />
-        
+      {/* Footer */}
+      <Footer />
         {/* Skip to main content for accessibility */}
         <a
           href="#main-content"
@@ -5306,13 +5300,8 @@ const HomePage: React.FC = () => {
           </section>
         </main>
 
-        <Footer />
-      </div>
-=======
-      {/* Footer */}
       <Footer />
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c40d
     </>
   );
 };
