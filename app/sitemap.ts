@@ -1,75 +1,146 @@
-import { MetadataRoute } from 'next';
-=======
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default function sitemap(): MetadataRoute.Sitemap {
-    return [;
+// Sitemap configuration for Zion Tech Group website
+export default function sitemap() {
+  const baseUrl = 'https://ziontechgroup.com';
+  const currentDate = new Date();
+  
+  return [
     {
-      url: 'https://ziontechgroup.com',
-      lastModified: new Date(),
+      url: baseUrl,
+      lastModified: currentDate,
       changeFrequency: 'yearly',
       priority: 1,
-  },
+    },
     {
-    url: 'https://ziontechgroup.com/about',
-      lastModified: new Date(),
+      url: `${baseUrl}/about`,
+      lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
-  },
+    },
     {
-    url: 'https://ziontechgroup.com/services',
-      lastModified: new Date(),
+      url: `${baseUrl}/services`,
+      lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
-  },
+    },
     {
-    url: 'https://ziontechgroup.com/contact',
-      lastModified: new Date(),
+      url: `${baseUrl}/contact`,
+      lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
-  },
+    },
     {
-    url: 'https://ziontechgroup.com/blog',
-      lastModified: new Date(),
+      url: `${baseUrl}/blog`,
+      lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.7,
-  },
+    },
     {
-    url: 'https://ziontechgroup.com/ai-3d-generation',
-      lastModified: new Date(),
+      url: `${baseUrl}/pricing`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/case-studies`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/careers`,
+      lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.6,
-  },
+    },
     {
-    url: 'https://ziontechgroup.com/edge-computing',
-      lastModified: new Date(),
+      url: `${baseUrl}/tutorials`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/demo`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/consultation`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/ai-services`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/it-services`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/micro-saas`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/faq`,
+      lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.6,
-  },
+    },
     {
-    url: 'https://ziontechgroup.com/financial-it',
-      lastModified: new Date(),
+      url: `${baseUrl}/docs`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/api`,
+      lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.6,
-  },
+    },
     {
-    url: 'https://ziontechgroup.com/consultation',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-  },
+      url: `${baseUrl}/community`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.5,
+    },
     {
-    url: 'https://ziontechgroup.com/partners',
-      lastModified: new Date(),
+      url: `${baseUrl}/partners`,
+      lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.5,
-  },
+    },
     {
-    url: 'https://ziontechgroup.com/support',
-      lastModified: new Date(),
+      url: `${baseUrl}/support`,
+      lastModified: currentDate,
       changeFrequency: 'monthly',
-<<<<<<< HEAD
       priority: 0.5,
-  },
-  ]
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/terms`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/cookies`,
+      lastModified: currentDate,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    }
+  ];
 }

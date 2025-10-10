@@ -419,8 +419,12 @@ const Navigation: React.FC = () => {
             <Link to="/demo" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Demo
             </Link>
+            <Link to="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Careers
+            </Link>
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Contact            </Link>
+              Contact
+            </Link>
           </div>
 
           {/* Contact Info */}
@@ -566,8 +570,12 @@ const Navigation: React.FC = () => {
               <Link to="/demo" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Demo
               </Link>
+              <Link to="/careers" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Careers
+              </Link>
               <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Contact              </Link>
+                Contact
+              </Link>
 
               {/* Mobile Contact Info */}
               <div className="pt-4 border-t border-cyan-500/20 space-y-2">

@@ -125,10 +125,11 @@ const Footer: React.FC = memo(() => {
     { name: 'Pricing', url: '/pricing' },
     { name: 'FAQ', url: '/faq' },
     { name: 'Documentation', url: '/docs' },
-    { name: 'API Reference', url: '/api-docs' },
+    { name: 'API Reference', url: '/api' },
     { name: 'Tutorials', url: '/tutorials' },
     { name: 'Community', url: '/community' },
     { name: 'Demo', url: '/demo' },
+    { name: 'Consultation', url: '/consultation' },
     { name: 'Compliance', url: '/compliance' }
   ]
 
@@ -218,7 +219,26 @@ const Footer: React.FC = memo(() => {
                   View All AI Services
                   <Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
-              </li>                    {service.name}
+              </li>
+            </ul>
+          </div>
+
+          {/* IT Services */}
+          <div className="cyber-card-enhanced p-6 rounded-2xl">
+            <h3 className="text-lg font-bold mb-6 text-purple-400 flex items-center neon-text-enhanced">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3">
+                <Cloud className="w-5 h-5 text-white" />
+              </div>
+              IT Services
+            </h3>
+            <ul className="space-y-3">
+              {itServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.url}
+                    className="text-gray-300 hover:text-purple-400 transition-all duration-300 text-sm group flex items-center">
+                    <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 group-hover:scale-150 transition-transform"></div>
+                    {service.name}
                   </Link>
                 </li>
               ))}
@@ -229,7 +249,26 @@ const Footer: React.FC = memo(() => {
                   View All IT Services
                   <Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
-              </li>                    {service.name}
+              </li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS Services */}
+          <div className="cyber-card-enhanced p-6 rounded-2xl">
+            <h3 className="text-lg font-bold mb-6 text-green-400 flex items-center neon-text-enhanced">
+              <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3">
+                <Code className="w-5 h-5 text-white" />
+              </div>
+              Micro SAAS
+            </h3>
+            <ul className="space-y-3">
+              {microSaasServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.url}
+                    className="text-gray-300 hover:text-green-400 transition-all duration-300 text-sm group flex items-center">
+                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-3 group-hover:scale-150 transition-transform"></div>
+                    {service.name}
                   </Link>
                 </li>
               ))}

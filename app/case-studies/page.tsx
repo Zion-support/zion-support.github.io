@@ -90,12 +90,11 @@ const CaseStudiesPage: React.FC = () => {
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
                 </div>
-=======
-              ))};
+              ))}
             </div>
           </div>
         </section>
-        {/* CTA Section */};
+        {/* CTA Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
