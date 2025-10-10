@@ -39,6 +39,7 @@ const FuturisticHeroPage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>FuturisticHero | Zion Tech Group</title>
@@ -231,6 +232,8 @@ const FuturisticHeroPage: React.FC = () => {
                   <feature.icon className="w-6 h-6 text-cyan-400" />
                   <div className="text-xs text-white font-medium text-center">{feature.title}</div>
               ))}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -263,6 +266,7 @@ const FuturisticHeroPage: React.FC = () => {
                 Email Us
               </button>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -276,6 +280,8 @@ const FuturisticHeroPage: React.FC = () => {
         <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-pulse">
     </section>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
   );
 };
 

@@ -2,12 +2,16 @@
 
 import React from 'react';
 
+<<<<<<< HEAD
 interface SkipLinkProps {
   to: string;
   children: React.ReactNode;
 }
 
 const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {
+=======
+const SkipLink: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
   return (
     <a
       href={to}

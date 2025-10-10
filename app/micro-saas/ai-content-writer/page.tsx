@@ -27,6 +27,7 @@ const PagePage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -514,6 +515,8 @@ const PagePage: React.FC = () => {
               >
                 Get Started Now;
               </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>

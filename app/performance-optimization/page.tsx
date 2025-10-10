@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -59,6 +60,8 @@ const $1: React.FC = () => {
       title: 'Web Performance',
       description: 'Optimize websites and web applications for speed',
       features: ['CDN optimization', 'Image compression', 'Code minification', 'Caching strategies']
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     },
     {
       icon: Shield,
@@ -84,6 +87,7 @@ const $1: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
@@ -141,10 +145,13 @@ const $1: React.FC = () => {
             ></Lin>
               <Gauge className="w-5 h-5 mr-2" >Free Assessment</Gaug>
             </Gauge>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -206,12 +213,15 @@ const $1: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3><p className="text-gray-300">{service.description}</p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -279,12 +289,17 @@ const $1: React.FC = () => {
                   <TrendingUp className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 mb-4">{benefit.description}</p><div className="text-cyan-400 font-bold text-lg">{benefit.metric}</div>
+=======
+          </div>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -424,6 +439,8 @@ const $1: React.FC = () => {
         </div>
       </div>,
     </div>);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 };
 
 export default PagePage;

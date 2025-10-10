@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -160,10 +161,13 @@ const $1: React.FC = () => {
   useEffect(() => {
     setIsLoaded(true);
   }, []);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
 const PagePage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
@@ -221,6 +225,8 @@ const PagePage: React.FC = () => {
         'Medical records',
         'Legal documents'
       ]
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     },
     {
       icon: Globe,
@@ -229,6 +235,7 @@ const PagePage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -710,6 +717,8 @@ const PagePage: React.FC = () => {
               <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center">
                 <Phone className="w-5 h-5 mr-2" />
                 Contact Sales;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </button>
             </div>
           </div>

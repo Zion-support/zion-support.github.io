@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const LazyImagePage: React.FC = () => {
   const features = [
     {
@@ -68,6 +69,8 @@ const LazyImage: React.FC<LazyImageProps> = ({,
   React.useEffect(() => {}
     if (entry?.isIntersecting) {}
       setIsInView(true);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -82,6 +85,7 @@ const LazyImage: React.FC<LazyImageProps> = ({,
     'Proven track record of success'
   ];
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -125,6 +129,8 @@ const LazyImage: React.FC<LazyImageProps> = ({,
           loading="lazy")
         />)
       )}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -154,6 +160,7 @@ const LazyImage: React.FC<LazyImageProps> = ({,
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -182,6 +189,8 @@ const LazyImage: React.FC<LazyImageProps> = ({,
       {hasError && (}
         <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500">
           <span>Failed to load image</span>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
         </div>
       </section>
 

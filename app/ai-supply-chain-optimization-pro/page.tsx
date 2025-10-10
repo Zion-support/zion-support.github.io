@@ -46,6 +46,7 @@ const PagePage: React.FC = () => {
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -62,11 +63,14 @@ const PagePage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Supply Chain Optimization Pro<p className="text-xl text-gray-300 mb-8">Professional ai supply chain optimization pro services powered by advanced AI and cutting-edge technology.</p>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
               Ai Supply Chain Optimization Pro;</h1>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -112,6 +116,8 @@ const PagePage: React.FC = () => {
                   ← Back to Home;
                 </a>
               </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>

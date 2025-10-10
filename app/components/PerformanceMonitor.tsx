@@ -1,5 +1,6 @@
 'use client';
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Activity, Clock, Zap, Database } from 'lucide-react';
 
@@ -9,6 +10,8 @@ interface PerformanceMetrics {
   connectionSpeed: string;
   renderTime: number;
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
 const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -72,6 +75,7 @@ const PerformanceMonitor: React.FC = () => {
     };
   }, []);
 
+<<<<<<< HEAD
   if (!isVisible || !metrics) return null;
 
   return (
@@ -128,6 +132,8 @@ const PerformanceMonitor: React.FC = () => {
       </div>
     </div>
   );
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 };
 
 export default PerformanceMonitor;

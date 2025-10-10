@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -53,6 +54,8 @@ const $1: React.FC = () => {
       features: ['Keyword Research', 'Ad Copy Optimization', 'Landing Page Testing', 'Conversion Tracking'],
       price: '$2,200/mo',
       icon: Zap,
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -68,6 +71,7 @@ const $1: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
@@ -105,11 +109,14 @@ const $1: React.FC = () => {
           <div className="text-center mb-16"></div>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6"></h1>
               Advanced <span className="text-cyan-400">Advertising</span> Services;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -195,6 +202,8 @@ const $1: React.FC = () => {
                 <div className="flex justify-between items-center"></div>
                   <span className="text-3xl font-bold text-cyan-400">{service.price}</span><a href="/contact" className="cyber-button px-6 py-2">Learn More</a>
                   </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -205,6 +214,7 @@ const $1: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -240,6 +250,8 @@ const $1: React.FC = () => {
                 <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <CheckCircle className="w-8 h-8 text-cyan-400" />
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
@@ -247,6 +259,7 @@ const $1: React.FC = () => {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -280,6 +293,8 @@ const $1: React.FC = () => {
             <a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
               Call +1 302 464 0950;
             </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
           </div>
         </div>
       </section>

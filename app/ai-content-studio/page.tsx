@@ -8,6 +8,7 @@ import { Palette, Brain, FileText, ArrowRight, CheckCircle, Star, Users, Shield,
 const AIContentStudioPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       icon: Palette,
       title: 'AI Design Studio',
       description: 'Create stunning visual content with AI-powered design tools and templates.',
@@ -76,6 +77,8 @@ const AIContentStudioPage: React.FC = () => {
       description: "Track content performance and get AI-powered recommendations for improvement.",
       icon: BarChart,
       benefits: ["Performance tracking", "AI recommendations", "ROI analysis"]
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -92,6 +95,7 @@ const AIContentStudioPage: React.FC = () => {
 
   const useCases = [
     {
+<<<<<<< HEAD
       title: 'Marketing Campaigns',
       description: 'Create compelling marketing campaigns with AI-powered content generation',
       icon: '📢'
@@ -577,6 +581,8 @@ const AIContentStudioPage: React.FC = () => {
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Ready to Transform Your Content Creation?
             </h2>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Create stunning content with our AI Content Studio. Advanced design tools, 
               content generation, and collaboration features for better content creation.
@@ -593,6 +599,7 @@ const AIContentStudioPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -645,6 +652,8 @@ const AIContentStudioPage: React.FC = () => {
                   <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
                     +1 (302) 464-0950;
                   </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
               ))}
             </div>

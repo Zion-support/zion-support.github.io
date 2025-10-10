@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 const IoTPlatformPage: React.FC = () => {
   const features = [
     {
@@ -31,6 +32,8 @@ const $1: React.FC = () => {
       title: 'Real-time Data Processing',
       description: 'Process IoT data in real-time with edge computing and cloud analytics capabilities.',
       benefits: ['Real-time processing', 'Edge computing', 'Cloud analytics']
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     },
     {
       icon: Clock,
@@ -39,6 +42,7 @@ const $1: React.FC = () => {
       benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance']
     },
     {
+<<<<<<< HEAD
       icon: Shield,
       title: 'Security & Privacy',
       description: 'Enterprise-grade security for IoT devices and data with end-to-end encryption.',
@@ -103,10 +107,13 @@ description: 'Comprehensive security measures designed specifically for IoT envi
       title: 'Analytics & Insights',
       description: 'Advanced analytics and insights from your IoT data to optimize operations and performance.',
       benefits: ['Data analytics', 'Predictive insights', 'Performance optimization']
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IoT Platform Solutions - Zion Tech Group | Internet of Things</title>
@@ -207,11 +214,14 @@ description: 'Comprehensive security measures designed specifically for IoT envi
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                   <feature.icon className="w-6 h-6 text-white" />
             <h2 className="text-4xl font-bold text-white mb-4">IoT Platform Features</h2>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our IoT platform provides everything you need to build, deploy, and scale 
               Internet of Things solutions for any industry or use case.
             </p>
           </div>
+<<<<<<< HEAD
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -239,6 +249,8 @@ description: 'Comprehensive security measures designed specifically for IoT envi
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{benefit}</CheckCircle>
                     </CheckCircle>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                   ))}
                 </ul>
 </div>
@@ -299,6 +311,7 @@ description: 'Comprehensive security measures designed specifically for IoT envi
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -313,16 +326,21 @@ description: 'Comprehensive security measures designed specifically for IoT envi
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial<button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales</button>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your IoT Platform?</h2>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
           <p className="text-xl text-gray-300 mb-8">
             Start building your IoT platform today. Get started with a free consultation 
             and discover how we can help you succeed.
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Get Free Consultation
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Free Trial;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo

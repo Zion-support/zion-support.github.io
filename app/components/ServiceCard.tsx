@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const ServiceCardPage: React.FC = () => {
   const features = [
     {
@@ -108,6 +109,10 @@ interface ServiceCardProps {
           </li>
         ))}
       </ul>
+=======
+
+  return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

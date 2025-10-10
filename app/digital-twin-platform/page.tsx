@@ -39,6 +39,7 @@ const PagePage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
@@ -69,6 +70,8 @@ const PagePage: React.FC = () => {
             <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button></<<<butto>View</butto></<<butto>Demo</butto>
             </button>
           </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -109,6 +112,7 @@ const PagePage: React.FC = () => {
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -125,6 +129,8 @@ const PagePage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -145,6 +151,7 @@ const PagePage: React.FC = () => {
               Experience the power of our page solutions for your business.
             </p>
           </div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -298,6 +305,8 @@ const PagePage: React.FC = () => {
                     <p className="text-gray-500 text-xs">{testimonial.company}</p>
                   </div>
                 </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
@@ -327,8 +336,11 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       <Footer /></Footer>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     </div>
   );
 };

@@ -8,6 +8,7 @@ import { Shield, Code, AlertTriangle, CheckCircle, XCircle, Eye, Lock, Unlock, F
 const AICodeSecurityAuditorPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
+<<<<<<< HEAD
   useEffect(() => {
     setIsLoaded(true);
   }, []);
@@ -217,6 +218,8 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
         "Compliance reporting"
       ],
       popular: false,
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -264,6 +267,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
     }
   ];
 
+<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -286,6 +290,8 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
       <div className="relative py-20 overflow-hidden"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
       <Navigation />
 
@@ -296,16 +302,20 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-full mb-8">
               <Shield className="w-10 h-10 text-white" />
             </div>
+<<<<<<< HEAD
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Code Security Auditor
 
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent neon-text">
               Automated Security Analysis;</h1>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Secure your code with our AI Code Security Auditor. Automated vulnerability detection, 
               security analysis, and compliance checking for better code security.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center">
                 Start Auditing
@@ -471,10 +481,13 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                   )}
                 </div>
               </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -564,6 +577,8 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                     </div>
                     <p className="text-gray-300 mb-2">{issue.description}</p>
                     <p className="text-green-400 text-sm">{issue.recommendation}</p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -581,6 +596,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -631,12 +647,15 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-red-400/50 transition-all duration-300 transform hover:scale-105"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-red-400 to-orange-600 rounded-lg flex items-center justify-center mb-4"></div>
                   <feature.icon className="w-6 h-6 text-white" />
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -695,6 +714,8 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                   <div className="flex items-baseline justify-center"></div>
                     <span className="text-5xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400 ml-2">{plan.period}</span>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                   </div>
                   <p className="text-white font-medium">{benefit}</p>
                 </div>
@@ -718,6 +739,7 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                   Get Started Now
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
+<<<<<<< HEAD
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300">
                   Schedule Demo
               </div>
@@ -796,6 +818,8 @@ export default function CodeSecurityAuditor({ className = '' }: CodeSecurityAudi
                 </div>
                 <button className="w-full mt-6 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold py-4 px-6 rounded-lg hover: from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105">
                   Start Free Scan;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </button>
               </div>
             </div>

@@ -46,6 +46,7 @@ const PagePage: React.FC = () => {
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -344,6 +345,8 @@ const PagePage: React.FC = () => {
             </div>
             <div className="mt-8 text-sm text-purple-200"></div>
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>

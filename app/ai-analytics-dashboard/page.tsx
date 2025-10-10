@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -7,6 +8,8 @@ import Footer from '../components/Footer';
 import React from 'react',
 import { Helmet } from 'react-helmet-async',
 import { Link } from 'react-router-dom',
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 import {
   BarChart3,
   TrendingUp,
@@ -63,8 +66,11 @@ import {
   Phone as PhoneIcon,
   Mail as MailIcon,
   MapPin as Location
+<<<<<<< HEAD
 } from 'lucide-react';
 } from 'lucide-react',
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
@@ -108,6 +114,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
   const benefits = [
     'Reduce data analysis time by 90%',
+<<<<<<< HEAD
     'Increase decision-making speed by 75%',
     'Improve data accuracy by 95%',
     'Lower operational costs by 40%',
@@ -539,6 +546,14 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Ready to Transform Your Data Analytics?
             </h2>
+=======
+
+  const useCases = [
+    {
+    }
+  ],
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your data into actionable insights with our advanced AI Analytics Dashboard. 
               Real-time analytics, predictive modeling, and custom dashboards for better business decisions.
@@ -555,6 +570,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -637,6 +653,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
                     kleber@ziontechgroup.com,
                   </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
               ))}
             </div>
@@ -688,6 +706,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
       </main>
 
@@ -703,3 +722,5 @@ export default AIAnalyticsDashboardPage;
 },
 
 export default AIAnalyticsDashboardPage,
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629

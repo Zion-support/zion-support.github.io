@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, TrendingUp, Brain, Zap, Settings, Clock, Shield, ArrowRight, Target, BarChart, Globe, Database, Users, Star, Phone, Mail } from 'lucide-react';
 
 const AIAutomationPage: React.FC = () => {
+<<<<<<< HEAD
   const automationServices = [
     {
       icon: Settings,
@@ -20,6 +21,8 @@ const Navigation = lazy(() => import('../components/Navigation'));
 const Footer = lazy(() => import('../components/Footer'));
 
 const AIAutomationPage: React.FC = React.memo((props) => {
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
   const features = [
     {
       icon: Brain,
@@ -28,9 +31,12 @@ const AIAutomationPage: React.FC = React.memo((props) => {
       benefits: ['Process mapping', 'Bottleneck identification', 'Efficiency analysis', 'ROI prediction']
     },
     {
+<<<<<<< HEAD
       icon: Zap,
       title: 'Process Automation',
       description: 'Automate repetitive tasks and workflows with intelligent AI systems',
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
       icon: Zap,
       title: 'Smart Workflow Automation',
       description: 'Deploy AI-powered workflows that learn and adapt to your business needs over time.',
@@ -43,6 +49,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
       benefits: ['Performance monitoring', 'Efficiency metrics', 'Cost reduction', 'Quality improvement']
     },
     {
+<<<<<<< HEAD
       icon: Clock,
       title: 'Real-time Monitoring',
       description: 'Monitor automated processes in real-time with intelligent alerts and notifications.',
@@ -69,10 +76,13 @@ const AIAutomationPage: React.FC = React.memo((props) => {
       title: 'Exception Handling',
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
   const benefits = [
+<<<<<<< HEAD
     'Increase operational efficiency by 85%',
     'Reduce manual errors by 95%',
     'Lower operational costs by 60%',
@@ -137,6 +147,8 @@ const AIAutomationPage: React.FC = React.memo((props) => {
       popular: false}
       popular: false,
     }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
   ];
 
   const useCases = [
@@ -179,6 +191,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
         <meta name="description" content="Transform your business with AI Automation solutions. Intelligent process automation, workflow optimization, and smart decision-making for better efficiency." />
         <meta name="keywords" content="AI automation, process automation, workflow optimization, business automation, intelligent automation, RPA" />
       </Helmet>
+<<<<<<< HEAD
 
       <Navigation />
 
@@ -311,6 +324,8 @@ const AIAutomationPage: React.FC = React.memo((props) => {
                         Get Started
                       </a>
                     </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -328,6 +343,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -387,6 +403,8 @@ const AIAutomationPage: React.FC = React.memo((props) => {
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                     <p className="text-gray-400">{feature.description}</p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                   </div>
                   <p className="text-white font-medium">{benefit}</p>
                 </div>
@@ -395,6 +413,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -404,11 +423,14 @@ const AIAutomationPage: React.FC = React.memo((props) => {
           <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
             <div className="max-w-4xl mx-auto text-center"></div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 Ready to Automate Your Business?
               </h2>
               <p className="text-xl text-teal-100 mb-8">
                 Join thousands of businesses who are already using our AI Automation solution
               </p>
+<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                   Get Started Now
@@ -432,6 +454,8 @@ const AIAutomationPage: React.FC = React.memo((props) => {
                   <Mail className="w-5 h-5" />
                   Get Custom Automation Strategy
                 </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             </div>
           </div>

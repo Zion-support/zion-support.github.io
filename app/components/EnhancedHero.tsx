@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const EnhancedHeroPage: React.FC = () => {
   const features = [
     {
@@ -48,6 +49,8 @@ const EnhancedHero: React.FC = () => {}
     { clients: 500, savings: '$2.5B+', uptime: '99.9%', support: '24/7' },
     { clients: 750, savings: '$3.2B+', uptime: '99.95%', support: '24/7' },
     { clients: 1000, savings: '$4.1B+', uptime: '99.99%', support: '24/7' }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
   ];
 
   const benefits = [
@@ -69,6 +72,7 @@ const EnhancedHero: React.FC = () => {}
         <meta name="keywords" content="EnhancedHero, AI solutions, IT services, Zion Tech Group, enhancedhero" />
       </Helmet>
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -401,6 +405,8 @@ const EnhancedHero: React.FC = () => {}
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           /></motio>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
         </div>
       </section>
 

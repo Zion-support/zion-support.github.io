@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const SystemMonitorPage: React.FC = () => {
   const features = [
     {
@@ -363,6 +364,11 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
               <span className="text-sm font-medium text-gray-600">CLS</span>
               <span className="text-lg font-semibold text-gray-900">
                 {metrics.performance.cumulativeLayoutShift.toFixed(3)}
+=======
+    }
+  ];
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -381,6 +387,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
               </button>
             </div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Features Section */}
@@ -588,6 +595,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
               </div>
           </div>
       )}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     </div>
   );
 };

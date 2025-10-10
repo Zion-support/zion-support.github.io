@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Performance utilities for optimizing React components and application performance;
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
@@ -626,91 +627,172 @@ export const performanceOptimizer = () => {
 
 class PerformanceMonitor {}
   private metrics: PerformanceMetrics | null = null;
+=======
+// Performance utilities for the application
+
+export interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+}
+
+export class PerformanceMonitor {
+  private metrics: PerformanceMetrics = {
+    loadTime: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    firstInputDelay: 0,
+    cumulativeLayoutShift: 0,
+  };
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-efd4
   private observers: PerformanceObserver[] = [];
 
-  init(): void {}
+  constructor() {
+    this.initializeMetrics();
+  }
+
+  private initializeMetrics(): void {
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
-    // Monitor Core Web Vitals;
+    // Measure page load time
+    window.addEventListener('load', () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+    });
+
+    // Measure Core Web Vitals
+    this.measureCoreWebVitals();
+  }
+
+  private measureCoreWebVitals(): void {
+    // First Contentful Paint
+    this.observePaint('first-contentful-paint', (entry) => {
+      this.metrics.firstContentfulPaint = entry.startTime;
+    });
+
+    // Largest Contentful Paint
     this.observeLCP();
-    this.observeFID();,
+
+    // First Input Delay
+    this.observeFID();
+
+    // Cumulative Layout Shift
     this.observeCLS();
   }
 
-  private observeLCP(): void {}
-    if ('PerformanceObserver' in window) {}
-      const observer = new PerformanceObserver((list) => {}
+  private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+
+    try {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.name === type) {
+            callback(entry);
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['paint'] });
+      this.observers.push(observer);
+    } catch (error) {
+      console.warn('PerformanceObserver not supported:', error);
+    }
+  }
+
+  private observeLCP(): void {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+
+    try {
+      const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
-        if (this.metrics) {}
-          this.metrics.largestContentfulPaint = lastEntry.startTime;
-        }
-
+        this.metrics.largestContentfulPaint = lastEntry.startTime;
+      });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
+    } catch (error) {
+      console.warn('LCP observer not supported:', error);
     }
   }
 
-  private observeFID(): void {}
-    if ('PerformanceObserver' in window) {}
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
-        entries.forEach((entry) => {}
-          if (this.metrics) {}
-            this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
-          }
+  private observeFID(): void {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
-
+    try {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
+        }
+      });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
+    } catch (error) {
+      console.warn('FID observer not supported:', error);
     }
   }
 
-  private observeCLS(): void {}
-    if ('PerformanceObserver' in window) {}
+  private observeCLS(): void {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+
+    try {
       let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
-        entries.forEach((entry) => {}
-          if (!(entry as any).hadRecentInput) {}
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
           }
-
-        if (this.metrics) {}
-          this.metrics.cumulativeLayoutShift = clsValue;
         }
-
+        this.metrics.cumulativeLayoutShift = clsValue;
+      });
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
+    } catch (error) {
+      console.warn('CLS observer not supported:', error);
     }
   }
 
-  getMetrics(): PerformanceMetrics | null {}
-    return this.metrics;
+  public getMetrics(): PerformanceMetrics {
+    return { ...this.metrics };
   }
 
-  getScore(): number {}
-    if (!this.metrics) return 0;
-
-    // Simple scoring algorithm based on Core Web Vitals;
-    let score = 100;
-
-    if (this.metrics.largestContentfulPaint > 4000) score -= 20;
-    if (this.metrics.firstInputDelay > 300) score -= 20;
-    if (this.metrics.cumulativeLayoutShift > 0.25) score -= 20;
-    if (this.metrics.loadTime > 3000) score -= 20;
-    if (this.metrics.timeToInteractive > 5000) score -= 20;
-
-    return Math.max(0, score);
+  public getLoadTime(): number {
+    return this.metrics.loadTime;
   }
 
-  cleanup(): void {}
+  public getFirstContentfulPaint(): number {
+    return this.metrics.firstContentfulPaint;
+  }
+
+  public getLargestContentfulPaint(): number {
+    return this.metrics.largestContentfulPaint;
+  }
+
+  public getFirstInputDelay(): number {
+    return this.metrics.firstInputDelay;
+  }
+
+  public getCumulativeLayoutShift(): number {
+    return this.metrics.cumulativeLayoutShift;
+  }
+
+  public isPerformanceGood(): boolean {
+    return (
+      this.metrics.firstContentfulPaint < 1800 &&
+      this.metrics.largestContentfulPaint < 2500 &&
+      this.metrics.firstInputDelay < 100 &&
+      this.metrics.cumulativeLayoutShift < 0.1
+    );
+  }
+
+  public cleanup(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
-    this.metrics = null;
   }
 }
 
+<<<<<<< HEAD
 // Utility functions;
 export function lazyLoadImages(): void {
 // Utility functions
@@ -811,32 +893,72 @@ export const seoOptimizer = () => {
 
 // Export instances;
 export const performanceOptimizer = new PerformanceOptimizer();
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-efd4
 export const performanceMonitor = new PerformanceMonitor();
-export const accessibilityEnhancer = () => {
-  // Accessibility enhancement logic
-  if (typeof window !== 'undefined') {
-    // Add skip navigation link
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded';
-    document.body.insertBefore(skipLink, document.body.firstChild);
+
+// Utility functions
+export const measureFunction = <T extends (...args: any[]) => any>(
+  fn: T,
+  name?: string
+): T => {
+  return ((...args: Parameters<T>) => {
+    const start = performance.now();
+    const result = fn(...args);
+    const end = performance.now();
+    
+    if (name) {
+      console.log(`${name} took ${end - start} milliseconds`);
+    }
+    
+    return result;
+  }) as T;
+};
+
+export const debounce = <T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): T => {
+  let timeout: NodeJS.Timeout;
+  
+  return ((...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  }) as T;
+};
+
+export const throttle = <T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): T => {
+  let inThrottle: boolean;
+  
+  return ((...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  }) as T;
+};
+
+export const lazyLoad = (callback: () => void): void => {
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(callback);
+  } else {
+    setTimeout(callback, 1);
   }
 };
 
-export const collectPerformanceMetrics = () => {
-  // Collect performance metrics
-  if (typeof window !== 'undefined' && 'performance' in window) {
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          // eslint-disable-next-line no-console
-          console.log('Page load time:', navigation.loadEventEnd - navigation.loadEventStart);
-          // eslint-disable-next-line no-console
-          console.log('DOM content loaded:', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart);
-        }
-      }, 0);
-    });
-  }
+export const preloadImage = (src: string): Promise<void> => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve();
+    img.onerror = reject;
+    img.src = src;
+  });
+};
+
+export const preloadImages = (srcs: string[]): Promise<void[]> => {
+  return Promise.all(srcs.map(preloadImage));
 };

@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -246,11 +247,14 @@ const $1: React.FC = () => {
             <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
               <CheckCircle className="w-5 h-5 text-purple-400" />
               <span className="text-white font-medium">GDPR Compliant</span>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -295,12 +299,15 @@ const $1: React.FC = () => {
                     </CheckCircle>
                   ))}
                 </ul>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -336,6 +343,8 @@ const $1: React.FC = () => {
                     </span>
                   ))}
                 </ul>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
@@ -363,6 +372,7 @@ const $1: React.FC = () => {
               </button>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
     </div>
@@ -560,6 +570,8 @@ const $1: React.FC = () => {
 ,
       <Footer />,
     </div>);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 };
 
 export default PagePage;

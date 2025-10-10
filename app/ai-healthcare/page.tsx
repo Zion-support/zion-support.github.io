@@ -6,6 +6,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       icon: Heart,
     {}
       icon: Heart,
@@ -15,11 +16,14 @@ const PagePage: React.FC = () => {
     {
       icon: Brain,
     {}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
     {
+<<<<<<< HEAD
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
@@ -129,6 +133,8 @@ const PagePage: React.FC = () => {
       result: '60% faster'}
   ];
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -140,6 +146,7 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -299,6 +306,8 @@ const PagePage: React.FC = () => {
                   <div></div>
                     <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3><p className="text-gray-400">{feature.description}</p>
                   </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -308,6 +317,7 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -351,12 +361,15 @@ const PagePage: React.FC = () => {
                 <div className="flex items-center justify-between mb-4"></div>
                   <useCase.icon className="w-8 h-8 text-green-400" />
                   <div className="text-sm font-semibold text-green-400">{useCase.result}</div><h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3><p className="text-gray-400 text-sm">{useCase.description}</p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -471,6 +484,8 @@ const PagePage: React.FC = () => {
           </div>
         </section>
       </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     </div>
   );
 };

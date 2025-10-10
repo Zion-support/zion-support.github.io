@@ -58,6 +58,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
 
   const useCases = [
     {
+<<<<<<< HEAD
       title: 'E-commerce Support',
       description: 'Handle product inquiries, order tracking, and returns with AI assistance',
       icon: '🛒'
@@ -214,12 +215,15 @@ const AICustomerSupportChatbotPage: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
   return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
       <Helmet>
         <title>AI Customer Support Chatbot - Zion Tech Group</title>
         <meta name="description" content="Transform your customer support with our AI Customer Support Chatbot. 24/7 availability, natural language processing, and intelligent escalation for better customer experience." />
         <meta name="keywords" content="AI chatbot, customer support chatbot, virtual assistant, customer service automation, AI support bot" />
       </Helmet>
 
+<<<<<<< HEAD
       <Navigation />
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
@@ -469,12 +473,18 @@ const AICustomerSupportChatbotPage: React.FC = () => {
                 <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div></div>
                   <div className="font-semibold text-white">{testimonial.name}</div><div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+=======
+          </div>
+        </section>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -527,6 +537,8 @@ const AICustomerSupportChatbotPage: React.FC = () => {
             >
               Email Us;
             </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
           </div>
         </section>
 
