@@ -56,106 +56,47 @@ const CaseStudiesPage: React.FC = () => {
     },
     {
       id: '3',
-      title: 'Cybersecurity Enhancement for Healthcare',
-      client: 'MediCare Plus',
-      industry: 'Healthcare',
-      challenge: 'Increasing cyber threats and need for HIPAA compliance in patient data protection.',
-      solution: 'Comprehensive security audit and implementation of zero-trust architecture with advanced threat detection.',
-      results: [
-        '100% HIPAA compliance achieved',
-        'Zero security breaches in 12 months',
-        'Real-time threat detection and response',
-        'Automated compliance reporting'
-      ],
-      image: '/images/case-studies/cybersecurity-healthcare.jpg',
-      duration: '4 months',
-      team: '10 specialists'
-    },
-    {
-      id: '4',
-      title: 'Machine Learning for Predictive Analytics',
-      client: 'RetailMax',
-      industry: 'Retail',
-      challenge: 'Inventory management inefficiencies leading to stockouts and overstock situations.',
-      solution: 'ML-powered demand forecasting system with real-time inventory optimization.',
-      results: [
-        '40% reduction in stockouts',
-        '25% decrease in excess inventory',
-        '15% increase in revenue',
-        'Real-time demand prediction accuracy of 92%'
-      ],
-      image: '/images/case-studies/ml-predictive-analytics.jpg',
-      duration: '5 months',
-      team: '6 specialists'
-    },
-    {
-      id: '5',
-      title: 'Digital Transformation for Manufacturing',
-      client: 'ManufacturingPro',
-      industry: 'Manufacturing',
-      challenge: 'Manual processes and lack of real-time visibility into production efficiency.',
-      solution: 'IoT integration with AI-powered analytics dashboard and automated quality control.',
-      results: [
-        '30% increase in production efficiency',
-        '50% reduction in quality defects',
-        'Real-time production monitoring',
-        'Predictive maintenance implementation'
-      ],
-      image: '/images/case-studies/digital-transformation.jpg',
-      duration: '8 months',
-      team: '15 specialists'
-    },
-    {
-      id: '6',
-      title: 'Blockchain Integration for Supply Chain',
-      client: 'GlobalLogistics',
+      title: 'Blockchain Supply Chain Optimization',
+      client: 'Global Logistics Inc.',
       industry: 'Logistics',
-      challenge: 'Lack of transparency and traceability in complex supply chain operations.',
-      solution: 'Blockchain-based supply chain tracking system with smart contracts and real-time verification.',
+      challenge: 'Lack of transparency and traceability in supply chain operations.',
+      solution: 'Deployed blockchain-based tracking system with smart contracts for automated verification.',
       results: [
-        'Complete supply chain transparency',
-        '60% reduction in disputes',
-        'Real-time shipment tracking',
-        'Automated compliance verification'
+        '100% supply chain transparency',
+        '40% reduction in disputes',
+        '25% faster transaction processing',
+        'Real-time tracking capabilities'
       ],
       image: '/images/case-studies/blockchain-supply-chain.jpg',
-      duration: '7 months',
-      team: '11 specialists'
+      duration: '4 months',
+      team: '6 specialists'
     }
   ];
 
   const stats = [
-    { label: 'Projects Completed', value: '150+', icon: CheckCircle },
-    { label: 'Client Satisfaction', value: '98%', icon: TrendingUp },
-    { label: 'Team Members', value: '50+', icon: Users },
-    { label: 'Industry Awards', value: '25+', icon: Award }
+    { icon: TrendingUp, value: '150+', label: 'Projects Completed' },
+    { icon: Users, value: '50+', label: 'Happy Clients' },
+    { icon: Award, value: '99%', label: 'Success Rate' },
+    { icon: CheckCircle, value: '24/7', label: 'Support' }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Case Studies | Zion Tech Group</title>
-        <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions." />
-        <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation" />
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Explore our successful AI and IT solutions case studies. See how we've helped businesses transform their operations." />
+        <meta name="keywords" content="case studies, AI solutions, IT projects, business transformation, success stories" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="py-20 px-4">
+        <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Stories</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
               Discover how we've helped businesses across industries transform their operations with cutting-edge AI and IT solutions.
-=======
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Case Studies
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Explore our successful projects and see how we've helped businesses transform with AI and IT solutions.
             </p>
 
             {/* Stats */}
@@ -174,81 +115,65 @@ const CaseStudiesPage: React.FC = () => {
         </section>
 
         {/* Case Studies Grid */}
-        <section className="py-16 px-4">
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study) => (
-                <div key={study.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 group">
-                  <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-500 relative">
-                    <div className="absolute inset-0 bg-black/20"></div>
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <div className="flex items-center gap-2 text-white text-sm">
-                        <span className="bg-purple-500 px-3 py-1 rounded-full">{study.industry}</span>
-                        <span className="bg-white/20 px-3 py-1 rounded-full">{study.duration}</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="p-8">
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
-                      {study.title}
-                    </h3>
-                    
-                    <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-purple-400 mb-2">Client: {study.client}</h4>
-                      <p className="text-gray-300 text-sm mb-4">{study.team}</p>
-                    </div>
-
-                    <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
-                      <p className="text-gray-300 text-sm mb-4">{study.challenge}</p>
-                    </div>
-
-                    <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
-                      <p className="text-gray-300 text-sm mb-4">{study.solution}</p>
-                    </div>
-
-                    <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-white mb-3">Results</h4>
-                      <ul className="space-y-2">
-                        {study.results.map((result, index) => (
-                          <li key={index} className="flex items-center text-gray-300 text-sm">
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                            {result}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <Link
-                        to={`/case-studies/${study.id}`}
-                        className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
-                      >
-                        Read Full Case Study
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                      <button className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-                        <ExternalLink className="w-4 h-4" />
-                        Share
-                      </button>
-                    </div>
-                  </div>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
                   <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg mb-4 flex items-center justify-center">
                     <span className="text-white/60 text-sm">Case Study Image</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{study.title}</h3>
-                  <p className="text-gray-400 mb-2">{study.client}</p>
-                  <p className="text-purple-400 text-sm mb-4">{study.industry}</p>
-                  <button className="flex items-center text-purple-400 hover:text-purple-300 font-semibold group">
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  
+                  <div className="mb-4">
+                    <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                      {study.title}
+                    </h3>
+                    <p className="text-gray-400 mb-2">{study.client}</p>
+                    <p className="text-purple-400 text-sm mb-4">{study.industry}</p>
+                  </div>
+
+                  <div className="space-y-3 mb-6">
+                    <div>
+                      <h4 className="text-white font-semibold mb-1">Challenge:</h4>
+                      <p className="text-gray-300 text-sm">{study.challenge}</p>
+                    </div>
+                    
+                    <div>
+                      <h4 className="text-white font-semibold mb-1">Solution:</h4>
+                      <p className="text-gray-300 text-sm">{study.solution}</p>
+                    </div>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-white font-semibold mb-3">Key Results:</h4>
+                    <ul className="space-y-1">
+                      {study.results.map((result, resultIndex) => (
+                        <li key={resultIndex} className="text-gray-300 text-sm flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {result}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                    <span>Duration: {study.duration}</span>
+                    <span>Team: {study.team}</span>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <Link
+                      to={`/case-studies/${study.id}`}
+                      className="flex items-center text-purple-400 hover:text-purple-300 font-semibold group"
+                    >
+                      Read Full Case Study
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                    <button className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                      <ExternalLink className="w-4 h-4" />
+                      Share
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
@@ -263,7 +188,7 @@ const CaseStudiesPage: React.FC = () => {
                 Ready to Write Your Success Story?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Let's discuss how we can help transform your business with our AI and IT solutions.
+                Let's discuss how our AI and IT solutions can transform your business operations and drive growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -277,7 +202,7 @@ const CaseStudiesPage: React.FC = () => {
                   to="/services"
                   className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
-                  Explore Our Services
+                  Explore Services
                 </Link>
               </div>
             </div>
