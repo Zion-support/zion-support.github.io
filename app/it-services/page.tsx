@@ -713,6 +713,206 @@ export default function ITServicesPage() {
           popular: true
         }
       ]
+    },
+    {
+      category: 'Advanced AI & Machine Learning Infrastructure',
+      icon: Brain,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      services: [
+        {
+          name: 'AI Model Training Infrastructure',
+          description: 'High-performance computing infrastructure for training large-scale AI models with GPU clusters and distributed computing',
+          features: ['GPU Cluster Setup', 'Distributed Training', 'Model Versioning', 'Experiment Tracking', 'Resource Management', 'Auto-scaling', 'Cost Optimization', 'Performance Monitoring'],
+          pricing: 'Starting at $25,000',
+          trial: 'Free AI infrastructure assessment',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/ai-model-training',
+          popular: true
+        },
+        {
+          name: 'Edge AI Computing Solutions',
+          description: 'Edge computing infrastructure for AI inference at the edge with low latency and real-time processing',
+          features: ['Edge Servers', 'AI Inference', 'Real-time Processing', 'Low Latency', 'Device Management', 'Data Synchronization', 'Security', 'Monitoring'],
+          pricing: 'Starting at $15,000',
+          trial: 'Free edge AI demo',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/edge-ai-computing',
+          popular: true
+        },
+        {
+          name: 'AI Data Pipeline Infrastructure',
+          description: 'Complete data pipeline infrastructure for AI/ML with data ingestion, processing, and model serving',
+          features: ['Data Ingestion', 'ETL Pipelines', 'Data Processing', 'Model Serving', 'API Management', 'Monitoring', 'Scalability', 'Security'],
+          pricing: 'Starting at $18,000',
+          trial: 'Free data pipeline audit',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/ai-data-pipeline',
+          popular: true
+        }
+      ]
+    },
+    {
+      category: 'Cybersecurity & Compliance Solutions',
+      icon: Shield,
+      color: 'text-red-400',
+      bgColor: 'bg-red-500/10',
+      services: [
+        {
+          name: 'AI-Powered Security Operations Center',
+          description: 'Advanced SOC with AI-driven threat detection, automated response, and 24/7 monitoring',
+          features: ['AI Threat Detection', 'Automated Response', '24/7 Monitoring', 'Incident Management', 'Threat Intelligence', 'Forensics', 'Compliance', 'Reporting'],
+          pricing: 'Starting at $12,000/month',
+          trial: 'Free security assessment',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/ai-soc',
+          popular: true
+        },
+        {
+          name: 'Zero Trust Security Implementation',
+          description: 'Complete zero trust security architecture with identity verification and micro-segmentation',
+          features: ['Identity Verification', 'Micro-segmentation', 'Device Management', 'Access Control', 'Continuous Monitoring', 'Policy Enforcement', 'Compliance', 'Training'],
+          pricing: 'Starting at $30,000',
+          trial: 'Free zero trust assessment',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/zero-trust-implementation',
+          popular: true
+        },
+        {
+          name: 'AI-Powered Vulnerability Management',
+          description: 'Intelligent vulnerability scanning and management with automated patching and risk assessment',
+          features: ['Vulnerability Scanning', 'Risk Assessment', 'Automated Patching', 'Compliance Checking', 'Asset Discovery', 'Threat Modeling', 'Reporting', 'Integration'],
+          pricing: 'Starting at $8,000/month',
+          trial: 'Free vulnerability scan',
+          timeline: '2-4 weeks',
+          link: 'https://ziontechgroup.com/ai-vulnerability-management',
+          popular: true
+        }
+      ]
+    },
+    {
+      category: 'Cloud & Infrastructure Solutions',
+      icon: Cloud,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      services: [
+        {
+          name: 'Multi-Cloud Management Platform',
+          description: 'Unified management platform for multi-cloud environments with cost optimization and security',
+          features: ['Multi-cloud Management', 'Cost Optimization', 'Security Management', 'Resource Monitoring', 'Automation', 'Compliance', 'Migration', 'Support'],
+          pricing: 'Starting at $20,000',
+          trial: 'Free cloud assessment',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/multi-cloud-management',
+          popular: true
+        },
+        {
+          name: 'AI-Powered Cloud Cost Optimization',
+          description: 'Intelligent cloud cost management with AI-driven optimization and cost prediction',
+          features: ['Cost Analysis', 'AI Optimization', 'Resource Right-sizing', 'Reserved Instances', 'Spot Instances', 'Cost Prediction', 'Budget Management', 'Reporting'],
+          pricing: 'Starting at $5,000/month',
+          trial: 'Free cost analysis',
+          timeline: '2-4 weeks',
+          link: 'https://ziontechgroup.com/ai-cloud-cost-optimization',
+          popular: true
+        },
+        {
+          name: 'Hybrid Cloud Infrastructure',
+          description: 'Seamless hybrid cloud infrastructure connecting on-premises and cloud environments',
+          features: ['Hybrid Connectivity', 'Data Synchronization', 'Workload Migration', 'Security Integration', 'Monitoring', 'Backup & Recovery', 'Compliance', 'Support'],
+          pricing: 'Starting at $25,000',
+          trial: 'Free hybrid cloud consultation',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/hybrid-cloud-infrastructure',
+          popular: true
+        }
+      ]
+    },
+    {
+      category: 'Digital Transformation & Innovation',
+      icon: Rocket,
+      color: 'text-emerald-400',
+      bgColor: 'bg-emerald-500/10',
+      services: [
+        {
+          name: 'Digital Transformation Strategy',
+          description: 'Comprehensive digital transformation strategy with technology roadmap and implementation planning',
+          features: ['Strategy Development', 'Technology Roadmap', 'Change Management', 'Process Optimization', 'Digital Culture', 'Innovation Labs', 'Training', 'Support'],
+          pricing: 'Starting at $50,000',
+          trial: 'Free transformation assessment',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/digital-transformation-strategy',
+          popular: true
+        },
+        {
+          name: 'AI Innovation Lab Setup',
+          description: 'Complete AI innovation lab with research infrastructure, tools, and development environment',
+          features: ['Lab Setup', 'Research Infrastructure', 'AI Tools', 'Development Environment', 'Data Access', 'Collaboration Tools', 'Training', 'Support'],
+          pricing: 'Starting at $75,000',
+          trial: 'Free innovation lab consultation',
+          timeline: '16-32 weeks',
+          link: 'https://ziontechgroup.com/ai-innovation-lab',
+          popular: true
+        },
+        {
+          name: 'Technology Modernization Program',
+          description: 'Comprehensive technology modernization with legacy system replacement and new technology adoption',
+          features: ['Legacy Assessment', 'Modernization Planning', 'System Replacement', 'Data Migration', 'Integration', 'Testing', 'Training', 'Support'],
+          pricing: 'Starting at $100,000',
+          trial: 'Free modernization assessment',
+          timeline: '20-40 weeks',
+          link: 'https://ziontechgroup.com/technology-modernization',
+          popular: true
+        }
+      ]
+    },
+    {
+      category: 'Industry-Specific IT Solutions',
+      icon: Building,
+      color: 'text-cyan-400',
+      bgColor: 'bg-cyan-500/10',
+      services: [
+        {
+          name: 'Healthcare IT Solutions',
+          description: 'HIPAA-compliant IT infrastructure for healthcare organizations with patient data security',
+          features: ['HIPAA Compliance', 'Patient Data Security', 'Electronic Health Records', 'Medical Device Integration', 'Telemedicine Support', 'Interoperability', 'Audit Support', 'Training'],
+          pricing: 'Starting at $15,000',
+          trial: 'Free compliance audit',
+          timeline: '8-12 weeks',
+          link: 'https://ziontechgroup.com/healthcare-it',
+          popular: true
+        },
+        {
+          name: 'Financial Services IT',
+          description: 'SOX-compliant IT solutions for financial institutions with advanced security and compliance',
+          features: ['SOX Compliance', 'Financial Data Security', 'Transaction Monitoring', 'Risk Management', 'Regulatory Reporting', 'Audit Support', 'Training', 'Support'],
+          pricing: 'Starting at $20,000',
+          trial: 'Free compliance assessment',
+          timeline: '10-16 weeks',
+          link: 'https://ziontechgroup.com/financial-it',
+          popular: true
+        },
+        {
+          name: 'Manufacturing IT Solutions',
+          description: 'Industrial IT infrastructure with IoT integration and manufacturing automation',
+          features: ['IoT Integration', 'Manufacturing Automation', 'Supply Chain Management', 'Quality Control Systems', 'Predictive Maintenance', 'Safety Systems', 'Training', 'Support'],
+          pricing: 'Starting at $18,000',
+          trial: 'Free manufacturing assessment',
+          timeline: '12-20 weeks',
+          link: 'https://ziontechgroup.com/manufacturing-it',
+          popular: true
+        },
+        {
+          name: 'Retail IT Solutions',
+          description: 'Omnichannel retail IT infrastructure with POS systems and customer analytics',
+          features: ['POS Systems', 'Inventory Management', 'Customer Analytics', 'E-commerce Integration', 'Mobile Commerce', 'Loyalty Programs', 'Training', 'Support'],
+          pricing: 'Starting at $12,000',
+          trial: 'Free retail assessment',
+          timeline: '6-10 weeks',
+          link: 'https://ziontechgroup.com/retail-it',
+          popular: true
+        }
+      ]
     }
       ]
     }

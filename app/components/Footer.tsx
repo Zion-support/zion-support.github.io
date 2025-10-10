@@ -21,7 +21,11 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
         { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' }
+        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
+        { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence' },
+        { name: 'AI Creative Writing Studio', href: '/ai-creative-writing' },
+        { name: 'AI Personal Health Coach', href: '/ai-personal-health-coach' },
+        { name: 'AI Smart City Platform', href: '/ai-smart-city-platform' }
       ]
     },
     {
@@ -57,7 +61,11 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Smart Calendar', href: '/ai-smart-calendar' },
         { name: 'AI Content Writer', href: '/ai-content-writer' },
         { name: 'AI Video Generator', href: '/ai-video-generator' },
-        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' }
+        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' },
+        { name: 'AI Personal Trainer Pro', href: '/ai-personal-trainer' },
+        { name: 'AI Language Learning', href: '/ai-language-learning' },
+        { name: 'AI Recipe Generator Pro', href: '/ai-recipe-generator' },
+        { name: 'AI Plant Care Assistant', href: '/ai-plant-care' }
       ]
     },
     {
@@ -73,7 +81,13 @@ const Footer: React.FC = memo(() => {
         { name: 'Digital Transformation', href: '/digital-transformation' },
         { name: 'Innovation Labs', href: '/innovation-labs' },
         { name: 'Business Intelligence', href: '/business-intelligence' },
-        { name: 'Robotics Solutions', href: '/robotics' }
+        { name: 'Robotics Solutions', href: '/robotics' },
+        { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
+        { name: 'AI Space Technology', href: '/ai-space-technology-pro' },
+        { name: 'AI Climate Solutions', href: '/ai-climate-solutions-pro' },
+        { name: 'AI Agricultural Intelligence', href: '/ai-agricultural-intelligence-pro' },
+        { name: 'AI Energy Management', href: '/ai-energy' },
+        { name: 'AI Music Composition', href: '/ai-music-composition' }
       ]
     }
   ];

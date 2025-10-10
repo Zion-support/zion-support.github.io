@@ -1150,13 +1150,433 @@ const AIServicesPage: React.FC = () => {
         'AI-powered gestures',
         'Mixed reality integration'
       ]
+    },
+    {
+      id: 31,
+      name: 'AI Emotional Intelligence Platform',
+      description: 'Advanced AI system with emotional recognition, empathy modeling, and human-AI emotional interaction',
+      icon: Brain,
+      features: [
+        'Emotional Recognition',
+        'Empathy Modeling',
+        'Sentiment Analysis',
+        'Emotional Response Generation',
+        'Mood Tracking',
+        'Emotional Coaching',
+        'Human-AI Interaction',
+        'Emotional Analytics'
+      ],
+      category: 'Emotional AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,200+',
+      color: 'from-pink-500 to-rose-600',
+      pricing: 'Starting at $899/mo',
+      capabilities: [
+        'Emotional understanding',
+        'Empathetic responses',
+        'Mood optimization',
+        'Human-like interaction'
+      ]
+    },
+    {
+      id: 32,
+      name: 'AI Creative Writing Studio',
+      description: 'AI-powered creative writing platform with story generation, character development, and narrative analysis',
+      icon: FileText,
+      features: [
+        'Story Generation',
+        'Character Development',
+        'Plot Analysis',
+        'Style Adaptation',
+        'Genre Expertise',
+        'Collaborative Writing',
+        'Publishing Assistance',
+        'Creative Feedback'
+      ],
+      category: 'Creative AI',
+      popular: true,
+      rating: 4.7,
+      users: '3,800+',
+      color: 'from-purple-500 to-indigo-600',
+      pricing: 'Starting at $299/mo',
+      capabilities: [
+        'Creative story generation',
+        'Character development',
+        'Style adaptation',
+        'Publishing support'
+      ]
+    },
+    {
+      id: 33,
+      name: 'AI Personal Health Coach',
+      description: 'Comprehensive AI health coaching with personalized wellness plans, health monitoring, and lifestyle optimization',
+      icon: Stethoscope,
+      features: [
+        'Personalized Wellness Plans',
+        'Health Monitoring',
+        'Lifestyle Optimization',
+        'Nutrition Guidance',
+        'Exercise Planning',
+        'Sleep Optimization',
+        'Stress Management',
+        'Health Analytics'
+      ],
+      category: 'Health AI',
+      popular: true,
+      rating: 4.9,
+      users: '5,600+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $199/mo',
+      capabilities: [
+        'Personalized health plans',
+        'Lifestyle optimization',
+        'Health monitoring',
+        'Wellness improvement'
+      ]
+    },
+    {
+      id: 34,
+      name: 'AI Smart City Platform',
+      description: 'Comprehensive AI platform for smart city management with traffic optimization, resource management, and citizen services',
+      icon: Building,
+      features: [
+        'Traffic Optimization',
+        'Resource Management',
+        'Citizen Services',
+        'Environmental Monitoring',
+        'Energy Management',
+        'Public Safety',
+        'Urban Planning',
+        'Data Analytics'
+      ],
+      category: 'Smart Cities',
+      popular: true,
+      rating: 4.8,
+      users: '180+',
+      color: 'from-blue-500 to-cyan-600',
+      pricing: 'Starting at $15,000/mo',
+      capabilities: [
+        'Urban optimization',
+        'Resource efficiency',
+        'Citizen satisfaction',
+        'Environmental sustainability'
+      ]
+    },
+    {
+      id: 35,
+      name: 'AI Agricultural Intelligence',
+      description: 'AI-powered agricultural solutions with crop monitoring, yield prediction, and precision farming',
+      icon: Sprout,
+      features: [
+        'Crop Monitoring',
+        'Yield Prediction',
+        'Precision Farming',
+        'Pest Detection',
+        'Weather Integration',
+        'Soil Analysis',
+        'Irrigation Control',
+        'Harvest Optimization'
+      ],
+      category: 'Agricultural AI',
+      popular: true,
+      rating: 4.7,
+      users: '2,400+',
+      color: 'from-green-500 to-lime-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        'Crop yield optimization',
+        'Precision farming',
+        'Resource efficiency',
+        'Sustainable agriculture'
+      ]
+    },
+    {
+      id: 36,
+      name: 'AI Legal Research Assistant',
+      description: 'Advanced AI legal research platform with case law analysis, document review, and legal writing assistance',
+      icon: Scale,
+      features: [
+        'Case Law Analysis',
+        'Document Review',
+        'Legal Writing',
+        'Precedent Research',
+        'Contract Analysis',
+        'Compliance Checking',
+        'Legal Briefs',
+        'Research Automation'
+      ],
+      category: 'Legal AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,600+',
+      color: 'from-amber-500 to-orange-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        'Legal research efficiency',
+        'Document analysis',
+        'Case law insights',
+        'Legal writing support'
+      ]
+    },
+    {
+      id: 37,
+      name: 'AI Music Production Studio',
+      description: 'AI-powered music production with composition, mixing, mastering, and sound design capabilities',
+      icon: Music,
+      features: [
+        'AI Composition',
+        'Automatic Mixing',
+        'Mastering',
+        'Sound Design',
+        'Genre Adaptation',
+        'Collaborative Tools',
+        'Royalty-free Music',
+        'Production Analytics'
+      ],
+      category: 'Music AI',
+      popular: true,
+      rating: 4.6,
+      users: '4,200+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $399/mo',
+      capabilities: [
+        'Professional music production',
+        'Genre versatility',
+        'Collaborative creation',
+        'Production efficiency'
+      ]
+    },
+    {
+      id: 38,
+      name: 'AI Real Estate Assistant',
+      description: 'AI-powered real estate platform with property valuation, market analysis, and investment recommendations',
+      icon: Home,
+      features: [
+        'Property Valuation',
+        'Market Analysis',
+        'Investment Recommendations',
+        'Property Search',
+        'Price Prediction',
+        'Neighborhood Analysis',
+        'Investment ROI',
+        'Market Trends'
+      ],
+      category: 'Real Estate AI',
+      popular: true,
+      rating: 4.7,
+      users: '2,800+',
+      color: 'from-indigo-500 to-blue-600',
+      pricing: 'Starting at $599/mo',
+      capabilities: [
+        'Accurate property valuation',
+        'Market insights',
+        'Investment optimization',
+        'Market prediction'
+      ]
+    },
+    {
+      id: 39,
+      name: 'AI Sports Analytics Platform',
+      description: 'Advanced AI sports analytics with performance analysis, injury prediction, and tactical insights',
+      icon: Target,
+      features: [
+        'Performance Analysis',
+        'Injury Prediction',
+        'Tactical Insights',
+        'Player Scouting',
+        'Game Strategy',
+        'Biomechanical Analysis',
+        'Recovery Optimization',
+        'Team Analytics'
+      ],
+      category: 'Sports AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,400+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $1,199/mo',
+      capabilities: [
+        'Performance optimization',
+        'Injury prevention',
+        'Tactical insights',
+        'Team performance'
+      ]
+    },
+    {
+      id: 40,
+      name: 'AI Environmental Monitoring',
+      description: 'AI-powered environmental monitoring with pollution detection, climate analysis, and sustainability tracking',
+      icon: Globe,
+      features: [
+        'Pollution Detection',
+        'Climate Analysis',
+        'Sustainability Tracking',
+        'Air Quality Monitoring',
+        'Water Quality Analysis',
+        'Biodiversity Assessment',
+        'Environmental Alerts',
+        'Sustainability Reporting'
+      ],
+      category: 'Environmental AI',
+      popular: true,
+      rating: 4.9,
+      users: '1,800+',
+      color: 'from-emerald-500 to-teal-600',
+      pricing: 'Starting at $899/mo',
+      capabilities: [
+        'Environmental protection',
+        'Pollution monitoring',
+        'Sustainability insights',
+        'Climate analysis'
+      ]
+    },
+    {
+      id: 41,
+      name: 'AI Personal Shopper',
+      description: 'AI-powered personal shopping assistant with style analysis, product recommendations, and purchase optimization',
+      icon: ShoppingCart,
+      features: [
+        'Style Analysis',
+        'Product Recommendations',
+        'Price Comparison',
+        'Size Fitting',
+        'Trend Analysis',
+        'Wardrobe Integration',
+        'Purchase Optimization',
+        'Shopping Lists'
+      ],
+      category: 'Retail AI',
+      popular: true,
+      rating: 4.6,
+      users: '3,600+',
+      color: 'from-pink-500 to-rose-600',
+      pricing: 'Starting at $149/mo',
+      capabilities: [
+        'Personalized shopping',
+        'Style optimization',
+        'Price optimization',
+        'Wardrobe efficiency'
+      ]
+    },
+    {
+      id: 42,
+      name: 'AI Personal Learning Coach',
+      description: 'AI-powered personalized learning with adaptive curriculum, skill assessment, and learning optimization',
+      icon: BookOpen,
+      features: [
+        'Adaptive Curriculum',
+        'Skill Assessment',
+        'Learning Optimization',
+        'Progress Tracking',
+        'Personalized Content',
+        'Learning Analytics',
+        'Knowledge Gaps',
+        'Learning Paths'
+      ],
+      category: 'Education AI',
+      popular: true,
+      rating: 4.8,
+      users: '6,800+',
+      color: 'from-blue-500 to-indigo-600',
+      pricing: 'Starting at $179/mo',
+      capabilities: [
+        'Personalized learning',
+        'Skill development',
+        'Learning optimization',
+        'Knowledge retention'
+      ]
+    },
+    {
+      id: 43,
+      name: 'AI Personal Relationship Coach',
+      description: 'AI-powered relationship coaching with communication analysis, conflict resolution, and relationship optimization',
+      icon: Users,
+      features: [
+        'Communication Analysis',
+        'Conflict Resolution',
+        'Relationship Optimization',
+        'Emotional Intelligence',
+        'Communication Training',
+        'Relationship Analytics',
+        'Couples Therapy',
+        'Social Skills'
+      ],
+      category: 'Relationship AI',
+      popular: true,
+      rating: 4.7,
+      users: '2,200+',
+      color: 'from-pink-500 to-purple-600',
+      pricing: 'Starting at $299/mo',
+      capabilities: [
+        'Relationship improvement',
+        'Communication enhancement',
+        'Conflict resolution',
+        'Emotional intelligence'
+      ]
+    },
+    {
+      id: 44,
+      name: 'AI Personal Time Management',
+      description: 'AI-powered time management with productivity analysis, schedule optimization, and focus enhancement',
+      icon: Clock,
+      features: [
+        'Productivity Analysis',
+        'Schedule Optimization',
+        'Focus Enhancement',
+        'Time Tracking',
+        'Distraction Management',
+        'Energy Optimization',
+        'Goal Setting',
+        'Habit Formation'
+      ],
+      category: 'Productivity AI',
+      popular: true,
+      rating: 4.8,
+      users: '4,900+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $129/mo',
+      capabilities: [
+        'Productivity optimization',
+        'Time management',
+        'Focus enhancement',
+        'Goal achievement'
+      ]
+    },
+    {
+      id: 45,
+      name: 'AI Personal Memory Assistant',
+      description: 'AI-powered memory enhancement with information organization, recall optimization, and knowledge management',
+      icon: Brain,
+      features: [
+        'Information Organization',
+        'Recall Optimization',
+        'Knowledge Management',
+        'Memory Training',
+        'Information Retrieval',
+        'Learning Reinforcement',
+        'Memory Analytics',
+        'Cognitive Enhancement'
+      ],
+      category: 'Cognitive AI',
+      popular: true,
+      rating: 4.7,
+      users: '3,100+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $199/mo',
+      capabilities: [
+        'Memory enhancement',
+        'Information organization',
+        'Recall improvement',
+        'Cognitive optimization'
+      ]
     }
   ];
 
 <<<<<<< HEAD
   const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI'];
 =======
-  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace'];
+  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Emotional AI', 'Health AI', 'Smart Cities', 'Agricultural AI', 'Legal AI', 'Music AI', 'Real Estate AI', 'Sports AI', 'Environmental AI', 'Retail AI', 'Education AI', 'Relationship AI', 'Productivity AI'];
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
 
   if (!isLoaded) {
