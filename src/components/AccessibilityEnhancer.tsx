@@ -8,87 +8,191 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   useEffect(() => {
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
+      // Skip to main content with Alt + M
+      if (event.altKey && event.key === 'm') {
+        event.preventDefault();
+        const main = document.querySelector('main');
+        if (main) {
+          main.focus();
+          main.scrollIntoView({ behavior: 'smooth' });
+        }
       }
-    };
 
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
+      // Skip to navigation with Alt + N
+      if (event.altKey && event.key === 'n') {
+        event.preventDefault();
+        const nav = document.querySelector('nav');
+        if (nav) {
+          const firstLink = nav.querySelector('a');
+          if (firstLink) {
+            firstLink.focus();
+          }
+        }
+      }
+
+      // Skip to footer with Alt + F
+      if (event.altKey && event.key === 'f') {
+        event.preventDefault();
+        const footer = document.querySelector('footer');
+        if (footer) {
+          footer.focus();
+          footer.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
     };
 
     // Add focus indicators
     const addFocusIndicators = () => {
       const style = document.createElement('style');
       style.textContent = `
-        .keyboard-navigation *:focus {
-          outline: 2px solid #06b6d4 !important;
+        .focus-visible {
+          outline: 2px solid #00ffff !important;
           outline-offset: 2px !important;
+        }
+        
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+        
+        .focus-visible:not(.sr-only) {
+          position: static;
+          width: auto;
+          height: auto;
+          padding: 0.5rem 1rem;
+          margin: 0;
+          overflow: visible;
+          clip: auto;
+          white-space: normal;
         }
       `;
       document.head.appendChild(style);
     };
 
-    // Add ARIA labels to interactive elements
-    const enhanceAccessibility = () => {
-      const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach(button => {
-        if (!button.getAttribute('aria-label') && button.textContent) {
-          button.setAttribute('aria-label', button.textContent.trim());
-        }
-        // Add role if missing
-        if (!button.getAttribute('role')) {
-          button.setAttribute('role', 'button');
-        }
-      });
+    // Add ARIA landmarks
+    const addAriaLandmarks = () => {
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
+        main.setAttribute('aria-label', 'Main content');
+      }
 
-      const links = document.querySelectorAll('a:not([aria-label])');
-      links.forEach(link => {
-        if (!link.getAttribute('aria-label') && link.textContent) {
-          link.setAttribute('aria-label', link.textContent.trim());
-        }
-        // Add external link indicators
-        if (link.getAttribute('href')?.startsWith('http') && !link.getAttribute('href')?.includes('ziontechgroup.com')) {
-          link.setAttribute('aria-label', `${link.textContent?.trim()} (opens in new tab)`);
-          link.setAttribute('target', '_blank');
-          link.setAttribute('rel', 'noopener noreferrer');
-        }
-      });
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation');
+        nav.setAttribute('aria-label', 'Main navigation');
+      }
 
-      // Add ARIA labels to images
-      const images = document.querySelectorAll('img:not([alt])');
-      images.forEach(img => {
-        if (!img.getAttribute('alt')) {
-          img.setAttribute('alt', '');
-        }
-      });
-
-      // Add ARIA labels to form inputs
-      const inputs = document.querySelectorAll('input:not([aria-label])');
-      inputs.forEach(input => {
-        const label = document.querySelector(`label[for="${input.getAttribute('id')}"]`);
-        if (label && !input.getAttribute('aria-label')) {
-          input.setAttribute('aria-label', label.textContent?.trim() || '');
-        }
-      });
-
-      // Add skip links
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
+      const footer = document.querySelector('footer');
+      if (footer && !footer.getAttribute('role')) {
+        footer.setAttribute('role', 'contentinfo');
+        footer.setAttribute('aria-label', 'Site footer');
+      }
     };
 
+    // Add live region for announcements
+    const addLiveRegion = () => {
+      if (!document.getElementById('live-region')) {
+        const liveRegion = document.createElement('div');
+        liveRegion.id = 'live-region';
+        liveRegion.setAttribute('aria-live', 'polite');
+        liveRegion.setAttribute('aria-atomic', 'true');
+        liveRegion.className = 'sr-only';
+        document.body.appendChild(liveRegion);
+      }
+    };
+
+    // Announce page changes
+    const announcePageChange = (pageName: string) => {
+      const liveRegion = document.getElementById('live-region');
+      if (liveRegion) {
+        liveRegion.textContent = `Navigated to ${pageName}`;
+      }
+    };
+
+    // Add high contrast mode support
+    const addHighContrastSupport = () => {
+      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+      
+      const handleContrastChange = (e: MediaQueryListEvent) => {
+        if (e.matches) {
+          document.body.classList.add('high-contrast');
+        } else {
+          document.body.classList.remove('high-contrast');
+        }
+      };
+
+      mediaQuery.addEventListener('change', handleContrastChange);
+      handleContrastChange(mediaQuery);
+
+      // Add high contrast styles
+      const style = document.createElement('style');
+      style.textContent = `
+        .high-contrast {
+          filter: contrast(1.5) brightness(1.2);
+        }
+        
+        .high-contrast .cyber-card {
+          border: 2px solid #00ffff !important;
+          background: rgba(0, 0, 0, 0.9) !important;
+        }
+        
+        .high-contrast .neon-button {
+          border: 2px solid #00ffff !important;
+          background: #000 !important;
+          color: #fff !important;
+        }
+      `;
+      document.head.appendChild(style);
+    };
+
+    // Add reduced motion support
+    const addReducedMotionSupport = () => {
+      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      
+      const handleMotionChange = (e: MediaQueryListEvent) => {
+        if (e.matches) {
+          document.body.classList.add('reduce-motion');
+        } else {
+          document.body.classList.remove('reduce-motion');
+        }
+      };
+
+      mediaQuery.addEventListener('change', handleMotionChange);
+      handleMotionChange(mediaQuery);
+
+      // Add reduced motion styles
+      const style = document.createElement('style');
+      style.textContent = `
+        .reduce-motion * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      `;
+      document.head.appendChild(style);
+    };
+
+    // Initialize accessibility features
     addFocusIndicators();
-    enhanceAccessibility();
+    addAriaLandmarks();
+    addLiveRegion();
+    addHighContrastSupport();
+    addReducedMotionSupport();
 
+    // Add keyboard event listener
     document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
 
+    // Cleanup
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
     };
   }, []);
 

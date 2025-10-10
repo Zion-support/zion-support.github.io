@@ -1,78 +1,120 @@
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
-export const usePerformanceMonitor = () => {
+interface PerformanceMetrics {
+  CLS: number | null;
+  FID: number | null;
+  FCP: number | null;
+  LCP: number | null;
+  TTFB: number | null;
+}
+
+interface PerformanceMonitorOptions {
+  reportToAnalytics?: boolean;
+  reportToConsole?: boolean;
+  customCallback?: (metric: any) => void;
+}
+
+export const usePerformanceMonitor = (options: PerformanceMonitorOptions = {}) => {
+  const {
+    reportToAnalytics = true,
+    reportToConsole = false,
+    customCallback
+  } = options;
+
+  const reportMetric = useCallback((metric: any) => {
+    if (reportToConsole) {
+      console.log('Performance Metric:', metric);
+    }
+
+    if (customCallback) {
+      customCallback(metric);
+    }
+
+    if (reportToAnalytics && typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', metric.name, {
+        event_category: 'Web Vitals',
+        event_label: metric.id,
+        value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+        non_interaction: true,
+      });
+    }
+  }, [reportToAnalytics, reportToConsole, customCallback]);
+
   useEffect(() => {
-    // Monitor Core Web Vitals
-    const monitorWebVitals = async () => {
-      try {
-        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
-        
-        const logMetric = (metric: any, type: string) => {
-          if (process.env.NODE_ENV === 'development') {
-            console.log(`${type}:`, metric);
-          }
-          // Send to analytics service in production
-          if (process.env.NODE_ENV === 'production') {
-            // Send to analytics service
-          }
-        };
-        
-        getCLS((metric) => logMetric(metric, 'CLS'));
-        getFID((metric) => logMetric(metric, 'FID'));
-        getFCP((metric) => logMetric(metric, 'FCP'));
-        getLCP((metric) => logMetric(metric, 'LCP'));
-        getTTFB((metric) => logMetric(metric, 'TTFB'));
-      } catch (error) {
-        if (process.env.NODE_ENV === 'development') {
-          console.log('Web Vitals not available:', error);
-        }
-      }
-    };
+    // Core Web Vitals
+    getCLS(reportMetric);
+    getFID(reportMetric);
+    getFCP(reportMetric);
+    getLCP(reportMetric);
+    getTTFB(reportMetric);
 
-    // Monitor resource loading
-    const monitorResourceLoading = () => {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            const navEntry = entry as PerformanceNavigationTiming;
-            if (process.env.NODE_ENV === 'development') {
-              console.log('Navigation timing:', {
-                domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-                loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-                totalTime: navEntry.loadEventEnd - navEntry.fetchStart
+    // Additional performance monitoring
+    if (typeof window !== 'undefined') {
+      // Monitor long tasks
+      if ('PerformanceObserver' in window) {
+        const longTaskObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.duration > 50) {
+              reportMetric({
+                name: 'Long Task',
+                value: entry.duration,
+                id: 'long-task',
+                delta: entry.duration,
               });
             }
           }
+        });
+
+        try {
+          longTaskObserver.observe({ entryTypes: ['longtask'] });
+        } catch (e) {
+          // Long task API not supported
         }
-      });
 
-      observer.observe({ entryTypes: ['navigation', 'resource'] });
+        // Monitor layout shifts
+        const layoutShiftObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              reportMetric({
+                name: 'Layout Shift',
+                value: (entry as any).value,
+                id: 'layout-shift',
+                delta: (entry as any).value,
+              });
+            }
+          }
+        });
 
-      return () => observer.disconnect();
-    };
-
-    // Monitor memory usage
-    const monitorMemoryUsage = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        if (process.env.NODE_ENV === 'development') {
-          console.log('Memory usage:', {
-            used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-            total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-            limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
-          });
+        try {
+          layoutShiftObserver.observe({ entryTypes: ['layout-shift'] });
+        } catch (e) {
+          // Layout shift API not supported
         }
       }
-    };
 
-    // Initialize monitoring
-    monitorWebVitals();
-    const cleanupResource = monitorResourceLoading();
-    monitorMemoryUsage();
+      // Monitor memory usage
+      if ('memory' in performance) {
+        const checkMemory = () => {
+          const memory = (performance as any).memory;
+          if (memory.usedJSHeapSize > 50 * 1024 * 1024) { // 50MB threshold
+            reportMetric({
+              name: 'High Memory Usage',
+              value: memory.usedJSHeapSize / 1024 / 1024, // Convert to MB
+              id: 'memory-usage',
+              delta: memory.usedJSHeapSize / 1024 / 1024,
+            });
+          }
+        };
 
-    // Cleanup on unmount
-    return () => {
-      cleanupResource();
-    };
-  }, []);
+        // Check memory every 30 seconds
+        const memoryInterval = setInterval(checkMemory, 30000);
+        return () => clearInterval(memoryInterval);
+      }
+    }
+  }, [reportMetric]);
+
+  return null;
 };
+
+export default usePerformanceMonitor;
