@@ -31,30 +31,19 @@ function processFile(filePath) {
         (line.includes('openGraph:') && !line.includes('//')) ||,
         (line.includes('twitter:') && !line.includes('<meta') && !line.includes('//')) ||,
         (line.includes('images:') && !line.includes('<meta') && !line.includes('//')) ||,
-<<<<<<< HEAD
-        (line.trim() === '{' && i > 0 && lines[i - 1].includes('metadata')) ||,
+        (line.trim() === '{' && i >0 && lines[i - 1].includes('metadata')) ||,
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-=======
-        (line.trim() === '{' && i > 0 && lines[i - 1].includes('metadata')) ||,;
-function processFile(filePath) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '');
-    // Remove any broken metadata lines;
+    content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '');</meta>
+    // Remove any broken metadata lines;</meta>
     for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};
         (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata')) ||
         (line.trim() === '};' && i > 0 && lines[i - 1].includes('metadata'))
-<<<<<<< HEAD
       ) {/* TODO: Fix JSX expression */}
       }
 
       filteredLines.push(line);
     }
 
-=======
-      ) {/* TODO: Fix JSX expression */};
-      };
-      filteredLines.push(line)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     content = filteredLines.join('\n');
     // Clean up extra empty lines;
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
@@ -70,7 +59,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
     content = content.replace()
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */};
         content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
-<<<<<<< HEAD
         modified = true;
       }
     }
@@ -89,20 +77,6 @@ filesToFix.forEach(file => {)
     fixedCount++;
   }
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
-=======
-        modified = true};
-    };
-    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
-// Process all files;
-filesToFix.forEach(file => {)
-  if (processFile(file)) {
-    fixedCount++};
-filesToFix.forEach(file => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   })
 });
 // `

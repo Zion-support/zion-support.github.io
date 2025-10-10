@@ -14,16 +14,9 @@ console.log('🔍 Starting SEO enhancement...');
 
 // 1. Generate structured data;
 function generateStructuredData() {
-<<<<<<< HEAD
   console.log('📊 Generating structured data...');
   
   const structuredData = {
-=======
-  // console.log removed for production
-;
-const structuredData = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     "@context": "https: //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -71,20 +64,15 @@ const structuredData = {
       {
         "@type": "Service",
         "name": "Cybersecurity",
-        "description": "Advanced cybersecurity solutions and protection"
+        "description": "Advanced cybersecurity solutions and protection",
       };
     ]
-<<<<<<< HEAD
   }
 
-=======
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   fs.writeFileSync(
     path.join(__dirname, '../public/structured-data.json'), 
     JSON.stringify(structuredData, null, 2)
   );
-<<<<<<< HEAD
   console.log('✅ Structured data generated');
 }
 
@@ -93,16 +81,6 @@ function generateMetaTags() {
   console.log('🏷️ Generating meta tags...');
   
   const metaTags = {
-=======
-  // console.log removed for production
-};
-// 2. Generate meta tags;
-function generateMetaTags() {
-  // console.log removed for production
-;
-const metaTags = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     title: "Zion Tech Group - Advanced AI and IT Solutions",
     description: "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
     keywords: [,
@@ -135,19 +113,13 @@ const metaTags = {
       card: "summary_large_image",
       title: "Zion Tech Group - Advanced AI and IT Solutions",
       description: "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
-<<<<<<< HEAD
       image: "https://ziontechgroup.com/og-image.jpg"}
   }
 
-=======
-      image: "https://ziontechgroup.com/og-image.jpg"};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   fs.writeFileSync(
     path.join(__dirname, '../public/meta-tags.json'), 
     JSON.stringify(metaTags, null, 2)
   );
-<<<<<<< HEAD
   console.log('✅ Meta tags generated');
 }
 
@@ -163,22 +135,6 @@ function generateFAQSchema() {
   console.log('❓ Generating FAQ schema...');
   
   const faqSchema = {
-=======
-  // console.log removed for production
-};
-// 3. Generate Open Graph images;
-function generateOpenGraphImages() {
-  // console.log removed for production
-// This would typically use a library like canvas or sharp;
-  // console.log removed for production
-};
-// 4. Generate FAQ schema;
-function generateFAQSchema() {
-  // console.log removed for production
-;
-const faqSchema = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     "@context": "https: //schema.org",
     "@type": "FAQPage",
     "mainEntity": [
@@ -212,20 +168,15 @@ const faqSchema = {
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes, we offer free consultations to discuss your specific needs and provide recommendations for the best solutions for your business."
-        };
+        };,
       };
     ]
-<<<<<<< HEAD
   }
 
-=======
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   fs.writeFileSync(
     path.join(__dirname, '../public/faq-schema.json'), 
     JSON.stringify(faqSchema, null, 2)
   );
-<<<<<<< HEAD
   console.log('✅ FAQ schema generated');
 }
 
@@ -234,16 +185,6 @@ function generateBreadcrumbSchema() {
   console.log('🍞 Generating breadcrumb schema...');
   
   const breadcrumbSchema = {
-=======
-  // console.log removed for production
-};
-// 5. Generate breadcrumb schema;
-function generateBreadcrumbSchema() {
-  // console.log removed for production
-;
-const breadcrumbSchema = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     "@context": "https: //schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -263,17 +204,12 @@ const breadcrumbSchema = {
         "name": "AI Solutions",
         "item": "https: //ziontechgroup.com/ai-services"};
     ]
-<<<<<<< HEAD
   }
 
-=======
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   fs.writeFileSync(
     path.join(__dirname, '../public/breadcrumb-schema.json'), 
     JSON.stringify(breadcrumbSchema, null, 2)
   );
-<<<<<<< HEAD
   console.log('✅ Breadcrumb schema generated');
 }
 
@@ -282,16 +218,6 @@ function generateLocalBusinessSchema() {
   console.log('🏢 Generating local business schema...');
   
   const localBusinessSchema = {
-=======
-  // console.log removed for production
-};
-// 6. Generate local business schema;
-function generateLocalBusinessSchema() {
-  // console.log removed for production
-;
-const localBusinessSchema = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     "@context": "https: //schema.org",
     "@type": "LocalBusiness",
     "name": "Zion Tech Group",
@@ -317,26 +243,16 @@ const localBusinessSchema = {
     "serviceArea": {
       "@type": "Country",
       "name": "United States"
-<<<<<<< HEAD
     }
   }
 
-=======
-    };
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   fs.writeFileSync(
     path.join(__dirname, '../public/local-business-schema.json'), 
     JSON.stringify(localBusinessSchema, null, 2)
   );
-<<<<<<< HEAD
   console.log('✅ Local business schema generated');
 }
 
-=======
-  // console.log removed for production
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Run all SEO enhancements;
 async function runSEOEnhancements() {
     try {
@@ -346,7 +262,6 @@ async function runSEOEnhancements() {
     generateFAQSchema();
     generateBreadcrumbSchema();
     generateLocalBusinessSchema();
-<<<<<<< HEAD
     
     console.log('🎉 SEO enhancement completed successfully!')
   } catch (error) {
@@ -359,18 +274,6 @@ runSEOEnhancements();
 // #!/usr/bin/env node /** * SEO Enhancement Script for Zion Tech Group Website * * This script enhances SEO,
   by: * - Generating comprehensive sitemaps * - Optimizing meta tags * - Adding structured data * - Improving page performance metrics */ import fs from 'fs'' import path from 'path'' import { fileURLToPath } from 'url' const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); class SEOEnhancer {/* TODO: Fix JSX expression */}
   s: //ziontechgroup.com' this.pages = []; this.blogPosts = [], this.services = []} this.caseStudies = []} } async generateSitemap() {' // Read blog posts try {' const blogPostsPath = path.join(__dirname) '../src/content/blog-posts.ts');' const blogContent = fs.readFileSync(blogPostsPath) 'utf8')} // Extract blog post slugs (simplified extraction) const blogMatches = blogContent.match(/slu)
-=======
-    // console.log removed for production
-} catch (error) {
-    // console.error removed for production
-process.exit(1)};
-};
-runSEOEnhancements();
-// #!/usr/bin/env node /** * SEO Enhancement Script for Zion Tech Group Website * * This script enhances SEO,
-  by: * - Generating comprehensive sitemaps * - Optimizing meta tags * - Adding structured data * - Improving page performance metrics */ import fs from 'fs'' import path from 'path'' import { fileURLToPath } from 'url' const __filename = fileURLToPath(import.meta.url); // __dirname removed
-class SEOEnhancer {/* TODO: Fix JSX expression */};
-  s: //ziontechgroup.com' this.pages = []; this.blogPosts = []; this.services = []} this.caseStudies = []} } async generateSitemap() {' // Read blog posts try {' const blogPostsPath = path.join(__dirname) '../src/content/blog-posts.ts');' const blogContent = fs.readFileSync(blogPostsPath) 'utf8')} // Extract blog post slugs (simplified extraction) const blogMatches = blogContent.match(/slu)
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   g: \\s*"([^"]+)"/g), if (blogMatches) {/* TODO: Fix JSX expression */}"
   g:\s*"/) '').replace(/"/} '') ); } } catch (error) {' } // Define static pages const staticPages = [' '',' '/about',' '/services',' '/blog',' '/case-studies',' '/contact',' '/tools' ]; // Define service pages const servicePages = [' '/services/ai-data-analytics',' '/services/ai-workflow-automation',' '/services/ai-virtual-assistant',' '/services/cloud-migration',' '/services/devops-automation',' '/services/cybersecurity-consulting' ]; // Generate XML sitemap const sitemapXml = this.generateXMLSitemap([ ...staticPages, ...servicePages) ...this.blogPosts.map(slug => `/blog/${slug}`) ]); // Save sitemap' const sitemapPath = path.join(__dirname) '../public/sitemap.xml'); fs.writeFileSync(sitemapPath) sitemapXml); } generateXMLSitemap(pages) {const now = new Date().toISOString()} ' let xml = '<?xml version="1.0" encoding="UTF-8"?>\n'' xml += '<urlset xmlns="htt,"`
   p://www.sitemaps.org/schemas/sitemap/0.9">\n' pages.forEach(page => {' const url = page === '' ? this.baseUrl : `${this.baseUrl}${page}`)' const priority = page === '' ? '1.0' : ' page.includes('/blog/') ? '0.8' : ' page.includes('/services/') ? '0.9' : '0.7' ' xml += ' <url>\n' xml += ` <loc>${url}</loc>\\n`; xml += ` <lastmod>${now}</lastmod>\\n`; xml += ` <changefreq>weekly</changefreq>\\n`; xml += ` <priority>${priority}</priority>\\n`;' xml += ' </url>\n' }); ' xml += '</urlset>' return xml; } generateRobotsTxt() {' // console.log('🤖 Generating robots.txt...')} const robotsContent = `User-agen,

@@ -1,26 +1,16 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-<<<<<<< HEAD
 
-// Function to fix specific syntax errors in a file
-=======
 // Function to fix specific syntax errors in a file;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-<<<<<<< HEAD
     
-    // Fix specific patterns found in the files
-    const fixes = [
-=======
     // Fix specific patterns found in the files;
-const fixes = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    const fixes = [
       // Fix missing commas in object properties (like the values array in about/page.tsx)
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
@@ -55,7 +45,7 @@ const fixes = [
         replacement: 'export default function $1({\n  $2:'
       },
       // Fix malformed object literals with missing commas
-      {
+      {)
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
         replacement: '$1: $2,\n    $3:'
       },
@@ -77,11 +67,10 @@ const fixes = [
       // Fix malformed function declarations
       {
         pattern: /function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
-        replacement: 'function $1({\n  $2:'
+        replacement: 'function $1({\n  $2:',
       };
     ];
-<<<<<<< HEAD
-    
+    )
     for (const fix of fixes) {
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
@@ -90,19 +79,8 @@ const fixes = [
       }
     }
     
-    // Additional specific fixes for common patterns
-    const specificFixes = [
-=======
-    for (const fix of fixes) {;
-const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true};
-    };
     // Additional specific fixes for common patterns;
-const specificFixes = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    const specificFixes = [
       // Fix the specific pattern in about/page.tsx
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
@@ -118,11 +96,10 @@ const specificFixes = [
       // Fix malformed function parameters
       {
         pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
-        replacement: 'export default function $1({\n  $2:'
+        replacement: 'export default function $1({\n  $2:',
       };
     ];
-<<<<<<< HEAD
-    
+    )
     for (const fix of specificFixes) {
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
@@ -144,7 +121,7 @@ const specificFixes = [
   }
 }
 
-// Function to find files with syntax errors
+// Function to find files with syntax errors;
 function findFilesWithSyntaxErrors() {
   try {
     const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' });
@@ -155,30 +132,6 @@ function findFilesWithSyntaxErrors() {
   }
 }
 
-=======
-    for (const fix of specificFixes) {;
-const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true};
-    };
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      // console.log removed for production
-return true};
-    return false} catch (error) {
-    // console.error removed for production
-return false};
-};
-// Function to find files with syntax errors;
-function findFilesWithSyntaxErrors() {
-  try {;
-const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' });
-    return result.trim().split('\n').filter(file => file.length > 0)} catch (error) {
-    // console.error removed for production
-return []};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Main execution
 console.log('Starting syntax error resolution...');
 
@@ -188,24 +141,17 @@ console.log(`Found ${filesWithErrors.length} files with syntax errors`);
 let fixedCount = 0;
 for (const file of filesWithErrors) {
   if (fixSyntaxErrors(file)) {
-<<<<<<< HEAD
     fixedCount++;
   }
 }
 
 console.log(`Fixed syntax errors in ${fixedCount} files`);
 
-=======
-    fixedCount++};
-};
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Verify no more syntax errors exist
 try {
   const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });
   const count = parseInt(remainingErrors.trim());
   if (count === 0) {
-<<<<<<< HEAD
     console.log('✅ All syntax errors resolved!');
   } else {
     console.log(`⚠️  ${count} syntax errors still remain`);
@@ -213,12 +159,3 @@ try {
 } catch (error) {
   console.log('✅ No syntax errors found');
 }
-=======
-    // console.log removed for production
-} else {
-    // console.log removed for production
-};
-} catch (error) {
-  // console.log removed for production
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

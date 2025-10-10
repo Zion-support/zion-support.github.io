@@ -1,30 +1,18 @@
 export interface AIBreakthroughContent {
-<<<<<<< HEAD
-    id: string;
-=======
-}
-  id: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  title: string;
-  description: string;
-  content: string;
-  author: string;
-  publishedAt: string;
-  category: string;
-  tags: string[];
-<<<<<<< HEAD
-  featured: boolean
+    id: string;,
+  title: string;,
+  description: string;,
+  content: string;,
+  author: string;,
+  publishedAt: string;,
+  category: string;,
+  tags: string[];,
+  featured: boolean,
   readTime: string
   image?: string,,
   valueProposition: string
   }
 
-=======
-  featured: boolean;
-  readTime: string;
-  image?: string;,
-  valueProposition: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const new2026AIBreakthroughContent: AIBreakthroughContent[] = [,
   {,
     id: 'ai-2026-hyperconscious-computing-revolution',
@@ -49,9 +37,9 @@ The next evolution of AI is here - systems that not only think but feel, create,
     image: '/images/ai-2026-hyperconscious-computing.jpg',
     valueProposition: '$1.2 T enterprise value creation'},
   {
-    id: 'quantum-ai-synthesis-2026'
-    title: 'Quantum AI Synthesis 2026: The Convergence of Quantum and Artificial Intelligence'
-    description: 'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities and problem-solving abilities.'
+    id: 'quantum-ai-synthesis-2026',
+    title: 'Quantum AI Synthesis 2026: The Convergence of Quantum and Artificial Intelligence',
+    description: 'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities and problem-solving abilities.',
     content: `
 # Quantum AI Synthesis 2026;
 The convergence of quantum computing and artificial intelligence opens new frontiers in computational capability.

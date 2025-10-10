@@ -1,32 +1,22 @@
 export interface January2026Content {
-<<<<<<< HEAD
-    id: string;
-=======
-}
-  id: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  title: string;
-  description: string;
-  content: string;
-  author: string;
-  publishedAt: string;
-  category: string;
-  tags: string[];
-  featured: boolean;
+    id: string;,
+  title: string;,
+  description: string;,
+  content: string;,
+  author: string;,
+  publishedAt: string;,
+  category: string;,
+  tags: string[];,
+  featured: boolean;,
   readTime: string
   image?: string
   valueProposition: string,
   pricing: {,
-<<<<<<< HEAD
     starting: string,
     enterprise: string
   }
 }
 
-=======
-    starting: string;
-    enterprise: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const newJanuary2026 Content: January2026 Content[] = [
   {
     id: 'ai-2026-hyperconscious-computing',
@@ -46,16 +36,16 @@ The next evolution of AI is here - systems that not only think but feel, create,
     category: 'AI Consciousness',
     tags: ['AI Consciousness', 'Hyperconscious Computing', '2026', 'Breakthrough'],
     featured: true,
-    readTime: '25 min read'
-    image: '/images/ai-2026-hyperconscious-computing.jpg'
-    valueProposition: '$1.2T enterprise value creation'
+    readTime: '25 min read',
+    image: '/images/ai-2026-hyperconscious-computing.jpg',
+    valueProposition: '$1.2T enterprise value creation',
     pricing: {,
       starting: 'Contact for pricing',
       enterprise: 'Custom solutions available'}},
   {
-    id: 'quantum-ai-synthesis-2026'
-    title: 'Quantum AI Synthesis 2026: The Convergence Revolution'
-    description: 'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities.'
+    id: 'quantum-ai-synthesis-2026',
+    title: 'Quantum AI Synthesis 2026: The Convergence Revolution',
+    description: 'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities.',
     content: `
 # Quantum AI Synthesis 2026;
 The convergence of quantum computing and artificial intelligence opens new frontiers in computational capability.
@@ -70,21 +60,16 @@ The convergence of quantum computing and artificial intelligence opens new front
     category: 'Quantum AI',
     tags: ['Quantum AI', 'Synthesis', '2026', 'Computing'],
     featured: true,
-    readTime: '20 min read'
-    image: '/images/quantum-ai-synthesis-2026.jpg'
-    valueProposition: 'Exponential computational capabilities'
+    readTime: '20 min read',
+    image: '/images/quantum-ai-synthesis-2026.jpg',
+    valueProposition: 'Exponential computational capabilities',
     pricing: {,
       starting: 'Contact for pricing',
       enterprise: 'Custom solutions available',
-<<<<<<< HEAD
 export interface January2026Content {/* TODO: Fix JSX expression */}
   }
 }
 
-=======
-export interface January2026Content {/* TODO: Fix JSX expression */};
-  }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   newJanuary2026Content: January2026Content[] = [
   {/* TODO: Fix JSX expression */};

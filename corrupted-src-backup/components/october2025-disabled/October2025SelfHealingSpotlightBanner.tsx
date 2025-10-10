@@ -2,20 +2,16 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
   return(<div , classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-white, p, y-12, p, x-4'>
       <div , className='m, a, x-w-6xl, m, x-au, t, o'>
         <div , className='flex, fle, x-col, m, d: fl, e, x-row, item, s-center, ga, p-8'>
-          <div , className='fl, e, x-1'>
-  return (
+          <div , className='fl, e, x-1'>return (</div>
     <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-white, p, y-12, p, x-4'></div>
       <div, className='m, a, x-w-6xl, m, x-au, t, o'></div>
         <div, className='flex, fle, x-col, m, d: fl, e, x-row, item, s-center, ga, p-8'></div>
           <div, className='fl, e, x-1'></div>
-            <div , className='inli, n, e-block, b, g-r, e, d-500, tex, t-white, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, m, b-3, animat, e-boun, c, e'>
-              🔥 H, O, T - JUST, PUBLISHED, TODAY;
+            <div , className='inli, n, e-block, b, g-r, e, d-500, tex, t-white, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, m, b-3, animat, e-boun, c, e'>🔥 H, O, T - JUST, PUBLISHED, TODAY;</div>
             </div>
-            <h3 , className='te, x, t-4xl, fon, t-bold, m, b-4'>
-              Agentic, Sel, f-Healing, Infrastructur, e;
+            <h3 , className='te, x, t-4xl, fon, t-bold, m, b-4'>Agentic, Sel, f-Healing, Infrastructur, e;</h3>
             </h3>
-            <p , className='te, x, t-xl, tex, t-gr, a, y-300, m, b-4'>
-              AI, agents, that autonomously, det, e, c, t, diagno, s, e, and, resolve, infrastructure issues, before, they impact, your, business;
+            <p , className='te, x, t-xl, tex, t-gr, a, y-300, m, b-4'>AI, agents, that autonomously, det, e, c, t, diagno, s, e, and, resolve, infrastructure issues, before, they impact, your, business;</p>
             </p>
             <div, classNam, e = 'grid, gri, d-co, l, s-2, ga, p-4, m, b-6'></div>
               <div, className='bg-whi, t, e/1, 0, p-3, rounde, d-lg'></div>
@@ -28,18 +24,16 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
               </div>
               <div, className='bg-whi, t, e/1, 0, p-3, rounde, d-lg'></div>
                 <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>2.3, mi, n</div>
-                <div , className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>
-                  Mean, Time, to Resolution;
+                <div , className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>Mean, Time, to Resolution;</div>
                 </div>
               </div>
               <div, className='bg-whi, t, e/1, 0, p-3, rounde, d-lg'></div>
                 <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>94%</div>
-                <div , className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>
-                  Au, t, o-Resolution, Rat, e;
+                <div , className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>Au, t, o-Resolution, Rat, e;</div>
                 </div>
               </div>
             </div>
-            <Link, t, o='/bl, o, g/ai-20, 2, 5-octob, e, r-2-agent, i, c-se, l, f-heali, n, g-infrastructu, r, e-<revoluti, o, n'
+            <Link, t, o='/bl, o, g/ai-20, 2, 5-octob, e, r-2-agent, i, c-se, l, f-heali, n, g-infrastructu, r, e-<revoluti, o, n')
               className='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: fr, o, m-purp, l, e-600, hove, r:to-pi, n, k-600, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl'
             ></Link>Read</Link>, Complete, Guide + Fortune, 500, Case Stu, d, y →
             </Li, n, k>
@@ -50,8 +44,7 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
               <ul , className='spa, c, e-y-3, tex, t-lg'>
                 <li , className='flex, item, s-sta, r, t'>
                   <span, className='te, x, t-gre, e, n-400, m, r-3'>✓</sp, a, n>
-                  <sp , a, n>
-                    Predictive, anomaly, detection 15-30, min, before failu, r, e;
+                  <sp , a, n>Predictive, anomaly, detection 15-30, min, before failu, r, e;</sp>
                   </sp, a, n>
                 </li>
                 <li, className='flex, item, s-sta, r, t'></li>

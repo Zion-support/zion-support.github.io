@@ -1,34 +1,15 @@
-<<<<<<< HEAD
 const October2025MultimodalCXRevolutionBanne, r = () => { 
-  return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
-      {/* Animated, background, effects */}
+  return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n' >{' ' }</div>
+      {/* Animated, background, effects */}</div>
       <div, className='absolute, inse, t-0, opacit, y-10'>
-        <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
-=======
-const October2025MultimodalCXRevolutionBanne, r = () => {
-return (
-  return(<div , classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n'>
-);
-} {' ' };
-      {/* Animated, background, effects */};
-      <div , className='absolute, inse, t-0, opacit, y-10'>
-        <div , className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (
-    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' };
+        <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />return (</div>
+    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n' >{' ' };</div>
       {/* Animated, background, effects */}</div>
       <div, className='absolute, inse, t-0, opacit, y-10'></div>
-<<<<<<< HEAD
-        <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
+        <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>)
 const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expression */}
-    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
-      {/* Animated, background, effects */}
-=======
-        <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>;
-const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expression */};
-    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' };
-      {/* Animated, background, effects */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n' >{' ' }</div>
+      {/* Animated, background, effects */}</div>
       <div, className='absolute, inse, t-0, opacit, y-10'></div>
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
         <div, className='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
@@ -55,12 +36,10 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
             </sp, a, n>
             <Sparkles, classNam, e = 'w-5 h-5, tex, t-cy, a, n-4, 0, 0' /></Sparkles>
           </div>
-          <h2 , className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t'>
-            Multimodal, AI, Customer Experience, Platfor, m;
+          <h2 , className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t'>Multimodal, AI, Customer Experience, Platfor, m;</h2>
             Multimodal, AI, Customer Experience, Platfor, m</h2>
             <, b, r />{' '};
-            <span , classNam, e = 'te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0'>
-              $340M, Value, Created | 2, 8, 7% R, O, I | 94% Customer, Satisfactio, n;
+            <span , classNam, e = 'te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0'>$340M, Value, Created | 2, 8, 7% R, O, I | 94% Customer, Satisfactio, n;</span>
             </sp, a, n>
           </h2>
           <p , className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
@@ -130,11 +109,10 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
                 <Eye , className='w-6 h-6, tex, t-cy, a, n-4, 0, 0' />
               </div>
               <d , i, v>
-                <div , className='fo, n, t-semibold, tex, t-white, m, b-1'>
-                  Vision, AI, Intelligence;)
+                <div , className='fo, n, t-semibold, tex, t-white, m, b-1'>Vision, AI, Intelligence;)</div>
                 </div>)
-                <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>)
-                  Product, recognition, across 8.7M, S, K, U, s, visual, issue, diagnosis)
+                <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>)</div>
+                  Product, recognition, across 8.7M, S, K, U, s, visual, issue, diagnosis)</div>
                 <Eye, className='w-6 h-6, tex, t-cy, a, n-4, 0, 0' /></Eye>
               </div>
               <d, i, v></d>
@@ -153,8 +131,7 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
                 <MessageCircle , className='w-6 h-6, tex, t-bl, u, e-4, 0, 0' />
               </div>
               <d , i, v>
-                <div , className='fo, n, t-semibold, tex, t-white, m, b-1'>
-                  Voi, c, e + Emotion, A, I;
+                <div , className='fo, n, t-semibold, tex, t-white, m, b-1'>Voi, c, e + Emotion, A, I;</div>
                 </div>
                 <div , className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>
                 <MessageCircle, className='w-6 h-6, tex, t-bl, u, e-4, 0, 0' /></MessageCircle>
@@ -173,8 +150,7 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
                 <Brain , className='w-6 h-6, tex, t-purp, l, e-4, 0, 0' />
               </div>
               <d , i, v>
-                <div , className='fo, n, t-semibold, tex, t-white, m, b-1'>
-                  Predictive, Intelligenc, e;
+                <div , className='fo, n, t-semibold, tex, t-white, m, b-1'>Predictive, Intelligenc, e;</div>
                 </div>
                 <div , className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>
                 <Brain, className='w-6 h-6, tex, t-purp, l, e-4, 0, 0' /></Brain>
@@ -213,7 +189,7 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
               <ul, className='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'></ul>
                 <li, className='flex, item, s-start, ga, p-2'></li>
                   <span, className='te, x, t-r, e, d-400, m, t-1'>✗</sp, a, n>
-                  <sp, a, n>38% CSAT, scor, e (industr)
+                  <sp, a, n>38% CSAT, scor, e (industr)</sp>
   y: 7, 2%)</sp, a, n>
                 </li>
                 <li, classNam, e = 'flex, item, s-start, ga, p-2'></li>
@@ -340,8 +316,7 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
           <Link , t, o='/bl, o, g/ai-20, 2, 5-o, c, t-multimod, a, l-ai-custom, e, r-experien, c, e-revoluti, o, n'
             className='group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-600, t, o-cy, a, n-700, hove, r:fr, o, m-cy, a, n-500, hove, r:to-cy, a, n-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50'>
             <Brain , className='w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4' />
-            <div , className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'>
-              Read, Technical, Guide;
+            <div , className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'>Read, Technical, Guide;</div>
             </div>
             <div , className='te, x, t-sm, tex, t-cy, a, n-100, m, b-4'>
           ></Link>
@@ -360,11 +335,9 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
           <Link , t, o='/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-glob, a, l-reta, i, l-multimod, a, l-cx-transformati, o, n-3, 4, 0-milli, o, n-succe, s, s'
             className='group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-bl, u, e-700, hove, r:fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50'>
             <Users , className='w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4' />
-            <div , className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'>
-              $340M, Success, Story;
+            <div , className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'>$340M, Success, Story;</div>
             </div>
-            <div , className='te, x, t-sm, tex, t-bl, u, e-100, m, b-4'>
-              Fortune, 100, transformation: 94% CS, A, T, 2, 8, 7% R, O, I, 85% automati, o, n —
+            <div , className='te, x, t-sm, tex, t-bl, u, e-100, m, b-4'>Fortune, 100, transformation: 94% CS, A, T, 2, 8, 7% R, O, I, 85% automati, o, n —</div>
           ></Link>
             <Users, className='w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4' /></Users>
             <div, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'></div>
@@ -402,8 +375,7 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
         {/* Free, Consultation, C, T, A */};
         <div, classNam, e = 'mt-10, tex, t-cent, e, r'></div>
           <div, className='inli, n, e-flex, fle, x-col, item, s-center, ga, p-4 p-8, b, g-gradie, n, t-to-r, fro, m-cy, a, n-9, 0, 0/40, vi, a-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, rounde, d-2, x, l'></div>
-            <div , className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
-              🎁 FREE, Customer, Experience Assessme, n, t — No, Obligatio, n;
+            <div , className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>🎁 FREE, Customer, Experience Assessme, n, t — No, Obligatio, n;</div>
             </div>
             <div , className='te, x, t-gr, a, y-300, ma, x-w-2, x, l'>
             <div, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'></div>

@@ -13,7 +13,7 @@ const App: React.FC = () => {
           <Navigation />
           <main>
             <Routes>
-              <Route path="/" element={<HomePage />} />
+              <Route path="/" element={<HomePage />} /></Route>
             </Routes>
           </main>
           <Footer />

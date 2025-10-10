@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info } from 'lucide-react'
 const CookiesPage: React.FC = () => {
@@ -52,7 +51,7 @@ const CookiesPage: React.FC = () => {
         'Email marketing tracking',
         'Campaign performance'
       ],
-      required: false
+      required: false,
     }
   ]
 
@@ -75,12 +74,11 @@ const CookiesPage: React.FC = () => {
     {
       title: 'Marketing',
       description: 'Deliver relevant content and advertisements',
-      icon: Eye
+      icon: Eye,
     }
   ]
 
-  return (
-    <>
+  return(<>
       <Helmet>
         <title>Cookie Policy - Zion Tech Group</title>
         <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about the cookies we use and how to manage your cookie preferences." />
@@ -89,20 +87,17 @@ const CookiesPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
+        <div className="container mx-auto px-4 py-16 pt-24">{/* Header */}</div>
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
                 <Cookie className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white neon-text-enhanced">
-                Cookie Policy
+              <h1 className="text-4xl md:text-5xl font-bold text-white neon-text-enhanced">Cookie Policy</h1>
               </h1>
             </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              This policy explains how we use cookies and similar technologies on our website. 
-              Learn about the types of cookies we use and how to manage your preferences.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">This policy explains how we use cookies and similar technologies on our website. </p>
+              Learn about the types of cookies we use and how to manage your preferences.</p>
             </p>
             <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
               <Info className="w-4 h-4" />
@@ -115,37 +110,31 @@ const CookiesPage: React.FC = () => {
             <h2 className="text-2xl font-bold text-white mb-6">What Are Cookies?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  Cookies are small text files that are stored on your device when you visit our website. 
-                  They help us provide you with a better experience by remembering your preferences and 
-                  understanding how you use our site.
+                <p className="text-gray-300 mb-6 leading-relaxed">Cookies are small text files that are stored on your device when you visit our website. 
+                  They help us provide you with a better experience by remembering your preferences and )</p>
+                  understanding how you use our site.</p>
                 </p>
                 <div className="bg-slate-800 rounded-lg p-6">
                   <h3 className="text-lg font-semibold text-white mb-3">Key Points</h3>
                   <ul className="space-y-2">
                     <li className="flex items-center text-gray-300 text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      Cookies are safe and cannot harm your device
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />Cookies are safe and cannot harm your device</CheckCircle>
                     </li>
                     <li className="flex items-center text-gray-300 text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      They help us improve our website and services
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />They help us improve our website and services</CheckCircle>
                     </li>
                     <li className="flex items-center text-gray-300 text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      You can control which cookies you accept
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />You can control which cookies you accept</CheckCircle>
                     </li>
                     <li className="flex items-center text-gray-300 text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      Some cookies are essential for website functionality
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />Some cookies are essential for website functionality</CheckCircle>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-white mb-4">Cookie Categories</h3>
-                <div className="space-y-4">
-                  {purposes.map((purpose, index) => (
+                <div className="space-y-4">{purposes.map((purpose, index) => (</div>
                     <div key={index} className="flex items-center space-x-3">
                       <purpose.icon className="w-6 h-6 text-cyan-400" />
                       <div>
@@ -162,8 +151,7 @@ const CookiesPage: React.FC = () => {
           {/* Types of Cookies */}
           <div className="cyber-card-enhanced p-8 mb-12">
             <h2 className="text-2xl font-bold text-white mb-6">Types of Cookies We Use</h2>
-            <div className="space-y-6">
-              {cookieTypes.map((cookie, index) => (
+            <div className="space-y-6">{cookieTypes.map((cookie, index) => (</div>
                 <div key={index} className="bg-slate-800 rounded-lg p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center space-x-3">
@@ -171,23 +159,19 @@ const CookiesPage: React.FC = () => {
                       <h3 className="text-xl font-semibold text-white">{cookie.type}</h3>
                     </div>
                     {cookie.required ? (
-                      <span className="px-3 py-1 bg-red-600 text-white text-xs font-semibold rounded">
-                        Required
+                      <span className="px-3 py-1 bg-red-600 text-white text-xs font-semibold rounded">Required</span>
                       </span>
                     ) : (
-                      <span className="px-3 py-1 bg-yellow-600 text-white text-xs font-semibold rounded">
-                        Optional
+                      <span className="px-3 py-1 bg-yellow-600 text-white text-xs font-semibold rounded">Optional</span>
                       </span>
                     )}
                   </div>
                   <p className="text-gray-300 mb-4">{cookie.description}</p>
                   <div>
                     <h4 className="text-white font-medium mb-2">Examples:</h4>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {cookie.examples.map((example, exampleIndex) => (
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">{cookie.examples.map((example, exampleIndex) => (</ul>
                         <li key={exampleIndex} className="flex items-center text-gray-300 text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {example}
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />{example}</CheckCircle>
                         </li>
                       ))}
                     </ul>
@@ -203,49 +187,39 @@ const CookiesPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-lg font-semibold text-white mb-4">Browser Settings</h3>
-                <p className="text-gray-300 mb-4">
-                  You can control cookies through your browser settings. Most browsers allow you to:
+                <p className="text-gray-300 mb-4">You can control cookies through your browser settings. Most browsers allow you to:</p>
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Block all cookies
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />Block all cookies</CheckCircle>
                   </li>
                   <li className="flex items-center text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Block third-party cookies
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />Block third-party cookies</CheckCircle>
                   </li>
                   <li className="flex items-center text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Delete existing cookies
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />Delete existing cookies</CheckCircle>
                   </li>
                   <li className="flex items-center text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Get notifications before cookies are set
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />Get notifications before cookies are set</CheckCircle>
                   </li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white mb-4">Cookie Consent</h3>
-                <p className="text-gray-300 mb-4">
-                  When you first visit our website, you'll see a cookie consent banner where you can:
+                <p className="text-gray-300 mb-4">When you first visit our website, you'll see a cookie consent banner where you can:</p>
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Accept all cookies
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />Accept all cookies</CheckCircle>
                   </li>
                   <li className="flex items-center text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Reject non-essential cookies
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />Reject non-essential cookies</CheckCircle>
                   </li>
                   <li className="flex items-center text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Customize your preferences
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />Customize your preferences</CheckCircle>
                   </li>
                   <li className="flex items-center text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Change your settings anytime
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />Change your settings anytime</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -256,15 +230,13 @@ const CookiesPage: React.FC = () => {
           <div className="cyber-card-enhanced p-8 mb-12">
             <h2 className="text-2xl font-bold text-white mb-6">Third-Party Cookies</h2>
             <div className="space-y-6">
-              <p className="text-gray-300">
-                We may use third-party services that set their own cookies. These services help us provide 
-                better functionality and analytics. Here are the main third-party cookies we use:
+              <p className="text-gray-300">We may use third-party services that set their own cookies. These services help us provide </p>
+                better functionality and analytics. Here are the main third-party cookies we use:</p>
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-slate-800 rounded-lg p-6">
                   <h3 className="text-lg font-semibold text-white mb-3">Google Analytics</h3>
-                  <p className="text-gray-300 text-sm mb-3">
-                    Helps us understand website traffic and user behavior
+                  <p className="text-gray-300 text-sm mb-3">Helps us understand website traffic and user behavior</p>
                   </p>
                   <div className="text-xs text-gray-400">
                     <div>Cookies: _ga, _gid, _gat</div>
@@ -273,8 +245,7 @@ const CookiesPage: React.FC = () => {
                 </div>
                 <div className="bg-slate-800 rounded-lg p-6">
                   <h3 className="text-lg font-semibold text-white mb-3">Social Media</h3>
-                  <p className="text-gray-300 text-sm mb-3">
-                    Enables social media sharing and integration
+                  <p className="text-gray-300 text-sm mb-3">Enables social media sharing and integration</p>
                   </p>
                   <div className="text-xs text-gray-400">
                     <div>Platforms: LinkedIn, Twitter, Facebook</div>
@@ -291,49 +262,39 @@ const CookiesPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
-                  <AlertTriangle className="w-6 h-6 text-yellow-400 mr-2" />
-                  What Happens If You Disable Cookies
+                  <AlertTriangle className="w-6 h-6 text-yellow-400 mr-2" />What Happens If You Disable Cookies</AlertTriangle>
                 </h3>
                 <ul className="space-y-2">
                   <li className="flex items-center text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 text-yellow-400 mr-2" />
-                    Some website features may not work properly
+                    <CheckCircle className="w-4 h-4 text-yellow-400 mr-2" />Some website features may not work properly</CheckCircle>
                   </li>
                   <li className="flex items-center text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 text-yellow-400 mr-2" />
-                    You may need to re-enter information repeatedly
+                    <CheckCircle className="w-4 h-4 text-yellow-400 mr-2" />You may need to re-enter information repeatedly</CheckCircle>
                   </li>
                   <li className="flex items-center text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 text-yellow-400 mr-2" />
-                    Personalized content may not be available
+                    <CheckCircle className="w-4 h-4 text-yellow-400 mr-2" />Personalized content may not be available</CheckCircle>
                   </li>
                   <li className="flex items-center text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 text-yellow-400 mr-2" />
-                    We won't be able to remember your preferences
+                    <CheckCircle className="w-4 h-4 text-yellow-400 mr-2" />We won't be able to remember your preferences</CheckCircle>
                   </li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
-                  <Shield className="w-6 h-6 text-green-400 mr-2" />
-                  Essential Cookies Always Active
+                  <Shield className="w-6 h-6 text-green-400 mr-2" />Essential Cookies Always Active</Shield>
                 </h3>
-                <p className="text-gray-300 mb-4">
-                  Essential cookies are necessary for the website to function and cannot be disabled. 
-                  These include:
+                <p className="text-gray-300 mb-4">Essential cookies are necessary for the website to function and cannot be disabled. </p>
+                  These include:</p>
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Security and authentication
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />Security and authentication</CheckCircle>
                   </li>
                   <li className="flex items-center text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Load balancing and performance
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />Load balancing and performance</CheckCircle>
                   </li>
                   <li className="flex items-center text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Basic website functionality
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />Basic website functionality</CheckCircle>
                   </li>
                 </ul>
               </div>
@@ -343,16 +304,14 @@ const CookiesPage: React.FC = () => {
           {/* Contact Information */}
           <div className="cyber-card-enhanced p-8">
             <h2 className="text-2xl font-bold text-white mb-6">Questions About Cookies?</h2>
-            <p className="text-gray-300 mb-8">
-              If you have any questions about our use of cookies or this Cookie Policy, please contact us.
+            <p className="text-gray-300 mb-8">If you have any questions about our use of cookies or this Cookie Policy, please contact us.</p>
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="flex items-center space-x-3">
                 <Mail className="w-6 h-6 text-cyan-400" />
                 <div>
                   <div className="text-white font-semibold">Email</div>
-                  <a href="mailto:privacy@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
-                    privacy@ziontechgroup.com
+                  <a href="mailto:privacy@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">privacy@ziontechgroup.com</a>
                   </a>
                 </div>
               </div>
@@ -360,8 +319,7 @@ const CookiesPage: React.FC = () => {
                 <Phone className="w-6 h-6 text-cyan-400" />
                 <div>
                   <div className="text-white font-semibold">Phone</div>
-                  <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
-                    +1 (302) 464-0950
+                  <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 (302) 464-0950</a>
                   </a>
                 </div>
               </div>
@@ -380,49 +338,4 @@ const CookiesPage: React.FC = () => {
   )
 }
 
-export default CookiesPage
-=======
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
-const CookiesPage: React.FC = () => {
-};
-  return (<div>
-        <title>Cookie Policy - Zion Tech Group<
-        <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about how we use cookies on our website." 
-      <
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"><
-          <div className="container mx-auto px-4 py-16"><
-            <div className="max-w-4xl mx-auto"><
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Cookie Policy<
-              <
-              <div className="prose prose-lg max-w-none"><
-                <p className="text-xl text-gray-600 mb-8">)
-                  Last update,
-    d: {new Date().toLocaleDateString()};
-                <
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">What Are Cookies<
-                <p className="text-gray-700 mb-6">
-                  Cookies are small text files that are placed on your computer or mobile device when you visit our website.
-                <
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">How We Use Cookies<
-                <p className="text-gray-700 mb-6">
-                  We use cookies to improve your experience on our website, analyze site traffic, and personalize content.
-                <
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Managing Cookies<
-                <p className="text-gray-700 mb-6">
-                  You can control and
-                <
-              <
-            <
-          <
-        <
-        <Footer 
-      <
-    <
-  );
-};
 export default CookiesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

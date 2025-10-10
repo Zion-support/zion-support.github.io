@@ -1,19 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const FuturisticHeroPage: React.FC = () => {
 const features = [
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const FuturisticHeroPage: React.FC = () => {
-const features = [
-];
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -32,15 +22,8 @@ const features = [
     {
     icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses'  }
   }]
-=======
-      description: 'Worldwide deployment and support for international businesses'
-    }
-];;
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const benefits = [
 ];
 'Advanced AI technology integration',
@@ -51,15 +34,9 @@ const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-<<<<<<< HEAD
   ]
 return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-=======
-  ];
-  return (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle>
@@ -74,19 +51,16 @@ return (
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p>
-              Contact our experts to discuss your futuristichero needs and get a customized solution.
+            <p>Contact our experts to discuss your futuristichero needs and get a customized solution.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button>
-                <Phone>
-                Call Now
+                <Phone>Call Now</Phone>
               </button>
               <button>
-                <Mail>
-                Email Us
+                <Mail>Email Us</Mail>
               </button>
             </div>
   )
 }
-export default FuturisticHeroPage
+export default FuturisticHeroPage;

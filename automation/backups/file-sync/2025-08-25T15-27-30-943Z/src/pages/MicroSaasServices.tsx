@@ -2,22 +2,12 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
 import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, TrendingUp, PieChart, Activity} Package; Wifi } from 'lucide-react';
   // Micro SAAS Services data;
   const microSaasServices = [
-<<<<<<< HEAD
-    {id: 1
-      name: "TaskFlow Pro"
-      category: "Productivity"
-      pricing: "Freemium"
-      description: "Simple yet powerful task management and project collaboration tool for small teams"
+    {id: 1,
+      name: "TaskFlow Pro",
+      category: "Productivity",
+      pricing: "Freemium",
+      description: "Simple yet powerful task management and project collaboration tool for small teams",
       price: 15,
-=======
-];
-    {id: 1;
-      name: 'TaskFlow Pro',
-      category: 'Productivity',
-      pricing: 'Freemium',
-      description: 'Simple yet powerful task management and project collaboration tool for small teams',
-      price: 15;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       pricingModel: "monthly",
       userLimit: "Up to 10 users",
       features: ["Task management", "Team collaboration", "Time tracking", "Progress reports"],
@@ -29,11 +19,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 16
-      name: "AI CodeGen Pro"
-      category: "Development"
-      pricing: "Freemium"
-      description: "AI-powered code generation and development assistance for developers and teams"
+    {id: 16,
+      name: "AI CodeGen Pro",
+      category: "Development",
+      pricing: "Freemium",
+      description: "AI-powered code generation and development assistance for developers and teams",
       price: 45,
       pricingModel: "monthly",
       userLimit: "Up to 8 developers",
@@ -46,11 +36,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 17
-      name: "Quantum Analytics"
-      category: "Analytics"
-      pricing: "Freemium"
-      description: "Advanced predictive analytics and business intelligence using quantum computing principles"
+    {id: 17,
+      name: "Quantum Analytics",
+      category: "Analytics",
+      pricing: "Freemium",
+      description: "Advanced predictive analytics and business intelligence using quantum computing principles",
       price: 55,
       pricingModel: "monthly",
       userLimit: "Up to 12 users",
@@ -63,11 +53,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 18
-      name: "Blockchain Business Suite"
-      category: "Blockchain"
-      pricing: "Freemium"
-      description: "Complete blockchain solution for business operations and smart contract management"
+    {id: 18,
+      name: "Blockchain Business Suite",
+      category: "Blockchain",
+      pricing: "Freemium",
+      description: "Complete blockchain solution for business operations and smart contract management",
       price: 65,
       pricingModel: "monthly",
       userLimit: "Up to 20 users",
@@ -80,11 +70,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 19
-      name: "IoT Enterprise Hub"
-      category: "IoT"
-      pricing: "Freemium"
-      description: "Comprehensive IoT platform for enterprise device management and data collection"
+    {id: 19,
+      name: "IoT Enterprise Hub",
+      category: "IoT",
+      pricing: "Freemium",
+      description: "Comprehensive IoT platform for enterprise device management and data collection",
       price: 75,
       pricingModel: "monthly",
       userLimit: "Up to 1000 devices",
@@ -97,11 +87,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 20
-      name: "AR/VR Studio Pro"
-      category: "Immersive Tech"
-      pricing: "Freemium"
-      description: "Professional AR/VR development platform for immersive experiences and training"
+    {id: 20,
+      name: "AR/VR Studio Pro",
+      category: "Immersive Tech",
+      pricing: "Freemium",
+      description: "Professional AR/VR development platform for immersive experiences and training",
       price: 85,
       pricingModel: "monthly",
       userLimit: "Up to 15 developers",
@@ -114,11 +104,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 2
-      name: "InvoiceGenius"
-      category: "Finance"
-      pricing: "Freemium"
-      description: "AI-powered invoice generation and financial management for small businesses"
+    {id: 2,
+      name: "InvoiceGenius",
+      category: "Finance",
+      pricing: "Freemium",
+      description: "AI-powered invoice generation and financial management for small businesses",
       price: 25,
       pricingModel: "monthly",
       userLimit: "Unlimited users",
@@ -131,11 +121,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 3
-      name: "SocialSync Pro"
-      category: "Marketing"
-      pricing: "Freemium"
-      description: "Comprehensive social media management and analytics platform for businesses"
+    {id: 3,
+      name: "SocialSync Pro",
+      category: "Marketing",
+      pricing: "Freemium",
+      description: "Comprehensive social media management and analytics platform for businesses",
       price: 30,
       pricingModel: "monthly",
       userLimit: "Up to 5 users",
@@ -148,11 +138,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 4
-      name: "CustomerFlow CRM"
-      category: "CRM"
-      pricing: "Freemium"
-      description: "Lightweight customer relationship management system for growing businesses"
+    {id: 4,
+      name: "CustomerFlow CRM",
+      category: "CRM",
+      pricing: "Freemium",
+      description: "Lightweight customer relationship management system for growing businesses",
       price: 20,
       pricingModel: "monthly",
       userLimit: "Up to 15 users",
@@ -165,11 +155,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 5
-      name: "DataViz Studio"
-      category: "Analytics"
-      pricing: "Freemium"
-      description: "Easy-to-use data visualization and analytics platform for business insights"
+    {id: 5,
+      name: "DataViz Studio",
+      category: "Analytics",
+      pricing: "Freemium",
+      description: "Easy-to-use data visualization and analytics platform for business insights",
       price: 35,
       pricingModel: "monthly",
       userLimit: "Up to 8 users",
@@ -182,11 +172,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 6
-      name: "ScheduleMaster"
-      category: "Scheduling"
-      pricing: "Freemium"
-      description: "Intelligent scheduling and appointment booking system for service businesses"
+    {id: 6,
+      name: "ScheduleMaster",
+      category: "Scheduling",
+      pricing: "Freemium",
+      description: "Intelligent scheduling and appointment booking system for service businesses",
       price: 18,
       pricingModel: "monthly",
       userLimit: "Up to 12 users",
@@ -199,11 +189,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 7
-      name: "ContentCraft AI"
-      category: "Content"
-      pricing: "Freemium"
-      description: "AI-powered content creation and optimization tool for marketers and creators"
+    {id: 7,
+      name: "ContentCraft AI",
+      category: "Content",
+      pricing: "Freemium",
+      description: "AI-powered content creation and optimization tool for marketers and creators",
       price: 40,
       pricingModel: "monthly",
       userLimit: "Up to 6 users",
@@ -216,11 +206,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 8
-      name: "SecureVault"
-      category: "Security"
-      pricing: "Freemium"
-      description: "Enterprise-grade security and compliance management for small businesses"
+    {id: 8,
+      name: "SecureVault",
+      category: "Security",
+      pricing: "Freemium",
+      description: "Enterprise-grade security and compliance management for small businesses",
       price: 45,
       pricingModel: "monthly",
       userLimit: "Up to 20 users",
@@ -233,11 +223,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 9
-      name: "MediaHub Pro"
-      category: "Media"
-      pricing: "Freemium"
-      description: "Digital asset management and media organization platform for creative teams"
+    {id: 9,
+      name: "MediaHub Pro",
+      category: "Media",
+      pricing: "Freemium",
+      description: "Digital asset management and media organization platform for creative teams",
       price: 28,
       pricingModel: "monthly",
       userLimit: "Up to 10 users",
@@ -250,11 +240,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 10
-      name: "LearnFlow LMS"
-      category: "Education"
-      pricing: "Freemium"
-      description: "Learning management system for corporate training and online education"
+    {id: 10,
+      name: "LearnFlow LMS",
+      category: "Education",
+      pricing: "Freemium",
+      description: "Learning management system for corporate training and online education",
       price: 32,
       pricingModel: "monthly",
       userLimit: "Up to 100 learners",
@@ -267,11 +257,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 11
-      name: "EcoTrack Pro"
-      category: "Sustainability"
-      pricing: "Freemium"
-      description: "Sustainability tracking and environmental impact management for businesses"
+    {id: 11,
+      name: "EcoTrack Pro",
+      category: "Sustainability",
+      pricing: "Freemium",
+      description: "Sustainability tracking and environmental impact management for businesses",
       price: 38,
       pricingModel: "monthly",
       userLimit: "Up to 25 users",
@@ -284,11 +274,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 12
-      name: "LegalAssist AI"
-      category: "Legal"
-      pricing: "Freemium"
-      description: "AI-powered legal document generation and contract management for small businesses"
+    {id: 12,
+      name: "LegalAssist AI",
+      category: "Legal",
+      pricing: "Freemium",
+      description: "AI-powered legal document generation and contract management for small businesses",
       price: 50,
       pricingModel: "monthly",
       userLimit: "Up to 8 users",
@@ -301,11 +291,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 13
-      name: "HealthTrack Plus"
-      category: "Healthcare"
-      pricing: "Freemium"
-      description: "Health monitoring and wellness tracking platform for individuals and small clinics"
+    {id: 13,
+      name: "HealthTrack Plus",
+      category: "Healthcare",
+      pricing: "Freemium",
+      description: "Health monitoring and wellness tracking platform for individuals and small clinics",
       price: 22,
       pricingModel: "monthly",
       userLimit: "Up to 50 patients",
@@ -318,11 +308,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 14
-      name: "EventMaster Pro"
-      category: "Events"
-      pricing: "Freemium"
-      description: "Comprehensive event management and ticketing platform for event organizers"
+    {id: 14,
+      name: "EventMaster Pro",
+      category: "Events",
+      pricing: "Freemium",
+      description: "Comprehensive event management and ticketing platform for event organizers",
       price: 35,
       pricingModel: "monthly",
       userLimit: "Up to 1000 attendees",
@@ -335,11 +325,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 15
-      name: "InventorySmart"
-      category: "Inventory"
-      pricing: "Freemium"
-      description: "Intelligent inventory management and supply chain optimization for small businesses"
+    {id: 15,
+      name: "InventorySmart",
+      category: "Inventory",
+      pricing: "Freemium",
+      description: "Intelligent inventory management and supply chain optimization for small businesses",
       price: 25,
       pricingModel: "monthly",
       userLimit: "Up to 15 users",
@@ -352,11 +342,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 21
-      name: "Cybersecurity Shield"
-      category: "Security"
-      pricing: "Freemium"
-      description: "Advanced cybersecurity platform with AI-powered threat detection and response"
+    {id: 21,
+      name: "Cybersecurity Shield",
+      category: "Security",
+      pricing: "Freemium",
+      description: "Advanced cybersecurity platform with AI-powered threat detection and response",
       price: 95,
       pricingModel: "monthly",
       userLimit: "Up to 50 users",
@@ -369,11 +359,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 22
-      name: "GreenTech Monitor"
-      category: "Sustainability"
-      pricing: "Freemium"
-      description: "Environmental impact tracking and sustainability reporting for eco-conscious businesses"
+    {id: 22,
+      name: "GreenTech Monitor",
+      category: "Sustainability",
+      pricing: "Freemium",
+      description: "Environmental impact tracking and sustainability reporting for eco-conscious businesses",
       price: 42,
       pricingModel: "monthly",
       userLimit: "Up to 30 users",
@@ -386,11 +376,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 23
-      name: "VoiceAI Assistant"
-      category: "AI"
-      pricing: "Freemium"
-      description: "Voice-powered AI assistant for business automation and customer interaction"
+    {id: 23,
+      name: "VoiceAI Assistant",
+      category: "AI",
+      pricing: "Freemium",
+      description: "Voice-powered AI assistant for business automation and customer interaction",
       price: 38,
       pricingModel: "monthly",
       userLimit: "Up to 25 users",
@@ -403,11 +393,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 24
-      name: "Quantum Finance Pro"
-      category: "Finance"
-      pricing: "Freemium"
-      description: "Quantum computing-powered financial modeling and risk assessment platform"
+    {id: 24,
+      name: "Quantum Finance Pro",
+      category: "Finance",
+      pricing: "Freemium",
+      description: "Quantum computing-powered financial modeling and risk assessment platform",
       price: 120,
       pricingModel: "monthly",
       userLimit: "Up to 10 users",
@@ -420,11 +410,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 25
-      name: "Edge Computing Hub"
-      category: "Infrastructure"
-      pricing: "Freemium"
-      description: "Edge computing platform for distributed applications and real-time processing"
+    {id: 25,
+      name: "Edge Computing Hub",
+      category: "Infrastructure",
+      pricing: "Freemium",
+      description: "Edge computing platform for distributed applications and real-time processing",
       price: 68,
       pricingModel: "monthly",
       userLimit: "Up to 100 nodes",
@@ -439,354 +429,178 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     {/* TODO: Fix JSX expression */};
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
-  s://ziontechgroup.com"
-      }
+  s: //ziontechgroup.com"
+      },
     }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   const _categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', 'Infrastructure'];
   const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
@@ -802,12 +616,10 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <Zap className="text-left" />
-              Innovation at Scale;
+              <Zap className="text-left" />Innovation at Scale;</Zap>
             </div>
           </div>
-          <h1 className="text-left">
-            Micro SAAS Services;
+          <h1 className="text-left">Micro SAAS Services;</h1>
           </h1>
           <p className="text-left">
             Revolutionary software solutions designed specifically for small businesses, startups, and entrepreneurs.</p>
@@ -879,8 +691,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               className="text-left"
             />
             <div className="text-left"></div>
-              <div className="text-left">
-                {filteredServices.length} services found;
+              <div className="text-left">{filteredServices.length} services found;</div>
               </div>
             </div>
           </div>
@@ -888,7 +699,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
             <select;
           <div className="text-left"></div>
             <select
-            />"
+            />"</select>
             <div className="text-left"></div>"
               <div className="text-left"></div>
                 {filteredServices.length} services found;
@@ -906,11 +717,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               className="text-left">
               {pricingModels.map(pricing => ()
                 <option key={pricing} value={pricing} className="text-left">)
-                  {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`})
-        {/* Services Grid */})
+                  {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`})</option>
+        {/* Services Grid */})</option>
         <div className="text-left">)
-          {filteredServices.map((service) => (
-              {pricingModels.map(pricing => (
+          {filteredServices.map((service) => (</div>
+              {pricingModels.map(pricing => (</div>
                 <option key={pricing} value={pricing} className="text-left"></option>
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`};
         {/* Services Grid */};
@@ -921,13 +732,11 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               <div className="text-left"></div>
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <div className="text-left">
-                      {getCategoryIcon(service.category)};
+                    <div className="text-left">{getCategoryIcon(service.category)};</div>
                     </div>
                   </div>
                   <div></div>
-                    <h3 className="text-left">
-                      {service.name};
+                    <h3 className="text-left">{service.name};</h3>
                     </h3>
                     <div className="text-left"></div>
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 border border-current`}>
@@ -971,8 +780,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               </p>
               {/* Pricing */};
               <div className="text-left"></div>
-                <div className="text-left">
-              {/* Pricing */}"
+                <div className="text-left">{/* Pricing */}"</div>
               <div className="text-left"></div>"
                 <div className="text-left"></div>
                   {formatPrice(service.price} service.pricingModel)};
@@ -982,8 +790,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               {/* Features */};
               <div className="text-left"></div>
                 <h4 className="text-left">
-                  <Zap className="text-left" />
-                  Key Features;
+                  <Zap className="text-left" />Key Features;</Zap>
                 </h4>
                 <div className="text-left">
                   {service.features.slice(0) 3).map((feature} index) => (</div>
@@ -996,8 +803,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               {/* Target Audience */};
               <div className="text-left"></div>
                 <h4 className="text-left">
-                  <Users className="text-left" />
-                  Perfect For;
+                  <Users className="text-left" />Perfect For;</Users>
                 </h4>
                 <div className="text-left">
                   {service.targetAudience.slice(0) 2).map((audience} index) => (</div>
@@ -1018,8 +824,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                   <a href={service.contactInfo.website};
                     className="text-left"
                     target="_blank"
-                    rel="noopener noreferrer">
-                    Get Started;
+                    rel="noopener noreferrer">Get Started;</a>
                     <Link className="text-left" />
                   </a>
         {/* Contact Information */};
@@ -1030,12 +835,10 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <Rocket className="text-left" />
-                  Ready to Transform Your Business?
+                  <Rocket className="text-left" />Ready to Transform Your Business?</Rocket>
                 </div>
               </div>
-              <h2 className="text-left">
-                Let's Build the Future Together;
+              <h2 className="text-left">Let's Build the Future Together;</h2>
               </h2>
               <p className="text-left">
                 Our cutting-edge micro SAAS solutions are designed to scale with your business needs.</p>
@@ -1067,20 +870,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               <div className="text-left">
                 <a;
               <div className="text-left"></div>
-<<<<<<< HEAD
                 <a
                   href="mailto: kleber@ziontechgroup.<com" className="text-left">
-=======
-                <a href="mailto: kleber@ziontechgroup.<com" className="text-left">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                  <Mail className="text-left" />
-                  Get Started Today
+                  <Mail className="text-left" />Get Started Today</Mail>
                 </a>
                 <a,
-                  href="tel:+<13024640950" className="text-left">,
+                  href="tel:+<13024640950" className="text-left">,</a>
                   <Phone className="text-left" />,
-                  Call Now;
-              {/* Features */}"
+                  Call Now;</Phone>
+              {/* Features */}"</Phone>
               <div className="text-left"></div>"
                 <h4 className="text-left"></h4>"
                   <Zap className="text-left" /></Zap>

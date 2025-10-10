@@ -1,19 +1,18 @@
 export interface RevOpsContent {
 }
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  date: string;
-  readTime: string;
-  tags: string[];
+  id: string;,
+  title: string;,
+  description: string;,
+  category: string;,
+  date: string;,
+  readTime: string;,
+  tags: string[];,
   featured: boolean;
   content?: string;
   author?: string
   valueProposition?: string
   highlights: string[],
   metrics: {,
-<<<<<<< HEAD
     [key: string]: string,
 export interface RevOpsContent {/* TODO: Fix JSX expression */}
   }
@@ -24,27 +23,17 @@ export interface RevOpsContent {/* TODO: Fix JSX expression */}
   }
 }
 
-=======
-    [key: string]: string;
-export interface RevOpsContent {/* TODO: Fix JSX expression */};
-  };
-  icon?: string;
-  gradient?: string;
-  breaking?: boolean;
-  cta?: {/* TODO: Fix JSX expression */};
-  }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const octoberNewestRevOpsContent: RevOpsContent[] = [
   {
-    id: 'ai-revops-automation-2025'
-    title: 'AI RevOps Automation 2025: 3.2x Pipeline Velocity'
-    description: 'Revolutionary AI-powered RevOps automation delivering 3.2x pipeline velocity and 127% ROI.'
-    category: 'RevOps'
-    date: '2025-10-01'
+    id: 'ai-revops-automation-2025',
+    title: 'AI RevOps Automation 2025: 3.2x Pipeline Velocity',
+    description: 'Revolutionary AI-powered RevOps automation delivering 3.2x pipeline velocity and 127% ROI.',
+    category: 'RevOps',
+    date: '2025-10-01',
     readTime: '16 min',
     icon: '💰',
     gradient: 'from-emerald-600 to-teal-600',
-    featured: true
+    featured: true,
     breaking: true,
     tags: ['RevOps', 'Revenue Intelligence', 'AI Automation', 'Sales Optimization'],
     highlights: [,
@@ -54,7 +43,7 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       '$127 M incremental revenue (Fortune 500 case study)',
       '85% reduction in manual RevOps tasks',
       '4.7 x faster response times'],
-    metrics: {
+    metrics: {,
       roi: '127%',
       forecastAccuracy: '89%',
       pipelineVelocity: '3.2 x',
@@ -64,9 +53,9 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       text: 'Read the Complete RevOps Guide',
       link: '/blog/ai-2025-oct-01-autonomous-revenue-operations-revolution'}},
   {
-    id: 'autonomous-revenue-operations-2025'
-    title: 'Autonomous Revenue Operations 2025: Self-Healing Systems'
-    description: 'Self-healing RevOps systems with 99.9% uptime and 85% cost reduction.'
+    id: 'autonomous-revenue-operations-2025',
+    title: 'Autonomous Revenue Operations 2025: Self-Healing Systems',
+    description: 'Self-healing RevOps systems with 99.9% uptime and 85% cost reduction.',
     category: 'RevOps',
     date: '2025-10-02',
     readTime: '18 min read',
@@ -79,7 +68,7 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       'SaaS',
       'Revenue Operations',
       'Enterprise AI'],
-    featured: true
+    featured: true,
     breaking: true,
     highlights: [,
       '$127M incremental annual revenue',
@@ -88,7 +77,7 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       '3.2 x pipeline velocity improvement',
       '12-month transformation timeline',
       '704% three-year ROI'],
-    metrics: {
+    metrics: {,
       revenue: '$127 M',
       accuracy: '89%',
       winRate: '+42%',
@@ -103,7 +92,6 @@ export const,
     }},
   {/* TODO: Fix JSX expression */};
     }}];
-<<<<<<< HEAD
 
 export const getFeaturedRevOpsContent = () => {/* TODO: Fix JSX expression */}
 }
@@ -113,11 +101,3 @@ export const getBreakingRevOpsContent = () => {/* TODO: Fix JSX expression */}
 
 export const getAllRevOpsContent = () => {/* TODO: Fix JSX expression */}
 }
-=======
-export const getFeaturedRevOpsContent = () => {/* TODO: Fix JSX expression */};
-};
-export const getBreakingRevOpsContent = () => {/* TODO: Fix JSX expression */};
-};
-export const getAllRevOpsContent = () => {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

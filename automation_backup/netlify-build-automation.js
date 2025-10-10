@@ -26,7 +26,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -38,12 +38,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -123,7 +123,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -140,7 +140,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -255,7 +255,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -293,7 +293,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -309,7 +309,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -317,7 +317,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -383,7 +383,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } ' #!/usr/bin/en,
@@ -414,7 +414,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -426,12 +426,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -511,7 +511,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -528,7 +528,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -643,7 +643,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -681,7 +681,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -697,7 +697,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -705,7 +705,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -771,7 +771,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
@@ -802,7 +802,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -814,12 +814,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -899,7 +899,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -916,7 +916,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -1031,7 +1031,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -1069,7 +1069,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -1085,7 +1085,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -1093,7 +1093,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -1159,7 +1159,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
@@ -1190,7 +1190,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -1202,12 +1202,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -1287,7 +1287,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -1304,7 +1304,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -1419,7 +1419,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -1457,7 +1457,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -1473,7 +1473,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -1481,7 +1481,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -1547,7 +1547,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
@@ -1578,7 +1578,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -1590,12 +1590,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -1675,7 +1675,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -1692,7 +1692,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -1807,7 +1807,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -1845,7 +1845,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -1861,7 +1861,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -1869,7 +1869,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -1935,7 +1935,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } ursor/integrate-build-improve-and-re-verify-8f7d' #!/usr/bin/en,
@@ -1966,7 +1966,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -1978,12 +1978,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -2063,7 +2063,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -2080,7 +2080,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -2195,7 +2195,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -2233,7 +2233,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -2249,7 +2249,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -2257,7 +2257,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -2323,7 +2323,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
@@ -2354,7 +2354,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -2366,12 +2366,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -2451,7 +2451,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -2468,7 +2468,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -2583,7 +2583,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -2621,7 +2621,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -2637,7 +2637,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -2645,7 +2645,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -2711,7 +2711,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } ursor/add-new-services-and-deploy-updates-0462 ursor/fix-syntax-push-and-merge-to-main-40de' #!/usr/bin/en,
@@ -2742,7 +2742,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -2754,12 +2754,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -2839,7 +2839,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -2856,7 +2856,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -2971,7 +2971,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -3009,7 +3009,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -3025,7 +3025,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -3033,7 +3033,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -3099,7 +3099,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } origin/cursor/integrate-build-improve-and-re-verify-c7b5 ursor/integrate-build-improve-and-re-verify-8f7d' #!/usr/bin/en,
@@ -3130,7 +3130,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -3142,12 +3142,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -3227,7 +3227,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -3244,7 +3244,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -3359,7 +3359,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -3397,7 +3397,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -3413,7 +3413,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -3421,7 +3421,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -3487,7 +3487,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } origin/cursor/integrate-build-improve-and-re-verify-c7b5' #!/usr/bin/en,
@@ -3518,7 +3518,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -3530,12 +3530,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -3615,7 +3615,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -3632,7 +3632,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -3747,7 +3747,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -3785,7 +3785,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -3801,7 +3801,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -3809,7 +3809,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -3875,7 +3875,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/"env": node; ' #!/usr/bin/en,
@@ -3906,7 +3906,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -3918,12 +3918,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -4003,7 +4003,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -4020,7 +4020,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -4135,7 +4135,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -4173,7 +4173,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -4189,7 +4189,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -4197,7 +4197,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -4263,7 +4263,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,`
   s: '= NetlifyBuildAutomation'} } } }`;' #!/usr/bin/en,
@@ -4294,7 +4294,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -4306,12 +4306,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -4391,7 +4391,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -4408,7 +4408,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -4523,7 +4523,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -4561,7 +4561,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -4577,7 +4577,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -4585,7 +4585,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -4651,7 +4651,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,"
   s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/"env": node;" pr-12325' #!/usr/bin/en,
@@ -4686,7 +4686,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -4698,12 +4698,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -4783,7 +4783,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -4800,7 +4800,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -4915,7 +4915,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -4953,7 +4953,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -4969,7 +4969,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -4977,7 +4977,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -5043,7 +5043,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
@@ -5078,7 +5078,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -5090,12 +5090,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -5175,7 +5175,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -5192,7 +5192,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -5307,7 +5307,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -5345,7 +5345,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -5361,7 +5361,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -5369,7 +5369,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -5435,7 +5435,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,"
   s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/\\"env\\": node; /**; * Netlif,
@@ -5455,7 +5455,7 @@
   t: logDir = path.dirname(this.config.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } return} this.isRunnin,
-  g: = true;' this.log('Startin)
+  g: = true;' this.log('Startin),
   g: Netlify Build Automation...)'' ');' // Initia,
   l: status check; awai,
   t: this.checkNetlifyStatus(); // Schedul,
@@ -5564,7 +5564,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -5576,12 +5576,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -5661,7 +5661,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -5678,7 +5678,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -5793,7 +5793,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -5831,7 +5831,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -5847,7 +5847,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -5855,7 +5855,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -5921,7 +5921,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } ' #!/usr/bin/en,
@@ -5952,7 +5952,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -5964,12 +5964,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -6049,7 +6049,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -6066,7 +6066,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -6181,7 +6181,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -6219,7 +6219,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -6235,7 +6235,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -6243,7 +6243,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -6309,7 +6309,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
@@ -6340,7 +6340,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -6352,12 +6352,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -6437,7 +6437,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -6454,7 +6454,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -6569,7 +6569,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -6607,7 +6607,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -6623,7 +6623,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -6631,7 +6631,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -6697,7 +6697,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
@@ -6728,7 +6728,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -6740,12 +6740,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -6825,7 +6825,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -6842,7 +6842,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -6957,7 +6957,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -6995,7 +6995,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -7011,7 +7011,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -7019,7 +7019,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -7085,7 +7085,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
@@ -7116,7 +7116,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -7128,12 +7128,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -7213,7 +7213,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -7230,7 +7230,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -7345,7 +7345,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -7383,7 +7383,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -7399,7 +7399,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -7407,7 +7407,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -7473,7 +7473,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } ursor/integrate-build-improve-and-re-verify-8f7d' #!/usr/bin/en,
@@ -7504,7 +7504,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -7516,12 +7516,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -7601,7 +7601,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -7618,7 +7618,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -7733,7 +7733,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -7771,7 +7771,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -7787,7 +7787,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -7795,7 +7795,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -7861,7 +7861,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
@@ -7892,7 +7892,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -7904,12 +7904,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -7989,7 +7989,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -8006,7 +8006,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -8121,7 +8121,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -8159,7 +8159,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -8175,7 +8175,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -8183,7 +8183,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -8249,7 +8249,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } ursor/add-new-services-and-deploy-updates-0462 ursor/fix-syntax-push-and-merge-to-main-40de' #!/usr/bin/en,
@@ -8280,7 +8280,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -8292,12 +8292,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -8377,7 +8377,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -8394,7 +8394,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -8509,7 +8509,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -8547,7 +8547,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -8563,7 +8563,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -8571,7 +8571,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -8637,7 +8637,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } origin/cursor/integrate-build-improve-and-re-verify-c7b5 ursor/integrate-build-improve-and-re-verify-8f7d' #!/usr/bin/en,
@@ -8668,7 +8668,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -8680,12 +8680,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -8765,7 +8765,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -8782,7 +8782,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -8897,7 +8897,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -8935,7 +8935,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -8951,7 +8951,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -8959,7 +8959,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -9025,7 +9025,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } } origin/cursor/integrate-build-improve-and-re-verify-c7b5' #!/usr/bin/en,
@@ -9056,7 +9056,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -9068,12 +9068,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -9153,7 +9153,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -9170,7 +9170,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -9285,7 +9285,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -9323,7 +9323,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -9339,7 +9339,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -9347,7 +9347,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -9413,7 +9413,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,"
   s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/"env": node; ' #!/usr/bin/en,
@@ -9444,7 +9444,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -9456,12 +9456,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -9541,7 +9541,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -9558,7 +9558,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -9673,7 +9673,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -9711,7 +9711,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -9727,7 +9727,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -9735,7 +9735,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -9801,7 +9801,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,`
   s: '= NetlifyBuildAutomation'} } } }`;' #!/usr/bin/en,
@@ -9832,7 +9832,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -9844,12 +9844,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -9929,7 +9929,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -9946,7 +9946,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -10061,7 +10061,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -10099,7 +10099,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -10115,7 +10115,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -10123,7 +10123,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -10189,7 +10189,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,"
   s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/"env": node;" pr-12325' #!/usr/bin/en,
@@ -10224,7 +10224,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -10236,12 +10236,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -10321,7 +10321,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -10338,7 +10338,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -10453,7 +10453,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -10491,7 +10491,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -10507,7 +10507,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -10515,7 +10515,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -10581,7 +10581,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildAutomation'} } } }' #!/usr/bin/en,
@@ -10616,7 +10616,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -10628,12 +10628,12 @@
   t: this.performDailyOptimization()}) this.log('Netlify Build Automation started successfully''))}' asyn,
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
-  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,)
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
-  h: director,
+  h: director,)
   y: ${/* TODO: Fix JSX expression */})`
   r: || 'Not se}t}`)} } } catch (error) {this.error('Failed to check Netlify status''}}error)}' const siteInfo = await this.getSiteInfo(); if (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.name} (${siteInfo.url})`)` this.log(`Site)`
@@ -10713,7 +10713,7 @@
   t: this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success''}}error)}'} asyn,
   c: checkBuildHealth() {/* TODO: Fix JSX expression */}`
   m: + (build.duration || 0),0) /; recentBuilds.length} this.log(`Averag,
-  e: build,
+  e: build,)
   duration: ${/* TODO: Fix JSX expression */})`
   n: / 1000})}s`); const failedBuilds = recentBuilds.filter(build => build.status === 'error''))' i,
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
@@ -10730,7 +10730,7 @@
   c: makeNetlifyRequest(endpoint,method = 'GET''))dat,
   a: = null) {/* TODO: Fix JSX expression */}`
   r: ${this.config.netlifyToke}n}`,Content-Type': ' application/json'-Agent'';: 'Zion-App-Build-Automation/1.0}}' i,
-  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,
+  f: (data) {const postData = JSON.stringify(data)} options.headers['Content-Length''] = Buffer.byteLength(postData)}' const req = https.request(options)res => {let responseData = '''} res.on('data'}chun,)
   k: => {/* TODO: Fix JSX expression */})
   a: += chunk}) res.on('end')() => {/* TODO: Fix JSX expression */}`
   y: { '); await this.optimizeBuildConfiguration(); await this.cleanupBuildArtifacts(); await this.updateDependenciesIfNeeded()} await this.checkBuildPerformance()} this.log('Daily optimization completed')} catch (error) {this.error('Daily optimization failed'}error) } } async makeNetlifyRequest(endpoint,method = 'GET) `)data = null) {/* TODO: Fix JSX expression */}
@@ -10845,7 +10845,7 @@
   f: (!config.includes('swcMinify''})) {/* TODO: Fix JSX expression */}
   swcMinify: tru)e}'} async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('swcMinify')) {/* TODO: Fix JSX expression */}
   swcMinify: 'true'})} fs.writeFileSync(next.config.js')config)}'; const packageJson = JSON.parse(fs.readFileSync('package.json''))utf8'))' i,
-  f: (packageJson.scripts) {packageJson.scripts['}buil,
+  f: (packageJson.scripts) {packageJson.scripts['}buil,]
   d: optimized'] ='',NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run buil}d}' fs.writeFileSync(package.json',JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -10883,7 +10883,7 @@
   y: { execSync(npm audit fix')}{/* TODO: Fix JSX expression */}
   o: 'pipe })} } catch (error) {this.error('Failed to update dependencies'}error) } } async checkBuildPerformance() {/* TODO: Fix JSX expression */}`
   m: '+ dur',0) / durations.length; const minDuration = Math.min(...durations); const maxDuration = Math.max(...durations)} this.log(`Buil,
-  d: performanc,
+  d: performanc,)
   e: Avg=${/* TODO: Fix JSX expression */})`
   n: / 1000})}s,Min=${Math.round(minDuration / 1000)}s,Max=${Math.round(maxDuration / 1000)}s`); i,
   f: (avgDuration > 300000) {/* TODO: Fix JSX expression */}
@@ -10899,7 +10899,7 @@
   s: tru,e}\n: 'optimizePackageImport,
   s: true\n:' })' )} fs.writeFileSync(next.config.js')config)}' const packageJson = JSON.parse(fs.readFileSync( 'package.json')utf8'';))' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run build''}' packageJson.scripts['buil,
+  m: run build''}' packageJson.scripts['buil,]
   d:analyze''] = 'ANALYZE=tru,
   e: npm run buil}d}' fs.writeFileSync('package.json''),JSON.stringify(packageJson,null)2))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
@@ -10907,7 +10907,7 @@
   c: checkDeploymentStatus(build) { try { this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(this.error('Build performance check failed')error) } } async applyPerformanceOptimizations() {' this.log('Applying performance optimizations...'); try { await this.optimizeBuildConfiguration(); await this.updateDependenciesIfNeeded(); await this.cleanupBuildArtifacts()} this.log('Performance optimizations applied')} catch (error) {this.error('Failed to apply performance optimizations'}error) } } async optimizeBuildConfiguration() {' this.log('Optimizing build configuration...'); try { if (fs.existsSync('next.config.js')) {' let config = fs.readFileSync('next.config.js')utf8')} if (!config.includes(')'experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} const packageJson = JSON.parse(fs.readFileSync(','package.json')utf8')); if (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`
+  d: fast'] ='}NODE_OPTIONS='--max-old-space-size=4096' npm run build' packageJson.scripts['buil,`]
   d:analyze'] = 'ANALYZE=true npm run build} fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))} catch (error) {this.error(`Failed to optimize build configuration} `}error) } } async checkDeploymentStatus(build) { try {' this.log(`Checking deployment status for build ${build.id}...`); const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,
   f: (deployments && deployments.length > 0) {/* TODO: Fix JSX expression */}`
   t: ${latestDeploy.stat}e} (${latestDeploy.url})`); i,
@@ -10973,7 +10973,7 @@
   f: (require.main === module) {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) process.on('SIGTERM')asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
+  t: automation.stop()} process.exit(0)}) automation.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,"
   s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/\\"env\\": node; /**; * Netlif,
@@ -10993,7 +10993,7 @@
   t: logDir = path.dirname(this.config.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } return} this.isRunnin,
-  g: = true;' this.log('Startin)
+  g: = true;' this.log('Startin),
   g: Netlify Build Automation...)'' ');' // Initia,
   l: status check; awai,
   t: this.checkNetlifyStatus(); // Schedul,

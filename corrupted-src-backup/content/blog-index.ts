@@ -4,27 +4,18 @@
  */
 export interface BlogPost {
 }
-  slug: string;
-  title: string;
-  description: string;
-  category: string;
-  date: string;
-<<<<<<< HEAD
-  readTime: string
+  slug: string;,
+  title: string;,
+  description: string;,
+  category: string;,
+  date: string;,
+  readTime: string,
   tags: string[]
   featured?: boolean,,
   valueProposition: string,
 export interface BlogPost {/* TODO: Fix JSX expression */}
 }
 
-=======
-  readTime: string;
-  tags: string[];
-  featured?: boolean;,
-  valueProposition: string;
-export interface BlogPost {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 /**
  * October 2025 Breakthrough Content;
  */
@@ -92,7 +83,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     featured: true,
     valueProposition: '$215M annual value'},
   {
-    slug: 'ai-2025-oct-03-autonomous-cloud-security'
+    slug: 'ai-2025-oct-03-autonomous-cloud-security',
     title: 'Autonomous Cloud Security 2025',
     description: '99.98% threat neutralization under 5 seconds with policy-backed automations.',
     category: 'Security',
@@ -143,18 +134,13 @@ export const,
  * All blog posts combined;
  */
 export const,
-<<<<<<< HEAD
   allBlogPosts: BlogPost[] = [...october2025Breakthroughs]
-=======
-  allBlogPosts: BlogPost[] = [...october2025Breakthroughs];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 /**
  * Helper functions,
  */,
 export function getFeaturedPosts(): BlogPost[] {,
   return allBlogPosts.filter(post => post.featured);
  */
-<<<<<<< HEAD
 export function getFeaturedPosts(): BlogPost[] {/* TODO: Fix JSX expression */}
 }
 
@@ -167,39 +153,19 @@ export function getAllTags(): string[] {/* TODO: Fix JSX expression */}
 export function getTotalValueProposition(): string {
   const totalValue = allBlogPosts.reduce((sum, post) => {
     const _value = post.valueProposition.match(/\$(\d+)M/);
-=======
-export function getFeaturedPosts(): BlogPost[] {/* TODO: Fix JSX expression */};
-};
-export function getAllCategories(): string[] {/* TODO: Fix JSX expression */};
-};
-export function getAllTags(): string[] {/* TODO: Fix JSX expression */};
-};
-export function getTotalValueProposition(): string {;
-const totalValue = allBlogPosts.reduce((sum, post) => {;
-const _value = post.valueProposition.match(/\$(\d+)M/);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 :corrupted-src-backup/content/blog-index.ts;
 export function getTotalValueProposition(): string {/* TODO: Fix JSX expression */};
   }, 0);
-<<<<<<< HEAD
   return `$${totalValue}M+ total value proposition`;
 }
 
-=======
-  return `$${totalValue}M+ total value proposition`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const blogStats = {
 };
-  totalPosts: allBlogPosts.length;
-  featuredPosts: getFeaturedPosts().length
-  categories: getAllCategories().length
+  totalPosts: allBlogPosts.length;,
+  featuredPosts: getFeaturedPosts().length,
+  categories: getAllCategories().length,
   tags: getAllTags().length,
   totalValue: getTotalValueProposition(),
-<<<<<<< HEAD
 export const blogStats = {/* TODO: Fix JSX expression */}
 }
-=======
-export const blogStats = {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 `

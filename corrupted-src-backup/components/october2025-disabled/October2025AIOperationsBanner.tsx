@@ -3,13 +3,11 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */};
     },
     {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */};
+    {/* TODO: Fix JSX expression */};,
     };
-  ]; return(<div , classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6, l, g:px-8, relative, overflow-hidd, e, n">
-      {/* Animated, background, elemen, t, s */};
+  ]; return(<div , classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6, l, g:px-8, relative, overflow-hidd, e, n">{/* Animated, background, elemen, t, s */};</div>
       <div , classNam, e = "absolute, inse, t-0, opacit, y-20">
-        <div , className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" />
-  ]; return (
+        <div , className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" />]; return (</div>
     <div , classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6, l, g:px-8, relative, overflow-hidd, e, n">
       {/* Animated, background, elemen, t, s */}</div>
       <div, classNam, e = "absolute, inse, t-0, opacit, y-20"></div>
@@ -21,38 +19,24 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */};
         <div, className="te, x, t-center, m, b-12"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, border, border-bl, u, e-4, 0, 0/30, m, b-4"></div>
             <Activity , className="w-4 h-4, tex, t-bl, u, e-400, animat, e-pul, s, e" />
-            <span , className="te, x, t-bl, u, e-300, tex, t-sm, fon, t-semibo, l, d">
-              OCTOBER, 202, 5 - BREAKTHROUGH, AI, OPERATIONS;
+            <span , className="te, x, t-bl, u, e-300, tex, t-sm, fon, t-semibo, l, d">OCTOBER, 202, 5 - BREAKTHROUGH, AI, OPERATIONS;</span>
             </sp, a, n>
           </div>
-          <h2 , className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">
-            Transform, Your, Enterprise Operatio, n, s;
+          <h2 , className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">Transform, Your, Enterprise Operatio, n, s;</h2>
           </h2>
-          <p , className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
-            Three, revolutionary, platforms delivering, unprecedented, R, O, I, securi, t, y, and, operational, excellence;
+          <p , className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">Three, revolutionary, platforms delivering, unprecedented, R, O, I, securi, t, y, and, operational, excellence;</p>
           </p>
         </div>)
         {/* Articles, Gri, d */})
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
-<<<<<<< HEAD
-          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > {
+        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)</div>
+          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > {</div>
             const Ico, n = artic, l, e.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
             const Ico, n = artic, l, e.ic, o, n; return (</div>
-              <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l">
-                {/* Gradient, over, l, a, y */}
+              <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l">{/* Gradient, over, l, a, y */}</Link>
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} />
-=======
-          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > {;
-const Ico, n = artic, l, e.ic, o, n; return(<Link , ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l";
-const Ico, n = artic, l, e.ic, o, n; return (</div>
-              <Link , ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l">
-                {/* Gradient, over, l, a, y */};
-                <div , classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 {/* Conte, n, t */}</div>
                 <div, classNam, e = "relativ, e, z-10" ></div> <div, classNam, e = { `w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.co, l, o, r }, flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}></div>
-                    <Icon , classNam, e = "w-6 h-6, tex, t-whi, t, e" />
-  ]; return ("
+                    <Icon , classNam, e = "w-6 h-6, tex, t-whi, t, e" />]; return ("</Icon>
     <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6, l, g:px-8, relative, overflow-hidd, e, n"></div>
       {/* Animated, background, elemen, t, s */}"
       <div, classNam, e = "absolute, inse, t-0, opacit, y-20"></div>"
@@ -71,21 +55,15 @@ const Ico, n = artic, l, e.ic, o, n; return (</div>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4"></h2>
             Transform, Your, Enterprise Operatio, n, s;
           </h2>"
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o"></p>
+          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o"></p>)
             Three, revolutionary, platforms delivering, unprecedented, R, O, I, securi, t, y, and, operational, excellence;
           </p>
         </div>
         {/* Articles, Gri, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8"></div>
           {/* TODO: Fix JSX expression */}"
-<<<<<<< HEAD
               <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"></Link>
                 {/* Gradient, over, l, a, y */}
-=======
-              <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
-              ></Link>
-                {/* Gradient, over, l, a, y */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} /></div>
                 {/* Conte, n, t */}"`
                 <div, classNam, e = "relativ, e, z-10" > <div, classNam, e = { `w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.co, l, o, r }, flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}></div>"
@@ -101,8 +79,7 @@ const Ico, n = artic, l, e.ic, o, n; return (</div>
                   </p>
                   {/* Sta, t, s */};
                   <div, className="flex, item, s-center, justif, y-between, m, b-4"></div>
-                    <span , className="te, x, t-xs, fon, t-semibold, tex, t-gre, e, n-400, b, g-gre, e, n-4, 0, 0/10, p, x-3, p, y-1, rounde, d-fu, l, l">
-                      {artic, l, e.sta, t, s};
+                    <span , className="te, x, t-xs, fon, t-semibold, tex, t-gre, e, n-400, b, g-gre, e, n-4, 0, 0/10, p, x-3, p, y-1, rounde, d-fu, l, l">{artic, l, e.sta, t, s};</span>
                     </sp, a, n>
                   </div>
                   {/* C, T, A */};
@@ -124,12 +101,8 @@ const Ico, n = artic, l, e.ic, o, n; return (</div>
                   </div>
                 </div>
               </Li, n, k>)
-<<<<<<< HEAD
             );
           })}
-=======
-            )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         </div>
         {/* Bottom, CT, A */};
         <div, classNam, e = "te, x, t-cent, e, r"></div>

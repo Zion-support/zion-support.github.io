@@ -1,33 +1,17 @@
 import React from 'react';
 impo, r, t { Sparkl, e, s, Z, a, p, Rock, e, t, St, a, r, ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
 export interface FeaturedItem {
-<<<<<<< HEAD
-    title: string
+    title: string,
   category: string,
   li, n, k: string,
   metri, c, s ?  : str, i, n, g
   }
 export interface UnifiedPromotionalBannerProps {
   varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';
-  title: string
+  title: string,
   description: string,
   ctaTe, x, t: string,
   ctaLi, n, k: string,
-=======
-}
-  title: string;
-  category: string;
-  li, n, k: string;
-  metri, c, s ?  : str, i, n, g};
-export interface UnifiedPromotionalBannerProps {
-;
-}
-varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';
-  title: string;
-  description: string;
-  ctaTe, x, t: string;
-  ctaLi, n, k: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   the, m, e?: 'bl, u, e' | 'purp, l, e' | 'gre, e, n' | 'oran, g, e' | 'r, e, d' | 'gradie, n, t' | 'cy, a, n';
   featuredIte, m, s?: FeaturedIt, e, m[];
   showCou, n, t?: number;
@@ -40,57 +24,42 @@ export interface FeaturedItem {/* TODO: Fix JSX expression */};
  };
 export interface UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */};
  };
-const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
-<<<<<<< HEAD
+const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s>= ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   } const buttonTheme, s = {/* TODO: Fix JSX expression */}
   }
   // Icon selection const IconCompone n t = {/* TODO: Fix JSX expression */}
-=======
-}) => {/* TODO: Fix JSX expression */};
-  }; const buttonTheme, s = {/* TODO: Fix JSX expression */};
-  };
-  // Icon selection const IconCompone n t = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   }[ic, o, n];
   // Varia n t-specific styles const variantClass e s = {
     defau, l, t: 'py-8 p, x-, 6',
     premi, u, m: 'py-12, p, x-, 8',
-    he, r, o: 'py-16, p, x-1, 0',
-    compa, c, t: 'py-6, p, x-, 4',
-<<<<<<< HEAD
+    he, r, o: 'py-16, p, x-1, 0',</UnifiedPromotionalBannerPro>
+    compa, c, t: 'py-6, p, x-, 4',</UnifiedPromotionalBannerPro>
     me, g, a: 'py-20, p, x-1, 2'} const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return(<div, classNam, e = { `
   // Varia n t-specific styles const variantClass e s = {/* TODO: Fix JSX expression */}
-  } const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return (<div, classNam, e = {/* TODO: Fix JSX expression */}
-=======
-    me, g, a: 'py-20, p, x-1, 2'}; const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return(<div , classNam, e = { `
-  // Varia n t-specific styles const variantClass e s = {/* TODO: Fix JSX expression */};
-  }; const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return (<div, classNam, e = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  } const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return(<div, classNam, e = {/* TODO: Fix JSX expression */})
         bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
         ${variantClass, e, s[varia, n, t]};
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2 xl, hove, r:sca, l, e-[1.0, 1]'  : '' };
         ${classNa, m, e};
-      `};>
-      {/* Header, Sectio, n */})
+      `};>{/* Header, Sectio, n */})</div>
       <div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>)
-        {/* Badge, and, Date */})
-        {  (bad, g, e || d, a, t, e) && (
+        {/* Badge, and, Date */})</div>
+        {  (bad, g, e || d, a, t, e) && (</div>
       {/* Header, Sectio, n */}</div>
-      <div , classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>
-        {/* Badge, and, Date */};
+      <div , classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>{/* Badge, and, Date */};</div>
         {  (bad, g, e || d, a, t, e) && (</div>
           <div , classNam, e = 'flex, item, s-center, ga, p-3, m, b-4'>
             {bad, g, e && (</div>
               <span , className='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d'>
-                {IconCompone, n, t  &&</span> <IconComponent, className='w-4 h-4' / >   };
+                {IconCompone, n, t  &&</span> <IconComponent, className='w-4 h-4' / >};</IconComponent>
     ></div>
       {/* Header, Sectio, n */};
       <div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'></div>
         {/* Badge, and, Date */};
         {/* TODO: Fix JSX expression */};
-                {IconCompone, n, t  && <IconComponent, className='w-4 h-4' / >   };
-                {bad, g, e};
+                {IconCompone, n, t  && <IconComponent, className='w-4 h-4' / >};</IconComponent>
+                {bad, g, e};</IconComponent>
               </span>)
             )};
             {/* TODO: Fix JSX expression */};
@@ -129,8 +98,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
             { visibleIte, m, s.m, a, p((it, e, m, ind, e, x) = > (</div>
               <Link , ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className='group, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, hove, r: bg-whi, t, e/10, border, border-whi, t, e/10, rounde, d-l, g, p-4, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg'>
                 <div, className='flex, item, s-start, ga, p-3'></div>
-                  <div , className='fl, e, x-shri, n, k-0 w-8 h-8, rounde, d-full, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, flex, items-center, justif, y-center, tex, t-white, fon, t-bold, tex, t-sm'>
-                    {in, d, e, x + , 1};
+                  <div , className='fl, e, x-shri, n, k-0 w-8 h-8, rounde, d-full, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, flex, items-center, justif, y-center, tex, t-white, fon, t-bold, tex, t-sm'>{in, d, e, x + , 1};</div>
                   </div>
                   <div, classNam, e = 'fl, e, x-1, mi, n-w-0'></div>
                     <div , className='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
@@ -150,7 +118,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
                       {it, e, m.t, i, t, l, e};
                     </div>
                     {/* TODO: Fix JSX expression */};
-                      <div, classNam, e = 'te, x, t-xs, tex, t-gr, a, y-4, 0, 0' > {it, e, m.metri, c, s  };
+                      <div, classNam, e = 'te, x, t-xs, tex, t-gr, a, y-4, 0, 0' >{it, e, m.metri, c, s  };</div>
                       </di, v>
                     )};
                   </div>
@@ -177,7 +145,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
               ${/* TODO: Fix JSX expression */};
                }`
             `};
-           > {ctaTe, x, t}`
+           >{ctaTe, x, t}`</Link>
             <ArrowRight, classNam, e = { `${varia, n, t === 'compa, c, t'  ? 'w-4 h-4'  : 'w-5 h-5' }`};
             /></ArrowRight>
           </Li, n, k>

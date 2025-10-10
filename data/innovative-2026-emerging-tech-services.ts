@@ -1,37 +1,34 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: ServiceVariant;
-  contact_info: unknown;
-    mobile: string;
-    email: string
-    address: string
+  id: string;,
+  name: string;,
+  tagline: string;,
+  price: string;,
+  period: string;,
+  description: string;,
+  features: string[];,
+  popular: boolean;,
+  icon: string;,
+  color: string;,
+  text_color: string;,
+  link: string;,
+  market_position: string;,
+  target_audience: string;,
+  trial_days: number;,
+  setup_time: string;,
+  category: string;,
+  real_service: boolean;,
+  technology: string[];,
+  integrations: string[];,
+  use_cases: string[];,
+  roi: string;,
+  competitors: string[];,
+  market_size: string;,
+  growth_rate: string;,
+  variant: ServiceVariant;,
+  contact_info: unknown;,
+    mobile: string;,
+    email: string,
+    address: string,
     website: string,
   i,
   d: string,
@@ -147,8 +144,8 @@ export const,
         'Performance optimization tools',
         'Research collaboration platform'],
       popular: true,
-      icon: ''
-      color: 'from - purple - 500 to - indigo - 600'
+      icon: '',
+      color: 'from - purple - 500 to - indigo - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / services / neuromorphic - computing - platform - 2026',
       market_position: unknown,
@@ -156,7 +153,7 @@ export const,
       target_audience: unknown,
         'AI researchers, Technology companies, Universities, Government agencies, Defense contractors, Healthcare organizations',
       trial_days: 30,
-      setup_time: '2 - 3 weeks'
+      setup_time: '2 - 3 weeks',
       category: 'Emerging Technology & Neuromorphic Computing',
       real_service: true,
       technology: [,
@@ -219,20 +216,20 @@ export const,
         'BrainChip',
         'SpiNNaker',
         'BrainScaleS'],
-      market_size: '$12.8B market'
-      growth_rate: '380% annual growth'
-      variant: 'quantum - futuristic'
+      market_size: '$12.8B market',
+      growth_rate: '380% annual growth',
+      variant: 'quantum - futuristic',
       contact_info: unknown,
-        mobile: '+1 302 464 0950'
+        mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true
+      real_implementation: true,
       implementation_details: unknown,
         'Advanced neuromorphic computing platform with brain - inspired architecture, spiking neural networks, and comprehensive development tools. Includes research collaboration features.',
-      launch_date: '2026 - 01 - 10'
-      customers: 80
-      rating: 4 && 4.9
+      launch_date: '2026 - 01 - 10',
+      customers: 80,
+      rating: 4 && 4.9,
       reviews: 40,
     },
         'DNA-based data storage',
@@ -303,8 +300,8 @@ export const,
         'Laboratory integration',
         'Professional bioengineering support'],
       popular: false,
-      icon: ''
-      color: 'from - green - 500 to - emerald - 600'
+      icon: '',
+      color: 'from - green - 500 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / services / dna - computing - platform - 2026',
       market_position: unknown,
@@ -312,7 +309,7 @@ export const,
       target_audience: unknown,
         'Biotechnology companies, Research institutions, Pharmaceutical companies, Data storage companies, Government agencies, Healthcare organizations',
       trial_days: 45,
-      setup_time: '4 - 6 weeks'
+      setup_time: '4 - 6 weeks',
       category: 'Emerging Technology & DNA Computing',
       real_service: true,
       technology: [,
@@ -375,20 +372,20 @@ export const,
         'Twist Bioscience',
         'Illumina',
         'Pacific Biosciences'],
-      market_size: '$8.9B market'
-      growth_rate: '520% annual growth'
-      variant: 'quantum - futuristic'
+      market_size: '$8.9B market',
+      growth_rate: '520% annual growth',
+      variant: 'quantum - futuristic',
       contact_info: unknown,
-        mobile: '+1 302 464 0950'
+        mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true
+      real_implementation: true,
       implementation_details: unknown,
         'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.',
-      launch_date: '2026 - 01 - 20'
-      customers: 45
-      rating: 4 && 4.9
+      launch_date: '2026 - 01 - 20',
+      customers: 45,
+      rating: 4 && 4.9,
       reviews: 25,
     },
     // Photonic Computing Platform;
@@ -457,8 +454,8 @@ export const,
         'Custom photonic design',
         'Professional engineering support'],
       popular: true,
-      icon: ''
-      color: 'from - yellow - 500 to - orange - 600'
+      icon: '',
+      color: 'from - yellow - 500 to - orange - 600',
       text_color: 'text - yellow - 400',
       link: 'https://ziontechgroup.com / services / photonic - computing - platform - 2026',
       market_position: unknown,
@@ -466,7 +463,7 @@ export const,
       target_audience: unknown,
         'Technology companies, Research institutions, Telecommunications companies, Data centers, Government agencies, Defense contractors',
       trial_days: 21,
-      setup_time: '3 - 4 weeks'
+      setup_time: '3 - 4 weeks',
       category: 'Emerging Technology & Photonic Computing',
       real_service: true,
       technology: [,
@@ -529,24 +526,24 @@ export const,
         'Xanadu',
         'Intel Silicon Photonics',
         'IBM Photonics'],
-      market_size: '$15.6B market'
-      growth_rate: '420% annual growth'
-      variant: 'quantum - futuristic'
+      market_size: '$15.6B market',
+      growth_rate: '420% annual growth',
+      variant: 'quantum - futuristic',
       contact_info: unknown,
-        mobile: '+1 302 464 0950'
+        mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true
+      real_implementation: true,
       implementation_details: unknown,
         'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.',
-      launch_date: '2026 - 02 - 01'
-      customers: 120
-      rating: 4 && 4.8
+      launch_date: '2026 - 02 - 01',
+      customers: 120,
+      rating: 4 && 4.8,
       reviews: 60,
     },
     // Holographic Display Platform;
-      id: 'holographic - display - platform - 2026'
+      id: 'holographic - display - platform - 2026',
       name: 'Holographic Display Platform 2026',
       tagline: 'Next - generation 3 D holographic visualization and interaction',
       price: '$699',
@@ -609,8 +606,8 @@ export const,
         'Custom content development',
         'Professional installation services'],
       popular: false,
-      icon: ''
-      color: 'from - pink - 500 to - rose - 600'
+      icon: '',
+      color: 'from - pink - 500 to - rose - 600',
       text_color: 'text - pink - 400',
       link: 'https://ziontechgroup.com / services / holographic - display - platform - 2026',
       market_position: unknown,
@@ -618,7 +615,7 @@ export const,
       target_audience: unknown,
         'Entertainment companies, Educational institutions, Healthcare providers, Retail businesses, Museums, Event planners',
       trial_days: 14,
-      setup_time: '1 - 2 weeks'
+      setup_time: '1 - 2 weeks',
       category: 'Emerging Technology & Holographic Displays',
       real_service: true,
       technology: [,
@@ -681,20 +678,20 @@ export const,
         'RealView',
         'Hologram USA',
         'HoloLens'],
-      market_size: '$23.4B market'
-      growth_rate: '280% annual growth'
-      variant: 'ai - futuristic'
+      market_size: '$23.4B market',
+      growth_rate: '280% annual growth',
+      variant: 'ai - futuristic',
       contact_info: unknown,
-        mobile: '+1 302 464 0950'
+        mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true
+      real_implementation: true,
       implementation_details: unknown,
         'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.',
-      launch_date: '2026 - 02 - 15'
-      customers: 200
-      rating: 4 && 4.7
+      launch_date: '2026 - 02 - 15',
+      customers: 200,
+      rating: 4 && 4.7,
       reviews: 100,
       market_siz,
   e: '$23.4B market',
@@ -763,8 +760,8 @@ export const,
         'API and SDK access',
         'Enterprise security features'],
       popular: true,
-      icon: ''
-      color: 'from - blue - 500 to - indigo - 600'
+      icon: '',
+      color: 'from - blue - 500 to - indigo - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / services / biometric - authentication - platform - 2026',
       market_position: unknown,
@@ -772,7 +769,7 @@ export const,
       target_audience: unknown,
         'Financial institutions, Healthcare organizations, Government agencies, Technology companies, Retail businesses, Educational institutions',
       trial_days: 21,
-      setup_time: '1 - 2 weeks'
+      setup_time: '1 - 2 weeks',
       category: 'Emerging Technology & Biometric Security',
       real_service: true,
       technology: [,
@@ -828,20 +825,20 @@ export const,
         'Customer verification'],
       roi: 'Average customer sees 350% ROI within 4 months through improved security and user experience.',
       competitors: ['Face ID', 'Touch ID', 'Voice ID', 'Clear', 'ID.me'],
-      market_size: '$34.8B market'
-      growth_rate: '320% annual growth'
-      variant: 'ai - futuristic'
+      market_size: '$34.8B market',
+      growth_rate: '320% annual growth',
+      variant: 'ai - futuristic',
       contact_info: unknown,
-        mobile: '+1 302 464 0950'
+        mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true
+      real_implementation: true,
       implementation_details: unknown,
         'Advanced biometric authentication platform with multi - modal recognition, AI - powered security, and comprehensive enterprise features. Includes API access and professional support.',
-      launch_date: '2026 - 03 - 01'
-      customers: 350
-      rating: 4 && 4.8
+      launch_date: '2026 - 03 - 01',
+      customers: 350,
+      rating: 4 && 4.8,
       reviews: 175,
     },
       id: 'quantum - internet - platform - 2026',
@@ -910,8 +907,8 @@ export const,
         '24 / 7 network operations',
         'Government compliance features'],
       popular: false,
-      icon: ''
-      color: 'from - cyan - 500 to - blue - 600'
+      icon: '',
+      color: 'from - cyan - 500 to - blue - 600',
       text_color: 'text - cyan - 400',
       link: 'https://ziontechgroup.com / services / quantum - internet - platform - 2026',
       market_position: unknown,
@@ -919,7 +916,7 @@ export const,
       target_audience: unknown,
         'Government agencies, Financial institutions, Defense contractors, Healthcare organizations, Critical infrastructure, Technology companies',
       trial_days: 60,
-      setup_time: '6 - 8 weeks'
+      setup_time: '6 - 8 weeks',
       category: 'Emerging Technology & Quantum Internet',
       real_service: true,
       technology: [,
@@ -982,20 +979,20 @@ export const,
         'Toshiba Quantum',
         'NTT Quantum',
         'Chinese Quantum Network'],
-      market_size: '$18.7B market'
-      growth_rate: '480% annual growth'
-      variant: 'quantum - futuristic'
+      market_size: '$18.7B market',
+      growth_rate: '480% annual growth',
+      variant: 'quantum - futuristic',
       contact_info: unknown,
-        mobile: '+1 302 464 0950'
+        mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
-      real_implementation: true
+      real_implementation: true,
       implementation_details: unknown,
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
-      launch_date: '2026 - 01 - 25'
-      customers: 60
-      rating: 4 && 4.9
+      launch_date: '2026 - 01 - 25',
+      customers: 60,
+      rating: 4 && 4.9,
       reviews: 30,
       market_siz,
   e: '$18.7B market',
@@ -1027,18 +1024,11 @@ export const,
   g: 4 && 4.9,
       review,
   s: 30}];
-<<<<<<< HEAD
 export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression */}
   return innovative2026EmergingTechServices.filter(service => service.popular)}
 }
   return innovative2026 EmergingTechServices && innovative2026 EmergingTechServices.filter(service => service && service.popular);
 }
-=======
-export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression */};
-  return innovative2026EmergingTechServices.filter(service => service.popular)};
-};
-  return innovative2026 EmergingTechServices && innovative2026 EmergingTechServices.filter(service => service && service.popular)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       id: 'quantum-internet-platform-2026',
       name: 'Quantum Internet Platform 2026',
       tagline: 'Ultra-secure quantum communication network for the future',
@@ -1068,21 +1058,21 @@ export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression
         'Advanced cryptography'
         'Real-time quantum monitoring'
         'Professional installation services'
-        '24/7 network operations'
+        '24/7 network operations',
         'Government compliance features'
       ]
       popular: false,
-      icon: ''
-      color: 'from-cyan-500 to-blue-600'
+      icon: '',
+      color: 'from-cyan-500 to-blue-600',
       textColor: 'text-cyan-400',
       link: 'https://ziontechgroup.com/services/quantum-internet-platform-2026',
       marketPosition:,
         'Competitive with Quantum Xchange ($50)000+/setup), ID Quantique ($30)000+/setup), and Toshiba Quantum ($40)000+/setup). Our advantage: Modern architecture, faster deployment, and 70% cost savings.'
       targetAudience: 'Government agencies, Financial institutions, Defense contractors, Healthcare organizations, Critical infrastructure, Technology companies'
-      trialDays: 60
-      setupTime: '6-8 weeks'
-      category: 'Emerging Technology & Quantum Internet'
-      realService: true
+      trialDays: 60,
+      setupTime: '6-8 weeks',
+      category: 'Emerging Technology & Quantum Internet',
+      realService: true,
       technology: [,
       popula,
   r: false,
@@ -1115,7 +1105,7 @@ export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression
         'Quantum Networks'
         'Quantum Cryptography'
         'Quantum Repeaters'
-        'Python'
+        'Python',
         'Quantum Algorithms'
       ]
       integration,
@@ -1124,7 +1114,7 @@ export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression
         'Financial systems'
         'Defense networks'
         'Healthcare systems'
-        'Critical infrastructure'
+        'Critical infrastructure',
         'Cloud platforms'
       ]
       useCase,
@@ -1133,7 +1123,7 @@ export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression
         'Government networks'
         'Financial transactions'
         'Defense communications'
-        'Healthcare data'
+        'Healthcare data',
         'Critical infrastructure'
       ]
       ro,
@@ -1143,9 +1133,9 @@ export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression
   ],
 export const getPopularEmergingTechServices = () =>,
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
-      launchDate: '2026-01-25'
-      customers: 60
-      rating: 4.9
+      launchDate: '2026-01-25',
+      customers: 60,
+      rating: 4.9,
       reviews: 30,
       launchDat,
   e: '2026-01-25',
@@ -1156,19 +1146,11 @@ export const getPopularEmergingTechServices = () =>,
       review,
   s: 30}
   ];
-<<<<<<< HEAD
 export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression */}
   return innovative2026EmergingTechServices.filter(service => service.popular)}
 }
 // DNA Computing Platform realImplementation: true,
 implementationDetails: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.'
-=======
-export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression */};
-  return innovative2026EmergingTechServices.filter(service => service.popular)};
-};
-// DNA Computing Platform realImplementation: true;
-implementationDetails: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 launchDate: '2026-01-20'
 // DNA Computing Platform,
   realImplementation: true,
@@ -1176,7 +1158,6 @@ implementationDetail,
   s: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.'
 launchDat,
   e: '2026-01-20'
-<<<<<<< HEAD
 export const getPopularEmergingTechServices = () =>: unknown,
   return innovative2026EmergingTechServices.filter (service => service.popular)}
 // DNA Computing Platform real_implementation: true,
@@ -1238,61 +1219,7 @@ export const getEmergingTechServicesByCategory = (category: string) =>,
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>),
     service && service.category.toLowerCase().includes(category && category.toLowerCase()));
 }
-=======
-;
-export const getPopularEmergingTechServices = () =>: unknown;
-  return innovative2026EmergingTechServices.filter (service => service.popular)};
-// DNA Computing Platform real_implementation: true;
-implementation_details: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools; and comprehensive computing capabilities. Includes professional bioengineering support.',
-launch_date: '2026 - 01 - 20',
-customers: 45;
-rating: 4 && 4.9;
-reviews: 25};
-// Photonic Computing Platform realImplementation: true;
-implementationDetails: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.',
-launchDate: '2026-02-01',
-reviews: 25};
-// Photonic Computing Platform real_implementation: true;
-implementation_details: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.',
-launch_date: '2026 - 02 - 01',
-customers: 120;
-rating: 4 && 4.8;
-reviews: 60};
-// Holographic Display Platform realImplementation: true;
-implementationDetails: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.',
-launchDate: '2026-02-15',
-reviews: 60};
-// Holographic Display Platform real_implementation: true;
-implementation_details: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.',
-launch_date: '2026 - 02 - 15',
-customers: 200;
-rating: 4 && 4.7;
-reviews: 100};
-// Biometric Authentication Platform realImplementation: true;
-implementationDetails: 'Advanced biometric authentication platform with multi-modal recognition, AI-powered security, and comprehensive enterprise features. Includes API access and professional support.',
-launchDate: '2026-03-01',
-reviews: 100};
-// Biometric Authentication Platform real_implementation: true;
-implementation_details: 'Advanced biometric authentication platform with multi - modal recognition, AI - powered security, and comprehensive enterprise features. Includes API access and professional support.',
-launch_date: '2026 - 03 - 01',
-customers: 350;
-rating: 4 && 4.8;
-reviews: 175};
-// Quantum Internet Platform realImplementation: true;
-implementationDetails: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
-launchDate: '2026-01-25',
-reviews: 175};
-// Quantum Internet Platform real_implementation: true;
-implementation_details: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
-launch_date: '2026 - 01 - 25',
-customers: 60;
-rating: 4 && 4.9;
-reviews: 30}];
-export const getEmergingTechServicesByCategory = (category: string) =>;
-  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>),
-    service && service.category.toLowerCase().includes(category && category.toLowerCase()))};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const getEmergingTechServicesByPriceRange = (minPrice: number)
+export const getEmergingTechServicesByPriceRange = (minPrice: number),
   maxPrice: number)) =>,
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>)
 // DNA Computing Platform,
@@ -1391,18 +1318,13 @@ export const getEmergingTechServicesByCategory = (categor)
   y: string) =>
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>)
     service && service.category.toLowerCase().includes(category && category.toLowerCase())
-<<<<<<< HEAD
   ),
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const getEmergingTechServicesByPriceRange = (minPric)
   e: number)
   maxPric,
   e: number)
 ) =>
-<<<<<<< HEAD
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>)
     const _price = parseInt(service && service.price.replace('$') '').replace(')'; ''))
     return price >= minPrice && price <= maxPrice,
@@ -1420,47 +1342,17 @@ export interface Innovative2026EmergingTechService {id: string, name: string,
   technology: string[], integrations: string[],
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant
+  growthRate: string, variant: ServiceVariant,
   contactInfo: unknown,
-    mobile: string, email: string
+    mobile: string, email: string,
     address: string,
     website: string}
     },
     realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number
-  rating: number
+  launchDate: string, customers: number,
+  rating: number,
   reviews: number,
 }
-=======
-  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>);
-const _price = parseInt(service && service.price.replace('$') '').replace(')'; ''));
-    return price >= minPrice && price <= maxPrice})};
-    return price >= minPrice && price <= maxPrice;
-export interface Innovative2026EmergingTechService {
-id: string, name: string;
-}
-  tagline: string, price: string;
-  period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
-  textColor: string, link: string;
-  marketPosition: string, targetAudience: string;
-  trialDays: number, setupTime: string;
-  category: string, realService: boolean;
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string, variant: ServiceVariant;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string};
-    },
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const innovative2026EmergingTechServices: Innovative2026EmergingTechService[] = [,
   // Neuromorphic Computing Platform;
     id: 'neuromorphic-computing-platform-2026', name: 'Neuromorphic Computing Platform 2026',
@@ -1488,8 +1380,8 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       website: 'https://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture, spiking neural networks, and comprehensive development tools. Includes research collaboration features.',
-    launchDate: '2026-01-10', customers: 80
-    rating: 4.9
+    launchDate: '2026-01-10', customers: 80,
+    rating: 4.9,
     reviews: 40,
   }
   // DNA Computing Platform;
@@ -1518,8 +1410,8 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       website: 'https://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.',
-    launchDate: '2026-01-20', customers: 45
-    rating: 4.9
+    launchDate: '2026-01-20', customers: 45,
+    rating: 4.9,
     reviews: 25,
   }
   // Photonic Computing Platform;
@@ -1548,8 +1440,8 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       website: 'https://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Advanced photonic computing platform with optical processors, photonic neural networks, and comprehensive computing capabilities. Includes professional engineering support.',
-    launchDate: '2026-02-01', customers: 120
-    rating: 4.8
+    launchDate: '2026-02-01', customers: 120,
+    rating: 4.8,
     reviews: 60,
   }
   // Holographic Display Platform;
@@ -1577,8 +1469,8 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       website: 'https://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Advanced holographic display platform with 3D projection, interactive capabilities, and comprehensive content creation tools. Includes professional installation and support.',
-    launchDate: '2026-02-15', customers: 200
-    rating: 4.7
+    launchDate: '2026-02-15', customers: 200,
+    rating: 4.7,
     reviews: 100,
   }
   // Biometric Authentication Platform;
@@ -1606,8 +1498,8 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       website: 'https://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Advanced biometric authentication platform with multi-modal recognition, AI-powered security, and comprehensive enterprise features. Includes API access and professional support.',
-    launchDate: '2026-03-01', customers: 350
-    rating: 4.8
+    launchDate: '2026-03-01', customers: 350,
+    rating: 4.8,
     reviews: 175,
   }
   // Quantum Internet Platform;
@@ -1636,19 +1528,11 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       website: 'https://ziontechgroup.com'},
     realImplementation: true,
     implementationDetails: 'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
-<<<<<<< HEAD
-    launchDate: '2026-01-25', customers: 60
-    rating: 4.9
+    launchDate: '2026-01-25', customers: 60,
+    rating: 4.9,
     reviews: 30,
 export interface Innovative2026EmergingTechService {/* TODO: Fix JSX expression */}
   e: string}
-=======
-    launchDate: '2026-01-25', customers: 60;
-    rating: 4.9;
-    reviews: 30;
-export interface Innovative2026EmergingTechService {/* TODO: Fix JSX expression */};
-  e: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     realImplementatio,
   n: boolean, implementationDetail,
@@ -1675,7 +1559,7 @@ export const,
   n: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing, cognitive computing, and adaptive learning systems.'
     feature,
   s: [,
-      'Brain-inspired neural architectureSpiking neural networks (SNNs)Ultra-low power consumptionReal-time learning and adaptationCognitive computing capabilitiesAdvanced pattern recognitionNeuromorphic hardware integrationCustom neural model development'
+      'Brain-inspired neural architectureSpiking neural networks (SNNs)Ultra-low power consumptionReal-time learning and adaptationCognitive computing capabilitiesAdvanced pattern recognitionNeuromorphic hardware integrationCustom neural model development',
       'Performance optimization toolsResearch collaboration platform'
     ],
     popula,
@@ -1719,7 +1603,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     },
     realImplementatio,
   n: true,
@@ -1745,7 +1629,7 @@ export const,
   n: 'Groundbreaking DNA computing platform that leverages molecular biology for ultra-dense data storage, complex problem solving, and next-generation computational capabilities.',
     feature,
   s: [,
-      'DNA-based data storageMolecular problem solvingUltra-dense information encodingBiomolecular algorithmsDNA synthesis and sequencingMolecular computing workflowsAdvanced bioinformatics toolsCustom DNA program development'
+      'DNA-based data storageMolecular problem solvingUltra-dense information encodingBiomolecular algorithmsDNA synthesis and sequencingMolecular computing workflowsAdvanced bioinformatics toolsCustom DNA program development',
       'Laboratory integrationProfessional bioengineering support'
     ],
     popula,
@@ -1789,7 +1673,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     },
     realImplementatio,
   n: true,
@@ -1815,7 +1699,7 @@ export const,
   n: 'Next-generation photonic computing platform that uses light instead of electricity for ultra-fast processing, low power consumption, and high-bandwidth data transfer.',
     feature,
   s: [,
-      'Photonic processorsOptical interconnectsLight-based computingUltra-fast data processingLow power consumptionHigh-bandwidth communicationPhotonic neural networksOptical memory systems'
+      'Photonic processorsOptical interconnectsLight-based computingUltra-fast data processingLow power consumptionHigh-bandwidth communicationPhotonic neural networksOptical memory systems',
       'Custom photonic designProfessional engineering support'
     ],
     popula,
@@ -1859,7 +1743,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     },
     realImplementatio,
   n: true,
@@ -1884,7 +1768,7 @@ export const,
   n: 'Revolutionary holographic display platform that creates immersive 3D visualizations, interactive holograms, and next-generation display experiences for entertainment, education, and business.',
     feature,
   s: [,
-      '3D holographic projectionInteractive holographic displaysReal-time 3D renderingGesture and touch interactionMulti-user collaborationHolographic content creationAugmented reality integrationMobile holographic apps'
+      '3D holographic projectionInteractive holographic displaysReal-time 3D renderingGesture and touch interactionMulti-user collaborationHolographic content creationAugmented reality integrationMobile holographic apps',
       'Custom content developmentProfessional installation services'
     ],
     popula,
@@ -1928,7 +1812,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     },
     realImplementatio,
   n: true,
@@ -1953,7 +1837,7 @@ export const,
   n: 'Next-generation biometric authentication platform that uses AI-powered facial recognition, fingerprint scanning, voice recognition, and behavioral biometrics for secure, convenient authentication.',
     feature,
   s: [,
-      'Multi-modal biometric authenticationAI-powered recognitionFacial recognition technologyFingerprint and palm scanningVoice and speech recognitionBehavioral biometricsLiveness detectionMulti-factor authentication'
+      'Multi-modal biometric authenticationAI-powered recognitionFacial recognition technologyFingerprint and palm scanningVoice and speech recognitionBehavioral biometricsLiveness detectionMulti-factor authentication',
       'API and SDK accessEnterprise security features'
     ],
     popula,
@@ -1997,7 +1881,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     },
     realImplementatio,
   n: true,
@@ -2023,7 +1907,7 @@ export const,
   n: 'Revolutionary quantum internet platform that provides ultra-secure communication, quantum key distribution, and next-generation networking capabilities for government, financial, and critical infrastructure.',
     feature,
   s: [,
-      'Quantum key distribution (QKD)Quantum secure communicationQuantum network infrastructureEntanglement-based protocolsQuantum repeaters and nodesAdvanced cryptographyReal-time quantum monitoringProfessional installation services'
+      'Quantum key distribution (QKD)Quantum secure communicationQuantum network infrastructureEntanglement-based protocolsQuantum repeaters and nodesAdvanced cryptographyReal-time quantum monitoringProfessional installation services',
       '24/7 network operationsGovernment compliance features'
     ],
     popula,
@@ -2067,7 +1951,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     },
     realImplementatio,
   n: true,
@@ -2110,13 +1994,8 @@ reviews: 30,
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>),
-<<<<<<< HEAD
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
-=======
-    service.category.toLowerCase ().includes (category.toLowerCase ()))};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const getEmergingTechServicesByPriceRange = (min_price: number)
+export const getEmergingTechServicesByPriceRange = (min_price: number),
   max_price: number) =>: unknown,
   return innovative2026EmergingTechServices.filter(service =>),
 review,
@@ -2124,34 +2003,20 @@ review,
 export const getEmergingTechServicesByCategory = (categor)
   y: string) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>)
-<<<<<<< HEAD
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
-=======
-    service.category.toLowerCase ().includes (category.toLowerCase ()))};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
-<<<<<<< HEAD
   return innovative2026EmergingTechServices.filter (service =>)
     const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
     return price >= min_price && price <= max_price;
   });}
 export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown,
-=======
-  return innovative2026EmergingTechServices.filter (service =>);
-const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
-    return price >= min_price && price <= max_price})};
-;
-export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return innovative2026EmergingTechServices.filter(service =>),
 export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown,
-<<<<<<< HEAD
   return innovative2026EmergingTechServices.filter (service =>)
     const _price = parse_int (service.price.replace ('$') '').replace (; ''));
     return price >= min_price && price <= max_price;
@@ -2169,39 +2034,19 @@ export interface Innovative2026EmergingTechService {/* TODO: Fix JSX expression 
     websit,
   e: string}
   }
-=======
-  return innovative2026EmergingTechServices.filter (service =>);
-const _price = parse_int (service.price.replace ('$') '').replace (; ''));
-    return price >= min_price && price <= max_price})}}};
-;
-  return innovative2026EmergingTechServices.filter(service => {/* TODO: Fix JSX expression */});
-const _price = parseInt(service.price.replace('$') '').replace(} ''));
-    return price >= minPrice && price <= maxPrice})
-};
-export interface Innovative2026EmergingTechService {/* TODO: Fix JSX expression */};
-  s: string};
-    websit,
-  e: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number
-  rating: number
+  realImplementation: boolean;,
+  implementationDetails: string;,
+  launchDate: string;,
+  customers: number,
+  rating: number,
   reviews: number,
 }
 reviews: 30,
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>),
-<<<<<<< HEAD
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
-=======
-    service.category.toLowerCase ().includes (category.toLowerCase ()))};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const getEmergingTechServicesByPriceRange = (min_price: number)
+export const getEmergingTechServicesByPriceRange = (min_price: number),
   max_price: number) =>: unknown,
   return innovative2026EmergingTechServices.filter(service =>),
   realImplementatio,
@@ -2221,29 +2066,16 @@ review,
 export const getEmergingTechServicesByCategory = (categor)
   y: string) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>)
-<<<<<<< HEAD
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
-=======
-    service.category.toLowerCase ().includes (category.toLowerCase ()))};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
-<<<<<<< HEAD
   return innovative2026EmergingTechServices.filter (service =>)
     const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
     return price >= min_price && price <= max_price;
   });}
 export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown,
-=======
-  return innovative2026EmergingTechServices.filter (service =>);
-const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
-    return price >= min_price && price <= max_price})};
-;
-export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return innovative2026EmergingTechServices.filter(service =>),
 export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
@@ -2257,13 +2089,8 @@ reviews: 30,
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>),
-<<<<<<< HEAD
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
-=======
-    service.category.toLowerCase ().includes (category.toLowerCase ()))};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const getEmergingTechServicesByPriceRange = (min_price: number)
+export const getEmergingTechServicesByPriceRange = (min_price: number),
   max_price: number) =>: unknown,
   return innovative2026EmergingTechServices.filter(service =>),
 review,
@@ -2271,29 +2098,16 @@ review,
 export const getEmergingTechServicesByCategory = (categor)
   y: string) =>: unknown,
   return innovative2026EmergingTechServices.filter (service =>)
-<<<<<<< HEAD
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
-=======
-    service.category.toLowerCase ().includes (category.toLowerCase ()))};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
-<<<<<<< HEAD
   return innovative2026EmergingTechServices.filter (service =>)
     const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
     return price >= min_price && price <= max_price;
   });}
 export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown,
-=======
-  return innovative2026EmergingTechServices.filter (service =>);
-const _price = parse_int (service.price.replace ('$') '').replace (') '; ''));
-    return price >= min_price && price <= max_price})};
-;
-export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return innovative2026EmergingTechServices.filter(service =>),
 export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
@@ -2661,7 +2475,7 @@ i,
   g: 4 && 4.9, review,
   s: 30 }]; export const getEmergingTechServicesByCategory = (categor)
   y: string) => return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => service && service.category.toLowerCase().includes(category && category.toLowerCase()) )} export const getEmergingTechServicesByPriceRange = (minPric,
-  e: number)
+  e: number),
   maxPrice: number ) => return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => ' const price = parseInt(service && service.price.replace('$') '').replace(')'; '')); return price >= minPrice && price <= maxPrice, });} return price >= minPrice && price <= maxPrice; export interface Innovative2026EmergingTechService,
   id: string, nam,
   e: string, taglin,
@@ -2949,11 +2763,7 @@ i,
   e: number) max_pric,
   e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (') '; '')); return price >= min_price && price <= max_price, });} export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
-<<<<<<< HEAD
   e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (; '')); return price >= min_price && price <= max_price, }); } } } return innovative2026EmergingTechServices.filter(service => {)' const price = parseInt(service.price.replace('$') '').replace(} '')); return price >= minPrice && price <= maxPrice }) } ' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026EmergingTechService {/* TODO: Fix JSX expression */}
-=======
-  e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (; '')); return price >= min_price && price <= max_price})}}} ; return innovative2026EmergingTechServices.filter(service => {)' const price = parseInt(service.price.replace('$') '').replace(} '')); return price >= minPrice && price <= maxPrice }) } ' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026EmergingTechService {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -2973,8 +2783,4 @@ i,
   e: number) max_pric,
   e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (') '; '')); return price >= min_price && price <= max_price, });} export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
-<<<<<<< HEAD
   e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (; '')); return price >= min_price && price <= max_price, }) } '"
-=======
-  e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (; '')); return price >= min_price && price <= max_price}) }; '"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -5,7 +5,6 @@ import { glob } from 'glob';
 class SEOOptimizer {
     constructor() {
     this.optimizations = [];
-<<<<<<< HEAD
     this.issues = []
   }
 
@@ -19,17 +18,6 @@ class SEOOptimizer {
       try {
         const content = fs.readFileSync(file, 'utf8');
         
-=======
-    this.issues = []};
-  // Check meta tags;
-  async checkMetaTags() {
-    // console.log removed for production
-;
-const htmlFiles = await glob('dist/**/*.html');
-    for (const file of htmlFiles) {
-      try {;
-const content = fs.readFileSync(file, 'utf8');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         // Check for essential meta tags;
         const hasTitle = content.includes('<title>');</title>
         const hasDescription = content.includes('name="description"');
@@ -47,7 +35,6 @@ const content = fs.readFileSync(file, 'utf8');
         if (!hasOgTitle) this.issues.push(`${file}: Missing Open Graph title`);
         if (!hasOgDescription) this.issues.push(`${file}: Missing Open Graph description`);
         if (!hasOgImage) this.issues.push(`${file}: Missing Open Graph image`);
-<<<<<<< HEAD
         if (!hasTwitterCard) this.issues.push(`${file}: Missing Twitter card meta`);
         
       } catch (error) {
@@ -59,14 +46,6 @@ const content = fs.readFileSync(file, 'utf8');
     this.optimizations.push('Meta tags validation');
   }
 
-=======
-        if (!hasTwitterCard) this.issues.push(`${file}: Missing Twitter card meta`)} catch (error) {
-        // console.error removed for production
-};
-    };
-    // console.log removed for production
-this.optimizations.push('Meta tags validation')};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Check heading structure;
   async checkHeadingStructure() {
     console.log('📝 Checking heading structure...');
@@ -77,21 +56,15 @@ this.optimizations.push('Meta tags validation')};
 
     let headingIssues = 0;
     for (const file of tsxFiles) {
-<<<<<<< HEAD
       try {
         const content = fs.readFileSync(file, 'utf8');
         
-=======
-      try {;
-const content = fs.readFileSync(file, 'utf8');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         // Check for h1 tags;
         const h1Count = (content.match(/<h1/g) || []).length;
         const h2Count = (content.match(/<h2/g) || []).length;
         const h3Count = (content.match(/<h3/g) || []).length;
         if (h1 Count === 0) {
           this.issues.push(`${file}: No h1 tag found`);
-<<<<<<< HEAD
           headingIssues++;
         }
         if (h1 Count ></h3></h2></h1> 1) {
@@ -111,21 +84,6 @@ const content = fs.readFileSync(file, 'utf8');
     this.optimizations.push('Heading structure validation');
   }
 
-=======
-          headingIssues++};
-        if (h1 Count ></h3></h2></h1> 1) {
-          this.issues.push(`${file}: Multiple h1 tags found (${h1 Count})`);
-          headingIssues++};
-      } catch (error) {
-        // console.error removed for production
-};
-    };
-    // console.log removed for production
-if (headingIssues > 0) {
-      // console.log removed for production
-};
-    this.optimizations.push('Heading structure validation')};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Check alt attributes;
   async checkAltAttributes() {
     console.log('🖼️  Checking alt attributes...');
@@ -136,20 +94,14 @@ if (headingIssues > 0) {
 
     let altIssues = 0;
     for (const file of tsxFiles) {
-<<<<<<< HEAD
       try {
         const content = fs.readFileSync(file, 'utf8');
         
-=======
-      try {;
-const content = fs.readFileSync(file, 'utf8');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         // Find img tags without alt attributes;
         const imgTags = content.match(/<img[^>]*>/g) || [];
         for (const imgTag of imgTags) {
           if (!imgTag.includes('alt=')) {
             this.issues.push(`${file}: Image without alt attribute`);
-<<<<<<< HEAD
             altIssues++;
           }
         }
@@ -166,19 +118,6 @@ const content = fs.readFileSync(file, 'utf8');
     this.optimizations.push('Alt attributes validation');
   }
 
-=======
-            altIssues++};
-        };
-      } catch (error) {
-        // console.error removed for production
-};
-    };
-    // console.log removed for production
-if (altIssues > 0) {
-      // console.log removed for production
-};
-    this.optimizations.push('Alt attributes validation')};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Check internal links;
   async checkInternalLinks() {
     console.log('🔗 Checking internal links...');
@@ -189,7 +128,6 @@ if (altIssues > 0) {
 
     let linkCount = 0;
     for (const file of tsxFiles) {
-<<<<<<< HEAD
     try {
         const content = fs.readFileSync(file, 'utf8');
         
@@ -214,33 +152,12 @@ if (altIssues > 0) {
       console.log(`   ${index + 1}. ${opt}`);
     });
     
-=======
-      try {;
-const content = fs.readFileSync(file, 'utf8');
-        // Count internal links;
-        const internalLinks = content.match(/href=["']\/(?!\/)[^"']*["']/g) || [];
-        linkCount += internalLinks.length} catch (error) {
-        // console.error removed for production
-};
-    };
-    // console.log removed for production
-this.optimizations.push('Internal links analysis')};
-  // Generate SEO report;
-  generateReport() {
-    // console.log removed for production
-// console.log removed for production
-// console.log removed for production
-this.optimizations.forEach((opt, index) => {
-      // console.log removed for production
-});
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     if (this.issues.length > 0) {
       console.log(`\n⚠️  Issues found: ${this.issues.length}`);
       this.issues.slice(0, 10).forEach((issue, index) => {
         console.log(`   ${index + 1}. ${issue}`);
       });
       if (this.issues.length > 10) {
-<<<<<<< HEAD
         console.log(`   ... and ${this.issues.length - 10} more issues`);
       }
     } else {
@@ -260,26 +177,6 @@ this.optimizations.forEach((opt, index) => {
     console.log('   10. Implement schema markup'),
   }
 
-=======
-        // console.log removed for production
-};
-    } else {
-      // console.log removed for production
-};
-    // console.log removed for production
-// console.log removed for production
-');
-    // console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Run all optimizations;
   async run() {
     console.log('🔍 Starting SEO optimization...\n');
@@ -290,7 +187,6 @@ this.optimizations.forEach((opt, index) => {
       await this.checkAltAttributes();
       await this.checkInternalLinks();
       this.generateReport();
-<<<<<<< HEAD
       
       console.log('\n✅ SEO optimization completed!')
   } catch (error) {
@@ -332,40 +228,6 @@ function optimizeSEO() {/* TODO: Fix JSX expression */}
 
 function generateSitemap() {/* TODO: Fix JSX expression */}
 }
-=======
-      // console.log removed for production
-} catch (error) {
-      // console.error removed for production
-};
-  };
-};
-// Run the optimizer;
-if (import.meta.url === `file://${process.argv[1]}`) {;
-const optimizer = new SEOOptimizer();
-  optimizer.run()};
-export default SEOOptimizer;
-// SEO optimization script;
-function optimizeSEO() {/* TODO: Fix JSX expression */};
-};
-  // // console.log removed for production
-// 1. Generate sitemap;
-  // // console.log removed for production
-generateSitemap();
-  // 2. Optimize meta tags;
-  // // console.log removed for production
-optimizeMetaTags();
-  // 3. Generate robots.txt;
-  // // console.log removed for production
-generateRobotsTxt();
-  // 4. Generate structured data;
-  // // console.log removed for production
-generateStructuredData();
-  // // console.log removed for production
-};
-;
-function generateSitemap() {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const pages = [
 ];
     '/',
@@ -421,8 +283,8 @@ function generateSitemap() {/* TODO: Fix JSX expression */};
     '/support',
     '/task-manager-pro',
     '/team'
-  ];
-  
+  ];</img>
+  </img>
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
 <urlset xmlns="htt,"
   p://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
@@ -434,7 +296,6 @@ ${/* TODO: Fix JSX expression */};
   </url>`).join('\n')}`
 </urlset>`;
   fs.writeFileSync(path.join(__dirname, '../public/sitemap.xml'), sitemap);
-<<<<<<< HEAD
   // console.log('  - Sitemap)
   generated: public/sitemap.xml'),
 }
@@ -444,20 +305,10 @@ function optimizeMetaTags() {/* TODO: Fix JSX expression */}
   const metaOptimizations = {/* TODO: Fix JSX expression */}
   }
   
-=======
-  // // console.log removed for production
-generated: public/sitemap.xml')};
-;
-function optimizeMetaTags() {/* TODO: Fix JSX expression */};
-};
-  const metaOptimizations = {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   fs.writeFileSync()
     path.join(__dirname, '../seo-optimizations.json'),
     JSON.stringify(metaOptimizations, null, 2)
   );
-<<<<<<< HEAD
   
   // console.log('  - Meta tags)
   optimized: seo-optimizations.json'),
@@ -466,14 +317,6 @@ function optimizeMetaTags() {/* TODO: Fix JSX expression */};
 function generateRobotsTxt() {/* TODO: Fix JSX expression */}
 }`
   const robotsTxt = `User-agen,
-=======
-  // // console.log removed for production
-optimized: seo-optimizations.json')};
-;
-function generateRobotsTxt() {/* TODO: Fix JSX expression */};
-}`;
-const robotsTxt = `User-agen,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   t: *
 Allo,
   w: /
@@ -495,7 +338,6 @@ Allo,
   Allow: /services,
   Allow: /contact,
   Allow: /ai-services,`
-<<<<<<< HEAD
   Allow: /it-services`,
   
   fs.writeFileSync(path.join(__dirname, '../public/robots.txt'), robotsTxt);
@@ -506,16 +348,6 @@ Allo,
 function generateStructuredData() {/* TODO: Fix JSX expression */}
 }
   const structuredData = {/* TODO: Fix JSX expression */}
-=======
-  Allow: /it-services`;
-  fs.writeFileSync(path.join(__dirname, '../public/robots.txt'), robotsTxt);
-  // // console.log removed for production
-generated: public/robots.txt')};
-;
-function generateStructuredData() {/* TODO: Fix JSX expression */};
-};
-  const structuredData = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },"
     "address": {/* TODO: Fix JSX expression */};
     },"
@@ -525,25 +357,16 @@ function generateStructuredData() {/* TODO: Fix JSX expression */};
       "http,"
   s://linkedin.com/company/ziontechgroup"
     ]
-<<<<<<< HEAD
   }
   
-=======
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   fs.writeFileSync()
     path.join(__dirname, '../public/structured-data.json'),
     JSON.stringify(structuredData, null, 2)
   );
-<<<<<<< HEAD
   
   // console.log('  - Structured data)
   generated: public/structured-data.json'),
 }
 
-=======
-  // // console.log removed for production
-generated: public/structured-data.json')};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Run SEO optimization;
 optimizeSEO();"`

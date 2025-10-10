@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
@@ -102,13 +101,12 @@ const SitemapPage: React.FC = () => {
         { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' },
         { name: 'Cookie Policy', url: '/cookies', description: 'Cookie usage information' },
         { name: 'Sitemap', url: '/sitemap', description: 'Complete site map' }
-      ]
+      ],
     }
   ]
 
   const totalPages = pageCategories.reduce((total, category) => total + category.pages.length, 0)
-  return (
-    <>
+  return(<>
       <Helmet>
         <title>Sitemap - Zion Tech Group</title>
         <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place." />
@@ -117,82 +115,17 @@ const SitemapPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
+        <div className="container mx-auto px-4 py-16 pt-24">{/* Header */}</div>
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
                 <Map className="w-8 h-8 text-white" />
-=======
-import React from 'react';
-;
-const SitemapPage: React.FC = () => {
-const pages = [
-];
-};
-    { path: '/', title: 'Home', description: 'Zion Tech Group - Advanced AI and IT Solutions' },
-    { path: '/about', title: 'About Us', description: 'Learn about our mission and expertise' },
-    { path: '/services', title: 'All Services', description: 'Comprehensive AI, IT, and micro SAAS solutions' },
-    { path: '/micro-saas', title: 'Micro SAAS Solutions', description: 'Affordable, powerful AI-driven tools for modern businesses' },
-    { path: '/ai-services', title: 'AI Services', description: 'Advanced artificial intelligence solutions' },
-    { path: '/ai-marketing', title: 'AI Marketing', description: 'Revolutionary AI-powered marketing automation' },
-    { path: '/ai-automation', title: 'AI Automation', description: 'Intelligent automation of business processes' },
-    { path: '/ai-healthcare', title: 'AI Healthcare', description: 'Cutting-edge AI solutions for medical applications' },
-    { path: '/ai-fintech', title: 'AI Fintech', description: 'Revolutionary AI-powered financial services' },
-    { path: '/it-services', title: 'IT Services', description: 'Comprehensive IT solutions and infrastructure' },
-    { path: '/quantum-computing', title: 'Quantum Computing', description: 'Next-generation quantum computing capabilities' },
-    { path: '/autonomous-systems', title: 'Autonomous Systems', description: 'Self-managing and self-optimizing systems' },
-    { path: '/business-intelligence', title: 'Business Intelligence', description: 'Data-driven insights and analytics' },
-    { path: '/blockchain-web3', title: 'Blockchain & Web3', description: 'Decentralized applications and smart contracts' },
-    { path: '/iot-edge-computing', title: 'IoT & Edge Computing', description: 'Connected devices and edge analytics' },
-    { path: '/cybersecurity', title: 'Cybersecurity', description: 'Advanced security services and threat detection' },
-    { path: '/services-advertising', title: 'AI Advertising', description: 'AI-powered advertising and marketing solutions' },
-    { path: '/case-studies', title: 'Case Studies', description: 'Success stories and client implementations' },
-    { path: '/enterprise', title: 'Enterprise Solutions', description: 'Advanced AI and IT solutions for large organizations' },
-    { path: '/team', title: 'Our Team', description: 'Meet the experts behind our innovative solutions' },
-    { path: '/contact', title: 'Contact Us', description: 'Get in touch with our team of experts' },
-    { path: '/blog', title: 'Blog & Insights', description: 'Latest insights and trends in AI and technology' },
-    { path: '/guides', title: 'Technical Guides', description: 'Comprehensive guides and documentation' },
-    { path: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection practices' },
-    { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' }];
-  return (
-    <div>
-      <div>
-        <div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4"></h1>
-            Sitemap</h1>
-          </h1>
-          <p className="text-xl text-gray-600"></p>
-            Navigate through all pages on our website
-          </p>
-        </div>
-        <div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-            {pages.map((page, index) => (</div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2"></h3>
-                  <a 
-                    href={page.path};
-                    className="text-blue-600 hover:text-blue-700 transition-colors"
-                  ></a>
-                    {page.title};
-                  </a>
-                </h3>
-                <p className="text-sm text-gray-600 mb-2"></p>
-                  {page.description};
-                </p>
-                <p className="text-xs text-gray-500"></p>
-                  {page.path};
-                </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white neon-text-enhanced">
-                Sitemap
+              <h1 className="text-4xl md:text-5xl font-bold text-white neon-text-enhanced">Sitemap</h1>
               </h1>
             </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Complete overview of all pages and resources available on our website. 
-              Find what you're looking for quickly and easily.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Complete overview of all pages and resources available on our website. )</p>
+              Find what you're looking for quickly and easily.</p>
             </p>
             <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
               <Calendar className="w-4 h-4" />
@@ -201,7 +134,6 @@ const pages = [
               <span>{totalPages} pages</span>
             </div>
           </div>
-<<<<<<< HEAD
 
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
@@ -228,22 +160,18 @@ const pages = [
           </div>
 
           {/* Page Categories */}
-          <div className="space-y-12">
-            {pageCategories.map((category, categoryIndex) => (
+          <div className="space-y-12">{pageCategories.map((category, categoryIndex) => (</div>
               <div key={categoryIndex} className="cyber-card-enhanced p-8">
                 <div className="flex items-center mb-6">
                   <category.icon className="w-8 h-8 text-cyan-400 mr-3" />
                   <h2 className="text-2xl font-bold text-white">{category.title}</h2>
-                  <span className="ml-4 px-3 py-1 bg-slate-700 text-cyan-400 text-sm font-semibold rounded">
-                    {category.pages.length} pages
+                  <span className="ml-4 px-3 py-1 bg-slate-700 text-cyan-400 text-sm font-semibold rounded">{category.pages.length} pages</span>
                   </span>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {category.pages.map((page, pageIndex) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">{category.pages.map((page, pageIndex) => (</div>
                     <div key={pageIndex} className="bg-slate-800 rounded-lg p-4 hover:bg-slate-700 transition-colors duration-300">
                       <div className="flex items-start justify-between mb-2">
-                        <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                          {page.name}
+                        <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">{page.name}</h3>
                         </h3>
                         <a
                           href={page.url}
@@ -257,8 +185,7 @@ const pages = [
                       <a
                         href={page.url}
                         className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center"
-                      >
-                        Visit Page
+                      >Visit Page</a>
                         <ExternalLink className="w-3 h-3 ml-1" />
                       </a>
                     </div>
@@ -271,27 +198,23 @@ const pages = [
           {/* Search Functionality */}
           <div className="cyber-card-enhanced p-8 mt-16">
             <h2 className="text-2xl font-bold text-white mb-6 text-center">Can't Find What You're Looking For?</h2>
-            <p className="text-gray-300 text-center mb-8">
-              Use our search functionality or contact our support team for assistance.
+            <p className="text-gray-300 text-center mb-8">Use our search functionality or contact our support team for assistance.</p>
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-              >
-                Contact Support
+              >Contact Support</a>
               </a>
               <a
                 href="/search"
                 className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Search Site
+              >Search Site</a>
               </a>
               <a
                 href="/"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
-              >
-                Go Home
+              >Go Home</a>
               </a>
             </div>
           </div>
@@ -299,51 +222,20 @@ const pages = [
           {/* XML Sitemap Link */}
           <div className="cyber-card-enhanced p-6 mt-8 text-center">
             <h3 className="text-lg font-semibold text-white mb-2">For Developers</h3>
-            <p className="text-gray-300 mb-4">
-              Access our XML sitemap for search engines and automated tools.
+            <p className="text-gray-300 mb-4">Access our XML sitemap for search engines and automated tools.</p>
             </p>
             <a
               href="/sitemap.xml"
               className="text-cyan-400 hover:text-cyan-300 font-medium flex items-center justify-center"
             >
-              <Code className="w-4 h-4 mr-2" />
-              View XML Sitemap
+              <Code className="w-4 h-4 mr-2" />View XML Sitemap</Code>
               <ExternalLink className="w-4 h-4 ml-2" />
-=======
-        </div>
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4"></h2>
-            Need Help Finding Something?
-          </h2>
-          <p className="text-gray-600 mb-6"></p>
-            If you can't find what you're looking for, feel free to contact us directly.
-          </p>
-          <div>
-            <a 
-              href="/contact"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
-            ></a>
-              Contact Us
-            </a>
-            <a 
-              href="tel:+13024640950"
-              className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
-            ></a>
-              Call Us: (302) 464-0950
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             </a>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </>
   )
 }
 
-export default SitemapPage
-=======
-    </div>
-)]
-    };
 export default SitemapPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

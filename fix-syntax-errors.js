@@ -1,15 +1,15 @@
 import { glob } from 'glob';
-// Function to fix JSX syntax errors
+// Function to fix JSX syntax errors;
 function fixJSXSyntax(content) {
   let fixed = content;
-  // Fix missing closing tags by analyzing the structure
+  // Fix missing closing tags by analyzing the structure;
   const openTags = [];
   const lines = fixed.split('\n');
   let result = [];
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     result.push(line);
-    // Track opening tags
+    // Track opening tags;
     const openTagMatch = line.match(/<(\w+)(?:\s[^>]*)?(?:>|$)/g);
     if (openTagMatch) {
       for (const tag of openTagMatch) {
@@ -19,7 +19,7 @@ function fixJSXSyntax(content) {
         };
       };
     };
-    // Track closing tags
+    // Track closing tags;
     const closeTagMatch = line.match(/<\/(\w+)>/g);
     if (closeTagMatch) {
       for (const tag of closeTagMatch) {
@@ -39,7 +39,7 @@ function fixJSXSyntax(content) {
   };
   return result.join('\n');
 };
-// Function to fix TypeScript interface issues
+// Function to fix TypeScript interface issues;
 function fixTypeScriptSyntax(content) {
   let fixed = content;
   // Fix missing commas in interfaces
@@ -52,18 +52,18 @@ function fixTypeScriptSyntax(content) {
   fixed = fixed.replace(/(\w+)\s*:\s*([^,;}\n]+)(?=\n\s*[^:])/g, '$1: $2;');
   return fixed;
 };
-// Function to fix specific parsing errors
+// Function to fix specific parsing errors;
 function fixParsingErrors(content) {
   let fixed = content;
   // Fix JSX expressions must have one parent element
   fixed = fixed.replace(/(\s*)<(\w+)([^>]*)>\s*\n\s*<(\w+)([^>]*)>/g, '$1<>\n$1  <$2$3>\n$1    <$4$5>');
   fixed = fixed.replace(/(\s*)<\/\w+>\s*\n\s*<\/\w+>\s*\n\s*<\/\w+>/g, '$1    </div>\n$1  </div>\n$1</>');
-  // Fix missing closing tags for common elements
+  // Fix missing closing tags for common elements;
   const commonElements = ['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside'];
   for (const element of commonElements) {
     const regex = new RegExp(`<${element}([^>]*)>(?!.*</${element}>)`, 'g');
     fixed = fixed.replace(regex, (match, attrs) => {
-      // Count opening and closing tags
+      // Count opening and closing tags;
       const openMatches = (fixed.match(new RegExp(`<${element}`, 'g')) || []).length;
       const closeMatches = (fixed.match(new RegExp(`</${element}>`, 'g')) || []).length;
       if (openMatches > closeMatches) {
@@ -89,7 +89,7 @@ async function processFiles() {
   let processedCount = 0;
   let errorCount = 0;
   for (const pattern of patterns) {
-    const files = await glob(pattern, { 
+    const files = await glob(pattern, { )
       ignore: [
         'node_modules/**',
         'dist/**',
@@ -172,7 +172,7 @@ function findFilesWithSyntaxErrors(dir) {
 traverse(dir);
   return files;
 };
-// Main execution
+// Main execution;
 const files = findFilesWithSyntaxErrors('/workspace');
 console.log(`Checking ${files.length} files for syntax errors`);
 let fixedCount = 0;

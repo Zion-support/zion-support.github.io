@@ -1,12 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 export default function EnterpriseAISolutions(): React.JSX.Element {
   const solutions = [
-=======
-export default function EnterpriseAISolutions(): React.JSX.Element {;
-const solutions = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       icon: <Building className="w-8 h-8" />,</Building>title</Building>: 'Enterprise AI Platform',
       description: 'Comprehensive AI platform designed for large-scale enterprise deployments.',
@@ -27,52 +21,44 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         'Workflow Optimization',
         'Intelligent Routing',
         'Performance Monitoring']}];
-  return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-  return (
+  return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">return (</div>
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
       <Helmet>
         <title>Enterprise AI Solutions - Zion Website</title>
         <meta;
-          name="description"
+          name="description")
           content="Comprehensive AI solutions designed for enterprise-scale deployments."
         /></meta>
       </Helmet>
       <div className="container mx-auto px-4 py-16"></div>
         <div className="text-center mb-16"></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Enterprise AI Solutions</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive AI solutions designed for enterprise-scale deployments and large;)
-            organizations.)
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive AI solutions designed for enterprise-scale deployments and large;)</p>
+            organizations.)</p>
           </p>)
         </div>)
 )
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">),
-          {solutions.map((solution, index) => (
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">),</div>
+          {solutions.map((solution, index) => (</div>
             <div;
               key={index};
               className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow",
-            >,
+            >,</div>
               <div className="flex items-center mb-4">,
-            Comprehensive AI solutions designed for enterprise-scale deployments and large
-            organizations.
+            Comprehensive AI solutions designed for enterprise-scale deployments and large</div>
+            organizations.</div>
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (</div>
             <div
-<<<<<<< HEAD
               key={index}
               className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
-=======
-              key={index};
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-            ></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <div className="flex items-center mb-4"></div>
                 <div className="text-blue-600 mr-3">{solution.icon}</div>
     {/* TODO: Fix JSX expression */};
     }];
-  return (<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
+  return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
       <Helmet></Helmet>
         <title>Enterprise AI Solutions - Zion Website</title>
         <meta></meta>"
@@ -95,7 +81,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
   lg:grid-cols-3 gap-8"></div>
           {/* TODO: Fix JSX expression */};
               key={index}"
-              className="bg-white rounded-lg shadow-lg p-6,"
+              className="bg-white rounded-lg shadow-lg p-6,")
   hover:shadow-xl transition-shadow"
             >"
               <div className="flex items-center mb-4"></div>"
@@ -118,10 +104,6 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 "

@@ -5,18 +5,9 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 const AIAutomationPage: React.FC = () => {
   const features = [
     {
-=======
-;
-const AIAutomationPage: React.FC = () => {
-};
-const features = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       icon: Settings,
       title: 'Process Automation',
       description: 'Intelligent automation of complex business processes with decision-making capabilities',
@@ -38,18 +29,11 @@ const features = [
       icon: Clock,
       title: 'Exception Handling',
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
-      benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
+      benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities'],
     };
   ];
-<<<<<<< HEAD
   const pricingPlans = [
     {
-=======
-;
-const pricingPlans = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       name: 'Starter',
       price: '$1,400',
       period: '/month',
@@ -92,60 +76,37 @@ const pricingPlans = [
         'API access',
         'Dedicated support'
       ],
-      popular: false
+      popular: false,
     };
   ];
-<<<<<<< HEAD
   const stats = [
     { icon: Users, value: '200+', label: 'Automated Processes' },
     { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
     { icon: Clock, value: '60%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'Client Rating' }
-=======
-;
-const stats = [
-[
-        { icon: Users, value: '200+', label: 'Automated Processes' },
-        { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
-        { icon: Clock, value: '60%', label: 'Time Saved' },
-        { icon: Star, value: '4.9/5', label: 'Client Rating' };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
 export default function AIAutomationPage() {
-    return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl lg: text-6xl font-bold text-white mb-6">
-            AI Automation
+          <h1 className="text-4xl lg: text-6xl font-bold text-white mb-6">AI Automation</h1>
   </
-          <p className="text-xl text-gray-300 mb-8">
-            Intelligent process automation with AI-powered decision making and exception handling.
+          <p className="text-xl text-gray-300 mb-8">Intelligent process automation with AI-powered decision making and exception handling.</p>
           </p>
           <div className="bg-slate-800/50 rounded-lg p-8">
             <h2 className="text-2xl font-bold text-white mb-4">AI-Powered Automation</h2>
-            <p className="text-gray-300 mb-6">
-              Transform your business processes with intelligent automation that learns and adapts to your needs.
+            <p className="text-gray-300 mb-6">Transform your business processes with intelligent automation that learns and adapts to your needs.</p>
             </p>
-<<<<<<< HEAD
             <a
-              href="/contact"
-=======
-            <a href="/contact"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+              href="/contact")
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
-              <ArrowRight className="w-5 h-5 mr-2" />
-              Contact Us,
+              <ArrowRight className="w-5 h-5 mr-2" />Contact Us,</ArrowRight>
   </
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   )
   }
   </a>
   </h1>
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

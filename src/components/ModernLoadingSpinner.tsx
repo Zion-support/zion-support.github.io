@@ -1,20 +1,12 @@
 import React from 'react';
 'use client';
 interface ModernLoadingSpinnerProps {
-<<<<<<< HEAD
     size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'accent';
   text?: string;
   fullScreen?: boolean
   }
-=======
-  size?: 'sm' | 'md' | 'lg' | 'xl'
-}
-  color?: 'primary' | 'secondary' | 'accent';
-  text?: string;
-  fullScreen?: boolean};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
+const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps>= ({
   size = 'md',
   color = 'primary',
   text = 'Loading...',
@@ -45,8 +37,8 @@ $4}
   `;
   const containerClasses = fullScreen
     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
-    : 'flex items-center justify-center p-4';
-  return (
+    : 'flex items-center justify-center p-4';</ModernLoadingSpinnerProps>
+  return (</ModernLoadingSpinnerProps>
     <div className={containerClasses} role="status" aria-label="Loading">
       <div className="flex flex-col items-center space-y-4">
         <div className="relative">
@@ -59,7 +51,6 @@ $4}
       </div>
 'use client';
 interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -67,24 +58,11 @@ interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   text?: string;
   fullScreen?: boolean;
 }
-=======
-  O: Add content};
-};
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'accent';
-  text?: string;
-  fullScreen?: boolean};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const,
   ModernLoadingSpinner: React.FC,
-          <ModernLoadingSpinnerProps> = ({/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
+          <ModernLoadingSpinnerProps>= ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   size = 'md',
   color = 'primary',
   text = 'Loading...',
@@ -99,13 +77,8 @@ const,
   l: 'w-16 h-16'
   }
   const colorClasses = {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   primar,
   y: 'text-cyan-400',
     secondar,
@@ -123,8 +96,8 @@ const,
 //     rounded-full;`
   `;
   const containerClasses = fullScreen;
-//     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
-    : 'flex items-center justify-center p-4';
+//     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'</ModernLoadingSpinnerProps>
+    : 'flex items-center justify-center p-4';</ModernLoadingSpinnerProps>
   return (<div>Coming Soon</div>)
   )
           <div className={containerClasses} role="status" aria-label="Loading"></div>"
@@ -143,8 +116,5 @@ const,
 }
 export default ModernLoadingSpinner;
 export default ModernLoadingSpinner;"`
-<<<<<<< HEAD
   </ModernLoadingSpinnerProps>
   </ModernLoadingSpinnerProps>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

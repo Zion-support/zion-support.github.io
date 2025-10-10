@@ -35,7 +35,7 @@ openGraphPages.forEach(pagePath => {)
     // Fix authors format to match Author type;
     content = content.replace(/authors: \['Zion Tech Group'\]/g),
       "authors: [{ name: 'Zion Tech Group' }]"
-openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */};
+openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */};)
   e: 'Zion Tech Group' }]")
     );
     fs.writeFileSync(pagePath, content);
@@ -58,26 +58,16 @@ if (fs.existsSync(seoOptimizerPath)) {
     `interface AdvancedSEOOptimizerProps {
 }
   config?: {
-    title: string;
-    description: string;
-    keywords: string[];
-<<<<<<< HEAD
-    canonicalUrl: string
+    title: string;,
+    description: string;,
+    keywords: string[];,
+    canonicalUrl: string,
     ogImage: string
     structuredData?: unknown,,
 if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
     /interface AdvancedSEOOptimizerProps \{[^}]*\}/,`
     `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
   }
-=======
-    canonicalUrl: string;
-    ogImage: string;
-    structuredData?: unknown;,
-if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */};
-    /interface AdvancedSEOOptimizerProps \{[^}]*\}/,`
-    `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
   enablePerformanceTracking?: boolean;
@@ -132,16 +122,13 @@ if (fs.existsSync(performancePath)) {
   // Add proper declaration at the top;
   content = `declare global {
   interface Window {
-<<<<<<< HEAD
-    gtag: (...args: unknown[]) => void,
+    gtag: (...args: unknown[]) =>void,
 if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */}
   content = content.replace(/declare global \{[^}]*\}/g, '');
 
   // Add proper declaration at the top;`
   content = `declare global {/* TODO: Fix JSX expression */}
   }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 }
     gtag: (...args: unknown[]) => void;
 if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */};
@@ -153,5 +140,5 @@ if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */};
 `
 ${content}`;
   fs.writeFileSync(performancePath, content);
-  //     };
-// "`
+  //     };</Calculator>
+// "`</Calculator>

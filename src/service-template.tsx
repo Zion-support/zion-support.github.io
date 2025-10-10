@@ -3,15 +3,9 @@ import { Link } from 'react-router-dom';
 import { CheckCircle, Star, Phone } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-<<<<<<< HEAD
 interface ServicePageProps {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-interface ServicePageProps {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   titl,
   e: string,,
     descriptio,
@@ -20,66 +14,37 @@ interface ServicePageProps {/* TODO: Fix JSX expression */};
   n: React.ComponentType,
           <{ className?: string }>;
   service,
-<<<<<<< HEAD
   s: Array<{/* TODO: Fix JSX expression */}
   s: string[],}
-=======
-  s: Array<{/* TODO: Fix JSX expression */};
-  s: string[]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     pric,
   e: string,
   }>;
   benefit,
-<<<<<<< HEAD
   s: string[],
 }
 const,
-  ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {/* TODO: Fix JSX expression */}
+  ServicePage: React.FC<ServicePageProps>= ({ title, description, services, benefits }) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-=======
-  s: string[]};
-;
-const,
-  ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (
+}</ServicePageProps>
+  return(</ServicePageProps>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
-            Service Template;
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">Service Template;</h1>
   </
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post
+          <p className="text-xl text-cyan-400 mb-8 font-medium">Blog Post</p>
   </
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
             <Link
               to="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
-// >
-=======
-            <Link to="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
-//>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          "
+// >"</Link>
           <Phone className="w-5 h-5 mr-2" /></Phone>
 // Get Free Consultation
           </Link>
-<<<<<<< HEAD
-            <a
+            <a)
               href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              <Phone className="w-4 h-4 mr-2" />
-// (302) 464-0950,
-=======
-            <a href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              <Phone className="w-4 h-4 mr-2" />
-// (302) 464-0950;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+              <Phone className="w-4 h-4 mr-2" />// (302) 464-0950,</a>
           </a>
           </div>
         </section>
@@ -101,17 +66,12 @@ const,
                       <CheckCircle className="w-5 h-5 text-green-400 mr-2" /></CheckCircle>
                       {feature};
                     </li>
-<<<<<<< HEAD
                   ))}
-=======
-                  ))};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 </ul>
                 <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                   className="cyber-button w-full text-center inline-block" Get Started;
         {/* Benefits Section */};
-          <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-            Why Choose Our {title}?
+          <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Why Choose Our {title}?</h2>
           </h2>"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -130,14 +90,9 @@ Ready to Transform Your Business?"
       </main>
       <Footer /></Footer>
     </div>
-<<<<<<< HEAD
   );
 }
 export default ServicePage;
   </p>
   </h1>
   </ServicePageProps>
-=======
-  )};
-export default ServicePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

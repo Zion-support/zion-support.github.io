@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 /**;
  * Validation Utilities;
  * Provides common validation functions for forms and data;
@@ -219,9 +218,9 @@ export function sanitizeHtml(html: string): string {
 /**;
  * Validate object against schema;
  */;
-export function validateObject<T extends Record<string, unknown>>(;
-  obj: T,
-  schema: Record<keyof T, (value: unknown) => boolean>;
+export function validateObject<T extends Record<string, unknown>>(;</T>
+  obj: T,</T>
+  schema: Record<keyof T, (value: unknown) =>boolean>;
 ): ValidationResult {
     const errors: string[] = []
   for (const key in schema) {
@@ -241,17 +240,17 @@ export function validateObject<T extends Record<string, unknown>>(;
 /**;
  * Validate form data;
  */;
-export interface FormField {
-    value: string,
+export interface FormField {</keyof>
+    value: string,</keyof>
   validators: Array<{,
     validate: (value: string) => boolean,
     message: string,
   }
   }>;
 }
-export function validateForm(fields: Record<string, FormField>);
-): Record<string, string[]> {}
-  const errors: Record<string, string[]> = {}
+export function validateForm(fields: Record<string, FormField>);</string>
+): Record<string, string[]>{}</string>
+  const errors: Record<string, string[]>= {}
   for (const fieldName in fields) {
     const field = fields[fieldName]
     const fieldErrors: string[] = [],
@@ -304,8 +303,8 @@ export const validators = {
     message
   }
   })
-}
-export function hasMaxLength(value: string, maxLength: number): boolean {
+}</string>
+export function hasMaxLength(value: string, maxLength: number): boolean {</string>
     return value && value.length <= maxLength
   }
 }
@@ -313,7 +312,7 @@ export function hasMaxLength(value: string, maxLength: number): boolean {
  * Validate password strength;
  */;
 export function isStrongPassword(password: string): boolean {
-    if (!password || password.length < 8) return false
+    if (!password || password.length < 8) return false;
 const hasUpperCase = /[A-Z]/.test(password)
   const hasLowerCase = /[a-z]/.test(password),,;
   const hasNumbers = /\d/.test(password)
@@ -431,7 +430,7 @@ export function sanitizeHTML(html: string): string {
  * Validate name (letters, spaces, hyphens, apostrophes);
  */;
 export function isValidName(name: string): boolean {
-  if (!name || typeof name !== 'string') return false
+  if (!name || typeof name !== 'string') return false;
   const nameRegex = /^[a-zA-Z\s\-']+$/,
   return nameRegex.test(name.trim()) && name.trim().length >= 2
   }
@@ -552,8 +551,8 @@ export function isValidState(state: string): boolean {
  * Validate form data with multiple fields;
  */;
 export function validateFormData(;
-  data: Record<string, unknown>,;
-  rules: Record<string, (value: unknown) => boolean>
+  data: Record<string, unknown>,;</string>)
+  rules: Record<string, (value: unknown) =>boolean>
 ): ValidationResult {
   const errors: string[] = [],
 for (const [field, validator] of Object.entries(rules)) {
@@ -575,7 +574,7 @@ export function validateContactForm(data: {
     name?: string;
   email?: string
   phone?: string
-  company?: string,
+  company?: string,)
   message?: string
   }
 }): ValidationResult {
@@ -609,8 +608,8 @@ return {
 /**;
  * Sanitize string input;
  */;
-export function sanitizeString(input: string): string {
-    if (!input || typeof input !== 'string') return '',
+export function sanitizeString(input: string): string {</string>
+    if (!input || typeof input !== 'string') return '',</string>
   return input.trim().replace(/[<>{]/g, '')
   }
 }
@@ -619,7 +618,7 @@ export function sanitizeString(input: string): string {
  */;
 export function sanitizeHtml(input: string): string {
     if (!input || typeof input !== 'string') return ''
-  }
+  }</>
   return input}</>
     .replace(/</g, '&lt;');
     .replace(/>/g, '&gt;');
@@ -766,10 +765,10 @@ export function validateComposite(value: string, validators: Array<(val: string)
 /**;
  * Async validation;
  */;
-export async function validateAsync(;
-  validator: (val: unknown) => Promise<ValidationResult>
-  value: unknown,
-): Promise<ValidationResult> {,;
+export async function validateAsync(;)
+  validator: (val: unknown) => Promise<ValidationResult>,</ValidationResult>
+  value: unknown,</ValidationResult>
+): Promise<ValidationResult>{,;
   try {,;
  * Validate required field with detailed result;
  */;
@@ -780,155 +779,14 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
   return { isValid: true, errors: [] }
 }
 /**;
- * Validate async;
- */;
-export async function validateAsync(validator: (val: string) => Promise<ValidationResult>, value: string): Promise<ValidationResult> {
+ * Validate async;</ValidationResult>
+ */;</ValidationResult>
+export async function validateAsync(validator: (val: string) => Promise<ValidationResult>, value: string): Promise<ValidationResult>{
     try {
     return await validator(value)
   }
   } catch (error) {}
     return { isValid: false, errors: ['Validation failed'], error: 'Validation failed' }
   }
-}
-=======
-/**
- * Validation Utilities
- * Provides common validation functions for forms and data
- */
-export interface ValidationResult {
-}
-}
-  isValid: boolean;
-  errors: string[];
-  error?: string;
-};
-/**
- * Email validation regex pattern
- */
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-/**
- * Phone number validation regex (US format)
- */
-const PHONE_REGEX = /^(\+1\s?)?(\([0-9]{3}\)|[0-9]{3})[-\s]?[0-9]{3}[-\s]?[0-9]{4}$/;
-/**
- * Name validation regex (letters, spaces, hyphens, apostrophes)
- */
-const NAME_REGEX = /^[a-zA-Z\s\-'\.]+$/;
-/**
- * URL validation regex
- */
-const URL_REGEX = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/;
-/**
- * Validate email address
- */
-export function validateEmail(email: string): ValidationResult {
-  const errors: string[] = [];
-  if (!email) {
-    errors.push('Email is required');
-  } else if (email.length > 254) {
-    errors.push('Email is too long');
-  } else if (!EMAIL_REGEX.test(email)) {
-    errors.push('Invalid email format');
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
-/**
- * Validate phone number
- */
-export function validatePhone(phone: string): ValidationResult {
-  const errors: string[] = [];
-  if (!phone) {
-    errors.push('Phone number is required');
-  } else if (!PHONE_REGEX.test(phone)) {
-    errors.push('Invalid phone number format');
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
-/**
- * Validate name
- */
-export function validateName(name: string): ValidationResult {
-  const errors: string[] = [];
-  if (!name) {
-    errors.push('Name is required');
-  } else if (name.length > 100) {
-    errors.push('Name is too long');
-  } else if (!NAME_REGEX.test(name)) {
-    errors.push('Name contains invalid characters');
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
-/**
- * Validate URL
- */
-export function validateUrl(url: string): ValidationResult {
-  const errors: string[] = [];
-  if (!url) {
-    errors.push('URL is required');
-  } else if (!URL_REGEX.test(url)) {
-    errors.push('Invalid URL format');
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
-/**
- * Validate message
- */
-export function validateMessage(message: string): ValidationResult {
-  const errors: string[] = [];
-  if (!message) {
-    errors.push('Message is required');
-  } else if (message.length > 1000) {
-    errors.push('Message is too long');
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
-/**
- * Validate form data
- */
-export function validateFormData(data: Record<string, any>): ValidationResult {
-  const errors: string[] = [];
-  if (data.email) {
-    const emailResult = validateEmail(data.email);
-    if (!emailResult.isValid) {
-      errors.push(...emailResult.errors);
-    };
-  };
-  if (data.phone) {
-    const phoneResult = validatePhone(data.phone);
-    if (!phoneResult.isValid) {
-      errors.push(...phoneResult.errors);
-    };
-  };
-  if (data.name) {
-    const nameResult = validateName(data.name);
-    if (!nameResult.isValid) {
-      errors.push(...nameResult.errors);
-    };
-  };
-  if (data.message) {
-    const messageResult = validateMessage(data.message);
-    if (!messageResult.isValid) {
-      errors.push(...messageResult.errors);
-    };
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+}</ValidationResult>
+</ValidationResult>

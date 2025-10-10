@@ -8,25 +8,16 @@ import { Link } from 'react-router-dom';
  * @description High-performance promotional banner with accessibility features;
  */
 const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
-<<<<<<< HEAD
   return(<section,
       className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden",
       aria-label="Cognitive Mesh Platform Launch Announcement",
-     > {/* Animated background elements - purely decorative */}
-=======
-return (
-  return(<section ;
-      className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden",
-      aria-label="Cognitive Mesh Platform Launch Announcement",>
-);
-} {/* Animated background elements - purely decorative */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+     >{/* Animated background elements - purely decorative */}</section>
       <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true"></section>
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>
         <div;
-const,
-  October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {/* TODO: Fix JSX expression */};
-     > {/* Animated background elements - purely decorative */};
+const,)
+  October2025CognitiveMeshLaunchBanner: React.FC = memo(() =>{/* TODO: Fix JSX expression */};</div>
+     > {/* Animated background elements - purely decorative */};</div>
       <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true"></div>"
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>
         <div></div>"
@@ -41,8 +32,7 @@ const,
   y: '4s' }};
         ></div>
       </div>
-      <div className="container mx-auto px-6 py-12 relative z-10">
-        {/* Header Section */};
+      <div className="container mx-auto px-6 py-12 relative z-10">{/* Header Section */};</div>
         <div className="text-center mb-8">
           <div ;
         {/* Header Section */}</div>
@@ -50,23 +40,19 @@ const,
           <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6 animate-fade-in"
             role="status"
             aria-label="New product launch announcement">
-             aria-hidden="true" <span className="text-white font-bold text-lg">
-              🚀 JUST LAUNCHED - OCTOBER 2025;
-             aria-hidden="true"</div> <span className="text-white font-bold text-lg">
-              🚀 JUST LAUNCHED - OCTOBER 2025;
+             aria-hidden="true" <span className="text-white font-bold text-lg">🚀 JUST LAUNCHED - OCTOBER 2025;</span>
+             aria-hidden="true"</div> <span className="text-white font-bold text-lg">🚀 JUST LAUNCHED - OCTOBER 2025;</span>
   </
              aria-hidden="true"</div>
-          <h1 className="text-4xl md: text-5xl font-bold text-white mb-4 animate-slide-up">
-            Cognitive Mesh Orchestration Platform
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-4 animate-slide-up">Cognitive Mesh Orchestration Platform</h1>
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-6 max-w-4xl mx-auto animate-fade-in">
-            The Revolutionary Distributed AI Platform Transforming Enterprise Operations,
+          <p className="text-xl md:text-2xl text-white/90 mb-6 max-w-4xl mx-auto animate-fade-in">The Revolutionary Distributed AI Platform Transforming Enterprise Operations,</p>
           </p>
 )
-          <ul className="flex flex-wrap items-center justify-center gap-4 mb-8 list-none" aria-label="Platform key statistics">)
-            <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg">)
-              <Network className="w-5 h-5 text-green-300" aria-hidden="true" />),
-"
+          <ul className="flex flex-wrap items-center justify-center gap-4 mb-8 list-none" aria-label="Platform key statistics">)</ul>
+            <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg">)</li>
+              <Network className="w-5 h-5 text-green-300" aria-hidden="true" />),</Network>
+"</Network>
       <div className="container mx-auto px-6 py-12 relative z-10"></div>
         {/* Header Section */}"
         <div className="text-center mb-8"></div>
@@ -109,43 +95,23 @@ const,
             </li>
           </ul>
         </section>
-<<<<<<< HEAD
         {/* Call to Action */}
         <div  className="text-center" role="region" aria-label="Call to action">
           <div  className="inline-flex flex-col sm: flex-row gap-4">
-=======
-        {/* Call to Action */};
-        <div className="text-center" role="region" aria-label="Call to action">
-          <div className="inline-flex flex-col sm: flex-row gap-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <Link;
         <div  className="text-center" role="region" aria-label="Call to action"></div>
           <div  className="inline-flex flex-col sm:flex-row gap-4"></div>
             <Link to="/contact"
                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2 xl transform hover:scale-105"
-<<<<<<< HEAD
               aria-label="Schedule a free consultation about Cognitive Mesh Platform"
-            >
-              Schedule Free Consultation
+            >Schedule Free Consultation</Link>
             </Link>
             <Link
               to="/blog"
                className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
               aria-label="Learn more about Cognitive Mesh technology"
             >
-              <Network  className="w-5 h-5" aria-hidden="true" />
-              Learn More,
-=======
-              aria-label="Schedule a free consultation about Cognitive Mesh Platform">
-              Schedule Free Consultation;
-            </Link>
-            <Link ;
-              to="/blog"
-               className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
-              aria-label="Learn more about Cognitive Mesh technology">
-              <Network className="w-5 h-5" aria-hidden="true" />
-              Learn More;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+              <Network  className="w-5 h-5" aria-hidden="true" />Learn More,</Network>
             </Link>
           </div>
           <p className="text-white/80 text-sm mt-6 max-w-2xl mx-auto">
@@ -162,11 +128,7 @@ const,
   hover: scale-105""
               aria-label="Schedule a free consultation about Cognitive Mesh Platform"
             >
-<<<<<<< HEAD
               Schedule Free Consultation,
-=======
-              Schedule Free Consultation;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             </Link>
             <Link></Link>"
               to="/blog""
@@ -179,7 +141,7 @@ const,
             </Link>
           </div>"
           <p  className="text-white/80 text-sm mt-6 max-w-2xl mx-auto"></p>
-            ✨ <strong>Limited Time,
+            ✨ <strong>Limited Time,</strong>
   Offer:</strong> Get 50% off implementation fees for October 2025 sign-ups. 
             Free 2-week assessment included. No commitment required.
           </p>

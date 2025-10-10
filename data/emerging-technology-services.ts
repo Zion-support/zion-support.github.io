@@ -1,27 +1,17 @@
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-<<<<<<< HEAD
-  contactInfo: unknown
-    mobile: string
+  id: string;,
+  name: string;,
+  tagline: string;,
+  price: string;,
+  description: string;,
+  features: string[];,
+  link: string;,
+  category: string;,
+  realImplementation: boolean;,
+  contactInfo: unknown,
+    mobile: string,
     email: string,
 export interface EmergingTechnologyService {,
     address: string}
-=======
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-export interface EmergingTechnologyService {
-;,
-}
-    address: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: string,
   nam,
@@ -45,17 +35,10 @@ export interface EmergingTechnologyService {
     mobil,
   e: string,
     emai,
-<<<<<<< HEAD
   l: string,
 export interface EmergingTechnologyService {/* TODO: Fix JSX expression */}
   s: string}
 }
-=======
-  l: string;
-export interface EmergingTechnologyService {/* TODO: Fix JSX expression */};
-  s: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: string,
   nam,
@@ -87,26 +70,17 @@ export interface EmergingTechnologyService {/* TODO: Fix JSX expression */};
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
-<<<<<<< HEAD
-  link: string, category: string
-  realImplementation: boolean
+  link: string, category: string,
+  realImplementation: boolean,
   contactInfo: unknown,
-    mobile: string, email: string
+    mobile: string, email: string,
     address: string,
   }
 }
-=======
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const emergingTechnologyServices: EmergingTechnologyService[] = [,
     id: "blockchain-platform", name: "Blockchain Development Platform",
-    tagline: "Build and deploy blockchain applications", price: "$179/month"
-    description: "Comprehensive blockchain development platform for creating decentralized applications."
+    tagline: "Build and deploy blockchain applications", price: "$179/month",
+    description: "Comprehensive blockchain development platform for creating decentralized applications.",
     features: [,
       "Smart contract development"
       "DApp deployment"
@@ -114,15 +88,9 @@ export const emergingTechnologyServices: EmergingTechnologyService[] = [,
       "Security auditing",
       "Performance monitoring"],
     link: "/services/blockchain-platform", category: "Emerging Tech",
-<<<<<<< HEAD
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-=======
-    realImplementation: true;
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"};
@@ -172,7 +140,7 @@ export const,
       "Smart contract development""
       "DApp deployment""
       "Blockchain integration""
-      "Security auditing""
+      "Security auditing"",
       "Performance monitoring"
     ],
     lin,"
@@ -201,7 +169,7 @@ export const,
     };
   };
 ];
-id: "blockchain-platform"
+id: "blockchain-platform",
     name: "Blockchain Development Platform",
     tagline: "Build and deploy blockchain applications",
     price: "$179/month",
@@ -213,12 +181,12 @@ id: "blockchain-platform"
       "Security auditing",
       "Performance monitoring"
     ],
-    link: "/services/blockchain-platform"
-    category: "Emerging Tech"
-    realImplementation: true
+    link: "/services/blockchain-platform",
+    category: "Emerging Tech",
+    realImplementation: true,
     contactInfo: unknown,
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}}
@@ -287,7 +255,6 @@ i,
   y: string, realImplementatio,
   n: boolean, contactInf,
   o: mobil,
-<<<<<<< HEAD
   e: string, emai,
   l: string, export interface EmergingTechnologyService {/* TODO: Fix JSX expression */}
   s: string } i,
@@ -301,21 +268,6 @@ i,
   y: string, realImplementatio,
   n: boolean, contactInf,
   o: {/* TODO: Fix JSX expression */}
-=======
-  e: string; emai,
-  l: string; export interface EmergingTechnologyService {/* TODO: Fix JSX expression */};
-  s: string }; i,
-  d: string; nam,
-  e: string; taglin,
-  e: string; pric,
-  e: string, descriptio,
-  n: string; feature,
-  s: string[]; lin,
-  k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,

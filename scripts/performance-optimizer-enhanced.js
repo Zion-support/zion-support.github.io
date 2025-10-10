@@ -4,20 +4,12 @@ import path from 'path';
 import { glob } from 'glob';
 // Performance optimization patterns;
 const optimizations = {
-<<<<<<< HEAD
     // Remove unused CSS classes;
   removeUnusedCSS: (content) => {,
     // This is a simplified version - in production, use tools like PurgeCSS;
     return content
   },
 
-=======
-};
-  // Remove unused CSS classes;
-  removeUnusedCSS: (content) => {,
-    // This is a simplified version - in production, use tools like PurgeCSS;
-    return content},
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Optimize images (placeholder - would need actual image processing)
   optimizeImages: (content) => {
     ,
@@ -25,13 +17,9 @@ const optimizations = {
     return content;
       .replace(/\.jpg/g, '.webp')
       .replace(/\.png/g, '.webp')
-<<<<<<< HEAD
       .replace(/\.jpeg/g, '.webp')
   },
 
-=======
-      .replace(/\.jpeg/g, '.webp')},
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Minify inline styles;
   minifyInlineStyles: (content) => {,
     return content.replace(/style="([^"]*)"/g, (match, styles) => {
@@ -40,26 +28,18 @@ const optimizations = {
         .replace(/;\s*/g, ';')
         .replace(/:\s*/g, ':')
         .trim();
-<<<<<<< HEAD
       return `style="${minified}"`;
     });
   },
 
-=======
-      return `style="${minified}"`})},
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Remove empty lines and extra whitespace;
   removeExtraWhitespace: (content) => {,
     return content;
       .replace(/\n\s*\n\s*\n/g, '\n\n')
       .replace(/[ \t]+$/gm, '')
-<<<<<<< HEAD
       .replace(/\n{3}/g, '\n\n');
   },
 
-=======
-      .replace(/\n{3}/g, '\n\n')},
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Optimize React components;
   optimizeReactComponents: (content) => {
     // Add React.memo to functional components;
@@ -70,7 +50,6 @@ const optimizations = {
       );
       // Add closing parenthesis for React.memo
       content = content.replace()
-<<<<<<< HEAD
         /(\w+)\.displayName = '\w+';/g
         '$1.displayName = \'$1\',\n});'
       );
@@ -81,37 +60,17 @@ const optimizations = {
   // Add performance hints;
   addPerformanceHints: (content) => {
     // Add preload hints for critical resources,
-    if (content.includes('<head>')) {
-      const preloadHints = `
-    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin>,
-    <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossorigin>,
-    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">`;
+    if (content.includes('<head>')) {</head>
+      const preloadHints = `</head>
+    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin>,</link>
+    <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossorigin>,</link>
+    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">`;</link>
       content = content.replace('<head>', `<head>${preloadHints}`);
     }
     return content;
   }
 }
 
-=======
-        /(\w+)\.displayName = '\w+';/g;
-        '$1.displayName = \'$1\';\n});'
-      )};
-    return content},
-  // Add performance hints;
-  addPerformanceHints: (content) => {
-return (
-    // Add preload hints for critical resources;
-    if (content.includes('<head>')) {;
-const preloadHints = `
-    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin>,
-    <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossorigin>,
-    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">`;
-      content = content.replace('<head>', `<head>
-);
-}${preloadHints}`)};
-    return content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Files to process;
 const filePatterns = [
 ];
@@ -155,16 +114,11 @@ function processFile(filePath) {
       const before = newContent;
       newContent = optimizer(newContent);
       if (newContent !== before) {
-<<<<<<< HEAD
         fileOptimizations++
   }
-=======
-        fileOptimizations++};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     });
     if (fileOptimizations > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-<<<<<<< HEAD
       console.log(`✅ ${filePath}: Applied ${fileOptimizations} optimizations`);
       optimizationsApplied += fileOptimizations;
     }
@@ -175,14 +129,6 @@ function processFile(filePath) {
   }
 }
 
-=======
-      // console.log removed for production
-optimizationsApplied += fileOptimizations};
-    processedFiles++} catch (error) {
-    // console.error removed for production
-};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 async function main() {
   console.log('🚀 Starting enhanced performance optimization...\n');
 
@@ -192,7 +138,6 @@ async function main() {
     const files = await glob(pattern, {)
       ignore: excludePatterns),
       cwd: process.cwd()});
-<<<<<<< HEAD
     allFiles.push(...files);
   }
 
@@ -215,21 +160,5 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     main()
   }
 
-export { processFile, optimizations }
-=======
-    allFiles.push(...files)};
-  // Remove duplicates;
-  const uniqueFiles = [...new Set(allFiles)];
-  totalFiles = uniqueFiles.length;
-  // console.log removed for production
-// Process each file;
-  uniqueFiles.forEach(processFile);
-  // console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-};
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main()};
-export { processFile, optimizations };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+export { processFile, optimizations }</head>
+</head>

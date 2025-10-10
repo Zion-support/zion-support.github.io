@@ -37,7 +37,6 @@ function fixReactMemo(content) {
   // Pattern 1: const Component: React.FC = React.memo(() => {,
   const pattern1 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g;
   if (pattern1.test(newContent)) {,
-<<<<<<< HEAD
     newContent = newContent.replace(pattern1, 'const $1: React.FC = () => {'),
     fixed = true
   }
@@ -66,60 +65,30 @@ function fixReactMemo(content) {
     fixed = true
   }
 
-=======
-    newContent = newContent.replace(pattern1, 'const $1: React.FC = () => {');
-    fixed = true};
-  // Pattern 2: const Component = React.memo(() => {,;
-const pattern2 = /const\s+(\w+)\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g;
-  if (pattern2.test(newContent)) {,
-    newContent = newContent.replace(pattern2, 'const $1 = () => {');
-    fixed = true};
-  // Pattern 3: const Component: React.FC = React.memo((props) => {,;
-const pattern3 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,
-  if (pattern3.test(newContent)) {,
-    newContent = newContent.replace(pattern3, 'const $1: React.FC = () => {');
-    fixed = true};
-  // Pattern 4: const Component = React.memo((props) => {,;
-const pattern4 = /const\s+(\w+)\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,
-  if (pattern4.test(newContent)) {,
-    newContent = newContent.replace(pattern4, 'const $1 = () => {');
-    fixed = true};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Remove React.memo closing parentheses;
   // Pattern: }); at the end of component;
   const closingPattern = /(\w+)\.displayName\s*=\s*['"][^'"]+['"];\s*\}\);/g;
   if (closingPattern.test(newContent)) {
     newContent = newContent.replace(closingPattern, '$1.displayName = \'$1\';');
-<<<<<<< HEAD
     fixed = true
   }
 
-=======
-    fixed = true};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Alternative closing pattern;
   const closingPattern2 = /^\s*\}\);\s*$/gm;
   if (closingPattern2.test(newContent)) {
     newContent = newContent.replace(closingPattern2, '');
-<<<<<<< HEAD
     fixed = true
   }
 
   return { content: newContent, fixed }
 }
 
-=======
-    fixed = true};
-  return { content: newContent, fixed }};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const result = fixReactMemo(content);
     if (result.fixed) {
       fs.writeFileSync(filePath, result.content, 'utf8');
-<<<<<<< HEAD
       console.log(`✅ ${filePath}: Fixed React.memo syntax`);
       fixedFiles++;
     }
@@ -130,14 +99,6 @@ function processFile(filePath) {
   }
 }
 
-=======
-      // console.log removed for production
-fixedFiles++};
-    processedFiles++} catch (error) {
-    // console.error removed for production
-};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 async function main() {
   console.log('🚀 Starting React.memo syntax fixes...\n');
 
@@ -147,7 +108,6 @@ async function main() {
     const files = await glob(pattern, {)
       ignore: excludePatterns),
       cwd: process.cwd()});
-<<<<<<< HEAD
     allFiles.push(...files);
   }
 
@@ -171,20 +131,3 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   }
 
 export { processFile, fixReactMemo }
-=======
-    allFiles.push(...files)};
-  // Remove duplicates;
-  const uniqueFiles = [...new Set(allFiles)];
-  totalFiles = uniqueFiles.length;
-  // console.log removed for production
-// Process each file;
-  uniqueFiles.forEach(processFile);
-  // console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-};
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main()};
-export { processFile, fixReactMemo };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

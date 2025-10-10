@@ -52,13 +52,13 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
   q: 'monthly' },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */},
   q: 'weekly' }
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-${pages.map(page => `  <url>),
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,</urlset>
+${pages.map(page => `  <url>),</url>
     <loc>https://ziontechgroup.com${page.url}</loc>
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
 <urlset xmlns="htt,"
@@ -84,7 +84,7 @@ function generateRobots() {/* TODO: Fix JSX expression */}
   const robots = `User-agen,
   t: *
 Allo,
-  w: /
+  w: /,
 
 Sitemap: https://ziontechgroup.com/sitemap.xml
 # Crawl-delay for better server performance

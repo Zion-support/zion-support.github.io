@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**;
  * Comprehensive validation utilities for forms and data;
  * Provides all validation functions expected by tests;
@@ -60,9 +59,9 @@ try {/* TODO: Fix JSX expression */}
 /**;
  * String length validation;
  */;
-export function validateLength(value: string;);
-  min: number)
-  max: number)
+export function validateLength(value: string;);,
+  min: number),
+  max: number),
   fieldName: string = 'Field',
 ): ValidationResult {
     if (value.length < min) {,;
@@ -86,7 +85,7 @@ export function validateLength(valu,;
   n: number,
   ma,;
   x: number,
-  fieldNam,;
+  fieldNam,;)
   e: string = 'Field'),
 ): ValidationResult {/* TODO: Fix JSX expression */}
   r: `${fieldName} must be at least ${min} characters long`;
@@ -165,7 +164,7 @@ if (Array.isArray(value) && value.length === 0) {}
     return { isValid: false, error: `${fieldName} is required` }
   }
 return { isValid: true }
-export function validateRequired(valu,;
+export function validateRequired(valu,;)
   e: unknown, fieldNam);
   e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */}`;
   r: `${fieldName} is required` }
@@ -233,7 +232,7 @@ export function validateCreditCard(cardNumbe);
 const cleaned = cardNumber.replace(/[\s-]/g, '');
   if (!/^\d+$/.test(cleaned)) {/* TODO: Fix JSX expression */}
   r: 'Credit card number must contain only digits' }
-  }
+  }</>
 }</>
   if (cleaned.length < 13 || cleaned.length > 19) {}
     return { isValid: false, error: 'Credit card number must be between 13 and 19 digits' }
@@ -308,7 +307,7 @@ export function sanitizeHTML(htm)
 /**;
  * Composite validation;
  */;
-export function validateComposite(value: unknown)
+export function validateComposite(value: unknown),
   validators: Array<(val: unknown) => ValidationResult>
 ): ValidationResult {
     for (const validator of validators) {
@@ -317,7 +316,7 @@ export function validateComposite(value: unknown)
       return result;
 export function validateComposite(valu,;
   e: unknown,
-  validator,;
+  validator,;)
   s: Array<(va),
   l: unknown) => ValidationResult>
   }
@@ -330,10 +329,10 @@ export function validateComposite(valu,;
 /**;
  * Async validation;
  */;
-export async function validateAsync(;
-  validator: (val: unknown) => Promise<ValidationResult>
-  value: unknown,
-): Promise<ValidationResult> {
+export async function validateAsync(;)
+  validator: (val: unknown) => Promise<ValidationResult>,</ValidationResult>
+  value: unknown,</ValidationResult>
+): Promise<ValidationResult>{
     ,;
   try {,;
     return await validator(value)
@@ -342,13 +341,13 @@ export async function validateAsync(;
     return {
       isValid: false,
       error: error instanceof Error ? error.message : 'Validation failed',
-export async function validateAsync(validato,;
-  r: (va),
+export async function validateAsync(validato,;)</ValidationResult>
+  r: (va),</ValidationResult>
   l: unknown) => Promise<ValidationResult>,
   valu,;
-  e: unknown,
-  }
-): Promise<ValidationResult> {/* TODO: Fix JSX expression */}
+  e: unknown,</ValidationResult>
+  }</ValidationResult>
+): Promise<ValidationResult>{/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
     }
   }
@@ -364,119 +363,5 @@ export {
   }
 } from './validators';
 export {/* TODO: Fix JSX expression */}
-} from './validators';"`;
-=======
-/**
- * Comprehensive validation utilities for forms and data
- * Provides all validation functions expected by tests
- */
-export interface ValidationResult {
-}
-}
-  isValid: boolean;
-  error?: string;
-  errors?: string[];
-};
-/**
- * Email validation with length check
- */
-export function validateEmail(email: string): ValidationResult {
-  if (!email || email.length > 254) {
-    return { isValid: false, error: 'Email is too long' };
-  };
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    return { isValid: false, error: 'Invalid email format' };
-  };
-  return { isValid: true };
-};
-/**
- * Phone number validation
- */
-export function validatePhone(phone: string): ValidationResult {
-  if (!phone) {
-    return { isValid: false, error: 'Phone number is required' };
-  };
-  const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-  if (!phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''))) {
-    return { isValid: false, error: 'Invalid phone number format' };
-  };
-  return { isValid: true };
-};
-/**
- * Name validation
- */
-export function validateName(name: string): ValidationResult {
-  if (!name || name.trim().length === 0) {
-    return { isValid: false, error: 'Name is required' };
-  };
-  if (name.length > 100) {
-    return { isValid: false, error: 'Name is too long' };
-  };
-  const nameRegex = /^[a-zA-Z\s\-'\.]+$/;
-  if (!nameRegex.test(name)) {
-    return { isValid: false, error: 'Name contains invalid characters' };
-  };
-  return { isValid: true };
-};
-/**
- * Message validation
- */
-export function validateMessage(message: string): ValidationResult {
-  if (!message || message.trim().length === 0) {
-    return { isValid: false, error: 'Message is required' };
-  };
-  if (message.length > 1000) {
-    return { isValid: false, error: 'Message is too long' };
-  };
-  return { isValid: true };
-};
-/**
- * URL validation
- */
-export function validateUrl(url: string): ValidationResult {
-  if (!url) {
-    return { isValid: false, error: 'URL is required' };
-  };
-  try {
-    new URL(url);
-    return { isValid: true };
-  } catch {
-    return { isValid: false, error: 'Invalid URL format' };
-  };
-};
-/**
- * Validate form data
- */
-export function validateFormData(data: Record<string, any>): ValidationResult {
-  const errors: string[] = [];
-  if (data.email) {
-    const emailResult = validateEmail(data.email);
-    if (!emailResult.isValid) {
-      errors.push(emailResult.error || 'Invalid email');
-    };
-  };
-  if (data.phone) {
-    const phoneResult = validatePhone(data.phone);
-    if (!phoneResult.isValid) {
-      errors.push(phoneResult.error || 'Invalid phone');
-    };
-  };
-  if (data.name) {
-    const nameResult = validateName(data.name);
-    if (!nameResult.isValid) {
-      errors.push(nameResult.error || 'Invalid name');
-    };
-  };
-  if (data.message) {
-    const messageResult = validateMessage(data.message);
-    if (!messageResult.isValid) {
-      errors.push(messageResult.error || 'Invalid message');
-    };
-  };
-  return {
-    isValid: errors.length === 0,
-    errors: errors.length > 0 ? errors : undefined
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+} from './validators';"`;</ValidationResult>
+</ValidationResult>

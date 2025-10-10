@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * Accessibility Enhancement Script;
@@ -14,34 +13,34 @@ const __dirname = path.dirname(__filename);
 
 console.log('♿ Starting accessibility enhancements...');
 
-// Create accessibility improvements for the main HTML file
+// Create accessibility improvements for the main HTML file;
 const indexPath = path.join(__dirname, '../dist/index.html');
 if (fs.existsSync(indexPath)) {
   let indexContent = fs.readFileSync(indexPath, 'utf8');
   
-  // Add accessibility improvements
+  // Add accessibility improvements;
   const accessibilityScript = `
     <script></scrip>
       // Accessibility enhancements
       (function() {
         'use strict';
         
-        // Skip to main content functionality
+        // Skip to main content functionality;
         function addSkipLink() {
           const skipLink = document.createElement('a');
           skipLink.href = '#main-content';
           skipLink.textContent = 'Skip to main content';
           skipLink.className = 'skip-link';
           skipLink.style.cssText = \`
-            position: absolute;
-            top: -40 px;
-            left: 6 px;
-            background: #000;
-            color: #fff;
+            position: absolute;,
+            top: -40 px;,
+            left: 6 px;,
+            background: #000;,
+            color: #fff;,
             padding: 8 px;
             text-decoration: none;
             z-index: 1000;
-            border-radius: 4 px;
+            border-radius: 4 px;,
             transition: top 0.3 s;
           \`;
           skipLink.addEventListener('focus', function() {
@@ -53,21 +52,21 @@ if (fs.existsSync(indexPath)) {
           document.body.insertBefore(skipLink, document.body.firstChild);
         }
         
-        // High contrast mode toggle
+        // High contrast mode toggle;
         function addHighContrastToggle() {
           const toggle = document.createElement('button');
           toggle.textContent = 'High Contrast';
           toggle.className = 'accessibility-toggle';
           toggle.style.cssText = \`
-            position: fixed;
-            top: 10 px;
+            position: fixed;,
+            top: 10 px;,
             right: 10 px;
-            z-index: 1000;
-            background: #000;
-            color: #fff;
-            border: 2 px solid #fff;
+            z-index: 1000;,
+            background: #000;,
+            color: #fff;,
+            border: 2 px solid #fff;,
             padding: 8 px 16 px;
-            border-radius: 4 px;
+            border-radius: 4 px;,
             cursor: pointer;
             font-size: 14 px;
           \`;
@@ -78,21 +77,21 @@ if (fs.existsSync(indexPath)) {
           document.body.appendChild(toggle);
         }
         
-        // Font size controls
+        // Font size controls;
         function addFontSizeControls() {
           const controls = document.createElement('div');
           controls.className = 'font-size-controls';
           controls.style.cssText = \`
-            position: fixed;
-            top: 50 px;
+            position: fixed;,
+            top: 50 px;,
             right: 10 px;
-            z-index: 1000;
-            background: #000;
-            color: #fff;
+            z-index: 1000;,
+            background: #000;,
+            color: #fff;,
             padding: 10 px;
-            border-radius: 4 px;
+            border-radius: 4 px;,
             display: flex;
-            flex-direction: column;
+            flex-direction: column;,
             gap: 5 px;
           \`;
           
@@ -122,7 +121,7 @@ if (fs.existsSync(indexPath)) {
           document.body.appendChild(controls);
         }
         
-        // Focus management for modals and dropdowns
+        // Focus management for modals and dropdowns;
         function enhanceFocusManagement() {
           // Trap focus in modals
           document.addEventListener('keydown', function(e) {
@@ -160,11 +159,11 @@ if (fs.existsSync(indexPath)) {
           });
         }
         
-        // Add ARIA labels to interactive elements
+        // Add ARIA labels to interactive elements;
         function addAriaLabels() {
-          // Add aria-labels to buttons without text
+          // Add aria-labels to buttons without text;
           const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-          iconButtons.forEach(button => {
+          iconButtons.forEach(button => {)
             const icon = button.querySelector('svg, i');
             if (icon) {
               const iconName = icon.getAttribute('class') || icon.tagName.toLowerCase();
@@ -172,44 +171,44 @@ if (fs.existsSync(indexPath)) {
             }
           });
           
-          // Add role="button" to clickable divs
+          // Add role="button" to clickable divs;
           const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer"]');
-          clickableDivs.forEach(div => {
+          clickableDivs.forEach(div => {)
             if (!div.getAttribute('role')) {
               div.setAttribute('role', 'button');
               div.setAttribute('tabindex', '0');
             }
           });
           
-          // Add aria-expanded to collapsible elements
+          // Add aria-expanded to collapsible elements;
           const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse"]');
-          collapsibles.forEach(element => {
+          collapsibles.forEach(element => {)
             if (!element.getAttribute('aria-expanded')) {
               element.setAttribute('aria-expanded', 'false');
             }
           });
         }
         
-        // Announce page changes to screen readers
+        // Announce page changes to screen readers;
         function addLiveRegion() {
           const liveRegion = document.createElement('div');
           liveRegion.setAttribute('aria-live', 'polite');
           liveRegion.setAttribute('aria-atomic', 'true');
           liveRegion.className = 'sr-only';
           liveRegion.style.cssText = \`
-            position: absolute;
-            width: 1 px;
-            height: 1 px;
-            padding: 0;
-            margin: -1 px;
-            overflow: hidden;
+            position: absolute;,
+            width: 1 px;,
+            height: 1 px;,
+            padding: 0;,
+            margin: -1 px;,
+            overflow: hidden;,
             clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
+            white-space: nowrap;,
             border: 0;
           \`;
           document.body.appendChild(liveRegion);
           
-          // Announce navigation changes
+          // Announce navigation changes;
           const originalPushState = history.pushState;
           history.pushState = function() {
             originalPushState.apply(history, arguments);
@@ -227,7 +226,7 @@ if (fs.existsSync(indexPath)) {
           addLiveRegion();
         });
         
-        // Add high contrast styles
+        // Add high contrast styles;
         const highContrastStyles = \`
           .high-contrast {
             filter: contrast(150%) brightness(120%);
@@ -255,19 +254,19 @@ if (fs.existsSync(indexPath)) {
   console.log('✅ Enhanced accessibility features');
 }
 
-// Create accessibility statement
+// Create accessibility statement;
 const accessibilityStatement = `# Accessibility Statement
 // 1. Generate accessibility report;
 function generateAccessibilityReport() {
   console.log('📊 Generating accessibility report...');
   
   const accessibilityReport = {
-    timestamp: new Date().toISOString()
-    version: "1.0.0"
-    summary: {
-      totalIssues: 0;
-      criticalIssues: 0;
-      warnings: 0;
+    timestamp: new Date().toISOString(),
+    version: "1.0.0",
+    summary: {,
+      totalIssues: 0;,
+      criticalIssues: 0;,
+      warnings: 0;,
       passed: 0;
     },
     checks: [
@@ -334,15 +333,9 @@ function generateAccessibilityChecklist() {
   console.log('✅ Generating accessibility checklist...');
   
   const checklist = {
-=======
-  // console.log removed for production
-;
-const checklist = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    title: "Zion Tech Group Accessibility Checklist"
-    version: "1.0.0"
-    lastUpdated: new Date().toISOString()
+    title: "Zion Tech Group Accessibility Checklist",
+    version: "1.0.0",
+    lastUpdated: new Date().toISOString(),
     categories: [,
       {,
         name: "Visual Design",
@@ -387,7 +380,7 @@ const checklist = {
           "Tested with keyboard-only navigation",
           "Tested with voice control software",
           "Tested with high contrast mode"
-        ]
+        ],
       }
     ]
   };
@@ -448,9 +441,9 @@ function generateAccessibilityTestingGuide() {
   console.log('🧪 Generating accessibility testing guide...');
   
   const testingGuide = {
-    title: "Accessibility Testing Guide"
-    version: "1.0.0"
-    lastUpdated: new Date().toISOString()
+    title: "Accessibility Testing Guide",
+    version: "1.0.0",
+    lastUpdated: new Date().toISOString(),
     tools: [,
       {,
         name: "axe-core",
@@ -467,7 +460,7 @@ function generateAccessibilityTestingGuide() {
       {
         name: "Screen Readers",
         description: "Test with actual screen readers",
-        usage: "NVDA (Windows), JAWS (Windows), VoiceOver (Mac)"
+        usage: "NVDA (Windows), JAWS (Windows), VoiceOver (Mac)",
       }
     ],
     manualTests: [,

@@ -12,10 +12,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [,
   { id: 'lever', name: 'Lever', category: 'ats', description: 'ATS & CRM' },
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
 import type { IntegrationProviderMeta } from './types';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   PROVIDERS: IntegrationProviderMeta[] = [
   {/* TODO: Fix JSX expression */};
@@ -84,7 +81,6 @@ export const,
 ];
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' };
 ];
-<<<<<<< HEAD
 
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 
@@ -94,40 +90,21 @@ export const,
 
   {/* TODO: Fix JSX expression */}
   n: 'HRIS & ATS' }
-=======
-  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' };
-  {/* TODO: Fix JSX expression */};
-  n: 'HRIS & ATS' };
-];
-  {/* TODO: Fix JSX expression */};
-  n: 'HRIS & ATS' };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
   {/* TODO: Fix JSX expression */};
   n: 'HRIS & ATS' };
 ];
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {,
     description: 'HRIS & ATS'}];
-<<<<<<< HEAD
 
 export function getProviderById(id: string,)): IntegrationProviderMeta | undefined {,
-=======
-export function getProviderById(id: string;)): IntegrationProviderMeta | undefined {,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return PROVIDERS.find(p => p.id === id);
 export function getProviderById(i)
   d: string): IntegrationProviderMeta | undefined {/* TODO: Fix JSX expression */};
   }];
-export function getProviderById(i,
-<<<<<<< HEAD
+export function getProviderById(i,)
   d: string,)
 ): IntegrationProviderMeta | undefined {/* TODO: Fix JSX expression */}
 }
 
 }
-=======
-  d: string;)
-): IntegrationProviderMeta | undefined {/* TODO: Fix JSX expression */};
-};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

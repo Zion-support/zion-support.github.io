@@ -15,13 +15,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       rati, n, g: 4.9,
       trendi, n, g: tr, u, e;
       featur, e, d: tr, u, e;
-<<<<<<< HEAD
       ic, o, n: <Brain, className="w-6 h-6/>,"
-=======
-      ic, o, n: <Brain , className="w-6 h-6/>
-);
-},"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0','
       bad, g, e: 'FEATUR, E, D','
       ta, g, s: ['AI', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']'
@@ -38,8 +32,8 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       auth, o, r: 'Pr, o, f. Michael, Rodrigue, z','
       vie, w, s: '9, 8, K','
       rati, n, g: 4.8,
-      trendi, n, g: tr, u, e;
-      featur, e, d: fal, s, e;
+      trendi, n, g: tr, u, e;</Brain>
+      featur, e, d: fal, s, e;</Brain>
       ic, o, n: <Zap, className="w-6 h-6/>,"
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0','
       bad, g, e: 'TRENDI, N, G','
@@ -57,8 +51,8 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       auth, o, r: 'Jennifer, Li, u','
       vie, w, s: '8, 7, K','
       rati, n, g: 4.9,
-      trendi, n, g: tr, u, e;
-      featur, e, d: tr, u, e;
+      trendi, n, g: tr, u, e;</Zap>
+      featur, e, d: tr, u, e;</Zap>
       ic, o, n: <Award, className="w-6 h-6/>,"
       gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0','
       bad, g, e: 'POPUL, A, R','
@@ -76,8 +70,8 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       auth, o, r: 'Dr. Alex, Thompso, n','
       vie, w, s: '7, 6, K','
       rati, n, g: 4.7,
-      trendi, n, g: fal, s, e;
-      featur, e, d: fal, s, e;
+      trendi, n, g: fal, s, e;</Award>
+      featur, e, d: fal, s, e;</Award>
       ic, o, n: <Sparkles, className="w-6 h-6/>,"
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0','
       bad, g, e: 'INNOVATI, O, N','
@@ -95,8 +89,8 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       auth, o, r: 'Dr. Maria, Santo, s','
       vie, w, s: '9, 2, K','
       rati, n, g: 4.8,
-      trendi, n, g: tr, u, e;
-      featur, e, d: fal, s, e;
+      trendi, n, g: tr, u, e;</Sparkles>
+      featur, e, d: fal, s, e;</Sparkles>
       ic, o, n: <TrendingUp, className="w-6 h-6/>,"
       gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0','
       bad, g, e: 'ANALYTI, C, S','
@@ -114,8 +108,8 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       auth, o, r: 'Pr, o, f. David, Ki, m','
       vie, w, s: '6, 8, K','
       rati, n, g: 4.9,
-      trendi, n, g: fal, s, e;
-      featur, e, d: tr, u, e;
+      trendi, n, g: fal, s, e;</TrendingUp>
+      featur, e, d: tr, u, e;</TrendingUp>
       ic, o, n: <Award, className="w-6 h-6/>,"
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-5, 0, 0','
       bad, g, e: 'ETHI, C, S','
@@ -130,17 +124,13 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       auth, o, r: 'Dr. Sarah, Che, n',';
       vie, w, s: '12, 5, K',';
       rati, n, g: 4.9,
-      trendi, n, g: tr, u, e;
-      featur, e, d: tr, u, e;
+      trendi, n, g: tr, u, e;</Award>
+      featur, e, d: tr, u, e;</Award>
       ic, o, n: <Brain, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0',';
       bad, g, e: 'FEATUR, E, D',';
-<<<<<<< HEAD
       ta, g, s: ['AI', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']'
   }
-=======
-      ta, g, s: ['AI', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     id: 2,
       tit, l, e: 'Quantum, Computing, Breakthrough;
@@ -153,17 +143,13 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       auth, o, r: 'Pr, o, f. Michael, Rodrigue, z',';
       vie, w, s: '9, 8, K',';
       rati, n, g: 4.8,
-      trendi, n, g: tr, u, e;
-      featur, e, d: fal, s, e;
+      trendi, n, g: tr, u, e;</Brain>
+      featur, e, d: fal, s, e;</Brain>
       ic, o, n: <Zap, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0',';
       bad, g, e: 'TRENDI, N, G',';
-<<<<<<< HEAD
       ta, g, s: ['Quant, u, m', 'Computi, n, g', 'AI', 'Breakthrou, g, h']'
   }
-=======
-      ta, g, s: ['Quant, u, m', 'Computi, n, g', 'AI', 'Breakthrou, g, h']'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     id: 3,
       tit, l, e: 'Enterprise, AI, Implementatio;
@@ -176,17 +162,13 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       auth, o, r: 'Jennifer, Li, u',';
       vie, w, s: '8, 7, K',';
       rati, n, g: 4.9,
-      trendi, n, g: tr, u, e;
-      featur, e, d: tr, u, e;
+      trendi, n, g: tr, u, e;</Zap>
+      featur, e, d: tr, u, e;</Zap>
       ic, o, n: <Award, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0',';
       bad, g, e: 'POPUL, A, R',';
-<<<<<<< HEAD
       ta, g, s: ['Enterpri, s, e', 'Implementati, o, n', 'AI', 'Succe, s, s']'
   }
-=======
-      ta, g, s: ['Enterpri, s, e', 'Implementati, o, n', 'AI', 'Succe, s, s']'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     id: 4,
       tit, l, e: 'Se, l, f-Evolving, AI, System;
@@ -199,17 +181,13 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       auth, o, r: 'Dr. Alex, Thompso, n',';
       vie, w, s: '7, 6, K',';
       rati, n, g: 4.7,
-      trendi, n, g: fal, s, e;
-      featur, e, d: fal, s, e;
+      trendi, n, g: fal, s, e;</Award>
+      featur, e, d: fal, s, e;</Award>
       ic, o, n: <Sparkles, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0',';
       bad, g, e: 'INNOVATI, O, N',';
-<<<<<<< HEAD
       ta, g, s: ['Se, l, f-Evolvi, n, g', 'AI', 'Innovati, o, n', 'Futu, r, e']'
   }
-=======
-      ta, g, s: ['Se, l, f-Evolvi, n, g', 'AI', 'Innovati, o, n', 'Futu, r, e']'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     id: 5,
       tit, l, e: 'Predictive, Analytics, Revolutio;
@@ -222,17 +200,13 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       auth, o, r: 'Dr. Maria, Santo, s',';
       vie, w, s: '9, 2, K',';
       rati, n, g: 4.8,
-      trendi, n, g: tr, u, e;
-      featur, e, d: fal, s, e;
+      trendi, n, g: tr, u, e;</Sparkles>
+      featur, e, d: fal, s, e;</Sparkles>
       ic, o, n: <TrendingUp, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0',';
       bad, g, e: 'ANALYTI, C, S',';
-<<<<<<< HEAD
       ta, g, s: ['Predicti, v, e', 'Analyti, c, s', 'Forecasti, n, g', 'AI']'
   }
-=======
-      ta, g, s: ['Predicti, v, e', 'Analyti, c, s', 'Forecasti, n, g', 'AI']'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       id: 6,
       tit, l, e: 'AI, Ethics, and Governa, n, c;
@@ -245,8 +219,8 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       auth, o, r: 'Pr, o, f. David, Ki, m',';
       vie, w, s: '6, 8, K',';
       rati, n, g: 4.9,
-      trendi, n, g: fal, s, e;
-      featur, e, d: tr, u, e;
+      trendi, n, g: fal, s, e;</TrendingUp>
+      featur, e, d: tr, u, e;</TrendingUp>
       ic, o, n: <Award, className="w-6 h-6" />,";
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-5, 0, 0',';
       bad, g, e: 'ETHI, C, S',';
@@ -271,39 +245,38 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expr
     };
     {/* TODO: Fix JSX expression */};
     };
-    {/* TODO: Fix JSX expression */};
+    {/* TODO: Fix JSX expression */};,
     };
-  ];
-  const, blogStat, s = [
-    { val, u, e: '5, 0, 0+', lab, e, l: 'Published, Article, s', ic, o, n: <Award, className="w-6 h-6" /> }"
-    { val, u, e: '2M+', lab, e, l: 'Monthly, Reader, s', ic, o, n: <Users, className="w-6 h-6" /> }"
-    { val, u, e: '4.8', lab, e, l: 'Average, Ratin, g', ic, o, n: <Star, className="w-6 h-6" /> }"
-    { val, u, e: '1, 5, 0+', lab, e, l: 'Expert, Author, s', ic, o, n: <Brain, className="w-6 h-6" /> }"
-    { val, u, e: '5, 0, 0+', lab, e, l: 'Published, Article, s', ic, o, n: <Award, className="w-6 h-6" /> },";"
-    { val, u, e: '2M+', lab, e, l: 'Monthly, Reader, s', ic, o, n: <Users, className="w-6 h-6" /> },";"
-    { val, u, e: '4.8', lab, e, l: 'Average, Ratin, g', ic, o, n: <Star, className="w-6 h-6" /> },";"
-    { val, u, e: '1, 5, 0+', lab, e, l: 'Expert, Author, s', ic, o, n: <Brain, className="w-6 h-6" /> }";
-  ];
-  return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">";
-      {/* Animated, background, effects */};
+  ];</Award>
+  const, blogStat, s = [</Award>
+    { val, u, e: '5, 0, 0+', lab, e, l: 'Published, Article, s', ic, o, n: <Award, className="w-6 h-6" />}"</Award>
+    { val, u, e: '2M+', lab, e, l: 'Monthly, Reader, s', ic, o, n: <Users, className="w-6 h-6" />}"</Users>
+    { val, u, e: '4.8', lab, e, l: 'Average, Ratin, g', ic, o, n: <Star, className="w-6 h-6" />}"</Star>
+    { val, u, e: '1, 5, 0+', lab, e, l: 'Expert, Author, s', ic, o, n: <Brain, className="w-6 h-6" />}"</Brain>
+    { val, u, e: '5, 0, 0+', lab, e, l: 'Published, Article, s', ic, o, n: <Award, className="w-6 h-6" />},";"</Award>
+    { val, u, e: '2M+', lab, e, l: 'Monthly, Reader, s', ic, o, n: <Users, className="w-6 h-6" />},";"</Users>
+    { val, u, e: '4.8', lab, e, l: 'Average, Ratin, g', ic, o, n: <Star, className="w-6 h-6" />},";"</Star>
+    { val, u, e: '1, 5, 0+', lab, e, l: 'Expert, Author, s', ic, o, n: <Brain, className="w-6 h-6" />}";</Brain>
+  ];</Brain>
+  return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">";</div>
+      {/* Animated, background, effects */};</div>
       <div , classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div , classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div , classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
         <div , classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
-          <h2, classNam, e="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">)
-            New, Blog, Content Showcase, 202, 6;)
-          <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">)
-            { blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (
+          <h2, classNam, e="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">)</h2>
+            New, Blog, Content Showcase, 202, 6;)</h2>
+          <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">)</div>
+            { blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (</div>
               <div , ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r">
-                <div , classNam, e="te, x, t-bl, u, e-400, m, b-2, flex, justify-cent, e, r">
-  return (
-    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">";
+                <div , classNam, e="te, x, t-bl, u, e-400, m, b-2, flex, justify-cent, e, r">return(</div>
+    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">";</div>
       {/* Animated, background, effects */}</div>
       <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
         <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} /></div>
-          <h2 , classNam, e="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">
+          <h2 , classNam, e="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">)</h2>
             New, Blog, Content Showcase, 202, 6</h2>
           <div , classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">
             { blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (</div>
@@ -332,17 +305,16 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expr
           <div, classNam, e="te, x, t-cent, e, r"></div>
             <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6"></div>
               <Star , classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />
-              <span , classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-                PREMIUM, CONTEN, T;
+              <span , classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">PREMIUM, CONTEN, T;</span>
                 PREMIUM, CONTEN, T</span>
             <p , classNam, e="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o">
               Subscribe, to, our newsletter, and, get early, access, to new, artic, l, e, s, exclusive, insight, s,</p>
                 <Link , classNam, e="w-5 h-5" />
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>
                 <a, hre, f="/bl, o, g"
-  return ("
-    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">";
-      {/* Animated, background, effects */}"
+  return("
+    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">";</a>
+      {/* Animated, background, effects */}"</a>
       <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
         <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>"
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>"
@@ -357,7 +329,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expr
           {/* TODO: Fix JSX expression */}"
             <div, ke, y = { po, s, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20"
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }};
-             > {/* Card, glow, effect */}`
+             >{/* Card, glow, effect */}`</div>
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${po, s, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>"
               <div, classNam, e = "relativ, e, p-8"></div>"
                   <div, classNam, e="flex, fle, x-col, ga, p-2"></div>
@@ -379,7 +351,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expr
               Subscribe, to, our newsletter, and, get early, access, to new, artic, l, e, s, exclusive, insight, s, "
                 <Link, classNam, e="w-5 h-5" /></Link>"
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>"
-                <a, hre, f="/bl, o, g""
+                <a, hre, f="/bl, o, g"")
                   classNa, m, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 ></a>"
                   <Sparkles, classNam, e="w-5 h-5" /></Sparkles>"

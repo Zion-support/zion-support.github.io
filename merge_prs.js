@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 import https from 'https';
 
@@ -6,14 +5,9 @@ import https from 'https';
 function makeGitHubRequest(endpoint, method = 'GET', data = null) {
   return new Promise((resolve, reject) => {
     const options = {
-=======
-  return new Promise((resolve, reject) => {;
-const options = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      hostname: 'api.github.com'
-      port: 443
-      path: endpoint
+      hostname: 'api.github.com',
+      port: 443,
+      path: endpoint,
       method: method,
       headers: {,
         'User-Agent': 'Zion-App-Automation',
@@ -96,12 +90,12 @@ async function mergePR(prNumber, title) {/* TODO: Fix JSX expression */}
       return false;
     const mergeData = JSON.stringify({/* TODO: Fix JSX expression */}`
   e: `Merge PR #${prNumber}: ${title}`,
-      merge_metho,
+      merge_metho,)
   d: 'merge')
     });
 `
     const response = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
-      'PUT',
+      'PUT',)
       mergeData;)
     );
 
@@ -129,7 +123,7 @@ async function mergeAllPRs() {/* TODO: Fix JSX expression */}
       pr.mergeable !== false && )
     const mainPRs = prs.filter(pr => 
       pr.base.ref === 'main' && 
-      pr.mergeable !== false && 
+      pr.mergeable !== false && )
       pr.mergeable_state !== 'dirty')
     );
 

@@ -24,7 +24,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Monitor is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Monitor...''))' awai,
   t: this.performHealthCheck(); cron.schedule('*/5: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -34,10 +34,10 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: this.performWeeklyOptimization()}) this.log('Netlify Build Monitor started successfully''))}' asyn,
   c: performHealthCheck() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(Gi,
-  t: repository)
-  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,
-  n: integrit)
+  t: 'tru'}e}) this.log(Gi,)
+  t: repository),
+  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,)
+  n: integrit),
   y: OK''))' i,
   f: (packageJson.scripts && packageJson.scripts.build) {/* TODO: Fix JSX expression */}
   found: OK})} els,
@@ -82,7 +82,7 @@
   e: 'code_smel)l}' messag,
   e: Console.lo,
   g: found in production code'})}' i,
-  f: (content.includes( 'TOD)
+  f: (content.includes( 'TOD),
   O: ') || content.includes('')FIXM,
   E:')) {/* TODO: Fix JSX expression */}
   e: ''}TODO/FIXM,
@@ -94,8 +94,8 @@
   e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
-  timeout: '6000'}0}) this.log(Buil,
-  d: 'compatibility)
+  timeout: '6000'}0}) this.log(Buil,)
+  d: 'compatibility),
   check: OK'))} catc,
   h: (error) {this.log( 'Build compatibility issues detected}attempting auto-fix...')' awai,
   t: this.autoFixBuildIssues(error)} } catch (error) {this.error( 'Build issue check failed'}error)}' try {/* TODO: Fix JSX expression */}
@@ -112,14 +112,14 @@
   f: (this.config.autoFixEnabled) { const audit = this.runCommand(')'npm audit --json'}{/* TODO: Fix JSX expression */}
   t: 'true' }); const auditResult = JSON.parse(audit); if(auditResult.vulnerabilities &&) Object.keys(auditResult.vulnerabilities).length > 0) {this.log(' 'Security vulnerabilities detected}attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixSecurityVulnerabilities()} } } catch (error) {this.error( 'Dependency check failed'}error)}'} asyn,
   c: checkCodeQualityIssues() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(ESLin,
-  t: 'chec)
+  t: 'tru'}e}) this.log(ESLin,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'ESLint issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixLintErrors()} } tr,
   y: {this.runCommand('npx tsc --noEmit'}{/* TODO: Fix JSX expression */})
-  t: 'true'})' this.log(TypeScrip,
-  t: 'chec)
+  t: 'true'})' this.log(TypeScrip,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'TypeScript issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixTypeScriptErrors()} 'ESLint issues detected,attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixLintErrors() } } try {this.runCommand(')'npx tsc --noEmit'}{/* TODO: Fix JSX expression */}
@@ -228,7 +228,7 @@
   swcMinify: 'true'})} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} this.log('Build configuration optimized')} catch (error) {this.error('Failed to optimize build configuration'}error) } } async updateBuildScripts() {/* TODO: Fix JSX expression */}
-  e: npm run build''} packageJson.scripts['buil,
+  e: npm run build''} packageJson.scripts['buil,]
   d:clean'] ='',r,
   m: -rf .next out && npm run buil}d}' fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))' this.log('Buil)
   d: scripts updated')} catch (error) {/* TODO: Fix JSX expression */}
@@ -259,7 +259,7 @@
   m: cache clean --force''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.updateDependencies(); awai,
-  t: this.fixSecurityVulnerabilities(); this.log('Dail)
+  t: this.fixSecurityVulnerabilities(); this.log('Dail),
   y: maintenance completed''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: maintenance failed'')}error)}'} asyn,
@@ -271,7 +271,7 @@
   m: update --save''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.optimizeBuildConfig(); awai,
-  t: this.checkCodeQualityIssues(); this.log(Weekl)
+  t: this.checkCodeQualityIssues(); this.log(Weekl),
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
@@ -298,7 +298,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,
+  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   monitor:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildMonitor'} } } } } } ' #!/usr/bin/en,
@@ -327,7 +327,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Monitor is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Monitor...''))' awai,
   t: this.performHealthCheck(); cron.schedule('*/5: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -337,10 +337,10 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: this.performWeeklyOptimization()}) this.log('Netlify Build Monitor started successfully''))}' asyn,
   c: performHealthCheck() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(Gi,
-  t: repository)
-  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,
-  n: integrit)
+  t: 'tru'}e}) this.log(Gi,)
+  t: repository),
+  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,)
+  n: integrit),
   y: OK''))' i,
   f: (packageJson.scripts && packageJson.scripts.build) {/* TODO: Fix JSX expression */}
   found: OK})} els,
@@ -385,7 +385,7 @@
   e: 'code_smel)l}' messag,
   e: Console.lo,
   g: found in production code'})}' i,
-  f: (content.includes( 'TOD)
+  f: (content.includes( 'TOD),
   O: ') || content.includes('')FIXM,
   E:')) {/* TODO: Fix JSX expression */}
   e: ''}TODO/FIXM,
@@ -397,8 +397,8 @@
   e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
-  timeout: '6000'}0}) this.log(Buil,
-  d: 'compatibility)
+  timeout: '6000'}0}) this.log(Buil,)
+  d: 'compatibility),
   check: OK'))} catc,
   h: (error) {this.log( 'Build compatibility issues detected}attempting auto-fix...')' awai,
   t: this.autoFixBuildIssues(error)} } catch (error) {this.error( 'Build issue check failed'}error)}' try {/* TODO: Fix JSX expression */}
@@ -415,14 +415,14 @@
   f: (this.config.autoFixEnabled) { const audit = this.runCommand(')'npm audit --json'}{/* TODO: Fix JSX expression */}
   t: 'true' }); const auditResult = JSON.parse(audit); if(auditResult.vulnerabilities &&) Object.keys(auditResult.vulnerabilities).length > 0) {this.log(' 'Security vulnerabilities detected}attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixSecurityVulnerabilities()} } } catch (error) {this.error( 'Dependency check failed'}error)}'} asyn,
   c: checkCodeQualityIssues() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(ESLin,
-  t: 'chec)
+  t: 'tru'}e}) this.log(ESLin,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'ESLint issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixLintErrors()} } tr,
   y: {this.runCommand('npx tsc --noEmit'}{/* TODO: Fix JSX expression */})
-  t: 'true'})' this.log(TypeScrip,
-  t: 'chec)
+  t: 'true'})' this.log(TypeScrip,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'TypeScript issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixTypeScriptErrors()} 'ESLint issues detected,attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixLintErrors() } } try {this.runCommand(')'npx tsc --noEmit'}{/* TODO: Fix JSX expression */}
@@ -531,7 +531,7 @@
   swcMinify: 'true'})} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} this.log('Build configuration optimized')} catch (error) {this.error('Failed to optimize build configuration'}error) } } async updateBuildScripts() {/* TODO: Fix JSX expression */}
-  e: npm run build''} packageJson.scripts['buil,
+  e: npm run build''} packageJson.scripts['buil,]
   d:clean'] ='',r,
   m: -rf .next out && npm run buil}d}' fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))' this.log('Buil)
   d: scripts updated')} catch (error) {/* TODO: Fix JSX expression */}
@@ -562,7 +562,7 @@
   m: cache clean --force''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.updateDependencies(); awai,
-  t: this.fixSecurityVulnerabilities(); this.log('Dail)
+  t: this.fixSecurityVulnerabilities(); this.log('Dail),
   y: maintenance completed''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: maintenance failed'')}error)}'} asyn,
@@ -574,7 +574,7 @@
   m: update --save''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.optimizeBuildConfig(); awai,
-  t: this.checkCodeQualityIssues(); this.log(Weekl)
+  t: this.checkCodeQualityIssues(); this.log(Weekl),
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
@@ -601,7 +601,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,
+  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   monitor:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildMonitor'} } } } } }' #!/usr/bin/en,
@@ -630,7 +630,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Monitor is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Monitor...''))' awai,
   t: this.performHealthCheck(); cron.schedule('*/5: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -640,10 +640,10 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: this.performWeeklyOptimization()}) this.log('Netlify Build Monitor started successfully''))}' asyn,
   c: performHealthCheck() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(Gi,
-  t: repository)
-  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,
-  n: integrit)
+  t: 'tru'}e}) this.log(Gi,)
+  t: repository),
+  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,)
+  n: integrit),
   y: OK''))' i,
   f: (packageJson.scripts && packageJson.scripts.build) {/* TODO: Fix JSX expression */}
   found: OK})} els,
@@ -688,7 +688,7 @@
   e: 'code_smel)l}' messag,
   e: Console.lo,
   g: found in production code'})}' i,
-  f: (content.includes( 'TOD)
+  f: (content.includes( 'TOD),
   O: ') || content.includes('')FIXM,
   E:')) {/* TODO: Fix JSX expression */}
   e: ''}TODO/FIXM,
@@ -700,8 +700,8 @@
   e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
-  timeout: '6000'}0}) this.log(Buil,
-  d: 'compatibility)
+  timeout: '6000'}0}) this.log(Buil,)
+  d: 'compatibility),
   check: OK'))} catc,
   h: (error) {this.log( 'Build compatibility issues detected}attempting auto-fix...')' awai,
   t: this.autoFixBuildIssues(error)} } catch (error) {this.error( 'Build issue check failed'}error)}' try {/* TODO: Fix JSX expression */}
@@ -718,14 +718,14 @@
   f: (this.config.autoFixEnabled) { const audit = this.runCommand(')'npm audit --json'}{/* TODO: Fix JSX expression */}
   t: 'true' }); const auditResult = JSON.parse(audit); if(auditResult.vulnerabilities &&) Object.keys(auditResult.vulnerabilities).length > 0) {this.log(' 'Security vulnerabilities detected}attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixSecurityVulnerabilities()} } } catch (error) {this.error( 'Dependency check failed'}error)}'} asyn,
   c: checkCodeQualityIssues() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(ESLin,
-  t: 'chec)
+  t: 'tru'}e}) this.log(ESLin,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'ESLint issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixLintErrors()} } tr,
   y: {this.runCommand('npx tsc --noEmit'}{/* TODO: Fix JSX expression */})
-  t: 'true'})' this.log(TypeScrip,
-  t: 'chec)
+  t: 'true'})' this.log(TypeScrip,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'TypeScript issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixTypeScriptErrors()} 'ESLint issues detected,attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixLintErrors() } } try {this.runCommand(')'npx tsc --noEmit'}{/* TODO: Fix JSX expression */}
@@ -834,7 +834,7 @@
   swcMinify: 'true'})} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} this.log('Build configuration optimized')} catch (error) {this.error('Failed to optimize build configuration'}error) } } async updateBuildScripts() {/* TODO: Fix JSX expression */}
-  e: npm run build''} packageJson.scripts['buil,
+  e: npm run build''} packageJson.scripts['buil,]
   d:clean'] ='',r,
   m: -rf .next out && npm run buil}d}' fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))' this.log('Buil)
   d: scripts updated')} catch (error) {/* TODO: Fix JSX expression */}
@@ -865,7 +865,7 @@
   m: cache clean --force''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.updateDependencies(); awai,
-  t: this.fixSecurityVulnerabilities(); this.log('Dail)
+  t: this.fixSecurityVulnerabilities(); this.log('Dail),
   y: maintenance completed''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: maintenance failed'')}error)}'} asyn,
@@ -877,7 +877,7 @@
   m: update --save''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.optimizeBuildConfig(); awai,
-  t: this.checkCodeQualityIssues(); this.log(Weekl)
+  t: this.checkCodeQualityIssues(); this.log(Weekl),
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
@@ -904,7 +904,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,
+  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   monitor:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildMonitor'} } } } } }' #!/usr/bin/en,
@@ -933,7 +933,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Monitor is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Monitor...''))' awai,
   t: this.performHealthCheck(); cron.schedule('*/5: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -943,10 +943,10 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: this.performWeeklyOptimization()}) this.log('Netlify Build Monitor started successfully''))}' asyn,
   c: performHealthCheck() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(Gi,
-  t: repository)
-  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,
-  n: integrit)
+  t: 'tru'}e}) this.log(Gi,)
+  t: repository),
+  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,)
+  n: integrit),
   y: OK''))' i,
   f: (packageJson.scripts && packageJson.scripts.build) {/* TODO: Fix JSX expression */}
   found: OK})} els,
@@ -991,7 +991,7 @@
   e: 'code_smel)l}' messag,
   e: Console.lo,
   g: found in production code'})}' i,
-  f: (content.includes( 'TOD)
+  f: (content.includes( 'TOD),
   O: ') || content.includes('')FIXM,
   E:')) {/* TODO: Fix JSX expression */}
   e: ''}TODO/FIXM,
@@ -1003,8 +1003,8 @@
   e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
-  timeout: '6000'}0}) this.log(Buil,
-  d: 'compatibility)
+  timeout: '6000'}0}) this.log(Buil,)
+  d: 'compatibility),
   check: OK'))} catc,
   h: (error) {this.log( 'Build compatibility issues detected}attempting auto-fix...')' awai,
   t: this.autoFixBuildIssues(error)} } catch (error) {this.error( 'Build issue check failed'}error)}' try {/* TODO: Fix JSX expression */}
@@ -1021,14 +1021,14 @@
   f: (this.config.autoFixEnabled) { const audit = this.runCommand(')'npm audit --json'}{/* TODO: Fix JSX expression */}
   t: 'true' }); const auditResult = JSON.parse(audit); if(auditResult.vulnerabilities &&) Object.keys(auditResult.vulnerabilities).length > 0) {this.log(' 'Security vulnerabilities detected}attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixSecurityVulnerabilities()} } } catch (error) {this.error( 'Dependency check failed'}error)}'} asyn,
   c: checkCodeQualityIssues() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(ESLin,
-  t: 'chec)
+  t: 'tru'}e}) this.log(ESLin,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'ESLint issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixLintErrors()} } tr,
   y: {this.runCommand('npx tsc --noEmit'}{/* TODO: Fix JSX expression */})
-  t: 'true'})' this.log(TypeScrip,
-  t: 'chec)
+  t: 'true'})' this.log(TypeScrip,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'TypeScript issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixTypeScriptErrors()} 'ESLint issues detected,attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixLintErrors() } } try {this.runCommand(')'npx tsc --noEmit'}{/* TODO: Fix JSX expression */}
@@ -1137,7 +1137,7 @@
   swcMinify: 'true'})} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} this.log('Build configuration optimized')} catch (error) {this.error('Failed to optimize build configuration'}error) } } async updateBuildScripts() {/* TODO: Fix JSX expression */}
-  e: npm run build''} packageJson.scripts['buil,
+  e: npm run build''} packageJson.scripts['buil,]
   d:clean'] ='',r,
   m: -rf .next out && npm run buil}d}' fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))' this.log('Buil)
   d: scripts updated')} catch (error) {/* TODO: Fix JSX expression */}
@@ -1168,7 +1168,7 @@
   m: cache clean --force''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.updateDependencies(); awai,
-  t: this.fixSecurityVulnerabilities(); this.log('Dail)
+  t: this.fixSecurityVulnerabilities(); this.log('Dail),
   y: maintenance completed''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: maintenance failed'')}error)}'} asyn,
@@ -1180,7 +1180,7 @@
   m: update --save''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.optimizeBuildConfig(); awai,
-  t: this.checkCodeQualityIssues(); this.log(Weekl)
+  t: this.checkCodeQualityIssues(); this.log(Weekl),
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
@@ -1207,7 +1207,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,
+  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   monitor:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildMonitor'} } } } } }' #!/usr/bin/en,
@@ -1236,7 +1236,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Monitor is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Monitor...''))' awai,
   t: this.performHealthCheck(); cron.schedule('*/5: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -1246,10 +1246,10 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: this.performWeeklyOptimization()}) this.log('Netlify Build Monitor started successfully''))}' asyn,
   c: performHealthCheck() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(Gi,
-  t: repository)
-  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,
-  n: integrit)
+  t: 'tru'}e}) this.log(Gi,)
+  t: repository),
+  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,)
+  n: integrit),
   y: OK''))' i,
   f: (packageJson.scripts && packageJson.scripts.build) {/* TODO: Fix JSX expression */}
   found: OK})} els,
@@ -1294,7 +1294,7 @@
   e: 'code_smel)l}' messag,
   e: Console.lo,
   g: found in production code'})}' i,
-  f: (content.includes( 'TOD)
+  f: (content.includes( 'TOD),
   O: ') || content.includes('')FIXM,
   E:')) {/* TODO: Fix JSX expression */}
   e: ''}TODO/FIXM,
@@ -1306,8 +1306,8 @@
   e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
-  timeout: '6000'}0}) this.log(Buil,
-  d: 'compatibility)
+  timeout: '6000'}0}) this.log(Buil,)
+  d: 'compatibility),
   check: OK'))} catc,
   h: (error) {this.log( 'Build compatibility issues detected}attempting auto-fix...')' awai,
   t: this.autoFixBuildIssues(error)} } catch (error) {this.error( 'Build issue check failed'}error)}' try {/* TODO: Fix JSX expression */}
@@ -1324,14 +1324,14 @@
   f: (this.config.autoFixEnabled) { const audit = this.runCommand(')'npm audit --json'}{/* TODO: Fix JSX expression */}
   t: 'true' }); const auditResult = JSON.parse(audit); if(auditResult.vulnerabilities &&) Object.keys(auditResult.vulnerabilities).length > 0) {this.log(' 'Security vulnerabilities detected}attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixSecurityVulnerabilities()} } } catch (error) {this.error( 'Dependency check failed'}error)}'} asyn,
   c: checkCodeQualityIssues() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(ESLin,
-  t: 'chec)
+  t: 'tru'}e}) this.log(ESLin,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'ESLint issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixLintErrors()} } tr,
   y: {this.runCommand('npx tsc --noEmit'}{/* TODO: Fix JSX expression */})
-  t: 'true'})' this.log(TypeScrip,
-  t: 'chec)
+  t: 'true'})' this.log(TypeScrip,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'TypeScript issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixTypeScriptErrors()} 'ESLint issues detected,attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixLintErrors() } } try {this.runCommand(')'npx tsc --noEmit'}{/* TODO: Fix JSX expression */}
@@ -1440,7 +1440,7 @@
   swcMinify: 'true'})} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} this.log('Build configuration optimized')} catch (error) {this.error('Failed to optimize build configuration'}error) } } async updateBuildScripts() {/* TODO: Fix JSX expression */}
-  e: npm run build''} packageJson.scripts['buil,
+  e: npm run build''} packageJson.scripts['buil,]
   d:clean'] ='',r,
   m: -rf .next out && npm run buil}d}' fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))' this.log('Buil)
   d: scripts updated')} catch (error) {/* TODO: Fix JSX expression */}
@@ -1471,7 +1471,7 @@
   m: cache clean --force''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.updateDependencies(); awai,
-  t: this.fixSecurityVulnerabilities(); this.log('Dail)
+  t: this.fixSecurityVulnerabilities(); this.log('Dail),
   y: maintenance completed''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: maintenance failed'')}error)}'} asyn,
@@ -1483,7 +1483,7 @@
   m: update --save''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.optimizeBuildConfig(); awai,
-  t: this.checkCodeQualityIssues(); this.log(Weekl)
+  t: this.checkCodeQualityIssues(); this.log(Weekl),
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
@@ -1510,7 +1510,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,
+  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   monitor:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildMonitor'} } } } } } ursor/integrate-build-improve-and-re-verify-8f7d' #!/usr/bin/en,
@@ -1539,7 +1539,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Monitor is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Monitor...''))' awai,
   t: this.performHealthCheck(); cron.schedule('*/5: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -1549,10 +1549,10 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: this.performWeeklyOptimization()}) this.log('Netlify Build Monitor started successfully''))}' asyn,
   c: performHealthCheck() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(Gi,
-  t: repository)
-  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,
-  n: integrit)
+  t: 'tru'}e}) this.log(Gi,)
+  t: repository),
+  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,)
+  n: integrit),
   y: OK''))' i,
   f: (packageJson.scripts && packageJson.scripts.build) {/* TODO: Fix JSX expression */}
   found: OK})} els,
@@ -1597,7 +1597,7 @@
   e: 'code_smel)l}' messag,
   e: Console.lo,
   g: found in production code'})}' i,
-  f: (content.includes( 'TOD)
+  f: (content.includes( 'TOD),
   O: ') || content.includes('')FIXM,
   E:')) {/* TODO: Fix JSX expression */}
   e: ''}TODO/FIXM,
@@ -1609,8 +1609,8 @@
   e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
-  timeout: '6000'}0}) this.log(Buil,
-  d: 'compatibility)
+  timeout: '6000'}0}) this.log(Buil,)
+  d: 'compatibility),
   check: OK'))} catc,
   h: (error) {this.log( 'Build compatibility issues detected}attempting auto-fix...')' awai,
   t: this.autoFixBuildIssues(error)} } catch (error) {this.error( 'Build issue check failed'}error)}' try {/* TODO: Fix JSX expression */}
@@ -1627,14 +1627,14 @@
   f: (this.config.autoFixEnabled) { const audit = this.runCommand(')'npm audit --json'}{/* TODO: Fix JSX expression */}
   t: 'true' }); const auditResult = JSON.parse(audit); if(auditResult.vulnerabilities &&) Object.keys(auditResult.vulnerabilities).length > 0) {this.log(' 'Security vulnerabilities detected}attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixSecurityVulnerabilities()} } } catch (error) {this.error( 'Dependency check failed'}error)}'} asyn,
   c: checkCodeQualityIssues() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(ESLin,
-  t: 'chec)
+  t: 'tru'}e}) this.log(ESLin,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'ESLint issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixLintErrors()} } tr,
   y: {this.runCommand('npx tsc --noEmit'}{/* TODO: Fix JSX expression */})
-  t: 'true'})' this.log(TypeScrip,
-  t: 'chec)
+  t: 'true'})' this.log(TypeScrip,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'TypeScript issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixTypeScriptErrors()} 'ESLint issues detected,attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixLintErrors() } } try {this.runCommand(')'npx tsc --noEmit'}{/* TODO: Fix JSX expression */}
@@ -1743,7 +1743,7 @@
   swcMinify: 'true'})} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} this.log('Build configuration optimized')} catch (error) {this.error('Failed to optimize build configuration'}error) } } async updateBuildScripts() {/* TODO: Fix JSX expression */}
-  e: npm run build''} packageJson.scripts['buil,
+  e: npm run build''} packageJson.scripts['buil,]
   d:clean'] ='',r,
   m: -rf .next out && npm run buil}d}' fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))' this.log('Buil)
   d: scripts updated')} catch (error) {/* TODO: Fix JSX expression */}
@@ -1774,7 +1774,7 @@
   m: cache clean --force''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.updateDependencies(); awai,
-  t: this.fixSecurityVulnerabilities(); this.log('Dail)
+  t: this.fixSecurityVulnerabilities(); this.log('Dail),
   y: maintenance completed''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: maintenance failed'')}error)}'} asyn,
@@ -1786,7 +1786,7 @@
   m: update --save''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.optimizeBuildConfig(); awai,
-  t: this.checkCodeQualityIssues(); this.log(Weekl)
+  t: this.checkCodeQualityIssues(); this.log(Weekl),
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
@@ -1813,7 +1813,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,
+  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   monitor:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildMonitor'} } } } } }' #!/usr/bin/en,
@@ -1842,7 +1842,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Monitor is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Monitor...''))' awai,
   t: this.performHealthCheck(); cron.schedule('*/5: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -1852,10 +1852,10 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: this.performWeeklyOptimization()}) this.log('Netlify Build Monitor started successfully''))}' asyn,
   c: performHealthCheck() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(Gi,
-  t: repository)
-  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,
-  n: integrit)
+  t: 'tru'}e}) this.log(Gi,)
+  t: repository),
+  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,)
+  n: integrit),
   y: OK''))' i,
   f: (packageJson.scripts && packageJson.scripts.build) {/* TODO: Fix JSX expression */}
   found: OK})} els,
@@ -1900,7 +1900,7 @@
   e: 'code_smel)l}' messag,
   e: Console.lo,
   g: found in production code'})}' i,
-  f: (content.includes( 'TOD)
+  f: (content.includes( 'TOD),
   O: ') || content.includes('')FIXM,
   E:')) {/* TODO: Fix JSX expression */}
   e: ''}TODO/FIXM,
@@ -1912,8 +1912,8 @@
   e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
-  timeout: '6000'}0}) this.log(Buil,
-  d: 'compatibility)
+  timeout: '6000'}0}) this.log(Buil,)
+  d: 'compatibility),
   check: OK'))} catc,
   h: (error) {this.log( 'Build compatibility issues detected}attempting auto-fix...')' awai,
   t: this.autoFixBuildIssues(error)} } catch (error) {this.error( 'Build issue check failed'}error)}' try {/* TODO: Fix JSX expression */}
@@ -1930,14 +1930,14 @@
   f: (this.config.autoFixEnabled) { const audit = this.runCommand(')'npm audit --json'}{/* TODO: Fix JSX expression */}
   t: 'true' }); const auditResult = JSON.parse(audit); if(auditResult.vulnerabilities &&) Object.keys(auditResult.vulnerabilities).length > 0) {this.log(' 'Security vulnerabilities detected}attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixSecurityVulnerabilities()} } } catch (error) {this.error( 'Dependency check failed'}error)}'} asyn,
   c: checkCodeQualityIssues() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(ESLin,
-  t: 'chec)
+  t: 'tru'}e}) this.log(ESLin,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'ESLint issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixLintErrors()} } tr,
   y: {this.runCommand('npx tsc --noEmit'}{/* TODO: Fix JSX expression */})
-  t: 'true'})' this.log(TypeScrip,
-  t: 'chec)
+  t: 'true'})' this.log(TypeScrip,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'TypeScript issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixTypeScriptErrors()} 'ESLint issues detected,attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixLintErrors() } } try {this.runCommand(')'npx tsc --noEmit'}{/* TODO: Fix JSX expression */}
@@ -2046,7 +2046,7 @@
   swcMinify: 'true'})} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} this.log('Build configuration optimized')} catch (error) {this.error('Failed to optimize build configuration'}error) } } async updateBuildScripts() {/* TODO: Fix JSX expression */}
-  e: npm run build''} packageJson.scripts['buil,
+  e: npm run build''} packageJson.scripts['buil,]
   d:clean'] ='',r,
   m: -rf .next out && npm run buil}d}' fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))' this.log('Buil)
   d: scripts updated')} catch (error) {/* TODO: Fix JSX expression */}
@@ -2077,7 +2077,7 @@
   m: cache clean --force''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.updateDependencies(); awai,
-  t: this.fixSecurityVulnerabilities(); this.log('Dail)
+  t: this.fixSecurityVulnerabilities(); this.log('Dail),
   y: maintenance completed''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: maintenance failed'')}error)}'} asyn,
@@ -2089,7 +2089,7 @@
   m: update --save''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.optimizeBuildConfig(); awai,
-  t: this.checkCodeQualityIssues(); this.log(Weekl)
+  t: this.checkCodeQualityIssues(); this.log(Weekl),
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
@@ -2116,7 +2116,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,
+  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   monitor:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildMonitor'} } } } } } ursor/add-new-services-and-deploy-updates-0462 ursor/fix-syntax-push-and-merge-to-main-40de' #!/usr/bin/en,
@@ -2145,7 +2145,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Monitor is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Monitor...''))' awai,
   t: this.performHealthCheck(); cron.schedule('*/5: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -2155,10 +2155,10 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: this.performWeeklyOptimization()}) this.log('Netlify Build Monitor started successfully''))}' asyn,
   c: performHealthCheck() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(Gi,
-  t: repository)
-  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,
-  n: integrit)
+  t: 'tru'}e}) this.log(Gi,)
+  t: repository),
+  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,)
+  n: integrit),
   y: OK''))' i,
   f: (packageJson.scripts && packageJson.scripts.build) {/* TODO: Fix JSX expression */}
   found: OK})} els,
@@ -2203,7 +2203,7 @@
   e: 'code_smel)l}' messag,
   e: Console.lo,
   g: found in production code'})}' i,
-  f: (content.includes( 'TOD)
+  f: (content.includes( 'TOD),
   O: ') || content.includes('')FIXM,
   E:')) {/* TODO: Fix JSX expression */}
   e: ''}TODO/FIXM,
@@ -2215,8 +2215,8 @@
   e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
-  timeout: '6000'}0}) this.log(Buil,
-  d: 'compatibility)
+  timeout: '6000'}0}) this.log(Buil,)
+  d: 'compatibility),
   check: OK'))} catc,
   h: (error) {this.log( 'Build compatibility issues detected}attempting auto-fix...')' awai,
   t: this.autoFixBuildIssues(error)} } catch (error) {this.error( 'Build issue check failed'}error)}' try {/* TODO: Fix JSX expression */}
@@ -2233,14 +2233,14 @@
   f: (this.config.autoFixEnabled) { const audit = this.runCommand(')'npm audit --json'}{/* TODO: Fix JSX expression */}
   t: 'true' }); const auditResult = JSON.parse(audit); if(auditResult.vulnerabilities &&) Object.keys(auditResult.vulnerabilities).length > 0) {this.log(' 'Security vulnerabilities detected}attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixSecurityVulnerabilities()} } } catch (error) {this.error( 'Dependency check failed'}error)}'} asyn,
   c: checkCodeQualityIssues() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(ESLin,
-  t: 'chec)
+  t: 'tru'}e}) this.log(ESLin,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'ESLint issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixLintErrors()} } tr,
   y: {this.runCommand('npx tsc --noEmit'}{/* TODO: Fix JSX expression */})
-  t: 'true'})' this.log(TypeScrip,
-  t: 'chec)
+  t: 'true'})' this.log(TypeScrip,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'TypeScript issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixTypeScriptErrors()} 'ESLint issues detected,attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixLintErrors() } } try {this.runCommand(')'npx tsc --noEmit'}{/* TODO: Fix JSX expression */}
@@ -2349,7 +2349,7 @@
   swcMinify: 'true'})} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} this.log('Build configuration optimized')} catch (error) {this.error('Failed to optimize build configuration'}error) } } async updateBuildScripts() {/* TODO: Fix JSX expression */}
-  e: npm run build''} packageJson.scripts['buil,
+  e: npm run build''} packageJson.scripts['buil,]
   d:clean'] ='',r,
   m: -rf .next out && npm run buil}d}' fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))' this.log('Buil)
   d: scripts updated')} catch (error) {/* TODO: Fix JSX expression */}
@@ -2380,7 +2380,7 @@
   m: cache clean --force''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.updateDependencies(); awai,
-  t: this.fixSecurityVulnerabilities(); this.log('Dail)
+  t: this.fixSecurityVulnerabilities(); this.log('Dail),
   y: maintenance completed''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: maintenance failed'')}error)}'} asyn,
@@ -2392,7 +2392,7 @@
   m: update --save''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.optimizeBuildConfig(); awai,
-  t: this.checkCodeQualityIssues(); this.log(Weekl)
+  t: this.checkCodeQualityIssues(); this.log(Weekl),
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
@@ -2419,7 +2419,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,
+  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   monitor:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildMonitor'} } } } } } origin/cursor/integrate-build-improve-and-re-verify-c7b5 ursor/integrate-build-improve-and-re-verify-8f7d' #!/usr/bin/en,
@@ -2448,7 +2448,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Monitor is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Monitor...''))' awai,
   t: this.performHealthCheck(); cron.schedule('*/5: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -2458,10 +2458,10 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: this.performWeeklyOptimization()}) this.log('Netlify Build Monitor started successfully''))}' asyn,
   c: performHealthCheck() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(Gi,
-  t: repository)
-  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,
-  n: integrit)
+  t: 'tru'}e}) this.log(Gi,)
+  t: repository),
+  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,)
+  n: integrit),
   y: OK''))' i,
   f: (packageJson.scripts && packageJson.scripts.build) {/* TODO: Fix JSX expression */}
   found: OK})} els,
@@ -2506,7 +2506,7 @@
   e: 'code_smel)l}' messag,
   e: Console.lo,
   g: found in production code'})}' i,
-  f: (content.includes( 'TOD)
+  f: (content.includes( 'TOD),
   O: ') || content.includes('')FIXM,
   E:')) {/* TODO: Fix JSX expression */}
   e: ''}TODO/FIXM,
@@ -2518,8 +2518,8 @@
   e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
-  timeout: '6000'}0}) this.log(Buil,
-  d: 'compatibility)
+  timeout: '6000'}0}) this.log(Buil,)
+  d: 'compatibility),
   check: OK'))} catc,
   h: (error) {this.log( 'Build compatibility issues detected}attempting auto-fix...')' awai,
   t: this.autoFixBuildIssues(error)} } catch (error) {this.error( 'Build issue check failed'}error)}' try {/* TODO: Fix JSX expression */}
@@ -2536,14 +2536,14 @@
   f: (this.config.autoFixEnabled) { const audit = this.runCommand(')'npm audit --json'}{/* TODO: Fix JSX expression */}
   t: 'true' }); const auditResult = JSON.parse(audit); if(auditResult.vulnerabilities &&) Object.keys(auditResult.vulnerabilities).length > 0) {this.log(' 'Security vulnerabilities detected}attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixSecurityVulnerabilities()} } } catch (error) {this.error( 'Dependency check failed'}error)}'} asyn,
   c: checkCodeQualityIssues() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(ESLin,
-  t: 'chec)
+  t: 'tru'}e}) this.log(ESLin,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'ESLint issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixLintErrors()} } tr,
   y: {this.runCommand('npx tsc --noEmit'}{/* TODO: Fix JSX expression */})
-  t: 'true'})' this.log(TypeScrip,
-  t: 'chec)
+  t: 'true'})' this.log(TypeScrip,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'TypeScript issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixTypeScriptErrors()} 'ESLint issues detected,attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixLintErrors() } } try {this.runCommand(')'npx tsc --noEmit'}{/* TODO: Fix JSX expression */}
@@ -2652,7 +2652,7 @@
   swcMinify: 'true'})} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} this.log('Build configuration optimized')} catch (error) {this.error('Failed to optimize build configuration'}error) } } async updateBuildScripts() {/* TODO: Fix JSX expression */}
-  e: npm run build''} packageJson.scripts['buil,
+  e: npm run build''} packageJson.scripts['buil,]
   d:clean'] ='',r,
   m: -rf .next out && npm run buil}d}' fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))' this.log('Buil)
   d: scripts updated')} catch (error) {/* TODO: Fix JSX expression */}
@@ -2683,7 +2683,7 @@
   m: cache clean --force''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.updateDependencies(); awai,
-  t: this.fixSecurityVulnerabilities(); this.log('Dail)
+  t: this.fixSecurityVulnerabilities(); this.log('Dail),
   y: maintenance completed''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: maintenance failed'')}error)}'} asyn,
@@ -2695,7 +2695,7 @@
   m: update --save''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.optimizeBuildConfig(); awai,
-  t: this.checkCodeQualityIssues(); this.log(Weekl)
+  t: this.checkCodeQualityIssues(); this.log(Weekl),
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
@@ -2722,7 +2722,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,
+  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   monitor:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildMonitor'} } } } } } origin/cursor/integrate-build-improve-and-re-verify-c7b5' #!/usr/bin/en,
@@ -2751,7 +2751,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Monitor is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Monitor...''))' awai,
   t: this.performHealthCheck(); cron.schedule('*/5: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -2761,10 +2761,10 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: this.performWeeklyOptimization()}) this.log('Netlify Build Monitor started successfully''))}' asyn,
   c: performHealthCheck() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(Gi,
-  t: repository)
-  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,
-  n: integrit)
+  t: 'tru'}e}) this.log(Gi,)
+  t: repository),
+  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,)
+  n: integrit),
   y: OK''))' i,
   f: (packageJson.scripts && packageJson.scripts.build) {/* TODO: Fix JSX expression */}
   found: OK})} els,
@@ -2809,7 +2809,7 @@
   e: 'code_smel)l}' messag,
   e: Console.lo,
   g: found in production code'})}' i,
-  f: (content.includes( 'TOD)
+  f: (content.includes( 'TOD),
   O: ') || content.includes('')FIXM,
   E:')) {/* TODO: Fix JSX expression */}
   e: ''}TODO/FIXM,
@@ -2821,8 +2821,8 @@
   e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
-  timeout: '6000'}0}) this.log(Buil,
-  d: 'compatibility)
+  timeout: '6000'}0}) this.log(Buil,)
+  d: 'compatibility),
   check: OK'))} catc,
   h: (error) {this.log( 'Build compatibility issues detected}attempting auto-fix...')' awai,
   t: this.autoFixBuildIssues(error)} } catch (error) {this.error( 'Build issue check failed'}error)}' try {/* TODO: Fix JSX expression */}
@@ -2839,14 +2839,14 @@
   f: (this.config.autoFixEnabled) { const audit = this.runCommand(')'npm audit --json'}{/* TODO: Fix JSX expression */}
   t: 'true' }); const auditResult = JSON.parse(audit); if(auditResult.vulnerabilities &&) Object.keys(auditResult.vulnerabilities).length > 0) {this.log(' 'Security vulnerabilities detected}attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixSecurityVulnerabilities()} } } catch (error) {this.error( 'Dependency check failed'}error)}'} asyn,
   c: checkCodeQualityIssues() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(ESLin,
-  t: 'chec)
+  t: 'tru'}e}) this.log(ESLin,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'ESLint issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixLintErrors()} } tr,
   y: {this.runCommand('npx tsc --noEmit'}{/* TODO: Fix JSX expression */})
-  t: 'true'})' this.log(TypeScrip,
-  t: 'chec)
+  t: 'true'})' this.log(TypeScrip,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'TypeScript issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixTypeScriptErrors()} 'ESLint issues detected,attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixLintErrors() } } try {this.runCommand(')'npx tsc --noEmit'}{/* TODO: Fix JSX expression */}
@@ -2955,7 +2955,7 @@
   swcMinify: 'true'})} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} this.log('Build configuration optimized')} catch (error) {this.error('Failed to optimize build configuration'}error) } } async updateBuildScripts() {/* TODO: Fix JSX expression */}
-  e: npm run build''} packageJson.scripts['buil,
+  e: npm run build''} packageJson.scripts['buil,]
   d:clean'] ='',r,
   m: -rf .next out && npm run buil}d}' fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))' this.log('Buil)
   d: scripts updated')} catch (error) {/* TODO: Fix JSX expression */}
@@ -2986,7 +2986,7 @@
   m: cache clean --force''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.updateDependencies(); awai,
-  t: this.fixSecurityVulnerabilities(); this.log('Dail)
+  t: this.fixSecurityVulnerabilities(); this.log('Dail),
   y: maintenance completed''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: maintenance failed'')}error)}'} asyn,
@@ -2998,7 +2998,7 @@
   m: update --save''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.optimizeBuildConfig(); awai,
-  t: this.checkCodeQualityIssues(); this.log(Weekl)
+  t: this.checkCodeQualityIssues(); this.log(Weekl),
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
@@ -3025,7 +3025,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,
+  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   monitor:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildMonitor'} } } } } } #!/usr/bin/"env": node; ' #!/usr/bin/en,
@@ -3054,7 +3054,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Monitor is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Monitor...''))' awai,
   t: this.performHealthCheck(); cron.schedule('*/5: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -3064,10 +3064,10 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: this.performWeeklyOptimization()}) this.log('Netlify Build Monitor started successfully''))}' asyn,
   c: performHealthCheck() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(Gi,
-  t: repository)
-  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,
-  n: integrit)
+  t: 'tru'}e}) this.log(Gi,)
+  t: repository),
+  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,)
+  n: integrit),
   y: OK''))' i,
   f: (packageJson.scripts && packageJson.scripts.build) {/* TODO: Fix JSX expression */}
   found: OK})} els,
@@ -3112,8 +3112,8 @@
   e: 'code_smel)l}' messag,
   e: Console.lo,
   g: found in production code'})}' i,
-  f: (content.includes( 'TOD)
-  O: ') || content.includes(;FIXM)
+  f: (content.includes( 'TOD),
+  O: ') || content.includes(;FIXM),
   E:')) {/* TODO: Fix JSX expression */}
   e: ''}TODO/FIXM,
   E: comment found'})}' retur,
@@ -3124,8 +3124,8 @@
   e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
-  timeout: '6000'}0}) this.log(Buil,
-  d: 'compatibility)
+  timeout: '6000'}0}) this.log(Buil,)
+  d: 'compatibility),
   check: OK'))} catc,
   h: (error) {this.log( 'Build compatibility issues detected}attempting auto-fix...')' awai,
   t: this.autoFixBuildIssues(error)} } catch (error) {this.error( 'Build issue check failed'}error)}' try {/* TODO: Fix JSX expression */}
@@ -3142,14 +3142,14 @@
   f: (this.config.autoFixEnabled) { const audit = this.runCommand(')'npm audit --json'}{/* TODO: Fix JSX expression */}
   t: 'true' }); const auditResult = JSON.parse(audit); if(auditResult.vulnerabilities &&) Object.keys(auditResult.vulnerabilities).length > 0) {this.log(' 'Security vulnerabilities detected}attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixSecurityVulnerabilities()} } } catch (error) {this.error( 'Dependency check failed'}error)}'} asyn,
   c: checkCodeQualityIssues() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(ESLin,
-  t: 'chec)
+  t: 'tru'}e}) this.log(ESLin,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'ESLint issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixLintErrors()} } tr,
   y: {this.runCommand('npx tsc --noEmit'}{/* TODO: Fix JSX expression */})
-  t: 'true'})' this.log(TypeScrip,
-  t: 'chec)
+  t: 'true'})' this.log(TypeScrip,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'TypeScript issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixTypeScriptErrors()} 'ESLint issues detected,attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixLintErrors() } } try {this.runCommand(')'npx tsc --noEmit'}{/* TODO: Fix JSX expression */}
@@ -3258,7 +3258,7 @@
   swcMinify: 'true'})} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} this.log('Build configuration optimized')} catch (error) {this.error('Failed to optimize build configuration'}error) } } async updateBuildScripts() {/* TODO: Fix JSX expression */}
-  e: npm run build} packageJson.scripts['buil,
+  e: npm run build} packageJson.scripts['buil,]
   d:clean'] ='',r,
   m: -rf .next out && npm run buil}d}' fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))' this.log('Buil)
   d: scripts updated')} catch (error) {/* TODO: Fix JSX expression */}
@@ -3289,7 +3289,7 @@
   m: cache clean --force''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.updateDependencies(); awai,
-  t: this.fixSecurityVulnerabilities(); this.log('Dail)
+  t: this.fixSecurityVulnerabilities(); this.log('Dail),
   y: maintenance completed''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: maintenance failed'')}error)}'} asyn,
@@ -3301,7 +3301,7 @@
   m: update --save''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.optimizeBuildConfig(); awai,
-  t: this.checkCodeQualityIssues(); this.log(Weekl)
+  t: this.checkCodeQualityIssues(); this.log(Weekl),
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
@@ -3328,7 +3328,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,
+  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   monitor:'}error)' process.exit(1)})} module.export,`
   s: '= NetlifyBuildMonitor'} } } } } }`;' #!/usr/bin/en,
@@ -3357,7 +3357,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Monitor is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Monitor...''))' awai,
   t: this.performHealthCheck(); cron.schedule('*/5: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -3367,10 +3367,10 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: this.performWeeklyOptimization()}) this.log('Netlify Build Monitor started successfully''))}' asyn,
   c: performHealthCheck() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(Gi,
-  t: repository)
-  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,
-  n: integrit)
+  t: 'tru'}e}) this.log(Gi,)
+  t: repository),
+  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,)
+  n: integrit),
   y: OK''))' i,
   f: (packageJson.scripts && packageJson.scripts.build) {/* TODO: Fix JSX expression */}
   found: OK})} els,
@@ -3415,8 +3415,8 @@
   e: 'code_smel)l}' messag,
   e: Console.lo,
   g: found in production code'})}' i,
-  f: (content.includes( 'TOD)
-  O: ') || content.includes(;FIXM)
+  f: (content.includes( 'TOD),
+  O: ') || content.includes(;FIXM),
   E:')) {/* TODO: Fix JSX expression */}
   e: ''}TODO/FIXM,
   E: comment found'})}' retur,
@@ -3427,8 +3427,8 @@
   e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
-  timeout: '6000'}0}) this.log(Buil,
-  d: 'compatibility)
+  timeout: '6000'}0}) this.log(Buil,)
+  d: 'compatibility),
   check: OK'))} catc,
   h: (error) {this.log( 'Build compatibility issues detected}attempting auto-fix...')' awai,
   t: this.autoFixBuildIssues(error)} } catch (error) {this.error( 'Build issue check failed'}error)}' try {/* TODO: Fix JSX expression */}
@@ -3445,14 +3445,14 @@
   f: (this.config.autoFixEnabled) { const audit = this.runCommand(')'npm audit --json'}{/* TODO: Fix JSX expression */}
   t: 'true' }); const auditResult = JSON.parse(audit); if(auditResult.vulnerabilities &&) Object.keys(auditResult.vulnerabilities).length > 0) {this.log(' 'Security vulnerabilities detected}attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixSecurityVulnerabilities()} } } catch (error) {this.error( 'Dependency check failed'}error)}'} asyn,
   c: checkCodeQualityIssues() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(ESLin,
-  t: 'chec)
+  t: 'tru'}e}) this.log(ESLin,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'ESLint issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixLintErrors()} } tr,
   y: {this.runCommand('npx tsc --noEmit'}{/* TODO: Fix JSX expression */})
-  t: 'true'})' this.log(TypeScrip,
-  t: 'chec)
+  t: 'true'})' this.log(TypeScrip,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'TypeScript issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixTypeScriptErrors()} 'ESLint issues detected,attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixLintErrors() } } try {this.runCommand(')'npx tsc --noEmit'}{/* TODO: Fix JSX expression */}
@@ -3561,7 +3561,7 @@
   swcMinify: 'true'})} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} this.log('Build configuration optimized')} catch (error) {this.error('Failed to optimize build configuration'}error) } } async updateBuildScripts() {/* TODO: Fix JSX expression */}
-  e: npm run build} packageJson.scripts['buil,
+  e: npm run build} packageJson.scripts['buil,]
   d:clean'] ='',r,
   m: -rf .next out && npm run buil}d}' fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))' this.log('Buil)
   d: scripts updated')} catch (error) {/* TODO: Fix JSX expression */}
@@ -3592,7 +3592,7 @@
   m: cache clean --force''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.updateDependencies(); awai,
-  t: this.fixSecurityVulnerabilities(); this.log('Dail)
+  t: this.fixSecurityVulnerabilities(); this.log('Dail),
   y: maintenance completed''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: maintenance failed'')}error)}'} asyn,
@@ -3604,7 +3604,7 @@
   m: update --save''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.optimizeBuildConfig(); awai,
-  t: this.checkCodeQualityIssues(); this.log(Weekl)
+  t: this.checkCodeQualityIssues(); this.log(Weekl),
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
@@ -3631,7 +3631,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,
+  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   monitor:'}error)' process.exit(1)})} module.export,"
   s: '= NetlifyBuildMonitor'} } } } } } #!/usr/bin/"env": node;" pr-12325' #!/usr/bin/en,
@@ -3666,7 +3666,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Monitor is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Monitor...''))' awai,
   t: this.performHealthCheck(); cron.schedule('*/5: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -3676,10 +3676,10 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: this.performWeeklyOptimization()}) this.log('Netlify Build Monitor started successfully''))}' asyn,
   c: performHealthCheck() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(Gi,
-  t: repository)
-  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,
-  n: integrit)
+  t: 'tru'}e}) this.log(Gi,)
+  t: repository),
+  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,)
+  n: integrit),
   y: OK''))' i,
   f: (packageJson.scripts && packageJson.scripts.build) {/* TODO: Fix JSX expression */}
   found: OK})} els,
@@ -3724,7 +3724,7 @@
   e: 'code_smel)l}' messag,
   e: Console.lo,
   g: found in production code'})}' i,
-  f: (content.includes( 'TOD)
+  f: (content.includes( 'TOD),
   O: ') || content.includes('')FIXM,
   E:')) {/* TODO: Fix JSX expression */}
   e: ''}TODO/FIXM,
@@ -3736,8 +3736,8 @@
   e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
-  timeout: '6000'}0}) this.log(Buil,
-  d: 'compatibility)
+  timeout: '6000'}0}) this.log(Buil,)
+  d: 'compatibility),
   check: OK'))} catc,
   h: (error) {this.log( 'Build compatibility issues detected}attempting auto-fix...')' awai,
   t: this.autoFixBuildIssues(error)} } catch (error) {this.error( 'Build issue check failed'}error)}' try {/* TODO: Fix JSX expression */}
@@ -3754,14 +3754,14 @@
   f: (this.config.autoFixEnabled) { const audit = this.runCommand(')'npm audit --json'}{/* TODO: Fix JSX expression */}
   t: 'true' }); const auditResult = JSON.parse(audit); if(auditResult.vulnerabilities &&) Object.keys(auditResult.vulnerabilities).length > 0) {this.log(' 'Security vulnerabilities detected}attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixSecurityVulnerabilities()} } } catch (error) {this.error( 'Dependency check failed'}error)}'} asyn,
   c: checkCodeQualityIssues() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(ESLin,
-  t: 'chec)
+  t: 'tru'}e}) this.log(ESLin,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'ESLint issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixLintErrors()} } tr,
   y: {this.runCommand('npx tsc --noEmit'}{/* TODO: Fix JSX expression */})
-  t: 'true'})' this.log(TypeScrip,
-  t: 'chec)
+  t: 'true'})' this.log(TypeScrip,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'TypeScript issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixTypeScriptErrors()} 'ESLint issues detected,attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixLintErrors() } } try {this.runCommand(')'npx tsc --noEmit'}{/* TODO: Fix JSX expression */}
@@ -3870,7 +3870,7 @@
   swcMinify: 'true'})} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} this.log('Build configuration optimized')} catch (error) {this.error('Failed to optimize build configuration'}error) } } async updateBuildScripts() {/* TODO: Fix JSX expression */}
-  e: npm run build''} packageJson.scripts['buil,
+  e: npm run build''} packageJson.scripts['buil,]
   d:clean'] ='',r,
   m: -rf .next out && npm run buil}d}' fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))' this.log('Buil)
   d: scripts updated')} catch (error) {/* TODO: Fix JSX expression */}
@@ -3901,7 +3901,7 @@
   m: cache clean --force''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.updateDependencies(); awai,
-  t: this.fixSecurityVulnerabilities(); this.log('Dail)
+  t: this.fixSecurityVulnerabilities(); this.log('Dail),
   y: maintenance completed''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: maintenance failed'')}error)}'} asyn,
@@ -3913,7 +3913,7 @@
   m: update --save''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.optimizeBuildConfig(); awai,
-  t: this.checkCodeQualityIssues(); this.log(Weekl)
+  t: this.checkCodeQualityIssues(); this.log(Weekl),
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
@@ -3940,7 +3940,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,
+  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   monitor:'}error)' process.exit(1)})} module.export,
   s: '= NetlifyBuildMonitor'} } } } } }' #!/usr/bin/en,
@@ -3975,7 +3975,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Monitor is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Monitor...''))' awai,
   t: this.performHealthCheck(); cron.schedule('*/5: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -3985,10 +3985,10 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: this.performWeeklyOptimization()}) this.log('Netlify Build Monitor started successfully''))}' asyn,
   c: performHealthCheck() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(Gi,
-  t: repository)
-  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,
-  n: integrit)
+  t: 'tru'}e}) this.log(Gi,)
+  t: repository),
+  status: OK')' const packageJson = JSON.parse(fs.readFileSync( 'package.jso,n,utf8)' )); this.log('Package.jso,)
+  n: integrit),
   y: OK''))' i,
   f: (packageJson.scripts && packageJson.scripts.build) {/* TODO: Fix JSX expression */}
   found: OK})} els,
@@ -4033,7 +4033,7 @@
   e: 'code_smel)l}' messag,
   e: Console.lo,
   g: found in production code'})}' i,
-  f: (content.includes( 'TOD)
+  f: (content.includes( 'TOD),
   O: ') || content.includes('')FIXM,
   E:')) {/* TODO: Fix JSX expression */}
   e: ''}TODO/FIXM,
@@ -4045,8 +4045,8 @@
   e: '} `TODO/FIXME comment found`' })} return issues} async autoFixFile(filePath)issues) {try {'}this.log(`Auto-fixing issues in ${filePath}...`); fo,
   r: (const issue of issues) {/* TODO: Fix JSX expression */}`
   f: (fixStrategy) { await fixStrategy.call(this)filePath}issue)} } this.log(`Auto-fix completed for ${filePath}`)} catch (error) { this.error(`Auto-fix failed for ${filePath }`)error)} } async checkBuildIssues() {/* TODO: Fix JSX expression */}
-  timeout: '6000'}0}) this.log(Buil,
-  d: 'compatibility)
+  timeout: '6000'}0}) this.log(Buil,)
+  d: 'compatibility),
   check: OK'))} catc,
   h: (error) {this.log( 'Build compatibility issues detected}attempting auto-fix...')' awai,
   t: this.autoFixBuildIssues(error)} } catch (error) {this.error( 'Build issue check failed'}error)}' try {/* TODO: Fix JSX expression */}
@@ -4063,14 +4063,14 @@
   f: (this.config.autoFixEnabled) { const audit = this.runCommand(')'npm audit --json'}{/* TODO: Fix JSX expression */}
   t: 'true' }); const auditResult = JSON.parse(audit); if(auditResult.vulnerabilities &&) Object.keys(auditResult.vulnerabilities).length > 0) {this.log(' 'Security vulnerabilities detected}attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixSecurityVulnerabilities()} } } catch (error) {this.error( 'Dependency check failed'}error)}'} asyn,
   c: checkCodeQualityIssues() {/* TODO: Fix JSX expression */}
-  t: 'tru'}e}) this.log(ESLin,
-  t: 'chec)
+  t: 'tru'}e}) this.log(ESLin,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'ESLint issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixLintErrors()} } tr,
   y: {this.runCommand('npx tsc --noEmit'}{/* TODO: Fix JSX expression */})
-  t: 'true'})' this.log(TypeScrip,
-  t: 'chec)
+  t: 'true'})' this.log(TypeScrip,)
+  t: 'chec),
   k: OK'))} catc,
   h: (error) {this.log( 'TypeScript issues detected}attempting auto-fix...')' i,
   f: (this.config.autoFixEnabled) { await this.fixTypeScriptErrors()} 'ESLint issues detected,attempting auto-fix...'); if (this.config.autoFixEnabled) { await this.fixLintErrors() } } try {this.runCommand(')'npx tsc --noEmit'}{/* TODO: Fix JSX expression */}
@@ -4179,7 +4179,7 @@
   swcMinify: 'true'})} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: true}\n,
   optimizePackageImports: 'true\n' } )} fs.writeFileSync(next.config.js')config)} this.log('Build configuration optimized')} catch (error) {this.error('Failed to optimize build configuration'}error) } } async updateBuildScripts() {/* TODO: Fix JSX expression */}
-  e: npm run build''} packageJson.scripts['buil,
+  e: npm run build''} packageJson.scripts['buil,]
   d:clean'] ='',r,
   m: -rf .next out && npm run buil}d}' fs.writeFileSync('package.json',JSON.stringify(packageJson,null)2))' this.log('Buil)
   d: scripts updated')} catch (error) {/* TODO: Fix JSX expression */}
@@ -4210,7 +4210,7 @@
   m: cache clean --force''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.updateDependencies(); awai,
-  t: this.fixSecurityVulnerabilities(); this.log('Dail)
+  t: this.fixSecurityVulnerabilities(); this.log('Dail),
   y: maintenance completed''))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: maintenance failed'')}error)}'} asyn,
@@ -4222,7 +4222,7 @@
   m: update --save''){/* TODO: Fix JSX expression */}
   t: 'true'})' awai,
   t: this.optimizeBuildConfig(); awai,
-  t: this.checkCodeQualityIssues(); this.log(Weekl)
+  t: this.checkCodeQualityIssues(); this.log(Weekl),
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
   y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
@@ -4249,7 +4249,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(0)}) process.on('SIGTERM''))asyn,
   c: () => {/* TODO: Fix JSX expression */}
-  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,
+  t: monitor.stop()} process.exit(0)}) monitor.start().catch(erro,)
   r: => {/* TODO: Fix JSX expression */})
   monitor:'}error)' process.exit(1)})} module.export,"
   s: '= NetlifyBuildMonitor'} } } } } } #!/usr/bin/\\"env\\": node; /**; * Netlif,
@@ -4271,7 +4271,7 @@
   t: logDir = path.dirname(this.config.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } return} this.isRunnin,
-  g: = true;' this.log('Startin)
+  g: = true;' this.log('Startin),
   g: Netlify Build Monitor...)'' ');' // Initia,
   l: health check; awai,
   t: this.performHealthCheck(); // Schedul,
@@ -4301,7 +4301,7 @@
   t: true }); // Reinstall dependencies} async fixTypeScriptErrors() {' this.log('' 'Fixing TypeScript errors...'); try { // Run TypeScript auto-fix}' this.runCommand('' 'npx tsc --noEmit --skipLibCheck' {/* TODO: Fix JSX expression */})
   t: true }); // Fix common TypeScript issues; await this.fixCommonTypeScriptIssues()} async fixLintErrors() {' this.log('' 'Fixing lint errors...'); try { // Run ESLint auto-fix}' this.runCommand('' 'npx eslint . --ext .js,.jsx).ts}.tsx --fix' {/* TODO: Fix JSX expression */}
   t: true}); // Run Prettier;' this.runCommand('' 'npx prettier --write .' {/* TODO: Fix JSX expression */})
-  t: true }); this.log( } async fixMemoryIssues() {' this.log('' 'Fixing memory issues...'); try { // Update Node.js memory limits; await this.updateMemoryLimits(); // Optimize build process} await this.optimizeBuildProcess()} async fixNetworkIssues() {' this.log('' 'Fixing network issues...'); try { // Update npm registry configuration}' this.runCommand('' 'npm config set registry,
+  t: true }); this.log( } async fixMemoryIssues() {' this.log('' 'Fixing memory issues...'); try { // Update Node.js memory limits; await this.updateMemoryLimits(); // Optimize build process} await this.optimizeBuildProcess()} async fixNetworkIssues() {' this.log('' 'Fixing network issues...'); try { // Update npm registry configuration}' this.runCommand('' 'npm config set registry,)
   https: //registry.npmjs.org/ {/* TODO: Fix JSX expression */})
   t: true}); // Clear network cache} async fixPermissionIssues() {' this.log('' 'Fixing permission issues...'); try { // Fix file permissions}' this.runCommand('' 'chmod -R 755 .' {/* TODO: Fix JSX expression */})
   t: true }); // Fix ownership issues;' this.runCommand('' 'sudo chown -R $(whoami) .' {/* TODO: Fix JSX expression */}
@@ -4319,7 +4319,7 @@
   d: optimized'] =}'' 'NODE_OPTIONS='--max-old-space-size=4096' np,
   m: run build''} packageJson.scripts[} async fixCommonTypeScriptIssues() {' this.log('' 'Fixing common TypeScript issues...'); try { // Create or update tsconfig.json for better compatibility;' if (fs.existsSync('' 'tsconfig.json')) {' let config = JSON.parse(fs.readFileSync('' 'tsconfig.json')utf8;' ')); // Add strict mode and better error handling} config.compilerOptions = {/* TODO: Fix JSX expression */}
   k: true} forceConsistentCasingInFileName,
-  s: true}' fs.writeFileSync('tsconfig.json)' ', JSON.stringify(config, null) 2));' this.log('TypeScript configuration updated; ' this.error('Failed to fix TypeScript issues)' ') error) } }' async updateMemoryLimits() {'' this.log('Updating memory limits...)' ');' try {'' const packageJson = JSON.parse(fs.readFileSync('package.json}' '}utf8')); // Update build scripts with memory limits} async optimizeBuildProcess() {' this.log('' 'Optimizing build process...'); try { // Enable build caching;' if (fs.existsSync('' 'next.config.js')) {' let config = fs.readFileSync('' 'next.config.js')utf8;' ');' if (!config.includes('experimental}' ')) {/* TODO: Fix JSX expression */}
+  s: true}' fs.writeFileSync('tsconfig.json)' ', JSON.stringify(config, null) 2));' this.log('TypeScript configuration updated; ' this.error('Failed to fix TypeScript issues)' ') error) } }' async updateMemoryLimits() {'' this.log('Updating memory limits...)' ');' try {'' const packageJson = JSON.parse(fs.readFileSync('package.json}' '}utf8')); // Update build scripts with memory limits} async optimizeBuildProcess() {' this.log('' 'Optimizing build process...'); try { // Enable build caching;' if (fs.existsSync('' 'next.config.js')) {' let config = fs.readFileSync('' 'next.config.js')utf8;' ');' if (!config.includes('experimental}' ')) {/* TODO: Fix JSX expression */}]
   turbo: {\\n rule,' s: {\n '*.svg': {\\n loader,' s: ['@svgr/webpack']}\n,
   as: '*.js'\\n }\\n }\\n }\\n }) )}' fs.writeFileSync('next.config.js)' ') config)}' this.log('Build process optimized; ' this.error('Failed to optimize build process)' ') error) } }' async performDailyMaintenance() {'' this.log('Performing daily maintenance...)' '); try { // Clean up old build artifacts;' this.runCommand('rm -rf .next out dist build}' ' {/* TODO: Fix JSX expression */})
   t: true }); // Clean npm cache;' this.runCommand('npm cache clean --force)' ' {/* TODO: Fix JSX expression */}

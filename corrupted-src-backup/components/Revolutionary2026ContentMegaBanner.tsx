@@ -16,12 +16,8 @@ const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {
       trendi, n, g: tr, u, e;
       ic, o, n: "🧠",
       impa, c, t: "1000x, Spee, d"
-<<<<<<< HEAD
       featur, e, d: tr, u, e
   }
-=======
-      featur, e, d: tr, u, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     id: 2,
       tit, l, e: "Autonomous, Enterprise, Operations 20, 2, 6"
@@ -35,12 +31,8 @@ const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {
       impa, c, t: "98% Automati, o, n"
       impa, c, t: "98% Automati, o, n"
       featu, r, e;
-<<<<<<< HEAD
   d: tr, u, e
   }
-=======
-  d: tr, u, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     id: 3,
       tit, l, e: "Quant, u, m-Neural, Network, Architecture"
@@ -52,12 +44,8 @@ const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {
       trendi, n, g: tr, u, e;
       ic, o, n: "⚛️",
       impa, c, t: "Quantum, Breakthroug, h"
-<<<<<<< HEAD
       featur, e, d: tr, u, e
   }
-=======
-      featur, e, d: tr, u, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     id: 4,
       tit, l, e: "Zero, Trust, AI Security, Framewor, k"
@@ -69,14 +57,9 @@ const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {
       trendi, n, g: tr, u, e;
       ic, o, n: "🛡️",
       impa, c, t: "99.99% Securi, t, y"
-<<<<<<< HEAD
       featur, e, d: fal, s, e
   }
 id: 3,
-=======
-      featur, e, d: fal, s, e};
-id: 3;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 tit, l, e: "Quant, u, m-Neural, Network, Architecture"
 descripti, o, n: "Ne, x, t-generation, computing, combining quantum, processing, with neural, networks, for unprecedented, performanc, e"
 sl, u, g: "quant, u, m-neur, a, l-netwo, r, k-architectu, r, e-20, 2, 6"
@@ -86,12 +69,8 @@ readTi, m, e: "52, mi, n"
 trendi, n, g: tr, u, e;
 ic, o, n: "⚛️",
 impa, c, t: "Quantum, Breakthroug, h"
-<<<<<<< HEAD
 featur, e, d: tr, u, e;
 }
-=======
-featur, e, d: tr, u, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     id: 4,
 tit, l, e: "Zero, Trust, AI Security, Framewor, k"
@@ -103,12 +82,8 @@ readTi, m, e: "41, mi, n"
 trendi, n, g: tr, u, e;
 ic, o, n: "🛡️",
 impa, c, t: "99.99% Securi, t, y"
-<<<<<<< HEAD
 featur, e, d: fal, s, e
   }
-=======
-featur, e, d: fal, s, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     id: 5,
       tit, l, e: "Edge, AI, Deployment at, Scal, e"
@@ -120,12 +95,8 @@ featur, e, d: fal, s, e};
       trendi, n, g: tr, u, e;
       ic, o, n: "📡",
       impa, c, t: "10,0, 0, 0+ Nod, e, s"
-<<<<<<< HEAD
       featur, e, d: fal, s, e
   }
-=======
-      featur, e, d: fal, s, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
     id: 6,
       tit, l, e: "Synthetic, Data, Generation Revoluti, o, n"
@@ -137,14 +108,9 @@ featur, e, d: fal, s, e};
       trendi, n, g: tr, u, e;
       ic, o, n: "🎭",
       impa, c, t: "95% Accura, c, y"
-<<<<<<< HEAD
       featur, e, d: fal, s, e
   }
 id: 6,
-=======
-      featur, e, d: fal, s, e};
-id: 6;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 tit, l, e: "Synthetic, Data, Generation Revoluti, o, n"
 descripti, o, n: "AI-generated, datasets, that outperform, real, data with, 9, 5% accuracy, and, infinite scalabili, t, y"
 sl, u, g: "synthet, i, c-da, t, a-generati, o, n-revoluti, o, n-20, 2, 6"
@@ -152,7 +118,6 @@ catego, r, y: "Data, Scienc, e"
 da, t, e: "20, 2, 6-01-15"
 readTi, m, e: "43, mi, n"
 trendi, n, g: tr, u, e;
-<<<<<<< HEAD
 ic, o, n: "🎭",
 const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
@@ -162,17 +127,6 @@ const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
     }
     {/* TODO: Fix JSX expression */}
     }
-=======
-ic, o, n: "🎭",;
-const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 i,
   d: 3,"
 tit, l, e: "Quant, u, m-Neural, Network, Architecture""
@@ -184,7 +138,6 @@ readTi, m, e: "52, mi, n"
 trendi, n, g: tr, u, e;"
 ic, o, n: "⚛️""
 impa, c, t: "Quantum, Breakthroug, h"
-<<<<<<< HEAD
 featur, e, d: tr, u, e;
 }
     {/* TODO: Fix JSX expression */}
@@ -193,15 +146,6 @@ featur, e, d: tr, u, e;
     }
     {/* TODO: Fix JSX expression */}
     }
-=======
-featur, e, d: tr, u, e};
-    {/* TODO: Fix JSX expression */};
-};
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 i,
   d: 6,"
 tit, l, e: "Synthetic, Data, Generation Revoluti, o, n""
@@ -213,17 +157,11 @@ readTi, m, e: "43, mi, n"
 trendi, n, g: tr, u, e;"
 ic, o, n: "🎭""
 impa, c, t: "95% Accura, c, y"
-<<<<<<< HEAD
 featur, e, d: fal, s, e;
 }
-=======
-featur, e, d: fal, s, e};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
-  return(<div , className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
-      {/* Animated, background, effects */};
-      <div , className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
-  return (
+  return(<div , className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">{/* Animated, background, effects */};</div>
+      <div , className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">return (</div>
     <div , className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
@@ -266,7 +204,7 @@ featur, e, d: fal, s, e};
             Revolutionary, 2026, Content;
           </h2>"
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>
-            Experience, the, future of, AI, with breakthrough, technologies, that are, reshaping, enterprise operatio, n, s. 
+            Experience, the, future of, AI, with breakthrough, technologies, that are, reshaping, enterprise operatio, n, s. )
             Me, t, a-cognitive, A, I, quant, u, m-neural, convergenc, e, and, autonomous, systems achieving, unprecedented, performance.
           </p>
           <div, className="flex, item, s-center, justif, y-center, ga, p-8, tex, t-cent, e, r"></div>
@@ -298,8 +236,8 @@ featur, e, d: fal, s, e};
         </d, i, v>
         {/* Featured, Content, Grid */})
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;)
-  g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">)
-          {revolutionaryConte, n, t.m, a, p((conte, n, t) => (
+  g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">)</div>
+          {revolutionaryConte, n, t.m, a, p((conte, n, t) => (</div>
             <d , i, v;
         {/* Featured, Content, Grid */};
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
@@ -329,8 +267,7 @@ featur, e, d: fal, s, e};
   r:bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l">
                 {/* Ic, o, n & Badg, e, s */}</div>
                 <div, className="flex, item, s-start, justif, y-between, m, b-6"></div>
-                  <div , className="te, x, t-6xl, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">
-                    {conte, n, t.ic, o, n};
+                  <div , className="te, x, t-6xl, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">{conte, n, t.ic, o, n};</div>
                   </d, i, v>
                   <div , className="flex, fle, x-col, ga, p-2">
                     {conte, n, t.trendi, n, g && (</div>
@@ -339,10 +276,9 @@ featur, e, d: fal, s, e};
                         <sp, a, n>TRENDI, N, G</sp, a, n>
                       </d, i, v>
                     )};
-                    <span , className="px-3, p, y-1.5, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30">
-              {/* TODO: Fix JSX expression */})
-              )};
-              {/* Card, glow, effect */}"
+                    <span , className="px-3, p, y-1.5, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30">{/* TODO: Fix JSX expression */})
+              )};</span>
+              {/* Card, glow, effect */}"</span>
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>"
               <div, className="relative, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hov, e,"
   r:bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l"></div>
@@ -361,8 +297,7 @@ featur, e, d: fal, s, e};
                 </d, i, v>
                 {/* Catego, r, y & Impa, c, t */};
                 <div, className="mb-4"></div>
-                  <span , className="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-400, tex, t-xs, fon, t-semibold, border, border-cy, a, n-5, 0, 0/30">
-                {/* Catego, r, y & Impa, c, t */}"
+                  <span , className="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-400, tex, t-xs, fon, t-semibold, border, border-cy, a, n-5, 0, 0/30">{/* Catego, r, y & Impa, c, t */}"</span>
                 <div, className="mb-4"></div>"
                   <span, className="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-400, tex, t-xs, fon, t-semibold, border, border-cy, a, n-5, 0, 0/30"></span>
                     {conte, n, t.catego, r, y};
@@ -378,15 +313,13 @@ featur, e, d: fal, s, e};
                 </p>
                 {/* Impact, Badg, e */};
                 <div, className="mb-6"></div>
-                  <div , className="inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-sm, fon, t-bold, border, border-purp, l, e-5, 0, 0/30">
-                    🚀 {conte, n, t.impa, c, t};
+                  <div , className="inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-sm, fon, t-bold, border, border-purp, l, e-5, 0, 0/30">🚀 {conte, n, t.impa, c, t};</div>
                   </d, i, v>
                 </d, i, v>
                 {/* Meta, Inf, o */};
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10"></div>
                   <span, className="flex, item, s-center, ga, p-2"></span>
-                    <Zap , className="w-4 h-4, tex, t-purp, l, e-4, 0, 0"  />
-                {/* Impact, Badg, e */}"
+                    <Zap , className="w-4 h-4, tex, t-purp, l, e-4, 0, 0"  />{/* Impact, Badg, e */}"</Zap>
                 <div, className="mb-6"></div>"
                   <div, className="inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-sm, fon, t-bold, border, border-purp, l, e-5, 0, 0/30"></div>
                     🚀 {conte, n, t.impa, c, t};
@@ -424,8 +357,7 @@ featur, e, d: fal, s, e};
         {/* Revolutionary, Stat, s */};
         <div, className="grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, m, b-16"></div>
           <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div>
-            <div , className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
-        {/* Revolutionary, Stat, s */}"
+            <div , className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">{/* Revolutionary, Stat, s */}"</div>
         <div, className="grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, m, b-16"></div>"
           <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div>"
             <div, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div>
@@ -465,8 +397,7 @@ featur, e, d: fal, s, e};
         <div, className="te, x, t-cent, e, r"></div>
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-bl, u, e-500, t, o-cy, a, n-5, 0, 0"></div>
             <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10"></div>
-              <h3 , className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">
-        {/* Ca, l, l-to-Action, Sectio, n */}"
+              <h3 , className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">{/* Ca, l, l-to-Action, Sectio, n */}"</h3>
         <div, className="te, x, t-cent, e, r"></div>"
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-bl, u, e-500, t, o-cy, a, n-5, 0, 0"></div>"
             <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10"></div>"
@@ -480,7 +411,7 @@ featur, e, d: fal, s, e};
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/conta, c, t"
-              </p>"
+              </p>"</a>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>"
                 <a, titl, e="Internal, lin, k""
                   hr, e, f="/conta, c, t""
@@ -492,7 +423,7 @@ featur, e, d: fal, s, e};
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/bl, o, g"
                   classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hov, e;
-                </a>"
+                </a>"</a>
                 <a, titl, e="Internal, lin, k""
                   hr, e, f="/bl, o, g""
                   classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hov, e,"

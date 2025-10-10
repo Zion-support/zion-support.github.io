@@ -1,11 +1,10 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 export default function October2025NewContentAdvertisingBann, e, r() { 
-  return(<section, classNam, e = "relative, p, y-20, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Background, Elements */ })
-      <div, className="absolute, inse, t-0">)
+  return(<section, classNam, e = "relative, p, y-20, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  >{/* Animated, Background, Elements */ })</section>
+      <div, className="absolute, inse, t-0">)</div>
         <div , className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-[u, r, l('da, t, a: image/s, v, g+x, m, l; ba, s, e, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4=')] opaci, t, y-40" <div, classNam, e = "absolute, to, p-1/4, righ, t-1/4 w-9, 6, h-96, b, g-yell, o, w-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" <div, className="absolute, botto, m-1/4, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"</div>
-      <div , className="container, m, x-auto, p, x-4, relative, z-10">
-  return (
-    <section, classNam, e = "relative, p, y-20, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Background, Elements */ };
+      <div , className="container, m, x-auto, p, x-4, relative, z-10">return (</div>
+    <section, classNam, e = "relative, p, y-20, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  >{/* Animated, Background, Elements */ };</section>
       <div, className="absolute, inse, t-0"></section>
         <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-[u, r, l('da, t, a: image/s, v, g+x, m, l; ba, s, e, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4=')] opaci, t, y-40" <div, classNam, e = "absolute, to, p-1/4, righ, t-1/4 w-9, 6, h-96, b, g-yell, o, w-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" <div, className="absolute, botto, m-1/4, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"</div></div>
       <div, className="container, m, x-auto, p, x-4, relative, z-10"></div>
@@ -14,9 +13,8 @@ export default function October2025NewContentAdvertisingBann, e, r() {
           <div, className="mb-8, animat, e-boun, c, e"></div>
             <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-yell, o, w-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, borde, r-2, borde, r-yell, o, w-5, 0, 0/50, shado, w-lg, shado, w-yell, o, w-5, 0, 0/30"></div>
               <Zap , className="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e" />
-              <span , className="te, x, t-yell, o, w-300, fon, t-black, tex, t-lg, uppercase, tracking-wid, e, r">
-export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: Fix JSX expression */}"
-    <section, classNam, e = "relative, p, y-20, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Background, Elements */ }"
+              <span , className="te, x, t-yell, o, w-300, fon, t-black, tex, t-lg, uppercase, tracking-wid, e, r">export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: Fix JSX expression */}"</span>
+    <section, classNam, e = "relative, p, y-20, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  >{/* Animated, Background, Elements */ }"</section>
       <div, className="absolute, inse, t-0"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-[u, r, l('da, t, a: image/s, v, g+x, m, l; ba, s, e, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4=')] opaci, t, y-40" <div, classNam, e = "absolute, to, p-1/4, righ, t-1/4 w-9, 6, h-96, b, g-yell, o, w-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" <div, className="absolute, botto, m-1/4, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"</div></div>"
       <div, className="container, m, x-auto, p, x-4, relative, z-10"></div>"
@@ -33,8 +31,7 @@ export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: F
           </div>
           {/* Main, Headlin, e */};
           <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-black, m, b-6, leadin, g-tig, h, t"></h2>
-            <span , className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t">
-          {/* Main, Headlin, e */}"
+            <span , className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t">{/* Main, Headlin, e */}"</span>
           <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-black, m, b-6, leadin, g-tig, h, t"></h2>"
             <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t"></span>
               3, Revolutionary, AI Breakthroug, h, s;
@@ -107,8 +104,7 @@ export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: F
           </div>
           {/* Urgen, t, C, T, A */};
           <div, classNam, e = "flex, fle, x-col, item, s-center, ga, p-6"></div>
-            <p , className="te, x, t-2xl, tex, t-yell, o, w-300, fon, t-bold, animat, e-pul, s, e">
-              ⚡ Limited, Tim, e: Free, Enterprise, Assessment ⚡
+            <p , className="te, x, t-2xl, tex, t-yell, o, w-300, fon, t-bold, animat, e-pul, s, e">⚡ Limited, Tim, e: Free, Enterprise, Assessment ⚡</p>
             </p>
             <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4"></div>
               <Link, t, o="/conta, c, t"
@@ -140,10 +136,6 @@ export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: F
         </div>
       </div>
     </sec, t, i, o, n>
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 "

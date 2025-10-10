@@ -1,63 +1,43 @@
-<<<<<<< HEAD
-export interface InnovativeITService2024 {id: string;
-=======
-import React from 'react';
-export interface InnovativeITService2024 {
-id: string;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  rating: number;
-  customers: number;
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-<<<<<<< HEAD
-  contactInfo: unknown
-    mobile: string
+export interface InnovativeITService2024 {id: string;,
+  name: string;,
+  tagline: string;,
+  price: string;,
+  period: string;,
+  description: string;,
+  features: string[];,
+  rating: number;,
+  customers: number;,
+  popular: boolean;,
+  icon: string;,
+  color: string;,
+  textColor: string;,
+  link: string;,
+  marketPosition: string;,
+  targetAudience: string;,
+  trialDays: number;,
+  setupTime: string;,
+  category: string;,
+  realService: boolean;,
+  technology: string[];,
+  integrations: string[];,
+  useCases: string[];,
+  roi: string;,
+  competitors: string[];,
+  marketSize: string;,
+  growthRate: string;,
+  variant: string;,
+  contactInfo: unknown,
+    mobile: string,
     email: string,
     address: string}
     website: string}
 }
-  realImplementation: boolean;
-  implementationDetails: string
-  launchDate: string
+  realImplementation: boolean;,
+  implementationDetails: string,
+  launchDate: string,
   reviews: number,
 }
-=======
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-    address: string};
-    website: string};
-};
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const innovativeITServices2024: InnovativeITService2024[] = [
+export const innovativeITServices2024: InnovativeITService2024[] = [,
     id: "autonomous-devops-platform",
     name: "Autonomous DevOps Platform",
     tagline: "Self-healing infrastructure with zero downtime",
@@ -77,7 +57,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       "White-label solution for MSPs"
     ],
     popular: true,
-    icon: ""
+    icon: "",
     color: "from-blue-500 to-cyan-600",
     textColor: "text-blue-400",
     link: "https://ziontechgroup.com/autonomous-devops",
@@ -92,38 +72,25 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     useCases: ["Continuous integration and deployment", "Infrastructure monitoring", "Performance optimization", "Security automation", "Disaster recovery"],
     roi: "Average customer reduces DevOps overhead by 60% and improves deployment frequency by 300% within 4 months.",
     competitors: ["GitLab", "Jenkins", "CircleCI", "GitHub Actions", "Azure DevOps"],
-    marketSize: "$8.2B market"
-    growthRate: "20.1% annual growth"
-    variant: "ai-futuristic"
+    marketSize: "$8.2B market",
+    growthRate: "20.1% annual growth",
+    variant: "ai-futuristic",
     contactInfo: unknown,
-      mobile: "+1 302 464 0950"
+      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup.com"},
     realImplementation: true,
     implementationDetails: "Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.",
-<<<<<<< HEAD
-    launchDate: "2024-01-15"
-    customers: 950
-    rating: 4.8
+    launchDate: "2024-01-15",
+    customers: 950,
+    rating: 4.8,
     reviews: 520,
 export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
 }
-=======
-    launchDate: '2024-01-15',
-    customers:
-        customers: 950;
-    rating: 4.8;
-    reviews: 520;
-export interface InnovativeITService2024 {/* TODO: Fix JSX expression */};
-  s: string};
-    websit,
-  e: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -209,7 +176,7 @@ export const,
   s: "364 E Main St STE 1008 Middletown DE 19709",
       websit,"
   e: "http,"
-  s://ziontechgroup.com"
+  s: //ziontechgroup.com"
     },
     realImplementatio,
   n: true,
@@ -302,8 +269,4 @@ export interface InnovativeITService2024,
   e: "2024-01-15", customer,
   s: 950, ratin,
   g: 4.8, review,
-<<<<<<< HEAD
   s: 520 } ];"
-=======
-  s: 520 } ];"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

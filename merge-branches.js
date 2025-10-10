@@ -1,6 +1,6 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import { execSync } from 'child_process';
-// Function to merge a branch into main
+// Function to merge a branch into main;
 function mergeBranch(branchName) {
   try {
     console.log(`Merging ${branchName} into main...`);
@@ -16,7 +16,7 @@ function mergeBranch(branchName) {
 // Main function
 async function main() {
   console.log('Starting branch merge process...');
-  // List of branches to merge
+  // List of branches to merge;
   const branches = [
 ];
     'cursor/enhance-app-with-new-services-and-futuristic-design-068b',

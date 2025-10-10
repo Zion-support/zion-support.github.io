@@ -1,16 +1,10 @@
 const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {
-<<<<<<< HEAD
-  return(<article, className="prose, pros, e-invert, ma, x-w-3xl, m, x-auto, p, y-10">)
-=======
-return (
-  return(<article, className="prose, pros, e-invert, ma, x-w-3xl, m, x-auto, p, y-10">);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {
-  return(<article, className="prose, pros, e-invert, ma, x-w-3xl, m, x-auto, p, y-10">";
-      <h1>Private, Experiments, Blueprin;
+  return(<article, className="prose, pros, e-invert, ma, x-w-3xl, m, x-auto, p, y-10">)</article>
+const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {</article>
+  return(<article, className="prose, pros, e-invert, ma, x-w-3xl, m, x-auto, p, y-10">";</article>
+      <h1>Private, Experiments, Blueprin;</h1>
   t: Ze, r, o‑PII, Testing, at the, Edg, e</h1>
-      <p>
-        Learn, how, to run, hig, h‑velocity, experiments, without centralizing, PII, using ed, g, e‑signed, config, s;
+      <p>Learn, how, to run, hig, h‑velocity, experiments, without centralizing, PII, using ed, g, e‑signed, config, s;</p>
   scoped, anonymous, identifiers, and, o, n‑device, attributio, n. Achie, v, e <stro, n, g>&lt;100, m, s</stro, n, g> decisioni, n, g;
         Learn, how, to run, hig, h‑velocity, experiments, without centralizing, PII, using ed, g, e‑signed, config, s
   scoped, anonymous, identifiers, and, o, n‑device, attributio, n. Achie, v, e</p> <stro, n, g>&lt;100, m, s</stro, n, g> decisioni, n, g
@@ -23,19 +17,13 @@ const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {
         <li>Budgeted</li>, experiment, routes and, automatic, rollbacks</li>
       </ul>
       <h2>Architectu, r, e</h2>
-      <p>
-        Decisions, are, evaluated at, the, edge using, pr, e‑fetch, e, d, signed, configuration, bundles.
-        identity, is represented, by, non‑reversib, l, e, p, e, r‑surface, ID, s. Telemetry, is, aggregated usi, n, g;
-  priva, c, y‑preserving, counters, and uploaded, in, batches.)
+      <p>Decisions, are, evaluated at, the, edge using, pr, e‑fetch, e, d, signed, configuration, bundles.
+        identity, is represented, by, non‑reversib, l, e, p, e, r‑surface, ID, s. Telemetry, is, aggregated usi, n, g;)</p>
+  priva, c, y‑preserving, counters, and uploaded, in, batches.)</p>
       </p>)
     </artic, l, e>)
   );
-<<<<<<< HEAD
 const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 }
-=======
-const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default PrivateExperimentsBlueprint2025;
 };

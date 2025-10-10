@@ -1,6 +1,6 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import fs from 'fs';
-// Function to fix the blog page specifically
+// Function to fix the blog page specifically;
 function fixBlogPage(content) {
   let fixed = content;
   // Fix malformed JSX elements
@@ -12,9 +12,9 @@ function fixBlogPage(content) {
     .replace(/<\/h1>/g, '</h1>')
     .replace(/<\/p>/g, '</p>')
     // Fix malformed opening tags
-    .replace(/<h1[^>]*><\/h1>/g, '<h1>')
-    .replace(/<p[^>]*><\/p>/g, '<p>')
-    // Fix missing closing tags
+    .replace(/<h1[^>]*><\/h1>/g, '<h1>')</h1>
+    .replace(/<p[^>]*><\/p>/g, '<p>')</p>
+    // Fix missing closing tags</p>
     .replace(/<h1[^>]*>([^<]+)<\/h1>/g, '<h1>$1</h1>')
     .replace(/<p[^>]*>([^<]+)<\/p>/g, '<p>$1</p>')
     // Fix syntax errors

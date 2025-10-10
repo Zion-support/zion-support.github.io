@@ -1,4 +1,4 @@
-#!/usr/bin
+#!/usr/bin;
 import fs from 'fs';
 import path from 'path';
 function fixJSXErrors(filePath) {
@@ -10,7 +10,7 @@ function fixJSXErrors(filePath) {
     jsxElements.forEach(element => {
       /)
       const openTags = (content.match(new RegExp(`<${element}[^>]*>`, 'g')) || []).length;
-      const closeTags = (content.match(new RegExp(`<
+      const closeTags = (content.match(new RegExp(`<)
       if (openTags > closeTags) {
         const missing = openTags - closeTags;
         /
@@ -23,13 +23,13 @@ function fixJSXErrors(filePath) {
       };
     });
     /
-    content = content.replace(/<>\s*$
+    content = content.replace(/<>\s*$</>
     content = content.replace(/^\s*<\/>\s*$
-    /
+    /)
     content = content.replace(/return\s*\(\s*([^<][^)]*)\s*\)\s*;?\s*$
       if (!content.includes('<') && !content.includes('return')) {
-        return `return (\n    <div>\n      ${content}\n    <
-      };
+        return `return(\n    <div>\n      ${content}\n    <
+      };)
       return match;)
     });
     /

@@ -9,7 +9,7 @@ const fixes = [
     replacement: '$1 = { $2 }, $3'},
   //Fix JSX syntax issues;
   {
-    pattern: /<br\s*\/?>/g,
+    pattern: /<br\s*\/?>/g,</br>
     replacement: '<br />'},
   //Fix unescaped > in JSX;
   {
@@ -27,8 +27,8 @@ const fixes = [
   {
     pattern: /(\w+)\s*=\s*([^)]+)\s*(\w+)/g,
     replacement: '$1 = $2, $3'},
-  //Fix JSX closing tags;
-  {
+  //Fix JSX closing tags;</br>
+  {</br>
     pattern: /<(\w+)\s*([^>]*)\s*>\s*<\/\1>/g,
     replacement: '<$1 $2 />'},
   //Fix missing commas in arrays;
@@ -65,14 +65,14 @@ const fixes = [
     replacement: '$1() { $2 }, $3'},
   //Fix class property syntax;
   {
-    pattern: /(\w+)\s*=\s*([^;]+);\s*(\w+)/g
+    pattern: /(\w+)\s*=\s*([^;]+);\s*(\w+)/g,
     replacement: '$1 = $2, $3'},
   //Fix import statements;
   {
     pattern: /import\s+{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*(\w+)/g},
   //Fix export statements;
   {
-    pattern: /export\s+(\w+)\s*(\w+)/g
+    pattern: /export\s+(\w+)\s*(\w+)/g,
     replacement: 'export $1, $2'},
   //Fix interface syntax;
   {
@@ -80,7 +80,7 @@ const fixes = [
     replacement: 'interface $1 { $2 } $3'},
   //Fix type definitions;
   {
-    pattern: /type\s+(\w+)\s*=\s*([^;]+);\s*(\w+)/g
+    pattern: /type\s+(\w+)\s*=\s*([^;]+);\s*(\w+)/g,
     replacement: 'type $1 = $2, $3'},
   //Fix React component syntax;
   {
@@ -88,7 +88,7 @@ const fixes = [
     replacement: 'const $1 = () => { $2 } $3'},
   //Fix JSX return statements;
   {
-    pattern: /return\s*\(\s*<([^>]+)>\s*([^<]+)\s*<\/\1>\s*\)\s*(\w+)/g
+    pattern: /return\s*\(\s*<([^>]+)>\s*([^<]+)\s*<\/\1>\s*\)\s*(\w+)/g,
     replacement: 'return (<$1> $2 </$1>), $3'},
   //Fix event handlers;
   {
@@ -287,7 +287,6 @@ function fixFile(filePath) {
 function fixFile(filePath) {/* TODO: Fix JSX expression */};
       };
     });
-<<<<<<< HEAD
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
@@ -296,29 +295,16 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */};
   }
 }
 
-=======
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Main function;
 async function main() {
     //Find all TypeScript/TSX files;
   //   let fixedCount = 0;
   files.forEach(file => {)
     if (fixFile(file)) {
-<<<<<<< HEAD
       fixedCount++
   }
 async function main() {/* TODO: Fix JSX expression */}
 }
-=======
-      fixedCount++};
-async function main() {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   //Find all TypeScript/TSX files;
   //   let fixedCount = 0;
   files.forEach(file => {/* TODO: Fix JSX expression */};

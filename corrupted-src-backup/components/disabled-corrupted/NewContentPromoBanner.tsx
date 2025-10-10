@@ -5,16 +5,10 @@ interface NewContentPromoBannerProp, s {
   classNa, m, e ?  : string;
 interface NewContentPromoBannerProp, s {/* TODO: Fix JSX expression */};
  };
-const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
-<<<<<<< HEAD
+const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s>= ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   } const featuredConten, t = [
     {/* TODO: Fix JSX expression */}
-=======
-}) => {/* TODO: Fix JSX expression */};
-  }; const featuredConten, t = [
-    {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */};
     },
@@ -36,15 +30,13 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
     },
     {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */};
-    };
-  ]; if (isDismiss, e, d) return, nul, l;
-  return(<div , classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
-      {/* Animated, background, elements */};
+    {/* TODO: Fix JSX expression */};,
+    };</NewContentPromoBannerPro>
+  ]; if (isDismiss, e, d) return, nul, l;</NewContentPromoBannerPro>
+  return(<div , classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>{/* Animated, background, elements */};</div>
       <div , className="absolute, inse, t-0, opacit, y-10">
         <div , className="absolute, to, p-0, lef, t-0 w-3, 2, h-32, b, g-white, rounde, d-full, animat, e-pul, s, e" />
-        <div , className="absolute, botto, m-0, righ, t-0 w-2, 4, h-24, b, g-white, rounde, d-full, animat, e-boun, c, e" />
-  return (
+        <div , className="absolute, botto, m-0, righ, t-0 w-2, 4, h-24, b, g-white, rounde, d-full, animat, e-boun, c, e" />return (</div>
     <div , classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
       {/* Animated, background, elements */}</div>
       <div, className="absolute, inse, t-0, opacit, y-10"></div>
@@ -60,26 +52,18 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
               <span, className="te, x, t-lg, fon, t-bo, l, d">🚀 NEW, CONTENT, ALERT</sp, a, n>
               <Star , className="w-5 h-5, animat, e-sp, i, n" />
             </div>
-            <h3 , className="te, x, t-xl, fon, t-bold, m, b-2">
-              Just, Publishe, d: New, Guides, for 20, 2, 6;)
+            <h3 , className="te, x, t-xl, fon, t-bold, m, b-2">Just, Publishe, d: New, Guides, for 20, 2, 6;)</h3>
             </h3>)
             <p, className="te, x, t-whi, t, e/90, m, b-4, tex, t-sm">)
-              Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces)
-              and, privac, y‑first, observabilit, y.
+              Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces)</p>
+              and, privac, y‑first, observabilit, y.</p>
             </p>
             {/* Featured, content, grid */};
             <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-3, m, b-4"></div>
-<<<<<<< HEAD
               { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > {
                 const Ico, n = it, e, m.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"
                 const Ico, n = it, e, m.ic, o, n; return (</div>
                   <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p">
-=======
-              { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > {;
-const Ico, n = it, e, m.ic, o, n; return(<Link , ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p";
-const Ico, n = it, e, m.ic, o, n; return (</div>
-                  <Link , ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     <div, className="flex, item, s-center, ga, p-2, m, b-2"></div>
                       <Icon , className="w-4 h-4, tex, t-whi, t, e/80" />
   return (<div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}></div>
@@ -101,7 +85,7 @@ const Ico, n = it, e, m.ic, o, n; return (</div>
               Just, Publishe, d: New, Guides, for 20, 2, 6;
             </h3>"
             <p, className="te, x, t-whi, t, e/90, m, b-4, tex, t-sm"></p>
-              Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces,
+              Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces,)
               and, privac, y‑first, observabilit, y.
             </p>
             {/* Featured, content, grid */}"
@@ -115,55 +99,30 @@ const Ico, n = it, e, m.ic, o, n; return (</div>
                     <h4, classNam, e = "fo, n, t-semibold, tex, t-white, tex, t-sm, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s"></h4>
                       {it, e, m.t, i, t, l, e};
                     </h4>
-                    <p , classNam, e = "te, x, t-xs, tex, t-whi, t, e/70, m, t-1, lin, e-cla, m, p-2">
-                      {it, e, m.description})
+                    <p , classNam, e = "te, x, t-xs, tex, t-whi, t, e/70, m, t-1, lin, e-cla, m, p-2">{it, e, m.description})</p>
                     </p>)
                     </h4>"
                     <p, classNam, e = "te, x, t-xs, tex, t-whi, t, e/70, m, t-1, lin, e-cla, m, p-2"></p>
                       {it, e, m.description};
                     </p>
                   </L, i, n, k>)
-<<<<<<< HEAD
                 );
               })}
-=======
-                )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             </div>
             {/* Action, button, s */};
             <div, classNam, e = "flex, fle, x-wrap, ga, p-3"></div>
-<<<<<<< HEAD
               <Link, t, o="/bl, o, g"
                 className="bg-white, tex, t-purp, l, e-600, hove, r: bg-whi, t, e/90, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2">
-                <BookOpen, className="w-4 h-4" />
-=======
-              <Link , t, o="/bl, o, g"
-                className="bg-white, tex, t-purp, l, e-600, hove, r: bg-whi, t, e/90, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2">
-                <BookOpen , className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                Read, All, Articles;
+                <BookOpen, className="w-4 h-4" />Read, All, Articles;</BookOpen>
                 <Link , className="w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
               </Li, n, k>
-<<<<<<< HEAD
               <Link, t, o="/ca, s, e-studi, e, s"
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2">
-                <TrendingUp, className="w-4 h-4" />
-                View, Case, Studies;
+                <TrendingUp, className="w-4 h-4" />View, Case, Studies;</TrendingUp>
               </Li, n, k>
               <Link, t, o="/servic, e, s"
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2">
-                <Shield, className="w-4 h-4" />
-=======
-              <Link , t, o="/ca, s, e-studi, e, s"
-                className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2">
-                <TrendingUp , className="w-4 h-4" />
-                View, Case, Studies;
-              </Li, n, k>
-              <Link , t, o="/servic, e, s"
-                className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2">
-                <Shield , className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                Explore, Service, s;
+                <Shield, className="w-4 h-4" />Explore, Service, s;</Shield>
               </Li, n, k>
             </div>
             {/* S, t, a, t, s */};
@@ -209,8 +168,8 @@ const Ico, n = it, e, m.ic, o, n; return (</div>
             </div>
           </div>
           {/* Dismiss, butto, n */}"
-          <button, onCli, c, k = {  () = > setIsDismiss, e, d(tr, u, e)  }, classNa, m, e = "ml-4 p-2, hove, r: bg-whi, t, e/10, rounde, d-full, transitio, n-colo, r, s"
-          >"
+          <button, onCli, c, k = {  () = >setIsDismiss, e, d(tr, u, e)  }, classNa, m, e = "ml-4 p-2, hove, r: bg-whi, t, e/10, rounde, d-full, transitio, n-colo, r, s"</button>
+          >"</button>
             <X, className="w-5 h-5" /></X>
           </button>
         </div>

@@ -1,7 +1,7 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import fs from 'fs';
 import { glob } from 'glob';
-// Function to fix remaining syntax errors
+// Function to fix remaining syntax errors;
 function fixRemainingSyntax(content) {
   let fixed = content;
   // Fix common syntax errors
@@ -42,7 +42,7 @@ async function processFiles() {
   let processedCount = 0;
   let errorCount = 0;
   for (const pattern of patterns) {
-    const files = await glob(pattern, { 
+    const files = await glob(pattern, { )
       ignore: [
         'node_modules/**',
         'dist/**',

@@ -1,16 +1,16 @@
 export default {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/app/$1',
-    '^@/components/(.*)$': '<rootDir>/app/components/$1',
-    '^@/pages/(.*)$': '<rootDir>/app/$1',
-    '^@/utils/(.*)$': '<rootDir>/utils/$1',
-    '^@/types/(.*)$': '<rootDir>/types/$1',
-    '^@/hooks/(.*)$': '<rootDir>/hooks/$1',
-    '^@/config/(.*)$': '<rootDir>/config/$1',
-    '^@/data/(.*)$': '<rootDir>/data/$1',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],</rootDir>
+  moduleNameMapper: {</rootDir>
+    '^@/(.*)$': '<rootDir>/app/$1',</rootDir>
+    '^@/components/(.*)$': '<rootDir>/app/components/$1',</rootDir>
+    '^@/pages/(.*)$': '<rootDir>/app/$1',</rootDir>
+    '^@/utils/(.*)$': '<rootDir>/utils/$1',</rootDir>
+    '^@/types/(.*)$': '<rootDir>/types/$1',</rootDir>
+    '^@/hooks/(.*)$': '<rootDir>/hooks/$1',</rootDir>
+    '^@/config/(.*)$': '<rootDir>/config/$1',</rootDir>
+    '^@/data/(.*)$': '<rootDir>/data/$1',</rootDir>
     '^@/content/(.*)$': '<rootDir>/content/$1'
   },
   transform: {
@@ -23,9 +23,9 @@ export default {
       ]
     }]
 
-  },
-  testMatch: [
-    '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
+  },</rootDir>
+  testMatch: [</rootDir>
+    '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',</rootDir>
     '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)'
   ],
   collectCoverageFrom: [
@@ -36,14 +36,14 @@ export default {
   ],
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testPathIgnorePatterns: [
-    '<rootDir>/node_modules/',
-    '<rootDir>/dist/',
-    '<rootDir>/.next/',
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],</rootDir>
+  testPathIgnorePatterns: [</rootDir>
+    '<rootDir>/node_modules/',</rootDir>
+    '<rootDir>/dist/',</rootDir>
+    '<rootDir>/.next/',</rootDir>
     '<rootDir>/out/'
   ],
-  transformIgnorePatterns: [
+  transformIgnorePatterns: [,
     'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
-  ]
-};
+  ]</rootDir>
+};</rootDir>

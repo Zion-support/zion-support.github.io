@@ -1,31 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 interface ImageOptimizerProps {
-<<<<<<< HEAD
-    src: string;
-=======
-  src: string
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    src: string;,
   alt: string;
   className?: string;
   width?: number;
   height?: number;
-<<<<<<< HEAD
   priority?: boolean
   placeholder?: string
   onLoad?: () => void,
   onError?: () => void
   }
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
+const ImageOptimizer: React.FC<ImageOptimizerProps>= ({
     ,
-=======
-  priority?: boolean;
-  placeholder?: string;
-  onLoad?: () => void;
-  onError?: () => void};
-;
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   src;
   alt,
   className = '',
@@ -37,8 +23,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   onError
   }) => {
     const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const [hasError, setHasError] = useState(false);
+  const [isInView, setIsInView] = useState(priority);</ImageOptimizerProps>
+  const [hasError, setHasError] = useState(false);</ImageOptimizerProps>
   const imgRef = useRef<HTMLImageElement>(null);</HTMLImageElement>useEffect</HTMLImageElement>(() => {
     if (priority) return;
     const observer = new IntersectionObserver(
@@ -54,7 +40,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   }
     );
     if (imgRef.current) {
-<<<<<<< HEAD
     observer.observe(imgRef.current)
   }
     return () => observer.disconnect();
@@ -68,52 +53,24 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
     onError?.()
   }
   const generatePlaceholder = () => {
-=======
-      observer.observe(imgRef.current)}
-    return () => observer.disconnect()}, [priority]);
-;
-const handleLoad = () => {
-}
-    setIsLoaded(true);
-    onLoad?.()};
-;
-const handleError = () => {
-}
-    setHasError(true);
-    onError?.()};
-;
-const generatePlaceholder = () => {
-}
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     if (placeholder) return placeholder;
     const svg = `
       <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
-<<<<<<< HEAD
-=======
-);
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <rect width="100%" height="100%" fill="#1e293b"/>
         <rect x="0" y="0" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
         <rect x="0" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
         <rect x="0" y="98%" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
         <rect x="98%" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
-        <text x="50%" y="50%" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="14">
-          Loading...,
+        <text x="50%" y="50%" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="14">Loading...,</text>
         </text>,
       </svg>,
     `;
     ,
-<<<<<<< HEAD
     return `data: image/svg+xml,base64,${btoa(svg)}`;
   }
-=======
-    return `data:image/svg+xml;base64,${btoa(svg)}`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   if (hasError) {
     return(<div;
-        className={`bg-slate-800 flex items-center justify-center ${className}`};
+        className={`bg-slate-800 flex items-center justify-center ${className}`};)
         style={{ width, height }}
       ></div>
         <div className="text-gray-400 text-center"></div>
@@ -121,19 +78,13 @@ return (
           <div className="text-sm">Image failed to load</div>)
         </div>)
       </div>)
-<<<<<<< HEAD
     );
   }
   return(<div;
-=======
-    )};
-  return(<div ;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       ref={imgRef}
-      className={`relative overflow-hidden ${className}`};
-      style={{ width, height }}>
-      {/* Placeholder */})
-      {!isLoaded && ()
+      className={`relative overflow-hidden ${className}`};)
+      style={{ width, height }}>{/* Placeholder */})</div>
+      {!isLoaded && ()</div>
         <img ;)
       {/* Placeholder */}
       {!isLoaded && (</div>
@@ -143,11 +94,7 @@ return (
           className="absolute inset-0 w-full h-full object-cover animate-pulse"
           style={{ filter: 'blur(1 px)' }}
         /></img>
-<<<<<<< HEAD
       )}
-=======
-      )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       {/* Actual Image */}
       {isInView && (
         <img;
@@ -164,12 +111,7 @@ return (
         /></img>
       )};
     </div>
-<<<<<<< HEAD
   );
 }
 export default ImageOptimizer;
   </ImageOptimizerProps>
-=======
-  )};
-export default ImageOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -1,25 +1,19 @@
 export default function HeroSection() {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Effects */}
+  return(<section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">{/* Background Effects */}</section>
       <div className="absolute inset-0 particle-field"></div>
       <div className="absolute inset-0 cyber-scan-effect"></div>
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="space-y-8">
-          {/* Main Heading */}
+        <div className="space-y-8">{/* Main Heading */}</div>
           <h1 className="text-4xl md: text-6xl lg:text-7xl font-bold leading-tight">
-            <span className="block holographic-text cyber-text-3d">
-              Zion Tech Group
+            <span className="block holographic-text cyber-text-3d">Zion Tech Group</span>
   </
-            <span className="block text-white mt-4">
-              Advanced AI & IT Solutions,
+            <span className="block text-white mt-4">Advanced AI & IT Solutions,</span>
   </
           </h1>
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Transforming businesses through cutting-edge artificial intelligence, 
-            machine learning, and innovative IT solutions. We build the future, today.
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">Transforming businesses through cutting-edge artificial intelligence, </p>
+            machine learning, and innovative IT solutions. We build the future, today.</p>
           </p>
           {/* Key Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
@@ -52,29 +46,15 @@ export default function HeroSection() {
             </div>
           </div>
           {/* CTA Buttons */}
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mt-12">
             <a
               href="#services"
-              className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-              Explore Services
+              className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">Explore Services</a>
   </
             <a
-              href="#contact"
-              className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">
-              Get Started,
+              href="#contact")
+              className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">Get Started,</a>
   </
-=======
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
-            <a href="#services"
-              className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-              Explore Services
-            </a>
-            <a href="#contact"
-              className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">
-              Get Started
-            </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           </div>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-16">
@@ -104,7 +84,6 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   );
 }
 export default HeroSection;"`
@@ -112,7 +91,3 @@ export default HeroSection;"`
   </a>
   </span>
   </span>
-=======
-  )};
-export default HeroSection;"`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

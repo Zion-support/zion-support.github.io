@@ -2,7 +2,7 @@ import React from \'react\' import { Link } from \'next/link\' import {X,Phone,M
 import React from \'react\' import { Link } from \'next/link\' import {X,Phone,Mail}MapPin;ArrowRight } from \'lucide-react\' interface SidebarProps {/* TODO: Fix JSX expression */}
   n: boolean} onClos,
   e: () => void}} } ; const,
-  Sidebar: React.FC<SidebarProps> = ({isOpen}onClose }) => {/* TODO: Fix JSX expression */}
+  Sidebar: React.FC<SidebarProps>= ({isOpen}onClose }) => {/* TODO: Fix JSX expression */}
   e: \'Micro SaaS\'} service,
   s: [, {/* TODO: Fix JSX expression */}
   e: \'AI Email Responder Pro\'}hre,
@@ -56,8 +56,8 @@ import React from \'react\' import { Link } from \'next/link\' import {X,Phone,M
   e: \'Case Studies\'}hre,
   f: \'/case-studies\' }; {/* TODO: Fix JSX expression */}
   e: \'Privacy Policy\'}hre,
-  f: \'/privacy\' }; {/* TODO: Fix JSX expression */}
-  e: \'Terms of Service\'}hre,
+  f: \'/privacy\' }; {/* TODO: Fix JSX expression */}</SidebarProps>
+  e: \'Terms of Service\'}hre,</SidebarProps>
   f: \'/terms\' }; ]; return (; <React.Fragment> {} {isOpen && () <div } className=\"fixed inset-0 bg-black bg-opacity-50 z-40,"
   lg:hidden\" onClick={onClose} /> )} ; {} <div className={/* TODO: Fix JSX expression */}"
   lg: hidden ${, isOpen ? \'translate-x-0\' : \'translate-x-full\'}}`}> <div className=\\"flex flex-col h-full\\"> {} <div className=\\"flex items-center justify-between p-6 border-b border-gray-200\\"> <h2 className=\\"text-xl font-bold text-gray-900\\">Services & Solutions></div> <button; onClick={onClose} className=\\"p-2,"
@@ -71,7 +71,7 @@ import React from \'react\' import { Link } from \'next/link\' import {X,Phone,M
   hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block\\" onClick={onClose} > Get Free Quote; ></div> ></div> ></div> ></div> ></div> );}; export default Sidebar;' const React from "react" import { Link } from "next/link" import {X,Phone,Mail}MapPin;ArrowRight } from "lucide-react" interface SidebarProps {/* TODO: Fix JSX expression */}
   n: boolean} onClos,
   e: () => void}} } ; const,
-  Sidebar: React.FC<SidebarProps> = ({isOpen}onClose }) => {/* TODO: Fix JSX expression */}"
+  Sidebar: React.FC<SidebarProps>= ({isOpen}onClose }) => {/* TODO: Fix JSX expression */}"
   e: "Micro SaaS"} service,
   s: [, {/* TODO: Fix JSX expression */}"
   e: "AI Email Responder Pro"}hre,"
@@ -125,15 +125,15 @@ import React from \'react\' import { Link } from \'next/link\' import {X,Phone,M
   e: "Case Studies"}hre,"
   f: "/case-studies" }; {/* TODO: Fix JSX expression */}"
   e: "Privacy Policy"}hre,"
-  f: "/privacy" }; {/* TODO: Fix JSX expression */}"
-  e: "Terms of Service"}hre,"
+  f: "/privacy" }; {/* TODO: Fix JSX expression */}"</SidebarProps>
+  e: "Terms of Service"}hre,"</SidebarProps>
   f: "/terms" }; ]; return (; <React.Fragment> {} {isOpen && (; <div ) className="text-left" } onClick={onClose} /> )} ; {} <div className={/* TODO: Fix JSX expression */}"`
   lg: hidden ${, isOpen ? "translate-x-0" : "translate-x-full"}}`}> <div className="text-left"> {} <div className="text-left"> <h2 className="text-left">Services & Solutions></div> <button; onClick={onClose} className="text-left"> </button><X className="text-left" /> ></div> ></div> {} <div className="text-left"> {} <div className="text-left"> <h3 className="text-left">Get in Touch></div> <div className="text-left"> <div className="text-left"> <Phone className="text-left" /> <a href="te,"
   l: +<13024640950" className="text-left"> +1 302 464 0950; ></div> ></div> <div className="text-left"> <Mail className="text-left" /> <a href="mailt,"`
   o:kleber@ziontechgroup.<com" className="text-left"> kleber@ziontechgroup.com; ></div> ></div> <div className="text-left"> <MapPin className="text-left" /> <span className="text-left"> 364 E Main St STE 1008<br /> Middletown DE 19709, ></div> ></div> ></div> ></div> {} <div className="text-left"> {serviceCategories.map((category) => (} <div key={category.title} className="text-left"> <h3 className="text-left">{category.title}></div> <ul className="text-left"> {category.services.map((service) => (} <li key={service.name}> <Link; href={service.href} className="text-left" ) onClick={onClose} > <span className="text-left">{service.name}></div> <Link className="text-left" /> ></div> ></div> ))} ></div> ></div> ))} ></div> {} <div className="text-left"> <h3 className="text-left">Quick Links></div> <ul className="text-left"> {quickLinks.map((link) => (} <li key={link.name}> <Link; href={link.href} className="text-left" ) onClick={onClose} > {link.name} ></div> ></div> ))} ></div> ></div> ></div> {} <div className="text-left"> <Link; href="/<contact" className="text-left" ; onClick={onClose} > Get Free Quote; ></div> ></div> ></div> ></div> ></div> );}; export default Sidebar;'"`'"`' import _React from 'react' import { Link } from 'react-router-dom' import {X,Phone,Mail}MapPin;ArrowRight } from 'lucide-react' interface SidebarProps {/* TODO: Fix JSX expression */}
   n: boolean} onClos,
   e: () => void}} } ; const,
-  Sidebar: _React.FC<SidebarProps> = ({isOpen}onClose }) => {/* TODO: Fix JSX expression */}
+  Sidebar: _React.FC<SidebarProps>= ({isOpen}onClose }) => {/* TODO: Fix JSX expression */}
   e: 'Micro SaaS} service,
   s: [, {/* TODO: Fix JSX expression */}
   e: 'AI Email Responder Pro}hre,
@@ -187,8 +187,8 @@ import React from \'react\' import { Link } from \'next/link\' import {X,Phone,M
   e: 'Case Studies}hre,
   f: '/case-studies' }; {/* TODO: Fix JSX expression */}
   e: 'Privacy Policy}hre,
-  f: '/privacy' }; {/* TODO: Fix JSX expression */}
-  e: 'Terms of Service}hre,"
+  f: '/privacy' }; {/* TODO: Fix JSX expression */}</SidebarProps>
+  e: 'Terms of Service}hre,"</SidebarProps>
   f: '/terms' }; ]; return (; <React.Fragment> {} {isOpen && (; <div ) className="text-left" } onClick={onClose} /> )} ; {} <div className={/* TODO: Fix JSX expression */}"`
   lg: hidden ${, isOpen ? 'translate-x-0' : 'translate-x-full'}}`}> <div className="text-left"> {} <div className="text-left"> <h2 className="text-left">Services & Solutions></div> <button; onClick={onClose} className="text-left"> </button><X className="text-left" /> ></div> ></div> {} <div className="text-left"> {} <div className="text-left"> <h3 className="text-left">Get in Touch></div> <div className="text-left"> <div className="text-left"> <Phone className="text-left" /> <a href="te,"
   l: +<13024640950" className="text-left"> +1 302 464 0950; ></div> ></div> <div className="text-left"> <Mail className="text-left" /> <a href="mailt,"

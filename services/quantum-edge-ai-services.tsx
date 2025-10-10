@@ -5,17 +5,12 @@ export const metadata: Metadata = {,
   openGraph: {,
     title: 'Quantum Edge Ai Services',
     description: 'Professional Quantum Edge Ai Services services from Zion Tech Group.',
-<<<<<<< HEAD
     type: 'website'}}
-=======
-    type: 'website'}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default function quantumedgeaiservices() {
   return(<div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <div className="text-center mb-8">
-  return (
+          <div className="text-center mb-8">return (</div>
     <div className="min-h-screen bg-gray-50"></div>
       <div className="max-w-4xl mx-auto px-4 py-8"></div>
         <div className="bg-white rounded-lg shadow-lg p-8"></div>
@@ -24,26 +19,18 @@ export default function quantumedgeaiservices() {
             <p className="text-xl text-gray-600 mb-6">Professional Technology Services</p>
           </div>
           <div className="prose max-w-none"></div>
-            <p className="text-lg text-gray-700 mb-6">
-              Our Quantum Edge Ai Services services are designed to help your business achieve its;
-              goals through innovative technology solutions.
+            <p className="text-lg text-gray-700 mb-6">Our Quantum Edge Ai Services services are designed to help your business achieve its;)</p>
+              goals through innovative technology solutions.</p>
             </p>)
           </div>)
         </div>)
       </div>)
 export const,
-<<<<<<< HEAD
   metadata: Metadata = {/* TODO: Fix JSX expression */}
   }}
 export default function quantumedgeaiservices() {/* TODO: Fix JSX expression */}
 }
-=======
-  metadata: Metadata = {/* TODO: Fix JSX expression */};
-  }};
-export default function quantumedgeaiservices() {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (<div className="min-h-screen bg-gray-50"></div>"
+  return(<div className="min-h-screen bg-gray-50"></div>"
       <div className="max-w-4xl mx-auto px-4 py-8"></div>"
         <div className="bg-white rounded-lg shadow-lg p-8"></div>"
           <div className="text-center mb-8"></div>"
@@ -52,17 +39,13 @@ export default function quantumedgeaiservices() {/* TODO: Fix JSX expression */}
           </div>"
           <div className="prose max-w-none"></div>"
             <p className="text-lg text-gray-700 mb-6"></p>
-              Our Quantum Edge Ai Services services are designed to help your business achieve its;
+              Our Quantum Edge Ai Services services are designed to help your business achieve its;)
               goals through innovative technology solutions.
             </p>
           </div>
         </div>
       </div>
     </div>)
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 "

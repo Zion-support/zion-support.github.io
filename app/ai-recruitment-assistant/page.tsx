@@ -32,7 +32,7 @@ const AIRecruitmentAssistantPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Automated Screening',
-      description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
+      description: 'AI-powered initial screening questions and assessments to filter candidates effectively.',
     }
   ]
   return (
@@ -46,15 +46,12 @@ const AIRecruitmentAssistantPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
-                AI Recruitment Assistant,
+              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">AI Recruitment Assistant,</h1>
   </
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your hiring process with AI-powered recruitment tools that find, screen, and hire the best candidates faster and more efficiently.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your hiring process with AI-powered recruitment tools that find, screen, and hire the best candidates faster and more efficiently.</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
                 <div
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
@@ -72,5 +69,5 @@ const AIRecruitmentAssistantPage: React.FC = () => {
     </React.Fragment>
   )
 }
-export default AIRecruitmentAssistantPage
+export default AIRecruitmentAssistantPage;
   </h1>

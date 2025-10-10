@@ -1,11 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 export default function BlogPost(): React.JSX.Element {
-<<<<<<< HEAD
   return(<React.Fragment>
-=======
-  return(<React .Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
         <Helmet>
@@ -13,22 +9,14 @@ export default function BlogPost(): React.JSX.Element {
           <meta;
             name="description"
             content="Quantum Edge Ai Revolution October 2025 - Latest insights from Zion Tech Group"
-<<<<<<< HEAD
           /></meta>
         </Helmet>
-=======
-          /><
-        <
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <div className="max-w-4xl mx-auto px-4 py-20">
           <div className="mb-12">
-            <h1 className="text-4xl md: text-5xl font-bold mb-6 leading-tight">
-              Quantum Edge Ai Revolution October 2025
-<<<<<<< HEAD
+            <h1 className="text-4xl md: text-5xl font-bold mb-6 leading-tight">Quantum Edge Ai Revolution October 2025</h1>
         <div className="max-w-4xl mx-auto px-4 py-20"></div>
           <div className="mb-12"></div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Quantum Edge Ai Revolution October 2025
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">Quantum Edge Ai Revolution October 2025</h1>
   </
             <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"></div>
               <span>By Zion Tech Group Team</span>
@@ -41,54 +29,26 @@ export default function BlogPost(): React.JSX.Element {
           <div className="prose prose-lg prose-invert max-w-none"></div>
             <div className="text-gray-200 leading-relaxed"></div>
               <h2>Introduction</h2>
-=======
-            <
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"><
-              <span>By Zion Tech Group Team<
-              <span>•<
-              <span>2025-10-03<
-              <span>•<
-              <span>5 min read<
-            <
-          <
-          <div className="prose prose-lg prose-invert max-w-none"><
-            <div className="text-gray-200 leading-relaxed"><
-              <h2>Introduction<
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              <p>
-                This is a placeholder blog post. The content for "Quantum Edge Ai Revolution October,
-                2025" will be added here.
+              <p>This is a placeholder blog post. The content for "Quantum Edge Ai Revolution October,</p>
+                2025" will be added here.</p>
               </p>
 ,
               <h2>Main Content</h2>,
               <p>,
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor;
-                incididunt ut labore et dolore magna aliqua.
-<<<<<<< HEAD
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor;</p>
+                incididunt ut labore et dolore magna aliqua.</p>
               </p>
               <h2>Conclusion</h2>
-              <p>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip;
-                ex ea commodo consequat.
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip;)</p>
+                ex ea commodo consequat.</p>
               </p>
             </div>
           </div>
-=======
-              <
-              <h2>Conclusion<
-              <p>
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip;
-                ex ea commodo consequat.
-              <
-            <
-          <
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div className="mt-16 pt-8 border-t border-white border-opacity-20">
             <div className="flex flex-col sm: flex-row justify-between items-center gap-6">
-              <div>)
+              <div>)</div>
                 <h3 className="text-xl font-bold mb-2">Share this article</h3>)
-                <div className="flex gap-4">)
-<<<<<<< HEAD
+                <div className="flex gap-4">)</div>
                   <a,),
           <div className="mt-16 pt-8 border-t border-white border-opacity-20"></div>
             <div className="flex flex-col sm:flex-row justify-between items-center gap-6"></div>
@@ -99,27 +59,10 @@ export default function BlogPost(): React.JSX.Element {
                     href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Quantum Edge Ai Revolution October 2025')}&url=${encodeURIComponent(window.location.href)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
-                    Twitter,
+                    className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors">Twitter,</a>
                   </a>,
                   <a;
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
-=======
-                  <a;),
-          <div className="mt-16 pt-8 border-t border-white border-opacity-20"><
-            <div className="flex flex-col sm: flex-row justify-between items-center gap-6"><
-              <div><
-                <h3 className="text-xl font-bold mb-2">Share this article<
-                <div className="flex gap-4"><
-                  <a href = { `https://twitter.com/intent
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
-                    Twitter;
-                  <
-                  <a ;
-                    href={`https://www.linkedin.com/sharing/share-offsite
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
@@ -128,23 +71,12 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
                     target="_blank""
                     rel="noopener noreferrer""
                     className="bg-white bg-opacity-20,"
-<<<<<<< HEAD
   hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
-                  >
-                    Twitter,
+                  >Twitter,</a>
                   </a>
                   <a></a>
                     href={/* TODO: Fix JSX expression */}`
   s://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}"
-=======
-  hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
-                    Twitter;
-                  <
-                  <a><
-                    href={/* TODO: Fix JSX expression *
-  ,
-    s://www.linkedin.com/sharing/share-offsite
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     target="_blank""
                     rel="noopener noreferrer""
                     className="bg-white bg-opacity-20,"
@@ -162,23 +94,14 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,"
   hover: bg-gray-100 transition-colors"
               >
-<<<<<<< HEAD
                 Back to Blog,
-=======
-                Back to Blog;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               </a>
             </div>
           </div>
         </div>
       </div>,
-<<<<<<< HEAD
     </React.Fragment>);
 }
 "`
   </h1>
   </h1>
-=======
-    </React.Fragment>)};
-"`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

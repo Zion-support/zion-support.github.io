@@ -2,32 +2,18 @@
 import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOData {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
 }
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 const,
-  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
+  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps>= ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
     const baseStructuredData = {/* TODO: Fix JSX expression */}
-=======
-};
-interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
-};
-;
-const,
-  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-    };
-;
-const baseStructuredData = {/* TODO: Fix JSX expression */}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       },
       addres,
   s: {/* TODO: Fix JSX expression */}
       },
-<<<<<<< HEAD
       ...seoData.structuredData}
     if (seoData.author) {/* TODO: Fix JSX expression */}
       }
@@ -42,49 +28,22 @@ const baseStructuredData = {/* TODO: Fix JSX expression */}
     }
     return baseStructuredData;
   }, [seoData, enableStructuredData]);
-=======
-      ...seoData.structuredData};
-    if (seoData.author) {/* TODO: Fix JSX expression */}
-      }};
-    if (seoData.publishedTime) {/* TODO: Fix JSX expression */}
-    };
-    if (seoData.modifiedTime) {/* TODO: Fix JSX expression */}
-    };
-    if (seoData.section) {/* TODO: Fix JSX expression */}
-    };
-    if (seoData.tags && seoData.tags.length > 0) {/* TODO: Fix JSX expression */}
-    };
-    return baseStructuredData}, [seoData, enableStructuredData]);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Generate Open Graph data;
   const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableOpenGraph) return {}
     return {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
     }
   }, [seoData, enableOpenGraph]);
   // Generate Twitter Card data;
   const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableTwitterCards) return {}
     const faqData = {/* TODO: Fix JSX expression */}
-=======
-    }}, [seoData, enableOpenGraph]);
-  // Generate Twitter Card data;
-  const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
-    if (!enableTwitterCards) return {}
-;
-const faqData = {/* TODO: Fix JSX expression */}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           }},
         {/* TODO: Fix JSX expression */}
           }},
         {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
           }}]}
   }, [seoData, enableTwitterCards]);
-=======
-          }}]}}, [seoData, enableTwitterCards]);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Generate meta tags;
   const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}
   t: seoData.description },
@@ -114,18 +73,12 @@ const faqData = {/* TODO: Fix JSX expression */}
       // Update canonical URL;
       let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
       }
       canonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
-=======
-      };
-      canonicalLink.setAttribute('href', seoData.canonicalUrl)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  }, [seoData]);
-  const addStructuredData = (dat)
+  }, [seoData]);</AdvancedSEOOptimizerProps>
+  const addStructuredData = (dat)</AdvancedSEOOptimizerProps>
   a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
     }
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -133,36 +86,20 @@ const faqData = {/* TODO: Fix JSX expression */}
     document.head.appendChild(script);
     structuredDataRef.current = script;
   }
-=======
-    };
-    ;
-const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-    structuredDataRef.current = script};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   useEffect(() => {/* TODO: Fix JSX expression */}
     };
   }, [structuredData]);
   useEffect(() => {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
           });
         }
       }
-    }
-=======
-          })};
-      };
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  }, []);
+    }</string>
+  }, []);</string>
   return (<Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{seoData.title}</title>
       {/* TODO: Fix JSX expression */}
         <meta key={index} name={tag.name} content={tag.content} /></meta>)
-<<<<<<< HEAD
       ))}
       {/* Canonical URL */}
       {/* TODO: Fix JSX expression */}"
@@ -176,21 +113,6 @@ const script = document.createElement('script');
       {/* TODO: Fix JSX expression */}
         <meta key={name} name={name} content={content} /></meta>
       ))}
-=======
-      ))};
-      {/* Canonical URL */}
-      {/* TODO: Fix JSX expression */}"
-        <link rel="canonical" href={seoData.canonicalUrl} /></link>
-      )};
-      {/* Open Graph Tags */}
-      {/* TODO: Fix JSX expression */}
-        <meta key={property} property={property} content={content} /></meta>
-      ))};
-      {/* Twitter Card Tags */}
-      {/* TODO: Fix JSX expression */}
-        <meta key={name} name={name} content={content} /></meta>
-      ))};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       {/* Additional SEO Tags */}"
       <meta name="format-detection" content="telephone=no" /></meta>"
       <meta name="mobile-web-app-capable" content="yes" /></meta>"
@@ -217,12 +139,8 @@ const script = document.createElement('script');
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
       <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
     </Helmet>
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default AdvancedSEOOptimizer;
 "
   </AdvancedSEOOptimizerProps>

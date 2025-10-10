@@ -1,27 +1,17 @@
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-<<<<<<< HEAD
-  contactInfo: unknown
-    mobile: string
+  id: string;,
+  name: string;,
+  tagline: string;,
+  price: string;,
+  description: string;,
+  features: string[];,
+  link: string;,
+  category: string;,
+  realImplementation: boolean;,
+  contactInfo: unknown,
+    mobile: string,
     email: string,
 export interface Innovative2026AiServiceV3 {,
     address: string}
-=======
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-export interface Innovative2026AiServiceV3 {
-;,
-}
-    address: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: string,
   nam,
@@ -45,17 +35,10 @@ export interface Innovative2026AiServiceV3 {
     mobil,
   e: string,
     emai,
-<<<<<<< HEAD
   l: string,
 export interface Innovative2026AiServiceV3 {/* TODO: Fix JSX expression */}
   s: string}
 }
-=======
-  l: string;
-export interface Innovative2026AiServiceV3 {/* TODO: Fix JSX expression */};
-  s: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: string,
   nam,
@@ -87,26 +70,17 @@ export interface Innovative2026AiServiceV3 {/* TODO: Fix JSX expression */};
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
-<<<<<<< HEAD
-  link: string, category: string
-  realImplementation: boolean
+  link: string, category: string,
+  realImplementation: boolean,
   contactInfo: unknown,
-    mobile: string, email: string
+    mobile: string, email: string,
     address: string,
   }
 }
-=======
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const innovative2026 AIServicesV3: Innovative2026 AiServiceV3[] = [,
     id: "2026-innovative-ai-v3", name: "2026 Innovative AI Platform V3",
-    tagline: "Third generation innovative AI", price: "$349/month"
-    description: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features."
+    tagline: "Third generation innovative AI", price: "$349/month",
+    description: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.",
     features: [,
       "Third generation AI"
       "Enhanced capabilities"
@@ -114,15 +88,9 @@ export const innovative2026 AIServicesV3: Innovative2026 AiServiceV3[] = [,
       "Improved performance",
       "Better integration"],
     link: "/services/2026-innovative-ai-v3", category: "Innovative 2026 AI V3",
-<<<<<<< HEAD
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-=======
-    realImplementation: true;
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"};
@@ -172,7 +140,7 @@ export const,
       "Third generation AI""
       "Enhanced capabilities""
       "Advanced features""
-      "Improved performance""
+      "Improved performance"",
       "Better integration"
     ],
     lin,"
@@ -201,7 +169,7 @@ export const,
     };
   };
 ];
-id: "2026-innovative-ai-v3"
+id: "2026-innovative-ai-v3",
     name: "2026 Innovative AI Platform V3",
     tagline: "Third generation innovative AI",
     price: "$349/month",
@@ -213,12 +181,12 @@ id: "2026-innovative-ai-v3"
       "Improved performance",
       "Better integration"
     ],
-    link: "/services/2026-innovative-ai-v3"
-    category: "Innovative 2026 AI V3"
-    realImplementation: true
+    link: "/services/2026-innovative-ai-v3",
+    category: "Innovative 2026 AI V3",
+    realImplementation: true,
     contactInfo: unknown,
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}}
@@ -287,7 +255,6 @@ i,
   y: string, realImplementatio,
   n: boolean, contactInf,
   o: mobil,
-<<<<<<< HEAD
   e: string, emai,
   l: string, export interface Innovative2026AiServiceV3 {/* TODO: Fix JSX expression */}
   s: string } i,
@@ -301,21 +268,6 @@ i,
   y: string, realImplementatio,
   n: boolean, contactInf,
   o: {/* TODO: Fix JSX expression */}
-=======
-  e: string; emai,
-  l: string; export interface Innovative2026AiServiceV3 {/* TODO: Fix JSX expression */};
-  s: string }; i,
-  d: string; nam,
-  e: string; taglin,
-  e: string; pric,
-  e: string, descriptio,
-  n: string; feature,
-  s: string[]; lin,
-  k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,

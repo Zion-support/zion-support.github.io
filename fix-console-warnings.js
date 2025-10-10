@@ -1,9 +1,8 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 
-// Files with console warnings
+// Files with console warnings;
 const filesToFix = [
   './add-missing-routes.js',
   './advanced-app-improvements.js',
@@ -41,7 +40,7 @@ function fixConsoleWarnings(filePath) {
 // Process all files
 console.log('🔧 Fixing console warnings...\n');
 
-filesToFix.forEach(filePath => {
+filesToFix.forEach(filePath => {)
   if (fs.existsSync(filePath)) {
     fixConsoleWarnings(filePath);
   } else {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**;
  * Security Headers Configuration;
  * Comprehensive security headers for production applications;
@@ -60,12 +59,12 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
 /**;
  * Get security headers as key-value pairs;
  */;
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
-export function getSecurityHeaders();
+export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);</SecurityHeadersConfig>
+export function getSecurityHeaders();</SecurityHeadersConfig>
   customConfig?: Partial<SecurityHeadersConfig>
-): Record<string, string> {}
-  const config = { ...defaultSecurityHeaders, ...customConfig }
-  const headers: Record<string, string> = {}
+): Record<string, string>{}</string>
+  const config = { ...defaultSecurityHeaders, ...customConfig }</string>
+  const headers: Record<string, string>= {}
     'X-XSS-Protection': '1; mode=block',;
     'X-DNS-Prefetch-Control': 'on'}
   }
@@ -92,13 +91,13 @@ export const,;
   defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
 }
 /**;
- * Get security headers as key-value pairs;
- */;
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
-): Record<string, string> {/* TODO: Fix JSX expression */}
-  const config = { ...defaultSecurityHeaders, ...customConfig }
-  const,;
-  headers: Record<string, string> = {/* TODO: Fix JSX expression */}
+ * Get security headers as key-value pairs;</string>
+ */;</string>
+export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);</SecurityHeadersConfig>
+): Record<string, string>{/* TODO: Fix JSX expression */}
+  const config = { ...defaultSecurityHeaders, ...customConfig }</string>
+  const,;</string>
+  headers: Record<string, string>= {/* TODO: Fix JSX expression */}
   }
   if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
   }
@@ -115,103 +114,21 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig 
   return headers;
 }
 /**;
- * Get security headers in Next.js format;
- */;
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
+ * Get security headers in Next.js format;</string>
+ */;</string>
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);</SecurityHeadersConfig>
 ): Array<{ key: string, value: string }> {
     export function getNextSecurityHeaders();
-  customConfig?: Partial<SecurityHeadersConfig>
-  }
+  customConfig?: Partial<SecurityHeadersConfig>}</SecurityHeadersConfig>
 ): Array<{ key: string, value: string }> {}
   const headers = getSecurityHeaders(customConfig);
   return Object.entries(headers).map(([key, value]) => ({}
     key,;
     value}
   }));
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);</SecurityHeadersConfig>
 ): Array<{/* TODO: Fix JSX expression */}
   e: string }> {/* TODO: Fix JSX expression */}
   }));
 }
 export default defaultSecurityHeaders;
-=======
-    'magnetometer=()'].join(', '););
-    'magnetometer=()'].join(', ')]
-    };
-/**
- * Get security headers as key-value pairs;
- */
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
-export function getSecurityHeaders()
-  customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
-): Record<string, string></string> {};
-  const config = { ...defaultSecurityHeaders, ...customConfig };
-  const headers: Record<string, string></string> = {};
-    'X-XSS-Protection': '1; mode=block',
-    'X-DNS-Prefetch-Control': 'on'});
-};
-  if (config.contentSecurityPolicy) {};
-    headers['Content-Security-Policy'] = config.contentSecurityPolicy;});
-};
-  if (config.strictTransportSecurity) {};
-    headers['Strict-Transport-Security'] = config.strictTransportSecurity;});
-};
-  if (config.xFrameOptions) {};
-    headers['X-Frame-Options'] = config.xFrameOptions;});
-};
-  if (config.xContentTypeOptions) {};
-    headers['X-Content-Type-Options'] = config.xContentTypeOptions;});
-};
-  if (config.referrerPolicy) {};
-    headers['Referrer-Policy'] = config.referrerPolicy;});
-};
-  if (config.permissionsPolicy) {};
-    headers['Permissions-Policy'] = config.permissionsPolicy;};
-export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */});
-};
-export const,
-  defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */});
-};
-/**
- * Get security headers as key-value pairs;
- */
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
-): Record<string, string></string> {/* TODO: Fix JSX expression */};
-  const config = { ...defaultSecurityHeaders, ...customConfig };
-  const,
-  headers: Record<string, string></string> = {/* TODO: Fix JSX expression */});
-};
-  if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */});
-};
-  if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */});
-};
-  if (config.xFrameOptions) {/* TODO: Fix JSX expression */});
-};
-  if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */});
-};
-  if (config.referrerPolicy) {/* TODO: Fix JSX expression */});
-};
-  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */});
-};
-return headers]
-    };
-/**
- * Get security headers in Next.js format;
- */
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
-): Array<{ key: string; value: string }> {
-export function getNextSecurityHeaders()
-  customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
-): Array<{ key: string; value: string }> {};
-  const headers = getSecurityHeaders(customConfig)
-  return Object.entries(headers).map(([key, value]) => ({};
-    key,
-    value});
-});)
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
-): Array<{/* TODO: Fix JSX expression */};
-  e: string }> {/* TODO: Fix JSX expression */});
-});)]
-    };
-export default defaultSecurityHeaders;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

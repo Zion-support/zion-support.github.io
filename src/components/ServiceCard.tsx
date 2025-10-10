@@ -2,28 +2,16 @@
 import React, { memo } from 'react';
 import { LucideIcon, ArrowRight } from 'lucide-react';
 interface ServiceCardProps {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
 }
 const,
-  ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */})
+  ServiceCard: React.FC<ServiceCardProps>= memo(({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   }
-  const bgColorClasses = {/* TODO: Fix JSX expression */}
-  }
-=======
-};
-;
-const,
-  ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-  };
-;
-const bgColorClasses = {/* TODO: Fix JSX expression */}
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (<article></article>
+  const bgColorClasses = {/* TODO: Fix JSX expression */}</ServiceCardProps>
+  }</ServiceCardProps>
+  return(<article></article>
       className="quantum-card p-4,"
-  sm:p-6 energy-pulse group relative""
+  sm:p-6 energy-pulse group relative"")
       role="article")
       aria-labelledby={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}
                 >
@@ -33,7 +21,7 @@ const bgColorClasses = {/* TODO: Fix JSX expression */}
       <div className="text-4xl,
   sm:text-5xl mb-4,"
   sm:mb-6 text-center cyber-scan-line" aria-hidden="true"></div>"
-        {typeof Icon === 'string' ? Icon : <Icon className="w-12 h-12 mx-auto" />}
+        {typeof Icon === 'string' ? Icon : <Icon className="w-12 h-12 mx-auto" />}</Icon>
       </div>
       <h3></h3>`
         id={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}"
@@ -51,7 +39,7 @@ const bgColorClasses = {/* TODO: Fix JSX expression */}
       </p>
       "
       <div className="mb-4"></div>"
-        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
+        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,</h4>
   Features:</h4>"
         <ul className="text-sm text-gray-300 space-y-1"></ul>
           {/* TODO: Fix JSX expression */}"
@@ -68,7 +56,7 @@ const bgColorClasses = {/* TODO: Fix JSX expression */}
       </div>
       "
       <div className="mb-4"></div>"
-        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologie,
+        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologie,</h4>
   s:</h4>"
         <div className="flex flex-wrap gap-1"></div>
           {/* TODO: Fix JSX expression */}
@@ -90,7 +78,7 @@ const bgColorClasses = {/* TODO: Fix JSX expression */}
   sm:text-2xl font-bold text-cyan-400 mb-2 neon-text" aria-label="Starting price"></div>
           {price}
         </div>"
-        <div className="text-xs text-gray-400">Categor,
+        <div className="text-xs text-gray-400">Categor,</div>
   y: {category}</div>
       </div>
       <a></a>
@@ -109,14 +97,8 @@ const bgColorClasses = {/* TODO: Fix JSX expression */}
         <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
       </a>
     </article>
-<<<<<<< HEAD
   );
 });
 ServiceCard.displayName = 'ServiceCard';
 export default ServiceCard;"`
   </ServiceCardProps>
-=======
-  )});
-ServiceCard.displayName = 'ServiceCard';
-export default ServiceCard;"`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

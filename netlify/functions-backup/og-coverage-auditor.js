@@ -8,7 +8,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   return {status: res.status || 0,
     stdout: res.stdout || ''}
     stderr: res.stderr || '',
-  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
+  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */})
   g: 'utf8'})
   });
   return {/* TODO: Fix JSX expression */}

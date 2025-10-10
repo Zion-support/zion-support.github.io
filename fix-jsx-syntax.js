@@ -1,10 +1,10 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import fs from 'fs';
 function fixJSXSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-    // Fix common JSX syntax issues
+    // Fix common JSX syntax issues;
     const patterns = [
 ];
       // Fix self-closing div tags that should be properly closed
@@ -55,10 +55,10 @@ function fixJSXSyntax(filePath) {
       // Fix self-closing input tags
       {
         regex: /<input([^>]*)><\/input>\s*([^<]+)\s*<\/input>/g,
-        replacement: '<input$1>$2</input>'
+        replacement: '<input$1>$2</input>',
       };
     ];
-    patterns.forEach(pattern => {
+    patterns.forEach(pattern => {)
       const newContent = content.replace(pattern.regex, pattern.replacement);
       if (newContent !== content) {
         content = newContent;

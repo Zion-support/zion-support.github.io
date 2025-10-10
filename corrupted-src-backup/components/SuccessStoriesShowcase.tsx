@@ -26,8 +26,8 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
     };
     {
-      company: "FinanceFirst Bank"
-      industry: "Financial Services"
+      company: "FinanceFirst Bank",
+      industry: "Financial Services",
       icon: <Users className="w-8 h-8" />,
       result: "99.95% Fraud Detection",
       description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",
@@ -35,34 +35,26 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
         "$5M fraud prevented",
         "Sub-100ms detection",
         "95% fewer false positives"
-      ],
-      color: "from-purple-500 to-pink-500",
+      ],</Users>
+      color: "from-purple-500 to-pink-500",</Users>
         </div>,
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">,
-          {stories.map((story, index) => (
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">,</div>
+          {stories.map((story, index) => (</div>
             <div;
 key={index};
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover: scale-105 transition-all duration-300",
-            >,
-              <div className={`bg-gradient-to-r ${story.color} text-white p-6`}>
-      color: "from-purple-500 to-pink-500"
+            >,</div>
+              <div className={`bg-gradient-to-r ${story.color} text-white p-6`}>color: "from-purple-500 to-pink-500"</div>
         </div>
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
           {stories.map((story, index) => (</div>
             <div
-<<<<<<< HEAD
 key={index}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"></div>
-=======
-key={index};
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"
-            ></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>
                 <div className="flex items-center gap-3 mb-4">
                   {story.icon}</div>
                   <div></div>
-<<<<<<< HEAD
                     <h3 className="font-bold text-xl">{story.company}</h3>
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
@@ -70,15 +62,6 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
     }
     {/* TODO: Fix JSX expression */}
 key={index}
-=======
-                    <h3 className="font-bold text-xl">{story.company}</h3>;
-const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-key={index};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="bg-white rounded-2xl shadow-xl overflow-hidden,"
   hover:scale-105 transition-all duration-300"
             >

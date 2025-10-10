@@ -5,11 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extend: {
-      colors: {
-        neon: {
-          cyan: '#00ffff'
+  theme: {,
+    extend: {,
+      colors: {,
+        neon: {,
+          cyan: '#00ffff',
           purple: '#8b5cf6',
           pink: '#ec4899',
           green: '#10 b981',
@@ -138,16 +138,9 @@ export default {
         '80': '80',
         '90': '90',
         '100': '100'}}},
-<<<<<<< HEAD
   plugins: [,
     function({ addUtilities }) {
       const newUtilities = {
-=======
-  plugins: [,;
-function({ addUtilities }) {;
-const newUtilities = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         '.neon-text': {
           color: 'var(--neon-cyan)',
           animation: 'neon-glow 2 s ease-in-out infinite alternate'},
@@ -172,11 +165,11 @@ const newUtilities = {
           backgroundSize: '20 px 20 px'},
         '.cyber-button': {
           background: 'linear-gradient(45deg, var(--neon-cyan), var(--neon-purple))',
-          border: 'none'
-          color: 'white'
-          padding: '12px 24px'
-          borderRadius: '8px'
-          fontWeight: '600'
+          border: 'none',
+          color: 'white',
+          padding: '12px 24px',
+          borderRadius: '8px',
+          fontWeight: '600',
           textTransform: 'uppercase',
           letterSpacing: '1 px',
           position: 'relative',
@@ -202,7 +195,7 @@ const newUtilities = {
           backgroundSize: '200% 100%',
           animation: 'loading 1.5 s infinite'},
         '.sr-only': {
-          position: 'absolute'
+          position: 'absolute',
           width: '1px',
           height: '1px',
           padding: '0',
@@ -211,20 +204,15 @@ const newUtilities = {
           clip: 'rect(0, 0, 0, 0)',
           whiteSpace: 'nowrap',
           border: '0'},
-        '.sr-only: focus': {
-          position: 'static'
-          width: 'auto'
-          height: 'auto'
+        '.sr-only: focus': {,
+          position: 'static',
+          width: 'auto',
+          height: 'auto',
           padding: 'inherit',
           margin: 'inherit',
           overflow: 'visible',
           clip: 'auto',
           whiteSpace: 'normal'}};
-      addUtilities(newUtilities)
-<<<<<<< HEAD
+      addUtilities(newUtilities),
     }
   ]}
-=======
-    };
-  ]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

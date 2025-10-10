@@ -15,10 +15,10 @@ const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     if (typeof window === 'undefined') return
-    // Only show in development or when performance monitoring is enabled
+    // Only show in development or when performance monitoring is enabled;
     const shouldMonitor = process.env.NODE_ENV === 'development' || 
-                         localStorage.getItem('performance-monitoring') === 'true'
-    if (!shouldMonitor) return
+                         localStorage.getItem('performance-monitoring') === 'true'</PerformanceMetrics>
+    if (!shouldMonitor) return;</PerformanceMetrics>
     const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
       setMetrics(prev => ({ ...prev, ...newMetrics }))
     }
@@ -61,15 +61,15 @@ const PerformanceMonitor: React.FC = () => {
       return () => observer.disconnect()
     }
 
-    // Show performance panel after 3 seconds
+    // Show performance panel after 3 seconds;
     const timer = setTimeout(() => setIsVisible(true), 3000)
     return () => clearTimeout(timer)
   }, [])
   if (!isVisible || Object.keys(metrics).length === 0) {
     return null
   }
-
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
+</PerformanceMetrics>
+  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {</PerformanceMetrics>
     if (value <= thresholds.good) return 'text-green-400'
     if (value <= thresholds.poor) return 'text-yellow-400'
     return 'text-red-400'
@@ -81,24 +81,21 @@ const PerformanceMonitor: React.FC = () => {
     return 'Poor'
   }
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
+  return(<div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
       <div className="flex items-center justify-between mb-2">
         <h3 className="font-semibold text-cyan-400">Performance</h3>
-        <button
-          onClick={() => setIsVisible(false)}
+        <button)
+          onClick={() =>setIsVisible(false)}
           className="text-gray-400 hover:text-white"
-        >
-          ×
+        ></button>
+          ×</button>
         </button>
       </div>
       
-      <div className="space-y-1">
-        {metrics.lcp && (
+      <div className="space-y-1">{metrics.lcp && (</div>
           <div className="flex justify-between">
             <span>LCP:</span>
-            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
-              {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
+            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>{Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})</span>
             </span>
           </div>
         )}
@@ -106,8 +103,7 @@ const PerformanceMonitor: React.FC = () => {
         {metrics.fid && (
           <div className="flex justify-between">
             <span>FID:</span>
-            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
-              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})
+            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>{Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})</span>
             </span>
           </div>
         )}
@@ -115,8 +111,7 @@ const PerformanceMonitor: React.FC = () => {
         {metrics.cls && (
           <div className="flex justify-between">
             <span>CLS:</span>
-            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
-              {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})
+            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>{metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})</span>
             </span>
           </div>
         )}
@@ -124,8 +119,7 @@ const PerformanceMonitor: React.FC = () => {
         {metrics.fcp && (
           <div className="flex justify-between">
             <span>FCP:</span>
-            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
-              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
+            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>{Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})</span>
             </span>
           </div>
         )}
@@ -133,8 +127,7 @@ const PerformanceMonitor: React.FC = () => {
         {metrics.ttfb && (
           <div className="flex justify-between">
             <span>TTFB:</span>
-            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
-              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
+            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>{Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})</span>
             </span>
           </div>
         )}
@@ -143,4 +136,4 @@ const PerformanceMonitor: React.FC = () => {
   )
 }
 
-export default PerformanceMonitor
+export default PerformanceMonitor;

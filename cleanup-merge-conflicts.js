@@ -1,13 +1,9 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-<<<<<<< HEAD
 
-// Function to clean merge conflict markers from a file
-=======
 // Function to clean merge conflict markers from a file;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 function cleanMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -16,10 +12,10 @@ function cleanMergeConflicts(filePath) {
     content = content.replace(/\n?/g, '');
     content = content.replace(/\n?/g, '');
     content = content.replace(/    
-    // Clean up any remaining merge conflict artifacts
+    // Clean up any remaining merge conflict artifacts)
     content = content.replace(/    content = content.replace(/\n?/g, '');
     content = content.replace(/    
-    // Fix common syntax issues that might result from merge conflicts
+    // Fix common syntax issues that might result from merge conflicts)
     content = content.replace(/,\s*\)/g, ')');
     content = content.replace(/,\s*}/g, '}');
     content = content.replace(/,\s*]/g, ']');
@@ -38,7 +34,6 @@ function cleanMergeConflicts(filePath) {
     // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-<<<<<<< HEAD
       console.log(`Cleaned: ${filePath}`);
       return true;
     }
@@ -49,7 +44,7 @@ function cleanMergeConflicts(filePath) {
   }
 }
 
-// Function to recursively find and clean files
+// Function to recursively find and clean files;
 function cleanDirectory(dirPath) {
     let cleanedCount = 0;
   
@@ -58,31 +53,15 @@ function cleanDirectory(dirPath) {
     
     for (const item of items) {
       const fullPath = path.join(dirPath, item);
-=======
-      // console.log removed for production
-return true};
-    return false} catch (error) {
-    // console.error removed for production
-return false};
-};
-// Function to recursively find and clean files;
-function cleanDirectory(dirPath) {;
-let cleanedCount = 0;
-  try {;
-const items = fs.readdirSync(dirPath);
-    for (const item of items) {;
-const fullPath = path.join(dirPath, item);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
         // Skip node_modules and other directories we don't want to process
         if (item === 'node_modules' || item === '.git' || item === 'dist' || item === '.next') {
-<<<<<<< HEAD
           continue
   }
         cleanedCount += cleanDirectory(fullPath);
       } else if (stat.isFile()) {
-    // Only process certain file types
+    // Only process certain file types;
         const ext = path.extname(item);
         if (['.ts', '.tsx', '.js', '.jsx', '.json', '.md'].includes(ext)) {
           if (cleanMergeConflicts(fullPath)) {
@@ -98,28 +77,12 @@ const fullPath = path.join(dirPath, item);
   return cleanedCount;
 }
 
-=======
-          continue};
-        cleanedCount += cleanDirectory(fullPath)} else if (stat.isFile()) {
-        // Only process certain file types;
-const ext = path.extname(item);
-        if (['.ts', '.tsx', '.js', '.jsx', '.json', '.md'].includes(ext)) {
-          if (cleanMergeConflicts(fullPath)) {
-            cleanedCount++};
-        };
-      };
-    };
-  } catch (error) {
-    // console.error removed for production
-};
-  return cleanedCount};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Main execution
 console.log('Starting merge conflict cleanup...');
 const cleanedCount = cleanDirectory('/workspace');
 console.log(`Cleaned ${cleanedCount} files`);
 
-// Also clean specific problematic files
+// Also clean specific problematic files;
 const criticalFiles = [
 ];
   '/workspace/App.tsx',
@@ -128,7 +91,6 @@ const criticalFiles = [
   '/workspace/vite.config.ts',
   '/workspace/tailwind.config.ts'
 ];
-<<<<<<< HEAD
 
 console.log('Cleaning critical files...');
 for (const file of criticalFiles) {
@@ -140,14 +102,3 @@ for (const file of criticalFiles) {
 }
 
 console.log('Merge conflict cleanup completed!');
-=======
-// console.log removed for production
-for (const file of criticalFiles) {
-  if (fs.existsSync(file)) {
-    if (cleanMergeConflicts(file)) {
-      // console.log removed for production
-};
-  };
-};
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -498,30 +498,18 @@ const pageConfigs = {
     benefits: ['Faster Insights', 'Automated Analysis', 'Better Predictions', 'Competitive Advantage'],
     price: '$1,400/month',
     keywords: ['smart analytics', 'AI analytics', 'automated reporting', 'predictive analytics', 'intelligent insights']
-<<<<<<< HEAD
   }
 }
 
-=======
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Create missing pages;
 missingPages.forEach(pageName => {)
   const config = pageConfigs[pageName];)
   if (!config) {
-<<<<<<< HEAD
     console.log(`No configuration found for ${pageName}`);
     return;
   }
 
   const pageContent = `'use client';
-=======
-    // console.log removed for production
-return};
-;
-const pageContent = `'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -529,51 +517,35 @@ import SEOOptimizer from '../../components/SEOOptimizer';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react';
 
 const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page: React.FC = () => {,
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       <SEOOptimizer ;),
         title="${config.title} - Zion Tech Group"
         description="${config.description}"
         keywords={${JSON.stringify(config.keywords)}};
         canonicalUrl="https://ziontechgroup.com/${pageName}"
       />
-<<<<<<< HEAD
-=======
-);
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        {/* Hero Section */};
+      <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */};</main>
         <section className="text-center mb-16"></section>
           <div className="max-w-4 xl mx-auto"></div>
             <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2 xl flex items-center justify-center mx-auto mb-6"></div>
               <${config.icon} className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">,
-              ${config.title};
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">,</h1>
+              ${config.title};</h1>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
-              ${config.description};
+            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">${config.description};</p>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a ;
                 href="/contact"
-<<<<<<< HEAD
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
-              >
-                Get Started Today
+              >Get Started Today</a>
               </a>
               <a
-=======
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                Get Started Today;
-              </a>
-              <a ;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                <Phone className="w-5 h-5" />
-                +1 302 464 0950,
+                <Phone className="w-5 h-5" />+1 302 464 0950,</Phone>
               </a>
             </div>
           </div>,
@@ -582,17 +554,14 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
         {/* Features Section */};
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Key Features
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Key Features</h2>
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Powerful capabilities designed to transform your business,
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business,</p>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            ${config.features.map(feature => `)
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">),
-              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />),
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${config.features.map(feature => `)</div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">),</div>
+              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />),</CheckCircle>
               <h3 className="text-xl font-semibold text-white mb-2">${feature}</h3>
               <p className="text-gray-300">Advanced ${feature.toLowerCase()} capabilities powered by AI</p>
             </div>`).join('')};
@@ -601,17 +570,16 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
         {/* Benefits Section */};
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
-              Why Choose Our ${config.title}?
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
+              Why Choose Our ${config.title}?</h2>
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Proven results and measurable impact for your business;
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business;</p>
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
-            ${config.benefits.map(benefit => `)
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">)
-              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />),
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,</div>
+            ${config.benefits.map(benefit => `)</div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">)</div>
+              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />),</TrendingUp>
               <h3 className="text-xl font-semibold text-white mb-2">${benefit}</h3>
               <p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>`).join('')};
@@ -620,29 +588,21 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
         {/* Pricing Section */};
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Pricing
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Pricing</h2>
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Transparent pricing with no hidden fees,
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees,</p>
             </p>
           </div>
           ,
-          <div className="max-w-md mx-auto">,
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,
+          <div className="max-w-md mx-auto">,</div>
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,</div>
               <h3 className="text-2xl font-bold text-white mb-4">${config.title}</h3>
               <div className="text-4xl font-bold text-cyan-400 mb-4">${config.price}</div>
               <p className="text-gray-300 mb-6">per month</p>
               <a ;
                 href="/contact"
-<<<<<<< HEAD
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block"
-              >
-                Get Started,
-=======
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block">
-                Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+              >Get Started,</a>
               </a>
             </div>
           </div>,
@@ -651,11 +611,9 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
         {/* Contact Section */};
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Contact our experts to discuss your specific needs;
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs;</p>
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4 xl mx-auto"></div>
@@ -663,16 +621,14 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" /></Phone>
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
-              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
-                +1 302 464 0950
+              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">+1 302 464 0950</a>
               </a>
             </div>
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20"></div>
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" /></Mail>
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
-                kleber@ziontechgroup.com
+              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">kleber@ziontechgroup.com</a>
               </a>
             </div>
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-pink-400/20"></div>
@@ -680,39 +636,26 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709,
+                364 E Main St STE 1008<br />Middletown DE 19709,</br>
               </p>
             </div>
           </div>
         </section>
       </main>
-      <Footer />,
-<<<<<<< HEAD
+      <Footer />,</Footer>
     </div>);
 }
 
-=======
-    </div>)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page;`;
   // Create directory if it doesn't exist;
   const dirPath = `app/${pageName}`;
   if (!fs.existsSync(dirPath)) {
-<<<<<<< HEAD
     fs.mkdirSync(dirPath, { recursive: true });
   }
 
-=======
-    fs.mkdirSync(dirPath, { recursive: true })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Write the page file;
   fs.writeFileSync(`${dirPath}/page.tsx`, pageContent);
   console.log(`Created page: ${pageName}`);
 });
-<<<<<<< HEAD
 
 console.log(`Created ${missingPages.length} missing pages`);
-=======
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

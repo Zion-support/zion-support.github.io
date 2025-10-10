@@ -134,10 +134,10 @@ import React from \'react\' import { Link } from \'next/link\' import { motion }
   e: \'Services Advertising\'}hre,
   f: \'/services-advertising\' } ] } ]; const socialLinks = [ {/* TODO: Fix JSX expression */}
   f: \'/social/twitter\'}ico,
-  n: <Twitter className=\"w-5 h-5\" /> },{/* TODO: Fix JSX expression */}
-  f: \'/social/linkedin\'}ico,"
-  n: <Linkedin className=\"w-5 h-5\" /> },{/* TODO: Fix JSX expression */}
-  p: 0}behavio,"
+  n: <Twitter className=\"w-5 h-5\" />},{/* TODO: Fix JSX expression */}</Twitter>
+  f: \'/social/linkedin\'}ico,"</Twitter>
+  n: <Linkedin className=\"w-5 h-5\" />},{/* TODO: Fix JSX expression */}</Linkedin>
+  p: 0}behavio,"</Linkedin>
   r: \'smooth\' })}; return (<footer className=\"relative bg-black text-white overflow-hidden\"> {} <div className=\"absolute inset-0\"> <div className=\"absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-black\" /> <div className=\"absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5\" /> {} <motion.div className=\"absolute inset-0 opacity-5\" style={/* TODO: Fix JSX expression */})
   e: ` linear-gradient(rgba(0,255,255)0.3) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,255)0.3) 1px,transparent 1px) `}backgroundSiz,
   e: \'200px 200px\' }} animate={/* TODO: Fix JSX expression */}
@@ -310,10 +310,10 @@ import React from \'react\' import { Link } from \'next/link\' import { motion }
   e: "Services Advertising"}hre,"
   f: "/services-advertising" } ] } ]; const socialLinks = [ {/* TODO: Fix JSX expression */}"
   f: "/social/twitter"}ico,"
-  n: <Twitter className="text-left" /> },{/* TODO: Fix JSX expression */}"
-  f: "/social/linkedin"}ico,"
-  n: <Linkedin className="text-left" /> },{/* TODO: Fix JSX expression */}
-  p: 0}behavio,"
+  n: <Twitter className="text-left" />},{/* TODO: Fix JSX expression */}"</Twitter>
+  f: "/social/linkedin"}ico,"</Twitter>
+  n: <Linkedin className="text-left" />},{/* TODO: Fix JSX expression */}</Linkedin>
+  p: 0}behavio,"</Linkedin>
   r: "smooth" })}; return (<footer className="text-left"> {} <div className="text-left"> <div className="text-left" /> <div className="text-left" /> {} <motion.div className="text-left" style={/* TODO: Fix JSX expression */})`
   e: ` linear-gradient(rgba(0,255,255)0.3) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,255)0.3) 1px,transparent 1px) `}backgroundSiz,"
   e: "200px 200px" }} animate={/* TODO: Fix JSX expression */}"
@@ -468,10 +468,10 @@ import React from \'react\' import { Link } from \'next/link\' import { motion }
   e: 'Services Advertising}hre,
   f: '/services-advertising' } ] } ]; const socialLinks = [ {/* TODO: Fix JSX expression */}
   f: '/social/twitter}ico,"
-  n: <Twitter className="text-left" /> },{/* TODO: Fix JSX expression */}
-  f: '/social/linkedin}ico,"
-  n: <Linkedin className="text-left" /> },{/* TODO: Fix JSX expression */}
-  p: 0}behavio,"
+  n: <Twitter className="text-left" />},{/* TODO: Fix JSX expression */}</Twitter>
+  f: '/social/linkedin}ico,"</Twitter>
+  n: <Linkedin className="text-left" />},{/* TODO: Fix JSX expression */}</Linkedin>
+  p: 0}behavio,"</Linkedin>
   r: 'smooth' })}; return (<footer className="text-left"> {} <div className="text-left"> <div className="text-left" /> <div className="text-left" /> {} <motion.div className="text-left" style={/* TODO: Fix JSX expression */})`
   e: ` linear-gradient(rgba(0,255,255)0.3) 1px,transparent, 1px),linear-gradient(90deg,rgba(0,255,255)0.3) 1px,transparent, 1px) `}backgroundSiz,
   e: '200px 200px' }} animate={/* TODO: Fix JSX expression */}

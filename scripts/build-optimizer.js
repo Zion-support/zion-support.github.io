@@ -175,22 +175,21 @@ class BuildOptimizer {
     const htmlFiles = this.getFilesRecursively(this.distPath).filter(file => )
       file.endsWith('.html')
     );
-
-    const securityHeaders = `
+</img>
+    const securityHeaders = `</img>
 <!-- Security Headers -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none', upgrade-insecure-requests">
-<meta http-equiv="X-Frame-Options" content="DENY">,
-<meta http-equiv="X-Content-Type-Options" content="nosniff">,
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">,
+<meta http-equiv="X-Frame-Options" content="DENY">,</meta>
+<meta http-equiv="X-Content-Type-Options" content="nosniff">,</meta>
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">,</meta>
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
 <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">
-`;
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">`;
 
     htmlFiles.forEach(htmlFile => {)
       let content = fs.readFileSync(htmlFile, 'utf8');
-      
-      // Add security headers before closing head tag;
+      </meta>
+      // Add security headers before closing head tag;</meta>
       content = content.replace('</head>', `${securityHeaders}</head>`);
       
       fs.writeFileSync(htmlFile, content);
@@ -207,8 +206,8 @@ class BuildOptimizer {
     console.log('🗺️  Generating sitemap...');
     
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-  <url>,
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,</urlset>
+  <url>,</url>
     <loc>https://ziontechgroup.com/</loc>,
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>daily</changefreq></changefreq>
@@ -252,7 +251,7 @@ class BuildOptimizer {
     console.log('🤖 Generating robots.txt...');
     
     const robotsTxt = `User-agent: *
-Allow: /
+Allow: /,
 
 Sitemap: https://ziontechgroup.com/sitemap.xml;
 # Crawl-delay for respectful crawling

@@ -10,19 +10,13 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {,
       highlig, h, t: 'BREAKTHRO, U, G, H',
       impa, c, t: '98% Automat, i, o, n',
       ty, p, e: 'b, l, o, g',
-<<<<<<< HEAD
       readTime: '15, m, i, n',
 const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      readTime: '15, m, i, n',;
-const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */};
     },
     {/* TODO: Fix JSX expression */};
-    }]; return(<section , classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'>
-      {/* Animated, Backgroun, d */};
+    }]; return(<section , classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'>{/* Animated, Backgroun, d */};</section>
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></section>
   ]; return (<section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'></section>
       {/* Animated, Backgroun, d */};
@@ -40,12 +34,10 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
         <div, className='te, x, t-center, m, b-16'></div>
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8'></div>
             <Sparkles , className='w-5 h-5, tex, t-bl, u, e-4, 0, 0' />
-            <span , className='te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e'>
-              January, 202, 6 • Revolutionary, Content, Launch;
+            <span , className='te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e'>January, 202, 6 • Revolutionary, Content, Launch;</span>
             </sp, a, n>
           </div>
-          <h2 , className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-            Revolutionary, AI, Breakthroughs: The, Future, is He, r, e;
+          <h2 , className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>Revolutionary, AI, Breakthroughs: The, Future, is He, r, e;</h2>
       <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'></div>
         {/* Head, e, r */};
         <div, className='te, x, t-center, m, b-16'></div>
@@ -60,13 +52,13 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
   s: The, Future, is He, r, e;
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d'></p>
-            Experience, the, cutting-edge, of, AI innovation, with, our latest, breakthrough, conten,
+            Experience, the, cutting-edge, of, AI innovation, with, our latest, breakthrough, conten,)
   t: 98% automation, ra, t, e, s, quantum, computing, revolutions, and, Fortune, 500 transformations, wort, h $1, 0, B.
           </p>
         </div>)
         {/* Content, Gri, d */})
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>)
-          { revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>)</div>
+          { revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
         </div>
         {/* Content, Gri, d */};
         <div , classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
@@ -137,7 +129,7 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
             },
             {/* TODO: Fix JSX expression */};
             }].m, a, p((st, a, t, ind, e, x) => (</div>
-            <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r'
+            <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r',
             ></div>
           ].m, a, p((st, a, t, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r'
             ></div>`
@@ -163,9 +155,8 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
             </p>
             <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
               <Link , t, o='/conta, c, t'
-                className='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1'>
-                className='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hove,
-  r:-transla, t, e-y-1'
+                className='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1'>className='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hove,</Link>
+  r:-transla, t, e-y-1'</Link>
               ></Link>
                 Start, Your, Transformation;
               </Li, n, k>

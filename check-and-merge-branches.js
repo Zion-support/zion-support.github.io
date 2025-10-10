@@ -1,7 +1,7 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import { execSync } from 'child_process';
 import fs from 'fs';
-// Function to check if a branch can be merged without conflicts
+// Function to check if a branch can be merged without conflicts;
 function canMergeWithoutConflicts(branchName) {
   try {
     // Check if branch exists
@@ -13,7 +13,7 @@ function canMergeWithoutConflicts(branchName) {
     return false;
   };
 };
-// Function to merge a branch into main
+// Function to merge a branch into main;
 function mergeBranch(branchName) {
   try {
     console.log(`Attempting to merge ${branchName}...`);
@@ -49,7 +49,7 @@ function mergeBranch(branchName) {
 // Main function
 async function main() {
   console.log('Checking for branches to merge...');
-  // Get list of recent branches
+  // Get list of recent branches;
   const branches = [
 ];
     'cursor/enhance-app-with-new-services-and-futuristic-design-068b',

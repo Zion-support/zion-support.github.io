@@ -1,21 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-<<<<<<< HEAD
 const Navigation: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
-=======
-;
-const Navigation: React.FC = () => {
-}
-const [isOpen, setIsOpen] = useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-<<<<<<< HEAD
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -33,31 +25,10 @@ const [isOpen, setIsOpen] = useState(false);
   }
   }, []);
   const closeAllMenus = () => {
-=======
-  useEffect(() => {;
-const handleResize = () => {
-}
-      if (window.innerWidth >= 1024) {
-        setIsOpen(false)}
-    };
-;
-const handleScroll = () => {
-}
-      setIsScrolled(window.scrollY > 50)};
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll)}}, []);
-;
-const closeAllMenus = () => {
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
-<<<<<<< HEAD
     setIsOpen(false)
   }
   const toggleMenu = () => {
@@ -67,19 +38,6 @@ const closeAllMenus = () => {
   }
   }
   const serviceCategories = [
-=======
-    setIsOpen(false)};
-;
-const toggleMenu = () => {
-}
-    setIsOpen(!isOpen);
-    if (isOpen) {
-      closeAllMenus()}
-  };
-;
-const serviceCategories = [
-[
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       title: 'Micro SAAS Solutions',
       icon: Zap,
@@ -204,18 +162,16 @@ const serviceCategories = [
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping' },
         { name: 'Sustainability Tech', path: '/sustainability-tech', description: 'Green technology solutions' },
         { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
-];
+];,
     };
   ];
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+  return(<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-16 lg:h-20">{/* Logo */}</div>
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <span className="text-white font-bold text-lg">Z</span>
@@ -227,27 +183,18 @@ const serviceCategories = [
           </Link>
           {/* Desktop Menu */}
           <div className="hidden lg: flex space-x-8">
-            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
-<<<<<<< HEAD
+            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">Home</Link>
   </
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About,
+            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">About,</Link>
   </
-=======
-            </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              About
-            </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             {/* Services Dropdown */}
             <div className="relative">
-              <button
-                onClick={() => setServicesOpen(!servicesOpen)}
+              <button)
+                onClick={() =>setServicesOpen(!servicesOpen)}
                 className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
                 aria-expanded={servicesOpen}
-                aria-haspopup="true"
-              >
+                aria-haspopup="true"</button>
+              ></button>
                 <Brain className="w-4 h-4" />
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
@@ -256,23 +203,20 @@ const serviceCategories = [
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
-                  <div className="grid grid-cols-2 gap-4">
-                    {serviceCategories.map((category, index) => (
+                  <div className="grid grid-cols-2 gap-4">{serviceCategories.map((category, index) => (</div>
                       <div key={index} className="space-y-2">
                         <div className="flex items-center space-x-2 mb-2">
                           <category .icon className={`w-4 h-4 ${category.color}`} />
                           <span className="text-sm font-semibold text-white">{category.title}</span>
                         </div>
-                        <div className="space-y-2">
-                          {category.services.slice(0, 6).map((service, serviceIndex) => (
+                        <div className="space-y-2">{category.services.slice(0, 6).map((service, serviceIndex) => (</div>
                             <Link key={serviceIndex}
                               href={service.path}
                               className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
                               onClick={closeAllMenus}
                 >
                               <div className="font-medium">{service.name}</div>
-                              <div className="text-xs text-gray-500 group-hover:text-purple-500">
-                                {service.description}
+                              <div className="text-xs text-gray-500 group-hover:text-purple-500">{service.description}</div>
                               </div>
                             </Link>
                           ))};
@@ -280,8 +224,7 @@ const serviceCategories = [
                             <Link href={`/${category.title.toLowerCase().replace(' ', '-')}`};
                               className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
                               onClick={closeAllMenus}
-                >
-                              View All →
+                >View All →</Link>
                             </Link>
                           )};
                         </div>
@@ -292,15 +235,8 @@ const serviceCategories = [
                     <Link href="/services"
                       className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                       onClick={closeAllMenus}
-<<<<<<< HEAD
-                    >
-                      View All Services;
+                    >View All Services;</Link>
   </
-=======
-                >
-                      View All Services
-                    </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   </div>
                 </div>
               )};
@@ -311,48 +247,26 @@ const serviceCategories = [
             <Link href="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
-<<<<<<< HEAD
-            >
-              Case Studies;
+            >Case Studies;</Link>
   </
             <Link
               href="/blog"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
-            >
-              Blog;
+            >Blog;</Link>
   </
             <Link
               href="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
-            >
-              Contact;
+            >Contact;</Link>
   </
-=======
-                >
-              Case Studies
-            </Link>
-            <Link href="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-                >
-              Blog
-            </Link>
-            <Link href="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-                >
-              Contact
-            </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             {/* CTA Button */}
             <Link href="/contact"
               className="cyber-button inline-flex items-center"
               onClick={closeAllMenus}
                 >
-              <Phone className="w-4 h-4 mr-2" />
-              (302) 464-0950;
+              <Phone className="w-4 h-4 mr-2" />(302) 464-0950;</Phone>
   </
           </div>
           {/* Mobile Menu Button */}
@@ -360,7 +274,7 @@ const serviceCategories = [
             <button onClick={toggleMenu}
               className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
               aria-label="Toggle menu">
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}</Menu>
             </button>
           </div>
         </div>
@@ -371,33 +285,19 @@ const serviceCategories = [
               <Link href="/"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
-<<<<<<< HEAD
-              >
-                Home;
+              >Home;</Link>
   </
               <Link
                 href="/about"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
-              >
-                About;
+              >About;</Link>
   </
-=======
-                >
-                Home
-              </Link>
-              <Link href="/about"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-                >
-                About
-              </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               {/* Mobile Services */}
               <div>
                 <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md">
+                  onClick={() =>setServicesOpen(!servicesOpen)}</button>
+                  className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"></button>
                   <span className="flex items-center space-x-2">
                     <Brain className="w-4 h-4" />
                     <span>Services</span>
@@ -405,27 +305,19 @@ const serviceCategories = [
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {servicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {serviceCategories.map((category, categoryIndex) => (
+                  <div className="mt-2 ml-4 space-y-2">{serviceCategories.map((category, categoryIndex) => (</div>
                       <div key={categoryIndex}>
                         <div className="text-sm font-medium text-cyan-400 mb-2">{category.title}</div>
-                        <div className="ml-4 space-y-1">
-                          {category.services.slice(0, 3).map((service, serviceIndex) => (
+                        <div className="ml-4 space-y-1">{category.services.slice(0, 3).map((service, serviceIndex) => (</div>
                             <Link key={serviceIndex}
                               href={service.path}
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1">
-                              {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
+                              {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}</service>
                             </Link>
-<<<<<<< HEAD
                           ))}
                           <Link
                             href="/services"
-=======
-                          ))};
-                          <Link href="/services"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                            className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium">
-                            View All →
+                            className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium">View All →</Link>
                           </Link>
                         </div>
                       </div>
@@ -434,53 +326,35 @@ const serviceCategories = [
                 </div>
               </div>
           {/* Contact Info */}
-<<<<<<< HEAD
           <div className="hidden lg: flex items-center space-x-4">
             <a
               href="tel:+13024640950"
-=======
-          <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:+13024640950"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
               <Phone className="w-4 h-4" />
               <span className="text-sm font-medium">+1 302 464 0950</span>
             </a>
-<<<<<<< HEAD
             <a
               href="mailto:kleber@ziontechgroup.com"
-=======
-            <a href="mailto:kleber@ziontechgroup.com"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="flex items-center space-x-2 text-pink-400 hover:text-pink-300 transition-colors duration-300">
               <Mail className="w-4 h-4" />
               <span className="text-sm font-medium">Email</span>
             </a>
-<<<<<<< HEAD
             <a
               href="/contact"
-              className="cyber-button px-4 py-2 text-sm font-medium">
-              Get Started,
+              className="cyber-button px-4 py-2 text-sm font-medium">Get Started,</a>
   </
-=======
-            <a href="/contact"
-              className="cyber-button px-4 py-2 text-sm font-medium">
-              Get Started
-            </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           </div>
           {/* Mobile Menu Button */}
           <button onClick={toggleMenu}
             className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-300"
             aria-label="Toggle menu">
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}</Menu>
           </button>
         </div>
         {/* Mobile Menu */}
         {isOpen && (
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-            <div className="px-4 py-6 space-y-6">
-              {/* Main Navigation */}
+            <div className="px-4 py-6 space-y-6">{/* Main Navigation */}</div>
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white mb-3 neon-text">Navigation</h3>
                 {mainNavItems.map((item) => (
@@ -493,29 +367,20 @@ const serviceCategories = [
                   </Link>
                 ))};
               </div>
-<<<<<<< HEAD
               <a
                 href="tel:+13024640950"
-=======
-              <a href="tel:+13024640950"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
                 onClick={closeAllMenus}
                 >
-                <Phone className="w-4 h-4 inline mr-2" />
-                (302) 464-0950;
+                <Phone className="w-4 h-4 inline mr-2" />(302) 464-0950;</Phone>
   </
             </div>
           </div>
         )};
       </div>
     </nav>
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default Navigation;
   </a>
   </a>

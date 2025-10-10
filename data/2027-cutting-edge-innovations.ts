@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 2027'
-=======
-export const cuttingEdge2027Innovations = [
-{name: 'Cutting Edge AI Innovation 2027',
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 2027',
     path: '/services/cutting-edge-ai-innovation-2027',
     description: 'Next-generation AI innovations for 2027',
     icon: 'Brain',
@@ -20,7 +14,7 @@ export const cuttingEdge2027Innovations = [
       professional: '$1399/month'};
       enterprise: 'Custom'};
   },
-    name: 'Cutting Edge Tech Innovation 2027'
+    name: 'Cutting Edge Tech Innovation 2027',
     path: '/services/cutting-edge-tech-innovation-2027',
     description: 'Revolutionary technology innovations for 2027',
     icon: 'Zap',
@@ -73,9 +67,9 @@ export const cuttingEdge2027 Categories = [
   'Advanced Solutions'
 ];
 export const cuttingEdge2027Stats =
-  totalServices: 2;
-  categories: 4
-  averageRating: 4.9
+  totalServices: 2;,
+  categories: 4,
+  averageRating: 4.9,
   activeUsers: 3500,
 export const cuttingEdge2027Stats = {}
   totalService,
@@ -85,15 +79,8 @@ export const cuttingEdge2027Stats = {}
   averageRatin,
   g: 4.9,
   activeUser,
-<<<<<<< HEAD
   s: 3500}
 export const cuttingEdge2027Innovations = [ nam,
-=======
-  s: 3500};
-export const cuttingEdge2027Innovations = [
- nam,
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: 'Cutting Edge AI Innovation 2027',' pat,
   h: '/services/cutting-edge-ai-innovation-2027',' descriptio,
   n: 'Next-generation AI innovations for 2027',' ico,

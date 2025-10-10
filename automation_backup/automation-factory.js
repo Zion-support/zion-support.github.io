@@ -33,8 +33,8 @@
   r: error.message }} } optimizeImages() {/* TODO: Fix JSX expression */}
   y: { // Placeholder for image optimization} analyzeDependencies() {/* TODO: Fix JSX expression */}
   y: { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname } findUnusedDependencies() {/* TODO: Fix JSX expression */}
-  r: for unused dependency detection, return [ fs.writeFileSync(reportFile, JSON.stringify(report) null} 2))} } cons,
-  t: optimizer = new PerformanceOptimizer(); optimizer.optimizePerformance().then(repor)
+  r: for unused dependency detection, return[fs.writeFileSync(reportFile, JSON.stringify(report) null} 2))} } cons,
+  t: optimizer = new PerformanceOptimizer(); optimizer.optimizePerformance().then(repor),
   t: => { if (report) { return false} const startTime = Date.now();' try {/* TODO: Fix JSX expression */}`
   script: ${scriptName}`); this.runningScripts.set(scriptName {startTime} pi)
   d: null }); this.saveStatus(); ' stdi,
@@ -44,9 +44,9 @@
   n: = new Date().toISOString()} this.saveStatus()} resolve(cod)
   e: === 0)}) child.on( this.runningScripts.delete(scriptName); this.saveStatus(); resolve(false)})})} catch (error) {script.errorCount++; this.runningScripts.delete(scriptName); this.saveStatus()} retur,
   n: false} } async runAllScripts() {/* TODO: Fix JSX expression */}
-  Scripts:) )} fo,`
-  r: (const [name} script] of this.scripts) {const status = this.runningScripts.has(name) ?} // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log(` Erro,
-  r: Coun)`
+  Scripts:) )} fo,`]
+  r: (const [name} script] of this.scripts) {const status = this.runningScripts.has(name) ?} // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log(` Erro,)
+  r: Coun)`,
   t: ${script.errorCoun}t}`)} ; // // // // // // // // // console.log(for (const [name) info] of this.runningScripts) {const duration = Date.now() - info.startTime} // // // // // // // // // console.log(`${name}: Running for ${Math.floor(duration / 1000)}s`)}` // console.log(`\\n${name}:`)` // console.log(` Descriptio)`
   n: ${script.description}`)` // console.log(` Statu)`
   s: ${status}`)` // console.log(` Last)`

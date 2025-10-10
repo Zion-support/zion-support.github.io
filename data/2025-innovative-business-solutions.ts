@@ -1,39 +1,34 @@
-<<<<<<< HEAD
 
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string[];
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: string;
-  contact_info: unknown;
-    mobile: string;
-<<<<<<< HEAD
-    email: string
-    address: string
+  id: string;,
+  name: string;,
+  tagline: string;,
+  price: string;,
+  period: string;,
+  description: string;,
+  features: string[];,
+  popular: boolean;,
+  icon: string;,
+  color: string;,
+  text_color: string;,
+  link: string;,
+  market_position: string;,
+  target_audience: string[];,
+  trial_days: number;,
+  setup_time: string;,
+  category: string;,
+  real_service: boolean;,
+  technology: string[];,
+  integrations: string[];,
+  use_cases: string[];,
+  roi: string;,
+  competitors: string[];,
+  market_size: string;,
+  growth_rate: string;,
+  variant: string;,
+  contact_info: unknown;,
+    mobile: string;,
+    email: string,
+    address: string,
     website: string,
   }
 export interface InnovativeBusinessSolution {id: string, name: string,
@@ -42,51 +37,23 @@ export interface InnovativeBusinessSolution {id: string, name: string,
   features: string[], popular: boolean,
   icon: string, color: string,
   textColor: string, link: string,
-=======
-    email: string;
-    address: string;
-    website: string};
-export interface InnovativeBusinessSolution {
-id: string, name: string;
-}
-  tagline: string, price: string;
-  period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
-  textColor: string, link: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   marketPosition: string, targetAudience: string[],
   trialDays: number, setupTime: string,
   category: string, realService: boolean,
   technology: string[], integrations: string[],
-<<<<<<< HEAD
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
-  growthRate: string, variant: string
+  growthRate: string, variant: string,
   contactInfo: unknown,
-    mobile: string, email: string
+    mobile: string, email: string,
     address: string,
     website: string}
     },
     realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number
-  rating: number
+  launchDate: string, customers: number,
+  rating: number,
   reviews: number,
 }
-=======
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string, variant: string;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string};
-    },
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
   // AI Business Intelligence Suite;
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
@@ -111,19 +78,12 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     real_implementation: true,
     implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
-    launch_date: '2025 - 05 - 01'
-=======
-      website: 'https://ziontechgroup.com'};
-    real_implementation: true;
-    implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
     launch_date: '2025 - 05 - 01',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    customers: 38;
-    rating: 4.7
+    customers: 38;,
+    rating: 4.7,
     reviews: 26
 ],
 ,
@@ -219,7 +179,7 @@ export const,
   n: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business performance.',
     feature,
   s: [,
-      'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems'
+      'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems',
       'Advanced analytics and reportingCustom business intelligence workflows'
     ],
     popula,
@@ -262,7 +222,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     };
     real_implementatio,
   n: true,
@@ -282,7 +242,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     };
 ];
 };
@@ -290,19 +250,11 @@ export const,
 realImplementation: true,
     implementationDetails:,
       'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'
-<<<<<<< HEAD
-    launchDate: '2025-02-15'
-    customers: 89
-    rating: 4.7
+    launchDate: '2025-02-15',
+    customers: 89,
+    rating: 4.7,
     reviews: 62,
   }
-=======
-    launchDate: '2025-02-15',
-    customers:
-        customers: 89;
-    rating: 4.7;
-    reviews: 62};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // AI Sales Intelligence Platform;
     id: 'ai-sales-intelligence-platform-v2',
     name: 'AI Sales Intelligence Platform',
@@ -346,12 +298,12 @@ realImplementation: true,
       'Sales analytics and insights'
       'Integration with CRM systems'
       'Custom sales workflows'
-      'Advanced sales reporting'
+      'Advanced sales reporting',
       'Real-time sales monitoring'
     ]
     popular: true,
-    icon: ''
-    color: 'from-orange-500 to-red-600'
+    icon: '',
+    color: 'from-orange-500 to-red-600',
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-sales-intelligence-platform',
     marketPosition:,
@@ -374,7 +326,7 @@ realImplementation: true,
       'Sales teams'
       'Sales managers'
       'Revenue operations'
-      'Business development'
+      'Business development',
       'Technology companies'
     ]
     trialDay,
@@ -392,7 +344,7 @@ realImplementation: true,
       'Sales Analytics'
       'Predictive Modeling'
       'Python'
-      'TensorFlow'
+      'TensorFlow',
       'React'
     ]
     integration,
@@ -400,7 +352,7 @@ realImplementation: true,
       'CRM systems'
       'Sales tools'
       'Email platforms'
-      'Analytics tools'
+      'Analytics tools',
       'Business applications'
     ]
     useCases: [
@@ -413,33 +365,21 @@ realImplementation: true,
       'Revenue acceleration'],
     roi: 'Sales teams report 400% ROI with 50% improvement in conversion rates and 40% increase in revenue.',
     competitors: ['Gong', 'Chorus.ai', 'SalesLoft', 'Outreach']
-    marketSize: '$5.2 B sales intelligence market'
-    growthRate: '30% annual growth'
+    marketSize: '$5.2 B sales intelligence market',
+    growthRate: '30% annual growth',
     variant: 'ai-sales',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
       'Comprehensive AI-powered sales intelligence platform with intelligent optimization, forecasting, and seamless CRM integration.'
-    launchDate: '2025-03-01'
-    customers: 67
-    rating: 4.9
+    launchDate: '2025-03-01',
+    customers: 67,
+    rating: 4.9,
     reviews: 45,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Comprehensive AI-powered sales intelligence platform with intelligent optimization, forecasting, and seamless CRM integration.'
-    launchDate: '2025-03-01',
-    customers:
-        customers: 67;
-    rating: 4.9;
-    reviews: 45};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // AI Customer Service Platform;
     id: 'ai-customer-service-platform',
     name: 'AI Customer Service Platform',
@@ -468,7 +408,7 @@ realImplementation: true,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     };
     realImplementatio,
   n: true,
@@ -506,12 +446,12 @@ realImplementation: true,
       'Multi-channel support integration'
       'Performance analytics and insights'
       'Custom support workflows'
-      'Integration with support tools'
+      'Integration with support tools',
       'Advanced customer service analytics'
     ]
     popular: false,
-    icon: ''
-    color: 'from-purple-500 to-pink-600'
+    icon: '',
+    color: 'from-purple-500 to-pink-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-customer-service-platform',
     marketPosition:,
@@ -534,7 +474,7 @@ realImplementation: true,
       'Customer service teams'
       'Support managers'
       'E-commerce companies'
-      'Technology companies'
+      'Technology companies',
       'Service providers'
     ]
     trialDay,
@@ -552,7 +492,7 @@ realImplementation: true,
       'Natural Language Processing'
       'Chatbot Technology'
       'Python'
-      'TensorFlow'
+      'TensorFlow',
       'React'
     ]
     integration,
@@ -560,7 +500,7 @@ realImplementation: true,
       'Help desk systems'
       'CRM platforms'
       'Live chat tools'
-      'Knowledge base systems'
+      'Knowledge base systems',
       'Social media platforms'
     ]
     useCases: [
@@ -573,33 +513,21 @@ realImplementation: true,
       'Support analytics'],
     roi: 'Customer service teams report 350% ROI with 60% reduction in support costs and 45% improvement in customer satisfaction.',
     competitors: ['Zendesk', 'Intercom', 'Freshdesk', 'Help Scout']
-    marketSize: '$4.8 B customer service market'
-    growthRate: '22% annual growth'
+    marketSize: '$4.8 B customer service market',
+    growthRate: '22% annual growth',
     variant: 'ai-customer-service',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
       'Comprehensive AI-powered customer service platform with intelligent automation, support optimization, and seamless support tool integration.'
-    launchDate: '2025-03-15'
-    customers: 54
-    rating: 4.7
+    launchDate: '2025-03-15',
+    customers: 54,
+    rating: 4.7,
     reviews: 38,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Comprehensive AI-powered customer service platform with intelligent automation, support optimization, and seamless support tool integration.'
-    launchDate: '2025-03-15',
-    customers:
-        customers: 54;
-    rating: 4.7;
-    reviews: 38};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // AI HR Management Platform;
     id: 'ai-hr-management-platform',
     name: 'AI HR Management Platform',
@@ -628,7 +556,7 @@ realImplementation: true,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     };
     realImplementatio,
   n: true,
@@ -666,12 +594,12 @@ realImplementation: true,
       'HR analytics and insights'
       'Integration with HR systems'
       'Custom HR workflows'
-      'Advanced HR reporting'
+      'Advanced HR reporting',
       'Comprehensive workforce analytics'
     ]
     popular: false,
-    icon: ''
-    color: 'from-teal-500 to-cyan-600'
+    icon: '',
+    color: 'from-teal-500 to-cyan-600',
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-hr-management-platform',
     marketPosition:,
@@ -694,7 +622,7 @@ realImplementation: true,
       'HR teams'
       'HR managers'
       'Recruitment teams'
-      'People operations'
+      'People operations',
       'Technology companies'
     ]
     trialDay,
@@ -712,7 +640,7 @@ realImplementation: true,
       'HR Analytics'
       'Recruitment Technology'
       'Python'
-      'TensorFlow'
+      'TensorFlow',
       'React'
     ]
     integration,
@@ -720,7 +648,7 @@ realImplementation: true,
       'HRIS systems'
       'ATS platforms'
       'Payroll systems'
-      'Performance management tools'
+      'Performance management tools',
       'Learning platforms'
     ]
     useCases: [
@@ -733,33 +661,21 @@ realImplementation: true,
       'HR analytics'],
     roi: 'HR teams report 320% ROI with 50% improvement in recruitment efficiency and 40% increase in employee engagement.',
     competitors: ['Workday', 'BambooHR', 'Greenhouse', 'Lever']
-    marketSize: '$6.2 B HR technology market'
-    growthRate: '26% annual growth'
+    marketSize: '$6.2 B HR technology market',
+    growthRate: '26% annual growth',
     variant: 'ai-hr',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
       'Comprehensive AI-powered HR management platform with intelligent automation, workforce optimization, and seamless HR system integration.'
-    launchDate: '2025-04-01'
-    customers: 42
-    rating: 4.8
+    launchDate: '2025-04-01',
+    customers: 42,
+    rating: 4.8,
     reviews: 29,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Comprehensive AI-powered HR management platform with intelligent automation, workforce optimization, and seamless HR system integration.'
-    launchDate: '2025-04-01',
-    customers:
-        customers: 42;
-    rating: 4.8;
-    reviews: 29};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // AI Financial Analytics Platform;
     id: 'ai-financial-analytics-platform',
     name: 'AI Financial Analytics Platform',
@@ -788,7 +704,7 @@ realImplementation: true,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     };
     realImplementatio,
   n: true,
@@ -826,12 +742,12 @@ realImplementation: true,
       'Compliance and audit support'
       'Integration with financial systems'
       'Custom financial workflows'
-      'Advanced financial reporting'
+      'Advanced financial reporting',
       'Comprehensive financial insights'
     ]
     popular: true,
-    icon: ''
-    color: 'from-emerald-500 to-green-600'
+    icon: '',
+    color: 'from-emerald-500 to-green-600',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/ai-financial-analytics-platform',
     marketPosition:,
@@ -854,7 +770,7 @@ realImplementation: true,
       'Finance teams'
       'CFOs'
       'Financial analysts'
-      'Accounting teams'
+      'Accounting teams',
       'Technology companies'
     ]
     trialDay,
@@ -872,7 +788,7 @@ realImplementation: true,
       'Financial Analytics'
       'Risk Management'
       'Python'
-      'TensorFlow'
+      'TensorFlow',
       'React'
     ]
     integration,
@@ -880,7 +796,7 @@ realImplementation: true,
       'ERP systems'
       'Accounting software'
       'Financial databases'
-      'Trading platforms'
+      'Trading platforms',
       'Risk management tools'
     ]
     useCases: [
@@ -893,33 +809,21 @@ realImplementation: true,
       'Performance monitoring'],
     roi: 'Finance teams report 450% ROI with 60% improvement in financial decision-making and 50% reduction in financial risks.',
     competitors: ['Bloomberg', 'Thomson Reuters', 'FactSet', 'Refinitiv']
-    marketSize: '$8.5 B financial analytics market'
-    growthRate: '32% annual growth'
+    marketSize: '$8.5 B financial analytics market',
+    growthRate: '32% annual growth',
     variant: 'ai-financial',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails:,
       'Comprehensive AI-powered financial analytics platform with intelligent analysis, risk management, and seamless financial system integration.'
-    launchDate: '2025-04-15'
-    customers: 28
-    rating: 4.9
+    launchDate: '2025-04-15',
+    customers: 28,
+    rating: 4.9,
     reviews: 19,
   }
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails:,
-      'Comprehensive AI-powered financial analytics platform with intelligent analysis, risk management, and seamless financial system integration.'
-    launchDate: '2025-04-15',
-    customers:
-        customers: 28;
-    rating: 4.9;
-    reviews: 19};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // AI Project Management Platform;
     id: 'ai-project-management-platform',
     name: 'AI Project Management Platform',
@@ -948,7 +852,7 @@ realImplementation: true,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     };
     realImplementatio,
   n: true,
@@ -986,12 +890,12 @@ realImplementation: true,
       'Team collaboration and communication'
       'Integration with project tools'
       'Custom project workflows'
-      'Advanced project reporting'
+      'Advanced project reporting',
       'Comprehensive project insights'
     ]
     popular: false,
-    icon: ''
-    color: 'from-indigo-500 to-purple-600'
+    icon: '',
+    color: 'from-indigo-500 to-purple-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-project-management-platform',
     marketPosition:,
@@ -1014,7 +918,7 @@ realImplementation: true,
       'Project managers'
       'Project teams'
       'Program managers'
-      'Technology companies'
+      'Technology companies',
       'Consulting firms'
     ]
     trialDay,
@@ -1032,7 +936,7 @@ realImplementation: true,
       'Project Management'
       'Resource Optimization'
       'Python'
-      'TensorFlow'
+      'TensorFlow',
       'React'
     ]
     integration,
@@ -1040,7 +944,7 @@ realImplementation: true,
       'Project management tools'
       'Collaboration platforms'
       'Time tracking tools'
-      'Resource management systems'
+      'Resource management systems',
       'Communication tools'
     ]
     useCases: [
@@ -1053,45 +957,30 @@ realImplementation: true,
       'Team collaboration'],
     roi: 'Project teams report 350% ROI with 50% improvement in project delivery and 40% reduction in project costs.',
     competitors: ['Asana', 'Monday.com', 'ClickUp', 'Notion']
-    marketSize: '$5.5 B project management market'
-    growthRate: '24% annual growth'
+    marketSize: '$5.5 B project management market',
+    growthRate: '24% annual growth',
     variant: 'ai-project-management',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails:,
       'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
-    launchDate: '2025-05-01'
-    customers: 38
-    rating: 4.7
+    launchDate: '2025-05-01',
+    customers: 38,
+    rating: 4.7,
     reviews: 26,
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
     implementationDetails: 'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
-    launchDate: '2025-05-01'
-    customers: 38
-    rating: 4.7
-    reviews: 26,
-=======
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails: 'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
     launchDate: '2025-05-01',
-    customers: 38;
-    rating: 4.7;
-    reviews: 26;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    customers: 38,
+    rating: 4.7,
+    reviews: 26,
       'Team collaboration'
     ]
     ro,
@@ -1113,7 +1002,7 @@ realImplementation: true,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     };
     realImplementatio,
   n: true,
@@ -1135,7 +1024,7 @@ realImplementation: true,
   s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     };
     realImplementatio,
   n: true,
@@ -1153,43 +1042,23 @@ realImplementation: true,
 export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
   }
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number
-  rating: number
+  realImplementation: boolean;,
+  implementationDetails: string;,
+  launchDate: string;,
+  customers: number,
+  rating: number,
   reviews: number,
 }
 realImplementation: true,
     implementationDetails:,
       'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'
-    launchDate: '2025-02-15'
-    customers: 89
-    rating: 4.7
+    launchDate: '2025-02-15',
+    customers: 89,
+    rating: 4.7,
     reviews: 62,
   }
-=======
-  e: string};
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number};
-;
-    realImplementation: true;
-    implementationDetails:,
-      'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'
-    launchDate: '2025-02-15',
-    customers:
-        customers: 89;
-    rating: 4.7;
-    reviews: 62};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // AI Sales Intelligence Platform;
     id: 'ai-sales-intelligence-platform-v2',
     name: 'AI Sales Intelligence Platform',
@@ -1211,14 +1080,8 @@ realImplementation: true,
   ratin,
   g: number,
   review,
-<<<<<<< HEAD
   s: number}
 realImplementatio,
-=======
-  s: number};
-;
-    realImplementatio,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   n: true,
     implementationDetail,
   s:
@@ -1254,7 +1117,7 @@ realImplementatio,
       'Sales teams'
       'Sales managers'
       'Revenue operations'
-      'Business development'
+      'Business development',
       'Technology companies'
     ]
     trialDay,
@@ -1272,7 +1135,7 @@ realImplementatio,
       'Sales Analytics'
       'Predictive Modeling'
       'Python'
-      'TensorFlow'
+      'TensorFlow',
       'React'
     ]
     integration,
@@ -1280,7 +1143,7 @@ realImplementatio,
       'CRM systems'
       'Sales tools'
       'Email platforms'
-      'Analytics tools'
+      'Analytics tools',
       'Business applications'
     ]
     useCases: [
@@ -1319,7 +1182,7 @@ realImplementatio,
       'Customer service teams'
       'Support managers'
       'E-commerce companies'
-      'Technology companies'
+      'Technology companies',
       'Service providers'
     ]
     trialDay,
@@ -1337,7 +1200,7 @@ realImplementatio,
       'Natural Language Processing'
       'Chatbot Technology'
       'Python'
-      'TensorFlow'
+      'TensorFlow',
       'React'
     ]
     integration,
@@ -1345,7 +1208,7 @@ realImplementatio,
       'Help desk systems'
       'CRM platforms'
       'Live chat tools'
-      'Knowledge base systems'
+      'Knowledge base systems',
       'Social media platforms'
     ]
     useCases: [
@@ -1384,7 +1247,7 @@ realImplementatio,
       'HR teams'
       'HR managers'
       'Recruitment teams'
-      'People operations'
+      'People operations',
       'Technology companies'
     ]
     trialDay,
@@ -1402,7 +1265,7 @@ realImplementatio,
       'HR Analytics'
       'Recruitment Technology'
       'Python'
-      'TensorFlow'
+      'TensorFlow',
       'React'
     ]
     integration,
@@ -1410,7 +1273,7 @@ realImplementatio,
       'HRIS systems'
       'ATS platforms'
       'Payroll systems'
-      'Performance management tools'
+      'Performance management tools',
       'Learning platforms'
     ]
     useCases: [
@@ -1449,7 +1312,7 @@ realImplementatio,
       'Finance teams'
       'CFOs'
       'Financial analysts'
-      'Accounting teams'
+      'Accounting teams',
       'Technology companies'
     ]
     trialDay,
@@ -1467,7 +1330,7 @@ realImplementatio,
       'Financial Analytics'
       'Risk Management'
       'Python'
-      'TensorFlow'
+      'TensorFlow',
       'React'
     ]
     integration,
@@ -1475,7 +1338,7 @@ realImplementatio,
       'ERP systems'
       'Accounting software'
       'Financial databases'
-      'Trading platforms'
+      'Trading platforms',
       'Risk management tools'
     ]
     useCases: [
@@ -1514,7 +1377,7 @@ realImplementatio,
       'Project managers'
       'Project teams'
       'Program managers'
-      'Technology companies'
+      'Technology companies',
       'Consulting firms'
     ]
     trialDay,
@@ -1532,7 +1395,7 @@ realImplementatio,
       'Project Management'
       'Resource Optimization'
       'Python'
-      'TensorFlow'
+      'TensorFlow',
       'React'
     ]
     integration,
@@ -1546,48 +1409,42 @@ realImplementatio,
       'Communication tools'
     ]
     useCase,
-<<<<<<< HEAD
   s: [}
-=======
-  s: [};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
   // AI Business Intelligence Suite;
   {
-    id: 'ai-business-intelligence-suite'
-    name: 'AI Business Intelligence Suite'
+    id: 'ai-business-intelligence-suite',
+    name: 'AI Business Intelligence Suite',
     tagline: 'Intelligent business insights and analytics',
     price: '$3,200';
     period: '/month',,
   description: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business window.window.window.performance.';
     features: [
-      'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems';
+      'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems';,
       'Advanced analytics and reportingCustom business intelligence workflows'
     ];
-    popular: true;
-    icon: '';
-    color: 'from-blue-500 to-indigo-600'
-    textColor: 'text-blue-400'
+    popular: true;,
+    icon: '';,
+    color: 'from-blue-500 to-indigo-600',
+    textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-business-intelligence-suite',
     marketPosition: 'Leading AI-powered business intelligence platform with advanced analytics, predictive insights, and comprehensive business optimization capabilities.';
-    targetAudience: ['Business analystsData scientistsExecutivesBusiness intelligence teamsTechnology companies'];
-    trialDays: 30;
-    setupTime: '3-4 weeks';
-    category: 'AI Business Intelligence';
-    realService: true;
-    technology: ['Artificial IntelligenceMachine LearningBusiness AnalyticsData VisualizationPythonTensorFlowReact'];
-    integrations: ['ERP systemsCRM platformsDatabasesCloud platformsBusiness applicationsAPI services'];
-    useCases: ['Business analyticsPerformance monitoringPredictive insightsDecision supportBusiness optimization'];
-    roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business window.window.window.performance.';
-    competitors: ['TableauPower BIQlikViewLooker'];
-    marketSize: '$7.8 B business intelligence market'
-    growthRate: '28% annual growth'
+    targetAudience: ['Business analystsData scientistsExecutivesBusiness intelligence teamsTechnology companies'];,
+    trialDays: 30;,
+    setupTime: '3-4 weeks';,
+    category: 'AI Business Intelligence';,
+    realService: true;,
+    technology: ['Artificial IntelligenceMachine LearningBusiness AnalyticsData VisualizationPythonTensorFlowReact'];,
+    integrations: ['ERP systemsCRM platformsDatabasesCloud platformsBusiness applicationsAPI services'];,
+    useCases: ['Business analyticsPerformance monitoringPredictive insightsDecision supportBusiness optimization'];,
+    roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business window.window.window.performance.';,
+    competitors: ['TableauPower BIQlikViewLooker'];,
+    marketSize: '$7.8 B business intelligence market',
+    growthRate: '28% annual growth',
     variant: 'ai-business-intelligence',
     contactInfo: {,
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
@@ -1597,30 +1454,12 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
       website: 'https://ziontechgroup.com'}
     real_implementation: true,
     implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
-    launch_date: '2025 - 05 - 01'
-    customers: 38
-    rating: 4.7
+    launch_date: '2025 - 05 - 01',
+    customers: 38,
+    rating: 4.7,
     reviews: 26,
   {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
-export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
-  // AI Business Intelligence Suite;
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    reviews: 26};
-      website: 'https://ziontechgroup.com'};
-    real_implementation: true;
-    implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
-    launch_date: '2025 - 05 - 01',
-    customers: 38;
-    rating: 4.7;
-    reviews: 26;
-  {/* TODO: Fix JSX expression */};
-  s: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
   // AI Business Intelligence Suite,
@@ -1629,7 +1468,7 @@ export const,
   s: 26};
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     };
     real_implementatio,
   n: true,
@@ -2061,13 +1900,8 @@ i,
   e: true,
   technology: [' 'Artificial Intelligence'' 'Machine Learning'' 'Project Management'' 'Resource Optimization'' 'Python'' 'TensorFlow'' 'React' ] integration,
   s: [' 'Project management tools'' 'Collaboration platforms'' 'Time tracking tools'' 'Resource management systems'' 'Communication tools' ] useCase,
-<<<<<<< HEAD
   s: [ } export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [; // AI Business Intelligence Suite, {/* TODO: Fix JSX expression */}
-=======
-  s: [ } ; export const,
-  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [; // AI Business Intelligence Suite; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: '364 E Main St STE 1008 Middletown DE 19709'} export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [ // AI Business Intelligence Suite ' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'} review,
@@ -2079,8 +1913,4 @@ i,
   e: '2025 - 05 - 01' customer,
   s: 38, ratin,
   g: 4.7, review,
-<<<<<<< HEAD
   s: 26} ]; '
-=======
-  s: 26} ]; '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

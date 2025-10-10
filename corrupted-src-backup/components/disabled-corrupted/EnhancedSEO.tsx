@@ -1,14 +1,8 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
-=======
-interface SEOProps {/* TODO: Fix JSX expression */};
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const EnhancedSEO: React.FC<SEOProps> = ({,
+const EnhancedSEO: React.FC<SEOProps>= ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.',
   keywords = 'AI solutions, IT services, enterprise software, digital transformation, machine learning, artificial intelligence, technology consulting',
@@ -23,17 +17,10 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   noindex = false,
   nofollow = false,
   canonical}) => {
-  const _location = useLocation();
-const,
-<<<<<<< HEAD
-  EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
+  const _location = useLocation();</SEOProps>
+const,</SEOProps>
+  EnhancedSEO: React.FC<SEOProps>= ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-=======
-  EnhancedSEO: React.FC<SEOProps>
-);
-} = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   //   const currentUrl = url || `${window.location.origin}${location.pathname}`;
   //   const canonicalUrl = canonical || currentUrl;
   //   const currentTime = new Date().toISOString();
@@ -43,7 +30,7 @@ const,
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    description: description
+    description: description,
     url: window.location.origin,
     logo: `${window.location.origin}/images/logo.png`,
     sameAs: [,
@@ -71,24 +58,15 @@ const,
       postalCode: '94105',
       addressCountry: 'US',
     addres,
-<<<<<<< HEAD
   s: {/* TODO: Fix JSX expression */}
     }}
   // Add article structured data if type is article;
   if (type === 'article') {
     const articleData = {
-=======
-  s: {/* TODO: Fix JSX expression */};
-    }};
-  // Add article structured data if type is article;
-  if (type === 'article') {;
-const articleData = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       '@context': 'https: //schema.org',
       '@type': 'Article',
-      headline: title
-      description: description
+      headline: title,
+      description: description,
       image: image,
       author: {,
         '@type': 'Organization',
@@ -100,7 +78,7 @@ const articleData = {
         logo: {,
           '@type': 'ImageObject',
           url: `${window.location.origin}/images/logo.png`}},
-      datePublished: publishedTime || currentTime
+      datePublished: publishedTime || currentTime,
       dateModified: modifiedTime || currentTime,
       mainEntityOfPage: {,
         '@type': 'WebPage',
@@ -115,7 +93,6 @@ const articleData = {
       dateModifie,
   d: modifiedTime || currentTime,
       mainEntityOfPag,
-<<<<<<< HEAD
   e: {/* TODO: Fix JSX expression */}
       }}
     if (section) {/* TODO: Fix JSX expression */}
@@ -124,15 +101,6 @@ const articleData = {
     }
     (structuredData as any)['@graph'] = [structuredData, articleData];
   }
-=======
-  e: {/* TODO: Fix JSX expression */};
-      }};
-    if (section) {/* TODO: Fix JSX expression */};
-    };
-    if (tags.length > 0) {/* TODO: Fix JSX expression */};
-    };
-    (structuredData as any)['@graph'] = [structuredData, articleData]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Track page view;
   useEffect(() => {
     // Google Analytics tracking;
@@ -140,99 +108,76 @@ const articleData = {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: title),
         page_location: currentUrl),
-<<<<<<< HEAD
   useEffect(() => {/* TODO: Fix JSX expression */}
       });
     }
-=======
-  useEffect(() => {/* TODO: Fix JSX expression */};
-      })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Custom analytics tracking;
     if (typeof window !== 'undefined' && (window as any).analytics) {
       (window as any).analytics.track('Page Viewed', {)
         title)
         url: currentUrl),
         type),
-<<<<<<< HEAD
     if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */}
       });
-    }
-=======
-    if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */};
-      })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  }, [title, currentUrl, type]);
-  return(<Helmet>
-      {/* Basic Meta Tags */};
+    }</SEOProps>
+  }, [title, currentUrl, type]);</SEOProps>
+  return(<Helmet>{/* Basic Meta Tags */};</Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      {/* Robots */};
+      <meta name="author" content={author} />{/* Robots */};</meta>
       <meta ;
-        name="robots"
+        name="robots")
         content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`};
-      />
-      {/* Canonical URL */};
-      <link rel="canonical" href={canonicalUrl} />
-      {/* Open Graph / Facebook */};
+      />{/* Canonical URL */};</meta>
+      <link rel="canonical" href={canonicalUrl} />{/* Open Graph / Facebook */};</link>
       <meta property="og:type" content={type} />
-      <meta property="og:title" content={title} />)
-      <meta property="og:description" content={description} />)
+      <meta property="og:title" content={title} />)</meta>
+      <meta property="og:description" content={description} />)</meta>
       <meta ;)
         property="og: image"),
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`};
       />
       <meta property="og:url" content={currentUrl} />
-      <meta property="og: site_name" content="Zion Tech Group" />,
+      <meta property="og: site_name" content="Zion Tech Group" />,</meta>
       <meta property="og:locale" content="en_US" />,
-,
-      {/* Twitter */};
-      <meta name="twitter: card" content="summary_large_image" />,
+,</meta>
+      {/* Twitter */};</meta>
+      <meta name="twitter: card" content="summary_large_image" />,</meta>
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta ;
         name="twitter: image",
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`};
       />
-      <meta name="twitter: site" content="@ziontechgroup" />,
+      <meta name="twitter: site" content="@ziontechgroup" />,</meta>
       <meta name="twitter:creator" content="@ziontechgroup" />,
-,
-      {/* Additional Meta Tags */};
+,</meta>
+      {/* Additional Meta Tags */};</meta>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />
       <meta name="distribution" content="global" />
-      <meta name="rating" content="general" />
-      {/* Theme Color */};
+      <meta name="rating" content="general" />{/* Theme Color */};</meta>
       <meta name="theme-color" content="#1f2937" />
-      <meta name="msapplication-TileColor" content="#1f2937" />
-      {/* Favicon */};
+      <meta name="msapplication-TileColor" content="#1f2937" />{/* Favicon */};</meta>
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      {/* Preconnect to external domains */};
-      <link rel="preconnect" href="https: //fonts.googleapis.com" />,
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
+      <link rel="manifest" href="/site.webmanifest" />{/* Preconnect to external domains */};</link>
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />,</link>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,</link>
       <link rel="preconnect" href="https://www.google-analytics.com" />,
-,
-      {/* DNS Prefetch */};
+,</link>
+      {/* DNS Prefetch */};</link>
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      {/* Structured Data */};
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />{/* Structured Data */};</link>
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-<<<<<<< HEAD
       {/* Additional structured data for breadcrumbs */}
       {
     location.pathname !== '/' && (
-=======
-      {/* Additional structured data for breadcrumbs */};
-      {location.pathname !== '/' && (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <script type="application/ld+json"></scrip>
           {JSON.stringify({
             '@context': 'https: //schema.org',
@@ -241,16 +186,16 @@ const articleData = {
               {
                 '@type': 'ListItem'
                 position: 1,
-                name: 'Home',
+                name: 'Home',)
                 item: window.location.origin
   },
               {
                 '@type': 'ListItem')
-                position: 2;)
-                name: title;)
+                position: 2;),
+                name: title;),
                 item: currentUrl,)})
             ])
-  return (<Helmet></Helmet>
+  return(<Helmet></Helmet>
       {/* Basic Meta Tags */};
       <title>{title}</title>
       <meta name="description" content={description} /></meta>"
@@ -271,7 +216,7 @@ const articleData = {
       <meta property="o,"
   g:description" content={description} /></meta>
       <meta></meta>"
-        property="o,"
+        property="o,")
   g:image")`
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`};
       />"
@@ -325,25 +270,16 @@ const articleData = {
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
       {/* Structured Data */}"
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-<<<<<<< HEAD
       {/* Additional structured data for breadcrumbs */}
       {/* TODO: Fix JSX expression */}
-=======
-      {/* Additional structured data for breadcrumbs */};
-      {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               },
               {/* TODO: Fix JSX expression */};
               }]})};
         </script>
       )};
     </Helmet>
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default EnhancedSEO;
 "`
   </SEOProps>

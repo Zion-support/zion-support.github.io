@@ -1,21 +1,11 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react'
 const TermsPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024'
   const sections = [
     {
-=======
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
-export default function TermsPage() {;
-const lastUpdated = 'January 1, 2024';
-  ;
-const sections = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'Acceptance of Terms',
       icon: CheckCircle,
       content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
@@ -30,7 +20,6 @@ const sections = [
       icon: Server,
       content: 'We strive to maintain 99.9% uptime for our services, but we do not guarantee uninterrupted access and reserve the right to perform maintenance.'
     },
-<<<<<<< HEAD
     {
       title: 'User Accounts',
       icon: User,
@@ -40,38 +29,21 @@ const sections = [
       title: 'Data Protection',
       icon: Shield,
       content: 'We implement industry-standard security measures to protect your data and comply with applicable data protection regulations.'
-=======
-        {
-      title: 'Limitation of Liability',
-      icon: Shield,
-      content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.']
-    },
-        {
-      title: 'Privacy Policy',
-      icon: Lock,
-      content: 'Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services.']
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
         {
       title: 'Intellectual Property',
       icon: Lock,
       content: 'All content, trademarks, and intellectual property on our website and services are owned by Zion Tech Group or our licensors.'
     },
-<<<<<<< HEAD
     {
       title: 'Limitation of Liability',
-=======
-        {
-      title: 'Termination',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       icon: AlertTriangle,
       content: 'In no event shall Zion Tech Group be liable for any indirect, incidental, special, consequential, or punitive damages.'
     },
         {
       title: 'Governing Law',
       icon: Scale,
-<<<<<<< HEAD
-      content: 'These terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States.'
+      content: 'These terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States.',
     }
   ]
 
@@ -81,8 +53,7 @@ const sections = [
     address: '364 E Main St STE 1008, Middletown, DE 19709'
   }
 
-  return (
-    <>
+  return(<>
       <Helmet>
         <title>Terms of Service - Zion Tech Group</title>
         <meta name="description" content="Terms of Service for Zion Tech Group. Learn about our terms, conditions, and policies for using our AI and IT services." />
@@ -91,20 +62,17 @@ const sections = [
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
+        <div className="container mx-auto px-4 py-16 pt-24">{/* Header */}</div>
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
                 <FileText className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white neon-text-enhanced">
-                Terms of Service
+              <h1 className="text-4xl md:text-5xl font-bold text-white neon-text-enhanced">Terms of Service</h1>
               </h1>
             </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Please read these terms carefully before using our services. By accessing or using our website and services, 
-              you agree to be bound by these terms and conditions.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Please read these terms carefully before using our services. By accessing or using our website and services, )</p>
+              you agree to be bound by these terms and conditions.</p>
             </p>
             <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
               <Calendar className="w-4 h-4" />
@@ -115,8 +83,7 @@ const sections = [
           {/* Quick Navigation */}
           <div className="cyber-card-enhanced p-6 mb-12">
             <h2 className="text-xl font-bold text-white mb-4">Quick Navigation</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {sections.map((section, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">{sections.map((section, index) => (</div>
                 <a
                   key={index}
                   href={`#${section.title.toLowerCase().replace(/\s+/g, '-')}`}
@@ -130,51 +97,12 @@ const sections = [
           </div>
 
           {/* Terms Sections */}
-          <div className="space-y-8 mb-16">
-            {sections.map((section, index) => (
+          <div className="space-y-8 mb-16">{sections.map((section, index) => (</div>
               <div key={index} id={section.title.toLowerCase().replace(/\s+/g, '-')} className="cyber-card-enhanced p-8">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 mr-6">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                       <section.icon className="w-6 h-6 text-white" />
-=======
-content: 'These terms shall be governed by and construed in accordance with the laws of the United States.']
-    };
-  ];
-  return (
-    <div>
-      <div>
-        <div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6"></h1>
-            Terms of Service</h1>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"></p>
-            Please read these terms carefully before using our services
-          </p>
-          <div>
-            <Calendar className="h-4 w-4 mr-2" />
-            Last updated: {lastUpdated};
-          </div>
-        </div>
-      </div>
-      <div>
-        <div>
-          <div>
-            <div className="space-y-8"></div>
-              {sections.map((section, index) => (</div>
-                <div>
-                  <div>
-                    <div>
-                      <section .icon className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <h2 className="text-2xl font-bold text-gray-900 mb-3"></h2>
-                        {index + 1}. {section.title};
-                      </h2>
-                      <p className="text-gray-700 leading-relaxed"></p>
-                        {section.content};
-                      </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     </div>
                   </div>
                   <div className="flex-1">
@@ -182,7 +110,6 @@ content: 'These terms shall be governed by and construed in accordance with the 
                     <p className="text-gray-300 leading-relaxed text-lg">{section.content}</p>
                   </div>
                 </div>
-<<<<<<< HEAD
               </div>
             ))}
           </div>
@@ -191,34 +118,22 @@ content: 'These terms shall be governed by and construed in accordance with the 
           <div className="cyber-card-enhanced p-8 mb-16">
             <h2 className="text-2xl font-bold text-white mb-6">Additional Terms</h2>
             <div className="space-y-6">
-=======
-              ));
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4"></h>Contact Information</h3>
-              <p className="text-gray-700 mb-6"></p>
-                If you have any questions about these Terms of Service, please contact us:
-              </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <div>
                 <h3 className="text-lg font-semibold text-white mb-3">Service Modifications</h3>
-                <p className="text-gray-300">
-                  We reserve the right to modify or discontinue our services at any time without notice. 
-                  We shall not be liable to you or any third party for any modification, suspension, or discontinuance of the service.
+                <p className="text-gray-300">We reserve the right to modify or discontinue our services at any time without notice. </p>
+                  We shall not be liable to you or any third party for any modification, suspension, or discontinuance of the service.</p>
                 </p>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white mb-3">Termination</h3>
-                <p className="text-gray-300">
-                  We may terminate or suspend your account and access to our services immediately, without prior notice or liability, 
-                  for any reason whatsoever, including without limitation if you breach the terms.
+                <p className="text-gray-300">We may terminate or suspend your account and access to our services immediately, without prior notice or liability, </p>
+                  for any reason whatsoever, including without limitation if you breach the terms.</p>
                 </p>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white mb-3">Changes to Terms</h3>
-                <p className="text-gray-300">
-                  We reserve the right to modify these terms at any time. We will notify users of any material changes by posting 
-                  the new terms on this page and updating the "Last updated" date.
+                <p className="text-gray-300">We reserve the right to modify these terms at any time. We will notify users of any material changes by posting </p>
+                  the new terms on this page and updating the "Last updated" date.</p>
                 </p>
               </div>
             </div>
@@ -227,16 +142,14 @@ content: 'These terms shall be governed by and construed in accordance with the 
           {/* Contact Information */}
           <div className="cyber-card-enhanced p-8 mb-16">
             <h2 className="text-2xl font-bold text-white mb-6">Questions About These Terms?</h2>
-            <p className="text-gray-300 mb-8">
-              If you have any questions about these Terms of Service, please contact our legal team.
+            <p className="text-gray-300 mb-8">If you have any questions about these Terms of Service, please contact our legal team.</p>
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="flex items-center space-x-3">
                 <Mail className="w-6 h-6 text-cyan-400" />
                 <div>
                   <div className="text-white font-semibold">Email</div>
-                  <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300">
-                    {contactInfo.email}
+                  <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300">{contactInfo.email}</a>
                   </a>
                 </div>
               </div>
@@ -244,8 +157,7 @@ content: 'These terms shall be governed by and construed in accordance with the 
                 <Phone className="w-6 h-6 text-cyan-400" />
                 <div>
                   <div className="text-white font-semibold">Phone</div>
-                  <a href={`tel:${contactInfo.phone}`} className="text-cyan-400 hover:text-cyan-300">
-                    {contactInfo.phone}
+                  <a href={`tel:${contactInfo.phone}`} className="text-cyan-400 hover:text-cyan-300">{contactInfo.phone}</a>
                   </a>
                 </div>
               </div>
@@ -257,7 +169,6 @@ content: 'These terms shall be governed by and construed in accordance with the 
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
           </div>
 
           {/* Related Links */}
@@ -297,24 +208,12 @@ content: 'These terms shall be governed by and construed in accordance with the 
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" />
               </a>
-=======
-            <div>
-              <p className="text-sm text-gray-500"></p>
-                By using our services, you acknowledge that you have read and understood these terms.
-              </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </>
   )
 }
 
-export default TermsPage
-=======
-    </div>
-)]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+export default TermsPage;

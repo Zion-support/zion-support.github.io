@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Users, Shield } from 'lucide-react'
@@ -26,7 +25,7 @@ const ConsultationPage: React.FC = () => {
       description: 'Comprehensive security assessment and recommendations.',
       features: ['Vulnerability assessment', 'Compliance review', 'Security policies', 'Training recommendations'],
       price: 'Starting at $3,500',
-      duration: '2-3 weeks'
+      duration: '2-3 weeks',
     }
   ]
 
@@ -53,7 +52,7 @@ const ConsultationPage: React.FC = () => {
       step: '4',
       title: 'Implementation Support',
       description: 'We provide ongoing support to ensure successful implementation.',
-      icon: ArrowRight
+      icon: ArrowRight,
     }
   ]
 
@@ -65,31 +64,25 @@ const ConsultationPage: React.FC = () => {
         <meta name="keywords" content="AI consultation, cloud migration, cybersecurity audit, technology consulting, IT strategy" />
       </Helmet>
 
-      <Navigation />
-      
+      <Navigation /> </Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Expert Consultation Services
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Expert Consultation Services</h1>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Get personalized guidance and strategic insights to transform your business with cutting-edge technology.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get personalized guidance and strategic insights to transform your business with cutting-edge technology.</p>
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-              {services.map((service, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">{services.map((service, index) => (</div>
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
                   
-                  <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
+                  <ul className="space-y-3 mb-6">{service.features.map((feature, featureIndex) => (</ul>
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />{feature}</CheckCircle>
                       </li>
                     ))}
                   </ul>
@@ -98,12 +91,10 @@ const ConsultationPage: React.FC = () => {
                     <div className="flex justify-between items-center mb-4">
                       <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                       <span className="text-gray-400 flex items-center">
-                        <Clock className="w-4 h-4 mr-2" />
-                        {service.duration}
+                        <Clock className="w-4 h-4 mr-2" />{service.duration}</Clock>
                       </span>
                     </div>
-                    <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                      Get Started
+                    <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">Get Started</button>
                     </button>
                   </div>
                 </div>
@@ -112,8 +103,7 @@ const ConsultationPage: React.FC = () => {
 
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-8">Our Consultation Process</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {process.map((step, index) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</div>
                   <div key={index} className="text-center">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                       <step.icon className="w-8 h-8 text-white" />
@@ -128,15 +118,12 @@ const ConsultationPage: React.FC = () => {
 
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
               <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Schedule a free consultation to discuss your technology needs and discover how we can help.
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Schedule a free consultation to discuss your technology needs and discover how we can help.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                  Schedule Free Consultation
+                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">Schedule Free Consultation</button>
                 </button>
-                <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300">
-                  Download Our Guide
+                <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300">Download Our Guide</button>
                 </button>
               </div>
             </div>
@@ -149,136 +136,4 @@ const ConsultationPage: React.FC = () => {
   )
 }
 
-export default ConsultationPage
-=======
-import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Star } from 'lucide-react';
-interface ConsultationType {
-}
-}
-  id: number;
-  name: string;
-  description: string;
-  duration: string;
-  price: string;
-  features: string[];
-  popular?: boolean;
-};
-const ConsultationPage: React.FC = () => {
-};
-  const [selectedType, setSelectedType] = useState<number | null>(null);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    message: '',
-    consultationType: ''
-  });
-  const consultationTypes: ConsultationType[] = [
-    {
-      id: 1,
-  const consultationTypes: ConsultationType[] = [
-    {
-      id: '1',
-      name: 'Discovery Call',
-      description: 'Initial consultation to understand your business needs and challenges',
-      duration: '30 minutes',
-      price: 'Free',
-      features: [
-        'Business needs assessment',
-        'Technology evaluation',
-        'Initial recommendations',
-        'Next steps planning'
-      ]
-    },
-    {
-      id: 2,
-      name: 'Strategic Planning',
-      description: 'Comprehensive analysis and strategic roadmap for your AI transformation',
-      duration: '2 hours',
-      price: '$500',
-      features: [
-        'Deep dive into current systems',
-        'AI readiness assessment',
-        'Strategic roadmap creation',
-        'Implementation timeline',
-        'ROI projections',
-        'Follow-up support'
-      ],
-      popular: true
-    },
-    {
-      id: 3,
-      name: 'Technical Deep Dive',
-      description: 'Detailed technical analysis and architecture recommendations',
-      duration: '4 hours',
-      price: '$1,200',
-      features: [
-      ],
-      popular: true});;)
-},
-    {
-      id: '3',
-      name: 'Technical Deep Dive',
-      description: 'In-depth technical analysis and solution architecture design',
-      duration: '4-8 hours',
-      price: '$1,200',
-      features: [
-        'Technical architecture review',
-        'Security assessment',
-        'Performance optimization',
-        'Integration planning',
-        'Scalability analysis',
-        'Detailed technical documentation'
-      ]
-    },
-    {
-      id: 4,
-      name: 'Executive Briefing',
-      description: 'High-level overview for C-level executives and decision makers',
-      duration: '1 hour',
-      price: '$300',
-      features: [
-        'Executive summary',
-        'Business impact analysis',
-        'Investment recommendations',
-        'Risk assessment',
-        'Competitive advantages'
-      ]
-      ],
-      popular: false});;)
-};
-  ];
-  const experts = [
-[
-        {
-      name: 'Dr. Sarah Chen',
-      role: 'AI & Machine Learning Consultant',
-      experience: '15+ years',
-      expertise: ['AI Strategy', 'Machine Learning', 'Data Science'],
-      image: '/images/experts/sarah-chen.jpg'});;)
-},
-    {
-      name: 'Michael Rodriguez',
-      role: 'Cloud Architecture Specialist',
-      experience: '12+ years',
-      expertise: ['Cloud Migration', 'AWS', 'Azure', 'DevOps'],
-      image: '/images/experts/michael-rodriguez.jpg'
-    },
-    {
-      name: 'Alex Thompson',
-      role: 'Cybersecurity Consultant',
-      experience: '10+ years',
-      expertise: ['Security Audits', 'Compliance', 'Risk Management'],
-      image: '/images/experts/alex-thompson.jpg'});;)
-};
-  ];
-  const handleBooking = (typeId: string) => {
-    setSelectedType(typeId);
-    console.log(`Booking consultation: ${typeId}`);
-    };
-  ];
-  );
-};
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+export default ConsultationPage;

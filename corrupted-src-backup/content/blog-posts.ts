@@ -1,29 +1,17 @@
 export interface BlogPost {
-<<<<<<< HEAD
-    slug: string;
-=======
-}
-  slug: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  title: string;
-  description: string;
-  content: string;
-  author: string;
-  date: string;
-  category: string;
-<<<<<<< HEAD
-  tags: string[]
-  featured: boolean
+    slug: string;,
+  title: string;,
+  description: string;,
+  content: string;,
+  author: string;,
+  date: string;,
+  category: string;,
+  tags: string[],
+  featured: boolean,
   readTime: string,
   image?: string
   }
 
-=======
-  tags: string[];
-  featured: boolean;
-  readTime: string;
-  image?: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const blogPosts: BlogPost[] = [,
   {,
     slug: 'ai-2025-oct-04-operational-ai-scorecards-v2',

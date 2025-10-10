@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // ursor/fix-syntax-push-and-merge-to-main-40de origin/automation-improvements-final #!/usr/bin/env node const {execSync}spawn } = require('child_process'); const fs = require('fs') const path = require('path') class ComprehensiveAutomationRunner {/* TODO: Fix JSX expression */}
   d: 0} optimization,
   s: 0} error,
@@ -298,9 +297,3 @@
   Report: '), // console.log(JSON.stringify(report null)2);); return report} catch (error) {/* TODO: Fix JSX expression */}`
   failed: ${error.message}`)'ERROR'); throw error} } } if() {const runner = new ComprehensiveAutomationRunner;(;)} runner.run().catch(console.error) } module.exports = ComprehensiveAutomationRunner; '
 "`
-=======
-  y: ${report.summary.successfulSteps }/${report.summary.totalSteps} steps successful`)); // // console.log removed for production
-Report: '), // // console.log removed for production
-2);); return report} catch (error) {/* TODO: Fix JSX expression */}`
-  failed: ${error.message}`)'ERROR'); throw error} } } if() {const runner = new ComprehensiveAutomationRunner;(;)} runner.run().catch(console.error) } module.exports = ComprehensiveAutomationRunner;#!/usr/bin/env node const {execSync}spawn } = require('child_process'); const fs = require('fs') const path = require('path') class ComprehensiveAutomationRunner {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

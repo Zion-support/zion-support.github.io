@@ -3,16 +3,9 @@ import fs from 'fs';
 
 function fixJSXErrors(filePath) {
   try {
-<<<<<<< HEAD
-    //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>
-    const patterns = [
-=======
-    //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>;
-const patterns = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      {
-        //Fix CheckCircleIcon and similar patterns
+    //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>const patterns = [
+      {</span>
+        //Fix CheckCircleIcon and similar patterns</span>
         pattern: /(<CheckCircleIcon[^>]*>)\s*<span/g,
         replacement: '$1 />\n                  <span'},
       {
@@ -31,7 +24,6 @@ const patterns = [
         //Fix TruckIcon patterns;
         pattern: /(<TruckIcon[^>]*>)\s*<\/div>/g,
         replacement: '$1 />\n          </div>'}];
-<<<<<<< HEAD
 
     patterns.forEach(fix => {
     )
@@ -41,14 +33,6 @@ const patterns = [
         modified = true
   }
 function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}
-=======
-    patterns.forEach(fix => {)
-      //       const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true};
-function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       },
       {/* TODO: Fix JSX expression */};
       },
@@ -61,7 +45,6 @@ function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */};
     patterns.forEach(fix => {/* TODO: Fix JSX expression */};
       })
     });
-<<<<<<< HEAD
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
@@ -70,13 +53,6 @@ function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */};
   }
 }
 
-=======
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Fix the specific file;
 // const filePath = process.argv[2];
 if (filePath) {/* TODO: Fix JSX expression */};

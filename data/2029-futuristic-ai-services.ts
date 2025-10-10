@@ -1,27 +1,17 @@
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-<<<<<<< HEAD
-  contactInfo: unknown
-    mobile: string
+  id: string;,
+  name: string;,
+  tagline: string;,
+  price: string;,
+  description: string;,
+  features: string[];,
+  link: string;,
+  category: string;,
+  realImplementation: boolean;,
+  contactInfo: unknown,
+    mobile: string,
     email: string,
 export interface FuturisticAiService2029 {,
     address: string}
-=======
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-export interface FuturisticAiService2029 {
-;,
-}
-    address: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: string,
   nam,
@@ -45,17 +35,10 @@ export interface FuturisticAiService2029 {
     mobil,
   e: string,
     emai,
-<<<<<<< HEAD
   l: string,
 export interface FuturisticAiService2029 {/* TODO: Fix JSX expression */}
   s: string}
 }
-=======
-  l: string;
-export interface FuturisticAiService2029 {/* TODO: Fix JSX expression */};
-  s: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: string,
   nam,
@@ -87,26 +70,17 @@ export interface FuturisticAiService2029 {/* TODO: Fix JSX expression */};
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
-<<<<<<< HEAD
-  link: string, category: string
-  realImplementation: boolean
+  link: string, category: string,
+  realImplementation: boolean,
   contactInfo: unknown,
-    mobile: string, email: string
+    mobile: string, email: string,
     address: string,
   }
 }
-=======
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const futuristicAIServices2029: FuturisticAiService2029[] = [,
     id: "2029-futuristic-ai", name: "2029 Futuristic AI Platform",
-    tagline: "Futuristic AI for 2029", price: "$499/month"
-    description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029."
+    tagline: "Futuristic AI for 2029", price: "$499/month",
+    description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",
     features: [,
       "Futuristic AI"
       "Advanced capabilities"
@@ -114,15 +88,9 @@ export const futuristicAIServices2029: FuturisticAiService2029[] = [,
       "Innovation platform",
       "Future-ready AI"],
     link: "/services/2029-futuristic-ai", category: "Futuristic AI 2029",
-<<<<<<< HEAD
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-=======
-    realImplementation: true;
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"};
@@ -172,7 +140,7 @@ export const,
       "Futuristic AI""
       "Advanced capabilities""
       "Breakthrough algorithms""
-      "Innovation platform""
+      "Innovation platform"",
       "Future-ready AI"
     ],
     lin,"
@@ -201,7 +169,7 @@ export const,
     };
   };
 ];
-id: "2029-futuristic-ai"
+id: "2029-futuristic-ai",
     name: "2029 Futuristic AI Platform",
     tagline: "Futuristic AI for 2029",
     price: "$499/month",
@@ -213,12 +181,12 @@ id: "2029-futuristic-ai"
       "Innovation platform",
       "Future-ready AI"
     ],
-    link: "/services/2029-futuristic-ai"
-    category: "Futuristic AI 2029"
-    realImplementation: true
+    link: "/services/2029-futuristic-ai",
+    category: "Futuristic AI 2029",
+    realImplementation: true,
     contactInfo: unknown,
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}}
@@ -287,7 +255,6 @@ i,
   y: string, realImplementatio,
   n: boolean, contactInf,
   o: mobil,
-<<<<<<< HEAD
   e: string, emai,
   l: string, export interface FuturisticAiService2029 {/* TODO: Fix JSX expression */}
   s: string } i,
@@ -301,21 +268,6 @@ i,
   y: string, realImplementatio,
   n: boolean, contactInf,
   o: {/* TODO: Fix JSX expression */}
-=======
-  e: string; emai,
-  l: string; export interface FuturisticAiService2029 {/* TODO: Fix JSX expression */};
-  s: string }; i,
-  d: string; nam,
-  e: string; taglin,
-  e: string; pric,
-  e: string, descriptio,
-  n: string; feature,
-  s: string[]; lin,
-  k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,

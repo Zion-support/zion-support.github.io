@@ -17,11 +17,9 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
   e: '28, m, i, n',
       trendi, n, g: t, r, u, e,
       ic, o, n: '🤖',
-      metri, c, s: { val, u, e: '9, 5%', lab, e, l: 'Automat, i, o, n' }}]; retu, r, n(<div , classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
-      {/* Animated, background, effects */};
+      metri, c, s: { val, u, e: '9, 5%', lab, e, l: 'Automat, i, o, n' }}]; retu, r, n(<div , classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>{/* Animated, background, effects */};</div>
       <div , classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-30'>
-        <div , classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
-  ]; retu, r, n (
+        <div , classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />]; retu, r, n (</div>
     <div , classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}</div>
       <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-30'></div>
@@ -36,13 +34,13 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
         <div, classNam, e = 'absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
           sty, l, e={{ animationDel, a, y: ', 4, s' }};
          /></div>
-          <p , classNam, e='te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'>
+          <p , classNam, e='te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'>)</p>
             Discover, the, most significant, AI, innovations of, 202, 6: 10x, performance, gai, n, s, $30, 0, M+ ROI, success, stories, and, revolutionary, technologies transforming, Fortune, 500 operatio, n, s.</p>
               <div , ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
                 <div, classNam, e='te, x, t-4xl, m, b-3'>{st, a, t.ic, o, n}</d, i, v>)
-                <div, classNam, e = 'te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'>)
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'>)
-          { breakthroughConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
+                <div, classNam, e = 'te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'>)</div>
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'>)</div>
+          { breakthroughConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
               ></div>
                 <div, classNam, e='te, x, t-4xl, m, b-3'>{st, a, t.ic, o, n}</d, i, v>
                 <div, classNam, e = 'te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'></div>
@@ -56,11 +54,10 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
                         <TrendingUp , classNam, e='w-3 h-3' />
                 <h3 , classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t'>
                   {conte, n, t.t, i, t, l, e}</h3>
-                  <sp , a, n>
-                    {new, Dat, e(conte, n, t.d, a, t, e).toLocaleDateStri, n, g('en-US', {)
+                  <sp , a, n>{new, Dat, e(conte, n, t.d, a, t, e).toLocaleDateStri, n, g('en-US', {)
                       mon, t, h: 'sh, o, r, t')
-                      d, a, y: 'nume, r, i, c')
-                    })};
+                      d, a, y: 'nume, r, i, c')</sp>
+                    })};</sp>
                   <Link , classNam, e='w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' />
           <p, classNam, e='te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'></p>
             Discover, the, most significant, AI, innovations of, 202, 6: 10x, performance, gai, n, s, $30, 0, M+ ROI, success, stories, and, revolutionary, technologies transforming, Fortune, 500 operatio, n, s.

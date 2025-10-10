@@ -71,14 +71,9 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */};
     let braceCount = 0;
     let bracketCount = 0;
     let parenCount = 0;
-<<<<<<< HEAD
 
     for (let i = 0; i < lines.length; i++) {
       let line = lines[i];
-=======
-    for (let i = 0; i < lines.length; i++) {;
-let line = lines[i];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       const trimmed = line.trim();
       // Track JSX state;
       if (trimmed.includes('<') && !trimmed.includes('</')) {
@@ -116,38 +111,25 @@ let line = lines[i];
       // Fix missing closing braces;
       if (braceCount > 0 && i === lines.length - 1) {
         for (let j = 0; j < braceCount; j++) {
-<<<<<<< HEAD
       if (braceCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
           line += '\n}';
         }
         modified = true;
       }
 
-=======
-      if (braceCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */};
-          line += '\n}'};
-        modified = true};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       // Fix missing closing brackets;
       if (bracketCount > 0 && i === lines.length - 1) {
         for (let j = 0; j < bracketCount; j++) {
           line += '\n]';
-<<<<<<< HEAD
       if (bracketCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
         }
         modified = true;
       }
 
-=======
-      if (bracketCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */};
-        };
-        modified = true};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       // Fix missing closing parentheses;
       if (parenCount > 0 && i === lines.length - 1) {
         for (let j = 0; j < parenCount; j++) {
           line += '\n)';
-<<<<<<< HEAD
       if (parenCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
         }
         modified = true;
@@ -156,12 +138,6 @@ let line = lines[i];
       cleanedLines.push(line);
     }
 
-=======
-      if (parenCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */};
-        };
-        modified = true};
-      cleanedLines.push(line)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     content = cleanedLines.join('\n');
     // Final cleanup;
     content = content;
@@ -170,7 +146,6 @@ let line = lines[i];
       .replace(/\s+$/gm, ''); // Remove trailing spaces;
     if (modified || content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-<<<<<<< HEAD
       console.log(`Fixed: ${filePath}`);
     if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
   d: ${filePath}`);
@@ -193,24 +168,6 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
     
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
-=======
-      // console.log removed for production
-if (modified || content !== originalContent) {/* TODO: Fix JSX expression */};
-  d: ${filePath}`);
-      return true};
-    return false} catch (error) {/* TODO: Fix JSX expression */}`
-    // console.error removed for production
-return false};
-};
-// Function to find all TypeScript/React files;
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {;
-const files = [];
-  ;
-function traverse(currentDir) {;
-const items = fs.readdirSync(currentDir);
-    for (const item of items) {;
-const fullPath = path.join(currentDir, item);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         traverse(fullPath);
@@ -222,13 +179,9 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: F
     };
   };
   traverse(dir);
-<<<<<<< HEAD
   return files;
 }
 
-=======
-  return files};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Main execution;
 console.log('Starting proper merge conflict resolution...');
 
@@ -240,16 +193,10 @@ let errorCount = 0;
 for (const file of files) {/* TODO: Fix JSX expression */};
     };
   } catch (error) {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
     console.error(`Failed to process ${file}:`, error.message);
     errorCount++;
   }
 }
-=======
-    // console.error removed for production
-errorCount++};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 `
 console.log(`\nMerge conflict resolution)`
   complete:`);`
@@ -259,7 +206,6 @@ console.log(`- Files)`
   fixed: ${fixedCount}`);`
 console.log(`- Error)`
   s: ${errorCount}`);
-<<<<<<< HEAD
 
 console.log(`\nMerge conflict resolution complete: `);
 console.log(`- Files processed: ${files.length}`);
@@ -272,16 +218,4 @@ try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
   console.log('Linting passed!');
 } catch (error) {/* TODO: Fix JSX expression */}
-=======
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// Run linting to check for remaining issues;
-// console.log removed for production
-try {/* TODO: Fix JSX expression */};
-  o: 'inherit' });
-  // console.log removed for production
-} catch (error) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 }"`

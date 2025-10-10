@@ -1,61 +1,47 @@
-<<<<<<< HEAD
 
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: ServiceVariant;
-  contact_info: unknown;
-    mobile: string;
-<<<<<<< HEAD
-    email: string
-    address: string
+  id: string;,
+  name: string;,
+  tagline: string;,
+  price: string;,
+  period: string;,
+  description: string;,
+  features: string[];,
+  popular: boolean;,
+  icon: string;,
+  color: string;,
+  text_color: string;,
+  link: string;,
+  market_position: string;,
+  target_audience: string;,
+  trial_days: number;,
+  setup_time: string;,
+  category: string;,
+  real_service: boolean;,
+  technology: string[];,
+  integrations: string[];,
+  use_cases: string[];,
+  roi: string;,
+  competitors: string[];,
+  market_size: string;,
+  growth_rate: string;,
+  variant: ServiceVariant;,
+  contact_info: unknown;,
+    mobile: string;,
+    email: string,
+    address: string,
     website: string,
   }
-=======
-    email: string;
-    address: string;
-    website: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-  customers: number;
-  rating: number;
-  reviews: number
-  benefits: string[]
+  real_implementation: boolean;,
+  implementation_details: string;,
+  launch_date: string;,
+  customers: number;,
+  rating: number;,
+  reviews: number,
+  benefits: string[],
   marketAdvantage: string,
   capabilities: string[],
-<<<<<<< HEAD
   market_advantage: string,
 }
-=======
-  market_advantage: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const contact =
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -63,18 +49,18 @@ const contact =
   website: 'https://ziontechgroup && ziontechgroup.com'}
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI & Machine Learning Services
-    id: 'ai - content - generation - platform'
-    name: 'AI Content Generation Platform'
-    tagline: 'Create high - quality content at scale with AI'
-    price: '$299'
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-content-generation'
+    id: 'ai - content - generation - platform',
+    name: 'AI Content Generation Platform',
+    tagline: 'Create high - quality content at scale with AI',
+    price: '$299',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-content-generation',
     marketPosition: 'Leading AI content generation platform with enterprise features'
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI & Machine Learning Services,
   {
-    id: 'ai-content-generation-platform'
-    name: 'AI Content Generation Platform'
-    tagline: 'Create high - quality content at scale with AI'
+    id: 'ai-content-generation-platform',
+    name: 'AI Content Generation Platform',
+    tagline: 'Create high - quality content at scale with AI',
     price: '$299',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-content-generation',
     marketPosition: 'Leading AI content generation platform with enterprise features',
@@ -88,22 +74,22 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions'];
     roi: 'Reduce content creation time by 80% and increase engagement by 40%',
     competitors: ['Jasper, Copy && Copy.ai, Writesonic, ContentBot'];
-    marketSize: '$8 B+ content marketing market'
-    growthRate: '180% YoY'
-    variant: 'ai-futuristic'
-    contactInfo: contact
+    marketSize: '$8 B+ content marketing market',
+    growthRate: '180% YoY',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Cloud-native SaaS platform with enterprise SSO and custom integrations',
     launchDate: '2024-08-01',
     period: '/month',
     description: 'Advanced AI - powered content generation platform that creates high - quality, SEO - optimized content for blogs, social media, marketing materials, and more.'
     features: [
-      'AI - powered content writingSEO optimization tools_multi - language support_content templates library_plagiarism detection_brand voice customization_content scheduling_performance analytics'
+      'AI - powered content writingSEO optimization tools_multi - language support_content templates library_plagiarism detection_brand voice customization_content scheduling_performance analytics',
       'Collaboration toolsAPI integration'
     ]
     popular: true,
-    icon: ''
-    color: 'from - blue - 600 to - indigo - 600'
+    icon: '',
+    color: 'from - blue - 600 to - indigo - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / ai - content - generation',
     market_position: 'Leading AI content generation platform with enterprise features',
@@ -117,22 +103,21 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['Blog writing, Social media content, Marketing copy, Product descriptions'];
     roi: 'Reduce content creation time by 80% and increase engagement by 40%',
     competitors: ['Jasper, Copy.ai, Writesonic, ContentBot'];
-    market_size: '$8 B+ content marketing market'
-    growth_rate: '180% YoY'
-    variant: 'ai - futuristic'
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Cloud - native SaaS platform with enterprise SSO and custom integrations'
-    launch_date: '2024 - 08 - 01'
-    customers: 342;
-    rating: 4 && 4.8
-    reviews: 267
+    market_size: '$8 B+ content marketing market',
+    growth_rate: '180% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact;,
+    real_implementation: true;,
+    implementation_details: 'Cloud - native SaaS platform with enterprise SSO and custom integrations',
+    launch_date: '2024 - 08 - 01',
+    customers: 342;,
+    rating: 4 && 4.8,
+    reviews: 267,
     benefits: [,
       '80% faster content creation40% increase in engagementSEO optimization built - in_multi - language support_brand voice consistency'
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-security',
     marketPosition: 'Advanced zero-trust security platform for modern enterprises',
-<<<<<<< HEAD
     targetAudience: 'Enterprise security teams, Government agencies, Financial institutions'
     trialDays: 30}
     setupTime: '2-3 weeks',
@@ -141,18 +126,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
       'AI content generationSEO optimization_multi - language support_brand customization_performance analytics']}
     market_advantage: 'Advanced AI models with enterprise - grade features and integrations'}
 // Cybersecurity Services;
-=======
-    targetAudience: 'Enterprise security teams, Government agencies, Financial institutions',
-    trialDays:
-        trialDays: 30};
-    setupTime: '2-3 weeks',
-    category: 'Cybersecurity',
-    capabilities: [,
-      'AI content generationSEO optimization_multi - language support_brand customization_performance analytics']};
-    market_advantage: 'Advanced AI models with enterprise - grade features and integrations'};
-;
-  // Cybersecurity Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'zero - trust - security - platform',
     name: 'Zero Trust Security Platform',
     tagline: 'Never trust, always verify security architecture'
@@ -160,12 +133,12 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     period: '/month',
     description: 'Comprehensive zero - trust security platform that implements continuous verification and least - privilege access across all users, devices, and applications.'
     features: [
-      'Identity verification and management_device trust scoring_application access control_network segmentation_continuous monitoring_threat detection and response_compliance reportingAPI security'
+      'Identity verification and management_device trust scoring_application access control_network segmentation_continuous monitoring_threat detection and response_compliance reportingAPI security',
       'Data encryption_security analytics dashboard'
     ]
     popular: true,
-    icon: ''
-    color: 'from - red - 600 to - pink - 600'
+    icon: '',
+    color: 'from - red - 600 to - pink - 600',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / zero - trust - security',
     market_position: 'Advanced zero - trust security platform for modern enterprises',
@@ -181,31 +154,24 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['Enterprise security, Government compliance, Financial security, Healthcare security'];
     roi: 'Reduce security incidents by 90% and compliance costs by 60%',
     competitors: ['Okta, Ping Identity, ForgeRock, CyberArk'];
-    market_size: '$25 B+ identity and access management market'
-    growth_rate: '140% YoY'
-    variant: 'cybersecurity - futuristic'
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Enterprise - grade zero - trust platform with custom integrations and 24 / 7 support'
-    launch_date: '2024 - 07 - 01'
-    customers: 156;
-    rating: 4 && 4.9;
-    reviews: 134
-    benefits: [
+    market_size: '$25 B+ identity and access management market',
+    growth_rate: '140% YoY',
+    variant: 'cybersecurity - futuristic',
+    contact_info: contact;,
+    real_implementation: true;,
+    implementation_details: 'Enterprise - grade zero - trust platform with custom integrations and 24 / 7 support',
+    launch_date: '2024 - 07 - 01',
+    customers: 156;,
+    rating: 4 && 4.9;,
+    reviews: 134,
+    benefits: [,
       '90% reduction in security incidents60% lower compliance costs_continuous verification_least - privilege access_real - time threat detection'
     ],
     capabilities: [,
       'Identity verification_device trust scoring_application control_network segmentation_continuous monitoring'],
-<<<<<<< HEAD
     market_advantage: 'Comprehensive zero - trust platform with advanced threat detection'}
 // DevOps & Infrastructure Services;
-    id: 'ai - powered - devops - automation'
-=======
-    market_advantage: 'Comprehensive zero - trust platform with advanced threat detection'};
-;
-  // DevOps & Infrastructure Services;
     id: 'ai - powered - devops - automation',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     name: 'AI - Powered DevOps Automation',
     tagline: 'Intelligent DevOps automation and optimization',
     price: '$899',
@@ -223,12 +189,12 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     period: '/month',
     description: 'AI - driven DevOps platform that automates deployment, testing, monitoring, and optimization using machine learning and predictive analytics.'
     features: [
-      'Intelligent CI / CD pipelines_automated testing and QAPredictive deployment optimization_performance monitoring and alerting_infrastructure as code automation_security scanning integration_cost optimization recommendations_team collaboration tools'
+      'Intelligent CI / CD pipelines_automated testing and QAPredictive deployment optimization_performance monitoring and alerting_infrastructure as code automation_security scanning integration_cost optimization recommendations_team collaboration tools',
       'Compliance automation_analytics and reporting'
     ]
     popular: true,
-    icon: ''
-    color: 'from - green - 600 to - teal - 600'
+    icon: '',
+    color: 'from - green - 600 to - teal - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - devops - automation',
     market_position: 'Leading AI - powered DevOps automation platform',
@@ -242,31 +208,24 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['CI / CD automation, Testing automation, Infrastructure management, Performance optimization'];
     roi: 'Reduce deployment time by 70% and increase team productivity by 50%',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'];
-    market_size: '$18 B+ DevOps tools market'
-    growth_rate: '160% YoY'
-    variant: 'devops - futuristic'
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Cloud - native DevOps platform with enterprise integrations and AI - powered optimization'
-    launch_date: '2024 - 06 - 01'
-    customers: 234;
-    rating: 4 && 4.7;
-    reviews: 189
-    benefits: [
+    market_size: '$18 B+ DevOps tools market',
+    growth_rate: '160% YoY',
+    variant: 'devops - futuristic',
+    contact_info: contact;,
+    real_implementation: true;,
+    implementation_details: 'Cloud - native DevOps platform with enterprise integrations and AI - powered optimization',
+    launch_date: '2024 - 06 - 01',
+    customers: 234;,
+    rating: 4 && 4.7;,
+    reviews: 189,
+    benefits: [,
       '70% faster deployments50% team productivity increaseAI - powered optimization_automated testing_cost optimization'
     ],
     capabilities: [,
       'Intelligent CI / CDAutomated testing_predictive optimization_performance monitoring_infrastructure automation'],
-<<<<<<< HEAD
     market_advantage: 'First AI - powered DevOps platform with predictive optimization'}
 // Edge Computing Services;
-    id: 'iot - edge - intelligence - platform'
-=======
-    market_advantage: 'First AI - powered DevOps platform with predictive optimization'};
-;
-  // Edge Computing Services;
     id: 'iot - edge - intelligence - platform',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     name: 'IoT Edge Intelligence Platform',
     tagline: 'Intelligent IoT edge computing and analytics',
     price: '$599',
@@ -284,12 +243,12 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     period: '/month',
     description: 'Advanced IoT edge computing platform that processes data locally, provides real - time analytics, and enables intelligent decision - making at the edge.'
     features: [
-      'Edge data processing_real - time analytics_machine learning at the edge_device management and monitoring_data synchronization_security and encryption_scalable edge deployment_custom edge applications'
+      'Edge data processing_real - time analytics_machine learning at the edge_device management and monitoring_data synchronization_security and encryption_scalable edge deployment_custom edge applications',
       'Performance optimization_integration APIs'
     ]
     popular: false,
-    icon: ''
-    color: 'from - purple - 600 to - blue - 600'
+    icon: '',
+    color: 'from - purple - 600 to - blue - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / iot - edge - intelligence',
     market_position: 'Advanced IoT edge computing platform for industrial applications',
@@ -303,29 +262,23 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation'];
     roi: 'Reduce latency by 80% and improve operational efficiency by 45%',
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'];
-    market_size: '$12 B+ edge computing market'
-    growth_rate: '220% YoY'
-    variant: 'edge - futuristic'
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Industrial - grade edge computing platform with custom hardware support'
-    launch_date: '2024 - 05 - 01'
-    customers: 89;
-    rating: 4 && 4.6;
-    reviews: 67
-    benefits: [
+    market_size: '$12 B+ edge computing market',
+    growth_rate: '220% YoY',
+    variant: 'edge - futuristic',
+    contact_info: contact;,
+    real_implementation: true;,
+    implementation_details: 'Industrial - grade edge computing platform with custom hardware support',
+    launch_date: '2024 - 05 - 01',
+    customers: 89;,
+    rating: 4 && 4.6;,
+    reviews: 67,
+    benefits: [,
       '80% latency reduction45% operational efficiency_real - time processing_local intelligence_cost optimization'
     ],
     capabilities: [,
       'Edge data processing_real - time analyticsML at the edge_device management_security features'],
-<<<<<<< HEAD
     market_advantage: 'Advanced edge computing with AI - powered intelligence'}
 // Healthcare AI Services;
-=======
-    market_advantage: 'Advanced edge computing with AI - powered intelligence'};
-;
-  // Healthcare AI Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'ai - medical - imaging - analysis',
     name: 'AI Medical Imaging Analysis',
     tagline: 'Advanced AI - powered medical image diagnosis',
@@ -333,7 +286,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     period: '/month',
     description: 'Revolutionary AI platform for medical imaging analysis that provides accurate diagnosis, early detection, and treatment recommendations for various medical conditions.'
     features: [
-      'Multi - modality image analysisAI - powered diagnosis_early detection algorithms_treatment recommendations_radiologist assistance tools_clinical decision support_patient outcome prediction_research and analytics'
+      'Multi - modality image analysisAI - powered diagnosis_early detection algorithms_treatment recommendations_radiologist assistance tools_clinical decision support_patient outcome prediction_research and analytics',
       'HIPAA compliance_integration with PACS systems'
     ]
     popular: true,
@@ -363,29 +316,23 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies'];
     roi: 'Improve diagnostic accuracy by 25% and reduce reading time by 60%',
     competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];
-    market_size: '$28 B+ medical imaging market'
-    growth_rate: '190% YoY'
-    variant: 'healthcare - futuristic'
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'FDA - cleared medical imaging platform with enterprise integrations'
-    launch_date: '2024 - 04 - 01'
-    customers: 67;
-    rating: 4 && 4.9;
-    reviews: 52
-    benefits: [
+    market_size: '$28 B+ medical imaging market',
+    growth_rate: '190% YoY',
+    variant: 'healthcare - futuristic',
+    contact_info: contact;,
+    real_implementation: true;,
+    implementation_details: 'FDA - cleared medical imaging platform with enterprise integrations',
+    launch_date: '2024 - 04 - 01',
+    customers: 67;,
+    rating: 4 && 4.9;,
+    reviews: 52,
+    benefits: [,
       '25% diagnostic accuracy improvement60% reading time reduction_early detection capabilities_treatment optimization_research support'
     ],
     capabilities: [,
       'Multi - modality analysisAI diagnosis_early detection_treatment recommendations_clinical decision support'],
-<<<<<<< HEAD
     market_advantage: 'Advanced AI medical imaging with proven clinical outcomes'}
 // Financial Technology Services;
-=======
-    market_advantage: 'Advanced AI medical imaging with proven clinical outcomes'};
-;
-  // Financial Technology Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'ai - financial - risk - management',
     name: 'AI Financial Risk Management',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-financial-risk',
@@ -399,12 +346,12 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     period: '/month',
     description: 'Advanced AI - powered financial risk management platform that provides real - time risk assessment, fraud detection, and compliance monitoring for financial institutions.'
     features: [
-      'Real - time risk assessmentAI - powered fraud detection_compliance monitoring_portfolio risk analysis_market risk modeling_credit risk evaluation_regulatory reporting_stress testing scenarios'
+      'Real - time risk assessmentAI - powered fraud detection_compliance monitoring_portfolio risk analysis_market risk modeling_credit risk evaluation_regulatory reporting_stress testing scenarios',
       'Risk analytics dashboardAPI integration'
     ]
     popular: true,
-    icon: ''
-    color: 'from - yellow - 600 to - orange - 600'
+    icon: '',
+    color: 'from - yellow - 600 to - orange - 600',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / ai - financial - risk',
     market_position: 'Leading AI financial risk management platform',
@@ -420,29 +367,23 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['Risk assessment, Fraud detection, Compliance monitoring, Portfolio management'];
     roi: 'Reduce risk losses by 40% and compliance costs by 50%',
     competitors: ['RiskMetrics, Bloomberg Risk, MSCI, S & P Global'];
-    market_size: '$32 B+ risk management market'
-    growth_rate: '170% YoY'
-    variant: 'financial - futuristic'
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Enterprise - grade risk management platform with real - time data feeds'
-    launch_date: '2024 - 03 - 01'
-    customers: 134;
-    rating: 4 && 4.8;
-    reviews: 98
-    benefits: [
+    market_size: '$32 B+ risk management market',
+    growth_rate: '170% YoY',
+    variant: 'financial - futuristic',
+    contact_info: contact;,
+    real_implementation: true;,
+    implementation_details: 'Enterprise - grade risk management platform with real - time data feeds',
+    launch_date: '2024 - 03 - 01',
+    customers: 134;,
+    rating: 4 && 4.8;,
+    reviews: 98,
+    benefits: [,
       '40% risk loss reduction50% compliance cost savings_real - time monitoringAI - powered detection_regulatory compliance'
     ],
     capabilities: [,
       'Real - time risk assessment_fraud detection_compliance monitoring_portfolio analysis_regulatory reporting'],
-<<<<<<< HEAD
     market_advantage: 'Advanced AI risk management with real - time capabilities'}
 // Education Technology Services;
-=======
-    market_advantage: 'Advanced AI risk management with real - time capabilities'};
-;
-  // Education Technology Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'ai - personalized - learning - platform',
     name: 'AI Personalized Learning Platform',
     tagline: 'Adaptive learning powered by artificial intelligence',
@@ -450,7 +391,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     period: '/month',
     description: 'Intelligent learning platform that personalizes education content, tracks student progress, and provides adaptive learning paths using AI and machine learning.'
     features: [
-      'Personalized learning paths_adaptive content delivery_progress tracking and analytics_intelligent tutoring system_assessment and feedback_collaborative learning tools_content creation tools_learning analytics dashboard'
+      'Personalized learning paths_adaptive content delivery_progress tracking and analytics_intelligent tutoring system_assessment and feedback_collaborative learning tools_content creation tools_learning analytics dashboard',
       'Mobile learning support_integration with LMS systems'
     ]
     popular: false,
@@ -459,9 +400,9 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     marketPosition: 'Advanced AI-powered personalized learning platform',
     targetAudience: 'Schools, Universities, Corporate training, Online education platforms'
     trialDays: 30,
-    setupTime: '2-3 weeks'
-    category: 'Education Technology'
-    color: 'from - indigo - 600 to - purple - 600'
+    setupTime: '2-3 weeks',
+    category: 'Education Technology',
+    color: 'from - indigo - 600 to - purple - 600',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / ai - personalized - learning',
     market_position: 'Advanced AI - powered personalized learning platform',
@@ -477,29 +418,23 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['K - 12 education, Higher education, Corporate training, Skills development'];
     roi: 'Improve learning outcomes by 35% and reduce dropout rates by 50%',
     competitors: ['Coursera, Udemy, Khan Academy, Duolingo'];
-    market_size: '$15 B+ edtech market'
-    growth_rate: '200% YoY'
-    variant: 'education - futuristic'
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Cloud - native learning platform with AI - powered personalization'
-    launch_date: '2024 - 02 - 01'
-    customers: 156;
-    rating: 4 && 4.7;
-    reviews: 123
-    benefits: [
+    market_size: '$15 B+ edtech market',
+    growth_rate: '200% YoY',
+    variant: 'education - futuristic',
+    contact_info: contact;,
+    real_implementation: true;,
+    implementation_details: 'Cloud - native learning platform with AI - powered personalization',
+    launch_date: '2024 - 02 - 01',
+    customers: 156;,
+    rating: 4 && 4.7;,
+    reviews: 123,
+    benefits: [,
       '35% learning outcome improvement50% dropout rate reduction_personalized learning_adaptive content_progress tracking'
     ],
     capabilities: [,
       'Personalized learning paths_adaptive content delivery_progress tracking_intelligent tutoring_learning analytics'],
-<<<<<<< HEAD
     market_advantage: 'Advanced AI learning platform with proven educational outcomes'}
 // Supply Chain & Logistics Services;
-=======
-    market_advantage: 'Advanced AI learning platform with proven educational outcomes'};
-;
-  // Supply Chain & Logistics Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'ai - supply - chain - optimization',
     name: 'AI Supply Chain Optimization',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-supply-chain',
@@ -513,12 +448,12 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     period: '/month',
     description: 'AI - powered supply chain platform that optimizes inventory, predicts demand, manages logistics, and provides real - time visibility across the entire supply chain.'
     features: [
-      'Demand forecasting_inventory optimization_logistics route optimization_supplier management_real - time tracking_risk assessment_cost optimization_sustainability metrics'
+      'Demand forecasting_inventory optimization_logistics route optimization_supplier management_real - time tracking_risk assessment_cost optimization_sustainability metrics',
       'Performance analytics_integration with ERP systems'
     ]
     popular: true,
-    icon: ''
-    color: 'from - teal - 600 to - cyan - 600'
+    icon: '',
+    color: 'from - teal - 600 to - cyan - 600',
     text_color: 'text - teal - 400',
     link: 'https://ziontechgroup.com / ai - supply - chain',
     market_position: 'Leading AI supply chain optimization platform',
@@ -534,29 +469,23 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['Inventory management, Demand forecasting, Logistics optimization, Supplier management'];
     roi: 'Reduce inventory costs by 30% and improve delivery times by 40%',
     competitors: ['SAP Ariba, Oracle SCM, Blue Yonder, Manhattan Associates'];
-    market_size: '$22 B+ supply chain management market'
-    growth_rate: '160% YoY'
-    variant: 'logistics - futuristic'
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Enterprise supply chain platform with AI optimization and real - time tracking'
-    launch_date: '2024 - 01 - 01'
-    customers: 189;
-    rating: 4 && 4.8;
-    reviews: 145
-    benefits: [
+    market_size: '$22 B+ supply chain management market',
+    growth_rate: '160% YoY',
+    variant: 'logistics - futuristic',
+    contact_info: contact;,
+    real_implementation: true;,
+    implementation_details: 'Enterprise supply chain platform with AI optimization and real - time tracking',
+    launch_date: '2024 - 01 - 01',
+    customers: 189;,
+    rating: 4 && 4.8;,
+    reviews: 145,
+    benefits: [,
       '30% inventory cost reduction40% delivery time improvement_demand forecasting_route optimization_real - time visibility'
     ],
     capabilities: [,
       'Demand forecasting_inventory optimization_logistics optimization_supplier management_risk assessment'],
-<<<<<<< HEAD
     market_advantage: 'Advanced AI supply chain platform with comprehensive optimization'}
 // Energy & Sustainability Services;
-=======
-    market_advantage: 'Advanced AI supply chain platform with comprehensive optimization'};
-;
-  // Energy & Sustainability Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     id: 'ai - energy - optimization - platform',
     name: 'AI Energy Optimization Platform',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-energy-optimization',
@@ -575,12 +504,12 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     period: '/month',
     description: 'AI - powered energy optimization platform that manages renewable energy systems, optimizes consumption, and provides sustainability insights for businesses and utilities.'
     features: [
-      'Renewable energy management_energy consumption optimization_grid integration and management_sustainability reporting_carbon footprint tracking_energy trading optimization_predictive maintenance_real - time monitoring'
+      'Renewable energy management_energy consumption optimization_grid integration and management_sustainability reporting_carbon footprint tracking_energy trading optimization_predictive maintenance_real - time monitoring',
       'Performance analytics_integration with smart meters'
     ]
     popular: false,
-    icon: ''
-    color: 'from - green - 600 to - emerald - 600'
+    icon: '',
+    color: 'from - green - 600 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - energy - optimization',
     market_position: 'Advanced AI energy optimization platform for sustainability',
@@ -594,92 +523,66 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     use_cases: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting'];
     roi: 'Reduce energy costs by 25% and improve sustainability metrics by 40%',
     competitors: ['Schneider Electric, Siemens, GE Digital, ABB'];
-    market_size: '$18 B+ energy management market'
-    growth_rate: '180% YoY'
-    variant: 'energy - futuristic'
-    contact_info: contact;
-    real_implementation: true;
-    implementation_details: 'Industrial energy management platform with AI optimization and IoT integration'
-    launch_date: '2023 - 12 - 01'
-    customers: 78;
-    rating: 4 && 4.6;
-    reviews: 56;
-    benefits: [;
+    market_size: '$18 B+ energy management market',
+    growth_rate: '180% YoY',
+    variant: 'energy - futuristic',
+    contact_info: contact;,
+    real_implementation: true;,
+    implementation_details: 'Industrial energy management platform with AI optimization and IoT integration',
+    launch_date: '2023 - 12 - 01',
+    customers: 78;,
+    rating: 4 && 4.6;,
+    reviews: 56;,
+    benefits: [;,
       '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking'
     ]
 export interface ComprehensiveInnovativeService {
-<<<<<<< HEAD
-=======
-;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string
-  growthRate: string
+  id: string;,
+  name: string;,
+  tagline: string;,
+  price: string;,
+  period: string;,
+  description: string;,
+  features: string[];,
+  popular: boolean;,
+  icon: string;,
+  color: string;,
+  textColor: string;,
+  link: string;,
+  marketPosition: string;,
+  targetAudience: string;,
+  trialDays: number;,
+  setupTime: string;,
+  category: string;,
+  realService: boolean;,
+  technology: string[];,
+  integrations: string[];,
+  useCases: string[];,
+  roi: string;,
+  competitors: string[];,
+  marketSize: string,
+  growthRate: string,
   variant: ServiceVariant,
   contactInfo: {,
-<<<<<<< HEAD
-    mobile: string
+    mobile: string,
     email: string,
     address: string}
     website: string}
   }
-=======
-    mobile: string;
-    email: string;
-    address: string};
-    website: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-<<<<<<< HEAD
-  benefits: string[]
-  capabilities: string[]
+  realImplementation: boolean;,
+  implementationDetails: string;,
+  launchDate: string;,
+  customers: number;,
+  rating: number;,
+  reviews: number;,
+  benefits: string[],
+  capabilities: string[],
   marketAdvantage: string,
 }
 // const contact = {
-  mobile: '+1 302 464 0950'
+  mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-  benefits: string[];
-  capabilities: string[];
-  marketAdvantage: string};
-;
-// const contact = {
-;
-};
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   website: 'https://ziontechgroup.com',
   i,
   d: string,
@@ -790,17 +693,10 @@ export const,
     marketPositio,
   n: 'Leading AI content generation platform with enterprise features',
 export const,
-<<<<<<< HEAD
   comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI & Machine Learning Services,
   {/* TODO: Fix JSX expression */}
   s: 30}
-=======
-  comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
-  // AI & Machine Learning Services;
-  {/* TODO: Fix JSX expression */};
-  s: 30};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     setupTim,
   e: '2-3 weeks'
     categor,
@@ -811,14 +707,8 @@ export const,
     ]};
     market_advantag,
   e: 'Advanced AI models with enterprise - grade features and integrations'
-<<<<<<< HEAD
   }
 // Cybersecurity Services;
-=======
-  };
-;
-  // Cybersecurity Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'zero - trust - security - platform'
     nam,
@@ -833,7 +723,7 @@ export const,
   n: 'Comprehensive zero - trust security platform that implements continuous verification and least - privilege access across all users, devices, and applications.'
     feature,
   s: [
-      'Identity verification and management_device trust scoring_application access control_network segmentation_continuous monitoring_threat detection and response_compliance reportingAPI security'
+      'Identity verification and management_device trust scoring_application access control_network segmentation_continuous monitoring_threat detection and response_compliance reportingAPI security',
       'Data encryption_security analytics dashboard'
     ],
     popula,
@@ -894,7 +784,7 @@ export const,
     review,
   s: 134,
     benefit,
-  s: [
+  s: [,
       '90% reduction in security incidents60% lower compliance costs_continuous verification_least - privilege access_real - time threat detection'
     ],
     capabilitie,
@@ -903,14 +793,8 @@ export const,
     ],
     market_advantag,
   e: 'Comprehensive zero - trust platform with advanced threat detection'
-<<<<<<< HEAD
   }
 // DevOps & Infrastructure Services;
-=======
-  };
-;
-  // DevOps & Infrastructure Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'ai - powered - devops - automation'
     nam,
@@ -948,7 +832,7 @@ export const,
   n: 'AI - driven DevOps platform that automates deployment, testing, monitoring, and optimization using machine learning and predictive analytics.'
     feature,
   s: [
-      'Intelligent CI / CD pipelines_automated testing and QAPredictive deployment optimization_performance monitoring and alerting_infrastructure as code automation_security scanning integration_cost optimization recommendations_team collaboration tools'
+      'Intelligent CI / CD pipelines_automated testing and QAPredictive deployment optimization_performance monitoring and alerting_infrastructure as code automation_security scanning integration_cost optimization recommendations_team collaboration tools',
       'Compliance automation_analytics and reporting'
     ],
     popula,
@@ -1005,7 +889,7 @@ export const,
     review,
   s: 189,
     benefit,
-  s: [
+  s: [,
       '70% faster deployments50% team productivity increaseAI - powered optimization_automated testing_cost optimization'
     ],
     capabilitie,
@@ -1014,14 +898,8 @@ export const,
     ],
     market_advantag,
   e: 'First AI - powered DevOps platform with predictive optimization'
-<<<<<<< HEAD
   }
 // Edge Computing Services;
-=======
-  };
-;
-  // Edge Computing Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'iot - edge - intelligence - platform'
     nam,
@@ -1059,7 +937,7 @@ export const,
   n: 'Advanced IoT edge computing platform that processes data locally, provides real - time analytics, and enables intelligent decision - making at the edge.'
     feature,
   s: [
-      'Edge data processing_real - time analytics_machine learning at the edge_device management and monitoring_data synchronization_security and encryption_scalable edge deployment_custom edge applications'
+      'Edge data processing_real - time analytics_machine learning at the edge_device management and monitoring_data synchronization_security and encryption_scalable edge deployment_custom edge applications',
       'Performance optimization_integration APIs'
     ],
     popula,
@@ -1116,7 +994,7 @@ export const,
     review,
   s: 67,
     benefit,
-  s: [
+  s: [,
       '80% latency reduction45% operational efficiency_real - time processing_local intelligence_cost optimization'
     ],
     capabilitie,
@@ -1125,14 +1003,8 @@ export const,
     ],
     market_advantag,
   e: 'Advanced edge computing with AI - powered intelligence'
-<<<<<<< HEAD
   }
 // Healthcare AI Services;
-=======
-  };
-;
-  // Healthcare AI Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'ai - medical - imaging - analysis'
     nam,
@@ -1147,7 +1019,7 @@ export const,
   n: 'Revolutionary AI platform for medical imaging analysis that provides accurate diagnosis, early detection, and treatment recommendations for various medical conditions.'
     feature,
   s: [
-      'Multi - modality image analysisAI - powered diagnosis_early detection algorithms_treatment recommendations_radiologist assistance tools_clinical decision support_patient outcome prediction_research and analytics'
+      'Multi - modality image analysisAI - powered diagnosis_early detection algorithms_treatment recommendations_radiologist assistance tools_clinical decision support_patient outcome prediction_research and analytics',
       'HIPAA compliance_integration with PACS systems'
     ],
     popula,
@@ -1227,7 +1099,7 @@ export const,
     review,
   s: 52,
     benefit,
-  s: [
+  s: [,
       '25% diagnostic accuracy improvement60% reading time reduction_early detection capabilities_treatment optimization_research support'
     ],
     capabilitie,
@@ -1236,14 +1108,8 @@ export const,
     ],
     market_advantag,
   e: 'Advanced AI medical imaging with proven clinical outcomes'
-<<<<<<< HEAD
   }
 // Financial Technology Services;
-=======
-  };
-;
-  // Financial Technology Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'ai - financial - risk - management'
     nam,
@@ -1271,7 +1137,7 @@ export const,
   n: 'Advanced AI - powered financial risk management platform that provides real - time risk assessment, fraud detection, and compliance monitoring for financial institutions.'
     feature,
   s: [
-      'Real - time risk assessmentAI - powered fraud detection_compliance monitoring_portfolio risk analysis_market risk modeling_credit risk evaluation_regulatory reporting_stress testing scenarios'
+      'Real - time risk assessmentAI - powered fraud detection_compliance monitoring_portfolio risk analysis_market risk modeling_credit risk evaluation_regulatory reporting_stress testing scenarios',
       'Risk analytics dashboardAPI integration'
     ],
     popula,
@@ -1332,7 +1198,7 @@ export const,
     review,
   s: 98,
     benefit,
-  s: [
+  s: [,
       '40% risk loss reduction50% compliance cost savings_real - time monitoringAI - powered detection_regulatory compliance'
     ],
     capabilitie,
@@ -1341,14 +1207,8 @@ export const,
     ],
     market_advantag,
   e: 'Advanced AI risk management with real - time capabilities'
-<<<<<<< HEAD
   }
 // Education Technology Services;
-=======
-  };
-;
-  // Education Technology Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'ai - personalized - learning - platform'
     nam,
@@ -1363,7 +1223,7 @@ export const,
   n: 'Intelligent learning platform that personalizes education content, tracks student progress, and provides adaptive learning paths using AI and machine learning.'
     feature,
   s: [
-      'Personalized learning paths_adaptive content delivery_progress tracking and analytics_intelligent tutoring system_assessment and feedback_collaborative learning tools_content creation tools_learning analytics dashboard'
+      'Personalized learning paths_adaptive content delivery_progress tracking and analytics_intelligent tutoring system_assessment and feedback_collaborative learning tools_content creation tools_learning analytics dashboard',
       'Mobile learning support_integration with LMS systems'
     ],
     popula,
@@ -1437,7 +1297,7 @@ export const,
     review,
   s: 123,
     benefit,
-  s: [
+  s: [,
       '35% learning outcome improvement50% dropout rate reduction_personalized learning_adaptive content_progress tracking'
     ],
     capabilitie,
@@ -1446,14 +1306,8 @@ export const,
     ],
     market_advantag,
   e: 'Advanced AI learning platform with proven educational outcomes'
-<<<<<<< HEAD
   }
 // Supply Chain & Logistics Services;
-=======
-  };
-;
-  // Supply Chain & Logistics Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'ai - supply - chain - optimization'
     nam,
@@ -1481,7 +1335,7 @@ export const,
   n: 'AI - powered supply chain platform that optimizes inventory, predicts demand, manages logistics, and provides real - time visibility across the entire supply chain.'
     feature,
   s: [
-      'Demand forecasting_inventory optimization_logistics route optimization_supplier management_real - time tracking_risk assessment_cost optimization_sustainability metrics'
+      'Demand forecasting_inventory optimization_logistics route optimization_supplier management_real - time tracking_risk assessment_cost optimization_sustainability metrics',
       'Performance analytics_integration with ERP systems'
     ],
     popula,
@@ -1542,7 +1396,7 @@ export const,
     review,
   s: 145,
     benefit,
-  s: [
+  s: [,
       '30% inventory cost reduction40% delivery time improvement_demand forecasting_route optimization_real - time visibility'
     ],
     capabilitie,
@@ -1551,14 +1405,8 @@ export const,
     ],
     market_advantag,
   e: 'Advanced AI supply chain platform with comprehensive optimization'
-<<<<<<< HEAD
   }
 // Energy & Sustainability Services;
-=======
-  };
-;
-  // Energy & Sustainability Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'ai - energy - optimization - platform'
     nam,
@@ -1596,7 +1444,7 @@ export const,
   n: 'AI - powered energy optimization platform that manages renewable energy systems, optimizes consumption, and provides sustainability insights for businesses and utilities.'
     feature,
   s: [
-      'Renewable energy management_energy consumption optimization_grid integration and management_sustainability reporting_carbon footprint tracking_energy trading optimization_predictive maintenance_real - time monitoring'
+      'Renewable energy management_energy consumption optimization_grid integration and management_sustainability reporting_carbon footprint tracking_energy trading optimization_predictive maintenance_real - time monitoring',
       'Performance analytics_integration with smart meters'
     ],
     popula,
@@ -1659,13 +1507,8 @@ export const,
 export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
   }
-=======
-  e: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -1683,16 +1526,9 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   capabilitie,
   s: string[],
   marketAdvantag,
-<<<<<<< HEAD
   e: string}
 // const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
-=======
-  e: string};
-;
-// const contact = {/* TODO: Fix JSX expression */};
-  s: '364 E Main St STE 1008 Middletown DE 19709'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   websit,
   e: 'http,
   s://ziontechgroup.com'
@@ -1701,41 +1537,41 @@ export const,
   comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
   // AI & Machine Learning Services;
   {
-    id: 'ai-content-generation-platform';
-    name: 'AI Content Generation Platform';
-    tagline: 'Create high-quality content at scale with AI'
-    price: '$299'
+    id: 'ai-content-generation-platform';,
+    name: 'AI Content Generation Platform';,
+    tagline: 'Create high-quality content at scale with AI',
+    price: '$299',
     period: '/month',
     description: 'Advanced AI-powered content generation platform that creates high-quality, SEO-optimized content for blogs, social media, marketing materials, and more.';
     features: [
-      'AI-powered content writingSEO optimization toolsMulti-language supportContent templates libraryPlagiarism detectionBrand voice customizationContent schedulingPerformance analytics';
+      'AI-powered content writingSEO optimization toolsMulti-language supportContent templates libraryPlagiarism detectionBrand voice customizationContent schedulingPerformance analytics';,
       'Collaboration toolsAPI integration'
     ];
-    popular: true;
-    icon: '';
-    color: 'from-blue-600 to-indigo-600';
-    textColor: 'text-blue-400'
-    link: 'https://ziontechgroup.com/ai-content-generation'
+    popular: true;,
+    icon: '';,
+    color: 'from-blue-600 to-indigo-600';,
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/ai-content-generation',
     marketPosition: 'Leading AI content generation platform with enterprise features',
     targetAudience: 'Marketing teams, Content creators, Agencies, E-commerce businesses';
-    trialDays: 14;
-    setupTime: '1-2 days'
-    category: 'AI & Machine Learning'
+    trialDays: 14;,
+    setupTime: '1-2 days',
+    category: 'AI & Machine Learning',
     realService: true,
     technology: ['OpenAI GPT-4, Claude, Python, React, Node.js, PostgreSQL'];
     integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms'];
     useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions'];
     roi: 'Reduce content creation time by 80% and increase engagement by 40%',
     competitors: ['Jasper, Copy.ai, Writesonic, ContentBot'];
-    marketSize: '$8 B+ content marketing market';
-    growthRate: '180% YoY';
-    variant: 'ai-futuristic';
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Cloud-native SaaS platform with enterprise SSO and custom integrations';
-    launchDate: '2024-08-01';
-    customers: 342
-    rating: 4.8
+    marketSize: '$8 B+ content marketing market';,
+    growthRate: '180% YoY';,
+    variant: 'ai-futuristic';,
+    contactInfo: contact;,
+    realImplementation: true;,
+    implementationDetails: 'Cloud-native SaaS platform with enterprise SSO and custom integrations';,
+    launchDate: '2024-08-01';,
+    customers: 342,
+    rating: 4.8,
     reviews: 267,
     benefits: [,
       '80% faster content creation40% increase in engagementSEO optimization built-inMulti-language supportBrand voice consistency']};
@@ -1753,28 +1589,19 @@ export const,
   };
 ];
 export default comprehensiveInnovativeServices;
-<<<<<<< HEAD
 export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
   }
-=======
-;
-export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */};
-  s: string};
-    websit,
-  e: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  benefits: string[]
-  capabilities: string[]
+  realImplementation: boolean;,
+  implementationDetails: string;,
+  launchDate: string;,
+  customers: number;,
+  rating: number;,
+  reviews: number;,
+  benefits: string[],
+  capabilities: string[],
   marketAdvantage: string,
   realImplementatio,
   n: boolean,
@@ -1793,12 +1620,7 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   capabilitie,
   s: string[],
   marketAdvantag,
-<<<<<<< HEAD
   e: string}
-=======
-  e: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default comprehensiveInnovativeServices;
 i,
   d: string, nam,
@@ -2228,7 +2050,6 @@ i,
   n: true,' implementation_detail,
   s: 'Industrial energy management platform with AI optimization and IoT integration'' launch_dat,
   e: '2023 - 12 - 01' customer,
-<<<<<<< HEAD
   s: 78, ratin,
   g: 4 && 4.6, review,
   s: 56, benefit,
@@ -2244,38 +2065,15 @@ i,
   s: string[], capabilitie,
   s: string[], marketAdvantag,
   e: string} const contact = {/* TODO: Fix JSX expression */}
-=======
-  s: 78; ratin,
-  g: 4 && 4.6; review,
-  s: 56; benefit,
-  s: [;' '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking' ], ' import { ServiceVariant } from '../types/service-variants'; export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */};
-  s: string} websit,
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number; benefit,
-  s: string[]; capabilitie,
-  s: string[]; marketAdvantag,
-  e: string} ; const contact = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
-<<<<<<< HEAD
   s://ziontechgroup.com' } export const,
   comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [; // AI & Machine Learning Services, {/* TODO: Fix JSX expression */}
-=======
-  s://ziontechgroup.com' }; export const,
-  comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [; // AI & Machine Learning Services; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: [,' '80% faster content creation40% increase in engagementSEO optimization built-inMulti-language supportBrand voice consistency' ]} capabilitie,
   s: [,' 'Renewable energy management_energy optimization_grid integration_sustainability reporting_predictive maintenance' ]}' market_advantag,
   e: 'Advanced AI energy platform with comprehensive sustainability features' } ]; export default comprehensiveInnovativeServices; ' import { ServiceVariant } from '../types/service-variants'; export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */};
   s: string} websit,
-<<<<<<< HEAD
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
   s: string, launchDat,
@@ -2286,15 +2084,3 @@ i,
   s: string[], capabilitie,
   s: string[], marketAdvantag,
   e: string} export default comprehensiveInnovativeServices; '
-=======
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number; benefit,
-  s: string[]; capabilitie,
-  s: string[]; marketAdvantag,
-  e: string} ; export default comprehensiveInnovativeServices; '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

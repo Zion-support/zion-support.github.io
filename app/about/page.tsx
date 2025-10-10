@@ -24,33 +24,23 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const AboutPage: React.FC = () => {
-  return (
-    <>
+  return(<>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions. Discover our mission, values, and team." />
       </Helmet>
       
-      <Navigation />
-      
+      <Navigation /> </Navigation>
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            {/* Hero Section */}
+          <div className="max-w-6xl mx-auto">{/* Hero Section */}</div>
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                About Zion Tech Group
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">About Zion Tech Group</h1>
               </h1>
-<<<<<<< HEAD
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leading the future of technology with innovative AI and IT solutions that transform businesses worldwide.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Leading the future of technology with innovative AI and IT solutions that transform businesses worldwide.</p>
               </p>
             </div>
 
@@ -59,10 +49,9 @@ const AboutPage: React.FC = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
-                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                    To empower businesses with cutting-edge AI and IT solutions that drive innovation, 
-                    efficiency, and growth. We believe technology should be accessible, powerful, and 
-                    transformative for organizations of all sizes.
+                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">To empower businesses with cutting-edge AI and IT solutions that drive innovation, 
+                    efficiency, and growth. We believe technology should be accessible, powerful, and </p>
+                    transformative for organizations of all sizes.</p>
                   </p>
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3">
@@ -78,45 +67,6 @@ const AboutPage: React.FC = () => {
                       <p className="text-gray-300">Fostering innovation through collaboration</p>
                     </div>
                   </div>
-=======
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Mission Section */}
-        <section className="py-20 bg-slate-800/50">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
-                <p className="text-lg text-gray-300 mb-6">
-                  To democratize advanced AI and technology solutions, making them accessible 
-                  to businesses of all sizes while delivering unprecedented value and innovation.
-                </p>
-                <p className="text-lg text-gray-300 mb-8">
-                  We believe that every organization deserves access to cutting-edge technology 
-                  that can transform their operations, enhance their capabilities, and drive 
-                  sustainable growth.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
-                    <MessageCircle className="w-5 h-5" />
-                    <span>Get in Touch</span>
-                  </a>
-                  <a
-                    href="/services"
-                    className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
-                    <Settings className="w-5 h-5" />
-                    <span>Our Services</span>
-                  </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 </div>
                 <div className="bg-slate-800/50 rounded-lg p-8">
                   <div className="grid grid-cols-2 gap-6">
@@ -152,7 +102,6 @@ const AboutPage: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
 
             {/* Values Section */}
             <div className="mb-16">
@@ -163,9 +112,8 @@ const AboutPage: React.FC = () => {
                     <Brain className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">Innovation</h3>
-                  <p className="text-gray-300">
-                    We constantly push the boundaries of what's possible with technology, 
-                    always seeking new ways to solve complex problems.
+                  <p className="text-gray-300">We constantly push the boundaries of what's possible with technology, </p>
+                    always seeking new ways to solve complex problems.</p>
                   </p>
                 </div>
                 
@@ -174,9 +122,8 @@ const AboutPage: React.FC = () => {
                     <Shield className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">Security</h3>
-                  <p className="text-gray-300">
-                    We prioritize the security and privacy of our clients' data, 
-                    implementing industry-leading security measures.
+                  <p className="text-gray-300">We prioritize the security and privacy of our clients' data, </p>
+                    implementing industry-leading security measures.</p>
                   </p>
                 </div>
                 
@@ -185,25 +132,11 @@ const AboutPage: React.FC = () => {
                     <Heart className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">Excellence</h3>
-                  <p className="text-gray-300">
-                    We are committed to delivering exceptional quality in everything we do, 
-                    from initial consultation to ongoing support.
+                  <p className="text-gray-300">We are committed to delivering exceptional quality in everything we do, </p>
+                    from initial consultation to ongoing support.</p>
                   </p>
                 </div>
               </div>
-=======
-          </div>
-        </section>
-
-        {/* Values Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Our Core Values</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                These principles guide everything we do and shape our approach to delivering exceptional solutions.
-              </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             </div>
 
             {/* Team Section */}
@@ -216,8 +149,7 @@ const AboutPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">AI Engineers</h3>
                   <p className="text-cyan-400 mb-4">Machine Learning Specialists</p>
-                  <p className="text-gray-300 text-sm">
-                    Expert in developing and deploying AI solutions that drive business value.
+                  <p className="text-gray-300 text-sm">Expert in developing and deploying AI solutions that drive business value.</p>
                   </p>
                 </div>
                 
@@ -227,8 +159,7 @@ const AboutPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">IT Architects</h3>
                   <p className="text-cyan-400 mb-4">Cloud & Infrastructure Experts</p>
-                  <p className="text-gray-300 text-sm">
-                    Designing scalable, secure, and efficient technology infrastructure.
+                  <p className="text-gray-300 text-sm">Designing scalable, secure, and efficient technology infrastructure.</p>
                   </p>
                 </div>
                 
@@ -238,8 +169,7 @@ const AboutPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">Data Scientists</h3>
                   <p className="text-cyan-400 mb-4">Analytics & Insights Specialists</p>
-                  <p className="text-gray-300 text-sm">
-                    Transforming raw data into actionable insights and business intelligence.
+                  <p className="text-gray-300 text-sm">Transforming raw data into actionable insights and business intelligence.</p>
                   </p>
                 </div>
               </div>
@@ -248,24 +178,20 @@ const AboutPage: React.FC = () => {
             {/* CTA Section */}
             <div className="text-center">
               <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
-                  Ready to Work With Us?
+                <h2 className="text-2xl font-bold text-white mb-4">Ready to Work With Us?</h2>
                 </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Join hundreds of satisfied clients who have transformed their businesses with our solutions.
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Join hundreds of satisfied clients who have transformed their businesses with our solutions.</p>
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
-                    Get Started Today
+                  >Get Started Today</a>
                   </a>
                   <a
-                    href="tel:+13024640950"
+                    href="tel:+13024640950")
                     className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
-                    Call: (302) 464-0950
+                  >Call: (302) 464-0950</a>
                   </a>
                 </div>
               </div>
@@ -276,12 +202,7 @@ const AboutPage: React.FC = () => {
       
       <Footer />
     </>
-<<<<<<< HEAD
   )
 }
-=======
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 
-export default AboutPage
+export default AboutPage;

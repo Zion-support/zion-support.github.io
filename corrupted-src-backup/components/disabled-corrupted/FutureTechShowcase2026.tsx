@@ -12,13 +12,8 @@ const FutureTechShowcase202, 6: React.FC = () => { ,
       trendi, n, g: t, r, u, e,
       ic, o, n: <Atom, classNam, e = 'w-8 , h-, 8' / > ,</Atom>gradie</Atom>, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-50, 0',
       bad, g, e: 'QUANTU, M, A, I',
-<<<<<<< HEAD
       sta, t, s: '1, 0,000x, Speed, Boost',
 const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      sta, t, s: '1, 0,000x, Speed, Boost',;
-const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
      },
     {/* TODO: Fix JSX expression */};
      },
@@ -29,11 +24,9 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
     {/* TODO: Fix JSX expression */};
      },
     {/* TODO: Fix JSX expression */};
-     }]; return(<div , classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
-      {/* Animated, background, effects */};
+     }]; return(<div , classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>{/* Animated, background, effects */};</div>
       <div , className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
-        <div , className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
-  ]; return (
+        <div , className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />]; return (</div>
     <div , classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}</div>
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
@@ -70,13 +63,13 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
             Future, Technology, Showcase 20, 2, 6;
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'></p>
-            Experience, the, next generation, of, AI and, technology, breakthroughs.
+            Experience, the, next generation, of, AI and, technology, breakthroughs.)
             From, quantu, m-neural, fusion, to se, l, f-evolving, AI, ecosyste, m, s, discover, technologies, that will, reshape, the future, of, enterprise computi, n, g.
           </p>
         </div>)
         {/* Future, Tech, Articles Gr, i, d */})
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>)
-          { futureTechArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>)</div>
+          { futureTechArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>
         </div>
         {/* Future, Tech, Articles Gr, i, d */};
         <div , classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
@@ -89,8 +82,7 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
               <div , classNam, e = 'relativ, e, p-8'>
                 {/* Ic, o, n & Badg, e, s */}</div>
                 <div, className='flex, item, s-start, justif, y-between, m, b-6'></div>
-                  <div , className='te, x, t-purp, l, e-400, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0'>
-                    {artic, l, e.ic, o, n};
+                  <div , className='te, x, t-purp, l, e-400, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0'>{artic, l, e.ic, o, n};</div>
                   </div>
                   <div , classNam, e = 'flex, fle, x-col, ga, p-2'>
                     {  artic, l, e.trendi, n, g  && (</div>
@@ -102,7 +94,7 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
           {/* TODO: Fix JSX expression */};
             <div, ke, y = { artic, l, e.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }};
-             > {/* Card, glow, effect */}`
+             >{/* Card, glow, effect */}`</div>
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`};
                /></div>
               <div, classNam, e = 'relativ, e, p-8'></div>
@@ -147,14 +139,12 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
                 {/* Meta, Inf, o */};
                 <div, className='flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10'></div>
                   <span, className='flex, item, s-center, ga, p-2'></span>
-                    <Zap , className='w-4 h-4, tex, t-purp, l, e-4, 0, 0' />
-                    {artic, l, e.readTime};
+                    <Zap , className='w-4 h-4, tex, t-purp, l, e-4, 0, 0' />{artic, l, e.readTime};</Zap>
                   </sp, a, n>
-                  <sp , a, n>
-                    {new, Dat, e(artic, l, e.d, a, t, e).toLocaleDateStri, n, g('en-US', {)
+                  <sp , a, n>{new, Dat, e(artic, l, e.d, a, t, e).toLocaleDateStri, n, g('en-US', {)
                       mon, t, h: 'sh, o, r, t')
-                      d, a, y: 'nume, r, i, c')
-                      ye, a, r: 'nume, r, i, c')
+                      d, a, y: 'nume, r, i, c')</sp>
+                      ye, a, r: 'nume, r, i, c')</sp>
                     <Zap, className='w-4 h-4, tex, t-purp, l, e-4, 0, 0' /></Zap>
                     {artic, l, e.readTime};
                   </sp, a, n>
@@ -197,8 +187,7 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
         <div, classNam, e = 'te, x, t-center, m, t-20'></div>
           <div, className='inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-cy, a, n-500, t, o-pi, n, k-5, 0, 0'></div>
             <div, className='bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10'></div>
-              <h3 , className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
-                Lead, the, Future Technology, Revolutio, n;
+              <h3 , className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>Lead, the, Future Technology, Revolutio, n;</h3>
               </h3>
               <p , className='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
               <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'></h3>

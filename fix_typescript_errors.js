@@ -3,13 +3,8 @@ import fs from 'fs';
 // // const seoOptimizerPath = '/workspace/app/components/AdvancedSEOOptimizer.tsx';
 if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */};
     /interface AdvancedSEOOptimizerProps \{[^}]*\}/,
-<<<<<<< HEAD
     `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
   }
-=======
-    `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
   enablePerformanceTracking?: boolean;`
@@ -53,14 +48,10 @@ blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */};
   'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx'];
 openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}"
   e: ['"][^'"]*['"]\s*\}\s*\]/g,"
-      "author,"
+      "author,")
   s: ['Zion Tech Group']")
-<<<<<<< HEAD
     ),
 
-=======
-    );
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     fs.writeFileSync(pagePath, content);
     //         };
 });

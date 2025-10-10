@@ -6,22 +6,21 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
-  experimental: {
+  experimental: {,
     optimizeCss: true,
     optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
   },
-  compiler: {
+  compiler: {,
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  images: {
+  images: {,
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   async headers() {
-    return [
-      {
+    return[{
         source: '/(.*)',
         headers: [
           {
@@ -33,7 +32,7 @@ const nextConfig = {
             value: 'nosniff',
           },
           {
-            key: 'Referrer-Policy',
+            key: 'Referrer-Policy',]
             value: 'origin-when-cross-origin',
           },
         ],
@@ -43,7 +42,6 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-<<<<<<< HEAD
             value: 'public, max-age=3600, s-maxage=3600',
           },
         ],
@@ -52,7 +50,4 @@ const nextConfig = {
   },
 };
 
-=======
-            value: 'public, max-age=3600, s-maxage=3600'}]}]}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 module.exports = nextConfig;

@@ -17,17 +17,11 @@ import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
-<<<<<<< HEAD
 import ServiceWorker from './app/components/ServiceWorker';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import FuturisticBackground from './app/components/FuturisticBackground';
 
-// Lazy load pages for better performance
-=======
-import SecurityEnhancer from './app/components/SecurityEnhancer';
-// Lazy load pages for better performance
-const HomePage = React.lazy(() => import('./app/page'));
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+// Lazy load pages for better performance;
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
@@ -51,13 +45,13 @@ const CommunityPage = React.lazy(() => import('./app/community/page'));
 const ApiPage = React.lazy(() => import('./app/api/page'));
 const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
-// Performance monitoring hook
+// Performance monitoring hook;
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
   return <React.Fragment>{children}</React.Fragment>;
 };
 
-// Main App Component
+// Main App Component;
 const App: React.FC = () => {
   return (
     <EnhancedErrorBoundary>
@@ -115,15 +109,9 @@ const App: React.FC = () => {
           </AppWithPerformanceMonitoring>
         </Router>
       </HelmetProvider>
-<<<<<<< HEAD
     </EnhancedErrorBoundary>
   );
 };
 
 App.displayName = 'App';
-=======
-    </ErrorBoundary>
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default App;

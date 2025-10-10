@@ -6,7 +6,7 @@ interface LoadingSpinnerProps {
   text?: string
 }
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+export const LoadingSpinner: React.FC<LoadingSpinnerProps>= ({ 
   size = 'md', 
   text = 'Loading...' 
 }) => {
@@ -15,11 +15,10 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
   }
-
-  return (
+</LoadingSpinnerProps>
+  return (</LoadingSpinnerProps>
     <div className="flex flex-col items-center justify-center p-8">
-      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-500`} />
-      {text && (
+      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-500`} />{text && (</Loader2>
         <p className="mt-2 text-sm text-gray-500">{text}</p>
       )}
     </div>
@@ -50,8 +49,7 @@ export const ServiceCardSkeleton: React.FC = () => (
   </div>
 )
 export const StatsSkeleton: React.FC = () => (
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-    {Array.from({ length: 4 }).map((_, index) => (
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-8">{Array.from({ length: 4 }).map((_, index) => (</div>
       <div key={index} className="text-center animate-pulse">
         <div className="h-8 bg-gray-600 rounded mb-2"></div>
         <div className="h-4 bg-gray-600 rounded w-3/4 mx-auto"></div>

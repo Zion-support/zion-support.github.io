@@ -1,18 +1,12 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 import https from 'https';
 
 const makeGitHubRequest = (path) => {
   return new Promise((resolve, reject) => {
     const options = {
-=======
-  return new Promise((resolve, reject) => {;
-const options = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      hostname: 'api.github.com'
+      hostname: 'api.github.com',
       path: path,
-      method: 'GET'
+      method: 'GET',
       headers: {,
         'User-Agent': 'Zion-App-Automation',
         Accept: 'application/vnd.github.v3+json'}}
@@ -22,7 +16,7 @@ const makeGitHubRequest = (path) => {/* TODO: Fix JSX expression */}
       }}
 
     const req = https.request(options, res => {/* TODO: Fix JSX expression */})
-      res.on('data', chunk => {
+      res.on('data', chunk => {)
     data += chunk
   });
       res.on('end', () => {/* TODO: Fix JSX expression */}

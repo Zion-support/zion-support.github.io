@@ -15,24 +15,19 @@ const AdCampaignManagerPage: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ad-campaign-manager" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */};
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */};</div>
         <section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                AI Ad Campaign Manager
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Ad Campaign Manager</span>
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Automated ad campaign management with AI optimization across Google, Facebook, and LinkedIn. Maximize ROI with intelligent targeting and budget allocation.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Automated ad campaign management with AI optimization across Google, Facebook, and LinkedIn. Maximize ROI with intelligent targeting and budget allocation.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-cyan-400 text-slate-900 font-semibold rounded-lg hover:bg-cyan-300 transition-colors">
-                Start Free Trial
+              <button className="px-8 py-4 bg-cyan-400 text-slate-900 font-semibold rounded-lg hover:bg-cyan-300 transition-colors">Start Free Trial</button>
               </button>
-              <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-                View Demo
+              <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">View Demo</button>
               </button>
             </div>
           </div>
@@ -91,8 +86,7 @@ const AdCampaignManagerPage: React.FC = () => {
                   <span>24/7 support</span>
                 </li>
               </ul>
-              <button className="mt-8 w-full bg-cyan-400 text-slate-900 font-semibold py-3 rounded-lg hover:bg-cyan-300 transition-colors">
-                Get Started Now
+              <button className="mt-8 w-full bg-cyan-400 text-slate-900 font-semibold py-3 rounded-lg hover:bg-cyan-300 transition-colors">Get Started Now</button>
               </button>
             </div>
           </div>

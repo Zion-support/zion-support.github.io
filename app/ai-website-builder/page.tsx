@@ -53,13 +53,12 @@ return (
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
           <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">Ai Website Builder</h1>
-            <p>
-              Advanced AI-powered ai website builder solution for modern businesses.
+            <p>Advanced AI-powered ai website builder solution for modern businesses.</p>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Get Started
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Get Started</button>
               </button>
-              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">View Demo,
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">View Demo,</button>
               </button>
             </div>
           </div>
@@ -69,8 +68,7 @@ return (
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p>
-                Advanced AI technology that drives results
+              <p>Advanced AI technology that drives results</p>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
@@ -83,13 +81,10 @@ return (
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {
     feature.benefits && (
-                    <ul>
-                      {feature.benefits.map((benefit, idx) => (
-  }
+                    <ul>{feature.benefits.map((benefit, idx) => (</ul>
+  }</ul>
                         <li>
-                          <CheckCircle>
-
-                          {benefit}
+                          <CheckCircle>{benefit}</CheckCircle>
                         </li>
                       ))}
                     </ul>
@@ -105,8 +100,7 @@ return (
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution?</h2>
-              <p>
-                Proven results that drive business growth and efficiency
+              <p>Proven results that drive business growth and efficiency</p>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -128,16 +122,15 @@ return (
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Contact our experts to discuss your requirements and get started today.</p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-                <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Contact Us
+                <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Contact Us</button>
                 </button>
-                <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Learn More
+                <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Learn More</button>
                 </button>
               </div>
             </div>
           </div>
         </section>
       </div>
-      <Footer />
-  )
-}
-export default AiWebsiteBuilderPage
+      <Footer />)
+}</Footer>
+export default AiWebsiteBuilderPage</Footer>

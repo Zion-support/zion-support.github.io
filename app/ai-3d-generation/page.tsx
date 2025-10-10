@@ -1,22 +1,11 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const Ai3dGenerationPage: React.FC = () => {
   const features = [
-=======
-import Navigation from '../components
-import Footer from '../components
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-;
-const Ai3dGenerationPage: React.FC = () => {
-const features = [
-];
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -39,91 +28,53 @@ const features = [
       icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-<<<<<<< HEAD
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
     }
   ]
   const benefits = [
-=======
-    };
-  ];
-;
-const benefits = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-<<<<<<< HEAD
   ]
   return (
     <>
-=======
-  ];
-  return (
-    <React .Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered 3D generation solutions for businesses" />
         <meta name="keywords" content="AI, 3D generation, artificial intelligence, business solutions" />
       </Helmet>
-<<<<<<< HEAD
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">{/* Hero Section */}</div>
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-=======
-        {/* Hero Section *
-        <section className="relative py-20 px-4 overflow-hidden">)
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" 
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI 3D Generation
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">AI 3D Generation</h1>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced AI-powered 3D generation solution for modern businesses.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced AI-powered 3D generation solution for modern businesses.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 flex items-center gap-2">
-                Get Started
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 flex items-center gap-2">Get Started</button>
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
-                View Demo
-<<<<<<< HEAD
+              <button className="border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">View Demo</button>
               </button>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-=======
-              <
-            <
-          <
-        <
-        {/* Features Section *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Key Features
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               </h2>
-              <p className="text-xl text-gray-300">
-                Advanced AI technology that drives results
-<<<<<<< HEAD
+              <p className="text-xl text-gray-300">Advanced AI technology that drives results</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
@@ -131,31 +82,9 @@ const benefits = [
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
+                    <ul className="space-y-2">{feature.benefits.map((benefit, idx) => (</ul>
                         <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          {benefit}
-=======
-              <
-            <
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-4 gap-8">
-              {features.map((feature), index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white
-                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hove,
-    r:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" 
-                  <
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}<
-                  <p className="text-gray-300 mb-4">{feature.description}<
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />{benefit}</CheckCircle>
                         </li>
                       ))}
                     </ul>
@@ -169,20 +98,12 @@ const benefits = [
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Why Choose Our Solution?
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution?</h2>
               </h2>
-              <p className="text-xl text-gray-300">
-                Proven results that drive business growth and efficiency
-<<<<<<< HEAD
+              <p className="text-xl text-gray-300">Proven results that drive business growth and efficiency</p>
               </p>
             </div>
-=======
-              <
-            <
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <CheckCircle className="w-8 h-8 text-white" />
@@ -193,27 +114,19 @@ const benefits = [
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* CTA Section */}
-=======
-        {/* CTA Section *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Ready to Get Started?
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
+              <p className="text-xl text-gray-300 mb-8">Contact our experts to discuss your requirements and get started today.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">
-                  Contact Us
+                <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Contact Us</button>
                 </button>
-                <button className="border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
-                  Learn More
+                <button className="border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">Learn More</button>
                 </button>
               </div>
             </div>
@@ -221,12 +134,7 @@ const benefits = [
         </section>
       </div>
       <Footer />
-<<<<<<< HEAD
     </>
   )
 }
-export default Ai3dGenerationPage
-=======
-    </React.Fragment>)
 export default Ai3dGenerationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

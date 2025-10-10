@@ -1,19 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const ServiceCardSkeletonPage: React.FC = () => {
 const features = [
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const ServiceCardSkeletonPage: React.FC = () => {
-const features = [
-];
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -32,15 +22,8 @@ const features = [
     {
     icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses'  }
   }]
-=======
-      description: 'Worldwide deployment and support for international businesses'
-    }
-];;
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const benefits = [
 ];
 'Advanced AI technology integration',

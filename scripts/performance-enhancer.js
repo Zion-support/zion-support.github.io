@@ -21,7 +21,6 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */};
   s: {},
       recommendation,
   s: []
-<<<<<<< HEAD
     }
   }
 
@@ -31,13 +30,6 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */};
     }
   }
 
-=======
-    }};
-  async enhance() {/* TODO: Fix JSX expression */};
-  to: ${path.join(process.cwd(), 'performance-enhancement-report.json')}`)} catch (error) {/* TODO: Fix JSX expression */};
-    };
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   async analyzeBundle() {
 //     try {
       // Build with analysis;
@@ -46,7 +38,6 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */};
   o: 'pipe' });
 //       const distPath = path.join(process.cwd(), 'dist');
 //       const files = await fs.readdir(distPath);
-<<<<<<< HEAD
       
       let _totalSize = 0;
       const _fileSizes = {}
@@ -55,27 +46,14 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */};
         }
       }
       
-=======
-      ;
-let _totalSize = 0;
-      const _fileSizes = {};
-      for (const file of files) {/* TODO: Fix JSX expression */};
-        };
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       this.report.metrics.bundleSize = totalSize;
       this.report.metrics.fileSizes = fileSizes;
       // Add recommendations based on bundle size;
-<<<<<<< HEAD
       if (totalSize > 1024 * 1024) {
     // 1MB;
         this.report.recommendations.push('Bundle size is large (>1MB). Consider code splitting.')
   }
       
-=======
-      if (totalSize > 1024 * 1024) { // 1MB;
-        this.report.recommendations.push('Bundle size is large (>1MB). Consider code splitting.')};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       this.report.optimizations.push({)
         type: 'bundle-analysis'),
         status: 'completed'),
@@ -86,20 +64,12 @@ let _totalSize = 0;
   size: ${(totalSize / 1024).toFixed(2)} KB`
       });
       `
-<<<<<<< HEAD
 //       // console.log(`✅ Bundle analysis completed. Total)`
   size: ${(totalSize / 1024).toFixed(2)} KB`);
     } catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
 
-=======
-//       // // console.log removed for production
-`
-  size: ${(totalSize / 1024).toFixed(2)} KB`)} catch (error) {/* TODO: Fix JSX expression */};
-//       };
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   async optimizeImages() {
     //     try {
 //       const publicPath = path.join(process.cwd(), 'public');
@@ -109,22 +79,13 @@ let _totalSize = 0;
         await fs.access(imagesPath)
   } catch {
 //         return;
-<<<<<<< HEAD
   async optimizeImages() {/* TODO: Fix JSX expression */}
       } catch {/* TODO: Fix JSX expression */}
       }
       
       const _images = await fs.readdir(imagesPath);
-=======
-  async optimizeImages() {/* TODO: Fix JSX expression */};
-      } catch {/* TODO: Fix JSX expression */};
-      };
-      ;
-const _images = await fs.readdir(imagesPath);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       let _optimizedCount = 0;
       for (const image of images) {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
   detected: ${image} (${(stats.size / 1024).toFixed(2)} KB)`);
           }
           
@@ -132,16 +93,11 @@ const _images = await fs.readdir(imagesPath);
         }
       }
       
-=======
-  detected: ${image} (${(stats.size / 1024).toFixed(2)} KB)`)};
-          optimizedCount++};
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       this.report.optimizations.push({)
         type: 'image-optimization'),
         status: 'completed'),
         details: `Processed ${optimizedCount} images`
-      this.report.optimizations.push({/* TODO: Fix JSX expression */}`
+      this.report.optimizations.push({/* TODO: Fix JSX expression */}`)
   s: `Processed ${optimizedCount} images`)
       });
 //       } catch (error) {/* TODO: Fix JSX expression */};
@@ -152,7 +108,6 @@ const _images = await fs.readdir(imagesPath);
       // Generate critical CSS;
       const criticalCSS = `
 /* Critical CSS for above-the-fold content */
-<<<<<<< HEAD
 .min-h-screen { min-height: 100 vh
   }
 .bg-slate-950 {
@@ -202,38 +157,6 @@ const _images = await fs.readdir(imagesPath);
   g: 1rem, }
 .rounded {/* TODO: Fix JSX expression */}
   s: 0.25rem, }`
-=======
-.min-h-screen { min-height: 100 vh};
-.bg-slate-950 { background-color: #020617};
-.flex { display: flex};
-.items-center { align-items: center};
-.justify-center { justify-content: center};
-.text-white { color: #ffffff};
-.font-bold { font-weight: 700};
-.text-xl { font-size: 1.25rem};
-.p-4 { padding: 1rem};
-.rounded { border-radius: 0.25rem};
-  async optimizeCSS() {/* TODO: Fix JSX expression */};
-  t: 100vh};
-.bg-slate-950 {/* TODO: Fix JSX expression */};
-  r: #020617};
-.flex {/* TODO: Fix JSX expression */};
-  y: flex};
-.items-center {/* TODO: Fix JSX expression */};
-  s: center};
-.justify-center {/* TODO: Fix JSX expression */};
-  t: center};
-.text-white {/* TODO: Fix JSX expression */};
-  r: #ffffff};
-.font-bold {/* TODO: Fix JSX expression */};
-  t: 700};
-.text-xl {/* TODO: Fix JSX expression */};
-  e: 1.25rem};
-.p-4 {/* TODO: Fix JSX expression */};
-  g: 1rem};
-.rounded {/* TODO: Fix JSX expression */};
-  s: 0.25rem}`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 `;
 //       const criticalCSSPath = path.join(process.cwd(), 'public', 'critical.css');
       await fs.writeFile(criticalCSSPath, criticalCSS);
@@ -271,14 +194,9 @@ const _images = await fs.readdir(imagesPath);
 //         }).observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] });
       // FID;
-<<<<<<< HEAD
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
 //           });
       }).observe({/* TODO: Fix JSX expression */})
-=======
-      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */};
-//           })}).observe({/* TODO: Fix JSX expression */})
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   s: ['first-input'] });
       // CLS;
       let _clsValue = 0;
@@ -286,15 +204,10 @@ const _images = await fs.readdir(imagesPath);
           };
         });
 //         }).observe({/* TODO: Fix JSX expression */})
-<<<<<<< HEAD
   s: ['layout-shift'] });
     }
   }
   
-=======
-  s: ['layout-shift'] })};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Start monitoring when DOM is ready;
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', observeWebVitals)
@@ -332,13 +245,9 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
-<<<<<<< HEAD
   )
   });
 
-=======
-  )});
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
@@ -349,17 +258,11 @@ self.addEventListener('fetch', (event) => {
 });
 self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */};
       })
-<<<<<<< HEAD
   );
 });
 
 self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
           }
-=======
-  )});
-self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */};
-          };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         })
       );
     })
@@ -442,15 +345,10 @@ ${this.report.recommendations.map(rec => `- ${rec}`).join('\n')};
 4. Regular performance audits;
 ---
 *Generated by Performance Enhancer Script*`
-<<<<<<< HEAD
 `;
   }
 }
 
-=======
-`};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Run the enhancer;
 const _enhancer = new PerformanceEnhancer();
 // enhancer.enhance().catch(console.error);

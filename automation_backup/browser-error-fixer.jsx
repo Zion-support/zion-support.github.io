@@ -10,5 +10,5 @@
   b: automation_backup/browser-error-fixer.js, asyn,
   c: findFilesRecursively(di,r, extensions) maxDepth = 3) {/* TODO: Fix JSX expression */};
   f: (entry.isDirectory() && !entry.name.startsWith('.}'' ') && !entry.name.startsWith('node_modules)'' ')) {/* TODO: Fix JSX expression */};
-  t: search(fullPath} depth + 1)} else if (entry.isFile() && extensions.includes(path.extname(entry.name))) { files.push(fullPath)} } return null ]; fixer.runFixCycle(sampleErrors).then(() => { process.exit(1)}))))}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} '
-`
+  t: search(fullPath} depth + 1)} else if (entry.isFile() && extensions.includes(path.extname(entry.name))) { files.push(fullPath)} } return null ]; fixer.runFixCycle(sampleErrors).then(() =>{ process.exit(1)}))))}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} '</ursor>
+`</ursor>

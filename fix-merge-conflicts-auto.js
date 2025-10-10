@@ -1,13 +1,13 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-// Function to fix common merge conflicts
+// Function to fix common merge conflicts;
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-    // Fix common patterns
+    // Fix common patterns;
     const patterns = [
 ];
       // Fix function closing patterns
@@ -29,10 +29,10 @@ function fixMergeConflicts(filePath) {
       {
         regex: /<<<<<<< HEAD\s*\n(\s*)\s*\n=======\s*\n(\s*)\s*\n        replacement: (match, head, branch) => {
           return head.trim() || branch.trim();
-        };
+        };,
       };
     ];
-    patterns.forEach(pattern => {
+    patterns.forEach(pattern => {)
       const newContent = content.replace(pattern.regex, pattern.replacement);
       if (newContent !== content) {
         content = newContent;
@@ -50,7 +50,7 @@ function fixMergeConflicts(filePath) {
     return false;
   };
 };
-// Function to find all files with merge conflicts
+// Function to find all files with merge conflicts;
 function findFilesWithMergeConflicts(dir) {
   const files = [];
   function scanDirectory(currentDir) {
@@ -86,7 +86,7 @@ for (const file of filesWithConflicts) {
   };
 };
 console.log(`Fixed merge conflicts in ${fixedCount} files`);
-// Check remaining conflicts
+// Check remaining conflicts;
 const remainingConflicts = findFilesWithMergeConflicts('/workspace');
 console.log(`Remaining files with conflicts: ${remainingConflicts.length}`);
 if (remainingConflicts.length > 0) {

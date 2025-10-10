@@ -8,21 +8,10 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 const AIMLPlatformPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-=======
-;
-const AIMLPlatformPage: React.FC = () => {
-};
-const features = [
-[
-        {
-      ico,
-    n: Brain,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'Complete ML Platform',
       description: 'End-to-end machine learning platform with model development, training, and deployment',
       benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
@@ -38,16 +27,10 @@ const features = [
       icon: Users,
       title: 'Team Collaboration',
       description: 'Collaborative tools for data scientists and ML engineers',
-      benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
+      benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing'],
     };
   ];
-<<<<<<< HEAD
   const pricingPlans = [
-=======
-;
-const pricingPlans = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       name: 'Developer',
       price: '$999',
       period: '/month',
@@ -64,16 +47,10 @@ const pricingPlans = [
       price: '$2,499',
       description: 'Ideal for development teams',
   const features = [];
-  return (
-<<<<<<< HEAD
-    {
+  return({
     // TODO: Add content
   }
 }
-=======
-    {// TODO: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: Brain,
       titl,
@@ -98,7 +75,7 @@ const pricingPlans = [
       descriptio,
   n: 'Collaborative tools for data scientists and ML engineers',
       benefit,
-  s: ['Shared workspaces', 'Version control', 'Knowledge sharing']
+  s: ['Shared workspaces', 'Version control', 'Knowledge sharing'],
     };
   ];
   const pricingPlans = [
@@ -134,7 +111,6 @@ const pricingPlans = [
         'Custom compute',
         'Custom analytics',
         'White-label options',
-<<<<<<< HEAD
         'API access'
   const stats = [
   const stats = [
@@ -153,64 +129,28 @@ const pricingPlans = [
       </Helmet>
       <Navigation />
       <div className="container mx-auto px-4 py-16">
-=======
-        'API access';
-const stats = [
-;
-];
-const stats = [
-];
-  // TOD,
-  O: Add items;
-];;
-    { ico,
-    n: Users, value: '500+', label: 'Data Scientists' },
-    { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
-    { icon: Clock, value: '70%', label: 'Faster Development' },
-    { icon: Star, value: '4.9
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <title>AI ML Platform | Zion Tech Group<
-        <meta name="description" content="Advanced AI ML platform solutions by Zion Tech Group." 
-      <
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI ML Platform</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Coming Soon - Advanced AI ML platform solutions that will transform your business.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Coming Soon - Advanced AI ML platform solutions that will transform your business.</p>
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us;
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">Contact Us;</button>
   </
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-<<<<<<< HEAD
-              Learn More;
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">Learn More;</button>
   </
       <Footer />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Page</h1>
   </
-=======
-              Learn More
-          <
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-          <
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
+          <p className="text-xl text-cyan-400 mb-8 font-medium">Coming Soon</p>
   </
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us,
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">// Contact Us,</button>
           </button>"
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,
   hover:bg-cyan-400,"
-  hover: text-slate-900 transition-colors"></button>
+  hover: text-slate-900 transition-colors"></button>)
 Learn More
           </div>
       <Footer />
@@ -228,19 +168,3 @@ export default AiMlPlatformPage;
   </div>
   </div>
   </div>
-=======
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hove,
-    r:bg-cyan-600 transition-colors">
-/
-          <
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg),
-  hover:bg-cyan-400,"
-  hover:text-slate-900 transition-colors"><
-Learn More;
-          <
-      <Footer 
-    <
-  )};
-export default $1;
-export default AiMlPlatformPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

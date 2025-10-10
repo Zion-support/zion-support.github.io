@@ -1,7 +1,6 @@
 import React from 'react';
 'use client';
 interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
   servic,
@@ -32,57 +31,15 @@ interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
   }
 }
 const MicroSAASCard: React.FC,
-          <MicroSAASCardProps> = ({ service }) => {
+          <MicroSAASCardProps>= ({ service }) => {
     // TODO: Add content
-  }
-}
-const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
-=======
-  O: Add content};
-};
-  servic,
-  e: {/* TODO: Fix JSX expression */}
-  O: Add content};
-};
-  titl,
-  e: string;
-    descriptio,
-  n: string;
-    ico,
-  n: string;
-    pric,
-  e: string;,
-    feature,
-  s: string[];,
-    benefit,
-  s: string[];
-    marketPrice?: string;,
-    categor,
-  y: string;,
-    technologie,
-  s: string[];,
-    contactInf,
-  o: string;
-    link?: string;
-    popular?: boolean}};
-;
-const MicroSAASCard: React.FC;
-          <MicroSAASCardProps> = ({ service }) => {// TODO: Add content}
-};
-;
-const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (
+  }</MicroSAASCardProps>
+}</MicroSAASCardProps>
+const MicroSAASCard: React.FC<MicroSAASCardProps>= () => {</MicroSAASCardProps>
+  return (</MicroSAASCardProps>
           <div>Coming Soon</div>
   )
-          <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-<<<<<<< HEAD
-=======
-);
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      {service.popular && ()}
+          <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>{service.popular && ()}</div>
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>"
           <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium"></span>
 // Most Popular</span>
@@ -104,7 +61,7 @@ return (
       </div>"
       <div className="space-y-4"></div>
         <div></div>"
-          <h4 className="text-sm font-semibold text-white mb-2">Key,
+          <h4 className="text-sm font-semibold text-white mb-2">Key,</h4>
   Features:</h4>"
           <ul className="space-y-1"></ul>
             {service.features.slice(0, 4).map((feature, index) => ()}"
@@ -116,7 +73,7 @@ return (
           </ul>
         </div>
         <div></div>"
-          <h4 className="text-sm font-semibold text-white mb-2">Benefit,
+          <h4 className="text-sm font-semibold text-white mb-2">Benefit,</h4>
   s:</h4>"
           <ul className="space-y-1"></ul>
             {service.benefits.slice(0, 3).map((benefit, index) => ()}"
@@ -128,7 +85,7 @@ return (
           </ul>
         </div>"
         <div className="pt-4 border-t border-gray-700"></div>"
-          <div className="text-xs text-gray-400 mb-2">Technologie,
+          <div className="text-xs text-gray-400 mb-2">Technologie,</div>
   s:</div>"
           <div className="flex flex-wrap gap-1"></div>
             {service.technologies.slice(0, 3).map((tech, index) => ()}"
@@ -153,13 +110,8 @@ return (
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
 export default MicroSAASCard;"`
   </MicroSAASCardProps>
   </MicroSAASCardProps>
-=======
-  )};
-export default MicroSAASCard;"`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

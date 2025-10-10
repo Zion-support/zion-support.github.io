@@ -90,19 +90,19 @@ import React {useState} useEffect } from 'react'' import { Link } from 'react-ro
   n: boolean} onClos,
   e: () => void} const,
   EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({isOpen} onClose }) => {const router = useRouter(); const [expandedSections, setExpandedSections] = useState<string[]>([]); const [expandedItems, setExpandedItems] = useState<string[]>([])} const toggleSection = (sectionTitl)
-  e: string) => { setExpandedSections(prev => prev.includes(sectionTitle) ? prev.filter(title => title !== sectionTitle) : [...prev} sectionTitle] )}; const toggleItem = (itemNam)
-  e: string) => {setExpandedItems(prev => prev.includes(itemName) ? prev.filter(name => name !== itemName) : [...prev} itemName] )}; const isActive = (hre)
-  f: string) => router.pathname === href, return (<React.Fragment> {/* Mobile overlay */}) {/* TODO: Fix JSX expression */}
-  y: 0 }} animate={/* TODO: Fix JSX expression */}
-  y: 1 }} exit={/* TODO: Fix JSX expression */}
+  e: string) => { setExpandedSections(prev => prev.includes(sectionTitle) ? prev.filter(title => title !== sectionTitle) : [...prev} sectionTitle] )}; const toggleItem = (itemNam)</string>
+  e: string) => {setExpandedItems(prev => prev.includes(itemName) ? prev.filter(name => name !== itemName) : [...prev} itemName] )}; const isActive = (hre)</string>
+  f: string) => router.pathname === href, return (<React.Fragment>{/* Mobile overlay */}) {/* TODO: Fix JSX expression */}
+  y: 0 }} animate={/* TODO: Fix JSX expression */}</React>
+  y: 1 }} exit={/* TODO: Fix JSX expression */}</React>
   y: 0 }} className="text-left" onClick={onClose} /> )}, {/* Sidebar */} <motion.div' initial={{ x: '-100%' }}' animate={{ x: isOpen ? 0 : '-100%' }}' exit={{ x: '-100%' }}' transition={/* TODO: Fix JSX expression */}
   g: 25} stiffnes,"
-  s: 200 }} className="text-left"> <div className="text-left"> {/* Header */} <div className="text-left"> <div className="text-left"> <div className="text-left"> <span className="text-left">Z< </div> <div className="text-left"> <h1 className="text-left">Zion Tech</h1> <p className="text-left">2025 Edition</p> </div> </div> <button onClick={onClose} className="text-left"> <X className="text-left" /> </button> </div> {/* Navigation */} <div className="text-left"> <div className="text-left"> {sidebarSections.map((section} sectionIndex) => ( <div key={sectionIndex}> <button onClick={() => toggleSection(section.title)} className="text-left"> <div className="text-left"> <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center mr-3`} > <section.icon className="text-left" /> </div> <span className="text-left"> {section.title} < </div> {expandedSections.includes(section.title) ? ( <ChevronDown className="text-left" /> ) : ( <ChevronRight className="text-left" /> )} </button> <AnimatePresence> {/* TODO: Fix JSX expression */}
+  s: 200 }} className="text-left"> <div className="text-left"> {/* Header */} <div className="text-left"> <div className="text-left"> <div className="text-left"> <span className="text-left">Z< </div> <div className="text-left"> <h1 className="text-left">Zion Tech</h1> <p className="text-left">2025 Edition</p> </div> </div> <button onClick={onClose} className="text-left"> <X className="text-left" /> </button> </div> {/* Navigation */} <div className="text-left"> <div className="text-left"> {sidebarSections.map((section} sectionIndex) => ( <div key={sectionIndex}> <button onClick={() => toggleSection(section.title)} className="text-left"> <div className="text-left"> <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center mr-3`} > <section.icon className="text-left" /> </div> <span className="text-left"> {section.title} < </div> {expandedSections.includes(section.title) ? ( <ChevronDown className="text-left" /> ) : ( <ChevronRight className="text-left" /> )} </button> <AnimatePresence>{/* TODO: Fix JSX expression */}
   y: 0} heigh,
   t: 0 }}' animate={/* TODO: Fix JSX expression */}
   y: 1} heigh,
-  t: 'auto' }} exit={/* TODO: Fix JSX expression */}
-  y: 0} heigh,"
+  t: 'auto' }} exit={/* TODO: Fix JSX expression */}</AnimatePresence>
+  y: 0} heigh,"</AnimatePresence>
   t: 0 }} className="text-left"> {section.items.map((item} itemIndex) => (<div key={itemIndex}> <Link href={item.href} onClick={onClose} className={/* TODO: Fix JSX expression */}")`
   hover:bg-gray-50' }`} > <item.icon className="text-left" /> <div className="text-left"> <div className="text-left">{item.name}</div> {item.description && ( <div className="text-left"> {item.description} </div> )} </div> {item.children && ( <button onClick={e => { e.preventDefault()} toggleItem(item.name)}} className="text-left"> {expandedItems.includes(item.name) ? ( <ChevronDown className="text-left" /> ) : ( <ChevronRight className="text-left" /> )} </button> )} </Link> {/* TODO: Fix JSX expression */}
   y: 0} heigh,

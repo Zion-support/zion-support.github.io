@@ -9,13 +9,13 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/\n?/g, '');
     content = content.replace(/\n?/g, '');
     content = content.replace(/    
-    // Fix common JSX issues that might have been caused by merge conflicts
+    // Fix common JSX issues that might have been caused by merge conflicts)
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*>\s*<\/\1>/g, ''); // Remove empty self-closing tags
     content = content.replace(/\s*<([A-Z][a-zA-Z0-9]*)\s*>\s*$/gm, ''); // Remove opening tags without content
-    // Fix missing closing tags for common elements
+    // Fix missing closing tags for common elements;
     const openTags = content.match(/<([A-Z][a-zA-Z0-9]*)[^>]*>(?!.*<\/\1>)/g);
     if (openTags) {
-      openTags.forEach(tag => {
+      openTags.forEach(tag => {)
         const tagName = tag.match(/<([A-Z][a-zA-Z0-9]*)/)[1];
         if (!content.includes(`</${tagName}>`)) {
           // Add closing tag at the end of the component
@@ -49,9 +49,9 @@ function findFilesWithConflicts(dir) {
         } catch (error) {
           // Skip files that can't be read
         };
-// Function to resolve merge conflicts by choosing the HEAD version
+// Function to resolve merge conflicts by choosing the HEAD version;
 function resolveMergeConflicts(content) {
-  // Remove merge conflict markers and choose HEAD version
+  // Remove merge conflict markers and choose HEAD version;
   let resolved = content
     .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)  
   // Clean up any remaining conflict markers
@@ -61,18 +61,18 @@ function resolveMergeConflicts(content) {
     .replace(/  
   return resolved;
 };
-// Function to fix common JSX syntax issues
+// Function to fix common JSX syntax issues;)
 function fixJSXSyntax(content) {
-  // Fix unclosed JSX tags by adding proper closing tags
+  // Fix unclosed JSX tags by adding proper closing tags;
   let fixed = content;
   // Fix common JSX issues
   fixed = fixed
     // Fix missing closing tags for common elements
     .replace(/<div([^>]*)>(?!.*<\/div>)/g, (match, attrs) => {
-      // Only add closing tag if there's no corresponding closing tag
+      // Only add closing tag if there's no corresponding closing tag;
       const openDivs = (match.match(/<div/g) || []).length;
-      const closeDivs = (match.match(/<\/div>/g) || []).length;
-      if (openDivs > closeDivs) {
+      const closeDivs = (match.match(/<\/div>/g) || []).length;</div>
+      if (openDivs > closeDivs) {</div>
         return match + '</div>';
       };
       return match;
@@ -80,8 +80,8 @@ function fixJSXSyntax(content) {
     // Fix missing closing tags for sections
     .replace(/<section([^>]*)>(?!.*<\/section>)/g, (match, attrs) => {
       const openSections = (match.match(/<section/g) || []).length;
-      const closeSections = (match.match(/<\/section>/g) || []).length;
-      if (openSections > closeSections) {
+      const closeSections = (match.match(/<\/section>/g) || []).length;</section>
+      if (openSections > closeSections) {</section>
         return match + '</section>';
       };
       return match;
@@ -89,8 +89,8 @@ function fixJSXSyntax(content) {
     // Fix missing closing tags for main
     .replace(/<main([^>]*)>(?!.*<\/main>)/g, (match, attrs) => {
       const openMain = (match.match(/<main/g) || []).length;
-      const closeMain = (match.match(/<\/main>/g) || []).length;
-      if (openMain > closeMain) {
+      const closeMain = (match.match(/<\/main>/g) || []).length;</main>
+      if (openMain > closeMain) {</main>
         return match + '</main>';
       };
       return match;
@@ -98,8 +98,8 @@ function fixJSXSyntax(content) {
     // Fix missing closing tags for article
     .replace(/<article([^>]*)>(?!.*<\/article>)/g, (match, attrs) => {
       const openArticle = (match.match(/<article/g) || []).length;
-      const closeArticle = (match.match(/<\/article>/g) || []).length;
-      if (openArticle > closeArticle) {
+      const closeArticle = (match.match(/<\/article>/g) || []).length;</article>
+      if (openArticle > closeArticle) {</article>
         return match + '</article>';
       };
       return match;
@@ -107,15 +107,15 @@ function fixJSXSyntax(content) {
     // Fix missing closing tags for p
     .replace(/<p([^>]*)>(?!.*<\/p>)/g, (match, attrs) => {
       const openP = (match.match(/<p/g) || []).length;
-      const closeP = (match.match(/<\/p>/g) || []).length;
-      if (openP > closeP) {
+      const closeP = (match.match(/<\/p>/g) || []).length;</p>
+      if (openP > closeP) {</p>
         return match + '</p>';
       };
       return match;
     });
   return fixed;
 };
-// Function to fix TypeScript/JavaScript syntax issues
+// Function to fix TypeScript/JavaScript syntax issues;
 function fixSyntaxIssues(content) {
   let fixed = content;
   // Fix missing semicolons
@@ -129,7 +129,7 @@ function fixSyntaxIssues(content) {
 // Main function to process files
 async function processFiles() {
   console.log('Starting merge conflict resolution...');
-  // Find all TypeScript and JavaScript files
+  // Find all TypeScript and JavaScript files;
   const patterns = [
 ];
     'app/**/*.tsx',
@@ -140,7 +140,7 @@ async function processFiles() {
   let processedCount = 0;
   let errorCount = 0;
   for (const pattern of patterns) {
-    const files = await glob(pattern, { 
+    const files = await glob(pattern, { )
       ignore: [
         'node_modules/**',
         'dist/**',
@@ -226,7 +226,7 @@ const content = fs.readFileSync(fullPath, 'utf8');
 traverse(dir);
   return files;
 };
-// Main execution
+// Main execution;
 const filesWithConflicts = findFilesWithMergeConflicts('/workspace');
 console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
 let fixedCount = 0;

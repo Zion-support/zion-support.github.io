@@ -10,12 +10,8 @@ interface AccessibilityIssue {/* TODO: Fix JSX expression */};
  * Accessibility auditor class;
  */
 export class AccessibilityAuditor {
-<<<<<<< HEAD
     private issues: AccessibilityIssue[] = [];
 
-=======
-  private issues: AccessibilityIssue[] = [];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Run comprehensive accessibility audit;
    */
@@ -30,17 +26,11 @@ export class AccessibilityAuditor {
     this.checkKeyboardNavigation()
     this.checkARIALabels(),
 ,
-<<<<<<< HEAD
     return this.issues
   }
 
   private checkImages(): void {
     const _images = document.querySelectorAll('img');
-=======
-    return this.issues};
-  private checkImages(): void {;
-const _images = document.querySelectorAll('img');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     images.forEach((img, index) => {
       if (!img.getAttribute('alt')) {
         this.addIssue('critical')
@@ -52,7 +42,6 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */};
           `img[${index}]`,
           'Missing alt attribute',
           'Add descriptive alt text for all images'
-<<<<<<< HEAD
         );
       }
     });
@@ -60,12 +49,6 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */};
 
   private checkHeadings(): void {
     const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-=======
-        )};
-    })};
-  private checkHeadings(): void {;
-const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     let _previousLevel = 0;
     headings.forEach((heading, index) => {
       //       const level = parseInt(heading.tagName.charAt(1));
@@ -77,7 +60,6 @@ const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
           `heading[${index}]`,
           'Heading level skipped',
           'Use proper heading hierarchy'
-<<<<<<< HEAD
         );
       }
 
@@ -87,12 +69,6 @@ const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
 
   private checkLinks(): void {
     const _links = document.querySelectorAll('a');
-=======
-        )};
-      previousLevel = level})};
-  private checkLinks(): void {;
-const _links = document.querySelectorAll('a');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     links.forEach((link, index) => {
       if (!link.getAttribute('href') && !link.getAttribute('role')) {
         this.addIssue('serious')
@@ -102,7 +78,6 @@ const _links = document.querySelectorAll('a');
           `a[${index}]`,
           'Link without href',
           'Add href attribute or role="button"'
-<<<<<<< HEAD
         );
       }
     });
@@ -110,12 +85,6 @@ const _links = document.querySelectorAll('a');
 
   private checkForms(): void {
     const _inputs = document.querySelectorAll('input, textarea, select');
-=======
-        )};
-    })};
-  private checkForms(): void {;
-const _inputs = document.querySelectorAll('input, textarea, select');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     inputs.forEach((input, index) => {
       if (!input.getAttribute('id') && !input.getAttribute('aria-label')) {
         this.addIssue('serious')
@@ -125,7 +94,6 @@ const _inputs = document.querySelectorAll('input, textarea, select');
           `input[${index}]`,
           'Form control without label',
           'Add id and associated label or aria-label'
-<<<<<<< HEAD
         );
       }
     });
@@ -133,12 +101,6 @@ const _inputs = document.querySelectorAll('input, textarea, select');
 
   private checkButtons(): void {
     const _buttons = document.querySelectorAll('button');
-=======
-        )};
-    })};
-  private checkButtons(): void {;
-const _buttons = document.querySelectorAll('button');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     buttons.forEach((button, index) => {
       if (!button.textContent?.trim() && !button.getAttribute('aria-label')) {
         this.addIssue('serious')
@@ -148,33 +110,22 @@ const _buttons = document.querySelectorAll('button');
           `button[${index}]`,
           'Button without accessible name',
           'Add text content or aria-label'
-<<<<<<< HEAD
         );
       }
     });
   }
 
-=======
-        )};
-    })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   private checkColorContrast(): void {
     // This is a simplified check - in practice, you'd use a library like axe-core;
     this.addIssue('moderate')
       'document')
       'Color contrast check needed')
       'Use automated tools to verify color contrast ratios'
-<<<<<<< HEAD
     )
   }
 
   private checkKeyboardNavigation(): void {
     const focusableElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]')
-=======
-    )};
-  private checkKeyboardNavigation(): void {;
-const focusableElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]')
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     );
     focusableElements.forEach((element, index) => {
       if (element.getAttribute('tabindex') === '-1' && !element.getAttribute('aria-hidden')) {
@@ -187,7 +138,6 @@ const focusableElements = document.querySelectorAll('button, a, input, select, t
           `element[${index}]`,
           'Focusable element hidden from keyboard',
           'Consider if element should be focusable'
-<<<<<<< HEAD
         );
       }
     });
@@ -195,12 +145,6 @@ const focusableElements = document.querySelectorAll('button, a, input, select, t
 
   private checkARIALabels(): void {
     const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelledby]');
-=======
-        )};
-    })};
-  private checkARIALabels(): void {;
-const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelledby]');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     elementsWithAria.forEach((element, index) => {
       //       const ariaLabel = element.getAttribute('aria-label');
       //       const ariaLabelledBy = element.getAttribute('aria-labelledby');
@@ -212,19 +156,14 @@ const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelle
           `element[${index}]`,
           'Conflicting ARIA labels',
           'Use either aria-label or aria-labelledby, not both'
-<<<<<<< HEAD
         );
       }
     });
   }
 
-=======
-        )};
-    })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  private addIssue(severity: AccessibilityIssue['severity'])
-    element: string)
-    issue: string)
+  private addIssue(severity: AccessibilityIssue['severity']),
+    element: string),
+    issue: string),
     recommendation: string,
   ): void {,
     this.issues.push({)
@@ -238,18 +177,12 @@ const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelle
   t: string,
     issu,
   e: string,
-    recommendatio,
-<<<<<<< HEAD
+    recommendatio,)
   n: string,)
   ): void {/* TODO: Fix JSX expression */}
     });
   }
 
-=======
-  n: string;)
-  ): void {/* TODO: Fix JSX expression */};
-    })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   /**
    * Get issues by severity;
    */
@@ -262,18 +195,17 @@ const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelle
    * Get summary of audit results;
    */
   public getSummary(): {
-    total: number;
-    critical: number
-    serious: number
+    total: number;,
+    critical: number,
+    serious: number,
     moderate: number,
     minor: number
   } {
     return {
-      total: this.issues.length;
-      critical: this.getIssuesBySeverity('critical').length;
-<<<<<<< HEAD
-      serious: this.getIssuesBySeverity('serious').length
-      moderate: this.getIssuesBySeverity('moderate').length
+      total: this.issues.length;,
+      critical: this.getIssuesBySeverity('critical').length;,
+      serious: this.getIssuesBySeverity('serious').length,
+      moderate: this.getIssuesBySeverity('moderate').length,
       minor: this.getIssuesBySeverity('minor').length,
   public getSummary(): {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
@@ -286,18 +218,4 @@ const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelle
  */
 export const runAccessibilityAudit = (): AccessibilityIssue[] => {/* TODO: Fix JSX expression */}
 }
-=======
-      serious: this.getIssuesBySeverity('serious').length;
-      moderate: this.getIssuesBySeverity('moderate').length;
-      minor: this.getIssuesBySeverity('minor').length;
-  public getSummary(): {/* TODO: Fix JSX expression */};
-  } {/* TODO: Fix JSX expression */};
-    }};
-};
-/**
- * Utility function to run accessibility audit;
- */
-export const runAccessibilityAudit = (): AccessibilityIssue[] => {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 "`

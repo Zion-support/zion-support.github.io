@@ -1,5 +1,4 @@
-// Analysis of missing pages based on navigation links
-
+// Analysis of missing pages based on navigation links;
 const navigationLinks = [
 ];
   // From Header navigation
@@ -133,15 +132,14 @@ const existingPages = [
   '/ai-3d-generation',
   '/about'
 ];
-<<<<<<< HEAD
 
-// Find missing pages
+// Find missing pages;
 const missingPages = navigationLinks.filter(link => !existingPages.includes(link));
 
 console.log('Missing pages from navigation:');
 missingPages.forEach(page => console.log(`- ${page}`));
 
-// Find pages that exist but aren't in navigation
+// Find pages that exist but aren't in navigation;
 const extraPages = existingPages.filter(page => !navigationLinks.includes(page));
 
 console.log('\nPages that exist but aren\'t in main navigation:');
@@ -149,31 +147,10 @@ extraPages.forEach(page => console.log(`- ${page}`));
 
 // Check for broken links (pages that should exist based on navigation)
 const brokenLinks = missingPages.filter(page => {
-  // These are critical pages that should exist
-  const criticalPages = ['/blockchain-web3'];
+  // These are critical pages that should exist;
+  const criticalPages = ['/blockchain-web3'];)
   return criticalPages.includes(page);
 });
 
 console.log('\nCritical missing pages (broken links):');
 brokenLinks.forEach(page => console.log(`- ${page}`));
-=======
-// Find missing pages;
-const missingPages = navigationLinks.filter(link => !existingPages.includes(link));
-// console.log removed for production
-missingPages.forEach(page => // console.log removed for production
-);
-// Find pages that exist but aren't in navigation;
-const extraPages = existingPages.filter(page => !navigationLinks.includes(page));
-// console.log removed for production
-extraPages.forEach(page => // console.log removed for production
-);
-// Check for broken links (pages that should exist based on navigation);
-const brokenLinks = missingPages.filter(page => {
-  // These are critical pages that should exist;
-const criticalPages = ['/blockchain-web3'];
-  return criticalPages.includes(page)});
-// console.log removed for production
-:');
-brokenLinks.forEach(page => // console.log removed for production
-);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

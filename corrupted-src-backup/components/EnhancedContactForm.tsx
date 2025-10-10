@@ -1,34 +1,17 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 export default function EnhancedContactForm(): React.JSX.Element {
   const [name, setName] = useState('');
-=======
-export default function EnhancedContactForm(): React.JSX.Element {;
-const [name, setName] = useState('');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   return(<form;)
       aria-label="Contact form")
-<<<<<<< HEAD
-      onSubmit={e => e.preventDefault()}
-      className="grid gap-4 max-w-xl mx-auto">
+      onSubmit={e =>e.preventDefault()}</form>
+      className="grid gap-4 max-w-xl mx-auto"></form>
       <input;
         aria-label="Name"
 export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix JSX expression */}
-      onSubmit={e => e.preventDefault()}
-      className="grid gap-4 max-w-xl mx-auto">
-=======
-      onSubmit={e => e.preventDefault()};
-      className="grid gap-4 max-w-xl mx-auto"
-    >
-      <input;
-        aria-label="Name"
-export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix JSX expression */};
-      onSubmit={e => e.preventDefault()};
-      className="grid gap-4 max-w-xl mx-auto"
-    >
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+      onSubmit={e =>e.preventDefault()}</input>
+      className="grid gap-4 max-w-xl mx-auto"></input>
       <input></input>"
         aria-label="Name""
         placeholder="Name"
@@ -54,16 +37,11 @@ export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix J
         onChange={e => setMessage(e.target.value)}"
         className="border p-2 rounded"
       />
-      <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
-      />"
+      <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">/>"</button>
       <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded"></button>
         Send;
       </button>
     </form>
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 "

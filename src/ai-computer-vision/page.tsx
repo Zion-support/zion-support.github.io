@@ -5,19 +5,10 @@ import Footer from '../components/Footer';
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
 import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react';
 const AIComputerVisionPage: React.FC = () => {
-<<<<<<< HEAD
     const features = [],
-  return (
-    {// TODO: Add content
+  return({// TODO: Add content
   }
 }
-=======
-};
-const features = [];
-  return (
-    {// TODO: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: Eye,
       titl,
@@ -42,7 +33,7 @@ const features = [];
       descriptio,
   n: 'Secure and accurate facial recognition technology',
       benefit,
-  s: ['Identity verification', 'Access control', 'Privacy protection']
+  s: ['Identity verification', 'Access control', 'Privacy protection'],
     };
   ];
   const applications = [
@@ -62,14 +53,8 @@ const features = [];
       ico,
   n: Settings,
       useCase,
-<<<<<<< HEAD
   s: ['Defect detection', 'Quality assurance', 'Process monitoring']
   const pricing = [
-=======
-  s: ['Defect detection', 'Quality assurance', 'Process monitoring'];
-const pricing = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       nam,
   e: 'Starter',
       pric,
@@ -85,61 +70,35 @@ const pricing = [
 //         'Email support',
 //         'Standard API'
 //       ],
-<<<<<<< HEAD
-      popular: false,
+      popular: false,)
 const PagePage: React.FC = () => {
-=======
-      popular: false,;
-const PagePage: React.FC = () => {
-};
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-// AI Computer Vision
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">// AI Computer Vision</h1>
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-// Advanced Visual Intelligence Solutions,
+          <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">// Advanced Visual Intelligence Solutions,</p>
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,
-            our AI-powered visual intelligence solutions help you see and understand the world like never before.
-<<<<<<< HEAD
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,</p>
+            our AI-powered visual intelligence solutions help you see and understand the world like never before.</p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-// >
-//               Get Started
-=======
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-//>
-//               Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+// >//               Get Started</a>
           </a>
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-<Eye className="w-5 h-5" />
-              +1 302 464 0950,
+<Eye className="w-5 h-5" />+1 302 464 0950,</Eye>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Features Section */}
-=======
-);
-};
-        {/* Features Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <section className="mb-16"></section>"
           <h2 className="text-3xl,"
   md: text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Core Capabilities,
           </h2>"
           <div className="grid grid-cols-1,
-  md:grid-cols-2,"
+  md:grid-cols-2,")
   lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => ()}"
           <div key={index} className="cyber-card p-6,"
@@ -174,7 +133,7 @@ Transform your business with cutting-edge computer vision technology. From objec
                 <p className="text-gray-300 mb-6 leading-relaxed"></p>
                   {application.description}"
                 <div className="space-y-2"></div>"
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Use,
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Use,</h4>
   Cases:</h4>
                   {application.useCases.map((useCase, useCaseIndex) => ()}"
           <div key={useCaseIndex} className="flex items-center text-sm text-gray-300"></div>"
@@ -203,24 +162,15 @@ Most Popular;
                       {feature}`
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${};
   // TOD,
-<<<<<<< HEAD
   O: Add content,
 }
-=======
-  O: Add content};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //                     plan.popular;
 //                       ? 'cyber-button'
                       : 'border-2 border-cyan-400 text-cyan-400,
   hover:bg-cyan-400,
-  hover:text-slate-900'`
-<<<<<<< HEAD
+  hover: text-slate-900'`
                   }`}
         {/* CTA Section */}
-=======
-                  }`};
-        {/* CTA Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           "
           <section className="text-center"></section>"
           <div className="cyber-card p-12 max-w-4xl mx-auto"></div>"
@@ -231,9 +181,7 @@ Ready to See the Future?"
               Transform your business with AI-powered computer vision solutions that see, understand, and act.
                 Start Your Vision Journey;
                 href="/demo" className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300"
-                <Camera className="w-5 h-5" />
-<<<<<<< HEAD
-                Request Demo
+                <Camera className="w-5 h-5" />Request Demo</Camera>
       </main>
       <Footer /></Footer>
     </div>
@@ -241,11 +189,3 @@ Ready to See the Future?"
 }
 export default PagePage;
   </p>
-=======
-                Request Demo;
-      </main>
-      <Footer /></Footer>
-    </div>
-  )};
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

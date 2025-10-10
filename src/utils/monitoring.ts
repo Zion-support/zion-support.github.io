@@ -5,32 +5,19 @@
  * Comprehensive Monitoring Utility;
  * Real-time application monitoring, performance tracking, and error reporting;
  */
-<<<<<<< HEAD
 export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-export interface PerformanceMetrics {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   lcp?: number;
   fid?: number;
   cls?: number;
   fcp?: number;
   ttfb?: number;
-<<<<<<< HEAD
   inp?: number;
 }
 export interface ErrorReport {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  inp?: number};
-export interface ErrorReport {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   messag,
   e: string
   stack?: string
@@ -40,23 +27,15 @@ export interface ErrorReport {/* TODO: Fix JSX expression */};
     userAgen,
   t: string,,
     ur,
-<<<<<<< HEAD
   l: string,
 class MonitoringService {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
-=======
-  l: string;
-class MonitoringService {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 class MonitoringService {
   private metrics: PerformanceMetrics = {};
   private errors: ErrorReport[] = []
-  private observer: PerformanceObserver | null = null
-
+  private observer: PerformanceObserver | null = null;
   constructor() {
     if (typeof window !== 'undefined') {
       this.initializeMonitoring()
@@ -70,31 +49,18 @@ class MonitoringService {
   };
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
-<<<<<<< HEAD
       try {
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
-=======
-      try {;
-const lcpObserver = new PerformanceObserver((list) => {;
-const entries = list.getEntries();
-const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
           this.reportMetric('lcp', this.metrics.lcp)
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-<<<<<<< HEAD
 
-        // First Input Delay
+        // First Input Delay;
         const fidObserver = new PerformanceObserver((list) => {
     const entries = list.getEntries();
-=======
-        // First Input Delay;
-const fidObserver = new PerformanceObserver((list) => {;
-const entries = list.getEntries();
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime,
             this.reportMetric('fid', this.metrics.fid)
@@ -103,11 +69,10 @@ const entries = list.getEntries();
         fidObserver.observe({ entryTypes: ['first-input'] });
 
         let clsValue = 0;
-        const clsObserver = new PerformanceObserver(list => {
+        const clsObserver = new PerformanceObserver(list => {)
     const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
-<<<<<<< HEAD
               clsValue += (entry as any).value || 0
               this.metrics.cls = clsValue,
               this.reportMetric('cls', clsValue)
@@ -116,11 +81,11 @@ const entries = list.getEntries();
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
 
-        // First Contentful Paint
-        const fcpObserver = new PerformanceObserver(list => {
+        // First Contentful Paint;
+        const fcpObserver = new PerformanceObserver(list => {)
     const entries = list.getEntries();
           entries.forEach(entry => {
-            this.metrics.fcp = entry.startTime;
+            this.metrics.fcp = entry.startTime;)
             this.reportMetric('fcp', entry.startTime)
   });
         });
@@ -131,40 +96,16 @@ const entries = list.getEntries();
     }
   }
 
-=======
-              clsValue += (entry as any).value || 0;
-              this.metrics.cls = clsValue;
-              this.reportMetric('cls', clsValue)};
-          })
-        })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
-        // First Contentful Paint;
-const fcpObserver = new PerformanceObserver(list => {;
-const entries = list.getEntries();
-          entries.forEach(entry => {
-            this.metrics.fcp = entry.startTime;
-            this.reportMetric('fcp', entry.startTime)})});
-        fcpObserver.observe({ entryTypes: ['paint'] })} catch (error) {
-        // // console.error removed for production
-};
-    };
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-<<<<<<< HEAD
             // console.warn('Long task detected:', {
             //   duration: entry.duration,
             //   startTime: entry.startTime
             // })
           }
-=======
-            // // console.warn removed for production
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
@@ -180,7 +121,6 @@ const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             const resourceEntry = entry as PerformanceResourceTiming,
             if (resourceEntry.duration && resourceEntry.duration > 1000) {
-<<<<<<< HEAD
               // console.warn('Slow resource detected:', {
               //   name: resourceEntry.name,
               //   duration: resourceEntry.duration,
@@ -196,21 +136,11 @@ const entries = list.getEntries();
     }
   }
 
-=======
-              // // console.warn removed for production
-};
-          })});
-        resourceObserver.observe({ entryTypes: ['resource'] })} catch (_error) {
-        // // console.error removed for production
-};
-    };
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   private setupErrorHandling(): void {
     window.addEventListener('error', (event) => {
       this.logError({
         message: event.message,
-        stack: event.error?.stack,
+        stack: event.error?.stack,)
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href
@@ -219,7 +149,7 @@ const entries = list.getEntries();
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
-        message: `Unhandled Promise Rejection: ${event.reason}`,
+        message: `Unhandled Promise Rejection: ${event.reason}`,)
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href
@@ -231,18 +161,12 @@ const entries = list.getEntries();
       return
     };
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
-<<<<<<< HEAD
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
     }
-=======
-    if (thresholds) {;
-const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Send to analytics (if configured)
     if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', name, {
+      (window as any).gtag('event', name, {)
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
       })
@@ -288,7 +212,6 @@ const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImpr
         //   'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
         //   'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         // })
-<<<<<<< HEAD
       }
     }
   }
@@ -297,12 +220,3 @@ const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImpr
 const monitoring = new MonitoringService()
 export default monitoring;`
 
-=======
-      };
-    };
-  };
-};
-;
-const monitoring = new MonitoringService()
-export default monitoring;`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

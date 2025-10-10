@@ -52,5 +52,5 @@ fs.writeFileSync('/workspace/src/App.tsx', newAppContent);
 // Log success for debugging in development
 if (process.env.NODE_ENV === 'development') {
   console.log(`✅ Added ${missingPages.length} missing routes to App.tsx`);
-  console.log('All navigation links should now work properly!');
-}
+  console.log('All navigation links should now work properly!');</Route>
+}</Route>

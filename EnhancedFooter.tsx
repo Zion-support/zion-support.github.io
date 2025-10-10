@@ -1,26 +1,14 @@
 import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const services = [
-=======
-;
-const EnhancedFooter: React.FC = () => {
-;
-};
-const currentYear = new Date().getFullYear();
-  ;
-const services = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     { name: 'AI Solutions', href: '/services/ai' },
     { name: 'Cloud Architecture', href: '/services/cloud' },
     { name: 'Web Development', href: '/services/web' },
     { name: 'Mobile Apps', href: '/services/mobile' },
     { name: 'Data Analytics', href: '/services/analytics' },
-<<<<<<< HEAD
     { name: 'DevOps', href: '/services/devops' },
   ];
   const products = [
@@ -30,32 +18,14 @@ const services = [
     { name: 'Mobile SDK', href: '/products/mobile-sdk' },
   ];
   const quickLinks = [
-=======
-    { name: 'DevOps', href: '/services/devops' }];
-;
-const products = [
-];
-    { name: 'AI Platform', href: '/products/ai-platform' },
-    { name: 'Cloud Suite', href: '/products/cloud-suite' },
-    { name: 'Analytics Dashboard', href: '/products/analytics' },
-    { name: 'Mobile SDK', href: '/products/mobile-sdk' }];
-;
-const quickLinks = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
     { name: 'Privacy Policy', href: '/legal/privacy' },
-<<<<<<< HEAD
     { name: 'Terms of Service', href: '/legal/terms' },
   ];
-=======
-    { name: 'Terms of Service', href: '/legal/terms' }];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (
-    <footer className="bg-gray-900 text-white">
+  return(<footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
@@ -65,12 +35,10 @@ const quickLinks = [
               </div>
               <div className="text-xl font-bold">Zion Tech Group</div>
             </div>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Leading technology solutions provider helping businesses transform their digital
-              presence with cutting-edge AI, cloud architecture and innovative development services.
+            <p className="text-gray-300 mb-6 max-w-md">Leading technology solutions provider helping businesses transform their digital</p>
+              presence with cutting-edge AI, cloud architecture and innovative development services.</p>
             </p>
             <div className="flex space-x-4">
-<<<<<<< HEAD
               <a
                 href="https://linkedin.com/company/ziontechgroup"
                 className="text-gray-400 hover:text-white transition-colors">
@@ -87,22 +55,7 @@ const quickLinks = [
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://facebook.com/ziontechgroup"
-=======
-              <a href="https://linkedin.com/company/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="https://twitter.com/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="https://github.com/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors">
-                <Github className="w-5 h-5" />
-              </a>
-              <a href="https://facebook.com/ziontechgroup"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+                href="https://facebook.com/ziontechgroup")
                 className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
@@ -110,12 +63,10 @@ const quickLinks = [
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              {services.slice(0, 6).map(service => (
+            <ul className="space-y-2">{services.slice(0, 6).map(service => (</ul>
                 <li key={service.name}>
                   <Link to={service.href}>
-                    <span className="text-gray-300 hover:text-white transition-colors">
-                      {service.name};
+                    <span className="text-gray-300 hover:text-white transition-colors">{service.name};</span>
                     </span>
                   </Link>
                 </li>
@@ -124,12 +75,10 @@ const quickLinks = [
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Products</h3>
-            <ul className="space-y-2">
-              {products.slice(0, 6).map(product => (
+            <ul className="space-y-2">{products.slice(0, 6).map(product => (</ul>
                 <li key={product.name}>
                   <Link to={product.href}>
-                    <span className="text-gray-300 hover:text-white transition-colors">
-                      {product.name};
+                    <span className="text-gray-300 hover:text-white transition-colors">{product.name};</span>
                     </span>
                   </Link>
                 </li>
@@ -138,12 +87,10 @@ const quickLinks = [
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {quickLinks.map(item => (
+            <ul className="space-y-2">{quickLinks.map(item => (</ul>
                 <li key={item.name}>
                   <Link to={item.href}>
-                    <span className="text-gray-300 hover:text-white transition-colors">
-                      {item.name};
+                    <span className="text-gray-300 hover:text-white transition-colors">{item.name};</span>
                     </span>
                   </Link>
                 </li>
@@ -178,23 +125,19 @@ const quickLinks = [
         </div>
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">
-              &copy; {currentYear} Zion Tech Group. All rights reserved.
+            <p className="text-gray-300 text-sm">&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/legal/privacy">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Privacy Policy
+                <span className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</span>
                 </span>
               </Link>
               <Link to="/legal/terms">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Terms of Service
+                <span className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</span>
                 </span>
               </Link>
               <Link to="/legal/cookies">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Cookie Policy
+                <span className="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</span>
                 </span>
               </Link>
             </div>
@@ -202,12 +145,7 @@ const quickLinks = [
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
   );
 };
 
 export default EnhancedFooter;
-=======
-  )};
-export default EnhancedFooter;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

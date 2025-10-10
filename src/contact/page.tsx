@@ -7,56 +7,32 @@ import React from 'react';
 const ContactPage: React.FC = () => {
 };
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, User, Building, Globe, Shield, Brain, Zap, Cloud, Database, Code, BarChart, Users, Award, Target, Star, TrendingUp, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-=======
-export default function ContactPage() {;
-const [formData, setFormData] = useState({
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     name: '',
     email: '',
     company: '',
     phone: '',
-    service: '',
+    service: '',)
     message:   ,
 $4});
-<<<<<<< HEAD
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-=======
-;
-const [isSubmitted, setIsSubmitted] = useState(false);
-;
-const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
     message: '',
     budget: '',
     timeline: ''
   });
-<<<<<<< HEAD
-  const [isSubmitting, setIsSubmitting] = useState(false);
-=======
-;
-const [isSubmitting, setIsSubmitting] = useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);</HTMLInputElement>
+  const [isSubmitted, setIsSubmitted] = useState(false);</HTMLInputElement>
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-<<<<<<< HEAD
     }));
   }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
-=======
-    }))};
-;
-const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Here you would typically send the form data to your backend
     // console.log('Form submitted:', formData);
     setIsSubmitted(true);
@@ -65,7 +41,6 @@ const handleSubmit = (e: React.FormEvent) => {
       setIsSubmitted(false);
       setFormData({}, 3000);
   const handleSubmit = async (e: React.FormEvent) => {
-<<<<<<< HEAD
     e.preventDefault()
     setIsSubmitting(true),
     // Simulate form submission
@@ -80,27 +55,6 @@ const handleSubmit = (e: React.FormEvent) => {
     hours: 'Mon-Fri: 9AM-6PM EST'
   }
   const services = [
-=======
-    e.preventDefault();
-    setIsSubmitting(true);
-    /
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitted(true);
-    setIsSubmitting(false)};
-;
-const contactInfo = {
-};
-};
-    phone: '+1 (302) 464-0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709',
-    hours: 'Mon-Fr,
-    i: 9AM-6PM EST'
-  };
-;
-const services = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     'AI Services',
     'IT Services',
     'Micro SAAS Solutions',
@@ -112,41 +66,21 @@ const services = [
     'Custom Development',
     'Other'
   ];
-<<<<<<< HEAD
   const achievements = [
     { icon: Users, text: '100+ Happy Clients' },
     { icon: Award, text: '50+ Successful Projects' },
     { icon: TrendingUp, text: '300% Average ROI' },
-    { icon: Shield, text: '99.9% Uptime Guarantee' }
-  return (
+    { icon: Shield, text: '99.9% Uptime Guarantee' }</HTMLInputElement>
+  return(</HTMLInputElement>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Contact</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced contact solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors">
+        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors">)</a>
           Contact Us</span>
       </div>
   )
 export default ContactPage,
-=======
-;
-const achievements = [
-[
-        { icon: Users, text: '100+ Happy Clients' },
-        { icon: Award, text: '50+ Successful Projects' },
-        { icon: TrendingUp, text: '300% Average ROI' },
-        { icon: Shield, text: '99.9% Uptime Guarantee' };
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Contact<
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced contact solutions<
-        <a href="
-          Contact Us
-        <
-      <)
-  );
-export default ContactPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     'Quantum Computing',
     'Cybersecurity',
     'Cloud Migration',
@@ -155,13 +89,7 @@ export default ContactPage;
     'Consulting',
     'Other'
   ];
-<<<<<<< HEAD
   const budgetRanges = [
-=======
-;
-const budgetRanges = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     'Under $10K',
     '$10K - $50K',
     '$50K - $100K',
@@ -169,13 +97,7 @@ const budgetRanges = [
     '$500K+',
     'Not sure'
   ];
-<<<<<<< HEAD
   const timelines = [
-=======
-;
-const timelines = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     'ASAP',
     'Within 1 month',
     '1-3 months',
@@ -183,15 +105,8 @@ const timelines = [
     '6+ months',
     'Just exploring'
   ];
-<<<<<<< HEAD
   const offices = [
     {
-=======
-;
-const offices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       city: 'Middletown, DE',
       address: '364 E Main St STE 1008, Middletown, DE 19709',
       phone: '+1 (302) 464-0950',
@@ -213,18 +128,11 @@ const offices = [
       phone: '+44 20 7946 0958',
       email: 'london@ziontechgroup.com',
       hours: 'Mon-Fri: 9AM-6PM GMT',
-      timezone: 'Greenwich Mean Time'
+      timezone: 'Greenwich Mean Time',
     };
   ];
-<<<<<<< HEAD
   const faqs = [
     {
-=======
-;
-const faqs = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       question: 'How quickly can you start my project?',
       answer: 'We can typically begin most projects within 1-2 weeks of contract signing. For urgent projects, we offer expedited onboarding.'
     },
@@ -238,19 +146,17 @@ const faqs = [
     },
         {
       question: 'Do you work with small businesses?',
-      answer: 'Absolutely! We offer scalable solutions for businesses of all sizes, from startups to enterprise organizations.'
+      answer: 'Absolutely! We offer scalable solutions for businesses of all sizes, from startups to enterprise organizations.',
     };
   ];
   if (isSubmitted) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="max-w-2xl mx-auto text-center p-8">
           <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-3xl font-bold text-white mb-4">Thank You!</h1>
-          <p className="text-xl text-gray-300 mb-6">
-            Your message has been sent successfully. Our team will get back to you within 24 hours.
+          <p className="text-xl text-gray-300 mb-6">Your message has been sent successfully. Our team will get back to you within 24 hours.</p>
           </p>
           <div className="space-y-4">
             <p className="text-gray-400">
@@ -272,43 +178,27 @@ const faqs = [
             </div>
           </div>
           <div className="mt-8">
-<<<<<<< HEAD
             <a
               href="/"
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
-=======
-            <a href="
-              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              <ArrowRight className="w-5 h-5 mr-2" />
+              <ArrowRight className="w-5 h-5 mr-2" />)</ArrowRight>
               Back to Home</span>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     )
   }
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-=======
-    )};
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
               Get In Touch</span>
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Ready to transform your business with AI? Let's discuss your project and explore 
-              how we can help you achieve your goals.
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Ready to transform your business with AI? Let's discuss your project and explore </p>
+              how we can help you achieve your goals.</p>
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-<<<<<<< HEAD
               <div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">{contactInfo.phone}</span>
@@ -322,54 +212,35 @@ const faqs = [
         </div>
       </section>
       {/* Contact Form & Info */}
-=======
-              <div className="flex items-center space-x-3 bg-slate-800
-                <Phone className="w-5 h-5 text-cyan-400" 
-                <span className="text-white font-medium">{contactInfo.phone}<
-              <
-              <div className="flex items-center space-x-3 bg-slate-800
-                <Mail className="w-5 h-5 text-purple-400" 
-                <span className="text-white font-medium">{contactInfo.email}<
-              <
-            <
-          <
-        <
-      <
-      {/* Contact Form & Info *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">{/* Contact Form */}</div>
             <div className="bg-slate-800/50 rounded-lg p-8">
               <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Full Name *
-<<<<<<< HEAD
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Full Name *</label>
                     </label>
-                    <input
+                    <input;
                       type="text"
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      required
+                      required;
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                       placeholder="Your full name"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Email Address *
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Email Address *</label>
                     </label>
-                    <input
+                    <input;
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      required
+                      required;
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                       placeholder="your@email.com"
                     />
@@ -379,64 +250,25 @@ const faqs = [
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Company</span>
-                    <input
+                    <input;
                       type="text"
-=======
-                    <
-                    <input type="text"
-                      name="name"
-                      value = { formData.name };
-                      onChange = { handleInputChange };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,
-    s:border-cyan-400 transition-colors"
-                      placeholder="Your full name"
-                  <
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Email Address *
-                    <
-                    <input type="email"
-                      name="email"
-                      value = { formData.email };
-                      onChange = { handleInputChange };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 transition-colors"
-                      placeholder="your@email.com"
-                  <
-                <
-                <div className="grid grid-cols-1 m,
-    d:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                    <
-                    <input type="text"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                       placeholder="Your company name"
-<<<<<<< HEAD
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number</span>
-                    <input
+                    <input;
                       type="tel"
-=======
-                  <
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number
-                    <
-                    <input type="tel"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors")
                       placeholder="+1 (555) 123-4567"
-<<<<<<< HEAD
                     />
                   </div>
                 </div>
@@ -485,8 +317,7 @@ const faqs = [
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Message *
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Message *</label>
                   </label>
                   <textarea
                     name="message"
@@ -498,100 +329,28 @@ const faqs = [
                     placeholder="Tell us about your project, goals, and any specific requirements..."
                   />
                 </div>
-                <button
+                <button;
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center">
-=======
-                  <
-                <
-                <div className="grid grid-cols-1 m,
-    d:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Service Interest
-                    <
-                    <select name="service"
-                      value = { formData.service };
-                      onChange = { handleInputChange };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,
-    s:border-cyan-400 transition-colors">
-                      <option value="">Select a service<
-                      {services.map((service), index) => (<option key={index} value={service}>{service}<)
-                      ))};
-                    <
-                  <
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Budget Range
-                    <
-                    <select name="budget"
-                      value = { formData.budget };
-                      onChange = { handleInputChange };
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,
-    s:border-cyan-400 transition-colors">
-                      <option value="">Select budget range<
-                      {budgetRanges.map((range), index) => (<option key={index} value={range}>{range}<)
-                      ))};
-                    <
-                  <
-                <
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                  <
-                  <select name="timeline"
-                    value = { formData.timeline };
-                    onChange = { handleInputChange };
-                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,
-    s:border-cyan-400 transition-colors">
-                    <option value="">Select timeline<
-                    {timelines.map((timeline), index) => (<option key={index} value={timeline}>{timeline}<)
-                    ))};
-                  <
-                <
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Message *
-                  <
-                  <textarea name="message"
-                    value = { formData.message };
-                    onChange = { handleInputChange };
-                    rows = { 5 };
-                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focu,
-    s:border-cyan-400 transition-colors resize-none"
-                    placeholder="Tell us about your project, goals, and any specific requirements..."
-                <
-                <button
-                  type="submit"
-                  disabled = { isSubmitting };
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover: from-cyan-600 hover:to-purple-700 transition-all disabled:opacity-50 disable,
-    d:cursor-not-allowed flex items-center justify-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                  {isSubmitting ? (
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center">{isSubmitting ? (</button>
                     <React .Fragment>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Sending...
                     </React.Fragment>
                   ) : (
                     <React .Fragment>
-                      <Send className="w-5 h-5 mr-2" />
-                      Send Message
+                      <Send className="w-5 h-5 mr-2" />Send Message</Send>
                     </React.Fragment>
                   )};
                 </button>
               </form>
             </div>
-<<<<<<< HEAD
             {/* Contact Information */}
-=======
-            {/* Contact Information */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <div className="space-y-8">
               <div>
                 <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-<<<<<<< HEAD
                     <Phone className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                     <div>
                       <div className="text-white font-medium">{contactInfo.phone}</div>
@@ -623,31 +382,6 @@ const faqs = [
               </div>
               <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
-=======
-                      <div className="text-white font-medium">{contactInfo.phone}<
-                      <div className="text-gray-400 text-sm">Call us anytime<
-                    <
-                  <
-                  <div className="flex items-start space-x-4">
-                      <div className="text-white font-medium">{contactInfo.email}<
-                      <div className="text-gray-400 text-sm">Email us<
-                    <
-                  <
-                  <div className="flex items-start space-x-4">
-                      <div className="text-white font-medium">Middletown, DE<
-                      <div className="text-gray-400 text-sm">{contactInfo.address}<
-                    <
-                  <
-                  <div className="flex items-start space-x-4">
-                      <div className="text-white font-medium">{contactInfo.hours}<
-                      <div className="text-gray-400 text-sm">Business hours<
-                    <
-                  <
-                <
-              <
-              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600
-                <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?<
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -662,7 +396,6 @@ const faqs = [
                     <span className="text-gray-300">24/7 Support</span>
                   </div>
                   <div className="flex items-center space-x-3">
-<<<<<<< HEAD
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">Enterprise Security</span>
                   </div>
@@ -690,26 +423,13 @@ const faqs = [
       {/* Global Offices */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
-=======
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" 
-                    <span className="text-gray-300">Enterprise Security<
-                  <
-                <
-              <
-              <div className="bg-slate-800
-                <h3 className="text-xl font-bold text-white mb-4">Quick Actions<
-                <div className="space-y-3">
-                  <a href="
-                    className="block w-full bg-cyan-500 text-white py-3 px-4 rounded-lg font-medium hover: bg-cyan-600 transition-colors text-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Our Global Offices</span>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               We're here to serve you wherever you are in the world</span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {offices.map((office, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{offices.map((office, index) => (</div>
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
                 <h3 className="text-xl font-bold text-white mb-4">{office.city}</h3>
                 <div className="space-y-3">
@@ -726,7 +446,6 @@ const faqs = [
                     <span className="text-gray-300 text-sm">{office.email}</span>
                   </div>
                   <div className="flex items-center justify-center space-x-2">
-<<<<<<< HEAD
                     <Clock className="w-4 h-4 text-yellow-400" />
                     <span className="text-gray-300 text-sm">{office.hours}</span>
                   </div>
@@ -738,19 +457,6 @@ const faqs = [
         </div>
       </section>
       {/* FAQ Section */}
-=======
-                    <Clock className="w-4 h-4 text-yellow-400" 
-                    <span className="text-gray-300 text-sm">{office.hours}<
-                  <
-                  <div className="text-cyan-400 text-sm font-medium">{office.timezone}<
-                <
-              <)
-            ))};
-          <
-        <
-      <
-      {/* FAQ Section *
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -760,27 +466,17 @@ const faqs = [
               Common questions about our services and process</span>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
-<<<<<<< HEAD
-              {faqs.map((faq, index) => (
+            <div className="space-y-6">{faqs.map((faq, index) => (</div>
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
               ))}
-=======
-              {faqs.map((faq), index) => (<div key={index} className="bg-slate-800
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}<
-                  <p className="text-gray-300">{faq.answer}<
-                <)
-              ))};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             </div>
           </div>
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
 }
   </p>
@@ -801,6 +497,3 @@ const faqs = [
   </div>
   </HTMLInputElement>
   </HTMLInputElement>
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

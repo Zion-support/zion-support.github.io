@@ -3,49 +3,37 @@ export interface EnterpriseCaseStudy {
 }
   id: string;
   slug?: string;
-  title: string;
-  company: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  results: string;
-  metrics: {
-    costSavings: string;
-<<<<<<< HEAD
-    efficiencyGain: string
-    roi: string
+  title: string;,
+  company: string;,
+  industry: string;,
+  challenge: string;,
+  solution: string;,
+  results: string;,
+  metrics: {,
+    costSavings: string;,
+    efficiencyGain: string,
+    roi: string,
     timeline: string,
 export interface EnterpriseCaseStudy {/* TODO: Fix JSX expression */}
   }
-=======
-    efficiencyGain: string;
-    roi: string;
-    timeline: string;
-export interface EnterpriseCaseStudy {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   feature,
   d: boolean,
   publishedA,
   t: string,
   tag,
-<<<<<<< HEAD
   s: string[],
 }
 
-=======
-  s: string[]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
   {
-    id: 'fortune-500-ai-automation'
-    slug: 'fortune-500-ai-automation-case-study'
-    title: 'Fortune 500 AI Automation: 85% Cost Reduction'
-    company: 'Global Manufacturing Corp'
-    industry: 'Manufacturing'
-    challenge: 'Manual processes causing delays and high operational costs'
-    solution: 'Implemented AI-powered automation platform with intelligent workflow optimization'
-    results: 'Achieved 85% cost reduction and 300% efficiency improvement'
+    id: 'fortune-500-ai-automation',
+    slug: 'fortune-500-ai-automation-case-study',
+    title: 'Fortune 500 AI Automation: 85% Cost Reduction',
+    company: 'Global Manufacturing Corp',
+    industry: 'Manufacturing',
+    challenge: 'Manual processes causing delays and high operational costs',
+    solution: 'Implemented AI-powered automation platform with intelligent workflow optimization',
+    results: 'Achieved 85% cost reduction and 300% efficiency improvement',
     metrics: {,
       costSavings: '$50M annually',
       efficiencyGain: '300%',
@@ -55,14 +43,14 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     publishedAt: '2025-10-01',
     tags: ['AI Automation', 'Manufacturing', 'Cost Reduction', 'ROI']},
   {
-    id: 'financial-services-ai-analytics'
-    slug: 'financial-services-ai-analytics-case-study'
-    title: 'Financial Services AI Analytics: 99.9% Accuracy'
-    company: 'Major Bank'
-    industry: 'Financial Services'
-    challenge: 'Manual fraud detection leading to false positives and missed threats'
-    solution: 'Deployed AI-powered analytics platform with real-time fraud detection'
-    results: 'Achieved 99.9% accuracy in fraud detection with 60% reduction in false positives'
+    id: 'financial-services-ai-analytics',
+    slug: 'financial-services-ai-analytics-case-study',
+    title: 'Financial Services AI Analytics: 99.9% Accuracy',
+    company: 'Major Bank',
+    industry: 'Financial Services',
+    challenge: 'Manual fraud detection leading to false positives and missed threats',
+    solution: 'Deployed AI-powered analytics platform with real-time fraud detection',
+    results: 'Achieved 99.9% accuracy in fraud detection with 60% reduction in false positives',
     metrics: {,
       costSavings: '$25M annually',
       efficiencyGain: '200%',

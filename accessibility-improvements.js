@@ -4,16 +4,10 @@
 // <button aria-label="Close dialog">×</button>
 // <input aria-describedby="email-help" type="email" />
 // <div id="email-help">Enter your email address</div>
-<<<<<<< HEAD
 
-// 2. Implement focus management
+// 2. Implement focus management;
 const trapFocus = (element) => {
   const focusableElements = element.querySelectorAll(
-=======
-// 2. Implement focus management;
-const trapFocus = (element) => {;
-const focusableElements = element.querySelectorAll(
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
   const firstElement = focusableElements[0];
@@ -23,7 +17,6 @@ const focusableElements = element.querySelectorAll(
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();
-<<<<<<< HEAD
           e.preventDefault();
         }
       } else {
@@ -36,20 +29,9 @@ const focusableElements = element.querySelectorAll(
   });
 };
 
-=======
-          e.preventDefault()};
-      } else {
-        if (document.activeElement === lastElement) {
-          firstElement.focus();
-          e.preventDefault()};
-      };
-    };
-  })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // 3. Add live regions for dynamic content
 // Example JSX:
-// <div aria-live="polite" aria-atomic="true" className="sr-only">
-//   {announcement};
+// <div aria-live="polite" aria-atomic="true" className="sr-only">//   {announcement};</div>
 // </div>
 // 4. Ensure proper heading hierarchy
 // Example JSX:
@@ -58,8 +40,7 @@ const focusableElements = element.querySelectorAll(
 // <h3>Subsection Title</h3>
 // 5. Add skip links
 // Example JSX:
-// <a href="#main-content" className="skip-link">
-//   Skip to main content
+// <a href="#main-content" className="skip-link">//   Skip to main content</a>
 // </a>
 // 6. Use semantic HTML
 // Example JSX:
@@ -95,12 +76,10 @@ const focusableElements = element.querySelectorAll(
 // };
 // 9. Keyboard navigation
 // Example JSX:
-// <div role="button" tabIndex={0} onKeyDown={handleKeyDown}>
-//   Clickable div
+// <div role="button" tabIndex={0} onKeyDown={handleKeyDown}>//   Clickable div</div>
 // </div>
 // 10. Screen reader announcements
 // Example JSX:
-// <div aria-live="assertive" aria-atomic="true">
-//   {errorMessage};
+// <div aria-live="assertive" aria-atomic="true">//   {errorMessage};</div>
 // </div>
 export { trapFocus };

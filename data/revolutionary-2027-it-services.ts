@@ -1,27 +1,17 @@
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-<<<<<<< HEAD
-  contactInfo: unknown
-    mobile: string
+  id: string;,
+  name: string;,
+  tagline: string;,
+  price: string;,
+  description: string;,
+  features: string[];,
+  link: string;,
+  category: string;,
+  realImplementation: boolean;,
+  contactInfo: unknown,
+    mobile: string,
     email: string,
 export interface Revolutionary2027ItService {,
     address: string}
-=======
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-export interface Revolutionary2027ItService {
-;,
-}
-    address: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: string,
   nam,
@@ -45,17 +35,10 @@ export interface Revolutionary2027ItService {
     mobil,
   e: string,
     emai,
-<<<<<<< HEAD
   l: string,
 export interface Revolutionary2027ItService {/* TODO: Fix JSX expression */}
   s: string}
 }
-=======
-  l: string;
-export interface Revolutionary2027ItService {/* TODO: Fix JSX expression */};
-  s: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: string,
   nam,
@@ -87,26 +70,17 @@ export interface Revolutionary2027ItService {/* TODO: Fix JSX expression */};
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
-<<<<<<< HEAD
-  link: string, category: string
-  realImplementation: boolean
+  link: string, category: string,
+  realImplementation: boolean,
   contactInfo: unknown,
-    mobile: string, email: string
+    mobile: string, email: string,
     address: string,
   }
 }
-=======
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const revolutionary2027 ITServices: Revolutionary2027 ItService[] = [,
     id: "2027-revolutionary-it", name: "2027 Revolutionary IT Platform",
-    tagline: "Revolutionary IT for 2027", price: "$349/month"
-    description: "Revolutionary IT platform that transforms how businesses manage technology in 2027."
+    tagline: "Revolutionary IT for 2027", price: "$349/month",
+    description: "Revolutionary IT platform that transforms how businesses manage technology in 2027.",
     features: [,
       "Revolutionary IT"
       "Transformative technology"
@@ -114,15 +88,9 @@ export const revolutionary2027 ITServices: Revolutionary2027 ItService[] = [,
       "Innovation platform",
       "Future-ready solutions"],
     link: "/services/2027-revolutionary-it", category: "Revolutionary 2027 IT",
-<<<<<<< HEAD
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-=======
-    realImplementation: true;
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"};
@@ -172,7 +140,7 @@ export const,
       "Revolutionary IT""
       "Transformative technology""
       "Advanced capabilities""
-      "Innovation platform""
+      "Innovation platform"",
       "Future-ready solutions"
     ],
     lin,"
@@ -201,7 +169,7 @@ export const,
     };
   };
 ];
-id: "2027-revolutionary-it"
+id: "2027-revolutionary-it",
     name: "2027 Revolutionary IT Platform",
     tagline: "Revolutionary IT for 2027",
     price: "$349/month",
@@ -213,12 +181,12 @@ id: "2027-revolutionary-it"
       "Innovation platform",
       "Future-ready solutions"
     ],
-    link: "/services/2027-revolutionary-it"
-    category: "Revolutionary 2027 IT"
-    realImplementation: true
+    link: "/services/2027-revolutionary-it",
+    category: "Revolutionary 2027 IT",
+    realImplementation: true,
     contactInfo: unknown,
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}}
@@ -287,7 +255,6 @@ i,
   y: string, realImplementatio,
   n: boolean, contactInf,
   o: mobil,
-<<<<<<< HEAD
   e: string, emai,
   l: string, export interface Revolutionary2027ItService {/* TODO: Fix JSX expression */}
   s: string } i,
@@ -301,21 +268,6 @@ i,
   y: string, realImplementatio,
   n: boolean, contactInf,
   o: {/* TODO: Fix JSX expression */}
-=======
-  e: string; emai,
-  l: string; export interface Revolutionary2027ItService {/* TODO: Fix JSX expression */};
-  s: string }; i,
-  d: string; nam,
-  e: string; taglin,
-  e: string; pric,
-  e: string, descriptio,
-  n: string; feature,
-  s: string[]; lin,
-  k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,

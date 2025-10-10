@@ -1,33 +1,19 @@
 import React from 'react';
-<<<<<<< HEAD
 interface SkeletonProps {
     // TODO: Add content
   }
 }
-=======
-interface SkeletonProps {// TODO: Add content}
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   className?: string;
   width?: string | number;
   height?: string | number;
   rounded?: boolean;
-<<<<<<< HEAD
   animated?: boolean;
 }
-=======
-  animated?: boolean};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const,
   Skeleton: React.FC,
-          <SkeletonProps> = ({/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
+          <SkeletonProps>= ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   className = '',
 //   width,
 //   height,
@@ -36,17 +22,12 @@ const,
 }) => {
     const roundedClasses = rounded ? 'rounded' : ''
   }
-  const animatedClasses = animated ? 'animate-pulse' : '';
-  return (
-    <div className="loadingskeleton">
-      {/* Component content */}
+  const animatedClasses = animated ? 'animate-pulse' : '';</SkeletonProps>
+  return (</SkeletonProps>
+    <div className="loadingskeleton">{/* Component content */}</div>
     </div>)
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           "
           <div className="bg-white rounded-lg shadow-lg p-6"><Skeleton height="24px" width="75%" className="mb-4" /><Skeleton height="16px" width="100%" className="mb-2" /><Skeleton height="16px" width="90%" className="mb-4" /><Skeleton height="40px" width="120px" rounded /></div>
 );
@@ -61,22 +42,13 @@ export const,
         height="16px"
         width={index === lines - 1 ? '75%' : '100%'}
 // />
-<<<<<<< HEAD
     ))}
-=======
-    ))};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           </div>
 );
 export const,
   ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   aspectRatio = '16/9')
 }) => ("
           <div className="bg-gray-200 rounded-lg animate-pulse"
@@ -96,15 +68,9 @@ export const,
   </div>
 );
 export const,
-<<<<<<< HEAD
   TableSkeleton: React.FC<{ rows?: number, columns?: number }> = ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({/* TODO: Fix JSX expression */}
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   rows = 5,
   columns = 4;)
 }) => ("
@@ -131,8 +97,4 @@ export const,
     ))};
   </div>
 );
-<<<<<<< HEAD
 export default Skeleton</SkeletonProps>
-=======
-export default Skeleton;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

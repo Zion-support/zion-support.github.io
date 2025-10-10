@@ -9,20 +9,12 @@ const __dirname = path.dirname(__filename);
 // Function to fix malformed type annotations;
 function fixTypeAnnotations(content) {
   // Fix malformed type annotations with comments inside;
-<<<<<<< HEAD
   content = content.replace(
 function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
     /\{\/\*\/\s*([^}]+)\s*\/\*\/\}/g,
     (match, body) => {/* TODO: Fix JSX expression */}
       return `{ ${body.trim()} }`;
     }
-=======
-  content = content.replace(;
-function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */};
-    /\{\/\*\/\s*([^}]+)\s*\/\*\/\}/g,
-    (match, body) => {/* TODO: Fix JSX expression */};
-      return `{ ${body.trim()} }`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   );
   // Fix specific patterns we've seen;
   content = content.replace(/\{\/\*\/\s*usedJSHeapSize:\s*number\s*\/\*\/\}/g)
@@ -32,15 +24,14 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */};
     '{ value: number }'
   );
   // Fix variable name issues;
-  content = content.replace(
-  content = content.replace(/\{/* TODO: Fix JSX expression */};
+  content = content.replace(content = content.replace(/\{/* TODO: Fix JSX expression */};
   e:\s*number\s*\/\*\/\}/g,
-    '{/* TODO: Fix JSX expression */};
+    '{/* TODO: Fix JSX expression */};)
   e: number }')
   );
   content = content.replace(/\{/* TODO: Fix JSX expression */};
   e:\s*number\s*\/\*\/\}/g,
-    '{/* TODO: Fix JSX expression */};
+    '{/* TODO: Fix JSX expression */};)
   e: number }')
   );
   // Fix variable name issues;
@@ -49,14 +40,10 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */};
     'const _memory = (performance as {/* TODO: Fix JSX expression */})
   e: number } }).memory;\n          memoryUsage = _memory?.'
   );
-<<<<<<< HEAD
 
   return content;
 }
 
-=======
-  return content};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Function to process a single file;
 function processFile(filePath) {
   try {
@@ -68,7 +55,6 @@ function processFile(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       modified = true;
-<<<<<<< HEAD
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
@@ -88,32 +74,12 @@ function findSourceFiles(dir) {
     
     for (const item of items) {
       const fullPath = path.join(currentPath, item);
-=======
-function processFile(filePath) {/* TODO: Fix JSX expression */};
-    };
-    return modified} catch (error) {/* TODO: Fix JSX expression */}`
-    // console.error removed for production
-return false};
-};
-// Function to find all TypeScript/JavaScript files;
-function findSourceFiles(dir) {;
-const files = [];
-  ;
-function walkDir(currentPath) {;
-const items = fs.readdirSync(currentPath);
-    for (const item of items) {;
-const fullPath = path.join(currentPath, item);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
         // Skip node_modules and other common directories;
         if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-<<<<<<< HEAD
           walkDir(fullPath);
         }
-=======
-          walkDir(fullPath)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       } else if (stat.isFile()) {
         // Check for TypeScript/JavaScript files;
         if (/\.(ts|tsx|js|jsx)$/.test(item)) {
@@ -126,13 +92,9 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */};
     };
   };
   walkDir(dir);
-<<<<<<< HEAD
   return files;
 }
 
-=======
-  return files};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Main execution;
 console.log('Starting type annotation fixes...');
 
@@ -144,14 +106,9 @@ console.log(`Found ${files.length} files to process`);
 
 let processedCount = 0;
 for (const file of files) {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
   d: ${file}`);
   }
 }
-=======
-  d: ${file}`)};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 `
 console.log(`Processed ${processedCount} files`);
 console.log('Type annotation fixes completed!');`

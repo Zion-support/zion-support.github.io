@@ -1,7 +1,7 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
-// Function to fix critical syntax errors
+// Function to fix critical syntax errors;
 function fixCriticalSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -49,7 +49,7 @@ function fixCriticalSyntax(filePath) {
     return false;
   };
 };
-// Function to find all TypeScript/JavaScript files in app directory
+// Function to find all TypeScript/JavaScript files in app directory;
 function findAppFiles(dir) {
   const files = [];
   function searchDirectory(currentDir) {

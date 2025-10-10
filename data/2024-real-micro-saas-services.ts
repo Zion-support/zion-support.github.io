@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024'
-=======
-export const realMicroSaasServices2024 = [
-{name: 'Real Micro-SaaS Platform 2024',
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024',
     path: '/services/real-micro-saas-platform-2024',
     description: 'Comprehensive micro-SaaS development and management platform',
     icon: 'Rocket',
@@ -20,7 +14,7 @@ export const realMicroSaasServices2024 = [
       professional: '$399/month'};
       enterprise: 'Custom'};
   },
-    name: 'Real SaaS Analytics 2024'
+    name: 'Real SaaS Analytics 2024',
     path: '/services/real-saas-analytics-2024',
     description: 'Comprehensive SaaS performance and user analytics',
     icon: 'BarChart3',
@@ -74,9 +68,9 @@ export const realMicroSaasCategories2024 = [
   'Revenue Optimization'
 ];
 export const realMicroSaasStats2024 =
-  totalServices: 2;
-  categories: 4
-  averageRating: 4.7
+  totalServices: 2;,
+  categories: 4,
+  averageRating: 4.7,
   activeUsers: 1200,
 export const realMicroSaasStats2024 = {}
   totalService,
@@ -86,15 +80,8 @@ export const realMicroSaasStats2024 = {}
   averageRatin,
   g: 4.7,
   activeUser,
-<<<<<<< HEAD
   s: 1200}
 export const realMicroSaasServices2024 = [ nam,
-=======
-  s: 1200};
-export const realMicroSaasServices2024 = [
- nam,
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: 'Real Micro-SaaS Platform 2024',' pat,
   h: '/services/real-micro-saas-platform-2024',' descriptio,
   n: 'Comprehensive micro-SaaS development and management platform',' ico,

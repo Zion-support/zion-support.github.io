@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import fs from 'fs';
 const filePath = '/workspace/app/case-studies/page.tsx';
 let content = fs.readFileSync(filePath, 'utf8');

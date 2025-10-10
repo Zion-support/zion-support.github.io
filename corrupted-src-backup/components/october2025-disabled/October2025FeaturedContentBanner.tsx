@@ -8,13 +8,8 @@ const October2025FeaturedContentBanne, r = () => {
       gradie, n, t: 'fr, o, m-indi, g, o-600, t, o-bl, u, e-60, 0',
       bgGradie, n, t: 'fr, o, m-indi, g, o-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/4, 0',
       borderCol, o, r: 'bord, e, r-indi, g, o-5, 0, 0/3, 0',
-<<<<<<< HEAD
       sta, t, s: [,
 const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */}
-=======
-      sta, t, s: [,;
-const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         { val, u, e: '90, d', lab, e, l: 'To, Outcom, e, s' },
         { val, u, e: 'KP, I', lab, e, l: 'Linked, Gat, e, s' },
         { val, u, e: '$$', lab, e, l: 'Predictable, Co, s, t' }]},
@@ -69,36 +64,26 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
     {/* TODO: Fix JSX expression */};
         { val, u, e: '<10 , 0, m, s', lab, e, l: 'P95, Laten, c, y' },
         { val, u, e: 'SL, A', lab, e, l: 'Aware, Routi, n, g' },
-        { val, u, e: '$', lab, e, l: 'Predictable, Spe, n, d' }]}]; return(<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4'>
-  ]; return (
+        { val, u, e: '$', lab, e, l: 'Predictable, Spe, n, d' }]}]; return(<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4'>]; return (</10>
     <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4'></div>
       <div , className='container, m, x-auto, ma, x-w-7, x, l'>
         {/* Head, e, r */}</div>
         <div, className='te, x, t-center, m, b-12'></div>
           <div, className='inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e'></div>
-            <Sparkles , className='w-5 h-5, m, r-2' />
-            🚀 NEW, CONTENT, RELEASE - Octob, e, r , 1, 20, 2, 5;
+            <Sparkles , className='w-5 h-5, m, r-2' />🚀 NEW, CONTENT, RELEASE - Octob, e, r , 1, 20, 2, 5;</Sparkles>
             <Sparkles , classNam, e = 'w-5 h-5, m, l-2' />
           </div>
-          <h2 , className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
-            Latest, AI, Solutions & Insigh, t, s;
+          <h2 , className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>Latest, AI, Solutions & Insigh, t, s;</h2>
           </h2>
-          <p , className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
-            Discover, breakthrough, AI platforms, delivering, millions in, value, to;
-            enterprise, organization, s;
+          <p , className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>Discover, breakthrough, AI platforms, delivering, millions in, value, to;)</p>
+            enterprise, organization, s;</p>
           </p>
         </div>)
         {/* Featured, Content, Car, d, s */})
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'>)
-<<<<<<< HEAD
-          { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > {
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'>)</div>
+          { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > {</div>
             const Ico, n = conte, n, t.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
             const Ico, n = conte, n, t.ic, o, n; return (</div>
-=======
-          { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > {;
-const Ico, n = conte, n, t.ic, o, n; return(<Link , ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l';
-const Ico, n = conte, n, t.ic, o, n; return (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
   ]; return (<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4'></10>
       <div, className='container, m, x-auto, ma, x-w-7, x, l'></div>
@@ -121,7 +106,7 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'></div>
           {/* TODO: Fix JSX expression */};
               <Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hove,
-  r: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
+  r: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l')
                 sty, l, e={{ borderCol, o, r: conte, n, t.borderC, o, l, o, r }};
               ></Link>
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradi, e, n, t }, opaci, t, y-50, grou, p-hov, e, r: opaci, t, y-70, transitio, n-opac, i, t, y`};
@@ -150,8 +135,8 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
                     </div>
                   </div>)
                   {/* Sta, t, s */})
-                  <div, className='grid, gri, d-co, l, s-3, ga, p-4, m, b-6'>)
-                    { conte, n, t.sta, t, s.m, a, p((s, t, a, t, i, d, x) = > (
+                  <div, className='grid, gri, d-co, l, s-3, ga, p-4, m, b-6'>)</div>
+                    { conte, n, t.sta, t, s.m, a, p((s, t, a, t, i, d, x) = > (</div>
                   </div>
                   {/* Sta, t, s */};
                   <div , className='grid, gri, d-co, l, s-3, ga, p-4, m, b-6'>
@@ -173,10 +158,8 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
                   </div>
                   {/* C, T, A */};
                   <div, classNam, e = 'flex, item, s-center, justif, y-betwe, e, n'></div>
-                    <span , className='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>
-                      Published, Octobe, r , 1, 20, 2, 5;
-                    </sp, a, n > <div , classNam, e = {`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-trans, f, o, r, m`};>
-                      Read, Full, Article;
+                    <span , className='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>Published, Octobe, r , 1, 20, 2, 5;</span>
+                    </sp, a, n > <div , classNam, e = {`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-trans, f, o, r, m`};>Read, Full, Article;</div>
                       Read, Full, Article</div>
                       <Link , classNam, e = 'w-4 h-4, m, l-2' />
                     <span, className='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'></span>
@@ -191,27 +174,20 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opac, i, t, y`};
                  /></div>
               </Li, n, k>
-<<<<<<< HEAD
             );
           })}
-=======
-            )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         </div>
         {/* Bottom, CT, A */};
         <div, classNam, e = 'te, x, t-cent, e, r'></div>
           <div, className='inli, n, e-flex, item, s-center, spac, e-x-4'></div>
             <Link , t, o='/bl, o, g'
-              className='px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hover:sca, l, e-105, inlin, e-flex, item, s-cent, e, r'>
-              Explore, All, Articles;
+              className='px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hover:sca, l, e-105, inlin, e-flex, item, s-cent, e, r'>Explore, All, Articles;</Link>
               <TrendingUp , className='w-5 h-5, m, l-2' />
             </Li, n, k>
             <Link , t, o='/conta, c, t'
-              className='px-8, p, y-4, b, g-sla, t, e-800, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:bg-sla, t, e-700, transitio, n-all, border, border-bl, u, e-5, 0, 0/30, inlin, e-flex, item, s-cent, e, r'>
-              Get, a, Free Consultati, o, n;
-              <Link , className='w-5 h-5, m, l-2' />
-              className='px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hove,
-  r:sca, l, e-105, inlin, e-flex, item, s-cent, e, r'
+              className='px-8, p, y-4, b, g-sla, t, e-800, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:bg-sla, t, e-700, transitio, n-all, border, border-bl, u, e-5, 0, 0/30, inlin, e-flex, item, s-cent, e, r'>Get, a, Free Consultati, o, n;</Link>
+              <Link , className='w-5 h-5, m, l-2' />className='px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hove,</Link>
+  r:sca, l, e-105, inlin, e-flex, item, s-cent, e, r'</Link>
             ></Link>
               Explore, All, Articles;
               <TrendingUp, className='w-5 h-5, m, l-2' /></TrendingUp>

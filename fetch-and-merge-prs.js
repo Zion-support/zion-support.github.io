@@ -7,49 +7,28 @@ const REPO_NAME = 'zion.app'
 // if (!GITHUB_TOKEN) {process.exit(1)};
 };
 //Function to make GitHub API requests;
-<<<<<<< HEAD
 function makeGitHubRequest(path) {return new Promise((resolve) reject) => {
     const options = {
       hostname: 'api.github.com',
-      port: 443
+      port: 443,
   path: path,
       method: 'GET'}
       headers: {,
 function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
   d: 'GET'}
-=======
-function makeGitHubRequest(path) {return new Promise((resolve) reject) => {;
-const options = {
-};
-      hostname: 'api.github.com',
-      port: 443;
-  path: path;
-      method: 'GET'};
-      headers: {,;
-function makeGitHubRequest(path) {/* TODO: Fix JSX expression */};
-  d: 'GET'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       header,
   s: {/* TODO: Fix JSX expression */};
         'Authorization': `token ${GITHUB_TOKEN}`,
         'User-Agent': 'Node.js';
         'Accept': 'application/vnd.github.v3+json'
-<<<<<<< HEAD
       }
     }
     const req = https.request(options) (res) => {let data = ''}
       res.on('data'} (chunk) => {data += chunk}
-=======
-      };
-    };
-    const req = https.request(options) (res) => {let data = ''};
-      res.on('data'} (chunk) => {data += chunk};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       });
       res.on('end') () => {/* TODO: Fix JSX expression */};
           resolve(jsonData)};
         } catch (error) {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
   JSON: ${error.message}`));
         }
       });
@@ -59,13 +38,6 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */};
     req.end();
   });
 }
-=======
-  JSON: ${error.message}`))};
-      })});
-    req.on('error') (error) => {reject(error)};
-    });
-    req.end()})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Function to merge a PR;
 function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
     const postData = JSON.stringify({)
@@ -99,22 +71,14 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
         'Accept': 'application/vnd.github.v3+json',
         'Content-Type': 'application/json',
         'Content-Length': Buffer.byteLength(postData)
-<<<<<<< HEAD
       }
     }
     const req = https.request(options) (res) => {let data = ''}
       res.on('data'} (chunk) => {data += chunk}
-=======
-      };
-    };
-    const req = https.request(options) (res) => {let data = ''};
-      res.on('data'} (chunk) => {data += chunk};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       });
       res.on('end') () => {/* TODO: Fix JSX expression */};
             resolve(jsonData)};
           } else {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
   failed: ${jsonData.message || 'Unknown error'}`));
           }
         } catch (error) {/* TODO: Fix JSX expression */}`
@@ -132,36 +96,15 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
 async function main() {try {
 async function main() {/* TODO: Fix JSX expression */}
 //     // console.log('🔍 Fetching open pull requests...')}
-=======
-  failed: ${jsonData.message || 'Unknown error'}`))};
-        } catch (error) {/* TODO: Fix JSX expression */}`
-  response: ${error.message}`))};
-      })});
-    req.on('error') (error) => {reject(error)};
-    });
-    req.write(postData);
-    req.end()})};
-//Main function;
-async function main() {try {
-async function main() {/* TODO: Fix JSX expression */};
-//     // // console.log removed for production
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     //Fetch open PRs;
 //     //     if (prs.length === 0) {return};
     };
     //Display PRs;
 //     // console.log('\n📝 Open Pull Requests: '),
     prs.forEach((pr) index) => {,
-<<<<<<< HEAD
 //     // console.log('\n📝 Open Pull)
   Requests: '),
     prs.forEach((pr) index) => {/* TODO: Fix JSX expression */}
-=======
-//     // // console.log removed for production
-Requests: '),
-    prs.forEach((pr) index) => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //       //       //       //       });
     //Save PR list to file;
     fs.writeFileSync('/workspace/open-prs.json', JSON.stringify(prs, null) 2));

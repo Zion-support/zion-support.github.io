@@ -2,10 +2,9 @@
 import React from 'react'
 interface StructuredDataProps {
   type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness'
-  data?: Record<string, unknown>
-}
-
-const StructuredData: React.FC<StructuredDataProps> = ({ 
+  data?: Record<string, unknown>}</string>
+</string>
+const StructuredData: React.FC<StructuredDataProps>= ({ 
   type = 'Organization', 
   data 
 }) => {
@@ -93,7 +92,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://ziontechgroup.com"
+                "item": "https://ziontechgroup.com",
               }
             ]
           }
@@ -166,15 +165,14 @@ const StructuredData: React.FC<StructuredDataProps> = ({
     }
   }
 
-  const structuredData = data || getDefaultData()
-  return (
-    <script
+  const structuredData = data || getDefaultData()</StructuredDataProps>
+  return(</StructuredDataProps>
+    <script;
       type="application/ld+json"
-      dangerouslySetInnerHTML={{
+      dangerouslySetInnerHTML={{)
         __html: JSON.stringify(structuredData, null, 2)
       }}
-    />
-  )
+    />)
 }
-
-export default StructuredData
+</script>
+export default StructuredData</script>

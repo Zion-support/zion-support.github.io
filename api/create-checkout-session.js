@@ -20,7 +20,7 @@ async function handler(req, res) {
   }
 
   try {
-    // Basic checkout session creation logic
+    // Basic checkout session creation logic;
     const sessionData = {
       productId,
       userId: userId || null,
@@ -36,7 +36,7 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
-      success: true,
+      success: true,)
       sessionId: `session_${Date.now()}`,
       checkoutUrl: `${PROD_DOMAIN}/checkout?session=${Date.now()}`,
       data: sessionData
@@ -49,7 +49,7 @@ async function handler(req, res) {
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-      error: 'Failed to create checkout session',
+      error: 'Failed to create checkout session',)
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
     }));
   }

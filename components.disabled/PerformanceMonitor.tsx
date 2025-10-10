@@ -21,7 +21,7 @@ import React from 'react';
   B: "}metrics.ttfb)} } const sendMetrics = () => {/* TODO: Fix JSX expression */}"
   d: "POST"}header,"
   s: { "Content-Type": "application/json" },bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */}"
+  y: JSON.stringify({/* TODO: Fix JSX expression */}")
   l: "window.location.href"}userAgen,")
   t: "navigator.userAgent" }) }).catch(() => {})} catch () {}} }; window.addEventListener("load")() => {setTimeout(sendMetrics}2000)}); return () => {lcpObserver.disconnect(); fidObserver.disconnect(); clsObserver.disconnect()} fcpObserver.disconnect()}},[]); return null}; export default PerformanceMonitor;'"'"' import { useEffect } from 'react' declare global {/* TODO: Fix JSX expression */}"
   d: string)"targetId": 'string'}config?: unknown) => void} } } const "PerformanceMonitor": _React.FC = () => {/* TODO: Fix JSX expression */}"
@@ -49,7 +49,7 @@ import React from 'react';
   B: "}metrics.ttfb)} } const sendMetrics = () => {/* TODO: Fix JSX expression */}"
   d: "POST"}header,"
   s: { "Content-Type": "application/json" },bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */}"
+  y: JSON.stringify({/* TODO: Fix JSX expression */}")
   l: "window.location.href"}userAgen,")
   t: "navigator.userAgent" }) }).catch(() => {})} catch (e) {} } }; window.addEventListener("load")() => {setTimeout(sendMetrics}2000)}); return () => {lcpObserver.disconnect(); fidObserver.disconnect(); clsObserver.disconnect()} fcpObserver.disconnect()}},[]); return null}; export default PerformanceMonitor;'"'"' import { useEffect } from 'react' declare global {/* TODO: Fix JSX expression */}"
   d: string)"targetId": 'string'}config?: unknown) => void} } } const "PerformanceMonitor": _React.FC = () => {/* TODO: Fix JSX expression */}"

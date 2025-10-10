@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
@@ -42,11 +41,9 @@ const benefits = [
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>
-              Why Choose Our Page?,
+            <h2>Why Choose Our Page?,</h2>
             </h2>
-            <p>
-              Our page solutions deliver unmatched performance, security, and scalability.
+            <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
@@ -66,11 +63,9 @@ const benefits = [
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>
-              Key Benefits
+            <h2>Key Benefits</h2>
             </h2>
-            <p>
-              Experience the power of our page solutions for your business.,
+            <p>Experience the power of our page solutions for your business.,</p>
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
@@ -88,17 +83,14 @@ const benefits = [
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p>
-              Contact our experts to discuss your page needs and get a customized solution.
+            <p>Contact our experts to discuss your page needs and get a customized solution.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button>
-                <Phone>
-                Call Now
+                <Phone>Call Now</Phone>
               </button>
               <button>
-                <Mail>
-                Email Us
+                <Mail>Email Us</Mail>
               </button>
             </div>
           </div>
@@ -107,12 +99,4 @@ const benefits = [
     </div>
   )
 }
-export default PagePage
-=======
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const PagePage: React.FC = () => {
-const features = [
-];
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+export default PagePage;

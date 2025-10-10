@@ -113,18 +113,13 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
-<<<<<<< HEAD
-// Dynamically import heavy components for better performance
-=======
 // Dynamically import heavy components for better performance;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-<<<<<<< HEAD
-// Preload critical components
+// Preload critical components;
 const preloadComponents = () => {
     if (typeof window !== 'undefined') {
     setTimeout(() => {
@@ -133,37 +128,17 @@ const preloadComponents = () => {
   }, 100);
   }
 }
-// Loading skeleton component
-=======
-// Preload critical components;
-const preloadComponents = () => {
-};
-  if (typeof window !== 'undefined') {
-    setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel')}, 100)};
-};
 // Loading skeleton component;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
-<<<<<<< HEAD
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 const HomePage: React.FC = () => {
     const [isLoaded, setIsLoaded] = useState(false);
-=======
-));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-;
-const HomePage: React.FC = () => {
-};
-const [isLoaded, setIsLoaded] = useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     setIsLoaded(true);
@@ -171,35 +146,20 @@ const [isLoaded, setIsLoaded] = useState(false);
     preloadComponents();
     // Initialize performance optimizations
     initializePerformanceOptimizations();
-<<<<<<< HEAD
     return () => clearTimeout(timer)
   }, []);
-  // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
-=======
-    return () => clearTimeout(timer)}, []);
   // Analytics tracking for phone clicks - optimized;
-const handlePhoneClick = useCallback(() => {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
-        event_category: 'engagement',
+        event_category: 'engagement',)
         event_label: 'main_phone_number'
-<<<<<<< HEAD
       });
     }
   }, []);
-  // Enhanced Micro SAAS Services with real functionality and pricing
+  // Enhanced Micro SAAS Services with real functionality and pricing;
   const microSAASServices = [
     {
-=======
-      })};
-  }, []);
-  // Enhanced Micro SAAS Services with real functionality and pricing;
-const microSAASServices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'AI Project Manager Pro',
       description: 'Intelligent project planning with AI-powered resource optimization and timeline prediction',
       icon: '📊',
@@ -405,19 +365,12 @@ const microSAASServices = [
       popular: true,
       category: 'Sales',
       marketPrice: '$499',
-      savings: '40%'
+      savings: '40%',
     };
   ];
-<<<<<<< HEAD
-  // Enhanced AI Services with real capabilities and market pricing
+  // Enhanced AI Services with real capabilities and market pricing;
   const aiServices = [
     {
-=======
-  // Enhanced AI Services with real capabilities and market pricing;
-const aiServices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics and decision-making with 99.9% accuracy',
       icon: Brain,
@@ -511,19 +464,12 @@ const aiServices = [
       benefits: ['Better returns', 'Risk reduction', 'Fraud prevention', 'Compliance', 'Real-time insights'],
       marketPrice: '$3,800',
       savings: '42%',
-      contact: 'kleber@ziontechgroup.com'
+      contact: 'kleber@ziontechgroup.com',
     };
   ];
-<<<<<<< HEAD
-  // Enhanced IT Services with comprehensive capabilities
+  // Enhanced IT Services with comprehensive capabilities;
   const itServices = [
     {
-=======
-  // Enhanced IT Services with comprehensive capabilities;
-const itServices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'Cloud Migration & Management',
       description: 'Complete cloud transformation with AWS, Azure, and GCP expertise',
       icon: Cloud,
@@ -617,19 +563,12 @@ const itServices = [
       benefits: ['Minimal downtime', 'Proactive maintenance', 'Expert support', 'Cost predictability', 'Peace of mind'],
       marketPrice: '$1,400',
       savings: '43%',
-      contact: '+1 302 464 0950'
+      contact: '+1 302 464 0950',
     };
   ];
-<<<<<<< HEAD
-  // Specialized Services
+  // Specialized Services;
   const specializedServices = [
     {
-=======
-  // Specialized Services;
-const specializedServices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'AI-Powered Business Intelligence',
       description: 'Transform your data into actionable business insights with advanced AI analytics',
       icon: BarChart,
@@ -699,47 +638,21 @@ const specializedServices = [
       benefits: ['Seamless integration', 'Scalable APIs', 'Comprehensive documentation', 'Enhanced security', 'Reliable performance'],
       marketPrice: '$2,800',
       savings: '46%',
-      contact: '+1 302 464 0950'
+      contact: '+1 302 464 0950',
     };
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Performance Optimizer */};
-      <PerformanceOptimizer />
-<<<<<<< HEAD
-      {/* SEO Optimizer */}
-      <SEOOptimizer />
-      {/* Accessibility Enhancer */}
-      <AccessibilityEnhancer />
-      {/* Analytics */}
-      <Analytics />
-      {/* Security Enhancer */}
-      <SecurityEnhancer />
-      {/* Navigation */}
-      <Navigation />
-      {/* Hero Section with Futuristic Design */}
-=======
-      {/* SEO Optimizer */};
-      <SEOOptimizer />
-      {/* Accessibility Enhancer */};
-      <AccessibilityEnhancer />
-      {/* Analytics */};
-      <Analytics />
-      {/* Security Enhancer */};
-      <SecurityEnhancer />
-      {/* Navigation */};
-      <Navigation />
-      {/* Hero Section with Futuristic Design */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background */};
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Performance Optimizer */};</div>
+      <PerformanceOptimizer />{/* SEO Optimizer */}</PerformanceOptimizer>
+      <SEOOptimizer />{/* Accessibility Enhancer */}</SEOOptimizer>
+      <AccessibilityEnhancer />{/* Analytics */}</AccessibilityEnhancer>
+      <Analytics />{/* Security Enhancer */}</Analytics>
+      <SecurityEnhancer />{/* Navigation */}</SecurityEnhancer>
+      <Navigation />{/* Hero Section with Futuristic Design */}</Navigation>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">{/* Animated Background */};</section>
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-<<<<<<< HEAD
         {/* Neon Grid Overlay */}
-=======
-        {/* Neon Grid Overlay */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <div className="absolute inset-0" style={{
           backgroundImage: `
             linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
@@ -749,23 +662,19 @@ const specializedServices = [
         }}></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-6xl md: text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-              ZION TECH GROUP
+            <h1 className="text-6xl md: text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">ZION TECH GROUP</h1>
   </
-            <p className="text-2xl md:text-3xl text-white mb-8 font-light">
-              AI-Powered Enterprise Solutions & Digital Transformation,
+            <p className="text-2xl md:text-3xl text-white mb-8 font-light">AI-Powered Enterprise Solutions & Digital Transformation,</p>
   </
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <div className="flex items-center text-cyan-400 text-lg">
                 <Phone className="w-6 h-6 mr-2" />
-                <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover: text-cyan-300 transition-colors">
-                  +1 302 464 0950
+                <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover: text-cyan-300 transition-colors">+1 302 464 0950</a>
   </
               </div>
               <div className="flex items-center text-purple-400 text-lg">
                 <Mail className="w-6 h-6 mr-2" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">
-                  kleber@ziontechgroup.com,
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">kleber@ziontechgroup.com,</a>
   </
               </div>
               <div className="flex items-center text-pink-400 text-lg">
@@ -793,45 +702,29 @@ const specializedServices = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Micro SAAS Services Section */}
-=======
-      {/* Micro SAAS Services Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Micro SAAS Services;
+            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SAAS Services;</h2>
   </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Powerful, affordable AI-powered tools designed for modern businesses. 
-              Start with our micro SAAS solutions and scale as you grow.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Powerful, affordable AI-powered tools designed for modern businesses. </p>
+              Start with our micro SAAS solutions and scale as you grow.</p>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {microSAASServices.map((service, index) => (
-              <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-400/20 hover: border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
-                {service.popular && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">{microSAASServices.map((service, index) => (</div>
+              <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-400/20 hover: border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">{service.popular && (</div>
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg">
-                      🔥 POPULAR,
+                    <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg">🔥 POPULAR,</div>
   </
                   </div>
-<<<<<<< HEAD
                 )}
-=======
-                )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 <div className="text-center mb-4">
-                  <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {service.icon};
+                  <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon};</div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {service.title};
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{service.title};</h3>
                   </h3>
-                  <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                    {service.description};
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4">{service.description};</p>
                   </p>
                 </div>
                 <div className="text-center mb-6">
@@ -841,41 +734,31 @@ const specializedServices = [
                   </div>
                   <div className="flex items-center justify-center gap-2 text-sm">
                     <span className="text-gray-400 line-through">{service.marketPrice}</span>
-                    <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
-                      Save {service.savings};
+                    <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">Save {service.savings};</span>
                     </span>
                   </div>
                 </div>
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                  <ul className="space-y-2">{service.features.slice(0, 4).map((feature, featureIndex) => (</ul>
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature};
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />{feature};</CheckCircle>
                       </li>
                     ))};
                   </ul>
                 </div>
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-purple-400 mb-3">Benefits:</h4>
-                  <ul className="space-y-1">
-                    {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-sm text-gray-300">
-                        ✓ {benefit};
+                  <ul className="space-y-1">{service.benefits.slice(0, 3).map((benefit, benefitIndex) => (</ul>
+                      <li key={benefitIndex} className="text-sm text-gray-300">✓ {benefit};</li>
                       </li>
                     ))};
                   </ul>
                 </div>
                 <div className="text-center">
-<<<<<<< HEAD
                   <a 
                     href={service.link}
-=======
-                  <a href={service.link};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                    Get Started
+                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">Get Started</a>
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
@@ -884,34 +767,25 @@ const specializedServices = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* AI Services Section */}
-=======
-      {/* AI Services Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              AI Services & Solutions;
+            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">AI Services & Solutions;</h2>
   </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Cutting-edge artificial intelligence solutions tailored for enterprise needs. 
-              Transform your business with our advanced AI capabilities.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Cutting-edge artificial intelligence solutions tailored for enterprise needs. </p>
+              Transform your business with our advanced AI capabilities.</p>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{aiServices.map((service, index) => (</div>
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                     <service .icon className={`w-8 h-8 ${service.color}`} />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                    {service.title};
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">{service.title};</h3>
                   </h3>
-                  <p className="text-gray-300 leading-relaxed mb-6">
-                    {service.description};
+                  <p className="text-gray-300 leading-relaxed mb-6">{service.description};</p>
                   </p>
                 </div>
                 <div className="text-center mb-6">
@@ -921,41 +795,31 @@ const specializedServices = [
                   </div>
                   <div className="flex items-center justify-center gap-2 text-sm">
                     <span className="text-gray-400 line-through">{service.marketPrice}</span>
-                    <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
-                      Save {service.savings};
+                    <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">Save {service.savings};</span>
                     </span>
                   </div>
                 </div>
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-purple-400 mb-3">Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                  <ul className="space-y-2">{service.features.slice(0, 4).map((feature, featureIndex) => (</ul>
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature};
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />{feature};</CheckCircle>
                       </li>
                     ))};
                   </ul>
                 </div>
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-pink-400 mb-3">Benefits:</h4>
-                  <ul className="space-y-1">
-                    {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-sm text-gray-300">
-                        ✓ {benefit};
+                  <ul className="space-y-1">{service.benefits.slice(0, 3).map((benefit, benefitIndex) => (</ul>
+                      <li key={benefitIndex} className="text-sm text-gray-300">✓ {benefit};</li>
                       </li>
                     ))};
                   </ul>
                 </div>
                 <div className="text-center">
-<<<<<<< HEAD
                   <a 
                     href={`mailto:${service.contact}?subject=Interest in ${service.title}`}
-=======
-                  <a href={`mailto:${service.contact}?subject=Interest in ${service.title}`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                    Contact Us
+                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">Contact Us</a>
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
@@ -964,34 +828,25 @@ const specializedServices = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* IT Services Section */}
-=======
-      {/* IT Services Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
-              IT Services & Solutions;
+            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">IT Services & Solutions;</h2>
   </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT services to support your digital transformation journey. 
-              From infrastructure to cybersecurity, we've got you covered.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT services to support your digital transformation journey. </p>
+              From infrastructure to cybersecurity, we've got you covered.</p>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {itServices.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{itServices.map((service, index) => (</div>
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-green-400/20 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                     <service .icon className={`w-8 h-8 ${service.color}`} />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">
-                    {service.title};
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.title};</h3>
                   </h3>
-                  <p className="text-gray-300 leading-relaxed mb-6">
-                    {service.description};
+                  <p className="text-gray-300 leading-relaxed mb-6">{service.description};</p>
                   </p>
                 </div>
                 <div className="text-center mb-6">
@@ -1001,41 +856,31 @@ const specializedServices = [
                   </div>
                   <div className="flex items-center justify-center gap-2 text-sm">
                     <span className="text-gray-400 line-through">{service.marketPrice}</span>
-                    <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
-                      Save {service.savings};
+                    <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">Save {service.savings};</span>
                     </span>
                   </div>
                 </div>
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-green-400 mb-3">Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                  <ul className="space-y-2">{service.features.slice(0, 4).map((feature, featureIndex) => (</ul>
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature};
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />{feature};</CheckCircle>
                       </li>
                     ))};
                   </ul>
                 </div>
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Benefits:</h4>
-                  <ul className="space-y-1">
-                    {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-sm text-gray-300">
-                        ✓ {benefit};
+                  <ul className="space-y-1">{service.benefits.slice(0, 3).map((benefit, benefitIndex) => (</ul>
+                      <li key={benefitIndex} className="text-sm text-gray-300">✓ {benefit};</li>
                       </li>
                     ))};
                   </ul>
                 </div>
                 <div className="text-center">
-<<<<<<< HEAD
                   <a 
                     href={`tel:${service.contact}`}
-=======
-                  <a href={`tel:${service.contact}`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-green-500 to-cyan-500 text-white font-bold py-3 px-6 rounded-lg hover:from-green-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                    Call Now
+                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-green-500 to-cyan-500 text-white font-bold py-3 px-6 rounded-lg hover:from-green-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">Call Now</a>
                     <Phone className="w-4 h-4 ml-2" />
                   </a>
                 </div>
@@ -1044,34 +889,25 @@ const specializedServices = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Specialized Services Section */}
-=======
-      {/* Specialized Services Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-              Specialized Solutions;
+            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Specialized Solutions;</h2>
   </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced specialized solutions for complex business challenges. 
-              Cutting-edge technology meets practical business needs.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced specialized solutions for complex business challenges. </p>
+              Cutting-edge technology meets practical business needs.</p>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {specializedServices.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{specializedServices.map((service, index) => (</div>
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-orange-400/20 hover:border-orange-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/20">
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                     <service .icon className={`w-8 h-8 ${service.color}`} />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">
-                    {service.title};
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">{service.title};</h3>
                   </h3>
-                  <p className="text-gray-300 leading-relaxed mb-6">
-                    {service.description};
+                  <p className="text-gray-300 leading-relaxed mb-6">{service.description};</p>
                   </p>
                 </div>
                 <div className="text-center mb-6">
@@ -1081,43 +917,31 @@ const specializedServices = [
                   </div>
                   <div className="flex items-center justify-center gap-2 text-sm">
                     <span className="text-gray-400 line-through">{service.marketPrice}</span>
-                    <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
-                      Save {service.savings};
+                    <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">Save {service.savings};</span>
                     </span>
                   </div>
                 </div>
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-orange-400 mb-3">Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                  <ul className="space-y-2">{service.features.slice(0, 4).map((feature, featureIndex) => (</ul>
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature};
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />{feature};</CheckCircle>
                       </li>
                     ))};
                   </ul>
                 </div>
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-red-400 mb-3">Benefits:</h4>
-                  <ul className="space-y-1">
-                    {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-sm text-gray-300">
-                        ✓ {benefit};
+                  <ul className="space-y-1">{service.benefits.slice(0, 3).map((benefit, benefitIndex) => (</ul>
+                      <li key={benefitIndex} className="text-sm text-gray-300">✓ {benefit};</li>
                       </li>
                     ))};
                   </ul>
                 </div>
                 <div className="text-center">
-<<<<<<< HEAD
                   <a 
                     href={service.contact.startsWith('+') ? `tel:${service.contact}` : `mailto:${service.contact}?subject=Interest in ${service.title}`}
-                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-3 px-6 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                    {service.contact.startsWith('+') ? 'Call Now' : 'Email Us'}
-=======
-                  <a href={service.contact.startsWith('+') ? `tel:${service.contact}` : `mailto:${service.contact}?subject=Interest in ${service.title}`};
-                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-3 px-6 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                    {service.contact.startsWith('+') ? 'Call Now' : 'Email Us'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-3 px-6 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">{service.contact.startsWith('+') ? 'Call Now' : 'Email Us'}</a>
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
@@ -1126,19 +950,13 @@ const specializedServices = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Contact Section */}
-=======
-      {/* Contact Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Ready to Transform Your Business?
+            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Ready to Transform Your Business?</h2>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Get in touch with our experts to discuss your specific needs and discover how our AI and IT solutions can drive your success.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Get in touch with our experts to discuss your specific needs and discover how our AI and IT solutions can drive your success.</p>
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -1146,16 +964,14 @@ const specializedServices = [
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
-              <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover: text-cyan-300 text-lg font-semibold">
-                +1 302 464 0950
+              <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover: text-cyan-300 text-lg font-semibold">+1 302 464 0950</a>
   </
             </div>
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
-                kleber@ziontechgroup.com
+              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">kleber@ziontechgroup.com</a>
   </
             </div>
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-400/20 hover:border-pink-400/60 transition-all duration-300">
@@ -1163,14 +979,12 @@ const specializedServices = [
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709,
+                364 E Main St STE 1008<br />Middletown DE 19709,</br>
   </
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Footer */}
       <Footer />
     </div>
@@ -1189,10 +1003,3 @@ export default HomePage;
   </p>
   </h1>
   </div>
-=======
-      {/* Footer */};
-      <Footer />
-    </div>
-  )};
-export default HomePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

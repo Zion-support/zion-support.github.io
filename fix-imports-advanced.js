@@ -1,18 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-<<<<<<< HEAD
 
 
 function getRelativePath(fromPath, toPath) {/* TODO: Fix JSX expression */}
 }
 
-=======
-;
-function getRelativePath(fromPath, toPath) {/* TODO: Fix JSX expression */};
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 function processFile(filePath) {
   try {
     // Calculate relative paths based on file location;
@@ -29,13 +22,13 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
     const replacements = [
 ];
       {
-        pattern: /import\s+Link\s+from\s+'next\/link';/g;
+        pattern: /import\s+Link\s+from\s+'next\/link';/g;,
         replacement: `import Link from '${utilsPath}link';`},
       {
-        pattern: /import\s+Image\s+from\s+'next\/image';/g;
+        pattern: /import\s+Image\s+from\s+'next\/image';/g;,
         replacement: `import Image from '${utilsPath}image';`},
       {
-        pattern: /import\s+dynamic\s+from\s+'next\/dynamic';/g;
+        pattern: /import\s+dynamic\s+from\s+'next\/dynamic';/g;,
         replacement: `import dynamic from '${utilsPath}dynamic';`,
       {/* TODO: Fix JSX expression */};
   t: `import Link from '${utilsPath}link';`},
@@ -68,14 +61,13 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
         replacemen,`
   t: `import type { Metadata } from '${typesPath}next';`},
       {
-        pattern: /'use client';/g;
+        pattern: /'use client';/g;,
         replacement: "// 'use client'; // Removed for Vite compatibility",
       {/* TODO: Fix JSX expression */};
       }];
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */};
       };
     });
-<<<<<<< HEAD
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
@@ -84,14 +76,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
   }
 }
 
-=======
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 function processDirectory(dirPath) {
   items.forEach(item => {)
 )
@@ -105,13 +89,9 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */};
       };
     };
   });
-<<<<<<< HEAD
 
   return totalFixed;
 }
 
-=======
-  return totalFixed};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Process the app directory;
 // Process the app directory;`

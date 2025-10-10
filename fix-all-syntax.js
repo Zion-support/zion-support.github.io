@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 function fixAllSyntaxErrors(filePath) {
@@ -65,7 +65,7 @@ function findFilesWithSyntaxErrors(dir) {
   traverse(dir);
   return files;
 };
-// Main execution
+// Main execution;
 const files = findFilesWithSyntaxErrors('/workspace');
 console.log(`Checking ${files.length} files for syntax errors`);
 let fixedCount = 0;

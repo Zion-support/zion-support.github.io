@@ -1,32 +1,31 @@
-<<<<<<< HEAD
-export interface AdvancedAIAutomationService {id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string[];
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: unknown
-    mobile: string
+export interface AdvancedAIAutomationService {id: string;,
+  name: string;,
+  tagline: string;,
+  price: string;,
+  period: string;,
+  description: string;,
+  features: string[];,
+  popular: boolean;,
+  icon: string;,
+  color: string;,
+  text_color: string;,
+  link: string;,
+  market_position: string;,
+  target_audience: string[];,
+  trial_days: number;,
+  setup_time: string;,
+  category: string;,
+  real_service: boolean;,
+  technology: string[];,
+  integrations: string[];,
+  use_cases: string[];,
+  roi: string;,
+  competitors: string[];,
+  marketSize: string;,
+  growthRate: string;,
+  variant: string;,
+  contactInfo: unknown,
+    mobile: string,
     email: string,
     address: string}
     website: string}
@@ -50,11 +49,11 @@ export interface AdvancedAIAutomationService {id: string;
     useCases: ['Financial forecastingSupply chain optimizationCustomer behavior predictionRisk management'], roi: 'Improve decision accuracy by 85% and reduce forecasting errors by 90%.',
     competitors: ['Tableau, Power BI, Qlik, Alteryx, SAS'];
     marketSize: '$30B+ business intelligence market', growthRate: '95% YoY',
-    variant: 'ai-futuristic', contactInfo: contact
+    variant: 'ai-futuristic', contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Enterprise SaaS with advanced ML models, real-time processing, and predictive algorithms.',
-    launchDate: '2026-02-01', customers: 234
-    rating: 4.9
+    launchDate: '2026-02-01', customers: 234,
+    rating: 4.9,
     reviews: 312,
   }
     id: 'ai-autonomous-customer-success', name: 'AI Autonomous Customer Success',
@@ -76,11 +75,11 @@ export interface AdvancedAIAutomationService {id: string;
     useCases: ['SaaS customer retentionSubscription managementCustomer support automationRevenue optimization'], roi: 'Increase customer retention by 35% and reduce churn by 60%.',
     competitors: ['Gainsight, Totango, ChurnZero, Customer.io'];
     marketSize: '$8B+ customer success market', growthRate: '140% YoY',
-    variant: 'ai-futuristic', contactInfo: contact
+    variant: 'ai-futuristic', contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Multi-tenant SaaS with AI customer intelligence, automated workflows, and retention engine.',
-    launchDate: '2026-01-20', customers: 167
-    rating: 4.7
+    launchDate: '2026-01-20', customers: 167,
+    rating: 4.7,
     reviews: 203,
   }
     id: 'ai-autonomous-marketing-orchestrator', name: 'AI Autonomous Marketing Orchestrator',
@@ -103,11 +102,11 @@ export interface AdvancedAIAutomationService {id: string;
     useCases: ['Multi-channel marketingCampaign optimizationBudget managementROI maximization'], roi: 'Increase marketing ROI by 250% and reduce customer acquisition costs by 40%.',
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'];
     marketSize: '$20B+ marketing automation market', growthRate: '110% YoY',
-    variant: 'ai-futuristic', contactInfo: contact
+    variant: 'ai-futuristic', contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Enterprise SaaS with AI marketing intelligence, cross-channel coordination, and optimization engine.',
-    launchDate: '2026-02-15', customers: 145
-    rating: 4.8
+    launchDate: '2026-02-15', customers: 145,
+    rating: 4.8,
     reviews: 189,
 export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   s: string}
@@ -126,7 +125,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   n: 'Enterprise-grade predictive analytics platform that forecasts business outcomes, market trends, and operational risks with unprecedented accuracy using advanced machine learning.',
     feature,
   s: [,
-      '99.7% prediction accuracyReal-time data processingMulti-dimensional forecastingRisk assessment algorithmsMarket trend analysisCustom model trainingAPI integration capabilitiesAutomated reporting'
+      '99.7% prediction accuracyReal-time data processingMulti-dimensional forecastingRisk assessment algorithmsMarket trend analysisCustom model trainingAPI integration capabilitiesAutomated reporting',
       'Scenario planning toolsExecutive dashboard'
     ],
     popula,
@@ -186,7 +185,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   n: 'AI-powered customer success platform that automatically identifies at-risk customers, predicts churn, and implements retention strategies without human intervention.',
     feature,
   s: [,
-      'Automatic churn predictionPersonalized retention strategiesCustomer health scoringProactive issue resolutionSuccess metric trackingAutomated outreach campaignsCustomer journey optimizationSentiment analysis'
+      'Automatic churn predictionPersonalized retention strategiesCustomer health scoringProactive issue resolutionSuccess metric trackingAutomated outreach campaignsCustomer journey optimizationSentiment analysis',
       'ROI measurementIntegration with CRM systems'
     ],
     popula,
@@ -247,7 +246,7 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   n: 'End-to-end marketing automation platform that autonomously manages campaigns across all channels, optimizes budgets, and maximizes ROI using advanced AI algorithms.',
     feature,
   s: [,
-      'Cross-channel campaign coordinationAutonomous budget optimizationReal-time performance trackingA/B testing automationAudience segmentation AIContent personalizationROI maximization algorithmsPredictive analytics'
+      'Cross-channel campaign coordinationAutonomous budget optimizationReal-time performance trackingA/B testing automationAudience segmentation AIContent personalizationROI maximization algorithmsPredictive analytics',
       'Multi-platform integrationAutomated reporting'
     ],
     popula,
@@ -307,16 +306,16 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   n: 'Intelligent sales platform that autonomously identifies high-value prospects, qualifies leads, and nurtures them through the sales funnel using advanced AI and behavioral analysis.',
     feature,
   s: [
-      'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection'
+      'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection',
       'ROI trackingCRM integration'
     ]
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence',
     marketPosition: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.'
-    targetAudience: ['Sales teamsB2B companiesenterprise softwareconsulting firms']
+    targetAudience: ['Sales teamsB2B companiesenterprise softwareconsulting firms'],
     trialDays: 14,
     setupTime: '1 week',
     category: 'AI & Sales',
@@ -329,12 +328,12 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     marketSize: '$12B+ sales intelligence market',
     growthRate: '130% YoY',
     variant: 'ai-futuristic',
-    contactInfo: contact
+    contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.'
-    launchDate: '2026-01-25'
-    customers: 198
-    rating: 4 && 4.9
+    launchDate: '2026-01-25',
+    customers: 198,
+    rating: 4 && 4.9,
     reviews: 267,
     popula,
   r: true,
@@ -424,7 +423,7 @@ export const getPopularAIAutomationServices = (limi)
 }
 export const getAIAutomationServicesByTechnology = (technolog)
   y: string): AIAutomationService[] =>
-  return advancedAIAutomationServices.filter(service =>
+  return advancedAIAutomationServices.filter(service =>)
     service.technology.some(tech =>)
       tech.toLowerCase().includes(technology.toLowerCase())
   </div>)),
@@ -439,7 +438,7 @@ export const getAIAutomationServicesByPriceRange = (minPric)
     return price >= minPrice && (maxPrice === Infinity || price <= maxPrice);
   });
 }
-export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026'
+export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026',
     path: '/services/advanced-ai-automation-platform-2026',
     description: 'Next-generation AI automation platform for enterprise',
     icon: 'Brain',
@@ -455,7 +454,7 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
       professional: '$1199/month'}
       enterprise: 'Custom'}
   },
-    name: 'Advanced AI Workflow Engine 2026'
+    name: 'Advanced AI Workflow Engine 2026',
     path: '/services/advanced-ai-workflow-engine-2026',
     description: 'Intelligent workflow automation with AI',
     icon: 'Workflow',
@@ -506,9 +505,9 @@ export const advancedAIAutomationCategories2026 = [
   'Performance Optimization'
 ];
 export const advancedAIAutomationStats2026 =
-  totalServices: 2;
-  categories: 4
-  averageRating: 4.9
+  totalServices: 2;,
+  categories: 4,
+  averageRating: 4.9,
   activeUsers: 3000,
 export const advancedAIAutomationStats2026 = {}
   totalService,
@@ -716,11 +715,3 @@ export interface AdvancedAIAutomationService,
   s: 4, averageRatin,
   g: 4.9, activeUser,
   s: 3000 }'
-=======
-  return advancedAIAutomationServices.filter(service =>);
-const _price = parseFloat(service.price.replace('$') '').replace(')'; ''));
-    return price >= minPrice && (maxPrice === Infinity || price <= maxPrice)})};
-export const advancedAIAutomationServices2026 = [
-{name: 'Advanced AI Automation Platform 2026'
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

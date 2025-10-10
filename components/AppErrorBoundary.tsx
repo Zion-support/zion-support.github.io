@@ -1,18 +1,10 @@
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 interface ErrorFallbackProps {
-<<<<<<< HEAD
     error: Error,
   resetError: () => void
   }
-=======
-}
-  error: Error;
-  resetError: () => void};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+  return(<div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
         <div className="flex items-center mb-4">
           <div className="flex-shrink-0">
@@ -33,19 +25,17 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
         </div>
         <div className="mb-4">
           <p className="text-sm text-gray-600 mb-2">An unexpected error occurred:</p>
-          <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto max-h-32 text-gray-800">
-            {error.message};
+          <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto max-h-32 text-gray-800">{error.message};</pre>
           </pre>
         </div>
         <div className="flex space-x-3">
-<<<<<<< HEAD
           <button
             onClick={resetError}
             className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
             Try again</span>
-          <button
-            onClick={() => window?.location.reload()}
-            className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500">
+          <button)
+            onClick={() =>window?.location.reload()}</button>
+            className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"></button>
             Reload page</span>
         </div>
       </div>
@@ -59,7 +49,7 @@ interface AppErrorBoundaryState {
     hasError: boolean,
   error: Error | undefined
   }
-export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
+export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState>{
   constructor(props: AppErrorBoundaryProps) {
     super(props),
     this.state = { hasError: false, error: undefined }
@@ -76,55 +66,12 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
   resetError = () => {
     this.setState({ hasError: false, error: undefined })
   }
-  render() {
-    if (this.state.hasError && this.state.error) {
-      return <ErrorFallback>
-    }
+  render() {</AppErrorBoundaryProps>
+    if (this.state.hasError && this.state.error) {</AppErrorBoundaryProps>
+      return <ErrorFallback>}
     return this.props.children;
-  }
-}
+  }</ErrorFallback>
+}</ErrorFallback>
   </button>
   </button>
   </path>
-=======
-          <button onClick={resetError};
-            className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            Try again
-          </button>
-          <button
-            onClick={() => window?.location.reload()};
-            className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
-          >
-            Reload page
-          </button>
-        </div>
-      </div>
-    </div>
-  )};
-interface AppErrorBoundaryProps {
-}
-  children: ReactNode};
-interface AppErrorBoundaryState {
-}
-  hasError: boolean;
-  error: Error | undefined};
-export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {;
-constructor(props: AppErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: undefined }};
-  static getDerivedStateFromError(error: Error): AppErrorBoundaryState {
-    return { hasError: true, error }};
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    if (process.env['NODE_ENV'] === 'development') {
-      // console.error removed for production
-};
-    // Here you could send error to monitoring service
-  };
-  resetError = () => {
-    this.setState({ hasError: false, error: undefined })};
-  render() {
-    if (this.state.hasError && this.state.error) {
-      return <ErrorFallback error={this.state.error} resetError={this.resetError} />};
-    return this.props.children};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

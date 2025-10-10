@@ -247,9 +247,9 @@ function makeRequest(url) {
     const client = isHttps ? https : http;
     
     const requestOptions = {
-      hostname: urlObj.hostname;
-      port: urlObj.port || (isHttps ? 443 : 80)
-      path: urlObj.pathname + urlObj.search;
+      hostname: urlObj.hostname;,
+      port: urlObj.port || (isHttps ? 443 : 80),
+      path: urlObj.pathname + urlObj.search;,
       method: 'GET',
       headers: {,
         'User-Agent': USER_AGENT;
@@ -271,7 +271,7 @@ function makeRequest(url) {
       
       res.on('end', () => {
         resolve({)
-          statusCode: res.statusCode;)
+          statusCode: res.statusCode;),
           headers: res.headers),
           body: data),
           url: url;
@@ -355,16 +355,16 @@ async function analyzeAllRoutes() {
 
   // Generate report;
   const report = {
-    timestamp: new Date().toISOString()
-    baseUrl: BASE_URL;
-    summary: {
-      total: results.total;
-      working: results.working.length;
-      broken: results.broken.length;
+    timestamp: new Date().toISOString(),
+    baseUrl: BASE_URL;,
+    summary: {,
+      total: results.total;,
+      working: results.working.length;,
+      broken: results.broken.length;,
       errors: results.errors.length;
     },
-    working: results.working;
-    broken: results.broken;
+    working: results.working;,
+    broken: results.broken;,
     errors: results.errors;
   };
 

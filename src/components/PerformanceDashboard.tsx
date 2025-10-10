@@ -1,18 +1,17 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle } from 'lucide-react';
 interface PerformanceMetrics {
-    loadTime: number;
-  renderTime: number
-  memoryUsage: number
+    loadTime: number;,
+  renderTime: number,
+  memoryUsage: number,
   fps: number,
   [key: string]: number
   }
 interface PerformanceProps {
     onMetricsUpdate?: (metrics: PerformanceMetrics) => void
   }
-const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
+const PerformanceDashboard: React.FC<PerformanceProps>= ({ onMetricsUpdate }) => {</PerformanceProps>
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
@@ -39,8 +38,8 @@ fps
   }
     if (currentMetrics.memoryUsage > 50 * 1024 * 1024) {
     // 50MB
-      newAlerts.push('Memory usage is high')
-  }
+      newAlerts.push('Memory usage is high')</PerformanceMetrics>
+  }</PerformanceMetrics>
     if (currentMetrics.fps < 30) {
     newAlerts.push('FPS is below 30')
   }
@@ -61,22 +60,19 @@ fps
     if (value <= thresholds.warning) return 'text-yellow-400';
     return 'text-red-400'
   }
-  return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+  return(<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-xl font-semibold text-white flex items-center gap-2">
-          <Activity className="w-5 h-5" />
-          Performance Dashboard;
+          <Activity className="w-5 h-5" />Performance Dashboard;</Activity>
   </
         <button
           onClick={toggleMonitoring}
-          className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+          className={`px-4 py-2 rounded-lg font-medium transition-colors ${)
             isMonitoring
               ? 'bg-red-600 text-white hover:bg-red-700'
-              : 'bg-green-600 text-white hover:bg-green-700'
+              : 'bg-green-600 text-white hover: bg-green-700'
           }`}
-        >
-          {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
+        >{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}</button>
         </button>
       </div>
       {alerts.length > 0 && (
@@ -85,8 +81,7 @@ fps
             <AlertTriangle className="w-5 h-5 text-red-400" />
             <h4 className="text-red-400 font-semibold">Performance Alerts</h4>
           </div>
-          <ul className="space-y-1">
-            {alerts.map((alert, index) => (
+          <ul className="space-y-1">{alerts.map((alert, index) => (</ul>
               <li key={index} className="text-red-300 text-sm">• {alert}</li>
             ))}
           </ul>
@@ -98,8 +93,7 @@ fps
             <Zap className="w-4 h-4 text-blue-400" />
             <span className="text-gray-300 text-sm">Load Time</span>
           </div>
-          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}>
-            {metrics.loadTime.toFixed(0)}ms;
+          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}>{metrics.loadTime.toFixed(0)}ms;</div>
   </
         </div>
         <div className="bg-white/5 rounded-lg p-4">
@@ -107,8 +101,7 @@ fps
             <Cpu className="w-4 h-4 text-green-400" />
             <span className="text-gray-300 text-sm">Render Time</span>
           </div>
-          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`}>
-            {metrics.renderTime.toFixed(2)}ms;
+          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`}>{metrics.renderTime.toFixed(2)}ms;</div>
   </
         </div>
         <div className="bg-white/5 rounded-lg p-4">
@@ -116,8 +109,7 @@ fps
             <MemoryStick className="w-4 h-4 text-purple-400" />
             <span className="text-gray-300 text-sm">Memory Usage</span>
           </div>
-          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`}>
-            {formatBytes(metrics.memoryUsage)}
+          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`}>{formatBytes(metrics.memoryUsage)}</div>
           </div>
         </div>
         <div className="bg-white/5 rounded-lg p-4">
@@ -125,14 +117,12 @@ fps
             <TrendingUp className="w-4 h-4 text-orange-400" />
             <span className="text-gray-300 text-sm">FPS</span>
           </div>
-          <div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`}>
-            {metrics.fps}
+          <div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`}>{metrics.fps}</div>
           </div>
         </div>
       </div>
       <div className="mt-6 text-center">
-        <p className="text-gray-400 text-sm">
-          {isMonitoring ? 'Monitoring performance metrics...' : 'Click "Start Monitoring" to begin tracking performance'}
+        <p className="text-gray-400 text-sm">{isMonitoring ? 'Monitoring performance metrics...' : 'Click "Start Monitoring" to begin tracking performance'}</p>
         </p>
       </div>
     </div>
@@ -144,46 +134,3 @@ export default PerformanceDashboard;
   </div>
   </PerformanceMetrics>
   </PerformanceProps>
-=======
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;};
-};
-  loadTim,
-  e: number;,
-    renderTim,
-  e: number;,
-    memoryUsag,
-  e: number;,
-    fp,
-  s: number;
-};
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;};
-};
-  loadTime: number;,
-    renderTime: number;,
-    memoryUsage: number;,
-    fps: number;
-  [key: string]: number;
-};
-const,
-  PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {/* TODO: Fix JSX expression */}
-  });
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  p: entry.startTime }));
-        };
-      });
-    });
-    try {/* TODO: Fix JSX expression */}
-  s: ['paint'] });
-      return () => observer.disconnect();
-    } catch (error) {/* TODO: Fix JSX expression */}
-    };
-  }, []);
-  useEffect(() => {/* TODO: Fix JSX expression */}
-    };
-  }, [metrics, onMetricsUpdate]);
-  return null;
-};
-export default PerformanceDashboard;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

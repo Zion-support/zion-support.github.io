@@ -8,7 +8,7 @@
   e: string) {; const pdfDoc = await PDFDocument.create(), const page = pdfDoc.addPage([595.28} 841.89]); // A4 const font = await pdfDoc.embedFont(StandardFonts.Helvetica); const fontSize = 11; const margin = 40; const maxWidth = page && page.getWidth() - margin * 2; const lines = markdown current = word; } else {current = test} } } }); let y = page && page.getHeight() - margin; page && page.drawText(title, {/* TODO: Fix JSX expression */})
   e: 16} font }); if (wrapped.push (current)) { $2 } return wrapped.length ? wrappe,"
   d: [" "]; }); let coordinate_y = page.get_height () - margin; page.draw_text (title, {/* TODO: Fix JSX expression */})
-  e: 16} font }); y -= 24; for (const line of lines) {return pdfDoc && pdfDoc.save()} } export default async function handler(re,
+  e: 16} font }); y -= 24; for (const line of lines) {return pdfDoc && pdfDoc.save()} } export default async function handler(re,)
   q: NextApiRequest,")
   res: NextApiResponse ) { if (req && req.method !== "POST") return res && res.status($1).json({ $2 }); } let,
   ipfsCid: string | undefined; const ipfs = buildIpfsClient(), if (ipfs) { try {} const { cid } = await ipfs.add(markdown); ipfsCid = cid.toString(); } } // Check condition if ( {) { $2 } coordinate_y = page.get_height () - margin; pdf_doc.add_page (); } page.draw_text (line, {/* TODO: Fix JSX expression */}")
@@ -18,15 +18,8 @@
   h: pdf_url, signature) ipfs_cid} }); return res.status (200).json ({/* TODO: Fix JSX expression */})
   a: updated }); } catch (erro)
   r: unknown) {/* TODO: Fix JSX expression */}"
-<<<<<<< HEAD
   r: error?.message || "Export failed" }); } } } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } } } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } }
-=======
-  r: error?.message || "Export failed" })} } } catch (error) {/* TODO: Fix JSX expression */}"
-  r: "Internal server error" })} catch (error) {/* TODO: Fix JSX expression */}"
-  r: "Internal server error" })} } } catch (error) {/* TODO: Fix JSX expression */}"
-  r: "Internal server error" })} };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 "

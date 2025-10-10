@@ -1,58 +1,52 @@
 export type ZionCuttingEdgeService2029 =
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  aiTechnology: string[];
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: unknown;
-    mobile: string;
-    email: string
-    address: string
+  id: string;,
+  name: string;,
+  tagline: string;,
+  price: string;,
+  period: string;,
+  description: string;,
+  features: string[];,
+  benefits: string[];,
+  popular: boolean;,
+  icon: string;,
+  color: string;,
+  textColor: string;,
+  link: string;,
+  marketPosition: string;,
+  targetAudience: string[];,
+  trialDays: number;,
+  setupTime: string;,
+  category: string;,
+  aiTechnology: string[];,
+  realService: boolean;,
+  technology: string[];,
+  integrations: string[];,
+  useCases: string[];,
+  roi: string;,
+  competitors: string[];,
+  marketSize: string;,
+  growthRate: string;,
+  variant: string;,
+  contactInfo: unknown;,
+    mobile: string;,
+    email: string,
+    address: string,
     website: string,
   }
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  pricing: unknown;
-    starter: number;
-    professional: number;
-<<<<<<< HEAD
-    enterprise: number
-    currency: string
+  realImplementation: boolean;,
+  implementationDetails: string;,
+  launchDate: string;,
+  customers: number;,
+  rating: number;,
+  reviews: number;,
+  pricing: unknown;,
+    starter: number;,
+    professional: number;,
+    enterprise: number,
+    currency: string,
     period: string,
   }
 }
-=======
-    enterprise: number;
-    currency: string;
-    period: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
   // 1. AI-Powered Quantum Computing Optimization Platform,
     id: 'ai-quantum-computing-optimization',
@@ -151,12 +145,8 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     currenc,
   y: string,
     perio,
-<<<<<<< HEAD
   d: string}
 }
-=======
-  d: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [,
   // 1. AI-Powered Quantum Computing Optimization Platform,
@@ -192,7 +182,7 @@ export const,
       'Create competitive advantage in quantum era'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-200',
     link: 'https://ziontechgroup.com/services/ai-quantum-computing-optimization',
@@ -208,23 +198,23 @@ export const,
     useCases: ['Drug discovery optimization', 'Portfolio optimization', 'Supply chain optimization', 'Materials design', 'Cryptography'],
     roi: 'Average customer achieves 300% ROI within 6 months through quantum advantage in optimization problems.',
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Rigetti', 'D-Wave', 'IonQ'],
-    marketSize: '$1.3B quantum computing market'
-    growthRate: '32.1% annual growth'
-    variant: 'quantum-ai-futuristic'
+    marketSize: '$1.3B quantum computing market',
+    growthRate: '32.1% annual growth',
+    variant: 'quantum-ai-futuristic',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
-    implementationDetails: 'Production-ready quantum optimization platform with real quantum hardware access and AI-driven algorithm optimization.'
-    launchDate: '2024-01-15'
-    customers: 45;
-    rating: 4.9;
-    reviews: 23;
-    pricing: unknown;
-      starter: 2999
-      professional: 7999
+    realImplementation: true;,
+    implementationDetails: 'Production-ready quantum optimization platform with real quantum hardware access and AI-driven algorithm optimization.',
+    launchDate: '2024-01-15',
+    customers: 45;,
+    rating: 4.9;,
+    reviews: 23;,
+    pricing: unknown;,
+      starter: 2999,
+      professional: 7999,
       enterprise: 19999,
       currency: 'USD',
       period: 'month'};
@@ -288,7 +278,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     },
     realImplementatio,
   n: true,
@@ -349,7 +339,7 @@ export const,
       'Enable 24/7 autonomous operations'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-200',
     link: 'https://ziontechgroup.com/services/autonomous-drone-fleet-management',
@@ -365,23 +355,23 @@ export const,
     useCases: ['Last-mile delivery', 'Infrastructure inspection', 'Agricultural monitoring', 'Security surveillance', 'Emergency response'],
     roi: 'Average customer achieves 200% ROI within 12 months through reduced delivery costs and improved efficiency.',
     competitors: ['DroneDeploy', 'Skydio', 'DJI Enterprise', 'PrecisionHawk', 'Parrot'],
-    marketSize: '$45.8B drone market'
-    growthRate: '16.3% annual growth'
-    variant: 'autonomous-robotics'
+    marketSize: '$45.8B drone market',
+    growthRate: '16.3% annual growth',
+    variant: 'autonomous-robotics',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
-    implementationDetails: 'Production-ready autonomous drone management system with real drone integrations and AI-powered fleet optimization.'
-    launchDate: '2024-03-01'
-    customers: 89;
-    rating: 4.8;
-    reviews: 156;
-    pricing: unknown;
-      starter: 1499
-      professional: 3999
+    realImplementation: true;,
+    implementationDetails: 'Production-ready autonomous drone management system with real drone integrations and AI-powered fleet optimization.',
+    launchDate: '2024-03-01',
+    customers: 89;,
+    rating: 4.8;,
+    reviews: 156;,
+    pricing: unknown;,
+      starter: 1499,
+      professional: 3999,
       enterprise: 9999,
       currency: 'USD',
       period: 'month'};
@@ -445,7 +435,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     },
     realImplementatio,
   n: true,
@@ -506,7 +496,7 @@ export const,
       'Enable seamless cross-border operations'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-200',
     link: 'https://ziontechgroup.com/services/blockchain-decentralized-identity',
@@ -522,23 +512,23 @@ export const,
     useCases: ['KYC/AML compliance', 'Healthcare identity', 'Government services', 'Financial services', 'Travel and hospitality'],
     roi: 'Average customer achieves 150% ROI within 8 months through reduced fraud and compliance costs.',
     competitors: ['Microsoft Entra', 'Okta', 'Auth0', 'Sovrin', 'uPort'],
-    marketSize: '$28.6B identity management market'
-    growthRate: '18.2% annual growth'
-    variant: 'blockchain-identity'
+    marketSize: '$28.6B identity management market',
+    growthRate: '18.2% annual growth',
+    variant: 'blockchain-identity',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
-    implementationDetails: 'Production-ready decentralized identity platform with real blockchain integrations and regulatory compliance.'
-    launchDate: '2024-02-01'
-    customers: 234;
-    rating: 4.9;
-    reviews: 189;
-    pricing: unknown;
-      starter: 299
-      professional: 799
+    realImplementation: true;,
+    implementationDetails: 'Production-ready decentralized identity platform with real blockchain integrations and regulatory compliance.',
+    launchDate: '2024-02-01',
+    customers: 234;,
+    rating: 4.9;,
+    reviews: 189;,
+    pricing: unknown;,
+      starter: 299,
+      professional: 799,
       enterprise: 1999,
       currency: 'USD',
       period: 'month'};
@@ -602,7 +592,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     },
     realImplementatio,
   n: true,
@@ -663,7 +653,7 @@ export const,
       'Improve corporate ESG ratings'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-teal-600 to-green-700',
     textColor: 'text-teal-200',
     link: 'https://ziontechgroup.com/services/ai-climate-change-prediction',
@@ -679,23 +669,23 @@ export const,
     useCases: ['Climate risk assessment', 'Insurance underwriting', 'Real estate planning', 'Agricultural planning', 'Energy optimization'],
     roi: 'Average customer achieves 180% ROI within 12 months through reduced climate risks and improved sustainability.',
     competitors: ['ClimateAI', 'Jupiter Intelligence', 'One Concern', 'Climate Corp', 'The Climate Service'],
-    marketSize: '$15.2B climate tech market'
-    growthRate: '24.5% annual growth'
-    variant: 'climate-ai-sustainability'
+    marketSize: '$15.2B climate tech market',
+    growthRate: '24.5% annual growth',
+    variant: 'climate-ai-sustainability',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
-    implementationDetails: 'Production-ready climate prediction platform with real AI models and environmental data integration.'
-    launchDate: '2024-01-01'
-    customers: 156;
-    rating: 4.8;
-    reviews: 234;
-    pricing: unknown;
-      starter: 1999
-      professional: 4999
+    realImplementation: true;,
+    implementationDetails: 'Production-ready climate prediction platform with real AI models and environmental data integration.',
+    launchDate: '2024-01-01',
+    customers: 156;,
+    rating: 4.8;,
+    reviews: 234;,
+    pricing: unknown;,
+      starter: 1999,
+      professional: 4999,
       enterprise: 12999,
       currency: 'USD',
       period: 'month'};
@@ -759,7 +749,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     },
     realImplementatio,
   n: true,
@@ -820,7 +810,7 @@ export const,
       'Create new AI applications'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/services/neuromorphic-computing-ai',
@@ -836,23 +826,23 @@ export const,
     useCases: ['Edge AI processing', 'IoT sensor networks', 'Robotics control', 'Healthcare monitoring', 'Autonomous vehicles'],
     roi: 'Average customer achieves 250% ROI within 18 months through reduced power costs and new AI capabilities.',
     competitors: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip', 'SynSense', 'General Vision'],
-    marketSize: '$8.7B neuromorphic computing market'
-    growthRate: '28.9% annual growth'
-    variant: 'neuromorphic-ai-futuristic'
+    marketSize: '$8.7B neuromorphic computing market',
+    growthRate: '28.9% annual growth',
+    variant: 'neuromorphic-ai-futuristic',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
-    implementationDetails: 'Production-ready neuromorphic computing platform with real hardware integration and AI optimization.'
-    launchDate: '2024-03-15'
-    customers: 67;
-    rating: 4.9;
-    reviews: 45;
-    pricing: unknown;
-      starter: 3999
-      professional: 9999
+    realImplementation: true;,
+    implementationDetails: 'Production-ready neuromorphic computing platform with real hardware integration and AI optimization.',
+    launchDate: '2024-03-15',
+    customers: 67;,
+    rating: 4.9;,
+    reviews: 45;,
+    pricing: unknown;,
+      starter: 3999,
+      professional: 9999,
       enterprise: 24999,
       currency: 'USD',
       period: 'month'};
@@ -916,7 +906,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     },
     realImplementatio,
   n: true,
@@ -977,7 +967,7 @@ export const,
       'Optimize sustainability metrics'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-200',
     link: 'https://ziontechgroup.com/services/autonomous-supply-chain-optimization',
@@ -993,23 +983,23 @@ export const,
     useCases: ['Inventory optimization', 'Demand forecasting', 'Supplier management', 'Logistics optimization', 'Risk management'],
     roi: 'Average customer achieves 200% ROI within 12 months through reduced costs and improved efficiency.',
     competitors: ['SAP Ariba', 'Oracle SCM', 'Manhattan Associates', 'JDA Software', 'Blue Yonder'],
-    marketSize: '$19.2B supply chain management market'
-    growthRate: '11.8% annual growth'
-    variant: 'supply-chain-ai'
+    marketSize: '$19.2B supply chain management market',
+    growthRate: '11.8% annual growth',
+    variant: 'supply-chain-ai',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
-    implementationDetails: 'Production-ready supply chain optimization platform with real AI models and ERP integrations.'
-    launchDate: '2024-02-15'
-    customers: 189;
-    rating: 4.8;
-    reviews: 267;
-    pricing: unknown;
-      starter: 2499
-      professional: 5999
+    realImplementation: true;,
+    implementationDetails: 'Production-ready supply chain optimization platform with real AI models and ERP integrations.',
+    launchDate: '2024-02-15',
+    customers: 189;,
+    rating: 4.8;,
+    reviews: 267;,
+    pricing: unknown;,
+      starter: 2499,
+      professional: 5999,
       enterprise: 14999,
       currency: 'USD',
       period: 'month'};
@@ -1073,7 +1063,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     },
     realImplementatio,
   n: true,
@@ -1134,7 +1124,7 @@ export const,
       'Enable personalized medicine'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-200',
     link: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics-treatment',
@@ -1150,23 +1140,23 @@ export const,
     useCases: ['Medical imaging analysis', 'Diagnostic support', 'Treatment planning', 'Drug discovery', 'Population health'],
     roi: 'Average customer achieves 180% ROI within 12 months through improved diagnostics and reduced costs.',
     competitors: ['IBM Watson Health', 'Google Health AI', 'Microsoft Healthcare', 'Nuance', 'Zebra Medical'],
-    marketSize: '$45.2B AI healthcare market'
-    growthRate: '23.7% annual growth'
-    variant: 'healthcare-ai'
+    marketSize: '$45.2B AI healthcare market',
+    growthRate: '23.7% annual growth',
+    variant: 'healthcare-ai',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
-    implementationDetails: 'Production-ready healthcare AI platform with FDA compliance and real medical data integration.'
-    launchDate: '2024-01-01'
-    customers: 234;
-    rating: 4.9;
-    reviews: 456;
-    pricing: unknown;
-      starter: 1799
-      professional: 4499
+    realImplementation: true;,
+    implementationDetails: 'Production-ready healthcare AI platform with FDA compliance and real medical data integration.',
+    launchDate: '2024-01-01',
+    customers: 234;,
+    rating: 4.9;,
+    reviews: 456;,
+    pricing: unknown;,
+      starter: 1799,
+      professional: 4499,
       enterprise: 11999,
       currency: 'USD',
       period: 'month'};
@@ -1230,7 +1220,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     },
     realImplementatio,
   n: true,
@@ -1291,7 +1281,7 @@ export const,
       'Enable 24/7 market monitoring'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-200',
     link: 'https://ziontechgroup.com/services/autonomous-financial-trading',
@@ -1307,23 +1297,23 @@ export const,
     useCases: ['Portfolio management', 'Algorithmic trading', 'Risk management', 'Market analysis', 'Compliance automation'],
     roi: 'Average customer achieves 300% ROI within 12 months through improved returns and reduced costs.',
     competitors: ['Alpaca', 'Robinhood', 'Interactive Brokers', 'TD Ameritrade', 'E*TRADE'],
-    marketSize: '$12.8B algorithmic trading market'
-    growthRate: '19.4% annual growth'
-    variant: 'fintech-ai-autonomous'
+    marketSize: '$12.8B algorithmic trading market',
+    growthRate: '19.4% annual growth',
+    variant: 'fintech-ai-autonomous',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
-    implementationDetails: 'Production-ready autonomous trading platform with real exchange integrations and regulatory compliance.'
-    launchDate: '2024-02-01'
-    customers: 89;
-    rating: 4.8;
-    reviews: 156;
-    pricing: unknown;
-      starter: 3999
-      professional: 9999
+    realImplementation: true;,
+    implementationDetails: 'Production-ready autonomous trading platform with real exchange integrations and regulatory compliance.',
+    launchDate: '2024-02-01',
+    customers: 89;,
+    rating: 4.8;,
+    reviews: 156;,
+    pricing: unknown;,
+      starter: 3999,
+      professional: 9999,
       enterprise: 24999,
       currency: 'USD',
       period: 'month'};
@@ -1387,7 +1377,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     },
     realImplementatio,
   n: true,
@@ -1448,7 +1438,7 @@ export const,
       'Enable proactive threat prevention'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-slate-700 to-zinc-800',
     textColor: 'text-slate-200',
     link: 'https://ziontechgroup.com/services/ai-cybersecurity-threat-intelligence',
@@ -1464,23 +1454,23 @@ export const,
     useCases: ['Threat detection', 'Incident response', 'Vulnerability management', 'Compliance automation', 'Security training'],
     roi: 'Average customer achieves 200% ROI within 12 months through reduced security incidents and compliance costs.',
     competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance', 'FireEye'],
-    marketSize: '$182.3B cybersecurity market'
-    growthRate: '13.4% annual growth'
-    variant: 'cybersecurity-ai'
+    marketSize: '$182.3B cybersecurity market',
+    growthRate: '13.4% annual growth',
+    variant: 'cybersecurity-ai',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
-    implementationDetails: 'Production-ready cybersecurity platform with real threat intelligence and AI-powered detection.'
-    launchDate: '2024-01-15'
-    customers: 345;
-    rating: 4.9;
-    reviews: 567;
-    pricing: unknown;
-      starter: 2199
-      professional: 5499
+    realImplementation: true;,
+    implementationDetails: 'Production-ready cybersecurity platform with real threat intelligence and AI-powered detection.',
+    launchDate: '2024-01-15',
+    customers: 345;,
+    rating: 4.9;,
+    reviews: 567;,
+    pricing: unknown;,
+      starter: 2199,
+      professional: 5499,
       enterprise: 13999,
       currency: 'USD',
       period: 'month'};
@@ -1544,7 +1534,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     },
     realImplementatio,
   n: true,
@@ -1605,7 +1595,7 @@ export const,
       'Improve citizen satisfaction'
     ],
     popular: true,
-    icon: ''
+    icon: '',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-200',
     link: 'https://ziontechgroup.com/services/autonomous-smart-city-infrastructure',
@@ -1621,23 +1611,23 @@ export const,
     useCases: ['Traffic optimization', 'Energy management', 'Waste management', 'Public safety', 'Citizen services'],
     roi: 'Average customer achieves 250% ROI within 18 months through reduced costs and improved efficiency.',
     competitors: ['Cisco Smart Cities', 'Siemens City Performance', 'IBM Smarter Cities', 'Microsoft CityNext', 'Oracle Smart City'],
-    marketSize: '$225.1B smart city market'
-    growthRate: '14.8% annual growth'
-    variant: 'smart-city-ai'
+    marketSize: '$225.1B smart city market',
+    growthRate: '14.8% annual growth',
+    variant: 'smart-city-ai',
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
+      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
-    realImplementation: true;
-    implementationDetails: 'Production-ready smart city platform with real IoT integrations and AI-powered optimization.'
-    launchDate: '2024-03-01'
-    customers: 78;
-    rating: 4.8;
-    reviews: 123;
-    pricing: unknown;
-      starter: 4999
-      professional: 12999
+    realImplementation: true;,
+    implementationDetails: 'Production-ready smart city platform with real IoT integrations and AI-powered optimization.',
+    launchDate: '2024-03-01',
+    customers: 78;,
+    rating: 4.8;,
+    reviews: 123;,
+    pricing: unknown;,
+      starter: 4999,
+      professional: 12999,
       enterprise: 29999,
       currency: 'USD',
       period: 'month'};
@@ -1696,7 +1686,7 @@ export const getServicesByCategory = (category: string) =>
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s: //ziontechgroup.com'
     },
     realImplementatio,
   n: true,
@@ -2272,10 +2262,5 @@ export type ZionCuttingEdgeService2029 = i,
   d: 'month' } } ]; export const getServicesByCategory = (categor)
   y: string) => return zionCuttingEdgeServices2029.filter(service => service.category === category), } export const getPopularServices = () => return zionCuttingEdgeServices2029.filter(service => service.popular); } export const getServicesByPriceRange = (minPric)
   e: number) maxPric,
-<<<<<<< HEAD
   e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter, return starterPrice >= minPrice && starterPrice <= maxPrice) }); } export const getServicesByTechnology = (technolog)
   y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) ), }'
-=======
-  e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) })}; export const getServicesByTechnology = (technolog)
-  y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) )};'
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

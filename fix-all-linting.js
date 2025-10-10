@@ -68,7 +68,6 @@ const fixes = [
   m: 'import { describe, it, expect, jest }',
         t,
   o: 'import { describe, it, expect, jest as _jest }'}]}];
-<<<<<<< HEAD
 
 function applyFixes() {/* TODO: Fix JSX expression */}
 }
@@ -100,25 +99,3 @@ try {/* TODO: Fix JSX expression */}
 
 } catch (error) {/* TODO: Fix JSX expression */}
 }
-=======
-;
-function applyFixes() {/* TODO: Fix JSX expression */};
-};
-  fixes.forEach(({ file, changes }) => {/* TODO: Fix JSX expression */};
-    };
-    changes.forEach(({ from, to }) => {/* TODO: Fix JSX expression */};
-        content = content.replace(new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), to);
-        modified = true;
-        totalFixed++};
-    });
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-  })};
-// Apply fixes;
-// Run linter to check results;
-try {
-  execSync('pnpm run lint:comprehensive', { stdio: 'inherit' })} catch (error) {
-try {/* TODO: Fix JSX expression */};
-  o: 'inherit' })} catch (error) {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

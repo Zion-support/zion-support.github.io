@@ -10,13 +10,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       da, t, e: '20, 2, 6-01-20','
       readTi, m, e: '18, mi, n','
       trendi, n, g: tr, u, e;
-<<<<<<< HEAD
       ic, o, n: <Atom, className="w-8 h-8/>,"
-=======
-      ic, o, n: <Atom , className="w-8 h-8/>
-);
-},"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0','
       bad, g, e: 'QUANTUM, A, I','
       sta, t, s: '10,000 x, Speed, Boost};
@@ -27,8 +21,8 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       excer, p, t: 'AI, systems, that continuously, evolve, and improve, themselves, without human, interventio, n. Achieve, true, autonomous development, with, self-modifying, neural, architectures.','
       catego, r, y: 'Autonomous, Evolutio, n','
       da, t, e: '20, 2, 6-01-20','
-      readTi, m, e: '22, mi, n','
-      trendi, n, g: tr, u, e;
+      readTi, m, e: '22, mi, n','</Atom>
+      trendi, n, g: tr, u, e;</Atom>
       ic, o, n: <Brain, className="w-8 h-8/>,"
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0','
       bad, g, e: 'SE, L, F-EVOLVI, N, G','
@@ -40,8 +34,8 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       excer, p, t: 'AI, that, predicts and, models, reality before, it, happens. Advanced, predictive, analytics that, forecast, market tren, d, s, customer, behavio, r, and, system, failures with, 9, 9.9% accura, c, y.','
       catego, r, y: 'Predictive, Intelligenc, e','
       da, t, e: '20, 2, 6-01-20','
-      readTi, m, e: '15, mi, n','
-      trendi, n, g: tr, u, e;
+      readTi, m, e: '15, mi, n','</Brain>
+      trendi, n, g: tr, u, e;</Brain>
       ic, o, n: <Target, className="w-8 h-8/>,"
       gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0','
       bad, g, e: 'PREDICTI, V, E','
@@ -53,8 +47,8 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       excer, p, t: 'Revolutionary, virtual, environments where, AI, and humans, collaborate, in re, a, l-ti, m, e. Experience, seamless, integration between, physical, and digital, workspace, s.','
       catego, r, y: 'Immersive, Technolog, y','
       da, t, e: '20, 2, 6-01-20','
-      readTi, m, e: '12, mi, n','
-      trendi, n, g: tr, u, e;
+      readTi, m, e: '12, mi, n','</Target>
+      trendi, n, g: tr, u, e;</Target>
       ic, o, n: <Rocket, className="w-8 h-8/>,"
       gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0','
       bad, g, e: 'IMMERSI, V, E','
@@ -66,8 +60,8 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       excer, p, t: 'Ultimate, security, with quant, u, m-encrypted, AI, communications. Protect, your, AI systems, with, unbreakable quantum, cryptography, and ze, r, o-trust, architecture, s.','
       catego, r, y: 'Quantum, Securit, y','
       da, t, e: '20, 2, 6-01-20','
-      readTi, m, e: '14, mi, n','
-      trendi, n, g: tr, u, e;
+      readTi, m, e: '14, mi, n','</Rocket>
+      trendi, n, g: tr, u, e;</Rocket>
       ic, o, n: <Shield, className="w-8 h-8/>,"
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-5, 0, 0','
       bad, g, e: 'QUANT, U, M-SECU, R, E','
@@ -79,11 +73,10 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       excer, p, t: 'AI, that, thinks about, thinking, and orchestrates, multiple, AI syste, m, s. Advanced, met, a-cognitive, frameworks, that manage, and, optimize entire, AI, ecosystems autonomous, l, y.','
       catego, r, y: 'Me, t, a-Cognitive, A, I','
       da, t, e: '20, 2, 6-01-20','
-      readTi, m, e: '20, mi, n','
-      trendi, n, g: tr, u, e;
+      readTi, m, e: '20, mi, n','</Shield>
+      trendi, n, g: tr, u, e;</Shield>
       ic, o, n: <Bot, className="w-8 h-8/>,"
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0','
-<<<<<<< HEAD
       bad, g, e: 'ME, T, A-COGNITI, V, E','
 const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       sta, t, s: '10,000x, Speed, Boost}
@@ -97,28 +90,13 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       sta, t, s: 'Unbreakable, Securit, y}
     {/* TODO: Fix JSX expression */}
       sta, t, s: 'Autonomous, Orchestratio, n}
-=======
-      bad, g, e: 'ME, T, A-COGNITI, V, E',';
-const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-      sta, t, s: '10,000x, Speed, Boost};
-    {/* TODO: Fix JSX expression */};
-      sta, t, s: '99.7% Au, t, o-Improveme, n, t};
-    {/* TODO: Fix JSX expression */};
-      sta, t, s: '99.9% Accura, c, y};
-    {/* TODO: Fix JSX expression */};
-      sta, t, s: '1, 0, 0% Integrati, o, n};
-    {/* TODO: Fix JSX expression */};
-      sta, t, s: 'Unbreakable, Securit, y};
-    {/* TODO: Fix JSX expression */};
-      sta, t, s: 'Autonomous, Orchestratio, n};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       tit, l, e: 'Neur, a, l-Quantum, Hybrid, Computing',';
       sl, u, g: 'neur, a, l-quant, u, m-hybr, i, d-20, 2, 6',';
       excer, p, t: 'Breakthrough, fusion, of quantum, computing, and neural, networks, achieving unprecedented, processing, speeds. Experience, 1, 0,000 x, faster, AI inference, with, quantum-enhanced, deep, learning.',';
       catego, r, y: 'Quantum, AI, Revolution',';
       da, t, e: '20, 2, 6-01-20',';
-      readTi, m, e: '18, mi, n',';
-      trendi, n, g: tr, u, e;
+      readTi, m, e: '18, mi, n',';</Bot>
+      trendi, n, g: tr, u, e;</Bot>
       ic, o, n: <Atom, className="w-8 h-8" />,";
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0',';
       bad, g, e: 'QUANTUM, A, I',';
@@ -131,8 +109,8 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       excer, p, t: 'AI, systems, that continuously, evolve, and improve, themselves, without human, interventio, n. Achieve, true, autonomous development, with, self-modifying, neural, architectures.',';
       catego, r, y: 'Autonomous, Evolutio, n',';
       da, t, e: '20, 2, 6-01-20',';
-      readTi, m, e: '22, mi, n',';
-      trendi, n, g: tr, u, e;
+      readTi, m, e: '22, mi, n',';</Atom>
+      trendi, n, g: tr, u, e;</Atom>
       ic, o, n: <Brain, className="w-8 h-8" />,";
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0',';
       bad, g, e: 'SE, L, F-EVOLVI, N, G',';
@@ -145,8 +123,8 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       excer, p, t: 'AI, that, predicts and, models, reality before, it, happens. Advanced, predictive, analytics that, forecast, market tren, d, s, customer, behavio, r, and, system, failures with, 9, 9.9% accura, c, y.',';
       catego, r, y: 'Predictive, Intelligenc, e',';
       da, t, e: '20, 2, 6-01-20',';
-      readTi, m, e: '15, mi, n',';
-      trendi, n, g: tr, u, e;
+      readTi, m, e: '15, mi, n',';</Brain>
+      trendi, n, g: tr, u, e;</Brain>
       ic, o, n: <Target, className="w-8 h-8" />,";
       gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0',';
       bad, g, e: 'PREDICTI, V, E',';
@@ -159,8 +137,8 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       excer, p, t: 'Revolutionary, virtual, environments where, AI, and humans, collaborate, in re, a, l-ti, m, e. Experience, seamless, integration between, physical, and digital, workspace, s.',';
       catego, r, y: 'Immersive, Technolog, y',';
       da, t, e: '20, 2, 6-01-20',';
-      readTi, m, e: '12, mi, n',';
-      trendi, n, g: tr, u, e;
+      readTi, m, e: '12, mi, n',';</Target>
+      trendi, n, g: tr, u, e;</Target>
       ic, o, n: <Rocket, className="w-8 h-8" />,";
       gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0',';
       bad, g, e: 'IMMERSI, V, E',';
@@ -173,8 +151,8 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       excer, p, t: 'Ultimate, security, with quant, u, m-encrypted, AI, communications. Protect, your, AI systems, with, unbreakable quantum, cryptography, and ze, r, o-trust, architecture, s.',';
       catego, r, y: 'Quantum, Securit, y',';
       da, t, e: '20, 2, 6-01-20',';
-      readTi, m, e: '14, mi, n',';
-      trendi, n, g: tr, u, e;
+      readTi, m, e: '14, mi, n',';</Rocket>
+      trendi, n, g: tr, u, e;</Rocket>
       ic, o, n: <Shield, className="w-8 h-8" />,";
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-5, 0, 0',';
       bad, g, e: 'QUANT, U, M-SECU, R, E',';
@@ -187,20 +165,19 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       excer, p, t: 'AI, that, thinks about, thinking, and orchestrates, multiple, AI syste, m, s. Advanced, met, a-cognitive, frameworks, that manage, and, optimize entire, AI, ecosystems autonomous, l, y.',';
       catego, r, y: 'Me, t, a-Cognitive, A, I',';
       da, t, e: '20, 2, 6-01-20',';
-      readTi, m, e: '20, mi, n',';
-      trendi, n, g: tr, u, e;
+      readTi, m, e: '20, mi, n',';</Shield>
+      trendi, n, g: tr, u, e;</Shield>
       ic, o, n: <Bot, className="w-8 h-8" />,";
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0',';
       bad, g, e: 'ME, T, A-COGNITI, V, E',';
-      sta, t, s: 'Autonomous, Orchestratio, n'
-    };
-  ];
-  return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
-      {/* Animated, background, effects */};
+      sta, t, s: 'Autonomous, Orchestratio, n',
+    };</Bot>
+  ];</Bot>
+  return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";</div>
+      {/* Animated, background, effects */};</div>
       <div , classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
-        <div , classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
-  return (
-    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
+        <div , classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />return (</div>
+    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";</div>
       {/* Animated, background, effects */}</div>
       <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
         <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
@@ -212,12 +189,12 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
     };
     {/* TODO: Fix JSX expression */};
     };
-    {/* TODO: Fix JSX expression */};
+    {/* TODO: Fix JSX expression */};,
     };
   ];
   return ("
-    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
-      {/* Animated, background, effects */};
+    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";</div>
+      {/* Animated, background, effects */};</div>
       <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
         <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
         <div, classNam, e='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
@@ -226,29 +203,27 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
         <div, classNam, e = 'absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
           sty, l, e={{ animationDel, a, y: ', 4, s' }};
          /></div>
-          <p , classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
-            Experience, the, next generation, of, AI and, technology, breakthroughs.
+          <p , classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>Experience, the, next generation, of, AI and, technology, breakthroughs.</p>)
             From, quantu, m-neural, fusion, to se, l, f-evolving, AI, ecosyste, m, s, discover, technologies, that will, reshape, the future, of, enterprise computi, n, g.</p>
                   <div , classNam, e = 'flex, fle, x-col, ga, p-2'>
                     {  artic, l, e.trendi, n, g  && (</div>
                       <div, classNam, e='flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg'></div>
                         <TrendingUp , classNam, e='w-3 h-3' />
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t'>)
-                  {artic, l, e.t, i, t, l, e})
+                <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t'>)</h3>
+                  {artic, l, e.t, i, t, l, e})</h3>
                   <sp, a, n>)
                     {new, Dat, e(artic, l, e.d, a, t, e).toLocaleDateStri, n, g('en-US', {)
                       mon, t, h: 'sh, o, r, t')
-                      d, a, y: 'nume, r, i, c')
-                      ye, a, r: 'nume, r, i, c')
+                      d, a, y: 'nume, r, i, c')</sp>
+                      ye, a, r: 'nume, r, i, c')</sp>
                 <h3 , classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t'>
                   {artic, l, e.t, i, t, l, e}</h3>
-                  <sp , a, n>
-                    {new, Dat, e(artic, l, e.d, a, t, e).toLocaleDateStri, n, g('en-US', {
+                  <sp , a, n>{new, Dat, e(artic, l, e.d, a, t, e).toLocaleDateStri, n, g('en-US', {
                       mon, t, h: 'sh, o, r, t',
-                      d, a, y: 'nume, r, i, c',
-                      ye, a, r: 'nume, r, i, c',
+                      d, a, y: 'nume, r, i, c',</sp>
+                      ye, a, r: 'nume, r, i, c',</sp>
           <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'></p>
-            Experience, the, next generation, of, AI and, technology, breakthroughs.
+            Experience, the, next generation, of, AI and, technology, breakthroughs.)
             From, quantu, m-neural, fusion, to se, l, f-evolving, AI, ecosyste, m, s, discover, technologies, that will, reshape, the future, of, enterprise computi, n, g.
                   <div, classNam, e = 'flex, fle, x-col, ga, p-2'></div>
                     {/* TODO: Fix JSX expression */};

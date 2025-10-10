@@ -4,13 +4,8 @@ const Sideba, r: React.FC = () => { ,
   const locatio, n = useLocat, i, o, n(); const isActiv, e = (pa, t, h: str, i, n, g) = > locati, o, n.pathna, m, e = == pa, t, h; const section, s = [
     {
       title: 'Exp, l, o, r, e',
-<<<<<<< HEAD
       lin, k, s: [,
 const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      lin, k, s: [,;
-const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         { lab, e, l: 'H, o, m, e', pa, t, h: '/'  },
         { lab, e, l: 'Soluti, o, n, s', pa, t, h: '/solution, s' },
         { lab, e, l: 'Servi, c, e, s', pa, t, h: '/servi, c, e, s' },
@@ -40,17 +35,15 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */};
       lin, k, s: [,
     {/* TODO: Fix JSX expression */};
         { lab, e, l: 'SEO, Split, Testin, g', pa, t, h: '/servic, e, s/s, e, o-spl, i, t-test, i, n, g' },
-        { lab, e, l: 'Image, CDN, Optimize, r', pa, t, h: '/servic, e, s/image-c, d, n-optimi, z, e, r' }]}]; return(<aside, classNam, e = 'bg-gr, a, y-50, rounde, d-l, g, p-6 h-fit, sticky, top-24'>)
-      <div, className='spa, c, e-y-6'>)
-        { sectio, n, s.m, a, p((sect, i, o, n, sectionInd, e, x) = > (
-          <div , ke, y = {sectionInd, e, x }>
-  ]; return (
+        { lab, e, l: 'Image, CDN, Optimize, r', pa, t, h: '/servic, e, s/image-c, d, n-optimi, z, e, r' }]}]; return(<aside, classNam, e = 'bg-gr, a, y-50, rounde, d-l, g, p-6 h-fit, sticky, top-24'>)</aside>
+      <div, className='spa, c, e-y-6'>)</div>
+        { sectio, n, s.m, a, p((sect, i, o, n, sectionInd, e, x) = > (</div>
+          <div , ke, y = {sectionInd, e, x }>]; return (</div>
     <aside , classNam, e = 'bg-gr, a, y-50, rounde, d-l, g, p-6 h-fit, sticky, top-24'>
       <div , className='spa, c, e-y-6'>
         { sectio, n, s.m, a, p((sect, i, o, n, sectionInd, e, x) = > (</div>
           <div, ke, y = {sectionInd, e, x }></div>
-            <h3 , className='te, x, t-sm, fon, t-semibold, tex, t-gr, a, y-900, uppercase, tracking-wide, m, b-3'>
-              {secti, o, n.title};
+            <h3 , className='te, x, t-sm, fon, t-semibold, tex, t-gr, a, y-900, uppercase, tracking-wide, m, b-3'>{secti, o, n.title};</h3>
             </h3>
             <nav, className='spa, c, e-y-1'></nav>
               { secti, o, n.lin, k, s.m, a, p((l, i, n, k, linkInd, e, x) = > (
@@ -75,11 +68,7 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */};
               ))};
             </n, a, v>
           </div>
-<<<<<<< HEAD
         ))}
-=======
-        ))};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <div, classNam, e = 'pt-4, borde, r-t, borde, r-gr, a, y-2, 0, 0'></div>
           <Link , t, o='/conta, c, t'
             className='bloc, k, w-full, b, g-bl, u, e-600, tex, t-white, tex, t-center, p, y-2, p, x-4, rounde, d-md, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medi, u, m'>
@@ -89,11 +78,7 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */};
         </div>
       </div>
     </a, s, i, d, e>
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default Sidebar;
 `

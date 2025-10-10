@@ -8,7 +8,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 import StructuredData from './components/StructuredData'
 import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react'
-// Loading skeleton component
+// Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
@@ -18,33 +18,26 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 ;
-<<<<<<< HEAD
 const HomePage: React.FC = () => {
     const [isLoaded, setIsLoaded] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
     setIsLoaded(true)
-    // Trigger visibility animation
+    // Trigger visibility animation;
     const timer = setTimeout(() => setIsVisible(true), 100)
     return () => clearTimeout(timer)
   }, [])
-  // Analytics tracking for phone clicks - optimized
+  // Analytics tracking for phone clicks - optimized;
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag
       gtag('event', 'phone_click', {
-        event_category: 'engagement',
+        event_category: 'engagement',)
         event_label: 'main_phone_number'
       })
     }
   }, [])
   const features = [
-=======
-const PageBackupPage: React.FC = () => {
-const features = [
-];
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -64,7 +57,6 @@ const features = [
       benefits: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']
     },
     {
-<<<<<<< HEAD
       icon: Code,
       title: 'Custom Development',
       description: 'Tailored software solutions designed specifically for your business requirements.',
@@ -80,7 +72,7 @@ const features = [
       icon: Users,
       title: 'Consulting Services',
       description: 'Expert guidance to help you navigate digital transformation and technology adoption.',
-      benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training']
+      benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training'],
     }
   ]
 
@@ -104,11 +96,11 @@ const features = [
       title: 'Micro SaaS',
       description: 'Specialized software-as-a-service solutions designed for specific business needs.',
       href: '/micro-saas',
-      features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance']
+      features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance'],
     }
   ]
-
-  return (
+</string>
+  return(</string>
     <React.Fragment>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -163,15 +155,11 @@ const features = [
           enableHighContrast={true}
           enableFocusManagement={true}
         >
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
-            {/* Navigation */}
-            <Navigation />
-            
-            {/* Skip to main content for accessibility */}
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">{/* Navigation */}</div>
+            <Navigation />{/* Skip to main content for accessibility */}</Navigation>
             <a
               href="#main-content"
-              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
-              Skip to main content
+              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">Skip to main content</a>
             </a>
 
             {/* Hero Section */}
@@ -180,22 +168,18 @@ const features = [
                 <div className="text-center">
                   <div className="mb-8">
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
-                      <Sparkles className="w-4 h-4 mr-2" />
-                      Trusted by 500+ Companies Worldwide
+                      <Sparkles className="w-4 h-4 mr-2" />Trusted by 500+ Companies Worldwide</Sparkles>
                     </div>
                   </div>
                   <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                    <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent neon-text">
-                      Advanced AI & IT Solutions
+                    <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent neon-text">Advanced AI & IT Solutions</span>
                     </span>
                     <br />
-                    <span className="text-3xl md:text-5xl lg:text-6xl">
-                      for the Future
+                    <span className="text-3xl md:text-5xl lg:text-6xl">for the Future</span>
                     </span>
                   </h1>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                    Transform your business with cutting-edge artificial intelligence, quantum computing, 
-                    and autonomous systems. We deliver enterprise-grade solutions that drive innovation and growth.
+                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">Transform your business with cutting-edge artificial intelligence, quantum computing, </p>
+                    and autonomous systems. We deliver enterprise-grade solutions that drive innovation and growth.</p>
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                     <a
@@ -208,7 +192,7 @@ const features = [
                     <a
                       href="tel:+13024640950"
                       onClick={handlePhoneClick}
-                      className="cyber-button-secondary text-lg px-8 py-4 inline-flex items-center space-x-2 group"
+                      className="cyber-button-secondary text-lg px-8 py-4 inline-flex items-center space-x-2 group")
                       aria-label="Call us at (302) 464-0950">
                       <Phone className="w-5 h-5" />
                       <span>(302) 464-0950</span>
@@ -278,7 +262,7 @@ const HomePage: React.FC = memo(() => {
       icon: Users,
       title: 'IT Consulting',
       description: 'Expert guidance to help you make the right technology decisions.',
-      benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']
+      benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training'],
     }
   ]
 
@@ -297,70 +281,18 @@ const HomePage: React.FC = memo(() => {
       <StructuredData type="Service" />
       <PerformanceOptimizer />
       <SEOOptimizer />
-      <AccessibilityEnhancer />
-      
-      <Navigation />
-      
-      <main>
-        {/* Hero Section */}
+      <AccessibilityEnhancer /> </AccessibilityEnhancer>
+      <Navigation /> </Navigation>
+      <main>{/* Hero Section */}</main>
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden" aria-labelledby="hero-heading">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" aria-hidden="true" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} aria-hidden="true" />
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 id="hero-heading" className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Transform Your Business with
+            <h1 id="hero-heading" className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Transform Your Business with</h1>
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> AI & IT Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              We help businesses leverage cutting-edge technology to drive growth, 
-              improve efficiency, and stay ahead of the competition.
-=======
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    };
-  ];
-;
-const benefits = [
-];
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-  return (
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page backup solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page backup solutions deliver unmatched performance, security, and scalability.
-            </p>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-              </div>
-            ))
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */};
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page backup needs and get a customized solution.
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">We help businesses leverage cutting-edge technology to drive growth, </p>
+              improve efficiency, and stay ahead of the competition.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
             </section>
@@ -369,15 +301,12 @@ const benefits = [
             <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    Our Core Services
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Core Services</h2>
                   </h2>
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Comprehensive technology solutions designed to accelerate your digital transformation
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive technology solutions designed to accelerate your digital transformation</p>
                   </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {services.map((service, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{services.map((service, index) => (</div>
                     <div
                       key={service.title}
                       className="cyber-card group hover:scale-105 transition-all duration-300"
@@ -389,8 +318,7 @@ const benefits = [
                         </div>
                         <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                         <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                        <div className="space-y-2 mb-6">
-                          {service.features.map((feature, featureIndex) => (
+                        <div className="space-y-2 mb-6">{service.features.map((feature, featureIndex) => (</div>
                             <div key={featureIndex} className="flex items-center space-x-2">
                               <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                               <span className="text-sm text-gray-300">{feature}</span>
@@ -416,15 +344,12 @@ const benefits = [
             <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    Why Choose Zion Tech Group?
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
                   </h2>
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    We combine cutting-edge technology with deep industry expertise to deliver exceptional results
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">We combine cutting-edge technology with deep industry expertise to deliver exceptional results</p>
                   </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {features.map((feature, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
                     <div
                       key={feature.title}
                       className="cyber-card group hover:scale-105 transition-all duration-300"
@@ -436,8 +361,7 @@ const benefits = [
                         </div>
                         <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                         <p className="text-gray-300 mb-6 leading-relaxed">{feature.description}</p>
-                        <div className="space-y-2">
-                          {feature.benefits.map((benefit, benefitIndex) => (
+                        <div className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</div>
                             <div key={benefitIndex} className="flex items-center space-x-2">
                               <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
                               <span className="text-sm text-gray-300">{benefit}</span>
@@ -455,28 +379,22 @@ const benefits = [
             <section className="py-20 bg-slate-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    What Our Clients Say
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
                   </h2>
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Don't just take our word for it. Here's what industry leaders say about our solutions.
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">Don't just take our word for it. Here's what industry leaders say about our solutions.</p>
                   </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   <div className="cyber-card">
                     <div className="flex items-center mb-4">
-                      <div className="flex text-yellow-400">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-current" />
-                        ))}
+                      <div className="flex text-yellow-400">{[...Array(5)].map((_, i) => (</div>
+                          <Star key={i} className="w-5 h-5 fill-current" />))}</Star>
                       </div>
                     </div>
-                    <p className="text-gray-300 mb-4">
-                      "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300%."
+                    <p className="text-gray-300 mb-4">"Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300%."</p>
                     </p>
                     <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                        JS
+                      <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">JS</div>
                       </div>
                       <div>
                         <div className="text-white font-semibold">John Smith</div>
@@ -486,18 +404,14 @@ const benefits = [
                   </div>
                   <div className="cyber-card">
                     <div className="flex items-center mb-4">
-                      <div className="flex text-yellow-400">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-current" />
-                        ))}
+                      <div className="flex text-yellow-400">{[...Array(5)].map((_, i) => (</div>
+                          <Star key={i} className="w-5 h-5 fill-current" />))}</Star>
                       </div>
                     </div>
-                    <p className="text-gray-300 mb-4">
-                      "Outstanding service and cutting-edge technology. They delivered our project ahead of schedule."
+                    <p className="text-gray-300 mb-4">"Outstanding service and cutting-edge technology. They delivered our project ahead of schedule."</p>
                     </p>
                     <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                        MJ
+                      <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-3">MJ</div>
                       </div>
                       <div>
                         <div className="text-white font-semibold">Maria Johnson</div>
@@ -507,18 +421,14 @@ const benefits = [
                   </div>
                   <div className="cyber-card">
                     <div className="flex items-center mb-4">
-                      <div className="flex text-yellow-400">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-current" />
-                        ))}
+                      <div className="flex text-yellow-400">{[...Array(5)].map((_, i) => (</div>
+                          <Star key={i} className="w-5 h-5 fill-current" />))}</Star>
                       </div>
                     </div>
-                    <p className="text-gray-300 mb-4">
-                      "The best IT partner we've ever worked with. Their expertise in AI and cloud solutions is unmatched."
+                    <p className="text-gray-300 mb-4">"The best IT partner we've ever worked with. Their expertise in AI and cloud solutions is unmatched."</p>
                     </p>
                     <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                        DW
+                      <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold mr-3">DW</div>
                       </div>
                       <div>
                         <div className="text-white font-semibold">David Wilson</div>
@@ -533,11 +443,9 @@ const benefits = [
             {/* CTA Section */}
             <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  Ready to Transform Your Business?
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
                 </h2>
-                <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
-                  Let's discuss how our AI and IT solutions can drive your digital transformation and accelerate growth.
+                <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">Let's discuss how our AI and IT solutions can drive your digital transformation and accelerate growth.</p>
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
@@ -571,4 +479,4 @@ const benefits = [
 }
 
 HomePage.displayName = 'HomePage'
-export default HomePage
+export default HomePage;

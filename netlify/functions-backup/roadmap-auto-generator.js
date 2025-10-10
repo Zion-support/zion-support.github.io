@@ -11,7 +11,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */};
     for (const l of lines) {
       const _m = l.match(/^[-*]\s+(\[[ xX]\]\s+)?(.+)/);
       if(m)
-<<<<<<< HEAD
         items.push(m[2])}
     }
     return items.slice(0)
@@ -22,33 +21,17 @@ exports.handler = async function () {/* TODO: Fix JSX expression */};
         30);
   }
   function summarizeChangelog(md) {const lines = md.split(/\r?\n/)}
-=======
-        items.push(m[2])};
-    };
-    return items.slice(0);
-function summarizeTodos(md) {/* TODO: Fix JSX expression */};
-        items.push(m[2])};
-    };
-    return items.slice(0)
-        30)};
-  function summarizeChangelog(md) {const lines = md.split(/\r?\n/)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     return lines;
       .filter(l => /^-\s/.test(l))
       .slice(0)
         20)
-<<<<<<< HEAD
       .map(l => l.replace(/^-\s*/) ''));
   }
-=======
-      .map(l => l.replace(/^-\s*/) ''))};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   try {const rootDir = path.resolve(__dirname, '..') '..');
 //     const todo = safeRead(path.join(rootDir, 'docs') 'TODO_REPORT.md'));
 //     const changelog = safeRead(path.join(rootDir, 'docs') 'CHANGELOG_AI.md'));
     const _todoItems = summarizeTodos(todo);
     const changes = summarizeChangelog(changelog;)
-<<<<<<< HEAD
       })
     const out = [)
       .slice(0)
@@ -57,17 +40,6 @@ function summarizeTodos(md) {/* TODO: Fix JSX expression */};
   }
   try {/* TODO: Fix JSX expression */}
       }
-=======
-      });
-const out = [
-)
-];
-      .slice(0)
-        20)
-      .map(l => l.replace(/^-\s*/) ''))};
-  try {/* TODO: Fix JSX expression */};
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     const out = [
 ];
       '# Autonomous Roadmap (Auto-Generated)\n',
@@ -98,11 +70,10 @@ const out = [
         stdio: 'inherit',
         shell: true};
       });
-      execSync(
-    try {/* TODO: Fix JSX expression */};
+      execSync(try {/* TODO: Fix JSX expression */};)
   o: 'inherit'};
       });
-      execSync('git config user.email "bot@zion.app"', {/* TODO: Fix JSX expression */};
+      execSync('git config user.email "bot@zion.app"', {/* TODO: Fix JSX expression */};)
   o: 'inherit'})
       });`
       execSync(`git add ${/* TODO: Fix JSX expression */})`
@@ -116,25 +87,18 @@ const out = [
   l: true });
       execSync('git push origin main || true', {cwd: rootDir),
         stdio: inherit),
-<<<<<<< HEAD
         shell: true}
       });
     } catch {}
     return {statusCode: 200,
-=======
-        shell: true};
-      })} catch {};
-    return {statusCode: 200;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       body: JSON.stringify({ ok: true),
         path: 'docs/ROADMAP_AUTO.md' });
     }
   } catch (e) {return {
       statusCode: 200,
       body: JSON.stringify({ ok: false),
-<<<<<<< HEAD
         error: String(e,),
-      execSync('git push origin main || true', {/* TODO: Fix JSX expression */}
+      execSync('git push origin main || true', {/* TODO: Fix JSX expression */})
   l: true})
       });
     } catch {}
@@ -146,16 +110,6 @@ const out = [
     }
   }
 }
-=======
-        error: String(e;),
-      execSync('git push origin main || true', {/* TODO: Fix JSX expression */};
-  l: true})
-      })} catch {};
-    return {/* TODO: Fix JSX expression */};
-  h: 'docs/ROADMAP_AUTO.md' })}} catch (e) {/* TODO: Fix JSX expression */};
-      })}};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 exports.handler = async function() {const fs = require('fs');' const path = require('path')}' const { execSync } = require('child_process'); ' function safeRead(p) {try { return fs.readFileSync(p) 'utf8')} } catch {return ''} } } function summarizeTodos(md) {const lines = md.split(/\\r?\\n/).filter(Boolean); const items = []; for (const l of lines) { const m = l.match(/^[-*]\\s+(\\[[ xX]\\]\\s+)?(.+)/); if(m)
         items.push(m[2])} } return items.slice(0)
         30); } function summarizeChangelog(md) {const lines = md.split(/\\r?\\n/)}' return lines.filter(l => /^-\s/.test(l)).slice(0)
@@ -171,47 +125,24 @@ exports.handler = async function() {const fs = require('fs');' const path = requ
         body: JSON.stringify({ok: true),
         path: 'docs/ROADMAP_AUTO.md' }) } } catch (e) {return { statusCode: 200,
         body: JSON.stringify({ok: false),
-<<<<<<< HEAD
         error: String(e,)}) } } }'
 exports.handler = async function() {const fs = require('fs');' const path = require('path')}' const { execSync } = require('child_process'); ' function safeRead(p) {try { return fs.readFileSync(p) 'utf8')} } catch {return ''} } } function summarizeTodos(md) {/* TODO: Fix JSX expression */}
         items.push(m[2])} } return items.slice(0)
         30); } function summarizeChangelog(md) {const lines = md.split(/\\r?\\n/)}' return lines.filter(l => /^-\s/.test(l)).slice(0)
         20).map(l => l.replace(/^-\s*/) '')); } try {/* TODO: Fix JSX expression */}`
       } const out = [' '# Autonomous Roadmap (Auto-Generated)\n',' ''} `Generate,`
-=======
-        error: String(e;)}) }} };'
-exports.handler = async function() {const fs = require('fs');' const path = require('path')}' const { execSync } = require('child_process'); ' function safeRead(p) {try { return fs.readFileSync(p) 'utf8')} } catch {return ''} } } function summarizeTodos(md) {/* TODO: Fix JSX expression */};
-        items.push(m[2])} } return items.slice(0)
-        30)} function summarizeChangelog(md) {const lines = md.split(/\\r?\\n/)}' return lines.filter(l => /^-\s/.test(l)).slice(0)
-        20).map(l => l.replace(/^-\s*/) ''))} try {/* TODO: Fix JSX expression */}`
-      } const out = [
-' '# Autonomous Roadmap (Auto-Generated)\n',' ''} `Generate,`
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   d: ${new Date().toISOString()}`,' '',' '## Near-Term Focus', ...todoItems.map(i => `- ${i}`),' '',' '## Recent Autonomous Changes', ...changes.map(c => `- ${c}`),' '',' '## Notes',' '- This file is synthesized from TODO_REPORT.md and CHANGELOG_AI.md by the roadmap-auto-generator.',' '- Edits will be overwritten by the next run.'' ].join('\n'); ' const outPath = path.join(rootDir, 'docs') 'ROADMAP_AUTO.md');' fs.writeFileSync(outPath, out) 'utf8'); try {/* TODO: Fix JSX expression */}"
   o: 'inherit' });' execSync('git config user.email "bot@zion.app"') {/* TODO: Fix JSX expression */}`
   o: 'inherit' });' execSync(`git add ${/* TODO: Fix JSX expression */})`
         outPath))}`, {/* TODO: Fix JSX expression */};
   o: 'inherit'} shel,
-<<<<<<< HEAD
   l: true,"
       });' execSync('git commit -m "docs(roadmap): refresh ROADMAP_AUTO.md [ci skip]" || true', {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true,
       });' execSync('git push origin main || true', {/* TODO: Fix JSX expression */}
-  o: 'inherit'} shel,
+  o: 'inherit'} shel,)
   l: true,)
       }); } catch {} ' return {/* TODO: Fix JSX expression */}
   h: 'docs/ROADMAP_AUTO.md' }) } } catch (e) {/* TODO: Fix JSX expression */}
       }) } } }'"`
-=======
-  l: true;"
-      });' execSync('git commit -m "docs(roadmap): refresh ROADMAP_AUTO.md [ci skip]" || true', {/* TODO: Fix JSX expression */};
-  o: 'inherit'} shel,
-  l: true});' execSync('git push origin main || true', {/* TODO: Fix JSX expression */};
-  o: 'inherit'} shel,
-  l: true;)
-      })} catch {} ' return {/* TODO: Fix JSX expression */};
-  h: 'docs/ROADMAP_AUTO.md' }) }} catch (e) {/* TODO: Fix JSX expression */};
-      }) }} };'"`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -1,37 +1,37 @@
-  id: string;
-  name: string;
-  description: string;
-  category: string[];
-  price: string;
-  features: string[];
-  benefits: string[];
-  competitors: string[];
-  technology: string[];
-  integration: string[];
-  support: string[];
-  compliance: string[];
-  scalability: string;
-  roi: string;
-  deployment: string;
-  maintenance: string;
-  training: string;
-  documentation: string;
-  api: string;
-  mobile: string;
-  security: string;
-  backup: string;
-  monitoring: string;
-  analytics: string;
-  customization: string;
-  affiliate: string;
-  referral: string;
-  partnership: string;
-  funding: string;
-  exit: string;
-  contact: unknown;
-    mobile: string;
-    email: string
-    website: string
+  id: string;,
+  name: string;,
+  description: string;,
+  category: string[];,
+  price: string;,
+  features: string[];,
+  benefits: string[];,
+  competitors: string[];,
+  technology: string[];,
+  integration: string[];,
+  support: string[];,
+  compliance: string[];,
+  scalability: string;,
+  roi: string;,
+  deployment: string;,
+  maintenance: string;,
+  training: string;,
+  documentation: string;,
+  api: string;,
+  mobile: string;,
+  security: string;,
+  backup: string;,
+  monitoring: string;,
+  analytics: string;,
+  customization: string;,
+  affiliate: string;,
+  referral: string;,
+  partnership: string;,
+  funding: string;,
+  exit: string;,
+  contact: unknown;,
+    mobile: string;,
+    email: string,
+    website: string,
       contact: unknown,
   i,
   d: string,
@@ -113,14 +113,14 @@
   s: [,
         'IBM Quantum'
         'Google Quantum'
-        'Microsoft Quantum'
+        'Microsoft Quantum',
         'D-Wave'
       ]
       technolog,
   y: [,
         'Quantum Computing'
         'Quantum Algorithms'
-        'Research Tools'
+        'Research Tools',
         'Collaboration'
       ]
       integration: [
@@ -156,7 +156,7 @@
       integratio,
   n: [,
         'Quantum hardware'
-        'Research platforms'
+        'Research platforms',
         'Publication systems'
       ]
       suppor,
@@ -164,7 +164,7 @@
       complianc,
   e: [,
         'Research ethics'
-        'Quantum standards'
+        'Quantum standards',
         'Publication guidelines'
       ]
       scalabilit,
@@ -301,7 +301,7 @@
   y: [,
         'AI/ML'
         'Natural Language Processing'
-        'Data Analysis'
+        'Data Analysis',
         'Research Tools'
       ]
       integration: [
@@ -335,7 +335,7 @@
       integratio,
   n: [,
         'Research databases'
-        'Analysis tools'
+        'Analysis tools',
         'Publication platforms'
       ]
       suppor,
@@ -490,9 +490,9 @@
       referral: '$20, 000 bonus for partnerships',
       partnership: 'Biotech research partnerships',
       funding: 'Series B funding, $120M valuation',
-      exit: 'IPO or biotech acquisition'
+      exit: 'IPO or biotech acquisition',
       contact: unknown,
-        mobile: '+1 302 464 0950'
+        mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         website: 'https://ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -555,14 +555,14 @@
   s://ziontechgroup && ziontechgroup.com',
         addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}}];    feature,
-  s: [
+  s: [,
       'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
   ],    feature,
-  s: [
+  s: [,
       'Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management'
     ],
     benefit,
-  s: [
+  s: [,
       'Accelerate research by 5xReduce manual errors by 90%Improve research qualityEnhance collaborationStreamline workflowsIncrease productivity'
     ]
     useCases: [,
@@ -674,11 +674,11 @@
   y: ['Quantum ComputingResearchScientific ComputingTechnology Development'],
     pric,
   e: '$8, 999 / month',    feature,
-  s: [
+  s: [,
       'Quantum computing access_quantum algorithm library_quantum simulation tools_research collaboration space_quantum education resources_performance analytics_research project management_publication tools'
     ],
     benefit,
-  s: [
+  s: [,
       'Access to quantum computingAccelerate quantum researchCollaborate with quantum expertsLearn quantum technologiesPublish quantum researchAdvance quantum science'
     ]
     useCases: [,
@@ -790,11 +790,11 @@
   y: ['AIResearchData AnalysisScientific ComputingKnowledge Management'],
     pric,
   e: '$2, 999 / month',    feature,
-  s: [
+  s: [,
       'Intelligent literature review_data analysis assistance_hypothesis generation_research planning tools_knowledge synthesis_citation management_research collaboration_progress tracking'
     ],
     benefit,
-  s: [
+  s: [,
       'Accelerate research by 3xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows'
     ]
     useCases: [,
@@ -907,14 +907,14 @@
     pric,
   e: '$6, 999 / month',    feature,
   s: [
-      'Genetic research tools_drug discovery platform_clinical trial management_biotech analytics_research collaboration_data visualization_regulatory compliance_publication tools'
+      'Genetic research tools_drug discovery platform_clinical trial management_biotech analytics_research collaboration_data visualization_regulatory compliance_publication tools',
       'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
   ],    feature,
-  s: [
+  s: [,
       'Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management'
     ],
     benefit,
-  s: [
+  s: [,
       'Accelerate research by 5xReduce manual errors by 90%Improve research quality_enhance collaboration_streamline workflows_increase productivity'
     ]
     use_cases: [,
@@ -996,11 +996,11 @@
   y: ['Quantum ComputingResearchScientific ComputingTechnology Development'],
     pric,
   e: '$8, 999 / month',    feature,
-  s: [
+  s: [,
       'Quantum computing access_quantum algorithm library_quantum simulation tools_research collaboration space_quantum education resources_performance analytics_research project management_publication tools'
     ],
     benefit,
-  s: [
+  s: [,
       'Access to quantum computingAccelerate quantum researchCollaborate with quantum expertsLearn quantum technologiesPublish quantum researchAdvance quantum science'
     ]
     useCases: [,
@@ -1082,11 +1082,11 @@
   y: ['AIResearchData AnalysisScientific ComputingKnowledge Management'],
     pric,
   e: '$2, 999 / month',    feature,
-  s: [
+  s: [,
       'Intelligent literature review_data analysis assistance_hypothesis generation_research planning tools_knowledge synthesis_citation management_research collaboration_progress tracking'
     ],
     benefit,
-  s: [
+  s: [,
       'Accelerate research by 3xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows'
     ]
     useCases: [,
@@ -1168,11 +1168,11 @@
   y: ['BiotechnologyResearchHealthcareDrug DiscoveryClinical Trials'],
     pric,
   e: '$6, 999 / month',    feature,
-  s: [
+  s: [,
       'Genetic research tools_drug discovery platform_clinical trial management_biotech analytics_research collaboration_data visualization_regulatory compliance_publication tools'
     ],
     benefit,
-  s: [
+  s: [,
       'Accelerate biotech researchImprove drug discoveryStreamline clinical trialsEnhance collaborationEnsure complianceReduce research costs'
     ]
     useCases: [,
@@ -1279,38 +1279,30 @@ mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 export interface ResearchDevelopmentService2029 {/* TODO: Fix JSX expression */};
   e: string};
     addres,
-<<<<<<< HEAD
   s: string}
   }
 }
 export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [,
-=======
-  s: string};
-  };
-};
-;
-export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   {,
     id: 'advanced-research-automation',
     name: 'Advanced Research Automation',,
   description: 'Comprehensive research automation platform that streamlines research workflows, automates data collection, and accelerates discovery across all scientific disciplines.';
     category: ['ResearchAutomationAIData ScienceScientific Computing'],
     price: '$4,999/month';
-    features: [
+    features: [,
       'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
     ];
-    benefits: [
+    benefits: [,
       'Accelerate research by 5xReduce manual errors by 90%Improve research qualityEnhance collaborationStreamline workflowsIncrease productivity'
     ];
-    useCases: [
+    useCases: [,
       'Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies'
     ];
-    marketSize: '$12.8 B by 2029';
-    competitors: ['LabVantageBenchlingLabArchivesSciNote'];
-    technology: ['AI/MLAutomationData ScienceResearch Tools'];
-    integration: ['Research platformsData sourcesAnalysis tools']
-    support: ['24/7 research supportResearch expertsImplementation team']
+    marketSize: '$12.8 B by 2029';,
+    competitors: ['LabVantageBenchlingLabArchivesSciNote'];,
+    technology: ['AI/MLAutomationData ScienceResearch Tools'];,
+    integration: ['Research platformsData sourcesAnalysis tools'],
+    support: ['24/7 research supportResearch expertsImplementation team'],
     compliance: ['Research ethicsData privacyScientific standards'],
     scalability: 'Research-grade, multi-discipline support';
     roi: '400% within 15 months',
@@ -1318,57 +1310,45 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     maintenance: 'Continuous updates, research optimization';
     training: 'Research training, certification program';
     documentation: 'Research guides, best practices';
-    api: 'Research integration APIs'
+    api: 'Research integration APIs',
     mobile: 'Mobile research apps',
     security: 'Research data security, access controls';
     backup: 'Research data backup, redundancy';
     monitoring: 'Research progress monitoring',
     analytics: 'Research insights, performance metrics';
     customization: 'Custom research workflows, integration';
-    whiteLabel: 'Available for research institutions'
+    whiteLabel: 'Available for research institutions',
     affiliate: '25% commission for referrals',
     referral: '$15,000 bonus for partnerships';
     partnership: 'Research institution partnerships',
     funding: 'Series A funding, $60 M valuation';
-<<<<<<< HEAD
     exit: 'Acquisition by major research platform'}
     contact: {}
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
   {
     id: 'quantum-research-platform',
-=======
-    exit: 'Acquisition by major research platform'};
-    contact: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
-  };
-  {;
-    id: 'quantum-research-platform';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     name: 'Quantum Research Platform',,
   description: 'Advanced quantum research platform that provides quantum computing resources, quantum algorithms, and research tools for quantum science and technology development.';
     category: ['Quantum ComputingResearchScientific ComputingTechnology Development'],
     price: '$8,999/month';
-    features: [
+    features: [,
       'Quantum computing accessQuantum algorithm libraryQuantum simulation toolsResearch collaboration spaceQuantum education resourcesPerformance analyticsResearch project managementPublication tools'
     ];
-    benefits: [
+    benefits: [,
       'Access to quantum computingAccelerate quantum researchCollaborate with quantum expertsLearn quantum technologiesPublish quantum researchAdvance quantum science'
     ];
-    useCases: [
+    useCases: [,
       'Quantum physics researchQuantum algorithm developmentQuantum cryptography researchQuantum materials scienceQuantum chemistryQuantum machine learning'
     ];
-    marketSize: '$18.5 B by 2029';
-    competitors: ['IBM QuantumGoogle QuantumMicrosoft QuantumD-Wave'];
-    technology: ['Quantum ComputingQuantum AlgorithmsResearch ToolsCollaboration'];
-    integration: ['Quantum hardwareResearch platformsPublication systems']
-    support: ['24/7 quantum supportQuantum expertsResearch team']
+    marketSize: '$18.5 B by 2029';,
+    competitors: ['IBM QuantumGoogle QuantumMicrosoft QuantumD-Wave'];,
+    technology: ['Quantum ComputingQuantum AlgorithmsResearch ToolsCollaboration'];,
+    integration: ['Quantum hardwareResearch platformsPublication systems'],
+    support: ['24/7 quantum supportQuantum expertsResearch team'],
     compliance: ['Research ethicsQuantum standardsPublication guidelines'],
     scalability: 'Quantum-grade, global research network';
     roi: '600% within 24 months',
@@ -1376,57 +1356,45 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     maintenance: 'Quantum optimization, research updates';
     training: 'Quantum training, research certification';
     documentation: 'Quantum research guides, best practices';
-    api: 'Quantum research APIs'
+    api: 'Quantum research APIs',
     mobile: 'Mobile research apps',
     security: 'Quantum security, research protection';
     backup: 'Research backup, quantum redundancy';
     monitoring: 'Quantum performance monitoring',
     analytics: 'Quantum research analytics, insights';
     customization: 'Custom quantum research, integration';
-    whiteLabel: 'Available for research institutions'
+    whiteLabel: 'Available for research institutions',
     affiliate: '20% commission for referrals',
     referral: '$25,000 bonus for partnerships';
     partnership: 'Quantum research partnerships',
     funding: 'Series B funding, $150 M valuation';
-<<<<<<< HEAD
     exit: 'IPO or quantum acquisition'}
     contact: {}
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
   {
     id: 'ai-research-assistant',
-=======
-    exit: 'IPO or quantum acquisition'};
-    contact: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
-  };
-  {;
-    id: 'ai-research-assistant';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     name: 'AI Research Assistant',,
   description: 'Intelligent AI research assistant that helps researchers with literature review, data analysis, hypothesis generation, and research planning across all scientific domains.';
     category: ['AIResearchData AnalysisScientific ComputingKnowledge Management'],
     price: '$2,999/month';
-    features: [
+    features: [,
       'Intelligent literature reviewData analysis assistanceHypothesis generationResearch planning toolsKnowledge synthesisCitation managementResearch collaborationProgress tracking'
     ];
-    benefits: [
+    benefits: [,
       'Accelerate research by 3xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows'
     ];
-    useCases: [
+    useCases: [,
       'Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews'
     ];
-    marketSize: '$15.2 B by 2029';
-    competitors: ['GrammarlyMendeleyZoteroEndNote'];
-    technology: ['AI/MLNatural Language ProcessingData AnalysisResearch Tools'];
-    integration: ['Research databasesAnalysis toolsPublication platforms']
-    support: ['24/7 AI supportResearch expertsImplementation help']
+    marketSize: '$15.2 B by 2029';,
+    competitors: ['GrammarlyMendeleyZoteroEndNote'];,
+    technology: ['AI/MLNatural Language ProcessingData AnalysisResearch Tools'];,
+    integration: ['Research databasesAnalysis toolsPublication platforms'],
+    support: ['24/7 AI supportResearch expertsImplementation help'],
     compliance: ['Research ethicsData privacyAcademic standards'],
     scalability: 'AI-powered, multi-domain support';
     roi: '350% within 12 months',
@@ -1434,57 +1402,45 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     maintenance: 'Continuous AI learning, research updates';
     training: 'AI research training, certification';
     documentation: 'AI research guides, best practices';
-    api: 'AI research APIs'
+    api: 'AI research APIs',
     mobile: 'Mobile AI research apps',
     security: 'AI security, research protection';
     backup: 'Research backup, AI redundancy';
     monitoring: 'AI performance monitoring',
     analytics: 'AI research analytics, insights';
     customization: 'Custom AI research, integration';
-    whiteLabel: 'Available for research institutions'
+    whiteLabel: 'Available for research institutions',
     affiliate: '30% commission for referrals',
     referral: '$10,000 bonus for partnerships';
     partnership: 'AI research partnerships',
     funding: 'Series A funding, $80 M valuation';
-<<<<<<< HEAD
     exit: 'Acquisition by major research platform'}
     contact: {}
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
   {
     id: 'biotech-research-suite',
-=======
-    exit: 'Acquisition by major research platform'};
-    contact: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
-  };
-  {;
-    id: 'biotech-research-suite';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     name: 'Biotech Research Suite',,
   description: 'Comprehensive biotech research platform that provides tools for genetic research, drug discovery, clinical trials, and biotechnology development with AI-powered insights.';
     category: ['BiotechnologyResearchHealthcareDrug DiscoveryClinical Trials'],
     price: '$6,999/month';
-    features: [
+    features: [,
       'Genetic research toolsDrug discovery platformClinical trial managementBiotech analyticsResearch collaborationData visualizationRegulatory compliancePublication tools'
     ];
-    benefits: [
+    benefits: [,
       'Accelerate biotech researchImprove drug discoveryStreamline clinical trialsEnhance collaborationEnsure complianceReduce research costs'
     ];
-    useCases: [
+    useCases: [,
       'Pharmaceutical researchGenetic researchClinical trialsBiotech developmentMedical researchAgricultural biotech'
     ];
-    marketSize: '$22.8 B by 2029';
-    competitors: ['BenchlingLabVantageSciNoteLabArchives'];
-    technology: ['AI/MLBiotechnologyData ScienceResearch Tools'];
-    integration: ['Lab equipmentResearch databasesClinical systems']
-    support: ['24/7 biotech supportBiotech expertsResearch team']
+    marketSize: '$22.8 B by 2029';,
+    competitors: ['BenchlingLabVantageSciNoteLabArchives'];,
+    technology: ['AI/MLBiotechnologyData ScienceResearch Tools'];,
+    integration: ['Lab equipmentResearch databasesClinical systems'],
+    support: ['24/7 biotech supportBiotech expertsResearch team'],
     compliance: ['FDAHIPAAGCPResearch ethics'],
     scalability: 'Biotech-grade, multi-institution support';
     roi: '500% within 20 months',
@@ -1492,48 +1448,32 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     maintenance: 'Continuous updates, biotech optimization';
     training: 'Biotech training, research certification';
     documentation: 'Biotech research guides, best practices';
-    api: 'Biotech research APIs'
+    api: 'Biotech research APIs',
     mobile: 'Mobile biotech apps',
     security: 'Biotech security, data protection';
     backup: 'Research backup, biotech redundancy';
     monitoring: 'Biotech research monitoring',
     analytics: 'Biotech analytics, research insights';
     customization: 'Custom biotech research, integration';
-    whiteLabel: 'Available for biotech institutions'
+    whiteLabel: 'Available for biotech institutions',
     affiliate: '25% commission for referrals',
     referral: '$20,000 bonus for partnerships';
     partnership: 'Biotech research partnerships',
     funding: 'Series B funding, $120 M valuation';
-<<<<<<< HEAD
     exit: 'IPO or biotech acquisition'}
     contact: {}
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
-=======
-    exit: 'IPO or biotech acquisition'};
-    contact: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709',
 export const,
-<<<<<<< HEAD
   researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [,
   {/* TODO: Fix JSX expression */}
   t: 'Acquisition by major research platform'}
-=======
-  researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [;
-  {/* TODO: Fix JSX expression */};
-  t: 'Acquisition by major research platform'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     contac,
   t: {};
       mobil,
@@ -1545,17 +1485,10 @@ export const,
   s: //ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
     }
   }
   {/* TODO: Fix JSX expression */}
   t: 'IPO or quantum acquisition'}
-=======
-    };
-  };
-  {/* TODO: Fix JSX expression */};
-  t: 'IPO or quantum acquisition'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     contac,
   t: {};
       mobil,
@@ -1567,17 +1500,10 @@ export const,
   s: //ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
     }
   }
   {/* TODO: Fix JSX expression */}
   t: 'Acquisition by major research platform'}
-=======
-    };
-  };
-  {/* TODO: Fix JSX expression */};
-  t: 'Acquisition by major research platform'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     contac,
   t: {};
       mobil,
@@ -1589,17 +1515,10 @@ export const,
   s: //ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
     }
   }
   {/* TODO: Fix JSX expression */}
   t: 'IPO or biotech acquisition'}
-=======
-    };
-  };
-  {/* TODO: Fix JSX expression */};
-  t: 'IPO or biotech acquisition'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     contac,
   t: {};
       mobil,
@@ -1621,14 +1540,8 @@ export const,
   e: 'http,
   s://ziontechgroup.com',      addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
     }
   }
-=======
-    };
-  };
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 i,
   d: string, nam,
   e: string, descriptio,
@@ -2070,7 +1983,6 @@ i,
   s://ziontechgroup.com', addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; export interface ResearchDevelopmentService2029 {/* TODO: Fix JSX expression */};
   e: string} addres,
-<<<<<<< HEAD
   s: string} } } export const,
   researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [, {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' websit,
@@ -2085,22 +1997,6 @@ i,
   e: 'http,
   s://ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' } } {/* TODO: Fix JSX expression */}
-=======
-  s: string} } } ; export const,
-  researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [; {/* TODO: Fix JSX expression */};
-  l: 'kleber@ziontechgroup.com'}' websit,
-  e: 'http,
-  s://ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }; {/* TODO: Fix JSX expression */};
-  l: 'kleber@ziontechgroup.com'}' websit,
-  e: 'http,
-  s://ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }; {/* TODO: Fix JSX expression */};
-  l: 'kleber@ziontechgroup.com'}' websit,
-  e: 'http,
-  s://ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' websit,
   e: 'http,
   s://ziontechgroup.com'}' addres,

@@ -1,68 +1,41 @@
 export interface VerifiedRealService2025Batch2 {
 id: string;
 }
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-<<<<<<< HEAD
-  real_implementation: boolean
-  contact_info: unknown
+  name: string;,
+  tagline: string;,
+  price: string;,
+  description: string;,
+  features: string[];,
+  link: string;,
+  category: string;,
+  real_implementation: boolean,
+  contact_info: unknown,
     mobile: string,
     email: string}
     address: string}
   }
     address: string,
   }
-export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
+export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [,
     address: string,
   }
-=======
-  real_implementation: boolean;
-  contact_info: unknown;
-    mobile: string;
-    email: string};
-    address: string};
-  };
-    address: string};
-export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [;
-    address: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
+export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [,
     id: 'ai - quality - assurance',
     name: 'AI Quality Assurance Platform',
     tagline: 'Automated testing and quality control',
     price: '$79 / month',
-<<<<<<< HEAD
     description: unknown,
 export interface VerifiedRealService2025Batch2 {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
   }
-=======
-    description: unknown;
-export interface VerifiedRealService2025Batch2 {/* TODO: Fix JSX expression */};
-  l: string};
-    addres,
-  s: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     addres,
   s: string};
 export const,
   verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [,
     addres,
-<<<<<<< HEAD
   s: string}
-=======
-  s: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [,
     i,
@@ -83,14 +56,14 @@ export const,
       'Performance monitoring',
       'Quality metrics',
       'Continuous integration'],
-    link: '/services / ai - quality - assurance'
-    category: 'Verified Services 2025'
-    real_implementation: true
+    link: '/services / ai - quality - assurance',
+    category: 'Verified Services 2025',
+    real_implementation: true,
     contact_info: unknown,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950"
-    id: "ai-quality-assurance"
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950",
+    id: "ai-quality-assurance",
     name: "AI Quality Assurance Platform",
     tagline: "Automated testing and quality control",
     price: "$79/month",
@@ -102,9 +75,9 @@ export const,
       "Quality metrics",
       "Continuous integration"
     ],
-    link: "/services/ai-quality-assurance"
-    category: "Verified Services 2025"
-    realImplementation: true
+    link: "/services/ai-quality-assurance",
+    category: "Verified Services 2025",
+    realImplementation: true,
     contactInfo: unknown,
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"};
@@ -116,26 +89,17 @@ export const,
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
-<<<<<<< HEAD
-  link: string, category: string
-  realImplementation: boolean
+  link: string, category: string,
+  realImplementation: boolean,
   contactInfo: unknown,
-    mobile: string, email: string
+    mobile: string, email: string,
     address: string,
   }
 }
-=======
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] = [,
     id: "ai-quality-assurance", name: "AI Quality Assurance Platform",
-    tagline: "Automated testing and quality control", price: "$79/month"
-    description: "AI-powered quality assurance platform that automates testing and ensures software quality."
+    tagline: "Automated testing and quality control", price: "$79/month",
+    description: "AI-powered quality assurance platform that automates testing and ensures software quality.",
     features: [,
       "Automated testing"
       "AI defect detection"
@@ -143,7 +107,7 @@ export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] =
       "Quality metrics",
       "Continuous integration"],
     link: "/services/ai-quality-assurance", category: "Verified Services 2025",
-    realImplementation: true
+    realImplementation: true,
     contactInfo: unknown,
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"};
@@ -241,7 +205,7 @@ export const,
       "Automated testing""
       "AI defect detection""
       "Performance monitoring""
-      "Quality metrics""
+      "Quality metrics"",
       "Continuous integration"
     ],
     lin,"
@@ -266,7 +230,7 @@ export const,
     };
   };
 ];
-id: "ai-quality-assurance"
+id: "ai-quality-assurance",
     name: "AI Quality Assurance Platform",
     tagline: "Automated testing and quality control",
     price: "$79/month",
@@ -278,12 +242,12 @@ id: "ai-quality-assurance"
       "Quality metrics",
       "Continuous integration"
     ],
-    link: "/services/ai-quality-assurance"
-    category: "Verified Services 2025"
-    realImplementation: true
+    link: "/services/ai-quality-assurance",
+    category: "Verified Services 2025",
+    realImplementation: true,
     contactInfo: unknown,
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}}

@@ -1,59 +1,44 @@
-<<<<<<< HEAD
 
 export interface EnterpriseITService2029V2 {
-=======
-export interface EnterpriseITService2029V2 {
-;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  id: string;
-  name: string;
-  description: string;
-  category: string[];
-  price: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  marketSize: string;
-  competitors: string[];
-  technology: string[];
-  integration: string[];
-  support: string[];
-  compliance: string[];
-  scalability: string;
-  roi: string;
-  deployment: string;
-  maintenance: string;
-  training: string;
-  documentation: string;
-  api: string;
-  mobile: string;
-  security: string;
-  backup: string;
-  monitoring: string;
-  analytics: string;
-  customization: string;
-  whiteLabel: string;
-  affiliate: string;
-  referral: string;
-  partnership: string;
-  funding: string;
-  exit: string;
-<<<<<<< HEAD
-  contact: unknown
-    mobile: string
+  id: string;,
+  name: string;,
+  description: string;,
+  category: string[];,
+  price: string;,
+  features: string[];,
+  benefits: string[];,
+  useCases: string[];,
+  marketSize: string;,
+  competitors: string[];,
+  technology: string[];,
+  integration: string[];,
+  support: string[];,
+  compliance: string[];,
+  scalability: string;,
+  roi: string;,
+  deployment: string;,
+  maintenance: string;,
+  training: string;,
+  documentation: string;,
+  api: string;,
+  mobile: string;,
+  security: string;,
+  backup: string;,
+  monitoring: string;,
+  analytics: string;,
+  customization: string;,
+  whiteLabel: string;,
+  affiliate: string;,
+  referral: string;,
+  partnership: string;,
+  funding: string;,
+  exit: string;,
+  contact: unknown,
+    mobile: string,
     email: string,
     website: string}
     address: string}
   }
-=======
-  contact: unknown;
-    mobile: string;
-    email: string;
-    website: string};
-    address: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [,
     id: 'autonomous-devops-platform',
     name: 'Autonomous DevOps Platform',
@@ -84,7 +69,7 @@ export const,
       'Intelligent monitoring and alerting'
       'Performance optimization'
       'Security automation'
-      'Cost optimization'
+      'Cost optimization',
       'Predictive maintenance'
     ]
     benefit,
@@ -93,7 +78,7 @@ export const,
       'Improve system reliability by 99.9%'
       'Accelerate deployment cycles by 10 x'
       'Eliminate manual interventions'
-      'Enhance security posture'
+      'Enhance security posture',
       'Optimize resource utilization'
     ]
     useCases: [
@@ -159,7 +144,7 @@ export const,
     suppor,
   t: [,
       '24/7 enterprise support'
-      'DevOps experts'
+      'DevOps experts',
       'Implementation team'
     ]
     complianc,
@@ -222,7 +207,7 @@ export const,
       'Cloud Computing'
       'Quantum Computing'
       'Infrastructure'
-      'Security'
+      'Security',
       'Performance'
     ]
     pric,
@@ -235,7 +220,7 @@ export const,
       'Quantum networking capabilities'
       'Quantum storage solutions'
       'Quantum security protocols'
-      'Performance optimization'
+      'Performance optimization',
       'Scalable quantum resources'
     ]
     benefit,
@@ -244,7 +229,7 @@ export const,
       'Unbreakable security'
       'Exponential performance gains'
       'Future-proof infrastructure'
-      'Competitive advantage'
+      'Competitive advantage',
       'Long-term investment value'
     ]
     useCases: [
@@ -269,7 +254,7 @@ export const,
   y: [,
       'Quantum Computing'
       'Cloud Infrastructure'
-      'Quantum Security'
+      'Quantum Security',
       'Hybrid Computing'
     ]
     integration: [
@@ -311,7 +296,7 @@ export const,
     integratio,
   n: [,
       'Existing cloud platforms'
-      'Quantum applications'
+      'Quantum applications',
       'Enterprise systems'
     ]
     suppor,
@@ -374,7 +359,7 @@ export const,
       'Cybersecurity'
       'AI'
       'Enterprise Security'
-      'Threat Detection'
+      'Threat Detection',
       'Automation'
     ]
     pric,
@@ -387,7 +372,7 @@ export const,
       'Predictive threat analytics'
       'Behavioral analysis'
       'Zero-day threat protection'
-      'Security automation'
+      'Security automation',
       'Compliance management'
     ]
     benefit,
@@ -396,7 +381,7 @@ export const,
       'Reduce false positives by 80%'
       'Automate security responses'
       'Improve threat prevention'
-      'Enhance compliance posture'
+      'Enhance compliance posture',
       'Reduce security team workload'
     ]
     useCases: [
@@ -461,7 +446,7 @@ export const,
   y: [,
       'AI/ML'
       'Machine Learning'
-      'Behavioral Analysis'
+      'Behavioral Analysis',
       'Security'
     ]
     integratio,
@@ -469,7 +454,7 @@ export const,
     suppor,
   t: [,
       '24/7 security support'
-      'Security experts'
+      'Security experts',
       'Implementation team'
     ]
     complianc,
@@ -530,7 +515,7 @@ export const,
       'IT Operations'
       'Automation'
       'Infrastructure'
-      'Monitoring'
+      'Monitoring',
       'Management'
     ]
     pric,
@@ -543,7 +528,7 @@ export const,
       'Performance optimization'
       'Capacity planning'
       'Automated troubleshooting'
-      'Intelligent resource allocation'
+      'Intelligent resource allocation',
       'Continuous optimization'
     ]
     benefit,
@@ -552,7 +537,7 @@ export const,
       'Reduce operational costs by 85%'
       'Eliminate manual interventions'
       'Improve system performance'
-      'Enhance user experience'
+      'Enhance user experience',
       'Optimize resource utilization'
     ]
     useCases: [
@@ -657,7 +642,7 @@ export const,
 ];      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
     ];
     benefit,
-  s: [
+  s: [,
       'Quantum computing capabilitiesUnbreakable securityExponential performance gainsFuture-proof infrastructureCompetitive advantageLong-term investment value'
     ]
     useCases: [,
@@ -745,13 +730,8 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
     }
   }
-=======
-    };
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'ai-powered-enterprise-security', nam,
   e: 'AI-Powered Enterprise Security',
@@ -762,11 +742,11 @@ export const,
     pric,
   e: '$9,999/month',
     feature,
-  s: [
+  s: [,
       'AI-powered threat detectionReal-time security monitoringAutomated incident responsePredictive threat analyticsBehavioral analysisZero-day threat protectionSecurity automationCompliance management'
     ],
     benefit,
-  s: [
+  s: [,
       'Detect threats 10x fasterReduce false positives by 80%Automate security responsesImprove threat preventionEnhance compliance postureReduce security team workload'
     ]
     useCases: [,
@@ -854,13 +834,8 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
     }
   }
-=======
-    };
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     i,
   d: 'autonomous-it-operations-center', nam,
   e: 'Autonomous IT Operations Center',
@@ -871,11 +846,11 @@ export const,
     pric,
   e: '$14,999/month',
     feature,
-  s: [
+  s: [,
       'Autonomous infrastructure managementSelf-healing systemsPredictive maintenancePerformance optimizationCapacity planningAutomated troubleshootingIntelligent resource allocationContinuous optimization'
     ],
     benefit,
-  s: [
+  s: [,
       'Achieve 99.99% uptimeReduce operational costs by 85%Eliminate manual interventionsImprove system performanceEnhance user experienceOptimize resource utilization'
     ]
     useCases: [,
@@ -942,9 +917,9 @@ export const,
 ];
 ];      'Enterprise IT operations_data center management_application performance management_infrastructure automation_service desk automationIT service management'
     ];
-    market_size: '$28.9B by 2029'
-    competitors: ['ServiceNowBMCMicro FocusIvanti']
-    technology: ['AI / MLAutomationMonitoringITSM']
+    market_size: '$28.9B by 2029',
+    competitors: ['ServiceNowBMCMicro FocusIvanti'],
+    technology: ['AI / MLAutomationMonitoringITSM'],
     integration: ['ITSM platforms_monitoring tools_enterprise systems'],
     support: ['24 / 7 operations supportIT experts_implementation team'],
     compliance: ['SOC 2 ISO 27001 ITILCOBIT'],
@@ -962,7 +937,7 @@ export const,
     analytics: 'Operations insights, performance metrics'
     customization: 'Custom workflows, integration templates'
     funding: 'Series B funding, $180 M valuation'
-    exit: 'IPO or enterprise acquisition'
+    exit: 'IPO or enterprise acquisition',
     contact: unknown,
       mobile: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'};
@@ -1071,12 +1046,7 @@ export const,
     };
   };
 ];
-<<<<<<< HEAD
 export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
-=======
-;
-export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: string} addres,
   s: string} } export const,
   enterpriseITServices2029V2: EnterpriseITService2029V2[] = [ i,
