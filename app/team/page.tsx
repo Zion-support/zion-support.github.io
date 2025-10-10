@@ -18,7 +18,10 @@ const TeamPage: React.FC = () => {
   ];
 
   const stats = [
-  );
+    { label: 'Years Experience', value: '10+' },
+    { label: 'Projects Completed', value: '500+' },
+    { label: 'Happy Clients', value: '200+' }
+  ];
 };
 
 export default TeamPage;
