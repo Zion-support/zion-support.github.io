@@ -77,7 +77,9 @@ import {
   ChefHat,
   Rocket,
   Sprout,
-  Scale
+  Scale,
+  DollarSign,
+  Award
 } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -120,138 +122,70 @@ const Navigation: React.FC = () => {
     {
       title: 'AI Services',
       icon: Brain,
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50',
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
       services: [
-        { name: 'AI Services', path: '/ai-services' },
-        { name: 'AI Marketing', path: '/ai-marketing' },
-        { name: 'AI Automation', path: '/ai-automation' },
-        { name: 'AI Healthcare', path: '/ai-healthcare' },
-        { name: 'AI Fintech', path: '/ai-fintech' },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
-        { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure' },
-        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development' },
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence' },
         { name: 'AI Content Generation', path: '/ai-content-generation' },
         { name: 'AI Customer Support', path: '/ai-customer-support' },
         { name: 'AI Sales Automation', path: '/ai-sales-automation' },
-        { name: 'AI Data Visualization', path: '/ai-data-visualization' },
-        { name: 'AI Sentiment Analyzer', path: '/ai-sentiment-analyzer' },
-        { name: 'AI Video Generator', path: '/ai-video-generator' },
-        { name: 'AI Code Assistant', path: '/ai-code-assistant' },
-        { name: 'AI Social Media Scheduler', path: '/ai-social-media-scheduler' },
-        { name: 'AI Cybersecurity Monitor', path: '/ai-cybersecurity-monitor' },
-        { name: 'AI Expense Tracker', path: '/ai-expense-tracker' }
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
+        { name: 'AI Healthcare', path: '/ai-healthcare' },
+        { name: 'AI Fintech', path: '/ai-fintech' },
+        { name: 'AI Manufacturing', path: '/ai-manufacturing' }
       ]
     },
     {
       title: 'IT Services',
       icon: Cloud,
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50',
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
       services: [
-        { name: 'IT Infrastructure', path: '/it-infrastructure' },
-        { name: 'IT Services', path: '/it-services' },
+        { name: 'Cloud Infrastructure', path: '/cloud-infrastructure' },
         { name: 'Cybersecurity', path: '/cybersecurity' },
-        { name: 'Cloud Services', path: '/ai-cloud-infrastructure' },
-        { name: 'DevOps', path: '/ai-workflow-automation' },
-        { name: 'Database Services', path: '/ai-data-analytics' },
-        { name: 'Network Services', path: '/networking' }
+        { name: 'Network Management', path: '/network-management' },
+        { name: 'Database Management', path: '/database-management' },
+        { name: 'DevOps', path: '/devops' },
+        { name: 'Hardware Support', path: '/hardware-support' },
+        { name: 'IT Consulting', path: '/it-consulting' },
+        { name: 'IT Training', path: '/it-training' }
       ]
     },
     {
       title: 'Micro SAAS',
       icon: Code,
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
       services: [
-        { name: 'Micro SAAS', path: '/micro-saas' },
-        { name: 'Developer Tools', path: '/micro-saas' },
-        { name: 'Business Apps', path: '/micro-saas' },
-        { name: 'Productivity Tools', path: '/micro-saas' },
-        { name: 'Marketing Tools', path: '/micro-saas' }
+        { name: 'AI Project Manager Pro', path: '/ai-project-manager-pro' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
+        { name: 'AI Email Marketing Suite', path: '/ai-email-marketing-suite' },
+        { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot' },
+        { name: 'AI Lead Generation Engine', path: '/ai-lead-generation-engine' },
+        { name: 'AI Content Studio', path: '/ai-content-studio' },
+        { name: 'AI Video Generator', path: '/ai-video-generator' }
       ]
     },
     {
       title: 'Specialized',
       icon: Zap,
-      color: 'text-orange-600',
-      bgColor: 'bg-orange-50',
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-500/10',
       services: [
         { name: 'Quantum Computing', path: '/quantum-computing' },
         { name: 'Autonomous Systems', path: '/autonomous-systems' },
         { name: 'Blockchain & Web3', path: '/blockchain-web3' },
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing' },
-        { name: 'Business Intelligence', path: '/business-intelligence' }
+        { name: 'Business Intelligence', path: '/business-intelligence' },
+        { name: 'Robotics Solutions', path: '/robotics' }
       ]
     }
-<<<<<<< HEAD
   ];
 
-=======
-  };
-
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
-  };
-<<<<<<< HEAD
-
-  const microSAASServices = [
-    { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity', price: '$199/mo' },
-    { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar', icon: Calendar, category: 'Productivity', price: '$89/mo' },
-    { name: 'AI Content Writer Pro', href: '/ai-content-writer', icon: FileText, category: 'Content', price: '$129/mo' },
-    { name: 'AI Video Generator Pro', href: '/ai-video-generator', icon: Video, category: 'Content', price: '$199/mo' },
-    { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager', icon: Smartphone, category: 'Marketing', price: '$99/mo' },
-    { name: 'AI Email Marketing Suite', href: '/ai-email-marketing', icon: Mail, category: 'Marketing', price: '$79/mo' },
-    { name: 'AI CRM Assistant Pro', href: '/ai-crm-assistant', icon: Users, category: 'Business', price: '$149/mo' },
-    { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer', icon: DollarSign, category: 'Finance', price: '$299/mo' },
-    { name: 'AI Code Assistant Pro', href: '/ai-code-assistant', icon: Code, category: 'Development', price: '$99/mo' },
-    { name: 'AI API Manager Pro', href: '/ai-api-manager', icon: Settings, category: 'Development', price: '$179/mo' },
-    { name: 'AI Cybersecurity Monitor Pro', href: '/ai-cybersecurity-monitor', icon: Shield, category: 'Security', price: '$249/mo' },
-    { name: 'AI Password Manager Pro', href: '/ai-password-manager', icon: Lock, category: 'Security', price: '$49/mo' }
-  ];
-
-  const aiServices = [
-    { name: 'AI-Powered Drug Discovery Pro', href: '/ai-drug-discovery-pro', icon: Stethoscope, price: '$4,500/mo' },
-    { name: 'AI Climate Change Solutions Pro', href: '/ai-climate-solutions-pro', icon: Globe, price: '$3,200/mo' },
-    { name: 'AI-Powered Space Technology Pro', href: '/ai-space-technology-pro', icon: Rocket, price: '$5,500/mo' },
-    { name: 'AI-Powered Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro', icon: Shield, price: '$2,800/mo' },
-    { name: 'AI-Powered Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro', icon: Truck, price: '$2,200/mo' },
-    { name: 'AI-Powered Energy Grid Management Pro', href: '/ai-energy-grid-management-pro', icon: Zap, price: '$3,500/mo' },
-    { name: 'AI-Powered Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro', icon: Sprout, price: '$1,800/mo' },
-    { name: 'AI-Powered Legal Research Pro', href: '/ai-legal-research-pro', icon: Scale, price: '$2,500/mo' }
-  ];
-
-  const itServices = [
-    { name: 'AI-Powered Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring', icon: Activity, price: '$1,800/mo' },
-    { name: 'Blockchain Integration Services Pro', href: '/blockchain-integration-services', icon: Shield, price: '$2,500/mo' },
-    { name: 'AI-Powered API Management Pro', href: '/ai-api-management', icon: Settings, price: '$1,400/mo' },
-    { name: 'Intelligent Database Migration Pro', href: '/intelligent-database-migration', icon: Database, price: '$2,200/mo' },
-    { name: 'AI-Powered Load Testing Pro', href: '/ai-load-testing', icon: BarChart, price: '$1,200/mo' },
-    { name: 'Smart Contract Security Audit Pro', href: '/smart-contract-security-audit', icon: Shield, price: '$3,000/mo' },
-    { name: 'AI-Powered Content Delivery Network Pro', href: '/ai-content-delivery-network', icon: Globe, price: '$1,600/mo' },
-    { name: 'Intelligent Email Infrastructure Pro', href: '/intelligent-email-infrastructure', icon: Mail, price: '$1,000/mo' }
-  ];
-
-  const specializedServices = [
-    { name: 'Quantum Computing Solutions', href: '/quantum-computing', icon: Cpu, price: '$5,000/mo' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings, price: '$4,000/mo' },
-    { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock, price: '$2,500/mo' },
-    { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe, price: '$1,800/mo' },
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, price: '$1,500/mo' },
-    { name: 'Robotics Solutions', href: '/robotics', icon: Settings, price: '$3,500/mo' }
-  ];
-
->>>>>>> cursor/fix-errors-and-merge-to-main-a74d
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-<<<<<<< HEAD
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg cyber-border-glow' : 'bg-transparent'
-=======
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5b7f
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -264,11 +198,7 @@ const Navigation: React.FC = () => {
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
               <Zap className="w-5 h-5 text-white" />
             </div>
-<<<<<<< HEAD
             <span className="text-white neon-text-advanced cyber-text">
-=======
-            <span className="text-white bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5b7f
               Zion Tech Group
             </span>
           </Link>
@@ -290,13 +220,6 @@ const Navigation: React.FC = () => {
             >
               About
             </Link>
-            <Link 
-              to="/services" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Services
-            </Link>
 
             {/* Services Dropdown */}
             <div className="relative">
@@ -311,7 +234,7 @@ const Navigation: React.FC = () => {
               </button>
               
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/30 py-6 z-50">
                   <div className="grid grid-cols-2 gap-6 px-6">
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-3">
@@ -336,7 +259,7 @@ const Navigation: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="border-t border-gray-200 mt-6 pt-4 px-6">
+                  <div className="border-t border-gray-700 mt-6 pt-4 px-6">
                     <Link
                       to="/services"
                       className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
@@ -374,7 +297,7 @@ const Navigation: React.FC = () => {
             {/* CTA Button */}
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center"
+              className="cyber-button inline-flex items-center px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
               onClick={closeAllMenus}
             >
               Get Started
@@ -411,6 +334,7 @@ const Navigation: React.FC = () => {
               >
                 About
               </Link>
+              
               <Link 
                 to="/services" 
                 className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
@@ -427,7 +351,7 @@ const Navigation: React.FC = () => {
                 >
                   <div className="flex items-center space-x-2">
                     <Code className="w-4 h-4" />
-                    <span>Services</span>
+                    <span>All Services</span>
                   </div>
                   <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
                 </button>
@@ -435,7 +359,7 @@ const Navigation: React.FC = () => {
                   <div className="ml-4 space-y-2 mt-2">
                     {serviceCategories.map((category, categoryIndex) => (
                       <div key={categoryIndex}>
-                        <div className="text-gray-300 font-semibold text-sm mb-2">{category.title}</div>
+                        <div className="text-cyan-400 font-semibold text-sm mb-2">{category.title}</div>
                         <div className="ml-4 space-y-1">
                           {category.services.slice(0, 4).map((service, serviceIndex) => (
                             <Link
@@ -479,7 +403,7 @@ const Navigation: React.FC = () => {
               {/* Mobile CTA */}
               <Link
                 to="/contact"
-                className="block bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center mt-4"
+                className="block cyber-button text-center mt-4"
                 onClick={closeAllMenus}
               >
                 Get Started
@@ -493,5 +417,3 @@ const Navigation: React.FC = () => {
 };
 
 export default Navigation;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e12a

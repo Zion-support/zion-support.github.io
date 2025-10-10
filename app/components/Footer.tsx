@@ -10,46 +10,42 @@ const Footer: React.FC = memo(() => {
       title: 'AI Services',
       icon: Brain,
       services: [
-        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
-        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
-        { name: 'AI Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro' },
-        { name: 'AI Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro' },
-        { name: 'AI Energy Grid Management Pro', href: '/ai-energy-grid-management-pro' },
-        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
-        { name: 'AI Legal Research Pro', href: '/ai-legal-research-pro' }
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence' },
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support' },
+        { name: 'AI Sales Automation Pro', href: '/ai-sales-automation' },
+        { name: 'AI Cybersecurity Pro', href: '/ai-cybersecurity' },
+        { name: 'AI Healthcare Pro', href: '/ai-healthcare' },
+        { name: 'AI Fintech Pro', href: '/ai-fintech' },
+        { name: 'AI Manufacturing Pro', href: '/ai-manufacturing' }
       ]
     },
     {
       title: 'IT Services',
       icon: Cloud,
       services: [
-        { name: 'AI Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring' },
-        { name: 'Blockchain Integration Services Pro', href: '/blockchain-integration-services' },
-        { name: 'AI API Management Pro', href: '/ai-api-management' },
-        { name: 'Intelligent Database Migration Pro', href: '/intelligent-database-migration' },
-        { name: 'AI Load Testing Pro', href: '/ai-load-testing' },
-        { name: 'Smart Contract Security Audit Pro', href: '/smart-contract-security-audit' },
-        { name: 'AI Content Delivery Network Pro', href: '/ai-content-delivery-network' },
-        { name: 'Intelligent Email Infrastructure Pro', href: '/intelligent-email-infrastructure' }
+        { name: 'Cloud Infrastructure Pro', href: '/cloud-infrastructure' },
+        { name: 'Cybersecurity Pro', href: '/cybersecurity' },
+        { name: 'Network Management Pro', href: '/network-management' },
+        { name: 'Database Management Pro', href: '/database-management' },
+        { name: 'DevOps Pro', href: '/devops' },
+        { name: 'Hardware Support Pro', href: '/hardware-support' },
+        { name: 'IT Consulting Pro', href: '/it-consulting' },
+        { name: 'IT Training Pro', href: '/it-training' }
       ]
     },
     {
       title: 'Micro SAAS',
       icon: Code,
       services: [
-        { name: 'AI Project Manager Pro', href: '/ai-project-manager' },
-        { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar' },
-        { name: 'AI Content Writer Pro', href: '/ai-content-writer' },
-        { name: 'AI Video Generator Pro', href: '/ai-video-generator' },
+        { name: 'AI Project Manager Pro', href: '/ai-project-manager-pro' },
         { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager' },
-        { name: 'AI Email Marketing Suite', href: '/ai-email-marketing' },
-        { name: 'AI CRM Assistant Pro', href: '/ai-crm-assistant' },
-        { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer' },
-        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant' },
-        { name: 'AI API Manager Pro', href: '/ai-api-manager' },
-        { name: 'AI Cybersecurity Monitor Pro', href: '/ai-cybersecurity-monitor' },
-        { name: 'AI Password Manager Pro', href: '/ai-password-manager' }
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard' },
+        { name: 'AI Email Marketing Suite Pro', href: '/ai-email-marketing-suite' },
+        { name: 'AI Customer Support Bot Pro', href: '/ai-customer-support-bot' },
+        { name: 'AI Lead Generation Engine Pro', href: '/ai-lead-generation-engine' },
+        { name: 'AI Content Studio Pro', href: '/ai-content-studio' },
+        { name: 'AI Video Generator Pro', href: '/ai-video-generator' }
       ]
     },
     {
@@ -94,18 +90,14 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-<<<<<<< HEAD
-    <footer className="bg-slate-900/95 backdrop-blur-sm border-t border-cyan-400/30 cyber-scan-effect">
-=======
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-sm border-t border-cyan-400/30 relative overflow-hidden">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.05)_0%,transparent_50%)] animate-pulse" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.02)_1px,transparent_1px)] bg-[length:50px_50px]" />
       
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5b7f
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
@@ -113,11 +105,7 @@ const Footer: React.FC = memo(() => {
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
                 <Zap className="w-5 h-5 text-white" />
               </div>
-<<<<<<< HEAD
               <span className="text-white font-bold text-xl neon-text-advanced cyber-text">Zion Tech Group</span>
-=======
-              <span className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Zion Tech Group</span>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5b7f
             </div>
             
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -265,7 +253,7 @@ const Footer: React.FC = memo(() => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center">
+              <button className="cyber-button inline-flex items-center px-6 py-3 rounded-lg font-medium transition-all duration-300">
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>
