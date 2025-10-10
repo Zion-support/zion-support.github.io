@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useCallback, lazy } from 'react'
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const Navigation = lazy(() => import('../components/Navigation'))
@@ -11,17 +11,17 @@ const ContactPage: React.FC = React.memo((props) => {
     company: '',
     phone: '',
     service: '',
-    message: ''}
+    message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const handleInputChange = useCallback((...args) => {}
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
-      [name]: value}
+      [name]: value
     }))
-  }
+  }, [])
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -36,12 +36,12 @@ const ContactPage: React.FC = React.memo((props) => {
         company: '',
         phone: '',
         service: '',
-        message: ''}
+        message: ''
       })
     } catch (error) {
-      setSubmitStatus('error');}
+      setSubmitStatus('error')
     } finally {
-      setIsSubmitting(false);}
+      setIsSubmitting(false)
     }
   }
   const services = [
@@ -179,14 +179,14 @@ const ContactPage: React.FC = React.memo((props) => {
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-900/50 border border-green-400 rounded-lg flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                <span className="text-green-400"><span className="sr-only">Screen reader: </span>Thank you as any Your message has been sent successfully.</span>
-              </div>}
+                <span className="text-green-400"><span className="sr-only">Screen reader: </span>Thank you! Your message has been sent successfully.</span>
+              </div>
             )}
             {submitStatus === 'error' && (
               <div className="mb-6 p-4 bg-red-900/50 border border-red-400 rounded-lg flex items-center">
                 <AlertCircle className="w-5 h-5 text-red-400 mr-3" />
                 <span className="text-red-400"><span className="sr-only">Screen reader: </span>Sorry, there was an error sending your message. Please try again.</span>
-              </div>}
+              </div>
             )}
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -194,32 +194,32 @@ const ContactPage: React.FC = React.memo((props) => {
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                     Full Name *
                   </label>
-                  <label htmlFor="name" className="sr-only">name</label><input
+                  <input
                     type="text"
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none transition-all duration-300"
                     placeholder="Your full name"
-                  / id="name">
+                  />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                     Email Address *
                   </label>
-                  <label htmlFor="email" className="sr-only">email</label><input
+                  <input
                     type="email"
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none transition-all duration-300"
                     placeholder="your@email.com"
-                  / id="email">
+                  />
                 </div>
               </div>
 
@@ -228,30 +228,30 @@ const ContactPage: React.FC = React.memo((props) => {
                   <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                     Company
                   </label>
-                  <label htmlFor="company" className="sr-only">company</label><input
+                  <input
                     type="text"
                     id="company"
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none transition-all duration-300"
                     placeholder="Your company name"
-                  / id="company">
+                  />
                 </div>
 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                     Phone Number
                   </label>
-                  <label htmlFor="phone" className="sr-only">phone</label><input
+                  <input
                     type="tel"
                     id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none transition-all duration-300"
                     placeholder="+1 (555) 123-4567"
-                  / id="phone">
+                  />
                 </div>
               </div>
 
@@ -293,7 +293,7 @@ const ContactPage: React.FC = React.memo((props) => {
                 type="submit"
                 disabled={isSubmitting}
                 className="w-full cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-               tabIndex="0">
+                tabIndex={0}>
                 {isSubmitting ? (
                   <div className="flex items-center justify-center">
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></div>
@@ -303,7 +303,7 @@ const ContactPage: React.FC = React.memo((props) => {
                   <div className="flex items-center justify-center">
                     <Send className="w-5 h-5 mr-2" />
                     Send Message
-                  </div>}
+                  </div>
                 )}
               </button>
             </form>
