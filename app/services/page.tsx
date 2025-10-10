@@ -13,7 +13,13 @@ import {
   CheckCircle,
   ArrowRight,
   Search,
-  Filter
+  Filter,
+  Eye,
+  Settings,
+  Users,
+  MessageSquare,
+  FileText,
+  Target
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -26,79 +32,167 @@ const ServicesPage: React.FC = () => {
     // AI Services
     {
       icon: Brain,
-      title: 'AI Solutions',
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
+      title: 'AI-Powered Chatbots',
+      description: 'Advanced conversational AI with natural language processing and sentiment analysis for 24/7 customer support.',
       category: 'ai',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      price: 'Starting at $299/month'
+      features: ['Natural Language Processing', 'Multi-language Support', 'Sentiment Analysis', 'CRM Integration', 'Real-time Learning'],
+      price: 'Starting at $299/month',
+      marketPrice: '$500-2000/month',
+      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions']
     },
     {
       icon: BarChart3,
       title: 'AI Data Analytics',
-      description: 'Transform your data into actionable insights with our AI-powered analytics platform.',
+      description: 'Transform your data into actionable insights with our AI-powered analytics platform and predictive modeling.',
       category: 'ai',
-      features: ['Real-time Dashboards', 'Predictive Modeling', 'Automated Reporting', 'Custom Visualizations'],
-      price: 'Starting at $399/month'
+      features: ['Predictive Analytics', 'Real-time Dashboards', 'Automated Reporting', 'Anomaly Detection', 'Custom Data Models'],
+      price: 'Starting at $399/month',
+      marketPrice: '$800-3000/month',
+      benefits: ['Data-driven insights', 'Predictive forecasting', 'Automated reporting', 'ROI optimization']
     },
     {
       icon: Zap,
-      title: 'AI Automation',
-      description: 'Streamline your workflows with intelligent automation solutions.',
+      title: 'AI Workflow Automation',
+      description: 'Intelligent process automation that learns and optimizes business workflows for maximum efficiency.',
       category: 'ai',
-      features: ['Process Automation', 'Workflow Optimization', 'Task Scheduling', 'Exception Handling'],
-      price: 'Starting at $349/month'
+      features: ['Process Mining', 'Workflow Optimization', 'Task Automation', 'Exception Handling', 'Performance Monitoring'],
+      price: 'Starting at $349/month',
+      marketPrice: '$600-2500/month',
+      benefits: ['Process efficiency', 'Error reduction', 'Cost savings', 'Scalable automation']
+    },
+    {
+      icon: Eye,
+      title: 'AI Computer Vision',
+      description: 'Image and video analysis solutions for quality control, security, and automation across industries.',
+      category: 'ai',
+      features: ['Object Detection', 'Quality Control Automation', 'Facial Recognition', 'Video Analytics', 'Real-time Processing'],
+      price: 'Starting at $599/month',
+      marketPrice: '$1000-5000/month',
+      benefits: ['Automated quality control', 'Enhanced security', 'Real-time monitoring', 'Cost reduction']
+    },
+    {
+      icon: Shield,
+      title: 'AI Fraud Detection',
+      description: 'Advanced machine learning algorithms to detect and prevent fraudulent activities in real-time.',
+      category: 'ai',
+      features: ['Real-time Monitoring', 'Behavioral Analysis', 'Risk Scoring', 'Anomaly Detection', 'Automated Alerts'],
+      price: 'Starting at $799/month',
+      marketPrice: '$1500-5000/month',
+      benefits: ['Reduce fraud losses by 85%', 'Real-time protection', 'False positive reduction', 'Compliance ready']
     },
     
     // IT Services
     {
       icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions for modern businesses.',
+      title: 'Cloud Infrastructure & Migration',
+      description: 'Complete cloud solutions including AWS, Azure, and GCP with seamless migration services.',
       category: 'it',
-      features: ['AWS/Azure/GCP', 'Cloud Migration', 'Auto-scaling', 'Disaster Recovery'],
-      price: 'Starting at $2,500/month'
+      features: ['Cloud Architecture Design', 'Multi-cloud Strategies', 'Cost Optimization', 'Disaster Recovery', 'Auto-scaling', 'Security Compliance'],
+      price: 'Starting at $2,500/month',
+      marketPrice: '$4000-15000/month',
+      benefits: ['99.9% uptime guarantee', 'Cost reduction up to 40%', 'Scalable infrastructure', 'Expert migration support']
     },
     {
       icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
+      title: 'Cybersecurity Solutions',
+      description: 'Comprehensive security services including threat detection, compliance, and incident response.',
       category: 'it',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Compliance'],
-      price: 'Starting at $1,800/month'
+      features: ['Threat Detection & Response', 'Vulnerability Assessments', 'Penetration Testing', 'Security Monitoring', 'Compliance Management', 'Employee Training'],
+      price: 'Starting at $1,800/month',
+      marketPrice: '$3000-12000/month',
+      benefits: ['24/7 security monitoring', 'Reduced security incidents', 'Compliance assurance', 'Expert security team']
     },
     {
       icon: Database,
       title: 'Database Management',
-      description: 'Expert database design, optimization, and management services.',
+      description: 'Expert database design, optimization, and management for all major database systems.',
       category: 'it',
-      features: ['Performance Tuning', 'Backup & Recovery', 'Data Migration', 'Security Hardening'],
-      price: 'Starting at $1,200/month'
+      features: ['Database Design & Optimization', 'Performance Tuning', 'Backup & Recovery', 'Data Migration', 'Security Hardening', 'Monitoring & Maintenance'],
+      price: 'Starting at $1,200/month',
+      marketPrice: '$2000-8000/month',
+      benefits: ['Improved performance', 'Data security', 'Automated backups', 'Expert DBA support']
+    },
+    {
+      icon: Settings,
+      title: 'DevOps & CI/CD',
+      description: 'Modern development operations with automated deployment, monitoring, and infrastructure as code.',
+      category: 'it',
+      features: ['CI/CD Pipeline Setup', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Logging', 'Automated Testing', 'Deployment Automation'],
+      price: 'Starting at $2,200/month',
+      marketPrice: '$3500-10000/month',
+      benefits: ['Faster deployments', 'Reduced downtime', 'Improved code quality', 'Automated workflows']
+    },
+    {
+      icon: Users,
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting and digital transformation services for enterprise organizations.',
+      category: 'it',
+      features: ['IT Strategy Development', 'Technology Assessment', 'Digital Transformation Planning', 'Vendor Evaluation', 'Process Optimization', 'Change Management'],
+      price: 'Starting at $200/hour',
+      marketPrice: '$300-800/hour',
+      benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Competitive advantage']
     },
     
     // Micro SaaS
     {
+      icon: BarChart3,
+      title: 'Zion Analytics Pro',
+      description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights.',
+      category: 'saas',
+      features: ['Real-time Data Visualization', 'AI-powered Predictive Analytics', 'Custom Dashboard Builder', 'Advanced Data Connectors', 'Automated Report Generation', 'Multi-tenant Architecture'],
+      price: 'Starting at $89/month',
+      marketPrice: '$150-500/month',
+      benefits: ['Data-driven decision making', 'Real-time insights', 'Custom dashboards', 'Automated reporting']
+    },
+    {
+      icon: MessageSquare,
+      title: 'Zion Chat AI',
+      description: 'Next-generation AI customer support platform with advanced NLP and sentiment analysis.',
+      category: 'saas',
+      features: ['GPT-4 Powered AI', 'Multi-channel Support', 'Advanced Sentiment Analysis', 'Automated Ticket Routing', 'Live Agent Handoff', 'Multi-language Support'],
+      price: 'Starting at $149/month',
+      marketPrice: '$300-800/month',
+      benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation']
+    },
+    {
       icon: Globe,
       title: 'Web Development',
-      description: 'Modern, responsive web applications built with cutting-edge technologies.',
+      description: 'Modern, responsive web applications built with cutting-edge technologies for optimal performance.',
       category: 'saas',
-      features: ['React/Next.js', 'Responsive Design', 'SEO Optimization', 'Performance Tuning'],
-      price: 'Starting at $5,000/project'
+      features: ['React/Next.js Development', 'Responsive Design', 'SEO Optimization', 'Performance Tuning', 'Security Implementation', 'Content Management'],
+      price: 'Starting at $5,000/project',
+      marketPrice: '$10000-30000/project',
+      benefits: ['Modern technology stack', 'SEO optimized', 'Mobile responsive', 'Fast loading times']
     },
     {
       icon: Smartphone,
       title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android.',
+      description: 'Native and cross-platform mobile applications for iOS and Android with optimal user experience.',
       category: 'saas',
-      features: ['iOS/Android Apps', 'Cross-platform', 'App Store Optimization', 'Push Notifications'],
-      price: 'Starting at $8,000/project'
+      features: ['iOS & Android Apps', 'Cross-platform Development', 'App Store Optimization', 'Push Notifications', 'Offline Functionality', 'Performance Optimization'],
+      price: 'Starting at $8,000/project',
+      marketPrice: '$15000-50000/project',
+      benefits: ['Native performance', 'Cross-platform compatibility', 'App store success', 'User engagement']
     },
     {
-      icon: BarChart3,
-      title: 'Business Intelligence',
-      description: 'Custom analytics and reporting solutions for data-driven decisions.',
+      icon: FileText,
+      title: 'Zion Invoice Genius',
+      description: 'AI-powered invoice generation and management with automated billing and payment tracking.',
       category: 'saas',
-      features: ['Custom Dashboards', 'Data Visualization', 'Report Automation', 'KPI Tracking'],
-      price: 'Starting at $89/month'
+      features: ['AI-powered Invoice Generation', 'Automated Recurring Billing', 'Multi-currency Support', 'Payment Tracking', 'Tax Calculation', 'Client Portal'],
+      price: 'Starting at $49/month',
+      marketPrice: '$100-300/month',
+      benefits: ['Save 90% invoice creation time', 'Reduce payment delays', 'Automated follow-ups', 'Professional invoices']
+    },
+    {
+      icon: Target,
+      title: 'Zion Lead Magnet',
+      description: 'Advanced lead generation and qualification platform with AI-powered prospect scoring.',
+      category: 'saas',
+      features: ['AI-powered Lead Scoring', 'Multi-channel Lead Capture', 'Automated Lead Nurturing', 'CRM Integration', 'Advanced Analytics', 'A/B Testing'],
+      price: 'Starting at $99/month',
+      marketPrice: '$200-600/month',
+      benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization']
     }
   ];
 
@@ -176,9 +270,14 @@ const ServicesPage: React.FC = () => {
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
                       <service.icon className="w-6 h-6 text-white" />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                      <p className="text-cyan-400 font-semibold">{service.price}</p>
+                      <div className="flex items-center space-x-2 mt-1">
+                        <span className="text-cyan-400 font-semibold">{service.price}</span>
+                        {service.marketPrice && (
+                          <span className="text-gray-400 text-sm line-through">{service.marketPrice}</span>
+                        )}
+                      </div>
                     </div>
                   </div>
                   
@@ -186,14 +285,31 @@ const ServicesPage: React.FC = () => {
                     {service.description}
                   </p>
                   
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 4).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {service.benefits && (
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
+                      <ul className="space-y-1">
+                        {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                          <li key={benefitIndex} className="flex items-center text-sm text-green-300">
+                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                   
                   <div className="flex items-center justify-between">
                     <a

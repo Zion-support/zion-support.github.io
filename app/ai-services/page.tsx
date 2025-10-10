@@ -16,7 +16,14 @@ import {
   Star, 
   Clock,
   Users,
-  TrendingUp
+  TrendingUp,
+  Settings,
+  Target,
+  Heart,
+  FileText,
+  Cpu,
+  Link,
+  Server
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -162,6 +169,328 @@ const AiServicesPage: React.FC = () => {
       category: 'Automation',
       popular: true,
       icon: Zap
+    },
+    {
+      id: 'ai-fraud-detection',
+      name: 'AI Fraud Detection',
+      description: 'Advanced machine learning algorithms to detect and prevent fraudulent activities in real-time',
+      price: '$799/month',
+      marketPrice: '$1500-5000/month',
+      features: [
+        'Real-time transaction monitoring',
+        'Behavioral pattern analysis',
+        'Risk scoring algorithms',
+        'Anomaly detection',
+        'Automated alert systems'
+      ],
+      benefits: [
+        'Reduce fraud losses by 85%',
+        'Real-time protection',
+        'False positive reduction',
+        'Compliance ready'
+      ],
+      category: 'Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'ai-predictive-maintenance',
+      name: 'AI Predictive Maintenance',
+      description: 'Machine learning-powered maintenance scheduling to prevent equipment failures and optimize uptime',
+      price: '$1,299/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        'IoT sensor integration',
+        'Failure prediction models',
+        'Maintenance scheduling optimization',
+        'Cost reduction analysis',
+        'Real-time monitoring'
+      ],
+      benefits: [
+        'Reduce downtime by 70%',
+        'Extend equipment life',
+        'Optimize maintenance costs',
+        'Prevent catastrophic failures'
+      ],
+      category: 'Industrial AI',
+      popular: false,
+      icon: Settings
+    },
+    {
+      id: 'ai-personalization',
+      name: 'AI Personalization Engine',
+      description: 'Advanced recommendation systems and personalization algorithms for enhanced customer experience',
+      price: '$499/month',
+      marketPrice: '$1000-3000/month',
+      features: [
+        'Real-time recommendations',
+        'Customer segmentation',
+        'Behavioral analysis',
+        'A/B testing automation',
+        'Cross-platform personalization'
+      ],
+      benefits: [
+        'Increase conversions by 40%',
+        'Improve customer engagement',
+        'Higher customer lifetime value',
+        'Automated optimization'
+      ],
+      category: 'Marketing',
+      popular: true,
+      icon: Target
+    },
+    {
+      id: 'ai-supply-chain',
+      name: 'AI Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting and inventory optimization',
+      price: '$1,599/month',
+      marketPrice: '$3000-10000/month',
+      features: [
+        'Demand forecasting',
+        'Inventory optimization',
+        'Route optimization',
+        'Supplier risk assessment',
+        'Cost optimization'
+      ],
+      benefits: [
+        'Reduce inventory costs by 30%',
+        'Improve delivery times',
+        'Minimize stockouts',
+        'Optimize supplier relationships'
+      ],
+      category: 'Supply Chain',
+      popular: false,
+      icon: Box
+    },
+    {
+      id: 'ai-healthcare-diagnostics',
+      name: 'AI Healthcare Diagnostics',
+      description: 'Medical image analysis and diagnostic assistance using advanced computer vision and machine learning',
+      price: '$2,999/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        'Medical image analysis',
+        'Diagnostic assistance',
+        'Patient risk assessment',
+        'Treatment recommendations',
+        'HIPAA compliance'
+      ],
+      benefits: [
+        'Improve diagnostic accuracy',
+        'Reduce diagnostic time',
+        'Early disease detection',
+        'Better patient outcomes'
+      ],
+      category: 'Healthcare',
+      popular: false,
+      icon: Heart
+    },
+    {
+      id: 'ai-financial-modeling',
+      name: 'AI Financial Modeling',
+      description: 'Advanced financial analysis and modeling using machine learning for investment decisions',
+      price: '$899/month',
+      marketPrice: '$2000-6000/month',
+      features: [
+        'Portfolio optimization',
+        'Risk assessment',
+        'Market prediction',
+        'Algorithmic trading',
+        'Compliance monitoring'
+      ],
+      benefits: [
+        'Improve investment returns',
+        'Reduce financial risk',
+        'Automated trading strategies',
+        'Real-time market analysis'
+      ],
+      category: 'Finance',
+      popular: true,
+      icon: TrendingUp
+    },
+    {
+      id: 'ai-nlp-processing',
+      name: 'AI Natural Language Processing',
+      description: 'Advanced text analysis, sentiment analysis, and language understanding for business applications',
+      price: '$399/month',
+      marketPrice: '$800-2500/month',
+      features: [
+        'Text classification',
+        'Sentiment analysis',
+        'Named entity recognition',
+        'Language translation',
+        'Document summarization'
+      ],
+      benefits: [
+        'Automate text processing',
+        'Extract business insights',
+        'Improve customer understanding',
+        'Multi-language support'
+      ],
+      category: 'Language Processing',
+      popular: false,
+      icon: FileText
+    },
+    {
+      id: 'ai-robotic-process',
+      name: 'AI Robotic Process Automation',
+      description: 'Intelligent automation of repetitive tasks with AI-powered decision making and learning capabilities',
+      price: '$599/month',
+      marketPrice: '$1200-4000/month',
+      features: [
+        'Process automation',
+        'Intelligent decision making',
+        'Exception handling',
+        'Process optimization',
+        'Integration capabilities'
+      ],
+      benefits: [
+        'Reduce manual work by 90%',
+        'Improve accuracy',
+        '24/7 operation',
+        'Scalable automation'
+      ],
+      category: 'Automation',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: 'ai-customer-insights',
+      name: 'AI Customer Insights',
+      description: 'Advanced customer analytics and behavioral insights to improve customer experience and retention',
+      price: '$699/month',
+      marketPrice: '$1500-5000/month',
+      features: [
+        'Customer journey mapping',
+        'Behavioral analysis',
+        'Churn prediction',
+        'Lifetime value calculation',
+        'Segmentation analysis'
+      ],
+      benefits: [
+        'Improve customer retention',
+        'Increase customer lifetime value',
+        'Predict customer behavior',
+        'Optimize marketing campaigns'
+      ],
+      category: 'Customer Analytics',
+      popular: true,
+      icon: Users
+    },
+    {
+      id: 'ai-quality-assurance',
+      name: 'AI Quality Assurance',
+      description: 'Automated testing and quality assurance using AI to improve software reliability and performance',
+      price: '$799/month',
+      marketPrice: '$1500-5000/month',
+      features: [
+        'Automated test generation',
+        'Performance testing',
+        'Bug detection',
+        'Code quality analysis',
+        'Regression testing'
+      ],
+      benefits: [
+        'Reduce testing time by 80%',
+        'Improve software quality',
+        'Automated test maintenance',
+        'Faster release cycles'
+      ],
+      category: 'Software Testing',
+      popular: false,
+      icon: CheckCircle
+    },
+    {
+      id: 'ai-energy-optimization',
+      name: 'AI Energy Optimization',
+      description: 'Smart energy management and optimization using AI to reduce costs and improve efficiency',
+      price: '$1,199/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        'Energy consumption analysis',
+        'Predictive energy modeling',
+        'Smart grid optimization',
+        'Renewable energy integration',
+        'Cost optimization'
+      ],
+      benefits: [
+        'Reduce energy costs by 25%',
+        'Improve energy efficiency',
+        'Optimize renewable usage',
+        'Environmental sustainability'
+      ],
+      category: 'Energy',
+      popular: false,
+      icon: Zap
+    },
+    {
+      id: 'ai-hr-analytics',
+      name: 'AI HR Analytics',
+      description: 'Human resources analytics and workforce optimization using AI and machine learning',
+      price: '$599/month',
+      marketPrice: '$1200-4000/month',
+      features: [
+        'Employee performance analysis',
+        'Talent acquisition optimization',
+        'Retention prediction',
+        'Workforce planning',
+        'Skills gap analysis'
+      ],
+      benefits: [
+        'Improve hiring decisions',
+        'Reduce employee turnover',
+        'Optimize workforce planning',
+        'Enhance employee satisfaction'
+      ],
+      category: 'Human Resources',
+      popular: false,
+      icon: Users
+    },
+    {
+      id: 'ai-blockchain-analytics',
+      name: 'AI Blockchain Analytics',
+      description: 'Advanced blockchain data analysis and cryptocurrency market insights using AI',
+      price: '$1,499/month',
+      marketPrice: '$3000-10000/month',
+      features: [
+        'Blockchain transaction analysis',
+        'Cryptocurrency market prediction',
+        'Smart contract auditing',
+        'DeFi protocol analysis',
+        'Risk assessment'
+      ],
+      benefits: [
+        'Better investment decisions',
+        'Risk mitigation',
+        'Market opportunity identification',
+        'Compliance monitoring'
+      ],
+      category: 'Blockchain',
+      popular: false,
+      icon: Link
+    },
+    {
+      id: 'ai-edge-computing',
+      name: 'AI Edge Computing',
+      description: 'Deploy AI models at the edge for real-time processing and reduced latency',
+      price: '$1,799/month',
+      marketPrice: '$3500-12000/month',
+      features: [
+        'Edge model deployment',
+        'Real-time processing',
+        'Low latency inference',
+        'Offline capabilities',
+        'Distributed computing'
+      ],
+      benefits: [
+        'Reduce latency by 90%',
+        'Improve response times',
+        'Enable offline AI',
+        'Reduce bandwidth costs'
+      ],
+      category: 'Edge Computing',
+      popular: false,
+      icon: Server
     }
   ];
 
@@ -172,7 +501,20 @@ const AiServicesPage: React.FC = () => {
     { id: 'Analytics', name: 'Analytics', count: services.filter(s => s.category === 'Analytics').length },
     { id: 'Computer Vision', name: 'Computer Vision', count: services.filter(s => s.category === 'Computer Vision').length },
     { id: 'Voice AI', name: 'Voice AI', count: services.filter(s => s.category === 'Voice AI').length },
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length },
+    { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length },
+    { id: 'Industrial AI', name: 'Industrial AI', count: services.filter(s => s.category === 'Industrial AI').length },
+    { id: 'Marketing', name: 'Marketing', count: services.filter(s => s.category === 'Marketing').length },
+    { id: 'Supply Chain', name: 'Supply Chain', count: services.filter(s => s.category === 'Supply Chain').length },
+    { id: 'Healthcare', name: 'Healthcare', count: services.filter(s => s.category === 'Healthcare').length },
+    { id: 'Finance', name: 'Finance', count: services.filter(s => s.category === 'Finance').length },
+    { id: 'Language Processing', name: 'Language Processing', count: services.filter(s => s.category === 'Language Processing').length },
+    { id: 'Customer Analytics', name: 'Customer Analytics', count: services.filter(s => s.category === 'Customer Analytics').length },
+    { id: 'Software Testing', name: 'Software Testing', count: services.filter(s => s.category === 'Software Testing').length },
+    { id: 'Energy', name: 'Energy', count: services.filter(s => s.category === 'Energy').length },
+    { id: 'Human Resources', name: 'Human Resources', count: services.filter(s => s.category === 'Human Resources').length },
+    { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length },
+    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length }
   ];
 
   const filteredServices = services.filter(service => 
