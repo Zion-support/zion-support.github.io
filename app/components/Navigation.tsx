@@ -135,6 +135,7 @@ const Navigation: React.FC = () => {
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Visual workflow builder', icon: '⚡', popular: true },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         { name: 'AI Quantum Financial Oracle', path: '/ai-quantum-financial-oracle', description: 'Quantum-powered financial analysis', icon: '⚛️', popular: true },
         { name: 'AI 3D Generation Studio', path: '/ai-3d-generation', description: 'AI-powered 3D model generation', icon: '🎨', popular: true },
         { name: 'AI Mobile App Builder', path: '/ai-mobile-app-builder', description: 'AI-powered mobile app development', icon: '📱', popular: true },
@@ -157,6 +158,8 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-f31a
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-deac
       ]
     },
     {
@@ -176,6 +179,7 @@ const Navigation: React.FC = () => {
         { name: 'AI Content Generation Studio', path: '/ai-content-generation', description: 'Complete content creation suite', icon: '✍️', popular: true },
         { name: 'AI Healthcare Solutions', path: '/ai-healthcare', description: 'Medical AI and diagnosis support', icon: '🏥', popular: true },
         { name: 'AI Fintech Platform', path: '/ai-fintech', description: 'Financial AI and fraud detection', icon: '💳', popular: true },
+<<<<<<< HEAD
         { name: 'AI Computer Vision Platform', path: '/ai-computer-vision', description: 'Advanced image recognition', icon: '👁️', popular: true },
         { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform', icon: '🧠', popular: true },
 <<<<<<< HEAD
@@ -220,6 +224,8 @@ const Navigation: React.FC = () => {
         { name: 'AI Machine Learning', path: '/ai-ml-platform', description: 'ML model development & deployment', icon: '🤖', popular: true },
         { name: 'AI Quantum Computing', path: '/ai-quantum-computing', description: 'Quantum algorithms & computing', icon: '⚛️', popular: false },
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-f31a
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-deac
       ]
     },
     {
@@ -233,6 +239,7 @@ const Navigation: React.FC = () => {
         { name: 'Enterprise Cybersecurity Suite', path: '/cybersecurity', description: 'Comprehensive security solutions', icon: '🛡️', popular: true },
         { name: 'IT Infrastructure Design', path: '/it-infrastructure', description: 'Scalable infrastructure architecture', icon: '🏗️', popular: true },
         { name: '24/7 IT Support & Monitoring', path: '/it-support', description: 'Round-the-clock technical support', icon: '🔄', popular: true },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'Custom Software Development', path: '/custom-development', description: 'Tailored software solutions', icon: '💻', popular: true },
@@ -276,6 +283,9 @@ const Navigation: React.FC = () => {
         { name: 'Database Management', path: '/database-management', description: 'Database optimization & maintenance', icon: '🗄️', popular: true },
         { name: 'Network Design', path: '/network-design', description: 'Secure network architecture', icon: '🌐', popular: false },
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-f31a
+=======
+        { name: 'Custom Software Development', path: '/custom-development', description: 'Tailored software solutions', icon: '💻', popular: true },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-deac
       ]
     },
     {
@@ -285,6 +295,7 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-pink-500/10',
       hoverColor: 'hover:bg-pink-500/20',
       services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -305,6 +316,9 @@ const Navigation: React.FC = () => {
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices', icon: '📡', popular: true },
         { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences', icon: '🥽', popular: true },
         { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions', icon: '🏙️', popular: true },
+=======
+        { name: 'Quantum Computing Solutions', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: true },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-deac
         { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization', icon: '🔄', popular: true },
 <<<<<<< HEAD
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping', icon: '🧪', popular: true },
@@ -350,6 +364,7 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
 =======
@@ -375,6 +390,8 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2202
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-deac
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
