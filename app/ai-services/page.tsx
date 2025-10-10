@@ -1229,7 +1229,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 
         <section className="py-20">
@@ -1237,7 +1236,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               AI Services
             </h1>
-=======
         </div>
       </div>
 
@@ -1247,7 +1245,6 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-glow-cyan">
             AI Services
           </h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-dffe
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">
               Transform your business with our comprehensive suite of AI-powered solutions
             </p>

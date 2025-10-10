@@ -11,34 +11,29 @@ function resolveMergeConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+    if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`🔧 Resolving merge conflicts in ${filePath}...`);
       
       // Advanced conflict resolution strategy
       let resolvedContent = content
         // Handle standard merge conflicts - prefer incoming changes
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
-          const parts = match.split('=======');
+        .replace(/[\s\S]*?[\s\S]*?          const parts = match.split('');
           if (parts.length > 1) {
-            const incoming = parts[1].replace(/>>>>>>> [^\n]+/, '').trim();
-            return incoming;
+            const incoming = parts[1].replace(/            return incoming;
           }
           return match;
         })
         // Handle other conflict patterns
-        .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
-          const parts = match.split('=======');
+        .replace(/<<<<<<< [^\n]+[\s\S]*?[\s\S]*?          const parts = match.split('');
           if (parts.length > 1) {
-            const incoming = parts[1].replace(/>>>>>>> [^\n]+/, '').trim();
-            return incoming;
+            const incoming = parts[1].replace(/            return incoming;
           }
           return match;
         })
         // Clean up any remaining conflict markers
         .replace(/<<<<<<< [^\n]+/g, '')
-        .replace(/=======/g, '')
-        .replace(/>>>>>>> [^\n]+/g, '');
-      
+        .replace(//g, '')
+        .replace(/      
       fs.writeFileSync(filePath, resolvedContent);
       console.log(`✅ Resolved merge conflicts in ${filePath}`);
       return true;

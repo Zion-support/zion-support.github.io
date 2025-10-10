@@ -5,14 +5,12 @@ const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
 // Static assets to cache
 const STATIC_ASSETS = [
   '/',
-<<<<<<< HEAD
   '/static/js/bundle.js',
   '/static/css/main.css',
   '/manifest.json'
 ];
 
 // Install event - cache resources
-=======
   '/index.html',
   '/manifest.json',
   '/favicon.ico',
@@ -28,17 +26,14 @@ const DYNAMIC_PATTERNS = [
 ];
 
 // Install event - cache static assets
->>>>>>> origin/main
 self.addEventListener('install', (event) => {
   console.log('Service Worker: Installing...');
   
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-<<<<<<< HEAD
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
-=======
         console.log('Service Worker: Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
@@ -48,12 +43,10 @@ self.addEventListener('install', (event) => {
       })
       .catch((error) => {
         console.error('Service Worker: Failed to cache static assets', error);
->>>>>>> origin/main
       })
   );
 });
 
-<<<<<<< HEAD
 // Fetch event - serve from cache when offline
 self.addEventListener('fetch', (event) => {
   event.respondWith(
@@ -81,7 +74,6 @@ self.addEventListener('activate', (event) => {
     })
   );
 });
-=======
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   console.log('Service Worker: Activating...');
@@ -301,4 +293,3 @@ self.addEventListener('message', (event) => {
 });
 
 console.log('Service Worker: Loaded successfully');
->>>>>>> origin/main

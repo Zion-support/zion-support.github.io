@@ -8,7 +8,7 @@ try {
   // Read the file
   const content = readFileSync('/workspace/app/page.tsx', 'utf8');
   
-  // Split by conflict markers and keep our version (after =======)
+  // Split by conflict markers and keep our version (after )
   const lines = content.split('\n');
   const resolvedLines = [];
   let skipUntilNextMarker = false;
@@ -16,18 +16,17 @@ try {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     
-    if (line.includes('<<<<<<< HEAD')) {
+    if (line.includes('')) {
       skipUntilNextMarker = true;
       continue;
     }
     
-    if (line.includes('=======')) {
+    if (line.includes('')) {
       skipUntilNextMarker = false;
       continue;
     }
     
-    if (line.includes('>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c013')) {
-      continue;
+    if (line.includes('      continue;
     }
     
     if (!skipUntilNextMarker) {

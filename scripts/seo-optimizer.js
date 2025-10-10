@@ -149,7 +149,7 @@ class SEOOptimizer {
   // Generate SEO report
   generateReport() {
     console.log('\n📊 SEO Optimization Report');
-    console.log('============================');
+    console.log('');
     console.log(`✅ Optimizations applied: ${this.optimizations.length}`);
     this.optimizations.forEach((opt, index) => {
       console.log(`   ${index + 1}. ${opt}`);
