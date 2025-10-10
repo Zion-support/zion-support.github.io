@@ -2,89 +2,58 @@
 
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 
-// Files with merge conflicts
-const filesWithConflicts = [
-  './src/components/PerformanceDashboard.tsx',
-  './app/utils/accessibilityChecker.ts',
-  './app/utils/accessibilityEnhancer.ts',
-  './app/types/next.d.ts',
-  './app/ai-crm-assistant/page.tsx',
-  './app/ai-content-studio/page.tsx',
-  './app/ai-content-writer/page.tsx',
-  './app/ai-code-assistant/page.tsx',
-  './app/ai-code-security-auditor/page.tsx',
-  './app/ai-blockchain-solutions/page.tsx',
-  './app/ai-cloud-infrastructure/page.tsx',
-  './app/ai-content-generation/page.tsx',
-  './app/ai-api-manager/page.tsx',
-  './app/ai-computer-vision/page.tsx',
-  './app/ai-analytics/page.tsx',
-  './app/ai-api-management/page.tsx',
-  './app/ai-blockchain-analytics/page.tsx',
-  './app/ai-content-delivery-network/page.tsx',
-  './app/ai-autonomous-systems/page.tsx',
-  './app/ai-climate-solutions-pro/page.tsx'
-];
-
-function resolveMergeConflicts(filePath) {
+// Function to fix merge conflicts in a file
+function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Split by merge conflict markers
+    // Check if file has merge conflicts
     const lines = content.split('\n');
-    const resolvedLines = [];
+    const fixedLines = [];
     let inConflict = false;
-    let inHead = false;
-    let inSeparator = false;
+    let keepLines = false;
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.trim() === '<<<<<<< HEAD') {
-        inConflict = true;
-        inHead = true;
-        inSeparator = false;
-        continue;
-      } else if (line.trim() === '=======') {
-        inHead = false;
-        inSeparator = true;
-        continue;
-      } else if (line.trim() === '>>>>>>>') {
-        inConflict = false;
-        inHead = false;
-        inSeparator = false;
+        keepLines = true;
         continue;
       }
       
-      if (inConflict) {
-        if (inHead) {
-          resolvedLines.push(line);
-        }
-        // Skip lines in the other branch (after =======)
-      } else {
-        resolvedLines.push(line);
+        inConflict = false;
+        keepLines = false;
+        continue;
+      }
+      
+      if (!inConflict || keepLines) {
+        fixedLines.push(line);
       }
     }
     
-    const resolvedContent = resolvedLines.join('\n');
-    fs.writeFileSync(filePath, resolvedContent, 'utf8');
-    console.log(`✅ Resolved merge conflicts in ${filePath}`);
-    
+    // Write the fixed content back
+    fs.writeFileSync(filePath, fixedLines.join('\n'));
+    return true;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Process all files
-console.log('🔧 Resolving merge conflicts...\n');
-
-filesWithConflicts.forEach(filePath => {
-  if (fs.existsSync(filePath)) {
-    resolveMergeConflicts(filePath);
-  } else {
-    console.log(`⚠️  File not found: ${filePath}`);
-  }
-});
-
-console.log('\n✨ Merge conflict resolution complete!');
+// Function to find all files with merge conflicts
+function findFilesWithConflicts(dir) {
+  const files = [];
+  
+  function scanDirectory(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        scanDirectory(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
