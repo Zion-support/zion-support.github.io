@@ -47,45 +47,48 @@ const Navigation: React.FC = () => {
 
   // Service data
   const aiServices = [
-    { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' },
-    { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' },
-    { name: 'AI CRM', href: '/ai-crm', icon: Users, description: 'Customer relationship management' },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, description: 'Advanced threat protection' },
-    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: Database, description: 'Data-driven insights' },
-    { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' },
-    { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' },
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: Calendar, description: 'Smart project management' },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Share2, description: 'Social media automation' },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: Mail, description: 'Email automation' },
-    { name: 'AI Voice Assistant', href: '/ai-voice-assistant-platform', icon: Mic, description: 'Voice AI platform' },
-    { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Wrench, description: 'Equipment monitoring' },
-    { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization', icon: Truck, description: 'Supply chain optimization' },
-    { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Intelligent cloud management' }
+    { name: 'AI Customer Service', href: '/ai-services', icon: MessageCircle, description: 'Intelligent chatbots & support' },
+    { name: 'AI Content Generation', href: '/ai-services', icon: FileText, description: 'Automated content creation' },
+    { name: 'AI Analytics & Forecasting', href: '/ai-services', icon: BarChart, description: 'Predictive business intelligence' },
+    { name: 'Computer Vision', href: '/ai-services', icon: Eye, description: 'Image & video analysis' },
+    { name: 'Voice AI Solutions', href: '/ai-services', icon: Mic, description: 'Speech recognition & synthesis' },
+    { name: 'AI Process Automation', href: '/ai-services', icon: Zap, description: 'Intelligent workflow automation' },
+    { name: 'AI Cybersecurity', href: '/ai-services', icon: Shield, description: 'AI-powered threat detection' },
+    { name: 'AI Mobile Apps', href: '/ai-services', icon: Box, description: 'Intelligent mobile applications' },
+    { name: 'AI Business Intelligence', href: '/ai-services', icon: Brain, description: 'Natural language data queries' },
+    { name: 'AI Marketing Automation', href: '/ai-services', icon: Target, description: 'Personalized marketing campaigns' },
+    { name: 'AI Healthcare Solutions', href: '/ai-services', icon: Heart, description: 'Medical AI & diagnostics' },
+    { name: 'AI Financial Services', href: '/ai-services', icon: DollarSign, description: 'Fraud detection & trading' }
   ];
 
   const itServices = [
-    { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
-    { name: 'API Management', href: '/ai-api-management', icon: Code, description: 'API development & management' },
-    { name: 'Cybersecurity', href: '/ai-cybersecurity-suite', icon: Shield, description: 'Comprehensive security' },
-    { name: 'Data Management', href: '/ai-data-analytics', icon: Database, description: 'Data processing & storage' },
-    { name: 'Network Solutions', href: '/ai-network-solutions', icon: Globe, description: 'Advanced networking' },
-    { name: 'Mobile Development', href: '/ai-mobile-development', icon: Smartphone, description: 'Mobile app solutions' },
-    { name: 'System Integration', href: '/ai-system-integration', icon: Settings, description: 'Seamless integration' },
-    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems' },
-    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' },
-    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' }
+    { name: 'Cloud Infrastructure', href: '/it-services', icon: Cloud, description: 'AWS, Azure, GCP migration' },
+    { name: 'DevOps & CI/CD', href: '/it-services', icon: Settings, description: 'Automated deployment pipelines' },
+    { name: 'Database Management', href: '/it-services', icon: Database, description: 'Database optimization & maintenance' },
+    { name: 'Cybersecurity Solutions', href: '/it-services', icon: Shield, description: 'Advanced threat protection' },
+    { name: 'Managed IT Services', href: '/it-services', icon: Users, description: '24/7 IT support & monitoring' },
+    { name: 'IT Strategy & Consulting', href: '/it-services', icon: Globe, description: 'Technology roadmap planning' },
+    { name: 'Mobile App Development', href: '/it-services', icon: Smartphone, description: 'iOS & Android applications' },
+    { name: 'Web Development', href: '/it-services', icon: Globe, description: 'Custom web applications' },
+    { name: 'Network Infrastructure', href: '/it-services', icon: Globe, description: 'Network design & security' },
+    { name: 'Data Center Services', href: '/it-services', icon: Server, description: 'Data center solutions' },
+    { name: 'API Development', href: '/it-services', icon: Code, description: 'Custom API solutions' },
+    { name: 'IT Support & Helpdesk', href: '/it-services', icon: Users, description: 'Technical support services' }
   ];
 
   const microSaasServices = [
-    { name: 'Project Management', href: '/micro-saas-project-management', icon: CheckSquare, description: 'Streamlined project tracking' },
-    { name: 'Customer Support', href: '/micro-saas-customer-support', icon: MessageCircle, description: 'Efficient support systems' },
-    { name: 'Analytics Dashboard', href: '/micro-saas-analytics', icon: BarChart, description: 'Business intelligence' },
-    { name: 'Content Management', href: '/micro-saas-cms', icon: FileText, description: 'Content organization' },
-    { name: 'Team Collaboration', href: '/micro-saas-collaboration', icon: Users, description: 'Team productivity tools' },
-    { name: 'Financial Tracking', href: '/micro-saas-finance', icon: DollarSign, description: 'Financial management' },
-    { name: 'Inventory Management', href: '/micro-saas-inventory', icon: Box, description: 'Stock and asset tracking' },
-    { name: 'Performance Monitoring', href: '/micro-saas-monitoring', icon: Monitor, description: 'System performance tracking' }
+    { name: 'Analytics Pro', href: '/micro-saas', icon: BarChart, description: 'Real-time business intelligence' },
+    { name: 'Chat AI', href: '/micro-saas', icon: MessageCircle, description: 'AI customer support platform' },
+    { name: 'Security Shield', href: '/micro-saas', icon: Shield, description: 'Enterprise cybersecurity monitoring' },
+    { name: 'Cloud Vault', href: '/micro-saas', icon: Cloud, description: 'Intelligent backup & recovery' },
+    { name: 'Performance AI', href: '/micro-saas', icon: Monitor, description: 'Application performance monitoring' },
+    { name: 'AI Workflow', href: '/micro-saas', icon: Zap, description: 'Business process automation' },
+    { name: 'Email Marketing AI', href: '/micro-saas', icon: Mail, description: 'AI-powered email campaigns' },
+    { name: 'Finance AI', href: '/micro-saas', icon: DollarSign, description: 'Financial management automation' },
+    { name: 'Content Studio', href: '/micro-saas', icon: FileText, description: 'AI content creation platform' },
+    { name: 'Team Hub', href: '/micro-saas', icon: Users, description: 'Collaboration & project management' },
+    { name: 'E-commerce AI', href: '/micro-saas', icon: Box, description: 'AI-powered online store' },
+    { name: 'Lead Gen Pro', href: '/micro-saas', icon: Target, description: 'AI lead generation platform' }
   ];
 
   return (

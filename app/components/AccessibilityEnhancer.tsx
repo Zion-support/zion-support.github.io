@@ -4,7 +4,7 @@ import React, { useEffect, useCallback } from 'react';
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
   enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;
+  enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
 }
@@ -12,7 +12,7 @@ interface AccessibilityEnhancerProps {
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
   enableKeyboardNavigation = true,
-  enableScreenReader = true,
+  enableScreenReaderSupport = true,
   enableHighContrast = true,
   enableFocusManagement = true
 }) => {
@@ -46,7 +46,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   // Screen reader enhancements
   useEffect(() => {
-    if (enableScreenReader) {
+    if (enableScreenReaderSupport) {
       // Add ARIA live region for announcements
       const liveRegion = document.createElement('div');
       liveRegion.id = 'aria-live-region';
@@ -62,7 +62,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       };
     }
-  }, [enableScreenReader]);
+  }, [enableScreenReaderSupport]);
 
   // High contrast mode detection
   useEffect(() => {
@@ -87,13 +87,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableHighContrast]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return <React.Fragment>{children}</React.Fragment>;
-=======
-  return null;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-=======
   // Focus management
   useEffect(() => {
     if (enableFocusManagement) {
@@ -140,7 +133,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, [announcePageChange]);
 
   return <>{children}</>;
->>>>>>> cursor/analyze-improve-and-deploy-application-6516
 };
 
 export default AccessibilityEnhancer;

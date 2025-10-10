@@ -1,11 +1,5 @@
 'use client';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-=======
-import React, { createContext, useContext, useEffect, useCallback } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-6516
+import React, { createContext, useContext, useEffect, useCallback, ReactNode } from 'react';
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
@@ -17,99 +11,14 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefin
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
-<<<<<<< HEAD
-  if (context === undefined) {
-=======
-import React, { createContext, useContext, useEffect, useState } from 'react';
-
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
-  trackPageView: (pageName: string, pagePath: string) => void;
-  trackConversion: (conversionType: string, value?: number) => void;
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
   if (!context) {
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-=======
-  if (!context) {
->>>>>>> cursor/analyze-improve-and-deploy-application-6516
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   return context;
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default AnalyticsProvider;
-=======
 interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const [isInitialized, setIsInitialized] = useState(false);
-
-  useEffect(() => {
-    // Initialize Google Analytics
-    if (typeof window !== 'undefined' && !window.gtag) {
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID || 'G-XXXXXXXXXX'}`;
-      document.head.appendChild(script);
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args);
-      }
-      window.gtag = gtag;
-
-      gtag('js', new Date());
-      gtag('config', process.env.REACT_APP_GA_ID || 'G-XXXXXXXXXX', {
-        page_title: document.title,
-        page_location: window.location.href,
-      });
-
-      setIsInitialized(true);
-    }
-  }, []);
-
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, {
-        event_category: 'engagement',
-        ...parameters
-      });
-    }
-  };
-
-  const trackPageView = (pageName: string, pagePath: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', process.env.REACT_APP_GA_ID || 'G-XXXXXXXXXX', {
-        page_title: pageName,
-        page_location: window.location.origin + pagePath,
-      });
-    }
-  };
-
-  const trackConversion = (conversionType: string, value?: number) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'conversion', {
-        send_to: process.env.REACT_APP_GA_CONVERSION_ID || 'AW-XXXXXXXXXX/XXXXXXXXXX',
-        value: value,
-        currency: 'USD',
-        conversion_type: conversionType
-      });
-    }
-  };
-
-  const value: AnalyticsContextType = {
-=======
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
   googleAnalyticsId?: string;
   googleTagManagerId?: string;
 }
@@ -221,15 +130,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   }, [trackEvent]);
 
   const contextValue: AnalyticsContextType = {
->>>>>>> cursor/analyze-improve-and-deploy-application-6516
     trackEvent,
     trackPageView,
     trackConversion
   };
 
   return (
-<<<<<<< HEAD
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value={contextValue}>
       {children}
     </AnalyticsContext.Provider>
   );
@@ -242,11 +149,3 @@ declare global {
     dataLayer: any[];
   }
 }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-=======
-    <AnalyticsContext.Provider value={contextValue}>
-      {children}
-    </AnalyticsContext.Provider>
-  );
-};
->>>>>>> cursor/analyze-improve-and-deploy-application-6516

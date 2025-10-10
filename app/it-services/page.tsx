@@ -24,78 +24,114 @@ const ItServicesPage: React.FC = () => {
     {
       id: 1,
       title: 'Cloud Infrastructure & Migration',
-      description: 'Complete cloud solutions including AWS, Azure, and GCP migration and management',
+      description: 'Complete cloud solutions including AWS, Azure, and GCP migration, optimization, and ongoing management services',
       icon: Cloud,
       category: 'Cloud',
       price: 'Starting at $2,500/month',
-      features: ['Cloud architecture design', 'Migration planning & execution', 'Cost optimization', 'Security compliance', '24/7 monitoring', 'Disaster recovery']
+      features: ['Multi-cloud architecture design and implementation', 'Seamless migration planning and execution', 'Cost optimization and resource management', 'Security compliance and governance', '24/7 monitoring and support', 'Disaster recovery and backup solutions', 'Auto-scaling and load balancing', 'Cloud security and access management']
     },
     {
       id: 2,
       title: 'DevOps & CI/CD Pipeline',
-      description: 'Automated development workflows and deployment pipelines for faster delivery',
+      description: 'Automated development workflows and deployment pipelines for faster, more reliable software delivery',
       icon: Settings,
       category: 'DevOps',
       price: 'Starting at $3,000/month',
-      features: ['CI/CD pipeline setup', 'Container orchestration', 'Infrastructure as Code', 'Automated testing', 'Deployment automation', 'Performance monitoring']
+      features: ['CI/CD pipeline setup and optimization', 'Container orchestration with Kubernetes', 'Infrastructure as Code (Terraform, CloudFormation)', 'Automated testing and quality assurance', 'Deployment automation and rollback strategies', 'Performance monitoring and alerting', 'GitOps and version control integration', 'Security scanning and compliance checks']
     },
     {
       id: 3,
-      title: 'Database Management',
-      description: 'Comprehensive database services including design, optimization, and maintenance',
+      title: 'Database Management & Optimization',
+      description: 'Comprehensive database services including design, optimization, migration, and ongoing maintenance',
       icon: Database,
       category: 'Database',
       price: 'Starting at $1,800/month',
-      features: ['Database design & architecture', 'Performance optimization', 'Backup & recovery', 'Security hardening', 'Migration services', '24/7 support']
+      features: ['Database design and architecture planning', 'Performance tuning and optimization', 'Backup and disaster recovery solutions', 'Security hardening and access control', 'Database migration and consolidation', '24/7 monitoring and support', 'Query optimization and indexing', 'Data warehousing and analytics setup']
     },
     {
       id: 4,
       title: 'Cybersecurity Solutions',
-      description: 'Advanced security solutions to protect your digital assets and ensure compliance',
+      description: 'Advanced security solutions to protect your digital assets and ensure compliance with industry standards',
       icon: Shield,
       category: 'Security',
       price: 'Starting at $4,000/month',
-      features: ['Security assessment', 'Threat detection', 'Vulnerability management', 'Compliance auditing', 'Incident response', 'Security training']
+      features: ['Comprehensive security assessment and auditing', 'Advanced threat detection and prevention', 'Vulnerability management and patching', 'Compliance auditing (SOC2, GDPR, HIPAA)', 'Incident response and forensics', 'Security training and awareness programs', 'Penetration testing and vulnerability scanning', 'Security policy development and implementation']
     },
     {
       id: 5,
       title: 'Managed IT Services',
-      description: 'Complete IT management including helpdesk, monitoring, and maintenance',
-      icon: Settings,
+      description: 'Complete IT management including helpdesk, monitoring, maintenance, and strategic technology planning',
+      icon: Users,
       category: 'Managed',
       price: 'Starting at $2,200/month',
-      features: ['24/7 helpdesk support', 'Proactive monitoring', 'Patch management', 'Asset management', 'User training', 'Vendor management']
+      features: ['24/7 helpdesk support and ticketing system', 'Proactive monitoring and maintenance', 'Patch management and software updates', 'Asset management and inventory tracking', 'User training and onboarding programs', 'Vendor management and procurement', 'IT strategy and roadmap development', 'Performance optimization and capacity planning']
     },
     {
       id: 6,
       title: 'IT Strategy & Consulting',
-      description: 'Strategic IT consulting to align technology with business objectives',
+      description: 'Strategic IT consulting to align technology with business objectives and drive digital transformation',
       icon: Globe,
       category: 'Consulting',
       price: 'Starting at $1,500/month',
-      features: ['Technology roadmap', 'Vendor evaluation', 'Cost analysis', 'Digital transformation', 'Change management', 'Training programs']
+      features: ['Technology roadmap and strategic planning', 'Vendor evaluation and selection', 'Cost analysis and budget optimization', 'Digital transformation initiatives', 'Change management and adoption strategies', 'Training programs and knowledge transfer', 'Technology assessment and recommendations', 'IT governance and best practices']
     },
     {
       id: 7,
       title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android',
+      description: 'Native and cross-platform mobile applications for iOS and Android with modern UI/UX design',
       icon: Smartphone,
       category: 'Development',
       price: 'Starting at $8,000/project',
-      features: ['Native iOS/Android apps', 'Cross-platform development', 'UI/UX design', 'API integration', 'App store deployment', 'Maintenance & updates']
+      features: ['Native iOS and Android development', 'Cross-platform development (React Native, Flutter)', 'UI/UX design and user experience optimization', 'API integration and backend connectivity', 'App store deployment and optimization', 'Maintenance, updates, and support', 'Performance optimization and testing', 'Security implementation and compliance']
     },
     {
       id: 8,
       title: 'Web Application Development',
-      description: 'Custom web applications and e-commerce solutions built with modern technologies',
+      description: 'Custom web applications and e-commerce solutions built with modern technologies and best practices',
       icon: Globe,
       category: 'Development',
       price: 'Starting at $6,000/project',
-      features: ['Custom web applications', 'E-commerce solutions', 'API development', 'Responsive design', 'Performance optimization', 'SEO optimization']
+      features: ['Custom web application development', 'E-commerce solutions and online stores', 'API development and integration', 'Responsive design and mobile optimization', 'Performance optimization and caching', 'SEO optimization and search engine visibility', 'Security implementation and testing', 'Content management system integration']
+    },
+    {
+      id: 9,
+      title: 'Network Infrastructure & Security',
+      description: 'Comprehensive network design, implementation, and security solutions for modern businesses',
+      icon: Globe,
+      category: 'Networking',
+      price: 'Starting at $3,500/month',
+      features: ['Network design and architecture planning', 'Firewall configuration and management', 'VPN setup and remote access solutions', 'Network monitoring and performance optimization', 'Wireless network design and implementation', 'Network security and threat prevention', 'Load balancing and traffic management', 'Network documentation and maintenance']
+    },
+    {
+      id: 10,
+      title: 'Data Center Services',
+      description: 'Complete data center solutions including design, implementation, and ongoing management services',
+      icon: Server,
+      category: 'Data Center',
+      price: 'Starting at $5,000/month',
+      features: ['Data center design and planning', 'Server hardware procurement and installation', 'Power and cooling system optimization', 'Physical security and access control', 'Backup and disaster recovery solutions', 'Environmental monitoring and management', 'Capacity planning and scaling', 'Compliance and certification support']
+    },
+    {
+      id: 11,
+      title: 'API Development & Management',
+      description: 'Custom API development, integration, and management services with comprehensive documentation and monitoring',
+      icon: Code,
+      category: 'API',
+      price: 'Starting at $2,400/month',
+      features: ['Custom API development and design', 'Third-party API integration and management', 'API documentation and developer portals', 'Rate limiting and access control', 'API security and authentication', 'Performance monitoring and analytics', 'API versioning and lifecycle management', 'Testing and quality assurance']
+    },
+    {
+      id: 12,
+      title: 'IT Support & Helpdesk',
+      description: 'Comprehensive IT support services including helpdesk, technical support, and user assistance',
+      icon: Users,
+      category: 'Support',
+      price: 'Starting at $1,200/month',
+      features: ['24/7 technical support and helpdesk', 'Remote desktop support and troubleshooting', 'Software installation and configuration', 'Hardware setup and maintenance', 'User training and onboarding', 'Password reset and account management', 'Software licensing and compliance', 'Incident management and escalation']
     }
   ];
 
-  const categories = ['all', 'Cloud', 'DevOps', 'Database', 'Security', 'Managed', 'Consulting', 'Development'];
+  const categories = ['all', 'Cloud', 'DevOps', 'Database', 'Security', 'Managed', 'Consulting', 'Development', 'Networking', 'Data Center', 'API', 'Support'];
 
   const filteredServices = itServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||

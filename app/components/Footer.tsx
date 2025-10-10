@@ -7,30 +7,30 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-    { name: 'AI Strategy & Consulting', url: '/ai-services', description: 'Strategic AI consulting' },
-    { name: 'Machine Learning Solutions', url: '/ai-services', description: 'Custom ML models' },
-    { name: 'Natural Language Processing', url: '/ai-services', description: 'NLP and chatbots' },
-    { name: 'Computer Vision', url: '/ai-services', description: 'Image and video analysis' },
-    { name: 'AI Analytics', url: '/ai-services', description: 'Data-driven insights' },
-    { name: 'AI Automation', url: '/ai-services', description: 'Process automation' }
+    { name: 'AI Customer Service', url: '/ai-services', description: 'Intelligent chatbots & support' },
+    { name: 'AI Content Generation', url: '/ai-services', description: 'Automated content creation' },
+    { name: 'AI Analytics & Forecasting', url: '/ai-services', description: 'Predictive business intelligence' },
+    { name: 'Computer Vision', url: '/ai-services', description: 'Image & video analysis' },
+    { name: 'Voice AI Solutions', url: '/ai-services', description: 'Speech recognition & synthesis' },
+    { name: 'AI Process Automation', url: '/ai-services', description: 'Intelligent workflow automation' }
   ];
 
   const itServices = [
-    { name: 'Cloud Infrastructure', url: '/it-services', description: 'Scalable cloud solutions' },
-    { name: 'Cybersecurity', url: '/it-services', description: 'Security solutions' },
-    { name: 'API Development', url: '/it-services', description: 'Custom API solutions' },
-    { name: 'Database Management', url: '/it-services', description: 'Database optimization' },
-    { name: 'Network Solutions', url: '/it-services', description: 'Network infrastructure' },
-    { name: 'Managed IT Services', url: '/it-services', description: '24/7 IT support' }
+    { name: 'Cloud Infrastructure', url: '/it-services', description: 'AWS, Azure, GCP migration' },
+    { name: 'DevOps & CI/CD', url: '/it-services', description: 'Automated deployment pipelines' },
+    { name: 'Database Management', url: '/it-services', description: 'Database optimization & maintenance' },
+    { name: 'Cybersecurity Solutions', url: '/it-services', description: 'Advanced threat protection' },
+    { name: 'Managed IT Services', url: '/it-services', description: '24/7 IT support & monitoring' },
+    { name: 'Mobile App Development', url: '/it-services', description: 'iOS & Android applications' }
   ];
 
   const microSaasServices = [
-    { name: 'Project Management', url: '/micro-saas', description: 'Streamlined project tracking' },
-    { name: 'Customer Support', url: '/micro-saas', description: 'Efficient support systems' },
-    { name: 'Analytics Dashboard', url: '/micro-saas', description: 'Business intelligence' },
-    { name: 'Content Management', url: '/micro-saas', description: 'Content organization' },
-    { name: 'Team Collaboration', url: '/micro-saas', description: 'Team productivity tools' },
-    { name: 'Financial Tracking', url: '/micro-saas', description: 'Financial management' }
+    { name: 'Analytics Pro', url: '/micro-saas', description: 'Real-time business intelligence' },
+    { name: 'Chat AI', url: '/micro-saas', description: 'AI customer support platform' },
+    { name: 'Security Shield', url: '/micro-saas', description: 'Enterprise cybersecurity monitoring' },
+    { name: 'Cloud Vault', url: '/micro-saas', description: 'Intelligent backup & recovery' },
+    { name: 'AI Workflow', url: '/micro-saas', description: 'Business process automation' },
+    { name: 'Email Marketing AI', url: '/micro-saas', description: 'AI-powered email campaigns' }
   ];
 
   const resourcesLinks = [
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center text-sm text-gray-300">
                 <Mail className="w-4 h-4 mr-2" />
-                <span>info@ziontechgroup.com</span>
+                <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-start text-sm text-gray-300">
                 <MapPin className="w-4 h-4 mr-2 mt-0.5" />
@@ -137,7 +137,6 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
-<<<<<<< HEAD
             </div>
             <div className="flex space-x-6">
               <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
@@ -152,19 +151,6 @@ const Footer: React.FC = () => {
               <Link to="/contact" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Contact
               </Link>
-=======
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="/privacy" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
-                Privacy Policy
-              </a>
-              <a href="/terms" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
-                Terms of Service
-              </a>
-              <a href="/cookies" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
-                Cookie Policy
-              </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
             </div>
           </div>
         </div>
@@ -173,10 +159,6 @@ const Footer: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default Footer;
-=======
 Footer.displayName = 'Footer';
 
 export default Footer;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
