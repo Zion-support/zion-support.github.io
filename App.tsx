@@ -12,6 +12,7 @@ import SEOHead from './src/components/EnhancedSEOHead';
 import SkipLink from './src/components/SkipLink';
 import PerformanceOptimizer from './src/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
+import EnhancedAccessibility from './src/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './src/components/Analytics';
 
@@ -169,7 +170,8 @@ const App: React.FC = memo(() => {
         <AnalyticsProvider>
           <PerformanceOptimizer>
             <AccessibilityEnhancer>
-              <AppWithPerformanceMonitoring>
+              <EnhancedAccessibility>
+                <AppWithPerformanceMonitoring>
                 <SEOHead />
                 <Router>
                 <div className="min-h-screen bg-white overflow-x-hidden">
@@ -297,7 +299,8 @@ const App: React.FC = memo(() => {
                   <Footer />
                 </div>
                 </Router>
-              </AppWithPerformanceMonitoring>
+                </AppWithPerformanceMonitoring>
+              </EnhancedAccessibility>
             </AccessibilityEnhancer>
           </PerformanceOptimizer>
         </AnalyticsProvider>
