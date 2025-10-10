@@ -63,8 +63,6 @@ const PricingPage: React.FC = () => {
         <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
       </Helmet>
-<<<<<<< HEAD
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -146,10 +144,9 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
-    </>
-  );
+        </div>
+      </>
+    );
 };
 
 export default PricingPage;
