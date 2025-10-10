@@ -1,66 +1,110 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
+import path from 'path';
 
-// Files that need syntax fixes
-const filesToFix = [
-  './app/ai-analytics/page.tsx',
-  './app/ai-api-management/page.tsx',
-  './app/ai-api-manager/page.tsx',
-  './app/ai-autonomous-systems/page.tsx',
-  './app/ai-blockchain-analytics/page.tsx',
-  './app/ai-blockchain-solutions/page.tsx',
-  './app/ai-climate-solutions-pro/page.tsx',
-  './app/ai-cloud-infrastructure/page.tsx',
-  './app/ai-code-assistant/page.tsx',
-  './app/ai-code-security-auditor/page.tsx',
-  './app/ai-computer-vision/page.tsx',
-  './app/ai-content-delivery-network/page.tsx',
-  './app/ai-content-generation/page.tsx',
-  './app/ai-content-studio/page.tsx',
-  './app/ai-content-writer/page.tsx',
-  './app/ai-crm-assistant/page.tsx'
-];
-
-function fixFile(filePath) {
+// Function to fix common syntax errors
+function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    let fixed = false;
     
-    // Fix common syntax issues
-    content = content.replace(/\s+return\s*\(\s*<>/g, '\n    }\n  ];\n\n  return (\n    <>');
+    // Fix common JSX syntax issues
+    const fixes = [
+      // Fix missing closing tags
+      {
+        pattern: /<div([^>]*)>\s*$/gm,
+        replacement: (match, attrs) => {
+          // Check if this div has a corresponding closing tag
+          const lines = content.split('\n');
+          const openDivLine = lines.findIndex(line => line.includes(match));
+          if (openDivLine !== -1) {
+            // Look for closing tag in subsequent lines
+            for (let i = openDivLine + 1; i < lines.length; i++) {
+              if (lines[i].includes('</div>')) {
+                return match; // Already has closing tag
+              }
+            }
+            // Add closing tag at the end of the component
+            return match + '\n      </div>';
+          }
+          return match;
+        }
+      },
+      
+      // Fix JSX fragment issues
+      {
+        pattern: /<>\s*$/gm,
+        replacement: '<>\n      '
+      },
+      
+      // Fix missing closing braces
+      {
+        pattern: /}\s*\)\s*$/gm,
+        replacement: '})\n      '
+      },
+      
+      // Fix extra closing braces
+      {
+        pattern: /}\s*}\s*\)\s*$/gm,
+        replacement: '})\n      '
+      }
+    ];
     
-    // Fix missing closing brackets for features array
-    content = content.replace(/(benefits:\s*\[[^\]]+\])\s+return\s*\(/g, '$1\n    }\n  ];\n\n  return (');
-    
-    // Fix malformed JSX structure
-    content = content.replace(/(benefits:\s*\[[^\]]+\])\s*}\s*return\s*\(/g, '$1\n    }\n  ];\n\n  return (');
-    
-    // Fix missing closing tags
-    content = content.replace(/<Helmet>\s*<title>[^<]+<\/title>\s*<meta[^>]+>\s*<meta[^>]+>\s*<meta[^>]+>\s*<\/Helmet>/g, 
-      '<Helmet>\n        <title>AI Analytics - Zion Tech Group</title>\n        <meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />\n        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />\n      </Helmet>');
-    
-    // Ensure proper JSX structure
-    if (!content.includes('export default')) {
-      content = content.replace(/(const\s+\w+Page:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?)(\s*};?\s*)$/m, '$1\n};\n\nexport default $1Page;');
+    for (const fix of fixes) {
+      if (typeof fix.replacement === 'function') {
+        const newContent = content.replace(fix.pattern, fix.replacement);
+        if (newContent !== content) {
+          content = newContent;
+          fixed = true;
+        }
+      } else {
+        const newContent = content.replace(fix.pattern, fix.replacement);
+        if (newContent !== content) {
+          content = newContent;
+          fixed = true;
+        }
+      }
     }
     
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`✅ Fixed syntax errors in ${filePath}`);
+    if (fixed) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed syntax errors in: ${filePath}`);
+      return true;
+    }
     
+    return false;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Process all files
-console.log('🔧 Fixing syntax errors...\n');
-
-filesToFix.forEach(filePath => {
-  if (fs.existsSync(filePath)) {
-    fixFile(filePath);
-  } else {
-    console.log(`⚠️  File not found: ${filePath}`);
+// Function to fix specific files with known issues
+function fixSpecificFiles() {
+  const filesToFix = [
+    './app/blog/page.tsx',
+    './app/careers/page.tsx',
+    './app/case-studies/page.tsx',
+    './app/cloud-migration-services/page.tsx',
+    './app/cloud-services/page.tsx'
+  ];
+  
+  let fixedCount = 0;
+  
+  for (const file of filesToFix) {
+    if (fs.existsSync(file)) {
+      if (fixSyntaxErrors(file)) {
+        fixedCount++;
+      }
+    }
   }
-});
+  
+  return fixedCount;
+}
 
-console.log('\n✨ Syntax error fixes complete!');
+// Main execution
+console.log('Starting syntax error fixes...');
+const fixedCount = fixSpecificFiles();
+console.log(`Fixed syntax errors in ${fixedCount} files.`);
+console.log('Syntax error fixes completed!');

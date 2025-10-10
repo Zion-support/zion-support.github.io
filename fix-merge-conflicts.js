@@ -2,89 +2,93 @@
 
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Files with merge conflicts
-const filesWithConflicts = [
-  './src/components/PerformanceDashboard.tsx',
-  './app/utils/accessibilityChecker.ts',
-  './app/utils/accessibilityEnhancer.ts',
-  './app/types/next.d.ts',
-  './app/ai-crm-assistant/page.tsx',
-  './app/ai-content-studio/page.tsx',
-  './app/ai-content-writer/page.tsx',
-  './app/ai-code-assistant/page.tsx',
-  './app/ai-code-security-auditor/page.tsx',
-  './app/ai-blockchain-solutions/page.tsx',
-  './app/ai-cloud-infrastructure/page.tsx',
-  './app/ai-content-generation/page.tsx',
-  './app/ai-api-manager/page.tsx',
-  './app/ai-computer-vision/page.tsx',
-  './app/ai-analytics/page.tsx',
-  './app/ai-api-management/page.tsx',
-  './app/ai-blockchain-analytics/page.tsx',
-  './app/ai-content-delivery-network/page.tsx',
-  './app/ai-autonomous-systems/page.tsx',
-  './app/ai-climate-solutions-pro/page.tsx'
-];
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-function resolveMergeConflicts(filePath) {
+// Function to fix merge conflicts in a file
+function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    let fixed = false;
     
-    // Split by merge conflict markers
+    // Remove merge conflict markers and keep HEAD version
     const lines = content.split('\n');
-    const resolvedLines = [];
+    const fixedLines = [];
     let inConflict = false;
-    let inHead = false;
-    let inSeparator = false;
+    let conflictType = '';
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.trim() === '<<<<<<< HEAD') {
+      if (line.startsWith('<<<<<<<')) {
         inConflict = true;
-        inHead = true;
-        inSeparator = false;
+        conflictType = 'head';
         continue;
-      } else if (line.trim() === '=======') {
-        inHead = false;
-        inSeparator = true;
+      } else if (line.startsWith('=======')) {
+        conflictType = 'other';
         continue;
-      } else if (line.trim() === '>>>>>>>') {
+      } else if (line.startsWith('>>>>>>>')) {
         inConflict = false;
-        inHead = false;
-        inSeparator = false;
+        conflictType = '';
         continue;
       }
       
-      if (inConflict) {
-        if (inHead) {
-          resolvedLines.push(line);
+      if (!inConflict || conflictType === 'head') {
+        fixedLines.push(line);
+        if (inConflict) {
+          fixed = true;
         }
-        // Skip lines in the other branch (after =======)
-      } else {
-        resolvedLines.push(line);
       }
     }
     
-    const resolvedContent = resolvedLines.join('\n');
-    fs.writeFileSync(filePath, resolvedContent, 'utf8');
-    console.log(`✅ Resolved merge conflicts in ${filePath}`);
+    if (fixed) {
+      fs.writeFileSync(filePath, fixedLines.join('\n'));
+      console.log(`Fixed merge conflicts in: ${filePath}`);
+      return true;
+    }
     
+    return false;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Process all files
-console.log('🔧 Resolving merge conflicts...\n');
-
-filesWithConflicts.forEach(filePath => {
-  if (fs.existsSync(filePath)) {
-    resolveMergeConflicts(filePath);
-  } else {
-    console.log(`⚠️  File not found: ${filePath}`);
+// Function to recursively find and fix merge conflicts
+function findAndFixConflicts(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += findAndFixConflicts(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
+      if (fixMergeConflicts(filePath)) {
+        fixedCount++;
+      }
+    }
   }
-});
+  
+  return fixedCount;
+}
 
-console.log('\n✨ Merge conflict resolution complete!');
+// Main execution
+console.log('Starting merge conflict resolution...');
+const fixedCount = findAndFixConflicts('./app');
+console.log(`Fixed merge conflicts in ${fixedCount} files.`);
+
+// Also check other directories
+const otherDirs = ['./src', './components'];
+for (const dir of otherDirs) {
+  if (fs.existsSync(dir)) {
+    const count = findAndFixConflicts(dir);
+    console.log(`Fixed merge conflicts in ${count} files in ${dir}.`);
+  }
+}
+
+console.log('Merge conflict resolution completed!');
