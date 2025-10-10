@@ -90,7 +90,7 @@ const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  usePerformanceMonitor();
+  // usePerformanceMonitor();
   return <>{children}</>;
 };
 
