@@ -2,28 +2,24 @@
 // const fs = require('fs');
 // const path = require('path');
 
-// Create advanced monitoring system;
-function createAdvancedMonitoring() {
-  //   const monitoringFiles = {
-    'monitoring/health-check.js': `// Advanced health check system;
-module.exports = {
-  healthCheck: () => ({ status: 'ok' })
-};`,
 // Create advanced monitoring system
 function createAdvancedMonitoring() {
   const monitoringFiles = {
+    'monitoring/health-check.js': `// Advanced health check system
+module.exports = {
+  healthCheck: () => ({ status: 'ok' })
+};`,
     status: 'ok'
   };
   return monitoringFiles;
 }
 
 function createAdvancedCaching() {
-  //   const cachingFiles = {
-    'caching/cache-manager.js': `// Advanced cache manager;
+  const cachingFiles = {
+    'caching/cache-manager.js': `// Advanced cache manager
 module.exports = {
   cacheManager: () => ({ status: 'ready' })
 };`,
-  const cachingFiles = {
     status: 'ready'
   };
   return cachingFiles;

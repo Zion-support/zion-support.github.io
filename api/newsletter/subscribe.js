@@ -3,20 +3,16 @@ const { isValidEmail } = require('../emailUtils.cjs');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 
-=======
->>>>>>> origin/resolve-merge-conflicts
   try {
     const { email } = req.body || {};
 
     if (!email) {
-<<<<<<< HEAD
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Email is required' }));
@@ -52,17 +48,3 @@ async function handler(req, res) {
 }
 
 module.exports = withSentry(handler);
-=======
-    };
-
-    res.statusCode = 200;
-    res.json({ success: true, subscription });
-  } catch (err) {
-    console.error("Error:", err);
-    console.error('Error subscribing to newsletter:', err);
-    res.status(500).json({ error: 'Failed to subscribe to newsletter' });
-  }
-}
-
-export default withSentry(handler);
->>>>>>> origin/resolve-merge-conflicts

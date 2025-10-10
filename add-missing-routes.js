@@ -18,10 +18,10 @@ const generateImportStatement = (route) => {
   return `const ${componentName} = lazy(() => import('.${route}/page'));`;
 };
 
-// Generate route statements;
+// Generate route statements
 const generateRouteStatement = (route) => {
   const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
-  return `            <Route path="${route}" element={<${componentName} />} />`;</Route>
+  return `            <Route path="${route}" element={<${componentName} />} />`;
 };
 
 // Generate all import statements;

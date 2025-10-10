@@ -1,10 +1,9 @@
-<<<<<<< HEAD
-=======
 import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const EnhancedFooter: React.FC = () => {const services = [
+const EnhancedFooter: React.FC = () => {
+  const services = [
     { name: 'AI Solutions', href: '/services/ai' },
     { name: 'Cloud Architecture', href: '/services/cloud' },
     { name: 'Web Development', href: '/services/web' },
@@ -167,6 +166,5 @@ const EnhancedFooter: React.FC = () => {const services = [
     </footer>
   );
 };
->>>>>>> origin/resolve-merge-conflicts-1759965566
 
 export default EnhancedFooter;
