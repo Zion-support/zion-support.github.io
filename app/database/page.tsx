@@ -1,33 +1,19 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-            </div>
-          </div>
-        </div>
-      </section>
-          </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-            </div>
-          </div>
-        </div>
-      </section>
+
+const Database: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 text-center">
+          Database
+        </h1>
+        <p className="text-xl text-gray-300 text-center max-w-3xl mx-auto">
+          This page is temporarily simplified for build purposes.
+        </p>
+      </div>
     </div>
   );
 };
-export default PagePage;
-  </h2>
+
+export default Database;
