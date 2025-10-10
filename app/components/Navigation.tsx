@@ -378,6 +378,7 @@ const Navigation: React.FC = () => {
         { name: 'AI Computer Vision Platform', path: '/ai-computer-vision', description: 'Advanced image recognition', icon: '👁️', popular: false },
         { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform', icon: '🧠', popular: false },
         { name: 'AI Quantum Computing', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: false },
+<<<<<<< HEAD
         { name: 'AI Quantum Financial Oracle', path: '/ai-quantum-financial-oracle', description: 'Quantum financial intelligence', icon: '💰', popular: true },
         { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro', description: 'Environmental AI solutions', icon: '🌱', popular: true },
         { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro', description: 'Revolutionary drug discovery', icon: '💊', popular: true },
@@ -409,6 +410,13 @@ const Navigation: React.FC = () => {
         { name: 'AI Security Solutions', path: '/ai-cybersecurity', description: 'Advanced AI security solutions', icon: '🛡️', popular: true },
         { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing', icon: '📄', popular: true }
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
+=======
+        { name: 'AI Financial Crime Detection Pro', path: '/ai-financial-crime-detection-pro', description: 'Advanced fraud detection', icon: '🛡️', popular: true },
+        { name: 'AI Supply Chain Optimization Pro', path: '/ai-supply-chain-optimization-pro', description: 'Intelligent supply chain management', icon: '🚚', popular: true },
+        { name: 'AI Energy Grid Management Pro', path: '/ai-energy-grid-management-pro', description: 'Smart energy grid optimization', icon: '⚡', popular: true },
+        { name: 'AI Agricultural Intelligence Pro', path: '/ai-agricultural-intelligence-pro', description: 'Precision farming solutions', icon: '🌱', popular: true },
+        { name: 'AI Legal Research Pro', path: '/ai-legal-research-pro', description: 'Advanced legal research AI', icon: '⚖️', popular: true }
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-d464
       ]
     },
     {
@@ -536,6 +544,7 @@ const Navigation: React.FC = () => {
         { name: 'DevOps & CI/CD Implementation', path: '/devops-cicd', description: 'Streamlined development processes', icon: '⚙️', popular: false },
         { name: 'Database Management & Optimization', path: '/database-management', description: 'Performance tuning & security', icon: '🗄️', popular: false },
         { name: 'Network Design & Implementation', path: '/network-design', description: 'Secure network infrastructure', icon: '🌐', popular: false },
+<<<<<<< HEAD
         { name: 'Quantum Cloud Infrastructure', path: '/quantum-cloud-infrastructure', description: 'Quantum computing cloud', icon: '⚛️', popular: true }
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
 =======
@@ -579,6 +588,11 @@ const Navigation: React.FC = () => {
         { name: 'Database Management', path: '/it-services', description: 'Performance tuning & security', icon: '🗄️', popular: false },
         { name: 'Network Design', path: '/it-services', description: 'Secure network infrastructure', icon: '🌐', popular: false }
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
+=======
+        { name: 'AI Infrastructure Monitoring Pro', path: '/ai-infrastructure-monitoring', description: 'Intelligent infrastructure monitoring', icon: '📊', popular: true },
+        { name: 'Blockchain Integration Services Pro', path: '/blockchain-integration-services', description: 'Complete blockchain integration', icon: '⛓️', popular: true },
+        { name: 'AI API Management Pro', path: '/ai-api-management', description: 'Advanced API management platform', icon: '🔧', popular: true }
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-d464
       ]
     },
     {
