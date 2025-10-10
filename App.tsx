@@ -9,15 +9,15 @@ import Footer from './app/components/Footer';
 import HomePage from './app/page';
 import { PageLoader } from './app/components/LoadingStates';
 import ErrorBoundary from './app/components/ErrorBoundary';
-import SEOHead from './app/components/EnhancedSEOHead';
-import SkipLink from './app/components/SkipLink';
-import Breadcrumb from './app/components/Breadcrumb';
+// import SEOHead from './app/components/EnhancedSEOHead';
+// import SkipLink from './app/components/SkipLink';
+// import Breadcrumb from './app/components/Breadcrumb';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
-import { AnalyticsProvider } from './app/components/AnalyticsProvider';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
+// import EnhancedAccessibility from './app/components/EnhancedAccessibility';
+// import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
+// import { AnalyticsProvider } from './app/components/AnalyticsProvider';
+// import PerformanceMonitor from './app/components/PerformanceMonitor';
 
 // Structured data for SEO - moved to SEOHead component
 
@@ -39,28 +39,28 @@ const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
 
 // Performance monitoring hook
-const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  usePerformanceMonitor();
-  return <>{children}</>;
-};
+// const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+//   usePerformanceMonitor();
+//   return <>{children}</>;
+// };
 
 // Main App Component
 const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <HelmetProvider>
-        <SEOHead />
-        <SkipLink />
+        {/* <SEOHead /> */}
+        {/* <SkipLink /> */}
         <Router>
-          <AppWithPerformanceMonitoring>
-            <AnalyticsProvider>
+          {/* <AppWithPerformanceMonitoring> */}
+            {/* <AnalyticsProvider> */}
               <PerformanceOptimizer>
-                <EnhancedAccessibility>
+                {/* <EnhancedAccessibility> */}
                   <AccessibilityEnhancer>
-                    <PerformanceMonitor />
+                    {/* <PerformanceMonitor /> */}
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                       <Navigation />
-                      <Breadcrumb />
+                      {/* <Breadcrumb /> */}
                       <main id="main-content" className="flex-1">
                         <Suspense fallback={<PageLoader />}>
                           <Routes>
@@ -86,10 +86,10 @@ const App: React.FC = () => {
                       <Footer />
                     </div>
                   </AccessibilityEnhancer>
-                </EnhancedAccessibility>
+                {/* </EnhancedAccessibility> */}
               </PerformanceOptimizer>
-            </AnalyticsProvider>
-          </AppWithPerformanceMonitoring>
+            {/* </AnalyticsProvider> */}
+          {/* </AppWithPerformanceMonitoring> */}
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
