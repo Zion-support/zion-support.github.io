@@ -151,6 +151,96 @@ const ServicesPage: React.FC = () => {
       benefits: ['Global communication', 'Reduced language barriers', 'Faster localization', 'Cost-effective translation']
     },
     {
+      icon: Cpu,
+      title: 'AI Quantum Machine Learning',
+      description: 'Quantum-enhanced machine learning algorithms for solving complex optimization and pattern recognition problems.',
+      category: 'ai',
+      features: ['Quantum Neural Networks', 'Quantum Optimization', 'Quantum Feature Selection', 'Quantum Clustering', 'Quantum Regression', 'Hybrid Algorithms'],
+      price: 'Starting at $2,999/month',
+      marketPrice: '$5000-20000/month',
+      benefits: ['Exponential speedup', 'Complex problem solving', 'Advanced pattern recognition', 'Future-ready AI']
+    },
+    {
+      icon: Eye,
+      title: 'AI Spatial Intelligence',
+      description: 'Advanced spatial AI for autonomous navigation, mapping, and 3D environment understanding.',
+      category: 'ai',
+      features: ['3D Mapping', 'Autonomous Navigation', 'Spatial Recognition', 'Path Planning', 'Obstacle Avoidance', 'SLAM Technology'],
+      price: 'Starting at $1,499/month',
+      marketPrice: '$3000-12000/month',
+      benefits: ['Autonomous navigation', '3D environment understanding', 'Precise mapping', 'Robotic applications']
+    },
+    {
+      icon: Brain,
+      title: 'AI Neuromorphic Computing',
+      description: 'Brain-inspired AI systems that mimic neural processing for ultra-efficient computing.',
+      category: 'ai',
+      features: ['Spiking Neural Networks', 'Neuromorphic Chips', 'Event-driven Processing', 'Low Power Computing', 'Real-time Learning', 'Adaptive Systems'],
+      price: 'Starting at $1,999/month',
+      marketPrice: '$4000-15000/month',
+      benefits: ['Ultra-low power consumption', 'Real-time processing', 'Adaptive learning', 'Brain-like efficiency']
+    },
+    {
+      icon: Zap,
+      title: 'AI Swarm Intelligence',
+      description: 'Distributed AI systems that coordinate multiple agents for complex problem solving and optimization.',
+      category: 'ai',
+      features: ['Multi-agent Systems', 'Swarm Optimization', 'Distributed Learning', 'Cooperative AI', 'Emergent Behavior', 'Scalable Intelligence'],
+      price: 'Starting at $1,299/month',
+      marketPrice: '$2500-10000/month',
+      benefits: ['Distributed problem solving', 'Scalable intelligence', 'Emergent behaviors', 'Robust systems']
+    },
+    {
+      icon: Heart,
+      title: 'AI Emotional Intelligence',
+      description: 'Advanced emotion recognition and response systems for human-AI interaction and mental health applications.',
+      category: 'ai',
+      features: ['Emotion Recognition', 'Sentiment Analysis', 'Empathy Modeling', 'Mental Health Support', 'Social Interaction', 'Therapeutic Applications'],
+      price: 'Starting at $799/month',
+      marketPrice: '$1500-5000/month',
+      benefits: ['Human-like interaction', 'Mental health support', 'Emotional understanding', 'Therapeutic applications']
+    },
+    {
+      icon: Shield,
+      title: 'AI Adversarial Defense',
+      description: 'Advanced AI systems designed to detect and defend against adversarial attacks and AI manipulation.',
+      category: 'ai',
+      features: ['Adversarial Detection', 'Robust AI Models', 'Attack Prevention', 'Security Validation', 'Threat Intelligence', 'Defense Strategies'],
+      price: 'Starting at $1,799/month',
+      marketPrice: '$3500-12000/month',
+      benefits: ['AI security protection', 'Adversarial resistance', 'Robust AI systems', 'Threat mitigation']
+    },
+    {
+      icon: Database,
+      title: 'AI Federated Learning',
+      description: 'Privacy-preserving AI training across distributed data sources without centralizing sensitive information.',
+      category: 'ai',
+      features: ['Distributed Training', 'Privacy Preservation', 'Secure Aggregation', 'Differential Privacy', 'Federated Analytics', 'Cross-silo Learning'],
+      price: 'Starting at $1,399/month',
+      marketPrice: '$2800-10000/month',
+      benefits: ['Privacy-preserving AI', 'Distributed learning', 'Data security', 'Collaborative intelligence']
+    },
+    {
+      icon: Users,
+      title: 'AI Collective Intelligence',
+      description: 'AI systems that aggregate knowledge and insights from multiple sources to solve complex problems.',
+      category: 'ai',
+      features: ['Knowledge Aggregation', 'Crowd Intelligence', 'Expert Systems', 'Consensus Building', 'Wisdom of Crowds', 'Collective Decision Making'],
+      price: 'Starting at $999/month',
+      marketPrice: '$2000-8000/month',
+      benefits: ['Collective wisdom', 'Expert-level insights', 'Consensus building', 'Scalable intelligence']
+    },
+    {
+      icon: Target,
+      title: 'AI Causal Inference',
+      description: 'Advanced AI systems that understand cause-and-effect relationships for better decision making.',
+      category: 'ai',
+      features: ['Causal Discovery', 'Counterfactual Analysis', 'Intervention Planning', 'Causal Modeling', 'Effect Estimation', 'Causal Reasoning'],
+      price: 'Starting at $1,599/month',
+      marketPrice: '$3200-12000/month',
+      benefits: ['Causal understanding', 'Better decision making', 'Intervention planning', 'Scientific insights']
+    },
+    {
       icon: Mic,
       title: 'AI Voice Recognition',
       description: 'Advanced speech-to-text and voice command solutions for various business applications.',
@@ -341,6 +431,96 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $1,200/month',
       marketPrice: '$2000-6000/month',
       benefits: ['Improved performance', 'Better user experience', 'Cost optimization', 'Scalable solutions']
+    },
+    {
+      icon: Cpu,
+      title: 'Quantum Computing Integration',
+      description: 'Quantum computing solutions and hybrid quantum-classical system integration for advanced problem solving.',
+      category: 'it',
+      features: ['Quantum Algorithm Development', 'Hybrid System Integration', 'Quantum Simulation', 'Optimization Problems', 'Cryptography Solutions', 'Research & Development'],
+      price: 'Starting at $5,000/month',
+      marketPrice: '$10000-50000/month',
+      benefits: ['Exponential computational power', 'Complex problem solving', 'Future-ready technology', 'Competitive advantage']
+    },
+    {
+      icon: Eye,
+      title: 'Extended Reality (XR) Development',
+      description: 'Immersive XR solutions including AR, VR, and MR applications for enterprise and consumer markets.',
+      category: 'it',
+      features: ['AR/VR Applications', 'Mixed Reality Solutions', '3D Content Creation', 'Spatial Computing', 'Haptic Feedback', 'Immersive Training'],
+      price: 'Starting at $3,500/month',
+      marketPrice: '$7000-25000/month',
+      benefits: ['Immersive experiences', 'Enhanced training', 'Remote collaboration', 'Innovative solutions']
+    },
+    {
+      icon: Wifi,
+      title: '5G & Edge Computing',
+      description: '5G network implementation and edge computing solutions for ultra-low latency applications.',
+      category: 'it',
+      features: ['5G Network Design', 'Edge Computing Infrastructure', 'IoT Integration', 'Real-time Processing', 'Network Optimization', 'Latency Reduction'],
+      price: 'Starting at $2,800/month',
+      marketPrice: '$5000-20000/month',
+      benefits: ['Ultra-low latency', 'High-speed connectivity', 'Real-time processing', 'IoT enablement']
+    },
+    {
+      icon: Brain,
+      title: 'AI Infrastructure & MLOps',
+      description: 'Complete AI infrastructure setup and machine learning operations for scalable AI deployment.',
+      category: 'it',
+      features: ['ML Pipeline Setup', 'Model Deployment', 'AI Infrastructure', 'Data Pipeline', 'Model Monitoring', 'Auto-scaling'],
+      price: 'Starting at $2,200/month',
+      marketPrice: '$4000-15000/month',
+      benefits: ['Scalable AI deployment', 'Automated ML operations', 'Model reliability', 'Cost optimization']
+    },
+    {
+      icon: Shield,
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation for modern enterprise environments.',
+      category: 'it',
+      features: ['Identity Verification', 'Network Segmentation', 'Device Trust', 'Data Protection', 'Continuous Monitoring', 'Threat Detection'],
+      price: 'Starting at $1,800/month',
+      marketPrice: '$3500-12000/month',
+      benefits: ['Enhanced security posture', 'Reduced attack surface', 'Compliance assurance', 'Continuous protection']
+    },
+    {
+      icon: Database,
+      title: 'Blockchain & Web3 Solutions',
+      description: 'Blockchain development and Web3 integration services for decentralized applications.',
+      category: 'it',
+      features: ['Smart Contract Development', 'DeFi Solutions', 'NFT Platforms', 'Web3 Integration', 'Blockchain Infrastructure', 'Token Economics'],
+      price: 'Starting at $3,000/month',
+      marketPrice: '$6000-25000/month',
+      benefits: ['Decentralized solutions', 'Transparent transactions', 'Innovative business models', 'Future-ready technology']
+    },
+    {
+      icon: Globe,
+      title: 'Digital Twin Technology',
+      description: 'Digital twin development for physical assets, processes, and systems for optimization and monitoring.',
+      category: 'it',
+      features: ['3D Modeling', 'Real-time Simulation', 'Predictive Analytics', 'IoT Integration', 'Performance Monitoring', 'Optimization'],
+      price: 'Starting at $2,500/month',
+      marketPrice: '$5000-20000/month',
+      benefits: ['Virtual asset management', 'Predictive maintenance', 'Process optimization', 'Cost reduction']
+    },
+    {
+      icon: Users,
+      title: 'Metaverse Development',
+      description: 'Metaverse platform development and virtual world creation for immersive digital experiences.',
+      category: 'it',
+      features: ['Virtual Worlds', 'Avatar Systems', 'Social Features', 'Virtual Economy', '3D Environments', 'Cross-platform Integration'],
+      price: 'Starting at $4,000/month',
+      marketPrice: '$8000-30000/month',
+      benefits: ['Immersive experiences', 'Virtual collaboration', 'New revenue streams', 'Innovative engagement']
+    },
+    {
+      icon: Settings,
+      title: 'Autonomous Systems Integration',
+      description: 'Integration of autonomous systems including drones, robots, and self-operating machinery.',
+      category: 'it',
+      features: ['Drone Integration', 'Robotic Systems', 'Autonomous Vehicles', 'Sensor Networks', 'AI Control Systems', 'Safety Protocols'],
+      price: 'Starting at $3,200/month',
+      marketPrice: '$6000-25000/month',
+      benefits: ['Automated operations', 'Reduced human error', '24/7 operation', 'Cost efficiency']
     },
     
     // Micro SaaS
@@ -703,6 +883,196 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $139/month',
       marketPrice: '$250-600/month',
       benefits: ['Faster document processing', 'Reduced manual work', 'Better accuracy', 'Cost savings']
+    },
+    {
+      icon: Brain,
+      title: 'Zion AI Quantum Analytics',
+      description: 'Next-generation quantum-inspired analytics platform for complex data processing and optimization.',
+      category: 'saas',
+      features: ['Quantum Algorithms', 'Complex Optimization', 'Advanced ML Models', 'Real-time Processing', 'Multi-dimensional Analysis', 'Quantum Simulation'],
+      price: 'Starting at $499/month',
+      marketPrice: '$1000-3000/month',
+      benefits: ['Exponential processing power', 'Complex problem solving', 'Advanced optimization', 'Future-ready technology']
+    },
+    {
+      icon: Cpu,
+      title: 'Zion AI Edge Intelligence',
+      description: 'Distributed AI processing platform for real-time edge computing and IoT applications.',
+      category: 'saas',
+      features: ['Edge AI Models', 'Real-time Processing', 'IoT Integration', 'Low Latency', 'Offline Capability', 'Distributed Computing'],
+      price: 'Starting at $299/month',
+      marketPrice: '$600-2000/month',
+      benefits: ['Ultra-low latency', 'Offline processing', 'Scalable edge deployment', 'Cost-effective computing']
+    },
+    {
+      icon: Eye,
+      title: 'Zion AI Vision Pro',
+      description: 'Advanced computer vision platform with 3D reconstruction and augmented reality capabilities.',
+      category: 'saas',
+      features: ['3D Object Detection', 'AR Integration', 'Real-time Tracking', 'Depth Analysis', 'Spatial Mapping', 'Gesture Recognition'],
+      price: 'Starting at $399/month',
+      marketPrice: '$800-2500/month',
+      benefits: ['Advanced visual processing', 'AR/VR integration', 'Real-time 3D analysis', 'Immersive experiences']
+    },
+    {
+      icon: Zap,
+      title: 'Zion AI Energy Optimizer',
+      description: 'AI-powered energy management system for smart buildings and industrial facilities.',
+      category: 'saas',
+      features: ['Smart Grid Integration', 'Predictive Maintenance', 'Energy Forecasting', 'Load Balancing', 'Carbon Footprint Tracking', 'Cost Optimization'],
+      price: 'Starting at $199/month',
+      marketPrice: '$400-1200/month',
+      benefits: ['Reduce energy costs by 30%', 'Carbon footprint reduction', 'Smart automation', 'Predictive maintenance']
+    },
+    {
+      icon: Heart,
+      title: 'Zion AI Health Monitor',
+      description: 'Comprehensive health monitoring platform with AI-powered diagnostics and wellness tracking.',
+      category: 'saas',
+      features: ['Vital Signs Monitoring', 'AI Diagnostics', 'Health Predictions', 'Wellness Tracking', 'Medical Records', 'Emergency Alerts'],
+      price: 'Starting at $149/month',
+      marketPrice: '$300-800/month',
+      benefits: ['Proactive health management', 'Early disease detection', 'Personalized insights', '24/7 monitoring']
+    },
+    {
+      icon: Globe,
+      title: 'Zion AI Climate Intelligence',
+      description: 'Advanced climate monitoring and prediction platform for environmental management.',
+      category: 'saas',
+      features: ['Climate Modeling', 'Weather Prediction', 'Environmental Monitoring', 'Risk Assessment', 'Sustainability Tracking', 'Carbon Analytics'],
+      price: 'Starting at $249/month',
+      marketPrice: '$500-1500/month',
+      benefits: ['Accurate climate predictions', 'Environmental compliance', 'Risk mitigation', 'Sustainability insights']
+    },
+    {
+      icon: Shield,
+      title: 'Zion AI Security Sentinel',
+      description: 'Next-generation cybersecurity platform with AI-powered threat detection and response.',
+      category: 'saas',
+      features: ['Zero-day Detection', 'Behavioral Analysis', 'Automated Response', 'Threat Hunting', 'Compliance Monitoring', 'Incident Forensics'],
+      price: 'Starting at $349/month',
+      marketPrice: '$700-2000/month',
+      benefits: ['Advanced threat protection', 'Automated response', 'Compliance assurance', '24/7 monitoring']
+    },
+    {
+      icon: Users,
+      title: 'Zion AI Talent Intelligence',
+      description: 'AI-powered talent acquisition and management platform with advanced matching algorithms.',
+      category: 'saas',
+      features: ['AI Resume Screening', 'Skill Matching', 'Interview Automation', 'Performance Analytics', 'Diversity Tracking', 'Retention Prediction'],
+      price: 'Starting at $179/month',
+      marketPrice: '$350-900/month',
+      benefits: ['Faster hiring process', 'Better candidate matches', 'Reduced bias', 'Improved retention']
+    },
+    {
+      icon: BarChart,
+      title: 'Zion AI Market Intelligence',
+      description: 'Real-time market analysis and trading platform with AI-powered insights and predictions.',
+      category: 'saas',
+      features: ['Market Analysis', 'Trading Signals', 'Risk Assessment', 'Portfolio Optimization', 'News Sentiment', 'Algorithmic Trading'],
+      price: 'Starting at $599/month',
+      marketPrice: '$1200-3000/month',
+      benefits: ['Data-driven trading', 'Risk reduction', 'Portfolio optimization', 'Real-time insights']
+    },
+    {
+      icon: Code,
+      title: 'Zion AI Code Generator Pro',
+      description: 'Advanced AI code generation platform with full-stack development capabilities.',
+      category: 'saas',
+      features: ['Full-Stack Generation', 'Code Review', 'Bug Detection', 'Performance Optimization', 'Documentation Generation', 'Test Automation'],
+      price: 'Starting at $199/month',
+      marketPrice: '$400-1000/month',
+      benefits: ['10x faster development', 'Higher code quality', 'Automated testing', 'Reduced bugs']
+    },
+    {
+      icon: MessageSquare,
+      title: 'Zion AI Conversational Platform',
+      description: 'Enterprise-grade conversational AI platform with multi-modal interaction capabilities.',
+      category: 'saas',
+      features: ['Voice & Text Chat', 'Multi-language Support', 'Context Awareness', 'Emotion Detection', 'Voice Synthesis', 'Integration APIs'],
+      price: 'Starting at $279/month',
+      marketPrice: '$550-1400/month',
+      benefits: ['Natural conversations', 'Multi-modal interaction', 'Emotional intelligence', 'Seamless integration']
+    },
+    {
+      icon: Database,
+      title: 'Zion AI Data Fabric',
+      description: 'Intelligent data management platform with automated data governance and quality assurance.',
+      category: 'saas',
+      features: ['Data Governance', 'Quality Monitoring', 'Automated Classification', 'Privacy Protection', 'Data Lineage', 'Compliance Management'],
+      price: 'Starting at $229/month',
+      marketPrice: '$450-1100/month',
+      benefits: ['Data quality assurance', 'Compliance automation', 'Privacy protection', 'Governance efficiency']
+    },
+    {
+      icon: Settings,
+      title: 'Zion AI Process Optimizer',
+      description: 'Intelligent business process optimization platform with automated workflow improvement.',
+      category: 'saas',
+      features: ['Process Mining', 'Workflow Optimization', 'Bottleneck Detection', 'Resource Allocation', 'Performance Analytics', 'Automated Improvement'],
+      price: 'Starting at $159/month',
+      marketPrice: '$320-800/month',
+      benefits: ['Process efficiency', 'Cost reduction', 'Automated optimization', 'Performance insights']
+    },
+    {
+      icon: Target,
+      title: 'Zion AI Customer 360',
+      description: 'Comprehensive customer intelligence platform with 360-degree view and predictive analytics.',
+      category: 'saas',
+      features: ['Customer Profiling', 'Behavior Prediction', 'Churn Prevention', 'Lifetime Value', 'Personalization Engine', 'Cross-channel Analytics'],
+      price: 'Starting at $189/month',
+      marketPrice: '$380-950/month',
+      benefits: ['Complete customer view', 'Predictive insights', 'Churn reduction', 'Personalized experiences']
+    },
+    {
+      icon: Package,
+      title: 'Zion AI Supply Chain Pro',
+      description: 'Advanced supply chain optimization platform with AI-powered demand forecasting and logistics.',
+      category: 'saas',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Management', 'Risk Assessment', 'Cost Optimization'],
+      price: 'Starting at $279/month',
+      marketPrice: '$550-1400/month',
+      benefits: ['Supply chain efficiency', 'Cost reduction', 'Risk mitigation', 'Optimized logistics']
+    },
+    {
+      icon: Monitor,
+      title: 'Zion AI Infrastructure Monitor',
+      description: 'Intelligent infrastructure monitoring platform with predictive maintenance and optimization.',
+      category: 'saas',
+      features: ['Predictive Maintenance', 'Performance Monitoring', 'Anomaly Detection', 'Capacity Planning', 'Cost Optimization', 'Automated Scaling'],
+      price: 'Starting at $149/month',
+      marketPrice: '$300-750/month',
+      benefits: ['Proactive maintenance', 'Cost optimization', 'Performance improvement', 'Automated scaling']
+    },
+    {
+      icon: FileText,
+      title: 'Zion AI Legal Assistant',
+      description: 'AI-powered legal document analysis and contract management platform.',
+      category: 'saas',
+      features: ['Contract Analysis', 'Legal Research', 'Compliance Checking', 'Risk Assessment', 'Document Generation', 'Case Law Analysis'],
+      price: 'Starting at $299/month',
+      marketPrice: '$600-1500/month',
+      benefits: ['Faster legal research', 'Contract optimization', 'Risk reduction', 'Compliance assurance']
+    },
+    {
+      icon: Heart,
+      title: 'Zion AI Mental Health Pro',
+      description: 'AI-powered mental health monitoring and wellness platform with personalized interventions.',
+      category: 'saas',
+      features: ['Mood Tracking', 'Stress Analysis', 'Wellness Recommendations', 'Crisis Detection', 'Therapy Matching', 'Progress Monitoring'],
+      price: 'Starting at $99/month',
+      marketPrice: '$200-500/month',
+      benefits: ['Mental health awareness', 'Early intervention', 'Personalized care', 'Wellness improvement']
+    },
+    {
+      icon: Globe,
+      title: 'Zion AI Language Master',
+      description: 'Advanced language learning platform with AI-powered personalized instruction and practice.',
+      category: 'saas',
+      features: ['Personalized Learning', 'Speech Recognition', 'Grammar Analysis', 'Cultural Context', 'Progress Tracking', 'Adaptive Testing'],
+      price: 'Starting at $79/month',
+      marketPrice: '$150-400/month',
+      benefits: ['Faster language learning', 'Personalized instruction', 'Cultural understanding', 'Progress optimization']
     },
   ];
   const categories = [

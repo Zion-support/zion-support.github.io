@@ -110,21 +110,22 @@ const Footer: React.FC = memo(() => {
   ]
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden cyber-grid-advanced neural-network-advanced">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 particle-system"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
-            <div className="flex items-center space-x-3 group">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
-                <Brain className="w-7 h-7 text-white" />
+            <div className="flex items-center space-x-4 group">
+              <div className="w-14 h-14 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25 cyber-card-advanced">
+                <Brain className="w-8 h-8 text-white" />
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-bold neon-text-enhanced group-hover:glow">Zion Tech Group</span>
+                <span className="text-3xl font-bold neon-text-advanced group-hover:glow-advanced">Zion Tech Group</span>
                 <span className="text-sm text-cyan-400 font-medium tracking-wider">AI & IT SOLUTIONS</span>
               </div>
             </div>
