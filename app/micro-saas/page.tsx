@@ -2696,6 +2696,7 @@ export default function MicroSaasPage() {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Filters */}
       <section className="py-8 px-4">
         <div className="max-w-6xl mx-auto">
@@ -2750,6 +2751,19 @@ export default function MicroSaasPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => (
               <div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 relative">
+=======
+        {/* Services Grid */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service) => (
+              <div
+                key={service.id}
+                className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 ${
+                  service.popular ? 'ring-2 ring-purple-500' : ''
+                }`}
+              >
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ea76
                 {service.popular && (
                   <div className="absolute top-4 right-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                     Popular
@@ -2934,7 +2948,10 @@ export default function MicroSaasPage() {
             </div>
 =======
           ))}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ee5
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ea76
           </div>
         </div>
 <<<<<<< HEAD
