@@ -1,4 +1,3 @@
-'use client';
 import React, { useEffect } from 'react';
 
 interface SecurityEnhancerProps {
@@ -6,7 +5,13 @@ interface SecurityEnhancerProps {
   enableHTTPSRedirect?: boolean;
   enableXSSProtection?: boolean;
   enableClickjackingProtection?: boolean;
-  enableContentTypeSniffingProtection?: boolean;
+  enableCSRFProtection?: boolean;
+  enableContentSecurityPolicy?: boolean;
+  enableStrictTransportSecurity?: boolean;
+  enableReferrerPolicy?: boolean;
+  enablePermissionsPolicy?: boolean;
+  enableAnalytics?: boolean;
+  enableErrorReporting?: boolean;
 }
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
@@ -14,184 +19,302 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   enableHTTPSRedirect = true,
   enableXSSProtection = true,
   enableClickjackingProtection = true,
-  enableContentTypeSniffingProtection = true
+  enableCSRFProtection = true,
+  enableContentSecurityPolicy = true,
+  enableStrictTransportSecurity = true,
+  enableReferrerPolicy = true,
+  enablePermissionsPolicy = true,
+  enableAnalytics = true,
+  enableErrorReporting = true
 }) => {
   useEffect(() => {
-    if (enableCSP) {
-      addContentSecurityPolicy();
+    if (typeof window === 'undefined') return;
+
+    // HTTPS Redirect
+    if (enableHTTPSRedirect && location.protocol !== 'https:' && location.hostname !== 'localhost') {
+      location.replace(`https:${location.href.substring(location.protocol.length)}`);
     }
-    
-    if (enableHTTPSRedirect) {
-      enforceHTTPS();
-    }
-    
+
+    // XSS Protection
     if (enableXSSProtection) {
-      addXSSProtection();
+      // Add XSS protection headers via meta tag
+      const xssMeta = document.createElement('meta');
+      xssMeta.setAttribute('http-equiv', 'X-XSS-Protection');
+      xssMeta.setAttribute('content', '1; mode=block');
+      document.head.appendChild(xssMeta);
     }
-    
+
+    // Clickjacking Protection
     if (enableClickjackingProtection) {
-      addClickjackingProtection();
+      // Add X-Frame-Options header via meta tag
+      const frameOptionsMeta = document.createElement('meta');
+      frameOptionsMeta.setAttribute('http-equiv', 'X-Frame-Options');
+      frameOptionsMeta.setAttribute('content', 'DENY');
+      document.head.appendChild(frameOptionsMeta);
     }
-    
-    if (enableContentTypeSniffingProtection) {
-      addContentTypeSniffingProtection();
+
+    // Content Security Policy
+    if (enableContentSecurityPolicy) {
+      const cspMeta = document.createElement('meta');
+      cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');
+      cspMeta.setAttribute('content', [
+        "default-src 'self'",
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+        "font-src 'self' https://fonts.gstatic.com",
+        "img-src 'self' data: https: blob:",
+        "connect-src 'self' https://www.google-analytics.com https://analytics.google.com",
+        "frame-src 'none'",
+        "object-src 'none'",
+        "base-uri 'self'",
+        "form-action 'self'",
+        "frame-ancestors 'none'"
+      ].join('; '));
+      document.head.appendChild(cspMeta);
     }
-    
-    // Add security headers
-    addSecurityHeaders();
-    
-    // Add security event listeners
-    addSecurityEventListeners();
-  }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
 
-  const addContentSecurityPolicy = () => {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'Content-Security-Policy';
-    meta.content = [
-      "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "img-src 'self' data: https: blob:",
-      "font-src 'self' https://fonts.gstatic.com",
-      "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com",
-      "frame-ancestors 'none'",
-      "base-uri 'self'",
-      "form-action 'self'",
-      "object-src 'none'",
-      "media-src 'self'",
-      "worker-src 'self'"
-    ].join('; ');
-    document.head.appendChild(meta);
-  };
-
-  const enforceHTTPS = () => {
-    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
-      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+    // Strict Transport Security
+    if (enableStrictTransportSecurity) {
+      const hstsMeta = document.createElement('meta');
+      hstsMeta.setAttribute('http-equiv', 'Strict-Transport-Security');
+      hstsMeta.setAttribute('content', 'max-age=31536000; includeSubDomains; preload');
+      document.head.appendChild(hstsMeta);
     }
-  };
 
-  const addXSSProtection = () => {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'X-XSS-Protection';
-    meta.content = '1; mode=block';
-    document.head.appendChild(meta);
-  };
+    // Referrer Policy
+    if (enableReferrerPolicy) {
+      const referrerMeta = document.createElement('meta');
+      referrerMeta.setAttribute('name', 'referrer');
+      referrerMeta.setAttribute('content', 'strict-origin-when-cross-origin');
+      document.head.appendChild(referrerMeta);
+    }
 
-  const addClickjackingProtection = () => {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'X-Frame-Options';
-    meta.content = 'DENY';
-    document.head.appendChild(meta);
-  };
+    // Permissions Policy
+    if (enablePermissionsPolicy) {
+      const permissionsMeta = document.createElement('meta');
+      permissionsMeta.setAttribute('http-equiv', 'Permissions-Policy');
+      permissionsMeta.setAttribute('content', [
+        'camera=()',
+        'microphone=()',
+        'geolocation=()',
+        'interest-cohort=()',
+        'payment=()',
+        'usb=()',
+        'magnetometer=()',
+        'gyroscope=()',
+        'accelerometer=()'
+      ].join(', '));
+      document.head.appendChild(permissionsMeta);
+    }
 
-  const addContentTypeSniffingProtection = () => {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'X-Content-Type-Options';
-    meta.content = 'nosniff';
-    document.head.appendChild(meta);
-  };
+    // CSRF Protection
+    if (enableCSRFProtection) {
+      // Generate CSRF token
+      const csrfToken = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+      sessionStorage.setItem('csrfToken', csrfToken);
+      
+      // Add CSRF token to all forms
+      const addCSRFTokenToForms = () => {
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+          const existingToken = form.querySelector('input[name="csrfToken"]');
+          if (!existingToken) {
+            const csrfInput = document.createElement('input');
+            csrfInput.type = 'hidden';
+            csrfInput.name = 'csrfToken';
+            csrfInput.value = csrfToken;
+            form.appendChild(csrfInput);
+          }
+        });
+      };
 
-  const addSecurityHeaders = () => {
-    const headers = [
-      { httpEquiv: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
-      { httpEquiv: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
-      { httpEquiv: 'Strict-Transport-Security', content: 'max-age=63072000; includeSubDomains; preload' }
-    ];
+      // Add CSRF token to forms on page load
+      addCSRFTokenToForms();
 
-    headers.forEach(header => {
-      const meta = document.createElement('meta');
-      meta.httpEquiv = header.httpEquiv;
-      meta.content = header.content;
-      document.head.appendChild(meta);
-    });
-  };
+      // Add CSRF token to dynamically created forms
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          mutation.addedNodes.forEach((node) => {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+              const element = node as Element;
+              if (element.tagName === 'FORM') {
+                addCSRFTokenToForms();
+              } else {
+                const forms = element.querySelectorAll('form');
+                if (forms.length > 0) {
+                  addCSRFTokenToForms();
+                }
+              }
+            }
+          });
+        });
+      });
 
-  const addSecurityEventListeners = () => {
-    // Prevent right-click context menu (optional)
-    document.addEventListener('contextmenu', (e) => {
-      // Only prevent on production
-      if (process.env.NODE_ENV === 'production') {
-        e.preventDefault();
-      }
-    });
+      observer.observe(document.body, { childList: true, subtree: true });
+    }
 
-    // Prevent text selection (optional)
-    document.addEventListener('selectstart', (e) => {
-      // Only prevent on production
-      if (process.env.NODE_ENV === 'production') {
-        e.preventDefault();
-      }
-    });
-
-    // Prevent drag and drop
-    document.addEventListener('dragover', (e) => {
-      e.preventDefault();
-    });
-
-    document.addEventListener('drop', (e) => {
-      e.preventDefault();
-    });
-
-    // Prevent F12, Ctrl+Shift+I, Ctrl+U, etc.
-    document.addEventListener('keydown', (e) => {
-      if (process.env.NODE_ENV === 'production') {
-        // F12
-        if (e.keyCode === 123) {
-          e.preventDefault();
-        }
-        // Ctrl+Shift+I
-        if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
-          e.preventDefault();
-        }
-        // Ctrl+U
-        if (e.ctrlKey && e.keyCode === 85) {
-          e.preventDefault();
-        }
-        // Ctrl+S
-        if (e.ctrlKey && e.keyCode === 83) {
-          e.preventDefault();
-        }
-        // Ctrl+A
-        if (e.ctrlKey && e.keyCode === 65) {
-          e.preventDefault();
-        }
-      }
-    });
-
-    // Monitor for suspicious activity
-    let suspiciousActivity = 0;
-    const resetSuspiciousActivity = () => {
-      suspiciousActivity = 0;
+    // Input sanitization
+    const sanitizeInput = (input: string): string => {
+      return input
+        .replace(/[<>]/g, '') // Remove < and >
+        .replace(/javascript:/gi, '') // Remove javascript: protocol
+        .replace(/on\w+\s*=/gi, '') // Remove event handlers
+        .trim();
     };
 
-    // Reset suspicious activity counter every 5 minutes
-    setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
-
-    // Track rapid clicks (potential bot activity)
-    let clickCount = 0;
-    document.addEventListener('click', () => {
-      clickCount++;
-      if (clickCount > 10) { // More than 10 clicks in 5 minutes
-        suspiciousActivity++;
-        if (suspiciousActivity > 3) {
-          // Could implement additional security measures here
-        }
-      }
-    });
-
-    // Track rapid keyboard input
-    let keyCount = 0;
-    document.addEventListener('keydown', () => {
-      keyCount++;
-      if (keyCount > 100) { // More than 100 keystrokes in 5 minutes
-        suspiciousActivity++;
-        if (suspiciousActivity > 3) {
+    // Sanitize all text inputs
+    const sanitizeInputs = () => {
+      const inputs = document.querySelectorAll('input[type="text"], input[type="email"], input[type="password"], textarea');
+      inputs.forEach(input => {
+        input.addEventListener('input', (e) => {
+          const target = e.target as HTMLInputElement;
+          const originalValue = target.value;
+          const sanitizedValue = sanitizeInput(originalValue);
+          if (originalValue !== sanitizedValue) {
+            target.value = sanitizedValue;
+            console.warn('Input sanitized for security');
           }
-      }
-    });
-  };
+        });
+      });
+    };
 
-  return null;
+    // Run sanitization on page load
+    sanitizeInputs();
+
+    // Run sanitization on dynamically added inputs
+    const inputObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            const element = node as Element;
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+              sanitizeInputs();
+            } else {
+              const inputs = element.querySelectorAll('input, textarea');
+              if (inputs.length > 0) {
+                sanitizeInputs();
+              }
+            }
+          }
+        });
+      });
+    });
+
+    inputObserver.observe(document.body, { childList: true, subtree: true });
+
+    // Secure cookie handling
+    const setSecureCookie = (name: string, value: string, days: number = 7) => {
+      const expires = new Date();
+      expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+      const secureFlag = location.protocol === 'https:' ? '; Secure' : '';
+      document.cookie = `${name}=${value}; expires=${expires.toUTCString()}; path=/; SameSite=Strict${secureFlag}`;
+    };
+
+    // Get secure cookie
+    const getSecureCookie = (name: string): string | null => {
+      const nameEQ = name + '=';
+      const ca = document.cookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    };
+
+    // Expose secure cookie functions globally
+    (window as any).setSecureCookie = setSecureCookie;
+    (window as any).getSecureCookie = getSecureCookie;
+
+    // Security headers validation
+    const validateSecurityHeaders = () => {
+      const requiredHeaders = [
+        'X-XSS-Protection',
+        'X-Frame-Options',
+        'Content-Security-Policy',
+        'Strict-Transport-Security',
+        'Referrer-Policy',
+        'Permissions-Policy'
+      ];
+
+      // This would typically be done server-side, but we can check what's available
+      console.log('Security headers validation would be performed server-side');
+    };
+
+    // Run validation
+    validateSecurityHeaders();
+
+    // Analytics
+    if (enableAnalytics && typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as any).gtag;
+      
+      // Track security events
+      const trackSecurityEvent = (event: string, details?: any) => {
+        gtag('event', 'security_event', {
+          event_category: 'Security',
+          event_label: event,
+          custom_parameters: details
+        });
+      };
+
+      // Track potential security issues
+      window.addEventListener('beforeunload', () => {
+        trackSecurityEvent('page_unload');
+      });
+
+      // Track form submissions for potential CSRF
+      document.addEventListener('submit', (e) => {
+        const form = e.target as HTMLFormElement;
+        const csrfToken = form.querySelector('input[name="csrfToken"]');
+        if (!csrfToken) {
+          trackSecurityEvent('form_submission_without_csrf');
+        }
+      });
+    }
+
+    // Error reporting
+    if (enableErrorReporting) {
+      window.addEventListener('error', (event) => {
+        console.error('Security error:', event.error);
+        
+        if (typeof window !== 'undefined' && 'gtag' in window) {
+          const gtag = (window as any).gtag;
+          gtag('event', 'security_error', {
+            event_category: 'Security',
+            event_label: event.error?.message || 'Unknown security error'
+          });
+        }
+      });
+
+      // Track unhandled promise rejections
+      window.addEventListener('unhandledrejection', (event) => {
+        console.error('Unhandled promise rejection:', event.reason);
+        
+        if (typeof window !== 'undefined' && 'gtag' in window) {
+          const gtag = (window as any).gtag;
+          gtag('event', 'security_error', {
+            event_category: 'Security',
+            event_label: 'Unhandled promise rejection'
+          });
+        }
+      });
+    }
+
+  }, [
+    enableCSP,
+    enableHTTPSRedirect,
+    enableXSSProtection,
+    enableClickjackingProtection,
+    enableCSRFProtection,
+    enableContentSecurityPolicy,
+    enableStrictTransportSecurity,
+    enableReferrerPolicy,
+    enablePermissionsPolicy,
+    enableAnalytics,
+    enableErrorReporting
+  ]);
+
+  return null; // This component doesn't render anything
 };
 
 export default SecurityEnhancer;

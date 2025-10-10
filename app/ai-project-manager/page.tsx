@@ -1,11 +1,10 @@
 'use client'
-import React, { useState, useEffect } from 'react'
-// import { Helmet } from 'react-helmet-async'
-import { CheckCircle, Phone } from 'lucide-react';
+import React, { useState, useEffect, lazy } from 'react'
+import { CheckCircle, Phone, Brain, Target, BarChart, Users, Star } from 'lucide-react';
 
-const Navigation = lazy(() => import('../components/Navigation'))
-const Footer = lazy(() => import('../components/Footer'))
-const SEOOptimizer = lazy(() => import('../components/SEOOptimizer'))
+const Navigation = lazy(() => import('../../src/components/Navigation'))
+const Footer = lazy(() => import('../../src/components/Footer'))
+const SEOOptimizer = lazy(() => import('../../src/components/SEOOptimizer'))
 const AIProjectManagerPage: React.FC = React.memo((props) => {
   // const [isLoaded, setIsLoaded] = useState(false)
   // useEffect(() => {
@@ -16,25 +15,25 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'AI-Powered Planning',
       description: 'Intelligent project planning with resource optimization and timeline prediction',
-      benefits: ['Reduce planning time by 60%', 'Improve accuracy by 85%', 'Optimize resource allocation']}
+      benefits: ['Reduce planning time by 60%', 'Improve accuracy by 85%', 'Optimize resource allocation']
     },
     {
       icon: Target,
       title: 'Smart Task Management',
       description: 'Automated task assignment, priority setting, and progress tracking',
-      benefits: ['Increase productivity by 40%', 'Reduce missed deadlines by 70%', 'Improve team coordination']}
+      benefits: ['Increase productivity by 40%', 'Reduce missed deadlines by 70%', 'Improve team coordination']
     },
     {
       icon: BarChart,
       title: 'Predictive Analytics',
       description: 'AI-driven insights for project success prediction and risk management',
-      benefits: ['Identify risks 3x earlier', 'Improve success rate by 50%', 'Optimize budget allocation']}
+      benefits: ['Identify risks 3x earlier', 'Improve success rate by 50%', 'Optimize budget allocation']
     },
     {
       icon: Users,
       title: 'Team Collaboration',
       description: 'Enhanced team communication and collaboration with AI assistance',
-      benefits: ['Improve communication by 65%', 'Reduce conflicts by 45%', 'Boost team morale']}
+      benefits: ['Improve communication by 65%', 'Reduce conflicts by 45%', 'Boost team morale']
     }
   ]
   const pricingPlans = [
@@ -49,7 +48,7 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
         'Standard reporting',
         'Email support'
       ],
-      popular: false}
+      popular: false
     },
     {
       name: 'Professional',
@@ -63,7 +62,7 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
         'Custom integrations',
         'Priority support'
       ],
-      popular: true}
+      popular: true
     },
     {
       name: 'Enterprise',
@@ -78,7 +77,7 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
         'Dedicated support',
         'On-premise deployment'
       ],
-      popular: false}
+      popular: false
     }
   ]
   const testimonials = [
@@ -86,19 +85,19 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
       name: 'Sarah Johnson',
       role: 'Project Manager, TechCorp',
       content: 'AI Project Manager has revolutionized how we handle complex projects. The AI predictions are incredibly accurate.',
-      rating: 5}
+      rating: 5
     },
     {
       name: 'Michael Chen',
       role: 'CTO, StartupXYZ',
-      content: 'We reduced project delays by 70% and improved team productivity significantly. Highly recommended as any',
-      rating: 5}
+      content: 'We reduced project delays by 70% and improved team productivity significantly. Highly recommended!',
+      rating: 5
     },
     {
       name: 'Emily Rodriguez',
       role: 'Operations Director, GlobalCorp',
-      content: 'The predictive analytics helped us identify potential issues before they became problems. Game changer as any',
-      rating: 5}
+      content: 'The predictive analytics helped us identify potential issues before they became problems. Game changer!',
+      rating: 5
     }
   ]
   return (
@@ -131,17 +130,15 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
                 <a
                   href="#pricing"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                 aria-label="
-                  Start Free Trial
-                ">
+                  aria-label="Start Free Trial"
+                >
                   Start Free Trial
                 </a>
                 <a
                   href="#demo"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                 aria-label="
-                  Watch Demo
-                ">
+                  aria-label="Watch Demo"
+                >
                   Watch Demo
                 </a>
               </div>
@@ -223,7 +220,7 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
                       <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </div>
-                    </div>}
+                    </div>
                   )}
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -296,14 +293,13 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
               Start your free trial today and experience the power of AI-driven project management
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=AI Project Manager Free Trial Request"
-                className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-               aria-label="
-                Start Free Trial
-              ">
-                Start Free Trial
-              </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com?subject=AI Project Manager Free Trial Request"
+                  className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  aria-label="Start Free Trial"
+                >
+                  Start Free Trial
+                </a>
               <a
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all"
