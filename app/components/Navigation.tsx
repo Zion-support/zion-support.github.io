@@ -10,6 +10,7 @@ const Navigation: React.FC = () => {
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
+  const [emergingTechOpen, setEmergingTechOpen] = useState(false);
 
   // Handle scroll effect
   useEffect(() => {
@@ -40,6 +41,7 @@ const Navigation: React.FC = () => {
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
+    setEmergingTechOpen(false);
   }, [servicesOpen]);
 
   const toggleAiServices = useCallback(() => {
@@ -47,6 +49,7 @@ const Navigation: React.FC = () => {
     setServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
+    setEmergingTechOpen(false);
   }, [aiServicesOpen]);
 
   const toggleItServices = useCallback(() => {
@@ -54,6 +57,7 @@ const Navigation: React.FC = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
     setMicroSaasOpen(false);
+    setEmergingTechOpen(false);
   }, [itServicesOpen]);
 
   const toggleMicroSaas = useCallback(() => {
@@ -61,7 +65,16 @@ const Navigation: React.FC = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
+    setEmergingTechOpen(false);
   }, [microSaasOpen]);
+
+  const toggleEmergingTech = useCallback(() => {
+    setEmergingTechOpen(!emergingTechOpen);
+    setServicesOpen(false);
+    setAiServicesOpen(false);
+    setItServicesOpen(false);
+    setMicroSaasOpen(false);
+  }, [emergingTechOpen]);
 
   const closeAllMenus = useCallback(() => {
     setIsOpen(false);
@@ -69,6 +82,7 @@ const Navigation: React.FC = () => {
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
+    setEmergingTechOpen(false);
   }, []);
 
   // Service data
@@ -189,16 +203,16 @@ const Navigation: React.FC = () => {
   ];
 
   const emergingTech = [
-    { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
+    { name: 'Quantum Computing Solutions', href: '/quantum-computing', icon: Cpu, description: 'Revolutionary quantum processing' },
+    { name: 'AR/VR Business Solutions', href: '/ar-vr-solutions', icon: Monitor, description: 'Immersive experiences' },
+    { name: 'Blockchain & Web3 Integration', href: '/blockchain-web3', icon: LinkIcon, description: 'Decentralized solutions' },
+    { name: 'IoT & Smart City Solutions', href: '/iot-smart-city', icon: Wifi, description: 'Connected infrastructure' },
+    { name: 'AI Holographic Workspaces', href: '/ai-holographic-workspace', icon: Monitor, description: 'Immersive collaboration' },
+    { name: 'Autonomous Security Systems', href: '/autonomous-security', icon: Shield, description: 'AI-powered protection' },
+    { name: '5G Network Implementation', href: '/5g-implementation', icon: Zap, description: 'Ultra-fast connectivity' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D content creation' },
-    { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Monitor, description: 'Immersive work environments' },
-    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems' },
-    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' },
-    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' },
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum processing power' },
-    { name: 'AR/VR Solutions', href: '/ar-vr-solutions', icon: Monitor, description: 'Immersive experiences' },
-    { name: 'IoT Integration', href: '/iot-integration', icon: Wifi, description: 'Internet of Things' },
-    { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' }
+    { name: 'Edge Computing Solutions', href: '/edge-computing', icon: Server, description: 'Distributed processing' },
+    { name: 'Machine Learning Ops', href: '/machine-learning-ops', icon: Brain, description: 'ML deployment & management' }
   ];
 
   return (
@@ -373,13 +387,13 @@ const Navigation: React.FC = () => {
             {/* Emerging Technologies Dropdown */}
             <div className="relative group">
               <button
-                onClick={toggleServices}
+                onClick={toggleEmergingTech}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
                 <Zap className="w-4 h-4" />
                 <span>Emerging Tech</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${emergingTechOpen ? 'rotate-180' : ''}`} />
               </button>
-              {servicesOpen && (
+              {emergingTechOpen && (
                 <div className="absolute top-full left-0 mt-3 w-[400px] bg-slate-900/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-orange-500/30 p-6 cyber-card-enhanced holographic-card-enhanced">
                   <div className="mb-4">
                     <h3 className="text-lg font-bold text-orange-400 neon-text-enhanced">Emerging Technologies</h3>
@@ -556,6 +570,40 @@ const Navigation: React.FC = () => {
                       onClick={closeAllMenus}
                     >
                       View All Micro SAAS →
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile Emerging Technologies */}
+              <div>
+                <button
+                  onClick={toggleEmergingTech}
+                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+                  <span className="flex items-center space-x-2">
+                    <Zap className="w-4 h-4" />
+                    <span>Emerging Tech</span>
+                  </span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${emergingTechOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {emergingTechOpen && (
+                  <div className="mt-2 ml-4 space-y-2">
+                    {emergingTech.slice(0, 8).map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                        onClick={closeAllMenus}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                    <Link
+                      to="/emerging-tech"
+                      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                      onClick={closeAllMenus}
+                    >
+                      View All Emerging Tech →
                     </Link>
                   </div>
                 )}

@@ -80,6 +80,56 @@ const ServicesPage: React.FC = () => {
       marketPrice: '$1500-5000/month',
       benefits: ['Reduce fraud losses by 85%', 'Real-time protection', 'False positive reduction', 'Compliance ready']
     },
+    {
+      icon: Brain,
+      title: 'AI-Powered Predictive Maintenance',
+      description: 'Revolutionary IoT-based maintenance system that predicts equipment failures before they occur, reducing downtime by up to 70%.',
+      category: 'ai',
+      features: ['IoT Sensor Integration', 'Machine Learning Models', 'Real-time Alerts', 'Maintenance Scheduling', 'Cost Optimization'],
+      price: 'Starting at $1,200/month',
+      marketPrice: '$2000-8000/month',
+      benefits: ['70% reduction in downtime', '30% cost savings', 'Extended equipment life', 'Automated scheduling']
+    },
+    {
+      icon: Target,
+      title: 'AI Personalization Engine',
+      description: 'Advanced personalization platform that creates unique user experiences and increases conversion rates by up to 300%.',
+      category: 'ai',
+      features: ['User Behavior Analysis', 'Dynamic Content', 'A/B Testing', 'Real-time Adaptation', 'Cross-platform Sync'],
+      price: 'Starting at $899/month',
+      marketPrice: '$1500-6000/month',
+      benefits: ['300% increase in conversions', 'Enhanced user engagement', 'Real-time personalization', 'ROI optimization']
+    },
+    {
+      icon: Users,
+      title: 'AI Talent Acquisition Suite',
+      description: 'Comprehensive AI-powered recruitment platform that streamlines hiring processes and finds the best candidates 5x faster.',
+      category: 'ai',
+      features: ['Resume Screening', 'Skill Matching', 'Interview Scheduling', 'Candidate Scoring', 'Bias Reduction'],
+      price: 'Starting at $699/month',
+      marketPrice: '$1200-4000/month',
+      benefits: ['5x faster hiring', 'Better candidate quality', 'Reduced bias', 'Cost savings']
+    },
+    {
+      icon: Globe,
+      title: 'AI Language Translation Pro',
+      description: 'Enterprise-grade translation service supporting 100+ languages with 99.9% accuracy and real-time processing.',
+      category: 'ai',
+      features: ['100+ Languages', 'Real-time Translation', 'Context Awareness', 'Industry-specific Terms', 'API Integration'],
+      price: 'Starting at $499/month',
+      marketPrice: '$800-3000/month',
+      benefits: ['99.9% accuracy', 'Real-time processing', 'Global reach', 'Cost-effective']
+    },
+    {
+      icon: BarChart3,
+      title: 'AI Market Intelligence',
+      description: 'Advanced market analysis and competitor intelligence platform providing actionable insights for strategic decisions.',
+      category: 'ai',
+      features: ['Market Trend Analysis', 'Competitor Monitoring', 'Sentiment Analysis', 'Price Optimization', 'Strategic Recommendations'],
+      price: 'Starting at $1,500/month',
+      marketPrice: '$2500-10000/month',
+      benefits: ['Strategic advantage', 'Market insights', 'Competitive intelligence', 'Data-driven decisions']
+    },
     
     // IT Services
     {
@@ -131,6 +181,56 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $200/hour',
       marketPrice: '$300-800/hour',
       benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Competitive advantage']
+    },
+    {
+      icon: Globe,
+      title: '5G Network Implementation',
+      description: 'Complete 5G network deployment and optimization services for ultra-fast connectivity and IoT integration.',
+      category: 'it',
+      features: ['5G Infrastructure Design', 'Network Optimization', 'IoT Integration', 'Edge Computing', 'Security Implementation', 'Performance Monitoring'],
+      price: 'Starting at $15,000/project',
+      marketPrice: '$25000-100000/project',
+      benefits: ['Ultra-fast connectivity', 'IoT ready', 'Future-proof technology', 'Enhanced performance']
+    },
+    {
+      icon: Shield,
+      title: 'Zero Trust Security Architecture',
+      description: 'Implement comprehensive zero trust security model with continuous verification and micro-segmentation.',
+      category: 'it',
+      features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring', 'Threat Detection', 'Access Control', 'Compliance Management'],
+      price: 'Starting at $3,500/month',
+      marketPrice: '$5000-20000/month',
+      benefits: ['Enhanced security posture', 'Reduced attack surface', 'Compliance ready', 'Continuous protection']
+    },
+    {
+      icon: Database,
+      title: 'Big Data & Analytics Platform',
+      description: 'Enterprise-grade big data platform for processing, analyzing, and visualizing massive datasets in real-time.',
+      category: 'it',
+      features: ['Data Lake Architecture', 'Real-time Processing', 'Advanced Analytics', 'Machine Learning Integration', 'Data Governance', 'Scalable Storage'],
+      price: 'Starting at $4,000/month',
+      marketPrice: '$6000-25000/month',
+      benefits: ['Real-time insights', 'Scalable processing', 'Data-driven decisions', 'Cost optimization']
+    },
+    {
+      icon: Settings,
+      title: 'Edge Computing Solutions',
+      description: 'Deploy edge computing infrastructure to process data closer to the source, reducing latency and improving performance.',
+      category: 'it',
+      features: ['Edge Node Deployment', 'Data Processing', 'Real-time Analytics', 'IoT Integration', 'Security Management', 'Monitoring & Maintenance'],
+      price: 'Starting at $2,800/month',
+      marketPrice: '$4000-15000/month',
+      benefits: ['Reduced latency', 'Improved performance', 'Cost efficiency', 'Real-time processing']
+    },
+    {
+      icon: Cloud,
+      title: 'Multi-Cloud Management Platform',
+      description: 'Unified platform for managing multiple cloud providers with cost optimization, security, and compliance monitoring.',
+      category: 'it',
+      features: ['Multi-cloud Orchestration', 'Cost Optimization', 'Security Management', 'Compliance Monitoring', 'Resource Scaling', 'Disaster Recovery'],
+      price: 'Starting at $2,200/month',
+      marketPrice: '$3500-12000/month',
+      benefits: ['Vendor independence', 'Cost optimization', 'Enhanced security', 'Simplified management']
     },
     
     // Micro SaaS
@@ -193,6 +293,138 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $99/month',
       marketPrice: '$200-600/month',
       benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization']
+    },
+    {
+      icon: Brain,
+      title: 'Zion AI Code Assistant Pro',
+      description: 'Advanced AI-powered coding assistant that helps developers write better code 10x faster with intelligent suggestions and debugging.',
+      category: 'saas',
+      features: ['Code Generation', 'Bug Detection', 'Code Review', 'Documentation Generation', 'Multi-language Support', 'IDE Integration'],
+      price: 'Starting at $79/month',
+      marketPrice: '$150-400/month',
+      benefits: ['10x faster coding', 'Better code quality', 'Reduced bugs', 'Time savings']
+    },
+    {
+      icon: Eye,
+      title: 'Zion AI Video Analytics',
+      description: 'Intelligent video analysis platform that extracts insights from video content for marketing, security, and business intelligence.',
+      category: 'saas',
+      features: ['Object Detection', 'Sentiment Analysis', 'Content Moderation', 'Real-time Processing', 'Analytics Dashboard', 'API Integration'],
+      price: 'Starting at $149/month',
+      marketPrice: '$300-800/month',
+      benefits: ['Automated video analysis', 'Real-time insights', 'Content optimization', 'Cost reduction']
+    },
+    {
+      icon: Users,
+      title: 'Zion AI Customer Insights',
+      description: 'Advanced customer analytics platform that provides deep insights into customer behavior, preferences, and lifetime value.',
+      category: 'saas',
+      features: ['Behavior Analysis', 'Predictive Modeling', 'Segmentation', 'Churn Prediction', 'Personalization', 'ROI Tracking'],
+      price: 'Starting at $199/month',
+      marketPrice: '$400-1000/month',
+      benefits: ['Better customer understanding', 'Increased retention', 'Higher lifetime value', 'Data-driven decisions']
+    },
+    {
+      icon: Shield,
+      title: 'Zion AI Security Monitor',
+      description: 'Comprehensive security monitoring platform that uses AI to detect threats, vulnerabilities, and suspicious activities in real-time.',
+      category: 'saas',
+      features: ['Threat Detection', 'Vulnerability Scanning', 'Incident Response', 'Compliance Monitoring', 'Real-time Alerts', 'Security Reports'],
+      price: 'Starting at $299/month',
+      marketPrice: '$500-1500/month',
+      benefits: ['Enhanced security', 'Real-time protection', 'Compliance ready', 'Reduced risk']
+    },
+    {
+      icon: BarChart3,
+      title: 'Zion AI Financial Planner',
+      description: 'Intelligent financial planning and investment optimization platform for individuals and small businesses.',
+      category: 'saas',
+      features: ['Portfolio Optimization', 'Risk Assessment', 'Tax Planning', 'Goal Tracking', 'Market Analysis', 'Automated Rebalancing'],
+      price: 'Starting at $89/month',
+      marketPrice: '$150-500/month',
+      benefits: ['Better financial decisions', 'Optimized returns', 'Risk management', 'Automated planning']
+    },
+    {
+      icon: Globe,
+      title: 'Zion AI SEO Optimizer',
+      description: 'Advanced SEO optimization platform that uses AI to improve search rankings, content quality, and website performance.',
+      category: 'saas',
+      features: ['Keyword Research', 'Content Optimization', 'Technical SEO', 'Rank Tracking', 'Competitor Analysis', 'Performance Monitoring'],
+      price: 'Starting at $129/month',
+      marketPrice: '$250-700/month',
+      benefits: ['Higher search rankings', 'Increased organic traffic', 'Better content', 'ROI optimization']
+    },
+    {
+      icon: Settings,
+      title: 'Zion AI Workflow Automation',
+      description: 'Intelligent workflow automation platform that streamlines business processes and eliminates manual tasks.',
+      category: 'saas',
+      features: ['Process Automation', 'Task Scheduling', 'Integration Management', 'Error Handling', 'Performance Monitoring', 'Custom Workflows'],
+      price: 'Starting at $179/month',
+      marketPrice: '$300-900/month',
+      benefits: ['Process efficiency', 'Cost reduction', 'Error elimination', 'Time savings']
+    },
+    
+    // Emerging Technologies
+    {
+      icon: Brain,
+      title: 'Quantum Computing Solutions',
+      description: 'Revolutionary quantum computing services for complex optimization problems, cryptography, and scientific simulations.',
+      category: 'emerging',
+      features: ['Quantum Algorithm Development', 'Optimization Problems', 'Cryptography', 'Scientific Simulations', 'Quantum Machine Learning', 'Hybrid Classical-Quantum Systems'],
+      price: 'Starting at $5,000/month',
+      marketPrice: '$10000-50000/month',
+      benefits: ['Exponential speedup', 'Complex problem solving', 'Future-proof technology', 'Competitive advantage']
+    },
+    {
+      icon: Eye,
+      title: 'Augmented Reality (AR) Business Solutions',
+      description: 'Immersive AR applications for training, remote assistance, product visualization, and enhanced customer experiences.',
+      category: 'emerging',
+      features: ['AR App Development', '3D Object Recognition', 'Remote Assistance', 'Training Simulations', 'Product Visualization', 'Cross-platform Support'],
+      price: 'Starting at $3,500/project',
+      marketPrice: '$7000-30000/project',
+      benefits: ['Enhanced user experience', 'Improved training', 'Remote collaboration', 'Innovative solutions']
+    },
+    {
+      icon: Globe,
+      title: 'Blockchain & Web3 Integration',
+      description: 'Complete blockchain solutions including smart contracts, DeFi applications, NFT platforms, and Web3 integration.',
+      category: 'emerging',
+      features: ['Smart Contract Development', 'DeFi Applications', 'NFT Platforms', 'Web3 Integration', 'Token Economics', 'Security Audits'],
+      price: 'Starting at $4,000/project',
+      marketPrice: '$8000-50000/project',
+      benefits: ['Decentralized solutions', 'Enhanced security', 'New business models', 'Future-ready technology']
+    },
+    {
+      icon: Settings,
+      title: 'IoT & Smart City Solutions',
+      description: 'Comprehensive IoT solutions for smart cities, industrial automation, and connected devices with real-time monitoring.',
+      category: 'emerging',
+      features: ['IoT Device Management', 'Real-time Monitoring', 'Data Analytics', 'Predictive Maintenance', 'Smart City Integration', 'Edge Computing'],
+      price: 'Starting at $2,500/month',
+      marketPrice: '$5000-20000/month',
+      benefits: ['Operational efficiency', 'Real-time insights', 'Cost reduction', 'Automated processes']
+    },
+    {
+      icon: Brain,
+      title: 'AI-Powered Holographic Workspaces',
+      description: 'Next-generation holographic collaboration platforms for immersive remote work and virtual meetings.',
+      category: 'emerging',
+      features: ['3D Holographic Display', 'Gesture Recognition', 'Spatial Audio', 'Real-time Collaboration', 'Virtual Whiteboarding', 'Cross-platform Support'],
+      price: 'Starting at $6,000/month',
+      marketPrice: '$12000-40000/month',
+      benefits: ['Immersive collaboration', 'Enhanced productivity', 'Future of work', 'Cutting-edge technology']
+    },
+    {
+      icon: Shield,
+      title: 'AI-Powered Autonomous Security Systems',
+      description: 'Fully autonomous security systems with AI-driven threat detection, response, and prevention capabilities.',
+      category: 'emerging',
+      features: ['Autonomous Threat Detection', 'AI Response Systems', 'Predictive Security', 'Zero-touch Operations', 'Real-time Adaptation', 'Compliance Automation'],
+      price: 'Starting at $4,500/month',
+      marketPrice: '$8000-25000/month',
+      benefits: ['Autonomous protection', 'Reduced human error', 'Continuous monitoring', 'Advanced threat prevention']
     }
   ];
 
@@ -200,7 +432,8 @@ const ServicesPage: React.FC = () => {
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length },
     { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length },
-    { id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length }
+    { id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length },
+    { id: 'emerging', name: 'Emerging Technologies', count: services.filter(s => s.category === 'emerging').length }
   ];
 
   const filteredServices = services.filter(service => {

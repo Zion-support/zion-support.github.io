@@ -1440,6 +1440,76 @@ description: 'Custom API development, third-party integrations, and microservice
     }
   ];
 
+  // Emerging Technologies Services
+  const emergingTechServices = [
+    {
+      icon: Cpu,
+      title: 'Quantum Computing Solutions',
+      description: 'Revolutionary quantum computing services for complex optimization problems, cryptography, and scientific simulations',
+      price: '$5,000/month',
+      marketPrice: '$10000-50000/month',
+      features: ['Quantum algorithm development', 'Optimization problems', 'Cryptography', 'Scientific simulations', 'Quantum machine learning', 'Hybrid classical-quantum systems'],
+      benefits: ['Exponential speedup', 'Complex problem solving', 'Future-proof technology', 'Competitive advantage'],
+      category: 'Quantum Computing',
+      popular: true
+    },
+    {
+      icon: Eye,
+      title: 'AR/VR Business Solutions',
+      description: 'Immersive AR applications for training, remote assistance, product visualization, and enhanced customer experiences',
+      price: '$3,500/project',
+      marketPrice: '$7000-30000/project',
+      features: ['AR app development', '3D object recognition', 'Remote assistance', 'Training simulations', 'Product visualization', 'Cross-platform support'],
+      benefits: ['Enhanced user experience', 'Improved training', 'Remote collaboration', 'Innovative solutions'],
+      category: 'AR/VR',
+      popular: true
+    },
+    {
+      icon: Link,
+      title: 'Blockchain & Web3 Integration',
+      description: 'Complete blockchain solutions including smart contracts, DeFi applications, NFT platforms, and Web3 integration',
+      price: '$4,000/project',
+      marketPrice: '$8000-50000/project',
+      features: ['Smart contract development', 'DeFi applications', 'NFT platforms', 'Web3 integration', 'Token economics', 'Security audits'],
+      benefits: ['Decentralized solutions', 'Enhanced security', 'New business models', 'Future-ready technology'],
+      category: 'Blockchain',
+      popular: false
+    },
+    {
+      icon: Wifi,
+      title: 'IoT & Smart City Solutions',
+      description: 'Comprehensive IoT solutions for smart cities, industrial automation, and connected devices with real-time monitoring',
+      price: '$2,500/month',
+      marketPrice: '$5000-20000/month',
+      features: ['IoT device management', 'Real-time monitoring', 'Data analytics', 'Predictive maintenance', 'Smart city integration', 'Edge computing'],
+      benefits: ['Operational efficiency', 'Real-time insights', 'Cost reduction', 'Automated processes'],
+      category: 'IoT',
+      popular: true
+    },
+    {
+      icon: Monitor,
+      title: 'AI Holographic Workspaces',
+      description: 'Next-generation holographic collaboration platforms for immersive remote work and virtual meetings',
+      price: '$6,000/month',
+      marketPrice: '$12000-40000/month',
+      features: ['3D holographic display', 'Gesture recognition', 'Spatial audio', 'Real-time collaboration', 'Virtual whiteboarding', 'Cross-platform support'],
+      benefits: ['Immersive collaboration', 'Enhanced productivity', 'Future of work', 'Cutting-edge technology'],
+      category: 'Holographic',
+      popular: false
+    },
+    {
+      icon: Shield,
+      title: 'Autonomous Security Systems',
+      description: 'Fully autonomous security systems with AI-driven threat detection, response, and prevention capabilities',
+      price: '$4,500/month',
+      marketPrice: '$8000-25000/month',
+      features: ['Autonomous threat detection', 'AI response systems', 'Predictive security', 'Zero-touch operations', 'Real-time adaptation', 'Compliance automation'],
+      benefits: ['Autonomous protection', 'Reduced human error', 'Continuous monitoring', 'Advanced threat prevention'],
+      category: 'Autonomous Security',
+      popular: true
+    }
+  ];
+
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Projects Delivered' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime Guarantee' },
@@ -1789,6 +1859,69 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                         className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
                       >
                         Start Trial
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Emerging Technologies Section */}
+          <section className="mb-16" aria-labelledby="emerging-tech-heading">
+            <h2 id="emerging-tech-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
+              Emerging Technologies
+            </h2>
+            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+              Cutting-edge technology solutions that will define the future of business
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {emergingTechServices.map((service, index) => (
+                <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
+                  <div className="p-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                      <service.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+                    
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center justify-between">
+                        <span className="text-orange-400 font-semibold">Our Price:</span>
+                        <span className="text-white font-bold">{service.price}</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-400 text-sm">Market Price:</span>
+                        <span className="text-gray-300 text-sm line-through">{service.marketPrice}</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-400 text-sm">Category:</span>
+                        <span className="text-gray-300 text-sm">{service.category}</span>
+                      </div>
+                    </div>
+
+                    <ul className="space-y-2 mb-6">
+                      {service.features.slice(0, 4).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="flex items-center justify-between">
+                      <a 
+                        href="/contact"
+                        className="flex items-center text-orange-400 hover:text-orange-300 transition-colors"
+                      >
+                        Learn More
+                        <ArrowRight className="w-4 h-4 ml-1" />
+                      </a>
+                      <a 
+                        href="/contact"
+                        className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
+                      >
+                        Get Quote
                       </a>
                     </div>
                   </div>
