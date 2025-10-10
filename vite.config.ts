@@ -2,18 +2,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
-export default defineConfig({)
-  plugins: [react()],
-  root: '.',
-  publicDir: 'public',
-  resolve: {,
-    alias: {,
-      '@': resolve(__dirname, 'app'),
-      '@components': resolve(__dirname, 'app/components'),
-      '@utils': resolve(__dirname, 'app/utils'),
-      '@hooks': resolve(__dirname, 'app/hooks'),
-      '@types': resolve(__dirname, 'app/types'),
-
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -29,94 +17,80 @@ export default defineConfig({
       '@/content': resolve(__dirname, './content')
     }
   },
-  buil,
-  d: {/* TODO: Fix JSX expression */}
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src'),
-      '@components': resolve(__dirname, './src/components'),
-      '@utils': resolve(__dirname, './src/utils'),
-      '@hooks': resolve(__dirname, './src/hooks'),
-      '@types': resolve(__dirname, './src/types'),
-      '@app': resolve(__dirname, './app')}},
   build: {
-    target: 'esnext'
-    minify: 'terser'
-    sourcemap: false;
-    cssMinify: true;
-    reportCompressedSize: true;
-    chunkSizeWarningLimit: 1000;
-    assetsInlineLimit: 4096;
-    cssCodeSplit: true;
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    minify: 'terser',
+    cssMinify: true,
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 1000,
+    assetsInlineLimit: 4096,
+    cssCodeSplit: true,
     terserOptions: {
-      compress: {,
-        drop_console: true;
-        drop_debugger: true;
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.warn'],
-        passes: 3;
-        unsafe: true;
-        unsafe_comps: true;
-        unsafe_math: true;
-        unsafe_proto: true;
-        unsafe_regexp: true;
-        unsafe_undefined: true;
-        conditionals: true;
-        dead_code: true;
-        evaluate: true;
-        if_return: true;
-        join_vars: true;
-        loops: true;
-        reduce_vars: true;
-        sequences: true;
-        side_effects: true;
-        switches: true;
-        top_ret: true;
-        toplevel: true;
-        unused: true;
+        passes: 3,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+        conditionals: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true,
+        loops: true,
+        reduce_vars: true,
+        sequences: true,
+        side_effects: true,
+        switches: true,
+        top_ret: true,
+        toplevel: true,
+        unused: true
       },
       mangle: {
-        safari10: true;
-        toplevel: true;
-        properties: {,
-          regex: /^_/}
+        safari10: true,
+        toplevel: true,
+        properties: {
+          regex: /^_/
+        }
       },
       format: {
-        comments: false;
-        ascii_only: true;
-        beautify: false;
-        ecma: 2020;
-        indent_level: 0;
-        indent_start: 0;
-        inline_script: false;
-        keep_numbers: false;
-        max_line_len: false;
-        preamble: null;
-        preserve_annotations: false;
-        quote_keys: false;
-        quote_style: 0;
-        safari10: true;
-        semicolons: true;
-        shebang: false;
-        shorthand: false;
-        source_map: null;
-        webkit: true;
-        width: 80;
-        wrap_iife: false;
-        wrap_func_args: true;
+        comments: false,
+        ascii_only: true,
+        beautify: false,
+        ecma: 2020,
+        indent_level: 0,
+        indent_start: 0,
+        inline_script: false,
+        keep_numbers: false,
+        max_line_len: false,
+        preamble: null,
+        preserve_annotations: false,
+        quote_keys: false,
+        quote_style: 0,
+        safari10: true,
+        semicolons: true,
+        shebang: false,
+        shorthand: false,
+        source_map: null,
+        webkit: true,
+        width: 80,
+        wrap_iife: false,
+        wrap_func_args: true
       }
     },
-    chunkSizeWarningLimit: 1000;
-    reportCompressedSize: true;
-    cssCodeSplit: true;
-    assetsInlineLimit: 4096;
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks - more granular splitting;
-          if (id.includes('node_modules')) {,
-            if (id.includes('react') || id.includes('react-dom')) {,
+          // Vendor chunks - more granular splitting
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
             }
             if (id.includes('react-router')) {
@@ -146,8 +120,8 @@ export default defineConfig({
             return 'vendor';
           }
           
-          // Component chunks - split by functionality;
-          if (id.includes('/src/components/')) {
+          // Component chunks - split by functionality
+          if (id.includes('/app/components/')) {
             if (id.includes('Navigation') || id.includes('Footer')) {
               return 'layout';
             }
@@ -160,7 +134,7 @@ export default defineConfig({
             return 'components';
           }
           
-          // Page chunks - split by category;
+          // Page chunks - split by category
           if (id.includes('/app/')) {
             if (id.includes('/ai-') && !id.includes('/ai-services')) {
               return 'ai-pages';
@@ -176,70 +150,12 @@ export default defineConfig({
             }
             return 'pages';
           }
-    outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: false,
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          // Vendor chunks
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
-            }
-            if (id.includes('react-router')) {
-              return 'vendor-router';
-            }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui';
-            }
-            if (id.includes('recharts')) {
-              return 'vendor-charts';
-            }
-            if (id.includes('web-vitals')) {
-              return 'vendor-analytics';
-            }
-            return 'vendor-misc';
-          }
           
-          // App chunks
-          if (id.includes('/app/ai-')) {
-            return 'ai-services';
-          }
-          if (id.includes('/app/it-')) {
-            return 'it-services';
-          }
-          if (id.includes('/app/components/')) {
-            return 'components';
-          }
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src')}},
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: false,
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react', '@heroicons/react'],
-          router: ['react-router-dom'],
-          utils: ['clsx', 'tailwind-merge']
           return null;
-          return 'app';
         },
-        chunkFileNames: 'assets/[name]-[hash].js'
-        entryFileNames: 'assets/[name]-[hash].js'
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
-          const ext = info[info.length - 1];,
-          if (/\.(css)$/.test(assetInfo.name)) {,
           const ext = assetInfo.name?.split('.').pop();
           if (/\.(css)$/i.test(assetInfo.name || '')) {
             return `assets/css/[name]-[hash].${ext}`;
@@ -253,53 +169,7 @@ export default defineConfig({
           return `assets/[name]-[hash].${ext}`;
         }
       }
-    }},
-  server: {,
-    port: 3000;
-    host: true;
-  },
-  preview: {,
-    port: 4173;
-    host: true;
-  },
-  optimizeDeps: {,
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react'],
-    exclude: ['@vite/client', '@vite/env']
-  },
-  css: {,
-    postcss: './postcss.config.js',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true},
-      mangle: {
-        safari10: true},
-      format: {
-        comments: false,
-        drop_debugger: true
-      },
-      mangle: {
-        safari10: true
-      },
-      format: {
-        comments: false
-      }
-    },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
-    cssCodeSplit: true,
-    assetsInlineLimit: 4096},
-  server: {
-    port: 3000,
-    open: true},
-  preview: {
-    port: 4173,
-    open: true},
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom']},
-  css: {
-    devSourcemap: true},
-    assetsInlineLimit: 4096
+    }
   },
   server: {
     port: 3000,
