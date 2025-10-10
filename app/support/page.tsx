@@ -20,82 +20,87 @@ const SupportPage: React.FC = () => {
       answer: 'Implementation time varies based on project complexity, but most projects are completed within 4-12 weeks.'
     },
     {
-question: 'Do you provide training for our team?',
-      answer: 'Yes! We provide comprehensive training programs including hands-on workshops, documentation, and ongoing support to ensure your team can effectively use our solutions.'
-
+      question: 'Do you offer training for our team?',
+      answer: 'Yes, we provide comprehensive training sessions for your team to ensure they can effectively use and maintain the AI solutions we implement.'
     }
   ];
 
   const supportChannels = [
     {
-icon: Phone,
       title: 'Phone Support',
-      description: 'Speak directly with our technical experts',
-      contact: '+1-302-464-0950',
+      description: '24/7 technical support',
+      contact: '+1 (555) 123-4567',
+      icon: Phone,
       availability: '24/7'
-
     },
     {
-      icon: Mail,
       title: 'Email Support',
-description: 'Get detailed responses to your questions',
+      description: 'Get help via email',
       contact: 'support@ziontechgroup.com',
+      icon: Mail,
       availability: '24/7'
     },
     {
-      icon: MessageCircle,
       title: 'Live Chat',
-      description: 'Instant help through our website chat',
+      description: 'Chat with our experts',
       contact: 'Available on website',
-      availability: 'Business Hours'
-
+      icon: MessageCircle,
+      availability: '24/7'
     }
   ];
 
-  const resources = [
+  const quickLinks = [
     {
-icon: FileText,
-
       title: 'Documentation',
       description: 'Comprehensive guides and API references',
-      icon: BookOpen,
       link: '/docs'
     },
     {
-icon: Book,
       title: 'Knowledge Base',
-      description: 'Searchable articles and troubleshooting guides',
+      description: 'Search our knowledge base for answers',
       link: '/knowledge-base'
-
     },
     {
       title: 'Community Forum',
-description: 'Connect with other users and experts',
-
+      description: 'Connect with other users and experts',
       link: '/community'
     },
     {
-      title: 'Status Page',
-      description: 'Check system status and uptime',
-      icon: Globe,
+      title: 'System Status',
+      description: 'Check the status of our services',
       link: '/status'
     }
   ];
 
-  const filteredFaqs = selectedCategory === 'all' 
-    ? faqs 
-    : faqs.filter(faq => faq.category === selectedCategory);
+  return (
+    <>
+      <Helmet>
+        <title>Support - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Get support for your AI and IT solutions. 24/7 technical support, documentation, and expert assistance." />
+        <meta name="keywords" content="support, help, technical support, AI support, IT support, documentation" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Support
+              <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Center
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Get the help you need with our comprehensive support resources and expert assistance.
+            </p>
+          </div>
+        </section>
 
-  const searchedFaqs = searchQuery 
-    ? filteredFaqs.filter(faq => 
-        faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : filteredFaqs;
-
-{/* Search */}
-          <div className="max-w-2xl mx-auto mb-16">
-
+        {/* Search */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -117,32 +122,16 @@ description: 'Connect with other users and experts',
               <p className="text-xl text-gray-300">Get in touch with our support team</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="cyber-card p-6 text-center">
-                <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-8 h-8 text-white" />
+              {supportChannels.map((channel, index) => (
+                <div key={index} className="cyber-card p-6 text-center">
+                  <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <channel.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{channel.title}</h3>
+                  <p className="text-gray-300 mb-4">{channel.description}</p>
+                  <p className="text-cyan-400 font-semibold">{channel.contact}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Phone Support</h3>
-                <p className="text-gray-300 mb-4">24/7 technical support</p>
-                <p className="text-cyan-400 font-semibold">+1 (555) 123-4567</p>
-              </div>
-              <div className="cyber-card p-6 text-center">
-                <div className="w-16 h-16 bg-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Email Support</h3>
-                <p className="text-gray-300 mb-4">Get help via email</p>
-                <p className="text-cyan-400 font-semibold">support@ziontechgroup.com</p>
-              </div>
-              <div className="cyber-card p-6 text-center">
-                <div className="w-16 h-16 bg-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <MessageCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Live Chat</h3>
-                <p className="text-gray-300 mb-4">Chat with our experts</p>
-                <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors">
-                  Start Chat
-                </button>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -167,13 +156,13 @@ description: 'Connect with other users and experts',
 
         {/* Business Hours */}
         <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto">
             <div className="cyber-card p-8">
-              <div className="flex items-center justify-center mb-4">
+              <div className="flex items-center mb-8">
                 <Clock className="w-8 h-8 text-cyan-400 mr-3" />
                 <h2 className="text-2xl font-bold text-white">Business Hours</h2>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Technical Support</h3>
                   <p className="text-gray-300">24/7 availability</p>
@@ -190,5 +179,7 @@ description: 'Connect with other users and experts',
         </section>
       </div>
     </>
-);
-}
+  );
+};
+
+export default SupportPage;
