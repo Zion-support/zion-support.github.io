@@ -4,8 +4,7 @@
 export const useForm = {
   // Add utility functions here
   init: () => {
-    console.log('useForm initialized');
-  }
+    }
 };
 
 export default useForm;

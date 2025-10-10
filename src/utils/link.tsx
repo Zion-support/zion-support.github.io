@@ -4,8 +4,7 @@
 export const link = {
   // Add utility functions here
   init: () => {
-    console.log('link initialized');
-  }
+    }
 };
 
 export default link;

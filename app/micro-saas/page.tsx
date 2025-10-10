@@ -26,16 +26,7 @@ import {
   Database,
   ShoppingCart,
   Scale,
-<<<<<<< HEAD
-  Palette,
-  Music,
-  Cpu,
-  Sprout,
-  Phone,
-  MapPin
-=======
-  Palette
->>>>>>> origin/main
+Palette
 } from 'lucide-react';
 
 const MicroSAASPage: React.FC = () => {
@@ -59,12 +50,8 @@ const MicroSAASPage: React.FC = () => {
       rating: 4.8,
       users: '2,500+',
       trial: '14-day free trial',
-<<<<<<< HEAD
-      link: 'https://ziontechgroup.com/ai-project-manager'
-=======
-      link: 'https://ziontechgroup.com/ai-project-manager',
+link: 'https://ziontechgroup.com/ai-project-manager',
       capabilities: ['40% faster project delivery', '60% reduction in project overruns', 'Real-time team insights', 'Automated risk detection']
->>>>>>> origin/main
     },
     { 
       name: 'AI Smart Calendar Pro', 
@@ -244,8 +231,8 @@ const MicroSAASPage: React.FC = () => {
       trial: '14-day free trial'
     },
     { 
-      name: 'AI API Builder Pro', 
-      href: '/ai-api-builder', 
+      name: 'AI API Manager Pro', 
+      href: '/ai-api-manager', 
       icon: Settings, 
       category: 'Development', 
       price: '$249/mo',
@@ -257,8 +244,8 @@ const MicroSAASPage: React.FC = () => {
       trial: '21-day free trial'
     },
     { 
-      name: 'AI Database Optimizer', 
-      href: '/ai-database-optimizer', 
+      name: 'AI Database Management', 
+      href: '/database-management', 
       icon: Database, 
       category: 'Development', 
       price: '$199/mo',
@@ -273,7 +260,7 @@ const MicroSAASPage: React.FC = () => {
     // Security & Compliance
     { 
       name: 'AI Security Monitor Pro', 
-      href: '/ai-security-monitor', 
+      href: '/ai-cybersecurity-monitor', 
       icon: Shield, 
       category: 'Security', 
       price: '$299/mo',
@@ -301,7 +288,7 @@ const MicroSAASPage: React.FC = () => {
     // Specialized Industry Solutions
     { 
       name: 'AI Healthcare Assistant Pro', 
-      href: '/ai-healthcare-assistant', 
+      href: '/ai-healthcare', 
       icon: Stethoscope, 
       category: 'Healthcare', 
       price: '$399/mo',
@@ -349,208 +336,6 @@ const MicroSAASPage: React.FC = () => {
       popular: true,
       rating: 4.6,
       users: '1,700+',
-<<<<<<< HEAD
-      trial: '21-day free trial',
-      link: 'https://ziontechgroup.com/ai-hr-assistant'
-    },
-
-    // Advanced AI & Machine Learning
-=======
-<<<<<<< HEAD
-      trial: '21-day free trial'
-    },
-<<<<<<< HEAD
-    { 
-      name: 'AI Quantum Financial Oracle', 
-      href: '/ai-quantum-financial-oracle', 
-      icon: DollarSign, 
-      category: 'Finance', 
-      price: '$2,999/mo',
-      description: 'Revolutionary quantum-powered financial analysis with ultra-fast market predictions and risk assessment',
-      features: ['Quantum Market Analysis', 'Ultra-fast Predictions', 'Risk Assessment', 'Portfolio Optimization', 'Cryptocurrency Analysis', 'Real-time Trading Signals'],
-=======
-
-    // Advanced AI Solutions
->>>>>>> origin/main
-    { 
-      name: 'AI Quantum Financial Oracle', 
-      href: '/ai-quantum-financial-oracle', 
-      icon: Brain, 
-      category: 'Quantum AI', 
-<<<<<<< HEAD
-      price: '$2,999/mo',
-      description: 'Revolutionary quantum-powered financial prediction system with 99.7% accuracy in market forecasting',
-      features: ['Quantum Market Analysis', 'Real-time Risk Assessment', 'Portfolio Optimization', 'Crypto Prediction', 'Economic Modeling', 'Quantum Encryption'],
-      popular: true,
-      rating: 4.9,
-      users: '150+',
-      trial: '7-day free trial',
-      link: 'https://ziontechgroup.com/ai-quantum-financial-oracle'
-    },
-    { 
-      name: 'AI Neural Memory Assistant', 
-      href: '/ai-neural-memory-assistant', 
-      icon: Brain, 
-      category: 'AI Memory', 
-      price: '$399/mo',
-      description: 'Advanced AI system that learns and remembers everything about your business for instant recall and decision making',
-      features: ['Infinite Memory Storage', 'Contextual Recall', 'Pattern Recognition', 'Predictive Memory', 'Knowledge Graphs', 'Smart Search'],
-      popular: true,
-      rating: 4.8,
-      users: '800+',
-      trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-neural-memory-assistant'
-    },
-    { 
-      name: 'AI Holographic Workspace', 
-      href: '/ai-holographic-workspace', 
-      icon: Globe, 
-      category: 'Immersive Tech', 
-      price: '$1,299/mo',
-      description: 'Next-generation 3D holographic workspace for immersive collaboration and data visualization',
-      features: ['3D Data Visualization', 'Holographic Meetings', 'Spatial Computing', 'AR/VR Integration', 'Gesture Controls', 'Real-time Collaboration'],
-      popular: false,
-      rating: 4.7,
-      users: '200+',
-      trial: '30-day free trial',
-      link: 'https://ziontechgroup.com/ai-holographic-workspace'
-    },
-
-    // Specialized Industry Solutions
-    { 
-      name: 'AI Drug Discovery Pro', 
-      href: '/ai-drug-discovery-pro', 
-      icon: Stethoscope, 
-      category: 'Healthcare', 
-      price: '$4,999/mo',
-      description: 'Revolutionary AI platform for pharmaceutical drug discovery with molecular simulation and clinical trial optimization',
-      features: ['Molecular Simulation', 'Drug Target Identification', 'Clinical Trial Design', 'Side Effect Prediction', 'Patent Analysis', 'Regulatory Compliance'],
-      popular: true,
-      rating: 4.9,
-      users: '50+',
-      trial: '60-day free trial',
-      link: 'https://ziontechgroup.com/ai-drug-discovery-pro'
-    },
-    { 
-      name: 'AI Climate Solutions Pro', 
-      href: '/ai-climate-solutions-pro', 
-      icon: Globe, 
-      category: 'Climate Tech', 
-      price: '$2,499/mo',
-      description: 'Advanced AI system for climate modeling, carbon tracking, and environmental impact optimization',
-      features: ['Climate Modeling', 'Carbon Footprint Tracking', 'Renewable Energy Optimization', 'Environmental Impact Analysis', 'Sustainability Reporting', 'Green Tech Integration'],
-      popular: true,
-      rating: 4.8,
-      users: '300+',
-      trial: '30-day free trial',
-      link: 'https://ziontechgroup.com/ai-climate-solutions-pro'
-    },
-    { 
-      name: 'AI Space Technology Pro', 
-      href: '/ai-space-technology-pro', 
-      icon: Rocket, 
-      category: 'Space Tech', 
-      price: '$9,999/mo',
-      description: 'Cutting-edge AI platform for space mission planning, satellite optimization, and space resource management',
-      features: ['Mission Planning', 'Satellite Optimization', 'Space Resource Mapping', 'Orbital Mechanics', 'Space Weather Prediction', 'Launch Optimization'],
-      popular: false,
-      rating: 4.9,
-      users: '25+',
-      trial: '90-day free trial',
-      link: 'https://ziontechgroup.com/ai-space-technology-pro'
-    },
-    { 
-      name: 'AI Financial Crime Detection Pro', 
-      href: '/ai-financial-crime-detection-pro', 
-      icon: Shield, 
-      category: 'FinTech', 
-      price: '$1,999/mo',
-      description: 'Advanced AI system for real-time financial crime detection, fraud prevention, and compliance monitoring',
-      features: ['Real-time Fraud Detection', 'Money Laundering Prevention', 'Transaction Analysis', 'Risk Scoring', 'Compliance Monitoring', 'Regulatory Reporting'],
-      popular: true,
-      rating: 4.8,
-      users: '400+',
-      trial: '30-day free trial',
-      link: 'https://ziontechgroup.com/ai-financial-crime-detection-pro'
-    },
-
-    // Creative & Design
-    { 
-      name: 'AI Fashion Design Studio', 
-      href: '/ai-fashion-design', 
-      icon: Palette, 
-      category: 'Creative', 
-      price: '$299/mo',
-      description: 'Revolutionary AI fashion design platform with trend prediction, virtual modeling, and sustainable design optimization',
-      features: ['Trend Prediction', 'Virtual Modeling', 'Sustainable Design', 'Color Palette Generation', 'Pattern Creation', 'Market Analysis'],
-      popular: true,
-      rating: 4.7,
-      users: '1,200+',
-      trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-fashion-design'
-    },
-    { 
-      name: 'AI Music Composition Studio', 
-      href: '/ai-music-composition', 
-      icon: Music, 
-      category: 'Creative', 
-      price: '$199/mo',
-      description: 'Advanced AI music composition platform with genre analysis, emotional scoring, and collaborative composition tools',
-      features: ['Genre Analysis', 'Emotional Scoring', 'Collaborative Composition', 'Instrument Simulation', 'Lyric Generation', 'Mastering Tools'],
-      popular: true,
-      rating: 4.6,
-      users: '900+',
-      trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-music-composition'
-=======
-      price: '$8,500/mo',
-      description: 'Revolutionary quantum-powered financial predictions with 99.7% accuracy and real-time market analysis',
-      features: ['Quantum Risk Analysis', 'Market Prediction', 'Portfolio Optimization', 'Real-time Trading Signals', 'Fraud Detection', 'Compliance Monitoring'],
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
-      popular: true,
-      rating: 4.9,
-      users: '150+',
-      trial: '30-day free trial'
-    },
-    { 
-<<<<<<< HEAD
-      name: 'AI 3D Generation Studio', 
-      href: '/ai-3d-generation', 
-      icon: FileText, 
-      category: 'Creative', 
-      price: '$299/mo',
-      description: 'AI-powered 3D model generation, animation, and virtual environment creation',
-      features: ['3D Model Generation', 'Animation Creation', 'Virtual Environments', 'Texture Generation', 'Rigging Automation', 'Rendering Optimization'],
-      popular: true,
-      rating: 4.7,
-=======
-      name: 'AI Neural Memory Assistant', 
-      href: '/ai-neural-memory-assistant', 
-      icon: Brain, 
-      category: 'Cognitive AI', 
-      price: '$299/mo',
-      description: 'Advanced AI memory system for enhanced cognitive performance and accelerated learning',
-      features: ['Memory Enhancement', 'Learning Acceleration', 'Cognitive Training', 'Knowledge Management', 'Pattern Recognition', 'Neural Optimization'],
-      popular: true,
-      rating: 4.8,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
-      users: '1,200+',
-      trial: '14-day free trial'
-    },
-    { 
-<<<<<<< HEAD
-      name: 'AI Mobile App Builder Pro', 
-      href: '/ai-mobile-app-builder', 
-      icon: Smartphone, 
-      category: 'Development', 
-      price: '$399/mo',
-      description: 'AI-powered mobile app development with automated coding, testing, and deployment',
-      features: ['Auto Code Generation', 'UI/UX Design', 'Cross-platform Development', 'Automated Testing', 'App Store Optimization', 'Performance Monitoring'],
-      popular: true,
-      rating: 4.8,
-      users: '2,300+',
-      trial: '21-day free trial'
-=======
       trial: '21-day free trial',
       link: 'https://ziontechgroup.com/ai-hr-assistant',
       capabilities: ['50% faster hiring process', '80% reduction in HR admin time', 'Automated compliance tracking', 'Employee satisfaction insights']
@@ -660,104 +445,12 @@ const MicroSAASPage: React.FC = () => {
       users: '6,800+',
       trial: '14-day free trial',
       link: 'https://ziontechgroup.com/ai-password-generator',
-      capabilities: ['Military-grade encryption', 'Real-time breach monitoring', 'Cross-platform sync', 'Team password sharing']
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
->>>>>>> origin/main
+      capabilities: ['Military-grade encryption', 'Real-time breach monitoring', 'Cross-platform sync', 'Team password sharing'],
+      users: '900+'
     },
     { 
       name: 'AI Logo Designer Pro', 
-      href: '/ai-logo-designer', 
-<<<<<<< HEAD
-      icon: Palette, 
-      category: 'Design', 
-      price: '$99/mo',
-      description: 'Intelligent logo design platform with brand analysis, style matching, and automated design generation',
-      features: ['Brand Analysis', 'Style Matching', 'Auto Design Generation', 'Vector Export', 'Brand Guidelines', 'A/B Testing'],
-      popular: true,
-      rating: 4.8,
-      users: '2,100+',
-      trial: '7-day free trial',
-      link: 'https://ziontechgroup.com/ai-logo-designer'
-    },
-
-    // Advanced Business Solutions
-    { 
-      name: 'AI Supply Chain Optimization Pro', 
-      href: '/ai-supply-chain-optimization-pro', 
-      icon: Truck, 
-      category: 'Supply Chain', 
-      price: '$1,499/mo',
-      description: 'Comprehensive AI supply chain optimization with demand forecasting, inventory management, and logistics automation',
-      features: ['Demand Forecasting', 'Inventory Optimization', 'Logistics Automation', 'Supplier Management', 'Risk Assessment', 'Cost Optimization'],
-      popular: true,
-      rating: 4.7,
-      users: '600+',
-      trial: '30-day free trial',
-      link: 'https://ziontechgroup.com/ai-supply-chain-optimization-pro'
-    },
-    { 
-      name: 'AI Energy Grid Management Pro', 
-      href: '/ai-energy-grid-management-pro', 
-      icon: Zap, 
-      category: 'Energy', 
-      price: '$3,999/mo',
-      description: 'Smart energy grid management system with real-time optimization, renewable integration, and demand response',
-      features: ['Grid Optimization', 'Renewable Integration', 'Demand Response', 'Energy Storage', 'Predictive Maintenance', 'Carbon Tracking'],
-      popular: false,
-      rating: 4.8,
-      users: '100+',
-      trial: '60-day free trial',
-      link: 'https://ziontechgroup.com/ai-energy-grid-management-pro'
-    },
-    { 
-      name: 'AI Agricultural Intelligence Pro', 
-      href: '/ai-agricultural-intelligence-pro', 
-      icon: Sprout, 
-      category: 'Agriculture', 
-      price: '$799/mo',
-      description: 'Precision agriculture AI platform with crop monitoring, yield prediction, and sustainable farming optimization',
-      features: ['Crop Monitoring', 'Yield Prediction', 'Soil Analysis', 'Pest Detection', 'Irrigation Optimization', 'Sustainability Tracking'],
-      popular: true,
-      rating: 4.7,
-      users: '500+',
-      trial: '30-day free trial',
-      link: 'https://ziontechgroup.com/ai-agricultural-intelligence-pro'
-    },
-
-    // Emerging Technologies
-    { 
-      name: 'AI Autonomous Systems Pro', 
-      href: '/ai-autonomous-systems', 
-      icon: Cpu, 
-      category: 'Autonomous', 
-      price: '$2,999/mo',
-      description: 'Advanced AI platform for autonomous system development with self-learning capabilities and real-time adaptation',
-      features: ['Self-Learning Algorithms', 'Real-time Adaptation', 'Sensor Fusion', 'Decision Making', 'Safety Protocols', 'Performance Optimization'],
-      popular: true,
-      rating: 4.8,
-      users: '150+',
-      trial: '45-day free trial',
-      link: 'https://ziontechgroup.com/ai-autonomous-systems'
-    },
-    { 
-      name: 'AI Blockchain Solutions Pro', 
-      href: '/ai-blockchain-solutions', 
-      icon: Shield, 
-      category: 'Blockchain', 
-      price: '$1,799/mo',
-      description: 'Intelligent blockchain platform with smart contract optimization, DeFi integration, and automated compliance',
-      features: ['Smart Contract Optimization', 'DeFi Integration', 'Automated Compliance', 'Token Economics', 'Cross-chain Interoperability', 'Security Auditing'],
-      popular: true,
-      rating: 4.7,
-      users: '300+',
-      trial: '30-day free trial',
-      link: 'https://ziontechgroup.com/ai-blockchain-solutions'
-    }
-  ];
-
-  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Quantum AI', 'AI Memory', 'Immersive Tech', 'Climate Tech', 'Space Tech', 'FinTech', 'Creative', 'Design', 'Supply Chain', 'Energy', 'Agriculture', 'Autonomous', 'Blockchain'];
-=======
-<<<<<<< HEAD
+      href: '/ai-logo-designer',
       icon: FileText, 
       category: 'Design', 
       price: '$89/mo',
@@ -896,6 +589,7 @@ const MicroSAASPage: React.FC = () => {
       popular: false,
       rating: 4.7,
       users: '900+',
+>>>>>>> cursor/analyze-improve-and-deploy-application-7116
       trial: '30-day free trial'
     },
     { 
@@ -914,7 +608,6 @@ const MicroSAASPage: React.FC = () => {
   ];
 
   const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Creative', 'Computer Vision', 'Manufacturing', 'Insurance', 'Testing', 'Education', 'Health', 'Analytics', 'Industrial', 'Language', 'Design'];
-=======
       icon: Palette, 
       category: 'Design', 
       price: '$79/mo',
@@ -960,8 +653,7 @@ const MicroSAASPage: React.FC = () => {
   ];
 
   const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media'];
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
-=======
+
       name: 'AI Holographic Workspace', 
       href: '/ai-holographic-workspace', 
       icon: Rocket, 
@@ -1010,6 +702,7 @@ const MicroSAASPage: React.FC = () => {
       features: ['Grid Optimization', 'Demand Forecasting', 'Renewable Integration', 'Load Balancing', 'Energy Trading', 'Carbon Tracking'],
       popular: false,
       rating: 4.7,
+
       users: '180+',
       trial: '30-day free trial'
     },
@@ -1023,12 +716,12 @@ const MicroSAASPage: React.FC = () => {
       features: ['Satellite Operations', 'Space Mission Planning', 'Astronomical Data Analysis', 'Orbital Mechanics', 'Space Weather', 'Mission Control'],
       popular: false,
       rating: 4.9,
-      users: '120+',
+users: '120+',
       trial: '30-day free trial'
     },
     { 
       name: 'AI Climate Solutions Pro', 
-      href: '/ai-climate-solutions-pro', 
+      href: '/ai-climate-solutions-pro',
       icon: Globe, 
       category: 'Environmental AI', 
       price: '$3,200/mo',
@@ -1054,9 +747,10 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Quantum AI', 'Cognitive AI', 'Immersive Tech', 'Autonomous AI', 'Blockchain AI', 'Energy AI', 'Space Tech', 'Environmental AI', 'Pharma AI'];
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
->>>>>>> origin/main
+
+
+  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media', 'Space Tech', 'Climate Tech', 'Science', 'Computing', 'Transportation', 'Optimization', 'Education'];
+
 
   if (!isLoaded) {
     return (
@@ -1067,7 +761,7 @@ const MicroSAASPage: React.FC = () => {
   }
 
   return (
-<<<<<<< HEAD
+
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
@@ -1079,15 +773,12 @@ const MicroSAASPage: React.FC = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[length:100px_100px] animate-pulse" />
       </div>
 
-=======
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 matrix-bg">
->>>>>>> origin/main
       {/* Header */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10">
           <div className="text-center">
-<<<<<<< HEAD
+
             <div className="inline-block mb-6">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 neon-text">
                 Micro SAAS Solutions
@@ -1111,8 +802,6 @@ const MicroSAASPage: React.FC = () => {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
                 <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
                 <div className="text-gray-300">Uptime SLA</div>
-=======
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
               Micro SAAS Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">
@@ -1127,7 +816,7 @@ const MicroSAASPage: React.FC = () => {
               </div>
               <div className="holographic px-6 py-3 rounded-lg">
                 <span className="text-pink-400 font-semibold">99.9% Uptime</span>
->>>>>>> origin/main
+
               </div>
             </div>
           </div>
@@ -1154,13 +843,11 @@ const MicroSAASPage: React.FC = () => {
           {microSAASServices.map((service) => (
             <div
               key={service.name}
-<<<<<<< HEAD
+
               className={`group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden ${
                 service.popular ? 'ring-2 ring-purple-500/50 shadow-lg shadow-purple-500/20' : ''
-=======
-              className={`futuristic-card hover-lift p-8 ${
                 service.popular ? 'ring-2 ring-purple-500 neon-glow-purple' : ''
->>>>>>> origin/main
+
               }`}
             >
               {/* Animated Background */}
@@ -1193,27 +880,7 @@ const MicroSAASPage: React.FC = () => {
                   {service.description}
                 </p>
 
-<<<<<<< HEAD
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                    <Zap className="w-4 h-4 mr-2 text-cyan-400" />
-                    Key Features:
-                  </h4>
-                  <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                    {service.features.length > 4 && (
-                      <li className="text-cyan-400 text-sm font-medium">
-                        +{service.features.length - 4} more features
-                      </li>
-                    )}
-                  </ul>
-=======
-              <div className="mb-6">
+<div className="mb-6">
                 <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                 <ul className="space-y-2">
                   {service.features.slice(0, 6).map((feature, index) => (
@@ -1242,7 +909,6 @@ const MicroSAASPage: React.FC = () => {
               <div className="flex items-center justify-between mb-6">
                 <div className="text-2xl font-bold text-white">
                   {service.price}
->>>>>>> origin/main
                 </div>
 
                 <div className="flex items-center justify-between mb-6">
@@ -1280,10 +946,7 @@ const MicroSAASPage: React.FC = () => {
                   </a>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
-
-              <div className="flex items-center justify-between mb-6 text-sm">
+<div className="flex items-center justify-between mb-6 text-sm">
                 <div className="flex items-center text-gray-400">
                   <Users className="w-4 h-4 mr-1" />
                   {service.users}
@@ -1302,63 +965,13 @@ const MicroSAASPage: React.FC = () => {
                 Get Started
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
->>>>>>> origin/main
             </div>
           ))}
         </div>
       </div>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <div className="relative bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 py-20 overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Join thousands of companies already using our revolutionary AI-powered micro SaaS tools to boost productivity and drive innovation
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-            <a
-              href="/contact"
-              className="bg-white text-cyan-600 py-4 px-8 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-white/25 inline-flex items-center"
-            >
-              Start Your Free Trial
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
-            <a
-              href="tel:+13024640950"
-              className="border-2 border-white text-white py-4 px-8 rounded-xl font-bold text-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 inline-flex items-center"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call +1 (302) 464-0950
-            </a>
-          </div>
-
-          {/* Contact Information */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-white font-bold text-lg mb-2">Phone</h3>
-              <p className="text-gray-200">+1 (302) 464-0950</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-white font-bold text-lg mb-2">Email</h3>
-              <p className="text-gray-200">kleber@ziontechgroup.com</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <MapPin className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-white font-bold text-lg mb-2">Address</h3>
-              <p className="text-gray-200">364 E Main St STE 1008<br />Middletown, DE 19709</p>
-            </div>
-=======
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
+<div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business?
@@ -1382,7 +995,6 @@ const MicroSAASPage: React.FC = () => {
           </div>
           <div className="text-purple-100 text-sm">
             <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
->>>>>>> origin/main
           </div>
         </div>
       </div>

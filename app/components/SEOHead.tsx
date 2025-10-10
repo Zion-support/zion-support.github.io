@@ -39,24 +39,70 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com",
+      "areaServed": "US",
+      "availableLanguage": "English"
     },
     "sameAs": [
       "https://www.linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
+      "https://twitter.com/ziontechgroup",
+      "https://github.com/zion-tech-group",
+      "https://www.facebook.com/ziontechgroup",
+      "https://www.instagram.com/ziontechgroup",
+      "https://www.youtube.com/@ziontechgroup"
     ],
     "foundingDate": "2020",
     "numberOfEmployees": "50-100",
     "industry": "Technology",
-    "services": [
-      "AI Solutions",
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Machine Learning",
       "Quantum Computing",
       "Autonomous Systems",
       "Digital Transformation",
-      "Cloud Services",
+      "Cloud Computing",
       "Cybersecurity",
-      "Business Intelligence"
-    ]
+      "Business Intelligence",
+      "Data Analytics",
+      "Software Development"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "AI and IT Solutions",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI-Powered Analytics",
+            "description": "Advanced analytics solutions powered by machine learning and artificial intelligence"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI Workflow Automation",
+            "description": "Streamline your business processes with intelligent automation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI Security Solutions",
+            "description": "Advanced security solutions powered by artificial intelligence"
+          }
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "250",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;

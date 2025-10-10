@@ -5,18 +5,17 @@ import { HelmetProvider } from 'react-helmet-async';
 import './src/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
+import HomePage from './app/page';
 import { PageLoader } from './src/components/EnhancedLoadingStates';
 import EnhancedErrorBoundary from './src/components/EnhancedErrorBoundary';
 import SEOHead from './src/components/EnhancedSEOHead';
 import SkipLink from './src/components/SkipLink';
-import UnifiedContentPromotion from './src/components/UnifiedContentPromotion';
-import InteractiveAIROICalculator from './src/components/InteractiveAIROICalculator';
-import ContentShowcase from './src/components/ContentShowcase';
-import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
 import PerformanceOptimizer from './src/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
+import EnhancedAccessibility from './src/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './src/components/Analytics';
+import PerformanceMonitor from './src/components/PerformanceMonitor';
 
 // Structured data for SEO
 const structuredData = {
@@ -81,6 +80,13 @@ const StatusPage = React.lazy(() => import('./app/status/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
+const AIOpsPage = React.lazy(() => import('./app/ai-ops/page'));
+const HealthcareITPage = React.lazy(() => import('./app/healthcare-it/page'));
+const FinancialITPage = React.lazy(() => import('./app/financial-it/page'));
+const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
+const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
+const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
+
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -95,7 +101,8 @@ const App: React.FC = memo(() => {
         <AnalyticsProvider>
           <PerformanceOptimizer>
             <AccessibilityEnhancer>
-              <AppWithPerformanceMonitoring>
+              <EnhancedAccessibility>
+                <AppWithPerformanceMonitoring>
                 <SEOHead />
                 <Router>
                 <div className="min-h-screen bg-white overflow-x-hidden">
@@ -104,14 +111,7 @@ const App: React.FC = memo(() => {
                   <main id="main-content" className="w-full">
                     <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
                     <Routes>
-                      <Route path="/" element={
-                        <div className="w-full">
-                          <UnifiedContentPromotion />
-                          <InteractiveAIROICalculator />
-                          <ContentShowcase />
-                          <InteractiveContentShowcase2026 />
-                        </div>
-                      } />
+<Route path="/" element={<HomePage />} />
                       <Route path="/about" element={<AboutPage />} />
                       <Route path="/contact" element={<ContactPage />} />
                       <Route path="/pricing" element={<PricingPage />} />
@@ -131,14 +131,15 @@ const App: React.FC = memo(() => {
                       <Route path="/status" element={<StatusPage />} />
                       <Route path="/demo" element={<DemoPage />} />
                       <Route path="/consultation" element={<ConsultationPage />} />
-                      <Route path="/services" element={<ServicesPage />} />
+<Route path="/services" element={<ServicesPage />} />
                     </Routes>
                   </Suspense>
                   </main>
                   <Footer />
                 </div>
                 </Router>
-              </AppWithPerformanceMonitoring>
+                </AppWithPerformanceMonitoring>
+              </EnhancedAccessibility>
             </AccessibilityEnhancer>
           </PerformanceOptimizer>
         </AnalyticsProvider>

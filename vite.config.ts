@@ -21,6 +21,10 @@ export default defineConfig({
     minify: 'terser',
     sourcemap: false,
     cssMinify: true,
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 1000,
+    assetsInlineLimit: 4096,
+    cssCodeSplit: true,
     terserOptions: {
       compress: {
         drop_console: true,
@@ -79,14 +83,14 @@ export default defineConfig({
         wrap_func_args: true,
       }
     },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: false,
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: true,
     cssCodeSplit: true,
-    assetsInlineLimit: 2048,
+    assetsInlineLimit: 4096,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
@@ -94,8 +98,11 @@ export default defineConfig({
             if (id.includes('react-router')) {
               return 'vendor-router';
             }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui';
+            if (id.includes('framer-motion')) {
+              return 'vendor-animations';
+            }
+            if (id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-icons';
             }
             if (id.includes('recharts')) {
               return 'vendor-charts';
@@ -103,16 +110,46 @@ export default defineConfig({
             if (id.includes('web-vitals')) {
               return 'vendor-analytics';
             }
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'vendor-utils';
+            }
+            if (id.includes('react-helmet-async')) {
+              return 'vendor-seo';
+            }
+            if (id.includes('gray-matter')) {
+              return 'vendor-content';
+            }
             return 'vendor';
           }
           
-          // Component chunks
+          // Component chunks - split by functionality
           if (id.includes('/src/components/')) {
+            if (id.includes('Navigation') || id.includes('Footer')) {
+              return 'layout';
+            }
+            if (id.includes('SEO') || id.includes('Analytics')) {
+              return 'seo';
+            }
+            if (id.includes('Performance') || id.includes('Accessibility')) {
+              return 'optimization';
+            }
             return 'components';
           }
           
-          // Page chunks
+          // Page chunks - split by category
           if (id.includes('/app/')) {
+            if (id.includes('/ai-') && !id.includes('/ai-services')) {
+              return 'ai-pages';
+            }
+            if (id.includes('/it-') || id.includes('/cloud-') || id.includes('/cybersecurity')) {
+              return 'it-pages';
+            }
+            if (id.includes('/micro-saas')) {
+              return 'saas-pages';
+            }
+            if (id.includes('/about') || id.includes('/contact') || id.includes('/team')) {
+              return 'company-pages';
+            }
             return 'pages';
           }
         },

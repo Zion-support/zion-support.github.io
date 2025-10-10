@@ -1,116 +1,192 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, memo, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  // Preload critical resources
-  useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Preload critical fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'preload';
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap';
-      fontLink.as = 'style';
-      document.head.appendChild(fontLink);
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ children }) => {
+  // Intersection Observer for lazy loading
+  const setupIntersectionObserver = useCallback(() => {
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+              observer.unobserve(img);
+            }
+          }
+        });
+      }, {
+        rootMargin: '50px 0px',
+        threshold: 0.01
+      });
 
-      // Preload critical images
+      // Observe all lazy images
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+      });
+    }
+  }, []);
+
+  // Resource hints optimization
+  const optimizeResourceHints = useCallback(() => {
+    const criticalResources = [
+      { href: 'https://fonts.googleapis.com', rel: 'preconnect' },
+      { href: 'https://fonts.gstatic.com', rel: 'preconnect', crossorigin: 'anonymous' },
+      { href: 'https://www.google-analytics.com', rel: 'preconnect' },
+      { href: 'https://www.googletagmanager.com', rel: 'preconnect' }
+    ];
+
+    criticalResources.forEach(resource => {
+      if (!document.querySelector(`link[href="${resource.href}"]`)) {
+        const link = document.createElement('link');
+        Object.entries(resource).forEach(([key, value]) => {
+          link.setAttribute(key, value as string);
+        });
+        document.head.appendChild(link);
+      }
+    });
+  }, []);
+
+  // Critical CSS inlining
+  const inlineCriticalCSS = useCallback(() => {
+    const criticalCSS = `
+      .hero-section { opacity: 0; animation: fadeIn 0.6s ease-out forwards; }
+      @keyframes fadeIn { to { opacity: 1; } }
+      .loading { display: none; }
+      .loaded .loading { display: none; }
+      .loaded .content { display: block; }
+    `;
+
+    if (!document.querySelector('#critical-css')) {
+      const style = document.createElement('style');
+      style.id = 'critical-css';
+      style.textContent = criticalCSS;
+      document.head.insertBefore(style, document.head.firstChild);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Preload critical resources
+    const preloadCriticalResources = () => {
       const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png',
-        '/images/team/kleber-santos.jpg'
+        '/images/hero-bg.webp',
+        '/images/logo.webp',
+        '/images/og-image.webp'
       ];
 
       criticalImages.forEach(src => {
-        const img = new Image();
-        img.src = src;
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
+        document.head.appendChild(link);
       });
     };
 
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        // Add loading="lazy" to non-critical images
+        if (!img.hasAttribute('loading')) {
+          img.setAttribute('loading', 'lazy');
+        }
+        
+        // Add decoding="async" for better performance
+        if (!img.hasAttribute('decoding')) {
+          img.setAttribute('decoding', 'async');
+        }
+      });
+    };
+
+    // Enable service worker for caching
+    const enableServiceWorker = () => {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            if (process.env.NODE_ENV === 'development') {
+              console.log('Service Worker registered:', registration);
+            }
+          })
+          .catch(error => {
+            if (process.env.NODE_ENV === 'development') {
+              console.log('Service Worker registration failed:', error);
+            }
+          });
+      }
+    };
+
+    // Optimize scroll performance
+    const optimizeScroll = () => {
+      let ticking = false;
+      
+      const updateScroll = () => {
+        // Throttle scroll events
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
+
+      window.addEventListener('scroll', updateScroll, { passive: true });
+      
+      return () => {
+        window.removeEventListener('scroll', updateScroll);
+      };
+    };
+
+    // Initialize optimizations
     preloadCriticalResources();
-  }, []);
+    optimizeImages();
+    enableServiceWorker();
+    setupIntersectionObserver();
+    optimizeResourceHints();
+    inlineCriticalCSS();
+    const cleanupScroll = optimizeScroll();
 
-  // Optimize scroll performance
-  useEffect(() => {
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          // Throttled scroll handling
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Optimize resize performance
-  useEffect(() => {
-    let resizeTimeout: NodeJS.Timeout;
-
-    const handleResize = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        // Throttled resize handling
-      }, 250);
-    };
-
-    window.addEventListener('resize', handleResize);
+    // Cleanup on unmount
     return () => {
-      clearTimeout(resizeTimeout);
-      window.removeEventListener('resize', handleResize);
+      cleanupScroll();
     };
-  }, []);
+  }, [setupIntersectionObserver, optimizeResourceHints, inlineCriticalCSS]);
 
-  // Intersection Observer for lazy loading
+  // Add performance monitoring
   useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: '50px',
-      threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const target = entry.target as HTMLElement;
-          if (target.dataset.lazy) {
-            target.style.opacity = '1';
-            target.style.transform = 'translateY(0)';
-          }
-        }
-      });
-    }, observerOptions);
-
-    // Observe all lazy elements
-    const lazyElements = document.querySelectorAll('[data-lazy]');
-    lazyElements.forEach(el => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
-  // Memory optimization
-  useEffect(() => {
-    const cleanup = () => {
-      // Clean up any global event listeners or timers
-      if (typeof window !== 'undefined') {
-        // Clear any global intervals
-        const highestId = window.setTimeout(() => {}, 0);
-        for (let i = 0; i < highestId; i++) {
-          window.clearTimeout(i);
-        }
+    // Monitor Core Web Vitals
+    const monitorWebVitals = () => {
+      if ('web-vitals' in window) {
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          const logMetric = (metric: any) => {
+            if (process.env.NODE_ENV === 'development') {
+              console.log(metric);
+            }
+            // Send to analytics in production
+            if (process.env.NODE_ENV === 'production') {
+              // Send to analytics service
+            }
+          };
+          
+          getCLS(logMetric);
+          getFID(logMetric);
+          getFCP(logMetric);
+          getLCP(logMetric);
+          getTTFB(logMetric);
+        });
       }
     };
 
-    return cleanup;
+    monitorWebVitals();
   }, []);
 
   return <>{children}</>;
-};
+});
+
+PerformanceOptimizer.displayName = 'PerformanceOptimizer';
 
 export default PerformanceOptimizer;

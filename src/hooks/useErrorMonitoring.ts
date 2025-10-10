@@ -4,8 +4,7 @@
 export const useErrorMonitoring = {
   // Add utility functions here
   init: () => {
-    console.log('useErrorMonitoring initialized');
-  }
+    }
 };
 
 export default useErrorMonitoring;
