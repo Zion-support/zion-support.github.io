@@ -28,31 +28,27 @@ const ContentStatistics: React.FC = () => {
       value: counters.clients,
       label: 'Happy Clients',
       suffix: '+',
-      color: 'text-blue-400',
-      description: 'Businesses trust our solutions'
+      description: 'Businesses transformed worldwide'
     },
     {
-      icon: Award,
+      icon: Target,
       value: counters.projects,
       label: 'Projects Completed',
       suffix: '+',
-      color: 'text-purple-400',
       description: 'Successful implementations'
     },
     {
-      icon: TrendingUp,
+      icon: Star,
       value: counters.satisfaction,
       label: 'Client Satisfaction',
       suffix: '%',
-      color: 'text-green-400',
-      description: 'Customer satisfaction rate'
+      description: 'Average satisfaction rate'
     },
     {
       icon: Clock,
       value: counters.years,
       label: 'Years Experience',
       suffix: '+',
-      color: 'text-yellow-400',
       description: 'Industry expertise'
     },
     {
@@ -60,107 +56,99 @@ const ContentStatistics: React.FC = () => {
       value: counters.countries,
       label: 'Countries Served',
       suffix: '+',
-      color: 'text-cyan-400',
       description: 'Global presence'
     },
     {
-      icon: BarChart3,
-      value: counters.uptime,
-      label: 'Uptime Guarantee',
-      suffix: '%',
-      color: 'text-red-400',
-      description: 'Service reliability'
-    }
-  ];
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-      stats: ['95% Accuracy', '10x Faster', '24/7 Learning']
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-      stats: ['< 100ms Response', '99.9% Uptime', '10M+ Requests']
-    },
-    {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-      stats: ['256-bit Encryption', 'SOC 2 Compliant', 'Zero Breaches']
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-      stats: ['50+ Countries', '15+ Languages', '24/7 Support']
+      value: counters.uptime,
+      label: 'System Uptime',
+      suffix: '%',
+      description: 'Reliability guarantee'
     }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
   ];
 
   const achievements = [
     {
-      icon: Star,
-      title: 'Industry Recognition',
-      description: 'Awarded Best AI Solutions Provider 2024',
-      value: '25+'
+      icon: Brain,
+      title: 'AI Innovation',
+      description: 'Pioneering AI solutions that drive business growth',
+      metric: '500+ AI Models Deployed'
     },
     {
-      icon: Target,
-      title: 'Success Rate',
-      description: 'Projects delivered on time and within budget',
-      value: '98%'
+      icon: Zap,
+      title: 'Performance',
+      description: 'Lightning-fast systems with 99.9% uptime',
+      metric: 'Sub-100ms Response Time'
     },
     {
-      icon: Rocket,
-      title: 'Growth Rate',
-      description: 'Year-over-year business growth',
-      value: '300%'
+      icon: Shield,
+      title: 'Security',
+      description: 'Bank-level security protecting your data',
+      metric: 'Zero Security Breaches'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth',
+      description: 'Consistent year-over-year growth',
+      metric: '300% Revenue Growth'
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'TechCorp Solutions',
+      role: 'CTO',
+      content: 'Zion Tech Group transformed our entire infrastructure. The results speak for themselves.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      company: 'Global Finance Inc.',
+      role: 'VP of Technology',
+      content: 'Outstanding service and incredible results. Highly recommended for enterprise solutions.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      company: 'MedTech Systems',
+      role: 'IT Director',
+      content: 'The AI solutions they implemented have revolutionized our operations.',
+      rating: 5
     }
   ];
 
   useEffect(() => {
-    const duration = 3000; // 3 seconds
-    const steps = 60;
-    const stepDuration = duration / steps;
+    const animateCounters = () => {
+      const duration = 2000; // 2 seconds
+      const steps = 60;
+      const stepDuration = duration / steps;
 
-    const timers = Object.keys(targetCounters).map((key) => {
-      const target = targetCounters[key as keyof typeof targetCounters];
-      const increment = target / steps;
-      let current = 0;
+      Object.keys(targetCounters).forEach(key => {
+        const target = targetCounters[key as keyof typeof targetCounters];
+        const step = target / steps;
+        let current = 0;
 
-      return setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          current = target;
-        }
-        setCounters(prev => ({
-          ...prev,
-          [key]: Math.floor(current)
-        }));
-      }, stepDuration);
-    });
-
-    return () => {
-      timers.forEach(timer => clearInterval(timer));
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          setCounters(prev => ({
+            ...prev,
+            [key]: Math.floor(current)
+          }));
+        }, stepDuration);
+      });
     };
+
+    // Start animation after a short delay
+    const timer = setTimeout(animateCounters, 500);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -177,112 +165,87 @@ const ContentStatistics: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {statistics.map((stat, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center group">
-              <div className={`w-16 h-16 ${stat.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                <stat.icon className="w-8 h-8" />
+              <div className="flex justify-center mb-4">
+                <div className="p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full group-hover:scale-110 transition-transform duration-300">
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
               </div>
-              <div className={`text-4xl font-bold ${stat.color} mb-2`}>
+              <div className="text-4xl font-bold text-white mb-2">
                 {stat.value.toLocaleString()}{stat.suffix}
               </div>
-              <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
-              <div className="text-gray-400 text-sm">{stat.description}</div>
-=======
-    <div className="py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Statistics Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Our Impact in Numbers
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            See how we've helped businesses transform with our AI and IT solutions.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {statistics.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-8 h-8 text-slate-900" />
+              <div className="text-lg font-semibold text-gray-200 mb-2">
+                {stat.label}
               </div>
-              <div className={`text-4xl font-bold ${stat.color} mb-2`}>
-                {stat.value}{stat.suffix}
+              <div className="text-sm text-gray-400">
+                {stat.description}
               </div>
-              <div className="text-gray-300">{stat.label}</div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
             </div>
           ))}
-        </div>
-
-        {/* Features Section */}
-<<<<<<< HEAD
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">Why We're the Right Choice</h3>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              Our comprehensive solutions deliver measurable results across all key business metrics.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h4 className="text-lg font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                  {feature.title}
-                </h4>
-                <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
-                <div className="space-y-2">
-                  {feature.stats.map((stat, statIndex) => (
-                    <div key={statIndex} className="flex items-center text-xs text-gray-400">
-                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                      {stat}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Achievements Section */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">Key Achievements</h3>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              Recognition and awards that validate our commitment to excellence and innovation.
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Key Achievements
+            </h3>
+            <p className="text-gray-300">
+              Milestones that showcase our commitment to excellence
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {achievements.map((achievement, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <achievement.icon className="w-8 h-8 text-white" />
+              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-400 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg mr-4">
+                    <achievement.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="text-lg font-semibold text-white">
+                    {achievement.title}
+                  </h4>
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>
-                <div className="text-lg font-semibold text-white mb-2">{achievement.title}</div>
-                <div className="text-gray-400 text-sm">{achievement.description}</div>
+                <p className="text-gray-300 text-sm mb-3">
+                  {achievement.description}
+                </p>
+                <div className="text-blue-400 font-semibold text-sm">
+                  {achievement.metric}
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Benefits Section */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Comprehensive Benefits</h3>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              Our solutions provide a complete package of benefits designed to accelerate your business growth.
+        {/* Testimonials Section */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              What Our Clients Say
+            </h3>
+            <p className="text-gray-300">
+              Real feedback from satisfied customers
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                <span className="text-gray-300">{benefit}</span>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4 italic">
+                  "{testimonial.content}"
+                </p>
+                <div className="border-t border-white/20 pt-4">
+                  <div className="font-semibold text-white">
+                    {testimonial.name}
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    {testimonial.role}, {testimonial.company}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -290,65 +253,22 @@ const ContentStatistics: React.FC = () => {
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Join Our Success Stories?
             </h3>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Be part of our growing community of successful businesses. Start your transformation journey today.
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Let us help you achieve similar results with our proven AI and IT solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
-                <Zap className="w-5 h-5" />
-                <span>Get Started</span>
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 View Case Studies
               </button>
             </div>
-=======
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Why Choose Our Solutions?
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our solutions deliver unmatched performance, security, and scalability for modern businesses.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center mb-4">
-                <feature.icon className="w-6 h-6 text-slate-900" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                {feature.title}
-              </h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Benefits Section */}
-        <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the advantages that make our solutions the preferred choice for businesses worldwide.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
           </div>
         </div>
       </div>
