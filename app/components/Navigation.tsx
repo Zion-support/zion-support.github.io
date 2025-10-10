@@ -323,7 +323,7 @@ const Navigation: React.FC = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             <a href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </a>
@@ -336,6 +336,15 @@ const Navigation: React.FC = () => {
             <a href="/careers" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Careers
             </a>
+            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Pricing
+            </a>
+            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Case Studies
+            </a>
+            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Blog
+            </a>
             <div className="relative group">
               <button
                 onClick={toggleServices}
@@ -346,15 +355,15 @@ const Navigation: React.FC = () => {
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[1000px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
-                  <div className="grid grid-cols-4 gap-6">
+                <div className="absolute top-full left-0 mt-2 w-[1200px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
+                  <div className="grid grid-cols-5 gap-6">
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
                         <Zap className="w-4 h-4 mr-2" />
                         Micro SAAS
                       </h3>
                       <div className="space-y-3">
-                        {['Productivity', 'Content', 'Marketing', 'Business', 'Finance'].map(category => (
+                        {['Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Support', 'Development', 'Analytics', 'Creative', 'Health'].map(category => (
                           <div key={category}>
                             <h4 className="text-xs font-medium text-purple-400 mb-2 uppercase tracking-wide">{category}</h4>
                             <div className="space-y-1">
@@ -366,7 +375,7 @@ const Navigation: React.FC = () => {
                                 >
                                   <div className="flex items-center space-x-2">
                                     <service.icon className="w-3 h-3" />
-                                    <span>{service.name}</span>
+                                    <span className="truncate">{service.name}</span>
                                   </div>
                                   <span className="text-cyan-400 text-xs font-medium">{service.price}</span>
                                 </a>
@@ -382,7 +391,7 @@ const Navigation: React.FC = () => {
                         AI Services
                       </h3>
                       <div className="space-y-2">
-                        {aiServices.slice(0, 8).map((service) => (
+                        {aiServices.slice(0, 10).map((service) => (
                           <a key={service.name}
                             href={service.href}
                             className="flex items-center justify-between text-sm text-gray-300 hover:text-cyan-400 transition-colors group"
@@ -390,7 +399,7 @@ const Navigation: React.FC = () => {
                           >
                             <div className="flex items-center space-x-2">
                               <service.icon className="w-3 h-3" />
-                              <span>{service.name}</span>
+                              <span className="truncate">{service.name}</span>
                             </div>
                             <span className="text-purple-400 text-xs font-medium">{service.price}</span>
                           </a>
@@ -403,7 +412,7 @@ const Navigation: React.FC = () => {
                         IT Services
                       </h3>
                       <div className="space-y-2">
-                        {itServices.slice(0, 8).map((service) => (
+                        {itServices.slice(0, 10).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
@@ -412,7 +421,7 @@ const Navigation: React.FC = () => {
                           >
                             <div className="flex items-center space-x-2">
                               <service.icon className="w-3 h-3" />
-                              <span>{service.name}</span>
+                              <span className="truncate">{service.name}</span>
                             </div>
                             <span className="text-green-400 text-xs font-medium">{service.price}</span>
                           </a>
@@ -425,7 +434,7 @@ const Navigation: React.FC = () => {
                         Specialized
                       </h3>
                       <div className="space-y-2">
-                        {specializedServices.slice(0, 8).map((service) => (
+                        {specializedServices.slice(0, 10).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
@@ -434,9 +443,42 @@ const Navigation: React.FC = () => {
                           >
                             <div className="flex items-center space-x-2">
                               <service.icon className="w-3 h-3" />
-                              <span>{service.name}</span>
+                              <span className="truncate">{service.name}</span>
                             </div>
                             <span className="text-orange-400 text-xs font-medium">{service.price}</span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
+                        <Globe className="w-4 h-4 mr-2" />
+                        Industry
+                      </h3>
+                      <div className="space-y-2">
+                        {[
+                          { name: 'Healthcare', href: '/healthcare-solutions', price: '$2,500/mo' },
+                          { name: 'Finance', href: '/finance-solutions', price: '$2,000/mo' },
+                          { name: 'Education', href: '/education-solutions', price: '$1,800/mo' },
+                          { name: 'Manufacturing', href: '/manufacturing-solutions', price: '$2,200/mo' },
+                          { name: 'Retail', href: '/retail-solutions', price: '$1,900/mo' },
+                          { name: 'Government', href: '/government-solutions', price: '$3,000/mo' },
+                          { name: 'Energy', href: '/energy-solutions', price: '$2,800/mo' },
+                          { name: 'Transportation', href: '/transportation-solutions', price: '$2,400/mo' },
+                          { name: 'Real Estate', href: '/real-estate-solutions', price: '$1,600/mo' },
+                          { name: 'Entertainment', href: '/entertainment-solutions', price: '$1,700/mo' }
+                        ].map((service) => (
+                          <a
+                            key={service.name}
+                            href={service.href}
+                            className="flex items-center justify-between text-sm text-gray-300 hover:text-cyan-400 transition-colors group"
+                            onClick={closeAllMenus}
+                          >
+                            <div className="flex items-center space-x-2">
+                              <Building className="w-3 h-3" />
+                              <span className="truncate">{service.name}</span>
+                            </div>
+                            <span className="text-blue-400 text-xs font-medium">{service.price}</span>
                           </a>
                         ))}
                       </div>
@@ -474,18 +516,6 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
-              About
-            </a>
-            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
-              Blog
-            </a>
-            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
-              Case Studies
-            </a>
-            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
-              Pricing
-            </a>
             <a href="/enterprise" className="text-white hover:text-cyan-400 transition-colors">
               Enterprise
             </a>
@@ -520,7 +550,7 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
+          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20 max-h-[80vh] overflow-y-auto">
             <div className="px-4 py-6 space-y-4">
               <div>
                 <button
@@ -532,17 +562,17 @@ const Navigation: React.FC = () => {
                 </button>
                 
                 {isServicesOpen && (
-                  <div className="mt-4 pl-4 space-y-3">
+                  <div className="mt-4 pl-4 space-y-4">
                     <div>
                       <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
                       <div className="space-y-2">
-                        {microSAASServices.slice(0, 4).map((service) => (
+                        {microSAASServices.slice(0, 6).map((service) => (
                           <a key={service.name}
                             href={service.href}
                             className="flex items-center justify-between text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                             onClick={closeAllMenus}
                           >
-                            <span>{service.name}</span>
+                            <span className="truncate">{service.name}</span>
                             <span className="text-cyan-400 text-xs font-medium">{service.price}</span>
                           </a>
                         ))}
@@ -551,14 +581,29 @@ const Navigation: React.FC = () => {
                     <div>
                       <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
                       <div className="space-y-2">
-                        {aiServices.slice(0, 4).map((service) => (
+                        {aiServices.slice(0, 6).map((service) => (
                           <a key={service.name}
                             href={service.href}
                             className="flex items-center justify-between text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                             onClick={closeAllMenus}
                           >
-                            <span>{service.name}</span>
+                            <span className="truncate">{service.name}</span>
                             <span className="text-purple-400 text-xs font-medium">{service.price}</span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-cyan-400 font-semibold mb-2">IT Services</h4>
+                      <div className="space-y-2">
+                        {itServices.slice(0, 6).map((service) => (
+                          <a key={service.name}
+                            href={service.href}
+                            className="flex items-center justify-between text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                            onClick={closeAllMenus}
+                          >
+                            <span className="truncate">{service.name}</span>
+                            <span className="text-green-400 text-xs font-medium">{service.price}</span>
                           </a>
                         ))}
                       </div>
