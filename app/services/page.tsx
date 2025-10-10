@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import {
   Brain,
   Cloud,
@@ -13,10 +14,19 @@ import {
   CheckCircle,
   ArrowRight,
   Search,
-  Filter
+  Filter,
+  Users,
+  Settings
 } from 'lucide-react';
-<<<<<<< HEAD
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 const ServicesPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [currentPage, setCurrentPage] = useState(1);
+  const servicesPerPage = 12;
+
   const services = [
     // AI Services
     {
