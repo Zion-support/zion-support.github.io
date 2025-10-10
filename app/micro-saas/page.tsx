@@ -1,8 +1,6 @@
 'use client';
-<<<<<<< HEAD
-=======
 import React, { useState, useMemo } from 'react';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Brain, Cloud, Shield, Code, BarChart, Users, Award, Target, Star, ArrowRight, Sparkles, Cpu, Database, Smartphone, Lock, Zap, Globe, Calendar, FileText, Settings, CheckSquare, MessageSquare, Building, Clock, Send, DollarSign, Rocket, Shield as ShieldIcon, Users as UsersIcon, TrendingUp as TrendingUpIcon, Star as StarIcon, Award as AwardIcon, Target as TargetIcon, Brain as BrainIcon, Cloud as CloudIcon, Code as CodeIcon, BarChart as BarChartIcon, Users as UsersIcon2, Zap as ZapIcon, Globe as GlobeIcon, Database as DatabaseIcon, Smartphone as SmartphoneIcon, Lock as LockIcon, Settings as SettingsIcon, CheckSquare as CheckSquareIcon, MessageSquare as MessageSquareIcon, Building as BuildingIcon, Clock as ClockIcon, Send as SendIcon, DollarSign as DollarSignIcon, Rocket as RocketIcon } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Brain, Cloud, Shield, Code, BarChart, Users, Award, Target, Star, ArrowRight, Sparkles, Cpu, Database, Smartphone, Lock, Zap, Globe, Calendar, FileText, Settings, CheckSquare, MessageSquare, Building, Clock, Send, DollarSign, Rocket } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
@@ -20,10 +18,6 @@ export default function MicroSaasPage() {
       minimumFractionDigits: 0
     }).format(price);
   };
-
-export default function MicroSaasPage() {
->>>>>>> cursor/analyze-improve-and-deploy-application-55ba
-  const [activeTab, setActiveTab] = useState('overview');
 
   const microSaasServices = [
     {
@@ -48,34 +42,34 @@ export default function MicroSaasPage() {
         {
           id: 2,
           name: 'AI Smart Calendar Pro',
-          description: 'Revolutionary calendar that learns your patterns and automatically optimizes your schedule for maximum productivity and work-life balance.',
+          description: 'Revolutionary calendar management with AI-powered scheduling, conflict resolution, and productivity optimization. Used by Fortune 500 companies.',
           icon: Calendar,
-          price: 59,
-          originalPrice: 89,
-          features: ['Smart scheduling', 'Pattern learning', 'Conflict resolution', 'Time blocking', 'Meeting optimization', 'Work-life balance', 'Integration support', 'Mobile sync'],
-          benefits: ['50% time saved', '90% fewer conflicts', 'Perfect work-life balance', '25% more productive'],
+          price: 89,
+          originalPrice: 129,
+          features: ['Smart scheduling', 'Conflict resolution', 'Productivity analytics', 'Team coordination', 'Meeting optimization', 'Time blocking', 'Priority management', 'Integration support'],
+          benefits: ['35% more productive time', 'Better work-life balance', 'Reduced scheduling stress', 'Optimal energy usage'],
           link: '/ai-smart-calendar',
           popular: true,
           category: 'Productivity',
           rating: 4.8,
-          users: '5,000+',
-          freeTrial: '7 days'
+          users: '35,000+',
+          freeTrial: '21 days'
         },
         {
           id: 3,
-          name: 'AI Voice Cloning Studio Pro',
-          description: 'Professional voice cloning and synthesis platform for content creators, marketers, and businesses. Create natural-sounding voiceovers in minutes.',
-          icon: Mic,
-          price: 149,
-          originalPrice: 199,
-          features: ['Voice cloning', 'Text-to-speech', 'Emotion control', 'Multiple languages', 'Real-time processing', 'API integration', 'Custom voices', 'Batch processing'],
-          benefits: ['95% voice accuracy', '80% cost reduction', '10x faster production', 'Unlimited usage'],
-          link: '/ai-voice-cloning-studio',
-          popular: false,
-          category: 'Creative',
+          name: 'AI Document Intelligence Pro',
+          description: 'Transform any document into actionable insights with AI-powered analysis, summarization, and knowledge extraction.',
+          icon: FileText,
+          price: 79,
+          originalPrice: 119,
+          features: ['Document analysis', 'Smart summarization', 'Knowledge extraction', 'Search & discovery', 'Version control', 'Collaboration tools', 'OCR processing', 'Multi-format support'],
+          benefits: ['80% faster document processing', 'Better knowledge retention', 'Improved search', 'Enhanced collaboration'],
+          link: '/ai-document-intelligence',
+          popular: true,
+          category: 'Productivity',
           rating: 4.7,
-          users: '2,500+',
-          freeTrial: '3 days'
+          users: '15,000+',
+          freeTrial: '7 days'
         }
       ]
     },
@@ -84,72 +78,35 @@ export default function MicroSaasPage() {
       services: [
         {
           id: 4,
-          name: 'AI Email Marketing Pro',
-          description: 'Intelligent email marketing platform that uses AI to optimize subject lines, content, and send times for maximum engagement and conversions.',
-          icon: Mail,
-          price: 79,
-          originalPrice: 119,
-          features: ['AI content generation', 'Send time optimization', 'A/B testing', 'Segmentation', 'Analytics dashboard', 'Template library', 'Automation workflows', 'Deliverability tools'],
-          benefits: ['300% higher open rates', '250% more clicks', '180% increase in conversions', '60% time saved'],
-          link: '/ai-email-marketing',
+          name: 'AI Lead Generation Engine',
+          description: 'Generate high-quality leads using AI-powered targeting and automated outreach campaigns.',
+          icon: Target,
+          price: 199,
+          originalPrice: 299,
+          features: ['AI lead scoring', 'Automated outreach', 'Email sequences', 'Social media integration', 'CRM sync', 'Performance analytics', 'A/B testing', 'Custom templates'],
+          benefits: ['300% more qualified leads', '50% higher conversion rates', '90% time savings', 'Automated follow-ups'],
+          link: '/ai-lead-generation',
           popular: true,
           category: 'Marketing',
-          rating: 4.9,
-          users: '8,000+',
+          rating: 4.8,
+          users: '8,500+',
           freeTrial: '14 days'
         },
         {
           id: 5,
-          name: 'AI Social Media Manager',
-          description: 'Automated social media management with AI-powered content creation, posting optimization, and engagement tracking across all platforms.',
+          name: 'AI Content Marketing Suite',
+          description: 'Create, optimize, and distribute content at scale with AI-powered content generation and optimization.',
           icon: MessageSquare,
-          price: 89,
-          originalPrice: 129,
-          features: ['Content generation', 'Multi-platform posting', 'Engagement tracking', 'Hashtag optimization', 'Analytics reports', 'Scheduling', 'Brand voice training', 'Trend analysis'],
-          benefits: ['400% more engagement', '70% time saved', '200% follower growth', '85% better reach'],
-          link: '/ai-social-media-manager',
-          popular: true,
-          category: 'Marketing',
-          rating: 4.8,
-          users: '6,500+',
-          freeTrial: '10 days'
-        }
-      ]
-    },
-    {
-      category: 'Customer Support & Service',
-      services: [
-        {
-          id: 6,
-          name: 'AI Customer Support Pro',
-          description: 'Intelligent customer support system with AI chatbots, ticket routing, and automated responses that provide 24/7 assistance.',
-          icon: MessageSquare,
-          price: 129,
-          originalPrice: 179,
-          features: ['AI chatbots', 'Ticket routing', 'Knowledge base', 'Multi-language support', 'Sentiment analysis', 'Escalation management', 'Performance analytics', 'Integration APIs'],
-          benefits: ['90% faster response', '80% cost reduction', '95% customer satisfaction', '24/7 availability'],
-          link: '/ai-customer-support',
-          popular: true,
-          category: 'Support',
-          rating: 4.9,
-          users: '12,000+',
-          freeTrial: '21 days'
-        },
-        {
-          id: 7,
-          name: 'AI Help Desk Assistant',
-          description: 'Smart help desk solution that automatically categorizes tickets, suggests solutions, and provides instant answers to common questions.',
-          icon: Settings,
-          price: 99,
-          originalPrice: 139,
-          features: ['Auto-categorization', 'Solution suggestions', 'Knowledge base search', 'Ticket prioritization', 'SLA management', 'Reporting dashboard', 'Mobile app', 'Team collaboration'],
-          benefits: ['75% faster resolution', '60% fewer escalations', '85% accuracy', '50% time saved'],
-          link: '/ai-help-desk',
+          price: 149,
+          originalPrice: 199,
+          features: ['Content generation', 'SEO optimization', 'Social media scheduling', 'Performance tracking', 'Brand voice consistency', 'Multi-platform publishing', 'Content calendar', 'Analytics dashboard'],
+          benefits: ['10x content output', '60% better SEO performance', 'Consistent brand voice', 'Automated distribution'],
+          link: '/ai-content-marketing',
           popular: false,
-          category: 'Support',
-          rating: 4.7,
-          users: '4,000+',
-          freeTrial: '14 days'
+          category: 'Marketing',
+          rating: 4.6,
+          users: '12,000+',
+          freeTrial: '7 days'
         }
       ]
     },
@@ -157,603 +114,173 @@ export default function MicroSaasPage() {
       category: 'Data & Analytics',
       services: [
         {
-          id: 8,
-          name: 'AI Business Intelligence Pro',
-          description: 'Advanced BI platform with AI-powered insights, predictive analytics, and automated reporting for data-driven decision making.',
+          id: 6,
+          name: 'AI Data Analytics Pro',
+          description: 'Advanced data analytics platform with AI-powered insights, predictive modeling, and automated reporting.',
           icon: BarChart,
           price: 199,
           originalPrice: 299,
-          features: ['Predictive analytics', 'Automated insights', 'Custom dashboards', 'Data visualization', 'Report automation', 'Trend analysis', 'Alert system', 'API integration'],
-          benefits: ['300% faster insights', '90% accuracy', '200% better decisions', '80% time saved'],
-          link: '/ai-business-intelligence',
+          features: ['Predictive analytics', 'Automated reporting', 'Data visualization', 'Machine learning models', 'Real-time insights', 'Custom dashboards', 'Data integration', 'Trend analysis'],
+          benefits: ['90% faster insights', 'Better decision making', 'Automated reporting', 'Predictive accuracy'],
+          link: '/ai-data-analytics',
           popular: true,
           category: 'Analytics',
-          rating: 4.9,
-          users: '3,500+',
-          freeTrial: '30 days'
-        },
-        {
-          id: 9,
-          name: 'AI Data Visualization Studio',
-          description: 'Create stunning, interactive data visualizations with AI assistance. Transform complex data into compelling stories and insights.',
-          icon: BarChart,
-          price: 149,
-          originalPrice: 199,
-          features: ['AI chart suggestions', 'Interactive dashboards', 'Custom templates', 'Real-time updates', 'Export options', 'Collaboration tools', 'Mobile responsive', 'Brand customization'],
-          benefits: ['90% faster creation', '200% more engaging', '85% better insights', '60% time saved'],
-          link: '/ai-data-visualization',
-          popular: false,
-          category: 'Analytics',
-          rating: 4.6,
-          users: '2,000+',
-          freeTrial: '14 days'
-        }
-      ]
-    },
-    {
-      category: 'Security & Compliance',
-      services: [
-        {
-          id: 10,
-          name: 'AI Security Monitor Pro',
-          description: 'Advanced security monitoring with AI-powered threat detection, automated incident response, and compliance reporting.',
-          icon: Shield,
-          price: 299,
-          originalPrice: 399,
-          features: ['Threat detection', 'Incident response', 'Compliance reporting', 'Real-time monitoring', 'Risk assessment', 'Automated alerts', 'Forensic analysis', 'Integration support'],
-          benefits: ['95% threat detection', '80% faster response', '100% compliance', '70% cost reduction'],
-          link: '/ai-security-monitor',
-          popular: true,
-          category: 'Security',
-          rating: 4.9,
-          users: '1,500+',
-          freeTrial: '30 days'
+          rating: 4.8,
+          users: '6,200+',
+          freeTrial: '21 days'
         }
       ]
     }
   ];
 
-<<<<<<< HEAD
-=======
-  const categories = ['all', ...new Set(microSaasServices.flatMap(cat => cat.services.map(s => s.category)))];
+  const allServices = microSaasServices.flatMap(category => category.services);
 
   const filteredServices = useMemo(() => {
-    return microSaasServices.flatMap(category => 
-      category.services.filter(service => {
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-        const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
-        const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            service.description.toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesCategory && matchesPrice && matchesSearch;
-      })
-    );
-  }, [selectedCategory, priceRange, searchTerm]);
+    return allServices.filter(service => {
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+      const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase());
+      return matchesCategory && matchesPrice && matchesSearch;
+    });
+  }, [allServices, selectedCategory, priceRange, searchTerm]);
 
->>>>>>> cursor/analyze-improve-and-deploy-application-55ba
-  const benefits = [
-    {
-      icon: TrendingUp,
-      stat: '300%',
-      title: 'Average ROI Increase',
-      description: 'Our clients see significant returns on investment within the first quarter'
-    },
-    {
-      icon: Users,
-      stat: '50K+',
-      title: 'Active Users',
-      description: 'Trusted by businesses worldwide for their critical operations'
-    },
-    {
-      icon: Award,
-      stat: '99.9%',
-      title: 'Uptime Guarantee',
-      description: 'Enterprise-grade reliability with comprehensive SLA coverage'
-    },
-    {
-      icon: Target,
-      title: '24/7 Support',
-      description: 'Round-the-clock assistance from our expert technical team'
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      role: 'CEO, TechStart Inc.',
-      content: 'AI Project Manager Pro transformed our team productivity. We now complete projects 40% faster with better quality.',
-      rating: 5,
-      avatar: '/images/testimonials/sarah.jpg'
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Marketing Director, GrowthCorp',
-      content: 'The AI Email Marketing Pro increased our open rates by 300%. It\'s like having a marketing genius on our team.',
-      rating: 5,
-      avatar: '/images/testimonials/michael.jpg'
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Operations Manager',
-      content: 'AI Analytics Dashboard gave us insights we never had before. Our decision-making is now data-driven.',
-      rating: 5,
-      avatar: '/images/testimonials/emily.jpg'
-    }
-  ];
+  const categories = ['all', ...new Set(allServices.map(service => service.category))];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
       <Navigation />
       
-      <main className="relative z-10 pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4 text-center">
-          <div className="max-w-6xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">
-              Micro SAAS Solutions
-            </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-7c78
-              Powerful, focused AI tools designed to solve specific business challenges with maximum efficiency
-            </p>
-          </div>
-        </section>
-<<<<<<< HEAD
-=======
-=======
-              Powerful AI-driven tools for modern businesses
-  const categories = ['All', 'Productivity', 'Creative', 'Security', 'Health', 'IoT', 'Finance', 'Education'];
-
-import React, { useState, useEffect } from 'react';
-import { 
-  BarChart, 
-  Calendar, 
-  FileText, 
-  Zap, 
-  Shield, 
-  Users, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Award,
-  TrendingUp,
-  Globe,
-  Lock
-} from 'lucide-react';
-
-const MicroSaasPage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
-  const services = [
-    {
-      id: 1,
-      name: 'AI Project Manager Pro',
-      description: 'Revolutionary project management with quantum-inspired algorithms and real-time collaboration',
-      icon: BarChart,
-      price: '$199/month',
-      originalPrice: '$299/month',
-      features: [
-        'Quantum task optimization',
-        'Real-time collaboration',
-        'Predictive analytics',
-        'AI risk assessment',
-        'Resource optimization',
-        'Gantt charts',
-        'Time tracking',
-        'Team insights'
-      ],
-      benefits: [
-        '60% productivity increase',
-        '85% fewer delays',
-        '95% planning accuracy',
-        '40% cost reduction'
-      ],
-      popular: true,
-      category: 'Productivity',
-      rating: 4.9,
-      users: '25,000+',
-      freeTrial: '30 days'
-    },
-    {
-      id: 2,
-      name: 'AI Smart Calendar Pro',
-      description: 'Advanced calendar AI that learns your work patterns and optimizes meetings',
-      icon: Calendar,
-      price: '$89/month',
-      originalPrice: '$129/month',
-      features: [
-        'Smart scheduling',
-        'Meeting optimization',
-        'Conflict resolution',
-        'Time blocking',
-        'Integration with 50+ apps',
-        'Burnout prevention',
-        'Productivity insights',
-        'Automated follow-ups'
-      ],
-      benefits: [
-        '40% time saved',
-        '90% fewer conflicts',
-        '25% more productive meetings',
-        'Zero double-bookings'
-      ],
-      popular: true,
-      category: 'Productivity',
-      rating: 4.8,
-      users: '18,000+',
-      freeTrial: '14 days'
-    },
-    {
-      id: 3,
-      name: 'AI Content Writer Pro',
-      description: 'Professional content creation powered by advanced AI models',
-      icon: FileText,
-      price: '$129/month',
-      originalPrice: '$199/month',
-      features: [
-        'Multi-language support',
-        'SEO optimization',
-        'Brand voice training',
-        'Content templates',
-        'Plagiarism detection',
-        'Grammar checking',
-        'Tone adjustment',
-        'Bulk generation'
-      ],
-      benefits: [
-        '80% faster content creation',
-        '95% accuracy rate',
-        '50% cost reduction',
-        'Unlimited revisions'
-      ],
-      popular: false,
-      category: 'Content',
-      rating: 4.7,
-      users: '12,000+',
-      freeTrial: '7 days'
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Micro SaaS Solutions
+      {/* Header */}
+      <section className="relative py-20 px-4 text-center overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Micro SaaS Solutions
+            </span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Powerful, focused AI tools designed to solve specific business challenges with maximum efficiency
+          <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Powerful, affordable AI-powered tools designed to solve specific business challenges and drive growth.
           </p>
         </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-55ba
->>>>>>> cursor/analyze-improve-and-deploy-application-7c78
+      </section>
 
-        {/* Services Grid */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service) => (
-              <div
-                key={service.id}
-                className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 ${
-                  service.popular ? 'ring-2 ring-purple-500' : ''
-                }`}
-              >
+      {/* Filters */}
+      <section className="py-8 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label className="block text-white font-semibold mb-2">Search</label>
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full px-4 py-2 rounded-lg bg-white/20 text-white placeholder-gray-400 border border-white/30 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                />
+              </div>
+              <div>
+                <label className="block text-white font-semibold mb-2">Category</label>
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                >
+                  {categories.map(category => (
+                    <option key={category} value={category} className="bg-gray-800">
+                      {category === 'all' ? 'All Categories' : category}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="block text-white font-semibold mb-2">Price Range</label>
+                <div className="flex items-center space-x-2">
+                  <input
+                    type="range"
+                    min="0"
+                    max="1000"
+                    value={priceRange[1]}
+                    onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
+                    className="flex-1"
+                  />
+                  <span className="text-white text-sm">{formatPrice(priceRange[1])}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service) => (
+              <div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 relative">
                 {service.popular && (
-                  <div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-                    Most Popular
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Popular
                   </div>
                 )}
-
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center mr-4">
-                    <service.icon className="w-6 h-6 text-white" />
+                
+                <div className="flex items-center mb-4">
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 mr-4">
+                    <service.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white">{service.name}</h3>
-                    <div className="flex items-center text-sm text-gray-400">
-                      <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                      {service.rating} ({service.users} users)
+                    <h3 className="text-xl font-bold text-white">{service.name}</h3>
+                    <div className="flex items-center text-yellow-400">
+                      <Star className="w-4 h-4 fill-current" />
+                      <span className="ml-1 text-sm">{service.rating}</span>
+                      <span className="ml-2 text-gray-400 text-sm">({service.users})</span>
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
-
-                <p className="text-gray-300 mb-6">{service.description}</p>
-=======
-              </div>
-<<<<<<< HEAD
-=======
-            )}
-          </div>
-        </section>
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-4 py-2 mb-8">
-              <Sparkles className="w-4 h-4 text-cyan-400" />
-              <span className="text-cyan-400 text-sm font-medium">Micro SAAS Solutions</span>
-            </div>
-            
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              AI-Powered Micro SAAS Solutions
-            </h1>
-            
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              AI-Powered Business Tools for Modern Enterprises
-            </p>
-            <p className="text-lg text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
->>>>>>> cursor/analyze-improve-and-deploy-application-55ba
-              Streamline your business operations with our intelligent micro SAAS applications. 
-              From project management to customer support, we have the tools you need to succeed.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="#services"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
-              >
-                <Rocket className="w-5 h-5 mr-2" />
-                Explore Solutions
-              </a>
-              <a
-                href="/contact"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
-                <Calendar className="w-5 h-5 mr-2" />
-                Schedule Demo
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-slate-800/30">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI-powered solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Get Started Today
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now: (302) 464-0950
-              </a>
-            </div>
-            <div className="mt-8 text-sm text-gray-400">
-              <p>📧 Email: kleber@ziontechgroup.com</p>
-              <p>📍 Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
-          </div>
-        </section>
-      </main>
-<<<<<<< HEAD
-    </div>
-=======
-        </div>
-      </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-7c78
-
+                
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                
+                <div className="mb-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-2xl font-bold text-cyan-400">{formatPrice(service.price)}</span>
+                    {service.originalPrice && (
+                      <span className="text-sm text-gray-400 line-through">{formatPrice(service.originalPrice)}</span>
+                    )}
+                  </div>
+                  <div className="text-sm text-gray-400">{service.freeTrial} free trial</div>
+                </div>
+                
+                <div className="mb-4">
+                  <h4 className="text-white font-semibold mb-2">Key Features:</h4>
+                  <ul className="text-gray-300 text-sm space-y-1">
+                    {service.features.slice(0, 4).map((feature, index) => (
+                      <li key={index} className="flex items-center">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
                 <div className="mb-6">
-                  <div className="flex items-center mb-2">
-                    <span className="text-3xl font-bold text-white">{service.price}</span>
-                    <span className="text-lg text-gray-400 line-through ml-2">{service.originalPrice}</span>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Clock className="w-4 h-4 mr-1" />
-                    {service.freeTrial} free trial
+                  <h4 className="text-white font-semibold mb-2">Benefits:</h4>
+                  <ul className="text-gray-300 text-sm space-y-1">
+                    {service.benefits.map((benefit, index) => (
+                      <li key={index} className="flex items-center">
+                        <ArrowRight className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-55ba
-
-              <div className="space-y-2 mb-6">
-                <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                {service.features.slice(0, 4).map((feature, index) => (
-                  <div key={index} className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    {feature}
-                  </div>
-                ))}
-              </div>
-
-              <div className="space-y-2 mb-6">
-                <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
-                {service.benefits.slice(0, 2).map((benefit, index) => (
-                  <div key={index} className="flex items-center text-sm text-green-300">
-                    <TrendingUp className="w-4 h-4 mr-2" />
-                    {benefit}
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-sm text-gray-400">{service.category}</span>
-                <span className="text-sm text-green-400 font-semibold">
-                  {service.freeTrial} free trial
-                </span>
-              </div>
-
-              <button className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center">
-                Start Free Trial
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </button>
-            </div>
-          ))}
-<<<<<<< HEAD
-=======
-        </div>
-
-<<<<<<< HEAD
-=======
-      <Footer />
-    </div>
-  );
-}
-      {/* Benefits */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Why Choose Our Micro SAAS Solutions?
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Proven results and enterprise-grade solutions that deliver measurable business value
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="w-10 h-10 text-white" />
-                </div>
-                <div className="text-4xl font-bold text-white mb-2">{benefit.stat}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Micro SAAS Services */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our Micro SAAS Solutions
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Comprehensive micro SAAS solutions designed to solve real business challenges
-            </p>
-          </div>
-          <div className="space-y-16">
-            {microSaasServices.map((category, categoryIndex) => (
-              <div key={categoryIndex}>
-                <div className="flex items-center space-x-3 mb-8">
-                  <category.icon className={`w-8 h-8 ${category.color}`} />
-                  <h3 className="text-2xl font-bold text-white">{category.category}</h3>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300 relative">
-                      {service.popular && (
-                        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                          Popular
-                        </div>
-                      )}
-                      <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
-                      <p className="text-gray-300 mb-4">{service.description}</p>
-                      <div className="space-y-3 mb-6">
-                        <h5 className="text-sm font-semibold text-cyan-400">Key Features:</h5>
-                        <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
-                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                              <span>{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="space-y-2 mb-6">
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm text-gray-400">Pricing:</span>
-                          <span className="text-sm font-medium text-white">{service.pricing}</span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm text-gray-400">Trial:</span>
-                          <span className="text-sm font-medium text-cyan-400">{service.trial}</span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm text-gray-400">Expected ROI:</span>
-                          <span className="text-sm font-medium text-green-400">{service.roi}</span>
-                        </div>
-                      </div>
-                      <div className="space-y-2">
-                        <a
-                          href={service.link}
-                          className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all block text-center"
-                        >
-                          Learn More
-                        </a>
-                        <a
-                          href="/contact"
-                          className="w-full border border-cyan-400 text-cyan-400 py-2 px-4 rounded-lg font-medium hover:bg-cyan-400 hover:text-slate-900 transition-all block text-center"
-                        >
-                          Start Free Trial
-                        </a>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs. All plans include free trials and no setup fees.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
-              <div key={index} className={`bg-slate-800/50 rounded-lg p-8 relative ${tier.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-bold px-4 py-1 rounded-full">
-                    Most Popular
-                  </div>
-                )}
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                  <p className="text-gray-300 mb-4">{tier.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{tier.price}</span>
-                    <span className="text-gray-400 ml-1">{tier.period}</span>
-                  </div>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-2 text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                
                 <a
-                  href="/contact"
-                  className={`w-full py-3 px-4 rounded-lg font-medium transition-all block text-center ${
-                    tier.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                      : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                  }`}
+                  href={service.link}
+                  className="w-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 text-center block"
                 >
-                  {tier.cta}
+                  Learn More
                 </a>
               </div>
             ))}
@@ -761,107 +288,34 @@ const MicroSaasPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              What Our Customers Say
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Real results from real customers who have transformed their businesses with our solutions
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-bold text-lg">
-                      {testimonial.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-cyan-400">{testimonial.role}, {testimonial.company}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
+      {/* CTA Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Contact us today for a free consultation and discover how our micro SaaS solutions can revolutionize your operations.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Free Consultation
+            </a>
+            <a
+              href="/demo"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+            >
+              Schedule Demo
+            </a>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-        <div className="text-center mt-16">
-          <h2 className="text-3xl font-bold text-white mb-8">
-            Ready to Boost Your Productivity?
->>>>>>> cursor/analyze-improve-and-deploy-application-55ba
-          </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300">
-              Start Free Trial
-            </button>
-            <button className="border border-white/30 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-all duration-300">
-              View All Solutions
-            </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-7c78
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-slate-800/30">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI-powered solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Get Started Today
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now: (302) 464-0950
-              </a>
-            </div>
-            <div className="mt-8 text-sm text-gray-400">
-              <p>📧 Email: kleber@ziontechgroup.com</p>
-              <p>📍 Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
-          </div>
-        </section>
-      </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
-};
-
-<<<<<<< HEAD
-=======
-export default MicroSaasPage;
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-7c78
-export default MicroSaasPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-55ba
