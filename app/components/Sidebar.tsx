@@ -80,7 +80,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Custom Development', path: '/custom-development' },
         { name: 'DevOps & CI/CD', path: '/devops-cicd' },
         { name: 'Database Management', path: '/database-management' },
-        { name: 'Network Design', path: '/network-design' }
+        { name: 'Network Design', path: '/network-design' },
+        { name: 'AI IT Operations', path: '/ai-ops' },
+        { name: 'Healthcare IT', path: '/healthcare-it' },
+        { name: 'Financial IT', path: '/financial-it' },
+        { name: 'Edge Computing', path: '/edge-computing' },
+        { name: '5G Implementation', path: '/5g-implementation' },
+        { name: 'IoT Platform', path: '/iot-platform' }
       ]
     },
     {
