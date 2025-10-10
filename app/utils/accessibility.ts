@@ -1,8 +1,8 @@
 // Accessibility utilities for the application;
 export interface AccessibilityConfig {
     enableHighContrast: boolean;
-  enableScreenReader: boolean
-  enableKeyboardNavigation: boolean
+  enableScreenReader: boolean,
+    enableKeyboardNavigation: boolean
   fontSize: 'small' | 'medium' | 'large',
   colorScheme: 'light' | 'dark' | 'auto'
   }
@@ -22,7 +22,7 @@ constructor(config: AccessibilityConfig = defaultAccessibilityConfig) {
   }
   }
 public updateConfig(newConfig: Partial<AccessibilityConfig>): void {}
-    this.config = { ...this.config, ...newConfig }
+    this.config={ ...this.config, ...newConfig };
     this.applyConfig();
   }
 public getConfig(): AccessibilityConfig {}

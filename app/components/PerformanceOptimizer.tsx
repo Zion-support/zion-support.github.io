@@ -79,38 +79,25 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [runOptimizations]);
 
   return (
-    <div className="performance-optimizer">
-      {children}
+    <div className="performance-optimizer">      {children}
       
       {/* Performance Status Indicator (only in development) */}
       {process.env.NODE_ENV === 'development' && (
-        <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-sm max-w-xs">
-          <div className="flex items-center space-x-2 mb-2">
-            <Settings className="w-4 h-4 text-cyan-400" />
-            <span className="font-semibold">Performance Optimizer</span>
-          </div>
+        <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-sm max-w-xs">          <div className="flex items-center space-x-2 mb-2">            <Settings className="w-4 h-4 text-cyan-400" />            <span className="font-semibold">Performance Optimizer</span>          </div>
           
           {isOptimizing ? (
-            <div className="flex items-center space-x-2 text-yellow-400">
-              <Zap className="w-4 h-4 animate-pulse" />
-              <span>Optimizing...</span>
+            <div className="flex items-center space-x-2 text-yellow-400">              <Zap className="w-4 h-4 animate-pulse" />              <span>Optimizing...</span>
             </div>
           ) : (
-            <div className="space-y-2">
-              {performanceScore && (
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Score: {performanceScore}/100</span>
+            <div className="space-y-2">              {performanceScore && (
+                <div className="flex items-center space-x-2">                  <CheckCircle className="w-4 h-4 text-green-400" />                  <span>Score: {performanceScore}/100</span>
                 </div>
               )}
               
-              <div className="text-xs text-gray-300">
-                {optimizations.length > 0 ? (
-                  <ul className="space-y-1">
-                    {optimizations.map((opt, index) => (
-                      <li key={index} className="flex items-center space-x-1">
-                        <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
-                        <span>{opt}</span>
+              <div className="text-xs text-gray-300">                {optimizations.length > 0 ? (
+                  <ul className="space-y-1">                    {optimizations.map((opt, index) => (
+                      <li key={index};
+    className="flex items-center space-x-1">                        <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />                        <span>{opt}</span>
                       </li>
                     ))}
                   </ul>
@@ -160,8 +147,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (enableImageOptimization && typeof window !== 'undefined') {
     const images = document.querySelectorAll('img');
       images.forEach(img => {
-        // Add loading="lazy" for non-critical images
-        if (enableLazyLoading && !img.hasAttribute('loading')) {
+        // Add loading="lazy" for non-critical images        if (enableLazyLoading && !img.hasAttribute('loading')) {
           img.loading = 'lazy'
   }
 

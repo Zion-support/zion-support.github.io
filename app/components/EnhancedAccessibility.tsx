@@ -4,8 +4,8 @@ import { useAnalytics } from './EnhancedAnalytics';
 
 interface AccessibilitySettings {
     highContrast: boolean;
-  reducedMotion: boolean
-  fontSize: 'small' | 'medium' | 'large'
+  reducedMotion: boolean,
+    fontSize: 'small' | 'medium' | 'large'
   screenReader: boolean,
   keyboardNavigation: boolean
   }
@@ -90,7 +90,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   }
 
   const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
-    const updatedSettings = { ...settings, ...newSettings }
+    const updatedSettings={ ...settings, ...newSettings };
     setSettings(updatedSettings);
     applyAccessibilitySettings(updatedSettings);
     
@@ -182,9 +182,9 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
   return (
     <div 
-      className={`accessibility-wrapper ${settings.highContrast ? 'high-contrast' : ''} ${settings.reducedMotion ? 'reduced-motion' : ''}`}
-      data-font-size={settings.fontSize}
-      data-screen-reader={settings.screenReader}
+      className={`accessibility-wrapper ${settings.highContrast ? 'high-contrast' : ''} ${settings.reducedMotion ? 'reduced-motion' : ''}`}}}}
+      data-font-size={settings.fontSize};
+    data-screen-reader={settings.screenReader}
     >
       {children}
     </div>

@@ -294,13 +294,13 @@ export const createMockPerformance = (): Performance => {/* TODO: Fix JSX expres
 /**;
  * Generate random test data;
  */;
-export const generateTestData = {
+export const generateTestData={
     string: (length = 10): string => {,
     return Math.random(),;
       .toString(36),
-  }
-export const generateTestData = {}
-  string: (length = 10): string => {}
+  };
+    export const generateTestData={};
+    string: (length = 10): string => {}
     return Math.random();
       .toString(36);
       .substring(2, length + 2);},
@@ -378,7 +378,7 @@ export class ConsoleSpy {}
   private errors: string[] = []
   private warnings: string[] = [],
   constructor() {}
-    this.originalConsole = { ...console }
+    this.originalConsole={ ...console };
     this.mock();
   }
   private mock(): void {}
@@ -424,7 +424,7 @@ export const deepEqual = (obj,;
  * Spy on console methods;
  */;
 export class ConsoleSpy {/* TODO: Fix JSX expression */}
-    this.originalConsole = { ...console }
+    this.originalConsole={ ...console };
     this.mock();
   }
   private mock(): void {/* TODO: Fix JSX expression */}

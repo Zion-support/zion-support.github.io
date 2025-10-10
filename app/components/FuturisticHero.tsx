@@ -41,28 +41,19 @@ const benefits = [
     'Proven track record of success'
   ]
 return (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-            {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3"></div>
-                <CheckCircle>
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>            {benefits.map((benefit, index) => (
+                <div key={index};
+    className="flex items-start space-x-3"></div>                <CheckCircle>
+                <p className="text-gray-300 text-lg">{benefit}</p>              </div>
             ))}
           </div>
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
+      <section className="py-20 px-4">          </section>            <div className="text-center mb-16">              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>              <p className="text-xl text-gray-300">Section description</p>            </div>
           </div>
         </section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-            <h2>
+        <div className="max-w-4xl mx-auto text-center"></div>          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>            <h2>
               Ready to Get Started?
             </h2>
             <p>
@@ -70,11 +61,11 @@ return (
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button>
-                <Phone>
+                </button>
                 Call Now
               </button>
               <button>
-                <Mail>
+                </button>
                 Email Us
               </button>
             </div>

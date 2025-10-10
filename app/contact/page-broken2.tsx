@@ -104,25 +104,19 @@ const contactInfo = [
     {
     icon: Clock,
       title: 'Business Hours',
-      details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
+      details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 1,
+    0:00 AM - 4:00 PM',
       description: 'Eastern Time'
   }
     }
   ]
 return (
-    <>
-      <Helmet>
-        <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
-        <div className="container mx-auto px-4"></div>
-          {/* Header */}
-          <div className="text-center mb-16"></div>
-            <h1>
+    <>Contact Us - Zion Tech Group | Get in Touch</title>
+        <meta name="description" content="AI-powered solution" />        <meta name="keywords" content="AI, artificial intelligence, business solutions" />      </Helmet>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>        <div className="container mx-auto px-4"></div>          {/* Header */}
+          <div className="text-center mb-16"></div>            <h1>
               Get in;
-              <span>
+              </h1>
                 {' '}Touch
               </span>
             </h1>
@@ -132,59 +126,46 @@ return (
             </p>
           </div>
         </section>
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
-            {/* Contact Form */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></div>
-              <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
-              {
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>            {/* Contact Form */}
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></div>              <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>              {
     submitStatus === 'success' && (;
-                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>
-                  <CheckCircle>
-                  <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
-                </div>
+                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>                  <CheckCircle>
+                  <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>                </div>
   }
               )}
 {
     submitStatus === 'error' && (;
-                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>
-                  <span className="text-red-400">Failed to send message. Please try again.</span>
-                </div>
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>                  <span className="text-red-400">Failed to send message. Please try again.</span>                </div>
   }
               )}
 <form>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
-                  <div />
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>                  <div />
                     <label>
                       Full Name *
                     </label>
-                    <div className="relative"></div>
-                      <User>
+                    <div className="relative"></div>                      <User>
                       <input />
                   </div>
                   <div />
                     <label>
                       Email Address *
                     </label>
-                    <div className="relative"></div>
-                      <Mail>
+                    <div className="relative"></div>                      <Mail>
                       <input />
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-                  <div />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>                  <div />
                     <label>
                       Company
                     </label>
-                    <div className="relative"></div>
-                      <Building>
+                    <div className="relative"></div>                      <Building>
                       <input />
                   </div>
                   <div />
                     <label>
                       Phone Number
                     </label>
-                    <div className="relative"></div>
-                      <Phone>
+                    <div className="relative"></div>                      <Phone>
                       <input />
                   </div>
                 </div>
@@ -192,11 +173,9 @@ return (
                   <label>
                     Service Interest,
                   </label>
-                  <div className="relative"></div>
-                    <Globe>
+                  <div className="relative"></div>                    <Globe>
                     <select>
-                      <option value="">Select a service</option>
-                      {
+                      <option value="">Select a service</option>                      {
     services.map((service) => (
   }
                         <option>
@@ -212,21 +191,17 @@ return (
                   <label>
                     Message *
                   </label>
-                  <div className="relative"></div>
-                    <MessageCircle>
+                  <div className="relative"></div>                    <MessageCircle>
                     <textarea />
                 </div>
                 <button>
                   {
     isSubmitting ? (;
-                    <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      <span>Sending...</span>
+                    </button>
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>                      <span>Sending...</span>
                     </>
                   ) : (;
-                    <>
-                      <Send>
-                      <span>Send Message</span>
+                    <>Send Message</span>
                     </>
   }
                   )}
@@ -234,26 +209,19 @@ return (
               </form>
             </div>
             {/* Contact Information */}
-            <div className="space-y-8"></div>
-              <div />
-                <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
-                <p>
+            <div className="space-y-8"></div>              <div />
+                <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>                <p>
                   We're here to help! Reach out to us through any of these channels;
                   and we'll get back to you as soon as possible.
                 </p>
               </div>
               {/* Contact Information */}
-              <div className="space-y-8"></div>
-                <div />
-                  <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
-                  <p>
+              <div className="space-y-8"></div>                <div />
+                  <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>                  <p>
                     We're here to help you transform your business with cutting-edge AI and technology solutions.
                   </p>
                 </div>
-                <div className="space-y-6"></div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Phone />
+                <div className="space-y-6"></div>                  <div className="flex items-center"></div>                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div>                      <Phone />
                     <div />
 <h3>
 
@@ -268,28 +236,18 @@ return (
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Mail />
+                  <div className="flex items-center"></div>                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div>                      <Mail />
                     <div />
-                      <h3 className="text-lg font-semibold text-white">Email</h3>
-                      <p className="text-gray-300">info@ziontechgroup.com</p>
-                    </div>
+                      <h3 className="text-lg font-semibold text-white">Email</h3>                      <p className="text-gray-300">info@ziontechgroup.com</p>                    </div>
                   </div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <MapPin />
+                  <div className="flex items-center"></div>                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4"></div>                      <MapPin />
                     <div />
-                      <h3 className="text-lg font-semibold text-white">Address</h3>
-                      <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
-                    </div>
+                      <h3 className="text-lg font-semibold text-white">Address</h3>                      <p className="text-gray-300">123 Tech Street</p>San Francisco, CA 94105</p>                    </div>
                   </div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Clock />
+                  <div className="flex items-center"></div>                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4"></div>                      <Clock />
                     <div />
-                      <h3 className="text-lg font-semibold text-white">Business Hours</h3>
-                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
+                      <h3 className="text-lg font-semibold text-white">Business Hours</h3>                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM</p>Sat: 1,
+    0:00 AM - 4:00 PM</p>
                     </div>
                   </div>
                 </div>

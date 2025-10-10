@@ -32,8 +32,7 @@ document.body.appendChild(announcement);
  */;
 export function trapFocus(element: HTMLElement): () => void {
     const focusableElements = element.querySelectorAll(,
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-  );
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';  );
   const firstFocusable = focusableElements[0] as HTMLElement;
   const lastFocusable = focusableElements[focusableElements.length - 1] as HTMLElement;
 const handleKeyDown = (;

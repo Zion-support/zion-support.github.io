@@ -65,8 +65,8 @@ error(message: string,),;
       context = typeof contextOrMetadata === 'string' ? { action: contextOrMetadata } : contextOrMetadata;
       meta = metadata;
     } else if (typeof errorOrContextOrMetadata === 'string') {}
-      context = { action: errorOrContextOrMetadata }
-      meta = typeof contextOrMetadata === 'object' ? contextOrMetadata : undefined;
+      context={ action: errorOrContextOrMetadata };
+    meta = typeof contextOrMetadata === 'object' ? contextOrMetadata : undefined;
     } else if (typeof errorOrContextOrMetadata === 'object') {
     context = errorOrContextOrMetadata;
       meta = contextOrMetadata as Record<string>
@@ -137,13 +137,13 @@ private log(level: LogLevel,),;
     metadata?: Record<string>
   ): void {
     if (level < this.logLevel) return;
-    const logEntry = {
+    const logEntry={
       level,;
       message,;
       context,;
       metadata,
-  }
-      timestamp: Date.now()}
+  };
+    timestamp: Date.now()}
 this.logs.push(logEntry);
     // Keep only last 1000 logs;
     if (this.logs.length > 1000) {

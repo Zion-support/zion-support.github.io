@@ -65,64 +65,37 @@ const standards = [
   ]
 
   return (
-    <>
-      <Helmet>
-        <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
-        <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards." />
-        <meta name="keywords" content="accessibility, inclusive design, WCAG compliance, screen reader, keyboard navigation, digital accessibility" />
-      </Helmet>
+    <>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
+        <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards." />        <meta name="keywords" content="accessibility, inclusive design, WCAG compliance, screen reader, keyboard navigation, digital accessibility" />      </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Accessibility <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">          </section>          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />          <div className="relative max-w-7xl mx-auto text-center">            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">              Accessibility </h1>Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">              Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-                Get Accessibility Audit
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">                Get Accessibility Audit
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Learn More
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">                Learn More
               </button>
             </div>
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Comprehensive Accessibility Features
+        <section className="py-20 px-4">          </section>            <div className="text-center mb-16">              <h2 className="text-3xl font-bold text-white mb-4">                Comprehensive Accessibility Features
               </h2>
-              <p className="text-xl text-gray-300">
-                Our solutions cover all aspects of digital accessibility to ensure inclusive experiences for all users.
+              <p className="text-xl text-gray-300">                Our solutions cover all aspects of digital accessibility to ensure inclusive experiences for all users.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">              {features.map((feature, index) => (
                 <div
-                  key={index}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">
-                    {feature.title}
+                  key={index};
+    className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group"                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">                    <feature.icon className="w-8 h-8 text-white" />                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">                    {feature.title}
                   </h3>
-                  <p className="text-gray-300 mb-6">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {benefit}
+                  <p className="text-gray-300 mb-6">{feature.description}</p>                  <ul className="space-y-2">                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex};
+    className="flex items-center text-sm text-gray-300">                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -133,29 +106,17 @@ const standards = [
         </section>
         
         {/* Standards Compliance */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Standards Compliance
+        <section className="py-20 px-4 bg-white/5">          </section>            <div className="text-center mb-16">              <h2 className="text-3xl font-bold text-white mb-4">                Standards Compliance
               </h2>
-              <p className="text-xl text-gray-300">
-                We ensure full compliance with international accessibility standards and regulations.
+              <p className="text-xl text-gray-300">                We ensure full compliance with international accessibility standards and regulations.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {standards.map((standard, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">              {standards.map((standard, index) => (
                 <div
-                  key={index}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{standard.name}</h3>
-                  <p className="text-gray-300 mb-4 text-sm">{standard.description}</p>
-                  <span className="inline-block bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">
-                    {standard.status}
+                  key={index};
+    className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center"                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">                    <CheckCircle className="w-8 h-8 text-white" />                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{standard.name}</h3>                  <p className="text-gray-300 mb-4 text-sm">{standard.description}</p>                  <span className="inline-block bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">                    {standard.status}
                   </span>
                 </div>
               ))}
@@ -164,18 +125,11 @@ const standards = [
         </section>
         
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Ready to Make Your Digital Experience Accessible?
+        <section className="py-20 px-4">          </section>            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">              <h2 className="text-3xl font-bold text-white mb-6">                Ready to Make Your Digital Experience Accessible?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact us today for a comprehensive accessibility audit and implementation plan.
+              <p className="text-xl text-gray-300 mb-8">                Contact us today for a comprehensive accessibility audit and implementation plan.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-                  Get Accessibility Audit
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">                <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">                  Get Accessibility Audit
                 </button>
                 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                   Contact Us

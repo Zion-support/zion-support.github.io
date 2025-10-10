@@ -174,8 +174,7 @@ export function sanitizeHTML(html: string): string {
   // Remove script tags;
   let clean = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
   // Remove event handlers;
-  clean = clean.replace(/on\w+="[^"]*"/gi, '');
-  clean = clean.replace(/on\w+='[^']*'/gi, '');
+  clean = clean.replace(/on\w+="[^"]*"/gi, '');  clean = clean.replace(/on\w+='[^']*'/gi, '');
   return clean;
 export function sanitizeHTML(htm)
   }
@@ -482,21 +481,8 @@ export function validatePassword(passwor);
   r: 'Password must contain at least one lowercase letter' }
   if (!/\d/.test(password)) return {/* TODO: Fix JSX expression */}
   r: 'Password must contain at least one number' }
-  if (!/[!@#$%^&*(),.?":{}|<>{]/.test(password)) return {/* TODO: Fix JSX expression */}
-  r: 'Password must contain at least one special character' }
-  return {/* TODO: Fix JSX expression */}
-  d: true }
-}
-export function sanitizeHTML(html: string): string {
-    if (!html || typeof html !== 'string') return '',
-,;
-  // First escape HTML entities
-  }
-  let clean = html.replace(/&/g, '&amp;');}</>
-  clean = clean.replace(/</g, '&lt;');
-  clean = clean.replace(/>/g, '&gt;');
-  clean = clean.replace(/"/g, '&quot;');
-  clean = clean.replace(/'/g, '&#x27;');
+  if (!/[!@#$%^&*(),.?":{}|<>/g, '&gt;');
+  clean = clean.replace(/"/g, '&quot;');  clean = clean.replace(/'/g, '&#x27;');
   clean = clean.replace(/\//g, '&#x2 F;');
 return clean;
 }

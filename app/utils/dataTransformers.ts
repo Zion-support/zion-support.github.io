@@ -14,7 +14,8 @@ export function deepClone<T>(ob);
   if (obj instanceof Array) {/* TODO: Fix JSX expression */}
   }
   if (obj instanceof Object) {/* TODO: Fix JSX expression */}
-    const clonedObj = {} as T;
+    const clonedObj={};
+    as T;
     for (const key in obj) {/* TODO: Fix JSX expression */}
       }
     }
@@ -28,8 +29,8 @@ export function deepClone<T>(ob);
 export function deepMerge<T extends Record<string, unknown>>(targe,;
   t: T, sourc);
   e: Partial<T>): T {/* TODO: Fix JSX expression */}
-  const output = { ...target }
-  for (const key in source) {/* TODO: Fix JSX expression */}
+  const output={ ...target };
+    for (const key in source) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
     }
@@ -80,7 +81,8 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,;
   key,;
   s: K[]),
 ): Pick<T, K> {/* TODO: Fix JSX expression */}
-  const result = {} as Pick<T>
+  const result={};
+    as Pick<T>
   keys.forEach(key => {/* TODO: Fix JSX expression */}
     })
   })
@@ -94,8 +96,8 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,;
   key,;
   s: K[]),
 ): Omit<T, K> {/* TODO: Fix JSX expression */}
-  const result = { ...obj }
-  keys.forEach(key => {/* TODO: Fix JSX expression */})
+  const result={ ...obj };
+    keys.forEach(key => {/* TODO: Fix JSX expression */})
   })
   return result as Omit<T>
 }

@@ -19,7 +19,7 @@ constructor(config: SEOConfig) {
   }
   }
 public updateConfig(newConfig: Partial<SEOConfig>): void {}
-    this.config = { ...this.config, ...newConfig }
+    this.config={ ...this.config, ...newConfig };
     this.applyConfig();
   }
 public getConfig(): SEOConfig {}
@@ -75,8 +75,7 @@ private applyConfig(): void {
 private updateMetaTag(name: string, content: string): void {
     if (typeof document === 'undefined') return
   }
-    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
-    if (!meta) {
+    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;    if (!meta) {
     meta = document.createElement('meta');
       meta.name = name;
       document.head.appendChild(meta)
@@ -86,8 +85,7 @@ private updateMetaTag(name: string, content: string): void {
   }
 private updateCanonicalUrl(): void {
     if (typeof document === 'undefined' || !this.config.canonicalUrl) return;
-let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {
+let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;    if (!canonical) {
       canonical = document.createElement('link');
       canonical.rel = 'canonical';
       document.head.appendChild(canonical)

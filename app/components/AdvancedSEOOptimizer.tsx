@@ -78,8 +78,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
 
     // Check for internal links
-    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
-    if (internalLinks.length > 0) {
+    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');    if (internalLinks.length > 0) {
       score += 10;
     } else {
       newRecommendations.push('Add internal links for better SEO');
@@ -94,19 +93,9 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }, [analyzeSEO]);
 
   const generateStructuredData = () => {
-    const defaultStructuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": description,
-      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),
-      "logo": ogImage,
-      "sameAs": [
-        "https://twitter.com/ziontechgroup",
-        "https://linkedin.com/company/ziontechgroup"
-      ]
-    }
-
+    const defaultStructuredData={
+      "@context": "https://schema.org",      "@type": "Organization",      "name": "Zion Tech Group",      "description": description,      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),      "logo": ogImage,      "sameAs": [        "https://twitter.com/ziontechgroup",        "https://linkedin.com/company/ziontechgroup"      ]
+    };
     return structuredData || defaultStructuredData;
   }
 
@@ -134,37 +123,21 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
   }
   return (
-    <>
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-        
+    <>{title}</title>
+        <meta name="description" content={description} />        <meta name="keywords" content={keywords} />        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}        
         {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content="website" />
-        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-        
+        <meta property="og:title" content={title} />        <meta property="og:description" content={description} />        <meta property="og:image" content={ogImage} />        <meta property="og:type" content="website" />        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}        
         {/* Twitter Card */}
-        <meta name="twitter:card" content={twitterCard} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        
+        <meta name="twitter:card" content={twitterCard} />        <meta name="twitter:title" content={title} />        <meta name="twitter:description" content={description} />        <meta name="twitter:image" content={ogImage} />        
         {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(generateStructuredData())}
+        <script type="application/ld+json">          {JSON.stringify(generateStructuredData())}
         </script>
       </Helmet>
       
       {children}
       
       {process.env.NODE_ENV === 'development' && (
-        <div className="seo-debug" style={{
-          position: 'fixed',
+        <div className="seo-debug" style={{          position: 'fixed',
           top: '10px',
           left: '10px',
           background: 'rgba(0,0,0,0.8)',
@@ -190,43 +163,16 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       )}
 
       {/* Twitter Card Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-
+      <meta name="twitter:card" content="summary_large_image" />      <meta name="twitter:title" content={title} />      <meta name="twitter:description" content={description} />      <meta name="twitter:image" content={ogImage} />      <meta name="twitter:site" content="@ziontechgroup" />      <meta name="twitter:creator" content="@ziontechgroup" />
       {/* Additional SEO Meta Tags */}
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="publisher" content="Zion Tech Group" />
-      <meta name="copyright" content="Zion Tech Group" />
-      <meta name="language" content="en" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="distribution" content="global" />
-      <meta name="rating" content="general" />
-      <meta name="theme-color" content="#1a1a2e" />
-      <meta name="msapplication-TileColor" content="#1a1a2e" />
-      <meta name="msapplication-config" content="/browserconfig.xml" />
-
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />      <meta name="googlebot" content="index, follow" />      <meta name="bingbot" content="index, follow" />      <meta name="author" content="Zion Tech Group" />      <meta name="publisher" content="Zion Tech Group" />      <meta name="copyright" content="Zion Tech Group" />      <meta name="language" content="en" />      <meta name="revisit-after" content="7 days" />      <meta name="distribution" content="global" />      <meta name="rating" content="general" />      <meta name="theme-color" content="#1a1a2e" />      <meta name="msapplication-TileColor" content="#1a1a2e" />      <meta name="msapplication-config" content="/browserconfig.xml" />
       {/* Open Graph Tags */}
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={title} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-
+      <meta property="og:type" content="website" />      <meta property="og:title" content={title} />      <meta property="og:description" content={description} />      <meta property="og:url" content={canonicalUrl} />      <meta property="og:image" content={ogImage} />      <meta property="og: imag,
+    e:width" content="1200" />      <meta property="og: imag,
+    e:height" content="630" />      <meta property="og: imag,
+    e:alt" content={title} />      <meta property="og:site_name" content="Zion Tech Group" />      <meta property="og:locale" content="en_US" />
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(generateStructuredData())}

@@ -45,11 +45,11 @@ export class CacheManager<T = unknown> {}
   private config: Required<CacheConfig>
 ,
   constructor(config: CacheConfig = {}) {
-    this.config = {
+    this.config={
       storage: config.storage || CacheStorage.Memory,
       defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes
-  }
-  private stats: CacheStats = {}
+  };
+    private stats: CacheStats={};
     hits: 0,
     misses: 0,
     hitRate: 0,
@@ -58,8 +58,8 @@ export class CacheManager<T = unknown> {}
   }
   private config: Required<CacheConfig>
 constructor(config: CacheConfig = {}) {}
-    this.config = {}
-      storage: config.storage || CacheStorage.Memory,
+    this.config={};
+    storage: config.storage || CacheStorage.Memory,
       defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes,
     }
   }
@@ -434,8 +434,8 @@ return cleaned;
 try {}
       const storage = this.getStorage();
       if (storage) {}
-        const data = {}
-          entries: Object.fromEntries(this.cache),
+        const data={};
+    entries: Object.fromEntries(this.cache),
           stats: this.stats,
           timestamp: Date.now()}
         storage.setItem('cache-manager', JSON.stringify(data));

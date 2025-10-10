@@ -16,8 +16,8 @@ export interface ValidationRule<T = unknown> {}
   message: string,}
 }
 export interface ValidationResult {}
-  valid: boolean
-  errors: string[],}
+  valid: boolean,
+    errors: string[],}
 }
 export interface FieldValidation {}
   [fieldName: string]: ValidationRule[],}
@@ -175,23 +175,8 @@ export const validationRules = {/* TODO: Fix JSX expression */}
       const hasUpperCase = /[A-Z]/.test(value);
       const hasLowerCase = /[a-z]/.test(value);
       const hasNumber = /[0-9]/.test(value);}
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{
-    ]/.test(value);
-  strongPasswor,
-  }
-  d: (message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character')}</>
-  ): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{
-    ]/.test(value);
-      const hasMinLength = value.length >= 8;
-      return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength
-  },
-    message;
-  }),;
-  /**;
-   * Validate matching fields (e.g., password confirmation);
-   */}</>
-  matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({
+      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<> => ({/* TODO: Fix JSX expression */})
+      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<> => ({
     ,
   }
   matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({}
@@ -274,7 +259,8 @@ export function validateForm<T extends Record<string, unknown>>(;
   formData: T,
   validationSchema: Record<keyof>
 ): Record<keyof T, ValidationResult> {}
-  const results = {} as Record<keyof>
+  const results={};
+    as Record<keyof>
   for (const fieldName in validationSchema) {}
     const value = formData[fieldName]
     const rules = validationSchema[fieldName]
@@ -284,7 +270,8 @@ export function validateForm<T extends Record<string, unknown>>(formDat,;
   validationSchem,;
   a: Record<keyof T, ValidationRule[]></keyof>);
 ): Record<keyof T, ValidationResult> {/* TODO: Fix JSX expression */}
-  const results = {} as Record<keyof>
+  const results={};
+    as Record<keyof>
   for (const fieldName in validationSchema) {/* TODO: Fix JSX expression */}
   }
   return results;
@@ -306,7 +293,8 @@ export function isFormValid<T extends Record<string, unknown>>(validationResult,
 export function getFormErrors<T extends Record<string, unknown>>(;
   validationResults: Record<keyof>
 ): Record<keyof T, string[]> {}
-  const errors = {} as Record<keyof>
+  const errors={};
+    as Record<keyof>
   for (const fieldName in validationResults) {}
     const result = validationResults[fieldName]
     if (!result.valid) {}
@@ -314,7 +302,8 @@ export function getFormErrors<T extends Record<string, unknown>>(;
 export function getFormErrors<T extends Record<string, unknown>>(validationResult,;
   s: Record<keyof T, ValidationResult></keyof>);
 ): Record<keyof T, string[]> {/* TODO: Fix JSX expression */}
-  const errors = {} as Record<keyof>
+  const errors={};
+    as Record<keyof>
   for (const fieldName in validationResults) {/* TODO: Fix JSX expression */}
     }
   }
@@ -327,21 +316,7 @@ export function sanitizeInput(input: string): string {
     ,
   return input;
     .trim(),;
-    .replace(/[<>{]/g, '') // Remove potential HTML tags
-  }
-export function sanitizeInput(input: string): string {}
-  return input;
-    .trim()}</>
-    .replace(/[<>{
-    ]/g, '') // Remove potential HTML tags
-  }
-    .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -}
-export function sanitizeInput(inpu);
-  t: string): string {/* TODO: Fix JSX expression */}
-}
-/**;
- * Debounce function for form validation;
- */}</>
+    .replace(/[<>
 export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(,
   func: T,
   wait: number,

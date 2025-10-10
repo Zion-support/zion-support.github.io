@@ -88,8 +88,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     const optimizeCodeSplitting = () => {
       // Preload next likely routes
-      const links = document.querySelectorAll('a[href^="/"]');
-      links.forEach((link) => {
+      const links = document.querySelectorAll('a[href^="/"]');      links.forEach((link) => {
         link.addEventListener('mouseenter', () => {
           const href = link.getAttribute('href');
           if (href && !href.startsWith('#')) {
@@ -135,7 +134,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     return () => window.removeEventListener('load', measurePerformance);
   }, []);
 
-  return <>{children}</>;
+  return <>;
 };
 
 export default PerformanceOptimizer;

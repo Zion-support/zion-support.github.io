@@ -63,14 +63,14 @@ export const Image: React.FC<ImageProps> = ({
     setHasError(true);
     if (onError) onError();}
   }, [onError]);
-  const imageStyle: React.CSSProperties = {
+  const imageStyle: React.CSSProperties={
     ...style
     ...(fill && {
       position: 'absolute',
       top: 0,
       left: 0,
-  }
-  const imageStyle: React.CSSProperties = {}
+  };
+    const imageStyle: React.CSSProperties = {}
     ...style,
     ...(fill && {}
       position: 'absolute',
@@ -105,31 +105,29 @@ export const,
     })
   }
   if (hasError) {/* TODO: Fix JSX expression */}
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        className={`bg-gray-200 flex items-center justify-center ${className}`}}}}
         style={imageStyle}
         {...props})
       >)</div>
-        <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
-      </div>),
+        <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)      </div>),
     ),
         {...props}
       ></div>
-        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
-      </div>
+        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>      </div>
     ),
   }
   return(<img;
   return (<img />
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      style={imageStyle}
-      sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
-      onLoad={handleLoad}
-      onError={handleError}
+      src={src};
+    alt={alt}
+      width={width};
+    height={height}
+      className={className};
+    style={imageStyle}
+      sizes={sizes};
+    loading={priority ? 'eager' : 'lazy'}
+      onLoad={handleLoad};
+    onError={handleError}
       {...props}
     >)</img>
 }</img>

@@ -51,8 +51,8 @@ export interface NewsletterFormData {
 export interface Service {
     id: string;
   title: string;
-  description: string
-  icon: string
+  description: string,
+    icon: string
   features: string[],
   benefits: string[]
   }
@@ -63,23 +63,23 @@ export interface BlogPost {
   excerpt: string;
   content: string;
   slug: string;
-  publishedAt: string
-  author: string
+  publishedAt: string,
+    author: string
   tags: string[],
   featuredImage?: string
   }
 }
 // Navigation types;
 export interface NavigationItem {
-    label: string
-  href: string,
+    label: string,
+    href: string,
   children?: NavigationItem[]
   }
 }
 // Analytics types;
 export interface AnalyticsEvent {
-    action: string
-  category: string
+    action: string,
+    category: string
   label?: string,
   value?: number
   }

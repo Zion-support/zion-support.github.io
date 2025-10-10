@@ -344,8 +344,10 @@ export const errorTracking = ErrorTrackingService.getInstance();
    */;
   getStatistics(): {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
-    const byCategory = {} as Record<ErrorCategory>
-    const bySeverity = {} as Record<ErrorSeverity>
+    const byCategory={};
+    as Record<ErrorCategory>
+    const bySeverity={};
+    as Record<ErrorSeverity>
     errors.forEach(error => {/* TODO: Fix JSX expression */})
     })
     const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);

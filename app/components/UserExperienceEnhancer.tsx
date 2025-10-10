@@ -42,7 +42,7 @@ useEffect(() => {
     }
 enhanceUX();
   }, []);
-return <>{children}</>
+return <>
 };
 
 export default UserExperienceEnhancer;

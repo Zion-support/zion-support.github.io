@@ -138,7 +138,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   private,;
   isMonitoring: boolean = false,
   constructor(config?: Partial<OptimizationConfig>) {/* TODO: Fix JSX expression */}
-    this.config = { ...this.config, ...config }
+    this.config={ ...this.config, ...config };
     this.initializePerformanceMonitoring();
   }
   /**;
@@ -417,8 +417,7 @@ observer.observe({ entryTypes: ['measure'] })
     if (!this.config.enableImageOptimization) return;
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
-    // Add loading="lazy" for better performance;
-      if (!img.hasAttribute('loading')) {
+    // Add loading="lazy" for better performance;      if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy')
   }
       }

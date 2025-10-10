@@ -13,12 +13,12 @@ class ProductionLogger {}
   private isDevelopment = process.env.NODE_ENV === 'development';
   private isProduction = process.env.NODE_ENV === 'production';
 private log(level: LogLevel, message: string, data?: unknown, context?: string): void {
-    const entry: LogEntry = {,
+    const entry: LogEntry={,
       level
-  }
-  private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}
-    const entry: LogEntry = {}
-      level,;
+  };
+    private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}
+    const entry: LogEntry={};
+    level,;
       message,;
       data,;
       timestamp: new Date().toISOString(),

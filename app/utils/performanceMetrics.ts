@@ -22,8 +22,8 @@ export interface WebVitalsMetrics {
 export interface PerformanceMetric {}
   name: string;
   value: number;
-  unit: string
-  timestamp: Date
+  unit: string,
+    timestamp: Date
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
   metadata?: Record<string>}</strin>
 }
@@ -46,7 +46,7 @@ export interface PerformanceReport {}
   }
   summary: {}
     avgLoadTime: number;
-    totalMetrics: number
+    totalMetrics: number,
     performanceScore: number
     recommendations: string[],}
   }
@@ -56,8 +56,8 @@ export class PerformanceMetrics {
     private static instance: PerformanceMetrics,
   }
   private metrics: PerformanceMetric[] = [],}
-  private webVitals: WebVitalsMetrics = {}
-  private observers: PerformanceObserver[] = [],
+  private webVitals: WebVitalsMetrics={};
+    private observers: PerformanceObserver[] = [],
   constructor() {
     ,;
     if (typeof window !== 'undefined') {,
@@ -65,8 +65,8 @@ export class PerformanceMetrics {
 export class PerformanceMetrics {}
   private static instance: PerformanceMetrics
   private metrics: PerformanceMetric[] = [],}
-  private webVitals: WebVitalsMetrics = {}
-  private observers: PerformanceObserver[] = [],
+  private webVitals: WebVitalsMetrics={};
+    private observers: PerformanceObserver[] = [],
   constructor() {}
     if (typeof window !== 'undefined') {}
       this.initializeObservers();}
@@ -85,8 +85,8 @@ export interface PerformanceReport {/* TODO: Fix JSX expression */}
   p: Date,
 }
 export class PerformanceMetrics {/* TODO: Fix JSX expression */}
-  webVitals: WebVitalsMetrics = {}
-  private,;
+  webVitals: WebVitalsMetrics={};
+    private,;
   observers: PerformanceObserver[] = [],
   constructor() {/* TODO: Fix JSX expression */}
     }
@@ -643,8 +643,8 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */;
   clearMetrics(): void {}
     this.metrics = []}
-    this.webVitals = {}
-  clearMetrics(): void {/* TODO: Fix JSX expression */}
+    this.webVitals={};
+    clearMetrics(): void {/* TODO: Fix JSX expression */}
     this.webVitals = {}
   }
   /**;
@@ -673,8 +673,8 @@ interface LayoutShift extends PerformanceEntry {
 // Type for LayoutShift
   }
 interface LayoutShift extends PerformanceEntry {}
-  value: number
-  hadRecentInput: boolean,}
+  value: number,
+    hadRecentInput: boolean,}
 }
 // Export singleton instance;
 export const performanceMetrics = PerformanceMetrics.getInstance();

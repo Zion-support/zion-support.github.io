@@ -2,122 +2,173 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Get list of files with errors
-const lintOutput = execSync('cd /workspace && pnpm run lint 2>&1', { encoding: 'utf8' });
-const errorFiles = [...new Set(
-  lintOutput
-    .split('\n')
-    .filter(line => line.includes('error') && line.includes('.tsx:'))
-    .map(line => line.split(':')[0])
-    .filter(file => file.startsWith('/workspace/'))
-)];
-
-console.log(`Found ${errorFiles.length} files with errors`);
-
-// Common fixes
-const fixes = [
-  // Fix array syntax with semicolons
-  {
-    pattern: /(\s+)([^;]+),;/g,
-    replacement: '$1$2,'
-  },
-  // Fix array closing with semicolon
-  {
-    pattern: /(\s+)\];\s*$/gm,
-    replacement: '$1];'
-  },
-  // Fix JSX self-closing tags
-  {
-    pattern: /<meta>\s*<meta>/g,
-    replacement: '<meta name="description" content="AI-powered solution" />\n        <meta name="keywords" content="AI, artificial intelligence, business solutions" />'
-  },
-  // Fix Navigation component
-  {
-    pattern: /<Navigation>\s*<div/g,
-    replacement: '<Navigation />\n      <div'
-  },
-  // Fix malformed JSX elements
-  {
-    pattern: /<(\w+)>\s*<\/div>/g,
-    replacement: '<$1 />'
-  },
-  // Fix text content with semicolons
-  {
-    pattern: /([^>])\s*;(\s*<\/[^>]+>)/g,
-    replacement: '$1$2'
-  },
-  // Fix malformed feature mapping
-  {
-    pattern: /{\s*features\.map\(\(feature, index\) => \(\s*}\s*<div/g,
-    replacement: '{features.map((feature, index) => (\n                <div'
-  },
-  // Fix malformed benefits mapping
-  {
-    pattern: /{\s*benefits\.map\(\(benefit, index\) => \(\s*}\s*<div/g,
-    replacement: '{benefits.map((benefit, index) => (\n                <div'
-  },
-  // Fix feature.icon usage
-  {
-    pattern: /<feature>\s*<\/div>/g,
-    replacement: '<feature.icon className="w-8 h-8 text-white" />'
-  },
-  // Fix CheckCircle usage
-  {
-    pattern: /<CheckCircle>\s*<\/div>/g,
-    replacement: '<CheckCircle className="w-8 h-8 text-white" />'
-  },
-  // Fix malformed JSX structure
-  {
-    pattern: /<(\w+)>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/g,
-    replacement: '</div>\n          </div>\n        </section>'
-  },
-  // Fix return statement
-  {
-    pattern: /return \(\s*<>\s*<Helmet>/g,
-    replacement: 'return (\n    <>\n      <Helmet>'
-  },
-  // Fix export statement
-  {
-    pattern: /}\s*export default/g,
-    replacement: '};\n\nexport default'
-  },
-  // Fix function closing
-  {
-    pattern: /,\s*}\s*$/g,
-    replacement: ';\n};'
+// Function to fix specific syntax errors
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix common syntax patterns that cause parsing errors
+    const fixes = [
+      // Fix missing comma in object properties
+      {
+        pattern: /(\w+):\s*(\w+)\s*(\w+):/g,
+        replacement: '$1: $2,\n    $3:'
+      },
+      // Fix missing closing tags
+      {
+        pattern: /<h1([^>]*?)>([^<]*?)<([^>]*?)>/g,
+        replacement: '<h1$1>$2</h1>'
+      },
+      {
+        pattern: /<h2([^>]*?)>([^<]*?)<([^>]*?)>/g,
+        replacement: '<h2$1>$2</h2>'
+      },
+      {
+        pattern: /<h3([^>]*?)>([^<]*?)<([^>]*?)>/g,
+        replacement: '<h3$1>$2</h3>'
+      },
+      {
+        pattern: /<p([^>]*?)>([^<]*?)<([^>]*?)>/g,
+        replacement: '<p$1>$2</p>'
+      },
+      {
+        pattern: /<button([^>]*?)>([^<]*?)<([^>]*?)>/g,
+        replacement: '<button$1>$2</button>'
+      },
+      // Fix JSX fragment issues
+      {
+        pattern: /<>([^<]*?)<([^>]*?)>/g,
+        replacement: '<>'
+      },
+      // Fix missing closing brackets
+      {
+        pattern: /className=\{`([^`]*?)\$\{([^}]*?)\}`/g,
+        replacement: 'className={`$1${$2}`}'
+      },
+      // Fix unclosed strings
+      {
+        pattern: /"([^"]*?)\n([^"]*?)"/g,
+        replacement: '"$1$2"'
+      },
+      // Fix missing semicolons in JSX
+      {
+        pattern: /(\w+)\s*=\s*\{([^}]*?)\}\s*(\w+)/g,
+        replacement: '$1={$2};\n    $3'
+      }
+    ];
+    
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    }
+    
+    // Additional specific fixes for common patterns
+    const specificFixes = [
+      // Fix malformed JSX attributes
+      {
+        pattern: /className=\{`([^`]*?)\$\{([^}]*?)\}`/g,
+        replacement: 'className={`$1${$2}`}'
+      },
+      // Fix missing closing tags in common patterns
+      {
+        pattern: /<section([^>]*?)>([^<]*?)<([^>]*?)>/g,
+        replacement: '<section$1>$2</section>'
+      },
+      // Fix unclosed React fragments
+      {
+        pattern: /<>([^<]*?)<([^>]*?)>/g,
+        replacement: '<>'
+      }
+    ];
+    
+    for (const fix of specificFixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing syntax in ${filePath}:`, error.message);
+    return false;
   }
-];
+}
+
+// Function to fix specific problematic files
+function fixSpecificFiles() {
+  const problematicFiles = [
+    'app/ai-3d-generation/page.tsx',
+    'app/ai-agricultural-intelligence-pro/page.tsx',
+    'app/ai-analytics/page.tsx',
+    'app/ai-api-management/page.tsx',
+    'app/ai-api-manager/page.tsx',
+    'app/ai-automation/page.tsx'
+  ];
+  
+  for (const file of problematicFiles) {
+    const filePath = path.join(__dirname, file);
+    if (fs.existsSync(filePath)) {
+      console.log(`Fixing specific issues in: ${file}`);
+      fixSyntaxErrors(filePath);
+    }
+  }
+}
+
+// Function to find all TypeScript/JSX files
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+console.log('Starting comprehensive syntax error fixes...');
+
+// Fix specific problematic files first
+fixSpecificFiles();
+
+const appDir = path.join(__dirname, 'app');
+const files = findFiles(appDir);
 
 let fixedCount = 0;
 
-errorFiles.forEach(filePath => {
+for (const file of files) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Apply fixes
-    fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
-    
-    // Additional specific fixes
-    // Fix array syntax issues
-    content = content.replace(/(\s+)([^,;]+),;(\s*[^,;]+),;(\s*[^,;]+),;(\s*[^,;]+),;(\s*[^,;]+);/g, 
-      '$1$2,\n$3,\n$4,\n$5,\n$6');
-    
-    // Fix JSX structure issues
-    content = content.replace(/<section[^>]*>\s*<\/section>/g, '<section className="py-20 px-4">\n          <div className="max-w-7xl mx-auto">\n            <div className="text-center mb-16">\n              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>\n              <p className="text-xl text-gray-300">Section description</p>\n            </div>\n          </div>\n        </section>');
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (fixSyntaxErrors(file)) {
       fixedCount++;
-      console.log(`Fixed: ${filePath}`);
     }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${file}:`, error.message);
   }
-});
+}
 
-console.log(`Fixed ${fixedCount} files`);
+console.log(`\nFixed syntax errors in ${fixedCount} files`);
+console.log('Syntax error fixes completed!');

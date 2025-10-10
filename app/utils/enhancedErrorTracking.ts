@@ -29,8 +29,8 @@ export interface TrackedError {}
   message: string;
   stack?: string;
   context: ErrorContext;
-  timestamp: string
-  userAgent: string
+  timestamp: string,
+    userAgent: string
   url: string,}
 }
 class EnhancedErrorTracker {}
@@ -79,16 +79,16 @@ class EnhancedErrorTracker {}
   }
   public trackError(error: Error, context: ErrorContext = {}): void {
     if (typeof window === 'undefined') return;
-    const trackedError: TrackedError = {
+    const trackedError: TrackedError={
       message: error.message
       stack: error.stack,
       context: {,
         ...context
-  }
-  public trackError(error: Error, context: ErrorContext = {}): void {}
+  };
+    public trackError(error: Error, context: ErrorContext = {}): void {}
     if (typeof window === 'undefined') return;
-    const trackedError: TrackedError = {}
-      message: error.message,
+    const trackedError: TrackedError={};
+    message: error.message,
       stack: error.stack,
       context: {}
         ...context,;
@@ -155,7 +155,7 @@ class EnhancedErrorTracker {}
     total: number,
   }
   public getErrorStats(): {}
-    total: number
+    total: number,
     byComponent: Record<string>
     recent: TrackedError[],}
   } {}

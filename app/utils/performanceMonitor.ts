@@ -14,9 +14,9 @@ interface PerformanceMetrics {
   }
 }
 class PerformanceMonitor {
-    private metrics: PerformanceMetrics = {,
-  }
-interface PerformanceMetrics {}
+    private metrics: PerformanceMetrics={,
+  };
+    interface PerformanceMetrics {}
   fcp?: number; // First Contentful Paint;
   lcp?: number; // Largest Contentful Paint;
   fid?: number; // First Input Delay;
@@ -26,7 +26,7 @@ interface PerformanceMetrics {}
   customMetrics: Record<string></strin>
 }
 class PerformanceMonitor {}
-  private metrics: PerformanceMetrics = {}
+  private metrics: PerformanceMetrics={};
     customMetrics: {}
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }

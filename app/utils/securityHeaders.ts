@@ -11,11 +11,11 @@ export interface SecurityHeadersConfig {
   }
   permissionsPolicy?: string;}
 }
-export const defaultSecurityHeaders: SecurityHeadersConfig = {
+export const defaultSecurityHeaders: SecurityHeadersConfig={
     // Content Security Policy,
   contentSecurityPolicy: [,
-  }
-export interface SecurityHeadersConfig {}
+  };
+    export interface SecurityHeadersConfig {}
   contentSecurityPolicy?: string;
   strictTransportSecurity?: string;
   xFrameOptions?: string;
@@ -26,15 +26,8 @@ export interface SecurityHeadersConfig {}
 export const defaultSecurityHeaders: SecurityHeadersConfig = {}
   // Content Security Policy;
   contentSecurityPolicy: [,
-    "default-src 'self'",;
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
-    "style-src 'self' 'unsafe-inline'",;
-    "img-src 'self' data: https: blob:",
-    "font-src 'self' data: ",
-    "connect-src 'self' https: //www.google-analytics.com https://analytics.google.com",
-    "frame-ancestors 'none'",;
-    "base-uri 'self'",;
-    "form-action 'self'",;
+    "default-src 'self'",;    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",    "style-src 'self' 'unsafe-inline'",;    "img-src 'self' data: http,
+    s: blob:",    "font-src 'self' data: ",    "connect-src 'self' https: //www.google-analytics.com https://analytics.google.com",    "frame-ancestors 'none'",;    "base-uri 'self'",;    "form-action 'self'",;
     'upgrade-insecure-requests'].join('; '),;
   // HTTP Strict Transport Security (HSTS);
   strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload';
@@ -63,8 +56,8 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 export function getSecurityHeaders();
   customConfig?: Partial<SecurityHeadersConfig>
 ): Record<string, string> {}
-  const config = { ...defaultSecurityHeaders, ...customConfig }
-  const headers: Record<string, string> = {}
+  const config={ ...defaultSecurityHeaders, ...customConfig };
+    const headers: Record<string, string> = {}
     'X-XSS-Protection': '1; mode=block',;
     'X-DNS-Prefetch-Control': 'on'}
   }
@@ -95,8 +88,8 @@ export const,;
  */;
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
 ): Record<string, string> {/* TODO: Fix JSX expression */}
-  const config = { ...defaultSecurityHeaders, ...customConfig }
-  const,;
+  const config={ ...defaultSecurityHeaders, ...customConfig };
+    const,;
   headers: Record<string, string> = {/* TODO: Fix JSX expression */}
   }
   if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}

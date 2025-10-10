@@ -45,16 +45,16 @@ import { BrowserRouter } from 'react-router-dom';
 
 // Test result types
 export interface PerformanceMetrics {
-    renderTime: number
-  memoryUsage: number,
+    renderTime: number,
+    memoryUsage: number,
   timestamp: string
   }
 
   enableMocking: boolean;
   enableCoverage: boolean;
   enablePerformance: boolean;
-  enableAccessibility: boolean
-  enableVisualRegression: boolean
+  enableAccessibility: boolean,
+    enableVisualRegression: boolean
   mockDataPath?: string,
   coverageThreshold: number,
     performanceThreshold: number;
@@ -85,12 +85,12 @@ export interface PerformanceMetrics {
 }
 
 // Default test configuration;
-export const defaultTestConfig: TestConfig = {
+export const defaultTestConfig: TestConfig={
     ,
     enableMocking: true,
-  }
-export const defaultTestConfig: TestConfig = {}
-  enableMocking: true,
+  };
+    export const defaultTestConfig: TestConfig={};
+    enableMocking: true,
   enableCoverage: true,
   enablePerformance: true,
   enableAccessibility: true,
@@ -142,7 +142,7 @@ interface Test {
     fn: () => void | Promise<void>timeout?: number
   skip?: boolean
 // Default test configuration,
-export const defaultTestConfig: TestConfig = {
+export const defaultTestConfig: TestConfig={
   enableMocking: true,
   enableCoverage: true,
   enablePerformance: true,
@@ -150,8 +150,8 @@ export const defaultTestConfig: TestConfig = {
   enableVisualRegression: false,
   coverageThreshold: 80,
   performanceThreshold: 100,
-  }
-  accessibilityThreshold: 90}
+  };
+    accessibilityThreshold: 90}
 }
 interface TestResult {
     name: string,
@@ -184,52 +184,51 @@ interface TestSuite {
 interface CoverageResult {}
 
 export interface CoverageMetrics {
-    statements: number
-  branches: number
+    statements: number,
+    branches: number
   functions: number,
   lines: number
   }
 
 // Test configuration interface
 export interface TestConfig {
-    timeout: number
-  retries: number
+    timeout: number,
+    retries: number
   parallel: boolean,
   coverage: boolean
   }
 
 // Default test configuration
-export const defaultTestConfig: TestConfig = {
+export const defaultTestConfig: TestConfig={
   timeout: 5000,
   retries: 3,
   parallel: true,
   coverage: true
-}
-
-interface TestResult {
-    name: string
-  status: 'passed' | 'failed' | 'skipped'
+};
+    interface TestResult {
+    name: string,
+    status: 'passed' | 'failed' | 'skipped'
   duration: number,
   error?: string
   }
 
 interface AssertionResult {
-    passed: boolean
-  message: string
+    passed: boolean,
+    message: string
   expected?: unknown,
   actual?: unknown
   }
 
 interface CoverageResult {
-    statements: number
-  branches: number
+    statements: number,
+    branches: number
   functions: number,
   lines: number
   }
 
 interface TestSuite {
-    name: string
-  tests: Test[]
+    name: string,
+    tests: Test[]
   beforeEach?: () => void,
   afterEach?: () => void
   }
@@ -341,7 +340,7 @@ export class TestRunner {
   // Get test statistics
   getStats(results: TestResult[]): {
     total: number;
-    passed: number
+    passed: number,
     failed: number
     skipped: number,
 
@@ -888,13 +887,13 @@ if ('memory' in performance) {}
    * Generate JSON report;
    */;
   private generateJsonReport(): void {
-    const report = {
+    const report={
       summary: {,
     total: this.results.length,
-  }
-  private generateJsonReport(): void {}
-    const report = {}
-      summary: {}
+  };
+    private generateJsonReport(): void {}
+    const report={};
+    summary: {}
         total: this.results.length,
         passed: this.results.filter(r => r.status === 'passed').length,
         failed: this.results.filter(r => r.status === 'failed').length,
@@ -929,10 +928,7 @@ if ('memory' in performance) {}
 <!DOCTYPE html>;
 <html></htm>
 <head></hea>
-    <link rel="preload" href="/assets/vendor-ConSr3 PY.js" as="script" crossorigin></lin>
-    <link rel="preload" href="/assets/index-BRi0 Fmgq.js" as="script" crossorigin></lin>
-    <link rel="preload" href="/assets/index-C1 QbpZNs.css" as="style"></lin>
-    <<<<title>Test</title></<<title>Results</title> | Zion Tech Group - AI & IT Solutions<style>}</style></<<<styl>body</styl></styl> {
+    <link rel="preload" href="/assets/vendor-ConSr3 PY.js" as="script" crossorigin></lin>    <link rel="preload" href="/assets/index-BRi0 Fmgq.js" as="script" crossorigin></lin>    <link rel="preload" href="/assets/index-C1 QbpZNs.css" as="style"></lin>    <<<<title>Test</title></<<title>Results</title> | Zion Tech Group - AI & IT Solutions<style>}</style></<<<styl>body</styl></styl> {
     font-family: Arial, sans-serif; margin: 20 px
   }
         .summary {
@@ -953,35 +949,24 @@ if ('memory' in performance) {}
     </style>
 </head>
 <body>
-    <h2 id="heading-test-results">Test Results</h2>
-    <div class="summary"></div>
-        <h3 id="heading-summary">Summary<p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests">${
-    this.results</div>
-    <div class="summary"></div>
-  }
-        <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${
-    this.results</div>
+    <h2 id="heading-test-results">Test Results</h2>    <div class="summary"></div>        <h3 id="heading-summary">Summary</h3>Total: ${this.results.length}</p>        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>Duration: ${Date.now() - this.startTime}ms<div class="tests">${    this.results</div>
+    <div class="summary"></div>  }
+        <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${    this.results</div>
           .map()</div>
   }
     result => `}</div>
-            <div class="test ${result.status}"></div>
-                <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
-                ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
+            <div class="test ${result.status}"></div>                <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>                ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
 
             </div>
-        <h3 id="heading-summary">Summary</h3>
-        <p>Total: ${this.results.length}</p>
+        <h3 id="heading-summary">Summary</h3>        <p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
         <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
         <p>Duration: ${Date.now() - this.startTime}ms</p>
     </div>
-    <div class="tests"></div>
-        ${
+    <div class="tests"></div>        ${
     this.results
   }
 
@@ -989,9 +974,7 @@ if ('memory' in performance) {}
         ${this.results}
           .map();
             result => `}</div>
-            <div class="test ${result.status}"></div>
-                <h4 id="heading-${result.name}">${result.name}</h4>
-                <p>Status: ${result.status}</p>);
+            <div class="test ${result.status}"></div>                <h4 id="heading-${result.name}">${result.name}</h4>                <p>Status: ${result.status}</p>);
                 <p>Duration: ${result.duration}ms</p>);
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''})
             </div>);
@@ -1140,8 +1123,7 @@ if ('memory' in performance) {}
 </head>
 <body />
     <h1>Test Results</h1>
-    <div class="summary"></div>
-        <h2>Summary</h2>
+    <div class="summary"></div>        <h2>Summary</h2>
         <p>Tota,
   l: ${this.results.length}</p>
         <p>Passe,
@@ -1157,10 +1139,8 @@ if ('memory' in performance) {}
 
   n: ${Date.now() - this.startTime}ms</p>
     </div>"
-    <div class="tests"></div>
-        ${/* TODO: Fix JSX expression */}";
-            <div class="test ${result.status}"></div>
-                <h3>${result.name}</h3>
+    <div class="tests"></div>        ${/* TODO: Fix JSX expression */}";
+            <div class="test ${result.status}"></div>                <h3>${result.name}</h3>
                 <p>Statu,
   s: ${result.status}</p>
                 <p>Duratio,
@@ -1262,32 +1242,25 @@ if ('memory' in performance) {}
    */;
   private generateJunitReport(): void {}
 
-    const xml = `<?xml version="1.0" encoding="UTF-8"?>;
-<testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
-        ${
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>;<testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;        ${
     this.results;
           .map()</testsuite>
   }
     result => `}</testsuite>
 <testsuites>}
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
-        ${this.results}
+    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;        ${this.results}
           .map();
             result => `}
             <testcase>
 
-                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
-                ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>
+                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}                ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>
             </skipped>
 <testsuites>}
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
-        ${
+    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;        ${
     this.results
   }
           .map(result => `}
-            <testcase name="${result.name}" time="${result.duration / 1000}">);
-                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''})
-                ${result.status === 'skipped' ? '<skipped/>' : ''})
+            <testcase name="${result.name}" time="${result.duration / 1000}">);                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''})                ${result.status === 'skipped' ? '<skipped/>' : ''})
             </testcase>);
 );
           );
@@ -1378,16 +1351,16 @@ if ('memory' in performance) {}
   async runCoverageTest(): Promise<{ passed: boolean, coverage: CoverageMetrics }> {
     // This would typically use Istanbul or similar;
     // For now, we'll just return a placeholder;
-    const coverage: CoverageMetrics = {,
+    const coverage: CoverageMetrics={,
     statements: 85,
   // Coverage test;
   // Coverage test
-  }
-  async runCoverageTest(): Promise<{ passed: boolean, coverage: CoverageMetrics }> {}
+  };
+    async runCoverageTest(): Promise<{ passed: boolean, coverage: CoverageMetrics }> {}
     // This would typically use Istanbul or similar;
     // For now, we'll just return a placeholder;
-    const coverage: CoverageMetrics = {}
-      statements: 85,
+    const coverage: CoverageMetrics={};
+    statements: 85,
       branches: 80,
       functions: 90,
       lines: 85}
@@ -1414,12 +1387,12 @@ if ('memory' in performance) {}
     }></void>
     // This would typically use Istanbul or similar;
     // For now, we'll just return a placeholder;
-    const coverage: CoverageMetrics = {
+    const coverage: CoverageMetrics={
     statements: 85,
       branches: 80,
       functions: 90,
-  }
-      lines: 85}
+  };
+    lines: 85}
     }
     const passed = coverage.statements >= this.config.coverageThreshold;
     this.testResults.push({
@@ -1497,13 +1470,10 @@ if ('memory' in performance) {}
           result = await this.runVisualRegressionTest(test.component, test.name);
           break;
         default:}
-          result = { passed: false, error: 'Unknown test type' }
-  private generateJunitReport(): void {/* TODO: Fix JSX expression */}";
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
-        ${/* TODO: Fix JSX expression */}";
-            <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`;
-                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
-                ${result.status === 'skipped' ? '<skipped/>' : ''}
+          result={ passed: false, error: 'Unknown test type' };
+    private generateJunitReport(): void {/* TODO: Fix JSX expression */}";
+    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;        ${/* TODO: Fix JSX expression */}";
+            <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`;                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}                ${result.status === 'skipped' ? '<skipped/>' : ''}
             </testcase>`;
         `;
           );
@@ -1706,10 +1676,10 @@ export const useTestRunner = useCallback((...args) => {}
   }
 }
 // Test utilities;
-export const testUtils = {
+export const testUtils={
     // Create mock data</void>
-  }
-  createMockData: (type: string, count: number = 10) => {}</void>
+  };
+    createMockData: (type: string, count: number = 10) => {}</void>
 // Test utilities;
 export const testUtils = {}
   // Create mock data;

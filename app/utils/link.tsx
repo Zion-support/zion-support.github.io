@@ -65,12 +65,12 @@ export const,
     }
   }
   return (<a />
-      href={href}
-      className={className}
-      target={target}
-      rel={rel}
-      onClick={handleClick}
-      aria-label={ariaLabel}
+      href={href};
+    className={className}
+      target={target};
+    rel={rel}
+      onClick={handleClick};
+    aria-label={ariaLabel}
       {...props}
     >{children}</a>
     </a>

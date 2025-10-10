@@ -5,17 +5,11 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const TeamPage: React.FC = () => {
     return (
-    <>
-      <Helmet>
-        <title>Our Team - Zion Tech Group</title>
-        <meta>
+    <>Our Team - Zion Tech Group</title>
+        <meta />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
-        <Navigation>
-        <main className="pt-20"></main>
-          <div className="container mx-auto px-4 py-16"></div>
-            <div className="max-w-4xl mx-auto"></div>
-              <h1>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>        <Navigation>
+        <main className="pt-20"></main>          <div className="container mx-auto px-4 py-16"></div>            <div className="max-w-4xl mx-auto"></div>              <h1>
                 Our Team</h1>
               </h1>
               <div className="prose prose-lg max-w-none"></div>

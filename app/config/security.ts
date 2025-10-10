@@ -6,20 +6,11 @@ export const securityHeaders = {
     // Content Security Policy;
   contentSecurityPolicy: {
     directives: {
-      defaultSrc: ["'self'"],
-      scriptSrc: [,
-        "'self'",;
-        "'unsafe-inline'",;
-        "'unsafe-eval'",;
-        'https: //www.googletagmanager.com',
+      defaultSrc: ["'self'"],      scriptSrc: [,
+        "'self'",;        "'unsafe-inline'",;        "'unsafe-eval'",;        'https: //www.googletagmanager.com',
         'https: //www.google-analytics.com',
       ],;
-      styleSrc: ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],
-      fontSrc: ["'self'", 'https: //fonts.gstatic.com'],
-      imgSrc: ["'self'", 'data:', 'https:', 'blob: '],
-      connectSrc: ["'self'", 'https://www.google-analytics.com', 'https: //analytics.google.com'],
-      frameSrc: ["'self'"],
-      objectSrc: ["'none'"],
+      styleSrc: ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],      fontSrc: ["'self'", 'https: //fonts.gstatic.com'],      imgSrc: ["'self'", 'data:', 'https:', 'blob: '],      connectSrc: ["'self'", 'https://www.google-analytics.com', 'https: //analytics.google.com'],      frameSrc: ["'self'"],      objectSrc: ["'none'"],
       upgradeInsecureRequests: true,
   },
   },;
@@ -71,8 +62,8 @@ export const sessionConfig = {
 /**;
  * Input validation patterns;
  */;
-export const validationPatterns = {}
-  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,;
+export const validationPatterns={};
+    email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,;
   phone: /^\+?[1-9]\d{1,14}$/,;
   url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,;
   alphanumeric: /^[a-zA-Z0-9]+$/,
@@ -83,41 +74,7 @@ export const validationPatterns = {}
  */;
 export function sanitizeInput(input: string): string {
     return input,
-    .replace(/[<>]/g, '') // Remove < and >;
-    .replace(/javascript:/gi, '') // Remove javascript: protocol,
-    .replace(/on\w+\s*=/gi, '') // Remove event handlers;
-    .trim()
-  }
-}
-/**;
- * Validate email address;
- */;
-export function validateEmail(email: string): boolean {
-    return validationPatterns.email.test(email)
-  }
-}
-/**;
- * Validate URL;
- */;
-export function validateUrl(url: string): boolean {
-    return validationPatterns.url.test(url)
-  }
-}
-/**;
- * Generate secure token;
- */;
-export function generateSecureToken(length: number = 32): string {
-    if (typeof window !== 'undefined' && window.crypto) {
-    window.crypto.getRandomValues(array)
-  }
-  } else {
-    // Fallback for non-browser environments;
-    for (let i = 0; i < length; i++) {
-      array[i] = Math.floor(Math.random() * 256)
-  }
-    }
-  }
-  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+    .replace(/[<> byte.toString(16).padStart(2, '0')).join('');
 }
 export default {
     securityHeaders,;

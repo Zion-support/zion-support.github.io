@@ -81,12 +81,12 @@ export interface ErrorHandlerConfig {}
   logLevel: 'debug' | 'info' | 'warn' | 'error',
 }
 // Default configuration;
-export const defaultErrorHandlerConfig: ErrorHandlerConfig = {
+export const defaultErrorHandlerConfig: ErrorHandlerConfig={
     ,
     enableLogging: true,
-  }
-export const defaultErrorHandlerConfig: ErrorHandlerConfig = {}
-  enableLogging: true,
+  };
+    export const defaultErrorHandlerConfig: ErrorHandlerConfig={};
+    enableLogging: true,
   enableReporting: true,
   enableRetry: true,
   maxRetries: 3,
@@ -96,7 +96,7 @@ export const defaultErrorHandlerConfig: ErrorHandlerConfig = {}
   enableNetworkLogging: true,
   logLevel: 'error'
 // Default configuration,
-export const defaultErrorHandlerConfig: ErrorHandlerConfig = {
+export const defaultErrorHandlerConfig: ErrorHandlerConfig={
     enableLogging: true,
   enableReporting: true,
   enableRetry: true,
@@ -105,8 +105,8 @@ export const defaultErrorHandlerConfig: ErrorHandlerConfig = {
   enableUserNotification: true,
   enableConsoleLogging: true,
   enableNetworkLogging: true,
-  }
-  logLevel: 'error'}
+  };
+    logLevel: 'error'}
 // Error Handler class;
 export class ErrorHandler {
     // Error Handler class
@@ -151,10 +151,10 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     return ErrorHandler.instance;
   }</ErrorHandlerConfig>
   // Handle error</<<<ErrorHandlerConfig>handleError</ErrorHandlerConfig></ErrorHandlerConfig>(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {
-    </string></<<<strin>const</strin></<<strin>appError</strin>: AppError = {,
+    </string></<<<strin>const</strin></<<strin>appError</strin>: AppError={,
     id: this.generateErrorId(),
-  }
-  constructor(config: Partial<ErrorHandlerConfig> = {}) {}
+  };
+    constructor(config: Partial<ErrorHandlerConfig> = {}) {}
     this.config = { ...defaultErrorHandlerConfig, ...config }
   }
   static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {}
@@ -165,8 +165,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Handle error;
   handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {}
-    const appError: AppError = {}
-      id: this.generateErrorId(),
+    const appError: AppError={};
+    id: this.generateErrorId(),
       type: this.determineErrorType(error),
       severity: this.determineErrorSeverity(error),
       message: error.message,
@@ -209,18 +209,18 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Handle network error;
   handleNetworkError(error: Error, url: string, status?: number): AppError {
-    const appError: AppError = {,
+    const appError: AppError={,
     id: this.generateErrorId(),
   // Handle network error
-  }
-  handleNetworkError(error: Error, url: string, status?: number): AppError {}
-    const appError: AppError = {}
-      id: this.generateErrorId(),
+  };
+    handleNetworkError(error: Error, url: string, status?: number): AppError {}
+    const appError: AppError={};
+    id: this.generateErrorId(),
       type: ErrorType.NETWORK,
       severity: this.determineNetworkErrorSeverity(status),
       message: error.message,
       stack: error.stack,
-    const appError: AppError = {
+    const appError: AppError={
     id: this.generateErrorId();
       type: ErrorType.NETWORK;
       severity: this.determineNetworkErrorSeverity(status)
@@ -229,8 +229,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       timestamp: new Date(),
       url: typeof window !== 'undefined' ? window.location.href : undefined,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined
-  }
-      context: { networkUrl: url, statusCode: status },
+  };
+    context: { networkUrl: url, statusCode: status },
       resolved: false,
       retryCount: 0,
     }
@@ -245,13 +245,13 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Handle validation error;
   handleValidationError(field: string, message: string, value?: unknown): AppError {
-    const appError: AppError = {,
+    const appError: AppError={,
     id: this.generateErrorId(),
   // Handle validation error
-  }
-  handleValidationError(field: string, message: string, value?: unknown): AppError {}
-    const appError: AppError = {}
-      id: this.generateErrorId(),
+  };
+    handleValidationError(field: string, message: string, value?: unknown): AppError {}
+    const appError: AppError={};
+    id: this.generateErrorId(),
       type: ErrorType.VALIDATION,
       severity: ErrorSeverity.LOW,
       id: this.generateErrorId(),
@@ -556,21 +556,14 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       font-family: Arial, sans-serif;
     `</string>
     notification.innerHTML = `</string>
-      <div style="display: flex;justify-content:space-between;align-items:center,"></div>
-        <div />
-          <strong>${error.severity} Error<p style="margin: 5px 0 0 0;font-size:14px,">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
-    `
+      <div style="display: flex;justify-content:space-between;align-items:center,"></div>        <div />
+          <strong>${error.severity} Error<p style="margin: 5px 0 0 0;font-size:14px,">${error.message}</p>×</button>    `
     notification.innerHTML = `
-      <div style="display: flex;justify-content:space-between;align-items:center,">,</div>
-        <div>,</div>
+      <div style="display: flex;justify-content:space-between;align-items:center,">,</div>        <div>,</div>
           <strong>${error.severity} Error</strong>
-          <p style="margin: 5px 0 0 0;font-size:14px,">${error.message}</p>
-        </div>
-        <button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
-      <div style="display:flex;justify-content:space-between;align-items:center,"></div>
-        <div />
-          <strong>${error.severity} Error<p style="margin: 5px 0 0 0;font-size:14px,">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
-      </div>
+          <p style="margin: 5px 0 0 0;font-size:14px,">${error.message}</p>        </div>
+        <button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>      <div style="display:flex;justify-content:space-between;align-items:center,"></div>        <div />
+          <strong>${error.severity} Error<p style="margin: 5px 0 0 0;font-size:14px,">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>      </div>
     `
     document.body.appendChild(notification)
     // Auto-remove after 5 seconds for non-critical errors,
@@ -627,16 +620,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     notification.innerHTML = `;
       <div style="displa,
   y: flex, justify-conten,
-  t: space-between, align-item,";
-  s: center,"></div>
+  t: space-between, align-item,";  s: center,"></div>
         <div />
-          <strong>${error.severity} Error</strong>";
-          <p style="margi,
-  n: 5px 0 0 0, font-siz,";
-  e: 14px,">${error.message}</p>
-        </div>";
-        <button onclick="this.parentElement.parentElement.remove()" style=";
-          backgroun,
+          <strong>${error.severity} Error</strong>";          <p style="margi,
+  n: 5px 0 0 0, font-siz,";  e: 14px,">${error.message}</p>
+        </div>";        <button onclick="this.parentElement.parentElement.remove()" style=";          backgroun,
   d: none,
           borde,
   r: none,
@@ -648,8 +636,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   r: pointer,
           margin-lef,
   t: 10px;";
-        ">×</button>
-      </div>`;
+        ">×</button>      </div>`;
     `
     document.body.appendChild(notification)
     // Auto-remove after 5 seconds for non-critical errors,
@@ -702,7 +689,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Schedule retry;
   private scheduleRetry(error: AppError) {}
-    const retryItem = { error, retryCount: error.retryCount! + 1 }
+    const retryItem={ error, retryCount: error.retryCount! + 1 };
     this.retryQueue.push(retryItem);
     setTimeout(() => {}
       this.retryError(retryItem);
@@ -956,7 +943,7 @@ export class ErrorBoundary extends React.Component<;
   private errorHandler: ErrorHandler,
   constructor(props: { children: React.ReactNode, fallback?: React.ReactNode }) {}
     super(props);
-    this.state = { hasError: false }
+    this.state={ hasError: false };
     this.errorHandler = ErrorHandler.getInstance();
   }
   static getDerivedStateFromError(error: Error) {
@@ -986,32 +973,27 @@ export class ErrorBoundary extends React.Component<;
       return(this.props.fallback || (
   }
           <div style={{ padding: '20px', textAlign: 'center' }}></div>
-            <h2>Something went wrong<p>We're sorry, but something unexpected happened.<button;
+            <h2>Something went wrong</h2>We're sorry, but something unexpected happened.<button;
   render() {}
     if (this.state.hasError) {}
       return (
         this.props.fallback || (;
-          <div style={{ padding: '20px', textAlign: 'center' }}></div>
+          <div style={{ padding: '20px', textAlign: 'center' }}></button>
             <h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button;
               onClick={() =>this.setState({ hasError: false, error: undefined })}
-            <h2>Something went wrong</h2>);
+            </button>Something went wrong</h2>);
             <p>We're sorry, but something unexpected happened.</p>);
             <button;);
               onClick={() => this.setState({ hasError: false, error: undefined })}
-              style={{}
-              style={{}
+              style={{};
+    style={{}
                 padding: '10px 20px',
                 backgroundColor: '#007bff',
                 color: 'white',
                 border: 'none',
                 borderRadius: '4px'}
                 cursor: 'pointer'}
-export class ErrorBoundary extends React.Component<;
-  {/* TODO: Fix JSX expression */}
-  n: React.ReactNode, fallback?: React.ReactNode },
-  {/* TODO: Fix JSX expression */}
-  r: boolean, error?: Error }
-> {/* TODO: Fix JSX expression */}
+export class ErrorBoundary extends React.Component</button> {/* TODO: Fix JSX expression */}
   n: React.ReactNode, fallback?: React.ReactNode }) {/* TODO: Fix JSX expression */}
   r: false }
     this.errorHandler = ErrorHandler.getInstance();
@@ -1030,8 +1012,8 @@ export class ErrorBoundary extends React.Component<;
             <h2>Something went wrong</h2>
             <p>We're sorry, but something unexpected happened.</p>
             <button />
-              onClick={/* TODO: Fix JSX expression */}
-  r: undefined })}
+              onClick={/* TODO: Fix JSX expression */};
+    r: undefined })}
               style={/* TODO: Fix JSX expression */}
               }}
             ></button>

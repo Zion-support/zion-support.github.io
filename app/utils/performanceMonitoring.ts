@@ -26,8 +26,8 @@ export interface CustomMetric {
   }
 export interface PerformanceMetric {}
   name: string;
-  value: number
-  rating: 'good' | 'needs-improvement' | 'poor'
+  value: number,
+    rating: 'good' | 'needs-improvement' | 'poor'
   timestamp: number,}
 }
 export interface WebVitals {}
@@ -40,14 +40,14 @@ export interface WebVitals {}
 }
 export interface CustomMetric {}
   name: string;
-  value: number
-  unit: 'ms' | 'bytes' | 'count' | 'percentage'
+  value: number,
+    unit: 'ms' | 'bytes' | 'count' | 'percentage'
   timestamp: number,}
 }
 class PerformanceMonitoringService {}
   private static instance: PerformanceMonitoringService,}
-  private webVitals: WebVitals = {}
-  private customMetrics: CustomMetric[] = [],
+  private webVitals: WebVitals={};
+    private customMetrics: CustomMetric[] = [],
   private observers: PerformanceObserver[] = [],
   private maxMetrics = 1000;
   private constructor() {
@@ -69,8 +69,8 @@ export interface WebVitals {/* TODO: Fix JSX expression */}
 export interface CustomMetric {/* TODO: Fix JSX expression */}
 }
 class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
-  webVitals: WebVitals = {}
-  private,;
+  webVitals: WebVitals={};
+    private,;
   customMetrics: CustomMetric[] = [],
   private,;
   observers: PerformanceObserver[] = []
@@ -209,13 +209,13 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   private recordWebVital(name: keyof WebVitals, value: number): void {
     ,
     const rating = this.getRating(name, value);
-    const metric: PerformanceMetric = {,
+    const metric: PerformanceMetric={,
       name
-  }
-  private recordWebVital(name: keyof WebVitals, value: number): void {}
+  };
+    private recordWebVital(name: keyof WebVitals, value: number): void {}
     const rating = this.getRating(name, value);
-    const metric: PerformanceMetric = {}
-      name,;
+    const metric: PerformanceMetric={};
+    name,;
       value,;
       rating,;
       timestamp: Date.now()}
@@ -282,12 +282,12 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
    */;
   recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {
     ,
-    const metric: CustomMetric = {,
+    const metric: CustomMetric={,
       name
-  }
-  recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {}
-    const metric: CustomMetric = {}
-      name,;
+  };
+    recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {}
+    const metric: CustomMetric={};
+    name,;
       value,;
       unit,;
       timestamp: Date.now()}
@@ -396,7 +396,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   }
   getSummary(): {}
     score: number;
-    webVitals: WebVitals
+    webVitals: WebVitals,
     customMetrics: CustomMetric[]
     recommendations: string[],}
   } {}
@@ -547,10 +547,10 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
    * Clear all metrics;
    */;
   clearMetrics(): void {}
-    this.webVitals = {}
+    this.webVitals={};
     this.customMetrics = []
   clearMetrics(): void {/* TODO: Fix JSX expression */}
-    this.webVitals = {}
+    this.webVitals={};
     this.customMetrics = []
   }
   /**;

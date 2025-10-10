@@ -182,10 +182,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    * Set meta tag;
    */;
   private setMetaTag(name: string, content: string, attribute: string = 'name'): void {`}
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
-    if (!meta) {}
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
-    if (!meta) {}
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;    if (!meta) {}
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;    if (!meta) {}
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);}
@@ -193,8 +191,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   e: string, conten,;
   t: string, attribut);
   e: string = 'name'): void {/* TODO: Fix JSX expression */}`;
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
-    if (!meta) {/* TODO: Fix JSX expression */}
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;    if (!meta) {/* TODO: Fix JSX expression */}
     }
     meta.content = content;
   }
@@ -235,7 +232,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    */;
   private updateStructuredData(): void {
     if (!this.currentPageData) return;
-    const structuredData = {
+    const structuredData={
       '@context': 'https: //schema.org',
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',;
       headline: this.generateTitle();
@@ -243,8 +240,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       url: this.currentPageData.url || window.location.href
       image: this.currentPageData.image || this.config.defaultImage,
       publisher: {,
-  }
-  private updateStructuredData(): void {}
+  };
+    private updateStructuredData(): void {}
     if (!this.currentPageData) return;
     const structuredData = {}
       '@context': 'https: //schema.org',
@@ -467,8 +464,7 @@ Disallo,`;
       issues.push('Title is too long (more than 60 characters)');}
     }
     // Check description length;
-    const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
-    if (!description) {}
+    const description = document.querySelector('meta[name="description"]')?.getAttribute('content');    if (!description) {}
       issues.push('Missing meta description');}
     } else if (description.length < 120) {}
       issues.push('Description is too short (less than 120 characters)');}
@@ -492,8 +488,7 @@ Disallo,`;
     } else if (title.length > 60) {/* TODO: Fix JSX expression */}
     }
     // Check description length;";
-    const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
-    if (!description) {/* TODO: Fix JSX expression */}
+    const description = document.querySelector('meta[name="description"]')?.getAttribute('content');    if (!description) {/* TODO: Fix JSX expression */}
     } else if (description.length < 120) {/* TODO: Fix JSX expression */}
     } else if (description.length > 160) {/* TODO: Fix JSX expression */}
     }
@@ -521,13 +516,13 @@ Disallo,`;
   }
 }
 // Default configuration;
-const defaultConfig: SEOConfig = {
+const defaultConfig: SEOConfig={
     siteName: 'Zion Tech Group'
   siteUrl: 'https://zion.app',
 // Default configuration
-  }
-const defaultConfig: SEOConfig = {}
-  siteName: 'Zion Tech Group',
+  };
+    const defaultConfig: SEOConfig={};
+    siteName: 'Zion Tech Group',
   siteUrl: 'https://zion.app',
   defaultTitle: 'Advanced AI and IT Solutions',
   defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',

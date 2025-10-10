@@ -67,8 +67,7 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
     newRecommendations.push('Add alt text to all images')
   }
     // Check for internal links
-    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
-    if (internalLinks.length > 0) {
+    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');    if (internalLinks.length > 0) {
     score += 10
   } else {
     newRecommendations.push('Add internal links for better SEO')
@@ -80,41 +79,17 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
     analyzeSEO()
   }, [analyzeSEO]);
   const generateStructuredData = () => {
-    const defaultStructuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": description,
-      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),
-      "logo": ogImage,
-      "sameAs": [
-        "https://twitter.com/ziontechgroup",
-        "https://linkedin.com/company/ziontechgroup"
-      ]
-    }
+    const defaultStructuredData={
+      "@context": "https://schema.org",      "@type": "Organization",      "name": "Zion Tech Group",      "description": description,      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),      "logo": ogImage,      "sameAs": [        "https://twitter.com/ziontechgroup",        "https://linkedin.com/company/ziontechgroup"      ]
+    };
     return structuredData || defaultStructuredData;
   }
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-        {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content="website" />
-        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-        {/* Twitter Card */}
-        <meta name="twitter:card" content={twitterCard} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(generateStructuredData())}
+    <>{title}</title>
+        <meta name="description" content={description} />        <meta name="keywords" content={keywords} />        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}        {/* Open Graph */}
+        <meta property="og:title" content={title} />        <meta property="og:description" content={description} />        <meta property="og:image" content={ogImage} />        <meta property="og:type" content="website" />        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}        {/* Twitter Card */}
+        <meta name="twitter:card" content={twitterCard} />        <meta name="twitter:title" content={title} />        <meta name="twitter:description" content={description} />        <meta name="twitter:image" content={ogImage} />        {/* Structured Data */}
+        <script type="application/ld+json">          {JSON.stringify(generateStructuredData())}
         </script>
       </Helmet>
       {children}
@@ -144,7 +119,7 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
           )}
         </div>
       )}
-    </React.Fragment>
+    </>
   );
 };
 

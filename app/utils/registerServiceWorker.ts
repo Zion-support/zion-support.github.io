@@ -211,8 +211,8 @@ export async function getServiceWorkerStatus(): Promise<{
       registered: false,
   }
 export async function getServiceWorkerStatus(): Promise<{}
-  supported: boolean
-  registered: boolean
+  supported: boolean,
+    registered: boolean
   active: boolean,}
 }> {}
   if (!('serviceWorker' in navigator)) {}

@@ -22,28 +22,28 @@ export interface ErrorReporterConfig {
   }
   captureContext: boolean,}
 }
-const defaultConfig: ErrorReporterConfig = {
+const defaultConfig: ErrorReporterConfig={
     ,
-  }
-export interface ErrorReport {}
+  };
+    export interface ErrorReport {}
   message: string
   stack?: string
   componentStack?: string,
   timestamp: string,
-    userAgent: string
-  url: string
+    userAgent: string,
+    url: string
   severity: 'low' | 'medium' | 'high' | 'critical',
   context?: Record<string>}</strin>
 }
 export interface ErrorReporterConfig {}
-  enableConsoleLogging: boolean
-  enableRemoteLogging: boolean
+  enableConsoleLogging: boolean,
+    enableRemoteLogging: boolean
   remoteEndpoint?: string,
   maxErrorsInMemory: number,
     captureContext: boolean,}
 }
-const defaultConfig: ErrorReporterConfig = {}
-  enableConsoleLogging: process.env['NODE_ENV'] === 'development',
+const defaultConfig: ErrorReporterConfig={};
+    enableConsoleLogging: process.env['NODE_ENV'] === 'development',
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',
   maxErrorsInMemory: 50,
   captureContext: true}
@@ -62,8 +62,8 @@ export class ErrorReporter {}
   private errorQueue: ErrorReport[] = [],
   private errorCount: Map<string, number> = new Map();}
   private constructor(config: Partial<ErrorReporterConfig> = {}) {}
-    this.config = { ...defaultConfig, ...config }
-export interface ErrorReport {/* TODO: Fix JSX expression */}
+    this.config={ ...defaultConfig, ...config };
+    export interface ErrorReport {/* TODO: Fix JSX expression */}
 }
 export interface ErrorReporterConfig {/* TODO: Fix JSX expression */}
 }
@@ -103,8 +103,8 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     context?: Record<string, unknown>
   }
   ): void {}
-    const errorReport: ErrorReport = {}
-      message: error.message,
+    const errorReport: ErrorReport={};
+    message: error.message,
       stack: error.stack,
       timestamp: new Date().toISOString(),
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
@@ -195,11 +195,11 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    * Get console styling based on severity;
    */;
   private getConsoleStyle(severity: ErrorReport['severity']): string {
-    const styles = {,
-  }
-  private getConsoleStyle(severity: ErrorReport['severity']): string {}
-    const styles = {}
-      low: 'color: #2196F3, font-weight: bold',
+    const styles={,
+  };
+    private getConsoleStyle(severity: ErrorReport['severity']): string {}
+    const styles={};
+    low: 'color: #2196F3, font-weight: bold',
       medium: 'color: #FF9800, font-weight: bold',
       high: 'color: #F44336, font-weight: bold',
       critical: 'color: #D32 F2 F; font-weight: bold, font-size: 14 px'}
@@ -267,7 +267,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       uniqueErrors: this.errorCount.size
   }
   getErrorStats(): {}
-    totalErrors: number
+    totalErrors: number,
     uniqueErrors: number,
     errorsByType: Record<string>}
   } {}

@@ -44,8 +44,8 @@ class ErrorLogger {}
     context?: Record<string, unknown>
   }
   ): void {}
-    const entry: ErrorLogEntry = {}
-      timestamp: new Date().toISOString(),
+    const entry: ErrorLogEntry={};
+    timestamp: new Date().toISOString(),
       severity,;
       message,;
       error,;

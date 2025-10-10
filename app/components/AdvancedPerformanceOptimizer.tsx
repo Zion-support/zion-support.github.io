@@ -48,14 +48,12 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, []);
   const optimizeCSS = useCallback(() => {
     if (typeof window === 'undefined') return;
-    const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
-    let optimizedCount = 0;
+    const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');    let optimizedCount = 0;
     stylesheets.forEach((link) => {
       // Add media attribute for non-critical CSS
       if (!link.hasAttribute('media') && !link.hasAttribute('data-critical')) {
         link.setAttribute('media', 'print');
-        link.setAttribute('onload', "this.media='all'");
-        optimizedCount++
+        link.setAttribute('onload', "this.media='all'");        optimizedCount++
   }
     })
     return optimizedCount;
@@ -96,8 +94,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     return () => observer.disconnect();
   }, []);
   return (
-    <div className="performance-optimized" data-optimized={isOptimized}>
-      {children}
+    <div className="performance-optimized" data-optimized={isOptimized}>      {children}
       {process.env.NODE_ENV === 'development' && (
         <div className="optimization-debug" style={{
           position: 'fixed',

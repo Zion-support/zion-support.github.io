@@ -3,7 +3,6 @@
  * Provides comprehensive accessibility improvements for web applications
  */
 
-<<<<<<< HEAD
 export class AccessibilityEnhancer {
   private focusableElements: HTMLElement[] = []
   private skipLinks: HTMLElement[] = []
@@ -55,9 +54,7 @@ export class AccessibilityEnhancer {
       'input:not([disabled])',
       'select:not([disabled])',
       'textarea:not([disabled])',
-      '[tabindex]:not([tabindex="-1"])',
-      '[contenteditable="true"]'
-    ]
+      '[tabindex]:not([tabindex="-1"])',      '[contenteditable="true"]'    ]
     
     this.focusableElements = Array.from(
       document.querySelectorAll(selectors.join(', '))
@@ -125,44 +122,15 @@ export class AccessibilityEnhancer {
   /**
    * Handle escape key
    */
-=======
-const AccessibilityEnhancerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-00a6
   private handleEscapeKey(event: KeyboardEvent): void {
     // Close any open modals or dropdowns
-    const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
-    modals.forEach(modal => {
-      const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
-      closeButton?.click();
+    const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');    modals.forEach(modal => {
+      const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;      closeButton?.click();
     })
     
     // Close any open menus
-    const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
-    menus.forEach(menu => {
-      const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
-      trigger?.click();
+    const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');    menus.forEach(menu => {
+      const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;      trigger?.click();
     })
   }
 
@@ -185,8 +153,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
   private handleMenuNavigation(event: KeyboardEvent): void {
     const activeElement = document.activeElement as HTMLElement;
     const menuItems = Array.from(
-      activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || []
-    ) as HTMLElement[]
+      activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || []    ) as HTMLElement[]
     
     const currentIndex = menuItems.indexOf(activeElement);
     
@@ -221,7 +188,8 @@ const AccessibilityEnhancerPage: React.FC = () => {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+    skipLink.className = 'sr-only focus:not-sr-only focus: absolute,
+    focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
     document.body.insertBefore(skipLink, document.body.firstChild);
     
     this.skipLinks.push(skipLink);
@@ -379,27 +347,16 @@ const AccessibilityEnhancerPage: React.FC = () => {
     this.skipLinks = []
     this.landmarks = []
   }
-<<<<<<< HEAD
 }
 
 // Create global instance
 export const accessibilityEnhancer = new AccessibilityEnhancer();
-=======
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
->>>>>>> cursor/fix-errors-and-merge-to-main-00a6
 
 // Export utility functions
 export const announceToScreenReader = (message: string) => {
   accessibilityEnhancer.announce(message);
 }
 
-<<<<<<< HEAD
 export const updateFocusableElements = () => {
   accessibilityEnhancer.updateFocusableElements();
 }
@@ -411,6 +368,3 @@ export const focusFirstElement = () => {
 export const focusLastElement = () => {
   accessibilityEnhancer.focusLast();
 }
-=======
-export default AccessibilityEnhancerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-00a6

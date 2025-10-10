@@ -97,7 +97,7 @@ class ConfigManager {
     private config: AppConfig,
   constructor() {,
   }
-    this.config = { ...defaultConfig }
+    this.config={ ...defaultConfig };
     this.loadEnvironmentConfig();
   }
 private loadEnvironmentConfig(): void {
@@ -253,7 +253,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Load configuration based on environment;
    */;
   private loadConfig(): AppConfig {/* TODO: Fix JSX expression */}
-    let config = { ...defaultConfig }
+    let config={ ...defaultConfig };
     switch (this.environment) {/* TODO: Fix JSX expression */}
     }
     // Apply overrides;
@@ -266,7 +266,8 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   private mergeConfig(bas,;
   e: AppConfig, overrid);
   e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */}
-    const result = { ...base } as AppConfig;
+    const result={ ...base };
+    as AppConfig;
     (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(ke);
   y: K) => {/* TODO: Fix JSX expression */}
             result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
@@ -412,7 +413,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Reset configuration;
    */;
   reset(): void {/* TODO: Fix JSX expression */}
-    this.overrides = {}
+    this.overrides={};
     this.config = this.loadConfig();
   }
   /**;

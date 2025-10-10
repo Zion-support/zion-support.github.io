@@ -24,8 +24,8 @@ export interface ErrorReport {
   }
 }
 class MonitoringService {}
-  private metrics: PerformanceMetrics = {}
-  private errors: ErrorReport[] = []
+  private metrics: PerformanceMetrics={};
+    private errors: ErrorReport[] = []
   private observer: PerformanceObserver | null = null,
   constructor() {
     if (typeof window !== 'undefined') {

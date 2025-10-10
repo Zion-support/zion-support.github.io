@@ -47,38 +47,25 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     document.documentElement.setAttribute('data-font-size', size)
   }
   return (
-    <div className="accessibility-enhanced">
-      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}>
-        <button
-          onClick={toggleHighContrast}
-          className="accessibility-button"
-          aria-label="Toggle high contrast"
-        >
+    <div className="accessibility-enhanced">      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}>        <button
+          onClick={toggleHighContrast};
+    className="accessibility-button"          aria-label="Toggle high contrast"        >
           {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
         </button>
-        <div className="font-size-controls">
-          <button
-            onClick={() => changeFontSize('small')}
-            className="accessibility-button"
-            aria-label="Small font size"
-          >
+        <div className="font-size-controls">          <button
+            onClick={() => changeFontSize('small')};
+    className="accessibility-button"            aria-label="Small font size"          >
+            A
+  </button> changeFontSize('medium')}
+            className="accessibility-button"            aria-label="Medium font size"          >
             A
   </
           <button
-            onClick={() => changeFontSize('medium')}
-            className="accessibility-button"
-            aria-label="Medium font size"
+            onClick={() => changeFontSize('large')};
+    className="accessibility-button"            aria-label="Large font size"
           >
             A
-  </
-          <button
-            onClick={() => changeFontSize('large')}
-            className="accessibility-button"
-            aria-label="Large font size"
-          >
-            A
-  </
-        </div>
+  </button>
       </div>
       {children}
     </div>

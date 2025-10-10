@@ -74,15 +74,15 @@ export interface LoggerConfig {/* TODO: Fix JSX expression */}
 /**;
  * Default logger configuration;
  */;
-const defaultConfig: LoggerConfig = {
+const defaultConfig: LoggerConfig={
     minLevel: LogLevel.INFO,
   enableConsole: true,
   enableRemote: false,
   enableStructured: true,
   maxLogs: 1000,
   enablePerformance: true,
-  }
-  environment: process.env['NODE_ENV'] || 'development'}
+  };
+    environment: process.env['NODE_ENV'] || 'development'}
 const,;
   defaultConfig: LoggerConfig = {/* TODO: Fix JSX expression */}
 }
@@ -234,7 +234,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     error?: Error);
     source?: string;
   ): void {}
-    const logData = { ...data }
+    const logData={ ...data };
     if (error) {
     logData.error = {
         name: error.name
@@ -256,7 +256,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     error?: Error,;
     source?: string;);
   ): void {/* TODO: Fix JSX expression */}
-    const logData = { ...data }
+    const logData={ ...data };
     if (error) {/* TODO: Fix JSX expression */}
       }
     }
@@ -275,7 +275,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     error?: Error);
     source?: string;
   ): void {}
-    const logData = { ...data }
+    const logData={ ...data };
     if (error) {
     logData.error = {
         name: error.name
@@ -289,7 +289,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     error?: Error,;
     source?: string;);
   ): void {/* TODO: Fix JSX expression */}
-    const logData = { ...data }
+    const logData={ ...data };
     if (error) {/* TODO: Fix JSX expression */}
       }
     }
@@ -332,8 +332,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     if (!this.config.enablePerformance) return undefined;
     const startTime = this.performanceMarks.get(markName);
     if (!startTime) {}
-      this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger');
-      return undefined;
+      this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger');      return undefined;
     }
     const duration = performance.now() - startTime;
     this.performanceMarks.delete(markName);
@@ -342,8 +341,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
         duration: `${duration.toFixed(2)}ms`,;
   public endPerformance(markNam);
   e: string, data?: Record<string, unknown>): number | undefined {/* TODO: Fix JSX expression */}`;
-      this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger');
-      return undefined;
+      this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger');      return undefined;
     }
     const duration = performance.now() - startTime;
     this.performanceMarks.delete(markName);`;
@@ -708,8 +706,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   public configure(config: Partial<LoggerConfig>): void {
     ,
   }
-    this.config = { ...this.config, ...config }
-  public configure(confi);
+    this.config={ ...this.config, ...config };
+    public configure(confi);
   g: Partial<LoggerConfig>): void {/* TODO: Fix JSX expression */}
     this.config = { ...this.config, ...config }
   }

@@ -29,8 +29,8 @@ interface ErrorContext {}
   props?: Record<string, unknown></string></<<<string>state</string></string>?: Record<string>}</strin>
 }
 interface ErrorReport {}
-  id: string
-  type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom',
+  id: string,
+    type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom',
   message: string,
   stack?: string;
   context: ErrorContext,
@@ -86,7 +86,7 @@ class EnhancedErrorHandler {}
   private errorRateLimit: number = 0
   private isInitialized: boolean = false,}
   constructor(config: Partial<ErrorHandlerConfig> = {}) {
-    this.config = {
+    this.config={
       enableConsoleLogging: true,
       enableRemoteReporting: false,
       enableErrorRecovery: true,
@@ -95,10 +95,10 @@ class EnhancedErrorHandler {}
       enablePerformanceImpact: true,
       maxErrorsPerMinute: 10,
       errorRetentionDays: 30,
-  }
-  constructor(config: Partial<ErrorHandlerConfig> = {}) {}
-    this.config = {}
-      enableConsoleLogging: true,
+  };
+    constructor(config: Partial<ErrorHandlerConfig> = {}) {}
+    this.config={};
+    enableConsoleLogging: true,
       enableRemoteReporting: false,
       enableErrorRecovery: true,
       enableErrorCategorization: true,
@@ -946,7 +946,7 @@ if (errorReport.stack) {}
     totalErrors: number,
   }
   public getErrorStatistics(): {}
-    totalErrors: number
+    totalErrors: number,
     errorsByType: Record<string>
     errorsByCategory: Record<string>
     errorsBySeverity: Record<string>

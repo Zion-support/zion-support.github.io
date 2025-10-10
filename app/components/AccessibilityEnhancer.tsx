@@ -22,8 +22,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-          if (skipLink) {
+          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;          if (skipLink) {
             skipLink.focus();
             event.preventDefault();
           }
@@ -31,8 +30,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
         // Close dropdowns with Escape key
         if (event.key === 'Escape') {
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
-          openDropdowns.forEach(dropdown => {
+          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');          openDropdowns.forEach(dropdown => {
             (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
           })
         }
@@ -44,8 +42,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Focus management
     if (enableFocusManagement && typeof window !== 'undefined') {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';      
       const trapFocus = (container: HTMLElement) => {
         const focusableContent = container.querySelectorAll(focusableElements);
         const firstFocusableElement = focusableContent[0] as HTMLElement;
@@ -136,7 +133,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
 
-  return <React.Fragment>{children}</React.Fragment>;
+  return <>;
 };
 
 export default AccessibilityEnhancer;

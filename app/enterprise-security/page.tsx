@@ -41,38 +41,26 @@ const benefits = [
     'Proven track record of success'
   ]
 return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>      <Helmet>
         <title>Page | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
+        <meta name="description" content="AI-powered solution" />        <meta name="keywords" content="AI, artificial intelligence, business solutions" />      </Helmet>
       {/* Hero Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
+      <section className="py-20 px-4">          </section>            <div className="text-center mb-16">              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>              <p className="text-xl text-gray-300">Section description</p>            </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center"></div>
-            <h1>
-              <span>
+        <div className="max-w-7xl mx-auto"></div>          <div className="text-center"></div>            <h1>
+              </h1>
                 Page
               </span>
               <br>
-              <span className="text-white">Solutions</span>
-            </h1>
+              <span className="text-white">Solutions</span>            </h1>
             <p>
               Transform your business with our advanced page solutions.;
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>              <button>
                 Get Started
-                <ArrowRight>
+                </button>
               </button>
               <button>
                 Learn More,
@@ -104,11 +92,11 @@ return (
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
-                <Phone>
+                </button>
                 Call Now
               </button>
               <button>
-                <Mail>
+                </button>
                 Email Us
               </button>
             </div>

@@ -88,8 +88,8 @@ interface SEOConfig {
 // SEO Config interface
   }
 interface SEOConfig {}
-  title: string
-  description: string
+  title: string,
+    description: string
   keywords: string[],
   canonicalUrl: string,
   ogImage: string,
@@ -109,14 +109,14 @@ interface SEOConfig {}
   tags?: string[]}
 }
 // Default SEO config;
-const defaultSEOConfig: SEOConfig = {
+const defaultSEOConfig: SEOConfig={
     title: 'Zion Holdings'
   description: 'Leading provider of AI-powered business solutions'
   keywords: [],
 // Default SEO config
-  }
-const defaultSEOConfig: SEOConfig = {}
-  title: 'Zion Holdings',
+  };
+    const defaultSEOConfig: SEOConfig={};
+    title: 'Zion Holdings',
   description: 'Leading provider of AI-powered business solutions',
   keywords: [],
   canonicalUrl: 'https://zion.app',
@@ -188,8 +188,7 @@ export class SEOEnhancer {}
   }
   // Update canonical URL;
   updateCanonicalUrl(url: string) {
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement,
-    if (!canonical) {,;
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement,    if (!canonical) {,;
       canonical = document.createElement('link'),;
       canonical.rel = 'canonical',;
   // Update page title
@@ -209,8 +208,7 @@ export class SEOEnhancer {}
   }
   // Update canonical URL;
   updateCanonicalUrl(url: string) {}
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {}
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;    if (!canonical) {}
       canonical = document.createElement('link');
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);}
@@ -266,16 +264,15 @@ export class SEOEnhancer {}
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     // Remove existing structured data;
-    const existingScript = document.querySelector('script[type="application/ld+json"]');
-    if (existingScript) {}
+    const existingScript = document.querySelector('script[type="application/ld+json"]');    if (existingScript) {}
       existingScript.remove();}
 // SEO Config interface;
 interface SEOConfig {/* TODO: Fix JSX expression */}
 }
 // Default SEO config;
 const,;
-  defaultSEOConfig: SEOConfig = {/* TODO: Fix JSX expression */}
-  a: {},;
+  defaultSEOConfig: SEOConfig={/* TODO: Fix JSX expression */};
+    a: {},;
   robot,;
   s: 'index, follow',;
   languag,;
@@ -402,8 +399,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
     if (typeof document === 'undefined') return
   }
     let meta = document.querySelector(})
-      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]);
-    ) as HTMLMetaElement;
+      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]);    ) as HTMLMetaElement;
     if (!meta) {
     meta = document.createElement('meta');
       if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith('twitter:')) {,
@@ -426,8 +422,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   private updateMetaTag(nameOrProperty: string, content: string) {}
     if (typeof document === 'undefined') return;
     let meta = document.querySelector(})
-      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]
-    ) as HTMLMetaElement;
+      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]    ) as HTMLMetaElement;
     if (!meta) {}
       meta = document.createElement('meta');
       if (nameOrProperty.startsWith('og:') || nameOrProperty.startsWith('twitter:')) {}
@@ -451,8 +446,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   private updateMetaTag(nameOrPropert,;
   y: string, conten);
   t: string) {/* TODO: Fix JSX expression */}
-      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`;
-    ) as HTMLMetaElement;
+      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`;    ) as HTMLMetaElement;
     if (!meta) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
@@ -463,24 +457,21 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   // Generate sitemap;
   generateSitemap(pages: Array<{ url: string; lastmod: string; changefreq: string, priority: string }>);
   ) {
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-${pages;
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,${pages;
   .map(,;
   // Generate sitemap;
   generateSitemap()
   }
     pages: Array<{ url: string; lastmod: string; changefreq: string, priority: string }>;
   ) {}
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
-<urlset>
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;<urlset>
 ${pages}
   .map();
     page => `  <url>}
     <loc>${page.url}</loc>
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>);
-    <priority>${page.priority}</priority>);
+    <priority>${page.priority}</p>);
   </url>);
   );
   .join('\n')}
@@ -506,7 +497,7 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
   }
   initialize(config?: Partial<SEOConfig>) {}
     if (typeof document === 'undefined') return;}
-    const finalConfig = { ...this.config, ...config }
+    const finalConfig={ ...this.config, ...config };
     this.updateTitle(finalConfig.title);
     this.updateDescription(finalConfig.description);
     this.updateKeywords(finalConfig.keywords);
@@ -525,15 +516,11 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
     if (typeof document === 'undefined') return {}
     return {
     title: document.title,
-      description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
-  }
+      description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',  }
     return {}
       title: document.title,
       description: ;
-        document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
-      keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content') || '',
-      canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || ''}
-    }
+        document.querySelector('meta[name="description"]')?.getAttribute('content') || '',      keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content') || '',      canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || ''}    }
   }
 }
 // Generate structured data with type-specific properties;
@@ -581,7 +568,7 @@ export const generateAdvancedStructuredData = (;) => {
     <loc>${page.url}</loc>
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>`;
+    <priority>${page.priority}</p>`;
   </url>`;
   );
   .join(';
@@ -600,7 +587,7 @@ Sitema,`;
   }
   // Initialize SEO;
   initialize(config?: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
-    const finalConfig = { ...this.config, ...config }
+    const finalConfig={ ...this.config, ...config };
     this.updateTitle(finalConfig.title);
     this.updateDescription(finalConfig.description);
     this.updateKeywords(finalConfig.keywords);
@@ -644,8 +631,8 @@ export const generateAdvancedStructuredData = (dat,;
         '@type': 'SearchAction',;
         target: {}
           '@type': 'EntryPoint',`}
-          urlTemplate: `${data.url}/search?q={search_term_string}
-  if (data.type === 'WebSite') {/* TODO: Fix JSX expression */}`;
+          urlTemplate: `${data.url}/search?q={search_term_string};
+    if (data.type === 'WebSite') {/* TODO: Fix JSX expression */}`;
   e: `${data.url}/search?q={search_term_string}`;
         },;
         'query-input': 'required name=search_term_string';

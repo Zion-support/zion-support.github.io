@@ -45,8 +45,8 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
 export const preloadRoute = useCallback((...args) => {
   if (typeof window === 'undefined') return;
   // Preload route-specific resources;
-  const routeResources = {}
-export const preloadRoute = useCallback((...args) => {}
+  const routeResources={};
+    export const preloadRoute = useCallback((...args) => {}
   if (typeof window === 'undefined') return;
   // Preload route-specific resources;
   const routeResources = {}
@@ -69,8 +69,7 @@ export const preloadRoute = useCallback((...args) => {}
 }
 export const optimizeImages = useCallback((...args) => {
     if (typeof window === 'undefined') return;
-  // Add loading="lazy" to images below the fold;
-  const images = document.querySelectorAll('img[data-lazy]');
+  // Add loading="lazy" to images below the fold;  const images = document.querySelectorAll('img[data-lazy]');
   images.forEach(img => {)
   }
     img.setAttribute('loading', 'lazy')}

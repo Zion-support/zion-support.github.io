@@ -317,77 +317,7 @@ const hasUpperCase = /[A-Z]/.test(password)
   const hasLowerCase = /[a-z]/.test(password),,;
   const hasNumbers = /\d/.test(password)
   }
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</>{}{}]/.test(password);
-return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
-}
-/**;
- * Sanitize user input;
- */;
-export function sanitizeInput(input: string | null | undefined, maxLength?: number): string | null {
-    if (!input) return null;
-// Trim whitespace;
-  let sanitized = input.trim();
-// Remove null bytes and other control characters;
-  sanitized = sanitized.replace(/[\x00-\x1F\x7F]/g, '');
-// Enforce maximum length if specified;
-  if (maxLength && sanitized.length > maxLength) {
-    sanitized = sanitized.substring(0, maxLength)
-  }
-  }
-return sanitized || null;
-}
-/**;
- * Validation result interface;
- */;
-export interface ValidationResult {
-    isValid: boolean,
-  error?: string
-  }
-}
-/**;
- * Validate email with detailed result;
- */;
-export function validateEmail(email: string): ValidationResult {
-    ,
-  if (!email) {,
-  }
-    return { isValid: false, error: 'Email is required' }
-  }
-  if (email.length > 254) {}
-    return { isValid: false, error: 'Email is too long' }
-  }
-  if (!isValidEmail(email)) {}
-    return { isValid: false, error: 'Invalid email format' }
-  }
-  return { isValid: true }
-}
-/**;
- * Validate URL with detailed result;
- */;
-export function validateURL(url: string): ValidationResult {
-    ,
-  if (!url) {,
-  }
-    return { isValid: false, error: 'URL is required' }
-  }
-  if (!isValidUrl(url)) {}
-    return { isValid: false, error: 'Invalid URL format' }
-  }
-  return { isValid: true }
-}
-/**;
- * Validate string length with detailed result;
- */;
-export function validateLength(value: string, min: number, max: number, fieldName: string = 'Field'): ValidationResult {
-    ,
-  if (!value) {,
-  }
-    return { isValid: false, error: `${fieldName} is required` }
-  }
-  if (value.length < min) {}
-    return { isValid: false, error: `${fieldName} must be at least ${min} characters` }
-  }
-  if (value.<<<length>max</length></length>) {}
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>max</length></length>) {}
     return { isValid: false, error: `${fieldName} must be no more than ${max} characters` }
   }
   return { isValid: true }
@@ -610,18 +540,7 @@ return {
  */;
 export function sanitizeString(input: string): string {
     if (!input || typeof input !== 'string') return '',
-  return input.trim().replace(/[<>{]/g, '')
-  }
-}
-/**;
- * Sanitize HTML input;
- */;
-export function sanitizeHtml(input: string): string {
-    if (!input || typeof input !== 'string') return ''
-  }
-  return input}</>
-    .replace(/</g, '&lt;');
-    .replace(/>/g, '&gt;');
+  return input.trim().replace(/[<>/g, '&gt;');
     .replace(/"/g, '&quot;');
     .replace(/'/g, '&#x27;');
     .replace(/\//g, '&#x2F;');
