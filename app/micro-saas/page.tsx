@@ -4,7 +4,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Code, Target, Users, DollarSign, Box, FileText, Heart, Home, BookOpen, Settings, ShoppingCart, Truck, TreePine, Hammer, Hotel } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
   const microSaasTools = [
@@ -18,6 +18,215 @@ const MicroSaasPage: React.FC = () => {
       icon: Star,
       category: 'Analytics',
       popular: true
+    },
+    {
+      title: 'Zion AI Code Assistant Pro',
+      description: 'Intelligent code generation, review, and optimization platform with support for 50+ programming languages.',
+      features: ['AI Code Generation', 'Automated Code Review', 'Bug Detection & Fixes', 'Performance Optimization', 'Security Analysis', 'Multi-language Support', 'IDE Integration', 'Team Collaboration'],
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      benefits: ['Reduce development time by 60%', 'Improve code quality', 'Automated bug detection', 'Enhanced security'],
+      icon: Code,
+      category: 'Development',
+      popular: true
+    },
+    {
+      title: 'Zion AI Marketing Automation',
+      description: 'Complete marketing automation platform with AI-powered campaign optimization and customer journey mapping.',
+      features: ['AI Campaign Optimization', 'Customer Journey Mapping', 'Email Marketing Automation', 'Social Media Management', 'Lead Scoring', 'A/B Testing', 'ROI Analytics', 'Multi-channel Integration'],
+      price: '$149/month',
+      marketPrice: '$300-800/month',
+      benefits: ['Increase conversions by 45%', 'Automated campaigns', 'Better lead qualification', 'ROI optimization'],
+      icon: Target,
+      category: 'Marketing',
+      popular: true
+    },
+    {
+      title: 'Zion AI Customer Success Platform',
+      description: 'AI-powered customer success management with predictive churn analysis and automated engagement workflows.',
+      features: ['Churn Prediction', 'Automated Engagement', 'Customer Health Scoring', 'Success Metrics Tracking', 'Proactive Alerts', 'Integration Hub', 'Custom Workflows', 'Analytics Dashboard'],
+      price: '$179/month',
+      marketPrice: '$350-1000/month',
+      benefits: ['Reduce churn by 40%', 'Improve customer satisfaction', 'Automated success management', 'Better retention'],
+      icon: Users,
+      category: 'Customer Success',
+      popular: true
+    },
+    {
+      title: 'Zion AI Financial Planning',
+      description: 'Intelligent financial planning and budgeting platform with AI-powered forecasting and investment recommendations.',
+      features: ['AI Financial Forecasting', 'Budget Optimization', 'Investment Analysis', 'Risk Assessment', 'Tax Planning', 'Goal Tracking', 'Portfolio Management', 'Compliance Monitoring'],
+      price: '$129/month',
+      marketPrice: '$250-700/month',
+      benefits: ['Better financial decisions', 'Automated planning', 'Risk reduction', 'Goal achievement'],
+      icon: DollarSign,
+      category: 'Finance',
+      popular: false
+    },
+    {
+      title: 'Zion AI Supply Chain Optimizer',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning.',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Management', 'Logistics Planning', 'Cost Analysis', 'Risk Assessment', 'Real-time Tracking', 'Performance Analytics'],
+      price: '$299/month',
+      marketPrice: '$600-2000/month',
+      benefits: ['Reduce costs by 25%', 'Improve efficiency', 'Better supplier management', 'Optimized logistics'],
+      icon: Box,
+      category: 'Supply Chain',
+      popular: false
+    },
+    {
+      title: 'Zion AI HR Intelligence',
+      description: 'Comprehensive HR management platform with AI-powered recruitment, performance analysis, and employee engagement.',
+      features: ['AI Recruitment', 'Performance Analytics', 'Employee Engagement', 'Skills Assessment', 'Retention Prediction', 'Payroll Automation', 'Compliance Management', 'Workforce Planning'],
+      price: '$159/month',
+      marketPrice: '$300-900/month',
+      benefits: ['Better hiring decisions', 'Improve retention', 'Automated HR processes', 'Enhanced engagement'],
+      icon: Users,
+      category: 'Human Resources',
+      popular: true
+    },
+    {
+      title: 'Zion AI Legal Assistant',
+      description: 'AI-powered legal document analysis, contract review, and compliance monitoring platform.',
+      features: ['Contract Analysis', 'Legal Document Review', 'Compliance Monitoring', 'Risk Assessment', 'Document Generation', 'Case Law Research', 'Deadline Tracking', 'Client Management'],
+      price: '$249/month',
+      marketPrice: '$500-1500/month',
+      benefits: ['Faster document review', 'Reduced legal risks', 'Automated compliance', 'Better case management'],
+      icon: FileText,
+      category: 'Legal',
+      popular: false
+    },
+    {
+      title: 'Zion AI Healthcare Analytics',
+      description: 'Medical data analysis platform with patient insights, treatment optimization, and health outcome predictions.',
+      features: ['Patient Analytics', 'Treatment Optimization', 'Health Outcome Prediction', 'Risk Assessment', 'Clinical Decision Support', 'Data Integration', 'Compliance Management', 'Reporting Tools'],
+      price: '$399/month',
+      marketPrice: '$800-2500/month',
+      benefits: ['Improve patient outcomes', 'Optimize treatments', 'Reduce costs', 'Better care quality'],
+      icon: Heart,
+      category: 'Healthcare',
+      popular: false
+    },
+    {
+      title: 'Zion AI Real Estate Pro',
+      description: 'Intelligent real estate management with property valuation, market analysis, and investment optimization.',
+      features: ['Property Valuation', 'Market Analysis', 'Investment Optimization', 'Tenant Screening', 'Maintenance Scheduling', 'Financial Reporting', 'Portfolio Management', 'Risk Assessment'],
+      price: '$189/month',
+      marketPrice: '$350-1000/month',
+      benefits: ['Better investment decisions', 'Optimized property management', 'Reduced risks', 'Increased returns'],
+      icon: Home,
+      category: 'Real Estate',
+      popular: false
+    },
+    {
+      title: 'Zion AI Education Platform',
+      description: 'AI-powered learning management system with personalized education, progress tracking, and skill assessment.',
+      features: ['Personalized Learning', 'Progress Tracking', 'Skill Assessment', 'Content Generation', 'Adaptive Testing', 'Performance Analytics', 'Gamification', 'Multi-language Support'],
+      price: '$99/month',
+      marketPrice: '$200-600/month',
+      benefits: ['Improved learning outcomes', 'Personalized education', 'Better engagement', 'Automated assessment'],
+      icon: BookOpen,
+      category: 'Education',
+      popular: true
+    },
+    {
+      title: 'Zion AI Energy Manager',
+      description: 'Smart energy management platform with consumption optimization, cost analysis, and sustainability tracking.',
+      features: ['Energy Consumption Analysis', 'Cost Optimization', 'Sustainability Tracking', 'Predictive Maintenance', 'Renewable Integration', 'Carbon Footprint', 'Real-time Monitoring', 'Automated Controls'],
+      price: '$169/month',
+      marketPrice: '$300-800/month',
+      benefits: ['Reduce energy costs by 30%', 'Improve sustainability', 'Automated optimization', 'Better monitoring'],
+      icon: Zap,
+      category: 'Energy',
+      popular: false
+    },
+    {
+      title: 'Zion AI Manufacturing Optimizer',
+      description: 'Industrial AI platform for production optimization, quality control, and predictive maintenance.',
+      features: ['Production Optimization', 'Quality Control', 'Predictive Maintenance', 'Supply Chain Integration', 'Performance Monitoring', 'Cost Analysis', 'Safety Management', 'Compliance Tracking'],
+      price: '$349/month',
+      marketPrice: '$700-2000/month',
+      benefits: ['Increase production efficiency', 'Improve quality', 'Reduce downtime', 'Optimize costs'],
+      icon: Settings,
+      category: 'Manufacturing',
+      popular: false
+    },
+    {
+      title: 'Zion AI Retail Intelligence',
+      description: 'Smart retail management with inventory optimization, customer analytics, and sales forecasting.',
+      features: ['Inventory Optimization', 'Customer Analytics', 'Sales Forecasting', 'Price Optimization', 'Demand Planning', 'Customer Segmentation', 'Promotion Management', 'Performance Tracking'],
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      benefits: ['Increase sales by 25%', 'Optimize inventory', 'Better customer insights', 'Improved forecasting'],
+      icon: ShoppingCart,
+      category: 'Retail',
+      popular: true
+    },
+    {
+      title: 'Zion AI Insurance Platform',
+      description: 'AI-powered insurance management with risk assessment, claims processing, and fraud detection.',
+      features: ['Risk Assessment', 'Claims Processing', 'Fraud Detection', 'Policy Management', 'Customer Service', 'Underwriting Support', 'Compliance Monitoring', 'Analytics Dashboard'],
+      price: '$279/month',
+      marketPrice: '$550-1500/month',
+      benefits: ['Reduce fraud by 60%', 'Faster claims processing', 'Better risk assessment', 'Improved efficiency'],
+      icon: Shield,
+      category: 'Insurance',
+      popular: false
+    },
+    {
+      title: 'Zion AI Transportation Optimizer',
+      description: 'Logistics and transportation management with route optimization, fleet management, and delivery tracking.',
+      features: ['Route Optimization', 'Fleet Management', 'Delivery Tracking', 'Fuel Optimization', 'Driver Management', 'Maintenance Scheduling', 'Cost Analysis', 'Performance Monitoring'],
+      price: '$229/month',
+      marketPrice: '$450-1200/month',
+      benefits: ['Reduce delivery costs by 35%', 'Optimize routes', 'Improve efficiency', 'Better tracking'],
+      icon: Truck,
+      category: 'Transportation',
+      popular: false
+    },
+    {
+      title: 'Zion AI Agriculture Pro',
+      description: 'Smart farming platform with crop monitoring, yield prediction, and resource optimization.',
+      features: ['Crop Monitoring', 'Yield Prediction', 'Resource Optimization', 'Weather Integration', 'Pest Detection', 'Soil Analysis', 'Irrigation Management', 'Harvest Planning'],
+      price: '$199/month',
+      marketPrice: '$400-1000/month',
+      benefits: ['Increase crop yields by 20%', 'Optimize resources', 'Reduce waste', 'Better planning'],
+      icon: TreePine,
+      category: 'Agriculture',
+      popular: false
+    },
+    {
+      title: 'Zion AI Construction Manager',
+      description: 'Construction project management with progress tracking, resource optimization, and safety monitoring.',
+      features: ['Project Tracking', 'Resource Optimization', 'Safety Monitoring', 'Progress Analytics', 'Cost Management', 'Schedule Optimization', 'Quality Control', 'Risk Assessment'],
+      price: '$249/month',
+      marketPrice: '$500-1500/month',
+      benefits: ['Reduce project delays', 'Optimize resources', 'Improve safety', 'Better cost control'],
+      icon: Hammer,
+      category: 'Construction',
+      popular: false
+    },
+    {
+      title: 'Zion AI Hospitality Suite',
+      description: 'Hotel and restaurant management with guest analytics, revenue optimization, and operational efficiency.',
+      features: ['Guest Analytics', 'Revenue Optimization', 'Inventory Management', 'Staff Scheduling', 'Customer Service', 'Marketing Automation', 'Performance Tracking', 'Compliance Management'],
+      price: '$179/month',
+      marketPrice: '$350-1000/month',
+      benefits: ['Increase revenue by 30%', 'Improve guest satisfaction', 'Optimize operations', 'Better management'],
+      icon: Hotel,
+      category: 'Hospitality',
+      popular: false
+    },
+    {
+      title: 'Zion AI Non-Profit Manager',
+      description: 'Non-profit organization management with donor analytics, volunteer coordination, and impact tracking.',
+      features: ['Donor Analytics', 'Volunteer Coordination', 'Impact Tracking', 'Fundraising Optimization', 'Grant Management', 'Event Planning', 'Communication Tools', 'Reporting Dashboard'],
+      price: '$99/month',
+      marketPrice: '$200-600/month',
+      benefits: ['Increase donations', 'Better volunteer management', 'Track impact', 'Improve efficiency'],
+      icon: Heart,
+      category: 'Non-Profit',
+      popular: false
     },
     {
       title: 'Zion Chat AI',

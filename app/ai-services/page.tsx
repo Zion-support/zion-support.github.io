@@ -987,7 +987,6 @@ const AiServicesPage: React.FC = () => {
       icon: Mic
     },
     {
-<<<<<<< HEAD
       id: 'ai-content-generation',
       name: 'AI Content Generation Pro',
       description: 'Advanced content generation platform with multi-format support and brand consistency',
@@ -1012,139 +1011,526 @@ const AiServicesPage: React.FC = () => {
       category: 'Content Generation',
       popular: true,
       icon: FileText
-=======
-      title: 'AI-Powered Parenting Assistant',
-      description: 'Intelligent parenting support with child development monitoring and activity recommendations.',
-      icon: '👶',
-      price: 'Starting at $1,500/month',
-      features: ['Development monitoring', 'Activity recommendations', 'Safety alerts', 'Progress tracking', 'Expert guidance'],
-      benefits: ['Support child development', 'Improve parenting confidence', 'Ensure child safety'],
-      marketPrice: '$2,500-6,000/month',
-      category: 'Family AI',
-      technologies: ['Child Development Models', 'Safety Monitoring', 'Custom Family Models', 'Mobile Apps', 'Expert Systems']
     },
     {
-      title: 'AI-Powered Elderly Care',
-      description: 'Intelligent elderly care monitoring with health tracking and safety assistance.',
-      icon: '👴',
-      price: 'Starting at $2,500/month',
-      features: ['Health monitoring', 'Safety assistance', 'Medication reminders', 'Emergency alerts', 'Family communication'],
-      benefits: ['Improve elderly care', 'Ensure safety', 'Reduce care costs'],
-      marketPrice: '$4,000-10,000/month',
-      category: 'Elderly Care AI',
-      technologies: ['Health Monitoring', 'Safety Systems', 'Custom Care Models', 'IoT Integration', 'Mobile Apps']
+      id: 'ai-quantum-computing',
+      name: 'AI Quantum Computing Solutions',
+      description: 'Quantum-enhanced AI algorithms for complex optimization problems and advanced machine learning',
+      price: '$5,999/month',
+      marketPrice: '$12000-50000/month',
+      features: [
+        'Quantum machine learning algorithms',
+        'Complex optimization problems',
+        'Quantum neural networks',
+        'Advanced cryptography',
+        'Molecular simulation',
+        'Financial modeling',
+        'Drug discovery acceleration',
+        'Climate modeling'
+      ],
+      benefits: [
+        'Exponential computational power',
+        'Solve previously intractable problems',
+        'Revolutionary optimization',
+        'Breakthrough discoveries'
+      ],
+      category: 'Quantum AI',
+      popular: false,
+      icon: Cpu
     },
     {
-      title: 'AI-Powered Accessibility Assistant',
-      description: 'Intelligent accessibility support with adaptive interfaces and assistive technology.',
-      icon: '♿',
-      price: 'Starting at $1,800/month',
-      features: ['Adaptive interfaces', 'Voice control', 'Visual assistance', 'Mobility support', 'Communication aids'],
-      benefits: ['Improve accessibility', 'Enhance independence', 'Support inclusion'],
-      marketPrice: '$3,000-7,000/month',
-      category: 'Accessibility AI',
-      technologies: ['Accessibility APIs', 'Assistive Technology', 'Custom Accessibility Models', 'Mobile Apps', 'IoT Integration']
+      id: 'ai-neuromorphic-computing',
+      name: 'AI Neuromorphic Computing',
+      description: 'Brain-inspired AI systems with ultra-low power consumption and real-time learning capabilities',
+      price: '$3,999/month',
+      marketPrice: '$8000-25000/month',
+      features: [
+        'Spiking neural networks',
+        'Ultra-low power consumption',
+        'Real-time learning',
+        'Event-driven processing',
+        'Sensory data processing',
+        'Autonomous systems',
+        'Edge AI deployment',
+        'Adaptive intelligence'
+      ],
+      benefits: [
+        '99% power reduction',
+        'Real-time adaptation',
+        'Edge deployment',
+        'Autonomous operation'
+      ],
+      category: 'Neuromorphic AI',
+      popular: false,
+      icon: Brain
     },
     {
-      title: 'AI-Powered Environmental Monitoring',
-      description: 'Intelligent environmental monitoring with pollution detection and sustainability recommendations.',
-      icon: '🌱',
-      price: 'Starting at $2,000/month',
-      features: ['Pollution monitoring', 'Sustainability analysis', 'Environmental alerts', 'Carbon tracking', 'Green recommendations'],
-      benefits: ['Monitor environmental impact', 'Improve sustainability', 'Reduce carbon footprint'],
-      marketPrice: '$3,500-8,000/month',
-      category: 'Environmental AI',
-      technologies: ['Environmental Sensors', 'Pollution Detection', 'Custom Environmental Models', 'IoT Integration', 'Analytics']
+      id: 'ai-federated-learning',
+      name: 'AI Federated Learning Platform',
+      description: 'Privacy-preserving machine learning that trains models across decentralized data without sharing raw data',
+      price: '$2,499/month',
+      marketPrice: '$5000-15000/month',
+      features: [
+        'Privacy-preserving training',
+        'Decentralized model updates',
+        'Differential privacy',
+        'Secure aggregation',
+        'Cross-device learning',
+        'Federated analytics',
+        'Model personalization',
+        'Compliance automation'
+      ],
+      benefits: [
+        'Complete data privacy',
+        'Regulatory compliance',
+        'Distributed learning',
+        'Enhanced security'
+      ],
+      category: 'Federated Learning',
+      popular: true,
+      icon: Shield
     },
     {
-      title: 'AI-Powered Wildlife Conservation',
-      description: 'Intelligent wildlife monitoring and conservation with species identification and behavior analysis.',
-      icon: '🦁',
-      price: 'Starting at $3,500/month',
-      features: ['Species identification', 'Behavior analysis', 'Population monitoring', 'Threat detection', 'Conservation planning'],
-      benefits: ['Protect wildlife', 'Monitor populations', 'Prevent poaching'],
-      marketPrice: '$6,000-15,000/month',
-      category: 'Conservation AI',
-      technologies: ['Computer Vision', 'Wildlife Detection', 'Custom Conservation Models', 'Satellite Data', 'IoT Sensors']
+      id: 'ai-explainable-ai',
+      name: 'AI Explainable AI Platform',
+      description: 'Transparent AI systems that provide clear explanations for decisions and predictions',
+      price: '$1,799/month',
+      marketPrice: '$3500-12000/month',
+      features: [
+        'Model interpretability',
+        'Decision explanations',
+        'Bias detection',
+        'Fairness metrics',
+        'Audit trails',
+        'Regulatory compliance',
+        'Trust scoring',
+        'Human-AI collaboration'
+      ],
+      benefits: [
+        'Build trust in AI',
+        'Regulatory compliance',
+        'Bias mitigation',
+        'Better decisions'
+      ],
+      category: 'Explainable AI',
+      popular: true,
+      icon: Eye
     },
     {
-      title: 'AI-Powered Disaster Response',
-      description: 'Intelligent disaster prediction and response coordination with real-time monitoring.',
-      icon: '🚨',
-      price: 'Starting at $5,000/month',
-      features: ['Disaster prediction', 'Response coordination', 'Resource optimization', 'Evacuation planning', 'Damage assessment'],
-      benefits: ['Save lives', 'Reduce damage', 'Improve response time'],
-      marketPrice: '$8,000-20,000/month',
-      category: 'Emergency AI',
-      technologies: ['Disaster Prediction', 'Response Coordination', 'Custom Emergency Models', 'Satellite Data', 'IoT Sensors']
+      id: 'ai-multimodal-ai',
+      name: 'AI Multimodal AI Platform',
+      description: 'Advanced AI that processes and understands text, images, audio, and video simultaneously',
+      price: '$2,999/month',
+      marketPrice: '$6000-20000/month',
+      features: [
+        'Text-image understanding',
+        'Audio-visual processing',
+        'Cross-modal learning',
+        'Multimodal generation',
+        'Real-time processing',
+        'Contextual understanding',
+        'Emotion recognition',
+        'Content creation'
+      ],
+      benefits: [
+        'Comprehensive understanding',
+        'Richer insights',
+        'Better user experience',
+        'Advanced automation'
+      ],
+      category: 'Multimodal AI',
+      popular: true,
+      icon: Eye
     },
     {
-      title: 'AI-Powered Urban Planning',
-      description: 'Intelligent urban planning with traffic optimization and infrastructure analysis.',
-      icon: '🏙️',
-      price: 'Starting at $4,500/month',
-      features: ['Traffic optimization', 'Infrastructure analysis', 'Population modeling', 'Resource planning', 'Sustainability analysis'],
-      benefits: ['Improve city efficiency', 'Reduce traffic congestion', 'Optimize resource use'],
-      marketPrice: '$7,500-18,000/month',
-      category: 'Urban AI',
-      technologies: ['Traffic Analysis', 'Infrastructure Modeling', 'Custom Urban Models', 'Satellite Data', 'IoT Integration']
+      id: 'ai-reinforcement-learning',
+      name: 'AI Reinforcement Learning Platform',
+      description: 'Self-learning AI systems that improve through interaction and feedback in complex environments',
+      price: '$3,499/month',
+      marketPrice: '$7000-25000/month',
+      features: [
+        'Autonomous learning',
+        'Environment simulation',
+        'Reward optimization',
+        'Policy learning',
+        'Multi-agent systems',
+        'Real-world deployment',
+        'Continuous improvement',
+        'Adaptive strategies'
+      ],
+      benefits: [
+        'Autonomous operation',
+        'Continuous improvement',
+        'Complex problem solving',
+        'Adaptive intelligence'
+      ],
+      category: 'Reinforcement Learning',
+      popular: false,
+      icon: Target
     },
     {
-      title: 'AI-Powered Agriculture Optimization',
-      description: 'Intelligent agricultural optimization with crop monitoring and yield prediction.',
-      icon: '🌾',
-      price: 'Starting at $3,000/month',
-      features: ['Crop monitoring', 'Yield prediction', 'Pest detection', 'Irrigation optimization', 'Soil analysis'],
-      benefits: ['Increase crop yields', 'Reduce resource use', 'Improve sustainability'],
-      marketPrice: '$5,000-12,000/month',
-      category: 'Agriculture AI',
-      technologies: ['Satellite Imagery', 'IoT Sensors', 'Custom Agriculture Models', 'Drone Data', 'Weather APIs']
+      id: 'ai-transfer-learning',
+      name: 'AI Transfer Learning Platform',
+      description: 'AI systems that leverage knowledge from one domain to improve performance in related domains',
+      price: '$1,999/month',
+      marketPrice: '$4000-15000/month',
+      features: [
+        'Pre-trained models',
+        'Domain adaptation',
+        'Few-shot learning',
+        'Knowledge transfer',
+        'Model fine-tuning',
+        'Cross-domain applications',
+        'Rapid deployment',
+        'Cost optimization'
+      ],
+      benefits: [
+        'Faster model development',
+        'Reduced data requirements',
+        'Better performance',
+        'Cost efficiency'
+      ],
+      category: 'Transfer Learning',
+      popular: true,
+      icon: Zap
     },
     {
-      title: 'AI-Powered Water Management',
-      description: 'Intelligent water resource management with quality monitoring and distribution optimization.',
-      icon: '💧',
-      price: 'Starting at $2,800/month',
-      features: ['Water quality monitoring', 'Distribution optimization', 'Leak detection', 'Usage analysis', 'Treatment optimization'],
-      benefits: ['Improve water quality', 'Reduce waste', 'Optimize distribution'],
-      marketPrice: '$4,500-11,000/month',
-      category: 'Water AI',
-      technologies: ['Water Quality Sensors', 'Distribution Networks', 'Custom Water Models', 'IoT Integration', 'Analytics']
+      id: 'ai-meta-learning',
+      name: 'AI Meta-Learning Platform',
+      description: 'AI systems that learn how to learn, adapting their learning algorithms for optimal performance',
+      price: '$2,799/month',
+      marketPrice: '$5500-18000/month',
+      features: [
+        'Learning to learn',
+        'Algorithm selection',
+        'Hyperparameter optimization',
+        'Architecture search',
+        'Few-shot adaptation',
+        'Rapid learning',
+        'AutoML capabilities',
+        'Adaptive strategies'
+      ],
+      benefits: [
+        'Optimal learning strategies',
+        'Automated optimization',
+        'Rapid adaptation',
+        'Superior performance'
+      ],
+      category: 'Meta-Learning',
+      popular: false,
+      icon: Settings
     },
     {
-      title: 'AI-Powered Waste Management',
-      description: 'Intelligent waste management with collection optimization and recycling analysis.',
-      icon: '♻️',
-      price: 'Starting at $2,200/month',
-      features: ['Collection optimization', 'Recycling analysis', 'Waste sorting', 'Route planning', 'Sustainability tracking'],
-      benefits: ['Reduce waste', 'Improve recycling', 'Optimize collection'],
-      marketPrice: '$3,500-8,000/month',
-      category: 'Waste AI',
-      technologies: ['Waste Sensors', 'Route Optimization', 'Custom Waste Models', 'IoT Integration', 'Analytics']
+      id: 'ai-causal-ai',
+      name: 'AI Causal AI Platform',
+      description: 'AI systems that understand cause-and-effect relationships for better decision making',
+      price: '$2,299/month',
+      marketPrice: '$4500-15000/month',
+      features: [
+        'Causal inference',
+        'Counterfactual analysis',
+        'Intervention effects',
+        'Causal discovery',
+        'Robust predictions',
+        'Decision optimization',
+        'Causal explanations',
+        'Scientific discovery'
+      ],
+      benefits: [
+        'Better decision making',
+        'Understanding causality',
+        'Robust predictions',
+        'Scientific insights'
+      ],
+      category: 'Causal AI',
+      popular: true,
+      icon: BarChart
     },
     {
-      title: 'AI-Powered Energy Grid Management',
-      description: 'Intelligent energy grid optimization with demand prediction and renewable integration.',
-      icon: '⚡',
-      price: 'Starting at $4,000/month',
-      features: ['Demand prediction', 'Grid optimization', 'Renewable integration', 'Load balancing', 'Outage prevention'],
-      benefits: ['Improve grid efficiency', 'Integrate renewables', 'Prevent outages'],
-      marketPrice: '$6,500-16,000/month',
-      category: 'Energy AI',
-      technologies: ['Grid Data', 'Demand Forecasting', 'Custom Energy Models', 'IoT Sensors', 'Renewable APIs']
+      id: 'ai-generative-ai',
+      name: 'AI Generative AI Platform',
+      description: 'Advanced AI for creating realistic content including text, images, audio, and video',
+      price: '$1,599/month',
+      marketPrice: '$3000-12000/month',
+      features: [
+        'Text generation',
+        'Image synthesis',
+        'Audio generation',
+        'Video creation',
+        '3D content generation',
+        'Style transfer',
+        'Content editing',
+        'Creative assistance'
+      ],
+      benefits: [
+        'Creative automation',
+        'Content generation',
+        'Design assistance',
+        'Innovation acceleration'
+      ],
+      category: 'Generative AI',
+      popular: true,
+      icon: FileText
     },
     {
-      title: 'AI-Powered Smart City Management',
-      description: 'Comprehensive smart city management with integrated AI services and citizen engagement.',
-      icon: '🏛️',
-      price: 'Starting at $8,000/month',
-      features: ['Integrated services', 'Citizen engagement', 'Resource optimization', 'Service delivery', 'Data analytics'],
-      benefits: ['Improve city services', 'Enhance citizen experience', 'Optimize resources'],
-      marketPrice: '$15,000-40,000/month',
-      category: 'Smart City AI',
-      technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
+      id: 'ai-embodied-ai',
+      name: 'AI Embodied AI Platform',
+      description: 'AI systems integrated with physical bodies for robotics and autonomous systems',
+      price: '$4,999/month',
+      marketPrice: '$10000-40000/month',
+      features: [
+        'Robotic control',
+        'Sensor integration',
+        'Physical interaction',
+        'Navigation systems',
+        'Manipulation skills',
+        'Human-robot collaboration',
+        'Autonomous operation',
+        'Safety systems'
+      ],
+      benefits: [
+        'Physical AI capabilities',
+        'Autonomous robotics',
+        'Human-robot interaction',
+        'Advanced automation'
+      ],
+      category: 'Embodied AI',
+      popular: false,
+      icon: Cpu
+    },
+    {
+      id: 'ai-symbolic-ai',
+      name: 'AI Symbolic AI Platform',
+      description: 'Rule-based AI systems that use logical reasoning and knowledge representation',
+      price: '$1,899/month',
+      marketPrice: '$3500-12000/month',
+      features: [
+        'Logical reasoning',
+        'Knowledge representation',
+        'Rule-based systems',
+        'Expert systems',
+        'Automated theorem proving',
+        'Knowledge graphs',
+        'Semantic reasoning',
+        'Explainable decisions'
+      ],
+      benefits: [
+        'Transparent reasoning',
+        'Knowledge integration',
+        'Logical consistency',
+        'Explainable AI'
+      ],
+      category: 'Symbolic AI',
+      popular: false,
+      icon: Brain
+    },
+    {
+      id: 'ai-neuro-symbolic-ai',
+      name: 'AI Neuro-Symbolic AI Platform',
+      description: 'Hybrid AI combining neural networks with symbolic reasoning for enhanced intelligence',
+      price: '$3,299/month',
+      marketPrice: '$6500-20000/month',
+      features: [
+        'Neural-symbolic integration',
+        'Reasoning capabilities',
+        'Learning from data',
+        'Knowledge integration',
+        'Causal understanding',
+        'Compositional reasoning',
+        'Transfer learning',
+        'Explainable AI'
+      ],
+      benefits: [
+        'Best of both worlds',
+        'Enhanced reasoning',
+        'Better generalization',
+        'Explainable decisions'
+      ],
+      category: 'Neuro-Symbolic AI',
+      popular: true,
+      icon: Brain
+    },
+    {
+      id: 'ai-edge-ai',
+      name: 'AI Edge AI Platform',
+      description: 'AI systems optimized for deployment at the edge with minimal latency and power consumption',
+      price: '$1,299/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        'Edge-optimized models',
+        'Low latency processing',
+        'Minimal power consumption',
+        'Offline operation',
+        'Real-time inference',
+        'Distributed computing',
+        'Privacy preservation',
+        'Bandwidth optimization'
+      ],
+      benefits: [
+        'Ultra-low latency',
+        'Privacy protection',
+        'Offline operation',
+        'Cost efficiency'
+      ],
+      category: 'Edge AI',
+      popular: true,
+      icon: Server
+    },
+    {
+      id: 'ai-federated-analytics',
+      name: 'AI Federated Analytics Platform',
+      description: 'Privacy-preserving analytics across distributed datasets without centralizing data',
+      price: '$2,199/month',
+      marketPrice: '$4500-15000/month',
+      features: [
+        'Distributed analytics',
+        'Privacy preservation',
+        'Secure computation',
+        'Cross-silo analysis',
+        'Differential privacy',
+        'Federated statistics',
+        'Compliance automation',
+        'Real-time insights'
+      ],
+      benefits: [
+        'Complete data privacy',
+        'Regulatory compliance',
+        'Distributed insights',
+        'Enhanced security'
+      ],
+      category: 'Federated Analytics',
+      popular: true,
+      icon: BarChart
+    },
+    {
+      id: 'ai-continual-learning',
+      name: 'AI Continual Learning Platform',
+      description: 'AI systems that continuously learn from new data without forgetting previous knowledge',
+      price: '$2,599/month',
+      marketPrice: '$5000-18000/month',
+      features: [
+        'Continuous learning',
+        'Catastrophic forgetting prevention',
+        'Incremental updates',
+        'Memory consolidation',
+        'Adaptive learning',
+        'Lifelong learning',
+        'Knowledge retention',
+        'Performance stability'
+      ],
+      benefits: [
+        'Lifelong learning',
+        'Knowledge retention',
+        'Adaptive intelligence',
+        'Continuous improvement'
+      ],
+      category: 'Continual Learning',
+      popular: false,
+      icon: Clock
+    },
+    {
+      id: 'ai-self-supervised-learning',
+      name: 'AI Self-Supervised Learning Platform',
+      description: 'AI systems that learn from unlabeled data by finding patterns and structures',
+      price: '$1,899/month',
+      marketPrice: '$3500-12000/month',
+      features: [
+        'Unlabeled data learning',
+        'Pattern discovery',
+        'Representation learning',
+        'Pretext tasks',
+        'Contrastive learning',
+        'Masked language modeling',
+        'Data augmentation',
+        'Transfer learning'
+      ],
+      benefits: [
+        'Learn from unlabeled data',
+        'Better representations',
+        'Reduced labeling costs',
+        'Improved performance'
+      ],
+      category: 'Self-Supervised Learning',
+      popular: true,
+      icon: Eye
+    },
+    {
+      id: 'ai-few-shot-learning',
+      name: 'AI Few-Shot Learning Platform',
+      description: 'AI systems that learn new tasks with minimal examples by leveraging prior knowledge',
+      price: '$2,399/month',
+      marketPrice: '$4500-15000/month',
+      features: [
+        'Learning from few examples',
+        'Meta-learning algorithms',
+        'Prototypical networks',
+        'Matching networks',
+        'Relation networks',
+        'Rapid adaptation',
+        'Cross-domain learning',
+        'Zero-shot capabilities'
+      ],
+      benefits: [
+        'Rapid task adaptation',
+        'Minimal data requirements',
+        'Cross-domain learning',
+        'Efficient learning'
+      ],
+      category: 'Few-Shot Learning',
+      popular: true,
+      icon: Target
+    },
+    {
+      id: 'ai-multi-agent-ai',
+      name: 'AI Multi-Agent AI Platform',
+      description: 'AI systems with multiple intelligent agents that collaborate and compete to solve complex problems',
+      price: '$3,799/month',
+      marketPrice: '$7500-25000/month',
+      features: [
+        'Multi-agent systems',
+        'Agent coordination',
+        'Distributed problem solving',
+        'Game theory applications',
+        'Negotiation algorithms',
+        'Consensus mechanisms',
+        'Competitive learning',
+        'Collaborative intelligence'
+      ],
+      benefits: [
+        'Distributed intelligence',
+        'Complex problem solving',
+        'Scalable systems',
+        'Emergent behaviors'
+      ],
+      category: 'Multi-Agent AI',
+      popular: false,
+      icon: Users
+    },
+    {
+      id: 'ai-adversarial-ai',
+      name: 'AI Adversarial AI Platform',
+      description: 'AI systems that use adversarial training to improve robustness and security',
+      price: '$2,899/month',
+      marketPrice: '$5500-18000/month',
+      features: [
+        'Adversarial training',
+        'Robustness testing',
+        'Attack detection',
+        'Defense mechanisms',
+        'GAN training',
+        'Security analysis',
+        'Vulnerability assessment',
+        'Threat modeling'
+      ],
+      benefits: [
+        'Enhanced security',
+        'Robust AI systems',
+        'Attack resistance',
+        'Better reliability'
+      ],
+      category: 'Adversarial AI',
+      popular: false,
+      icon: Shield
     }
   ]
 
@@ -1176,7 +1562,27 @@ const AiServicesPage: React.FC = () => {
     { id: 'Conversational AI', name: 'Conversational AI', count: services.filter(s => s.category === 'Conversational AI').length },
     { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
     { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
-    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
+    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length },
+    { id: 'Quantum AI', name: 'Quantum AI', count: services.filter(s => s.category === 'Quantum AI').length },
+    { id: 'Neuromorphic AI', name: 'Neuromorphic AI', count: services.filter(s => s.category === 'Neuromorphic AI').length },
+    { id: 'Federated Learning', name: 'Federated Learning', count: services.filter(s => s.category === 'Federated Learning').length },
+    { id: 'Explainable AI', name: 'Explainable AI', count: services.filter(s => s.category === 'Explainable AI').length },
+    { id: 'Multimodal AI', name: 'Multimodal AI', count: services.filter(s => s.category === 'Multimodal AI').length },
+    { id: 'Reinforcement Learning', name: 'Reinforcement Learning', count: services.filter(s => s.category === 'Reinforcement Learning').length },
+    { id: 'Transfer Learning', name: 'Transfer Learning', count: services.filter(s => s.category === 'Transfer Learning').length },
+    { id: 'Meta-Learning', name: 'Meta-Learning', count: services.filter(s => s.category === 'Meta-Learning').length },
+    { id: 'Causal AI', name: 'Causal AI', count: services.filter(s => s.category === 'Causal AI').length },
+    { id: 'Generative AI', name: 'Generative AI', count: services.filter(s => s.category === 'Generative AI').length },
+    { id: 'Embodied AI', name: 'Embodied AI', count: services.filter(s => s.category === 'Embodied AI').length },
+    { id: 'Symbolic AI', name: 'Symbolic AI', count: services.filter(s => s.category === 'Symbolic AI').length },
+    { id: 'Neuro-Symbolic AI', name: 'Neuro-Symbolic AI', count: services.filter(s => s.category === 'Neuro-Symbolic AI').length },
+    { id: 'Edge AI', name: 'Edge AI', count: services.filter(s => s.category === 'Edge AI').length },
+    { id: 'Federated Analytics', name: 'Federated Analytics', count: services.filter(s => s.category === 'Federated Analytics').length },
+    { id: 'Continual Learning', name: 'Continual Learning', count: services.filter(s => s.category === 'Continual Learning').length },
+    { id: 'Self-Supervised Learning', name: 'Self-Supervised Learning', count: services.filter(s => s.category === 'Self-Supervised Learning').length },
+    { id: 'Few-Shot Learning', name: 'Few-Shot Learning', count: services.filter(s => s.category === 'Few-Shot Learning').length },
+    { id: 'Multi-Agent AI', name: 'Multi-Agent AI', count: services.filter(s => s.category === 'Multi-Agent AI').length },
+    { id: 'Adversarial AI', name: 'Adversarial AI', count: services.filter(s => s.category === 'Adversarial AI').length }
   ]
 
   const filteredServices = services.filter(service => 
