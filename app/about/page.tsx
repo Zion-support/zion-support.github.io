@@ -98,8 +98,6 @@ const AboutPage: React.FC = () => {
     { number: '50+', label: 'Countries Served' },
     { number: '24/7', label: 'Support Available' }
   ];
-
-const AboutPage: React.FC = () => {
   return (
     <>
       <Helmet>
