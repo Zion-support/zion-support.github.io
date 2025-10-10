@@ -61,10 +61,10 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
  */;
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
 export function getSecurityHeaders();
-  customConfig?: Partial<SecurityHeadersConfig>
+  customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
 ): Record<string, string> {}
-  const config = { ...defaultSecurityHeaders, ...customConfig }
-  const headers: Record<string, string> = {}
+  const config = const config = const config = { ...defaultSecurityHeaders, ...customConfig };
+  const headers: Record<string, string> = {};
     'X-XSS-Protection': '1; mode=block',
     'X-DNS-Prefetch-Control': 'on'}
   }
@@ -95,7 +95,7 @@ export const,
  */;
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
 ): Record<string, string> {/* TODO: Fix JSX expression */}
-  const config = { ...defaultSecurityHeaders, ...customConfig }
+  const config = const config = const config = { ...defaultSecurityHeaders, ...customConfig }
   const,
   headers: Record<string, string> = {/* TODO: Fix JSX expression */}
   }
@@ -109,8 +109,8 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig 
   }
   if (config.referrerPolicy) {/* TODO: Fix JSX expression */}
   }
-  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
-  }
+  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */};
+  };
   return headers;
 }
 /**;
@@ -119,13 +119,11 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig 
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
 ): Array<{ key: string, value: string }> {
     export function getNextSecurityHeaders();
-  customConfig?: Partial<SecurityHeadersConfig>
+  customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
   }
 ): Array<{ key: string, value: string }> {}
   const headers = getSecurityHeaders(customConfig);
-  return Object.entries(headers).map(([key, value]) => ({}
-    key,
-    value}
+  return Object.entries(headers).map(([key, value]) => ()
   }));
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
 ): Array<{/* TODO: Fix JSX expression */}

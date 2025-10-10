@@ -5,7 +5,7 @@ import { Brain, Cloud, Zap, Shield, Globe, Users, CheckCircle, Star, ArrowRight 
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const features = [
+  const features = const features = const features = [
     {
       id: 1,
       title: 'AI Solutions',
@@ -46,21 +46,21 @@ const DynamicContentShowcase: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale effortlessly across multiple regions with automatic load balancing',
       icon: Globe,
-      color: 'from-teal-500 to-cyan-600'
-    }
-  ];];];
-  const benefits = [
+      color: 'from-teal-500 to-cyan-600';
+    };
+  ];
+  const benefits = const benefits = const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
     '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
+    'Easy integration with existing systems',;
+    'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
 
-  const testimonials = [
+  const testimonials = const testimonials = const testimonials = [
     {
       name: 'Sarah Johnson',
       company: 'TechCorp Inc.',
@@ -80,11 +80,11 @@ const DynamicContentShowcase: React.FC = () => {
       company: 'CloudFirst Solutions',
       role: 'VP Engineering',
       content: 'The best investment we made. Seamless integration and exceptional support.',
-      rating: 5
-    }
+      rating: 5;
+    };
   ];
 
-  useEffect(() => {];];
+  useEffect(() => {];
     const timer = setInterval(() => {;
       setCurrentIndex((prev) => (prev + 1) % features.length);
     }, 3000);
@@ -92,62 +92,27 @@ const DynamicContentShowcase: React.FC = () => {
     return () => clearInterval(timer);
   }, [features.length]);
 
-  return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      {/* Features Showcase */}
-      <div className="text-center mb-16">
-        <h2 className="text-3xl font-bold text-white mb-4">
-          Dynamic Content Showcase
-        </h2>
-        <p className="text-gray-300 max-w-2xl mx-auto">
-          Experience our cutting-edge solutions through interactive demonstrations
-        </p>
-      </div>
-
-      {/* Feature Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        {features.map((feature, index) => (
-          <div
-            key={feature.id}
-            className={`bg-gradient-to-br ${feature.color} p-6 rounded-2xl text-white transform transition-all duration-500 ${
-              index === currentIndex ? 'scale-105 shadow-2xl' : 'scale-100'
-            }`}
-          >
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
-                <feature.icon className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold">{feature.title}</h3>
-            </div>
-            <p className="text-white/90">{feature.description}</p>
-          </div>
+  return() {features.map((feature, index) => ()
         ))}
       </div>
 
       {/* Benefits Section */}
-      <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">
+      <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16" /></div>
         <h3 className="text-2xl font-bold text-white mb-6 text-center">Key Benefits</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="flex items-center space-x-3">
-              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-              <span className="text-gray-300">{benefit}</span>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" /></div>
+          {benefits.map((benefit, index) => ()
           ))}
         </div>
       </div>
 
       {/* Testimonials */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {testimonials.map((testimonial, index) => (
-          <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
-            <div className="flex items-center mb-4">
-              {[...Array(testimonial.rating)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8" /></div>
+        {testimonials.map((testimonial, index) => ()
+              {[...Array(testimonial.rating)].map((_, i) => ()
               ))}
             </div>
             <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-            <div className="border-t border-white/10 pt-4">
+            <div className="border-t border-white/10 pt-4" /></div>
               <p className="text-white font-semibold">{testimonial.name}</p>
               <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
             </div>
@@ -156,10 +121,10 @@ const DynamicContentShowcase: React.FC = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="text-center mt-16">
-        <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+      <div className="text-center mt-16" /></div>
+        <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300" /></button>
           Get Started Today
-          <ArrowRight className="w-5 h-5 ml-2" />
+          <ArrowRight className="w-5 h-5 ml-2" / /></ArrowRight>
         </button>
       </div>
     </div>

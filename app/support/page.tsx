@@ -12,7 +12,7 @@ const SupportPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 >>>>>>> cursor/website-audit-and-update-with-deployment-26c5
 
-  const supportChannels = [
+  const supportChannels = const supportChannels = const supportChannels = [
     {
       icon: Phone,
       title: 'Phone Support',
@@ -48,16 +48,16 @@ const SupportPage: React.FC = () => {
       responseTime: 'Within 2 hours',
       contact: 'Schedule Call',
       color: 'from-orange-500 to-red-600'
-    }
-<<<<<<< HEAD
-  ];];];
-  const filteredFaqs = faqs.filter(faq =>
+    };
+<<<<<<< HEAD;
+  ];
+  const filteredFaqs = const filteredFaqs = const filteredFaqs = faqs.filter()
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
-=======
+    faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
+=======;
   ];
 
-  const faqCategories = [
+  const faqCategories = const faqCategories = const faqCategories = [
     {
       id: 'general',
       title: 'General Questions',
@@ -113,11 +113,11 @@ const SupportPage: React.FC = () => {
           question: 'How do you ensure data security?',
           answer: 'We implement enterprise-grade security measures including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA where applicable.'
         }
-      ]
-    }
+      ];
+    };
   ];
 
-  const resources = [
+  const resources = const resources = const resources = [
     {
       title: 'Documentation',
       description: 'Comprehensive guides and API documentation',
@@ -140,77 +140,28 @@ const SupportPage: React.FC = () => {
       title: 'Status Page',
       description: 'Real-time status of all our services',
       icon: CheckCircle,
-      link: '/status'
-    }
+      link: '/status';
+    };
   ];
 
-  const filteredCategories = faqCategories.filter(category => 
-    selectedCategory === 'all' || category.id === selectedCategory
+  const filteredCategories = const filteredCategories = const filteredCategories = faqCategories.filter();
   );
 
-  const filteredQuestions = filteredCategories.flatMap(category => 
-    category.questions.filter(q => 
+  const filteredQuestions = const filteredQuestions = const filteredQuestions = filteredCategories.flatMap()
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
-    )
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+    );
+>>>>>>> cursor/website-audit-and-update-with-deployment-26c5;
   );
 
-  return (
-    <>
-      <Helmet>
-        <title>Support - Zion Tech Group</title>
-        <meta name="description" content="Get technical support for Zion Tech Group's AI and IT services. 24/7 phone support, email, live chat, and comprehensive resources." />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Support Center
-              </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Get the help you need with our comprehensive support options. 
-                Our expert team is here to assist you 24/7 with any questions or issues.
-              </p>
-            </div>
-
-            {/* Support Channels */}
-            <div className="mb-16">
-              <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Support</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {supportChannels.map((channel, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
-                    <div className={`w-12 h-12 bg-gradient-to-r ${channel.color} rounded-lg flex items-center justify-center mb-4`}>
-                      <channel.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3>
-                    <p className="text-gray-300 mb-4">{channel.description}</p>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex items-center text-gray-400">
-                        <Clock className="w-4 h-4 mr-2" />
-                        {channel.availability}
-                      </div>
-                      <div className="text-cyan-400 font-semibold">
-                        Response: {channel.responseTime}
-                      </div>
-                    </div>
-                    <div className="mt-4">
-                      {channel.contact.startsWith('+') || channel.contact.includes('@') ? (
-                        <a
+  return() {supportChannels.map((channel, index) => ()
+                      {channel.contact.startsWith('+') || channel.contact.includes('@') ? ()
                           href={channel.contact.startsWith('+') ? `tel:${channel.contact}` : `mailto:${channel.contact}`}
                           className="text-cyan-400 hover:text-cyan-300 font-semibold"
-                        >
+                        ></a>
                           {channel.contact}
                         </a>
-                      ) : (
-                        <button className="text-cyan-400 hover:text-cyan-300 font-semibold">
-                          {channel.contact}
-                        </button>
+                      ) : ()
                       )}
                     </div>
                   </div>
@@ -219,14 +170,14 @@ const SupportPage: React.FC = () => {
             </div>
 
             {/* FAQ Section */}
-            <div className="mb-16">
+            <div className="mb-16" /></div>
               <h2 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
               
               {/* Search and Filter */}
-              <div className="mb-8">
-                <div className="flex flex-col md:flex-row gap-4 mb-6">
-                  <div className="flex-1 relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <div className="mb-8" /></div>
+                <div className="flex flex-col md:flex-row gap-4 mb-6" /></div>
+                  <div className="flex-1 relative" /></div>
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" / /></Search>
                     <input
                       type="text"
                       placeholder="Search FAQs..."
@@ -241,71 +192,46 @@ const SupportPage: React.FC = () => {
                     className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
                     <option value="all">All Categories</option>
-                    {faqCategories.map(category => (
-                      <option key={category.id} value={category.id}>
-                        {category.title}
-                      </option>
+                    {faqCategories.map()
                     ))}
                   </select>
                 </div>
               </div>
 
               {/* FAQ Items */}
-              <div className="space-y-6">
-                {filteredQuestions.map((faq, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
-                    <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                  </div>
+              <div className="space-y-6" /></div>
+                {filteredQuestions.map((faq, index) => ()
                 ))}
               </div>
             </div>
 
             {/* Resources */}
-            <div className="mb-16">
+            <div className="mb-16" /></div>
               <h2 className="text-2xl font-bold text-white mb-8 text-center">Additional Resources</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {resources.map((resource, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300 group">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                      <resource.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2">{resource.title}</h3>
-                    <p className="text-gray-300 mb-4">{resource.description}</p>
-                    <a
-                      href={resource.link}
-                      className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center group-hover:translate-x-1 transition-all"
-                    >
-                      Access Resource
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </a>
-                  </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" /></div>
+                {resources.map((resource, index) => ()
                 ))}
               </div>
             </div>
 
             {/* Contact CTA */}
-            <div className="text-center">
-              <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
+            <div className="text-center" /></div>
+              <div className="bg-slate-800/50 rounded-lg p-8" /></div>
+                <h2 className="text-2xl font-bold text-white mb-4" /></h2>
                   Still Need Help?
                 </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                <p className="text-gray-300 mb-6 max-w-2xl mx-auto" /></p>
                   Can't find what you're looking for? Our support team is ready to help you with any questions or issues.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="tel:+13024640950"
-                    className="flex items-center justify-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
-                    <Phone className="w-5 h-5" />
+                <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
+                  <a href="tel:+13024640950"
+                    className="flex items-center justify-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
+                    <Phone className="w-5 h-5" / /></Phone>
                     <span>Call: (302) 464-0950</span>
                   </a>
-                  <a
-                    href="mailto:kleber@ziontechgroup.com"
-                    className="flex items-center justify-center space-x-2 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
-                    <Mail className="w-5 h-5" />
+                  <a href="mailto:kleber@ziontechgroup.com"
+                    className="flex items-center justify-center space-x-2 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
+                    <Mail className="w-5 h-5" / /></Mail>
                     <span>Email Support</span>
                   </a>
                 </div>
@@ -320,7 +246,7 @@ const SupportPage: React.FC = () => {
 =======
       </main>
       
-      <Footer />
+      <Footer / /></Footer>
     </>
 >>>>>>> cursor/website-audit-and-update-with-deployment-26c5
   );

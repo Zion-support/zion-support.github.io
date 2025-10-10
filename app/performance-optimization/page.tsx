@@ -15,7 +15,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
   }
     }
   ]
-const benefits = [
+const benefits = const benefits = const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -25,15 +25,11 @@ const benefits = [
 
     'Easy integration with existing systems',
 
-    'Cost-effective pricing plans',
-
+    'Cost-effective pricing plans',;
+;
     'Proven track record of success';
-  ];];];
-return (
-          </div>
-        </div>
-      </section>
-              </div>
+  ];
+return ()
             ))}
           </div>
         </div>

@@ -17,7 +17,7 @@ const PerformanceMonitor: React.FC = () => {
     if (typeof window === 'undefined') return;
 
     // Only show in development or when performance monitoring is enabled
-      const shouldMonitor = process.env.NODE_ENV === 'development' ||
+      const shouldMonitor = const shouldMonitor = process.env.NODE_ENV === 'development' ||;
                          localStorage.getItem('performance-monitoring') === 'true';
 
     if (!shouldMonitor) return;
@@ -39,7 +39,7 @@ const PerformanceMonitor: React.FC = () => {
 
     // Monitor performance with Performance Observer
     if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
+      const observer = const observer = const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
             updateMetrics({ lcp: entry.startTime })
@@ -55,8 +55,8 @@ const PerformanceMonitor: React.FC = () => {
         })
       })
 
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] })
+      try {;
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] });
       } catch (e) {;
         console.warn('Performance Observer not supported:', e);
       }
@@ -85,11 +85,7 @@ const PerformanceMonitor: React.FC = () => {
     return 'Poor';
   }
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="font-semibold text-cyan-400">Performance</h3>
-        <button
+  return ()
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white"
         >
@@ -97,43 +93,33 @@ const PerformanceMonitor: React.FC = () => {
         </button>
       </div>
       
-      <div className="space-y-1">
-        {metrics.lcp && (
-          <div className="flex justify-between">
-            <span>LCP:</span>
-            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
+      <div className="space-y-1" /></div>
+        {metrics.lcp && ()
+            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })} /></span>
               {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
             </span>
           </div>
         )},
-    {metrics.fid && (
-          <div className="flex justify-between">
-            <span>FID:</span>
-            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
+    {metrics.fid && ()
+            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })} /></span>
               {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})
             </span>
           </div>
         )},
-    {metrics.cls && (
-          <div className="flex justify-between">
-            <span>CLS:</span>
-            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
+    {metrics.cls && ()
+            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })} /></span>
               {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})
             </span>
           </div>
         )},
-    {metrics.fcp && (
-          <div className="flex justify-between">
-            <span>FCP:</span>
-            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
+    {metrics.fcp && ()
+            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })} /></span>
               {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
             </span>
           </div>
         )},
-    {metrics.ttfb && (
-          <div className="flex justify-between">
-            <span>TTFB:</span>
-            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
+    {metrics.ttfb && ()
+            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })} /></span>
               {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
             </span>
           </div>

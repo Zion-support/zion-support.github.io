@@ -278,8 +278,8 @@ export const microSAASServices = [;
     users: '18,000+',
   }
     freeTrial: '7 days'}
-];];];
-export const aiServices = [
+];
+export const aiServices = const aiServices = const aiServices = [
   {
     title: 'Machine Learning Solutions',
     description: 'Custom ML models for predictive analytics, decision-making, and intelligent automation. Trusted by Fortune 500 companies.',
@@ -290,7 +290,7 @@ export const aiServices = [
     benefits: ['40% better predictions', 'Reduced development time', 'Scalable solutions', 'ROI tracking'],
     link: '/machine-learning',
     popular: true,
-    category: 'AI Development'
+    category: 'AI Development',
     rating: 4.9,
     users: '500+',
   }
@@ -305,7 +305,7 @@ export const aiServices = [
     benefits: ['99.9% threat detection', 'Zero false positives', 'Automated response', 'Compliance ready'],
     link: '/ai-cybersecurity',
     popular: true,
-    category: 'Security'
+    category: 'Security',
     rating: 4.8,
     users: '300+',
   }
@@ -320,7 +320,7 @@ export const aiServices = [
     benefits: ['30% faster diagnosis', 'Better patient outcomes', 'Reduced errors', 'Cost savings'],
     link: '/ai-healthcare',
     popular: true,
-    category: 'Healthcare'
+    category: 'Healthcare',
     rating: 4.9,
     users: '200+',
   }
@@ -335,7 +335,7 @@ export const aiServices = [
     benefits: ['25% better returns', 'Risk reduction', 'Automated management', 'Tax optimization'],
     link: '/ai-financial-advisor',
     popular: true,
-    category: 'Finance'
+    category: 'Finance',
     rating: 4.7,
     users: '400+',
   }
@@ -350,7 +350,7 @@ export const aiServices = [
     benefits: ['35% cost reduction', '99% on-time delivery', 'Better inventory management', 'Sustainability goals'],
     link: '/ai-supply-chain',
     popular: true,
-    category: 'Logistics'
+    category: 'Logistics',
     rating: 4.8,
     users: '250+',
   }
@@ -365,7 +365,7 @@ export const aiServices = [
     benefits: ['80% faster research', 'Better accuracy', 'Cost reduction', 'Risk mitigation'],
     link: '/ai-legal-assistant',
     popular: true,
-    category: 'Legal'
+    category: 'Legal',
     rating: 4.6,
     users: '150+',
   }
@@ -380,7 +380,7 @@ export const aiServices = [
     benefits: ['40% efficiency increase', 'Zero downtime', 'Better quality', 'Cost savings'],
     link: '/ai-manufacturing',
     popular: true,
-    category: 'Manufacturing'
+    category: 'Manufacturing',
     rating: 4.9,
     users: '180+',
   }
@@ -395,13 +395,13 @@ export const aiServices = [
     benefits: ['50% better learning outcomes', 'Personalized education', 'Teacher efficiency', 'Student engagement'],
     link: '/ai-education',
     popular: true,
-    category: 'Education'
+    category: 'Education',
     rating: 4.7,
     users: '600+',
-  }
-    freeTrial: '30 days'}
-];];];
-export const itServices = [
+  };
+    freeTrial: '30 days'};
+];
+export const itServices = const itServices = const itServices = [
   {
     title: 'Cloud Migration Services',
     description: 'Seamless cloud migration with zero downtime and optimized performance. Migrate to the cloud with confidence.',
@@ -412,7 +412,7 @@ export const itServices = [
     benefits: ['Zero downtime', 'Better performance', 'Cost savings', 'Enhanced security'],
     link: '/cloud-migration',
     popular: true,
-    category: 'Cloud Services'
+    category: 'Cloud Services',
     rating: 4.8,
     users: '600+',
   }
@@ -427,7 +427,7 @@ export const itServices = [
     benefits: ['99.99% uptime', 'Unlimited scalability', 'Enterprise security', 'Cost optimization'],
     link: '/enterprise-infrastructure',
     popular: true,
-    category: 'Infrastructure'
+    category: 'Infrastructure',
     rating: 4.9,
     users: '100+',
   }
@@ -442,7 +442,7 @@ export const itServices = [
     benefits: ['10x faster deployments', 'Zero downtime', 'Better quality', 'Team productivity'],
     link: '/devops-automation',
     popular: true,
-    category: 'DevOps'
+    category: 'DevOps',
     rating: 4.8,
     users: '400+',
   }
@@ -457,7 +457,7 @@ export const itServices = [
     benefits: ['50% performance improvement', 'Zero data loss', 'Better security', 'Cost reduction'],
     link: '/database-management',
     popular: true,
-    category: 'Database'
+    category: 'Database',
     rating: 4.7,
     users: '350+',
   }
@@ -472,7 +472,7 @@ export const itServices = [
     benefits: ['99.9% threat prevention', 'Zero breaches', 'Compliance ready', 'Better performance'],
     link: '/network-security',
     popular: true,
-    category: 'Security'
+    category: 'Security',
     rating: 4.9,
     users: '500+',
   }
@@ -487,13 +487,13 @@ export const itServices = [
     benefits: ['Better IT strategy', 'Cost optimization', 'Risk reduction', 'Competitive advantage'],
     link: '/it-consulting',
     popular: true,
-    category: 'Consulting'
+    category: 'Consulting',
     rating: 4.8,
     users: '200+',
-  }
-    freeTrial: '30 days'}
-];];];
-export const specializedServices = [
+  };
+    freeTrial: '30 days'};
+];
+export const specializedServices = const specializedServices = const specializedServices = [
   {
     title: 'Quantum Computing Solutions',
     description: 'Cutting-edge quantum computing with quantum algorithms, optimization, and research. Solve complex problems with quantum power.',
@@ -504,7 +504,7 @@ export const specializedServices = [
     benefits: ['Exponential speedup', 'Complex problem solving', 'Competitive advantage', 'Future-ready technology'],
     link: '/quantum-computing',
     popular: true,
-    category: 'Quantum'
+    category: 'Quantum',
     rating: 4.9,
     users: '50+',
   }
@@ -519,7 +519,7 @@ export const specializedServices = [
     benefits: ['Cutting-edge technology', 'Automation solutions', 'Safety first', 'Innovation leadership'],
     link: '/autonomous-systems',
     popular: true,
-    category: 'Autonomous'
+    category: 'Autonomous',
     rating: 4.8,
     users: '100+',
   }
@@ -534,7 +534,7 @@ export const specializedServices = [
     benefits: ['Decentralized solutions', 'Security & transparency', 'Future-ready technology', 'Innovation leadership'],
     link: '/blockchain',
     popular: true,
-    category: 'Blockchain'
+    category: 'Blockchain',
     rating: 4.7,
     users: '300+',
   }
@@ -549,12 +549,12 @@ export const specializedServices = [
     benefits: ['Connected solutions', 'Real-time insights', 'Edge efficiency', 'Scalable architecture'],
     link: '/iot-edge',
     popular: true,
-    category: 'IoT'
+    category: 'IoT',
     rating: 4.8,
     users: '400+',
-  }
-    freeTrial: '30 days'}
-];];];
+  };
+    freeTrial: '30 days'};
+];
 export interface Service {
     id: string,
   name: string,
@@ -1365,7 +1365,7 @@ export const services: Service[] = [
     }
   }
   ];
-export const serviceCategories = [
+export const serviceCategories = const serviceCategories = const serviceCategories = [
   {
     id: 'ai',
     name: 'AI Services',
@@ -1397,14 +1397,15 @@ export const serviceCategories = [
     icon: '🚀',
     color: 'text-pink-400',
     bgColor: 'bg-pink-500/10'
-  }
-  }
-];];];
-export const contactInfo = {
+  };
+  };
+];
+export const contactInfo = const contactInfo = const contactInfo = {
     phone: '+1 (302) 464-0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
   hours: 'Mon-Fri: 9AM-6PM EST'
   }
-}
+};
+;

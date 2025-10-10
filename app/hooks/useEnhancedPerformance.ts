@@ -34,10 +34,7 @@ return () => {
         const _duration = performance.now() - mountTimeRef.current;
         if (duration > 5000) {
           // Long-lived component;
-          analytics.trackCustomEvent(
-            'Performance',
-            'Long Component Lifetime',
-            component,
+          analytics.trackCustomEvent()
             Math.round(duration);
           )
   }
@@ -55,47 +52,36 @@ return () => {
     renderCountRef.current++;
 if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected;
-      analytics.trackCustomEvent(
-        'Performance',
-        'High Render Count',
-        component,
-        renderCountRef.current;
+      analytics.trackCustomEvent()
       )
   }
     }
   })
-const trackError = useCallback(;
+const trackError = const trackError = useCallback()
     (error: Error, context?: Record<string, unknown>) => {
     if (trackErrors) {
-        errorTracker.trackError(error, {
-          component,
-          ...context,
-  }
+        errorTracker.trackError()
         })
       },
-    [component, trackErrors]
+    [component, trackErrors];
   );
-const trackUserAction = useCallback(;
+const trackUserAction = const trackUserAction = useCallback()
     (action: string, metadata?: Record<string, unknown>) => {
     if (trackAnalytics) {
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata)
   }
       },
-    [component, trackAnalytics]
+    [component, trackAnalytics];
   );
-const measureOperation = useCallback(;
-    (operationName: string) => {}
+const measureOperation = const measureOperation = useCallback()
+    (operationName: string) => {};
       const _markName = `${component}-${operationName}`;
       const _startTime = performance.now();
 return {
     end: () => {
-          const _duration = performance.now() - startTime,
+          const _duration = const _duration = const _duration = performance.now() - startTime,
 if (trackPerformance) {
-            analytics.trackPerformance(
-  }
-              `${component}-${operationName}`,
-              duration,
-              duration > 1000 ? 'slow' : 'fast';
+            analytics.trackPerformance();
             );
           }
 return duration;

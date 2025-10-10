@@ -46,24 +46,24 @@ export const rateLimitConfig = {;
 /**;
  * CORS configuration;
  */;
-export const corsConfig = {
+export const corsConfig = const corsConfig = const corsConfig = {
     origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
   maxAge: 86400, // 24 hours
-  }
-}
+  };
+};
 /**;
  * Session configuration;
  */;
-export const sessionConfig = {
+export const sessionConfig = const sessionConfig = const sessionConfig = {
     secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: process.env['NODE_ENV'] === 'production',
-    httpOnly: true,
+    secure: process.env['NODE_ENV'] === 'production',;
+    httpOnly: true,;
     maxAge: 24 * 60 * 60 * 1000, // 24 hours;
     sameSite: 'strict' as const,
   },
@@ -71,13 +71,13 @@ export const sessionConfig = {
 /**;
  * Input validation patterns;
  */;
-export const validationPatterns = {}
+export const validationPatterns = const validationPatterns = const validationPatterns = {}
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
   phone: /^\+?[1-9]\d{1,14}$/,
   url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
   alphanumeric: /^[a-zA-Z0-9]+$/,
-  noSpecialChars: /^[a-zA-Z0-9\s]+$/,
-}
+  noSpecialChars: /^[a-zA-Z0-9\s]+$/,;
+};
 /**;
  * Sanitize user input;
  */;

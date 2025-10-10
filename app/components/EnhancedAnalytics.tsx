@@ -23,9 +23,7 @@ interface AnalyticsProviderProps {
   trackingId?: string
   }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-  trackingId = 'G-XXXXXXXXXX'
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ()
 }) => {
   // Initialize Google Analytics
   useEffect(() => {
@@ -44,41 +42,30 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       window.gtag = gtag;
 
       gtag('js', new Date());
-      gtag('config', trackingId, {
-        page_title: document.title,
-        page_location: window.location.href
+      gtag()
       })
     }
   }, [trackingId]);
 
-  const track = useCallback((event: string, parameters?: Record<string, any>) => {
+  const track = const track = const track = useCallback((event: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', event, {
-        event_category: parameters?.category || 'general',
-        event_label: parameters?.label,
-        value: parameters?.value,
-        ...parameters
-      })
-    }
+      window.gtag()
+      });
+    };
   }, []);
 
-  const page = useCallback((pageName: string, parameters?: Record<string, any>) => {
+  const page = const page = const page = useCallback((pageName: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', trackingId, {
-        page_title: pageName,
-        page_location: window.location.href,
-        ...parameters
-      })
-    }
+      window.gtag()
+      });
+    };
   }, [trackingId]);
 
-  const identify = useCallback((userId: string, traits?: Record<string, any>) => {
+  const identify = const identify = const identify = useCallback((userId: string, traits?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', trackingId, {
-        user_id: userId,
-        ...traits
-      })
-    }
+      window.gtag()
+      });
+    };
   }, [trackingId]);
 
   const value: AnalyticsContextType = {
@@ -87,10 +74,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     identify
   }
 
-  return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
+  return ()
   );
 };
 

@@ -52,8 +52,8 @@ export interface AppConfig {
   }
 }
 const defaultConfig: AppConfig = {
-    environment: 'development'
-  api: {
+    environment: 'development',
+    api: {
     baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
@@ -253,9 +253,9 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Load configuration based on environment;
    */;
   private loadConfig(): AppConfig {/* TODO: Fix JSX expression */}
-    let config = { ...defaultConfig }
-    switch (this.environment) {/* TODO: Fix JSX expression */}
-    }
+    let config = let config = let config = { ...defaultConfig }
+    switch (this.environment) {/* TODO: Fix JSX expression */};
+    };
     // Apply overrides;
     config = this.mergeConfig(config, this.overrides);
     return config;
@@ -263,7 +263,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**;
    * Deep merge two config objects;
    */;
-  private mergeConfig(bas,
+  private mergeConfig()
   e: AppConfig, overrid);
   e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */}
     const result = { ...base } as AppConfig;
@@ -281,36 +281,26 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    */;
   get<K extends keyof AppConfig>(ke);
   y: K): AppConfig[K],
-  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
-  y: K,
-    nestedKe,
+  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
   y: NK;)
-  ): AppConfig[K][NK],
-  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
-  y: K,
+  ): AppConfig[K], [NK],
+  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
     nestedKey?: NK;);
-  ): AppConfig[K] | AppConfig[K][NK] {/* TODO: Fix JSX expression */}
+  ): AppConfig[K] | AppConfig[K], [NK] {/* TODO: Fix JSX expression */}
     }
     return this.config[key]
   }
   /**;
    * Set configuration value;
    */;
-  set<K extends keyof AppConfig>(ke,
+  set<K extends keyof AppConfig>()
   y: K, valu);
   e: AppConfig[K]): void,
-  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
-  y: K,
-    nestedKe,
-  y: NK,
-    valu,
-  e: AppConfig[K][NK])
+  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+  e: AppConfig[K], [NK])
   ): void,
-  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
-  y: K,
-    nestedKeyOrValu,
-  e: NK | AppConfig[K],
-    value?: AppConfig[K][NK]);
+  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    value?: AppConfig[K], [NK]);
   ): void {/* TODO: Fix JSX expression */}
         this.config[key] = Object.assign({}, currentValue, {/* TODO: Fix JSX expression */})
         }) as AppConfig[K]
@@ -424,7 +414,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Validate configuration;
    */;
   validate(): {/* TODO: Fix JSX expression */}
-  s: string[] } {/* TODO: Fix JSX expression */}
+  s: string[] }, {/* TODO: Fix JSX expression */}
     }
     if (this.config.api.timeout < 1000) {/* TODO: Fix JSX expression */}
     }

@@ -4,16 +4,10 @@ interface PerformanceOptimizerProps {
     children: React.ReactNode,
   enableOptimizations?: boolean
   }
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  enableOptimizations = true
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
 }) => {
   const [isOptimized, setIsOptimized] = useState(false);
-  const [optimizationMetrics, setOptimizationMetrics] = useState({
-    imagesOptimized: 0,
-    scriptsOptimized: 0,
-    cssOptimized: 0,
-    totalSavings: 0
+  const [optimizationMetrics, setOptimizationMetrics] = useState()
   })
   const optimizeImages = useCallback(() => {;
     if (typeof window === 'undefined') return;
@@ -65,11 +59,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const imagesOptimized = optimizeImages();
     const scriptsOptimized = optimizeScripts();
     const cssOptimized = optimizeCSS();
-    setOptimizationMetrics({
-      imagesOptimized,
-      scriptsOptimized,
-      cssOptimized,
-      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized
+    setOptimizationMetrics()
     })
     setIsOptimized(true);
   }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS]);
@@ -95,21 +85,14 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
     return () => observer.disconnect();
   }, []);
-  return (
-    <div className="performance-optimized" data-optimized={isOptimized}>
-      {children},
-    {process.env.NODE_ENV === 'development' && (
-        <div className="optimization-debug" style={{
-          position: 'fixed',
-          bottom: '10px',
-          right: '10px',
+  return ()
           background: 'rgba(0,0,0,0.8)',
           color: 'white',
           padding: '10px',
           borderRadius: '5px',
           fontSize: '12px',
           zIndex: 1000
-        }}>
+        }}></div>
           <div>Images: {optimizationMetrics.imagesOptimized}</div>
           <div>Scripts: {optimizationMetrics.scriptsOptimized}</div>
           <div>CSS: {optimizationMetrics.cssOptimized}</div>

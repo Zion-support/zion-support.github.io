@@ -80,7 +80,7 @@ class EnhancedAnalytics {}
       ...config}
     }
     // Track initialization;
-    this.trackEvent({
+    this.trackEvent()
     );
       category: 'System'),
       action: 'Analytics Initialized'),
@@ -153,19 +153,15 @@ class EnhancedAnalytics {}
     }
   }
   private sendToGtag(event: AnalyticsEvent): void {}
-    if (;
-      typeof window !== 'undefined' &&;
-      (;
-        window as {}
+    if ()
           gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
         }
       ).gtag;
     ) {}
-      (;
-        window as unknown as {}
+      ()
           gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
         }
-      ).gtag('event', event.action, {
+      ).gtag()
     );
         event_category: event.category;),
         event_label: event.label),
@@ -225,7 +221,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   public initialize(config?: { userId?: string; userType?: string }): void {/* TODO: Fix JSX expression */}
     }
     // Track initialization;
-    this.trackEvent({/* TODO: Fix JSX expression */}
+    this.trackEvent()
       })
     })
   }
@@ -316,7 +312,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       value: Math.round(value),
       metadata: {}
         rating}
-  public trackPerformance(metri,
+  public trackPerformance()
   c: string, valu);
   e: number, rating?: string): void {/* TODO: Fix JSX expression */}
       }
@@ -345,7 +341,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     action: string,),
     label?: string),
     value?: number),
-    metadata?: Record<string>
+    metadata?: Record<string></string>
   ): void {
     this.trackEvent({);
       category);
@@ -365,7 +361,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     action: string,
     label?: string,
     value?: number,
-    metadata?: Record<string, unknown>
+    metadata?: Record<string, unknown></string>
   }
   ): void {}
     this.trackEvent({)}
@@ -417,7 +413,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     sessionId: string,
   }
     userProperties: UserProperties,}
-  } {
+  }, {
     return {
       queueSize: this.queue.length
       offlineQueueSize: this.offlineQueue.length,
@@ -428,7 +424,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     offlineQueueSize: number,
     sessionId: string,
     userProperties: UserProperties,}
-  } {}
+  }, {}
     return {}
       queueSize: this.queue.length,
       offlineQueueSize: this.offlineQueue.length,
@@ -440,12 +436,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 // Export singleton instance;
 export const analytics = new EnhancedAnalytics();
 export default analytics;
-  public trackCustomEvent(categor,
-  y: string,
-    actio,
-  n: string,
-    label?: string,
-    value?: number,
+  public trackCustomEvent()
     metadata?: Record<string, unknown></string>);
   ): void {/* TODO: Fix JSX expression */}
     })
@@ -468,7 +459,7 @@ export default analytics;
     return { ...this.userProperties }
   }
   public getAnalyticsSummary(): {/* TODO: Fix JSX expression */}
-  } {/* TODO: Fix JSX expression */}
+  }, {/* TODO: Fix JSX expression */}
     }
   }
 }

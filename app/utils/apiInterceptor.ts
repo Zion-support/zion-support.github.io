@@ -108,7 +108,7 @@ class APIInterceptor {
     response: number,
     error: number,
   }
-  } {
+  }, {
     return {
       request: this.requestInterceptors.length
       response: this.responseInterceptors.length,
@@ -127,7 +127,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     return ErrorHandler.instance;
   }
-  handleNetworkError(erro,
+  handleNetworkError()
   r: Error, ur);
   l: string, config?: unknown): void {/* TODO: Fix JSX expression */}
     }
@@ -209,9 +209,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * GET request;
    */;
-  async get<T = unknown>(ur,
-  l: string,
-    confi,
+  async get<T = unknown>()
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'GET' })
@@ -219,10 +217,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * POST request;
    */;
-  async post<T = unknown>(ur,
-  l: string,
-    body?: unknown,
-    confi,
+  async post<T = unknown>()
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'POST', body })
@@ -230,10 +225,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * PUT request;
    */;
-  async put<T = unknown>(ur,
-  l: string,
-    body?: unknown,
-    confi,
+  async put<T = unknown>()
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'PUT', body })
@@ -241,9 +233,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * DELETE request;
    */;
-  async delete<T = unknown>(ur,
-  l: string,
-    confi,
+  async delete<T = unknown>()
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'DELETE' })
@@ -251,10 +241,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * PATCH request;
    */;
-  async patch<T = unknown>(ur,
-  l: string,
-    body?: unknown,
-    confi,
+  async patch<T = unknown>()
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'PATCH', body })
@@ -327,7 +314,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * Set response in cache;
    */;
-  private setInCache(ke,
+  private setInCache()
   y: string, respons);
   e: APIResponse): void {/* TODO: Fix JSX expression */}
     })

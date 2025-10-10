@@ -122,19 +122,15 @@ class EnhancedErrorTracker {}
       ).gtag;
     ) {}
   private sendToAnalytics(error: TrackedError): void {}
-    if (;
-      typeof window !== 'undefined' &&;
-      (;
-        window as {}
+    if ()
           gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
         }
       ).gtag;
     ) {}
-      (;
-        window as unknown as {}
+      ()
           gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
         }
-      ).gtag('event', 'exception', {
+      ).gtag()
     );
         description: error.message),
   }
@@ -156,14 +152,14 @@ class EnhancedErrorTracker {}
   }
   public getErrorStats(): {}
     total: number
-    byComponent: Record<string>
+    byComponent: Record<string></string>
     recent: TrackedError[],}
-  } {}
+  }, {}
     const byComponent: Record<string, number> = {}
-    this.errors.forEach(error => {
+    this.errors.forEach()
     );
-      const component = error.context.component || 'Unknown')
-  }
+      const component = const component = const component = error.context.component || 'Unknown');
+  };
       byComponent[component] = (byComponent[component] || 0) + 1;}
     })
     return {
@@ -200,7 +196,7 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
       })
     }
   }
-  public trackError(erro,
+  public trackError()
   r: Error, contex);
   t: ErrorContext = {}): void {/* TODO: Fix JSX expression */},
       timestam,
@@ -235,7 +231,7 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
   public clearErrors(): void {/* TODO: Fix JSX expression */}
   }
   public getErrorStats(): {/* TODO: Fix JSX expression */}
-  } {/* TODO: Fix JSX expression */}
+  }, {/* TODO: Fix JSX expression */}
   byComponent: Record<string, number> = {}
     this.errors.forEach(error => {/* TODO: Fix JSX expression */})
     })

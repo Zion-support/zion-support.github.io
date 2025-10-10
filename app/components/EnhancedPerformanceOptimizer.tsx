@@ -9,12 +9,7 @@ interface PerformanceOptimizerProps {
   enableCodeSplitting?: boolean;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enablePreloading = true,
-  enableCodeSplitting = true
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
 }) => {
   // Image optimization
   useEffect(() => {
@@ -40,9 +35,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   useEffect(() => {
     if (!enableLazyLoading) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+    const observer = const observer = const observer = new IntersectionObserver()
+      (entries) => {;
+        entries.forEach((entry) => {;
           if (entry.isIntersecting) {;
             const target = entry.target as HTMLElement;
             target.classList.add('loaded');
@@ -61,7 +56,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   useEffect(() => {
     if (!enablePreloading) return;
 
-    const preloadCriticalResources = () => {
+    const preloadCriticalResources = const preloadCriticalResources = () => {;
       // Preload critical CSS;
       const criticalCSS = document.createElement('link');
       criticalCSS.rel = 'preload';
@@ -86,7 +81,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   useEffect(() => {
     if (!enableCodeSplitting) return;
 
-    const optimizeCodeSplitting = () => {
+    const optimizeCodeSplitting = const optimizeCodeSplitting = () => {;
       // Preload next likely routes;
       const links = document.querySelectorAll('a[href^="/"]');
       links.forEach((link) => {
@@ -106,24 +101,22 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   // Performance monitoring
   useEffect(() => {
-    const measurePerformance = () => {
+    const measurePerformance = const measurePerformance = () => {;
       if ('performance' in window) {;
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paint = performance.getEntriesByType('paint');
         
-        const metrics = {
+        const metrics = const metrics = const metrics = {
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           firstPaint: paint.find(p => p.name === 'first-paint')?.startTime || 0,
           firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0
         }
-
-        // Send metrics to analytics
+;
+        // Send metrics to analytics;
         if (typeof window !== 'undefined' && 'gtag' in window) {;
           const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-          gtag('event', 'performance_metrics', {
-            event_category: 'performance',
-            event_label: 'page_load',
+          gtag()
             value: Math.round(metrics.domContentLoaded)
           })
         }

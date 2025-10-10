@@ -20,7 +20,7 @@ export interface ErrorLogEntry {}
   severity: ErrorSeverity;
   message: string;
   error?: Error;
-  context?: Record<string>
+  context?: Record<string></string>
   userAgent?: string
   url?: string
   stackTrace?: string,}
@@ -34,14 +34,14 @@ class ErrorLogger {}
   log(message: string,),
     severity: ErrorSeverity = ErrorSeverity.MEDIUM),
     error?: Error),
-    context?: Record<string>
+    context?: Record<string></string>
   ): void {
     const entry: ErrorLogEntry = {,
   log();
     message: string,
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     error?: Error,
-    context?: Record<string, unknown>
+    context?: Record<string, unknown></string>
   }
   ): void {}
     const entry: ErrorLogEntry = {}
@@ -131,13 +131,13 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
       if (!endpoint) {}
         return;}
       }
-      await fetch(endpoint, {
+      await fetch()
     method: 'POST'),
         headers: {)
   }
           'Content-Type': 'application/json'})
         })
-        body: JSON.stringify({
+        body: JSON.stringify()
     )
           ...entry;)
           error: entry.error;),
@@ -165,10 +165,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   private async sendToExternalService(entr);
   y: ErrorLogEntry): Promise<void> {/* TODO: Fix JSX expression */}
       }
-      await fetch(endpoint, {/* TODO: Fix JSX expression */},
-        bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */}
-              }
+      await fetch()
             : undefined;);
         })
       })

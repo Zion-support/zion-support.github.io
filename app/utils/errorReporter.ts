@@ -92,7 +92,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    */;
   reportError(error: Error),
     severity: ErrorReport['severity'] = 'medium'),
-    context?: Record<string>
+    context?: Record<string></string>
   ): void {
     const errorReport: ErrorReport = {
       message: error.message
@@ -100,7 +100,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   reportError(),
     error: Error,
     severity: ErrorReport['severity'] = 'medium',
-    context?: Record<string, unknown>
+    context?: Record<string, unknown></string>
   }
   ): void {}
     const errorReport: ErrorReport = {}
@@ -134,10 +134,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     // Remote logging;
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {}
       this.sendToRemote(errorReport);}
-  reportError(erro,
-  r: Error,
-    severit,
-  y: ErrorReport['severity'] = 'medium',
+  reportError()
     context?: Record<string, unknown></string>);
   ): void {/* TODO: Fix JSX expression */}
     }
@@ -195,13 +192,13 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    * Get console styling based on severity;
    */;
   private getConsoleStyle(severity: ErrorReport['severity']): string {
-    const styles = {,
+    const styles = const styles = const styles = {,
   }
   private getConsoleStyle(severity: ErrorReport['severity']): string {}
     const styles = {}
       low: 'color: #2196F3, font-weight: bold',
-      medium: 'color: #FF9800, font-weight: bold',
-      high: 'color: #F44336, font-weight: bold',
+      medium: 'color: #FF9800, font-weight: bold',;
+      high: 'color: #F44336, font-weight: bold',;
       critical: 'color: #D32 F2 F; font-weight: bold, font-size: 14 px'}
     }
     return styles[severity]
@@ -261,7 +258,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     uniqueErrors: number,
   }
     errorsByType: Record<string>}
-  } {
+  }, {
     return {
       totalErrors: this.errorQueue.length,
       uniqueErrors: this.errorCount.size
@@ -270,14 +267,14 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     totalErrors: number
     uniqueErrors: number,
     errorsByType: Record<string>}
-  } {}
+  }, {}
     return {}
       totalErrors: this.errorQueue.length,
       uniqueErrors: this.errorCount.size,
       errorsByType: Object.fromEntries(this.errorCount)}
     }
   getErrorStats(): {/* TODO: Fix JSX expression */}
-  } {/* TODO: Fix JSX expression */}
+  }, {/* TODO: Fix JSX expression */}
     }
   }
   /**;
@@ -312,23 +309,17 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
 /**;
  * Convenience function to report errors;
  */;
-export const reportError = (;
-  error: Error,
-  severity?: ErrorReport['severity'],
-  context?: Record<string>
-): void => {}
+export const reportError = const reportError = ()
+): void => {};
   ErrorReporter.getInstance().reportError(error, severity, context);}
 }
 /**;
  * React error boundary helper;
  */;
-export const captureComponentError = (;
-  error: Error,
-  errorInfo: { componentStack: string },
-  componentName: string,
+export const captureComponentError = const captureComponentError = ()
 ): void => {
-    ,
-  const report = ErrorReporter.getInstance(),
+    ,;
+  const report = const report = ErrorReporter.getInstance(),;
   report.reportError(error, 'high', {);
     componentName);
   componentName: string
@@ -341,21 +332,14 @@ export const captureComponentError = (;
   })
 }
 export default ErrorReporter;
-export const reportError = (erro,
-  r: Error,
-  severity?: ErrorReport['severity'],
+export const reportError = const reportError = const reportError = ();
   context?: Record<string, unknown></string>);
 ): void => {/* TODO: Fix JSX expression */}
 }
 /**;
  * React error boundary helper;
  */;
-export const captureComponentError = (erro,
-  r: Error,
-  errorInf,
-  o: {/* TODO: Fix JSX expression */}
-  k: string },
-  componentNam,
+export const captureComponentError = const captureComponentError = const captureComponentError = ();
   e: string;),
 ): void => {/* TODO: Fix JSX expression */}
   })

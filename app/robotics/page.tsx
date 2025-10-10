@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const PagePage: React.FC = () => {
-    const features = [
+    const features = const features = const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -23,10 +23,10 @@ const PagePage: React.FC = () => {
     icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-  }
-    }
-  ];];];
-const benefits = [
+  };
+    };
+  ];
+const benefits = const benefits = const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -36,43 +36,20 @@ const benefits = [
 
     'Easy integration with existing systems',
 
-    'Cost-effective pricing plans',
-
+    'Cost-effective pricing plans',;
+;
     'Proven track record of success';
   ];
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
-      {/* Hero Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          </div>
-        </div>
-      </section>
-      {/* Features Section */}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              </div>
+return ()
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -86,9 +63,9 @@ return (
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+      <section className="py-20 px-4" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>

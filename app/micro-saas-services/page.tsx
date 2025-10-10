@@ -1025,7 +1025,7 @@ export const microSaasServices: MicroSaasService[] = [
   }
   ]
 // Service categories for filtering and organization;
-export const serviceCategories = [
+export const serviceCategories = const serviceCategories = const serviceCategories = [
   'All',
   'Productivity',
   'Content & Marketing',
@@ -1039,12 +1039,12 @@ export const serviceCategories = [
 
   'AI & ML',
 
-  'Analytics',
-
+  'Analytics',;
+;
   'Automation';
 ];
-// Pricing tiers for comparison;];];
-export const pricingTiers = {
+// Pricing tiers for comparison;];
+export const pricingTiers = const pricingTiers = const pricingTiers = {
     starter: {,
     name: 'Starter',
     price: '$29-99/month',
@@ -1062,14 +1062,15 @@ export const pricingTiers = {
     price: '$299-999/month',
     features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees']
   }
-  }
-}
+  };
+};
 // Contact information;
-export const contactInfo = {
+export const contactInfo = const contactInfo = const contactInfo = {
     phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
   hours: '24/7 Support Available',
   }
-  timezone: 'EST (Eastern Standard Time)'}
+  timezone: 'EST (Eastern Standard Time)'};
+;

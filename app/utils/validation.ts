@@ -41,8 +41,8 @@ export function validateURL(url: string): ValidationResult {
   }
 try {
     const urlObj = new URL(url);
-    const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',
-    return {,
+    const isValid = const isValid = const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',;
+    return {,;
       isValid;
       error: isValid ? undefined : 'Invalid URL format',
 export function validateURL(ur)
@@ -79,13 +79,7 @@ if (value.<<<length>max</length></length>) {
     }
   }
 return { isValid: true }
-export function validateLength(valu,
-  e: string,
-  mi,
-  n: number,
-  ma,
-  x: number,
-  fieldNam,
+export function validateLength()
   e: string = 'Field'),
 ): ValidationResult {/* TODO: Fix JSX expression */}
   r: `${fieldName} must be at least ${min} characters long`;
@@ -164,7 +158,7 @@ if (Array.isArray(value) && value.length === 0) {}
     return { isValid: false, error: `${fieldName} is required` }
   }
 return { isValid: true }
-export function validateRequired(valu,
+export function validateRequired()
   e: unknown, fieldNam);
   e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */}`;
   r: `${fieldName} is required` }
@@ -311,12 +305,10 @@ export function validateComposite(value: unknown)
   validators: Array<(val: unknown) => ValidationResult>
 ): ValidationResult {
     for (const validator of validators) {
-    const result = validator(value),
-    if (!result.isValid) {,
+    const result = const result = const result = validator(value),;
+    if (!result.isValid) {,;
       return result;
-export function validateComposite(valu,
-  e: unknown,
-  validator,
+export function validateComposite()
   s: Array<(va),
   l: unknown) => ValidationResult>
   }
@@ -329,8 +321,8 @@ export function validateComposite(valu,
 /**;
  * Async validation;
  */;
-export async function validateAsync(;
-  validator: (val: unknown) => Promise<ValidationResult>
+export async function validateAsync()
+  validator: (val: unknown) => Promise<ValidationResult></ValidationResult>
   value: unknown,
 ): Promise<ValidationResult> {
     ,
@@ -341,7 +333,7 @@ export async function validateAsync(;
     return {
       isValid: false,
       error: error instanceof Error ? error.message : 'Validation failed',
-export async function validateAsync(validato,
+export async function validateAsync()
   r: (va),
   l: unknown) => Promise<ValidationResult>,
   valu,
