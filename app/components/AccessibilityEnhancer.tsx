@@ -17,7 +17,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     // Keyboard navigation enhancements
     if (enableKeyboardNavigation && typeof window !== 'undefined') {
-      const handleKeyDown = (event: KeyboardEvent) => {,
+        const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content;
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
           const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
@@ -27,8 +27,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
         // Close dropdowns with Escape key;
         if (event.key === 'Escape') {const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
-          openDropdowns.forEach(dropdown => {)
-            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');})
+            openDropdowns.forEach(dropdown => {
+              (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
+            });
         }
       }
 

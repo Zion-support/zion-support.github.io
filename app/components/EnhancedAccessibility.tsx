@@ -1,26 +1,37 @@
 'use client';
-import React, {useEffect, useState}from 'react';
-import {useAnalytics}}from './EnhancedAnalytics';
+import React, { useEffect, useState } from 'react';
+import { useAnalytics } from './EnhancedAnalytics';
 
-interface AccessibilitySettings {highContrast: boolean;,}
-  reducedMotion: boolean;,
-  fontSize: 'small' | 'medium' | 'large',
-  screenReader: boolean,
-  keyboardNavigation: boolean;,}interface EnhancedAccessibilityProps {children: React.ReactNode;,}
+interface AccessibilitySettings {
+  highContrast: boolean;
+  reducedMotion: boolean;
+  fontSize: 'small' | 'medium' | 'large';
+  screenReader: boolean;
+  keyboardNavigation: boolean;
+}
+
+interface EnhancedAccessibilityProps {
+  children: React.ReactNode;
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean,
-  enableFocusManagement?: boolean;}const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({,
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+}
+
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   children,
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
-  enableFocusManagement = true;}) => {const [settings, setSettings] = useState<AccessibilitySettings>({
+  enableFocusManagement = true
+}) => {
+  const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',
     screenReader: false,
-    keyboardNavigation: false;,})
+    keyboardNavigation: false
+  });
 
   const analytics = useAnalytics();
 

@@ -1,16 +1,22 @@
 'use client';
-import React, {useEffect, useCallback}from 'react';
+import React, { useEffect, useCallback } from 'react';
 
-interface PerformanceOptimizerProps {children: React.ReactNode;,}
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;}const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
+  enableCodeSplitting?: boolean;
+}
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
-  enableCodeSplitting = true;}) => {// Image optimization;
+  enableCodeSplitting = true
+}) => {
+  // Image optimization
   useEffect(() => {
     if (!enableImageOptimization) return;
 
@@ -28,17 +34,21 @@ interface PerformanceOptimizerProps {children: React.ReactNode;,}
     return () => clearTimeout(timer);
   }, [enableImageOptimization]);
 
-  // Lazy loading;
-  useEffect(() => {if (!enableLazyLoading) return;
+  // Lazy loading
+  useEffect(() => {
+    if (!enableLazyLoading) return;
 
-    const observer = new IntersectionObserver()
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const target = entry.target as HTMLElement;
-            target.classList.add('loaded');}})
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const target = entry.target as HTMLElement;
+              target.classList.add('loaded');
+            }
+          });
       },
-      {threshold: 0.1 ,})
+        { threshold: 0.1 }
+      );
 
     const lazyElements = document.querySelectorAll('[data-lazy]');
     lazyElements.forEach((el) => observer.observe(el));
@@ -64,7 +74,10 @@ interface PerformanceOptimizerProps {children: React.ReactNode;,}
       criticalFont.as = 'font';
       criticalFont.type = 'font/woff2';
       criticalFont.crossOrigin = 'anonymous';
-      document.head.appendChild(criticalFont);}preloadCriticalResources();
+        document.head.appendChild(criticalFont);
+      }
+      
+      preloadCriticalResources();
   }, [enablePreloading]);
 
   // Code splitting optimization;
@@ -78,7 +91,7 @@ interface PerformanceOptimizerProps {children: React.ReactNode;,}
           const href = link.getAttribute('href');
           if (href && !href.startsWith('#')) {
             // Preload the route;
-            import(/* webpackChunkName: "route" */ `../app${href,)}/page.tsx`);
+              import(/* webpackChunkName: "route" */ `../app${href}/page.tsx`);
           }
         })
       })
@@ -98,12 +111,17 @@ interface PerformanceOptimizerProps {children: React.ReactNode;,}
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           firstPaint: paint.find(p => p.name === 'first-paint')?.startTime || 0,
-          firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0;,}// Send metrics to analytics;
-        if (typeof window !== 'undefined' && 'gtag' in window) {const gtag = (window as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag;
-          gtag('event', 'performance_metrics', {)
+          firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0
+        };
+        
+        // Send metrics to analytics
+        if (typeof window !== 'undefined' && 'gtag' in window) {
+          const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+          gtag('event', 'performance_metrics', {
             event_category: 'performance',
             event_label: 'page_load',
-            value: Math.round(metrics.domContentLoaded),})
+            value: Math.round(metrics.domContentLoaded)
+          });
         }
       }
     }
@@ -113,7 +131,7 @@ interface PerformanceOptimizerProps {children: React.ReactNode;,}
     return () => window.removeEventListener('load', measurePerformance);
   }, []);
 
-  return <React.Fragment>{children</React.Fragment>}</React.Fragment>;
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
 export default PerformanceOptimizer;
