@@ -71,8 +71,6 @@ const replacements = [
 // Function to process a single file
 function processFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
 
     // Apply replacements
     replacements.forEach(({ from, to, context }) => {
@@ -104,10 +102,7 @@ function processFile(filePath) {
       .replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, '') // Remove empty imports
       .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {
         // Merge consecutive imports from same module
-        const _lines = match.trim().split('\n');
-        const _imports = {};
         lines.forEach(line => {
-          const _match = line.match(/import\s+(.+?)\s+from\s+['"]([^'"]+)['"];?/);
           if (match) {
             const [, importsStr, module] = match;
             if (!imports[module]) imports[module] = [];
@@ -138,10 +133,7 @@ function processFile(filePath) {
 async function main() {
 
   // Find all TypeScript/JavaScript files in app directory
-  const _patterns = ['app/**/*.tsx', 'app/**/*.ts', 'app/**/*.jsx', 'app/**/*.js'];
 
-  let _totalFiles = 0;
-  let _fixedFiles = 0;
 
   for (const pattern of patterns) {
     const files = await glob(pattern, {
@@ -177,7 +169,8 @@ async function main() {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
 }
 
 export { processFile, replacements };
+
+}}}}}}}}}}}

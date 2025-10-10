@@ -81,7 +81,6 @@ const fixes = [
 ];
 
 function applyFixes() {
-  let _totalFixed = 0;
 
   fixes.forEach(({ file, changes }) => {
     if (!fs.existsSync(file)) {
@@ -89,8 +88,6 @@ function applyFixes() {
       return;
     }
 
-    let _content = fs.readFileSync(file, 'utf8');
-    let _modified = false;
 
     changes.forEach(({ from, to }) => {
       if (content.includes(from)) {
@@ -109,7 +106,6 @@ function applyFixes() {
 }
 
 // Apply fixes
-applyFixes();
 
 // Run linter to check results
 

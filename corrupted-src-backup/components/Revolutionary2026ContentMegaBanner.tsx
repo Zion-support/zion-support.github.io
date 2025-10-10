@@ -1,4 +1,3 @@
-import React from "react";
 impo, r, t { Trending, U, p, Z, a, p } fr, o, m "luci, d, e-rea, c, t";
 impo, r, t {
 } fr, o, m "luci, d, e-rea, c, t";

@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Code, Smartphone, Globe, Database, Zap, Shield, BarChart, Users, Phone, Mail, CheckCircle, ArrowRight, Cloud } from 'lucide-react';
+import {Code, Database, BarChart, CheckCircle, Cloud, Globe, Smartphone, Users, Shield, ArrowRight} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';

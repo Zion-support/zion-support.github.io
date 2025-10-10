@@ -335,15 +335,14 @@ export class ErrorHandler {
     }, this.config.retryDelay * retryItem.retryCount);
   }
   // Retry error
-  private async retryError(retryItem: { error: AppError; retryCount: number }) {
+  private async retryError(retryItem: {// error: AppError; retryCount: number}) {
     try {
       // Implement retry logic based on error type
       if (retryItem.error.type === ErrorType.NETWORK) {
         // Retry network request
         if (process.env['NODE_ENV'] === 'development') {
           if (import.meta.env.DEV) {
-            console.log('Retrying network request...');
-          }
+            }
         }
         // Add your retry logic here
       }

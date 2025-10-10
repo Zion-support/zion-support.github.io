@@ -21,11 +21,37 @@ try {
   console.log('📥 Pulling latest changes from main...');
   execSync('git pull origin main', { stdio: 'inherit' });
 
-  // Merge our feature branch
-  console.log('🔀 Merging feature branch...');
-  try {
-    execSync('git merge cursor/website-audit-and-update-with-deployment-1500 --no-ff -m "Merge website audit and update improvements"', { stdio: 'inherit' });
-    console.log('✅ Successfully merged feature branch!');
+//Process each PR
+for (const pr of prs) {
+//   try {
+    //Check if branch exists
+    try {
+      execSync(
+        `git show-ref --verify --quiet refs/remotes/origin/${pr.branch}`,
+        { stdio: 'pipe' }
+      );
+//       } catch (error) {
+//       continue;
+    }
+
+    //Try to merge the branch
+    try {
+      execSync(
+        `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,
+        { stdio: 'inherit' }
+      );
+//       } catch (error) {
+//       //Try to resolve conflicts automatically
+      try {
+        execSync('git status --porcelain', { stdio: 'pipe' });
+//         //If there are conflicts, try to resolve them
+        if (status.includes('UU') || status.includes('AA')) {
+//           //Reset the merge
+          execSync('git merge --abort', { stdio: 'inherit' });
+//           }
+      } catch (resolveError) {
+//         }
+    }
   } catch (error) {
     console.log('⚠️  Merge conflicts detected, resolving...');
     

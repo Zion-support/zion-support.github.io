@@ -32,8 +32,6 @@ const iconMappings = {
 //Function to fix imports in a file
 function fixImportsInFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
 
     //Fix lucide-react imports
     for (const [broken, correct] of Object.entries(iconMappings)) {

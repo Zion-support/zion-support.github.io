@@ -1,6 +1,5 @@
 import React from 'react';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-import { Link } from 'react-router-dom';
 impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Trending, U, p } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Use, r, s } fr, o, m 'luci, d, e-rea, c, t';
@@ -9,7 +8,6 @@ impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Bra, i, n } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t';
-import Header, from '../../componen, t, s/Head, e, r';
 
 const GlobalTelecomCognitiveTransformatio, n: React.FC = () => { 
   return (
@@ -290,3 +288,4 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
                 <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
                 Schedule, Consultatio, n
                 <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+}

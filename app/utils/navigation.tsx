@@ -1,7 +1,5 @@
 'use client';
-import React, { lazy } from 'react';
-import { useCallback } from 'react'
-export const useRouter = useCallback((...args) => {
+export const useRouter = () => {
   const push = useCallback((url: string) => {
     window.location.href = url;}
   }, [])

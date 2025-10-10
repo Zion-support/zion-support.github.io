@@ -1,4 +1,3 @@
-import fetch from 'node-fetch';
 
 export const handler = async function () {
   // This function assumes you have an internal endpoint to list users and their roles

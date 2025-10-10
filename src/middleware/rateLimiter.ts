@@ -11,10 +11,12 @@ export interface RateLimitConfig {
   skipSuccessfulRequests?: boolean;
   skipFailedRequests?: boolean;
 }
+
 interface RequestRecord {
   count: number;
   resetTime: number;
 }
+
 /**
  * Simple in-memory rate limiter
  * For production, use Redis or similar distributed storage
@@ -22,6 +24,7 @@ interface RequestRecord {
 export class RateLimiter {
   private requests: Map<string, RequestRecord> = new Map();
   private config: RateLimitConfig;
+
   constructor(config: RateLimitConfig) {
     this.config = {
       message: 'Too many requests, please try again later.',
@@ -32,6 +35,7 @@ export class RateLimiter {
     // Cleanup old entries every minute
     setInterval(() => this.cleanup(), 60000);
   }
+
   /**
    * Check if request is allowed
    * @param identifier - Unique identifier (e.g., IP address)
@@ -40,12 +44,14 @@ export class RateLimiter {
   check(identifier: string): { allowed: boolean; remaining: number; resetTime: number } {
     const now = Date.now();
     const record = this.requests.get(identifier);
+
     // No record or expired
     if (!record || now > record.resetTime) {
       const resetTime = now + this.config.windowMs;
       this.requests.set(identifier, { count: 1, resetTime });
       return { allowed: true, remaining: this.config.max - 1, resetTime };
     }
+
     // Increment count
     if (record.count < this.config.max) {
       record.count++;
@@ -56,9 +62,11 @@ export class RateLimiter {
         resetTime: record.resetTime
       };
     }
+
     // Limit exceeded
     return { allowed: false, remaining: 0, resetTime: record.resetTime };
   }
+
   /**
    * Reset rate limit for identifier
    * @param identifier - Unique identifier
@@ -66,6 +74,7 @@ export class RateLimiter {
   reset(identifier: string): void {
     this.requests.delete(identifier);
   }
+
   /**
    * Cleanup expired entries
    */
@@ -77,6 +86,7 @@ export class RateLimiter {
       }
     }
   }
+
   /**
    * Get current stats
    */
@@ -84,6 +94,7 @@ export class RateLimiter {
     return { totalTracked: this.requests.size };
   }
 }
+
 /**
  * Pre-configured rate limiters for common use cases
  */
@@ -118,6 +129,7 @@ export const rateLimiters = {
     skipSuccessfulRequests: true
   })
 };
+
 /**
  * Get client identifier from request
  * @param request - Request object
@@ -129,12 +141,15 @@ export function getClientIdentifier(request: Request): string {
   const forwardedFor = headers.get('x-forwarded-for');
   const realIp = headers.get('x-real-ip');
   const cfConnectingIp = headers.get('cf-connecting-ip');
+
   if (cfConnectingIp) return cfConnectingIp;
   if (realIp) return realIp;
   if (forwardedFor) return forwardedFor.split(',')[0].trim();
+
   // Fallback to a default identifier
   return 'unknown';
 }
+
 /**
  * Create rate limit middleware
  * @param limiter - Rate limiter instance
@@ -144,6 +159,7 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
   return async (request: Request): Promise<Response | null> => {
     const identifier = getClientIdentifier(request);
     const { allowed, remaining, resetTime } = limiter.check(identifier);
+
     if (!allowed) {
       return new Response(
         JSON.stringify({
@@ -162,8 +178,8 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
         }
       );
     }
+
     // Request allowed - headers can be added to response later
     return null;
   };
 }
-export default RateLimiter;

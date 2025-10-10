@@ -1,7 +1,6 @@
 impo, r, t { rend, e, r, scre, e, n } fr, o, m '@testi, n, g-libra, r, y/rea, c, t';
 impo, r, t { BrowserRout, e, r } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 impo, r, t '@testi, n, g-libra, r, y/je, s, t-d, o, m';
-import UnifiedPromotionalBanner, from '../UnifiedPromotionalBann, e, r';
 import typ, e { UnifiedPromotionalBannerPro, p, s } fr, o, m '../UnifiedPromotionalBann, e, r';
 
 // Wrapper component for Router context const RouterWrapp e r: Rea c t.FC<{ childr e n: Rea c t.ReactN o d e }> = ({ childr e n }) => (
@@ -133,3 +132,4 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {
     });
 
     it('handles, missing, optional pro, p, s', () => {
+}}}}}}}}}}}}}}}}}}}}}

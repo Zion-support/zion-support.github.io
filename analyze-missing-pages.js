@@ -1,190 +1,219 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Navigation links from the Navigation component
-const navigationLinks = [
-  // Main navigation
+// Sitemap URLs from the website
+const sitemapUrls = [
+  // Main Pages
   '/',
   '/about',
-  '/services',
-  '/ai-services',
-  '/it-services',
-  '/blog',
   '/contact',
-  
-  // Micro SAAS Services
-  '/ai-project-manager',
-  '/ai-writing-assistant',
-  '/ai-crm',
-  '/ai-healthcare',
-  '/ai-fintech',
-  '/ai-mobile-app-development',
-  '/ai-cybersecurity',
-  '/ai-marketing',
-  '/task-manager-pro',
-  '/expense-tracker',
-  '/ai-chatbot-builder',
-  '/ai-data-analytics',
-  '/ai-social-media-manager',
-  '/ai-email-marketing',
-  '/ai-customer-support-bot',
-  '/ai-code-generation',
-  '/ai-content-generation',
-  '/ai-lead-generation',
-  '/ai-document-processing',
-  '/ai-seo-optimizer',
-  '/ai-ecommerce-solutions',
-  '/ai-financial-analyzer',
-  '/ai-video-generation',
-  '/ai-voice-cloning',
-  '/ai-music-composition',
-  '/ai-fashion-design',
-  '/ai-fitness-coach',
-  '/ai-workflow-automation',
-  '/ai-sales-automation',
-  '/ai-data-visualization',
-  '/ai-3d-generation',
-  
-  // AI Services
-  '/machine-learning',
-  '/ai-business-intelligence',
-  '/ai-supply-chain',
-  '/ai-quality-assurance',
-  '/ai-hr',
-  '/ai-legal',
-  '/ai-real-estate',
-  '/ai-manufacturing',
-  '/ai-transportation',
-  '/ai-education',
-  '/ai-energy',
-  '/ai-insurance',
-  '/nlp',
-  '/computer-vision',
-  '/ai-automation',
-  '/quantum-ai',
-  '/ai-cybersecurity',
-  '/ai-healthcare',
-  '/ai-fintech',
-  '/ai-mobile-app-development',
-  '/ai-crm',
-  '/ai-email-assistant',
-  '/ai-scheduler',
-  
-  // IT Services
-  '/cloud-services',
-  '/enterprise-security',
-  '/it-infrastructure',
-  '/data-center',
-  '/network-security',
-  '/it-consulting',
-  '/managed-it',
-  '/cloud-security',
-  '/it-asset-management',
-  '/backup-recovery',
-  '/it-training',
-  '/it-performance',
-  '/cybersecurity',
-  '/devops',
-  '/database-services',
-  '/network-infrastructure',
-  '/it-support',
-  '/cloud-migration',
-  '/compliance',
-  '/developer-tools',
-  '/marketing-tools',
-  '/productivity',
-  
-  // Specialized Services
-  '/quantum-computing',
-  '/autonomous-systems',
-  '/blockchain',
-  '/iot-edge',
-  '/business-intelligence',
-  '/robotics',
-  '/enterprise',
-  '/analytics-tools',
-  '/business-apps',
-  '/expense-tracker',
-  '/task-manager-pro',
-  '/smart-analytics',
-  
-  // Additional pages from footer
-  '/team',
+  '/blog',
+  '/faq',
   '/careers',
-  '/case-studies',
+  '/partners',
   '/news',
-  '/pricing',
-  '/demo',
-  '/support',
-  '/docs',
-  '/api-docs',
+  '/solutions',
+  '/research-development',
+  '/request-quote',
+  '/green-it',
+  
+  // Services Pages
+  '/services',
+  '/services/ai-analytics',
+  '/services/cybersecurity',
+  '/services/cloud-devops',
+  '/services/iot-edge',
+  '/services/quantum-computing',
+  '/services/blockchain',
+  '/services/digital-twin',
+  '/services/sustainability',
+  '/services/data-analytics',
+  '/services/infrastructure',
+  '/services/digital-transformation',
+  '/services/consulting',
+  '/services/onsite-support',
+  '/services/5g-solutions',
+  
+  // Micro SAAS Pages
+  '/micro-saas',
+  '/micro-saas/ai-business-intelligence',
+  '/micro-saas/customer-experience',
+  '/micro-saas/quantum-computing',
+  '/micro-saas/supply-chain',
+  '/micro-saas/cybersecurity',
+  '/micro-saas/iot-edge',
+  '/micro-saas/content-creation',
+  '/micro-saas/hr-platform',
+  
+  // IT Services Pages
+  '/it-services',
+  '/it-services/infrastructure',
+  '/it-services/digital-transformation',
+  '/it-services/consulting',
+  '/it-services/onsite-support',
+  '/it-services/green-it',
+  '/it-services/5g-solutions',
+  
+  // Marketplace Pages
+  '/marketplace',
+  '/marketplace/products',
+  '/marketplace/talent',
+  '/marketplace/equipment',
+  '/marketplace/services',
+  '/talent',
+  '/equipment',
+  '/it-onsite-services',
+  
+  // Company Pages
+  '/team',
+  '/help',
+  '/security',
   '/status',
-  '/system-status',
+  
+  // Legal Pages
   '/privacy',
   '/terms',
   '/cookies',
-  '/gdpr',
-  '/security'
+  '/sitemap',
+  
+  // Auth Pages
+  '/login',
+  '/signup'
 ];
 
-// Get existing pages
-const existingPages = [];
-const srcDir = path.join(__dirname, 'src');
-
-function findPages(dir) {
-  const files = fs.readdirSync(dir);
+// Existing pages from the codebase
+const existingPages = [
+  // Main pages
+  '/',
+  '/about',
+  '/contact',
+  '/blog',
+  '/careers',
+  '/news',
+  '/team',
+  '/privacy',
+  '/terms',
+  '/cookies',
+  '/sitemap',
+  '/status',
+  '/support',
+  '/docs',
+  '/api-docs',
+  '/demo',
+  '/consultation',
+  '/pricing',
+  '/enterprise',
   
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      // Check if directory has a page.tsx file
-      const pagePath = path.join(filePath, 'page.tsx');
-      if (fs.existsSync(pagePath)) {
-        const relativePath = filePath.replace(srcDir, '');
-        const route = relativePath === '' ? '/' : relativePath;
-        existingPages.push(route);
-      }
-      
-      // Recursively search subdirectories
-      findPages(filePath);
-    }
-  }
-}
-
-findPages(srcDir);
+  // Services
+  '/services',
+  '/ai-services',
+  '/ai-marketing',
+  '/ai-automation',
+  '/ai-healthcare',
+  '/ai-fintech',
+  '/ai-cybersecurity',
+  '/ai-data-analytics',
+  '/ai-workflow-automation',
+  '/ai-mobile-app-development',
+  '/ai-ecommerce-solutions',
+  '/ai-customer-support',
+  '/ai-sales-automation',
+  '/ai-data-visualization',
+  '/ai-lead-generation',
+  '/ai-document-processing',
+  '/ai-content-generation',
+  '/ai-email-marketing',
+  '/ai-crm',
+  '/ai-chatbot-builder',
+  '/ai-writing-assistant',
+  '/ai-project-manager',
+  '/ai-social-media-manager',
+  '/ai-email-assistant',
+  '/ai-scheduler',
+  '/ai-3d-generation',
+  '/ai-fashion-design',
+  '/ai-fitness-coach',
+  '/ai-music-composition',
+  '/ai-video-generation',
+  '/ai-voice-cloning',
+  '/ai-code-generation',
+  '/ai-customer-support-bot',
+  '/ai-analytics-dashboard',
+  
+  // IT Services
+  '/it-services',
+  '/it-infrastructure',
+  '/it-consulting',
+  '/cybersecurity',
+  '/cloud-migration',
+  '/cloud-services',
+  '/devops',
+  '/database',
+  '/networking',
+  '/security',
+  '/compliance',
+  '/gdpr',
+  
+  // Emerging Technologies
+  '/quantum-computing',
+  '/autonomous-systems',
+  '/blockchain',
+  '/blockchain-web3',
+  '/iot-edge',
+  '/iot-edge-computing',
+  '/robotics',
+  '/business-intelligence',
+  '/smart-analytics',
+  '/analytics-tools',
+  '/marketing-tools',
+  '/developer-tools',
+  '/productivity',
+  '/business-apps',
+  '/expense-tracker',
+  '/task-manager-pro',
+  
+  // Micro SAAS
+  '/micro-saas',
+  
+  // Other
+  '/case-studies',
+  '/api',
+  '/offline',
+  '/system-status'
+];
 
 // Find missing pages
-const missingPages = navigationLinks.filter(link => !existingPages.includes(link));
+const missingPages = sitemapUrls.filter(url => !existingPages.includes(url));
 
-console.log('=== MISSING PAGES ANALYSIS ===\n');
-console.log(`Total navigation links: ${navigationLinks.length}`);
+// Find extra pages (in codebase but not in sitemap)
+const extraPages = existingPages.filter(url => !sitemapUrls.includes(url));
+
+console.log('=== MISSING PAGES (in sitemap but not in codebase) ===');
+missingPages.forEach(page => console.log(page));
+
+console.log('\n=== EXTRA PAGES (in codebase but not in sitemap) ===');
+extraPages.forEach(page => console.log(page));
+
+console.log('\n=== SUMMARY ===');
+console.log(`Total sitemap URLs: ${sitemapUrls.length}`);
 console.log(`Total existing pages: ${existingPages.length}`);
-console.log(`Missing pages: ${missingPages.length}\n`);
+console.log(`Missing pages: ${missingPages.length}`);
+console.log(`Extra pages: ${extraPages.length}`);
 
-if (missingPages.length > 0) {
-  console.log('MISSING PAGES:');
-  missingPages.forEach(page => {
-    console.log(`- ${page}`);
-  });
-} else {
-  console.log('✅ All navigation links have corresponding pages!');
-}
+// Categorize missing pages
+const missingByCategory = {
+  'Main Pages': missingPages.filter(p => ['/faq', '/partners', '/solutions', '/research-development', '/request-quote', '/green-it'].includes(p)),
+  'Services Subpages': missingPages.filter(p => p.startsWith('/services/')),
+  'Micro SAAS Subpages': missingPages.filter(p => p.startsWith('/micro-saas/')),
+  'IT Services Subpages': missingPages.filter(p => p.startsWith('/it-services/')),
+  'Marketplace Pages': missingPages.filter(p => p.startsWith('/marketplace') || ['/talent', '/equipment', '/it-onsite-services'].includes(p)),
+  'Company Pages': missingPages.filter(p => ['/help', '/security'].includes(p)),
+  'Auth Pages': missingPages.filter(p => ['/login', '/signup'].includes(p))
+};
 
-console.log('\n=== EXISTING PAGES NOT IN NAVIGATION ===\n');
-const extraPages = existingPages.filter(page => !navigationLinks.includes(page));
-if (extraPages.length > 0) {
-  console.log('Pages that exist but are not in navigation:');
-  extraPages.forEach(page => {
-    console.log(`- ${page}`);
-  });
-} else {
-  console.log('✅ All existing pages are included in navigation!');
-}
+console.log('\n=== MISSING PAGES BY CATEGORY ===');
+Object.entries(missingByCategory).forEach(([category, pages]) => {
+  if (pages.length > 0) {
+    console.log(`\n${category}:`);
+    pages.forEach(page => console.log(`  ${page}`));
+  }
+});

@@ -4,7 +4,6 @@ import { execSync } from 'child_process';
 import fs from 'fs';
 
 // // Read the open PRs data
-let _openPRs = [];
 try {
 //   const prData = fs.readFileSync('open_prs_current.json', 'utf8');
   openPRs = JSON.parse(prData);
@@ -66,9 +65,6 @@ function mergePR(pr) {
 }
 
 // Process each PR
-let _successCount = 0;
-let _failCount = 0;
-const _results = [];
 
 for (const pr of openPRs) {
 //   const success = mergePR(pr);

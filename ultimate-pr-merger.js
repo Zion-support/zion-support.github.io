@@ -67,10 +67,7 @@ const allPRs = [
 safeGitCommand('git pull origin main', 'Pull latest changes from main');
 
 // let mergedCount = 0;
-let _conflictCount = 0;
-let _notFoundCount = 0;
 // const skippedCount = 0;
-const _results = [];
 
 //Process each PR
 for (const pr of allPRs) {
@@ -126,8 +123,6 @@ for (const pr of allPRs) {
   'pnpm run type-check',
   'TypeScript type checking'
 );
-const _lintCheck = safeGitCommand('pnpm run lint', 'ESLint linting');
-const _testCheck = safeGitCommand('pnpm run test', 'Jest testing');
 const buildCheck = safeGitCommand(
   'pnpm run build:no-check',
   'Production build'

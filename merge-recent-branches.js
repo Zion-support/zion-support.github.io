@@ -105,7 +105,6 @@ const results = {
 };
 
 // for (const branch of recentBranches) {
-  const _result = mergeBranch(branch);
   results.summary.total++;
 
   if (result.success) {

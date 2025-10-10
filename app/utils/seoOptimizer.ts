@@ -171,8 +171,8 @@ class SEOOptimizer {
     if (this.currentPageData.type === 'article') {
       Object.assign(structuredData, {
         author: {
-          '@type': 'Person',
-          name: this.currentPageData.author || this.config.siteName}
+// '@type': 'Person',
+// name: this.currentPageData.author || this.config.siteName
         },
         datePublished: this.currentPageData.publishedTime,
         dateModified: this.currentPageData.modifiedTime,
@@ -185,11 +185,11 @@ class SEOOptimizer {
   /**
    * Add structured data to page
    */
-  private addStructuredData(data: any): void {
-    const script = document.createElement('script')
-    script.type = 'application/ld+json'
-    script.textContent = JSON.stringify(data)
-    document.head.appendChild(script);}
+  private addStructuredData(data: unknown): void {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(data);
+    document.head.appendChild(script);
   }
   /**
    * Setup canonical URLs

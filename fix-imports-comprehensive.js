@@ -54,8 +54,6 @@ const iconReplacements = {
 //Function to fix imports in a file
 function fixImportsInFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
 
     //Remove duplicate Link imports
     const linkImportRegex =
@@ -69,12 +67,8 @@ function fixImportsInFile(filePath) {
     }
 
     //Fix lucide-react imports - replace individual imports with single import
-    const _lucideImports = [];
-    const _importLines = content.split('\n');
-    const _newImportLines = [];
 
     for (let i = 0; i < importLines.length; i++) {
-      const _line = importLines[i];
 
       //Skip lucide-react individual imports
       if (line.includes('lucide-react/dist/esm/icons/')) {
@@ -102,10 +96,8 @@ function fixImportsInFile(filePath) {
 
     //Add consolidated lucide-react import
     if (lucideImports.length > 0) {
-      const _uniqueImports = [...new Set(lucideImports)];
 
       //Find the best place to insert the import
-      let _insertIndex = 0;
       for (let i = 0; i < newImportLines.length; i++) {
         if (newImportLines[i].startsWith('import ')) {
           insertIndex = i + 1;
@@ -130,8 +122,6 @@ function fixImportsInFile(filePath) {
 }
 
 //Get all files that need fixing
-const _directories = ['/workspace/app/blog', '/workspace/app/case-studies'];
-const _files = [];
 
 directories.forEach(dir => {
   if (fs.existsSync(dir)) {

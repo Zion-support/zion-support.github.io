@@ -10,3 +10,5 @@
 
 export interface BannerMetadata {
   id: string;
+
+}

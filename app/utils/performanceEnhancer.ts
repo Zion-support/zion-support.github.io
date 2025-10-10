@@ -4,7 +4,6 @@
  * Advanced performance optimization tools for the application
  */
 import React from 'react';
-import { useEffect, useRef } from 'react';
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
@@ -45,8 +44,7 @@ export class PerformanceMonitor {
   trackRender(componentName: string, renderTime: number) {
     this.metrics.set(`${componentName}_render`, renderTime);
     if (process.env['NODE_ENV'] === 'development') {
-      console.log(`${componentName} rendered in ${renderTime}ms`);
-    }
+      }
   }
   // Track memory usage
   trackMemory(componentName: string) {
@@ -221,7 +219,7 @@ export const getMemoryUsage = () => {
   if (typeof window === 'undefined' || !('memory' in performance)) {
     return null;
   }
-  const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+  const memory = (performance as unknown as { memory: {// usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number} }).memory;
   return {
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,
@@ -236,9 +234,9 @@ export const collectPerformanceMetrics = () => {
   const paint = performance.getEntriesByType('paint');
   return {
     navigation: {
-      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-      loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-      totalTime: navigation.loadEventEnd - navigation.fetchStart
+// domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+// loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+// totalTime: navigation.loadEventEnd - navigation.fetchStart
     },
     paint: {
       firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,

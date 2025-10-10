@@ -4,14 +4,10 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 // Function to fix remaining lint issues in a file
 function fixRemainingLintIssues(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
 
     // Skip if not a source file
     if (
@@ -84,11 +80,8 @@ function fixRemainingLintIssues(filePath) {
     });
 
     // Fix 2: Comment out unused variable declarations
-    const _lines = content.split('\n');
-    const _fixedLines = [];
 
     for (let i = 0; i < lines.length; i++) {
-      const _line = lines[i];
 
       // Comment out unused variable declarations
       if (
@@ -98,7 +91,6 @@ function fixRemainingLintIssues(filePath) {
         !line.includes('console.') &&
         !line.includes('//')
       ) {
-        const _varName = line.match(/(const|let|var)\s+(\w+)/)?.[2];
         if (
           varName &&
           [
@@ -274,9 +266,7 @@ function fixRemainingLintIssues(filePath) {
 
       // Fix 3: Add underscore prefix to unused function parameters
       if (line.includes('function') && line.includes('(') && line.includes(')')) {
-        const _paramMatch = line.match(/function\s+\w+\s*\(([^)]+)\)/);
         if (paramMatch) {
-          const _params = paramMatch[1].split(',').map(p => p.trim());
           const fixedParams = params.map(p => {
             if (
               p &&
@@ -397,14 +387,10 @@ function fixRemainingLintIssues(filePath) {
 // Function to recursively fix remaining lint issues
 function fixAllRemainingLintIssues(_dir) {
   try {
-    const _files = fs.readdirSync(dir);
-    let _fixedCount = 0;
 
     for (const file of files) {
-      const _filePath = path.join(dir, file);
 
       try {
-        const _stat = fs.statSync(filePath);
 
         if (stat.isDirectory()) {
           // Skip certain directories
@@ -436,6 +422,4 @@ function fixAllRemainingLintIssues(_dir) {
 }
 
 // Main execution
-const _workspaceDir = process.cwd();
 
-const _fixedCount = fixAllRemainingLintIssues(workspaceDir);
