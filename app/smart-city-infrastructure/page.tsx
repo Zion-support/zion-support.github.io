@@ -32,7 +32,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
     },
     {
     icon: Globe,
-      title: 'Global Reach',];];
+      title: 'Global Reach',];
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -59,7 +59,7 @@ const PagePage: React.FC = () => {
       description: 'Worldwide deployment and support for international smart city projects'
 
     }
-  ];];];
+  ];
   const smartCityServices = [
     {
       icon: Building,
@@ -157,7 +157,7 @@ export default PagePage;
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success';
-  ];];];
+  ];
   return (
     <>
       <Helmet>

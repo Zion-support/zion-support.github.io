@@ -35,7 +35,7 @@ const AISmartContractAuditor: React.FC = () => {
       description: 'Advanced ML models trained on thousands of audited contracts for pattern recognition',
       benefits: ['Continuous learning', 'Pattern recognition', 'Predictive analysis']
     },
-  ];];];
+  ];
   const pricingPlans = [
     {
       name: 'Starter',
@@ -114,7 +114,7 @@ const AISmartContractAuditor: React.FC = () => {
       icon: Globe,
       results: 'Prevented $50M+ in potential losses'
     }
-  ];];];
+  ];
   return (
     <>
       <Helmet>

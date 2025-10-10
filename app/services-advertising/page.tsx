@@ -17,7 +17,7 @@ const benefits = [
     'Cost-effective pricing plans',
 
     'Proven track record of success';
-  ];];];
+  ];
 return (
             </h1>
             <p>

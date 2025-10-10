@@ -35,7 +35,7 @@ const AINeuralInterface: React.FC = () => {
       description: 'Precise motor control interface for prosthetics and assistive devices',
       benefits: ['Precise motor control', 'Prosthetic integration', 'Assistive technology']
     },
-  ];];];
+  ];
   const pricingPlans = [
     {
       name: 'Research',
@@ -114,7 +114,7 @@ const AINeuralInterface: React.FC = () => {
       icon: MessageSquare,
       results: 'Restored communication ability'
     }
-  ];];];
+  ];
   return (
     <>
       <Helmet>

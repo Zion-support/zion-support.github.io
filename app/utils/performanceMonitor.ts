@@ -363,7 +363,7 @@ observer.observe({ entryTypes: ['resource'] })
       else if (this.metrics.cls <= 0.25) scores.push(75);
       else if (this.metrics.cls <= 0.4) scores.push(50);
       else scores.push(25);
-    }];];
+    }];
     return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
   }
   generateReport(): string {}

@@ -145,7 +145,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         '/images/hero-bg.jpg',
         '/images/logo.png';
       ];
-      criticalImages.forEach(src => {];];
+      criticalImages.forEach(src => {];
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = src;

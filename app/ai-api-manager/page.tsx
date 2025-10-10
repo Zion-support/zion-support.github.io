@@ -19,7 +19,7 @@ const AIApiManagerPage: React.FC = () => {
       description: 'Get deep insights into API usage, performance metrics, and user behavior with AI-powered analytics.',
       benefits: ['Usage analytics', 'Performance metrics', 'User insights', 'Predictive analytics']
     },
-    {];];
+    {];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>

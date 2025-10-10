@@ -14,7 +14,7 @@ interface Partner {
   category: string;
   website: string;
   tier: 'preferred' | 'certified' | 'strategic';
-}];];
+}];
 const PartnersPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedTier, setSelectedTier] = useState('all');
@@ -84,7 +84,7 @@ const PartnersPage: React.FC = () => {
         </section>
       </div>
     </>
-  const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];];];
+  const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];
   const tiers = ['all', ...Array.from(new Set(partners.map(partner => partner.tier)))];
 
   const filteredPartners = partners.filter(partner => {;

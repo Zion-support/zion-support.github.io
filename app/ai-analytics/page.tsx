@@ -41,7 +41,7 @@ const AiAnalyticsPage: React.FC = () => {
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     },
-  ];];];
+  ];
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -80,7 +80,7 @@ const AiAnalyticsPage: React.FC = () => {
       description: 'Identify and mitigate business risks proactively',
       icon: '🛡️'
     }
-  ];];];
+  ];
   return (
     <>
       <Helmet>

@@ -42,7 +42,7 @@ const EdgeComputingPage: React.FC = () => {
       description: 'Robust infrastructure designed for edge computing requirements and scalability.',
       benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
   },
-  ];];
+  ];
 const services = [
     {
     icon: '⚡',
@@ -77,7 +77,7 @@ const benefits = [
     'Real-time Processing',
 
     'Global Scalability';
-  ];];];
+  ];
 const useCases = [
     {
     title: 'Autonomous Vehicles',

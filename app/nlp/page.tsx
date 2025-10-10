@@ -69,5 +69,5 @@ const benefits = [
       </section>
     </div>
   ),
-};];];
+};];
 export default PagePage;

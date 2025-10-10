@@ -25,7 +25,7 @@ const ContentPromotionBanner: React.FC = () => {
       description: '24/7 support from our team of AI and IT specialists.',
       icon: Users
     }
-  ];];];
+  ];
   const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',

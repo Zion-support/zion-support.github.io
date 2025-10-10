@@ -31,7 +31,7 @@ const AiChatbotBuilderPage: React.FC = () => {
       description: 'Built with enterprise-grade security and compliance features.',
       benefits: ['Data encryption', 'GDPR compliance', 'SOC 2 certified', 'Secure hosting']
     },
-  ];];];
+  ];
   const useCases = [
     {
       title: 'Customer Support',

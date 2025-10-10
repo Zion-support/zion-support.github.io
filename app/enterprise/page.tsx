@@ -42,7 +42,7 @@ const EnterprisePage: React.FC = () => {
       description: 'Seamless integration with existing enterprise systems and workflows.',
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
   },
-  ];];
+  ];
 const solutions = [
     {
     title: 'Enterprise Resource Planning',
@@ -82,7 +82,7 @@ const benefits = [
     'Integrate with existing systems',
 
     'Provide 24/7 support and monitoring';
-  ];];];
+  ];
 const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },

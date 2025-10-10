@@ -24,7 +24,7 @@ const ARVRPlatformPage: React.FC = () => {
       title: 'Cross-Platform Support',
       description: 'Deploy across multiple devices and platforms for maximum reach and accessibility'
     }
-  ];];];
+  ];
   const benefits = [
     'Advanced AR/VR technology integration',
     'Real-time 3D rendering and interaction',

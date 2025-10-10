@@ -31,7 +31,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       description: 'Monitor key performance indicators and track business metrics.',
       benefits: ['KPI tracking', 'Goal monitoring', 'Progress reports', 'Trend analysis']
     },
-  ];];];
+  ];
   const benefits = [
     'Make data-driven decisions with confidence',
     'Identify opportunities and threats early',

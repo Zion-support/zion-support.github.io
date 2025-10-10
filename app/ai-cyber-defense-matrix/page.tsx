@@ -35,7 +35,7 @@ const AICyberDefenseMatrix: React.FC = () => {
       description: 'Intelligent incident response with automated containment and remediation',
       benefits: ['Automated containment', 'Rapid response', 'Minimal downtime']
     },
-  ];];];
+  ];
   const pricingPlans = [
     {
       name: 'Essential',
@@ -114,7 +114,7 @@ const AICyberDefenseMatrix: React.FC = () => {
       icon: Zap,
       results: '100% infrastructure protection'
     }
-  ];];];
+  ];
   return (
     <>
       <Helmet>

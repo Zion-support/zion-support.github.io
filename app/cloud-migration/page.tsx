@@ -11,7 +11,7 @@ const CloudMigrationPage: React.FC = () => {
     },
     {
     }
-  ];];];
+  ];
   const benefits = [
     'Advanced cloud migration technology',
     'Real-time migration monitoring',

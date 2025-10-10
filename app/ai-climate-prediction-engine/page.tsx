@@ -35,7 +35,7 @@ const AIClimatePredictionEngine: React.FC = () => {
       description: 'Comprehensive climate risk assessment for businesses and governments',
       benefits: ['Risk mitigation', 'Adaptation strategies', 'Policy recommendations']
     },
-  ];];];
+  ];
   const pricingPlans = [
     {
       name: 'Basic',
@@ -114,7 +114,7 @@ const AIClimatePredictionEngine: React.FC = () => {
       icon: Target,
       results: 'Enhanced urban resilience'
     }
-  ];];];
+  ];
   return (
     <>
       <Helmet>

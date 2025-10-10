@@ -35,7 +35,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
       description: 'Advanced error correction algorithms to simulate realistic quantum computing conditions',
       benefits: ['Noise modeling', 'Error correction codes', 'Fidelity analysis']
     },
-  ];];];
+  ];
   const pricingPlans = [
     {
       name: 'Researcher',
@@ -114,7 +114,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
       icon: Zap,
       results: 'Accurate molecular modeling'
     }
-  ];];];
+  ];
   return (
     <>
       <Helmet>

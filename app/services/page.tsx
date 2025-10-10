@@ -714,7 +714,7 @@ const ServicesPage: React.FC = () => {
     const filteredServices = services.filter(service => {
       const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
     return matchesSearch && matchesCategory;
   })
 

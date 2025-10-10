@@ -19,7 +19,7 @@ const AIApiManagementPage: React.FC = () => {
       description: 'AI-driven rate limiting that adapts to usage patterns and prevents abuse while maintaining optimal performance.',
       benefits: ['Adaptive rate limiting', 'Abuse prevention', 'Performance optimization', 'Dynamic scaling']
     },
-    {];];
+    {];
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">

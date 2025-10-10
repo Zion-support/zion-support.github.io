@@ -6,7 +6,7 @@ const BackupRecoveryPage: React.FC = () => {
   const features = [
     {
     }
-  ];];];
+  ];
   const benefits = [
     'Enterprise-grade security and compliance',
     'Scalable and flexible backup solutions',

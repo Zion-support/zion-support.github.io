@@ -42,7 +42,7 @@ const FinancialITPage: React.FC = () => {
       description: 'Comprehensive analytics and reporting for financial operations and compliance.',
       benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']
   },
-  ];];
+  ];
 const services = [
     {
     icon: '🏦',
@@ -77,7 +77,7 @@ const benefits = [
     'Fraud Prevention',
 
     'Advanced Analytics';
-  ];];];
+  ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>
       <Helmet>

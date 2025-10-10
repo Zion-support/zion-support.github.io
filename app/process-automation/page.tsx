@@ -51,7 +51,7 @@ const ProcessAutomationPage: React.FC = () => {
       description: 'Track and optimize your automated processes with real-time analytics and reporting.'
   }
     }
-  ];];];
+  ];
 const benefits = [
     'Reduce manual work and human errors',
     'Increase operational efficiency',
