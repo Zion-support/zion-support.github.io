@@ -1,8 +1,8 @@
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async';
 
-const CustomSoftwarePage: React.FC = () => {,
-  return(<>)
+const CustomSoftwarePage: React.FC = () => {
+  return (<>
       <Helmet />
         <title>Custom Software Development - Zion Tech Group</title>
         <meta name="description" content="Tailored custom software solutions designed specifically for your business needs including web applications, mobile apps, and enterprise software." />

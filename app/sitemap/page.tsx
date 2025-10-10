@@ -1,169 +1,164 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Map, ArrowRight, Home, Users, Settings, Brain, Cloud, Code, FileText, Mail, Phone, Calendar, Shield, BarChart, Target, Globe, Database, Zap, Eye, Mic, Heart, DollarSign, Box, Cpu, Link, Server, CheckCircle, Star, Clock, TrendingUp, MessageCircle, Package, Monitor, Search, Video, Headphones, Scale, Cookie } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Home, Brain, Cloud, Users, FileText, DollarSign, Briefcase, BookOpen, Phone, MapPin } from 'lucide-react';
 
 const SitemapPage: React.FC = () => {
+  const sitemapSections = [
     {
       title: 'Main Pages',
       icon: Home,
       pages: [
-    },
-    {title: 'AI Services',
-      icon: Brain,
-pages: [
-    },
-    {title: 'IT Services',
-      icon: Cloud,
-pages: [
-        { name: 'IT Services Overview', url: '/it-services', description: 'Complete IT infrastructure solutions' },
-        { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, and GCP solutions' },
-        { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Comprehensive security services' },
-        { name: 'Web Development', url: '/web-development', description: 'Modern web application development' },
-        { name: 'Mobile Development', url: '/mobile-development', description: 'iOS and Android app development' },
+        { name: 'Home', url: '/' },
+        { name: 'About', url: '/about' },
+        { name: 'Contact', url: '/contact' },
+        { name: 'Services', url: '/services' },
+        { name: 'Pricing', url: '/pricing' },
+        { name: 'Case Studies', url: '/case-studies' },
+        { name: 'Blog', url: '/blog' },
+        { name: 'Tutorials', url: '/tutorials' },
+        { name: 'Careers', url: '/careers' }
+      ]
     },
     {
-      title: 'Resources',
+      title: 'AI Services',
+      icon: Brain,
+      pages: [
+        { name: 'AI Analytics', url: '/ai-analytics' },
+        { name: 'AI Automation', url: '/ai-automation' },
+        { name: 'AI Chatbot', url: '/ai-chatbot-builder' },
+        { name: 'AI CRM', url: '/ai-crm' },
+        { name: 'AI Cybersecurity', url: '/ai-cybersecurity' },
+        { name: 'AI Data Analytics', url: '/ai-data-analytics' },
+        { name: 'AI Healthcare', url: '/ai-healthcare' },
+        { name: 'AI Financial Services', url: '/ai-financial-services' },
+        { name: 'AI Computer Vision', url: '/ai-computer-vision' },
+        { name: 'AI Voice Solutions', url: '/ai-voice-solutions' }
+      ]
+    },
+    {
+      title: 'IT Services',
+      icon: Cloud,
+      pages: [
+        { name: 'Cloud Infrastructure', url: '/cloud-infrastructure' },
+        { name: 'API Development', url: '/api-development' },
+        { name: 'Cybersecurity', url: '/cybersecurity-solutions' },
+        { name: 'Database Management', url: '/database-management' },
+        { name: 'Mobile Development', url: '/mobile-development' },
+        { name: 'Web Development', url: '/web-development' },
+        { name: 'DevOps & CI/CD', url: '/devops-cicd' },
+        { name: 'IT Support', url: '/it-support' },
+        { name: 'Data Analytics & BI', url: '/data-analytics-bi' },
+        { name: 'Custom Software', url: '/custom-software' }
+      ]
+    },
+    {
+      title: 'Micro SAAS',
+      icon: Users,
+      pages: [
+        { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard' },
+        { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder' },
+        { name: 'AI Email Marketing', url: '/ai-email-marketing' },
+        { name: 'Social Media AI', url: '/social-media-ai' },
+        { name: 'AI Project Management', url: '/ai-project-management' },
+        { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer' },
+        { name: 'AI Sales CRM', url: '/ai-sales-crm' },
+        { name: 'AI Design Studio', url: '/ai-design-studio' },
+        { name: 'AI Inventory Manager', url: '/ai-inventory-manager' },
+        { name: 'AI Invoice Generator', url: '/ai-invoice-generator' }
+      ]
+    },
+    {
+      title: 'Legal & Support',
       icon: FileText,
       pages: [
-        { name: 'Tutorials', url: '/tutorials', description: 'Step-by-step guides and tutorials' },
-        { name: 'Documentation', url: '/docs', description: 'Technical documentation and APIs' },
-        { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' },
+        { name: 'Privacy Policy', url: '/privacy' },
+        { name: 'Terms of Service', url: '/terms' },
+        { name: 'Cookie Policy', url: '/cookies' },
+        { name: 'Support', url: '/support' },
+        { name: 'FAQ', url: '/faq' }
+      ]
+    }
+  ];
 
-  return(<>)
-      <Helmet />
-        <title>Sitemap - Zion Tech Group</title>
-<meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all our pages, services, and resources organized by category." />
+  return (
+    <>
+      <Helmet>
+        <title>Sitemap - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources." />
       </Helmet>
       
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-16">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <Map className="w-8 h-8 text-white" />
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Sitemap
-              </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Navigate our website easily with this comprehensive sitemap. 
-                Find all our pages, services, and resources organized by category.
-              </p>
-            </div>
-{/* Quick Links */}
-            <div className="bg-slate-800/50 rounded-lg p-8 mb-12">
-              <h2 className="text-2xl font-bold text-white mb-6 text-center">Quick Links</h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                {quickLinks.map((link, index) => (
-                  <a
-                    key={index}
-                    href={link.url}
-                    className="flex flex-col items-center p-4 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition-all duration-300 group"
-                  >
-                    <link.icon className="w-6 h-6 text-cyan-400 mb-2 group-hover:scale-110 transition-transform" />
-                    <span className="text-sm text-white text-center group-hover:text-cyan-300 transition-colors">
-                      {link.name}
-                    </span>
-                  </a>
-                ))}
-              </div>
-            </div>
-
-{/* Sitemap Sections */}
-            <div className="space-y-12">
-              {sitemapSections.map((section, sectionIndex) => (
-                <div key={sectionIndex} className="bg-slate-800/50 rounded-lg p-8">
-                  <div className="flex items-center space-x-4 mb-8">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                      <section.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h2 className="text-2xl font-bold text-white">{section.title}</h2>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Sitemap
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Complete directory of all pages and services available on our website
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {sitemapSections.map((section, index) => (
+              <div
+                key={index}
+                className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
+                    <section.icon className="w-5 h-5 text-white" />
                   </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {section.pages.map((page, pageIndex) => (
+                  <h2 className="text-xl font-bold text-white">{section.title}</h2>
+                </div>
+                
+                <ul className="space-y-3">
+                  {section.pages.map((page, pageIndex) => (
+                    <li key={pageIndex}>
                       <a
-                        key={pageIndex}
                         href={page.url}
-                        className="block p-4 bg-slate-700/30 rounded-lg hover:bg-slate-700/50 transition-all duration-300 group"
+                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center"
                       >
-                        <div className="flex items-start justify-between mb-2">
-                          <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">
-                            {page.name}
-                          </h3>
-                          <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
-                        </div>
-                        <p className="text-sm text-gray-300 group-hover:text-gray-200 transition-colors">
-                          {page.description}
-                        </p>
+                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></span>
+                        {page.name}
                       </a>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Search Box */}
-            <div className="mt-16 text-center">
-              <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
-                  Can't Find What You're Looking For?
-                </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Use our search functionality or contact us directly for assistance.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                  <div className="flex-1 relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
-                      type="text"
-                      placeholder="Search our website..."
-                      className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    />
-                  </div>
-                  <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300">
-                    Search
-                  </button>
-                </div>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
-
-{/* Contact CTA */}
-            <div className="mt-12 text-center">
-              <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
-                  Need Help Finding Something?
-                </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Our team is here to help you find exactly what you need. Contact us for personalized assistance.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
-                    Contact Us
-                  </a>
-                  <a
-                    href="tel:+13024640950"
-                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
-                    Call: (302) 464-0950
-                  </a>
+            ))}
+          </div>
+          
+          <div className="mt-16 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+            <h2 className="text-2xl font-bold text-white mb-6 text-center">Contact Information</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="flex flex-col items-center">
+                <div className="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center mb-4">
+                  <Phone className="w-6 h-6 text-white" />
                 </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+                <p className="text-gray-300">(302) 464-0950</p>
+              </div>
+              
+              <div className="flex flex-col items-center">
+                <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mb-4">
+                  <FileText className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+                <p className="text-gray-300">kleber@ziontechgroup.com</p>
+              </div>
+              
+              <div className="flex flex-col items-center">
+                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mb-4">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown, DE 19709</p>
               </div>
             </div>
           </div>
         </div>
-      </main>
-      
-      <Footer />
+      </div>
     </>
   );
 };

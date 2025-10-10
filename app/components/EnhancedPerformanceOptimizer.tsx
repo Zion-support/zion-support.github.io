@@ -1,124 +1,69 @@
 'use client';
-import React, {useEffect, useCallback}from 'react';
+import React, { useEffect, useCallback } from 'react';
 
-interface PerformanceOptimizerProps {children: React.ReactNode;,}
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;}const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
+  enablePrefetching?: boolean;
+  enableCompression?: boolean;
+}
+
+const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
   enableImageOptimization = true,
   enableLazyLoading = true,
-  enablePreloading = true,
-  enableCodeSplitting = true;}) => {// Image optimization;
+  enablePrefetching = true,
+  enableCompression = true
+}) => {
+  // Image optimization
   useEffect(() => {
-    if (!enableImageOptimization) return;
-
-    const optimizeImages = () => {;
-      const images = document.querySelectorAll('img[data-src]');
+    if (enableImageOptimization && typeof window !== 'undefined') {
+      const images = document.querySelectorAll('img');
       images.forEach((img) => {
-        const image = img as HTMLImageElement;
-        if (image.dataset.src) {
-          image.src = image.dataset.src;
-          image.removeAttribute('data-src');}})
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
+        if (!img.decoding) {
+          img.decoding = 'async';
+        }
+      });
     }
-
-    // Run optimization after component mount;
-    const timer = setTimeout(optimizeImages, 100);
-    return () => clearTimeout(timer);
   }, [enableImageOptimization]);
 
-  // Lazy loading;
-  useEffect(() => {if (!enableLazyLoading) return;
-
-    const observer = new IntersectionObserver()
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {;
-            const target = entry.target as HTMLElement;
-            target.classList.add('loaded');}})
-      },
-      {threshold: 0.1 ,})
-
-    const lazyElements = document.querySelectorAll('[data-lazy]');
-    lazyElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, [enableLazyLoading]);
-
-  // Preloading;
-  useEffect(() => {if (!enablePreloading) return;
-
-    const preloadCriticalResources = () => {
-      // Preload critical CSS;
-      const criticalCSS = document.createElement('link');
-      criticalCSS.rel = 'preload';
-      criticalCSS.href = '/styles/critical.css';
-      criticalCSS.as = 'style';
-      document.head.appendChild(criticalCSS);
-
-      // Preload critical fonts;
-      const criticalFont = document.createElement('link');
-      criticalFont.rel = 'preload';
-      criticalFont.href = '/fonts/inter-var.woff2';
-      criticalFont.as = 'font';
-      criticalFont.type = 'font/woff2';
-      criticalFont.crossOrigin = 'anonymous';
-      document.head.appendChild(criticalFont);}preloadCriticalResources();
-  }, [enablePreloading]);
-
-  // Code splitting optimization;
-  useEffect(() => {if (!enableCodeSplitting) return;
-
-    const optimizeCodeSplitting = () => {
-      // Preload next likely routes;
-      const links = document.querySelectorAll('a[href^="/"]');
-      links.forEach((link) => {
-        link.addEventListener('mouseenter', () => {
-          const href = link.getAttribute('href');
-          if (href && !href.startsWith('#')) {
-            // Preload the route;
-            import(/* webpackChunkName: "route" */ `../app${href,)}/page.tsx`);
-          }
-        })
-      })
-    }
-
-    const timer = setTimeout(optimizeCodeSplitting, 1000);
-    return () => clearTimeout(timer);
-  }, [enableCodeSplitting]);
-
-// Performance monitoring
+  // Prefetch critical resources
   useEffect(() => {
-    const measurePerformance = () => {
-      if ('performance' in window) {;
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = performance.getEntriesByType('paint');
-        
-        const metrics = {
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-          firstPaint: paint.find(p => p.name === 'first-paint')?.startTime || 0,
-firstContentfulPaint: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0
-        }
+    if (enablePrefetching && typeof window !== 'undefined') {
+      const prefetchLinks = [
+        '/fonts/inter.woff2',
+        '/css/critical.css'
+      ];
 
-        // Send metrics to analytics
-        if (typeof window !== 'undefined' && 'gtag' in window) {;
-          const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-          gtag('event', 'performance_metrics', {
-            event_category: 'performance',
-            event_label: 'page_load',
-            value: Math.round(metrics.domContentLoaded),})
-        }
-      }
+      prefetchLinks.forEach((href) => {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = href;
+        document.head.appendChild(link);
+      });
     }
+  }, [enablePrefetching]);
 
-    // Measure performance after page load;
-    window.addEventListener('load', measurePerformance);
-    return () => window.removeEventListener('load', measurePerformance);
-  }, []);
+  // Compression optimization
+  useEffect(() => {
+    if (enableCompression && typeof window !== 'undefined') {
+      // Enable compression for text content
+      const style = document.createElement('style');
+      style.textContent = `
+        * {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }, [enableCompression]);
 
-  return <React.Fragment>{children</React.Fragment>}</React.Fragment>;
+  return <>{children}</>;
 };
 
-export default PerformanceOptimizer;
+export default EnhancedPerformanceOptimizer;

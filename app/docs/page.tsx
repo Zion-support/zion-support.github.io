@@ -1,9 +1,9 @@
 'use client';
 import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Search, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, ArrowRight, CheckCircle, ExternalLink, Download, FileText, Settings, Database}}from 'lucide-react';
+import {Helmet} from 'react-helmet-async';
+import {Search, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, ArrowRight, CheckCircle, ExternalLink, Download, FileText, Settings, Database} from 'lucide-react';
 
-const DocsPage: React.FC = () => {,
+const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -113,7 +113,7 @@ const DocsPage: React.FC = () => {,
       )
     : filteredDocs;
 
-  return(<>)
+  return (<>
       <Helmet />
         <title>Documentation - Zion Tech Group</title>
         <meta name="description" content="Complete documentation for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive guides and API references." />

@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async';
 
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock}}from 'lucide-react';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock} from 'lucide-react';
 
-const CloudServicesPage: React.FC = () => {,
+const CloudServicesPage: React.FC = () => {
   const services = [
     {
       icon: Cloud,

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Cloud, Zap, Shield, Brain } from 'lucide-react';
 
-const ContentCarousel: React.FC = () => {,
+const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [

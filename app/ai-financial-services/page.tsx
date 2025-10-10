@@ -1,8 +1,8 @@
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async';
 
-const AiFinancialServicesPage: React.FC = () => {,
-  return(<>)
+const AiFinancialServicesPage: React.FC = () => {
+  return (<>
       <Helmet />
         <title>AI Financial Services - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered financial services including fraud detection, risk assessment, algorithmic trading, and financial forecasting solutions." />

@@ -1,9 +1,9 @@
 'use client';
 import React, {useState, useEffect}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Rocket, Globe, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Database, Settings, Calendar, Award, Eye, MessageSquare, CheckSquare, Cpu, Brain, Zap}}from 'lucide-react';
+import {Helmet} from 'react-helmet-async';
+import {Rocket, Globe, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Database, Settings, Calendar, Award, Eye, MessageSquare, CheckSquare, Cpu, Brain, Zap} from 'lucide-react';
 
-const AISpaceMissionOptimizer: React.FC = () => {,
+const AISpaceMissionOptimizer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

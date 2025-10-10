@@ -1,8 +1,8 @@
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async';
 
-const DataAnalyticsBiPage: React.FC = () => {,
-  return(<>)
+const DataAnalyticsBiPage: React.FC = () => {
+  return (<>
       <Helmet />
         <title>Data Analytics & BI - Zion Tech Group</title>
         <meta name="description" content="Advanced data analytics and business intelligence solutions including data visualization, reporting, and insights for data-driven decision making." />

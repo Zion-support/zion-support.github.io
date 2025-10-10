@@ -1,8 +1,8 @@
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async';
 
-const AiHrSolutionsPage: React.FC = () => {,
-  return(<>)
+const AiHrSolutionsPage: React.FC = () => {
+  return (<>
       <Helmet />
         <title>AI HR Solutions - Zion Tech Group</title>
         <meta name="description" content="Transform your HR operations with AI-powered solutions for recruitment, employee management, performance analytics, and workforce optimization." />

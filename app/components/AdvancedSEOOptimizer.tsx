@@ -1,6 +1,6 @@
 'use client';
 import React, {useEffect, useState, useCallback}from 'react';
-import {Helmet}}from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async';
 
 interface SEOOptimizerProps {title?: string;}
   description?: string;
@@ -78,7 +78,7 @@ const _trackPerformanceMetrics = () => {
       })
     }
   }
-  return(<>)
+  return (<>
       <Helmet />
         <title>{title}</title>
 <meta name="description" content={description} />
