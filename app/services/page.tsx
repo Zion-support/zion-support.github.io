@@ -15,7 +15,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy'],
       link: '/ai-project-manager',
       popular: true,
-      category: 'Productivity'}
+      category: 'Productivity'
     },
     {
       title: 'AI Social Media Manager',
@@ -26,7 +26,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach'],
       link: '/ai-social-media-manager',
       popular: true,
-      category: 'Marketing'}
+      category: 'Marketing'
     },
     {
       title: 'AI Analytics Dashboard',
@@ -37,7 +37,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift'],
       link: '/ai-analytics',
       popular: true,
-      category: 'Analytics'}
+      category: 'Analytics'
     },
     {
       title: 'AI Email Marketing',
@@ -235,7 +235,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['Faster reviews', 'Risk identification', 'Cost savings'],
       link: '/ai-legal-assistant',
       popular: false,
-      category: 'Legal'}
+      category: 'Legal'
     }
   ]
   const aiServices = [
@@ -345,7 +345,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,200/month',
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Form Recognition'],
       color: 'text-gray-400',
-      category: 'Document AI'}
+      category: 'Document AI'
     }
   ]
   const itServices = [
@@ -455,7 +455,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       price: '$1,600/month',
       features: ['IoT Device Development', 'Sensor Integration', 'Data Collection', 'Real-time Monitoring'],
       color: 'text-green-500',
-      category: 'IoT'}
+      category: 'IoT'
     }
   ]
   const categories = ['All', 'Productivity', 'Marketing', 'Analytics', 'Customer Service', 'Development', 'Content Creation', 'Automation', 'Design', 'Creative', 'Health & Fitness', 'Sales', 'Operations', 'Human Resources', 'Finance', 'Legal', '3D & Graphics', 'Voice Technology', 'Content AI', 'Personalization', 'Security', 'Document AI', 'Cloud Computing', 'Data Management', 'Consulting', 'Infrastructure', 'Mobile Development', 'Web Development', 'Support', 'Blockchain', 'IoT']
