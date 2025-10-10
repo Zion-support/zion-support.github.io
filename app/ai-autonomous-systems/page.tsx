@@ -157,8 +157,9 @@ const AIAutonomousSystemsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation >{/* Hero Section */}</Navigation>
-      </Navigation><section className="pt-24 pb-16 px-4">
+      <Navigation />
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-cyan-400/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -166,23 +167,28 @@ const AIAutonomousSystemsPage: React.FC = () => {
               <span>Self-Managing AI Systems</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Autonomous <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Systems<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build intelligent systems that operate independently, make decisions autonomously, and adapt to changing</p>
+              AI Autonomous <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Systems</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build intelligent systems that operate independently, make decisions autonomously, and adapt to changing
               environments without human intervention.</p>
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="cyber-button px-8 py-4 text-lg">Build Autonomous Systems</a>
+              <a href="/contact" className="cyber-button px-8 py-4 text-lg inline-flex items-center">
+                Build Autonomous Systems
                 <ArrowRight className="w-5 h-5 ml-2" />
-              <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">View Demo</a>
               </a>
+              <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">View Demo</a>
             </div>
           </div>
 
           {/* Capabilities */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">{capabilities.map((capability, index) => (</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            {capabilities.map((capability, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <capability.icon className="w-8 h-8 text-cyan-400" />
-                <div className="text-3xl font-bold text-cyan-400 mb-2">{capability.metric}<div className="text-gray-300">{capability.description}</div>
+                </div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">{capability.metric}</div>
+                <div className="text-gray-300">{capability.description}</div>
               </div>
             ))}
           </div>
@@ -193,16 +199,24 @@ const AIAutonomousSystemsPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Autonomous AI Capabilities<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our autonomous systems platform provides the intelligence and capabilities needed for</p>
-              truly independent operation.<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+            <h2 className="text-4xl font-bold text-white mb-6">Autonomous AI Capabilities</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our autonomous systems platform provides the intelligence and capabilities needed for
+              truly independent operation.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-colors">
                 <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-cyan-400" />
+                </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, idx) => (</ul>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" >{benefit}</CheckCircle>
-                    </CheckCircle>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -215,15 +229,23 @@ const AIAutonomousSystemsPage: React.FC = () => {
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Autonomous System Applications<p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover how autonomous AI systems are transforming industries and enabling new possibilities.<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{applications.map((app, index) => (</div>
+            <h2 className="text-4xl font-bold text-white mb-6">Autonomous System Applications</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover how autonomous AI systems are transforming industries and enabling new possibilities.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {applications.map((app, index) => (
               <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover:border-purple-400/40 transition-colors">
                 <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4">
                   <app.icon className="w-6 h-6 text-purple-400" />
+                </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{app.title}</h3>
-                <p className="text-gray-300 mb-4">{app.description}<div className="space-y-2">{app.useCases.map((useCase, idx) => (</div>
+                <p className="text-gray-300 mb-4">{app.description}</p>
+                <div className="space-y-2">
+                  {app.useCases.map((useCase, idx) => (
                     <div key={idx} className="flex items-center text-sm text-purple-300">
-                      <Target className="w-4 h-4 mr-2" >{useCase}</Target>
-                    </Target>
+                      <Target className="w-4 h-4 mr-2" />
+                      {useCase}
+                    </div>
                   ))}
                 </div>
               </div>
