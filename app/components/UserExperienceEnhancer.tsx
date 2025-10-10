@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useEffect, useState } from 'react';
 
 interface UserExperienceEnhancerProps {

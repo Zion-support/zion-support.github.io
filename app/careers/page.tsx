@@ -3,6 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { MapPin, Clock, CheckCircle, Star, Users, Heart, Award } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const openPositions = [
@@ -12,6 +13,8 @@ const CareersPage: React.FC = () => {
       location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
+      description: 'Lead development of cutting-edge AI solutions and machine learning models.',
+      requirements: ['Python, TensorFlow, PyTorch', '5+ years ML experience', 'PhD in AI/ML preferred']
     },
     {
       title: 'Cloud Architect',
@@ -23,6 +26,22 @@ const CareersPage: React.FC = () => {
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
     },
     {
+      title: 'DevOps Engineer',
+      department: 'Infrastructure',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '4+ years',
+      description: 'Build and maintain CI/CD pipelines and infrastructure automation.',
+      requirements: ['Docker, Kubernetes, Jenkins', '4+ years DevOps experience', 'Cloud certifications']
+    },
+    {
+      title: 'Data Scientist',
+      department: 'AI Solutions',
+      location: 'San Francisco, CA',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Extract insights from complex datasets and build predictive models.',
+      requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistics background']
     }
   ];
 
@@ -127,11 +146,62 @@ const CareersPage: React.FC = () => {
                     </ul>
                   </div>
 
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+                    Apply Now
+                  </button>
                 </div>
               ))}
             </div>
 
-            </div>
+            {/* Company Values */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Our Values</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {values.map((value, index) => (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <value.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2">{value.title}</h3>
+                    <p className="text-gray-300 text-sm">{value.description}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Benefits */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Benefits & Perks</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center space-x-3 bg-white/5 backdrop-blur-lg rounded-lg p-4 border border-white/10">
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="text-center">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Don't See Your Dream Job?
+              </h2>
+              <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="cyber-button text-center">
+                  Send Resume
+                </button>
+                <Link 
+                  to="/contact" 
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </section>
           </div>
         </section>
       </div>

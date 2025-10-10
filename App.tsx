@@ -4,20 +4,21 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
+import './app/styles/accessibility.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
 import { PageLoader } from './app/components/LoadingStates';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import SEOHead from './app/components/EnhancedSEOHead';
+import ErrorBoundary from './app/components/EnhancedErrorBoundary';
+import SEOHead from './app/components/AdvancedSEOHead';
 import SkipLink from './app/components/SkipLink';
 import Breadcrumb from './app/components/Breadcrumb';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import AccessibilityEnhancer from './app/components/AdvancedAccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/AnalyticsProvider';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
+import PerformanceMonitor from './app/components/AdvancedPerformanceMonitor';
 
 // Structured data for SEO - moved to SEOHead component
 
