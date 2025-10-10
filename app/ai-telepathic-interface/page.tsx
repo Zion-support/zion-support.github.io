@@ -1,43 +1,182 @@
+'use client';
+
 import React from 'react';
-import { Brain, Zap, Target, BarChart, Clock, CheckCircle, ArrowRight, Star, Users, Award, Shield, Globe, Cpu, Database, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic, DollarSign, Truck, Link, HardDrive, FileCheck } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, TrendingUp, Building, Activity, Settings, Database, Heart, Home, Video, Palette, Code, Calculator, Calendar, Compass, PieChart, TrendingDown, Phone, Mail, MapPin, MessageSquare, Headphones, Mic, Eye, Cpu, Layers } from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const AITelepathicInterfacePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "Neural Interface Technology",
+      description: "Direct brain-computer interface for seamless thought-to-action communication",
+      benefits: ["Thought control", "Neural feedback", "Direct communication"]
+    },
+    {
+      icon: MessageSquare,
+      title: "Telepathic Communication",
+      description: "Send and receive messages through pure thought with AI-powered translation",
+      benefits: ["Silent communication", "Instant messaging", "Multi-language support"]
+    },
+    {
+      icon: Eye,
+      title: "Visual Thought Processing",
+      description: "Convert mental images and visualizations into digital content instantly",
+      benefits: ["Image generation", "Visual thinking", "Creative expression"]
+    },
+    {
+      icon: Cpu,
+      title: "AI Mind Integration",
+      description: "Seamless integration with AI systems through direct neural pathways",
+      benefits: ["AI collaboration", "Enhanced cognition", "Superhuman capabilities"]
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Explorer",
+      price: "$399",
+      period: "per month",
+      description: "Perfect for early adopters and researchers",
+      features: [
+        "Basic neural interface",
+        "Simple thought commands",
+        "Limited AI integration",
+        "Email support",
+        "Mobile app access"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$799",
+      period: "per month",
+      description: "Ideal for professionals and advanced users",
+      features: [
+        "Advanced neural interface",
+        "Full telepathic communication",
+        "Complete AI integration",
+        "Priority support",
+        "API access",
+        "Custom neural models"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$1,599",
+      period: "per month",
+      description: "Comprehensive solution for organizations",
+      features: [
+        "Premium neural interface",
+        "Team telepathic networks",
+        "Advanced AI collaboration",
+        "24/7 dedicated support",
+        "White-label solution",
+        "Custom integrations",
+        "Neural security suite"
+      ],
+      popular: false
+    }
+  ];
+
+  const useCases = [
+    {
+      icon: Users,
+      title: "Team Collaboration",
+      description: "Enable instant telepathic communication between team members",
+      benefits: ["Silent meetings", "Instant coordination", "Enhanced productivity"]
+    },
+    {
+      icon: Code,
+      title: "AI Development",
+      description: "Code directly with AI through thought-based programming",
+      benefits: ["Thought coding", "AI pair programming", "Faster development"]
+    },
+    {
+      icon: Video,
+      title: "Creative Production",
+      description: "Create content directly from mental visualizations",
+      benefits: ["Mental storyboarding", "Visual creation", "Creative flow"]
+    },
+    {
+      icon: Shield,
+      title: "Security & Privacy",
+      description: "Secure neural communication with advanced encryption",
+      benefits: ["Encrypted thoughts", "Privacy protection", "Secure channels"]
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Dr. Sarah Chen",
+      role: "Neuroscientist",
+      company: "Future Mind Labs",
+      content: "The AI Telepathic Interface has revolutionized how we think about human-computer interaction. It's like having a direct connection to the digital world.",
+      rating: 5
+    },
+    {
+      name: "Marcus Rodriguez",
+      role: "Software Engineer",
+      company: "Neural Tech Corp",
+      content: "Coding with my thoughts has made development incredibly intuitive. The AI understands my intentions perfectly and helps me build faster than ever.",
+      rating: 5
+    },
+    {
+      name: "Elena Watson",
+      role: "Creative Director",
+      company: "Imagination Studios",
+      content: "This technology has unlocked new levels of creativity. I can visualize and create content directly from my imagination without any barriers.",
+      rating: 5
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Navigation */}
-      <nav className="bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
-            </div>
-            <a href="/contact" className="cyber-button px-4 py-2 text-sm">
-              Get Started
-            </a>
-          </div>
-        </div>
-      </nav>
-
+      <Header />
+      
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              AI Telepathic Interface
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Control your digital world with the power of thought. Our revolutionary telepathic interface technology enables direct brain-computer interaction for unprecedented control and efficiency.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-                Experience Telepathy
-              </a>
-              <a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-                View Demo
-              </a>
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-cyan-500/10"></div>
+        <div className="absolute inset-0 cyber-grid-advanced"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full border border-purple-400/30 mb-8">
+            <Brain className="w-5 h-5 text-purple-400 mr-2" />
+            <span className="text-purple-400 font-medium">AI Telepathic Interface</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 cyber-text-enhanced">
+            Think It, Do It
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            The world's first AI-powered telepathic interface. Control computers, communicate with AI, 
+            and create content directly through thought with our revolutionary neural technology.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <button className="neon-button-ultra text-lg px-8 py-4 hover:scale-105 transition-transform">
+              Start Your Journey
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 rounded-lg hover:bg-purple-400/10 transition-colors">
+              Watch Demo
+            </button>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-2">0ms</div>
+              <div className="text-gray-300">Thought Latency</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Accuracy Rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">∞</div>
+              <div className="text-gray-300">Possibilities</div>
             </div>
           </div>
         </div>
@@ -45,226 +184,178 @@ const AITelepathicInterfacePage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4">
-        <div className="container mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Mind-Controlled Features
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 cyber-text-enhanced">
+              Revolutionary Neural Technology
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the future of human-computer interaction with direct neural interface technology.
+              Experience the future of human-computer interaction with direct neural interfaces
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mb-4">
-                <Brain className="w-6 h-6 text-white" />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="futuristic-card-ultra p-8 hover-lift">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 mb-6">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-purple-400">
+                      <CheckCircle className="w-4 h-4 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Neural Signal Processing</h3>
-              <p className="text-gray-300">
-                Advanced brain-computer interface technology that translates neural signals into digital commands.
-              </p>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mb-4">
-                <Target className="w-6 h-6 text-white" />
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 cyber-text-enhanced">
+              Transform Your Workflow
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how telepathic interfaces can revolutionize your work and creativity
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="futuristic-card-ultra p-8 hover-lift">
+                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
+                  <useCase.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300 mb-6">{useCase.description}</p>
+                <ul className="space-y-2">
+                  {useCase.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-pink-400">
+                      <CheckCircle className="w-4 h-4 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Thought Commands</h3>
-              <p className="text-gray-300">
-                Control applications, devices, and systems using only your thoughts with 99.9% accuracy.
-              </p>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-red-500 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Instant Response</h3>
-              <p className="text-gray-300">
-                Lightning-fast response times with sub-100ms latency for real-time control and interaction.
-              </p>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-teal-500 rounded-lg flex items-center justify-center mb-4">
-                <BarChart className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Adaptive Learning</h3>
-              <p className="text-gray-300">
-                AI-powered learning system that adapts to your unique neural patterns and preferences.
-              </p>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Secure Interface</h3>
-              <p className="text-gray-300">
-                Advanced encryption and security protocols protect your neural data and privacy.
-              </p>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-lg flex items-center justify-center mb-4">
-                <Settings className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Customizable Controls</h3>
-              <p className="text-gray-300">
-                Personalize your telepathic interface with custom commands and gesture recognition.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 bg-slate-800/30">
-        <div className="container mx-auto">
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Telepathic Interface Pricing
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 cyber-text-enhanced">
+              Choose Your Neural Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect telepathic interface plan for your mind-control needs.
+              Flexible pricing options designed to meet your telepathic interface needs
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-gray-600 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Telepathic Basic</h3>
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$299<span className="text-lg text-gray-400">/month</span></div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Basic thought commands
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Simple device control
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Email support
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Basic training
-                </li>
-              </ul>
-              <a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">
-                Get Started
-              </a>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400 rounded-lg p-8 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`futuristic-card-ultra p-8 relative ${plan.popular ? 'border-2 border-purple-400' : ''}`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="text-4xl font-bold text-purple-400 mb-2">{plan.price}</div>
+                  <div className="text-gray-400">{plan.period}</div>
+                  <p className="text-gray-300 mt-4">{plan.description}</p>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <button className={`w-full py-3 px-6 rounded-lg font-bold transition-all ${
+                  plan.popular 
+                    ? 'neon-button-ultra' 
+                    : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400/10'
+                }`}>
+                  {plan.popular ? 'Get Started' : 'Choose Plan'}
+                </button>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Telepathic Pro</h3>
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$599<span className="text-lg text-gray-400">/month</span></div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Advanced neural processing
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Multi-device control
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Custom commands
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Priority support
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Advanced training
-                </li>
-              </ul>
-              <a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">
-                Get Started
-              </a>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-gray-600 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Telepathic Enterprise</h3>
-              <div className="text-4xl font-bold text-cyan-400 mb-6">$1,299<span className="text-lg text-gray-400">/month</span></div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Full neural interface
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Enterprise integration
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  Custom AI models
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  24/7 dedicated support
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <Check className="w-5 h-5 text-green-400 mr-3" />
-                  On-premise deployment
-                </li>
-              </ul>
-              <a href="/contact" className="w-full cyber-button px-6 py-3 text-center block">
-                Contact Sales
-              </a>
-            </div>
+      {/* Testimonials Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-pink-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 cyber-text-enhanced">
+              Trusted by Pioneers
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See what researchers and innovators say about our telepathic interface
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="futuristic-card-ultra p-8">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                <div className="border-t border-gray-700 pt-4">
+                  <div className="font-bold text-white">{testimonial.name}</div>
+                  <div className="text-purple-400">{testimonial.role}</div>
+                  <div className="text-gray-400">{testimonial.company}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Ready to Control with Your Mind?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join the telepathic revolution and experience the future of human-computer interaction.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
-                Start Telepathic Control
-              </a>
-              <a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-                Schedule Demo
-              </a>
-            </div>
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-cyan-500/10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 cyber-text-enhanced">
+            Ready to Think the Future?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join the pioneers who are already communicating with AI through pure thought
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="neon-button-ultra text-lg px-8 py-4 hover:scale-105 transition-transform">
+              Start Your Journey
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 rounded-lg hover:bg-purple-400/10 transition-colors">
+              Schedule Demo
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-slate-900 border-t border-cyan-400/20 py-12">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
-          </div>
-          <p className="text-gray-300 mb-4">
-            Leading provider of AI-powered enterprise solutions and telepathic interface technology.
-          </p>
-          <div className="flex justify-center space-x-6">
-            <a href="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors">Privacy Policy</a>
-            <a href="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors">Terms of Service</a>
-            <a href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

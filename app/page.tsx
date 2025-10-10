@@ -11,6 +11,46 @@ import Footer from './components/Footer';
 // Service data
 const microSAASServices = [
   {
+    name: "AI Quantum Financial Oracle",
+    description: "Revolutionary quantum-powered financial predictions with 99.7% accuracy and real-time market analysis",
+    price: "$299/mo",
+    features: ["Quantum Predictions", "Risk Management", "Portfolio Optimization", "Real-time Analysis"],
+    category: "Finance",
+    popular: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-quantum-financial-oracle"
+  },
+  {
+    name: "AI Neural Memory Assistant",
+    description: "Advanced AI with persistent memory that never forgets, learns continuously, and provides instant access to information",
+    price: "$149/mo",
+    features: ["Persistent Memory", "Intelligent Recall", "Multi-layer Processing", "Real-time Processing"],
+    category: "Productivity",
+    popular: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-neural-memory-assistant"
+  },
+  {
+    name: "AI Holographic Workspace",
+    description: "Revolutionary 3D holographic workspace with immersive projections and spatial computing",
+    price: "$399/mo",
+    features: ["3D Holographic Display", "Multi-dimensional Interface", "AI Navigation", "Seamless Integration"],
+    category: "Innovation",
+    popular: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-holographic-workspace"
+  },
+  {
+    name: "AI 3D Generation Studio",
+    description: "Create stunning 3D models from text descriptions with AI-powered generation and advanced texturing",
+    price: "$199/mo",
+    features: ["AI 3D Generation", "Advanced Texturing", "360° Rendering", "Smart Scaling"],
+    category: "Creative",
+    popular: true,
+    icon: Video,
+    link: "https://ziontechgroup.com/ai-3d-generation"
+  },
+  {
     name: "AI Project Manager Pro",
     description: "Intelligent project management with predictive analytics and automated resource allocation",
     price: "$99/mo",
@@ -512,77 +552,103 @@ const HomePage: React.FC = () => {
       <Header />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[length:50px_50px]" />
+        {/* Futuristic Background Effects */}
+        <div className="absolute inset-0 cyber-grid-advanced"></div>
+        <div className="absolute inset-0 quantum-field"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            AI-Powered Enterprise Solutions
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full border border-cyan-400/30 mb-8 neon-glow-cyan">
+            <Brain className="w-6 h-6 text-cyan-400 mr-3" />
+            <span className="text-cyan-400 font-medium text-lg">Zion Tech Group - Leading AI Innovation</span>
+          </div>
+          
+          <h1 className="text-6xl md:text-8xl font-bold mb-8 cyber-text-enhanced">
+            The Future is Now
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.
+          
+          <p className="text-2xl md:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">
+            Revolutionize your business with our cutting-edge AI solutions. From quantum financial oracles to holographic workspaces, 
+            we're building the future of technology today.
           </p>
           
-<div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+            <button className="neon-button-ultra text-xl px-10 py-5 hover:scale-105 transition-transform">
+              Start Your Journey
+              <ArrowRight className="w-6 h-6 ml-3" />
             </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+            <button className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-colors text-xl font-semibold">
               Watch Demo
             </button>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">300%</div>
-              <div className="text-gray-400">Average ROI</div>
+          {/* Contact Information */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="flex items-center justify-center space-x-3 text-cyan-400">
+              <Phone className="w-6 h-6" />
+              <span className="text-lg font-semibold">+1 302 464 0950</span>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">70%</div>
-              <div className="text-gray-400">Cost Reduction</div>
+            <div className="flex items-center justify-center space-x-3 text-purple-400">
+              <Mail className="w-6 h-6" />
+              <span className="text-lg font-semibold">kleber@ziontechgroup.com</span>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-pink-400 mb-2">90%</div>
-              <div className="text-gray-400">Efficiency Gains</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
-              <div className="text-gray-400">Uptime Guarantee</div>
+            <div className="flex items-center justify-center space-x-3 text-pink-400">
+              <MapPin className="w-6 h-6" />
+              <span className="text-lg font-semibold">Middletown, DE 19709</span>
             </div>
           </div>
-</div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center futuristic-card-ultra p-6">
+              <div className="text-5xl font-bold text-cyan-400 mb-2 neon-pulse">300%</div>
+              <div className="text-gray-300 font-semibold">Average ROI</div>
+            </div>
+            <div className="text-center futuristic-card-ultra p-6">
+              <div className="text-5xl font-bold text-purple-400 mb-2 neon-pulse">70%</div>
+              <div className="text-gray-300 font-semibold">Cost Reduction</div>
+            </div>
+            <div className="text-center futuristic-card-ultra p-6">
+              <div className="text-5xl font-bold text-pink-400 mb-2 neon-pulse">90%</div>
+              <div className="text-gray-300 font-semibold">Efficiency Gains</div>
+            </div>
+            <div className="text-center futuristic-card-ultra p-6">
+              <div className="text-5xl font-bold text-green-400 mb-2 neon-pulse">99.9%</div>
+              <div className="text-gray-300 font-semibold">Uptime Guarantee</div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-purple-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
-            <p className="text-xl text-gray-300">Comprehensive AI and IT solutions for modern enterprises</p>
+            <h2 className="text-5xl font-bold mb-6 cyber-text-enhanced">Revolutionary Services</h2>
+            <p className="text-2xl text-gray-300 max-w-4xl mx-auto">Comprehensive AI and IT solutions that transform businesses and shape the future</p>
           </div>
-<div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
-                  <div className="text-center mb-4">
-                    <div className="text-4xl mb-4">🤖</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+<div key={index} className="futuristic-card-ultra p-8 hover-lift group">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                      <service.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4 cyber-text">{service.name}</h3>
+                    <p className="text-gray-300 mb-6 text-lg leading-relaxed">{service.description}</p>
                     
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-3 mb-8">
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          {feature}
+                        <div key={featureIndex} className="flex items-center text-gray-300">
+                          <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
                         </div>
                       ))}
                     </div>
                     
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                      <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
-                        Learn More →
+                      <div className="text-3xl font-bold text-cyan-400 mb-4 neon-glow-cyan">{service.price}</div>
+                      <button className="neon-button w-full py-3 px-6 text-sm font-bold">
+                        Learn More
+                        <ArrowRight className="w-4 h-4 ml-2" />
                       </button>
                     </div>
                   </div>
@@ -593,28 +659,31 @@ const HomePage: React.FC = () => {
 
           {/* AI Services */}
           <div className="mb-16">
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">Enterprise AI Solutions</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <h3 className="text-4xl font-bold text-white mb-12 text-center cyber-text-enhanced">Enterprise AI Solutions</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {aiServices.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300">
-                  <div className="text-center mb-4">
-                    <div className="text-4xl mb-4">🚀</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                <div key={index} className="futuristic-card-ultra p-8 hover-lift group">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                      <service.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4 cyber-text">{service.name}</h3>
+                    <p className="text-gray-300 mb-6 text-lg leading-relaxed">{service.description}</p>
                     
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-3 mb-8">
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
-                          {feature}
+                        <div key={featureIndex} className="flex items-center text-gray-300">
+                          <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
                         </div>
                       ))}
                     </div>
                     
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-purple-400 mb-2">{service.price}</div>
-                      <button className="text-purple-400 hover:text-purple-300 font-medium text-sm transition-colors">
-                        Learn More →
+                      <div className="text-3xl font-bold text-purple-400 mb-4 neon-glow-purple">{service.price}</div>
+                      <button className="neon-button w-full py-3 px-6 text-sm font-bold">
+                        Learn More
+                        <ArrowRight className="w-4 h-4 ml-2" />
                       </button>
                     </div>
                   </div>
@@ -625,28 +694,31 @@ const HomePage: React.FC = () => {
 
           {/* IT Services */}
           <div className="mb-16">
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">IT Infrastructure Services</h3>
+            <h3 className="text-4xl font-bold text-white mb-12 text-center cyber-text-enhanced">IT Infrastructure Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {itServices.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
-                  <div className="text-center mb-4">
-                    <div className="text-4xl mb-4">⚡</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                <div key={index} className="futuristic-card-ultra p-8 hover-lift group">
+                  <div className="text-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                      <service.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4 cyber-text">{service.name}</h3>
+                    <p className="text-gray-300 mb-6 text-lg leading-relaxed">{service.description}</p>
                     
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-3 mb-8">
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
+                        <div key={featureIndex} className="flex items-center text-gray-300">
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
                         </div>
                       ))}
                     </div>
                     
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-green-400 mb-2">{service.price}</div>
-                      <button className="text-green-400 hover:text-green-300 font-medium text-sm transition-colors">
-                        Learn More →
+                      <div className="text-3xl font-bold text-green-400 mb-4 neon-glow-pink">{service.price}</div>
+                      <button className="neon-button w-full py-3 px-6 text-sm font-bold">
+                        Learn More
+                        <ArrowRight className="w-4 h-4 ml-2" />
                       </button>
                     </div>
                   </div>
