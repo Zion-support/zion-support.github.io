@@ -1,6 +1,8 @@
 'use client';
 import React from 'react';
 
-constconst EnhancedSkipLink: React.FC;
+const SkipLink: React.FC = () => {
+  return null;
+};
 
-export default EnhancedSkipLink
+export default SkipLink;
