@@ -146,6 +146,39 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="target" content="all" />
       <meta name="HandheldFriendly" content="true" />
       <meta name="MobileOptimized" content="width" />
+      
+      {/* Enhanced SEO Meta Tags */}
+      <meta name="google-site-verification" content="your-google-verification-code" />
+      <meta name="msvalidate.01" content="your-bing-verification-code" />
+      <meta name="yandex-verification" content="your-yandex-verification-code" />
+      <meta name="pinterest-site-verification" content="your-pinterest-verification-code" />
+      
+      {/* Rich Snippets */}
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      
+      {/* Enhanced Open Graph */}
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="Zion Tech Group - AI-Powered Enterprise Solutions" />
+      <meta property="og:updated_time" content={new Date().toISOString()} />
+      
+      {/* Enhanced Twitter Cards */}
+      <meta name="twitter:image:alt" content="Zion Tech Group - AI-Powered Enterprise Solutions" />
+      <meta name="twitter:domain" content="ziontechgroup.com" />
+      <meta name="twitter:url" content={url} />
+      
+      {/* Additional Performance Hints */}
+      <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      <link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" />
+      
+      {/* Manifest */}
+      <link rel="manifest" href="/manifest.json" />
+      
+      {/* Theme Color Variations */}
+      <meta name="theme-color" content="#00ffff" media="(prefers-color-scheme: light)" />
+      <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
     </Helmet>
   );
 };
