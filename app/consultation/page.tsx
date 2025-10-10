@@ -96,6 +96,7 @@ const ConsultationPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-19af
   ];
 
+<<<<<<< HEAD
   const experts = [
     {
       name: 'Dr. Sarah Chen',
@@ -133,6 +134,13 @@ const ConsultationPage: React.FC = () => {
         <meta name="description" content="Get expert consultation on AI, cloud computing, cybersecurity, and IT strategy. Book a consultation with our experienced team." />
         <meta name="keywords" content="IT consultation, AI consulting, cloud consulting, cybersecurity consulting, technology strategy" />
       </Helmet>
+=======
+  return (<div>
+        <title>Consultation - Zion Tech Group | Expert IT Consulting<
+        <meta name="description" content="Get expert consultation on AI, cloud computing, cybersecurity, and IT strategy. Book a consultation with our experienced team." 
+        <meta name="keywords" content="IT consultation, AI consulting, cloud consulting, cybersecurity consulting, technology strategy" 
+      <
+>>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
 
 <<<<<<< HEAD
       {/* Hero Section */}
@@ -160,6 +168,7 @@ const ConsultationPage: React.FC = () => {
               </button>
 =======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -427,6 +436,15 @@ const ConsultationPage: React.FC = () => {
         </div>
       </section>
     </div>
+=======
+                <
+              <
+            <
+          <
+        <
+      <
+    <)
+>>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
   );
 };
 

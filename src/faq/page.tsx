@@ -1,16 +1,15 @@
 import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import Navigation from '../components
+import Footer from '../components
 
 const FAQPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
 
   const toggleItem = (index: number) => {
-    setOpenItems(prev => 
+    setOpenItems(prev =>)
       prev.includes(index) 
         ? prev.filter(i => i !== index)
         : [...prev, index]
@@ -21,14 +20,16 @@ const FAQPage: React.FC = () => {
     {
       category: 'General Questions',
       questions: [
-          question: 'What is Zion Tech Group?',
+          questio,
+    n: 'What is Zion Tech Group?',
           answer:         ,
 $4},
           question: 'What services do you offer?',
           answer:           ,
 questionquestion: 'How can I get started?',
           answer: 'Getting started is easy! Contact us for a free consultation at (302) 464-0950 or email kleber@ziontechgroup.com. We\'ll assess your needs and recommend the best solutions for your business.'
-          question: 'Do you offer custom solutions?',
+          questio,
+    n: 'Do you offer custom solutions?',
           answer:         ,
 $4}
       ]
@@ -44,8 +45,9 @@ questionquestion: 'Can you integrate AI with our existing systems?',
 categorycategory: 'IT Services',
           question: 'What IT services do you offer?',
           answer:           ,
-questionquestion: 'Do you provide 24/7 support?',
-          answer:           ,
+questionquestion: 'Do you provide 24
+          answe,
+    r:           ,
 questionquestion: 'Can you help with cloud migration?',
           answer:           ,
 questionquestion: 'What cybersecurity services do you provide?',
@@ -87,114 +89,104 @@ $4];
     )
   })).filter(category => category.questions.length > 0);
 
-  return (
-    <>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<>
+      
         <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
+          {/* Header *
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Frequently Asked Questions
-            </h1>
+            <
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Find answers to common questions about our AI and IT services, pricing, and support.
-            </p>
+            <
             
-            {/* Search Bar */}
+            {/* Search Bar *
             <div className="max-w-md mx-auto relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" 
               <input
                 type="text"
                 placeholder="Search FAQs..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-              />
-            </div>
+                value = { searchTerm };)
+                onChange = { (e) => setSearchTerm(e.target.value) };
+                className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
+    s:ring-cyan-400
+              
+            <
 
-          {/* FAQ Content */}
+          {/* FAQ Content *
           <div className="max-w-4xl mx-auto">
-            {filteredData.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="mb-12">
+            {filteredData.map((category), categoryIndex) => (<div key={categoryIndex} className="mb-12">
                 <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
                   {category.category}
-                </h2>
-                <div className="space-y-4">
+                <
+                <div className="space-y-4">)
                   {category.questions.map((item, itemIndex) => {
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
                     
-                      <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
+                      <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700
                         <button
-                          onClick={() => toggleItem(globalIndex)}
-                          className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
+                          onClick = { () => toggleItem(globalIndex) };
+                          className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700
                         >
-                          <span className="text-white font-medium pr-4">{item.question}</span>
+                          <span className="text-white font-medium pr-4">{item.question}<
                           {isOpen ? (
-                            <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                          ) : (
-                            <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                          )}
-                        </button>
-                        {isOpen && (
-                          <div className="px-6 pb-4">
-                            <p className="text-gray-300 leading-relaxed">{item.answer}</p>
+                            <p className="text-gray-300 leading-relaxed">{item.answer}<)
                   })}
             ))}
 
-          {/* Contact CTA */}
-          <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+          {/* Contact CTA *
+          <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900
             <h2 className="text-2xl font-bold text-white mb-4">
               Still Have Questions?
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Can't find the answer you're looking for? Our team is here to help you with any questions about our services.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2" 
                 Call (302) 464-0950
-              </a>
+              <
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
+                <Mail className="w-4 h-4 mr-2" 
                 Email Us
-                href="/contact"
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <MessageSquare className="w-4 h-4 mr-2" />
+                href="
+                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,
+    r:text-slate-900 transition-all duration-300 inline-flex items-center"
+                <MessageSquare className="w-4 h-4 mr-2" 
                 Contact Form
-      <Footer />
-    </>
+      <Footer 
+    <
 
 export default FAQPage;
 
-
 import { Link } from 'react-router-dom';
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components
+import Footer from '../components
 const FAQPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
-
+  return (<div>Coming Soon<)
   );
 };
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
 const toggleItem = (inde)
-  x: number) => {setOpenItems(prev =>})
+  x: number) => {setOpenItems(prev =>});
       prev.includes(index)
         ? prev.filter(i => i !== index)
         : [...prev, index]
     );
   };
   const faqData = [
-  // TOD,
+  /
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
-  O: Add content;}
+    {/* TODO: Fix JSX expression *
+  ,
+    O: Add content;}
 };
   categor,
   y: 'General Questions',
@@ -230,7 +222,7 @@ const toggleItem = (inde)
           questio,
   n: 'How much do AI services cost?',
           answe,
-  r: 'Our AI services start at $1,500/month for basic packages. Pricing varies based on complexity, scope, and specific requirements. Contact us for a detailed quote tailored to your needs.'
+  r: 'Our AI services start at $1,500
           questio,
   n: 'Do you provide AI training for our team?',
           answe,
@@ -244,11 +236,11 @@ const toggleItem = (inde)
           questio,
   n: 'What IT services do you offer?',
           answe,
-  r: 'We offer comprehensive IT services including cloud migration, cybersecurity, DevOps & CI/CD, database management, network solutions, system administration, IT consulting, and 24/7 support.'
+  r: 'We offer comprehensive IT services including cloud migration, cybersecurity, DevOps & CI/CD, database management, network solutions, system administration, IT consulting, and 24
           questio,
-  n: 'Do you provide 24/7 support?',
+  n: 'Do you provide 24
           answe,
-  r: 'Yes, we offer 24/7 IT support and monitoring services to ensure your systems are always running smoothly. Our support team is available around the clock to address any issues.'
+  r: 'Yes, we offer 24
           questio,
   n: 'Can you help with cloud migration?',
           answe,
@@ -299,11 +291,11 @@ const toggleItem = (inde)
           questio,
   n: 'How can I contact support?',
           answe,
-  r: 'You can contact our support team at (302) 464-0950, email kleber@ziontechgroup.com, or use our online support portal. We also offer 24/7 emergency support for critical issues.'
+  r: 'You can contact our support team at (302) 464-0950, email kleber@ziontechgroup.com, or use our online support portal. We also offer 24
           questio,
   n: 'What are your business hours?',
           answe,
-  r: 'Our business hours are Monday-Friday, 9AM-6PM EST. However, our support team is available 24/7 for critical issues and emergency support.'
+  r: 'Our business hours are Monday-Friday, 9AM-6PM EST. However, our support team is available 24
           questio,
   n: 'Do you offer remote support?',
           answe,
@@ -313,144 +305,112 @@ const toggleItem = (inde)
           answe,
   r: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
   ];
-  const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression *
+  ,
+    O: Add content;)}
 }
-//     ...category,
+/
     question,
   s: category.questions.filter(q =>)
-//       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-//       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
-//     )
+/
+/
+/
   })).filter(category => category.questions.length > 0);
-  return (<div>Coming Soon</div>)
+  return (<div>Coming Soon<)
   )
     
           <>
-      <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        <div className="container mx-auto px-4 py-16 pt-24"></div>
-          {/* Header */}"
-          <div className="text-center mb-12"></div>"
+      <Navigation /><
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
+        <div className="container mx-auto px-4 py-16 pt-24"><
+          {/* Header *
+          <div className="text-center mb-12"><
             <h1 className="text-4xl,"
-  md:text-5xl font-bold text-white mb-6 neon-text"></h1>
-// Frequently Asked Questions;
-          </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
-// Find answers to common questions about our AI and IT services, pricing, and support.
-            
-          
-          
-          
-          
-          
-          
-          
-          
-          </p>
+  md:text-5xl font-bold text-white mb-6 neon-text"><
+/
+          <
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"><
+/
 
-            {/* Search Bar */}
+          <
+
+            {/* Search Bar *
             <div className="max-w-md mx-auto relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" 
               <input
 type="text" placeholder="Search FAQs..."
 
-                value={searchTerm}
+                value = { searchTerm };
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400,
   focus:outline-none,
   focus:border-cyan-400,
   focus:ring-2,"
-  focus:ring-cyan-400/20"
-// />
-            
-          
-          
-          
-          
-          
-          
-          
-          
-          </div>
-          {/* FAQ Content */}"
-          <div className="max-w-4xl mx-auto"></div>
-            {filteredData.map((category, categoryIndex) => ()}"
-          <div key={categoryIndex} className="mb-12"></div>"
-                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text"></h2>
+  focus: ring-cyan-400
+// 
+
+          <
+          {/* FAQ Content *
+          <div className="max-w-4xl mx-auto"><
+            {filteredData.map((category), categoryIndex) => ()}"
+          <div key={categoryIndex} className="mb-12"><
+                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text"><
                   {category.category}
-                </h2>"
-                <div className="space-y-4"></div>
-                  {category.questions.map((item, itemIndex) => {}
-  // TOD,
+                <
+                <div className="space-y-4"><
+                  {category.questions.map ((item, itemIndex) => {}
+  /
   O: Add content;
 }
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
-                      
-          
-          
-          
-          
-          
-          
-          
+
           "
-          <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50"></div>
-                        <button></button>
+          <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50"><
+                        <button><
                           onClick={() => toggleItem(globalIndex)}"
                           className="w-full px-6 py-4 text-left flex items-center justify-between,"
-  hover:bg-slate-700/50 transition-colors"
-// >
-                          
-          
-          
-          
-          
-          
-          
-          
+  hover:bg-slate-700
+/
+
           "
-          <span className="text-white font-medium pr-4">{item.question}</span>
+          <span className="text-white font-medium pr-4">{item.question}<
                           {isOpen ? ()}"
-          <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" /></ChevronUp>
+          <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" /><
                           ) : ()
                             "
-          <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" /></ChevronDown>
+          <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" /><
                           )}
-                        </button>
+                        <
                         {isOpen && ()}"
-          <div className="px-6 pb-4"></div>"
-                            <p className="text-gray-300 leading-relaxed">{item.answer}</p>
+          <div className="px-6 pb-4"><
+                            <p className="text-gray-300 leading-relaxed">{item.answer}<
                   })}
             ))}
 
-{/* Contact CTA */}
-          <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+{/* Contact CTA *
+          <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900
             <h2 className="text-2xl font-bold text-white mb-4">
               Still Have Questions?
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Can't find the answer you're looking for? Our team is here to help you with any questions about our services.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+13024640950" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                <Phone className="w-5 h-5 mr-2" />
-// Call (302) 464-0950;
-          </a>
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
+                <Phone className="w-5 h-5 mr-2" 
+/
+          <
+                href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hove,
+    r:text-slate-900 transition-all duration-300 inline-flex items-center"
+                <Mail className="w-4 h-4 mr-2" 
                 Email Us;
-                href="/contact" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <MessageSquare className="w-4 h-4 mr-2" />
+                href="
+                <MessageSquare className="w-4 h-4 mr-2" 
 
                 Contact Form;
-      <Footer /></Footer>
-    </>
+      <Footer /><
+    <
 export default FAQPage;
 
-
-
-
 export default FaqPage;
-
 

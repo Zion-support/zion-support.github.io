@@ -21,6 +21,7 @@ interface CaseStudy {
 const CaseStudiesPage: React.FC = () => {
   const caseStudies: CaseStudy[] = [
     {
+<<<<<<< HEAD
       id: '1',
       title: 'AI-Powered Customer Service Transformation',
       client: 'TechCorp Solutions',
@@ -36,12 +37,17 @@ const CaseStudiesPage: React.FC = () => {
       image: '/images/case-studies/ai-customer-service.jpg',
       duration: '3 months',
       team: '8 specialists'
+=======
+      imag,
+    e: '/api/placeholder/600
+>>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
     },
     {
       id: '2',
       title: 'Cloud Migration for Financial Services',
       client: 'FinanceCorp',
       industry: 'Financial Services',
+<<<<<<< HEAD
       challenge: 'Legacy on-premises infrastructure limiting scalability and increasing maintenance costs.',
       solution: 'Complete cloud migration to AWS with microservices architecture and automated scaling.',
       results: [
@@ -53,12 +59,16 @@ const CaseStudiesPage: React.FC = () => {
       image: '/images/case-studies/cloud-migration.jpg',
       duration: '6 months',
       team: '12 specialists'
+=======
+      image: '/api/placeholder/600
+>>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
     },
     {
       id: '3',
       title: 'Cybersecurity Enhancement for Healthcare',
       client: 'MediCare Plus',
       industry: 'Healthcare',
+<<<<<<< HEAD
       challenge: 'Increasing cyber threats and need for HIPAA compliance in patient data protection.',
       solution: 'Comprehensive security audit and implementation of zero-trust architecture with advanced threat detection.',
       results: [
@@ -288,6 +298,28 @@ const CaseStudiesPage: React.FC = () => {
         </section>
       </div>
     </>
+=======
+      image: '/api/placeholder/600
+    }
+  ];
+
+  return (<div>
+        <title>Case Studies | Zion Tech Group<
+        <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions." 
+        <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation" 
+      <
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <
+          <
+        <)
+              ))}
+            <
+          <
+        <
+      <
+    <
+>>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
   );
 };
 

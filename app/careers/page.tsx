@@ -22,8 +22,13 @@ interface JobPosition {
 const CareersPage: React.FC = () => {
   const openPositions: JobPosition[] = [
     {
+<<<<<<< HEAD
       id: '1',
       title: 'Senior AI Engineer',
+=======
+      titl,
+    e: 'Senior AI Engineer',
+>>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
       department: 'AI Solutions',
       location: 'Remote',
       type: 'Full-time',
@@ -230,6 +235,7 @@ const CareersPage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -260,10 +266,32 @@ const CareersPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+  return (<div>
+        <title>Careers - Zion Tech Group | Join Our Team<
+        <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture." 
+        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs" 
+      <
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">)
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" 
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} 
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
+              Join Our Team
+            <
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Work on cutting-edge AI and IT solutions that transform businesses worldwide.
+            <
+          <
+        <
+>>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
 
         {/* Company Values */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Values</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -325,6 +353,14 @@ const CareersPage: React.FC = () => {
                   className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                     position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20'
                   } hover:border-purple-400 transition-all duration-300 group`}
+=======
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions<
+            <div className="grid grid-cols-1 m,
+    d:grid-cols-2 gap-6 mb-16">
+              {openPositions.map((position), index) => (<div
+                  key = { index };
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-400
+>>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
                 >
                   {position.featured && (
                     <div className="flex items-center gap-2 mb-4">
@@ -335,24 +371,39 @@ const CareersPage: React.FC = () => {
 
                   <div className="flex items-start justify-between mb-4">
                     <div>
+<<<<<<< HEAD
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
                         {position.title}
                       </h3>
                       <p className="text-gray-300">{position.department}</p>
                     </div>
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm rounded-full">
+=======
+                      <h3 className="text-xl font-bold text-white mb-2 group-hove,
+    r:text-cyan-400 transition-colors">
+                        {position.title}
+                      <
+                      <p className="text-gray-300">{position.department}<
+                    <
+                    <span className="px-3 py-1 bg-cyan-500
+>>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
                       {position.type}
-                    </span>
-                  </div>
+                    <
+                  <
 
+<<<<<<< HEAD
                   <p className="text-gray-300 mb-6">{position.description}</p>
+=======
+                  <p className="text-gray-300 mb-4">{position.description}<
+>>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
 
                   <div className="flex items-center gap-4 mb-6 text-sm text-gray-400">
                     <div className="flex items-center gap-1">
-                      <MapPin className="w-4 h-4" />
-                      <span>{position.location}</span>
-                    </div>
+                      <MapPin className="w-4 h-4" 
+                      <span>{position.location}<
+                    <
                     <div className="flex items-center gap-1">
+<<<<<<< HEAD
                       <Clock className="w-4 h-4" />
                       <span>{position.experience}</span>
                     </div>
@@ -368,9 +419,22 @@ const CareersPage: React.FC = () => {
                       {position.requirements.slice(0, 3).map((req, index) => (
                         <li key={index} className="text-sm text-gray-300 flex items-center">
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+=======
+                      <Clock className="w-4 h-4" 
+                      <span>{position.experience}<
+                    <
+                  <
+
+                  <div className="mb-6">
+                    <h4 className="text-white font-semibold mb-2">Key Requirements: <
+                    <ul className="space-y-1">)
+                      {position.requirements.map((req), reqIndex) => (<li key={reqIndex} className="text-gray-300 text-sm flex items-center">
+                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" 
+>>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
                           {req}
-                        </li>
+                        <)
                       ))}
+<<<<<<< HEAD
                       {position.requirements.length > 3 && (
                         <li className="text-sm text-gray-400">
                           +{position.requirements.length - 3} more requirements
@@ -424,6 +488,20 @@ const CareersPage: React.FC = () => {
         </section>
       </div>
     </>
+=======
+                    <
+                  <
+
+                <
+              ))}
+            <
+
+            <
+          <
+        <
+      <
+    <
+>>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
   );
 };
 
