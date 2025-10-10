@@ -1,116 +1,111 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, memo } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  // Preload critical resources
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ children }) => {
   useEffect(() => {
+    // Preload critical resources
     const preloadCriticalResources = () => {
-      // Preload critical fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'preload';
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap';
-      fontLink.as = 'style';
-      document.head.appendChild(fontLink);
-
-      // Preload critical images
       const criticalImages = [
         '/images/hero-bg.jpg',
         '/images/logo.png',
-        '/images/team/kleber-santos.jpg'
+        '/images/og-image.jpg'
       ];
 
       criticalImages.forEach(src => {
-        const img = new Image();
-        img.src = src;
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
+        document.head.appendChild(link);
       });
     };
 
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        // Add loading="lazy" to non-critical images
+        if (!img.hasAttribute('loading')) {
+          img.setAttribute('loading', 'lazy');
+        }
+        
+        // Add decoding="async" for better performance
+        if (!img.hasAttribute('decoding')) {
+          img.setAttribute('decoding', 'async');
+        }
+      });
+    };
+
+    // Enable service worker for caching
+    const enableServiceWorker = () => {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('Service Worker registered:', registration);
+          })
+          .catch(error => {
+            console.log('Service Worker registration failed:', error);
+          });
+      }
+    };
+
+    // Optimize scroll performance
+    const optimizeScroll = () => {
+      let ticking = false;
+      
+      const updateScroll = () => {
+        // Throttle scroll events
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
+
+      window.addEventListener('scroll', updateScroll, { passive: true });
+      
+      return () => {
+        window.removeEventListener('scroll', updateScroll);
+      };
+    };
+
+    // Initialize optimizations
     preloadCriticalResources();
-  }, []);
+    optimizeImages();
+    enableServiceWorker();
+    const cleanupScroll = optimizeScroll();
 
-  // Optimize scroll performance
-  useEffect(() => {
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          // Throttled scroll handling
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Optimize resize performance
-  useEffect(() => {
-    let resizeTimeout: NodeJS.Timeout;
-
-    const handleResize = () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        // Throttled resize handling
-      }, 250);
-    };
-
-    window.addEventListener('resize', handleResize);
+    // Cleanup on unmount
     return () => {
-      clearTimeout(resizeTimeout);
-      window.removeEventListener('resize', handleResize);
+      cleanupScroll();
     };
   }, []);
 
-  // Intersection Observer for lazy loading
+  // Add performance monitoring
   useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: '50px',
-      threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const target = entry.target as HTMLElement;
-          if (target.dataset.lazy) {
-            target.style.opacity = '1';
-            target.style.transform = 'translateY(0)';
-          }
-        }
-      });
-    }, observerOptions);
-
-    // Observe all lazy elements
-    const lazyElements = document.querySelectorAll('[data-lazy]');
-    lazyElements.forEach(el => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
-  // Memory optimization
-  useEffect(() => {
-    const cleanup = () => {
-      // Clean up any global event listeners or timers
-      if (typeof window !== 'undefined') {
-        // Clear any global intervals
-        const highestId = window.setTimeout(() => {}, 0);
-        for (let i = 0; i < highestId; i++) {
-          window.clearTimeout(i);
-        }
+    // Monitor Core Web Vitals
+    const monitorWebVitals = () => {
+      if ('web-vitals' in window) {
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          getCLS(console.log);
+          getFID(console.log);
+          getFCP(console.log);
+          getLCP(console.log);
+          getTTFB(console.log);
+        });
       }
     };
 
-    return cleanup;
+    monitorWebVitals();
   }, []);
 
   return <>{children}</>;
-};
+});
+
+PerformanceOptimizer.displayName = 'PerformanceOptimizer';
 
 export default PerformanceOptimizer;

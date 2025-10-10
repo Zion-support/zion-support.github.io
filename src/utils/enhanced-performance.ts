@@ -4,8 +4,7 @@
 export const enhanced-performance = {
   // Add utility functions here
   init: () => {
-    console.log('enhanced-performance initialized');
-  }
+    }
 };
 
 export default enhanced-performance;

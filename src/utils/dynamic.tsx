@@ -4,8 +4,7 @@
 export const dynamic = {
   // Add utility functions here
   init: () => {
-    console.log('dynamic initialized');
-  }
+    }
 };
 
 export default dynamic;

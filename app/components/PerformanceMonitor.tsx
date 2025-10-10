@@ -53,8 +53,7 @@ const PerformanceMonitor: React.FC = () => {
         // Auto-hide after 5 seconds
         setTimeout(() => setIsVisible(false), 5000);
       } catch (error) {
-        console.error('Error measuring performance:', error);
-      }
+        }
     };
 
     measurePerformance();

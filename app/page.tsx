@@ -1,7 +1,9 @@
 'use client';
-import React, { useState, useEffect, Suspense } from 'react';
-import Navigation from './components/Navigation';
+
+import React, { Suspense } from 'react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 import Footer from './components/Footer';
+<<<<<<< HEAD
 import SEOHead from './components/SEOHead';
 import ErrorBoundary from './components/ErrorBoundary';
 import Loading from './components/Loading';
@@ -34,131 +36,126 @@ import {
   Users as People,
   CheckCircle2
 } from 'lucide-react';
+=======
+
+// Service data
+const microSAASServices = [
+  {
+    name: "AI Project Manager Pro",
+    description: "Intelligent project management with predictive analytics and automated resource allocation",
+    price: "$99/mo",
+    features: ["Smart Scheduling", "Risk Prediction", "Team Optimization", "Progress Tracking"],
+    category: "Productivity",
+    popular: true
+  },
+  {
+    name: "AI Analytics Dashboard",
+    description: "Get intelligent insights from your data with AI-powered analytics and predictive modeling",
+    price: "$149/mo",
+    features: ["Real-time Analytics", "Predictive Insights", "Custom Reports", "Data Visualization"],
+    category: "Analytics",
+    popular: true
+  },
+  {
+    name: "AI Customer Support Bot",
+    description: "24/7 AI-powered customer support with natural language processing and instant responses",
+    price: "$199/mo",
+    features: ["24/7 Support", "Multi-language", "Sentiment Analysis", "Escalation Management"],
+    category: "Support",
+    popular: false
+  },
+  {
+    name: "AI Content Generator",
+    description: "Create high-quality content automatically with AI-powered writing and editing tools",
+    price: "$79/mo",
+    features: ["Content Creation", "SEO Optimization", "Multi-format", "Brand Voice"],
+    category: "Content",
+    popular: true
+  }
+];
+
+const aiServices = [
+  {
+    name: "AI Drug Discovery Pro",
+    description: "Accelerate pharmaceutical research with AI-powered molecular analysis and drug interaction prediction",
+    price: "$4,500/mo",
+    features: ["Molecular Modeling", "Drug Interaction Analysis", "Clinical Trial Optimization", "Patent Research"],
+    category: "Healthcare AI",
+    enterprise: true
+  },
+  {
+    name: "AI Climate Solutions Pro",
+    description: "Combat climate change with intelligent environmental monitoring and carbon footprint optimization",
+    price: "$3,200/mo",
+    features: ["Carbon Analysis", "Weather Prediction", "Sustainability Planning", "Emission Tracking"],
+    category: "Environmental AI",
+    enterprise: false
+  },
+  {
+    name: "AI Space Technology Pro",
+    description: "Advanced space exploration and satellite management with AI-powered mission planning",
+    price: "$5,500/mo",
+    features: ["Satellite Operations", "Mission Planning", "Data Analysis", "Orbital Mechanics"],
+    category: "Space Technology",
+    enterprise: true
+  },
+  {
+    name: "AI Financial Crime Detection Pro",
+    description: "Real-time fraud detection and financial security monitoring with machine learning algorithms",
+    price: "$2,800/mo",
+    features: ["Fraud Detection", "Risk Assessment", "Compliance Monitoring", "Transaction Analysis"],
+    category: "Financial AI",
+    enterprise: false
+  }
+];
+
+const itServices = [
+  {
+    name: "Cloud Migration & Setup",
+    description: "Seamless cloud migration with zero downtime and comprehensive security",
+    price: "$2,500/mo",
+    features: ["Zero Downtime", "Security Audit", "Performance Optimization", "24/7 Support"],
+    category: "Cloud Services"
+  },
+  {
+    name: "Cybersecurity Suite",
+    description: "Comprehensive security solutions to protect your digital assets and data",
+    price: "$1,800/mo",
+    features: ["Threat Detection", "Vulnerability Scanning", "Incident Response", "Compliance"],
+    category: "Security"
+  },
+  {
+    name: "IT Infrastructure Design",
+    description: "Scalable infrastructure architecture designed for your business needs",
+    price: "$3,000/mo",
+    features: ["Architecture Design", "Scalability Planning", "Performance Tuning", "Monitoring"],
+    category: "Infrastructure"
+  },
+  {
+    name: "24/7 IT Support",
+    description: "Round-the-clock technical support and monitoring for your systems",
+    price: "$1,200/mo",
+    features: ["24/7 Support", "Remote Monitoring", "Quick Response", "Proactive Maintenance"],
+    category: "Support"
+  }
+];
+
+// Loading skeleton component
+const ServiceCardSkeleton = () => (
+  <div className="cyber-card p-6 animate-pulse">
+    <div className="h-8 bg-gray-700 rounded mb-4"></div>
+    <div className="h-4 bg-gray-700 rounded mb-2"></div>
+    <div className="h-4 bg-gray-700 rounded mb-4"></div>
+    <div className="h-6 bg-gray-700 rounded"></div>
+  </div>
+);
+>>>>>>> cursor/analyze-improve-and-deploy-application-fc88
 
 const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
-  const services = [
-    {
-      id: 1,
-      name: 'AI-Powered Analytics',
-      description: 'Advanced analytics solutions powered by machine learning and artificial intelligence',
-      icon: BarChart,
-      features: [
-        'Predictive Analytics',
-        'Real-time Data Processing',
-        'Custom Dashboard Creation',
-        'ROI Optimization'
-      ],
-      popular: true,
-      rating: 4.8,
-      users: '2,800+',
-      color: 'from-purple-500 to-pink-600'
-    },
-    {
-      id: 2,
-      name: 'AI Workflow Automation',
-      description: 'Streamline your business processes with intelligent automation',
-      icon: Zap,
-      features: [
-        'Process Automation',
-        'Smart Workflows',
-        'Error Detection',
-        'Performance Optimization'
-      ],
-      popular: true,
-      rating: 4.9,
-      users: '3,200+',
-      color: 'from-blue-500 to-cyan-600'
-    },
-    {
-      id: 3,
-      name: 'AI Security Solutions',
-      description: 'Advanced security solutions powered by artificial intelligence',
-      icon: Shield,
-      features: [
-        'Threat Detection',
-        'Anomaly Detection',
-        'Automated Response',
-        'Security Analytics'
-      ],
-      popular: false,
-      rating: 4.7,
-      users: '1,500+',
-      color: 'from-red-500 to-orange-600'
-    },
-    {
-      id: 4,
-      name: 'AI Document Processing',
-      description: 'Intelligent document processing and data extraction with OCR and NLP',
-      icon: FileText,
-      features: [
-        'OCR Processing',
-        'Data Extraction',
-        'Document Classification',
-        'Automated Workflows'
-      ],
-      popular: false,
-      rating: 4.6,
-      users: '1,800+',
-      color: 'from-green-500 to-emerald-600'
-    }
-  ];
-
-  const microSAASServices = [
-    { 
-      name: 'AI Project Manager Pro', 
-      icon: BarChart, 
-      category: 'Productivity', 
-      price: '$199/mo',
-      description: 'Intelligent project management with AI-powered insights',
-      popular: true
-    },
-    { 
-      name: 'AI Smart Calendar Pro', 
-      icon: Clock, 
-      category: 'Productivity', 
-      price: '$89/mo',
-      description: 'AI-powered calendar management and scheduling',
-      popular: true
-    },
-    { 
-      name: 'AI Content Writer Pro', 
-      icon: FileText, 
-      category: 'Content', 
-      price: '$129/mo',
-      description: 'Advanced AI content creation with SEO optimization',
-      popular: true
-    },
-    { 
-      name: 'AI Social Media Manager Pro', 
-      icon: Smartphone, 
-      category: 'Marketing', 
-      price: '$99/mo',
-      description: 'Automated social media management with AI',
-      popular: false
-    }
-  ];
-
-  if (!isLoaded) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
-      </div>
-    );
-  }
-
   return (
-    <ErrorBoundary>
-      <SEOHead />
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <Navigation />
-      
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="relative overflow-hidden pt-20 pb-16">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 animate-pulse"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -261,65 +258,47 @@ const HomePage: React.FC = () => {
               Comprehensive AI solutions designed to accelerate your business growth
             </p>
           </div>
+=======
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            AI-Powered Enterprise Solutions
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.
+          </p>
+>>>>>>> cursor/analyze-improve-and-deploy-application-fc88
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service) => (
-              <div
-                key={service.id}
-                className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 ${
-                  service.popular ? 'ring-2 ring-purple-500' : ''
-                }`}
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className={`p-3 rounded-lg bg-gradient-to-r ${service.color} text-white`}>
-                    <service.icon className="h-8 w-8" />
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    {service.popular && (
-                      <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
-                        <Star className="w-3 h-3 mr-1" />
-                        Popular
-                      </span>
-                    )}
-                    <div className="flex items-center text-yellow-400">
-                      <Star className="w-4 h-4 fill-current" />
-                      <span className="ml-1 text-sm font-medium">{service.rating}</span>
-                    </div>
-                  </div>
-                </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+              Get Started Today
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+              Watch Demo
+            </button>
+          </div>
 
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  {service.name}
-                </h3>
-
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="flex items-center justify-between mb-6">
-                  <div className="text-sm text-gray-400">
-                    {service.users} users
-                  </div>
-                </div>
-
-                <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
-              </div>
-            ))}
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-cyan-400 mb-2">300%</div>
+              <div className="text-gray-400">Average ROI</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-400 mb-2">70%</div>
+              <div className="text-gray-400">Cost Reduction</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-pink-400 mb-2">90%</div>
+              <div className="text-gray-400">Efficiency Gains</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
+              <div className="text-gray-400">Uptime Guarantee</div>
+            </div>
           </div>
         </div>
       </section>
@@ -340,22 +319,31 @@ const HomePage: React.FC = () => {
             {microSAASServices.map((service, index) => (
               <div
                 key={index}
-                className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 ${
-                  service.popular ? 'ring-2 ring-purple-500' : ''
-                }`}
+                className="cyber-card p-6 hover:scale-105 transition-all duration-300 relative"
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 text-white">
-                    <service.icon className="h-8 w-8" />
+                {service.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center">
+                      <Star className="w-3 h-3 mr-1" />
+                      Popular
+                    </span>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    {service.popular && (
-                      <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
-                        <Star className="w-3 h-3 mr-1" />
-                        Popular
-                      </span>
-                    )}
+                )}
+                
+                <div className="text-center mb-4">
+                  <div className="text-4xl mb-4">🤖</div>
+                  <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
+                  <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                  
+                  <div className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </div>
+                    ))}
                   </div>
+<<<<<<< HEAD
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-4">
@@ -372,19 +360,23 @@ const HomePage: React.FC = () => {
                   </div>
                   <div className="text-sm text-gray-400">
                     {service.category}
+=======
+                  
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                    <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
+                      Learn More →
+                    </button>
+>>>>>>> cursor/analyze-improve-and-deploy-application-fc88
                   </div>
                 </div>
-
-                <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                  Get Started
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Testimonials Section */}
       <section className="py-16 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -463,20 +455,123 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             </div>
+=======
+      {/* AI Services Section */}
+      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Enterprise AI Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Advanced AI solutions for enterprise clients. Transform your industry with cutting-edge artificial intelligence.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {aiServices.map((service, index) => (
+              <div
+                key={index}
+                className={`cyber-card p-8 hover:scale-105 transition-all duration-300 relative ${
+                  service.enterprise ? 'ring-2 ring-purple-400/30' : ''
+                }`}
+              >
+                {service.enterprise && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                      Enterprise
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center">
+                  <div className="text-5xl mb-6">🧠</div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
+                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  
+                  <div className="grid grid-cols-2 gap-3 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-white mb-4">{service.price}</div>
+                    <button className="bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all">
+                      Get Started
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+>>>>>>> cursor/analyze-improve-and-deploy-application-fc88
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/90 to-blue-600/90"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+=======
+      {/* IT Services Section */}
+      <section className="py-16 bg-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              IT Infrastructure Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive IT solutions to build, secure, and scale your technology infrastructure.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {itServices.map((service, index) => (
+              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-center">
+                  <div className="text-4xl mb-4">⚙️</div>
+                  <h3 className="text-lg font-bold text-white mb-3">{service.name}</h3>
+                  <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+                  
+                  <div className="space-y-2 mb-4">
+                    {service.features.slice(0, 3).map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-xs text-gray-300">
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-white mb-2">{service.price}</div>
+                    <button className="text-green-400 hover:text-green-300 font-semibold text-sm transition-colors">
+                      Learn More →
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+>>>>>>> cursor/analyze-improve-and-deploy-application-fc88
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Join thousands of companies already using our AI solutions
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Contact us today for a free consultation and discover how our AI and IT solutions can revolutionize your operations.
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
               Start Your Free Trial
@@ -486,13 +581,48 @@ const HomePage: React.FC = () => {
               Schedule Demo
             </button>
           </div>
+=======
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="text-center">
+              <div className="text-2xl mb-2">📞</div>
+              <h3 className="text-lg font-bold text-white mb-2">Phone</h3>
+              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                +1 (302) 464-0950
+              </a>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-2xl mb-2">✉️</div>
+              <h3 className="text-lg font-bold text-white mb-2">Email</h3>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-2xl mb-2">📍</div>
+              <h3 className="text-lg font-bold text-white mb-2">Location</h3>
+              <p className="text-cyan-400 font-medium">
+                Middletown, DE
+              </p>
+            </div>
+          </div>
+          
+          <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+            Get Free Consultation
+          </button>
+>>>>>>> cursor/analyze-improve-and-deploy-application-fc88
         </div>
       </section>
 
       <Footer />
       <PerformanceMonitor />
     </div>
+<<<<<<< HEAD
     </ErrorBoundary>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-fc88
   );
 };
 

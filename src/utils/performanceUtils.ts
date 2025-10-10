@@ -3,7 +3,6 @@ export const measurePerformance = (name: string, fn: () => void) => {
   const start = performance.now();
   fn();
   const end = performance.now();
-  console.log(`${name} took ${end - start} milliseconds`);
   return end - start;
 };
 
@@ -11,7 +10,6 @@ export const measureAsyncPerformance = async (name: string, fn: () => Promise<an
   const start = performance.now();
   const result = await fn();
   const end = performance.now();
-  console.log(`${name} took ${end - start} milliseconds`);
   return { result, duration: end - start };
 };
 
@@ -28,8 +26,7 @@ export const reportWebVitals = (metric: any) => {
 
   // Log to console in development
   if (process.env.NODE_ENV === 'development') {
-    console.log('Web Vital:', metric);
-  }
+    }
 };
 
 // Resource timing analysis
@@ -40,8 +37,7 @@ export const analyzeResourceTiming = () => {
   const slowResources = resources.filter((resource: any) => resource.duration > 1000);
   
   if (slowResources.length > 0) {
-    console.warn('Slow resources detected:', slowResources);
-  }
+    }
 };
 
 // Memory usage monitoring
@@ -53,8 +49,7 @@ export const checkMemoryUsage = () => {
   const total = memory.totalJSHeapSize / 1024 / 1024; // MB
   
   if (used > 50) { // Alert if using more than 50MB
-    console.warn(`High memory usage: ${used.toFixed(2)}MB / ${total.toFixed(2)}MB`);
-  }
+    }
 };
 
 // Preload critical resources
