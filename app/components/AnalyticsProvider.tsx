@@ -69,13 +69,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         user_id: userId,
-        ...traits,
-
+        ...traits
+      });
     }
 
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-      }
+      console.log('Analytics identify:', { userId, traits });
+    }
   };
 
   const value: AnalyticsContextType = {

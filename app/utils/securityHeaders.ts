@@ -88,4 +88,4 @@ export function getNextSecurityHeaders(
     value}
   }))
 }
-export default defaultSecurityHeaders
+export default defaultSecurityHeaders;

@@ -279,7 +279,7 @@ const AIAutomationPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

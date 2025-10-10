@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Cloud, Server, Database, Shield, CheckCircle, Phone, Mail, Shield, CheckCircle, Phone, Mail } from 'lucide-react';
+import { Cloud, Server, Database, Shield, CheckCircle, Phone, Mail } from 'lucide-react';
 
 const AICloudInfrastructurePage: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);

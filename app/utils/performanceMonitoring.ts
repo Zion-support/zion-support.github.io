@@ -290,7 +290,7 @@ class PerformanceMonitoringService {
   }
 }
 export const performanceMonitoring = PerformanceMonitoringService.getInstance()
-export default PerformanceMonitoringService
+export default PerformanceMonitoringService;
 // Export convenience enums and functions
 export enum MetricUnit {
   Milliseconds = 'ms',

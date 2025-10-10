@@ -18,7 +18,7 @@ import {
   Award,
   Stethoscope,
   Truck,
-Rocket
+  Rocket,
 } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
