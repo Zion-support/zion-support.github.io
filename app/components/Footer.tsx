@@ -104,7 +104,7 @@ const Footer: React.FC = memo(() => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text">
               <Brain className="w-5 h-5 mr-2" />
               AI Services
             </h3>
@@ -131,7 +131,7 @@ const Footer: React.FC = memo(() => {
           </div>
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text">
               <Cloud className="w-5 h-5 mr-2" />
               IT Services
             </h3>
@@ -158,7 +158,7 @@ const Footer: React.FC = memo(() => {
           </div>
           {/* Micro SAAS */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text">
               <Code className="w-5 h-5 mr-2" />
               Micro SAAS
             </h3>
@@ -185,7 +185,7 @@ const Footer: React.FC = memo(() => {
           </div>
           {/* Emerging Technologies */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text">
               <Zap className="w-5 h-5 mr-2" />
               Emerging Tech
             </h3>
@@ -204,7 +204,7 @@ const Footer: React.FC = memo(() => {
           </div>
           {/* Company & Support */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text">
               <Users className="w-5 h-5 mr-2" />
               Company
             </h3>
@@ -220,7 +220,7 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
             </ul>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Support</h3>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 neon-text">Support</h3>
             <ul className="space-y-2 mb-6">
               {supportLinks.map((link, index) => (
                 <li key={index}>

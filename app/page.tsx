@@ -106,12 +106,37 @@ const HomePage: React.FC = () => {
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain relative overflow-hidden">
-        {/* Animated background elements */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg relative overflow-hidden">
+        {/* Enhanced animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+          <div className="absolute top-1/2 right-1/3 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-3000"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-56 h-56 bg-green-500/10 rounded-full blur-3xl animate-pulse delay-4000"></div>
+        </div>
+        
+        {/* Matrix rain effect */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+          <div className="matrix-rain absolute top-0 left-0 w-full h-full text-cyan-400 text-xs font-mono">
+            {Array.from({ length: 50 }).map((_, i) => (
+              <div
+                key={i}
+                className="absolute animate-matrix-rain"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 3}s`,
+                  animationDuration: `${3 + Math.random() * 2}s`
+                }}
+              >
+                {Array.from({ length: 20 }).map((_, j) => (
+                  <div key={j} className="opacity-70">
+                    {String.fromCharCode(0x30A0 + Math.random() * 96)}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
         {/* Navigation */}
         <Navigation />
@@ -755,13 +780,13 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Micro SAAS Solutions Section */}
+          {/* Micro SAAS Solutions Section */}
         <section className="mb-16" aria-labelledby="micro-saas-heading">
-          <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+          <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text cyber-scan-line">
             Micro SAAS Solutions
           </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-            Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
+            Affordable, powerful AI-driven tools for modern businesses. 100+ ready-to-use applications with real market value.
           </p>
           {/* Productivity Tools */}
           <div className="mb-12">
