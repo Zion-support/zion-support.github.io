@@ -92,6 +92,26 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     },
     {
+<<<<<<< HEAD
+=======
+      title: 'AI Content Writer Pro',
+      description: 'Generate high-quality content with AI-powered writing assistance for blogs, social media, and marketing materials. Create 10x more content in half the time.',
+      icon: '✍️',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['Blog posts', 'Social media content', 'Product descriptions', 'SEO optimization', 'Brand voice consistency', 'Multi-language support', 'Content templates', 'Plagiarism check'],
+      benefits: ['10x content output', 'SEO optimized', 'Brand voice consistency', '50% time saved'],
+      link: '/ai-content-writer',
+=======
+      title: 'AI Calendar Intelligence Pro',
+      description: 'Smart calendar management with AI-powered scheduling optimization, conflict resolution, and productivity insights. Used by 25,000+ professionals.',
+      icon: '📅',
+      price: '$49/month',
+      originalPrice: '$79/month',
+      features: ['Smart scheduling', 'Conflict resolution', 'Productivity analytics', 'Meeting optimization', 'Time blocking', 'Energy management', 'Calendar sync', 'Smart reminders'],
+      benefits: ['60% scheduling efficiency', 'Zero double bookings', 'Better time utilization', 'Reduced stress'],
+      link: '/ai-calendar-intelligence',
+>>>>>>> pr-28140
       popular: true,
       category: 'Productivity',
       rating: 4.8,
@@ -99,6 +119,7 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     },
     {
+<<<<<<< HEAD
       title: 'AI Document Intelligence Pro',
       description: 'Transform any document into actionable insights with AI-powered analysis, summarization, and knowledge extraction.',
       icon: '📄',
@@ -107,6 +128,54 @@ const HomePage: React.FC = () => {
       features: ['Document analysis', 'Smart summarization', 'Knowledge extraction', 'Search & discovery', 'Version control', 'Collaboration tools', 'OCR processing', 'Multi-format support'],
       benefits: ['80% faster document processing', 'Better knowledge retention', 'Improved search', 'Enhanced collaboration'],
       link: '/ai-document-intelligence',
+=======
+      title: 'AI Sleep Optimizer Pro',
+      description: 'Intelligent sleep tracking with AI-powered analysis, personalized recommendations, and smart alarm. Achieve perfect sleep every night.',
+      icon: '😴',
+      price: '$34/month',
+      originalPrice: '$49/month',
+      features: ['Sleep tracking', 'AI analysis', 'Smart alarms', 'Sleep stories', 'White noise', 'Sleep coaching', 'Progress tracking', 'Wearable sync'],
+      benefits: ['Better sleep quality', 'Faster sleep onset', 'Reduced wake-ups', 'Energy optimization'],
+      link: '/ai-sleep-optimizer',
+      popular: true,
+      category: 'Wellness',
+      rating: 4.7,
+      users: '45,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Mood Tracker Pro',
+      description: 'Comprehensive mood tracking with AI-powered insights, pattern recognition, and wellness recommendations. Understand and improve your mental health.',
+      icon: '😊',
+      price: '$29/month',
+      originalPrice: '$49/month',
+      features: ['Mood tracking', 'Pattern recognition', 'Wellness insights', 'Journal prompts', 'Meditation guides', 'Progress analytics', 'Professional insights', 'Crisis support'],
+      benefits: ['Better mental health', 'Pattern awareness', 'Proactive care', 'Emotional intelligence'],
+      link: '/ai-mood-tracker',
+      popular: true,
+      category: 'Wellness',
+      rating: 4.8,
+      users: '35,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Meeting Assistant Pro',
+      description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',
+      icon: '🎯',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Voice recognition', 'Multi-language support', 'Meeting analytics'],
+      benefits: ['90% meeting efficiency', 'Zero missed action items', 'Automatic follow-ups', 'Better meeting outcomes'],
+      link: '/ai-meeting-assistant',
+>>>>>>> cursor/website-audit-and-update-with-deployment-78fe
+      popular: true,
+      category: 'Content',
+      rating: 4.8,
+      users: '12,000+',
+      freeTrial: '14 days'
+    },
+    {
+>>>>>>> pr-28140
       popular: true,
       category: 'Productivity',
       rating: 4.7,
@@ -3852,6 +3921,7 @@ const HomePage: React.FC = () => {
           <FuturisticHero />
 
           {/* Micro SAAS Services Section */}
+<<<<<<< HEAD
           <section className="py-20 bg-slate-800/50 relative overflow-hidden">
             {/* Background Effects */}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent"></div>
@@ -4584,3 +4654,15 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+=======
+          <section className="py-20 bg-slate-800/50">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Micro SAAS Solutions
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Powerful, affordable AI-powered tools designed for modern businesses. 
+                  Choose from our comprehensive suite of micro SAAS solutions.
+                </p>
+>>>>>>> pr-28140

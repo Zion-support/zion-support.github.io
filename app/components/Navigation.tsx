@@ -169,12 +169,27 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
+<<<<<<< HEAD
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors">
+=======
+            <a href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+>>>>>>> pr-28140
               Home
             </Link>
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
+<<<<<<< HEAD
             </Link>
+=======
+            </a>
+            <a href="/team" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Team
+            </a>
+            <a href="/careers" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Careers
+            </a>
+            
+>>>>>>> pr-28140
             <div className="relative group">
               <button
                 onClick={toggleServices}
@@ -350,6 +365,7 @@ const Navigation: React.FC = () => {
           </button>
         </div>
 
+<<<<<<< HEAD
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
@@ -439,6 +455,8 @@ const Navigation: React.FC = () => {
             </div>
           </div>
         )}
+=======
+>>>>>>> pr-28140
       </div>
     </nav>
   );

@@ -249,9 +249,10 @@ const Footer: React.FC = () => {
               <a href="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 Terms of Service
               </a>
-              <a href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy
+              <a href="/sitemap" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                Sitemap
               </a>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -288,6 +289,8 @@ const Footer: React.FC = () => {
                   <social.icon className="w-5 h-5" />
                 </a>
                 ))}
+=======
+>>>>>>> pr-28140
             </div>
           </div>
         </div>

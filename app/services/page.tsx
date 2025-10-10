@@ -71,6 +71,7 @@ const ServicesPage: React.FC = () => {
 
   const microSAASServices = [
     // Productivity & Management Tools
+<<<<<<< HEAD
     { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity', price: '$99/mo', description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment' },
     { name: 'AI Task Manager Pro', href: '/ai-task-manager', icon: CheckCircle, category: 'Productivity', price: '$49/mo', description: 'Smart task management with AI prioritization, deadline tracking, and productivity insights' },
     { name: 'AI Workflow Automation Pro', href: '/ai-workflow-automation', icon: Settings, category: 'Productivity', price: '$79/mo', description: 'Automate repetitive tasks with intelligent workflow design and execution' },
@@ -384,3 +385,15 @@ const ServicesPage: React.FC = () => {
 };
 
 export default ServicesPage;
+=======
+    {
+      title: 'AI Project Manager Pro',
+      description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Trusted by 10,000+ teams worldwide.',
+      icon: BarChart,
+      price: '$99/month',
+      originalPrice: '$149/month',
+      features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration', 'Risk assessment', 'Resource optimization', 'Gantt charts', 'Time tracking'],
+      benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction'],
+      link: '/ai-project-manager',
+      popular: true,
+>>>>>>> pr-28140

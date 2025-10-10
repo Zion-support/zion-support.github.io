@@ -378,6 +378,7 @@ const ITServicesPage: React.FC = () => {
             End-to-end IT solutions for modern enterprises
           </p>
           
+<<<<<<< HEAD
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -524,3 +525,5 @@ const ITServicesPage: React.FC = () => {
 };
 
 export default ITServicesPage;
+=======
+>>>>>>> pr-28140
