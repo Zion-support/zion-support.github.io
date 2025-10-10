@@ -7,13 +7,17 @@ const Footer: React.FC = () => {
   const quickLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
+    { name: 'Team', href: '/team' },
     { name: 'Services', href: '/services' },
     { name: 'AI Solutions', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SAAS', href: '/micro-saas' },
+    { name: 'Specialized Services', href: '/specialized-services' },
     { name: 'Enterprise', href: '/enterprise' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Guides', href: '/guides' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -249,6 +253,9 @@ const Footer: React.FC = () => {
               </a>
               <a href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
+              </a>
+              <a href="/sitemap" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                Sitemap
               </a>
             </div>
           </div>

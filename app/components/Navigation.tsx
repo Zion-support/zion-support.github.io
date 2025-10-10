@@ -227,8 +227,14 @@ const Navigation: React.FC = () => {
             <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
             </a>
+            <a href="/team" className="text-white hover:text-cyan-400 transition-colors">
+              Team
+            </a>
             <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
               Blog
+            </a>
+            <a href="/guides" className="text-white hover:text-cyan-400 transition-colors">
+              Guides
             </a>
             <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
               Case Studies
@@ -326,8 +332,14 @@ const Navigation: React.FC = () => {
               <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 About
               </a>
+              <a href="/team" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Team
+              </a>
               <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Blog
+              </a>
+              <a href="/guides" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Guides
               </a>
               <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Case Studies

@@ -67,6 +67,12 @@ const _IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
 const _BlogPage = lazy(() => import('./blog-index'));
 const _GuidesPage = lazy(() => import('./guides/page'));
 const _SitemapPage = lazy(() => import('./sitemap-page'));
+const _PricingPage = lazy(() => import('./pricing/page'));
+const _TeamPage = lazy(() => import('./team/page'));
+const _CookiesPage = lazy(() => import('./cookies/page'));
+const _SpecializedServicesPage = lazy(() => import('./specialized-services/page'));
+const _MicroSAASPage = lazy(() => import('./micro-saas/page'));
+const _ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
@@ -234,6 +240,12 @@ const App: React.FC = () => {
                         <Route path="/blog" element={<_BlogPage />} />
                         <Route path="/guides" element={<_GuidesPage />} />
                         <Route path="/sitemap" element={<_SitemapPage />} />
+                        <Route path="/pricing" element={<_PricingPage />} />
+                        <Route path="/team" element={<_TeamPage />} />
+                        <Route path="/cookies" element={<_CookiesPage />} />
+                        <Route path="/specialized-services" element={<_SpecializedServicesPage />} />
+                        <Route path="/micro-saas" element={<_MicroSAASPage />} />
+                        <Route path="/services-advertising" element={<_ServicesAdvertisingPage />} />
                       </Routes>
                     </Suspense>
                   </main>
