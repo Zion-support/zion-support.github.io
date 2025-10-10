@@ -1,11 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect } from 'react';
-=======
-
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
   trackPageView: (pageName: string, pagePath: string) => void;

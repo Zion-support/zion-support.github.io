@@ -1,4 +1,8 @@
-'use client';
+#!/usr/bin/env node
+
+import fs from 'fs';
+
+const blogPageContent = `'use client';
 
 import React, { useState, useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -267,3 +271,7 @@ const BlogPage: React.FC = () => {
 };
 
 export default BlogPage;
+`;
+
+fs.writeFileSync('/workspace/app/blog/page.tsx', blogPageContent);
+console.log('Blog page fixed successfully!');
