@@ -1,8 +1,17 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import { Brain, Cloud, Shield, Zap, Globe } from 'lucide-react';
+
+const DynamicContentShowcase: React.FC = () => {
+  const [currentFeature, setCurrentFeature] = useState(0);
 
   const features = [
     {
+      id: 1,
+      title: 'AI-Powered Analytics',
+      description: 'Transform your data into actionable insights with advanced AI algorithms.',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-600'
     },
     {
       id: 2,
@@ -16,22 +25,17 @@ import React, { useState, useEffect } from 'react';
       title: 'AI Automation',
       description: 'Automate complex business processes with intelligent AI systems.',
       icon: Zap,
+      color: 'from-yellow-500 to-orange-600'
     },
     {
       id: 4,
       title: 'Cybersecurity Solutions',
       description: 'Protect your business with comprehensive AI-powered security solutions.',
       icon: Shield,
-<<<<<<< HEAD
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing'
+      color: 'from-red-500 to-pink-600'
     }
   ];
+
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -42,35 +46,11 @@ import React, { useState, useEffect } from 'react';
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      role: 'CTO',
-      content: 'This solution transformed our operations completely. The AI insights are incredible.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      company: 'DataFlow Systems',
-      role: 'CEO',
-      content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'CloudFirst Solutions',
-      role: 'VP Engineering',
-      content: 'Outstanding security features and seamless integration. Perfect for our needs.',
-      rating: 5
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
-    }
-  ]
 
   useEffect(() => {
     const timer = setInterval(() => {
-
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 3000);
     return () => clearInterval(timer);
   }, [features.length]);
 
@@ -87,15 +67,30 @@ import React, { useState, useEffect } from 'react';
           </p>
         </div>
 
+        {/* Feature Showcase */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+            <h3 className="text-3xl font-bold text-white mb-4">{features[currentFeature].title}</h3>
+            <p className="text-lg text-gray-300 mb-6">{features[currentFeature].description}</p>
+            <div className="flex space-x-2">
+              {features.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentFeature(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    index === currentFeature ? 'bg-blue-500' : 'bg-gray-600'
+                  }`}
+                />
+              ))}
             </div>
+          </div>
 
-            {/* Feature Visual */}
-            <div className="flex justify-center">
-              <div className={`w-80 h-80 bg-gradient-to-br ${features[currentFeature].color} rounded-2xl flex items-center justify-center relative overflow-hidden`}>
-                <div className="absolute inset-0 bg-black/20"></div>
-                {React.createElement(features[currentFeature].icon, { className: "w-32 h-32 text-white/90 relative z-10" })}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-              </div>
+          {/* Feature Visual */}
+          <div className="flex justify-center">
+            <div className={`w-80 h-80 bg-gradient-to-br ${features[currentFeature].color} rounded-2xl flex items-center justify-center relative overflow-hidden`}>
+              <div className="absolute inset-0 bg-black/20"></div>
+              {React.createElement(features[currentFeature].icon, { className: "w-32 h-32 text-white/90 relative z-10" })}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
             </div>
           </div>
         </div>
@@ -103,6 +98,11 @@ import React, { useState, useEffect } from 'react';
         {/* Benefits Section */}
         <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-2 text-gray-300">
+                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                <span>{benefit}</span>
               </div>
             ))}
           </div>
