@@ -33,6 +33,11 @@ const CareersPage = React.lazy(() => import('./app/careers/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
+const AiQuantumComputingPage = React.lazy(() => import('./app/ai-quantum-computing/page'));
+const AiBlockchainSolutionsPage = React.lazy(() => import('./app/ai-blockchain-solutions/page'));
+const AiIotSolutionsPage = React.lazy(() => import('./app/ai-iot-solutions/page'));
+const AiCybersecuritySuitePage = React.lazy(() => import('./app/ai-cybersecurity-suite/page'));
+const AiHealthcareSolutionsPage = React.lazy(() => import('./app/ai-healthcare-solutions/page'));
 const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
@@ -81,6 +86,11 @@ const App: React.FC = () => {
                             <Route path="/ai-services" element={<AiServicesPage />} />
                             <Route path="/it-services" element={<ItServicesPage />} />
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
+                            <Route path="/ai-quantum-computing" element={<AiQuantumComputingPage />} />
+                            <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
+                            <Route path="/ai-iot-solutions" element={<AiIotSolutionsPage />} />
+                            <Route path="/ai-cybersecurity-suite" element={<AiCybersecuritySuitePage />} />
+                            <Route path="/ai-healthcare-solutions" element={<AiHealthcareSolutionsPage />} />
                             <Route path="/tutorials" element={<TutorialsPage />} />
                             <Route path="/consultation" element={<ConsultationPage />} />
                             <Route path="/demo" element={<DemoPage />} />

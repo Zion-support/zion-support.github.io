@@ -1,7 +1,7 @@
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, ArrowRight } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
@@ -73,6 +73,21 @@ const Footer: React.FC = memo(() => {
     { name: 'Data Visualization & BI', url: '/data-visualization', description: 'Advanced dashboards' },
     { name: 'Workflow Automation', url: '/workflow-automation', description: 'Process automation' },
     { name: 'Cloud-Native Security', url: '/cloud-native-security', description: 'Container security' }
+  ];
+
+  const microSaasServices = [
+    { name: 'Zion Quantum AI', url: '/zion-quantum-ai', description: 'Quantum computing platform' },
+    { name: 'Zion Blockchain AI', url: '/zion-blockchain-ai', description: 'AI blockchain solutions' },
+    { name: 'Zion IoT Intelligence', url: '/zion-iot-intelligence', description: 'Smart IoT platform' },
+    { name: 'Zion Cyber AI', url: '/zion-cyber-ai', description: 'AI cybersecurity suite' },
+    { name: 'Zion Health AI', url: '/zion-health-ai', description: 'AI healthcare platform' },
+    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence platform' },
+    { name: 'Zion Chat AI', url: '/zion-chat-ai', description: 'AI customer support' },
+    { name: 'Zion Security Shield', url: '/zion-security-shield', description: 'Cybersecurity monitoring' },
+    { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', description: 'Cloud backup & recovery' },
+    { name: 'Zion Content Studio', url: '/zion-content-studio', description: 'AI content creation' },
+    { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', description: 'AI-enhanced CRM' },
+    { name: 'Zion Data Sync', url: '/zion-data-sync', description: 'Data integration platform' }
   ];
 
   const companyLinks = [
@@ -185,31 +200,6 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
-          {/* Micro SAAS Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Cpu className="w-5 h-5 mr-2 text-cyan-400" />
-              Micro SAAS Tools
-            </h3>
-            <ul className="space-y-3">
-              {microSaasServices.map((service, index) => (
-                <li key={index}>
-                  <Link
-                    href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-start"
-                  >
-                    <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div>
-                      <div className="font-medium">{service.name}</div>
-                      <div className="text-xs text-gray-400 group-hover:text-gray-300">
-                        {service.description}
-                      </div>
-                    </div>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* IT Services */}
           <div className="cyber-card-enhanced p-6 rounded-2xl">

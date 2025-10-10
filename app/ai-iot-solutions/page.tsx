@@ -1,122 +1,140 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Link, Shield, Zap, BarChart, Target, CheckCircle, ArrowRight, Star, Users, Globe, Database, Settings, Lock, TrendingUp, DollarSign, Cpu } from 'lucide-react';
+import { Brain, Wifi, Zap, Shield, BarChart, Target, CheckCircle, ArrowRight, Star, Users, Globe, Database, Settings, Lock, TrendingUp, Cpu, Eye, Smartphone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AiBlockchainSolutionsPage: React.FC = () => {
+const AiIotSolutionsPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Smart Contracts',
-      description: 'Intelligent smart contracts that adapt and optimize based on real-time data and conditions.',
-      benefits: ['Self-optimizing contracts', 'Dynamic pricing', 'Automated decision making', 'Reduced gas costs']
-    },
-    {
-      icon: Shield,
-      title: 'AI Security Auditing',
-      description: 'Advanced AI systems for smart contract security analysis and vulnerability detection.',
-      benefits: ['Automated security scanning', 'Zero-day detection', 'Compliance checking', 'Risk assessment']
+      title: 'AI-Powered Device Management',
+      description: 'Intelligent IoT device management with predictive maintenance and automated optimization.',
+      benefits: ['Predictive maintenance', 'Automated updates', 'Performance optimization', 'Remote diagnostics']
     },
     {
       icon: BarChart,
-      title: 'DeFi Analytics & Optimization',
-      description: 'AI-driven analytics for decentralized finance protocols and yield optimization.',
-      benefits: ['Yield farming optimization', 'Risk management', 'Liquidity analysis', 'Portfolio rebalancing']
+      title: 'Real-time Analytics',
+      description: 'Advanced analytics and insights from IoT data streams with AI-powered pattern recognition.',
+      benefits: ['Real-time insights', 'Pattern recognition', 'Anomaly detection', 'Predictive analytics']
+    },
+    {
+      icon: Shield,
+      title: 'IoT Security & Privacy',
+      description: 'Comprehensive security solutions for IoT networks with AI-powered threat detection.',
+      benefits: ['Threat detection', 'Data encryption', 'Privacy protection', 'Compliance management']
     },
     {
       icon: Zap,
-      title: 'AI Oracle Networks',
-      description: 'Intelligent oracle systems that provide accurate, tamper-proof data to blockchain networks.',
-      benefits: ['Real-time data feeds', 'Cross-chain compatibility', 'Anti-manipulation', 'High accuracy']
+      title: 'Edge AI Processing',
+      description: 'AI processing at the edge for faster response times and reduced bandwidth requirements.',
+      benefits: ['Low latency', 'Bandwidth optimization', 'Offline capabilities', 'Real-time decisions']
     }
   ];
 
   const solutions = [
     {
-      title: 'AI-Powered DeFi Platform',
-      description: 'Complete decentralized finance ecosystem with AI-driven yield optimization and risk management.',
-      icon: DollarSign,
-      features: ['Automated yield farming', 'AI risk assessment', 'Cross-chain swaps', 'Liquidity optimization'],
-      price: 'Starting at $25,000/month',
-      marketPrice: '$50,000-150,000/month'
-    },
-    {
-      title: 'Smart Contract AI Auditor',
-      description: 'Automated smart contract security analysis with AI-powered vulnerability detection and fixes.',
-      icon: Shield,
-      features: ['Automated auditing', 'Vulnerability detection', 'Code optimization', 'Gas efficiency'],
-      price: 'Starting at $5,000/month',
-      marketPrice: '$10,000-30,000/month'
-    },
-    {
-      title: 'AI Oracle Network',
-      description: 'Decentralized oracle network with AI-powered data validation and cross-chain compatibility.',
-      icon: Globe,
-      features: ['Multi-chain support', 'AI validation', 'Real-time data', 'Anti-manipulation'],
+      title: 'Smart Manufacturing IoT',
+      description: 'Complete IoT solution for smart manufacturing with AI-powered quality control and predictive maintenance.',
+      icon: Settings,
+      features: ['Predictive maintenance', 'Quality control', 'Production optimization', 'Energy management'],
       price: 'Starting at $15,000/month',
-      marketPrice: '$30,000-80,000/month'
+      marketPrice: '$30,000-80,000/month',
+      benefits: ['30% efficiency increase', '50% maintenance cost reduction', '99.5% quality rate']
     },
     {
-      title: 'NFT AI Generator',
-      description: 'AI-powered NFT creation and marketplace with intelligent rarity algorithms and automated trading.',
-      icon: Target,
-      features: ['AI art generation', 'Rarity algorithms', 'Automated trading', 'Market analysis'],
-      price: 'Starting at $8,000/month',
-      marketPrice: '$15,000-40,000/month'
+      title: 'Smart City Infrastructure',
+      description: 'Comprehensive smart city IoT platform with traffic management, environmental monitoring, and citizen services.',
+      icon: Globe,
+      features: ['Traffic optimization', 'Environmental monitoring', 'Smart lighting', 'Waste management'],
+      price: 'Starting at $50,000/month',
+      marketPrice: '$100,000-300,000/month',
+      benefits: ['40% traffic reduction', '25% energy savings', 'Improved citizen satisfaction']
     },
     {
-      title: 'AI Supply Chain Blockchain',
-      description: 'Transparent supply chain tracking with AI-powered fraud detection and quality assurance.',
-      icon: Database,
-      features: ['End-to-end tracking', 'AI fraud detection', 'Quality assurance', 'Compliance automation'],
-      price: 'Starting at $12,000/month',
-      marketPrice: '$25,000-60,000/month'
-    },
-    {
-      title: 'AI Governance Platform',
-      description: 'Decentralized governance with AI-powered proposal analysis and voting optimization.',
+      title: 'Healthcare IoT Monitoring',
+      description: 'AI-powered healthcare IoT for patient monitoring, medical device management, and health analytics.',
       icon: Users,
-      features: ['AI proposal analysis', 'Voting optimization', 'Community insights', 'Automated execution'],
-      price: 'Starting at $6,000/month',
-      marketPrice: '$12,000-35,000/month'
+      features: ['Patient monitoring', 'Medical device integration', 'Health analytics', 'Emergency alerts'],
+      price: 'Starting at $20,000/month',
+      marketPrice: '$40,000-120,000/month',
+      benefits: ['Improved patient outcomes', 'Reduced readmissions', 'Real-time health insights']
+    },
+    {
+      title: 'Agricultural IoT Platform',
+      description: 'Smart farming solution with precision agriculture, crop monitoring, and automated irrigation.',
+      icon: Target,
+      features: ['Crop monitoring', 'Precision irrigation', 'Weather integration', 'Yield optimization'],
+      price: 'Starting at $8,000/month',
+      marketPrice: '$15,000-40,000/month',
+      benefits: ['20% yield increase', '30% water savings', 'Reduced pesticide use']
+    },
+    {
+      title: 'Retail IoT Analytics',
+      description: 'Smart retail solution with customer behavior analysis, inventory optimization, and personalized experiences.',
+      icon: Smartphone,
+      features: ['Customer analytics', 'Inventory optimization', 'Personalized experiences', 'Loss prevention'],
+      price: 'Starting at $12,000/month',
+      marketPrice: '$25,000-60,000/month',
+      benefits: ['25% sales increase', '15% inventory reduction', 'Enhanced customer experience']
+    },
+    {
+      title: 'Energy Management IoT',
+      description: 'Smart energy management with AI-powered optimization, renewable integration, and demand response.',
+      icon: Zap,
+      features: ['Energy optimization', 'Renewable integration', 'Demand response', 'Grid management'],
+      price: 'Starting at $18,000/month',
+      marketPrice: '$35,000-90,000/month',
+      benefits: ['35% energy savings', '50% carbon reduction', 'Grid stability improvement']
     }
   ];
 
-  const benefits = [
+  const industries = [
     {
-      title: 'Enhanced Security',
-      description: 'AI-powered threat detection and automated security measures protect your blockchain assets.',
-      icon: Shield,
-      stats: '99.9% security uptime'
+      title: 'Manufacturing',
+      description: 'Smart factories with predictive maintenance, quality control, and production optimization.',
+      icon: Settings,
+      stats: '40% efficiency improvement'
     },
     {
-      title: 'Cost Optimization',
-      description: 'Intelligent gas optimization and smart contract efficiency reduce operational costs.',
-      icon: TrendingUp,
-      stats: '60% cost reduction'
+      title: 'Healthcare',
+      description: 'Connected medical devices, patient monitoring, and AI-powered diagnostics.',
+      icon: Users,
+      stats: '60% faster diagnosis'
     },
     {
-      title: 'Automated Operations',
-      description: 'AI-driven automation handles complex blockchain operations without manual intervention.',
+      title: 'Agriculture',
+      description: 'Precision farming with IoT sensors, AI analytics, and automated systems.',
+      icon: Target,
+      stats: '30% yield increase'
+    },
+    {
+      title: 'Smart Cities',
+      description: 'Urban infrastructure optimization with traffic management and environmental monitoring.',
+      icon: Globe,
+      stats: '50% traffic reduction'
+    },
+    {
+      title: 'Retail',
+      description: 'Smart stores with customer analytics, inventory optimization, and personalized experiences.',
+      icon: Smartphone,
+      stats: '25% sales growth'
+    },
+    {
+      title: 'Energy',
+      description: 'Smart grids with renewable integration, demand response, and energy optimization.',
       icon: Zap,
-      stats: '90% automation rate'
-    },
-    {
-      title: 'Scalable Solutions',
-      description: 'AI-optimized blockchain architectures that scale with your business growth.',
-      icon: Cpu,
-      stats: '10x scalability improvement'
+      stats: '45% energy savings'
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Blockchain Solutions - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered blockchain solutions including DeFi, smart contracts, NFTs, and supply chain. Transform your business with intelligent blockchain technology." />
-        <meta name="keywords" content="AI blockchain, DeFi, smart contracts, NFT, supply chain, oracle networks, blockchain security" />
+        <title>AI IoT Solutions - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered IoT solutions for smart manufacturing, cities, healthcare, and agriculture. Transform your business with intelligent connected devices." />
+        <meta name="keywords" content="AI IoT, smart manufacturing, smart cities, healthcare IoT, agricultural IoT, edge computing, IoT analytics" />
       </Helmet>
       
       <Navigation />
@@ -127,19 +145,18 @@ const AiBlockchainSolutionsPage: React.FC = () => {
           <section className="text-center mb-16">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                AI Blockchain Solutions
+                AI IoT Solutions
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize your business with AI-powered blockchain technology. From DeFi platforms 
-                to smart contracts, our solutions combine artificial intelligence with blockchain 
-                security for unprecedented innovation.
+                Transform your business with AI-powered Internet of Things solutions. From smart manufacturing 
+                to connected cities, our IoT platforms deliver intelligent automation and real-time insights.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center"
                 >
-                  Explore Blockchain Solutions
+                  Explore IoT Solutions
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
                 <a
@@ -155,7 +172,7 @@ const AiBlockchainSolutionsPage: React.FC = () => {
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-center text-white mb-12">
-              AI Blockchain Capabilities
+              AI IoT Capabilities
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -184,7 +201,7 @@ const AiBlockchainSolutionsPage: React.FC = () => {
           {/* Solutions Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-center text-white mb-12">
-              AI Blockchain Solutions
+              AI IoT Solutions
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {solutions.map((solution, index) => (
@@ -210,6 +227,17 @@ const AiBlockchainSolutionsPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-white mb-2">Proven Results:</h4>
+                    <ul className="space-y-1">
+                      {solution.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-sm text-green-300">
+                          <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                   <div className="mb-6">
                     <div className="flex items-center space-x-2">
                       <span className="text-cyan-400 font-semibold">{solution.price}</span>
@@ -227,23 +255,23 @@ const AiBlockchainSolutionsPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Benefits Section */}
+          {/* Industries Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-center text-white mb-12">
-              Why Choose AI Blockchain?
+              Industries We Serve
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {industries.map((industry, index) => (
                 <div
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-green-400/30 transition-all duration-300 text-center"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-white" />
+                    <industry.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-gray-300 mb-4">{benefit.description}</p>
-                  <div className="text-2xl font-bold text-green-400">{benefit.stats}</div>
+                  <h3 className="text-xl font-bold text-white mb-3">{industry.title}</h3>
+                  <p className="text-gray-300 mb-4">{industry.description}</p>
+                  <div className="text-2xl font-bold text-green-400">{industry.stats}</div>
                 </div>
               ))}
             </div>
@@ -253,24 +281,24 @@ const AiBlockchainSolutionsPage: React.FC = () => {
           <section className="text-center">
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Ready to Transform with AI Blockchain?
+                Ready to Connect with AI IoT?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join the future of decentralized technology. Contact our blockchain experts for a 
-                consultation and discover how AI-powered blockchain can revolutionize your business.
+                Transform your business with intelligent IoT solutions. Contact our IoT experts for a 
+                consultation and discover how AI-powered connected devices can revolutionize your operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
                 >
-                  Schedule Blockchain Demo
+                  Schedule IoT Demo
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
                 >
-                  Email Our Blockchain Team
+                  Email Our IoT Team
                 </a>
               </div>
             </div>
@@ -283,4 +311,4 @@ const AiBlockchainSolutionsPage: React.FC = () => {
   );
 };
 
-export default AiBlockchainSolutionsPage;
+export default AiIotSolutionsPage;

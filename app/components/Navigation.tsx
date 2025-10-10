@@ -73,6 +73,11 @@ const Navigation: React.FC = () => {
 
   // Service data
   const aiServices = [
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing', icon: Cpu, description: 'Quantum AI solutions' },
+    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Link, description: 'Decentralized AI' },
+    { name: 'AI IoT Solutions', href: '/ai-iot-solutions', icon: Wifi, description: 'Smart connected devices' },
+    { name: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite', icon: Shield, description: 'Advanced threat protection' },
+    { name: 'AI Healthcare Solutions', href: '/ai-healthcare-solutions', icon: Heart, description: 'Medical AI platform' },
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' },
     { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' },
@@ -112,6 +117,10 @@ const Navigation: React.FC = () => {
     { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro', icon: FileText, description: 'Advanced content creation' }
   ];
   const itServices = [
+    { name: 'Quantum Computing Infrastructure', href: '/quantum-computing-infrastructure', icon: Cpu, description: 'Quantum computing setup' },
+    { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: Brain, description: 'AI model deployment' },
+    { name: 'Edge Computing', href: '/edge-computing', icon: Wifi, description: 'Distributed computing' },
+    { name: '5G Network Solutions', href: '/5g-network-solutions', icon: Zap, description: 'Next-gen connectivity' },
     { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
     { name: 'API Development', href: '/api-development', icon: Code, description: 'API development & management' },
     { name: 'Cybersecurity', href: '/cybersecurity-solutions', icon: Shield, description: 'Comprehensive security' },
@@ -148,6 +157,11 @@ const Navigation: React.FC = () => {
     { name: 'Cloud-Native Security', href: '/cloud-native-security', icon: Shield, description: 'Container security' }
   ];
   const microSaasServices = [
+    { name: 'Zion Quantum AI', href: '/zion-quantum-ai', icon: Cpu, description: 'Quantum computing platform' },
+    { name: 'Zion Blockchain AI', href: '/zion-blockchain-ai', icon: Link, description: 'AI blockchain solutions' },
+    { name: 'Zion IoT Intelligence', href: '/zion-iot-intelligence', icon: Wifi, description: 'Smart IoT platform' },
+    { name: 'Zion Cyber AI', href: '/zion-cyber-ai', icon: Shield, description: 'AI cybersecurity suite' },
+    { name: 'Zion Health AI', href: '/zion-health-ai', icon: Heart, description: 'AI healthcare platform' },
     { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart, description: 'Business intelligence platform' },
     { name: 'Zion Chat AI', href: '/zion-chat-ai', icon: MessageCircle, description: 'AI customer support' },
     { name: 'Zion Security Shield', href: '/zion-security-shield', icon: Shield, description: 'Cybersecurity monitoring' },

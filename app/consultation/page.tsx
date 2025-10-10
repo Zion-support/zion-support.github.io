@@ -78,8 +78,7 @@ const ConsultationPage: React.FC = () => {
       price: 'Free',
       features: ['Process analysis', 'Technology selection', 'Change management', 'Timeline planning']
     }
-  ];
-<<<<<<< HEAD
+    ];
   const process = [
     {
       step: '1',
@@ -96,10 +95,7 @@ const ConsultationPage: React.FC = () => {
       step: '4',
       title: 'Ongoing Support',
     }
-  ];];];
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+    ];
   return (
     <>
       <Helmet>
@@ -365,9 +361,8 @@ const ConsultationPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-<<<<<<< HEAD
-      </section>
+          </div>
+        </section>
 
       {/* Selected Consultation Details */},
     {selectedConsultation && (

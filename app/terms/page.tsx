@@ -70,9 +70,6 @@ const TermsPage: React.FC = () => {
     },
     {
       title: 'Governing Law',
-<<<<<<< HEAD
-      icon: Scale,];];
-=======
       content: 'These terms and conditions are governed by and construed in accordance with the laws of Delaware, United States, and you irrevocably submit to the exclusive jurisdiction of the courts in that state or location.'
     },
     {
