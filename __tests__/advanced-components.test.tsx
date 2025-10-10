@@ -1,7 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
 import { MemoryRouter } from 'react-router-dom';
-<<<<<<< HEAD
 // Mock components
 const AdvancedErrorBoundary = ({ children }: { children: React.ReactNode }) => {
   return <div data-testid="error-boundary">{children}</div>;
@@ -12,9 +11,7 @@ const AdvancedSEOOptimizer = ({ title, description }: { title?: string; descript
 const AdvancedPerformanceMonitor = () => {
   return <div data-testid="performance-monitor">Performance Monitor</div>;
 };
-=======
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
@@ -22,7 +19,6 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   }
   return <div>Test content</div>;
 };
-<<<<<<< HEAD
 // Test component for error boundary tests
 // const TestComponent = () => <div>Test component</div>;
 // Mock onError callback
@@ -31,11 +27,9 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
 // const helmetContext = {};
 describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
-=======
 
 describe('Advanced Components', () => {
   it('renders test content without error', () => {
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     render(
       <MemoryRouter>
         <ThrowError shouldThrow={false} />
@@ -43,15 +37,13 @@ describe('Advanced Components', () => {
     );
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
-<<<<<<< HEAD
   it('renders error UI when there is an error', () => {
     const consoleSpy = jest
       .spyOn(console, 'error')
       .mockImplementation(() => {});
     render(
       <MemoryRouter>
-        <AdvancedErrorBoundary enableRetry={true}>
-          <ThrowError shouldThrow={true} />
+        <AdvancedErrorBoundary enableRetry={true}>ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
       </MemoryRouter>
     );
@@ -68,8 +60,7 @@ describe('Advanced Components', () => {
       .mockImplementation(() => {});
     render(
       <MemoryRouter>
-        <AdvancedErrorBoundary onError={onError}>
-          <ThrowError shouldThrow={true} />
+        <AdvancedErrorBoundary onError={onError}>ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
       </MemoryRouter>
     );
@@ -84,8 +75,7 @@ describe('Advanced Components', () => {
     const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
     render(
       <MemoryRouter>
-        <AdvancedErrorBoundary enableRetry={true}>
-          <TestComponent />
+        <AdvancedErrorBoundary enableRetry={true}>TestComponent />
         </AdvancedErrorBoundary>
       </MemoryRouter>
     );
@@ -141,8 +131,7 @@ describe('AdvancedSEOOptimizer', () => {
     const helmetContext = {};
     const { container } = render(
       <MemoryRouter>
-        <HelmetProvider context={helmetContext}>
-          <AdvancedSEOOptimizer
+        <HelmetProvider context={helmetContext}>AdvancedSEOOptimizer
             seoData={mockSEOData}
             enableStructuredData={true}
           />
@@ -159,8 +148,7 @@ describe('AdvancedSEOOptimizer', () => {
     const helmetContext = {};
     const { container } = render(
       <MemoryRouter>
-        <HelmetProvider context={helmetContext}>
-          <AdvancedSEOOptimizer seoData={mockSEOData} enableOpenGraph={true} />
+        <HelmetProvider context={helmetContext}>AdvancedSEOOptimizer seoData={mockSEOData} enableOpenGraph={true} />
         </HelmetProvider>
       </MemoryRouter>
     );
@@ -174,8 +162,7 @@ describe('AdvancedSEOOptimizer', () => {
     const helmetContext = {};
     const { container } = render(
       <MemoryRouter>
-        <HelmetProvider context={helmetContext}>
-          <AdvancedSEOOptimizer seoData={mockSEOData} enableTwitterCards={true} />
+        <HelmetProvider context={helmetContext}>AdvancedSEOOptimizer seoData={mockSEOData} enableTwitterCards={true} />
         </HelmetProvider>
       </MemoryRouter>
     );
@@ -274,7 +261,6 @@ describe('AdvancedPerformanceMonitor', () => {
     expect(screen.getByText('Recommendations:')).toBeInTheDocument();
     Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
   });
-=======
 
   it('handles error when shouldThrow is true', () => {
     const consoleSpy = jest
@@ -293,5 +279,4 @@ describe('AdvancedPerformanceMonitor', () => {
 
     consoleSpy.mockRestore();
   });
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 });

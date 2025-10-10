@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -64,7 +63,6 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
 ;
 const PagePage: React.FC = () => {;
   const features = [;
@@ -129,7 +127,6 @@ const PagePage: React.FC = () => {;
           </div>;
         </div>;
       </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>;
         <div className="max-w-7xl mx-auto"></div>;
@@ -146,7 +143,6 @@ const PagePage: React.FC = () => {;
                 <p className="text-gray-300">{feature.description}</p>;
               </div>;
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -198,7 +194,6 @@ export default PagePage;
   </h2>
   </button>
   </span>
-=======
           </div>;
         </div>;
       </section>;
@@ -246,4 +241,3 @@ export default PagePage;
 };
 ;
 export default PagePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 const CloudServicesPage: React.FC = () => {
 const features = [
@@ -24,7 +23,6 @@ const features = [
       icon: Globe,
       title: 'Global Deployment',
       description: 'Worldwide cloud services deployment and support'
-=======
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock } from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {
@@ -52,11 +50,9 @@ const CloudServicesPage: React.FC = () => {
       title: 'Cloud Security',
       description: 'Comprehensive security solutions to protect your cloud infrastructure and data.',
       features: ['Identity management', 'Data encryption', 'Compliance auditing', 'Threat detection']
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     }
   ];
   const benefits = [
-<<<<<<< HEAD
 'Advanced cloud technology integration',
     'Real-time monitoring and analytics',
     'Enterprise-grade security and compliance',
@@ -65,7 +61,6 @@ const CloudServicesPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-=======
     'Reduced infrastructure costs by up to 40%',
     'Improved scalability and flexibility',
     'Enhanced security and compliance',
@@ -119,10 +114,8 @@ const CloudServicesPage: React.FC = () => {
         'Custom development'
       ]
     }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   ];
   return (
-<<<<<<< HEAD
     <React.Fragment>
       <Helmet>
 <title>Cloud Services | Zion Tech Group</title>
@@ -148,7 +141,6 @@ const CloudServicesPage: React.FC = () => {
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
@@ -185,11 +177,9 @@ const CloudServicesPage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
             Why Choose Our Cloud Services?
@@ -277,7 +267,6 @@ const CloudServicesPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-=======
       </section>
 
       {/* Services Section */}
@@ -414,7 +403,6 @@ const CloudServicesPage: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   );
 };
 export default CloudServicesPage;
