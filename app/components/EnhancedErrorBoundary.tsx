@@ -1,53 +1,42 @@
 'use client';
-import React, {Component, ErrorInfo, ReactNode}from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;}class EnhancedErrorBoundary extends Component<Props, State> {constructor(props: Props) {,
+  errorInfo?: ErrorInfo;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
-this.state = { hasError: false };
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-    this.setState({)
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+    this.setState({
       error,
-errorInfo
+      errorInfo
     });
-
-    // Log error to analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-      gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        error_boundary: true
-      });
-    }
-
-    // Call custom error handler
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
   }
 
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
+
+  handleGoHome = () => {
+    window.location.href = '/';
   };
 
   render() {
@@ -57,65 +46,80 @@ errorInfo
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center">
-            <div className="text-6xl mb-4">⚠️</div>
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-            </p>
-            
-            <div className="space-y-4">
-              <button
-                onClick={this.handleRetry}
-                className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
-              >
-                Try Again
-              </button>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full">
+            <div className="cyber-card-enhanced holographic-card-enhanced p-8 text-center border border-red-500/30">
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <AlertTriangle className="w-8 h-8 text-white" />
+              </div>
               
-              <a
-                href="/"
-                className="block w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
-              >
-                Go Home
-              </a>
+              <h1 className="text-2xl font-bold text-white mb-4 neon-text-enhanced">
+                Oops! Something went wrong
+              </h1>
               
-              <a
-                href="/contact"
-                className="block w-full border border-gray-400 text-gray-300 hover:bg-gray-400 hover:text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
-              >
-                Report Issue
-              </a>
-            </div>
+              <p className="text-gray-300 mb-6">
+                We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-400 hover:text-gray-300">
-                  Error Details (Development)
-                </summary>
-                <div className="mt-2 p-4 bg-black/20 rounded text-xs font-mono text-red-300 overflow-auto max-h-40">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  <div className="mb-2">
-                    <strong>Stack:</strong>
-                    <pre className="whitespace-pre-wrap mt-1">
-                      {this.state.error.stack}
-                    </pre>
-                  </div>
-                  {this.state.errorInfo && (
-                    <div>
-                      <strong>Component Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
+              {process.env.NODE_ENV === 'development' && this.state.error && (
+                <details className="mb-6 text-left">
+                  <summary className="text-red-400 cursor-pointer mb-2">Error Details (Development)</summary>
+                  <div className="bg-slate-800 p-4 rounded-lg text-sm text-red-300 font-mono overflow-auto">
+                    <div className="mb-2">
+                      <strong>Error:</strong> {this.state.error.message}
                     </div>
-                  )}
+                    <div className="mb-2">
+                      <strong>Stack:</strong>
+                      <pre className="whitespace-pre-wrap mt-1">{this.state.error.stack}</pre>
+                    </div>
+                    {this.state.errorInfo && (
+                      <div>
+                        <strong>Component Stack:</strong>
+                        <pre className="whitespace-pre-wrap mt-1">{this.state.errorInfo.componentStack}</pre>
+                      </div>
+                    )}
+                  </div>
+                </details>
+              )}
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={this.handleRetry}
+                  className="cyber-button-enhanced px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center"
+                >
+                  <RefreshCw className="w-4 h-4 mr-2" />
+                  Try Again
+                </button>
+                
+                <button
+                  onClick={this.handleGoHome}
+                  className="px-6 py-3 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
+                >
+                  <Home className="w-4 h-4 mr-2" />
+                  Go Home
+                </button>
+              </div>
+
+              <div className="mt-6 text-center">
+                <p className="text-gray-400 text-sm">
+                  If this problem persists, please contact our support team.
+                </p>
+                <div className="mt-2">
+                  <a
+                    href="tel:+13024640950"
+                    className="text-cyan-400 hover:text-cyan-300 text-sm mr-4"
+                  >
+                    📞 (302) 464-0950
+                  </a>
+                  <a
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="text-cyan-400 hover:text-cyan-300 text-sm"
+                  >
+                    📧 kleber@ziontechgroup.com
+                  </a>
                 </div>
-              </details>
-            )}
+              </div>
+            </div>
           </div>
         </div>
       );
@@ -123,6 +127,6 @@ errorInfo
 
     return this.props.children;
   }
-};
+}
 
 export default EnhancedErrorBoundary;

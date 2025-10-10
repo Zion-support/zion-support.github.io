@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
 import './app/styles/futuristic-enhanced.css';
+import './app/styles/futuristic-advanced.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
@@ -41,6 +42,11 @@ const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
 const TermsPage = React.lazy(() => import('./app/terms/page'));
 const CookiesPage = React.lazy(() => import('./app/cookies/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
+const PartnersPage = React.lazy(() => import('./app/partners/page'));
+const FAQPage = React.lazy(() => import('./app/faq/page'));
+const DocsPage = React.lazy(() => import('./app/docs/page'));
+const CommunityPage = React.lazy(() => import('./app/community/page'));
+const ApiPage = React.lazy(() => import('./app/api/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {

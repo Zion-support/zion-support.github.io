@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Link}}from 'react-router-dom';
-import {ArrowRight, ExternalLink, Building, Users, TrendingUp}}from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, ExternalLink, Building, Users, TrendingUp } from 'lucide-react';
 
 const CaseStudiesPage: React.FC = () => {,
   const caseStudies = [
