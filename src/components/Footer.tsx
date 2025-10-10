@@ -458,6 +458,7 @@ const Footer: React.FC = memo(() => {
       </div>
     </footer>
   );
+});
 
 Footer.displayName = 'Footer';
 export default Footer;
