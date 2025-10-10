@@ -21,7 +21,11 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
         { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' }
+        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
+        { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence' },
+        { name: 'AI Creative Writing Studio', href: '/ai-creative-writing' },
+        { name: 'AI Scientific Research', href: '/ai-scientific-research' },
+        { name: 'AI Personal Life Coach', href: '/ai-personal-life-coach' }
       ]
     },
     {
@@ -39,7 +43,11 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Infrastructure Monitoring', href: '/ai-infrastructure-monitoring' },
         { name: 'Blockchain Integration', href: '/blockchain-integration-services' },
         { name: 'AI API Management', href: '/ai-api-management' },
-        { name: 'Smart Contract Security', href: '/smart-contract-security-audit' }
+        { name: 'Smart Contract Security', href: '/smart-contract-security-audit' },
+        { name: 'Quantum Computing Infrastructure', href: '/quantum-computing-infrastructure' },
+        { name: 'Space Technology Solutions', href: '/space-technology' },
+        { name: 'Green IT Infrastructure', href: '/green-it-infrastructure' },
+        { name: 'Metaverse Infrastructure', href: '/metaverse-infrastructure' }
       ]
     },
     {
@@ -57,7 +65,11 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Smart Calendar', href: '/ai-smart-calendar' },
         { name: 'AI Content Writer', href: '/ai-content-writer' },
         { name: 'AI Video Generator', href: '/ai-video-generator' },
-        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' }
+        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' },
+        { name: 'AI Smart Home Controller', href: '/ai-smart-home-controller' },
+        { name: 'AI Personal Fitness Coach', href: '/ai-personal-fitness-coach' },
+        { name: 'AI Language Learning', href: '/ai-language-learning' },
+        { name: 'AI Personal Assistant', href: '/ai-personal-assistant' }
       ]
     },
     {
@@ -73,7 +85,13 @@ const Footer: React.FC = memo(() => {
         { name: 'Digital Transformation', href: '/digital-transformation' },
         { name: 'Innovation Labs', href: '/innovation-labs' },
         { name: 'Business Intelligence', href: '/business-intelligence' },
-        { name: 'Robotics Solutions', href: '/robotics' }
+        { name: 'Robotics Solutions', href: '/robotics' },
+        { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
+        { name: 'AI Neural Interface', href: '/ai-neural-interface' },
+        { name: 'AI Quantum Security', href: '/ai-quantum-security' },
+        { name: 'AI Space Technology', href: '/ai-space-technology' },
+        { name: 'AI Climate Solutions', href: '/ai-climate-solutions' },
+        { name: 'AI Molecular Design', href: '/ai-molecular-design' }
       ]
     }
   ];
