@@ -1,5 +1,5 @@
 'use client;
-
+';
 import React from 'react;
 
 use client
@@ -27,8 +27,8 @@ interface ImageProps {}
 
   priority?: boolean;
 
-  _quality?: number;
-
+  _quality?: number;';
+';';
   _placeholder?: 'blur | empty
   _blurDataURL?: string;
 
@@ -48,7 +48,7 @@ export const Image: React.FC<ImageProps>= ({
 export const Image: React.FC<ImageProps> = ({}
 
   src,
-export const Image: React.FC<ImageProps> = ({,
+export const Image: React.FC<ImageProps> = ({,;
   src;
 
   alt,
@@ -56,7 +56,7 @@ export const Image: React.FC<ImageProps> = ({,
   height,
   className,
   priority = false,
-  quality = 75,
+  quality = 75,';
   placeholder = 'empty,
   blurDataURL,
   fill = false,
@@ -69,7 +69,7 @@ export const Image: React.FC<ImageProps> = ({,
 }) => {}
 
   const [, setIsLoaded] = useState(false)
-  const [hasError, setHasError] = useState(false)
+  const [hasError, setHasError] = useState(false);
   const handleLoad = useCallback(() => {};;
 
     setIsLoaded(true)
@@ -82,10 +82,10 @@ export const Image: React.FC<ImageProps> = ({,
     if (onError) onError();}
 
   }, [onError])
-  const imageStyle: React.CSSProperties = {
+  const imageStyle: React.CSSProperties = {;
     ...style;
 
-    ...(fill && {
+    ...(fill && {';
       position: 'absolute,
       top:
         top: 0,
@@ -93,13 +93,13 @@ export const Image: React.FC<ImageProps> = ({,
   const imageStyle: React.CSSProperties = {}
 
     ...style,
-    ...(fill && {}
-
+    ...(fill && {};
+';
       position: 'absolute,
       top: 0,
-      left: 0,
-      width: '100%,
-      height: '100%,
+      left: 0,';
+      width: '100%,';
+      height: '100%,';
       objectFit: 'cover}
 
     })
@@ -115,7 +115,7 @@ export const Image: React.FC<ImageProps> = ({,
 
   if (hasError) {
     return(<div}
-
+';
 'use client;
 
 import React, { useState, useCallback } from react;
@@ -124,7 +124,7 @@ interface ImageProps {/* TODO: Fix JSX expression */}
 
 }
 
-export const,
+export const,);
   Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
 
@@ -151,9 +151,9 @@ export const,
         <span className="text-gray-500 text-sm"><span className="sr-only>Screen reader: </span>Failed to load image</span>)
       </div>)
     ),
-        {...props}
-
-      ></div>
+        {...props}"
+"
+      ></div>";
         <span className="text-gray-500 text-sm"></span><span className="sr-only>Screen reader: </span>Failed to load image</span>
       </div>
     )
@@ -175,7 +175,7 @@ export const,
       style={imageStyle}
 
       sizes={sizes}
-
+';
       loading={priority ? 'eager' : 'lazy}
 
       onLoad={handleLoad}
@@ -183,10 +183,10 @@ export const,
       onError={handleError}
 
       {...props}
-
+);
     >)</img>
 }</img>
-export default Image</img>
+export default Image</img>';
       loading={priority ? 'eager' : 'lazy})
       onLoad={handleLoad})
       onError={handleError})
@@ -201,7 +201,8 @@ export default Image;
   );
 
 };
-
-export default Image;
-
 "
+export default Image;"
+";
+"
+';";`;

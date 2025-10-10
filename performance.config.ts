@@ -7,7 +7,7 @@ export const performanceConfig = {;
   // Core Web Vitals thresholds;
   webVitals: {,
     lcp: {,
-      good: 2500;
+      good: 2500;};
       needsImprovement: 4000},
     fid: {,
       good: 100;
@@ -27,12 +27,12 @@ export const performanceConfig = {;
 
   // Resource loading priorities;
   resourceHints: {,
-    preconnect: ['https://fonts.googleapis.com', 'https: //fonts.gstatic.com'],'
+    preconnect: ['https://fonts.googleapis.com', 'https: //fonts.gstatic.com'],'';
     dnsPrefetch: ['https://www.google-analytics.com', 'https: //www.googletagmanager.com']},'
 
   // Lazy loading configuration;
-  lazyLoading: {,
-    imagePlaceholder: 'blur','
+  lazyLoading: {,';
+    imagePlaceholder: 'blur','';
     rootMargin: '50px','
     threshold: 0.01;
     enableNativeLazyLoading: true},
@@ -106,3 +106,4 @@ export const performanceConfig = {/* TODO: Fix JSX expression */};
   }};
 
 export default performanceConfig;
+';

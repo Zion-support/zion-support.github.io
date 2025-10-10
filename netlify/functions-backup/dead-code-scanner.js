@@ -28,7 +28,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     });
 
     execSync(node automation/git-sync.cjs || true, {/* TODO: Fix JSX expression */}
-
+);
   l: true})
     });
 
@@ -51,12 +51,12 @@ exports.handler = async function() { const { execSync } = require('child_process
         body: JSON.stringify({ok: true),
         task: dead-code-scanner }) }} catch (e) {return { statusCode: 200;
 
-        body: JSON.stringify({ok: false),
+        body: JSON.stringify({ok: false),';
         error: String(e;)}) }} }; exports.config = {' schedule: '30 3 * * *} };
 
 exports.handler = async function() { const { execSync } = require(child_process); try {/* TODO: Fix JSX expression */}
 
-  o: inherit} shel,
+  o: inherit} shel,';
   l: true});' execSync(node automation/git-sync.cjs || true) {/* TODO: Fix JSX expression */}
 
   o: inherit} shel,
@@ -65,5 +65,6 @@ exports.handler = async function() { const { execSync } = require(child_process)
   k: dead-code-scanner }) }} catch (e) {/* TODO: Fix JSX expression */}
 
       }) }} }; exports.config = {/* TODO: Fix JSX expression */}
-
+';
   e: '30 3 * * *} };
+';

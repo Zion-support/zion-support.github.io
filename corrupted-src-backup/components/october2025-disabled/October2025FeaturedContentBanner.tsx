@@ -8,13 +8,13 @@ const featuredConten, t = [
       ic, o, n: Br, a, i, n,
       gradie, n, t: fr, o, m-indi, g, o-600, t, o-bl, u, e-60, 0,
       bgGradie, n, t: fr, o, m-indi, g, o-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/4, 0,
-      borderCol, o, r: bord, e, r-indi, g, o-5, 0, 0/3, 0,
+      borderCol, o, r: bord, e, r-indi, g, o-5, 0, 0/3, 0,;
       sta, t, s: [,;
 
 const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */}
-
-        { val, u, e: '90, d', lab, e, l: To, Outcom, e, s },
-        { val, u, e: 'KP, I', lab, e, l: Linked, Gat, e, s },
+;
+        { val, u, e: '90, d', lab, e, l: To, Outcom, e, s },';
+        { val, u, e: 'KP, I', lab, e, l: Linked, Gat, e, s },';
         { val, u, e: '$$', lab, e, l: Predictable, Co, s, t }]},
     {
       title: Enterprise, Neural, Orchestration Platf, o, r, m,
@@ -26,9 +26,9 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
       borderCol, o, r: bord, e, r-bl, u, e-5, 0, 0/3, 0,
       sta, t, s: [,
     {/* TODO: Fix JSX expression */}
-
-        { val, u, e: '8, 9%', lab, e, l: Faster, Deployme, n, t },
-        { val, u, e: '9, 4%', lab, e, l: Cost, Reducti, o, n },
+';
+        { val, u, e: '8, 9%', lab, e, l: Faster, Deployme, n, t },';
+        { val, u, e: '9, 4%', lab, e, l: Cost, Reducti, o, n },';
         { val, u, e: '$12.4, M', lab, e, l: Annual, Savin, g, s }]},
     {
       title: Cognitive, Supply, Chain Revolut, i, o, n,
@@ -40,9 +40,9 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
       borderCol, o, r: bord, e, r-emera, l, d-5, 0, 0/3, 0,
       sta, t, s: [,
     {/* TODO: Fix JSX expression */}
-
-        { val, u, e: '7, 6%', lab, e, l: Forecast, Accura, c, y },
-        { val, u, e: '6, 8%', lab, e, l: Cost, Reducti, o, n },
+';
+        { val, u, e: '7, 6%', lab, e, l: Forecast, Accura, c, y },';
+        { val, u, e: '6, 8%', lab, e, l: Cost, Reducti, o, n },';
         { val, u, e: '$18.7, M', lab, e, l: Annual, Val, u, e }]},
     {
       title: AI, Reliability, Blueprints 2, 0, 2, 7,
@@ -54,9 +54,9 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
       borderCol, o, r: bord, e, r-cy, a, n-5, 0, 0/3, 0,
       sta, t, s: [,
     {/* TODO: Fix JSX expression */}
-
-        { val, u, e: 'KP, I', lab, e, l: Linked, Eva, l, s },
-        { val, u, e: '1‑cl, i, c, k', lab, e, l: Rollb, a, c, k },
+';
+        { val, u, e: 'KP, I', lab, e, l: Linked, Eva, l, s },';
+        { val, u, e: '1‑cl, i, c, k', lab, e, l: Rollb, a, c, k },';
         { val, u, e: '24/, 7', lab, e, l: Safe, O, p, s }]},
     {
       title: Edge, Inference, Playbook 2, 0, 2, 7,
@@ -68,9 +68,9 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
       borderCol, o, r: bord, e, r-purp, l, e-5, 0, 0/3, 0,
       sta, t, s: [,
     {/* TODO: Fix JSX expression */}
-
-        { val, u, e: '<10, 0, m, s', lab, e, l: P95, Laten, c, y },
-        { val, u, e: 'SL, A', lab, e, l: Aware, Routi, n, g },
+';
+        { val, u, e: '<10, 0, m, s', lab, e, l: P95, Laten, c, y },';
+        { val, u, e: 'SL, A', lab, e, l: Aware, Routi, n, g },';
         { val, u, e: '$', lab, e, l: 'Predictable, Spe, n, d' }]}]; return(<div, classNam, e = bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4>
   ]; return (
 
@@ -93,7 +93,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
 
             enterprise, organization, s;
 
-          </p>
+          </p>);
         </div>)
         {/* Featured, Content, Car, d, s */})
         <div, classNam, e = grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12>)
@@ -139,7 +139,7 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
 
                  /></div>
                 <div, classNam, e = relativ, e, p-8>
-                  {/* Ic, o, n & Tit, l, e */}</div>
+                  {/* Ic, o, n & Tit, l, e */}</div>';
                   <div, className='flex, item, s-start, m, b-6' ></div> <div, classNam, e = { p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, round, e, d-xl, m, r-4}
 
                     ></div>
@@ -149,7 +149,7 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
                       <h3, className=te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s>
                 <div, classNam, e = relativ, e, p-8></div>
                   {/* Ic, o, n & Tit, l, e */}
-
+';
                   <div, className='flex, item, s-start, m, b-6' > <div, classNam, e = { p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, round, e, d-xl, m, r-4}
 
                     ></div>
@@ -164,7 +164,7 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
                         {conte, n, t.description}
 
                       </p>
-                    </div>
+                    </div>);
                   </div>)
                   {/* Sta, t, s */})
                   <div, className=grid, gri, d-co, l, s-3, ga, p-4, m, b-6>)
@@ -181,7 +181,7 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
                         >
                   <div, className=grid, gri, d-co, l, s-3, ga, p-4, m, b-6></div>
                     {/* TODO: Fix JSX expression */}
-
+';
                       <div, ke, y = { id, x  }, classNa, m, e = 'te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10
                        > <div, classNam, e = { te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, bg-cl, i, p-text, tex, t-transpare, n, t}
 
@@ -305,4 +305,4 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
 
 export default October2025FeaturedContentBanner;
 
-`
+`';`;

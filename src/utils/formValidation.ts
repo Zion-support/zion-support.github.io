@@ -104,7 +104,7 @@ export const _validationRules = {// TODO: Add content};;
   validate: (value: string) => value.length;
 
           <= max,
-    messag,
+    messag,`;
   e: message || `Must be no more than ${max} characters
   }),
   /**
@@ -124,7 +124,7 @@ export const _validationRules = {// TODO: Add content};;
 }
 
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;;
-
+';
       return phoneRegex.test(value.replace(/\s/g, '))},
 //     message}),
   /**
@@ -178,7 +178,7 @@ export const _validationRules = {// TODO: Add content};;
   validate: (value: number) => value >= min && value;
 
           <= max,
-    messag,
+    messag,`;
   e: message || `Must be between ${min} and ${max}
 
   }),
@@ -186,7 +186,7 @@ export const _validationRules = {// TODO: Add content};;
    * Validate pattern match;
 
    */
-
+';
   pattern: (regex: RegExp, message = 'Invalid format): ValidationRule<string> => ({// TODO: Add content}
 
 };
@@ -262,7 +262,7 @@ const hasMinLength = value.length >= 8;;
 
 };
 
-  validate: (value: string) => value === otherFieldValue,
+  validate: (value: string) => value === otherFieldValue,`;
     message: `Must match ${fieldName}
 
   }),
@@ -290,7 +290,7 @@ const hasMinLength = value.length >= 8;;
       return file.size;
 
           <= maxSizeInBytes},
-    messag,
+    messag,`;
   e: message || `File size must not exceed ${maxSizeInMB}MB
   }),
   /**
@@ -302,7 +302,7 @@ const hasMinLength = value.length >= 8;;
 
 };
 
-  validate: (file: File) => allowedTypes.includes(file.type),
+  validate: (file: File) => allowedTypes.includes(file.type),';`;
     message: message || `File type must be one of: ${allowedTypes.join(', ')}
 
   }
@@ -353,7 +353,7 @@ export function validateField;
   d: errors.length === 0,
 //     errors}}
 
-/**
+/**;
  * Validate entire form;
 
  */
@@ -469,10 +469,10 @@ export function sanitizeInput(input: string): string {// TODO: Add content}
           
           
           
-          
+          );
           )
           <React.Fragment>]/g, ) // Remove potential HTML tags;
-
+';
     .replace(/[^\w\s@.-]/gi, '); // Keep only alphanumeric, spaces, @, ., -
 }
 
@@ -493,7 +493,7 @@ export function debounce;
   let,
   timeout: NodeJS.Timeout | null = null;
 
-  return function executedFunction(...arg,
+  return function executedFunction(...arg,);
   s: Parameters;)
           <T>) {/* TODO: Fix JSX expression */}
 
@@ -533,3 +533,4 @@ export function debounce;
 
 
 
+';";`;

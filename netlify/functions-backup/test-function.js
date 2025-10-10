@@ -19,7 +19,7 @@ exports.handler = async function (event) context) {// // console.log removed for
   e: context.functionName}
 
       }}),
-    header,
+    header,';
   s: {'Content-Type': 'application/json}
 
     }}};
@@ -28,5 +28,6 @@ exports.handler = async function(event) context) {// // console.log removed for 
 } return {/* TODO: Fix JSX expression */}
 
   d: context.awsRequestId} functionNam,
-  e: context.functionName } }); header,
+  e: context.functionName } }); header,';
   s: {' 'Content-Type': 'application/json' } }};
+';

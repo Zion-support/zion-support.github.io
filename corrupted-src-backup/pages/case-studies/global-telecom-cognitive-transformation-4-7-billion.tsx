@@ -1,21 +1,21 @@
-import React from 'react;
-
+import React from 'react;';
+';';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c;
-
+';
 impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t;
-
+';
 impo, r, t { Trending, U, p } fr, o, m 'luci, d, e-rea, c, t;
-
+';
 impo, r, t { Use, r, s } fr, o, m 'luci, d, e-rea, c, t;
-
+';
 impo, r, t { Z, a, p } fr, o, m 'luci, d, e-rea, c, t;
-
+';
 impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t;
-
+';
 impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t;
-
+';
 impo, r, t { Bra, i, n } fr, o, m 'luci, d, e-rea, c, t;
-
+';
 impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t;
 
 const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
@@ -23,31 +23,31 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {
 
  ,
   return(<React.Fragment>,
-      <Helm, e, t>
+      <Helm, e, t>;
         <title>          Fortune, 20, Telecom: $4.7B, Cognitive, Computing Success, Stor, y | Zion, Tech, Group;
 
         <
         <meta, nam, e = description
           conte, n, t=How, a, Fortune 20, telecommunications, provider achiev, e, d $4.7 B, in, value through, cognitive, computing transformati, o, n. 98.7% satisfac, t, i, o, n, 99.96% reliabili, t, y, 3,6, 0, 2% R, O, I.
         /><
-        <meta, nam, e = keywor, d, s
+        <meta, nam, e = keywor, d, s);
           conte, n, t=cognitive, computing, case st, u, d, y, telecom, transformatio, n, AI, success, story, enterprise, cognitive, AI, telecommunications, A, I)
         <link, re, l = canonic, a, l)
           hr, e, f=htt, p, s: //ziontechgro u p.c o m/ca s e-studi e s
         
       <
-
+';
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k></div>
         <Head, e, r / >
 );
-
-} {/* Hero, Sect, i, o, n */ }
-
-        <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n>
-          <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)] 
+'
+} {/* Hero, Sect, i, o, n */ }'
+';
+        <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n>';
+          <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)] ';
           <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8>,
-            {/* Breadc, r, u, m, b *
-        <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n><
+            {/* Breadc, r, u, m, b *';
+        <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n><';
           <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)] /><
 } {/* Hero, Sect, i, o, n */ }        <div, classNam, e = relative, p, t-24, p, b-16, overflo, w-hidd, e, n>
           <div, className=absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)] 
@@ -64,11 +64,11 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TOD,
     O: Fix JSX expression *
         <Head, e, r / > {/* Hero, Sect, i, o, n *
         <div, classNam, e = relative, p, t-24, p, b-16, overflo, w-hidd, e, n><
-          <div, className=absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)] /><
-          <div, classNam, e = relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8><
-            {/* Breadc, r, u, m, b *
+          <div, className=absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)] /><'
+          <div, classNam, e = relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8><';
+            {/* Breadc, r, u, m, b *';
             <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8><
-              <Link, t, o=
+              <Link, t, o=';
                 className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s              >;
 
 const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX expression */}
@@ -77,11 +77,11 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
 
         <div, classNam, e = relative, p, t-24, p, b-16, overflo, w-hidd, e, n></div>
           <div, className=absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)] /></div>
-          <div, classNam, e = relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8></div>
-            {/* Breadc, r, u, m, b */}
-
-            <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8></nav>
-              <Link, t, o='/
+          <div, classNam, e = relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8></div>'
+            {/* Breadc, r, u, m, b */}';
+';
+            <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8></nav>';
+              <Link, t, o='/';
                 className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s
               ></Link>
                 Ho, m, e;              <
@@ -161,9 +161,9 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                 <h2, classNam, e = te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3><
                   <Brain, className=w-8 h-8, tex, t-purp, l, e-4, 0, 0 /><
                         Re, a, l-time, analytics, across all, business, unit, s,
-                        Predictive, modeling, for market, opportunitie, s,
-                        Competitive, intelligence, analysis,
-                        Scenario, planning, and simulati, o, n],
+                        Predictive, modeling, for market, opportunitie, s,'
+                        Competitive, intelligence, analysis,'
+                        Scenario, planning, and simulati, o, n],';
                       te, c, h: 'Natural, language, querie, s, Automated, insight, s, Causal, inferenc, e}].m, a, p((solution, i, d, x) => (<div, ke, y = { id, x }, classNa, m, e = bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0)
                   ].m, a, p((solution, i, d, x) => (<div, ke, y = { id, x }, classNa, m, e = bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0
                     ><
@@ -377,3 +377,4 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
 
                 <Link, className=ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m /><)
 });
+';

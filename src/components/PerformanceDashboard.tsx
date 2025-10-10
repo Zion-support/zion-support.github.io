@@ -70,3 +70,4 @@ const,
 };
 
 export default PerformanceDashboard;
+';

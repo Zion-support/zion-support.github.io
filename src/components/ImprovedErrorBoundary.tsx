@@ -1,5 +1,5 @@
-import React from 'react;
-
+import React from 'react;';
+';';
 'use client;
 
 /**
@@ -66,10 +66,10 @@ constructor(props: Props) {
       errorCount: prevState.errorCount + 1
     }));
 
-    // Log to console in development
+    // Log to console in development';
     if (process.env['NODE_ENV'] === 'development) {}
 
-    // Send to external error tracking (if available)
+    // Send to external error tracking (if available)';
     if (typeof window !== 'undefined && (window as unknown as { Sentry: unknown }).Sentry) {
       (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
         contexts: {
@@ -99,7 +99,7 @@ class ImprovedErrorBoundary extends Component;
 }
 
 ;
-
+);
 constructor(props: Props) {// TODO: Add content}
 
 }
@@ -141,7 +141,7 @@ constructor(props: ErrorBoundaryProps) {
   r: true,
 //       error}}
 
-  componentDidCatch(erro,
+  componentDidCatch(erro,);
   r: Error, errorInf)
   o: ErrorInfo): void {/* TODO: Fix JSX expression */}
 
@@ -182,7 +182,7 @@ p: Date.now(),
     }));
 
     // Log to console in development;
-
+';
     if (process.env['NODE_ENV'] === 'development) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -191,7 +191,7 @@ p: Date.now(),
 
     }
 
-    // Send to external error tracking (if available)
+    // Send to external error tracking (if available)';
     if (typeof window !== 'undefined && (window as unknown as {/* TODO: Fix JSX expression */})
   y: unknown }).Sentry) {/* TODO: Fix JSX expression */}
 
@@ -224,7 +224,7 @@ p: Date.now(),
 
   componentStac,
   k: errorInfo.componentStack}
-
+);
         })
       })}
 
@@ -262,7 +262,7 @@ p: Date.now(),
     this.setState({
       hasError: false,
       error: null,
-      errorInfo: null
+      errorInfo: null);
     })};
 
   handleReload = (): void => {
@@ -286,7 +286,7 @@ p: Date.now(),
             <h1 style={styles.title}>Oops! Something went wrong</h1>
             <p style={styles.message}>
               Were sorry for the inconvenience. The application encountered an unexpected error.
-            </p>
+            </p>';
             {process.env['NODE_ENV'] === 'development && this.state.error && (
 
               <details style={styles.details}>
@@ -307,7 +307,7 @@ p: Date.now(),
   r: false,
       erro,
   r: null,
-      errorInf,
+      errorInf,);
   o: null;)
     })};
 
@@ -351,16 +351,16 @@ p: Date.now(),
 
       // Default error UI;
 
-      return (<div>Coming Soon</div>)
-  )
-        
+      return (<div>Coming Soon</div>)"
+  )"
+        ";
           <div className="error-boundary-container style={styles.container}></div>
           <div style={styles.content}></div>
             <div style={styles.icon}></div>
             <h1 style={styles.title}>Oops! Something went wrong</h1>
             <p style={styles.message}></p>
               Were sorry for the inconvenience. The application encountered an unexpected error.
-            </p>
+            </p>';
             {process.env['NODE_ENV'] === 'development && this.state.error && ()}
 
           <details style={styles.details}></details>
@@ -411,9 +411,9 @@ p: Date.now(),
             <div style={styles.actions}></div>
               <button></button>
                 onClick={this.resetErrorBoundary}
-
-                style={styles.button}
-
+"
+                style={styles.button}"
+";
                 aria-label="Try Again
               >
                 Try Again
@@ -429,7 +429,7 @@ p: Date.now(),
                 onClick={this.handleReload}
 
                 style={{...styles.button, ...styles.secondaryButton}}
-
+";
                 aria-label="Reload Page
               >
                 Reload Page
@@ -445,7 +445,7 @@ p: Date.now(),
                 onClick={this.handleGoHome}
 
                 style={{...styles.button, ...styles.secondaryButton}}
-
+";
                 aria-label="Go to Homepage
               >
                 Go Home
@@ -474,93 +474,93 @@ p: Date.now(),
 
 const styles = {;;
 
-  container: {
-    minHeight: '100vh,
-    display: 'flex,
-    alignItems: 'center,
-    justifyContent: 'center,
-    padding: '20px,
-    backgroundColor: '#f5f5f5,
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica Neue, Arial, sans-serif
+  container: {';
+    minHeight: '100vh,';
+    display: 'flex,';
+    alignItems: 'center,';
+    justifyContent: 'center,';
+    padding: '20px,';
+    backgroundColor: '#f5f5f5,';";
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica Neue, Arial, sans-serif};
   },
-  content: {
-    maxWidth: '600px,
-    width: '100%,
-    backgroundColor: 'white,
-    borderRadius: '8px,
-    padding: '40px,
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1),
+  content: {';
+    maxWidth: '600px,';
+    width: '100%,';
+    backgroundColor: 'white,';
+    borderRadius: '8px,';
+    padding: '40px,';
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1),';
     textAlign: 'center as const
   },
-  icon: {
+  icon: {';
     fontSize: '48px,
     marginBottom:   ,
 $4},
-  title: {
-    fontSize: '24px,
-    fontWeight: 'bold,
+  title: {';
+    fontSize: '24px,';
+    fontWeight: 'bold,';
     color: '#333,
     marginBottom:   ,
 $4},
-  message: {
-    fontSize: '16px,
-    color: '#666,
+  message: {';
+    fontSize: '16px,';
+    color: '#666,';
     marginBottom: '32px,
     lineHeight:   ,
 $4},
-  details: {
-    textAlign: 'left as const,
-    marginBottom: '24px,
-    backgroundColor: '#f9f9f9,
-    padding: '16px,
+  details: {';
+    textAlign: 'left as const,';
+    marginBottom: '24px,';
+    backgroundColor: '#f9f9f9,';
+    padding: '16px,';
     borderRadius: '4px,
     border:   ,
 $4},
-  summary: {
-    cursor: 'pointer,
-    fontWeight: 'bold,
-    marginBottom: '12px,
+  summary: {';
+    cursor: 'pointer,';
+    fontWeight: 'bold,';
+    marginBottom: '12px,';
     userSelect: 'none as const
   },
   errorDetails: {
     fontSize:   ,
 $4},
-  errorMessage: {
+  errorMessage: {';
     marginBottom: '12px,
     color:   ,
 $4},
-  stack: {
-    backgroundColor: '#f5f5f5,
-    padding: '12px,
-    borderRadius: '4px,
-    fontSize: '12px,
-    overflowX: 'auto as const,
-    fontFamily: 'monospace,
-    whiteSpace: 'pre-wrap as const,
+  stack: {';
+    backgroundColor: '#f5f5f5,';
+    padding: '12px,';
+    borderRadius: '4px,';
+    fontSize: '12px,';
+    overflowX: 'auto as const,';
+    fontFamily: 'monospace,';
+    whiteSpace: 'pre-wrap as const,';
     wordBreak: 'break-all as const
   },
-  actions: {
-    display: 'flex,
-    gap: '12px,
-    justifyContent: 'center,
+  actions: {';
+    display: 'flex,';
+    gap: '12px,';
+    justifyContent: 'center,';
     flexWrap: 'wrap as const
   },
-  button: {
-    padding: '12px 24px,
-    fontSize: '16px,
-    fontWeight: '500,
-    color: 'white,
-    backgroundColor: '#007bff,
-    border: 'none,
-    borderRadius: '4px,
+  button: {';
+    padding: '12px 24px,';
+    fontSize: '16px,';
+    fontWeight: '500,';
+    color: 'white,';
+    backgroundColor: '#007bff,';
+    border: 'none,';
+    borderRadius: '4px,';
     cursor: 'pointer,
     transition:   ,
 $4},
   secondaryButton: {
     backgroundColor:   ,
 $4},
-  errorCount: {
-    marginTop: '24px,
+  errorCount: {';
+    marginTop: '24px,';
     fontSize: '14px,
     color:   ,
 $4}
@@ -586,19 +586,19 @@ const styles = {// TODO: Add content};;
 
 };
 
-  minHeigh,
+  minHeigh,';
   t: '100vh,
-    displa,
+    displa,';
   y: 'flex,
-    alignItem,
+    alignItem,';
   s: 'center,
-    justifyConten,
+    justifyConten,';
   t: 'center,
-    paddin,
+    paddin,';
   g: '20px,
-    backgroundColo,
+    backgroundColo,';
   r: '#f5f5f5,
-    fontFamil,
+    fontFamil,';";
   y: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica Neue, Arial, sans-serif
   },
   conten,
@@ -608,19 +608,19 @@ const styles = {// TODO: Add content};;
 
 };
 
-  maxWidt,
+  maxWidt,';
   h: '600px,
-    widt,
+    widt,';
   h: '100%,
-    backgroundColo,
+    backgroundColo,';
   r: 'white,
-    borderRadiu,
+    borderRadiu,';
   s: '8px,
-    paddin,
+    paddin,';
   g: '40px,
-    boxShado,
+    boxShado,';
   w: '0 4px 6px rgba(0, 0, 0, 0.1),
-    textAlig,
+    textAlig,';
   n: 'center as const},
   ico,
   n: {/* TODO: Fix JSX expression */}
@@ -629,7 +629,7 @@ const styles = {// TODO: Add content};;
 
 };
 
-  fontSiz,
+  fontSiz,';
   e: '48px,
     marginBotto,
   m: 20px
@@ -641,11 +641,11 @@ const styles = {// TODO: Add content};;
 
 };
 
-  fontSiz,
+  fontSiz,';
   e: '24px,
-    fontWeigh,
+    fontWeigh,';
   t: 'bold,
-    colo,
+    colo,';
   r: '#333,
     marginBotto,
   m: 16px
@@ -657,11 +657,11 @@ const styles = {// TODO: Add content};;
 
 };
 
-  fontSiz,
+  fontSiz,';
   e: '16px,
-    colo,
+    colo,';
   r: '#666,
-    marginBotto,
+    marginBotto,';
   m: '32px,
     lineHeigh,
   t: 1.6
@@ -673,15 +673,15 @@ const styles = {// TODO: Add content};;
 
 };
 
-  textAlig,
+  textAlig,';
   n: 'left as const,
-    marginBotto,
+    marginBotto,';
   m: '24px,
-    backgroundColo,
+    backgroundColo,';
   r: '#f9f9f9,
-    paddin,
+    paddin,';
   g: '16px,
-    borderRadiu,
+    borderRadiu,';
   s: '4px,
     borde,
   r: 1px solid #e0e0e0
@@ -693,13 +693,13 @@ const styles = {// TODO: Add content};;
 
 };
 
-  curso,
+  curso,';
   r: 'pointer,
-    fontWeigh,
+    fontWeigh,';
   t: 'bold,
-    marginBotto,
+    marginBotto,';
   m: '12px,
-    userSelec,
+    userSelec,';
   t: 'none as const},
   errorDetail,
   s: {/* TODO: Fix JSX expression */}
@@ -718,7 +718,7 @@ const styles = {// TODO: Add content};;
 
 };
 
-  marginBotto,
+  marginBotto,';
   m: '12px,
     colo,
   r: #d32f2f
@@ -730,21 +730,21 @@ const styles = {// TODO: Add content};;
 
 };
 
-  backgroundColo,
+  backgroundColo,';
   r: '#f5f5f5,
-    paddin,
+    paddin,';
   g: '12px,
-    borderRadiu,
+    borderRadiu,';
   s: '4px,
-    fontSiz,
+    fontSiz,';
   e: '12px,
-    overflow,
+    overflow,';
   X: 'auto as const,
-    fontFamil,
+    fontFamil,';
   y: 'monospace,
-    whiteSpac,
+    whiteSpac,';
   e: 'pre-wrap as const,
-    wordBrea,
+    wordBrea,';
   k: 'break-all as const},
   action,
   s: {/* TODO: Fix JSX expression */}
@@ -753,13 +753,13 @@ const styles = {// TODO: Add content};;
 
 };
 
-  displa,
+  displa,';
   y: 'flex,
-    ga,
+    ga,';
   p: '12px,
-    justifyConten,
+    justifyConten,';
   t: 'center,
-    flexWra,
+    flexWra,';
   p: 'wrap as const},
   butto,
   n: {/* TODO: Fix JSX expression */}
@@ -768,21 +768,21 @@ const styles = {// TODO: Add content};;
 
 };
 
-  paddin,
+  paddin,';
   g: '12px 24px,
-    fontSiz,
+    fontSiz,';
   e: '16px,
-    fontWeigh,
+    fontWeigh,';
   t: '500,
-    colo,
+    colo,';
   r: 'white,
-    backgroundColo,
+    backgroundColo,';
   r: '#007bff,
-    borde,
+    borde,';
   r: 'none,
-    borderRadiu,
+    borderRadiu,';
   s: '4px,
-    curso,
+    curso,';
   r: 'pointer,
     transitio,
   n: background-color 0.2s
@@ -804,12 +804,13 @@ const styles = {// TODO: Add content};;
 
 };
 
-  marginTo,
+  marginTo,';
   p: '24px,
-    fontSiz,
+    fontSiz,';
   e: '14px,
     colo,
   r: #999
   }
 
 };
+';";

@@ -5,7 +5,7 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
 
     },
     {/* TODO: Fix JSX expression */}
-
+;
     }]; return(<div, classNam, e = relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20>),
       {/* Animated, background, effec, t, s */}
 
@@ -19,9 +19,9 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
           <div, className=inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4>
   ]; return (
 
-    <div, classNam, e = relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20>
-      {/* Animated, background, effec, t, s */}</div>
-      <div, classNam, e = absolute, inse, t-0></div>
+    <div, classNam, e = relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20>"
+      {/* Animated, background, effec, t, s */}</div>"
+      <div, classNam, e = absolute, inse, t-0></div>';";
         <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g)] bg-center, opacit, y-10 /></div>
         <div, classNam, e = absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t / /></div>
       <div, className=relative, m, x-auto, ma, x-w-7xl, p, x-6, l, g: px-8>
@@ -36,9 +36,9 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
           </div>
           <h2, className=te, x, t-4xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5xl, m, b-4>
   ]; return (<div, classNam, e = relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20></div>
-      {/* Animated, background, effec, t, s */}
-
-      <div, classNam, e = absolute, inse, t-0></div>)
+      {/* Animated, background, effec, t, s */}"
+"
+      <div, classNam, e = absolute, inse, t-0></div>)';";
         <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g)] bg-center, opacit, y-10 /></div>
         <div, classNam, e = absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t / /></div>
       <div, className=relative, m, x-auto, ma, x-w-7xl, p, x-6, l, g: px-8></div>
@@ -83,7 +83,7 @@ const Ico, n = artic, l, e.ic, o, n; return (</div>
                   <div, classNam, e = { inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, mb-4}
 
                   ></div>
-                    <Icon, classNam, e = h-6 w-6, tex, t-whi, t, e />
+                    <Icon, classNam, e = h-6 w-6, tex, t-whi, t, e />';
                 <div, classNam, e = 'relati, v, e > {/* Ic, o, n */}
 
                   <div, classNam, e = { inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, mb-4}
@@ -101,7 +101,7 @@ const Ico, n = artic, l, e.ic, o, n; return (</div>
 
                   <p, classNam, e = te, x, t-gr, a, y-400, tex, t-sm, m, b-4></p>
                     {artic, l, e.description}
-
+);
                   </p>)
                   {/* Metri, c, s */})
                   <div, className=flex, fle, x-wrap, ga, p-2, m, b-4>)
@@ -174,7 +174,7 @@ const Ico, n = artic, l, e.ic, o, n; return (</div>
       </div>
     </div>
   )};
-
-export default October2025InfrastructureExcellenceBanner;
-
-"`
+"
+export default October2025InfrastructureExcellenceBanner;"
+";
+"`';";`;

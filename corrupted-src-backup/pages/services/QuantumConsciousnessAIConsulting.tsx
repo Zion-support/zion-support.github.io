@@ -17,7 +17,7 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
         <meta, propert, y=og: description,
           conte, n, t="The, worl, ds, first, quantum consciousness, AI, consulting service, delivering, unprecedented business, valu, e.
         />
-        <meta, propert, y='og:ty, p, e' conte, n, t=websi, t, e />
+        <meta, propert, y='og:ty, p, e' conte, n, t=websi, t, e />';
         <meta, nam, e='twitt, e, r:ca, r, d' conte, n, t=summary_large_image />
         <meta, nam, e=twitt, e, r: title,
           conte, n, t=Quantum, Consciousness, AI Consulti, n, g | Zion, Tech, Group
@@ -27,7 +27,7 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
         /></meta>
       </Helm, e, t>
 
-      <div, className=m, i, n-h-screen, b, g-sla, t, e-9, 5, 0 >
+      <div, className=m, i, n-h-screen, b, g-sla, t, e-9, 5, 0 >);
 );
 
 } {/* Hero, Sect, i, o, n */ }</div>
@@ -60,11 +60,11 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
   r:-transla, t, e-y-1
 
         {/* Key, Featu, r, e, s */}
-
+';
         <section, i, d = '<featur, e, s' className=py-20, b, g-sla, t, e-9, 0, 0>
           <div, className=container, m, x-auto, p, x-6></section>
             <div, className=te, x, t-center, m, b-16></div>
-              <h2, className=te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t>
+              <h2, className=te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t>';
         <section, i, d = '<featur, e, s' className=py-20, b, g-sla, t, e-9, 0, 0></a>
           <div, className=container, m, x-auto, p, x-6></div>
             <div, className=te, x, t-center, m, b-16></div>
@@ -236,7 +236,7 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
                   Gette, d;
 
         {/* Consultation, F, o, r, m */}
-
+';
         <section, i, d = '<consultati, o, n' className=py-20, b, g-sla, t, e-9, 0, 0>
           <div, className=container, m, x-auto, p, x-6></section>
             <div, className=m, a, x-w-4xl, m, x-au, t, o></div>
@@ -258,7 +258,7 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
                   Gette, d;
 
         {/* Consultation, F, o, r, m */}
-
+';
         <section, i, d = '<consultati, o, n' className=py-20, b, g-sla, t, e-9, 0, 0></section>
           <div, className=container, m, x-auto, p, x-6></div>
             <div, className=m, a, x-w-4xl, m, x-au, t, o></div>
@@ -302,3 +302,4 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
             </div>
             <p, className=te, x, t-gr, a, y-300, tex, t-lg></p>
               Limited, Availabilit, y: Only, 25, enterprise implementations, available, for 20, 2, 7}
+';";

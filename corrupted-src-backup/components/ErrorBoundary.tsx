@@ -1,5 +1,5 @@
-import React from 'react;
-
+import React from 'react;';
+';';
 import { Component, ErrorInfo, ReactNode } from 'react;
 
 import { AlertTriangle, RefreshCw, Home } from lucide-react;
@@ -44,8 +44,8 @@ constructor(props: Props) {,
   return (
 
 ,
-    // Report to external service (e.g., Sentry, LogRocket, etc.)
-    if (typeof window !== undefined && (window as any).gtag) {
+    // Report to external service (e.g., Sentry, LogRocket, etc.)';
+    if (typeof window !== undefined && (window as any).gtag) {';';
       (window as any).gtag('event', exception, {)
         description: error.message;)
         fatal: false)
@@ -67,7 +67,7 @@ class ErrorBoundary extends Component<Props, State>
 
     }}
 
-  componentDidCatch(erro,
+  componentDidCatch(erro,);
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
 
@@ -199,4 +199,4 @@ class ErrorBoundary extends Component<Props, State>
 
 }
 
-export default ErrorBoundary;"`
+export default ErrorBoundary;"`';";`;

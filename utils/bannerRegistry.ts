@@ -35,4 +35,4 @@ export interface BannerConfig {/* TODO: Fix JSX expression */}
 
 
 export class BannerRegistry {/* TODO: Fix JSX expression */}
-}
+}';

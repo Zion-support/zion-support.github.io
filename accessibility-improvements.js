@@ -1,8 +1,8 @@
 // Accessibility improvements to implement
 // 1. Add ARIA labels to interactive elements
 // Example JSX:
-// <button aria-label="Close dialog">×</button>
-// <input aria-describedby="email-help" type="email" />
+// <button aria-label="Close dialog">×</button>";
+// <input aria-describedby="email-help" type="email" />";
 // <div id="email-help">Enter your email address</div>
 
 // 2. Implement focus management;
@@ -10,15 +10,15 @@
 const trapFocus = (element) => {;;
 
 const focusableElements = element.querySelectorAll(;;
-
+";);
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1])
   );
 
   const firstElement = focusableElements[0];;
 
   const lastElement = focusableElements[focusableElements.length - 1];;
-
-  element.addEventListener('keydown', (e) => {
+';
+  element.addEventListener('keydown', (e) => {';
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
@@ -39,7 +39,7 @@ const focusableElements = element.querySelectorAll(;;
   })};
 
 // 3. Add live regions for dynamic content
-// Example JSX:
+// Example JSX:";
 // <div aria-live="polite" aria-atomic="true" className="sr-only">
 //   {announcement}
 
@@ -52,16 +52,16 @@ const focusableElements = element.querySelectorAll(;;
 // <h3>Subsection Title</h3>
 
 // 5. Add skip links
-// Example JSX:
+// Example JSX:";
 // <a href="#main-content" className="skip-link">
 //   Skip to main content
 // </a>
 
 // 6. Use semantic HTML
 // Example JSX:
-// <main>
+// <main>";
 //   <nav aria-label="Main navigation">
-//     <ul>
+//     <ul>";
 //       <li><a href="/">Home</a></li>
 //     </ul>
 //   </nav>
@@ -77,10 +77,10 @@ const focusableElements = element.querySelectorAll(;;
 // Example JSX:
 // <form>
 //   <fieldset>
-//     <legend>Contact Information</legend>
-//     <label htmlFor="email">Email:</label>
-//     <input id="email" type="email" required />
-//     <label htmlFor="phone">Phone:</label>
+//     <legend>Contact Information</legend>";
+//     <label htmlFor="email">Email:</label>";
+//     <input id="email" type="email" required />";
+//     <label htmlFor="phone">Phone:</label>";
 //     <input id="phone" type="tel" />
 //   </fieldset>
 // </form>
@@ -95,16 +95,17 @@ const focusableElements = element.querySelectorAll(;;
 // }
 
 // 9. Keyboard navigation
-// Example JSX:
+// Example JSX:";
 // <div role="button" tabIndex={0} onKeyDown={handleKeyDown}>
 //   Clickable div
 // </div>
 
 // 10. Screen reader announcements
-// Example JSX:
+// Example JSX:";
 // <div aria-live="assertive" aria-atomic="true">
 //   {errorMessage}
 
 // </div>
 
 export { trapFocus };
+';";

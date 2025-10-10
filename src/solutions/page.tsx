@@ -1,14 +1,14 @@
 'use client;
-
-import React, { useState } from 'react;
-
+';
+import React, { useState } from 'react;';
+';';
 import { Link } from 'react-router-dom;
 
 import Navigation from ../components
-import Footer from ../components
-
+import Footer from ../components';
+';';
 'use client;
-
+';
 import React, { useState } from 'react;
 
 const SolutionsPage: React.FC = () => {;
@@ -18,44 +18,44 @@ const [activeTab, setActiveTab] = useState(ai);
 ;
 
 const _solutionCategories = [;;
-
-    {
-      id: 'ai,
-      name: 'AI Solutions,
-      icon: Brain,
+';
+    {';';
+      id: 'ai,';
+      name: 'AI Solutions,'
+      icon: Brain,';
       color: 'text-purple-400,
       bgColor: bg-purple-500
       descriptio,
     n:     ,
 $4},
-    {
-      id: 'it,
-      name: 'IT Infrastructure,
-      icon: Cloud,
+    {';
+      id: 'it,';
+      name: 'IT Infrastructure,'
+      icon: Cloud,';
       color: 'text-blue-400,
       bgColor: bg-blue-500
       descriptio,
     n:     ,
 $4},
-    {
-      id: 'security,
-      name: 'Cybersecurity,
-      icon: Shield,
+    {';
+      id: 'security,';
+      name: 'Cybersecurity,'
+      icon: Shield,';
       color: 'text-red-400,
       bgColor: bg-red-500
       descriptio,
     n:     ,
 $4},
-    {
-      id: 'automation,
-      name: 'Automation,
-      icon: Zap,
+    {';
+      id: 'automation,';
+      name: 'Automation,'
+      icon: Zap,';
       color: 'text-yellow-400,
       bgColor: bg-yellow-500
       descriptio,
     n:     ,
 $4}
-
+];
   ];
 
 ;
@@ -64,25 +64,25 @@ const solutions = {;;
 
     ai: [
       {
-        titl,
-    e: 'AI-Powered Analytics,
-        description: 'Transform raw data into actionable insights with advanced AI analytics,
+        titl,';
+    e: 'AI-Powered Analytics,';
+        description: 'Transform raw data into actionable insights with advanced AI analytics,';
         features: ['Predictive Analytics', 'Real-time Insights', 'Automated Reporting', 'Custom Dashboards],
         pricing: Starting at $1,500
         icon: BarChart,
-        color:       ,
+        color:       ,};
 $4},
-      {
-        title: 'AI Marketing Automation,
-        description: 'Revolutionize your marketing with AI-powered automation and personalization,
+      {';
+        title: 'AI Marketing Automation,';
+        description: 'Revolutionize your marketing with AI-powered automation and personalization,';
         features: ['Campaign Optimization', 'Customer Segmentation', 'Content Generation', 'Performance Tracking],
         pricing: Starting at $199
         ico,
     n: Target,
         color:       ,
 $4},
-      {
-        title: 'AI Customer Support,
+      {';
+        title: 'AI Customer Support,';
         description: 'Enhance customer experience with intelligent AI-powered support systems,
         features: [24
         pricing: Starting at $299
@@ -90,9 +90,9 @@ $4},
     n: Users,
         color:       ,
 $4},
-      {
-        title: 'AI Process Automation,
-        description: 'Automate complex business processes with intelligent decision-making capabilities,
+      {';
+        title: 'AI Process Automation,';
+        description: 'Automate complex business processes with intelligent decision-making capabilities,';
         features: ['Workflow Automation', 'Exception Handling', 'Process Optimization', 'Compliance Monitoring],
         pricing: Starting at $399
         ico,
@@ -103,17 +103,17 @@ $4}
     ],
     it: [
       {
-        titl,
-    e: 'Cloud Migration,
-        description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime,
+        titl,';
+    e: 'Cloud Migration,';
+        description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime,';
         features: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', 24
         pricing: Starting at $1,299
         icon: Cloud,
         color:       ,
 $4},
-      {
-        title: 'IT Infrastructure Management,
-        description: 'Comprehensive IT infrastructure management and optimization services,
+      {';
+        title: 'IT Infrastructure Management,';
+        description: 'Comprehensive IT infrastructure management and optimization services,';
         features: ['Server Management', 'Network Monitoring', 'Performance Optimization', 'Disaster Recovery],
         pricing: Starting at $799
         ico,
@@ -122,17 +122,17 @@ $4},
 $4},
       {
         title: DevOps & CI
-        descriptio,
-    n: 'Streamline development workflows with automated testing and deployment,
+        descriptio,';
+    n: 'Streamline development workflows with automated testing and deployment,';
         features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Monitoring & Alerting],
         pricing: Starting at $599
         ico,
     n: Zap,
         color:       ,
 $4},
-      {
-        title: 'Database Management,
-        description: 'Optimize and manage your databases with AI-powered performance tuning,
+      {';
+        title: 'Database Management,';
+        description: 'Optimize and manage your databases with AI-powered performance tuning,';
         features: ['Database Optimization', 'Performance Monitoring', 'Backup & Recovery', 'Security Hardening],
         pricing: Starting at $399
         ico,
@@ -143,36 +143,36 @@ $4}
     ],
     security: [
       {
-        titl,
-    e: 'Cybersecurity Suite,
-        description: 'Comprehensive security solutions with threat detection and response,
+        titl,';
+    e: 'Cybersecurity Suite,';
+        description: 'Comprehensive security solutions with threat detection and response,';
         features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Management],
         pricing: Starting at $799
         ico,
     n: Shield,
         color:       ,
 $4},
-      {
-        title: 'AI Security Monitoring,
-        description: 'Real-time security monitoring with AI-powered threat detection,
+      {';
+        title: 'AI Security Monitoring,';
+        description: 'Real-time security monitoring with AI-powered threat detection,';
         features: ['Real-time Monitoring', 'AI Threat Detection', 'Automated Response', 'Security Analytics],
         pricing: Starting at $299
         ico,
     n: Brain,
         color:       ,
 $4},
-      {
-        title: 'Compliance Management,
-        description: 'Ensure regulatory compliance with automated compliance monitoring,
+      {';
+        title: 'Compliance Management,';
+        description: 'Ensure regulatory compliance with automated compliance monitoring,';
         features: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support],
         pricing: Starting at $499
         ico,
     n: CheckCircle,
         color:       ,
 $4},
-      {
-        title: 'Security Training,
-        description: 'Comprehensive security awareness training for your organization,
+      {';
+        title: 'Security Training,';
+        description: 'Comprehensive security awareness training for your organization,';
         features: ['Phishing Simulation', 'Security Awareness', 'Incident Response Training', 'Compliance Training],
         pricing: Starting at $199
         ico,
@@ -183,36 +183,36 @@ $4}
     ],
     automation: [
       {
-        titl,
-    e: 'Business Process Automation,
-        description: 'Automate complex business processes with intelligent workflow management,
+        titl,';
+    e: 'Business Process Automation,';
+        description: 'Automate complex business processes with intelligent workflow management,';
         features: ['Workflow Design', 'Process Optimization', 'Exception Handling', 'Performance Analytics],
         pricing: Starting at $399
         ico,
     n: Zap,
         color:       ,
 $4},
-      {
-        title: 'IT Automation,
-        description: 'Automate IT operations and reduce manual tasks with intelligent automation,
+      {';
+        title: 'IT Automation,';
+        description: 'Automate IT operations and reduce manual tasks with intelligent automation,';
         features: ['Server Automation', 'Network Automation', 'Backup Automation', 'Monitoring Automation],
         pricing: Starting at $299
         ico,
     n: Cloud,
         color:       ,
 $4},
-      {
-        title: 'Marketing Automation,
-        description: 'Automate marketing campaigns and customer engagement processes,
+      {';
+        title: 'Marketing Automation,';
+        description: 'Automate marketing campaigns and customer engagement processes,';
         features: ['Email Automation', 'Social Media Automation', 'Lead Nurturing', 'Campaign Management],
         pricing: Starting at $199
         ico,
     n: Target,
         color:       ,
 $4},
-      {
-        title: 'Data Automation,
-        description: 'Automate data processing, analysis, and reporting workflows,
+      {';
+        title: 'Data Automation,';
+        description: 'Automate data processing, analysis, and reporting workflows,';
         features: ['Data Collection', 'Data Processing', 'Report Generation', 'Data Quality Management],
         pricing: Starting at $249
         ico,
@@ -228,46 +228,46 @@ $4}
 const benefits = [;;
 
     {
-      icon: Star,
+      icon: Star,';
       title: 'Proven Results,
       description:     ,
 $4},
     {
-      icon: Shield,
+      icon: Shield,';
       title: 'Enterprise Security,
       description:     ,
 $4},
     {
-      icon: Globe,
+      icon: Globe,';
       title: 'Global Support,
       description:     ,
 $4},
     {
-      icon: Users,
+      icon: Users,';
       title: 'Expert Team,
       description:     ,
 $4}
-
+];
   ];
 
   return (
 
     <React.Fragment>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
-        <div className="container mx-auto px-4 py-16 pt-24>          {/* Header *
-          <div className="text-center mb-16>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text>
-              Our Solutions
-            <
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>";
+        <div className="container mx-auto px-4 py-16 pt-24>          {/* Header *";
+          <div className="text-center mb-16>";
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text>"
+              Our Solutions"
+            <";
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8>
               Comprehensive technology solutions designed to transform your business operations 
               and drive innovation across every aspect of your organization.
             <
-          <
-
-          {/* Solution Categories Tabs *
-          <div className="mb-12>
+          <"
+"
+          {/* Solution Categories Tabs *";
+          <div className="mb-12>";
             <div className="flex flex-wrap justify-center gap-4 mb-8>)
               {solutionCategories.map((category) => (<button
                   key = { category.id };)
@@ -277,17 +277,17 @@ $4}
                     activeTab === category.id
                       ? `${category.bgColor} ${category.color} border-2 border-current
                       : bg-slate-800/50 text-gray-300 hover:bg-slate-700
-                  }}
-
-                >
-                  <category.icon className="w-5 h-5 mr-2 
+                  }}"
+"
+                >";
+                  <category.icon className="w-5 h-5 mr-2 ";
                   <span className="font-medium>{category.name}<
                 <
               ))}
-
-            <
-            
-            <div className="text-center>
+"
+            <"
+            ";
+            <div className="text-center>";
               <p className="text-gray-300 max-w-2xl mx-auto>
     <div>Coming Soon<
 
@@ -299,20 +299,20 @@ $4}
 
   /
   O: Add items;
-
+];
 ];
 
     {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};  i,
+};  i,';
   d: 'ai,
-      nam,
+      nam,';
   e: 'AI Solutions,
       ico,
   n: Brain,
-      colo,
+      colo,';
   r: 'text-purple-400,
       bgColo,
   r: bg-purple-500
@@ -323,13 +323,13 @@ $4}
 
   O: Add content}
 
-};  i,
+};  i,';
   d: 'it,
-      nam,
+      nam,';
   e: 'IT Infrastructure,
       ico,
   n: Cloud,
-      colo,
+      colo,';
   r: 'text-blue-400,
       bgColo,
   r: bg-blue-500
@@ -340,13 +340,13 @@ $4}
 
   O: Add content}
 
-};  i,
+};  i,';
   d: 'security,
-      nam,
+      nam,';
   e: 'Cybersecurity,
       ico,
   n: Shield,
-      colo,
+      colo,';
   r: 'text-red-400,
       bgColo,
   r: bg-red-500
@@ -357,13 +357,13 @@ $4}
 
   O: Add content}
 
-};  i,
+};  i,';
   d: 'automation,
-      nam,
+      nam,';
   e: 'Automation,
       ico,
   n: Zap,
-      colo,
+      colo,';
   r: 'text-yellow-400,
       bgColo,
   r: bg-yellow-500
@@ -385,11 +385,11 @@ $4}
 
   O: Add content}
 
-};  titl,
+};  titl,';
   e: 'AI-Powered Analytics,
-        descriptio,
+        descriptio,';
   n: 'Transform raw data into actionable insights with advanced AI analytics,
-        feature,
+        feature,';
   s: ['Predictive Analytics', 'Real-time Insights', 'Automated Reporting', 'Custom Dashboards],
         pricin,
   g: Starting at $1,500
@@ -402,11 +402,11 @@ $4}
 
   O: Add content}
 
-};  titl,
+};  titl,';
   e: 'AI Marketing Automation,
-        descriptio,
+        descriptio,';
   n: 'Revolutionize your marketing with AI-powered automation and personalization,
-        feature,
+        feature,';
   s: ['Campaign Optimization', 'Customer Segmentation', 'Content Generation', 'Performance Tracking],
         pricin,
   g: Starting at $199
@@ -419,9 +419,9 @@ $4}
 
   O: Add content}
 
-};  titl,
+};  titl,';
   e: 'AI Customer Support,
-        descriptio,
+        descriptio,';
   n: 'Enhance customer experience with intelligent AI-powered support systems,
         feature,
   s: [24
@@ -436,11 +436,11 @@ $4}
 
   O: Add content}
 
-};  titl,
+};  titl,';
   e: 'AI Process Automation,
-        descriptio,
+        descriptio,';
   n: 'Automate complex business processes with intelligent decision-making capabilities,
-        feature,
+        feature,';
   s: ['Workflow Automation', 'Exception Handling', 'Process Optimization', 'Compliance Monitoring],
         pricin,
   g: Starting at $399
@@ -459,11 +459,11 @@ $4}
 
   O: Add content}
 
-};  titl,
+};  titl,';
   e: 'Cloud Migration,
-        descriptio,
+        descriptio,';
   n: 'Seamlessly migrate your infrastructure to the cloud with zero downtime,
-        feature,
+        feature,';
   s: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', 24
         pricin,
   g: Starting at $1,299
@@ -476,11 +476,11 @@ $4}
 
   O: Add content}
 
-};  titl,
+};  titl,';
   e: 'IT Infrastructure Management,
-        descriptio,
+        descriptio,';
   n: 'Comprehensive IT infrastructure management and optimization services,
-        feature,
+        feature,';
   s: ['Server Management', 'Network Monitoring', 'Performance Optimization', 'Disaster Recovery],
         pricin,
   g: Starting at $799
@@ -495,9 +495,9 @@ $4}
 
 };  titl,
   e: DevOps & CI
-        descriptio,
+        descriptio,';
   n: 'Streamline development workflows with automated testing and deployment,
-        feature,
+        feature,';
   s: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Monitoring & Alerting],
         pricin,
   g: Starting at $599
@@ -510,11 +510,11 @@ $4}
 
   O: Add content}
 
-};  titl,
+};  titl,';
   e: 'Database Management,
-        descriptio,
+        descriptio,';
   n: 'Optimize and manage your databases with AI-powered performance tuning,
-        feature,
+        feature,';
   s: ['Database Optimization', 'Performance Monitoring', 'Backup & Recovery', 'Security Hardening],
         pricin,
   g: Starting at $399
@@ -533,11 +533,11 @@ $4}
 
   O: Add content}
 
-};  titl,
+};  titl,';
   e: 'Cybersecurity Suite,
-        descriptio,
+        descriptio,';
   n: 'Comprehensive security solutions with threat detection and response,
-        feature,
+        feature,';
   s: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Management],
         pricin,
   g: Starting at $799
@@ -550,11 +550,11 @@ $4}
 
   O: Add content}
 
-};  titl,
+};  titl,';
   e: 'AI Security Monitoring,
-        descriptio,
+        descriptio,';
   n: 'Real-time security monitoring with AI-powered threat detection,
-        feature,
+        feature,';
   s: ['Real-time Monitoring', 'AI Threat Detection', 'Automated Response', 'Security Analytics],
         pricin,
   g: Starting at $299
@@ -567,11 +567,11 @@ $4}
 
   O: Add content}
 
-};  titl,
+};  titl,';
   e: 'Compliance Management,
-        descriptio,
+        descriptio,';
   n: 'Ensure regulatory compliance with automated compliance monitoring,
-        feature,
+        feature,';
   s: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support],
         pricin,
   g: Starting at $499
@@ -584,11 +584,11 @@ $4}
 
   O: Add content}
 
-};  titl,
+};  titl,';
   e: 'Security Training,
-        descriptio,
+        descriptio,';
   n: 'Comprehensive security awareness training for your organization,
-        feature,
+        feature,';
   s: ['Phishing Simulation', 'Security Awareness', 'Incident Response Training', 'Compliance Training],
         pricin,
   g: Starting at $199
@@ -607,11 +607,11 @@ $4}
 
   O: Add content}
 
-};  titl,
+};  titl,';
   e: 'Business Process Automation,
-        descriptio,
+        descriptio,';
   n: 'Automate complex business processes with intelligent workflow management,
-        feature,
+        feature,';
   s: ['Workflow Design', 'Process Optimization', 'Exception Handling', 'Performance Analytics],
         pricin,
   g: Starting at $399
@@ -624,11 +624,11 @@ $4}
 
   O: Add content}
 
-};  titl,
+};  titl,';
   e: 'IT Automation,
-        descriptio,
+        descriptio,';
   n: 'Automate IT operations and reduce manual tasks with intelligent automation,
-        feature,
+        feature,';
   s: ['Server Automation', 'Network Automation', 'Backup Automation', 'Monitoring Automation],
         pricin,
   g: Starting at $299
@@ -641,11 +641,11 @@ $4}
 
   O: Add content}
 
-};  titl,
+};  titl,';
   e: 'Marketing Automation,
-        descriptio,
+        descriptio,';
   n: 'Automate marketing campaigns and customer engagement processes,
-        feature,
+        feature,';
   s: ['Email Automation', 'Social Media Automation', 'Lead Nurturing', 'Campaign Management],
         pricin,
   g: Starting at $199
@@ -658,11 +658,11 @@ $4}
 
   O: Add content}
 
-};  titl,
+};  titl,';
   e: 'Data Automation,
-        descriptio,
+        descriptio,';
   n: 'Automate data processing, analysis, and reporting workflows,
-        feature,
+        feature,';
   s: ['Data Collection', 'Data Processing', 'Report Generation', 'Data Quality Management],
         pricin,
   g: Starting at $249
@@ -679,7 +679,7 @@ $4}
 
   /
   O: Add items;
-
+];
 ];
 
     {/* TODO: Fix JSX expression */}
@@ -688,7 +688,7 @@ $4}
 
 };  ico,
   n: Star,
-      titl,
+      titl,';
   e: 'Proven Results,
       descriptio,
   n: 300% average ROI and 95% process automation for our clients
@@ -699,7 +699,7 @@ $4}
 
 };  ico,
   n: Shield,
-      titl,
+      titl,';
   e: 'Enterprise Security,
       descriptio,
   n: Bank-level security and compliance for all our solutions
@@ -710,7 +710,7 @@ $4}
 
 };  ico,
   n: Globe,
-      titl,
+      titl,';
   e: 'Global Support,
       descriptio,
   n: 24
@@ -721,7 +721,7 @@ $4}
 
 };  ico,
   n: Users,
-      titl,
+      titl,';
   e: 'Expert Team,
       descriptio,
   n: Certified professionals with years of industry experience
@@ -731,25 +731,25 @@ $4}
 
   return (<div>Coming Soon<)
   )
-    
-          <React.Fragment>
-      <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="container mx-auto px-4 py-16 pt-24></div>
-          {/* Header */}
-
-          <div className="text-center mb-16"></div>
+    "
+          <React.Fragment>"
+      <Navigation /></Navigation>";
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>";
+        <div className="container mx-auto px-4 py-16 pt-24></div>"
+          {/* Header */}"
+";
+          <div className="text-center mb-16"></div>";
             <h1 className="text-4xl,"  md:text-5xl font-bold text-white mb-6 neon-text><
 /
-          <
+          <";
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8><
 /
 /
 
-          <
-          <
-          {/* Solution Categories Tabs *
-          <div className="mb-12><
+          <"
+          <"
+          {/* Solution Categories Tabs *";
+          <div className="mb-12><";
             <div className="flex flex-wrap justify-center gap-4 mb-8><
               {solutionCategories.map((category) => ()}
 
@@ -762,95 +762,95 @@ $4}
 
   // TOD,
   O: Add content}
-
+`;
                     activeTab === category.id;`                      ? `${category.bgColor} ${category.color} border-2 border-current
                       : bg-slate-800
   hover:bg-slate-700
                   }}
 
-/
-
-          
-          <category.icon className="w-5 h-5 mr-2 /><
+/"
+"
+          ";
+          <category.icon className="w-5 h-5 mr-2 /><";
                   <span className="font-medium>{category.name}<
                 <
-              ))}
-
-            <
-            <div className="text-center><
+              ))}"
+"
+            <";
+            <div className="text-center><";
               <p className="text-gray-300 max-w-2xl mx-auto><
                 {solutionCategories.find(cat => cat.id === activeTab)?.description}
 
               <
             <
-          <
-
-          {/* Solutions Grid *
-          <div className="mb-16>
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8>
-              {solutions[activeTab as keyof typeof solutions].map((solution), index) => (<div key={index} className=bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400
+          <"
+"
+          {/* Solutions Grid *";
+          <div className="mb-16>";
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8>"
+              {solutions[activeTab as keyof typeof solutions].map((solution), index) => (<div key={index} className=bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400";
                   <div className="flex items-start mb-4>
-                    <div className={w-12 h-12 bg-slate-700
-                      <solution.icon className={`w-6 h-6 ${solution.color}}
-
-                    <
-                    <div className="flex-1>
-                      <h3 className="text-xl font-semibold text-white mb-2>{solution.title}<
+                    <div className={w-12 h-12 bg-slate-700`;
+                      <solution.icon className={`w-6 h-6 ${solution.color}}"
+"
+                    <";
+                    <div className="flex-1>";
+                      <h3 className="text-xl font-semibold text-white mb-2>{solution.title}<";
                       <p className="text-gray-300 text-sm mb-4>{solution.description}<
-                    <
-                  <
-                  
-                  <div className="mb-4>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2>Key Features: <
-                    <ul className="space-y-1>)
-                      {solution.features.map((feature), featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-300>
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 
-          {/* Solutions Grid *
-          <div className="mb-16><
+                    <"
+                  <"
+                  ";
+                  <div className="mb-4>";
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2>Key Features: <";
+                    <ul className="space-y-1>)";
+                      {solution.features.map((feature), featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-300>";
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 "
+          {/* Solutions Grid *";
+          <div className="mb-16><";
             <div className="grid grid-cols-1,
   md: grid-cols-2 gap-8><)
               {solutions[activeTab as keyof typeof solutions].map((solution), index) => ()}
-
-          <div key={index} className=bg-slate-800/50 rounded-lg p-6 border border-gray-700
-  hover:border-cyan-400/50 transition-all duration-300><
-                  <div className="flex items-start mb-4><
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4}><
-                      <solution.icon className={`w-6 h-6 ${solution.color}} /><
-                    <
-                    <div className="flex-1><
-                      <h3 className="text-xl font-semibold text-white mb-2>{solution.title}<
-                      <p className="text-gray-300 text-sm mb-4>{solution.description}<
-                    <
-                  <
-                  <div className="mb-4><
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2>Key,
-  Features: <
-                    <ul className="space-y-1><
-                      {solution.features.map((feature), featureIndex) => ()}
-
-          <li key={featureIndex} className="flex items-center text-sm text-gray-300><
+"
+          <div key={index} className=bg-slate-800/50 rounded-lg p-6 border border-gray-700"
+  hover:border-cyan-400/50 transition-all duration-300><";
+                  <div className="flex items-start mb-4><`;
+                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4}><`;"
+                      <solution.icon className={`w-6 h-6 ${solution.color}} /><"
+                    <";
+                    <div className="flex-1><";
+                      <h3 className="text-xl font-semibold text-white mb-2>{solution.title}<";
+                      <p className="text-gray-300 text-sm mb-4>{solution.description}<"
+                    <"
+                  <";
+                  <div className="mb-4><";
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2>Key,"
+  Features: <";
+                    <ul className="space-y-1><"
+                      {solution.features.map((feature), featureIndex) => ()}"
+";
+          <li key={featureIndex} className="flex items-center text-sm text-gray-300><";
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 /><
                           {feature}
 
                         <
                       ))}
 
-                    <
-                  <
-                  
-                  <div className="flex items-center justify-between>
+                    <"
+                  <"
+                  ";
+                  <div className="flex items-center justify-between>`;
                     <div className={`text-lg font-bold ${solution.color}}>
                       {solution.pricing}
 
-                    <
-                    <a
-                      href=
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-1 
-                  <
-                  <div className="flex items-center justify-between><
+                    <"
+                    <a"
+                      href=";
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
+                    >"
+                      Learn More";
+                      <ArrowRight className="w-4 h-4 ml-1 "
+                  <";
+                  <div className="flex items-center justify-between><`;
                     <div className={`text-lg font-bold ${solution.color}}><
                       {solution.pricing}
 
@@ -858,9 +858,9 @@ $4}
 
                     <a
                       href=
-
-/
-/
+"
+/"
+/";
           <ArrowRight className="w-4 h-4 ml-1 /><
                     <
                   <
@@ -868,100 +868,100 @@ $4}
               ))}
 
             <
-          <
-
-          {/* Benefits Section *
-          <div className="mb-16>
+          <"
+"
+          {/* Benefits Section *";
+          <div className="mb-16>";
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text>
               Why Choose Our Solutions?
-            <
-            <div className=grid grid-cols-1 md: grid-cols-2 l,
-    g:grid-cols-4 gap-6>
-              {benefits.map((benefit), index) => (<div key={index} className="text-center>
-                  <div className=w-16 h-16 bg-cyan-500
-                    <benefit.icon className="w-8 h-8 text-cyan-400 
-                  <
-                  <h3 className="text-lg font-semibold text-white mb-2>{benefit.title}<
-          {/* Benefits Section *
-          <div className="mb-16><
+            <"
+            <div className=grid grid-cols-1 md: grid-cols-2 l,"
+    g:grid-cols-4 gap-6>";
+              {benefits.map((benefit), index) => (<div key={index} className="text-center>"
+                  <div className=w-16 h-16 bg-cyan-500";
+                    <benefit.icon className="w-8 h-8 text-cyan-400 "
+                  <";
+                  <h3 className="text-lg font-semibold text-white mb-2>{benefit.title}<"
+          {/* Benefits Section *";
+          <div className="mb-16><";
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text><
 /
 
           <
             <div className=grid grid-cols-1,
   md:grid-cols-2,
-  lg: grid-cols-4 gap-6><)
-              {benefits.map((benefit), index) => ()}
-
-          <div key={index} className="text-center><
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4><
-                    <benefit.icon className="w-8 h-8 text-cyan-400 /><
-                  <
-                  <h3 className="text-lg font-semibold text-white mb-2>{benefit.title}<
+  lg: grid-cols-4 gap-6><)"
+              {benefits.map((benefit), index) => ()}"
+";
+          <div key={index} className="text-center><";
+                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4><";
+                    <benefit.icon className="w-8 h-8 text-cyan-400 /><"
+                  <";
+                  <h3 className="text-lg font-semibold text-white mb-2>{benefit.title}<";
                   <p className="text-gray-300 text-sm>{benefit.description}<
                 <
               ))}
 
             <
           <
-
-          {/* CTA Section *
-          <div className=bg-gradient-to-r from-indigo-900/50 to-purple-900
-            <h2 className="text-2xl font-bold text-white mb-4>
-              Ready to Transform Your Business?
-            <
+"
+          {/* CTA Section *"
+          <div className=bg-gradient-to-r from-indigo-900/50 to-purple-900";
+            <h2 className="text-2xl font-bold text-white mb-4>"
+              Ready to Transform Your Business?"
+            <";
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto>
-              Get a free consultation and discover how our solutions can revolutionize your operations 
-              and drive unprecedented growth.
-            <
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center>
-              <a
-                href=
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105
-              >
-
+              Get a free consultation and discover how our solutions can revolutionize your operations "
+              and drive unprecedented growth."
+            <";
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center>"
+              <a"
+                href=";
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+              >"
+";
                 <Mail className="w-4 h-4 mr-2 
-                Email Us
-              <
-          {/* CTA Section *
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center><
+                Email Us"
+              <"
+          {/* CTA Section *";
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center><";
             <h2 className="text-2xl font-bold text-white mb-4><
-/
-
-          <
+/"
+"
+          <";
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto><
 /
-/
-
-          <
+/"
+"
+          <";
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center>
               <a
                 href=
 
-/
-
-          
+/"
+"
+          ";
           <Phone className="w-5 h-5 mr-2 /><
 /
-          <
-
-              <a
+          <"
+"
+              <a";
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center
 
-/
-
-          
+/"
+"
+          ";
           <Phone className="w-4 h-4 mr-2 /><
 /
-          <
-
-              <a
+          <"
+"
+              <a";
                 href="mailto:kleber@ziontechgroup.com" className=border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,
     r:text-slate-900 transition-all duration-300 inline-flex items-center
 
 /
 
-          
+          ";
           <Mail className="w-4 h-4 mr-2 /><
 /
           <
@@ -975,5 +975,6 @@ $4}
 
     </div>
   )};
-
-export default SolutionsPage;
+"
+export default SolutionsPage;"
+';";`;

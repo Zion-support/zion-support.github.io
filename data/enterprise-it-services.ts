@@ -77,28 +77,28 @@ export interface EnterpriseItService {/* TODO: Fix JSX expression */}
     mobile: string, email: string;
     address: string}
 }
-export const enterpriseITServices: EnterpriseItService[] = [,
-    id: "enterprise-architecture", name: "Enterprise Architecture Consulting",
-    tagline: "Strategic IT architecture for large organizations", price: '$150/hour',
+export const enterpriseITServices: EnterpriseItService[] = [,";
+    id: "enterprise-architecture", name: "Enterprise Architecture Consulting",";
+    tagline: "Strategic IT architecture for large organizations", price: '$150/hour',';
     description: 'Comprehensive enterprise architecture consulting services for digital transformation.',
-    features: [;
-      "Architecture assessment"
-      "Technology roadmap"
-      "Integration strategy"
-      "Governance framework",
-      "Implementation support"],
+    features: [;";
+      "Architecture assessment"";
+      "Technology roadmap"";
+      "Integration strategy"";
+      "Governance framework",";
+      "Implementation support"],";
     link: "/services/enterprise-architecture", category: "Enterprise IT",
-    realImplementation: true;
+    realImplementation: true;";
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+];";
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",";
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-      email: "kleber@ziontechgroup.com",
+];";
+      email: "kleber@ziontechgroup.com",";
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      addres,
+      addres,";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -126,121 +126,121 @@ export const enterpriseITServices: EnterpriseItService[] = [,
   s: string}
 }
 export const,
-  enterpriseITServices: EnterpriseItService[] = [,
-    i,"
-  d: "enterprise-architecture", nam,"
-  e: "Enterprise Architecture Consulting",
-    taglin,"
-  e: "Strategic IT architecture for large organizations", pric,"
-  e: "$150/hour",
-    descriptio,"
+  enterpriseITServices: EnterpriseItService[] = [,";
+    i,"";
+  d: "enterprise-architecture", nam,"";
+  e: "Enterprise Architecture Consulting",";
+    taglin,"";
+  e: "Strategic IT architecture for large organizations", pric,"";
+  e: "$150/hour",";
+    descriptio,"";
   n: "Comprehensive enterprise architecture consulting services for digital transformation.",
-    feature,
-  s: [;"
-      "Architecture assessment""
-      "Technology roadmap""
-      "Integration strategy""
-      "Governance framework""
+    feature,";
+  s: [;"";
+      "Architecture assessment""";
+      "Technology roadmap""";
+      "Integration strategy""";
+      "Governance framework""";
       "Implementation support"
-    ],
-    lin,"
-  k: "/services/enterprise-architecture", categor,"
+    ],";
+    lin,"";
+  k: "/services/enterprise-architecture", categor,"";
   y: "Enterprise IT",
     realImplementatio,
   n: true,
-    contactInf,
-  o: addres,"
+    contactInf,";
+  o: addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];";
+      mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com",";
+      addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];";
+      emai,"";
+  l: "kleber@ziontechgroup.com",";
+  addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-      mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-      emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-;
-    id: 'enterprise-architecture',
-    name: 'Enterprise Architecture Consulting',
-    tagline: "Strategic IT architecture for large organizations",
-    price: "$150/hour",
+;';
+    id: 'enterprise-architecture',';
+    name: 'Enterprise Architecture Consulting',";
+    tagline: "Strategic IT architecture for large organizations",";
+    price: "$150/hour",";
     description: "Comprehensive enterprise architecture consulting services for digital transformation.",
-    features: [,
-      "Architecture assessment",
-      "Technology roadmap",
-      "Integration strategy",
-      "Governance framework",
+    features: [,";
+      "Architecture assessment",";
+      "Technology roadmap",";
+      "Integration strategy",";
+      "Governance framework",";
       "Implementation support"
-    ],
-    link: '/services/enterprise-architecture',
+    ],';
+    link: '/services/enterprise-architecture',';
     category: 'Enterprise IT',
     realImplementation: true;
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
-  d: "enterprise-architecture",
-    nam,"
-  e: "Enterprise Architecture Consulting",
-    taglin,"
-  e: "Strategic IT architecture for large organizations",
-    pric,"
-  e: "$150/hour",
-    descriptio,"
+    contactInfo: unknown;';
+      mobile: '+1 302 464 0950',';
+      email: 'kleber@ziontechgroup.com',';
+      mobile: '+1 302 464 0950',';
+      email: 'kleber@ziontechgroup.com',';
+      address: '364 E Main St STE 1008 Middletown DE 19709'}};";
+];      mobile: "+1 302 464 0950",";
+      email: "kleber@ziontechgroup.com",";
+      mobile: "+1 302 464 0950",";
+      email: "kleber@ziontechgroup.com",";
+      address: "364 E Main St STE 1008 Middletown DE 19709",";
+    i,"";
+  d: "enterprise-architecture",";
+    nam,"";
+  e: "Enterprise Architecture Consulting",";
+    taglin,"";
+  e: "Strategic IT architecture for large organizations",";
+    pric,"";
+  e: "$150/hour",";
+    descriptio,"";
   n: "Comprehensive enterprise architecture consulting services for digital transformation.",
-    feature,
-  s: [,"
-      "Architecture assessment","
-      "Technology roadmap","
-      "Integration strategy","
-      "Governance framework","
+    feature,";
+  s: [,"";
+      "Architecture assessment","";
+      "Technology roadmap","";
+      "Integration strategy","";
+      "Governance framework","";
       "Implementation support"
-    ],
-    lin,"
-  k: "/services/enterprise-architecture",
-    categor,"
+    ],";
+    lin,"";
+  k: "/services/enterprise-architecture",";
+    categor,"";
   y: "Enterprise IT",
     realImplementatio,
   n: true,
     contactInf,
-  o: unknown,
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
+  o: unknown,";
+      mobil,"";
+  e: "+1 302 464 0950",";
+      emai,"";
   l: "kleber@ziontechgroup.com",
-      mobil,
+      mobil,';
   e: '+1 302 464 0950',
-      emai,
+      emai,';
   l: 'kleber@ziontechgroup.com',
-      addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
+      addres,';
+  s: '364 E Main St STE 1008 Middletown DE 19709'}};";
+];      mobil,"";
+  e: "+1 302 464 0950",";
+  emai,"";
+  l: "kleber@ziontechgroup.com"";
+      mobil,"";
+  e: "+1 302 464 0950",";
+      emai,"";
+  l: "kleber@ziontechgroup.com",";
+      addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -269,8 +269,8 @@ i,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
-  l: string} addres,
-  s: string} } } addres,"
+  l: string} addres,";
+  s: string} } } addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -284,43 +284,43 @@ i,
   o: mobil,
   e: string, emai,
   l: string, addres,
-  s: string } } export const,
-  enterpriseITServices: EnterpriseItService[] = [ i,"
-  d: "enterprise-architecture", nam,"
-  e: "Enterprise Architecture Consulting", taglin,"
-  e: "Strategic IT architecture for large organizations", pric,"
-  e: "$150/hour", descriptio,"
-  n: "Comprehensive enterprise architecture consulting services for digital transformation.", feature,"
-  s: [ "Architecture assessment" "Technology roadmap" "Integration strategy" "Governance framework" "Implementation support" ], lin,"
-  k: "/services/enterprise-architecture", categor,"
+  s: string } } export const,";
+  enterpriseITServices: EnterpriseItService[] = [ i,"";
+  d: "enterprise-architecture", nam,"";
+  e: "Enterprise Architecture Consulting", taglin,"";
+  e: "Strategic IT architecture for large organizations", pric,"";
+  e: "$150/hour", descriptio,"";
+  n: "Comprehensive enterprise architecture consulting services for digital transformation.", feature,"";
+  s: [ "Architecture assessment" "Technology roadmap" "Integration strategy" "Governance framework" "Implementation support" ], lin,"";
+  k: "/services/enterprise-architecture", categor,"";
   y: "Enterprise IT", realImplementatio,
-  n: true, contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "enterprise-architecture", nam,"
-  e: "Enterprise Architecture Consulting", taglin,"
-  e: "Strategic IT architecture for large organizations", pric,"
-  e: "$150/hour", descriptio,"
-  n: "Comprehensive enterprise architecture consulting services for digital transformation.", feature,"
-  s: [ "Architecture assessment", "Technology roadmap", "Integration strategy", "Governance framework", "Implementation support" ], lin,"
-  k: "/services/enterprise-architecture", categor,"
+  n: true, contactInf,";
+  o: addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"";
+  l: "kleber@ziontechgroup.com",";
+  addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"";
+  d: "enterprise-architecture", nam,"";
+  e: "Enterprise Architecture Consulting", taglin,"";
+  e: "Strategic IT architecture for large organizations", pric,"";
+  e: "$150/hour", descriptio,"";
+  n: "Comprehensive enterprise architecture consulting services for digital transformation.", feature,"";
+  s: [ "Architecture assessment", "Technology roadmap", "Integration strategy", "Governance framework", "Implementation support" ], lin,"";
+  k: "/services/enterprise-architecture", categor,"";
   y: "Enterprise IT", realImplementatio,
-  n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  n: true, contactInf,";
+  o: mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", mobil,';
+  e: '+1 302 464 0950',' emai,';
+  l: 'kleber@ziontechgroup.com',' addres,';";
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"";
+  e: "+1 302 464 0950",";
+  emai,"";
+  l: "kleber@ziontechgroup.com" mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", addres,"';";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"';";

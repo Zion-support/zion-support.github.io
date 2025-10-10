@@ -9,41 +9,41 @@ realImplementatio,
   e: $,2,999, perio,
   d: /mont,h; descriptio,
   n:  , Revolutionar,
-  y: platform for developing AI systems with genuine consciousnes,s, self-awareness, and emotional intelligence capabilities.''; features[ Consciousnes,
-  s: development framework''; Emotiona,
-  l: intelligence training''; Self-awarenes,
-  s: algorithms''; Consciousnes,
-  s: testing tools''; Ethica,
-  l: AI development''; Consciousnes,
-  s: validation''; Emotiona,
-  l: response systems''; Self-reflectio,
-  n: capabilities''; Consciousnes,
+  y: platform for developing AI systems with genuine consciousnes,s, self-awareness, and emotional intelligence capabilities.''; features[ Consciousnes,';
+  s: development framework''; Emotiona,';
+  l: intelligence training''; Self-awarenes,';
+  s: algorithms''; Consciousnes,';
+  s: testing tools''; Ethica,';
+  l: AI development''; Consciousnes,';
+  s: validation''; Emotiona,';
+  l: response systems''; Self-reflectio,';
+  n: capabilities''; Consciousnes,';
   s: metrics''; Ethic,
   s: compliance monitoring], popula,
-  r: tru,e, ico,
+  r: tru,e, ico,';
   n:,' 🧠'; colo,
   r: from-purple-60,
   0: to-pink-60,0; textColo,
   r:, marketPositio,
-  n:, Firs,
+  n:, Firs,';
   t: AI consciousness development platform. No direct competitors - this is a breakthrough technology.'; targetAudienc,
   e: A,
   I: research institution,s, Technology companies, Government agencies, Academic researchers, AI ethicists; trialDay,
-  s:  ,7, setupTim,
+  s:  ,7, setupTim,';
   e:,' 4-6: weeks'; categor,
   y: A,
   I: Consciousnes,s; realServic,
-  e: tru,e, technology[ Advance,
-  d: AI/ML, Neural Networks, Consciousness Algorithms, Emotional Intelligence, Ethics Frameworks']'; integrations[ A,
-  I: development platforms, Research tools, Ethics frameworks, Academic databases']'; useCases[ A,
+  e: tru,e, technology[ Advance,';
+  d: AI/ML, Neural Networks, Consciousness Algorithms, Emotional Intelligence, Ethics Frameworks']'; integrations[ A,';
+  I: development platforms, Research tools, Ethics frameworks, Academic databases']'; useCases[ A,';
   I: consciousness research, Emotional AI development, Ethics research, Academic studies, Government AI development']; ro,
   i: Researc,
-  h: institutions report 1000% ROI through breakthrough discoveries and funding,.; competitors[ N,
+  h: institutions report 1000% ROI through breakthrough discoveries and funding,.; competitors[ N,';
   o: direct competitors - breakthrough technology']; marketSiz,
   e: Emergin,
   g: market - estimated $5B potentia,l; growthRat,
   e:, implementationDetail,
-  s:, A,
+  s:, A,';
   I: consciousness development platform with consciousness algorithms, emotional intelligence training, and ethics compliance monitoring.'; launchDat,
   e: 2024-12-0,1; customer,
   s:  ,3, ratin,
@@ -95,5 +95,5 @@ realImplementatio,
 
   e: 2024-04-0,1} customer,
   s: 12,3, ratin,
-  g: 4.,7} review,
-  s: 67]}} '
+  g: 4.,7} review,';
+  s: 67]}} '';

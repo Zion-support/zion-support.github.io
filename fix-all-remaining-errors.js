@@ -19,20 +19,20 @@ let modified = false;;
 const importFixes = [;;
 
     // Fix malformed import statements with missing commas
-    {
-      pattern: /import\s+{([^}]*),\s*([^}]*),\s*([^}]*)\s+from\s+'([^']*);\s*}/g,
+    {];
+      pattern: /import\s+{([^}]*),\s*([^}]*),\s*([^}]*)\s+from\s+'([^']*);\s*}/g,';
       replacement: "import { $1, $2, $3 } from '$4';
 
     },
     // Fix malformed import statements with missing commas
-    {
-      pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*);\s*}/g,
+    {';
+      pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*);\s*}/g,';";
       replacement: "import { $1, $2 } from '$3';
 
     },
     // Fix malformed import statements
-    {
-      pattern: /import\s+{([^}]*)\s+from\s+'([^']*);\s*}/g,
+    {';
+      pattern: /import\s+{([^}]*)\s+from\s+'([^']*);\s*}/g,';";
       replacement: "import { $1 } from '$2';
 
     }
@@ -56,7 +56,7 @@ const functionFixes = [;;
 
     // Fix malformed function with missing return
     {
-      pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*}\s*const\s+(\w+)\s*=\s*\[\s*}/g,
+      pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*}\s*const\s+(\w+)\s*=\s*\[\s*}/g,];
       replacement: const $1: React.FC = () => {\n  const $2 = [];\n  const $3 = [];\n  return (
 
     },
@@ -74,7 +74,7 @@ const functionFixes = [;;
 
 \n  return (\n    <div
     }
-
+;
   ];
 
   for (const fix of functionFixes) {;
@@ -99,7 +99,7 @@ const objectFixes = [;;
     },
     // Fix malformed array with missing commas
     {
-      pattern: /(\w+):\s*\[\s*}\s*(\w+):/g,
+      pattern: /(\w+):\s*\[\s*}\s*(\w+):/g,];
       replacement: $1: [],\n    $2:
     },
     // Fix malformed object with missing commas
@@ -126,8 +126,8 @@ const newContent = content.replace(fix.pattern, fix.replacement);;
 const jsxFixes = [;;
 
     // Fix malformed JSX attributes
-    {
-      pattern: /(\w+)="([^"]*)\s*(\w+)/g,
+    {";];
+      pattern: /(\w+)="([^"]*)\s*(\w+)/g,';
       replacement: '$1=$2 $3
     },
     // Fix malformed JSX closing tags
@@ -171,7 +171,7 @@ const commentFixes = [;;
       pattern: /\/\/\s*(\w+);/g,
       replacement: // $1
     }
-
+];
   ];
 
   for (const fix of commentFixes) {;
@@ -220,9 +220,9 @@ return false}
 
 function findFilesWithSyntaxErrors() {
   try {;
-
+';";
 const result = execSync('npm run lint 2>&1 | grep -B1 "error.*Parsing error" | grep "^/workspace" | sort -u 2>/dev/null || true', { encoding: utf8 });;
-
+';
     return result.trim().split('\n).filter(file => file.length > 0)} catch (error) {
     // console.error removed for production
 return []}
@@ -249,7 +249,7 @@ for (const file of filesWithErrors) {
 // console.log removed for production
 // Verify no more syntax errors exist
 try {;
-
+';";
 const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: utf8 });;
 
   const count = parseInt(remainingErrors.trim());;
@@ -263,3 +263,4 @@ const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing er
 } catch (error) {
   // console.log removed for production
 }
+';";

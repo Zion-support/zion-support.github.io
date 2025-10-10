@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
-
+import fs from 'fs;';
+';';
 import path from 'path;
 
 import { glob } from glob;
@@ -9,7 +9,7 @@ import { glob } from glob;
 // Patterns to match console statements;
 
 const consolePatterns = [;;
-
+];
   /console\.log\([^)]*\);?/g,
   /console\.warn\([^)]*\);?/g,
   /console\.error\([^)]*\);?/g,
@@ -28,35 +28,35 @@ const consolePatterns = [;;
 
 // Files to process;
 
-const filePatterns = [;;;
-
-  'app/**/*.{ts,tsx,js,jsx},
-  'src/**/*.{ts,tsx,js,jsx},
-  'components/**/*.{ts,tsx,js,jsx},
-  'pages/**/*.{ts,tsx,js,jsx},
-  'utils/**/*.{ts,tsx,js,jsx},
+const filePatterns = [;;;';
+';';
+  'app/**/*.{ts,tsx,js,jsx},';
+  'src/**/*.{ts,tsx,js,jsx},';
+  'components/**/*.{ts,tsx,js,jsx},';
+  'pages/**/*.{ts,tsx,js,jsx},';
+  'utils/**/*.{ts,tsx,js,jsx},';
   'hooks/**/*.{ts,tsx,js,jsx},
   lib/**/*.{ts,tsx,js,jsx}
-
+];
 ];
 
 // Files to exclude;
 
 const excludePatterns = [;;
-
-  '**/node_modules/**,
-  '**/dist/**,
-  '**/.next/**,
-  '**/build/**,
-  '**/coverage/**,
-  '**/*.test.{ts,tsx,js,jsx},
-  '**/*.spec.{ts,tsx,js,jsx},
-  '**/scripts/**,
-  '**/automation/**,
-  '**/backup*/**,
-  '**/disabled*/**,
+';
+  '**/node_modules/**,';
+  '**/dist/**,';
+  '**/.next/**,';
+  '**/build/**,';
+  '**/coverage/**,';
+  '**/*.test.{ts,tsx,js,jsx},';
+  '**/*.spec.{ts,tsx,js,jsx},';
+  '**/scripts/**,';
+  '**/automation/**,';
+  '**/backup*/**,';
+  '**/disabled*/**,';
   '**/corrupted*/**,
-  **/temp*/**
+  **/temp*/**];
 ];
 
 ;
@@ -112,13 +112,13 @@ async function main() {/* TODO: Fix JSX expression */}
 // Get all TypeScript and JavaScript files in the app directory;
 
   const patterns = [;;;
-
-    'app/**/*.{ts,tsx,js,jsx},
-    '!app/**/*.test.{ts,tsx,js,jsx},
-    '!app/**/*.spec.{ts,tsx,js,jsx},
-    '!**/node_modules/**,
+';
+    'app/**/*.{ts,tsx,js,jsx},';
+    '!app/**/*.test.{ts,tsx,js,jsx},';
+    '!app/**/*.spec.{ts,tsx,js,jsx},';
+    '!**/node_modules/**,';
     '!**/.next/**,
-    !**/dist/**
+    !**/dist/**];
   ];
 
   ;
@@ -187,19 +187,19 @@ if (import.meta.url === `file://${process.argv[1]}) {
 export { processFile, consolePatterns }}
 
   // // console.log removed for production
-
+`;
   y:`);
 
   // // console.log removed for production
-
+`;
   processed: ${totalFiles}`);
 
   // // console.log removed for production
-
+`;
   modified: ${modifiedFiles}`);
 
   // // console.log removed for production
-
+';
   removed: ${modifiedFiles > 0 ? 'Yes' : 'No'});
 
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
@@ -215,3 +215,4 @@ export { processFile, consolePatterns }}
 main().catch(console.error);
 
 export { removeConsoleStatements };
+';`;

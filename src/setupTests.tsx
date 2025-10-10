@@ -1,6 +1,6 @@
 
-import React from 'react;
-
+import React from 'react;';
+';';
 'use client;
 
 /**
@@ -37,8 +37,8 @@ const originalConsoleError = console.error;;
 console.error = (...args) => {;
 
 const message = args[0]?.toString?.() || args[0]?.message || ;;
-
-  if (message.includes('Not implemented: navigation) ||
+';
+  if (message.includes('Not implemented: navigation) ||';
       message.includes('navigation (except hash changes))) {// TODO: Add content}
 
 }
@@ -48,19 +48,19 @@ const message = args[0]?.toString?.() || args[0]?.message || ;;
   originalConsoleError(...args)};
 
 // Mock window.matchMedia;
-
+';
 Object.defineProperty(window, 'matchMedia, {// TODO: Add content}
 
 };
 
-  writable: true,
+  writable: true,);
   value: jest.fn().mockImplementation(query => ({// TODO: Add content}
 
 };
 
   matches: false,
     media: query,
-    onchange: null,
+    onchange: null,);
     addListener: jest.fn(), // deprecated,
   removeListener: jest.fn(), // deprecated,
   addEventListener: jest.fn(),
@@ -84,7 +84,7 @@ const localStorageMock = {// TODO: Add content};;
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
-  clear: jest.fn()
+  clear: jest.fn()';
 Object.defineProperty(window, 'localStorage, {// TODO: Add content}
 
 };
@@ -100,7 +100,7 @@ const sessionStorageMock = {Object.defineProperty(window, sessionStorage, {};;
   value: sessionStorageMock;
 
 // Mock fetch;
-
+);
 global.fetch = jest.fn();
 
 // Mock console methods for cleaner test output;
@@ -122,7 +122,7 @@ console.warn = (...args) => {// TODO: Add content}
 console.warn = (...args) => {;
 
 const message = args[0]?.toString?.() || ;;
-
+';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation)) {}
 
   // TODO: Add content}
@@ -143,14 +143,14 @@ delete (window as unknown as Record;
 console.info = (...args) => {;
 
 const message = args[0]?.toString?.() || ;;
-
+';
   if (message.includes('ReactDOM.render is no longer supported)) {
     return}
 
   originalConsoleInfo(...args)};
 
 // Mock PerformanceObserver
-global.PerformanceObserver = class MockPerformanceObserver {
+global.PerformanceObserver = class MockPerformanceObserver {';
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', layout-shift];
 
   constructor(public callback: PerformanceObserverCallback) {}
@@ -166,7 +166,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
 
 // Suppress JSDOM navigation warnings
 // eslint-disable-next-line no-console
-console.error = (...args) => {
+console.error = (...args) => {';
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation)) {
     return; // Suppress JSDOM navigation warnings
   }
@@ -176,18 +176,19 @@ console.error = (...args) => {
 // Mock window.location
 delete (window as unknown as Record<string, unknown>).location;
 
-(window as unknown as Record<string, unknown>).location = {
-  href: 'http://localhost:3000,
-  origin: 'http://localhost:3000,
-  protocol: 'http:,
-  host: 'localhost:3000,
-  hostname: 'localhost,
-  port: '3000,
-  pathname: '/,
-  search: ',
+(window as unknown as Record<string, unknown>).location = {';
+  href: 'http://localhost:3000,';
+  origin: 'http://localhost:3000,';
+  protocol: 'http:,';
+  host: 'localhost:3000,';
+  hostname: 'localhost,';
+  port: '3000,';
+  pathname: '/,';
+  search: ',';
   hash: ',
   reload: jest.fn(),
   assign: jest.fn(),
   replace: jest.fn()
 
 
+';

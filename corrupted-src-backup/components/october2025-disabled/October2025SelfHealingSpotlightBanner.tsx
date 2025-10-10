@@ -79,7 +79,7 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
                   <sp, a, n>Cro</n>, s, s-cloud, orchestration, and optimizati, o, n</sp, a, n>
                 </li>
               </ul>
-            </div>
+            </div>);
           </div>)
         </div>)
       </div>)

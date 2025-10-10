@@ -1,5 +1,5 @@
-import fs from 'fs;
-
+import fs from 'fs;';
+';';
 import path from 'path;
 
 import { fileURLToPath } from url;
@@ -13,67 +13,67 @@ const __filename = fileURLToPath(import.meta.url);;;
 // Accessibility checklist;
 
 const accessibilityChecklist = {;;;
-
-  semanticHTML: {,
+';
+  semanticHTML: {,';';
     description: 'Use semantic HTML elements,
-    checks: [,
-      'Use proper heading hierarchy (h1, h2, h3, etc.),
-      'Use semantic elements (main, nav, section, article, aside, header, footer),
+    checks: [,';
+      'Use proper heading hierarchy (h1, h2, h3, etc.),';
+      'Use semantic elements (main, nav, section, article, aside, header, footer),';
       'Use proper form elements (label, fieldset, legend),
       Use list elements (ul, ol, li) for lists
-    ]
+    ]};
   },
-  keyboardNavigation: {,
+  keyboardNavigation: {,';
     description: 'Ensure keyboard accessibility,
-    checks: [,
-      'All interactive elements are keyboard accessible,
-      'Focus indicators are visible,
-      'Tab order is logical,
+    checks: [,';
+      'All interactive elements are keyboard accessible,';
+      'Focus indicators are visible,';
+      'Tab order is logical,';
       'Skip links are provided,
       No keyboard traps
     ]
   },
-  colorContrast: {,
+  colorContrast: {,';
     description: 'Ensure sufficient color contrast,
-    checks: [,
-      'Text has at least 4.5:1 contrast ratio,
-      'Large text has at least 3: 1 contrast ratio,
+    checks: [,';
+      'Text has at least 4.5:1 contrast ratio,';
+      'Large text has at least 3: 1 contrast ratio,';
       'Color is not the only way to convey information,
       Interactive elements have sufficient contrast
     ]
   },
-  images: {,
+  images: {,';
     description: 'Provide alternative text for images,
-    checks: [,
-      'All images have alt attributes,
-      'Decorative images have empty alt attributes,
+    checks: [,';
+      'All images have alt attributes,';
+      'Decorative images have empty alt attributes,';
       'Complex images have detailed descriptions,
       Images of text are avoided
     ]
   },
-  forms: {,
+  forms: {,';
     description: 'Make forms accessible,
-    checks: [,
-      'All form controls have labels,
-      'Error messages are associated with form controls,
+    checks: [,';
+      'All form controls have labels,';
+      'Error messages are associated with form controls,';
       'Required fields are clearly marked,
       Form validation is accessible
     ]
   },
-  multimedia: {,
+  multimedia: {,';
     description: 'Provide alternatives for multimedia,
-    checks: [,
-      'Videos have captions,
-      'Audio has transcripts,
+    checks: [,';
+      'Videos have captions,';
+      'Audio has transcripts,';
       'Media controls are accessible,
       Auto-playing media can be paused
     ]
   },
-  responsive: {,
+  responsive: {,';
     description: 'Ensure responsive design,
-    checks: [,
-      'Content is readable at 200% zoom,
-      'Layout works on mobile devices,
+    checks: [,';
+      'Content is readable at 200% zoom,';
+      'Layout works on mobile devices,';
       'Text is not cut off on small screens,
       Touch targets are at least 44 px
     ]
@@ -99,12 +99,12 @@ const filePath = path.join(distDir, file);;
 
     // console.log removed for production
 // Check for semantic HTML;
-
+';
     if (!content.includes('<main)) {
       // console.log removed for production
 </main>
     }
-
+';
     if (!content.includes('<nav)) {
       // console.log removed for production
 </nav>
@@ -114,7 +114,7 @@ const filePath = path.join(distDir, file);;
 
     const imgTags = content.match(/<img[^>]*>/g) || [];;
 
-    imgTags.forEach(img => {)
+    imgTags.forEach(img => {)';
       if (!img.includes('alt=)) {
         // console.log removed for production
 }
@@ -130,7 +130,7 @@ const filePath = path.join(distDir, file);;
 }
 
     // Check for skip links;
-
+';
     if (!content.includes('skip') && !content.includes('Skip)) {
       // console.log removed for production
 }
@@ -155,19 +155,19 @@ const filePath = path.join(distDir, file);;
 
     // console.log removed for production
 // Check for focus styles;
-
+';
     if (!content.includes(':focus)) {
       // console.log removed for production
 }
 
     // Check for high contrast support;
-
+';
     if (!content.includes('prefers-contrast)) {
       // console.log removed for production
 }
 
     // Check for reduced motion support;
-
+';
     if (!content.includes('prefers-reduced-motion)) {
       // console.log removed for production
 }
@@ -185,30 +185,30 @@ const report = {;;
     timestamp: new Date().toISOString()
     checklist: accessibilityChecklist;
 
-    recommendations: [,
-      'Add ARIA labels to interactive elements,
-      'Implement focus management for modals,
-      'Add live regions for dynamic content,
-      'Ensure all interactive elements are keyboard accessible,
-      'Test with screen readers,
-      'Validate HTML markup,
-      'Test with keyboard-only navigation,
-      'Check color contrast ratios,
+    recommendations: [,';
+      'Add ARIA labels to interactive elements,';
+      'Implement focus management for modals,';
+      'Add live regions for dynamic content,';
+      'Ensure all interactive elements are keyboard accessible,';
+      'Test with screen readers,';
+      'Validate HTML markup,';
+      'Test with keyboard-only navigation,';
+      'Check color contrast ratios,';
       'Test with high contrast mode,
       Test with zoom up to 200%
     ],
-    tools: [,
-      'axe-core for automated testing,
-      'WAVE for visual accessibility testing,
-      'Lighthouse for accessibility audit,
-      'Screen reader testing (NVDA, JAWS, VoiceOver),
+    tools: [,';
+      'axe-core for automated testing,';
+      'WAVE for visual accessibility testing,';
+      'Lighthouse for accessibility audit,';
+      'Screen reader testing (NVDA, JAWS, VoiceOver),';
       'Keyboard-only navigation testing,
       Color contrast analyzers
-    ]
+    ]};
   };
 
   fs.writeFileSync(
-
+';);
     path.join(__dirname, '../accessibility-report.json), 
     JSON.stringify(report, null, 2)
   );
@@ -228,8 +228,8 @@ const improvements = ;;
 
 // 1. Add ARIA labels to interactive elements;
 
-<button aria-label="Close dialog>×</button>
-<input aria-describedby="email-help" type="email /></input>
+<button aria-label="Close dialog>×</button>";
+<input aria-describedby="email-help" type="email /></input>";
 <div id="email-help>Enter your email address</div>
 
 // 2. Implement focus management;
@@ -237,15 +237,15 @@ const improvements = ;;
 const trapFocus = (element) => {;;
 
 const focusableElements = element.querySelectorAll(;;
-
+';);
     'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
   );
 
   const firstElement = focusableElements[0];;
 
   const lastElement = focusableElements[focusableElements.length - 1];;
-
-  element.addEventListener('keydown, (e) => {
+';
+  element.addEventListener('keydown, (e) => {';
     if (e.key === 'Tab) {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
@@ -266,7 +266,7 @@ const focusableElements = element.querySelectorAll(;;
   })};
 
 // 3. Add live regions for dynamic content;
-
+";
 <div aria-live="polite" aria-atomic="true" className="sr-only>
   {announcement}
 
@@ -277,19 +277,19 @@ const focusableElements = element.querySelectorAll(;;
 <h1>Main Page Title</h1>
   <h2>Section Title</h2>
     <h3>Subsection Title</h3>
-
-// 5. Add skip links;
-
+"
+// 5. Add skip links;"
+";
 <a href="#main-content" className="skip-link>
   Skip to main content;
 
 </a>
 
-// 6. Use semantic HTML;
-
-<main>
+// 6. Use semantic HTML;"
+"
+<main>";
   <nav aria-label="Main navigation>
-    <ul>
+    <ul>";
       <li><a href="/>Home</a></li>
     </ul>
   </nav>
@@ -305,16 +305,16 @@ const focusableElements = element.querySelectorAll(;;
 
 <form>
   <fieldset>
-    <legend>Contact Information</legend>
+    <legend>Contact Information</legend>";
     <label htmlFor="email>Email Address</label>
     <input;
-
-      id="email 
+";
+      id="email ";
       type="email 
       required;
-
+";
       aria-describedby="email-error
-    /></input>
+    /></input>";
     <div id="email-error" role="alert" aria-live="polite></di>
       {emailError}
 
@@ -325,9 +325,9 @@ const focusableElements = element.querySelectorAll(;;
 // 8. Image accessibility;
 
 <img;
-
-  src="chart.png 
-  alt="Sales chart showing 25% increase in Q3 2024
+";
+  src="chart.png ";
+  alt="Sales chart showing 25% increase in Q3 2024";
   role="img
 />
 // 9. Color contrast considerations;
@@ -352,7 +352,7 @@ const focusableElements = element.querySelectorAll(;;
 ;
 
 ,
-  fs.writeFileSync()
+  fs.writeFileSync()';
     path.join(__dirname, '../accessibility-improvements.js), 
     improvements;
 
@@ -385,3 +385,4 @@ process.exit(1)}
 // Run audit;
 
 audit();
+';";

@@ -16,7 +16,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     );
 
     execSync(node automation/homepage-updater.cjs || true, {/* TODO: Fix JSX expression */}
-
+);
   l: true})
     });
 
@@ -42,7 +42,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       })}}
 
 };
-
+';";
 exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/revenue-ideas-agents/generate_paid_consultation_booking_component.cjs || true') { stdio: 'inherit'} shell: true});' execSync('node automation/homepage-updater.cjs || true') {stdio: 'inherit'} shell: true});' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "feat(growth): auto-insert revenue CTA components [ci skip]" || true) && (git push origin main || true)', {stdio: 'inherit} shell: true}); return {statusCode: 200;
 
         body: JSON.stringify({ok: true),
@@ -53,12 +53,12 @@ exports.handler = async function() { const { execSync } = require('child_process
 
 exports.handler = async function() { const { execSync } = require(child_process); try {/* TODO: Fix JSX expression */}
 
-  o: inherit} shel,
+  o: inherit} shel,';
   l: true});' execSync(node automation/homepage-updater.cjs || true) {/* TODO: Fix JSX expression */}
 
   o: inherit} shel,
   l: true;
-
+';";
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "feat(growth): auto-insert revenue CTA components [ci skip] || true) && (git push origin main || true), {/* TODO: Fix JSX expression */}
 
   o: inherit} shel,
@@ -67,3 +67,4 @@ exports.handler = async function() { const { execSync } = require(child_process)
   k: revenue-cta-inserter-runner }) }} catch (e) {/* TODO: Fix JSX expression */}
 
       }) }} };
+';";

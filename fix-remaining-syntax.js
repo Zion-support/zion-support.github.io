@@ -14,23 +14,23 @@ function fixRemainingSyntax(content) {
 
     .replace(/;\)/g, '})
     // Fix ,) -> }
-
+';
     .replace(/,\)/g, '})
     // Fix ,; -> ;
-
+';
     .replace(/,;/g, ';)
-    // Fix missing commas in object literals
+    // Fix missing commas in object literals';
     .replace(/(\w+:\s*[^,;}\n]+)\n\s*(\w+:\s*)/g, '$1,\n  $2)
-    // Fix missing semicolons
+    // Fix missing semicolons';
     .replace(/([^;}])\n\s*}/g, '$1;\n})
-    // Fix missing closing parentheses
+    // Fix missing closing parentheses';
     .replace(/([^)])\n\s*}/g, '$1)\n})
-    // Fix JSX fragment issues
-    .replace(/<>\s*<div/g, '<>\n      <div)
+    // Fix JSX fragment issues';
+    .replace(/<>\s*<div/g, '<>\n      <div)';
     .replace(/<\/div>\s*<\/>/g, '</div>\n    </>)
     // Fix missing closing tags
     .replace(/<(\w+)([^>]*)>(?!.*<\/\1>)/g, (match, tag, attrs) => {
-      // Only add closing tag if its not a self-closing tag
+      // Only add closing tag if its not a self-closing tag';
       if (!match.includes('/>') && !['img', 'br', 'hr', 'input', 'meta', 'link].includes(tag)) {
         return match + `</${tag}>;
 
@@ -49,9 +49,9 @@ async function processFiles() {
   console.log(Starting remaining syntax fixes...);
 
   const patterns = [;;
-
+';
     'app/**/*.tsx,
-    app/**/*.ts
+    app/**/*.ts];
   ];
 
   let processedCount = 0;;
@@ -61,28 +61,28 @@ async function processFiles() {
   for (const pattern of patterns) {
     const files = await glob(pattern, {;;
 
-      ignore: [
-        'node_modules/**,
-        'dist/**,
-        '*.disabled/**,
-        '*-disabled/**,
-        'backup*/**,
+      ignore: [';
+        'node_modules/**,';
+        'dist/**,';
+        '*.disabled/**,';
+        '*-disabled/**,';
+        'backup*/**,';
         '**/*.backup,
         **/*.broken
-      ]
+      ]);
     });
 
     for (const file of files) {
       try {
         const content = fs.readFileSync(file, utf8);;
 
-        // Check if file has syntax issues
-        if (content.includes(';)) || 
-            content.includes(',)) ||
-            content.includes(',;) ||
-            content.includes('Property assignment expected) ||
+        // Check if file has syntax issues';
+        if (content.includes(';)) || ';
+            content.includes(',)) ||';
+            content.includes(',;) ||';
+            content.includes('Property assignment expected) ||';
             content.includes('Declaration or statement expected)) {
-          
+          `;
           console.log(`Processing syntax errors in: ${file});
 
           let fixed = fixRemainingSyntax(content);;
@@ -93,7 +93,7 @@ async function processFiles() {
 
         }
 
-      } catch (error) {
+      } catch (error) {`;
         console.error(`Error processing ${file}:, error.message);
 
         errorCount++;
@@ -103,14 +103,15 @@ async function processFiles() {
     }
 
   }
-
+`;
   console.log(`\nRemaining syntax fixes complete!);
-
+`;
   console.log(`Files processed: ${processedCount});
-
+`;
   console.log(`Errors encountered: ${errorCount});
 
 }
 
 // Run the script
 processFiles().catch(console.error);
+';`;

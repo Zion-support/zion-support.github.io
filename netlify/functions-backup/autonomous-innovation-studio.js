@@ -34,7 +34,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     });
 
     execSync(node automation/git-sync.cjs || true, {/* TODO: Fix JSX expression */}
-
+);
   l: true})
     });
 
@@ -55,7 +55,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         error: String(e;),
 // netlify/functions/autonomous-innovation-studio.js exports.handler = async function() { const { execSync } = require(child_process); try {/* TODO: Fix JSX expression */}
 
-  o: inherit} shel,
+  o: inherit} shel,';
   l: true});' execSync(node automation/git-sync.cjs || true) {/* TODO: Fix JSX expression */}
 
   o: inherit} shel,
@@ -64,3 +64,4 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   k: autonomous-innovation-studio }) }} catch (e) {/* TODO: Fix JSX expression */}
 
       }) }} };
+';

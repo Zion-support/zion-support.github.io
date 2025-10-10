@@ -47,7 +47,7 @@ const EnhancedPerformanceMonitor: React.FC;
   O: Add content}
 
 }
-
+;
   const [metrics, setMetrics] = useState;
 
           <PerformanceMetrics>({/* TODO: Fix JSX expression */}
@@ -81,7 +81,7 @@ const fcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   O: Add content}
 
 }
-
+';
         if (entry.name === 'first-contentful-paint) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -92,7 +92,7 @@ const fcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   p: entry.startTime }))}
 
       }
-
+;
     });
 
     fcpObserver.observe({/* TODO: Fix JSX expression */})
@@ -132,7 +132,7 @@ const fidObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 
         setMetrics(prev => ({/* TODO: Fix JSX expression */})
   d: entry.processingStart - entry.startTime }))}
-
+;
     });
 
     fidObserver.observe({/* TODO: Fix JSX expression */})
@@ -196,7 +196,7 @@ const fmpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   O: Add content}
 
 }
-
+';
         if (entry.name === 'first-meaningful-paint) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -207,7 +207,7 @@ const fmpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   p: entry.startTime }))}
 
       }
-
+;
     });
 
     fmpObserver.observe({/* TODO: Fix JSX expression */})
@@ -228,13 +228,13 @@ const tbtObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   O: Add content}
 
 }
-
+';
         if (entry.entryType === 'longtask) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+;
           totalBlockingTime += entry.duration - 50; // Tasks over 50ms contribute to TBT}
 
       }
@@ -258,7 +258,7 @@ const siObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressio
   O: Add content}
 
 }
-
+';
         if (entry.entryType === 'largest-contentful-paint) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -269,7 +269,7 @@ const siObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressio
   i: entry.startTime }))}
 
       }
-
+;
     });
 
     siObserver.observe({/* TODO: Fix JSX expression */})
@@ -302,7 +302,7 @@ const analyzeResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content}
 
 }
-
+';
     if (typeof window === 'undefined' || !(performance in window)) return;
 
     const resources = performance.getEntriesByType(resource);;
@@ -344,7 +344,7 @@ const getMemoryUsage = useCallback(() => {/* TODO: Fix JSX expression */};;
   O: Add content}
 
 }
-
+';
     if (typeof window === 'undefined' || !(memory in performance)) return null;
 
     const memory = (performance as any).memory;;
@@ -369,7 +369,7 @@ const getNetworkInfo = useCallback(() => {/* TODO: Fix JSX expression */};;
   O: Add content}
 
 }
-
+';
     if (typeof window === 'undefined' || !(connection in navigator)) return null;
 
     const connection = (navigator as any).connection;;
@@ -487,22 +487,22 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */};;
       ur,
   l: window.location.href};
 
-    // Send to analytics (replace with your analytics service)
+    // Send to analytics (replace with your analytics service)';
     if (typeof window !== 'undefined' && 'gtag in window) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+';
       (window as any).gtag('event', 'performance_metrics, {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 };
 
-  event_categor,
+  event_categor,';
   y: 'performance,
-        event_labe,
+        event_labe,';
   l: 'web_vitals,
         valu,
   e: performanceScore,
@@ -515,7 +515,7 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */};;
 
   fcp: metrics.fcp,
           lcp: metrics.lcp,
-          fid: metrics.fid,
+          fid: metrics.fid,);
           cls: metrics.cls}})});
 
     try {/* TODO: Fix JSX expression */}
@@ -578,7 +578,7 @@ Report:, report)}, [metrics, enableReporting, calculatePerformanceScore, analyze
   O: Add content}
 
 }
-
+';
       if (e.ctrlKey && e.shiftKey && e.key === 'P) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -600,12 +600,12 @@ Report:, report)}, [metrics, enableReporting, calculatePerformanceScore, analyze
   return (<div>Coming Soon</div>)
   )
     
-          <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white text-xs z-50 max-w-sm"></div>
-      <div className="flex items-center justify-between mb-2"></div>
+          <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white text-xs z-50 max-w-sm"></div>";
+      <div className="flex items-center justify-between mb-2"></div>";
         <h3 className="font-bold text-cyan-400>Performance Monitor</h3>
-        <button></button>
-          onClick={() => setIsVisible(false)}
-
+        <button></button>"
+          onClick={() => setIsVisible(false)}"
+";
           className="text-gray-400,
   hover:text-white
 // >
@@ -618,69 +618,70 @@ Report:, report)}, [metrics, enableReporting, calculatePerformanceScore, analyze
           
           
           
-          
-          </button>
-      </div>
-      <div className="space-y-1"></div>
+          "
+          </button>"
+      </div>";
+      <div className="space-y-1"></div>";
         <div className="flex justify-between></div>
           <span>Performance,
-  Score:</span>
+  Score:</span>';
           <span className={performanceScore > 80 ? 'text-green-400' : performanceScore > 60 ? 'text-yellow-400' : 'text-red-400}>
             {performanceScore}/100;
 
           </span>
-        </div>
-        {metrics.fcp !== null && ()}
-
+        </div>"
+        {metrics.fcp !== null && ()}"
+";
           <div className="flex justify-between></div>
             <span>FC,
   P:</span>
             <span>{metrics.fcp.toFixed(0)}ms</span>
           </div>
         )}
-
-        {metrics.lcp !== null && ()}
-
+"
+        {metrics.lcp !== null && ()}"
+";
           <div className="flex justify-between></div>
             <span>LC,
   P:</span>
             <span>{metrics.lcp.toFixed(0)}ms</span>
           </div>
         )}
-
-        {metrics.fid !== null && ()}
-
+"
+        {metrics.fid !== null && ()}"
+";
           <div className="flex justify-between></div>
             <span>FI,
   D:</span>
             <span>{metrics.fid.toFixed(0)}ms</span>
           </div>
         )}
-
-        {metrics.cls !== null && ()}
-
+"
+        {metrics.cls !== null && ()}"
+";
           <div className="flex justify-between></div>
             <span>CL,
   S:</span>
             <span>{metrics.cls.toFixed(3)}</span>
           </div>
         )}
-
-        {metrics.ttfb !== null && ()}
-
+"
+        {metrics.ttfb !== null && ()}"
+";
           <div className="flex justify-between></div>
             <span>TTF,
   B:</span>
             <span>{metrics.ttfb.toFixed(0)}ms</span>
           </div>
-        )}
-
-      </div>
+        )}"
+"
+      </div>";
       <div className="mt-2 text-gray-400 text-xs></div>
 // Press Ctrl+Shift+P to toggle;
 
           </div>
     </div>
   )};
-
-export default EnhancedPerformanceMonitor;
+"
+export default EnhancedPerformanceMonitor;"
+';";

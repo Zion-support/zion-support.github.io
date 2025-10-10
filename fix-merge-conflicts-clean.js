@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-import fs from 'fs;
-
+import fs from 'fs;';
+';';
 import path from 'path;
 
 // Function to resolve merge conflicts by choosing the HEAD version
 function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, utf8);;
-
-    // Check if file has merge conflict markers
+';
+    // Check if file has merge conflict markers';';
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>)) {
       return false; // No conflicts to resolve
     }
@@ -28,19 +28,19 @@ function resolveMergeConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {;;
 
       const line = lines[i];;
-
+';
       if (line.trim() === ') {
         inConflict = true;
 
         keepHead = true;
 
         continue;
-
+';
       } else if (line.trim() === ') {
         keepHead = false;
 
         continue;
-
+';
       } else if (line.trim().startsWith('>>>>>>>)) {
         inConflict = false;
 
@@ -63,7 +63,7 @@ function resolveMergeConflicts(filePath) {
 
     return true;
 
-  } catch (error) {
+  } catch (error) {`;
     console.error(`Error resolving conflicts in ${filePath}:, error.message);
 
     return false;
@@ -83,14 +83,14 @@ function findFilesWithConflicts(dir) {
       const fullPath = path.join(currentDir, item);;
 
       const stat = fs.statSync(fullPath);;
-
+';
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
         searchDirectory(fullPath);
-
+';
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx))) {
         try {
           const content = fs.readFileSync(fullPath, utf8);;
-
+';
           if (content.includes('') || content.includes('') || content.includes('>>>>>>>)) {
             files.push(fullPath);
 
@@ -118,7 +118,7 @@ console.log(Starting merge conflict resolution...);
 const workspaceDir = process.cwd();;
 
 const conflictedFiles = findFilesWithConflicts(workspaceDir);;
-
+`;
 console.log(`Found ${conflictedFiles.length} files with merge conflicts);
 
 let resolvedCount = 0;;
@@ -130,7 +130,8 @@ for (const file of conflictedFiles) {
   }
 
 }
-
+`;
 console.log(`Resolved conflicts in ${resolvedCount} files);
-
+';
 console.log('Merge conflict resolution complete!);
+';`;

@@ -125,28 +125,28 @@ export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
     mobile: string, email: string;
     address: string}
 }
-export const enterpriseITServices2029: EnterpriseItService2029[] = [,
-    id: "2029-enterprise-it", name: "2029 Enterprise IT Service Platform",
-    tagline: "Enterprise IT services for 2029", price: '$599/month',
+export const enterpriseITServices2029: EnterpriseItService2029[] = [,";
+    id: "2029-enterprise-it", name: "2029 Enterprise IT Service Platform",";
+    tagline: "Enterprise IT services for 2029", price: '$599/month',';
     description: 'Advanced enterprise IT service platform designed for large organizations in 2029.',
-    features: [;
-      "Enterprise IT services"
-      "Scalable solutions"
-      "Advanced security"
-      "24/7 support",
-      "Custom integration"],
+    features: [;";
+      "Enterprise IT services"";
+      "Scalable solutions"";
+      "Advanced security"";
+      "24/7 support",";
+      "Custom integration"],";
     link: "/services/2029-enterprise-it", category: "Enterprise IT Services 2029",
-    realImplementation: true;
+    realImplementation: true;";
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+];";
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",";
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-      email: "kleber@ziontechgroup.com",
+];";
+      email: "kleber@ziontechgroup.com",";
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      addres,
+      addres,";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -174,121 +174,121 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [,
   s: string}
 }
 export const,
-  enterpriseITServices2029: EnterpriseItService2029[] = [,
-    i,"
-  d: "2029-enterprise-it", nam,"
-  e: "2029 Enterprise IT Service Platform",
-    taglin,"
-  e: "Enterprise IT services for 2029", pric,"
-  e: "$599/month",
-    descriptio,"
+  enterpriseITServices2029: EnterpriseItService2029[] = [,";
+    i,"";
+  d: "2029-enterprise-it", nam,"";
+  e: "2029 Enterprise IT Service Platform",";
+    taglin,"";
+  e: "Enterprise IT services for 2029", pric,"";
+  e: "$599/month",";
+    descriptio,"";
   n: "Advanced enterprise IT service platform designed for large organizations in 2029.",
-    feature,
-  s: [;"
-      "Enterprise IT services""
-      "Scalable solutions""
-      "Advanced security""
-      "24/7 support""
+    feature,";
+  s: [;"";
+      "Enterprise IT services""";
+      "Scalable solutions""";
+      "Advanced security""";
+      "24/7 support""";
       "Custom integration"
-    ],
-    lin,"
-  k: "/services/2029-enterprise-it", categor,"
+    ],";
+    lin,"";
+  k: "/services/2029-enterprise-it", categor,"";
   y: "Enterprise IT Services 2029",
     realImplementatio,
   n: true,
-    contactInf,
-  o: addres,"
+    contactInf,";
+  o: addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];";
+      mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com",";
+      addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];";
+      emai,"";
+  l: "kleber@ziontechgroup.com",";
+  addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-      mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-      emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-;
-    id: '2029-enterprise-it',
-    name: '2029 Enterprise IT Service Platform',
-    tagline: "Enterprise IT services for 2029",
-    price: "$599/month",
+;';
+    id: '2029-enterprise-it',';
+    name: '2029 Enterprise IT Service Platform',";
+    tagline: "Enterprise IT services for 2029",";
+    price: "$599/month",";
     description: "Advanced enterprise IT service platform designed for large organizations in 2029.",
-    features: [,
-      "Enterprise IT services",
-      "Scalable solutions",
-      "Advanced security",
-      "24/7 support",
+    features: [,";
+      "Enterprise IT services",";
+      "Scalable solutions",";
+      "Advanced security",";
+      "24/7 support",";
       "Custom integration"
-    ],
-    link: '/services/2029-enterprise-it',
+    ],';
+    link: '/services/2029-enterprise-it',';
     category: 'Enterprise IT Services 2029',
     realImplementation: true;
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
-  d: "2029-enterprise-it",
-    nam,"
-  e: "2029 Enterprise IT Service Platform",
-    taglin,"
-  e: "Enterprise IT services for 2029",
-    pric,"
-  e: "$599/month",
-    descriptio,"
+    contactInfo: unknown;';
+      mobile: '+1 302 464 0950',';
+      email: 'kleber@ziontechgroup.com',';
+      mobile: '+1 302 464 0950',';
+      email: 'kleber@ziontechgroup.com',';
+      address: '364 E Main St STE 1008 Middletown DE 19709'}};";
+];      mobile: "+1 302 464 0950",";
+      email: "kleber@ziontechgroup.com",";
+      mobile: "+1 302 464 0950",";
+      email: "kleber@ziontechgroup.com",";
+      address: "364 E Main St STE 1008 Middletown DE 19709",";
+    i,"";
+  d: "2029-enterprise-it",";
+    nam,"";
+  e: "2029 Enterprise IT Service Platform",";
+    taglin,"";
+  e: "Enterprise IT services for 2029",";
+    pric,"";
+  e: "$599/month",";
+    descriptio,"";
   n: "Advanced enterprise IT service platform designed for large organizations in 2029.",
-    feature,
-  s: [,"
-      "Enterprise IT services","
-      "Scalable solutions","
-      "Advanced security","
-      "24/7 support","
+    feature,";
+  s: [,"";
+      "Enterprise IT services","";
+      "Scalable solutions","";
+      "Advanced security","";
+      "24/7 support","";
       "Custom integration"
-    ],
-    lin,"
-  k: "/services/2029-enterprise-it",
-    categor,"
+    ],";
+    lin,"";
+  k: "/services/2029-enterprise-it",";
+    categor,"";
   y: "Enterprise IT Services 2029",
     realImplementatio,
   n: true,
     contactInf,
-  o: unknown,
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
+  o: unknown,";
+      mobil,"";
+  e: "+1 302 464 0950",";
+      emai,"";
   l: "kleber@ziontechgroup.com",
-      mobil,
+      mobil,';
   e: '+1 302 464 0950',
-      emai,
+      emai,';
   l: 'kleber@ziontechgroup.com',
-      addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
+      addres,';
+  s: '364 E Main St STE 1008 Middletown DE 19709'}};";
+];      mobil,"";
+  e: "+1 302 464 0950",";
+  emai,"";
+  l: "kleber@ziontechgroup.com"";
+      mobil,"";
+  e: "+1 302 464 0950",";
+      emai,"";
+  l: "kleber@ziontechgroup.com",";
+      addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -333,8 +333,8 @@ i,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
-  l: string} addres,
-  s: string} } } addres,"
+  l: string} addres,";
+  s: string} } } addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -348,43 +348,43 @@ i,
   o: mobil,
   e: string, emai,
   l: string, addres,
-  s: string } } export const,
-  enterpriseITServices2029: EnterpriseItService2029[] = [ i,"
-  d: "2029-enterprise-it", nam,"
-  e: "2029 Enterprise IT Service Platform", taglin,"
-  e: "Enterprise IT services for 2029", pric,"
-  e: "$599/month", descriptio,"
-  n: "Advanced enterprise IT service platform designed for large organizations in 2029.", feature,"
-  s: [ "Enterprise IT services" "Scalable solutions" "Advanced security" "24/7 support" "Custom integration" ], lin,"
-  k: "/services/2029-enterprise-it", categor,"
+  s: string } } export const,";
+  enterpriseITServices2029: EnterpriseItService2029[] = [ i,"";
+  d: "2029-enterprise-it", nam,"";
+  e: "2029 Enterprise IT Service Platform", taglin,"";
+  e: "Enterprise IT services for 2029", pric,"";
+  e: "$599/month", descriptio,"";
+  n: "Advanced enterprise IT service platform designed for large organizations in 2029.", feature,"";
+  s: [ "Enterprise IT services" "Scalable solutions" "Advanced security" "24/7 support" "Custom integration" ], lin,"";
+  k: "/services/2029-enterprise-it", categor,"";
   y: "Enterprise IT Services 2029", realImplementatio,
-  n: true, contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "2029-enterprise-it", nam,"
-  e: "2029 Enterprise IT Service Platform", taglin,"
-  e: "Enterprise IT services for 2029", pric,"
-  e: "$599/month", descriptio,"
-  n: "Advanced enterprise IT service platform designed for large organizations in 2029.", feature,"
-  s: [ "Enterprise IT services", "Scalable solutions", "Advanced security", "24/7 support", "Custom integration" ], lin,"
-  k: "/services/2029-enterprise-it", categor,"
+  n: true, contactInf,";
+  o: addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"";
+  l: "kleber@ziontechgroup.com",";
+  addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"";
+  d: "2029-enterprise-it", nam,"";
+  e: "2029 Enterprise IT Service Platform", taglin,"";
+  e: "Enterprise IT services for 2029", pric,"";
+  e: "$599/month", descriptio,"";
+  n: "Advanced enterprise IT service platform designed for large organizations in 2029.", feature,"";
+  s: [ "Enterprise IT services", "Scalable solutions", "Advanced security", "24/7 support", "Custom integration" ], lin,"";
+  k: "/services/2029-enterprise-it", categor,"";
   y: "Enterprise IT Services 2029", realImplementatio,
-  n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  n: true, contactInf,";
+  o: mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", mobil,';
+  e: '+1 302 464 0950',' emai,';
+  l: 'kleber@ziontechgroup.com',' addres,';";
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"";
+  e: "+1 302 464 0950",";
+  emai,"";
+  l: "kleber@ziontechgroup.com" mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", addres,"';";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"';";

@@ -31,7 +31,7 @@ const _entries = list.getEntries();;
     new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
   p: fcpEntry.startTime }))}
 
-    }).observe({/* TODO: Fix JSX expression */})
+    }).observe({/* TODO: Fix JSX expression */})';
   s: ['paint] });
 
     // Largest Contentful Paint;
@@ -41,7 +41,7 @@ const _entries = list.getEntries();;
 const _entries = list.getEntries();;
 
       const _lastEntry = entries[entries.length - 1];;
-
+';
       setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))}).observe({ entryTypes: ['largest-contentful-paint] });
 
     // First Input Delay;
@@ -58,13 +58,13 @@ const _inputEntry = entry as PerformanceEventTiming;);;
           ...prev)
           fid: inputEntry.processingStart - inputEntry.startTime),
     new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
-  p: lastEntry.startTime }))}).observe({/* TODO: Fix JSX expression */})
+  p: lastEntry.startTime }))}).observe({/* TODO: Fix JSX expression */})';
   s: ['largest-contentful-paint] });
 
     // First Input Delay;
 
     new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
-        }))})}).observe({/* TODO: Fix JSX expression */})
+        }))})}).observe({/* TODO: Fix JSX expression */})';
   s: ['first-input] });
 
     // Cumulative Layout Shift;
@@ -86,7 +86,7 @@ const layoutEntry = entry as PerformanceEntry & {);;
           clsValue += layoutEntry.value || 0;
 
     new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-
+);
         };)
         if (!layoutEntry.hadRecentInput) {/* TODO: Fix JSX expression */}
 
@@ -95,7 +95,7 @@ const layoutEntry = entry as PerformanceEntry & {);;
       });
 
       setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  s: clsValue }))}).observe({/* TODO: Fix JSX expression */})
+  s: clsValue }))}).observe({/* TODO: Fix JSX expression */})';
   s: ['layout-shift] });
 
     // Time to First Byte;
@@ -105,7 +105,7 @@ const layoutEntry = entry as PerformanceEntry & {);;
 const _entries = list.getEntries();;
 
       const ttfbEntry = entries.find(entry =>);;
-
+';
         entry.name.includes('document')
       ) as PerformanceNavigationTiming;
 
@@ -116,7 +116,8 @@ const _entries = list.getEntries();;
     new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
         }))}
 
-    }).observe({/* TODO: Fix JSX expression */})
+    }).observe({/* TODO: Fix JSX expression */})';
   s: ['navigation] })}, []);
 
   return { metrics, isSupported }}
+';

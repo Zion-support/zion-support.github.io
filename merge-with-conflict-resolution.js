@@ -12,8 +12,8 @@ function resolveConflicts(filePath) {
 
 const content = readFileSync(filePath, utf8);;
 
-    // Check if file has conflict markers;
-
+    // Check if file has conflict markers;';
+';';
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>)) {
       return false; // No conflicts}
 
@@ -29,17 +29,17 @@ const lines = content.split(\n);;
     for (let i = 0; i < lines.length; i++) {;;
 
 const line = lines[i];;
-
+';
       if (line.includes(')) {
         skipUntilNextMarker = true;
 
         continue}
-
+';
       if (line.includes(')) {
         skipUntilNextMarker = false;
 
         continue}
-
+';
       if (line.includes('>>>>>>>)) {
         continue}
 
@@ -72,7 +72,7 @@ function mergeBranch(branchName) {
 return true} catch (error) {
     // console.log removed for production
 // Check for conflicts;
-
+';
     const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: utf8 });;
 
     if (conflictFiles.trim()) {
@@ -96,11 +96,11 @@ const files = conflictFiles.trim().split(\n);;
 
       // console.log removed for production
 // Add all resolved files;
-
+';
       execSync('git add .', { stdio: inherit });
 
       // Commit the resolution;
-
+";`;
       execSync(`git commit -m "feat: Resolve merge conflicts from ${branchName}"`, { stdio: inherit });
 
       // console.log removed for production
@@ -116,12 +116,12 @@ try {
   // List of branches to merge (most recent first);
 
 const branchesToMerge = [;;
-
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fcae,
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd44,
-    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd72,
+';
+    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fcae,';
+    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd44,';
+    'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd72,';
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-feb1,
-    origin/cursor/enhance-app-with-new-services-and-futuristic-design-ff2 c
+    origin/cursor/enhance-app-with-new-services-and-futuristic-design-ff2 c];
   ];
 
 ;
@@ -133,7 +133,7 @@ let mergedCount = 0;;
   for (const branch of branchesToMerge) {
     try {
       // Check if branch has unique commits;
-
+`;
       const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: utf8 });;
 
       if (!uniqueCommits.trim()) {
@@ -159,10 +159,11 @@ failedCount++}
 // console.log removed for production
 // Push all changes;
 
-  // console.log removed for production
+  // console.log removed for production';
 execSync('git push origin main', { stdio: inherit });
 
   // console.log removed for production
 } catch (error) {
   // console.error removed for production
 process.exit(1)}
+';";`;

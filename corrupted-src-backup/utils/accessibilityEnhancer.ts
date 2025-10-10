@@ -73,7 +73,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return;
 
-    document.addEventListener('keydown, event => {)
+    document.addEventListener('keydown, event => {)';
       if (event.key === 'Tab) {
         this.handleTabNavigation(event);
 
@@ -115,14 +115,14 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
     ;
 
-,
+,';
     skipLink.addEventListener('focus, () => {
       skipLink.style.top = 6px;
 
   private setupScreenReaderSupport(): void {/* TODO: Fix JSX expression */}
 
     });
-
+';
     skipLink.addEventListener('blur, () => {/* TODO: Fix JSX expression */}
 
     });
@@ -200,39 +200,39 @@ const _focusableElements = this.getFocusableElements();;
   private getFocusableElements(): HTMLElement[] {;
 
 const selectors = [;;;
-
-      'button: not([disabled]),
-      'input: not([disabled]),
-      'select: not([disabled]),
-      'textarea: not([disabled]),
-      'a[href],
+';];
+      'button: not([disabled]),';
+      'input: not([disabled]),';
+      'select: not([disabled]),';
+      'textarea: not([disabled]),';
+      'a[href],';
       '[tabindex]:not([tabindex="-1"])'].join(, );
 
     return Array.from(document.querySelectorAll(selectors)) as HTMLElement[]}
 
   private measureAccessibilityMetrics(): void {
     this.metrics = [
-      {
+      {';
         name: 'Focusable Elements,
         value:
         value: this.getFocusableElements().length;
 
-        threshold: 10;
-
+        threshold: 10;'
+';
         status: 'pass},
-      {
+      {';
         name: 'Images with Alt Text,
         value:
         value: this.getImagesWithAltText().length;
 
-        threshold: 0;
-
+        threshold: 0;'
+';
         status: 'pass},
-      {
+      {';
         name: 'Headings Structure,
         value: this.getHeadingStructureScore(),
-        threshold: 80;
-
+        threshold: 80;'
+';
         status: 'pass,
   private getFocusableElements(): HTMLElement[] {/* TODO: Fix JSX expression */}
 
@@ -290,4 +290,4 @@ const _headings = document.querySelectorAll(h1, h2, h3, h4, h5, h6);;
 
 export default AccessibilityEnhancer;
 
-`
+`';";`;

@@ -20,8 +20,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   children, 
   trackingId = 'G-XXXXXXXXXX 
 }) => {
-  useEffect(() => {
-    // Initialize Google Analytics
+  useEffect(() => {;
+    // Initialize Google Analytics';
     if (typeof window !== 'undefined' && trackingId !== 'G-XXXXXXXXXX) {
       // Load Google Analytics script;
 
@@ -42,9 +42,9 @@ const script = document.createElement(script);;
       window.gtag = gtag;
 
       gtag(js, new Date());
-
+';
       gtag('config, trackingId, {
-        page_title: document.title,
+        page_title: document.title,);
         page_location: window.location.href})}
 
   }, [trackingId]);
@@ -52,11 +52,11 @@ const script = document.createElement(script);;
 ;
 
 const track = (event: string, properties?: Record<string, any>) => {;;
-
-    if (typeof window !== 'undefined && window.gtag) {
+';
+    if (typeof window !== 'undefined && window.gtag) {';
       window.gtag('event, event, properties)}
 
-    // Also log in development
+    // Also log in development';
     if (process.env.NODE_ENV === 'development) {
       // console.log removed for production
 }
@@ -66,14 +66,14 @@ const track = (event: string, properties?: Record<string, any>) => {;;
 ;
 
 const page = (name: string, properties?: Record<string, any>) => {;;
-
-    if (typeof window !== 'undefined && window.gtag) {
+';
+    if (typeof window !== 'undefined && window.gtag) {';
       window.gtag('config, trackingId, {
         page_title: name,
-        page_location: window.location.href,
+        page_location: window.location.href,);
         ...properties})}
 
-    // Also log in development
+    // Also log in development';
     if (process.env.NODE_ENV === 'development) {
       // console.log removed for production
 }
@@ -83,13 +83,13 @@ const page = (name: string, properties?: Record<string, any>) => {;;
 ;
 
 const identify = (userId: string, traits?: Record<string, any>) => {;;
-
-    if (typeof window !== 'undefined && window.gtag) {
+';
+    if (typeof window !== 'undefined && window.gtag) {';
       window.gtag('config, trackingId, {
-        user_id: userId,
+        user_id: userId,);
         ...traits})}
 
-    // Also log in development
+    // Also log in development';
     if (process.env.NODE_ENV === 'development) {
       // console.log removed for production
 }
@@ -100,7 +100,7 @@ const identify = (userId: string, traits?: Record<string, any>) => {;;
 
 const value: AnalyticsContextType = {
     track,
-    page,
+    page,;
     identify};
 
   return (
@@ -115,7 +115,7 @@ export const useAnalytics = (): AnalyticsContextType => {;;
 
 const context = useContext(AnalyticsContext);;
 
-  if (context === undefined) {
+  if (context === undefined) {';
     throw new Error('useAnalytics must be used within an AnalyticsProvider)}
 
   return context};
@@ -128,3 +128,4 @@ declare global {
     gtag: (...args: any[]) => void}
 
 }
+';`;

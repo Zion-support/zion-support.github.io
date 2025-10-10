@@ -4,26 +4,26 @@ import React, { lazy, Suspense, useState, useEffect } from react;
 
 const bannerComponents = {;;;
 
-  'ai-innovation': lazy(() => import('./AIInnovationAdvertisingBanner)),
-  'ai-trends': lazy(() => import('./AITrendsInsightsBanner2026)),
-  'ai-cost-optimization': lazy(() => import('./AICostOptimizationBanner)),
-  'breakthrough-content': lazy(() => import('./BreakthroughContent2026 Banner)),
-  'comprehensive-promo': lazy(() => import('./ComprehensivePromoBanner)),
-  advertising: lazy(() => import('./AdvertisingBanner)),
-  'content-showcase': lazy(() => import('./ContentShowcase)),
+  'ai-innovation': lazy(() => import('./AIInnovationAdvertisingBanner)),';
+  'ai-trends': lazy(() => import('./AITrendsInsightsBanner2026)),';
+  'ai-cost-optimization': lazy(() => import('./AICostOptimizationBanner)),';
+  'breakthrough-content': lazy(() => import('./BreakthroughContent2026 Banner)),';
+  'comprehensive-promo': lazy(() => import('./ComprehensivePromoBanner)),';
+  advertising: lazy(() => import('./AdvertisingBanner)),';
+  'content-showcase': lazy(() => import('./ContentShowcase)),';
   'content-value-testimonials: lazy(
-
+';);
     () => import('./ContentValueTestimonials)
-  ),
+  ),';
   'december-revolutionary: lazy(
-
+';);
     () => import('./December2025 RevolutionaryContentShowcase)
-  ),
+  ),';
   'cognitive-orchestration: lazy(
-
+';);
     () => import('./CognitiveOrchestrationMegaBanner)
   ),;
-
+};
 const bannerComponents = {/* TODO: Fix JSX expression */};;
 
 };
@@ -49,8 +49,8 @@ interface BannerRotationManagerProps {/* TODO: Fix JSX expression */}
  */,
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
   banners = [],
-  maxBanners = 3,
-  rotationInterval = 10000,
+  maxBanners = 3,;
+  rotationInterval = 10000,';
   className = '}) => {
   return (
 
@@ -121,8 +121,8 @@ export const,
   return(<div className={`banner-rotation-manager ${className}}></div>
       <Suspense;
 
-        fallback={
-          <div className='flex items-center justify-center py-16></Suspense>
+        fallback={';
+          <div className='flex items-center justify-center py-16></Suspense>';
             <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600></div>}
 
           </div>}
@@ -130,11 +130,11 @@ export const,
         }
 
       >
-        <BannerComponent />
+        <BannerComponent />);
       </Suspense>)
-)
-      {/* Banner indicators */})
-      {visibleBanners.length > 1 && ()
+)'
+      {/* Banner indicators */})'
+      {visibleBanners.length > 1 && ()';
         <div className='flex justify-center mt-4 space-x-2></div>)
           {visibleBanners.map((_, index) => (
 
@@ -144,15 +144,15 @@ export const,
 
               onClick={() => setCurrentIndex(index)}
 
-              className={w-3 h-3 rounded-full transition-colors ${
-                index === currentIndex;
-
+              className={w-3 h-3 rounded-full transition-colors ${'
+                index === currentIndex;'
+';
                   ? 'bg-blue-600}
-
+';
                   : 'bg-gray-300 hover:bg-gray-400}
 
               }}
-
+`;
   return (<div className={`banner-rotation-manager ${className}}></div>
       <Suspense></Suspense>
         fallback={/* TODO: Fix JSX expression */}
@@ -171,9 +171,9 @@ export const,
               onClick={() => setCurrentIndex(index)}
 
               className={/* TODO: Fix JSX expression */}
-
+`;
               }`}
-
+`;
               aria-label={`Go to banner ${index + 1}}
 
             />
@@ -186,5 +186,5 @@ export const,
   )};
 
 export default BannerRotationManager;
-
-`
+`;
+`';`;

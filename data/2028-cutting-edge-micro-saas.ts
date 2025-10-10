@@ -77,28 +77,28 @@ export interface CuttingEdgeMicroSaas2028 {/* TODO: Fix JSX expression */}
     mobile: string, email: string;
     address: string}
 }
-export const cuttingEdge2028 MicroSaas: CuttingEdgeMicroSaas2028[] = [,
-    id: "2028-cutting-edge-micro-saas", name: "2028 Cutting-Edge Micro SAAS Platform",
-    tagline: "Cutting-edge micro SAAS for 2028", price: '$199/month',
+export const cuttingEdge2028 MicroSaas: CuttingEdgeMicroSaas2028[] = [,";
+    id: "2028-cutting-edge-micro-saas", name: "2028 Cutting-Edge Micro SAAS Platform",";
+    tagline: "Cutting-edge micro SAAS for 2028", price: '$199/month',';
     description: 'Cutting-edge micro SAAS platform that showcases the latest innovations for 2028.',
-    features: [;
-      "Cutting-edge features"
-      "Latest innovations"
-      "Advanced technology"
-      "Innovation platform",
-      "Future-ready solutions"],
+    features: [;";
+      "Cutting-edge features"";
+      "Latest innovations"";
+      "Advanced technology"";
+      "Innovation platform",";
+      "Future-ready solutions"],";
     link: "/services/2028-cutting-edge-micro-saas", category: "Cutting-Edge Micro SAAS 2028",
-    realImplementation: true;
+    realImplementation: true;";
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+];";
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",";
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-      email: "kleber@ziontechgroup.com",
+];";
+      email: "kleber@ziontechgroup.com",";
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      addres,
+      addres,";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -126,121 +126,121 @@ export const cuttingEdge2028 MicroSaas: CuttingEdgeMicroSaas2028[] = [,
   s: string}
 }
 export const,
-  cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [,
-    i,"
-  d: "2028-cutting-edge-micro-saas", nam,"
-  e: "2028 Cutting-Edge Micro SAAS Platform",
-    taglin,"
-  e: "Cutting-edge micro SAAS for 2028", pric,"
-  e: "$199/month",
-    descriptio,"
+  cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [,";
+    i,"";
+  d: "2028-cutting-edge-micro-saas", nam,"";
+  e: "2028 Cutting-Edge Micro SAAS Platform",";
+    taglin,"";
+  e: "Cutting-edge micro SAAS for 2028", pric,"";
+  e: "$199/month",";
+    descriptio,"";
   n: "Cutting-edge micro SAAS platform that showcases the latest innovations for 2028.",
-    feature,
-  s: [;"
-      "Cutting-edge features""
-      "Latest innovations""
-      "Advanced technology""
-      "Innovation platform""
+    feature,";
+  s: [;"";
+      "Cutting-edge features""";
+      "Latest innovations""";
+      "Advanced technology""";
+      "Innovation platform""";
       "Future-ready solutions"
-    ],
-    lin,"
-  k: "/services/2028-cutting-edge-micro-saas", categor,"
+    ],";
+    lin,"";
+  k: "/services/2028-cutting-edge-micro-saas", categor,"";
   y: "Cutting-Edge Micro SAAS 2028",
     realImplementatio,
   n: true,
-    contactInf,
-  o: addres,"
+    contactInf,";
+  o: addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];";
+      mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com",";
+      addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];";
+      emai,"";
+  l: "kleber@ziontechgroup.com",";
+  addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-      mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-      emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-;
-    id: '2028-cutting-edge-micro-saas',
-    name: '2028 Cutting-Edge Micro SAAS Platform',
-    tagline: "Cutting-edge micro SAAS for 2028",
-    price: "$199/month",
+;';
+    id: '2028-cutting-edge-micro-saas',';
+    name: '2028 Cutting-Edge Micro SAAS Platform',";
+    tagline: "Cutting-edge micro SAAS for 2028",";
+    price: "$199/month",";
     description: "Cutting-edge micro SAAS platform that showcases the latest innovations for 2028.",
-    features: [,
-      "Cutting-edge features",
-      "Latest innovations",
-      "Advanced technology",
-      "Innovation platform",
+    features: [,";
+      "Cutting-edge features",";
+      "Latest innovations",";
+      "Advanced technology",";
+      "Innovation platform",";
       "Future-ready solutions"
-    ],
-    link: '/services/2028-cutting-edge-micro-saas',
+    ],';
+    link: '/services/2028-cutting-edge-micro-saas',';
     category: 'Cutting-Edge Micro SAAS 2028',
     realImplementation: true;
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
-  d: "2028-cutting-edge-micro-saas",
-    nam,"
-  e: "2028 Cutting-Edge Micro SAAS Platform",
-    taglin,"
-  e: "Cutting-edge micro SAAS for 2028",
-    pric,"
-  e: "$199/month",
-    descriptio,"
+    contactInfo: unknown;';
+      mobile: '+1 302 464 0950',';
+      email: 'kleber@ziontechgroup.com',';
+      mobile: '+1 302 464 0950',';
+      email: 'kleber@ziontechgroup.com',';
+      address: '364 E Main St STE 1008 Middletown DE 19709'}};";
+];      mobile: "+1 302 464 0950",";
+      email: "kleber@ziontechgroup.com",";
+      mobile: "+1 302 464 0950",";
+      email: "kleber@ziontechgroup.com",";
+      address: "364 E Main St STE 1008 Middletown DE 19709",";
+    i,"";
+  d: "2028-cutting-edge-micro-saas",";
+    nam,"";
+  e: "2028 Cutting-Edge Micro SAAS Platform",";
+    taglin,"";
+  e: "Cutting-edge micro SAAS for 2028",";
+    pric,"";
+  e: "$199/month",";
+    descriptio,"";
   n: "Cutting-edge micro SAAS platform that showcases the latest innovations for 2028.",
-    feature,
-  s: [,"
-      "Cutting-edge features","
-      "Latest innovations","
-      "Advanced technology","
-      "Innovation platform","
+    feature,";
+  s: [,"";
+      "Cutting-edge features","";
+      "Latest innovations","";
+      "Advanced technology","";
+      "Innovation platform","";
       "Future-ready solutions"
-    ],
-    lin,"
-  k: "/services/2028-cutting-edge-micro-saas",
-    categor,"
+    ],";
+    lin,"";
+  k: "/services/2028-cutting-edge-micro-saas",";
+    categor,"";
   y: "Cutting-Edge Micro SAAS 2028",
     realImplementatio,
   n: true,
     contactInf,
-  o: unknown,
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
+  o: unknown,";
+      mobil,"";
+  e: "+1 302 464 0950",";
+      emai,"";
   l: "kleber@ziontechgroup.com",
-      mobil,
+      mobil,';
   e: '+1 302 464 0950',
-      emai,
+      emai,';
   l: 'kleber@ziontechgroup.com',
-      addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
+      addres,';
+  s: '364 E Main St STE 1008 Middletown DE 19709'}};";
+];      mobil,"";
+  e: "+1 302 464 0950",";
+  emai,"";
+  l: "kleber@ziontechgroup.com"";
+      mobil,"";
+  e: "+1 302 464 0950",";
+      emai,"";
+  l: "kleber@ziontechgroup.com",";
+      addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -269,8 +269,8 @@ i,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
-  l: string} addres,
-  s: string} } } addres,"
+  l: string} addres,";
+  s: string} } } addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -284,43 +284,43 @@ i,
   o: mobil,
   e: string, emai,
   l: string, addres,
-  s: string } } export const,
-  cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [ i,"
-  d: "2028-cutting-edge-micro-saas", nam,"
-  e: "2028 Cutting-Edge Micro SAAS Platform", taglin,"
-  e: "Cutting-edge micro SAAS for 2028", pric,"
-  e: "$199/month", descriptio,"
-  n: "Cutting-edge micro SAAS platform that showcases the latest innovations for 2028.", feature,"
-  s: [ "Cutting-edge features" "Latest innovations" "Advanced technology" "Innovation platform" "Future-ready solutions" ], lin,"
-  k: "/services/2028-cutting-edge-micro-saas", categor,"
+  s: string } } export const,";
+  cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [ i,"";
+  d: "2028-cutting-edge-micro-saas", nam,"";
+  e: "2028 Cutting-Edge Micro SAAS Platform", taglin,"";
+  e: "Cutting-edge micro SAAS for 2028", pric,"";
+  e: "$199/month", descriptio,"";
+  n: "Cutting-edge micro SAAS platform that showcases the latest innovations for 2028.", feature,"";
+  s: [ "Cutting-edge features" "Latest innovations" "Advanced technology" "Innovation platform" "Future-ready solutions" ], lin,"";
+  k: "/services/2028-cutting-edge-micro-saas", categor,"";
   y: "Cutting-Edge Micro SAAS 2028", realImplementatio,
-  n: true, contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "2028-cutting-edge-micro-saas", nam,"
-  e: "2028 Cutting-Edge Micro SAAS Platform", taglin,"
-  e: "Cutting-edge micro SAAS for 2028", pric,"
-  e: "$199/month", descriptio,"
-  n: "Cutting-edge micro SAAS platform that showcases the latest innovations for 2028.", feature,"
-  s: [ "Cutting-edge features", "Latest innovations", "Advanced technology", "Innovation platform", "Future-ready solutions" ], lin,"
-  k: "/services/2028-cutting-edge-micro-saas", categor,"
+  n: true, contactInf,";
+  o: addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"";
+  l: "kleber@ziontechgroup.com",";
+  addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"";
+  d: "2028-cutting-edge-micro-saas", nam,"";
+  e: "2028 Cutting-Edge Micro SAAS Platform", taglin,"";
+  e: "Cutting-edge micro SAAS for 2028", pric,"";
+  e: "$199/month", descriptio,"";
+  n: "Cutting-edge micro SAAS platform that showcases the latest innovations for 2028.", feature,"";
+  s: [ "Cutting-edge features", "Latest innovations", "Advanced technology", "Innovation platform", "Future-ready solutions" ], lin,"";
+  k: "/services/2028-cutting-edge-micro-saas", categor,"";
   y: "Cutting-Edge Micro SAAS 2028", realImplementatio,
-  n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  n: true, contactInf,";
+  o: mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", mobil,';
+  e: '+1 302 464 0950',' emai,';
+  l: 'kleber@ziontechgroup.com',' addres,';";
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"";
+  e: "+1 302 464 0950",";
+  emai,"";
+  l: "kleber@ziontechgroup.com" mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", addres,"';";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"';";

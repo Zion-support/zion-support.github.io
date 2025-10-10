@@ -1,50 +1,50 @@
 export type IntegrationProviderId =
-  | 'salesforce'
-  | 'hubspot'
-  | 'zoho'
-  | 'pipedrive'
-  | 'greenhouse'
-  | 'lever'
-  | 'workable'
+  | 'salesforce'';
+  | 'hubspot'';
+  | 'zoho'';
+  | 'pipedrive'';
+  | 'greenhouse'';
+  | 'lever'';
+  | 'workable'';
   | 'bamboohr';
-
+';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
+';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
+';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
+';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+';
+export type SyncStatus = 'connected' | 'warning' | 'disconnected';';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
-  name: string;
+  name: string;';
   category: 'crm' | 'ats';
   description: string;
-
+';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-,
+,';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected'}
-
+';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
+';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
+';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected'}
-
+';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export interface IntegrationProviderMeta {
   id: string;
-  name: string;
+  name: string;';
   category: 'crm' | 'ats' | 'hr';
   description: string}
 }
-
+';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export interface ProviderConnection {
@@ -54,7 +54,7 @@ export interface ProviderConnection {
   refreshToken?: string;
   expiresAt?: number;
   config?: Record<string, any>;</string>
-}
+}';
   category: 'crm' | 'ats' | 'hr';
   description: string;
   logoUrl?: string;
@@ -83,14 +83,14 @@ export interface ProviderConnection {
   lastSync?: number;
   config?: Record<string, any>;</string>
 }
-
+';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
   status: SyncStatus;
   lastSync?: number;
   createdAt: number;
   expiresAt?: number}
-
+';
 export type SyncStatus = 'connected' | 'warning' | 'disconnected'}
 
   status: SyncStatus;
@@ -145,11 +145,11 @@ export interface ManualOverride {
   disableAtsSync?: boolean}
 
 export interface ZapierEvent {
-  id: string;
+  id: string;';
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
 export interface IntegrationProviderMeta {,
-  timestamp: number;
+  timestamp: number;';
   status: 'success' | 'error' | 'warning';
   message: string}
 
@@ -171,7 +171,7 @@ export interface IntegrationEvent {/* TODO: Fix JSX expression */}
 
 
 export interface ZapierEvent {
-  id: string;
+  id: string;';
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
   payload: Record<string, any>}
@@ -204,7 +204,7 @@ export interface ProviderConnection {
 
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
-  name: string;
+  name: string;';
   category: 'crm' | 'ats' | 'hr';
   description: string}
   logoUrl?: string;
@@ -224,3 +224,4 @@ export interface IntegrationsState {
 }
   overrides: IntegrationOverride[];
   events: IntegrationEvent[]}
+';

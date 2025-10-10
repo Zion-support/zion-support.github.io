@@ -77,28 +77,28 @@ export interface ComprehensiveItSolution {/* TODO: Fix JSX expression */}
     mobile: string, email: string;
     address: string}
 }
-export const comprehensiveITSolutions: ComprehensiveItSolution[] = [,
-    id: "full-stack-development", name: "Full-Stack Development Services",
-    tagline: "End-to-end web application development", price: '$80/hour',
+export const comprehensiveITSolutions: ComprehensiveItSolution[] = [,";
+    id: "full-stack-development", name: "Full-Stack Development Services",";
+    tagline: "End-to-end web application development", price: '$80/hour',';
     description: 'Complete full-stack development services from frontend to backend and database design.',
-    features: [;
-      "Frontend development"
-      "Backend APIs"
-      "Database design"
-      "DevOps integration",
-      "Testing & deployment"],
+    features: [;";
+      "Frontend development"";
+      "Backend APIs"";
+      "Database design"";
+      "DevOps integration",";
+      "Testing & deployment"],";
     link: "/services/full-stack-development", category: "IT Solutions",
-    realImplementation: true;
+    realImplementation: true;";
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+];";
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",";
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-      email: "kleber@ziontechgroup.com",
+];";
+      email: "kleber@ziontechgroup.com",";
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      addres,
+      addres,";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -126,121 +126,121 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [,
   s: string}
 }
 export const,
-  comprehensiveITSolutions: ComprehensiveItSolution[] = [,
-    i,"
-  d: "full-stack-development", nam,"
-  e: "Full-Stack Development Services",
-    taglin,"
-  e: "End-to-end web application development", pric,"
-  e: "$80/hour",
-    descriptio,"
+  comprehensiveITSolutions: ComprehensiveItSolution[] = [,";
+    i,"";
+  d: "full-stack-development", nam,"";
+  e: "Full-Stack Development Services",";
+    taglin,"";
+  e: "End-to-end web application development", pric,"";
+  e: "$80/hour",";
+    descriptio,"";
   n: "Complete full-stack development services from frontend to backend and database design.",
-    feature,
-  s: [;"
-      "Frontend development""
-      "Backend APIs""
-      "Database design""
-      "DevOps integration""
+    feature,";
+  s: [;"";
+      "Frontend development""";
+      "Backend APIs""";
+      "Database design""";
+      "DevOps integration""";
       "Testing & deployment"
-    ],
-    lin,"
-  k: "/services/full-stack-development", categor,"
+    ],";
+    lin,"";
+  k: "/services/full-stack-development", categor,"";
   y: "IT Solutions",
     realImplementatio,
   n: true,
-    contactInf,
-  o: addres,"
+    contactInf,";
+  o: addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];";
+      mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com",";
+      addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];";
+      emai,"";
+  l: "kleber@ziontechgroup.com",";
+  addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-      mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-      emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-;
-    id: 'full-stack-development',
-    name: 'Full-Stack Development Services',
-    tagline: "End-to-end web application development",
-    price: "$80/hour",
+;';
+    id: 'full-stack-development',';
+    name: 'Full-Stack Development Services',";
+    tagline: "End-to-end web application development",";
+    price: "$80/hour",";
     description: "Complete full-stack development services from frontend to backend and database design.",
-    features: [,
-      "Frontend development",
-      "Backend APIs",
-      "Database design",
-      "DevOps integration",
+    features: [,";
+      "Frontend development",";
+      "Backend APIs",";
+      "Database design",";
+      "DevOps integration",";
       "Testing & deployment"
-    ],
-    link: '/services/full-stack-development',
+    ],';
+    link: '/services/full-stack-development',';
     category: 'IT Solutions',
     realImplementation: true;
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
-  d: "full-stack-development",
-    nam,"
-  e: "Full-Stack Development Services",
-    taglin,"
-  e: "End-to-end web application development",
-    pric,"
-  e: "$80/hour",
-    descriptio,"
+    contactInfo: unknown;';
+      mobile: '+1 302 464 0950',';
+      email: 'kleber@ziontechgroup.com',';
+      mobile: '+1 302 464 0950',';
+      email: 'kleber@ziontechgroup.com',';
+      address: '364 E Main St STE 1008 Middletown DE 19709'}};";
+];      mobile: "+1 302 464 0950",";
+      email: "kleber@ziontechgroup.com",";
+      mobile: "+1 302 464 0950",";
+      email: "kleber@ziontechgroup.com",";
+      address: "364 E Main St STE 1008 Middletown DE 19709",";
+    i,"";
+  d: "full-stack-development",";
+    nam,"";
+  e: "Full-Stack Development Services",";
+    taglin,"";
+  e: "End-to-end web application development",";
+    pric,"";
+  e: "$80/hour",";
+    descriptio,"";
   n: "Complete full-stack development services from frontend to backend and database design.",
-    feature,
-  s: [,"
-      "Frontend development","
-      "Backend APIs","
-      "Database design","
-      "DevOps integration","
+    feature,";
+  s: [,"";
+      "Frontend development","";
+      "Backend APIs","";
+      "Database design","";
+      "DevOps integration","";
       "Testing & deployment"
-    ],
-    lin,"
-  k: "/services/full-stack-development",
-    categor,"
+    ],";
+    lin,"";
+  k: "/services/full-stack-development",";
+    categor,"";
   y: "IT Solutions",
     realImplementatio,
   n: true,
     contactInf,
-  o: unknown,
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
+  o: unknown,";
+      mobil,"";
+  e: "+1 302 464 0950",";
+      emai,"";
   l: "kleber@ziontechgroup.com",
-      mobil,
+      mobil,';
   e: '+1 302 464 0950',
-      emai,
+      emai,';
   l: 'kleber@ziontechgroup.com',
-      addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
+      addres,';
+  s: '364 E Main St STE 1008 Middletown DE 19709'}};";
+];      mobil,"";
+  e: "+1 302 464 0950",";
+  emai,"";
+  l: "kleber@ziontechgroup.com"";
+      mobil,"";
+  e: "+1 302 464 0950",";
+      emai,"";
+  l: "kleber@ziontechgroup.com",";
+      addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -269,8 +269,8 @@ i,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
-  l: string} addres,
-  s: string} } } addres,"
+  l: string} addres,";
+  s: string} } } addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -284,43 +284,43 @@ i,
   o: mobil,
   e: string, emai,
   l: string, addres,
-  s: string } } export const,
-  comprehensiveITSolutions: ComprehensiveItSolution[] = [ i,"
-  d: "full-stack-development", nam,"
-  e: "Full-Stack Development Services", taglin,"
-  e: "End-to-end web application development", pric,"
-  e: "$80/hour", descriptio,"
-  n: "Complete full-stack development services from frontend to backend and database design.", feature,"
-  s: [ "Frontend development" "Backend APIs" "Database design" "DevOps integration" "Testing & deployment" ], lin,"
-  k: "/services/full-stack-development", categor,"
+  s: string } } export const,";
+  comprehensiveITSolutions: ComprehensiveItSolution[] = [ i,"";
+  d: "full-stack-development", nam,"";
+  e: "Full-Stack Development Services", taglin,"";
+  e: "End-to-end web application development", pric,"";
+  e: "$80/hour", descriptio,"";
+  n: "Complete full-stack development services from frontend to backend and database design.", feature,"";
+  s: [ "Frontend development" "Backend APIs" "Database design" "DevOps integration" "Testing & deployment" ], lin,"";
+  k: "/services/full-stack-development", categor,"";
   y: "IT Solutions", realImplementatio,
-  n: true, contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "full-stack-development", nam,"
-  e: "Full-Stack Development Services", taglin,"
-  e: "End-to-end web application development", pric,"
-  e: "$80/hour", descriptio,"
-  n: "Complete full-stack development services from frontend to backend and database design.", feature,"
-  s: [ "Frontend development", "Backend APIs", "Database design", "DevOps integration", "Testing & deployment" ], lin,"
-  k: "/services/full-stack-development", categor,"
+  n: true, contactInf,";
+  o: addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"";
+  l: "kleber@ziontechgroup.com",";
+  addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"";
+  d: "full-stack-development", nam,"";
+  e: "Full-Stack Development Services", taglin,"";
+  e: "End-to-end web application development", pric,"";
+  e: "$80/hour", descriptio,"";
+  n: "Complete full-stack development services from frontend to backend and database design.", feature,"";
+  s: [ "Frontend development", "Backend APIs", "Database design", "DevOps integration", "Testing & deployment" ], lin,"";
+  k: "/services/full-stack-development", categor,"";
   y: "IT Solutions", realImplementatio,
-  n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  n: true, contactInf,";
+  o: mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", mobil,';
+  e: '+1 302 464 0950',' emai,';
+  l: 'kleber@ziontechgroup.com',' addres,';";
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"";
+  e: "+1 302 464 0950",";
+  emai,"";
+  l: "kleber@ziontechgroup.com" mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", addres,"';";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"';";

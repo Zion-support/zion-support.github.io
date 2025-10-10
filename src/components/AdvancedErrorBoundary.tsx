@@ -60,7 +60,7 @@ constructor(props: ErrorBoundaryProps) {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo,
+      errorInfo,);
       errorId: error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}
 
     });
@@ -89,14 +89,14 @@ const errorReport: ErrorReport = {
         errorBoundary: AdvancedErrorBoundary,
         errorTimestamp: new Date().toISOString(),
         errorUserAgent: typeof window !== undefined ? window.navigator.userAgent : null,
-        errorUrl: typeof window !== undefined ? window.location.href : null
+        errorUrl: typeof window !== undefined ? window.location.href : null;
       };
 
       // Send to error reporting service
       await fetch(/api/error-report, {
         method: POST,
-        headers: {
-          'Content-Type': application/json},
+        headers: {';
+          'Content-Type': application/json},);
         body: JSON.stringify(errorReport)})} catch (reportError) {
       // console.error removed for production
 }
@@ -108,7 +108,7 @@ const errorReport: ErrorReport = {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null
+      errorId: null);
     })};
 
   private handleReload = () => {
@@ -128,7 +128,7 @@ const errorReport: ErrorReport = {
           <div className=max-w-md w-full bg-white shadow-lg rounded-lg p-6>
             <div className=flex items-center mb-4>
               <div className=flex-shrink-0>
-                <svg className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke=currentColor>
+                <svg className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke=currentColor>";
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d=M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z />
                 </svg>
               </div>
@@ -189,3 +189,4 @@ const errorReport: ErrorReport = {
 }
 
 export default AdvancedErrorBoundary;
+';";

@@ -32,7 +32,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     });
 
     execSync(node automation/advanced-git-sync.cjs || true, {/* TODO: Fix JSX expression */}
-
+);
   l: true})
     });
 
@@ -50,7 +50,7 @@ const { execSync } = require(child_process); exports.config = {/* TODO: Fix JSX 
 
   e: */10 * * * *} }; exports.handler = async () => {/* TODO: Fix JSX expression */}
 
-  o: inherit} shel,
+  o: inherit} shel,';
   l: true });' execSync(node automation/advanced-git-sync.cjs || true) {/* TODO: Fix JSX expression */}
 
   o: inherit} shel,
@@ -58,12 +58,13 @@ const { execSync } = require(child_process); exports.config = {/* TODO: Fix JSX 
 
   e: 200} bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
-
+);
   k: true} tas)
   k: roadmap-runner }) }} catch (e) {/* TODO: Fix JSX expression */}
 
   e: 200} bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
-
+);
   k: false} erro)
   r: String(e) }) }} };
+';

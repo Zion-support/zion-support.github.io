@@ -2,8 +2,8 @@ import React from 'react;
 
 import Reac, t, { useState } fr, o, m rea, c, t;
 
-interface NewContentPromoBannerProp, s {;
-
+interface NewContentPromoBannerProp, s {;';
+';';
 varia, n, t?: 'in, f, o' | 'premi, u, m' | 'succe, s, s' | warni, n, g;
 
   classNa, m, e ?  : string;
@@ -14,7 +14,7 @@ interface NewContentPromoBannerProp, s {/* TODO: Fix JSX expression */}
 
 const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-
+;
   }; const featuredConten, t = [
     {/* TODO: Fix JSX expression */}
 
@@ -52,7 +52,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
     {/* TODO: Fix JSX expression */}
 
     }
-
+;
   ]; if (isDismiss, e, d) return, nul, l;
 
   return(<div, classNam, e = {${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n}>
@@ -78,7 +78,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
               <span, className=te, x, t-lg, fon, t-bo, l, d>🚀 NEW, CONTENT, ALERT</sp, a, n>
               <Star, className=w-5 h-5, animat, e-sp, i, n />
             </div>
-            <h3, className=te, x, t-xl, fon, t-bold, m, b-2>
+            <h3, className=te, x, t-xl, fon, t-bold, m, b-2>);
               Just, Publishe, d: New, Guides, for 20, 2, 6;)
             </h3>)
             <p, className=te, x, t-whi, t, e/90, m, b-4, tex, t-sm>)
@@ -100,16 +100,16 @@ const Ico, n = it, e, m.ic, o, n; return (</div>
   return (<div, classNam, e = {${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n}></div>
       {/* Animated, background, elements */}
 
-      <div, className="absolute, inse, t-0, opacit, y-10></div>
-        <div, className="absolute, to, p-0, lef, t-0 w-3, 2, h-32, b, g-white, rounde, d-full, animat, e-pul, s, e /></div>
-        <div, className="absolute, botto, m-0, righ, t-0 w-2, 4, h-24, b, g-white, rounde, d-full, animat, e-boun, c, e /></div>
-        <div, className=absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-1, 6, h-16, b, g-white, rounde, d-full, animat, e-pi, n, g /></div>
-      </div>
-      <div, className="relativ, e, z-10, ma, x-w-7xl, m, x-auto, p, x-6, p, y-6></div>
-        <div, className="flex, item, s-center, justif, y-betwe, e, n></div>
-          <div, className="fl, e, x-1></div>
-            <div, className="flex, item, s-center, ga, p-3, m, b-3></div>
-              <Sparkles, className="w-6 h-6, animat, e-pul, s, e /></Sparkles>
+      <div, className="absolute, inse, t-0, opacit, y-10></div>";
+        <div, className="absolute, to, p-0, lef, t-0 w-3, 2, h-32, b, g-white, rounde, d-full, animat, e-pul, s, e /></div>";
+        <div, className="absolute, botto, m-0, righ, t-0 w-2, 4, h-24, b, g-white, rounde, d-full, animat, e-boun, c, e /></div>"
+        <div, className=absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-1, 6, h-16, b, g-white, rounde, d-full, animat, e-pi, n, g /></div>"
+      </div>";
+      <div, className="relativ, e, z-10, ma, x-w-7xl, m, x-auto, p, x-6, p, y-6></div>";
+        <div, className="flex, item, s-center, justif, y-betwe, e, n></div>";
+          <div, className="fl, e, x-1></div>";
+            <div, className="flex, item, s-center, ga, p-3, m, b-3></div>";
+              <Sparkles, className="w-6 h-6, animat, e-pul, s, e /></Sparkles>";
               <span, className="te, x, t-lg, fon, t-bo, l, d>🚀 NEW, CONTENT, ALERT</sp, a, n>
               <Star, className=w-5 h-5, animat, e-sp, i, n /></Star>
             </div>
@@ -125,10 +125,10 @@ const Ico, n = it, e, m.ic, o, n; return (</div>
 
             <div, classNam, e = grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-3, m, b-4></div>
               {/* TODO: Fix JSX expression */}
-
-                  <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className=bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p
-                  ></Link>
-                    <div, className="flex, item, s-center, ga, p-2, m, b-2></div>
+"
+                  <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className=bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"
+                  ></Link>";
+                    <div, className="flex, item, s-center, ga, p-2, m, b-2></div>";
                       <Icon, className="w-4 h-4, tex, t-whi, t, e/80 /></Icon>
                       <span, className=te, x, t-xs, fon, t-medium, tex, t-whi, t, e/80>{it, e, m.cate, g, o, r, y}</sp, a, n>
                     </div>
@@ -136,7 +136,7 @@ const Ico, n = it, e, m.ic, o, n; return (</div>
                       {it, e, m.t, i, t, l, e}
 
                     </h4>
-                    <p, classNam, e = te, x, t-xs, tex, t-whi, t, e/70, m, t-1, lin, e-cla, m, p-2>
+                    <p, classNam, e = te, x, t-xs, tex, t-whi, t, e/70, m, t-1, lin, e-cla, m, p-2>);
                       {it, e, m.description})
                     </p>)
                     </h4>
@@ -183,10 +183,10 @@ const Ico, n = it, e, m.ic, o, n; return (</div>
               <div, className=flex, item, s-center, ga, p-1></div>
                 <sp, a, n>New, Case, Studies</sp, a, n>
               </div>
-              <div, className=flex, item, s-center, ga, p-1></div>
-            {/* Action, button, s */}
-
-            <div, classNam, e = "flex, fle, x-wrap, ga, p-3></div>
+              <div, className=flex, item, s-center, ga, p-1></div>"
+            {/* Action, button, s */}"
+";
+            <div, classNam, e = "flex, fle, x-wrap, ga, p-3></div>";
               <Link, t, o="/bl, o, g
                 className=bg-white, tex, t-purp, l, e-600, hove, r: bg-whi, t, e/90, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2
               ></Link>
@@ -194,14 +194,14 @@ const Ico, n = it, e, m.ic, o, n; return (</div>
                 Read, All, Articles;
 
                 <Link, className=w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m /></Link>
-              </Li, n, k>
+              </Li, n, k>";
               <Link, t, o="/ca, s, e-studi, e, s
                 className=border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2
               ></Link>
                 <TrendingUp, className=w-4 h-4 /></TrendingUp>
                 View, Case, Studies;
 
-              </Li, n, k>
+              </Li, n, k>";
               <Link, t, o="/servic, e, s
                 className=border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2
               ></Link>
@@ -211,14 +211,14 @@ const Ico, n = it, e, m.ic, o, n; return (</div>
               </Li, n, k>
             </div>
             {/* S, t, a, t, s */}
-
+";
             <div, classNam, e = "flex, item, s-center, ga, p-6, m, t-4, tex, t-sm, tex, t-whi, t, e/80></div>
               <div, className=flex, item, s-center, ga, p-1></div>
                 <sp, a, n>New, Article, s</sp, a, n>
               </div>
               <div, className=flex, item, s-center, ga, p-1></div>
                 <sp, a, n>New, Case, Studies</sp, a, n>
-              </div>
+              </div>";
               <div, className="flex, item, s-center, ga, p-1></div>
                 <span, className=fo, n, t-semibo, l, d>50+</sp, a, n>
                 <sp, a, n>Expert, Insight, s</sp, a, n>
@@ -233,7 +233,7 @@ const Ico, n = it, e, m.ic, o, n; return (</div>
           </button>
         </div>
       </div>
-    </div>
-  )};
-
-export default React.me, m, o(NewContentPromoBann, e, r);"`
+    </div>"
+  )};"
+";
+export default React.me, m, o(NewContentPromoBann, e, r);"`';";`;

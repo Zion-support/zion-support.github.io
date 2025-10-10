@@ -1,10 +1,10 @@
-const { withSentry } = require('../withSentry.cjs');
+const { withSentry } = require('../withSentry.cjs');';
 const { isValidEmail } = require('../emailUtils.cjs');
 
-async function handler(req, res) {
+async function handler(req, res) {';
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Content-Type', 'application/json');
+    res.statusCode = 405;';
+    res.setHeader('Content-Type', 'application/json');';
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return}
 
@@ -12,14 +12,14 @@ async function handler(req, res) {
 const { email } = req.body || {};
 
     if (!email) {
-      res.statusCode = 400;
-      res.setHeader('Content-Type', 'application/json');
+      res.statusCode = 400;';
+      res.setHeader('Content-Type', 'application/json');';
       res.end(JSON.stringify({ error: 'Email is required' }));
       return}
 
     if (!isValidEmail(email)) {
-      res.statusCode = 400;
-      res.setHeader('Content-Type', 'application/json');
+      res.statusCode = 400;';
+      res.setHeader('Content-Type', 'application/json');';
       res.end(JSON.stringify({ error: 'Invalid email format' }));
       return}
 
@@ -29,26 +29,26 @@ const { email } = req.body || {};
     // 2. Add to your email marketing service (Mailchimp, ConvertKit, etc.)
     // 3. Send confirmation email
 
-    // console.log removed for production
+    // console.log removed for production';
     console.log('Newsletter subscription:', {
-      email: req.body.email,
+      email: req.body.email,);
       timestamp: new Date().toISOString()
     });
 
-    res.statusCode = 200;
+    res.statusCode = 200;';
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-      success: true, 
+      success: true, ';
       message: 'Successfully subscribed to newsletter',
-      email 
+      email );
     }))} catch (error) {
     // console.error removed for production
-res.statusCode = 500;
+res.statusCode = 500;';
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      error: 'Failed to subscribe to newsletter',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    res.end(JSON.stringify({ ';
+      error: 'Failed to subscribe to newsletter',';
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined);
     }))}
 }
 
-module.exports = withSentry(handler);
+module.exports = withSentry(handler);';

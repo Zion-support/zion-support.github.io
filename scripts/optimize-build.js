@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
-
+import fs from 'fs;';
+';';
 import path from 'path;
 
 import { glob } from glob;
@@ -67,48 +67,48 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
 
 const pages = [;;;
 
-    {/* TODO: Fix JSX expression */}
-
+    {/* TODO: Fix JSX expression */}';
+';';
   q: 'daily },
     {/* TODO: Fix JSX expression */}
-
+';
   q: 'monthly },
     {/* TODO: Fix JSX expression */}
-
+';
   q: 'weekly },
     {/* TODO: Fix JSX expression */}
-
+';
   q: 'weekly },
     {/* TODO: Fix JSX expression */}
-
+';
   q: 'weekly },
     {/* TODO: Fix JSX expression */}
-
+';
   q: 'monthly },
     {/* TODO: Fix JSX expression */}
-
+';
   q: 'weekly }
-
+];
   ];
 
 ;
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8?>;;
-
+";
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9>,
 ${pages.map(page =>   <url>),
     <loc>https://ziontechgroup.com${page.url}</loc>;
-
+";`;
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;;
-
+";
 <urlset xmlns="htt,
   p://www.sitemaps.org/schemas/sitemap/0.9></urlset>
 ${/* TODO: Fix JSX expression */}
 
-  s://ziontechgroup.com${page.url}</loc>
+  s://ziontechgroup.com${page.url}</loc>';
     <lastmod>${new Date().toISOString().split('T)[0]}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
+    <priority>${page.priority}</priority>';`;
   </url>`).join('\n')}
 
 </urlset>;
@@ -177,7 +177,7 @@ const issues = [];;
 const stats = fs.statSync(file);;
 
     if (stats.size > 100000) { // 100KB;
-
+`;
       issues.push(`Large file detected: ${file} (${Math.round(stats.size / 1024)}KB))}
 
   }
@@ -195,20 +195,20 @@ const stats = fs.statSync(file);;
 
   if (issues.length > 0) {/* TODO: Fix JSX expression */}
 
-    issues.forEach(issue => // // console.log removed for production
+    issues.forEach(issue => // // console.log removed for production);
 )} else {/* TODO: Fix JSX expression */}
 
   }
 
 }
-
+;
 // Main optimization function;
 
 async function optimize() {
   // // console.log removed for production
 try {
     // Create public directory if it doesnt exist;
-
+';
     if (!fs.existsSync('public)) {
       fs.mkdirSync(public);
 
@@ -254,5 +254,6 @@ process.exit(1)} catch (error) {/* TODO: Fix JSX expression */}
 // Run optimization;
 
 optimize();
-
+";
 optimize();"
+';";`;

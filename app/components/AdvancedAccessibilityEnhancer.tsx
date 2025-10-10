@@ -69,7 +69,7 @@ const style = document.createElement(style);;
       // Add keyboard navigation support;
 
 const handleKeyDown = (e: KeyboardEvent) => {;;;
-
+';
         if (e.key === 'Tab) {
           document.body.classList.add(keyboard-navigation);
 
@@ -118,5 +118,6 @@ const cleanup = initAccessibility();;
 
     </div>
   );}
-
-export default AdvancedAccessibilityEnhancer;
+"
+export default AdvancedAccessibilityEnhancer;"
+';";

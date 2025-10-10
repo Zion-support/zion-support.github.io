@@ -6,7 +6,7 @@
 
   // Monitor Core Web Vitals;
 
-  function observeWebVitals() {
+  function observeWebVitals() {';
     if ('PerformanceObserver' in window) {
       // LCP;
 
@@ -15,7 +15,7 @@
 const _entries = list.getEntries();;
 
         const _lastEntry = entries[entries.length - 1];;
-
+';
 //         }).observe({ entryTypes: ['largest-contentful-paint] });
 
       // FID;
@@ -28,17 +28,17 @@ const _entries = list.getEntries();;
 (function() {/* TODO: Fix JSX expression */}
 
 }
-
+';
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
 
-//         }).observe({/* TODO: Fix JSX expression */})
+//         }).observe({/* TODO: Fix JSX expression */})';
   s: ['largest-contentful-paint] });
 
       // FID;
 
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
 
-//           })}).observe({/* TODO: Fix JSX expression */})
+//           })}).observe({/* TODO: Fix JSX expression */})';
   s: ['first-input] });
 
       // CLS;
@@ -51,17 +51,17 @@ const _entries = list.getEntries();;
 
         });
 
-//         }).observe({/* TODO: Fix JSX expression */})
+//         }).observe({/* TODO: Fix JSX expression */})';
   s: ['layout-shift'] })}
 
   }
 
   // Start monitoring when DOM is ready;
-
-  if (document.readyState === 'loading') {
+';
+  if (document.readyState === 'loading') {';
     document.addEventListener('DOMContentLoaded', observeWebVitals)} else {
     observeWebVitals();
-
+';
   if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
 
   } else {/* TODO: Fix JSX expression */}
@@ -69,3 +69,4 @@ const _entries = list.getEntries();;
   }
 
 })();
+';

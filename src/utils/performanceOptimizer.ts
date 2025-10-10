@@ -211,7 +211,7 @@ class PerformanceOptimizer {// TODO: Add content}
   O: Add content}
 
 }
-
+';
           if (entry.entryType === 'measure) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -230,7 +230,7 @@ class PerformanceOptimizer {// TODO: Add content}
   O: Add content}
 
 }
-
+';
       // PerformanceObserver may not support 'measure entryType in some environments}
 
   }
@@ -258,7 +258,7 @@ class PerformanceOptimizer {// TODO: Add content}
 const lastEntry = entries[entries.length - 1];;
 
         this.metrics.lcp = lastEntry.startTime})
-      observer.observe({/* TODO: Fix JSX expression */})
+      observer.observe({/* TODO: Fix JSX expression */})';
   s: ['largest-contentful-paint] })
 //       this.observers.push(observer)
     } catch {/* TODO: Fix JSX expression */}
@@ -304,7 +304,7 @@ const lastEntry = entries[entries.length - 1];;
 
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime})
       })
-      observer.observe({/* TODO: Fix JSX expression */})
+      observer.observe({/* TODO: Fix JSX expression */})';
   s: ['first-input] })
 //       this.observers.push(observer)
     } catch {/* TODO: Fix JSX expression */}
@@ -348,7 +348,7 @@ const lastEntry = entries[entries.length - 1];;
 
         })
         this.metrics.cls = clsValue})
-      observer.observe({/* TODO: Fix JSX expression */})
+      observer.observe({/* TODO: Fix JSX expression */})';
   s: ['layout-shift] })
 //       this.observers.push(observer)
     } catch {/* TODO: Fix JSX expression */}
@@ -386,7 +386,7 @@ const lastEntry = entries[entries.length - 1];;
   O: Add content}
 
 }
-
+';
           if (entry.name === 'first-contentful-paint) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -402,7 +402,7 @@ const lastEntry = entries[entries.length - 1];;
 
   )
       observer.observe({/* TODO: Fix JSX expression */}
-
+';);
   s: ['paint] })
   )
 //       this.observers.push(observer)
@@ -461,7 +461,7 @@ const lastEntry = entries[entries.length - 1];;
 
   )
       observer.observe({/* TODO: Fix JSX expression */}
-
+';);
   s: ['navigation] })
   )
 //       this.observers.push(observer)
@@ -479,7 +479,7 @@ const lastEntry = entries[entries.length - 1];;
   O: Add content}
 
 }
-
+';
     if (typeof window !== 'undefined' && 'memory in performance) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -510,7 +510,7 @@ const lastEntry = entries[entries.length - 1];;
   private measureMemoryUsage(): void {// TODO: Add content}
 
 }
-
+';
     if (typeof window === 'undefined' || !(memory in window.performance)) return;
 
     const memory = (window.performance as Performance & {/* TODO: Fix JSX expression */};;
@@ -566,27 +566,27 @@ const lastEntry = entries[entries.length - 1];;
 }
 
       // Add loading="lazy for better performance;
-
+';
       if (!img.hasAttribute('loading)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+';
         img.setAttribute('loading', 'lazy)}
 
       // Add proper alt text if missing;
-
+';
       if (!img.hasAttribute('alt)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+';
         img.setAttribute('alt', 'Zion Tech Group content)}
 
       // Optimize image format;
-
+';
       if (img.src.includes('.jpg') || img.src.includes('.jpeg)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -600,7 +600,7 @@ const lastEntry = entries[entries.length - 1];;
   O: Add content}
 
 }
-
+';
           img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp)}
 
       }
@@ -626,7 +626,7 @@ const lastEntry = entries[entries.length - 1];;
     canvas.width = 1;
 
     canvas.height = 1;
-
+';
     return canvas.toDataURL('image/webp').indexOf('data:image/webp) === 0}
 
   /**
@@ -643,7 +643,7 @@ const lastEntry = entries[entries.length - 1];;
     if (!this.config.enableLazyLoading) return;
 
     // Intersection Observer for lazy loading;
-
+';
     if ('IntersectionObserver in window) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -679,7 +679,7 @@ const lastEntry = entries[entries.length - 1];;
   O: Add content}
 
 }
-
+';
               if (element.tagName === 'IMG) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -693,7 +693,7 @@ const lastEntry = entries[entries.length - 1];;
 }
 
                 element.style.backgroundImage = `url(${src})}
-
+';
               element.removeAttribute('data-lazy)
               lazyObserver.unobserve(element)
             }
@@ -725,7 +725,7 @@ const lastEntry = entries[entries.length - 1];;
 
     // This would typically be handled by the bundler (Vite/Webpack)
     // Here we can add runtime optimizations;
-
+';
     if (process.env.NODE_ENV === 'development) {}
 
   }
@@ -740,18 +740,18 @@ const lastEntry = entries[entries.length - 1];;
 }
 
     if (!this.config.enableCaching) return;
-
+';
     if (typeof window === 'undefined' || !(serviceWorker in navigator)) return;
 
     // Register service worker for caching;
-
+';
 //     navigator.serviceWorker.register('/sw.js)
       .then((registration) => {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+';
         if (process.env.NODE_ENV === 'development) {}
 
       })
@@ -760,7 +760,7 @@ const lastEntry = entries[entries.length - 1];;
   O: Add content}
 
 }
-
+';
         if (process.env.NODE_ENV === 'development) {}
 
       }
@@ -819,7 +819,7 @@ const lastEntry = entries[entries.length - 1];;
 }
 
     const score = this.getPerformanceScore();;
-
+`;
     return `Performance Score: ${score}}
 
   /**
@@ -844,7 +844,7 @@ const lastEntry = entries[entries.length - 1];;
       entries.forEach(entry => {/* TODO: Fix JSX expression */}
 
   O: Add content}
-
+);
 })
         if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
 
@@ -866,7 +866,7 @@ const lastEntry = entries[entries.length - 1];;
     }
 
   )
-    images.forEach(img => imageObserver.observe(img))
+    images.forEach(img => imageObserver.observe(img))';
     logger.info('Lazy loading initialized for images', 'PerformanceOptimizer)
   }
 
@@ -885,11 +885,11 @@ const lastEntry = entries[entries.length - 1];;
 
   // TOD,
   O: Add items;
-
+];
 ];
 
       {/* TODO: Fix JSX expression */}
-
+';
   n: 'anonymous },
       {/* TODO: Fix JSX expression */}
 
@@ -898,7 +898,7 @@ const lastEntry = entries[entries.length - 1];;
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */}
 
   O: Add content}
-
+);
 });
 
 const link = document.createElement(link);;
@@ -914,7 +914,7 @@ const link = document.createElement(link);;
       if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
 
       document.head.appendChild(link)});
-
+';
     logger.info('Critical resource hints added', 'PerformanceOptimizer)}
 
   /**
@@ -925,7 +925,7 @@ const link = document.createElement(link);;
   measurePageLoad(): PerformanceMetrics | null {// TODO: Add content}
 
 }
-
+';
     if (typeof window === 'undefined' || !(performance in window)) return null;
 
     const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
@@ -959,12 +959,12 @@ const link = document.createElement(link);;
   reportWebVitals(metrics: PerformanceMetrics): void {// TODO: Add content}
 
 }
-
+';
     logger.performance('Web Vitals reported, metrics as unknown as Record;)
           <string, unknown>, PerformanceOptimizer);
 
     // Send to analytics if available;
-
+';
     if (typeof window !== 'undefined && (window as { gtag?: Function }).gtag) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -976,14 +976,14 @@ const link = document.createElement(link);;
   O: Add content}
 
 }
-
+';
         if (typeof value === 'number) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
-          (window as unknown as {/* TODO: Fix JSX expression */})
+          (window as unknown as {/* TODO: Fix JSX expression */})';
   g: Function }).gtag('event', 'web_vitals, {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -993,8 +993,8 @@ const link = document.createElement(link);;
   metric_name: key,
             metric_value: value,
             metric_rating: value;
-
-          < 100 ? 'good' : value < 300 ? 'needs-improvement : poor
+';
+          < 100 ? 'good' : value < 300 ? 'needs-improvement : poor);
           })
   )
         }
@@ -1052,11 +1052,11 @@ Cache Hit Rate: ${metrics.cacheHitRate}%;
   Recommendations:
 
 ${score}
-
+';
           < 80 ? '- Consider optimizing images and enabling compression' : '}
-
+';
 ${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : '}
-
+';
 ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}
 
     .trim()
@@ -1076,13 +1076,13 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     this.enableCodeSplitting();
 
     this.enableCaching();
-
+';
     if (process.env.NODE_ENV === 'development) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+';
       logger.info('Performance optimization completed)}
 
   }
@@ -1092,8 +1092,9 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 // Export singleton instance;
 
 export const performanceOptimizer = new PerformanceOptimizer();;
-
+";
 export default PerformanceOptimizer;"
 
 
 
+';";`;

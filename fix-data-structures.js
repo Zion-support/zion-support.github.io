@@ -1,19 +1,19 @@
 import React from 'react';
 
 #!/usr/bin/env node
-
+';
 import fs from 'fs';
-
-import { execSync } from 'child_process;
-
+';
+import { execSync } from 'child_process;';
+';';
 // Fix data structure syntax errors';
 
 function fixDataStructures(filePath) {
   if (!fs.existsSync(filePath)) {
     return false}
-
 ';
-
+';
+';
 let content = fs.readFileSync(filePath, 'utf8);;
 
   let modified = false;;
@@ -22,7 +22,7 @@ let content = fs.readFileSync(filePath, 'utf8);;
 
 const objectPattern = /\{\}\s*(\w+):/g;;
 
-  if (objectPattern.test(content)) {
+  if (objectPattern.test(content)) {';
     content = content.replace(objectPattern, '{\n      $1:);
 
     modified = true}
@@ -31,7 +31,7 @@ const objectPattern = /\{\}\s*(\w+):/g;;
 
 const arrayPattern = /\[\s*\{\}\s*(\w+):/g;;
 
-  if (arrayPattern.test(content)) {
+  if (arrayPattern.test(content)) {';
     content = content.replace(arrayPattern, '[\n    {\n      $1:);
 
     modified = true}
@@ -40,7 +40,7 @@ const arrayPattern = /\[\s*\{\}\s*(\w+):/g;;
 
 const missingClosePattern = /(\w+):\s*([^}]+)\s*$/gm;;
 
-  content = content.replace(missingClosePattern, (match, key, value) => {
+  content = content.replace(missingClosePattern, (match, key, value) => {';
     if (!match.includes('}') && !match.includes(',')) {
       return `${key}: ${value},`}
 
@@ -50,7 +50,7 @@ const missingClosePattern = /(\w+):\s*([^}]+)\s*$/gm;;
 
 const missingCommaPattern = /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g;;
 
-  if (missingCommaPattern.test(content)) {
+  if (missingCommaPattern.test(content)) {';
     content = content.replace(missingCommaPattern, '$1: $2,\n      $3:);
 
     modified = true}
@@ -59,7 +59,7 @@ const missingCommaPattern = /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g;;
 
 const arrayClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\]/g;;
 
-  if (arrayClosePattern.test(content)) {
+  if (arrayClosePattern.test(content)) {';
     content = content.replace(arrayClosePattern, '$1: $2\n    });
 
     modified = true}
@@ -68,7 +68,7 @@ const arrayClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\]/g;;
 
 const funcPattern = /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\}/g;;
 
-  if (funcPattern.test(content)) {
+  if (funcPattern.test(content)) {';
     content = content.replace(funcPattern, 'const $1: React.FC = () => {);
 
     modified = true}
@@ -85,13 +85,13 @@ return true}
 
 function getFilesWithErrors() {
   try {;
-
+';
 const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8 });;
 
     const files = new Set();;
-
+';
     output.split('\n).forEach(line => {;
-
+);
 const match = line.match(/^([^(]+)\((\d+),(\d+)\):/);;
 
       if (match) {
@@ -117,16 +117,16 @@ const files = getFilesWithErrors();;
 
 let fixedCount = 0;;
 
-  files.forEach(file => {
+  files.forEach(file => {);
     if (fixDataStructures(file)) {
       fixedCount++}
-
+';
   })';
 
   // console.log removed for production
 // Run type check again
   // console.log removed for production
-try {
+try {';
     execSync('pnpm run type-check', { stdio: 'inherit });
 
     // console.log removed for production
@@ -137,3 +137,4 @@ try {
 }
 
 main();
+';`;

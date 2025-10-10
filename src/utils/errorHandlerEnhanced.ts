@@ -38,7 +38,7 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
 export const _errorHandler = (error: AppError | Error) => {// TODO: Add content};;
 
 }
-
+';
   const isDevelopment = process.env.NODE_ENV === 'development;;
 
   const appError = error instanceof AppError ? error : new AppError(error.message);;
@@ -53,7 +53,7 @@ export const _errorHandler = (error: AppError | Error) => {// TODO: Add content}
 
 };
 
-  messag,
+  messag,';
   e: appError.isOperational ? appError.message : 'An unexpected error occurred',
     statusCod,
   e: appError.statusCode || 500}};
@@ -78,7 +78,7 @@ export const asyncHandler = (f,;;
   O: Add content}
 
 }
-
+';
     if (next && typeof next === 'function') {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -91,3 +91,4 @@ export const asyncHandler = (f,;;
 
   )
 }
+';

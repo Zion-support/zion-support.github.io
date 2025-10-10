@@ -33,7 +33,7 @@ interface EnvConfig {
   ENABLE_PERFORMANCE_MONITORING: boolean;
 
   // Logging;
-
+';
   LOG_LEVEL: 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | NONE;
 
   // Build Configuration;
@@ -66,18 +66,18 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
 
     return EnvironmentConfig.instance}
 
-  private getEnvVar(key: string, defaultValue?: string): string {
+  private getEnvVar(key: string, defaultValue?: string): string {';
     if (typeof process !== 'undefined && process.env) {
       // Check both regular and NEXT_PUBLIC_ prefixed versions;
 
   private getEnvVar(ke)
   y: string, defaultValue?: string): string {/* TODO: Fix JSX expression */}
-
+';
       return process.env[key] || process.env[`NEXT_PUBLIC_${key}`] || defaultValue || '}
-
+';
     return defaultValue || '}
 
-  private getBooleanEnvVar(ke,
+  private getBooleanEnvVar(ke,);
   y: string, defaultValu)
   e: boolean = false): boolean {/* TODO: Fix JSX expression */}
 
@@ -94,32 +94,32 @@ const _value = this.getEnvVar(key);;
   private loadConfig(): EnvConfig {
     return {
       // App Configuration;
-
-      NODE_ENV: (this.getEnvVar('NODE_ENV', 'development') as any) || 'development,
-      APP_URL: this.getEnvVar('APP_URL', 'https: //ziontechgroup.com),
+';
+      NODE_ENV: (this.getEnvVar('NODE_ENV', 'development') as any) || 'development,';
+      APP_URL: this.getEnvVar('APP_URL', 'https: //ziontechgroup.com),';
       APP_NAME: this.getEnvVar('APP_NAME', 'Zion Tech Group),
 
       // Analytics;
-
+';
       GOOGLE_ANALYTICS_ID: this.getEnvVar('GOOGLE_ANALYTICS_ID),
       // API Configuration;
-
-      API_BASE_URL: this.getEnvVar('API_BASE_URL', 'https: //api.ziontechgroup.com),
+';
+      API_BASE_URL: this.getEnvVar('API_BASE_URL', 'https: //api.ziontechgroup.com),';
       API_TIMEOUT: this.getNumberEnvVar('API_TIMEOUT, 30000),
 
       // Feature Flags;
-
-      ENABLE_ANALYTICS: this.getBooleanEnvVar('ENABLE_ANALYTICS, true),
-      ENABLE_ERROR_TRACKING: this.getBooleanEnvVar('ENABLE_ERROR_TRACKING, true),
+';
+      ENABLE_ANALYTICS: this.getBooleanEnvVar('ENABLE_ANALYTICS, true),';
+      ENABLE_ERROR_TRACKING: this.getBooleanEnvVar('ENABLE_ERROR_TRACKING, true),';
       ENABLE_PERFORMANCE_MONITORING: this.getBooleanEnvVar('ENABLE_PERFORMANCE_MONITORING, true),
 
       // Logging;
-
+';
       LOG_LEVEL: (this.getEnvVar('LOG_LEVEL', 'INFO') as any) || 'INFO,
 
       // Build Configuration;
-
-      BUILD_ID: this.getEnvVar('BUILD_ID),
+';
+      BUILD_ID: this.getEnvVar('BUILD_ID),';
       VERSION: this.getEnvVar('VERSION', '1.0.0)}}
 
   private validate(): void {;
@@ -128,16 +128,16 @@ const errors: string[] = [];
 
 ,
     // Validate NODE_ENV;
-
-    if (!['development', 'production', 'test].includes(this.config.NODE_ENV)) {
+';
+    if (!['development', 'production', 'test].includes(this.config.NODE_ENV)) {`;
       errors.push(`Invalid NODE_ENV: ${this.config.NODE_ENV})}
 
     // Validate URLs;
 
-    if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {
+    if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {`;
       errors.push(`Invalid APP_URL: ${this.config.APP_URL});
 
-  private getNumberEnvVar(ke,
+  private getNumberEnvVar(ke,);
   y: string, defaultValu)
   e: number): number {/* TODO: Fix JSX expression */}
 
@@ -163,13 +163,13 @@ const errors: string[] = [];
 
     // Validate timeout;
 
-    if (this.config.API_TIMEOUT < 0) {
+    if (this.config.API_TIMEOUT < 0) {`;
       errors.push(`API_TIMEOUT must be positive: ${this.config.API_TIMEOUT})}
 
     if (errors.length > 0) {
       //       // In production, we might want to throw, but in development just warn;
-
-      if (this.config.NODE_ENV === 'production) {
+';
+      if (this.config.NODE_ENV === 'production) {';`;
         throw new Error(`Environment validation failed: ${errors.join(', ')});
 
     if (this.config.API_TIMEOUT < 0) {/* TODO: Fix JSX expression */}
@@ -177,7 +177,7 @@ const errors: string[] = [];
   positive: ${this.config.API_TIMEOUT})}
 
     if (errors.length > 0) {/* TODO: Fix JSX expression */}
-
+';
   failed: ${errors.join(', ')})}
 
     }
@@ -256,5 +256,5 @@ export const env = EnvironmentConfig.getInstance();;
 export type { EnvConfig };
 
 export default env;
-
-`
+`;
+`';`;

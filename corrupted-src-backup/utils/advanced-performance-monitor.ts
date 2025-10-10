@@ -166,7 +166,7 @@ const _entries = list.getEntries();;
         this.handlePerformanceEntry(entry)})});
 
     try {
-      this.observer.observe({)
+      this.observer.observe({)';
         entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'layout-shift'])
   private setupPerformanceObserver(): void {/* TODO: Fix JSX expression */}
 
@@ -184,26 +184,26 @@ const _entries = list.getEntries();;
    * Setup Web Vitals monitoring;
 
    */
-  private setupWebVitals(): void {
+  private setupWebVitals(): void {';
     if (typeof window === 'undefined) return;
-
+';
     // Dynamic import to avoid bundle size impact';
-
+';
     import('web-vitals')
       .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(metric => {)
+        getCLS(metric => {)';
           this.updateMetric('cumulativeLayoutShift, metric.value)});
 
-        getFID(metric => {)
+        getFID(metric => {)';
           this.updateMetric('firstInputDelay, metric.value)});
 
-        getFCP(metric => {)
+        getFCP(metric => {)';
           this.updateMetric('firstContentfulPaint, metric.value)});
 
-        getLCP(metric => {)
+        getLCP(metric => {)';
           this.updateMetric('largestContentfulPaint, metric.value)});
 
-        getTTFB(metric => {)
+        getTTFB(metric => {)';
           this.updateMetric('loadTime', metric.value)})})
       .catch(error => {)
   private setupWebVitals(): void {/* TODO: Fix JSX expression */}
@@ -259,7 +259,7 @@ const _entries = list.getEntries();;
   private handlePerformanceEntry(entry: PerformanceEntry): void {,;
 
 const data: Partial<PerformanceData> = {,
-      timestamp: Date.now(),
+      timestamp: Date.now(),;
       url: window.location.href;
 
   private handlePerformanceEntry(entr)
@@ -272,12 +272,12 @@ const data: Partial<PerformanceData> = {,
         }
 
         break;
-
+';
       case 'largest-contentful-paint':
         data.largestContentfulPaint = entry.startTime;
 
         break;
-
+';
       case 'layout-shift:;
 
 const _layoutShiftEntry = entry as any;;
@@ -334,7 +334,7 @@ const _latestData = this.data[this.data.length - 1];;
         networkInfo: null;
 
         [metric]: value,
-  private updateMetric(metri,
+  private updateMetric(metri,);
   c: keyof PerformanceData, valu)
   e: unknown): void {/* TODO: Fix JSX expression */}
 
@@ -377,38 +377,38 @@ const warnings: string[] = [];
     if (data.loadTime > this.thresholds.loadTime) {,
       warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`)}
 
-    if (data.firstContentfulPaint > this.thresholds.firstContentfulPaint) {
+    if (data.firstContentfulPaint > this.thresholds.firstContentfulPaint) {`;
       warnings.push(`FCP ${data.firstContentfulPaint}ms exceeds threshold ${this.thresholds.firstContentfulPaint}ms`)
       )}
 
-    if (data.largestContentfulPaint > this.thresholds.largestContentfulPaint) {
+    if (data.largestContentfulPaint > this.thresholds.largestContentfulPaint) {`;
       warnings.push(`LCP ${data.largestContentfulPaint}ms exceeds threshold ${this.thresholds.largestContentfulPaint}ms`)
       )}
 
-    if (data.cumulativeLayoutShift > this.thresholds.cumulativeLayoutShift) {
+    if (data.cumulativeLayoutShift > this.thresholds.cumulativeLayoutShift) {`;
       warnings.push(`CLS ${data.cumulativeLayoutShift} exceeds threshold ${this.thresholds.cumulativeLayoutShift}`)
       )}
 
-    if (data.firstInputDelay > this.thresholds.firstInputDelay) {
+    if (data.firstInputDelay > this.thresholds.firstInputDelay) {`;
       warnings.push(`FID ${data.firstInputDelay}ms exceeds threshold ${this.thresholds.firstInputDelay}ms`)
   private checkThresholds(dat)
   a: PerformanceData): void {/* TODO: Fix JSX expression */}
-
+`;
       warnings.push(`Load time ${data.loadTime}ms exceeds threshold ${this.thresholds.loadTime}ms`)}
-
-    if (data.firstContentfulPaint > this.thresholds.firstContentfulPaint) {/* TODO: Fix JSX expression */}`
+`;
+    if (data.firstContentfulPaint > this.thresholds.firstContentfulPaint) {/* TODO: Fix JSX expression */}``;
         `FCP ${data.firstContentfulPaint}ms exceeds threshold ${this.thresholds.firstContentfulPaint}ms`
       )}
-
-    if (data.largestContentfulPaint > this.thresholds.largestContentfulPaint) {/* TODO: Fix JSX expression */}`
+`;
+    if (data.largestContentfulPaint > this.thresholds.largestContentfulPaint) {/* TODO: Fix JSX expression */}``;
         `LCP ${data.largestContentfulPaint}ms exceeds threshold ${this.thresholds.largestContentfulPaint}ms`
       )}
-
-    if (data.cumulativeLayoutShift > this.thresholds.cumulativeLayoutShift) {/* TODO: Fix JSX expression */}`
+`;
+    if (data.cumulativeLayoutShift > this.thresholds.cumulativeLayoutShift) {/* TODO: Fix JSX expression */}``;
         `CLS ${data.cumulativeLayoutShift} exceeds threshold ${this.thresholds.cumulativeLayoutShift}`
       )}
-
-    if (data.firstInputDelay > this.thresholds.firstInputDelay) {/* TODO: Fix JSX expression */}`
+`;
+    if (data.firstInputDelay > this.thresholds.firstInputDelay) {/* TODO: Fix JSX expression */}``;
         `FID ${data.firstInputDelay}ms exceeds threshold ${this.thresholds.firstInputDelay}ms`
       )}
 
@@ -464,7 +464,7 @@ let _score = 100;;
 
     return Math.max(0, Math.min(100, score));
 
-  private calculatePerformanceScore(metric,
+  private calculatePerformanceScore(metric,);
   s: {/* TODO: Fix JSX expression */})
   }): number {/* TODO: Fix JSX expression */}
 
@@ -504,5 +504,5 @@ let _score = 100;;
 // const performanceMonitor = new AdvancedPerformanceMonitor();;
 
 export default performanceMonitor;
-
-`
+`;
+`';`;

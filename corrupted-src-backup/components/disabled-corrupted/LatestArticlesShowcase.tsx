@@ -4,13 +4,13 @@ impo, r, t { newArticles20, 2, 5 } fr, o, m ../conte, n, t/n, e, w-articl, e, s-
 
 const LatestArticlesShowcas, e: React.FC = () => {
   return (
-
+;
  ,;
 
 const latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); return(<section, classNam, e = py-20, b, g-whi, t, e>
       <div, className=container, m, x-auto, p, x-6>
         <div, className=te, x, t-center, m, b-12>;
-
+);
 const LatestArticlesShowcas, e: React.FC = () => { ;
 
 const latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); return (
@@ -30,7 +30,7 @@ const latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).s
         <div, classNam, e = grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8>
           {latestArticl, e, s.m, a, p(artic, l, e = > (</div>
             <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className=group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0
-            >
+            >);
 );
 
 }
@@ -74,7 +74,7 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
                     {artic, l, e.readTime}
 
                   </div>
-                  <div, className=te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l>
+                  <div, className=te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l>;
                     Read, Mor, e;
 
                     Read, Mor, e</div>
@@ -83,7 +83,7 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
                 </div>
                 <div, className=flex, fle, x-wrap, ga, p-2, m, t-4>
                   { artic, l, e.tags.sl, i, c, e(, 0, 3).m, a, p(t, a, g = > (</div>
-                    <span, ke, y = { ta, g  }, classNa, m, e = te, x, t-xs, b, g-gr, a, y-100, tex, t-gr, a, y-700, p, x-2, p, y-1, rounde, d-fu, l, l
+                    <span, ke, y = { ta, g  }, classNa, m, e = te, x, t-xs, b, g-gr, a, y-100, tex, t-gr, a, y-700, p, x-2, p, y-1, rounde, d-fu, l, l);
                     >)
                       {t, a, g})
                     </span>)
@@ -130,4 +130,5 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
     </sec, t, i, o, n>
   )};
 
-export default LatestArticlesShowcase;
+export default LatestArticlesShowcase;';
+';';

@@ -6,7 +6,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
       <div, className=absolute, inse, t-0, opacit, y-20>
         <div, className=absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e />
   return (
-
+';
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n' > {  }
 
       {/* Animated, background, elements */}</div>
@@ -15,9 +15,9 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
         <div, className=absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-7, 0, 0 />
       </div>
       <div, className=relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-8>
-        {/* Header, Sect, i, o, n */}</div>
+        {/* Header, Sect, i, o, n */}</div>);
 export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fix JSX expression */}
-
+';
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n' > {  }
 
       {/* Animated, background, elements */}
@@ -347,3 +347,4 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
       </div>
     </div>
   )}
+';

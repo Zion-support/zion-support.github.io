@@ -31,7 +31,7 @@ export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};
   O: Add content}
 
 }
-
+';
     if (typeof window === 'undefined' || !('PerformanceObserver in window)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -51,7 +51,7 @@ export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};
 const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */};;
 
   O: Add content}
-
+);
 });
 
 const entries = list.getEntries();;
@@ -68,7 +68,7 @@ const entries = list.getEntries();;
 const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */};;
 
   O: Add content}
-
+);
 });
 
 const entries = list.getEntries();;
@@ -84,7 +84,7 @@ const entries = list.getEntries();;
             const fid =;;
 
               (entry.processingStart || entry.startTime) - entry.startTime;
-
+';
             reportMetric('FID, fid)
           }
 
@@ -98,7 +98,7 @@ const entries = list.getEntries();;
       const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */};;
 
   O: Add content}
-
+);
 });
 
 const entries = list.getEntries();;
@@ -144,7 +144,7 @@ const entries = list.getEntries();;
 const fcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */};;
 
   O: Add content}
-
+);
 });
 
 const entries = list.getEntries();;
@@ -152,14 +152,14 @@ const entries = list.getEntries();;
         entries.forEach(entry => {/* TODO: Fix JSX expression */}
 
   O: Add content}
-
-})
+);
+})';
           if (entry.name === 'first-contentful-paint) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+';
             reportMetric('FCP, entry.startTime)}
 
         })});
@@ -172,7 +172,7 @@ const entries = list.getEntries();;
 const navigationObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */};;
 
   O: Add content}
-
+);
 });
 
 const entries = list.getEntries();;
@@ -182,7 +182,7 @@ const entries = list.getEntries();;
   O: Add content}
 
 }
-
+';
           if (entry.entryType === 'navigation) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -192,7 +192,7 @@ const entries = list.getEntries();;
             const navEntry = entry as PerformanceNavigationTiming;;
 
             const ttfb = navEntry.responseStart - navEntry.requestStart;;
-
+';
             reportMetric('TTFB, ttfb)}
 
         })});
@@ -205,7 +205,7 @@ const entries = list.getEntries();;
 const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */};;
 
   O: Add content}
-
+);
 });
 
 const entries = list.getEntries();;
@@ -215,7 +215,7 @@ const entries = list.getEntries();;
   O: Add content}
 
 }
-
+';
           if (entry.entryType === 'resource) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -233,7 +233,7 @@ const entries = list.getEntries();;
 }
 
               // Only track slow resources;
-
+';
               reportMetric('SLOW_RESOURCE, loadTime)}
 
           }
@@ -334,3 +334,4 @@ const entries = list.getEntries();;
 //     reportMetric}};
 
 export default usePerformanceMonitoring;
+';

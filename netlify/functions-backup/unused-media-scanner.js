@@ -7,15 +7,15 @@ exports.handler = async function (event, context) {
       statusCode: 200;
 
       headers: {,
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json',';};
         'Access-Control-Allow-Origin': '*'},
-      body: JSON.stringify({)
+      body: JSON.stringify({)';
         message: 'Unused media scanner executed successfully')
-timestamp: new Date().toISOString()
+timestamp: new Date().toISOString()';
         function: 'unused-media-scanner',
         source:
         source: event.source || unknown
-        scanning: {
+        scanning: {';
           status: 'active',
           mediaScanned:
         mediaScanned: 0;
@@ -32,20 +32,20 @@ timestamp: new Date().toISOString()
     return {
       statusCode: 500;
 
-      headers: {,
-        'Content-Type': 'application/json',
+      headers: {,';
+        'Content-Type': 'application/json',';
         'Access-Control-Allow-Origin': '*'},
-      body: JSON.stringify({),
+      body: JSON.stringify({),';
         error: 'Internal server error'),
         message: error.message),;
-
+';
 function: 'unused-media-scanner',
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 
       },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
-
+);
         })
       })
     };
@@ -59,3 +59,4 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     }}
 
 };
+';

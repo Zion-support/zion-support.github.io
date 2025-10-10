@@ -1,149 +1,149 @@
-import React from 'react;
-
-import { Link } from 'react-router-dom;
-
-import Navigation from '../components/Navigation;
-
+import React from 'react;';
+';';
+import { Link } from 'react-router-dom;';
+';';
+import Navigation from '../components/Navigation;';
+';';
 import Footer from '../components/Footer};
-
-  titl,
+';
+  titl,';';
   e: 'IoT Device Management Platform,
-      descriptio,
+      descriptio,';
   n: 'Comprehensive platform for managing, monitoring, and updating IoT devices at scale.,
-      ico,
+      ico,';
   n: ',
-      pric,
+      pric,';
   e: 'Starting at $3,500/month,
-      feature,
+      feature,';
   s: ['Device provisioning', 'Remote monitoring', 'Firmware updates', 'Device analytics', 'Security management],
-      benefit,
+      benefit,';
   s: ['Reduce management overhead by 70%', 'Improve device reliability', 'Enable remote operations],
-      marketPric,
+      marketPric,';
   e: '$5,000-15,000/month,
-      categor,
+      categor,';
   y: 'Device Management,
-      technologie,
+      technologie,';
   s: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes', 'MQTT]
     },
-      titl,
+      titl,';
   e: 'Edge Computing Solutions,
-      descriptio,
+      descriptio,';
   n: 'Real-time data processing at the edge with low latency and high performance.,
-      ico,
+      ico,';
   n: ',
-      pric,
+      pric,';
   e: 'Starting at $4,500/month,
-      feature,
+      feature,';
   s: ['Edge analytics', 'Real-time processing', 'Local data storage', 'Offline capabilities', 'Edge AI],
-      benefit,
+      benefit,';
   s: ['Reduce latency by 90%', 'Lower bandwidth costs', 'Enable offline operations],
-      marketPric,
+      marketPric,';
   e: '$7,000-20,000/month,
-      categor,
+      categor,';
   y: 'Edge Computing,
-      technologie,
+      technologie,';
   s: ['Kubernetes', 'Docker', 'TensorFlow Lite', 'OpenVINO', 'Edge TPU]
-      titl,
+      titl,';
   e: 'Smart City Solutions,
-      descriptio,
+      descriptio,';
   n: 'Comprehensive smart city infrastructure with traffic, energy, and environmental monitoring.,
-      ico,
+      ico,';
   n: ',
-      pric,
+      pric,';
   e: 'Starting at $12,000/month,
-      feature,
+      feature,';
   s: ['Traffic management', 'Energy monitoring', 'Environmental sensors', 'Public safety', 'Citizen services],
-      benefit,
+      benefit,';
   s: ['Improve city efficiency', 'Reduce energy consumption', 'Enhance citizen experience],
-      marketPric,
+      marketPric,';
   e: '$20,000-60,000/month,
-      categor,
+      categor,';
   y: 'Smart Cities,
-      technologie,
+      technologie,';
   s: ['LoRaWAN', 'NB-IoT', '5G', 'Big Data', 'AI Analytics]
-      titl,
+      titl,';
   e: 'Real-Time Data Analytics,
-      descriptio,
+      descriptio,';
   n: 'Streaming analytics for IoT data with real-time insights and alerting.,
-      ico,
+      ico,';
   n: ',
-      pric,
+      pric,';
   e: 'Starting at $3,200/month,
-      feature,
+      feature,';
   s: ['Stream processing', 'Real-time dashboards', 'Anomaly detection', 'Predictive analytics', 'Alert systems],
-      benefit,
+      benefit,';
   s: ['Make faster decisions', 'Identify issues early', 'Optimize operations],
-      categor,
+      categor,';
   y: 'Analytics,
-      technologie,
+      technologie,';
   s: ['Apache Kafka', 'Apache Flink', 'Apache Spark', 'InfluxDB', 'Grafana]
-      titl,
+      titl,';
   e: 'Predictive Maintenance Systems,
-      descriptio,
+      descriptio,';
   n: 'AI-powered predictive maintenance for industrial equipment and machinery.,
-      ico,
+      ico,';
   n: ',
-      pric,
+      pric,';
   e: 'Starting at $5,500/month,
-      feature,
+      feature,';
   s: ['Vibration analysis', 'Temperature monitoring', 'Performance tracking', 'Failure prediction', 'Maintenance scheduling],
-      benefit,
+      benefit,';
   s: ['Prevent unplanned downtime', 'Reduce maintenance costs', 'Extend equipment life],
-      marketPric,
+      marketPric,';
   e: '$8,000-25,000/month,
-      categor,
+      categor,';
   y: 'Predictive Maintenance,
-      technologie,
+      technologie,';
   s: ['Machine Learning', 'Time Series Analysis', 'Vibration Sensors', 'Thermal Cameras', 'AI Models]
-      titl,
+      titl,';
   e: 'Smart Agriculture Solutions,
-      descriptio,
+      descriptio,';
   n: 'Precision agriculture with IoT sensors, drones, and AI-powered crop management.,
-      ico,
+      ico,';
   n: ',
-      pric,
+      pric,';
   e: 'Starting at $4,000/month,
-      feature,
+      feature,';
   s: ['Soil monitoring', 'Crop health analysis', 'Weather tracking', 'Irrigation control', 'Yield optimization],
-      benefit,
+      benefit,';
   s: ['Increase crop yields by 25%', 'Reduce water usage by 30%', 'Optimize fertilizer use],
-      marketPric,
+      marketPric,';
   e: '$6,000-18,000/month,
-      categor,
+      categor,';
   y: 'Agriculture,
-      technologie,
+      technologie,';
   s: ['Soil Sensors', 'Drones', 'Satellite Imagery', 'Machine Learning', 'Precision Agriculture]
-      titl,
+      titl,';
   e: 'IoT Device Development,
-      descriptio,
+      descriptio,';
   n: 'Custom IoT device design and development for specific business requirements.,
-      ico,
+      ico,';
   n: ',
-      pric,
+      pric,';
   e: 'Starting at $15,000/project,
-      feature,
+      feature,';
   s: ['Hardware design', 'Firmware development', 'Prototyping', 'Testing & validation', 'Manufacturing support],
-      benefit,
+      benefit,';
   s: ['Custom solutions', 'Competitive advantage', 'Optimized performance],
-      marketPric,
+      marketPric,';
   e: '$25,000-100,000/project,
-      categor,
+      categor,';
   y: 'Device Development,
-      technologie,
+      technologie,';
   s: ['Arduino', 'Raspberry Pi', 'ESP32', 'ARM Cortex', 'Custom PCBs]
-titl,
+titl,';
   e: 'IoT Data Management,
-      descriptio,
+      descriptio,';
   n: 'Comprehensive data management for IoT with storage, processing, and analytics.,
-      ico,
+      ico,';
   n: '🗄️,
-      feature,
+      feature,';
   s: ['Data ingestion', 'Storage optimization', 'Data processing', 'Quality management', 'Analytics],
-      benefit,
+      benefit,';
   s: ['Handle massive data volumes', 'Ensure data quality', 'Enable advanced analytics],
-      categor,
+      categor,';
   y: 'Data Management,
-      technologie,
+      technologie,';
   s: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools]
     }
 
@@ -154,27 +154,27 @@ titl,
   return (<div>Coming Soon</div>)
   )
     
-          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50></div>
-        {/* Hero Section */}
-
-        <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20"></section>
+          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50></div>"
+        {/* Hero Section */}"
+";
+        <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20"></section>";
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className=relative max-w-7xl mx-auto px-4,
-  sm:px-6,
-  lg:px-8"></div>
-            <div className="text-center"></div>
+  sm:px-6,";
+  lg:px-8"></div>";
+            <div className="text-center"></div>";
               <h1 className="text-4xl,
   md:text-6xl font-bold mb-6></h1>
-// IoT & Edge Computing Services;
-
-          </h1>
+// IoT & Edge Computing Services;"
+"
+          </h1>";
               <p className="text-xl,
   md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto></p>
-// Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions;
-
-          </p>
-              <div className="flex flex-col,
-  sm:flex-row gap-4 justify-center"></div>
+// Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions;"
+"
+          </p>";
+              <div className="flex flex-col,";
+  sm:flex-row gap-4 justify-center"></div>";
                 <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold,
   hover:bg-cyan-50 transition-colors></button>
 // Explore IoT Solutions;
@@ -186,14 +186,14 @@ titl,
 Schedule Demo;
 
               </div>
-        </section>
-        {/* Key Benefits */}
-
+        </section>"
+        {/* Key Benefits */}"
+";
         <section className="py-16 bg-white"></section>
           <div className=max-w-7xl mx-auto px-4,
-  sm:px-6,
-  lg:px-8"></div>
-            <div className="text-center mb-12"></div>
+  sm:px-6,";
+  lg:px-8"></div>";
+            <div className="text-center mb-12"></div>";
               <h2 className="text-3xl,
   md:text-4xl font-bold text-gray-900 mb-4></h2>
 // Why Choose Our IoT & Edge Services?
@@ -204,35 +204,35 @@ Schedule Demo;
           
           
           
-          
-          
-          </h2>
+          "
+          "
+          </h2>";
               <p className="text-xl text-gray-600></p>
 Expert IoT engineers delivering scalable, secure, and intelligent connected solutions;
-
-            <div className=grid grid-cols-1,
-  md:grid-cols-2,
-  lg:grid-cols-4 gap-8"></div>
-                <div className="bg-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Wifi className="w-8 h-8 text-cyan-600" /></Wifi>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">IoT Experts</h3>
-                <p className="text-gray-600">Certified engineers with deep expertise in IoT and edge computing</p>
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Zap className="w-8 h-8 text-blue-600" /></Zap>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-Time Processing</h3>
-                <p className="text-gray-600">Ultra-low latency edge computing for critical applications</p>
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Shield className="w-8 h-8 text-green-600" /></Shield>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>
-                <p className="text-gray-600">Bank-level security with end-to-end encryption and monitoring</p>
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Target className="w-8 h-8 text-orange-600" /></Target>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>
+"
+            <div className=grid grid-cols-1,"
+  md:grid-cols-2,";
+  lg:grid-cols-4 gap-8"></div>";
+                <div className="bg-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>";
+                  <Wifi className="w-8 h-8 text-cyan-600" /></Wifi>";
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">IoT Experts</h3>";
+                <p className="text-gray-600">Certified engineers with deep expertise in IoT and edge computing</p>";
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>";
+                  <Zap className="w-8 h-8 text-blue-600" /></Zap>";
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-Time Processing</h3>";
+                <p className="text-gray-600">Ultra-low latency edge computing for critical applications</p>";
+                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>";
+                  <Shield className="w-8 h-8 text-green-600" /></Shield>";
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>";
+                <p className="text-gray-600">Bank-level security with end-to-end encryption and monitoring</p>";
+                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>";
+                  <Target className="w-8 h-8 text-orange-600" /></Target>";
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>";
                 <p className="text-gray-600>Successfully deployed 500+ IoT projects across industries</p>
         {/* Services by Category */}
-
-        {categories.map(category => ()}
-
+"
+        {categories.map(category => ()}"
+";
           <section key={category} className="py-16 bg-gray-50></section>
                   {category} Solutions;
 
@@ -243,53 +243,53 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
   lg:grid-cols-3 gap-8></div>
                 {iotServices}
 
-                  .filter(service => service.category === category)
-                  .map((service, index) => ()
-                    
-          <div key={index} className="bg-white rounded-lg shadow-lg p-6,
-  hover:shadow-xl transition-shadow"></div>
-                      <div className="text-4xl mb-4">{service.icon}</div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
-                      <div className="mb-4"></div>
-                        <div className="flex items-center justify-between mb-2"></div>
-                          <span className="text-2xl font-bold text-cyan-600">{service.price}</span>
-                          <span className="text-sm text-gray-500>Marke,
-  t: {service.marketPrice}</span>
-                        <div className="text-sm text-green-600 font-semibold></div>
-Save up to 40% vs market rates;
-
-                        <h4 className="font-semibold text-gray-900 mb-2>Key,
-  Features:</h4>
-                        <ul className="space-y-1></ul>
-                          {service.features.map((feature, featureIndex) => ()}
-
-          <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>
+                  .filter(service => service.category === category)"
+                  .map((service, index) => ()"
+                    ";
+          <div key={index} className="bg-white rounded-lg shadow-lg p-6,";
+  hover:shadow-xl transition-shadow"></div>";
+                      <div className="text-4xl mb-4">{service.icon}</div>";
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>";
+                      <p className="text-gray-600 mb-4">{service.description}</p>";
+                      <div className="mb-4"></div>";
+                        <div className="flex items-center justify-between mb-2"></div>";
+                          <span className="text-2xl font-bold text-cyan-600">{service.price}</span>";
+                          <span className="text-sm text-gray-500>Marke,"
+  t: {service.marketPrice}</span>";
+                        <div className="text-sm text-green-600 font-semibold></div>"
+Save up to 40% vs market rates;"
+";
+                        <h4 className="font-semibold text-gray-900 mb-2>Key,"
+  Features:</h4>";
+                        <ul className="space-y-1></ul>"
+                          {service.features.map((feature, featureIndex) => ()}"
+";
+          <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>";
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 /></CheckCircle>
                               {feature}
 
                             </li>
-                          ))}
-
-                        </ul>
-                        <h4 className="font-semibold text-gray-900 mb-2>Technologie,
-  s:</h4>
-                        <div className="flex flex-wrap gap-2></div>
-                          {service.technologies.map((tech, techIndex) => ()}
-
+                          ))}"
+"
+                        </ul>";
+                        <h4 className="font-semibold text-gray-900 mb-2>Technologie,"
+  s:</h4>";
+                        <div className="flex flex-wrap gap-2></div>"
+                          {service.technologies.map((tech, techIndex) => ()}"
+";
           <span key={techIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded></span>
-                              {tech}
-
-                            </span>
-                      <div className="mb-6"></div>
+                              {tech}"
+"
+                            </span>";
+                      <div className="mb-6"></div>";
                         <h4 className="font-semibold text-gray-900 mb-2>Business,
-  Benefits:</h4>
-                          {service.benefits.map((benefit, benefitIndex) => ()}
-
-          <li key={benefitIndex} className="flex items-center text-sm text-gray-600"></li>
-                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0 /></Star>
-                              {benefit}
-
+  Benefits:</h4>"
+                          {service.benefits.map((benefit, benefitIndex) => ()}"
+";
+          <li key={benefitIndex} className="flex items-center text-sm text-gray-600"></li>";
+                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0 /></Star>"
+                              {benefit}"
+";
 <button className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold,
   hover:bg-cyan-700 transition-colors></button>
                         Get IoT Consultation;
@@ -297,57 +297,58 @@ Save up to 40% vs market rates;
         {/* IoT Capabilities Showcase */}
 
                 Our IoT & Edge Capabilities;
-
-                Comprehensive IoT solutions covering device management, edge computing, and intelligent analytics;
-
-              <div className="text-center p-6 bg-gradient-to-br from-cyan-50 to-blue-100 rounded-lg"></div>
-                <Wifi className="w-12 h-12 text-cyan-600 mx-auto mb-4" /></Wifi>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Device Management</h3>
-                <p className="text-gray-600">Comprehensive platform for managing IoT devices at scale</p>
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg"></div>
-                <Zap className="w-12 h-12 text-blue-600 mx-auto mb-4" /></Zap>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Edge Computing</h3>
-                <p className="text-gray-600">Real-time processing at the edge with ultra-low latency</p>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>
-                <Brain className="w-12 h-12 text-green-600 mx-auto mb-4" /></Brain>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Analytics</h3>
-                <p className="text-gray-600">Machine learning and AI for intelligent IoT insights</p>
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg"></div>
-                <BarChart className="w-12 h-12 text-purple-600 mx-auto mb-4" /></BarChart>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-Time Analytics</h3>
-                <p className="text-gray-600">Streaming analytics and real-time data processing</p>
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg"></div>
-                <Settings className="w-12 h-12 text-orange-600 mx-auto mb-4" /></Settings>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Industrial IoT</h3>
-                <p className="text-gray-600">Smart manufacturing and industrial automation solutions</p>
-              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg"></div>
-                <Globe className="w-12 h-12 text-pink-600 mx-auto mb-4" /></Globe>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Cities</h3>
-                <p className="text-gray-600>Comprehensive smart city infrastructure and services</p>
-        {/* Contact Section */}
-
+"
+                Comprehensive IoT solutions covering device management, edge computing, and intelligent analytics;"
+";
+              <div className="text-center p-6 bg-gradient-to-br from-cyan-50 to-blue-100 rounded-lg"></div>";
+                <Wifi className="w-12 h-12 text-cyan-600 mx-auto mb-4" /></Wifi>";
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Device Management</h3>";
+                <p className="text-gray-600">Comprehensive platform for managing IoT devices at scale</p>";
+              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg"></div>";
+                <Zap className="w-12 h-12 text-blue-600 mx-auto mb-4" /></Zap>";
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Edge Computing</h3>";
+                <p className="text-gray-600">Real-time processing at the edge with ultra-low latency</p>";
+              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>";
+                <Brain className="w-12 h-12 text-green-600 mx-auto mb-4" /></Brain>";
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Analytics</h3>";
+                <p className="text-gray-600">Machine learning and AI for intelligent IoT insights</p>";
+              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg"></div>";
+                <BarChart className="w-12 h-12 text-purple-600 mx-auto mb-4" /></BarChart>";
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-Time Analytics</h3>";
+                <p className="text-gray-600">Streaming analytics and real-time data processing</p>";
+              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg"></div>";
+                <Settings className="w-12 h-12 text-orange-600 mx-auto mb-4" /></Settings>";
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Industrial IoT</h3>";
+                <p className="text-gray-600">Smart manufacturing and industrial automation solutions</p>";
+              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg"></div>";
+                <Globe className="w-12 h-12 text-pink-600 mx-auto mb-4" /></Globe>";
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Cities</h3>";
+                <p className="text-gray-600>Comprehensive smart city infrastructure and services</p>"
+        {/* Contact Section */}"
+";
         <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white"></section>
           <div className=max-w-7xl mx-auto px-4,
-  sm:px-6,
-  lg:px-8 text-center"></div>
-            <h2 className="text-3xl,
-  md:text-4xl font-bold mb-4></h2>
-Ready to Connect Your World?
+  sm:px-6,";
+  lg:px-8 text-center"></div>";
+            <h2 className="text-3xl,"
+  md:text-4xl font-bold mb-4></h2>"
+Ready to Connect Your World?";
             <p className="text-xl mb-8 text-cyan-100></p>
-              Contact our IoT experts for a free consultation and custom connected solution strategy;
-
-              <a
+              Contact our IoT experts for a free consultation and custom connected solution strategy;"
+"
+              <a";
                 href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center
 // >
-//                  +1 302 464 0950;
-
-          </a>
-href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors
-                ✉️ kleber@ziontechgroup.com;
-
+//                  +1 302 464 0950;"
+"
+          </a>";
+href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
+                ✉️ kleber@ziontechgroup.com;"
+";
             <div className="mt-8 text-sm text-cyan-200>
 
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
   )};
-
-export default IotEdgePage;
+"
+export default IotEdgePage;"
+';";

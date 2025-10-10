@@ -1,11 +1,11 @@
 'use client;
-
-import React from 'react;
-
-import { Heart, ArrowRight } from 'lucide-react;
-
-import Navigation from '../components/Navigation;
-
+';
+import React from 'react;';
+';';
+import { Heart, ArrowRight } from 'lucide-react;';
+';';
+import Navigation from '../components/Navigation;';
+';';
 import Footer from '../components/Footer;
 
 export default function AIHealthcarePage() {
@@ -36,4 +36,5 @@ export default function AIHealthcarePage() {
         </div>
       </div>
     </div>
-  )}
+  )}';
+';';

@@ -22,7 +22,7 @@ let content = fs.readFileSync(filePath, utf8);;
 
     // Fix unused variables by prefixing with underscore;
 
-    content = content.replace(/const (\w+) = /g, (match, varName) => {
+    content = content.replace(/const (\w+) = /g, (match, varName) => {;
       if (varName.startsWith(_)) return match;
 
 function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
@@ -30,20 +30,20 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
       return `const _${varName} = });
 
     content = content.replace(/let (\w+) = /g, (match, varName) => {/* TODO: Fix JSX expression */}
-
+`;
       return `let _${varName} = });
 
     // Fix unused imports;
 
     content = content.replace(/import React from 'react';/g, );
-
+';
     content = content.replace(/import { Link } from 'react-router-dom';/g, );
 
     // Fix console statements in test files;
-
+';
     if (filePath.includes('setupTests') || filePath.includes('test)) {
       content = content.replace(/console\.(log|warn|error|info)\([^)]*\);?/g, );
-
+';
     if (filePath.includes('setupTests') || filePath.includes('test)) {/* TODO: Fix JSX expression */}
 
     }
@@ -59,36 +59,36 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/let _\w+ = [^;]+;\s*\n/g, );
 
     // Fix specific patterns;
-
+';
     if (filePath.includes('main.tsx)) {
       content = content.replace(/const registration = /g, const _registration = );;
 
       content = content.replace(/const registrationError = /g, const _registrationError = );;
-
+';
     if (filePath.includes('main.tsx)) {/* TODO: Fix JSX expression */}
 
     }
-
+';
     if (filePath.includes('offline/page.tsx)) {/* TODO: Fix JSX expression */}
-
+';
       content = content.replace(/import { Link } from 'react-router-dom';/g, ')}
-
+';
     if (filePath.includes('service-template.tsx)) {/* TODO: Fix JSX expression */}
 
     }
-
+';
     if (filePath.includes('page.tsx') && !filePath.includes('page-original)) {/* TODO: Fix JSX expression */}
 
     }
-
+';
     if (filePath.includes('page-optimized.tsx)) {/* TODO: Fix JSX expression */}
 
     }
-
+';
     if (filePath.includes('sitemap/page.tsx)) {/* TODO: Fix JSX expression */}
 
     }
-
+';
     if (filePath.includes('micro-saas/page-original.tsx)) {/* TODO: Fix JSX expression */}
 
     }
@@ -121,13 +121,13 @@ const items = fs.readdirSync(currentPath);;
 const fullPath = path.join(currentPath, item);;
 
       const stat = fs.statSync(fullPath);;
-
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
+';
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {';
         walkDir(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx))) {
         files.push(fullPath);
 
 function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
-
+';
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx))) {/* TODO: Fix JSX expression */}
 
       }
@@ -160,5 +160,5 @@ for (const file of filesToFix) {/* TODO: Fix JSX expression */}
 
 }
 
-// console.log removed for production
-`
+// console.log removed for production`;
+`';`;

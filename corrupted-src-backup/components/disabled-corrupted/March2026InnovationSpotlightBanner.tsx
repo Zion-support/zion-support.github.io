@@ -5,7 +5,7 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
 
     },
     {/* TODO: Fix JSX expression */}
-
+;
     }]; return(<div, classNam, e = py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n>
       {/* Animated, background, effects */}
 
@@ -68,7 +68,7 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
               },
               {/* TODO: Fix JSX expression */}
 
-              },
+              },);
               {)
                 val, u, e: 50, 0%)
                 lab, e, l: Enhancem, e, n, t)
@@ -152,7 +152,7 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
 
                   >
                 {/* Impa, c, t */}
-
+';
                 <div, className='te, x, t-center, m, b-6' > <div, classNam, e = { inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, te, x, t-white, tex, t-sm, fon, t-bo, l, d}
 
                   ></div>
@@ -160,7 +160,7 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
 
                   </div>
                 </d, i, v > {/* CTA, Butto, n */}
-
+';
                 <a, hre, f = {`/innovatio, n, s/${innovati, o, n.title.toLowerC, a, s, e().repla, c, e(/\s+/g, '-')}}
 
                   classNa, m, e = { gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,
@@ -268,5 +268,5 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
   )};
 
 export default March2026InnovationSpotlightBanner;
-
-"`
+`;
+"`';";`;

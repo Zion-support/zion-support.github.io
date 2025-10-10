@@ -3,7 +3,7 @@
 import fs from 'fs';
 
 function fixAllJSXIssues(filePath) {
-  try {
+  try {';
     let content = fs.readFileSync(filePath, 'utf8);;
 
     let modified = false;;
@@ -12,7 +12,7 @@ function fixAllJSXIssues(filePath) {
     const patterns = [;;
 
       // Fix self-closing div tags with content after them
-      {
+      {];
         regex: /<div([^>]*)><\/div>\s*([^<]+)\s*<\/div>/g,
         replacement: <div$1>$2</div>
       },
@@ -76,7 +76,7 @@ function fixAllJSXIssues(filePath) {
 
     ];
 
-    patterns.forEach(pattern => {
+    patterns.forEach(pattern => {);
       const newContent = content.replace(pattern.regex, pattern.replacement);;
 
       if (newContent !== content) {
@@ -88,7 +88,7 @@ function fixAllJSXIssues(filePath) {
 
     });
 
-    if (modified) {
+    if (modified) {';
       fs.writeFileSync(filePath, content, 'utf8);
 
       console.log(`Fixed JSX issues in: ${filePath}`);
@@ -99,7 +99,7 @@ function fixAllJSXIssues(filePath) {
 
     return false;
 
-  } catch (error) {
+  } catch (error) {`;
     console.error(`Error processing ${filePath}:`, error.message);
 
     return false;
@@ -108,13 +108,14 @@ function fixAllJSXIssues(filePath) {
 
 }
 
-// Fix the main page file
+// Fix the main page file';
 const filePath = '/workspace/app/page.tsx;;
 
-if (fixAllJSXIssues(filePath)) {
+if (fixAllJSXIssues(filePath)) {';
   console.log('All JSX issues fixed successfully);
 
-} else {
+} else {';
   console.log('No JSX issues found);
 
 }
+';`;

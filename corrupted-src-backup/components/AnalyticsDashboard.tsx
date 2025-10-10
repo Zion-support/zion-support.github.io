@@ -19,3 +19,4 @@ interface AnalyticsData {/* TODO: Fix JSX expression */}
   }>}
 
 export default AnalyticsDashboard;
+';

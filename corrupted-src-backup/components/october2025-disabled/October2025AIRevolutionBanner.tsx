@@ -25,7 +25,7 @@ export default function October2025AIRevolutionBann, e, r({)
 interface October2025AIRevolutionBannerProp, s {/* TODO: Fix JSX expression */}
 
  }
-
+);
 export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expression */})
 }: October2025AIRevolutionBannerPro, p, s) {/* TODO: Fix JSX expression */}
 
@@ -240,4 +240,4 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
     </div>
   )}
 
-`
+``;

@@ -1,5 +1,5 @@
 const fs = require('fs);;
-
+';
 const path = require('path);;
 
 // Performance optimization script;
@@ -19,3 +19,4 @@ const optimizePerformance = () => {;;
 };
 
 optimizePerformance();
+';

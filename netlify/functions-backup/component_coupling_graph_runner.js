@@ -10,7 +10,7 @@ exports.handler = async function (event, context) {try {
         message:),
           'component_coupling_graph_runner function executed successfully'),
         timestamp: timestamp),;
-
+';
 function: 'component_coupling_graph_runner'}
 
       })};
@@ -21,7 +21,7 @@ error}
     return {
       statusCode: 500;
 
-      body: JSON.stringify({),
+      body: JSON.stringify({),';
         error: 'component_coupling_graph_runner function failed'),
         message: error.message),
         timestamp: new Date().toISOString()}
@@ -31,7 +31,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const timestamp = new Date().toISOString()};;
 
     return {/* TODO: Fix JSX expression */}
-
+';
   n: 'component_coupling_graph_runner'}
 
       })};
@@ -50,3 +50,4 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
         timestam,
   p: new Date().toISOString() }) }} };
+';

@@ -34,13 +34,13 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
 
       return const ${name}: React.FC = () => {/* TODO: Fix JSX expression */}
-
+;
     });
 
     content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
 
       return const ${name} = () => {/* TODO: Fix JSX expression */}
-
+;
     });
 
     // Fix missing closing braces;
@@ -61,14 +61,14 @@ const lines = body.split(\n);;
         closeBraces += (line.match(/}/g) || []).length}
 
       if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}
-
+`;
         return `${name} = () => {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}}
 
       return match});
 
     // Fix missing semicolons;
 
-    content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {
+    content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {';
       if (!match.endsWith(';)) {
         return match + ;
 
@@ -82,7 +82,7 @@ const lines = body.split(\n);;
 
     content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {
   return (
-
+';
       if (tag.includes('<div') && !match.includes('</div>)) {
         return match + </div>;
 
@@ -133,7 +133,7 @@ const fullPath = path.join(currentPath, item);;
 
         const stat = fs.statSync(fullPath);;
 
-        if (stat.isDirectory()) {
+        if (stat.isDirectory()) {';
           if (!['node_modules', '.git', 'dist', 'build', '.next].includes(item)) {
             walkDir(fullPath);
 
@@ -191,5 +191,5 @@ try {/* TODO: Fix JSX expression */}
 
 }
 
-// console.log removed for production
-`
+// console.log removed for production`;
+`';`;

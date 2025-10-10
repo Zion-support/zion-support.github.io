@@ -18,7 +18,7 @@ export const Link: React.FC<LinkProps></LinkProps>= ({
 export const Link: React.FC<LinkProps></LinkProps> = ({}
 
   href,
-  href: string,
+  href: string,;
   children: React.ReactNode;
 
   className?: string;
@@ -33,7 +33,7 @@ export const Link: React.FC<LinkProps></LinkProps> = ({}
 
 }
 
-export const Link: React.FC<LinkProps></LinkProps> = ({,
+export const Link: React.FC<LinkProps></LinkProps> = ({,;
   href;
 
   children,
@@ -55,9 +55,9 @@ export const Link: React.FC<LinkProps></LinkProps> = ({,
 }
 
     // Handle internal navigation;
-
+';
     if (href.startsWith('/') && !href.startsWith('//)) {
-    // Handle internal navigation
+    // Handle internal navigation';
     if (href.startsWith('/') && !href.startsWith('//)) {}
 
       e.preventDefault()
@@ -72,7 +72,7 @@ return (<a]
   return(<a;
 
 import React from react;
-
+);
 interface LinkProps {/* TODO: Fix JSX expression */});
 
 }
@@ -84,7 +84,7 @@ export const,
 }
 
     // Handle internal navigation;
-
+';
     if (href.startsWith('/') && !href.startsWith(//)) {/* TODO: Fix JSX expression */});
 
 }
@@ -131,3 +131,4 @@ export default Link;
 export default Link;
 
 }
+';

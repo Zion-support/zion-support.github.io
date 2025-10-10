@@ -7,8 +7,8 @@
 
  */
 
-import fs from 'fs;
-
+import fs from 'fs;';
+';';
 import path from 'path;
 
 import { fileURLToPath } from url;
@@ -69,11 +69,11 @@ const skipLink = document.createElement(a);;
 
             transition: top 0.3 s;
 
-          \;
-
+          \;';
+';';
           skipLink.addEventListener('focus, function() {
             this.style.top = 6 px});
-
+';
           skipLink.addEventListener('blur, function() {
             this.style.top = -40 px});
 
@@ -113,10 +113,10 @@ const toggle = document.createElement(button);;
             font-size: 14 px;
 
           \;
-
+';
           toggle.addEventListener('click, function() {
             document.body.classList.toggle(high-contrast);
-
+';
             this.textContent = document.body.classList.contains('high-contrast') ? 'Normal Contrast' : High Contrast});
 
           document.body.appendChild(toggle)}
@@ -183,7 +183,7 @@ const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSi
 const resetBtn = document.createElement(button);;
 
           resetBtn.textContent = Reset;
-
+';
           resetBtn.addEventListener('click, () => {
             document.documentElement.style.fontSize = 16 px});
 
@@ -198,16 +198,16 @@ const resetBtn = document.createElement(button);;
         // Focus management for modals and dropdowns;
 
 function enhanceFocusManagement() {
-          // Trap focus in modals
+          // Trap focus in modals';
           document.addEventListener('keydown, function(e) {
             if (e.key === Tab) {;
-
+';
 const modal = document.querySelector('.modal:not([style*="display: none]));;
 
               if (modal) {;
 
 const focusableElements = modal.querySelectorAll(;;
-
+';);
                   'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
                 );
 
@@ -235,11 +235,11 @@ const focusableElements = modal.querySelectorAll(;;
 
             // Close modals with Escape key
             if (e.key === Escape) {;
-
+';";
 const modal = document.querySelector('.modal:not([style*="display: none]));;
 
               if (modal) {;
-
+';";
 const closeBtn = modal.querySelector('[aria-label="Close], .close-btn);;
 
                 if (closeBtn) closeBtn.click()}
@@ -256,35 +256,35 @@ function addAriaLabels() {
 const iconButtons = document.querySelectorAll(button:not([aria-label]):not([aria-labelledby]));;
 
           iconButtons.forEach(button => {;
-
+);
 const icon = button.querySelector(svg, i);;
 
             if (icon) {;
 
 const iconName = icon.getAttribute(class) || icon.tagName.toLowerCase();;
-
+';
               button.setAttribute('aria-label', \`\${iconName} button\)}
 
           });
-
+";
           // Add role="button to clickable divs;
-
+';";
 const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer]);;
 
-          clickableDivs.forEach(div => {
-            if (!div.getAttribute('role)) {
+          clickableDivs.forEach(div => {';);
+            if (!div.getAttribute('role)) {';
               div.setAttribute('role', button);
-
+';
               div.setAttribute('tabindex', '0)}
 
           });
 
           // Add aria-expanded to collapsible elements;
-
+';";
 const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse]);;
 
-          collapsibles.forEach(element => {
-            if (!element.getAttribute('aria-expanded)) {
+          collapsibles.forEach(element => {';);
+            if (!element.getAttribute('aria-expanded)) {';
               element.setAttribute('aria-expanded', 'false)}
 
           })}
@@ -294,9 +294,9 @@ const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="co
 function addLiveRegion() {;
 
 const liveRegion = document.createElement(div);;
-
+';
           liveRegion.setAttribute('aria-live', polite);
-
+';
           liveRegion.setAttribute('aria-atomic', true);
 
           liveRegion.className = sr-only;
@@ -330,10 +330,10 @@ const originalPushState = history.pushState;;
 
           history.pushState = function() {
             originalPushState.apply(history, arguments);
-
+';
             liveRegion.textContent = 'Page navigation complete}}
 
-        // Initialize accessibility features
+        // Initialize accessibility features';
         document.addEventListener('DOMContentLoaded, function() {
           addSkipLink();
 
@@ -374,7 +374,7 @@ const styleSheet = document.createElement(style);;
     </script>
   ;
 
-  // Insert accessibility script before closing body tag
+  // Insert accessibility script before closing body tag';`;
   indexContent = indexContent.replace('</body>', `${accessibilityScript}</body>);
 
   fs.writeFileSync(indexPath, indexContent);
@@ -394,7 +394,7 @@ function generateAccessibilityReport() {
 
 const accessibilityReport = {;;
 
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString()';
     version: '1.0.0,
     summary:
         summary: {
@@ -403,63 +403,63 @@ const accessibilityReport = {;;
       criticalIssues: 0;
 
       warnings: 0;
-
+};
       passed: 0},
     checks: [
-      {,
-        id: "alt-text,
-        name: "Alt text for images,
-        status: "passed,
+      {,";
+        id: "alt-text,";
+        name: "Alt text for images,";
+        status: "passed,";
         description: "All images have appropriate alt text},
-      {
-        id: "heading-structure,
-        name: "Heading structure,
-        status: "passed,
+      {";
+        id: "heading-structure,";
+        name: "Heading structure,";
+        status: "passed,";
         description: "Proper heading hierarchy (h1, h2, h3, etc.)
       },
-      {
-        id: "color-contrast,
-        name: "Color contrast,
-        status: "passed,
+      {";
+        id: "color-contrast,";
+        name: "Color contrast,";
+        status: "passed,";
         description: "Sufficient color contrast ratios},
-      {
-        id: "keyboard-navigation,
-        name: "Keyboard navigation,
-        status: "passed,
+      {";
+        id: "keyboard-navigation,";
+        name: "Keyboard navigation,";
+        status: "passed,";
         description: "All interactive elements are keyboard accessible},
-      {
-        id: "focus-management,
-        name: "Focus management,
-        status: "passed,
+      {";
+        id: "focus-management,";
+        name: "Focus management,";
+        status: "passed,";
         description: "Proper focus management and visible focus indicators},
-      {
-        id: "aria-labels,
-        name: "ARIA labels,
-        status: "passed,
+      {";
+        id: "aria-labels,";
+        name: "ARIA labels,";
+        status: "passed,";
         description: "Appropriate ARIA labels and roles},
-      {
-        id: "semantic-html,
-        name: "Semantic HTML,
-        status: "passed,
+      {";
+        id: "semantic-html,";
+        name: "Semantic HTML,";
+        status: "passed,";
         description: "Proper use of semantic HTML elements},
-      {
-        id: "skip-links,
-        name: "Skip links,
-        status: "passed,
+      {";
+        id: "skip-links,";
+        name: "Skip links,";
+        status: "passed,";
         description: "Skip links for keyboard navigation}
 
     ],
-    recommendations: [,
-      "Continue regular accessibility audits,
-      "Test with screen readers,
-      "Ensure keyboard-only navigation works,
-      "Maintain color contrast standards,
+    recommendations: [,";
+      "Continue regular accessibility audits,";
+      "Test with screen readers,";
+      "Ensure keyboard-only navigation works,";
+      "Maintain color contrast standards,";
       "Keep ARIA labels up to date
     ]
   };
 
   fs.writeFileSync(
-
+';);
     path.join(__dirname, '../public/accessibility-report.json), 
     JSON.stringify(accessibilityReport, null, 2)
   );
@@ -474,6 +474,6 @@ function generateAccessibilityChecklist() {
 ;
 
 const checklist = {;;
-
-    title: "Zion Tech Group Accessibility Checklist
-    version: "1.0.0"
+";
+    title: "Zion Tech Group Accessibility Checklist";
+    version: "1.0.0"';";};`;

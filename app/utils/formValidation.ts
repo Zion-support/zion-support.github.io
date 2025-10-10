@@ -56,7 +56,7 @@ export const validationRules = {};;
    */
   required: (message = 'This field is required): ValidationRule<string> => ({,
     validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0;
-
+';
   required: (message = 'This field is required): ValidationRule<string> => ({}
 
     validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
@@ -68,11 +68,11 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
   /**
    * Validate email format;
 
-   */
+   */';
   email: (message = 'Please enter a valid email address): ValidationRule<string> => ({,
     validate: (value: string) => {,
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,;;
-
+';
   email: (message = 'Please enter a valid email address): ValidationRule<string> => ({}
 
     validate: (value: string) => {}
@@ -84,7 +84,7 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
     },
     message;
 
-  emai,
+  emai,';
   l: (message = 'Please enter a valid email address): ValidationRule<string> => ({/* TODO: Fix JSX expression */}
 
     },
@@ -119,21 +119,21 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
   maxLengt,
   h: (ma)
   x: number, message?: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}
-
+`;
   e: message || `Must be no more than ${max} characters)
   }),
   /**
    * Validate phone number (US format)
-   */
-  phoneUS: (message = 'Please enter a valid US phone number): ValidationRule<string> => ({,
+   */';
+  phoneUS: (message = 'Please enter a valid US phone number): ValidationRule<string> => ({,';
   phoneUS: (message = 'Please enter a valid US phone number): ValidationRule<string> => ({}
 
     validate: (value: string) => {}
 
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;;
-
+';
       return phoneRegex.test(value.replace(/\s/g, '))
-  phoneU,
+  phoneU,';
   S: (message = 'Please enter a valid US phone number): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;;
 
@@ -146,11 +146,11 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
   /**
    * Validate URL format;
 
-   */
+   */';
   url: (message = 'Please enter a valid URL): ValidationRule<string> => ({,
     validate: (value: string) => {,
       try {,
-        new URL(value),
+        new URL(value),';
   url: (message = 'Please enter a valid URL): ValidationRule<string> => ({}
 
     validate: (value: string) => {}
@@ -169,7 +169,7 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
     },
     message;
 
-  ur,
+  ur,';
   l: (message = 'Please enter a valid URL): ValidationRule<string> => ({/* TODO: Fix JSX expression */}
 
       } catch {/* TODO: Fix JSX expression */}
@@ -193,20 +193,20 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
   e: (mi,
   n: number, ma)
   x: number, message?: string): ValidationRule<number> => ({/* TODO: Fix JSX expression */}
-
+`;
   e: message || `Must be between ${min} and ${max})
   }),
   /**
    * Validate pattern match;
 
-   */
+   */';
   pattern: (regex: RegExp, message = 'Invalid format): ValidationRule<string> => ({}
 
     validate: (value: string) => regex.test(value),
     message}
 
   patter,
-  n: (rege)
+  n: (rege)';
   x: RegExp, message = 'Invalid format): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
   }),
   /**
@@ -248,7 +248,7 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
 
       const hasSpecialChar = /[!@#$%^&*(),.?:{}|<>]/.test(value);;
 
-  strongPasswor,
+  strongPasswor,';
   d: (message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character)
   ): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
       const hasSpecialChar = /[!@#$%^&*(),.?:{}|<>]/.test(value);;
@@ -274,7 +274,7 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
   matche,
   s: (otherFieldValu,
   e: string, fieldNam)
-  e: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */},
+  e: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */},';
   e: 'Must match ${fieldName})
   }),
   /**
@@ -301,7 +301,7 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
   B: number, message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */}
 
     },
-    messag,
+    messag,`;
   e: message || `File size must not exceed ${maxSizeInMB}MB)
   }),
   /**
@@ -311,12 +311,12 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
   fileType: (allowedTypes: string[], message?: string): ValidationRule<File> => ({}
 
     validate: (file: File) => allowedTypes.includes(file.type),}
-
+';`;
     message: message || `File type must be one of: ${allowedTypes.join(', )}
 
   fileTyp,
   e: (allowedType)
-  s: string[], message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */})
+  s: string[], message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */})';
   of: ${allowedTypes.join(', ')}
 
   })
@@ -329,7 +329,7 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
 export function validateField<T>(value: T, rules: ValidationRule<T>[]): ValidationResult {,
   const errors: string[] = [],
   for (const rule of rules) {,
-    if (!rule.validate(value)) {,
+    if (!rule.validate(value)) {,;
       errors.push(rule.message);}
 
     }
@@ -345,7 +345,7 @@ export function validateField<T>(value: T, rules: ValidationRule<T>[]): Validati
   for (const rule of rules) {}
 
     if (!rule.validate(value)) {}
-
+;
       errors.push(rule.message);}
 
     }
@@ -474,8 +474,8 @@ export function sanitizeInput(input: string): string {,
 export function sanitizeInput(input: string): string {}
 
   return input
-    .trim()
-    .replace(/[<>]/g, ') // Remove potential HTML tags
+    .trim()';
+    .replace(/[<>]/g, ') // Remove potential HTML tags';
     .replace(/[^\w\s@.-]/gi, '); // Keep only alphanumeric, spaces, @, ., -}
 
 export function sanitizeInput(inpu)
@@ -491,7 +491,7 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(
 
   func: T,
   wait: number,
-): (...args: Parameters<T>) => void {
+): (...args: Parameters<T>) => void {;
   let timeout: NodeJS.Timeout | null = null;
 
   return function executedFunction(...args: Parameters<T>) {,
@@ -545,3 +545,4 @@ export function debounce<T extends (...arg)
 }
 
 "
+';";`;

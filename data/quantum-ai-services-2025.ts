@@ -77,28 +77,28 @@ export interface QuantumAiService2025 {/* TODO: Fix JSX expression */}
     mobile: string, email: string;
     address: string}
 }
-export const quantumAIServices2025: QuantumAiService2025[] = [,
-    id: "quantum-ai-hybrid", name: "Quantum AI Hybrid Platform",
-    tagline: "Combining quantum computing with artificial intelligence", price: '$299/month',
+export const quantumAIServices2025: QuantumAiService2025[] = [,";
+    id: "quantum-ai-hybrid", name: "Quantum AI Hybrid Platform",";
+    tagline: "Combining quantum computing with artificial intelligence", price: '$299/month',';
     description: 'Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.',
-    features: [;
-      "Quantum AI algorithms"
-      "Hybrid processing"
-      "Advanced simulations"
-      "Real-time optimization",
-      "Enterprise support"],
+    features: [;";
+      "Quantum AI algorithms"";
+      "Hybrid processing"";
+      "Advanced simulations"";
+      "Real-time optimization",";
+      "Enterprise support"],";
     link: "/services/quantum-ai-hybrid", category: "Quantum AI",
-    realImplementation: true;
+    realImplementation: true;";
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+];";
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",";
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-      email: "kleber@ziontechgroup.com",
+];";
+      email: "kleber@ziontechgroup.com",";
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      addres,
+      addres,";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -126,121 +126,121 @@ export const quantumAIServices2025: QuantumAiService2025[] = [,
   s: string}
 }
 export const,
-  quantumAIServices2025: QuantumAiService2025[] = [,
-    i,"
-  d: "quantum-ai-hybrid", nam,"
-  e: "Quantum AI Hybrid Platform",
-    taglin,"
-  e: "Combining quantum computing with artificial intelligence", pric,"
-  e: "$299/month",
-    descriptio,"
+  quantumAIServices2025: QuantumAiService2025[] = [,";
+    i,"";
+  d: "quantum-ai-hybrid", nam,"";
+  e: "Quantum AI Hybrid Platform",";
+    taglin,"";
+  e: "Combining quantum computing with artificial intelligence", pric,"";
+  e: "$299/month",";
+    descriptio,"";
   n: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.",
-    feature,
-  s: [;"
-      "Quantum AI algorithms""
-      "Hybrid processing""
-      "Advanced simulations""
-      "Real-time optimization""
+    feature,";
+  s: [;"";
+      "Quantum AI algorithms""";
+      "Hybrid processing""";
+      "Advanced simulations""";
+      "Real-time optimization""";
       "Enterprise support"
-    ],
-    lin,"
-  k: "/services/quantum-ai-hybrid", categor,"
+    ],";
+    lin,"";
+  k: "/services/quantum-ai-hybrid", categor,"";
   y: "Quantum AI",
     realImplementatio,
   n: true,
-    contactInf,
-  o: addres,"
+    contactInf,";
+  o: addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];";
+      mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com",";
+      addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];";
+      emai,"";
+  l: "kleber@ziontechgroup.com",";
+  addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-      mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-      emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-;
-    id: 'quantum-ai-hybrid',
-    name: 'Quantum AI Hybrid Platform',
-    tagline: "Combining quantum computing with artificial intelligence",
-    price: "$299/month",
+;';
+    id: 'quantum-ai-hybrid',';
+    name: 'Quantum AI Hybrid Platform',";
+    tagline: "Combining quantum computing with artificial intelligence",";
+    price: "$299/month",";
     description: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.",
-    features: [,
-      "Quantum AI algorithms",
-      "Hybrid processing",
-      "Advanced simulations",
-      "Real-time optimization",
+    features: [,";
+      "Quantum AI algorithms",";
+      "Hybrid processing",";
+      "Advanced simulations",";
+      "Real-time optimization",";
       "Enterprise support"
-    ],
-    link: '/services/quantum-ai-hybrid',
+    ],';
+    link: '/services/quantum-ai-hybrid',';
     category: 'Quantum AI',
     realImplementation: true;
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
-  d: "quantum-ai-hybrid",
-    nam,"
-  e: "Quantum AI Hybrid Platform",
-    taglin,"
-  e: "Combining quantum computing with artificial intelligence",
-    pric,"
-  e: "$299/month",
-    descriptio,"
+    contactInfo: unknown;';
+      mobile: '+1 302 464 0950',';
+      email: 'kleber@ziontechgroup.com',';
+      mobile: '+1 302 464 0950',';
+      email: 'kleber@ziontechgroup.com',';
+      address: '364 E Main St STE 1008 Middletown DE 19709'}};";
+];      mobile: "+1 302 464 0950",";
+      email: "kleber@ziontechgroup.com",";
+      mobile: "+1 302 464 0950",";
+      email: "kleber@ziontechgroup.com",";
+      address: "364 E Main St STE 1008 Middletown DE 19709",";
+    i,"";
+  d: "quantum-ai-hybrid",";
+    nam,"";
+  e: "Quantum AI Hybrid Platform",";
+    taglin,"";
+  e: "Combining quantum computing with artificial intelligence",";
+    pric,"";
+  e: "$299/month",";
+    descriptio,"";
   n: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.",
-    feature,
-  s: [,"
-      "Quantum AI algorithms","
-      "Hybrid processing","
-      "Advanced simulations","
-      "Real-time optimization","
+    feature,";
+  s: [,"";
+      "Quantum AI algorithms","";
+      "Hybrid processing","";
+      "Advanced simulations","";
+      "Real-time optimization","";
       "Enterprise support"
-    ],
-    lin,"
-  k: "/services/quantum-ai-hybrid",
-    categor,"
+    ],";
+    lin,"";
+  k: "/services/quantum-ai-hybrid",";
+    categor,"";
   y: "Quantum AI",
     realImplementatio,
   n: true,
     contactInf,
-  o: unknown,
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
+  o: unknown,";
+      mobil,"";
+  e: "+1 302 464 0950",";
+      emai,"";
   l: "kleber@ziontechgroup.com",
-      mobil,
+      mobil,';
   e: '+1 302 464 0950',
-      emai,
+      emai,';
   l: 'kleber@ziontechgroup.com',
-      addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
+      addres,';
+  s: '364 E Main St STE 1008 Middletown DE 19709'}};";
+];      mobil,"";
+  e: "+1 302 464 0950",";
+  emai,"";
+  l: "kleber@ziontechgroup.com"";
+      mobil,"";
+  e: "+1 302 464 0950",";
+      emai,"";
+  l: "kleber@ziontechgroup.com",";
+      addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -269,8 +269,8 @@ i,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
-  l: string} addres,
-  s: string} } } addres,"
+  l: string} addres,";
+  s: string} } } addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -284,43 +284,43 @@ i,
   o: mobil,
   e: string, emai,
   l: string, addres,
-  s: string } } export const,
-  quantumAIServices2025: QuantumAiService2025[] = [ i,"
-  d: "quantum-ai-hybrid", nam,"
-  e: "Quantum AI Hybrid Platform", taglin,"
-  e: "Combining quantum computing with artificial intelligence", pric,"
-  e: "$299/month", descriptio,"
-  n: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.", feature,"
-  s: [ "Quantum AI algorithms" "Hybrid processing" "Advanced simulations" "Real-time optimization" "Enterprise support" ], lin,"
-  k: "/services/quantum-ai-hybrid", categor,"
+  s: string } } export const,";
+  quantumAIServices2025: QuantumAiService2025[] = [ i,"";
+  d: "quantum-ai-hybrid", nam,"";
+  e: "Quantum AI Hybrid Platform", taglin,"";
+  e: "Combining quantum computing with artificial intelligence", pric,"";
+  e: "$299/month", descriptio,"";
+  n: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.", feature,"";
+  s: [ "Quantum AI algorithms" "Hybrid processing" "Advanced simulations" "Real-time optimization" "Enterprise support" ], lin,"";
+  k: "/services/quantum-ai-hybrid", categor,"";
   y: "Quantum AI", realImplementatio,
-  n: true, contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "quantum-ai-hybrid", nam,"
-  e: "Quantum AI Hybrid Platform", taglin,"
-  e: "Combining quantum computing with artificial intelligence", pric,"
-  e: "$299/month", descriptio,"
-  n: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.", feature,"
-  s: [ "Quantum AI algorithms", "Hybrid processing", "Advanced simulations", "Real-time optimization", "Enterprise support" ], lin,"
-  k: "/services/quantum-ai-hybrid", categor,"
+  n: true, contactInf,";
+  o: addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"";
+  l: "kleber@ziontechgroup.com",";
+  addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"";
+  d: "quantum-ai-hybrid", nam,"";
+  e: "Quantum AI Hybrid Platform", taglin,"";
+  e: "Combining quantum computing with artificial intelligence", pric,"";
+  e: "$299/month", descriptio,"";
+  n: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.", feature,"";
+  s: [ "Quantum AI algorithms", "Hybrid processing", "Advanced simulations", "Real-time optimization", "Enterprise support" ], lin,"";
+  k: "/services/quantum-ai-hybrid", categor,"";
   y: "Quantum AI", realImplementatio,
-  n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  n: true, contactInf,";
+  o: mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", mobil,';
+  e: '+1 302 464 0950',' emai,';
+  l: 'kleber@ziontechgroup.com',' addres,';";
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"";
+  e: "+1 302 464 0950",";
+  emai,"";
+  l: "kleber@ziontechgroup.com" mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", addres,"';";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"';";

@@ -1,11 +1,11 @@
-import fs from 'fs;
-
-import path from 'path;
-
+import fs from 'fs;';
+';';
+import path from 'path;';
+';';
 import { fileURLToPath } from 'url;
 
-// Get all blog files;
-
+// Get all blog files;';
+';';
 const blogDir = path.join(__dirname, 'src', blog);;
 
 const blogFiles = [];;
@@ -13,7 +13,7 @@ const blogFiles = [];;
 ;
 
 function findBlogFiles(dir) {/* TODO: Fix JSX expression */}
-
+';
     } else if (file === 'page.tsx' || file === 'page.ts) {/* TODO: Fix JSX expression */}
 
     }
@@ -49,10 +49,10 @@ const line = lines[i];;
 
 const prevLine = lines[i - 1];;
 
-        // If previous line doesnt end with ) or );, add missing )
+        // If previous line doesnt end with ) or );, add missing )';
         if (!prevLine.trim().endsWith(')') && !prevLine.trim().endsWith(');)) {
           // Check if this looks like a JSX return statement that needs closing;
-
+';
           if (prevLine.includes('</') || prevLine.includes('>)) {
             newLines.push(  ););
 
@@ -63,7 +63,7 @@ const prevLine = lines[i - 1];;
 function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
 
       // Check if this line ends with }; and the previous line doesnt have a closing parenthesis;
-
+';
       if (line.trim() === '}; && i > 0) {/* TODO: Fix JSX expression */}
 
           }
@@ -94,4 +94,4 @@ blogFiles.forEach(file => {/* TODO: Fix JSX expression */})
 });
 
 // console.log removed for production
-`
+`';`;

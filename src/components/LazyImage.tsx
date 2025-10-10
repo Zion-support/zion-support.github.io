@@ -1,5 +1,5 @@
-import React from 'react;
-
+import React from 'react;';
+';';
 'use client;
 
 interface LazyImageProps {/* TODO: Fix JSX expression */}
@@ -75,7 +75,7 @@ const,
 
 };  threshol,
   d: 0.1,
-        rootMargi,
+        rootMargi,';
   n: '50px}
 
     );
@@ -123,27 +123,27 @@ const,
           <img><
           src = { placeholder };
 
-          alt="" className="w-full h-full object-cover"
+          alt="" className="w-full h-full object-cover"";
           aria-hidden="true
 // />
       ) : (<React.Fragment><img></img>
             src={hasError ? placeholder : src}
 
             alt={alt} className={cn(}
-
+';);
               'w-full h-full object-cover transition-opacity duration-300',              isLoaded ? 'opacity-100' : 'opacity-0)
             )}
 
             onLoad = { handleLoad };
 
             onError = { handleError };
-
+';
             loading={priority ? 'eager' : 'lazy'}
-
+";
             decoding="async
 // 
           {!isLoaded && !hasError && (}
-
+";
           <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center"><div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin /><)
           )}
 
@@ -152,5 +152,6 @@ const,
 
     </div>
   )};
-
-export default LazyImage;
+"
+export default LazyImage;"
+';";

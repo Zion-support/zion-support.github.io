@@ -1,5 +1,5 @@
-import React from 'react;
-
+import React from 'react;';
+';';
 import fs from 'fs;
 
 import { glob } from glob;
@@ -36,7 +36,7 @@ const fixes = [;;
   return (
 
       // Extract the first closing tag;
-
+];
 const firstTag = match.match(/<\/(\w+)>/)[1];;
 
       return </${firstTag}>
@@ -85,11 +85,11 @@ return false}
 async function main() {
   // Focus on the most problematic files first;
 
-const priorityFiles = [;;
-
-    'app/**/*.tsx,
+const priorityFiles = [;;';
+';';
+    'app/**/*.tsx,';
     'app/**/*.ts,
-    App.tsx
+    App.tsx];
   ];
 
   ;
@@ -99,8 +99,8 @@ let allFiles = [];;
   for (const pattern of priorityFiles) {;
 
 const files = await glob(pattern, {;;
-
-      ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**]
+';
+      ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**]);
     });
 
     allFiles = [...allFiles, ...files]}
@@ -123,3 +123,4 @@ let fixedCount = 0;;
 }
 
 main().catch(console.error);
+';

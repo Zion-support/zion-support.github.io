@@ -2,8 +2,9 @@
 
   r: 'Invalid error data format })} // Log the error (in production) you might want to send to a monitoring service) // // console.error removed for production
 k: data.errorInfo.componentStack }); // For now, well just acknowledge receipt res.status(200).json({/* TODO: Fix JSX expression */}
-
+);
   e: Error logged successfully} timestam)
   p: Date.now() })} catch (error) {/* TODO: Fix JSX expression */}
-
+';
   r: 'Internal server error })} }
+';

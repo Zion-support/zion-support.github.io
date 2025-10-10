@@ -30,7 +30,7 @@ constructor() {
 
 const navObserver = new PerformanceObserver((list) => {;;
 
-        for (const entry of list.getEntries()) {
+        for (const entry of list.getEntries()) {';
           this.recordMetric('navigation, entry.duration)}
 
       });
@@ -44,7 +44,7 @@ const navObserver = new PerformanceObserver((list) => {;;
 
 const resourceObserver = new PerformanceObserver((list) => {;;
 
-        for (const entry of list.getEntries()) {
+        for (const entry of list.getEntries()) {';
           this.recordMetric('resource, entry.duration)}
 
       });
@@ -76,7 +76,7 @@ const entries = list.getEntries();;
 
         const lastEntry = entries[entries.length - 1];;
 
-        if (lastEntry) {
+        if (lastEntry) {';
           this.recordMetric('lcp, lastEntry.startTime)}
 
       });
@@ -95,7 +95,7 @@ const fidObserver = new PerformanceObserver((list) => {;;
 const fidEntry = entry as PerformanceEventTiming;;
 
           const fid = fidEntry.processingStart - fidEntry.startTime;;
-
+';
           this.recordMetric('fid, fid)}
 
       });
@@ -117,7 +117,7 @@ const layoutShiftEntry = entry as LayoutShift;;
 
           if (!layoutShiftEntry.hadRecentInput) {
             clsValue += layoutShiftEntry.value;
-
+';
             this.recordMetric('cls, clsValue)}
 
         }
@@ -145,10 +145,10 @@ const values = this.metrics.get(name) || [];;
    * Get Web Vitals metrics
    */
   getWebVitals(): Partial<PerformanceMetrics> {
-    return {
-      fcp: this.getMetric('first-contentful-paint),
-      lcp: this.getMetric('lcp),
-      fid: this.getMetric('fid),
+    return {';
+      fcp: this.getMetric('first-contentful-paint),';
+      lcp: this.getMetric('lcp),';
+      fid: this.getMetric('fid),';
       cls: this.getMetric('cls),
       ttfb: this.getTTFB()}}
 
@@ -196,7 +196,7 @@ const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNav
   /**
    * Mark a custom timing
    */
-  mark(name: string): void {
+  mark(name: string): void {';
     if (typeof performance !== 'undefined && performance.mark) {
       performance.mark(name)}
 
@@ -224,7 +224,7 @@ return 0}
    */
   clear(): void {
     this.metrics.clear();
-
+';
     if (typeof performance !== 'undefined && performance.clearMarks) {
       performance.clearMarks();
 
@@ -248,7 +248,7 @@ const webVitals = this.getWebVitals();;
   /**
    * Get resource loading statistics
    */
-  private getResourceStats(): ResourceStats {
+  private getResourceStats(): ResourceStats {';
     if (typeof performance === 'undefined) {
       return { total: 0, scripts: 0, styles: 0, images: 0, fonts: 0 }}
 
@@ -257,16 +257,16 @@ const webVitals = this.getWebVitals();;
 const resources = performance.getEntriesByType(resource) as PerformanceResourceTiming[];;
 
     return {
-      total: resources.length,
-      scripts: resources.filter(r => r.initiatorType === 'script).length,
-      styles: resources.filter(r => r.initiatorType === 'css' || r.initiatorType === 'link).length,
-      images: resources.filter(r => r.initiatorType === 'img).length,
+      total: resources.length,';
+      scripts: resources.filter(r => r.initiatorType === 'script).length,';
+      styles: resources.filter(r => r.initiatorType === 'css' || r.initiatorType === 'link).length,';
+      images: resources.filter(r => r.initiatorType === 'img).length,';
       fonts: resources.filter(r => r.initiatorType === 'font).length}}
 
   /**
    * Get memory statistics
    */
-  private getMemoryStats(): MemoryStats | null {
+  private getMemoryStats(): MemoryStats | null {';
     if (typeof performance === 'undefined' || !('memory in performance)) {
       return null}
 
@@ -365,12 +365,12 @@ const now = Date.now();;
 /**
  * Request idle callback wrapper
  */
-export function runWhenIdle(callback: () => void, timeout = 1000): void {
+export function runWhenIdle(callback: () => void, timeout = 1000): void {';
   if (typeof window === 'undefined) {
     callback();
 
     return}
-
+';
   if ('requestIdleCallback in window) {
     window.requestIdleCallback(callback, { timeout })} else {
     setTimeout(callback, 0)}
@@ -419,7 +419,7 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
   O: Add content}
 
 }
-
+';
     if (typeof window !== 'undefined' && 'PerformanceObserver in window) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -437,7 +437,7 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
 }
 
     // Monitor navigation timing;
-
+';
     if (PerformanceObserver.supportedEntryTypes.includes('navigation)) {for (const entry of list.getEntries()) {}
 
   // TOD,
@@ -498,9 +498,9 @@ export function runWhenIdle(callbac)
   O: Add content}
 
 }
-
+';
   if (typeof window === 'undefined) {return}
-
+';
   if ('requestIdleCallback in window) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -518,3 +518,4 @@ export function runWhenIdle(callbac)
 * Default performance monitor instance;
 
 export const performanceMonitor = new PerformanceMonitor();;
+';

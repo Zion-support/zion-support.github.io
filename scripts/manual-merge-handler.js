@@ -10,8 +10,8 @@ import fs from fs;
 function execGitCommand(command, description) {
   try {
     // console.log removed for production
-const result = execSync(command, { );;;
-
+const result = execSync(command, { );;;';
+';';
       encoding: 'utf8),
       cwd: process.cwd(),
       stdio: pipe});
@@ -26,23 +26,23 @@ return null}
 // List of important branches to merge;
 
 const importantBranches = [;;;
-
-  'cursor/enhance-app-with-new-services-and-futuristic-design-2 e4 e,
-  'cursor/enhance-app-with-new-services-and-futuristic-design-7 bf2,
-  'cursor/enhance-app-with-new-services-and-futuristic-design-80 f7,
-  'cursor/website-audit-and-update-with-deployment-d0 c2,
-  'cursor/website-audit-and-update-with-deployment-db70,
-  'add-new-2026-content,
-  'add-revolutionary-content-2026,
+';
+  'cursor/enhance-app-with-new-services-and-futuristic-design-2 e4 e,';
+  'cursor/enhance-app-with-new-services-and-futuristic-design-7 bf2,';
+  'cursor/enhance-app-with-new-services-and-futuristic-design-80 f7,';
+  'cursor/website-audit-and-update-with-deployment-d0 c2,';
+  'cursor/website-audit-and-update-with-deployment-db70,';
+  'add-new-2026-content,';
+  'add-revolutionary-content-2026,';
   'ai-2027-content-integration,
-  ai-dashboard-improvements
+  ai-dashboard-improvements];
 ];
 
 async function main() {
   // console.log removed for production
 // Check current status;
 
-  // console.log removed for production
+  // console.log removed for production';
 execGitCommand('git status --porcelain', Checking git status);
 
   // Try to merge each important branch;
@@ -56,7 +56,7 @@ try {
 
       if (branchExists !== null) {
         // Try to merge;
-
+`;
         const mergeResult = execGitCommand(`git merge origin/${branch} --no-edit`, `Merging ${branch});;
 
         if (mergeResult) {
@@ -79,12 +79,13 @@ try {
 
   // Final status;
 
-  // console.log removed for production
+  // console.log removed for production';
 execGitCommand('git status', Final git status);
-
+';
   execGitCommand('git log --oneline -5', Recent commits);
 
   // console.log removed for production
 }
 
 main().catch(console.error);
+';`;

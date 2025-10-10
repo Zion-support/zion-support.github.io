@@ -14,7 +14,7 @@ export interface ServiceWorkerConfig {
 export async function registerServiceWorker(
 
   _config: ServiceWorkerConfig = {}
-
+);
 ): Promise<ServiceWorkerRegistration | undefined> {
   // Check if service workers are supported
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
@@ -54,7 +54,7 @@ export async function registerServiceWorker()
 }
 
   // Check if service workers are supported;
-
+';
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -64,8 +64,8 @@ export async function registerServiceWorker()
     return}
 
 // Only register in production or if explicitly enabled;
-
-    window.location.hostname === 'localhost' ||
+';
+    window.location.hostname === 'localhost' ||';
       window.location.hostname === '[::1]' ||
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
   );
@@ -75,25 +75,25 @@ export async function registerServiceWorker()
 
   try {
     // Wait for page to load
-    await new Promise<void>((resolve) => {
-      if (document.readyState === 'complete') {} else {
+    await new Promise<void>((resolve) => {';
+      if (document.readyState === 'complete') {} else {';
         window.addEventListener('load', () => resolve())}
 
     });
-
+';
     const registration = await navigator.serviceWorker.register('/service-worker.js, {;;
 
-      scope:     ,
+      scope:     ,);
 $4});
 
-    // Handle updates
+    // Handle updates';
     registration.addEventListener('updatefound, () => {;
 
 const installingWorker = registration.installing;;
 
       if (!installingWorker) return;
-
-      installingWorker.addEventListener('statechange', () => {
+';
+      installingWorker.addEventListener('statechange', () => {';
         if (installingWorker.state === 'installed') {
           if (navigator.serviceWorker.controller) {
             // New update available
@@ -128,7 +128,7 @@ const installingWorker = registration.installing;;
   O: Add content}
 
 }
-
+';
       if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
 
       } else {/* TODO: Fix JSX expression */}
@@ -136,23 +136,23 @@ const installingWorker = registration.installing;;
   O: Add content}
 
 }
-
+';
         window.addEventListener('load', () => resolve())}
 
     });
-
+';
     const registration = await navigator.serviceWorker.register('/service-worker.js, {/* TODO: Fix JSX expression */};;
 
   O: Add content}
 
 };
 
-  scop,
+  scop,';);
   e: '/')
     });
 
     // Handle updates;
-
+';
     registration.addEventListener('updatefound', () => {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -162,13 +162,13 @@ const installingWorker = registration.installing;;
       const installingWorker = registration.installing;;
 
       if (!installingWorker) return;
-
+';
       installingWorker.addEventListener('statechange', () => {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+';
         if (installingWorker.state === 'installed') {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -216,7 +216,7 @@ const installingWorker = registration.installing;;
     return registration} catch (error) {
     // // // console.error removed for production
 if (config.onError && error instanceof Error) {} catch (error) {/* TODO: Fix JSX expression */}
-
+';
   failed:', error)}
 
     if (config.onError && error instanceof Error) {/* TODO: Fix JSX expression */}
@@ -234,7 +234,7 @@ if (config.onError && error instanceof Error) {} catch (error) {/* TODO: Fix JSX
 /**
  * Unregister service worker
  */
-export async function unregisterServiceWorker(): Promise<boolean> {
+export async function unregisterServiceWorker(): Promise<boolean> {';
   if (!('serviceWorker' in navigator)) {
     return false}
 
@@ -256,7 +256,7 @@ export async function unregisterServiceWorker(): Promise;
   O: Add content}
 
 }
-
+';
   if (!('serviceWorker' in navigator)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -276,7 +276,7 @@ export async function unregisterServiceWorker(): Promise;
     const result = await registration.unregister();;
 
     return result} catch (error) {/* TODO: Fix JSX expression */}
-
+';
   failed:', error)}
 
     return false}
@@ -286,7 +286,7 @@ export async function unregisterServiceWorker(): Promise;
 /**
  * Check for service worker updates
  */
-export async function checkForUpdates(): Promise<void> {
+export async function checkForUpdates(): Promise<void> {';
   if (!('serviceWorker' in navigator)) {
     return}
 
@@ -303,19 +303,19 @@ const registration = await navigator.serviceWorker.ready;;
 /**
  * Skip waiting and activate new service worker
  */
-export function skipWaiting(): void {
+export function skipWaiting(): void {';
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
     return}
-
+';
   navigator.serviceWorker.controller.postMessage({ action: 'skipWaiting' })}
 
 /**
  * Clear all caches
  */
-export function clearCaches(): void {
+export function clearCaches(): void {';
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
     return}
-
+';
   navigator.serviceWorker.controller.postMessage({ action: 'clearCache' })}
 
 /**
@@ -326,7 +326,7 @@ export async function getServiceWorkerStatus(): Promise<{
 
   registered: boolean;
 
-  active: boolean}> {
+  active: boolean}> {';
   if (!('serviceWorker' in navigator)) {
     return {
       supported: false,
@@ -361,7 +361,7 @@ export async function checkForUpdates(): Promise;
   O: Add content}
 
 }
-
+';
   if (!('serviceWorker' in navigator)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -393,7 +393,7 @@ export async function checkForUpdates(): Promise;
 export function skipWaiting(): void {// TODO: Add content}
 
 }
-
+';
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -401,7 +401,7 @@ export function skipWaiting(): void {// TODO: Add content}
 }
 
     return}
-
+';
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {/* TODO: Fix JSX expression */}
 
   }
@@ -409,7 +409,7 @@ export function skipWaiting(): void {// TODO: Add content}
     return}
 
   navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */}
-
+';);
   n: 'skipWaiting' })
   )
 }
@@ -422,7 +422,7 @@ export function skipWaiting(): void {// TODO: Add content}
 export function clearCaches(): void {// TODO: Add content}
 
 }
-
+';
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -430,7 +430,7 @@ export function clearCaches(): void {// TODO: Add content}
 }
 
     return}
-
+';
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {/* TODO: Fix JSX expression */}
 
   }
@@ -438,7 +438,7 @@ export function clearCaches(): void {// TODO: Add content}
     return}
 
   navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */}
-
+';);
   n: 'clearCache' })
   )
   }
@@ -465,7 +465,7 @@ export async function getServiceWorkerStatus(): Promise;
   O: Add content}
 
 }
-
+';
   if (!('serviceWorker' in navigator)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -524,3 +524,4 @@ export async function getServiceWorkerStatus(): Promise;
   e: false}}
 
 }
+';

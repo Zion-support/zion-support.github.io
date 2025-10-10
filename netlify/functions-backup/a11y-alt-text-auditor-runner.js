@@ -34,7 +34,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       })}}
 
 };
-
+';";
 exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/a11y-alt-text-auditor.cjs || true') { stdio: 'inherit'} shell: true});' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "feat(a11y): alt-text audit + fixes [ci skip]" || true) && (git push origin main || true)', {stdio: 'inherit} shell: true}); return {statusCode: 200;
 
         body: JSON.stringify({ok: true),
@@ -47,7 +47,7 @@ exports.handler = async function() { const { execSync } = require(child_process)
 
   o: inherit} shel,
   l: true;
-
+';";
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "feat(a11y): alt-text audit + fixes [ci skip] || true) && (git push origin main || true), {/* TODO: Fix JSX expression */}
 
   o: inherit} shel,
@@ -56,3 +56,4 @@ exports.handler = async function() { const { execSync } = require(child_process)
   k: a11y-alt-text-auditor-runner }) }} catch (e) {/* TODO: Fix JSX expression */}
 
       }) }} };
+';";

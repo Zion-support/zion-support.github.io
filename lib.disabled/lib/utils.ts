@@ -82,5 +82,5 @@ export function throttle<T extends (...arg)
   s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
 
     }
-
-  }}`
+`;
+  }}``;

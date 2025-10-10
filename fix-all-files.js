@@ -14,7 +14,7 @@ const fileName = path.basename(filePath, path.extname(filePath));;
   const isPage = filePath.includes('/page.tsx') || filePath.includes(/page.jsx);;
 
   const isComponent = filePath.includes(/components/);;
-
+';
   const isUtil = filePath.includes('/utils/') || filePath.includes(/hooks/);;
 
   const isConfig = filePath.includes(/config/);;
@@ -29,20 +29,20 @@ let content = ;;
     content = `import React from react;
 
 export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}() {
-  return(<div className="min-h-screen bg-gray-50>)
-      <div className="container mx-auto px-4 py-8>)
-        <h1 className="text-3xl font-bold text-gray-900 mb-6>)
-          ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, ' )}
-
-        </h1>
-        <div className="bg-white rounded-lg shadow-md p-6></div>
+  return(<div className="min-h-screen bg-gray-50>)";
+      <div className="container mx-auto px-4 py-8>)";
+        <h1 className="text-3xl font-bold text-gray-900 mb-6>)';
+          ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, ' )}"
+"
+        </h1>";
+        <div className="bg-white rounded-lg shadow-md p-6></div>";
           <p className="text-gray-600>
             This page is under development. Content will be added soon.
           </p>
         </div>
       </div>
     </div>
-  )}} else if (isComponent) {
+  )}} else if (isComponent) {`;
     content = `import React from react;
 
 interface ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Props {
@@ -50,19 +50,19 @@ interface ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Props {
 
   children?: React.ReactNode}
 
-export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}({ 
+export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}({ ';
   className = ', 
   children}: ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Props) {
   return (
-
-    <div className={\`${fileName.toLowerCase()} \${className}\}></div>
-      {children || (
-
-        <div className="p-4></div>
-          <h3 className="text-lg font-semibold mb-2></h>
-            ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/([A-Z])/g, ' $1).trim()}
-
-          </h3>
+`;
+    <div className={\`${fileName.toLowerCase()} \${className}\}></div>"
+      {children || ("
+";
+        <div className="p-4></div>";
+          <h3 className="text-lg font-semibold mb-2></h>';
+            ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/([A-Z])/g, ' $1).trim()}"
+"
+          </h3>";
           <p className="text-gray-600>
             Component content will be added here.
           </p>
@@ -75,7 +75,7 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
 
 // This file contains utility functions and configurations;
 
-export const ${fileName} = {
+export const ${fileName} = {;
   // Add utility functions here;
 
   init: () => {,
@@ -117,7 +117,7 @@ return false}
 }
 
 // Function to find all TypeScript/JavaScript files;
-
+';
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', .jsx]) {;
 
 const files = [];;
@@ -137,7 +137,7 @@ const fullPath = path.join(currentDir, item);;
 
         if (stat.isDirectory()) {
           // Skip node_modules and other common directories;
-
+';
           if (!['node_modules', '.git', 'dist', 'build', '.next].includes(item)) {
             traverse(fullPath)}
 
@@ -192,5 +192,6 @@ errorCount++}
 if (fixedCount > 0) {
   // console.log removed for production
 } else {
-  // console.log removed for production
-}
+  // console.log removed for production"
+}"
+';";`;

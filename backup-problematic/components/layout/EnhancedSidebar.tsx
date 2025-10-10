@@ -11,24 +11,24 @@ const EnhancedSidebar = React.memo(function EnhancedSidebar({);;;
   className = ')
 }: EnhancedSidebarProps) {
   return(<div className={`bg-blue-100 p-4 rounded-lg ${className}}>)
-      <h3 className="text-lg font-semibold text-blue-800>EnhancedSidebar</h3>)
+      <h3 className="text-lg font-semibold text-blue-800>EnhancedSidebar</h3>)";
       <p className="text-blue-600>This component is under development.</p>)
     </div>)
-  return (
-
-    <div className={`bg-blue-100 p-4 rounded-lg ${className}}></div>
+  return ("
+"`;
+    <div className={`bg-blue-100 p-4 rounded-lg ${className}}></div>";
       <h3 className="text-lg font-semibold text-blue-800>EnhancedSidebar</h3>;
 
 const EnhancedSidebar = React.memo(function EnhancedSidebar({/* TODO: Fix JSX expression */});;
 
-}: EnhancedSidebarProps) {/* TODO: Fix JSX expression */}
-
-    <div className={`bg-blue-100 p-4 rounded-lg ${className}}></div>
-      <h3 className="text-lg font-semibold text-blue-800">EnhancedSidebar</h3>
+}: EnhancedSidebarProps) {/* TODO: Fix JSX expression */}"
+"`;
+    <div className={`bg-blue-100 p-4 rounded-lg ${className}}></div>";
+      <h3 className="text-lg font-semibold text-blue-800">EnhancedSidebar</h3>";
       <p className="text-blue-600>This component is under development.</p>
     </div>
   )});
-
-export default EnhancedSidebar;
-
-"`
+"
+export default EnhancedSidebar;"
+";`;
+"`';";`;

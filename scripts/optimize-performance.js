@@ -13,8 +13,8 @@ let content = fs.readFileSync(filePath, utf8);;
 
     let modified = false;;
 
-    // Add React.memo to functional components that dont have it;
-
+    // Add React.memo to functional components that dont have it;';
+';';
     if (content.includes('const ') && content.includes(': React.FC') && !content.includes('React.memo)) {
       // This is a basic optimization - in practice, youd want more sophisticated detection;
 
@@ -24,25 +24,25 @@ function optimizeComponent(filePath) {/* TODO: Fix JSX expression */}
 }
 
     // Add useCallback to event handlers;
-
-    if (content.includes('onClick') && !content.includes('useCallback)) {
+';
+    if (content.includes('onClick') && !content.includes('useCallback)) {';
     if (content.includes('onClick') && !content.includes('useCallback')) {/* TODO: Fix JSX expression */}
 
       // // console.log removed for production
 }
 
     // Check for missing key props in lists;
-
-    if (content.includes('.map(') && !content.includes('key=)) {
+';
+    if (content.includes('.map(') && !content.includes('key=)) {';
     if (content.includes('.map(') && !content.includes('key=')) {/* TODO: Fix JSX expression */}
 
       // // console.log removed for production
 without key props)}
 
     // Check for inline object/function definitions in JSX;
-
+';
     if (content.includes('style={{') || content.includes('onClick={())) {}
-
+';
     if (content.includes('style={/* TODO: Fix JSX expression */})
       // // console.log removed for production
 }
@@ -59,7 +59,7 @@ return false}
 async function addPerformanceOptimizations() {;
 
 const componentFiles = await glob(app/components/**/*.{ts,tsx}, {);;
-
+';
     ignore: ['**/node_modules/**', '**/dist/**', '**/build/**])
 async function addPerformanceOptimizations() {/* TODO: Fix JSX expression */}
 
@@ -96,7 +96,7 @@ function createPerformanceMonitor() {
   Summary:`);
 
   // // console.log removed for production
-
+`;
   analyzed: ${totalFiles}`);
 
   // // console.log removed for production
@@ -108,14 +108,14 @@ function createPerformanceMonitor() {
 function createPerformanceMonitor() {/* TODO: Fix JSX expression */}
 
 };
-
+';`;
 const performanceMonitorContent = `import React, { useEffect, useState } from 'react;;;
 
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 
 }
-
-export default PerformanceMonitor;`
+`;
+export default PerformanceMonitor;``;
 `;
 
   fs.writeFileSync(app/components/PerformanceMonitor.tsx, performanceMonitorContent);
@@ -130,7 +130,7 @@ function createImageOptimization() {;
 function createImageOptimization() {/* TODO: Fix JSX expression */}
 
 };
-
+`;
 const imageOptimizationContent = `import React from react;;
 
 interface OptimizedImageProps {/* TODO: Fix JSX expression */}
@@ -139,12 +139,12 @@ interface OptimizedImageProps {/* TODO: Fix JSX expression */}
 
 ;
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({,
+const OptimizedImage: React.FC<OptimizedImageProps> = ({,;
   src;
 
   alt,
-  width,
-  height,
+  width,';
+  height,';';
   className = ',
   priority = false}) => {
   return (<img;
@@ -155,12 +155,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
 
       width={width}
 
-      height={height})
-      className={\`\${className}\})
+      height={height})`;
+      className={\`\${className}\})';
       loading={priority ? 'eager' : 'lazy})
       decoding="async)
-      style={{})
-        width: width ? \`\${width}px\` : 'auto)
+      style={{})';`;
+        width: width ? \`\${width}px\` : 'auto)`;
         height: height ? \`\${height}px\` : auto;
 
 const,
@@ -177,22 +177,22 @@ const,
       width={width}
 
       height={height}
-
+`;
       className={\`\${className}\}
-
+';
       loading={priority ? 'eager' : 'lazy}
-
+";
       decoding="async
       style={/* TODO: Fix JSX expression */}
-
+';`;
   h: width ? \`\${width}px\` : 'auto,
-        heigh,
+        heigh,`;
   t: height ? \`\${height}px\ : auto
       }}
 
     /></img>
   )};
-
+`;
 export default OptimizedImage;`
 ;
 
@@ -217,5 +217,5 @@ await addPerformanceOptimizations();
 
   // // console.log removed for production
 }
-
-main().catch(console.error)}}}"`
+";`;
+main().catch(console.error)}}}"`';";`;

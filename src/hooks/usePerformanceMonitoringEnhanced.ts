@@ -76,13 +76,14 @@ const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression 
 };
 
   name: entry.name,
-            value: entry.startTime,
-            timestamp: Date.now()
+            value: entry.startTime,);
+            timestamp: Date.now()';
       observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint] }
-
+);
   )
       return () => observer.disconnect()
   }, [reportWebVitals])
   return { reportWebVitals }
 
-}
+};
+';

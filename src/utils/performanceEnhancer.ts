@@ -54,7 +54,7 @@ constructor(config: OptimizationConfig) {this.config = config}
 
             // console.log removed for production
 entry:, entry.name, entry.duration)})});
-
+';
         observer.observe({ entryTypes: ['measure', 'navigation'] })} catch (error) {// console.warn removed for production
 }
 
@@ -75,3 +75,4 @@ entry:, entry.name, entry.duration)})});
 }
 
 export default PerformanceEnhancer;
+';

@@ -139,7 +139,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
 
       : `${title} | ${this.config.siteName}`
   generateTitle(pageTitle?: string): string {/* TODO: Fix JSX expression */}
-
+`;
       : `${title} | ${this.config.siteName}`;
 
   }
@@ -172,7 +172,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   generateKeywords(pageKeywords?: string[]): string {}
 
     const keywords = pageKeywords || this.currentPageData?.keywords || [];;
-
+';
     return keywords.join(', ');}
 
   generateKeywords(pageKeywords?: string[]): string {/* TODO: Fix JSX expression */}
@@ -204,58 +204,58 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     document.title = title;
 
     // Update or create meta tags;
-
-    this.setMetaTag('description', description)
-    this.setMetaTag('keywords', keywords)
-    this.setMetaTag('author', this.currentPageData.author || this.config.siteName)
+';
+    this.setMetaTag('description', description)';
+    this.setMetaTag('keywords', keywords)';
+    this.setMetaTag('author', this.currentPageData.author || this.config.siteName)';
     this.setMetaTag('robots', this.getRobotsContent())
     // Open Graph tags;
-
-    this.setMetaTag('og:title', title, 'property')
-    this.setMetaTag('og:description', description, 'property')
-    this.setMetaTag('og:image', image, 'property')
-    this.setMetaTag('og:url', url, 'property')
-    this.setMetaTag('og:type', this.currentPageData.type || 'website', 'property')
+';
+    this.setMetaTag('og:title', title, 'property')';
+    this.setMetaTag('og:description', description, 'property')';
+    this.setMetaTag('og:image', image, 'property')';
+    this.setMetaTag('og:url', url, 'property')';
+    this.setMetaTag('og:type', this.currentPageData.type || 'website', 'property')';
     this.setMetaTag('og:site_name', this.config.siteName, 'property')
     // Twitter Card tags;
 
     if (this.config.twitterHandle) {
     // Twitter Card tags
     if (this.config.twitterHandle) {}
-
+';`;
       this.setMetaTag('twitter:card', 'summary_large_image');`}
-
-      this.setMetaTag('twitter:site', `@${this.config.twitterHandle}`)
-      this.setMetaTag('twitter:title', title)
-      this.setMetaTag('twitter:description', description)
+';`;
+      this.setMetaTag('twitter:site', `@${this.config.twitterHandle}`)';
+      this.setMetaTag('twitter:title', title)';
+      this.setMetaTag('twitter:description', description)';
       this.setMetaTag('twitter:image', image)
     }
 
     // Additional meta tags;
-
-    this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0')
-    this.setMetaTag('theme-color', '#1e40af')
-    this.setMetaTag('msapplication-TileColor', '#1e40af')
-  private updateMetaTags(): void {/* TODO: Fix JSX expression */}`
+';
+    this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0')';
+    this.setMetaTag('theme-color', '#1e40af')';
+    this.setMetaTag('msapplication-TileColor', '#1e40af')`;
+  private updateMetaTags(): void {/* TODO: Fix JSX expression */}`';`;
   r:site', `@${this.config.twitterHandle}`);
-
+';
       this.setMetaTag('twitte)
   r:title, title);
-
+';
       this.setMetaTag('twitte)
   r:description, description);
-
+';
       this.setMetaTag('twitte)
   r:image, image);
 
     }
 
     // Additional meta tags;
-
+';
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0);
-
+';
     this.setMetaTag('theme-color', '#1e40af);
-
+';
     this.setMetaTag('msapplication-TileColor', '#1e40af);
 
   }
@@ -263,24 +263,24 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Set meta tag;
 
-   */
+   */';`;
   private setMetaTag(name: string, content: string, attribute: string = 'name'): void {`}
-
+`;
     let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;;
 
-    if (!meta) {
+    if (!meta) {";`;
     let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;;
 
     if (!meta) {}
-
+';
       meta = document.createElement('meta')
       meta.setAttribute(attribute, name)
       document.head.appendChild(meta);}
 
   private setMetaTag(nam,
-  e: string, conten,
-  t: string, attribut)
-  e: string = 'name'): void {/* TODO: Fix JSX expression */}`
+  e: string, conten,);
+  t: string, attribut)';`;
+  e: string = 'name'): void {/* TODO: Fix JSX expression */}`";`;
     let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;;
 
     if (!meta) {/* TODO: Fix JSX expression */}
@@ -301,17 +301,17 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     const directives = [];;
 
     if (!this.currentPageData.noindex) {}
-
+';
       directives.push('noindex');}
 
     }
 
     if (!this.currentPageData.nofollow) {}
-
+';
       directives.push('follow');}
 
     } else {}
-
+';
       directives.push('nofollow');}
 
   private getRobotsContent(): string {/* TODO: Fix JSX expression */}
@@ -323,7 +323,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
 
     }
-
+';
     return directives.join(', ')
   }
 
@@ -333,9 +333,9 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    */
   private setupStructuredData(): void {}
 
-    this.addStructuredData(structuredData)
-  private setupStructuredData(): void {/* TODO: Fix JSX expression */}`
-  t: `${this.config.siteUrl}/search?q={search_term_string}`,
+    this.addStructuredData(structuredData)`;
+  private setupStructuredData(): void {/* TODO: Fix JSX expression */}``;
+  t: `${this.config.siteUrl}/search?q={search_term_string}`,';
         'query-input': required name=search_term_string
       }
 
@@ -353,8 +353,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     if (!this.currentPageData) return;
 
     const structuredData = {;;
-
-      '@context': 'https: //schema.org',
+';
+      '@context': 'https: //schema.org',';
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
       headline: this.generateTitle()
       description: this.generateDescription()
@@ -362,20 +362,20 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
 
       image: this.currentPageData.image || this.config.defaultImage;
 
-      publisher: {,
+      publisher: {,};
   private updateStructuredData(): void {}
 
     if (!this.currentPageData) return
     const structuredData = {};;
-
-      '@context': 'https://schema.org',
+';
+      '@context': 'https://schema.org',';
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
       headline: this.generateTitle(),
       description: this.generateDescription(),
       url: this.currentPageData.url || window.location.href,
       image: this.currentPageData.image || this.config.defaultImage,
       publisher: {}
-
+';
         '@type': 'Organization',
         name: this.config.siteName;
 
@@ -386,10 +386,10 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     }
 
     // Add article-specific properties;
-
+';
     if (this.currentPageData.type === 'article') {
-      Object.assign(structuredData, {
-        author: {)
+      Object.assign(structuredData, {);
+        author: {)';
 // '@type': 'Person')
 // name: this.currentPageData.author || this.config.siteName;)
         })
@@ -398,13 +398,13 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         dateModified: this.currentPageData.modifiedTime),
         articleSection: this.currentPageData.section),
         keywords: this.generateKeywords(),
-    // Add article-specific properties
+    // Add article-specific properties';
     if (this.currentPageData.type === 'article') {}
 
       Object.assign(structuredData, {)}
 
         author: {}
-
+';
 // '@type': 'Person',
 // name: this.currentPageData.author || this.config.siteName
         },
@@ -420,7 +420,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     };
 
     // Add article-specific properties;
-
+';
     if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */}
 
         },
@@ -444,9 +444,9 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
 
    */
   private addStructuredData(data: unknown): void {}
-
+';
     const script = document.createElement('script);;
-
+';
     script.type = 'application/ld+json;
 
     script.textContent = JSON.stringify(data);
@@ -463,7 +463,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
 
    */
   private setupCanonicalUrls(): void {}
-
+';
     const canonical = document.createElement('link);;
 
     canonical.rel = canonical
@@ -481,11 +481,11 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    */
   private setupPerformanceMonitoring(): void {
     // Monitor Core Web Vitals for SEO impact;
-
+';
     if (typeof window !== 'undefined' && 'performance' in window) {
   private setupPerformanceMonitoring(): void {}
 
-    // Monitor Core Web Vitals for SEO impact
+    // Monitor Core Web Vitals for SEO impact';
     if (typeof window !== 'undefined' && 'performance' in window) {}
 
       // Monitor LCP (Largest Contentful Paint)
@@ -498,17 +498,17 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         if (lastEntry.startTime > 4000) { // Poor LCP;
 
         if (lastEntry.startTime > 4000) { // Poor LCP}
-
+';
           this.trackSEOMetric('poor_lcp', lastEntry.startTime);}
 
         }
-
+';
       }).observe({ entryTypes: ['largest-contentful-paint'] })
   private setupPerformanceMonitoring(): void {/* TODO: Fix JSX expression */}
 
         }
 
-      }).observe({/* TODO: Fix JSX expression */})
+      }).observe({/* TODO: Fix JSX expression */})';
   s: ['largest-contentful-paint] });
 
       // Monitor CLS (Cumulative Layout Shift)
@@ -540,11 +540,11 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         }
 
         if (clsValue > 0.25) { // Poor CLS}
-
+';
           this.trackSEOMetric('poor_cls', clsValue);}
 
         }
-
+';
       }).observe({ entryTypes: ['layout-shift'] })
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
 
@@ -556,7 +556,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
 
         }
 
-      }).observe({/* TODO: Fix JSX expression */})
+      }).observe({/* TODO: Fix JSX expression */})';
   s: ['layout-shift] });
 
     }
@@ -567,22 +567,22 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    * Track SEO-related metrics;
 
    */
-  private trackSEOMetric(metric: string, value: number): void {,
-    if (typeof window !== 'undefined' && (window as any).gtag) {,
+  private trackSEOMetric(metric: string, value: number): void {,';
+    if (typeof window !== 'undefined' && (window as any).gtag) {,';
       (window as any).gtag('event', 'seo_metric', {)
         metric_name: metric),
   private trackSEOMetric(metric: string, value: number): void {}
-
+';
     if (typeof window !== 'undefined' && (window as any).gtag) {}
-
+';
       (window as any).gtag('event', 'seo_metric', {)}
 
         metric_name: metric,
-        metric_value: Math.round(value),
+        metric_value: Math.round(value),';
         event_category: 'seo'}
 
       })
-  private trackSEOMetric(metri,
+  private trackSEOMetric(metri,);
   c: string, valu)
   e: number): void {/* TODO: Fix JSX expression */}
 
@@ -610,8 +610,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       {}
 
         url: this.config.siteUrl,
-        lastmod: new Date().toISOString(),
-        changefreq: 'daily',
+        lastmod: new Date().toISOString(),';
+        changefreq: 'daily',';
         priority: '1.0'}
 
   generateSitemapData(): Array<{/* TODO: Fix JSX expression */}
@@ -627,10 +627,10 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    * Generate robots.txt content;
 
    */
-  generateRobotsTxt(): string {
+  generateRobotsTxt(): string {`;
     return `User-agent: *,
   generateRobotsTxt(): string {}
-
+`;
     return `User-agent: *
 Allow: /}
 
@@ -641,7 +641,7 @@ Sitemap: ${this.config.siteUrl}/sitemap.xml;
 Disallow: /admin/,
 Disallow: /private/,
 Disallow: /api/,
-Disallow: /_next/,
+Disallow: /_next/,`;
 Disallow: /static/`,
   generateRobotsTxt(): string {/* TODO: Fix JSX expression */}
 
@@ -654,8 +654,8 @@ Disallo,
 Disallo,
   w: /api/
 Disallo,
-  w: /_next/
-Disallo,`
+  w: /_next/`;
+Disallo,``;
   w: /static/`;
 
   }
@@ -666,7 +666,7 @@ Disallo,`
    */
   checkSEOIssues(): string[] {}
 
-    const issues: string[] = []
+    const issues: string[] = [];
     // Check title length;
 
     const title = document.title;,;;
@@ -676,55 +676,55 @@ Disallo,`
     const title = document.title;;
 
     if (title.length < 30) {}
-
+';
       issues.push('Title is too short (less than 30 characters)');}
 
     } else if (title.length > 60) {}
-
+';
       issues.push('Title is too long (more than 60 characters)');}
 
     }
 
     // Check description length;
-
+';";
     const description = document.querySelector('meta[name="description"]')?.getAttribute('content);;
 
     if (!description) {}
-
+';
       issues.push('Missing meta description');}
 
     } else if (description.length < 120) {}
-
+';
       issues.push('Description is too short (less than 120 characters)');}
 
     } else if (description.length > 160) {}
-
+';
       issues.push('Description is too long (more than 160 characters)');}
 
     }
 
     // Check for images without alt text;
-
+';
     const images = document.querySelectorAll('img);;
 
     images.forEach((img, index) => {}
-
+`;
       if (!img.alt) {`}
-
+`;
         issues.push(`Image ${index + 1} is missing alt text`)
       }
 
     })
     // Check for heading structure;
-
+';
     const h1s = document.querySelectorAll('h1);;
 
     if (h1s.length === 0) {}
-
+';
       issues.push('Page is missing H1 tag');}
 
     } else if (h1s.length > 1) {}
-
+';
       issues.push('Page has multiple H1 tags');}
 
   checkSEOIssues(): string[] {/* TODO: Fix JSX expression */}
@@ -732,8 +732,8 @@ Disallo,`
     } else if (title.length > 60) {/* TODO: Fix JSX expression */}
 
     }
-
-    // Check description length;"
+";
+    // Check description length;"';";
     const description = document.querySelector('meta[name="description"]')?.getAttribute('content);;
 
     if (!description) {/* TODO: Fix JSX expression */}
@@ -745,10 +745,10 @@ Disallo,`
     }
 
     // Check for images without alt text;
-
+';
     const images = document.querySelectorAll('img);;
-
-    images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
+`;
+    images.forEach((img, index) => {/* TODO: Fix JSX expression */}``;
         issues.push(`Image ${index + 1} is missing alt text`);
 
       }
@@ -756,7 +756,7 @@ Disallo,`
     });
 
     // Check for heading structure;
-
+';
     const h1s = document.querySelectorAll('h1);;
 
     if (h1s.length === 0) {/* TODO: Fix JSX expression */}
@@ -789,17 +789,17 @@ Disallo,`
 
 // Default configuration;
 
-const defaultConfig: SEOConfig = {
+const defaultConfig: SEOConfig = {';
   siteName: 'Zion Tech Group',
   siteUrl: https://zion.app
 // Default configuration
-const defaultConfig: SEOConfig = {}
-
-  siteName: 'Zion Tech Group',
-  siteUrl: 'https://zion.app',
-  defaultTitle: 'Advanced AI and IT Solutions',
-  defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',
-  defaultImage: 'https://zion.app/og-image.webp',
+const defaultConfig: SEOConfig = {};
+';
+  siteName: 'Zion Tech Group',';
+  siteUrl: 'https://zion.app',';
+  defaultTitle: 'Advanced AI and IT Solutions',';
+  defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',';
+  defaultImage: 'https://zion.app/og-image.webp',';
   twitterHandle: 'ZionTechGroup',
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID;
 
@@ -825,5 +825,6 @@ const,
 };
 
 export const seoOptimizer = new SEOOptimizer(defaultConfig);;
-
+";`;
 export default seoOptimizer;"`
+';";`;

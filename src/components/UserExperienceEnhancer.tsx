@@ -1,5 +1,5 @@
-import React from 'react;
-
+import React from 'react;';
+';';
 'use client;
 
 interface UserExperienceEnhancerProps {
@@ -23,12 +23,12 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   enableNotifications = true
 }) => {
   return (
-
+;
 ;
 
 const [isOnline, setIsOnline] = useState(true);
 
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>
+  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>;
 );
 
 }>({});
@@ -111,16 +111,16 @@ const setLoading = useCallback((key: string, loading: boolean) => {;;
 
 const links = document.querySelectorAll(a[href]);;
 
-      links.forEach(link => {
+      links.forEach(link => {);
         link.addEventListener(click, (e) => {;
 
 const href = link.getAttribute(href);;
-
+';
           if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:)) {
   // Loading states management;
 
   const setLoading = useCallback((ke,;;
-
+);
   y: string, loadin)
   g: boolean) => {/* TODO: Fix JSX expression */}
 
@@ -143,13 +143,13 @@ const href = link.getAttribute(href);;
 const handleError = (event: ErrorEvent) => {;;
 
         // // console.error removed for production
-// Send error to analytics if available
-        if (typeof window !== 'undefined' && 'gtag in window) {
-          (window as any).gtag('event', 'exception, {
+// Send error to analytics if available';
+        if (typeof window !== 'undefined' && 'gtag in window) {';
+          (window as any).gtag('event', 'exception, {';
             description: event.error?.message || 'Unknown error,
             fatal: false
   // Error boundary enhancement;
-
+);
   useEffect(() => {/* TODO: Fix JSX expression */}
 
           })}
@@ -160,12 +160,12 @@ const handleError = (event: ErrorEvent) => {;;
 
 const handleUnhandledRejection = (event: PromiseRejectionEvent) => {;;
 
-        // // console.error removed for production
-if (typeof window !== 'undefined' && 'gtag in window) {
-          (window as any).gtag('event', 'exception, {
+        // // console.error removed for production';
+if (typeof window !== 'undefined' && 'gtag in window) {';
+          (window as any).gtag('event', 'exception, {';
             description: event.reason?.message || 'Unhandled promise rejection,
             fatal: false;
-
+);
 const handleUnhandledRejection = (even);;
 
   t: PromiseRejectionEvent) => {/* TODO: Fix JSX expression */}
@@ -190,22 +190,22 @@ const handleUnhandledRejection = (even);;
   }, [enableErrorBoundaries]);
 
   // Analytics enhancement
-  useEffect(() => {
+  useEffect(() => {';
     if (enableAnalytics && typeof window !== 'undefined) {
       // Track page visibility changes;
 
 const handleVisibilityChange = () => {;;
 
-        if (document.hidden) {
-          if ('gtag in window) {
+        if (document.hidden) {';
+          if ('gtag in window) {';
             (window as any).gtag('event', 'page_hidden, {
-              event_category:             ,
+              event_category:             ,);
 $4})}
 
-        } else {
-          if ('gtag in window) {
+        } else {';
+          if ('gtag in window) {';
             (window as any).gtag('event', 'page_visible, {
-              event_category:             ,
+              event_category:             ,);
 $4});
 
   // Analytics enhancement;
@@ -231,7 +231,7 @@ return (
 ;
 
 const scrollDepth = Math.round(;;
-
+);
           (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
         );
 
@@ -239,39 +239,39 @@ const scrollDepth = Math.round(;;
           maxScrollDepth = scrollDepth;
 
           // Track milestone scroll depths
-          if (maxScrollDepth >= 25 && maxScrollDepth < 50) {
-            if ('gtag in window) {
-              (window as any).gtag('event', 'scroll, {
+          if (maxScrollDepth >= 25 && maxScrollDepth < 50) {';
+            if ('gtag in window) {';
+              (window as any).gtag('event', 'scroll, {';
                 event_category: 'engagement,
-                value: 25
+                value: 25);
               })}
 
           } else if (maxScrollDepth >
 );
 
-}= 50 && maxScrollDepth < 75) {
-            if ('gtag in window) {
-              (window as any).gtag('event', 'scroll, {
+}= 50 && maxScrollDepth < 75) {';
+            if ('gtag in window) {';
+              (window as any).gtag('event', 'scroll, {';
                 event_category: 'engagement,
-                value: 50
+                value: 50);
               })}
 
-          } else if (maxScrollDepth >= 75 && maxScrollDepth < 90) {
-            if ('gtag in window) {
-              (window as any).gtag('event', 'scroll, {
+          } else if (maxScrollDepth >= 75 && maxScrollDepth < 90) {';
+            if ('gtag in window) {';
+              (window as any).gtag('event', 'scroll, {';
                 event_category: 'engagement,
-                value: 75
+                value: 75);
               })}
 
-          } else if (maxScrollDepth >= 90) {
-            if ('gtag in window) {
-              (window as any).gtag('event', 'scroll, {
+          } else if (maxScrollDepth >= 90) {';
+            if ('gtag in window) {';
+              (window as any).gtag('event', 'scroll, {';
                 event_category: 'engagement,
                 value: 90
       // Track scroll depth;
 
       let maxScrollDepth = 0;;
-
+);
       const handleScroll = () => {/* TODO: Fix JSX expression */};;
 
               })}
@@ -301,12 +301,12 @@ const startTime = Date.now();;
       const handleBeforeUnload = () => {;;
 
 const timeOnPage = Math.round((Date.now() - startTime) / 1000);;
-
-        if ('gtag in window) {
-          (window as any).gtag('event', 'timing_complete, {
+';
+        if ('gtag in window) {';
+          (window as any).gtag('event', 'timing_complete, {';
             name: 'time_on_page,
             value: timeOnPage,
-            event_category:           ,
+            event_category:           ,);
 $4});
 
       // Track time on page;
@@ -330,8 +330,8 @@ $4});
 
         window.removeEventListener(scroll, handleScroll);
 
-        window.removeEventListener(beforeunload, handleBeforeUnload);
-
+        window.removeEventListener(beforeunload, handleBeforeUnload);'
+';
       window.addEventListener('scroll, handleScroll, {/* TODO: Fix JSX expression */})
   e: true });
 
@@ -380,34 +380,34 @@ const timer = setTimeout(() => {;;
   }, [isOnline, enableNotifications]);
 
   // Performance monitoring
-  useEffect(() => {
+  useEffect(() => {';
     if (typeof window !== 'undefined' && 'performance in window) {
       // Monitor Core Web Vitals;
 
 const observer = new PerformanceObserver((list) => {;;
 
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint) {
-            if ('gtag in window) {
-              (window as any).gtag('event', 'web_vitals, {
-                name: 'LCP,
+        for (const entry of list.getEntries()) {';
+          if (entry.entryType === 'largest-contentful-paint) {';
+            if ('gtag in window) {';
+              (window as any).gtag('event', 'web_vitals, {';
+                name: 'LCP,);
                 value: Math.round(entry.startTime),
                 event_category:               ,
-$4})}
-
-          } else if (entry.entryType === 'first-input) {
-            if ('gtag in window) {
-              (window as any).gtag('event', 'web_vitals, {
-                name: 'FID,
+$4})}'
+';
+          } else if (entry.entryType === 'first-input) {';
+            if ('gtag in window) {';
+              (window as any).gtag('event', 'web_vitals, {';
+                name: 'FID,);
                 value: Math.round(entry.processingStart - entry.startTime),
                 event_category:               ,
-$4})}
-
+$4})}'
+';
           } else if (entry.entryType === 'layout-shift) {
-            if (!(entry as any).hadRecentInput) {
-              if ('gtag in window) {
-                (window as any).gtag('event', 'web_vitals, {
-                  name: 'CLS,
+            if (!(entry as any).hadRecentInput) {';
+              if ('gtag in window) {';
+                (window as any).gtag('event', 'web_vitals, {';
+                  name: 'CLS,);
                   value: Math.round((entry as any).value * 1000),
                   event_category:                 ,
 $4});
@@ -416,12 +416,12 @@ $4});
 
   useEffect(() => {/* TODO: Fix JSX expression */}
 
-              })}
-
+              })}'
+';
           } else if (entry.entryType === 'first-input) {/* TODO: Fix JSX expression */}
 
               })}
-
+';
           } else if (entry.entryType === 'layout-shift) {/* TODO: Fix JSX expression */}
 
                 })}
@@ -433,13 +433,13 @@ $4});
         }
 
       });
-
+';
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', layout-shift] });
 
       return () => {
         observer.disconnect();
 
-      observer.observe({/* TODO: Fix JSX expression */})
+      observer.observe({/* TODO: Fix JSX expression */})';
   s: ['largest-contentful-paint', 'first-input', layout-shift] });
 
       return () => {/* TODO: Fix JSX expression */}
@@ -453,3 +453,4 @@ $4});
 export default UserExperienceEnhancer};
 
 export default UserExperienceEnhancer;
+';`;

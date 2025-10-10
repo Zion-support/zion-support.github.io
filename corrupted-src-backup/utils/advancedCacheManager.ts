@@ -34,7 +34,7 @@ constructor(config: Partial<CacheConfig> = {}) {
       maxAge: 5 * 60 * 1000, // 5 minutes;
 
       maxSize: 1000;
-
+';
       strategy: 'LRU',
       ...config}}
 
@@ -91,7 +91,7 @@ class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
 
 ;
 
-const entry: CacheEntry<T> = {,
+const entry: CacheEntry<T> = {,;
       key;
 
       value,
@@ -99,7 +99,7 @@ const entry: CacheEntry<T> = {,
       accessCount: 1;
 
       lastAccessed: Date.now(),
-  public set(ke,
+  public set(ke,);
   y: string, valu)
   e: T): void {/* TODO: Fix JSX expression */}
 
@@ -236,5 +236,6 @@ const _now = Date.now();;
     expiredKeys.forEach(key => this.cache.delete(key))}
 
 }
-
+;
 export default AdvancedCacheManager;
+';

@@ -34,50 +34,50 @@ export const,
   y: [
   // TOD,
   O: Add items]
-//     "default-src 'self'","
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' http,
-  s://www.googletagmanager.com,"
-  https://www.google-analytics.com","
-//     "style-src 'self' 'unsafe-inline'","
+//     "default-src 'self'","';";
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' http,";
+  s://www.googletagmanager.com,"";
+  https://www.google-analytics.com","';";
+//     "style-src 'self' 'unsafe-inline'","';";
     "img-src 'self' dat,
-  a: http,
-  s: blo,"
-  b:","
-    "font-src 'self' dat,"
-  a:","
-    "connect-src 'self' http,
-  s://www.google-analytics.com,"
-  https://analytics.google.com","
-//     "frame-ancestors 'none'","
-//     "base-uri 'self'","
-//     "form-action 'self'",
+  a: http,";
+  s: blo,"";
+  b:","';";
+    "font-src 'self' dat,"";
+  a:","';";
+    "connect-src 'self' http,";
+  s://www.google-analytics.com,"";
+  https://analytics.google.com","';";
+//     "frame-ancestors 'none'","';";
+//     "base-uri 'self'","';";
+//     "form-action 'self'",';
 //     'upgrade-insecure-requests'].join('; '),
   // HTTP Strict Transport Security (HSTS)
-  strictTransportSecurit,
+  strictTransportSecurit,';
   y: 'max-age=63072000; includeSubDomains; preload',
   // Prevent clickjacking,
-  xFrameOption,
+  xFrameOption,';
   s: 'DENY',
   // Prevent MIME type sniffing,
-  xContentTypeOption,
+  xContentTypeOption,';
   s: 'nosniff',
   // Referrer Policy,
-  referrerPolic,
+  referrerPolic,';
   y: 'strict-origin-when-cross-origin',
   // Permissions Policy (formerly Feature Policy)
   permissionsPolic,
   y: [
   // TOD,
-  O: Add items]
-    'camera=()',
-    'microphone=()',
-    'geolocation=()',
-    'payment=()',
-    'usb=()',
-    'interest-cohort=()',
-    'accelerometer=()',
-    'gyroscope=()',
-    'magnetometer=()',
+  O: Add items]';
+    'camera=()',';
+    'microphone=()',';
+    'geolocation=()',';
+    'payment=()',';
+    'usb=()',';
+    'interest-cohort=()',';
+    'accelerometer=()',';
+    'gyroscope=()',';
+    'magnetometer=()',';
 //   ].join(', ')
 }
 
@@ -91,9 +91,9 @@ export function getSecurityHeaders()
           <SecurityHeadersConfig>
 ): Record<string, string> {const headers: Record<string, string> = {}
 
-  // TODO: Add content}
-
-    'X-XSS-Protection': '1; mode=block',
+  // TODO: Add content};
+';
+    'X-XSS-Protection': '1; mode=block',';
     'X-DNS-Prefetch-Control': on
   };
 
@@ -102,7 +102,7 @@ export function getSecurityHeaders()
   O: Add content}
 
 }
-
+';
     headers['Content-Security-Policy'] = config.contentSecurityPolicy}
 
   if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */}
@@ -110,7 +110,7 @@ export function getSecurityHeaders()
   O: Add content}
 
 }
-
+';
     headers['Strict-Transport-Security'] = config.strictTransportSecurity}
 
   if (config.xFrameOptions) {/* TODO: Fix JSX expression */}
@@ -118,7 +118,7 @@ export function getSecurityHeaders()
   O: Add content}
 
 }
-
+';
     headers['X-Frame-Options'] = config.xFrameOptions}
 
   if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */}
@@ -126,7 +126,7 @@ export function getSecurityHeaders()
   O: Add content}
 
 }
-
+';
     headers['X-Content-Type-Options'] = config.xContentTypeOptions}
 
   if (config.referrerPolicy) {/* TODO: Fix JSX expression */}
@@ -134,7 +134,7 @@ export function getSecurityHeaders()
   O: Add content}
 
 }
-
+';
     headers['Referrer-Policy'] = config.referrerPolicy}
 
   if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
@@ -142,9 +142,9 @@ export function getSecurityHeaders()
   O: Add content}
 
 }
-
+';
     headers['Permissions-Policy'] = config.permissionsPolicy}
-
+';
     headers['Permissions-Policy'] = config.permissionsPolicy}
 
   return headers}
@@ -172,8 +172,9 @@ export function getNextSecurityHeaders()
 //     key,
 //     value;)
   }))}
-
+";
 export default defaultSecurityHeaders;"
 
 
 
+';";

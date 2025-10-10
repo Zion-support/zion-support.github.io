@@ -5,9 +5,10 @@ const App: React.FC = () => {
 
     <div>
       <h1>Test App</h1>
-    </div>
+    </div>;
   );
 
 };
 
-export default App;
+export default App;';
+';';

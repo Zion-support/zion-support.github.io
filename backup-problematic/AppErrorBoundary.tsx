@@ -29,7 +29,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
 
                 strokeLinecap=round
                 strokeLinejoin=round;
-
+);
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix JSX expression */}
 
                 strokeWidth={2}
@@ -73,9 +73,9 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
             className=bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500
           </div>
           <div className="ml-3></div>
-            <h3 className=text-lg font-medium text-gray-900>Something went wrong</h3>
-          </div>
-        </div>
+            <h3 className=text-lg font-medium text-gray-900>Something went wrong</h3>"
+          </div>"
+        </div>";
         <div className="mb-4></div>
           <p className=text-sm text-gray-600 mb-2>An unexpected error,
   occurred:</p>
@@ -130,8 +130,8 @@ constructor(props: AppErrorBoundaryProps) {,
 
   static getDerivedStateFromError(error: Error): AppErrorBoundaryState {,
     return { hasError: true, error }}
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
+';
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,';';
     if (process.env['NODE_ENV'] === development) {,
       // // console.error removed for production
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {/* TODO: Fix JSX expression */}
@@ -143,7 +143,7 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
 
   r: true, error }}
 
-  componentDidCatch(erro,
+  componentDidCatch(erro,);
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
 
@@ -160,7 +160,7 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
       return <ErrorFallback error={this.state.error} resetError={this.resetError} />}
 
     return this.props.children}
-
-}
-
 "
+}"
+";
+"';";

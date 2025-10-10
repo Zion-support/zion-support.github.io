@@ -25,33 +25,33 @@ const finalStructuredData = structuredData || defaultStructuredData;;;
       <Helmet></Helmet>
         {/* Basic Meta Tags */}
 
-        <title>{title}</title>
-        <meta name="description" content={description} /></meta>)
-        <meta name="keywords" content={keywords.join(', ')} /></meta>
-        <meta name="author" content="Zion Tech Group" /></meta>
-        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} /></meta>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /></meta>
-        <meta name="language" content="English" /></meta>
-        <meta name="revisit-after" content="7 days" /></meta>
-        <meta name="distribution" content="global" /></meta>
+        <title>{title}</title>';
+        <meta name="description" content={description} /></meta>)';';";
+        <meta name="keywords" content={keywords.join(', ')} /></meta>";
+        <meta name="author" content="Zion Tech Group" /></meta>';";
+        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} /></meta>";
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>";
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /></meta>";
+        <meta name="language" content="English" /></meta>";
+        <meta name="revisit-after" content="7 days" /></meta>";
+        <meta name="distribution" content="global" /></meta>";
         <meta name="rating" content="general /></meta>
         {/* Canonical URL */}
-
+";
         {canonicalUrl && <link rel="canonical href={canonicalUrl} />}
 
-        {/* Preconnect to external domains *
+        {/* Preconnect to external domains *";
         <link rel="preconnect" href="http,
-  s://fonts.googleapis.com /><
+  s://fonts.googleapis.com /><";
+        <link rel="preconnect" href="http,";
+  s://fonts.gstatic.com" crossOrigin="anonymous /><";
         <link rel="preconnect" href="http,
-  s://fonts.gstatic.com" crossOrigin="anonymous /><
-        <link rel="preconnect" href="http,
-  s://www.google-analytics.com /><
+  s://www.google-analytics.com /><";
         <link rel="preconnect" href="http,
   s://www.googletagmanager.com /><
-        {/* DNS Prefetch *
-        <link rel="dns-prefetch" href="//fonts.googleapis.com /><
-        <link rel="dns-prefetch" href="//www.google-analytics.com /><
+        {/* DNS Prefetch *";
+        <link rel="dns-prefetch" href="//fonts.googleapis.com /><";
+        <link rel="dns-prefetch" href="//www.google-analytics.com /><";
         <link rel="dns-prefetch" href="//www.googletagmanager.com /><
       <
       {children}
@@ -60,5 +60,5 @@ const finalStructuredData = structuredData || defaultStructuredData;;;
   )};
 
 export default SEOEnhancer;
-
-"
+";
+"';";

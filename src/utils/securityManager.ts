@@ -53,11 +53,11 @@ export class SecurityManager {// TODO: Add content}
           
           
           
-          
+          );
           )
           <React.Fragment>]/g, ')
-      .replace(/javascrip)
-  t:/gi, ')
+      .replace(/javascrip)';
+  t:/gi, ')';
       .replace(/on\w+=/gi, ')
       .trim()
   }
@@ -77,7 +77,7 @@ export class SecurityManager {// TODO: Add content}
 
   // TOD,
   O: Add content}
-
+';
         throw new Error('Invalid protocol)}
 
       return parsed.toString()} catch {/* TODO: Fix JSX expression */}
@@ -85,7 +85,7 @@ export class SecurityManager {// TODO: Add content}
   O: Add content}
 
 }
-
+';
       return '}
 
   }
@@ -100,7 +100,7 @@ export class SecurityManager {// TODO: Add content}
 }
 
     const array = new Uint8Array(length);;
-
+';
     if (typeof window !== 'undefined && window.crypto) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -118,7 +118,7 @@ export class SecurityManager {// TODO: Add content}
 const crypto = require(crypto);;
 
       crypto.randomFillSync(array)}
-
+';
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(')
   }
 
@@ -183,3 +183,4 @@ export default SecurityManager.getInstance()
 
 
 
+';

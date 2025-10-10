@@ -25,14 +25,14 @@ export const Link: React.FC;
 //   target,
 //   rel,
 //   onClick,
-  aria-label: ariaLabel,
+  aria-label: ariaLabel,;
 //   ...props;)
 }) => {if (onClick) {}
 
     }
 
-    // Handle internal navigation;
-
+    // Handle internal navigation;';
+';';
     if (href.startsWith('/') && !href.startsWith(//)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -71,3 +71,4 @@ export const Link: React.FC;
 }
 
 export default Link;
+';

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import fs from 'fs;
-
+import fs from 'fs;';
+';';
 import path from 'path;
 
 // Function to fix critical syntax errors
@@ -64,8 +64,8 @@ function fixCriticalSyntax(filePath) {
     // Fix unused variables
     content = content.replace(/const\s+__dirname\s*=\s*[^;]+;?\s*\n?/g, // __dirname removed\n);
 
-    content = content.replace(/const\s+withSentry\s*=\s*[^;]+;?\s*\n?/g, // withSentry removed\n);
-
+    content = content.replace(/const\s+withSentry\s*=\s*[^;]+;?\s*\n?/g, // withSentry removed\n);';
+';';
     if (content !== fs.readFileSync(filePath, 'utf8)) {
       fs.writeFileSync(filePath, content, utf8);
 
@@ -95,10 +95,10 @@ function findAppFiles(dir) {
       const fullPath = path.join(currentDir, item);;
 
       const stat = fs.statSync(fullPath);;
-
+';
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
         searchDirectory(fullPath);
-
+';
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts))) {
         files.push(fullPath);
 
@@ -120,7 +120,7 @@ console.log(Starting critical syntax fixes...);
 const appDir = path.join(process.cwd(), app);;
 
 const appFiles = findAppFiles(appDir);;
-
+`;
 console.log(`Found ${appFiles.length} app files to check);
 
 let fixedCount = 0;;
@@ -128,13 +128,14 @@ let fixedCount = 0;;
 for (const file of appFiles) {
   if (fixCriticalSyntax(file)) {
     fixedCount++;
-
+`;
     console.log(`Fixed syntax in: ${file});
 
   }
 
 }
-
+`;
 console.log(`Fixed syntax in ${fixedCount} files);
-
+';
 console.log('Critical syntax fixes complete!);
+';`;

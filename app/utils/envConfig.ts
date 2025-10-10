@@ -12,7 +12,7 @@ export interface EnvConfig {}
   apiKey?: string;
 
   enableAnalytics: boolean,
-  enableLogging: boolean,
+  enableLogging: boolean,';
   logLevel: 'debug' | 'info' | 'warn' | 'error',
   sentryDsn?: string;
 
@@ -55,10 +55,10 @@ constructor() {}
       nodeEnv,
       apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || http://localhost:3000/api
       apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY;
-
+';
       enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === production
       enableLogging: nodeEnv !== test
-      logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||,
+      logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||,';
         (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN;
 
@@ -108,7 +108,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
 
    */
   public isProduction(): boolean {}
-
+';
     return this.config.nodeEnv === 'production'}
 
   public isProduction(): boolean {/* TODO: Fix JSX expression */}
@@ -120,7 +120,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
 
    */
   public isDevelopment(): boolean {}
-
+';
     return this.config.nodeEnv === 'development'}
 
   public isDevelopment(): boolean {/* TODO: Fix JSX expression */}
@@ -132,7 +132,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
 
    */
   public isTest(): boolean {}
-
+';
     return this.config.nodeEnv === 'test'}
 
   public isTest(): boolean {/* TODO: Fix JSX expression */}
@@ -151,7 +151,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
 
 const missing: string[] = [],
     for (const varName of requiredVars) {,
-      if (!this.config[varName]) {,
+      if (!this.config[varName]) {,;
         missing.push(varName);
 
       }
@@ -172,7 +172,7 @@ const missing: string[] = [],
     for (const varName of requiredVars) {}
 
       if (!this.config[varName]) {}
-
+;
         missing.push(varName);
 
       }
@@ -205,21 +205,21 @@ const missing: string[] = [],
    */
   public getApiHeaders(): Record<string, string> {}
 
-    const headers: Record<string, string> = {}
-
+    const headers: Record<string, string> = {};
+';
       'Content-Type': 'application/json'}
 
     }
 
     if (this.config.apiKey) {}
-
+';
       headers['Authorization'] = `Bearer ${this.config.apiKey}`
   public getApiHeaders(): Record<string, string> {/* TODO: Fix JSX expression */}
 
     };
 
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
-
+';`;
       headers['Authorization'] = `Bearer ${this.config.apiKey}`}
 
     return headers}
@@ -266,5 +266,6 @@ export const isTest = () => envConfig.isTest();;
 export const getConfig = () => envConfig.getConfig();;
 
 export const getApiHeaders = () => envConfig.getApiHeaders();;
-
+`;
 `
+';`;

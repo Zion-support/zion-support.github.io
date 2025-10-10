@@ -4,5 +4,5 @@
   n: generated.youtube_description || , spotify_descriptio,
   n: generated.spotify_description || , best_quot,
   e: generated.best_quote || , audi,
-  o: {}, return res.status (200).json ({ episode }); console.error (error); return res.status (500).json ({/* TODO: Fix JSX expression */})
-  r: error?.message || 'Unknown error' })} episodes.unshift (episode); try {} generated = JSON.parse(content)} catch { // Attempt to extract JSON block } const match = content.match(/\\{[\\s\\S]*\\}$/); if (match) generated = JSON.parse(match[0]); if (!generated || !generated.title || !generated.transcript) {}' return res.status(500).json({ 'error': 'Failed to generate structured content' });' const episode = {} id,' 'createdAt': new Date().toISOString(), const episode = {} const episode = {/* TODO: Fix JSX expression */}"`
+  o: {}, return res.status (200).json ({ episode }); console.error (error); return res.status (500).json ({/* TODO: Fix JSX expression */})';";`;
+  r: error?.message || 'Unknown error' })} episodes.unshift (episode); try {} generated = JSON.parse(content)} catch { // Attempt to extract JSON block } const match = content.match(/\\{[\\s\\S]*\\}$/); if (match) generated = JSON.parse(match[0]); if (!generated || !generated.title || !generated.transcript) {}' return res.status(500).json({ 'error': 'Failed to generate structured content' });' const episode = {} id,' 'createdAt': new Date().toISOString(), const episode = {} const episode = {/* TODO: Fix JSX expression */}"`';";`;

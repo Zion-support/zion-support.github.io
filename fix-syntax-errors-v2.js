@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-
+';
 import path from 'path';
-
-import { execSync } from 'child_process;
-
+';
+import { execSync } from 'child_process;';
+';';
 // Function to fix specific syntax errors in a file';
 
-function fixSyntaxErrors(filePath) {
+function fixSyntaxErrors(filePath) {';
   try {';
-
+';
 let content = fs.readFileSync(filePath, 'utf8);;
 
     let modified = false;;
@@ -35,15 +35,15 @@ const fixes = [;;
         replacement: $1: $2,\n    $3:
       },
       // Fix malformed metadata objects
-      {
-        pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
+      {';];
+        pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,';
         replacement: 'export const metadata = {\n  $1: \'$2\',\n  $3:;;
-
+};
       },
       {
-        pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*"([^"]*)",?\s*}\s*(\w+):/g,
+        pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*"([^"]*)",?\s*}\s*(\w+):/g,';";
         replacement: 'export const metadata = {\n  $1: "$2",\n  $3:;;
-
+};
       },
       // Fix malformed function parameters
       {
@@ -51,7 +51,7 @@ const fixes = [;;
         replacement: export default function $1({\n  $2:
       },
       // Fix malformed object literals with missing commas
-      {
+      {);
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
         replacement: $1: $2,\n    $3:
       },
@@ -61,23 +61,23 @@ const fixes = [;;
         replacement: $1: $2,\n    $3:
       },
       // Fix malformed JSX attributes
-      {
-        pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
+      {";
+        pattern: /(\w+)="([^"]*)"\s*(\w+)/g,';";
         replacement: '$1="$2 $3
       },
       // Fix missing semicolons in exports
-      {
-        pattern: /export\s+const\s+(\w+)\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
+      {';
+        pattern: /export\s+const\s+(\w+)\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,';
         replacement: 'export const $1 = {\n  $2: \'$3\,\n  $4:
       },
       // Fix malformed function declarations
-      {
+      {;
         pattern: /function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
         replacement: function $1({\n  $2:
       }
 
     ];
-
+);
     for (const fix of fixes) {;
 
 const newContent = content.replace(fix.pattern, fix.replacement);;
@@ -99,10 +99,10 @@ const specificFixes = [;;
         replacement: $1: $2,\n    $3:
       },
       // Fix malformed metadata
-      {
-        pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
+      {';];
+        pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,';
         replacement: 'export const metadata = {\n  $1: \'$2\',\n  $3:;;
-
+};
       },
       // Fix malformed function parameters
       {
@@ -111,7 +111,7 @@ const specificFixes = [;;
       }
 
     ];
-
+);
     for (const fix of specificFixes) {;
 
 const newContent = content.replace(fix.pattern, fix.replacement);;
@@ -123,7 +123,7 @@ const newContent = content.replace(fix.pattern, fix.replacement);;
 
     }
 
-    if (modified) {
+    if (modified) {';
       fs.writeFileSync(filePath, content, 'utf8);
 
       // console.log removed for production
@@ -139,9 +139,9 @@ return false}
 
 function findFilesWithSyntaxErrors() {
   try {;
-
+';";
 const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8 });;
-
+';
     return result.trim().split('\n').filter(file => file.length > 0)} catch (error) {
     // console.error removed for production
 return []}
@@ -168,7 +168,7 @@ for (const file of filesWithErrors) {
 // console.log removed for production
 // Verify no more syntax errors exist
 try {;
-
+';";
 const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8 });;
 
   const count = parseInt(remainingErrors.trim());;
@@ -182,3 +182,4 @@ const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing er
 } catch (error) {
   // console.log removed for production
 }
+';";

@@ -9,9 +9,9 @@ if (fs.existsSync(appMinimalTestPath)) {
   // Fix jest imports;
 
   content = content.replace(/import \{ describe, it, expect \} from 'jest;/)
-if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */}
-
-    /import \{ describe, it, expect \} from 'jest;/,
+if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */}';
+';';
+    /import \{ describe, it, expect \} from 'jest;/,';';
     `import { describe, it, expect } from '@jest/globals';
 
   );
@@ -23,16 +23,16 @@ if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */}
 // 2. Fix blog page metadata;
 
 // const blogPages = [;;
-
-  'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx,
-  'app/blog/ai-2026-autonomous-agent-factories/page.tsx,
+';
+  'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx,';
+  'app/blog/ai-2026-autonomous-agent-factories/page.tsx,];
   app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx];
 
 blogPages.forEach(pagePath => {)
   if (fs.existsSync(pagePath)) {
 
     // Remove publishedTime from metadata;
-
+';
     content = content.replace(/\s+publishedTime: ['"][^'"]*['"],?\s*/g, );
 
     fs.writeFileSync(pagePath, content);
@@ -40,26 +40,26 @@ blogPages.forEach(pagePath => {)
     //         }
 
 blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
-
+);
     //         })
 });
 
 // 3. Fix OpenGraph authors;
 
 // const openGraphPages = [;;
-
-  'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx,
+';
+  'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx,];
   app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx];
 
 openGraphPages.forEach(pagePath => {)
   if (fs.existsSync(pagePath)) {
 
     // Fix authors format to match Author type;
-
-    content = content.replace(/authors: \['Zion Tech Group\]/g),
+';
+    content = content.replace(/authors: \['Zion Tech Group\]/g),';";
       "authors: [{ name: 'Zion Tech Group' }]
 openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
-
+';);
   e: 'Zion Tech Group' }])
     );
 
@@ -176,19 +176,19 @@ ${content};
 if (fs.existsSync(systemMonitorPath)) {
 
   // Add proper React imports;
-
+';
   content = content.replace(/import React from 'react;/)
-if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}
-
+if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}';
+';';`;
     `import React, { useState, useEffect } from 'react';
 
   );
 
   // Remove the performanceEnhancer import and usage;
-
-  content = content.replace(/import { performanceEnhancer } from '\.\.\/utils\/performanceEnhancer;\s*/g)
-    
-  content = content.replace(/import { performanceEnhancer } from '\.\.\/utils\/performanceEnhancer;\s*/g,
+';
+  content = content.replace(/import { performanceEnhancer } from '\.\.\/utils\/performanceEnhancer;\s*/g)';
+    ';';
+  content = content.replace(/import { performanceEnhancer } from '\.\.\/utils\/performanceEnhancer;\s*/g,';';);
     ')
   );
 
@@ -233,5 +233,5 @@ ${content};
   fs.writeFileSync(performancePath, content);
 
   //     }
-
-// "`
+";`;
+// "`';";`;

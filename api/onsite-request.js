@@ -1,22 +1,22 @@
 const fs = require('fs);;
-
+';
 const path = require('path);;
 
 // Simple wrapper function to replace withSentry;
 
 // withSentry removed
 ;
-
+';
 const dir = path.join(process.cwd(), 'data);;
-
+';
 const file = path.join(dir, 'onsite-requests.json);;
 
-export default function handler(req, res) {
+export default function handler(req, res) {';
   if (req.method !== 'POST') {
     res.statusCode = 405;
-
+';
     res.setHeader('Content-Type', 'application/json);
-
+';
     res.end(JSON.stringify({ error: 'Method not allowed }));
 
     return}
@@ -34,7 +34,7 @@ let existing = [];;
 
   try {
     if (fs.existsSync(file)) {;
-
+';
 const data = fs.readFileSync(file, 'utf8);;
 
       existing = JSON.parse(data);
@@ -57,7 +57,7 @@ const newRequest = {;;
     message,
     location,
     timestamp: new Date().toISOString(),
-    status: pending
+    status: pending};
   };
 
   existing.push(newRequest);
@@ -66,21 +66,22 @@ const newRequest = {;;
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
 
     res.statusCode = 200;
-
+';
     res.setHeader('Content-Type', 'application/json);
 
     res.end(JSON.stringify({ 
-      success: true, 
+      success: true, ';
       message: 'Onsite request submitted successfully',
-      id: newRequest.id
+      id: newRequest.id);
     }))} catch (error) {
     // console.error removed for production
 res.statusCode = 500;
-
+';
     res.setHeader('Content-Type', 'application/json);
-
+';
     res.end(JSON.stringify({ error: 'Failed to save request' }))}
 
 }
 
 module.exports = handler;
+';

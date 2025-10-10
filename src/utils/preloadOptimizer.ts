@@ -18,7 +18,7 @@ const fontPreloads = [;;
 
   // TOD,
   O: Add items;
-
+];
 ];
 
     http,
@@ -34,7 +34,7 @@ const fontPreloads = [;;
 }
 
 ;
-
+);
 const link = document.createElement(link);;
 
     link.rel = preload
@@ -51,10 +51,10 @@ const link = document.createElement(link);;
 const criticalImages = [;;
 
   // TODO: Add items;
-
+];
 ];
 
-//     '/images/hero-bg.jpg,
+//     '/images/hero-bg.jpg,';
 //     '/images/logo.png,
 //     /images/favicon.ico
   ];
@@ -64,7 +64,7 @@ const criticalImages = [;;
 }
 
 ;
-
+);
 const link = document.createElement(link);;
 
     link.rel = preload
@@ -90,9 +90,9 @@ const routeResources = {/* TODO: Fix JSX expression */};;
   O: Add content}
 
 }
-
-    '/blog': ['/api/blog/posts', '/images/blog-hero.jpg],
-    '/services': ['/api/services', '/images/services-hero.jpg],
+';
+    '/blog': ['/api/blog/posts', '/images/blog-hero.jpg],';
+    '/services': ['/api/services', '/images/services-hero.jpg],';
     '/contact': ['/api/contact', '/images/contact-hero.jpg]
   }
 
@@ -107,7 +107,7 @@ const routeResources = {/* TODO: Fix JSX expression */};;
 }
 
 ;
-
+);
 const link = document.createElement(link);;
 
       link.rel = prefetch
@@ -134,12 +134,12 @@ const images = document.querySelectorAll(img[data-lazy]);;
   images.forEach(img => {/* TODO: Fix JSX expression */}
 
   O: Add content}
-
-})
+);
+})';
 //     img.setAttribute('loading', 'lazy)
   })
   // Add intersection observer for lazy loading;
-
+';
   if ('IntersectionObserver in window) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -155,7 +155,7 @@ const images = document.querySelectorAll(img[data-lazy]);;
       entries.forEach(entry => {/* TODO: Fix JSX expression */}
 
   O: Add content}
-
+);
 })
         if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
 
@@ -164,14 +164,14 @@ const images = document.querySelectorAll(img[data-lazy]);;
 }
 
           const img = entry.target as HTMLImageElement;;
-
+';
           if (img.dataset['src]) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
-            img['src'] = img.dataset['src]
+';
+            img['src'] = img.dataset['src]';
 //             img.removeAttribute('data-src)
 //             imageObserver.unobserve(img)
           }
@@ -205,18 +205,18 @@ const scripts = document.querySelectorAll(script[data-defer]);;
   scripts.forEach(script => {/* TODO: Fix JSX expression */}
 
   O: Add content}
-
-})
+);
+})';
 //     script.setAttribute('defer', ')
   })
   // Load analytics after page load;
-
+';
   if (document.readyState === 'loading) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+';
     document.addEventListener('DOMContentLoaded, () => {}
 
   )
@@ -237,8 +237,9 @@ const loadAnalytics = () => {// TODO: Add content};;
 const gaScript = document.createElement(script);;
 
   gaScript.async = true;
-
+';
   gaScript['src'] = http,
   s://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID
 //   document.head.appendChild(gaScript)
 }
+';";

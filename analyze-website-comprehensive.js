@@ -1,21 +1,21 @@
 #!/usr/bin/env node
 
-import https from 'https;
-
-import http from 'http;
-
-import { JSDOM } from 'jsdom;
-
+import https from 'https;';
+';';
+import http from 'http;';
+';';
+import { JSDOM } from 'jsdom;';
+';';
 import fs from 'fs;
 
-// Configuration;
-
+// Configuration;';
+';';
 const BASE_URL = 'https: //ziontechgroup.com;;
 
 const MAX_DEPTH = 3;;
 
 const TIMEOUT = 10000;;
-
+';
 const USER_AGENT = 'Mozilla/5.0 (compatible; ZionTechBot/1.0);;
 
 // Track visited URLs and results;
@@ -37,7 +37,7 @@ const analysisResults = {;;
   brokenLinks: 0;
 
   missingPages: 0;
-
+};
   errors: []};
 
 // Helper function to make HTTP requests;
@@ -46,7 +46,7 @@ function makeRequest(url, options = {}) {
   return new Promise((resolve, reject) => {;
 
 const urlObj = new URL(url);;
-
+';
     const isHttps = urlObj.protocol === 'https: ;;
 
     const client = isHttps ? https : http;;
@@ -59,41 +59,41 @@ const requestOptions = {;;
 
       port: urlObj.port || (isHttps ? 443 : 80)
       path: urlObj.pathname + urlObj.search;
-
+';
       method: 'GET',
-      headers: {,
+      headers: {,';
         'User-Agent: USER_AGENT;
-
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
-        'Accept-Encoding': 'gzip, deflate',
-        'Connection': 'keep-alive',
-        'Upgrade-Insecure-Requests': '1',
+';
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',';
+        'Accept-Language': 'en-US,en;q=0.5',';
+        'Accept-Encoding': 'gzip, deflate',';
+        'Connection': 'keep-alive',';
+        'Upgrade-Insecure-Requests': '1',};
         ...options.headers},
       timeout: TIMEOUT};
 
 ;
 
 const req = client.request(requestOptions, (res) => {;;
-
+';
 let data = ';;
-
+';
       res.on('data', (chunk) => {
         data += chunk});
-
+';
       res.on('end', () => {
         resolve({)
           statusCode: res.statusCode;)
           headers: res.headers),
           body: data),
           url: url})})});
-
+';
     req.on('error', (error) => {
       reject(error)});
-
+';
     req.on('timeout', () => {
       req.destroy();
-
+';
       reject(new Error('Request timeout))});
 
     req.setTimeout(TIMEOUT);
@@ -111,11 +111,11 @@ const dom = new JSDOM(html);;
   const links = [];;
 
   // Extract all anchor tags;
-
+';
   const anchorTags = document.querySelectorAll('a[href]);;
 
   anchorTags.forEach(anchor => {);
-
+';
 const href = anchor.getAttribute('href);;
 
     if (href) {
@@ -137,11 +137,11 @@ const absoluteUrl = new URL(href, baseUrl).href;;
   });
 
   // Extract form actions;
-
+';
   const forms = document.querySelectorAll('form[action]);;
 
   forms.forEach(form => {);
-
+';
 const action = form.getAttribute('action);;
 
     if (action) {
@@ -150,7 +150,7 @@ const action = form.getAttribute('action);;
 const absoluteUrl = new URL(action, baseUrl).href;;
 
         links.push({)
-          url: absoluteUrl),
+          url: absoluteUrl),';
           text: 'Form Action'),
           element: form.outerHTML})} catch (error) {
         // console.log removed for production
@@ -202,7 +202,7 @@ const response = await makeRequest(url);;
       analysisResults.workingLinks++;
 
       // Extract and analyze links from this page;
-
+';
       if (response.headers['content-type'] && response.headers['content-type'].includes('text/html)) {;
 
 const links = extractLinks(response.body, url);;
@@ -216,17 +216,17 @@ const links = extractLinks(response.body, url);;
       }
 
     } else if (response.statusCode === 404) {
-      brokenLinks.push({)
+      brokenLinks.push({);
         url: url;)
         statusCode: response.statusCode),
-        depth: depth),
+        depth: depth),';
         reason: 'Page not found});
 
       analysisResults.brokenLinks++} else {
       brokenLinks.push({)
         url: url;)
         statusCode: response.statusCode),
-        depth: depth),
+        depth: depth),';
         reason: 'HTTP error});
 
       analysisResults.brokenLinks++}
@@ -273,11 +273,11 @@ try {
       brokenLinks: brokenLinks;
 
       missingPages: missingPages;
-
+};
       errors: analysisResults.errors};
 
     // Save detailed report;
-
+';
     fs.writeFileSync('website-analysis-report.json, JSON.stringify(report, null, 2));
 
     // Generate summary report;
@@ -290,7 +290,7 @@ try {
 if (brokenLinks.length > 0) {
       // console.log removed for production
 brokenLinks.forEach(link => {)
-        // console.log removed for production
+        // console.log removed for production`;
 - ${link.reason}`)})}
 
     if (analysisResults.errors.length > 0) {
@@ -303,10 +303,10 @@ analysisResults.errors.forEach(error => {)
 
     const recommendations = [];;
 
-    if (brokenLinks.length > 0) {
+    if (brokenLinks.length > 0) {';
       recommendations.push('Fix broken links by updating URLs or creating missing pages')}
 
-    if (analysisResults.errors.length > 0) {
+    if (analysisResults.errors.length > 0) {';
       recommendations.push('Investigate and fix connection errors')}
 
     if (recommendations.length > 0) {
@@ -365,7 +365,7 @@ constructor(baseUrl) {
 
     this.visitedUrls.add(url);
 
-    // console.log removed for production
+    // console.log removed for production`;
 `);
 
     try {;
@@ -382,7 +382,7 @@ const dom = new JSDOM(content);;
         this.pages.set(url, {
           title: document.title,
           content: content,
-          links: []
+          links: []);
         });
 
         // Extract all links;
@@ -415,33 +415,33 @@ const urlObj = new URL(url);;
 
       const options = {;;
 
-        hostname: urlObj.hostname,
+        hostname: urlObj.hostname,';
         port: urlObj.port || (urlObj.protocol === 'https:' ? 443 : 80),
-        path: urlObj.pathname + urlObj.search,
+        path: urlObj.pathname + urlObj.search,';
         method: 'GET',
-        timeout: 10000
+        timeout: 10000};
       };
 
 ;
-
+';
 const protocol = urlObj.protocol === 'https: ? https : http;;
 
       ;
 
 const req = protocol.request(options, (res) => {;;
-
+';
 let data = ';;
-
+';
         res.on('data', (chunk) => {
           data += chunk});
-
+';
         res.on('end', () => {
           resolve({ statusCode: res.statusCode, data })})});
-
+';
       req.on('error', (error) => {
         reject(error)});
-
-      req.on('timeout', () => {
+';
+      req.on('timeout', () => {';
         reject(new Error('Request timeout))});
 
       req.end()})}
@@ -449,11 +449,11 @@ let data = ';;
   extractLinks(document, baseUrl) {;
 
 const links = [];;
-
+';
     const linkElements = document.querySelectorAll('a[href]);;
 
     linkElements.forEach(link => {;
-
+';);
 const href = link.getAttribute('href);;
 
       if (href) {;
@@ -461,8 +461,8 @@ const href = link.getAttribute('href);;
 const absoluteUrl = this.resolveUrl(href, baseUrl);;
 
         links.push({
-          href: absoluteUrl,
-          text: link.textContent.trim(),
+          href: absoluteUrl,);
+          text: link.textContent.trim(),';
           title: link.getAttribute('title') || 
         })}
 
@@ -500,7 +500,7 @@ const urlObj = new URL(url);;
 if (this.brokenLinks.length > 0) {
       // console.log removed for production
 this.brokenLinks.forEach(link => {
-        // console.log removed for production
+        // console.log removed for production);
 })}
 
     // console.log removed for production
@@ -523,10 +523,10 @@ const report = {;;
       pages: Array.from(this.pages.entries()).map(([url, data]) => ({
         url,
         title: data.title,
-        linkCount: data.links.length
+        linkCount: data.links.length};
       }))
     };
-
+';
     fs.writeFileSync('website-analysis-report.json, JSON.stringify(report, null, 2));
 
     // console.log removed for production
@@ -535,14 +535,14 @@ const report = {;;
 }
 
 // Run the analysis;
-
+';
 const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com);;
 
 analyzer.analyze().catch(console.error);
 
-// Main execution
+// Main execution`;
 if (import.meta.url === `file://${process.argv[1]}`) {;
-
+';
 const baseUrl = process.argv[2] || 'https://ziontechgroup.com;;
 
   const analyzer = new WebsiteAnalyzer(baseUrl);;
@@ -550,3 +550,4 @@ const baseUrl = process.argv[2] || 'https://ziontechgroup.com;;
   analyzer.analyze()}
 
 export default WebsiteAnalyzer;
+';`;

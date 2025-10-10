@@ -39,7 +39,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       })}}
 
 };
-
+';";
 const { execSync } = require('child_process'); exports.config = {' schedule: '0 */12 * * *' // every 12 hours }; exports.handler = async function() {try {' execSync('node automation/og-image-generator.cjs || true') { stdio: 'inherit'} shell: true});' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(og): refresh Open Graph images [skip ci]" || true) && (git push origin main || true)', {stdio: 'inherit} shell: true}); return {statusCode: 200;
 
         body: JSON.stringify({ok: true),
@@ -54,7 +54,7 @@ const { execSync } = require(child_process); exports.config = {/* TODO: Fix JSX 
 
   o: inherit} shel,
   l: true;
-
+';";
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(og): refresh Open Graph images [skip ci] || true) && (git push origin main || true), {/* TODO: Fix JSX expression */}
 
   o: inherit} shel,
@@ -63,3 +63,4 @@ const { execSync } = require(child_process); exports.config = {/* TODO: Fix JSX 
   k: og-image-maker }) }} catch (e) {/* TODO: Fix JSX expression */}
 
       }) }} };
+';";

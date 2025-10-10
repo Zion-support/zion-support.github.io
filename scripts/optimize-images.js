@@ -1,6 +1,6 @@
 
-import sharp from 'sharp;
-
+import sharp from 'sharp;';
+';';
 import fs from 'fs;
 
 import path from path;
@@ -58,5 +58,5 @@ const _files = fs.readdirSync(this.inputDir);;
 const _optimizer = new ImageOptimizer();;;
 
 optimizer.optimizeImages();
-
-`
+';`;
+`';';`;

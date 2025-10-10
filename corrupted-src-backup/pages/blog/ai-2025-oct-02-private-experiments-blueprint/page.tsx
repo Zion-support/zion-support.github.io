@@ -1,7 +1,7 @@
 const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {
-  return (<article, className="prose, pros, e-invert, ma, x-w-3xl, m, x-auto, p, y-10>);
-
-const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {
+  return (<article, className="prose, pros, e-invert, ma, x-w-3xl, m, x-auto, p, y-10>);"
+"
+const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {";
   return(<article, className="prose, pros, e-invert, ma, x-w-3xl, m, x-auto, p, y-10">;
 
       <h1>Private, Experiments, Blueprin;
@@ -26,7 +26,7 @@ const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {
       <p>
         Decisions, are, evaluated at, the, edge using, pr, e‑fetch, e, d, signed, configuration, bundles.
         identity, is represented, by, non‑reversib, l, e, p, e, r‑surface, ID, s. Telemetry, is, aggregated usi, n, g;
-
+);
   priva, c, y‑preserving, counters, and uploaded, in, batches.)
       </p>)
     </artic, l, e>
@@ -42,3 +42,4 @@ const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {/* TODO: Fix JSX
 export default PrivateExperimentsBlueprint2025;
 
 }
+";

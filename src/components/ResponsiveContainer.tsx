@@ -49,7 +49,7 @@ const,
   const [isClient, setIsClient] = useState(false);
 
   const [screenSize, setScreenSize] = useState;
-
+';
           <'sm' | 'md' | 'lg' | 'xl' | '2xl'>(lg);
 
   const isTablet = useMediaQuery({/* TODO: Fix JSX expression */});;
@@ -85,25 +85,25 @@ const,
   O: Add content}
 
 }
-
+';
       setScreenSize('2xl)} else if (isDesktop) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+';
       setScreenSize('xl)} else if (isTablet) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+';
       setScreenSize('md)} else {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+';
       setScreenSize('sm)}
 
   }, [isClient, isMobile, isTablet, isDesktop, isLargeDesktop]);
@@ -183,13 +183,13 @@ export const useResponsiveValue = {};;
   const isLargeDesktop = useMediaQuery({/* TODO: Fix JSX expression */});;
 
   h: 1280 });
-
+';
   if (isLargeDesktop && values['2xl] !== undefined) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+';
     return values['2xl]}
 
   if (isDesktop && values.xl !== undefined) {/* TODO: Fix JSX expression */}
@@ -252,7 +252,8 @@ export const useBreakpoint = () => {/* TODO: Fix JSX expression */};;
 //     isTablet,
 //     isDesktop,
 //     isLargeDesktop,
-    curren,
+    curren,';
   t: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : sm}};
-
-export default ResponsiveContainer;
+"
+export default ResponsiveContainer;"
+';";`;

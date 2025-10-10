@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+';
 'use client';
 interface DynamicOptions {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -23,3 +23,4 @@ export function dynamic;
 
 
 
+';

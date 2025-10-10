@@ -19,7 +19,7 @@ export interface EnvConfig {// TODO: Add content}
   s: boolean;,
     enableLoggin,
   g: boolean;,
-    logLeve,
+    logLeve,';
   l: 'debug' | 'info' | 'warn' | error
   sentryDsn?: string;
 
@@ -54,19 +54,19 @@ class EnvironmentConfig {// TODO: Add content}
 
 //       nodeEnv,
       apiUr,
-  l:
+  l:';
         process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'htt,
-  p://localhos,
+  p://localhos,';
   t:3000/api',
       apiKe,
   y: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY,
       enableAnalytic,
-  s:
+  s:';
         process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
-      enableLoggin,
+      enableLoggin,';
   g: nodeEnv !== 'test',
       logLeve,
-  l: (process.env.NEXT_PUBLIC_LOG_LEVEL ||)
+  l: (process.env.NEXT_PUBLIC_LOG_LEVEL ||)';
         (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
 
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
@@ -109,7 +109,7 @@ class EnvironmentConfig {// TODO: Add content}
   public isProduction(): boolean {// TODO: Add content}
 
 }
-
+';
     return this.config.nodeEnv === 'production'}
 
   /**
@@ -120,7 +120,7 @@ class EnvironmentConfig {// TODO: Add content}
   public isDevelopment(): boolean {// TODO: Add content}
 
 }
-
+';
     return this.config.nodeEnv === 'development'}
 
   /**
@@ -131,7 +131,7 @@ class EnvironmentConfig {// TODO: Add content}
   public isTest(): boolean {// TODO: Add content}
 
 }
-
+';
     return this.config.nodeEnv === 'test'}
 
   /**
@@ -181,7 +181,7 @@ class EnvironmentConfig {// TODO: Add content}
   d: missing.length === 0,
 //       missing}}
 
-  /**
+  /**;
    * Get API headers with authentication;
 
    */
@@ -201,7 +201,7 @@ class EnvironmentConfig {// TODO: Add content}
   O: Add content}
 
 }
-
+';
       'Content-Type': application/json
     };
 
@@ -210,12 +210,12 @@ class EnvironmentConfig {// TODO: Add content}
   O: Add content}
 
 }
-
+';
       headers['Authorization'] = `Bearer ${this.config.apiKey}`}
 
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
-
-  }`
+`;
+  }`';`;
       headers['Authorization'] = `Bearer ${this.config.apiKey}`
     }
 
@@ -235,7 +235,7 @@ class EnvironmentConfig {// TODO: Add content}
   O: Add content}
 
 }
-
+';
       console.group(' Environment Configuration);
 
       console.table({/* TODO: Fix JSX expression */}
@@ -245,14 +245,14 @@ class EnvironmentConfig {// TODO: Add content}
 };
 
   Environment: this.config.nodeEnv,
-
-        'API URL': this.config.apiUrl,
-        'Analytics Enabled': this.config.enableAnalytics,
-        'Logging Enabled': this.config.enableLogging,
-        'Log Level': this.config.logLevel,
-        'API Key Set': !!this.config.apiKey,
+';
+        'API URL': this.config.apiUrl,';
+        'Analytics Enabled': this.config.enableAnalytics,';
+        'Logging Enabled': this.config.enableLogging,';
+        'Log Level': this.config.logLevel,';
+        'API Key Set': !!this.config.apiKey,';
         'Sentry DSN Set': !!this.config.sentryDsn,
-
+';);
         'GA Tracking ID Set: !!this.config.gaTrackingId});
 
       console.groupEnd()}
@@ -274,5 +274,6 @@ export const isDevelopment = () => envConfig.isDevelopment();;
 export const isTest = () => envConfig.isTest();;
 
 export const getConfig = () => envConfig.getConfig();;
-
+`;
 export const getApiHeaders = () => envConfig.getApiHeaders()`;;
+';`;

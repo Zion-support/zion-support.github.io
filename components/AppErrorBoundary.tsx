@@ -96,3 +96,4 @@ constructor(props: AppErrorBoundaryProps) {
     return this.props.children}
 
 }
+';

@@ -2,89 +2,137 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-// Function to fix all syntax errors
-function fixAllSyntax(content) {
-  // Fix extra quotes at end of lines
-  content = content.replace(/;'$/gm, ';');
-  content = content.replace(/''$/gm, '');
-  content = content.replace(/;'$/gm, ';');
+// Get all TypeScript and JavaScript files
+function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+  let files = [];
+  const items = fs.readdirSync(dir);
   
-  // Fix unterminated string literals in imports
-  content = content.replace(/import\s+.*\s+from\s+['"][^'"]+['"];'$/gm, (match) => {
-    return match.replace(/;'$/, ';');
-  });
-  
-  // Fix malformed function declarations
-  content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*$/gm, 'const $1 = () => {\n  return (\n');
-  
-  // Fix missing closing braces
-  content = content.replace(/\{\s*return\s*\(\s*$/gm, '{\n  return (\n');
-  
-  // Fix duplicate return statements
-  content = content.replace(/return\s*\(\s*\n\s*return\s*\(/g, 'return (');
-  
-  // Fix malformed JSX elements
-  content = content.replace(/<(\w+)\s+([^>]*?)\s*>\s*<\/\1>\s*<\/\1>/g, '<$1 $2></$1>');
-  
-  // Fix missing closing parentheses
-  content = content.replace(/\(\s*$/gm, '(\n');
-  
-  // Fix malformed arrow functions
-  content = content.replace(/=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*$/gm, '= () => {\n  return (\n');
-  
-  // Clean up extra semicolons
-  content = content.replace(/;;+/g, ';');
-  
-  // Fix malformed JSX attributes
-  content = content.replace(/className="[^"]*"\s+onClick="[^"]*"\s+className="[^"]*"/g, (match) => {
-    const classNameMatch = match.match(/className="([^"]*)"/g);
-    const onClickMatch = match.match(/onClick="([^"]*)"/g);
-    if (classNameMatch && onClickMatch) {
-      return `className="${classNameMatch[0].replace('className="', '').replace('"', '')}" ${onClickMatch[0]}`;
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      // Skip node_modules and other directories we don't want to modify
+      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+        files = files.concat(getAllFiles(fullPath, extensions));
+      }
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
     }
-    return match;
-  });
+  }
   
-  // Fix unterminated string constants
-  content = content.replace(/['"`]([^'"`]*?)\n(?!['"`])/g, '$1\n');
-  
-  // Fix expression expected errors
-  content = content.replace(/;\s*$/gm, ';\n');
-  
-  // Fix declaration or statement expected
-  content = content.replace(/}\s*$/gm, '}\n');
-  
-  // Fix missing semicolons after variable declarations
-  content = content.replace(/(const|let|var)\s+\w+\s*=.*\n(?!;)/g, (match) => {
-    if (!match.endsWith(';')) {
-      return match.trim() + ';\n';
-    }
-    return match;
-  });
-  
-  // Fix missing semicolons after imports
-  content = content.replace(/import\s+.*\s+from\s+['"][^'"]+['"]\n(?!;)/g, (match) => {
-    if (!match.endsWith(';')) {
-      return match.trim() + ';\n';
-    }
-    return match;
-  });
-  
-  return content;
+  return files;
 }
 
-// Function to fix specific file
+// Fix unterminated string literals in a file
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
+    let originalContent = content;
     
-    content = fixAllSyntax(content);
+    // Fix common unterminated string patterns
+    const fixes = [
+      // Fix import statements missing closing quotes
+      { 
+        regex: /import\s+([^'"]+)\s+from\s+'([^']*)$/gm, 
+        replacement: (match, imports, module) => `import ${imports} from '${module}';`
+      },
+      // Fix require statements missing closing quotes
+      { 
+        regex: /require\(([^)]*)$/gm, 
+        replacement: (match, module) => `require(${module});`
+      },
+      // Fix string literals missing closing quotes (single quotes)
+      { 
+        regex: /'([^']*)$/gm, 
+        replacement: (match, str) => `'${str}';`
+      },
+      // Fix string literals missing closing quotes (double quotes)
+      { 
+        regex: /"([^"]*)$/gm, 
+        replacement: (match, str) => `"${str}";`
+      },
+      // Fix JSX className attributes missing closing quotes
+      { 
+        regex: /className="([^"]*)$/gm, 
+        replacement: (match, className) => `className="${className}"`
+      },
+      // Fix JSX className attributes missing closing quotes (single quotes)
+      { 
+        regex: /className='([^']*)$/gm, 
+        replacement: (match, className) => `className='${className}'`
+      },
+      // Fix Route path attributes
+      { 
+        regex: /path="([^"]*)$/gm, 
+        replacement: (match, path) => `path="${path}"`
+      },
+      // Fix Route element attributes
+      { 
+        regex: /element=\{([^}]*)$/gm, 
+        replacement: (match, element) => `element={${element}}`
+      },
+      // Fix object properties missing closing quotes
+      { 
+        regex: /href:\s*'([^']*)$/gm, 
+        replacement: (match, href) => `href: '${href}'`
+      },
+      { 
+        regex: /href:\s*"([^"]*)$/gm, 
+        replacement: (match, href) => `href: "${href}"`
+      },
+      // Fix array elements missing closing quotes
+      { 
+        regex: /name:\s*'([^']*)$/gm, 
+        replacement: (match, name) => `name: '${name}'`
+      },
+      { 
+        regex: /name:\s*"([^"]*)$/gm, 
+        replacement: (match, name) => `name: "${name}"`
+      },
+      // Fix semicolons after variable declarations
+      { 
+        regex: /const\s+([^=]+)=([^;]*)$/gm, 
+        replacement: (match, varName, value) => `const ${varName}=${value};`
+      },
+      // Fix function calls missing closing parentheses
+      { 
+        regex: /(\w+)\(([^)]*)$/gm, 
+        replacement: (match, func, args) => `${func}(${args});`
+      },
+      // Fix array declarations missing closing brackets
+      { 
+        regex: /const\s+(\w+)\s*=\s*\[([^\]]*)$/gm, 
+        replacement: (match, varName, content) => `const ${varName} = [${content}];`
+      },
+      // Fix object declarations missing closing braces
+      { 
+        regex: /const\s+(\w+)\s*=\s*\{([^}]*)$/gm, 
+        replacement: (match, varName, content) => `const ${varName} = {${content}};`
+      }
+    ];
+    
+    // Apply fixes
+    fixes.forEach(fix => {
+      content = content.replace(fix.regex, fix.replacement);
+    });
+    
+    // Additional specific fixes for common patterns
+    // Fix unterminated template literals
+    content = content.replace(/`([^`]*)$/gm, (match, str) => `\`${str}\`;`);
+    
+    // Fix unterminated JSX attributes
+    content = content.replace(/className="([^"]*)$/gm, (match, className) => `className="${className}"`);
+    content = content.replace(/className='([^']*)$/gm, (match, className) => `className='${className}'`);
+    
+    // Fix unterminated object properties
+    content = content.replace(/href:\s*'([^']*)$/gm, (match, href) => `href: '${href}'`);
+    content = content.replace(/href:\s*"([^"]*)$/gm, (match, href) => `href: "${href}"`);
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax in: ${filePath}`);
       return true;
     }
     
@@ -95,59 +143,51 @@ function fixFile(filePath) {
   }
 }
 
-// Function to find all problematic files
-function findProblematicFiles() {
-  const problematicFiles = [];
+// Main function
+function main() {
+  console.log('Finding all TypeScript and JavaScript files...');
+  const files = getAllFiles('/workspace');
   
-  function scanDirectory(dir) {
-    const files = fs.readdirSync(dir);
+  console.log(`Found ${files.length} files to check.`);
+  
+  let fixedCount = 0;
+  let processedCount = 0;
+  
+  for (const file of files) {
+    processedCount++;
+    if (processedCount % 100 === 0) {
+      console.log(`Processed ${processedCount}/${files.length} files...`);
+    }
     
-    for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory() && !file.includes('node_modules') && !file.startsWith('.')) {
-        scanDirectory(filePath);
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(file)) {
-        try {
-          const content = fs.readFileSync(filePath, 'utf8');
-          // Check for common syntax issues
-          if (content.includes(";'") || content.includes("''") || content.includes('return (') || content.includes('Expression expected')) {
-            problematicFiles.push(filePath);
-          }
-        } catch (error) {
-          // Skip files that can't be read
-        }
+    try {
+      if (fixFile(file)) {
+        fixedCount++;
+        console.log(`Fixed: ${file}`);
       }
+    } catch (error) {
+      console.error(`Error processing ${file}:`, error.message);
     }
   }
   
-  scanDirectory('.');
-  return problematicFiles;
-}
-
-// Main function
-function main() {
-  console.log('Fixing all syntax errors...');
+  console.log(`\nProcessed ${processedCount} files.`);
+  console.log(`Fixed ${fixedCount} files.`);
   
-  const filesToFix = findProblematicFiles();
-  console.log(`Found ${filesToFix.length} files with syntax issues`);
-  
-  let fixedCount = 0;
-  let errorCount = 0;
-  
-  filesToFix.forEach(filePath => {
-    if (fixFile(filePath)) {
-      fixedCount++;
-    } else {
-      errorCount++;
+  // Run lint to check remaining errors
+  console.log('\nChecking remaining errors...');
+  try {
+    const result = execSync('npm run lint 2>&1', { encoding: 'utf8' });
+    const errorCount = (result.match(/error/g) || []).length;
+    console.log(`Remaining errors: ${errorCount}`);
+    
+    if (errorCount > 0) {
+      console.log('\nFirst 10 remaining errors:');
+      const lines = result.split('\n');
+      let errorLines = lines.filter(line => line.includes('error')).slice(0, 10);
+      errorLines.forEach(line => console.log(line));
     }
-  });
-  
-  console.log(`\nSyntax fixing complete:`);
-  console.log(`- Files fixed: ${fixedCount}`);
-  console.log(`- Files with errors: ${errorCount}`);
-  console.log(`- Total files processed: ${filesToFix.length}`);
+  } catch (error) {
+    console.log('Error running lint:', error.message);
+  }
 }
 
 main();

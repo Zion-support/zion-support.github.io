@@ -1,84 +1,80 @@
-'use client;
-
-import React, { useState } from 'react;
-
-import { Helmet } from 'react-helmet-async;
-
-import { ChevronDown, ChevronUp } from lucide-react;
-
-;
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const FAQPage: React.FC = () => {
-return (;
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-const [openItems, setOpenItems] = useState<number[]>
-);
-
-}([]);
-
-;
-
-const toggleItem = (index: number) => {;;
-
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(item => item !== index)
-        : [...prev, index]);
-
-;
-
-const faqs = [;;;
-
+  const faqs = [
     {
-      questio,
-    n: "What services does Zion Tech Group offer?,
-      answer: "We offer comprehensive AI-powered solutions including enterprise AI, quantum computing, autonomous systems, digital transformation, cloud services, cybersecurity, and custom micro SaaS applications.
-    },    {
-      question: "How can AI benefit my business?,
-      answer: "AI can automate repetitive tasks, provide data-driven insights, improve customer experience, enhance security, optimize operations, and drive innovation. Our solutions typically deliver 300% ROI within the first year.
+      question: 'What services does Zion Tech Group offer?',
+      answer: 'We offer AI solutions, cloud architecture, web development, mobile applications, and comprehensive technology consulting services.'
     },
     {
-      question: "Do you provide IT infrastructure services?,
-      answer: "Yes, we offer complete IT infrastructure services including cloud migration, DevOps, database management, cybersecurity, managed IT services, and IT consulting to modernize your technology stack.
+      question: 'How long does a typical project take?',
+      answer: 'Project timelines vary depending on complexity. Simple websites take 2-4 weeks, while complex AI implementations can take 3-6 months. We provide detailed timelines during consultation.'
     },
     {
-      question: "What is your pricing model?,
-      answer: "We offer flexible pricing models including subscription-based plans starting at $99/month for small businesses, custom enterprise solutions, and project-based pricing. Contact us for a personalized quote.
+      question: 'Do you work with small businesses?',
+      answer: 'Yes! We work with businesses of all sizes, from startups to enterprise companies. We have flexible solutions and pricing options to fit different budgets.'
     },
     {
-      question: "Do you offer 24/7 support?,
-      answer: "Yes, we provide 24/7 technical support for all our services. Our support team is available via phone, email, and live chat to ensure your systems run smoothly around the clock.
+      question: 'What technologies do you use?',
+      answer: 'We use modern technologies including React, Node.js, Python, AWS, Azure, machine learning frameworks, and cloud-native architectures.'
     },
     {
-      question: "Do you provide ongoing support?,
-      answer: Yes, we offer comprehensive support and maintenance services including 24
+      question: 'Do you provide ongoing support?',
+      answer: 'Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after launch.'
     },
     {
-      question: "What technologies do you use?,
-      answer: We use cutting-edge technologies including React, TypeScript, Python, TensorFlow, PyTorch, AWS, Azure, Docker, Kubernetes, and various AI
-    },    {
-      question: "What industries do you serve?,
-      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards.
+      question: 'How do I get started?',
+      answer: 'Simply contact us through our contact form or schedule a consultation. We\'ll discuss your needs and provide a customized proposal.'
     }
-
   ];
 
-  return (<div>
-        <title>Frequently Asked Questions - Zion Tech Group<
-        <meta name="description" content="Find answers to common questions about our AI and IT solutions, services, development process, and how we can help transform your business. 
-      <
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <>
+      <Helmet>
+        <title>FAQ - Zion Tech Group</title>
+        <meta name="description" content="Find answers to frequently asked questions about our AI solutions, cloud architecture, and development services." />
+      </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20>
-        <div className="container mx-auto px-4>
-          <div className="text-center mb-16>
-            <h1 className="text-5xl font-bold text-white mb-6>
-              Frequently Asked Questions
-            <
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto>
-              Find answers to common questions about our AI and IT solutions, 
-              services, and how we can help transform your business.
-            <
-          <
+      <div className="min-h-screen bg-white">
+        <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h1>
+            <p className="text-xl text-gray-600">
+              Find answers to common questions about our services and solutions.
+            </p>
+          </div>
+          
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-white border border-gray-200 rounded-lg">
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <span className="text-lg font-semibold text-gray-900">{faq.question}</span>
+                  <span className={`text-2xl transition-transform ${openIndex === index ? 'rotate-45' : ''}`}>
+                    +
+                  </span>
+                </button>
+                {openIndex === index && (
+                  <div className="px-6 pb-4">
+                    <p className="text-gray-600">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default FAQPage;

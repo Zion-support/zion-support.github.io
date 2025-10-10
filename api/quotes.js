@@ -21,29 +21,30 @@ const quoteData = {;;
       name,
       email,
       phone,
-      details,
-      country: country || 'Not specified',
+      details,';
+      country: country || 'Not specified',';
       service: service || 'General inquiry',
       timestamp: new Date().toISOString(),
-      status: pending
+      status: pending};
     };
 
     // console.log removed for production
 res.statusCode = 200;
-
+';
     res.setHeader('Content-Type', 'application/json);
 
     res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Quote request submitted successfully',
+      success: true, ';
+      message: 'Quote request submitted successfully',);
       quoteId: `quote_${Date.now()}`,
       data: quoteData
     }))} catch (error) {
     // console.error removed for production
 res.statusCode = 500;
-
+';
     res.setHeader('Content-Type', 'application/json);
-
+';
     res.end(JSON.stringify({ error: 'Internal server error' }))}
 
 }
+';`;

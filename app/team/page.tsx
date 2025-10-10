@@ -1,11 +1,11 @@
 'use client;
-
-import React from 'react;
-
-import { Helmet } from 'react-helmet-async;
-
-import Navigation from '../components/Navigation;
-
+';
+import React from 'react;';
+';';
+import { Helmet } from 'react-helmet-async;';
+';';
+import Navigation from '../components/Navigation;';
+';';
 import Footer from '../components/Footer;
 
 ;
@@ -21,9 +21,9 @@ const TeamPage: React.FC = () => {  return (<div>
             <div className=max-w-4xl mx-auto><
               <h1 className=text-4xl md:text-5xl font-bold text-gray-900 mb-8>
                 Our Team<
-              <
-              
-              <div className="prose prose-lg max-w-none><
+              <;
+              ";
+              <div className="prose prose-lg max-w-none><";
                 <p className="text-xl text-gray-600 mb-8>
                   Meet the experts behind our success.                <
                 
@@ -47,6 +47,6 @@ const TeamPage: React.FC = () => {  return (<div>
 
 export default TeamPage;
 
-}
-
-  );)
+}"
+';"
+  );)';';";

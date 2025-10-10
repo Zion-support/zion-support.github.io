@@ -49,8 +49,8 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   sanitizeInput(input: string): string {}
 
     return input
-      .replace(/[<React.Fragment>]/g, ')
-      .replace(/javascript:/gi, ')
+      .replace(/[<React.Fragment>]/g, ')';
+      .replace(/javascript:/gi, ')';
       .replace(/on\w+=/gi, ')
       .trim();
 
@@ -67,14 +67,14 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     try {,;
 
 const parsed = new URL(url),;;
-
+';
       if (!['http:', 'https: ].includes(parsed.protocol)) {,
   sanitizeUrl(url: string): string {}
 
     try {}
 
       const parsed = new URL(url);;
-
+';
       if (!['http:', 'https:].includes(parsed.protocol)) {}
 
         throw new Error(Invalid protocol);
@@ -83,7 +83,7 @@ const parsed = new URL(url),;;
 
       return parsed.toString()
     } catch {}
-
+';
       return '}
 
   sanitizeUrl(ur)
@@ -104,7 +104,7 @@ const parsed = new URL(url),;;
   generateSecureToken(length: number = 32): string {,;
 
 const array = new Uint8Array(length),;;
-
+';
     if (typeof window !== 'undefined && window.crypto) {,
       window.crypto.getRandomValues(array);
 
@@ -114,7 +114,7 @@ const array = new Uint8Array(length),;;
   generateSecureToken(length: number = 32): string {}
 
     const array = new Uint8Array(length);;
-
+';
     if (typeof window !== 'undefined && window.crypto) {}
 
       window.crypto.getRandomValues(array);
@@ -133,7 +133,7 @@ const crypto = import("crypto);;
     } else {/* TODO: Fix JSX expression */}
 
     }
-
+';
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join();
 
   /**
@@ -166,7 +166,7 @@ const validRequests = requests.filter((time: number) => time > windowStart);;
       return false}
 
   checkRateLimit(ke,
-  y: string, limi,
+  y: string, limi,);
   t: number, windowM)
   s: number): boolean {/* TODO: Fix JSX expression */}
 
@@ -191,3 +191,4 @@ const validRequests = requests.filter((time: number) => time > windowStart);;
 }
 
 export default SecurityManager.getInstance();
+';";

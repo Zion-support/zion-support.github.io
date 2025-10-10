@@ -83,9 +83,9 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 
       this.observer.observe({)
         entryTypes: [)
-          'paint')
-          'largest-contentful-paint')
-          'first-input')
+          'paint')';
+          'largest-contentful-paint')';
+          'first-input')';
           'layout-shift')
         ])
       this.observer.observe({/* TODO: Fix JSX expression */})
@@ -96,9 +96,9 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   }
 
   private processPerformanceEntry(entry: PerformanceEntry): void {,
-    switch (entry.entryType) {,
-      case 'paint':,
-        if (entry.name === 'first-paint') {,
+    switch (entry.entryType) {,';
+      case 'paint':,';
+        if (entry.name === 'first-paint') {,';
           this.metrics.firstPaint = entry.startTime} else if (entry.name === 'first-contentful-paint') {
           this.metrics.firstContentfulPaint = entry.startTime;
 
@@ -106,23 +106,23 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 
   private processPerformanceEntry(entr)
   y: PerformanceEntry): void {/* TODO: Fix JSX expression */}
-
+';
         } else if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
 
         }
 
         break;
-
+';
       case 'largest-contentful-paint':
         this.metrics.lcp = entry.startTime;
 
         break;
-
+';
       case 'first-input':
         this.metrics.fid = entry.processingStart - entry.startTime;
 
         break;
-
+';
       case 'layout-shift':
         if (!(entry as any).hadRecentInput) {/* TODO: Fix JSX expression */}
 
@@ -132,15 +132,15 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 
   }
 
-  private trackUserInteractions(): void {
+  private trackUserInteractions(): void {';
     if (typeof window === 'undefined) return;
 
 ;
 
-const interactionTypes: (keyof WindowEventMap)[] = [,
-      'click',
-      'scroll',
-      'keydown',
+const interactionTypes: (keyof WindowEventMap)[] = [,';
+      'click',';
+      'scroll',';
+      'keydown',';
       'resize];
 
     interactionTypes.forEach(type => {)
@@ -148,7 +148,7 @@ const interactionTypes: (keyof WindowEventMap)[] = [,
         type)
         event => {;
 
-const interaction: UserInteraction = {,
+const interaction: UserInteraction = {,';
             type: type as UserInteraction['type']),
             timestamp: performance.now(),
             element: (event.target as Element)?.tagName?.toLowerCase(),
@@ -174,7 +174,7 @@ const interaction: UserInteraction = {,
 
       )})}
 
-  private measureCoreWebVitals(): void {
+  private measureCoreWebVitals(): void {';
     if (typeof window === 'undefined) return;
 
     // Measure Time to First Byte;
@@ -184,21 +184,21 @@ const interaction: UserInteraction = {,
         performance.timing.responseStart - performance.timing.navigationStart}
 
     // Measure page load time;
-
+';
     window.addEventListener('load', () => {
       this.metrics.loadTime = performance.now() - this.metrics.navigationStart});
 
     // Measure DOM content loaded;
-
+';
     document.addEventListener('DOMContentLoaded', () => {
       this.metrics.domContentLoaded =
         performance.now() - this.metrics.navigationStart})}
 
-  private trackPageLoadMetrics(): void {
+  private trackPageLoadMetrics(): void {';
     if (typeof window === 'undefined) return;
 
     // Track resource loading;
-
+';
     const _resources = performance.getEntriesByType('resource);;
 
     const totalResourceSize = resources.reduce((total, resource) => {;;
@@ -210,13 +210,13 @@ const interaction: UserInteraction = {,
     }
 
     // Measure page load time;
-
+';
     window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
 
     });
 
     // Measure DOM content loaded;
-
+';
     document.addEventListener('DOMContentLoaded', () => {/* TODO: Fix JSX expression */}
 
     })}
@@ -226,7 +226,7 @@ const interaction: UserInteraction = {,
     }, 0);
 
 //     // // console.log removed for production
-`
+``;
   size: ${(totalResourceSize / 1024).toFixed(2)} KB`
     )}
 
@@ -307,74 +307,74 @@ const interaction: UserInteraction = {,
   Score: ${score}/100;
 
 Core Web,
-  Vitals:
-- LC,`
+  Vitals:`;
+- LC,`';`;
   P: ${metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}
-
-- FI,`
+`;
+- FI,`';`;
   D: ${metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}
 
-- CL,
+- CL,';
   S: ${metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}
-
-- FC,`
+`;
+- FC,`';`;
   P: ${metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}
-
+`;
     return `
 Performance Report:
 Overall Score: ${score}/100;
 
-Core Web Vitals:
+Core Web Vitals:';`;
 - LCP: ${metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}
-
+';`;
 - FID: ${metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}
-
+';
 - CLS: ${metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}
-
+';`;
 - FCP: ${metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}
 
-Page Load Metrics:
+Page Load Metrics:';`;
 - TTFB: ${metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}
-
+';`;
 - Load Time: ${metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}
-
+';`;
 - DOM Content Loaded: ${metrics.domContentLoaded ? `${metrics.domContentLoaded.toFixed(2)}ms` : 'N/A'}
 
 User Interactions: ${interactions.length}
-
+';
 - Clicks: ${interactions.filter(i => i.type === 'click').length}
-
+';
 - Scrolls: ${interactions.filter(i => i.type === 'scroll').length}
-
+';
 - Keydowns: ${interactions.filter(i => i.type === 'keydown').length}
-
+';
 - Resizes: ${interactions.filter(i => i.type === 'resize').length}
 
 Page Load,
-  Metrics:
-- TTF,`
+  Metrics:`;
+- TTF,`';`;
   B: ${metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}
-
-- Load,`
+`;
+- Load,`';`;
   Time: ${metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}
-
-- DOM Content,`
+`;
+- DOM Content,`';`;
   Loaded: ${metrics.domContentLoaded ? `${metrics.domContentLoaded.toFixed(2)}ms` : 'N/A'}
 
 User,
   Interactions: ${interactions.length}
 
-- Click,
+- Click,';
   s: ${interactions.filter(i => i.type === 'click').length}
 
-- Scroll,
+- Scroll,';
   s: ${interactions.filter(i => i.type === 'scroll').length}
 
-- Keydown,
+- Keydown,';
   s: ${interactions.filter(i => i.type === 'keydown').length}
 
-- Resize,
-  s: ${interactions.filter(i => i.type === 'resize').length}`
+- Resize,';`;
+  s: ${interactions.filter(i => i.type === 'resize').length}``;
     `.trim()}
 
   cleanup(): void {/* TODO: Fix JSX expression */}
@@ -388,5 +388,5 @@ User,
 }
 
 export default PerformanceMonitor;
-
-`
+`;
+`';`;

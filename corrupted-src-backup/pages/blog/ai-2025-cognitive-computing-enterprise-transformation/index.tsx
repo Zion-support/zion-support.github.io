@@ -1,19 +1,19 @@
-import React from 'react;
-
+import React from 'react;';
+';';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c;
-
+';
 impo, r, t { Bra, i, n } fr, o, m 'luci, d, e-rea, c, t;
-
+';
 impo, r, t { Sparkl, e, s } fr, o, m 'luci, d, e-rea, c, t;
-
+';
 impo, r, t { Trending, U, p } fr, o, m 'luci, d, e-rea, c, t;
-
+';
 impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t;
-
+';
 impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t;
-
+';
 impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t;
-
+';
 impo, r, t { Lightbu, l, b } fr, o, m 'luci, d, e-rea, c, t;
 
 const CognitiveComputingTransformatio, n: React.FC = () => {
@@ -21,31 +21,31 @@ const CognitiveComputingTransformatio, n: React.FC = () => {
 
  ,
   return(<React.Fragment>,
-      <Helm, e, t>
+      <Helm, e, t>;
         <title>          Cognitive, Computing, Enterprise Transformati, o, n | Hum, a, n-Like, AI, Intelligence | Zion, Tech, Group;
 
         <
         <meta, nam, e = description
           conte, n, t=Discover, cognitive, computing systems, that, understa, n, d, reas, o, n, and, learn, like huma, n, s. Achieve, 9, 8.5% decision, accurac, y, $1.2 B+ val, u, e, and, 9, 2% faster, proble, m-solving, with, cognitive AI.
         /><
-        <meta, nam, e = keywor, d, s
+        <meta, nam, e = keywor, d, s);
           conte, n, t=cognitive, computi, n, g, AI, intelligenc, e, natural, language, understanding, knowledge, reasonin, g, continuous, learnin, g, explainable, A, I, enterprise, transformatio, n)
         <link, re, l = canonic, a, l)
           hr, e, f=htt, p, s: //ziontechgro u p.c o m/bl o g
         
       <
-
+';
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k></div>
         <Head, e, r / >
 );
-
-} {/* Hero, Sect, i, o, n */ }
-
-        <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n>
-          <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)] 
+'
+} {/* Hero, Sect, i, o, n */ }'
+';
+        <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n>';
+          <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)] ';
           <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8>,
-            {/* Breadc, r, u, m, b *
-        <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n><
+            {/* Breadc, r, u, m, b *';
+        <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n><';
           <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)] /><
 } {/* Hero, Sect, i, o, n */ }        <div, classNam, e = relative, p, t-24, p, b-16, overflo, w-hidd, e, n>
           <div, className=absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)] 
@@ -62,11 +62,11 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TOD,
     O: Fix JSX expression *
         <Head, e, r / > {/* Hero, Sect, i, o, n *
         <div, classNam, e = relative, p, t-24, p, b-16, overflo, w-hidd, e, n><
-          <div, className=absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)] /><
-          <div, classNam, e = relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8><
-            {/* Breadc, r, u, m, b *
+          <div, className=absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)] /><'
+          <div, classNam, e = relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8><';
+            {/* Breadc, r, u, m, b *';
             <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8><
-              <Link, t, o=
+              <Link, t, o=';
                 className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s              >;
 
 const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX expression */}
@@ -75,11 +75,11 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
 
         <div, classNam, e = relative, p, t-24, p, b-16, overflo, w-hidd, e, n></div>
           <div, className=absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)] /></div>
-          <div, classNam, e = relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8></div>
-            {/* Breadc, r, u, m, b */}
-
-            <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8></nav>
-              <Link, t, o='/
+          <div, classNam, e = relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8></div>'
+            {/* Breadc, r, u, m, b */}';
+';
+            <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8></nav>';
+              <Link, t, o='/';
                 className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s
               ></Link>
                 Ho, m, e;              <
@@ -176,9 +176,9 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                         Transfer, learning, across domai, n, s,
                         F, e, w-shot, learning, for new, scenario, s,
                         Reinforcement, learning, from outcom, e, s]},
-                        Transparent, decision, pathway, s,
-                        Confidence, scoring, for recommendatio, n, s,
-                        Audit, trails, for complian, c, e,
+                        Transparent, decision, pathway, s,'
+                        Confidence, scoring, for recommendatio, n, s,'
+                        Audit, trails, for complian, c, e,';
                         'Hum, a, n-interpretable, explanation, s]}].m, a, p((capabili, t, y, i, d, x) => (<div, ke, y = { id, x }, classNa, m, e = bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0)
                   ].m, a, p((capabili, t, y, i, d, x) => (<div, ke, y = { id, x }, classNa, m, e = bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0
                     ><
@@ -356,3 +356,4 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                 <h3, className=te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s><
                   Fortune, 20, Teleco,)
   m: $4.7B, Cognitive, Transformation;)
+';

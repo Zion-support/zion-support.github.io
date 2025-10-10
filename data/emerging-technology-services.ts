@@ -77,28 +77,28 @@ export interface EmergingTechnologyService {/* TODO: Fix JSX expression */}
     mobile: string, email: string;
     address: string}
 }
-export const emergingTechnologyServices: EmergingTechnologyService[] = [,
-    id: "blockchain-platform", name: "Blockchain Development Platform",
-    tagline: "Build and deploy blockchain applications", price: '$179/month',
+export const emergingTechnologyServices: EmergingTechnologyService[] = [,";
+    id: "blockchain-platform", name: "Blockchain Development Platform",";
+    tagline: "Build and deploy blockchain applications", price: '$179/month',';
     description: 'Comprehensive blockchain development platform for creating decentralized applications.',
-    features: [;
-      "Smart contract development"
-      "DApp deployment"
-      "Blockchain integration"
-      "Security auditing",
-      "Performance monitoring"],
+    features: [;";
+      "Smart contract development"";
+      "DApp deployment"";
+      "Blockchain integration"";
+      "Security auditing",";
+      "Performance monitoring"],";
     link: "/services/blockchain-platform", category: "Emerging Tech",
-    realImplementation: true;
+    realImplementation: true;";
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+];";
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",";
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-      email: "kleber@ziontechgroup.com",
+];";
+      email: "kleber@ziontechgroup.com",";
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      addres,
+      addres,";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -126,121 +126,121 @@ export const emergingTechnologyServices: EmergingTechnologyService[] = [,
   s: string}
 }
 export const,
-  emergingTechnologyServices: EmergingTechnologyService[] = [,
-    i,"
-  d: "blockchain-platform", nam,"
-  e: "Blockchain Development Platform",
-    taglin,"
-  e: "Build and deploy blockchain applications", pric,"
-  e: "$179/month",
-    descriptio,"
+  emergingTechnologyServices: EmergingTechnologyService[] = [,";
+    i,"";
+  d: "blockchain-platform", nam,"";
+  e: "Blockchain Development Platform",";
+    taglin,"";
+  e: "Build and deploy blockchain applications", pric,"";
+  e: "$179/month",";
+    descriptio,"";
   n: "Comprehensive blockchain development platform for creating decentralized applications.",
-    feature,
-  s: [;"
-      "Smart contract development""
-      "DApp deployment""
-      "Blockchain integration""
-      "Security auditing""
+    feature,";
+  s: [;"";
+      "Smart contract development""";
+      "DApp deployment""";
+      "Blockchain integration""";
+      "Security auditing""";
       "Performance monitoring"
-    ],
-    lin,"
-  k: "/services/blockchain-platform", categor,"
+    ],";
+    lin,"";
+  k: "/services/blockchain-platform", categor,"";
   y: "Emerging Tech",
     realImplementatio,
   n: true,
-    contactInf,
-  o: addres,"
+    contactInf,";
+  o: addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];";
+      mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com",";
+      addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];";
+      emai,"";
+  l: "kleber@ziontechgroup.com",";
+  addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-      mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-      emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-;
-    id: 'blockchain-platform',
-    name: 'Blockchain Development Platform',
-    tagline: "Build and deploy blockchain applications",
-    price: "$179/month",
+;';
+    id: 'blockchain-platform',';
+    name: 'Blockchain Development Platform',";
+    tagline: "Build and deploy blockchain applications",";
+    price: "$179/month",";
     description: "Comprehensive blockchain development platform for creating decentralized applications.",
-    features: [,
-      "Smart contract development",
-      "DApp deployment",
-      "Blockchain integration",
-      "Security auditing",
+    features: [,";
+      "Smart contract development",";
+      "DApp deployment",";
+      "Blockchain integration",";
+      "Security auditing",";
       "Performance monitoring"
-    ],
-    link: '/services/blockchain-platform',
+    ],';
+    link: '/services/blockchain-platform',';
     category: 'Emerging Tech',
     realImplementation: true;
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
-  d: "blockchain-platform",
-    nam,"
-  e: "Blockchain Development Platform",
-    taglin,"
-  e: "Build and deploy blockchain applications",
-    pric,"
-  e: "$179/month",
-    descriptio,"
+    contactInfo: unknown;';
+      mobile: '+1 302 464 0950',';
+      email: 'kleber@ziontechgroup.com',';
+      mobile: '+1 302 464 0950',';
+      email: 'kleber@ziontechgroup.com',';
+      address: '364 E Main St STE 1008 Middletown DE 19709'}};";
+];      mobile: "+1 302 464 0950",";
+      email: "kleber@ziontechgroup.com",";
+      mobile: "+1 302 464 0950",";
+      email: "kleber@ziontechgroup.com",";
+      address: "364 E Main St STE 1008 Middletown DE 19709",";
+    i,"";
+  d: "blockchain-platform",";
+    nam,"";
+  e: "Blockchain Development Platform",";
+    taglin,"";
+  e: "Build and deploy blockchain applications",";
+    pric,"";
+  e: "$179/month",";
+    descriptio,"";
   n: "Comprehensive blockchain development platform for creating decentralized applications.",
-    feature,
-  s: [,"
-      "Smart contract development","
-      "DApp deployment","
-      "Blockchain integration","
-      "Security auditing","
+    feature,";
+  s: [,"";
+      "Smart contract development","";
+      "DApp deployment","";
+      "Blockchain integration","";
+      "Security auditing","";
       "Performance monitoring"
-    ],
-    lin,"
-  k: "/services/blockchain-platform",
-    categor,"
+    ],";
+    lin,"";
+  k: "/services/blockchain-platform",";
+    categor,"";
   y: "Emerging Tech",
     realImplementatio,
   n: true,
     contactInf,
-  o: unknown,
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
+  o: unknown,";
+      mobil,"";
+  e: "+1 302 464 0950",";
+      emai,"";
   l: "kleber@ziontechgroup.com",
-      mobil,
+      mobil,';
   e: '+1 302 464 0950',
-      emai,
+      emai,';
   l: 'kleber@ziontechgroup.com',
-      addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
+      addres,';
+  s: '364 E Main St STE 1008 Middletown DE 19709'}};";
+];      mobil,"";
+  e: "+1 302 464 0950",";
+  emai,"";
+  l: "kleber@ziontechgroup.com"";
+      mobil,"";
+  e: "+1 302 464 0950",";
+      emai,"";
+  l: "kleber@ziontechgroup.com",";
+      addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -269,8 +269,8 @@ i,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
-  l: string} addres,
-  s: string} } } addres,"
+  l: string} addres,";
+  s: string} } } addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -284,43 +284,43 @@ i,
   o: mobil,
   e: string, emai,
   l: string, addres,
-  s: string } } export const,
-  emergingTechnologyServices: EmergingTechnologyService[] = [ i,"
-  d: "blockchain-platform", nam,"
-  e: "Blockchain Development Platform", taglin,"
-  e: "Build and deploy blockchain applications", pric,"
-  e: "$179/month", descriptio,"
-  n: "Comprehensive blockchain development platform for creating decentralized applications.", feature,"
-  s: [ "Smart contract development" "DApp deployment" "Blockchain integration" "Security auditing" "Performance monitoring" ], lin,"
-  k: "/services/blockchain-platform", categor,"
+  s: string } } export const,";
+  emergingTechnologyServices: EmergingTechnologyService[] = [ i,"";
+  d: "blockchain-platform", nam,"";
+  e: "Blockchain Development Platform", taglin,"";
+  e: "Build and deploy blockchain applications", pric,"";
+  e: "$179/month", descriptio,"";
+  n: "Comprehensive blockchain development platform for creating decentralized applications.", feature,"";
+  s: [ "Smart contract development" "DApp deployment" "Blockchain integration" "Security auditing" "Performance monitoring" ], lin,"";
+  k: "/services/blockchain-platform", categor,"";
   y: "Emerging Tech", realImplementatio,
-  n: true, contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "blockchain-platform", nam,"
-  e: "Blockchain Development Platform", taglin,"
-  e: "Build and deploy blockchain applications", pric,"
-  e: "$179/month", descriptio,"
-  n: "Comprehensive blockchain development platform for creating decentralized applications.", feature,"
-  s: [ "Smart contract development", "DApp deployment", "Blockchain integration", "Security auditing", "Performance monitoring" ], lin,"
-  k: "/services/blockchain-platform", categor,"
+  n: true, contactInf,";
+  o: addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"";
+  l: "kleber@ziontechgroup.com",";
+  addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"";
+  d: "blockchain-platform", nam,"";
+  e: "Blockchain Development Platform", taglin,"";
+  e: "Build and deploy blockchain applications", pric,"";
+  e: "$179/month", descriptio,"";
+  n: "Comprehensive blockchain development platform for creating decentralized applications.", feature,"";
+  s: [ "Smart contract development", "DApp deployment", "Blockchain integration", "Security auditing", "Performance monitoring" ], lin,"";
+  k: "/services/blockchain-platform", categor,"";
   y: "Emerging Tech", realImplementatio,
-  n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  n: true, contactInf,";
+  o: mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", mobil,';
+  e: '+1 302 464 0950',' emai,';
+  l: 'kleber@ziontechgroup.com',' addres,';";
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"";
+  e: "+1 302 464 0950",";
+  emai,"";
+  l: "kleber@ziontechgroup.com" mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", addres,"';";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"';";

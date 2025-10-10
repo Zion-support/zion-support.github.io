@@ -49,7 +49,7 @@ return (
 
   if (typeof window !== 'undefined) {
     // Preload on idle;
-
+';
     if ('requestIdleCallback in window) {
       requestIdleCallback(() => {,
         importFn().catch(() => {,
@@ -73,7 +73,7 @@ export const preloadBanner = (importF);;
 export const createBannerLoader = () => {;;
 
 const observer = new IntersectionObserver(;;
-
+);
         if (entry.isIntersecting) {;
 
 const _element = entry.target as HTMLElement;;
@@ -93,7 +93,7 @@ export const createBannerLoader = () => {/* TODO: Fix JSX expression */};;;
 
       })},
     {/* TODO: Fix JSX expression */}
-
+';
   n: '50px }
 
   );
@@ -101,3 +101,4 @@ export const createBannerLoader = () => {/* TODO: Fix JSX expression */};;;
   return {/* TODO: Fix JSX expression */}
 
   }};
+';

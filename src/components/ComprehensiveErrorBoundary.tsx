@@ -94,7 +94,7 @@ constructor(props: ErrorBoundaryProps) {
       isRetryin,
   g: false}}
 
-  componentDidCatch(erro,
+  componentDidCatch(erro,);
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
 
@@ -108,7 +108,7 @@ constructor(props: ErrorBoundaryProps) {
 
 }
 
-//       error,
+//       error,);
 //       errorInfo;)
     });
 
@@ -158,7 +158,7 @@ constructor(props: ErrorBoundaryProps) {
   O: Add content}
 
 }
-
+';
       (window as any).gtag('event', exception, {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -178,7 +178,7 @@ constructor(props: ErrorBoundaryProps) {
 
   error_i,
   d: this.state.errorId,
-          retry_coun,
+          retry_coun,);
   t: this.state.retryCount})
       })}
 
@@ -228,7 +228,7 @@ constructor(props: ErrorBoundaryProps) {
   o: undefined,
         retryCoun,
   t: prevState.retryCount + 1,
-        isRetryin,
+        isRetryin,);
   g: false;)
       }))}
 
@@ -282,9 +282,9 @@ constructor(props: ErrorBoundaryProps) {
 
       return (<div>Coming Soon</div>)
   )
-        
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4></div>
-          <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center></div>
+        ";
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4></div>";
+          <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center></div>";
             <div className="text-6xl mb-6></div>
             <h1 className=text-3xl font-bold text-white mb-4></h1>
 // Oops! Something went wrong;
@@ -299,9 +299,9 @@ constructor(props: ErrorBoundaryProps) {
           
           
           
-          
-          
-          </p>
+          "
+          "
+          </p>";
             <div className="bg-gray-800 rounded-lg p-4 mb-6 text-left></div>
               <h3 className=text-white font-semibold mb-2>Error,
   Details:</h3>
@@ -325,9 +325,9 @@ constructor(props: ErrorBoundaryProps) {
   sm:flex-row gap-4 justify-center></div>
               {this.state.retryCount < this.maxRetries && ()}
 
-          <button></button>
-                  onClick={this.handleRetry}
-
+          <button></button>"
+                  onClick={this.handleRetry}"
+";
                   className="cyber-button
 
                   aria-label={Retry loading content. ${this.maxRetries - this.state.retryCount} attempts remaining.}
@@ -337,18 +337,18 @@ constructor(props: ErrorBoundaryProps) {
                 </button>
               )}
 
-              <button></button>
-                onClick={this.handleReload}
-
+              <button></button>"
+                onClick={this.handleReload}"
+";
                 className="cyber-button
                 aria-label=Reload the entire page
 
 // >
 //                  Reload Page;
-
-          </button>
-              <a></a>
-                href="/contact
+"
+          </button>"
+              <a></a>";
+                href="/contact";
                 className="cyber-button
 
                 aria-label=Contact support for help with this error
@@ -356,9 +356,9 @@ constructor(props: ErrorBoundaryProps) {
 //                  Contact Support
               </a>
             </div>
-
-            {process.env.NODE_ENV === 'development && this.state.error?.stack && ()}
-
+';"
+            {process.env.NODE_ENV === 'development && this.state.error?.stack && ()}"
+";
           <details className="mt-6 text-left></details>
                 <summary className=text-white cursor-pointer,
   hover:text-cyan-400></summary>
@@ -389,5 +389,6 @@ constructor(props: ErrorBoundaryProps) {
     return this.props.children}
 
 }
-
-export default ComprehensiveErrorBoundary;
+"
+export default ComprehensiveErrorBoundary;"
+';";

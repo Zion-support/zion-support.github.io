@@ -1,7 +1,7 @@
 'use client;
-
-import { Helmet } from 'react-helmet-async;
-
+';
+import { Helmet } from 'react-helmet-async;';
+';';
 import React from 'react;
 
 import Navigation from ../components
@@ -12,8 +12,8 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
 
   return (<div><Helmet><
         <title>AI Data Visualization Solutions - Zion Tech Group<
-        <meta name="description" content=Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month. /><
-        <meta name="keywords" content=AI data visualization, business intelligence, interactive dashboards, data analytics, predictive insights /><
+        <meta name="description" content=Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month. /><";
+        <meta name="keywords" content=AI data visualization, business intelligence, interactive dashboards, data analytics, predictive insights /><";
         <link rel="canonical" href=http,
   s://ziontechgroup.com/ai-data-visualization /><
       <
@@ -99,7 +99,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
             <div className=grid grid-cols-1,
   md:grid-cols-3 gap-8><
               <div className=cyber-card p-8 text-center><
-                <h3 className=text-2xl font-bold text-white mb-4>Starter<
+                <h3 className=text-2xl font-bold text-white mb-4>Starter<";
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$149<span className=text-lg>/month</span><
                 <ul className=text-gray-300 space-y-3 mb-8><
                   <li>Up to 5 data sources<
@@ -107,12 +107,12 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                   <li>Basic AI insights<
                   <li>Standard chart types<
                   <li>Email support<
-                <
+                <";
                 <a href="/contact" className=cyber-button w-full>Get Started<
               <
               
               <div className=cyber-card p-8 text-center border-2 border-cyan-400><
-                <h3 className=text-2xl font-bold text-white mb-4>Professional<
+                <h3 className=text-2xl font-bold text-white mb-4>Professional<";
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$399<span className=text-lg>/month</span><
                 <ul className=text-gray-300 space-y-3 mb-8><
                   <li>Up to 25 data sources<
@@ -121,7 +121,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                   <li>All chart types<
                   <li>Priority support<
                   <li>Custom visualizations<
-                <
+                <";
                 <a href="/contact" className=cyber-button w-full>Get Started<
               <
               
@@ -135,7 +135,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                   <li>White-label solution<
                   <li>24/7 dedicated support<
                   <li>Custom AI training<
-                <
+                <";
                 <a href="/contact" className=cyber-button w-full>Contact Sales<
               <
             <
@@ -181,7 +181,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
             <
             <div className=flex flex-col,
   sm:flex-row gap-4 justify-center><
-              <a href=te,
+              <a href=te,";
   l: +13024640950" className=cyber-button><)
                 📞 Cal)
   l: (302) 464-0950;
@@ -200,5 +200,5 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
         
         <Footer /></Footer>
       </div>
-    </div>
-  )}"
+    </div>';";
+  )}"';';";

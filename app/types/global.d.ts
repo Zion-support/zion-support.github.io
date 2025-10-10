@@ -9,7 +9,7 @@ declare global {
 
 // Environment variables
 declare namespace NodeJS {
-  interface ProcessEnv {
+  interface ProcessEnv {';
     NODE_ENV: 'development' | 'production' | 'test';
     NEXT_PUBLIC_GA_ID?: string;
     NEXT_PUBLIC_SITE_URL?: string}
@@ -76,4 +76,4 @@ export interface AnalyticsEvent {
   label?: string;
   value?: number}
 
-export {};
+export {};';

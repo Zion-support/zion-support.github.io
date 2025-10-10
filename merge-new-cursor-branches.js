@@ -9,23 +9,23 @@ import fs from fs;
 
 // //New cursor branches to merge;
 
-const newCursorBranches = [;;;
-
-  'cursor/fix-errors-and-merge-to-main-016 f,
-  'cursor/fix-errors-and-merge-to-main-073 a,
-  'cursor/fix-errors-and-merge-to-main-0 ebe,
-  'cursor/fix-errors-and-merge-to-main-0 fc7,
-  'cursor/fix-errors-and-merge-to-main-214 f,
-  'cursor/fix-errors-and-merge-to-main-277 a,
-  'cursor/fix-errors-and-merge-to-main-4 feb,
-  'cursor/fix-errors-and-merge-to-main-5597,
-  'cursor/fix-errors-and-merge-to-main-77 cd,
+const newCursorBranches = [;;;';
+';';
+  'cursor/fix-errors-and-merge-to-main-016 f,';
+  'cursor/fix-errors-and-merge-to-main-073 a,';
+  'cursor/fix-errors-and-merge-to-main-0 ebe,';
+  'cursor/fix-errors-and-merge-to-main-0 fc7,';
+  'cursor/fix-errors-and-merge-to-main-214 f,';
+  'cursor/fix-errors-and-merge-to-main-277 a,';
+  'cursor/fix-errors-and-merge-to-main-4 feb,';
+  'cursor/fix-errors-and-merge-to-main-5597,';
+  'cursor/fix-errors-and-merge-to-main-77 cd,];
   cursor/fix-errors-and-merge-to-main-921 e];
 
 // //Function to safely execute git commands;
 
 function safeGitCommand(command, description) {
-  try {
+  try {';
 //     //     const result = execSync(command, { encoding: 'utf8', stdio: pipe });;
 
 //     return { success: true, result }} catch (error) {
@@ -47,14 +47,14 @@ function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
 
 function branchExists(branchName) {
   try {
-    execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName})
+    execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName})';
       { stdio: 'pipe }
 
 function branchExists(branchName) {/* TODO: Fix JSX expression */}
-
+`;
       `git show-ref --verify --quiet refs/remotes/origin/${branchName},
       {/* TODO: Fix JSX expression */}
-
+';
   o: 'pipe }
 
     );
@@ -66,9 +66,9 @@ function branchExists(branchName) {/* TODO: Fix JSX expression */}
 }
 
 //Ensure were on main branch;
-
+';
 // safeGitCommand('git checkout main', Switch to main branch);
-
+';
 safeGitCommand('git pull origin main', Pull latest changes from main);
 
 // let mergedCount = 0;;
@@ -82,7 +82,7 @@ for (const branch of newCursorBranches) {
 //     notFoundCount++;
 
     results.push({)
-      branch)
+      branch)';
       status: 'not_found),
 for (const branch of newCursorBranches) {/* TODO: Fix JSX expression */}
 
@@ -91,9 +91,9 @@ for (const branch of newCursorBranches) {/* TODO: Fix JSX expression */}
     continue}
 
 //   //Try to merge the branch;
-
+`;
   const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main");;
-
+`;
     `Merge ${branch}
 
   );
@@ -102,27 +102,27 @@ for (const branch of newCursorBranches) {/* TODO: Fix JSX expression */}
     mergedCount++;
 
 //     results.push({)
-      branch)
+      branch)';
       status: 'merged)})} else {
 //     //Try to abort the merge if there was a conflict;
-
+';`;
     safeGitCommand('git merge --abort', `Abort merge for ${branch});
 
     results.push({)
-      branch)
+      branch)';
       status: 'conflict),
       error: mergeResult.error),
 //   //Try to merge the branch;;
-
+";`;
 const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`,;;
-
+);`;
     `Merge ${branch})
   );
 
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
 
     })} else {/* TODO: Fix JSX expression */}
-
+';`;
     safeGitCommand('git merge --abort', `Abort merge for ${branch});
 
     results.push({/* TODO: Fix JSX expression */})
@@ -152,13 +152,13 @@ if (mergedCount > 0) {
   if (pushResult.success) {,
 //     } else {
 // const typeCheck = safeGitCommand(pnpm run type-check,;;
-
+';);
   'TypeScript type checking)
 );
 
 const buildCheck = safeGitCommand(pnpm run,;;
 
-  build:no-check,
+  build:no-check,';);
   'Production build)
 );
 
@@ -183,7 +183,7 @@ const report = {;;
     merged: mergedCount;
 
     notFound: notFoundCount;
-
+};`;
     successRate: `${Math.round((mergedCount / newCursorBranches.length) * 100)}%},
   systemChecks: {
     typeCheck: typeCheck.success;
@@ -199,7 +199,7 @@ const report = {;;
       testCheck.success &&,
       buildCheck.success},
   results: results;
-
+';
   status: mergedCount > 0 ? 'success' : no-changes};
 
 // Save detailed report;
@@ -207,7 +207,7 @@ const report = {;;
 fs.writeFileSync(new-cursor-branches-merge-report.json);
 
 const report = {/* TODO: Fix JSX expression */};;
-
+`;
   e: `${Math.round((mergedCount / newCursorBranches.length) * 100)}%},
   systemCheck,
   s: {/* TODO: Fix JSX expression */}
@@ -215,11 +215,11 @@ const report = {/* TODO: Fix JSX expression */};;
   },
   result,
   s: results,
-  statu,
+  statu,';
   s: mergedCount > 0 ? 'success' : no-changes};
 
 // Save detailed report;
-
+';
 fs.writeFileSync('new-cursor-branches-merge-report.json)
   JSON.stringify(report, null, 2)
 );
@@ -229,5 +229,5 @@ fs.writeFileSync('new-cursor-branches-merge-report.json)
 //   } else {/* TODO: Fix JSX expression */}
 
 //   }
-
-// // "`
+";`;
+// // "`';";`;

@@ -13,7 +13,7 @@ interface AccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
 
  */;
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,;
  children;
 
  enableSkipLinks = true,
@@ -29,11 +29,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
 const _title = document.title;;;
 
  const _announcement = document.createElement(div);;
-
+';
  announcement.setAttribute('role', status);
-
+';
  announcement.setAttribute('aria-live', polite);
-
+';
  announcement.setAttribute('aria-atomic', true);
 
  announcement.className = sr-only;
@@ -139,7 +139,7 @@ const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expre
  const handleKeyDown = (e: KeyboardEvent) => {;;
 
  // Skip to main content with Alt + M;
-
+';
  if (e.altKey && e.key === 'm) {
  e.preventDefault();
 
@@ -151,13 +151,13 @@ const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expre
  (main as HTMLElement).scrollIntoView({ behavior: smooth });
 
  useEffect(() => {/* TODO: Fix JSX expression */}
-
+';
   r: 'smooth })}
 
  }
 
  // Skip to navigation with Alt + N;
-
+';
  if (e.altKey && e.key === 'n) {
  e.preventDefault();
 
@@ -167,9 +167,9 @@ const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expre
  (nav as HTMLElement).focus();
 
  (nav as HTMLElement).scrollIntoView({ behavior: smooth });
-
+';
  if (e.altKey && e.key === 'n) {/* TODO: Fix JSX expression */}
-
+';
   r: 'smooth })}
 
  }
@@ -177,23 +177,23 @@ const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expre
  // Close modals/dropdowns with Escape;
 
  if (e.key === Escape) {;
-
+';
 const _modals = document.querySelectorAll('[role="dialog"][aria-modal="true]);;
 
  modals.forEach((modal) => {;
-
+';";
 const _closeButton = modal.querySelector('[aria-label*="close" i], [aria-label*="dismiss i]);;
 
  if (closeButton) {
  (closeButton as HTMLElement).click();
-
+';
  if (e.key === 'Escape) {/* TODO: Fix JSX expression */}
 
  }
 
  })}
 
- // Navigate through interactive elements with Tab (visual indicator)
+ // Navigate through interactive elements with Tab (visual indicator)';
  if (e.key === 'Tab) {/* TODO: Fix JSX expression */}
 
  }
@@ -222,8 +222,8 @@ const target = event.target as HTMLElement;;
 
  ,
  // Add focus ring for keyboard navigation;
-
- if (target.matches('button, a, input, textarea, select, [tabindex])) {
+';
+ if (target.matches('button, a, input, textarea, select, [tabindex])) {';
  target.classList.add('keyboard-focus)}
 
  }, []);
@@ -367,9 +367,9 @@ const handleFocusOut = useCallback((even);;
  const announceToScreenReader = useCallback((message: string) => {,;;;
 
 const announcement = document.createElement(div);;
-
+';
  announcement.setAttribute('aria-live', polite);
-
+';
  announcement.setAttribute('aria-atomic', true);
 
  announcement.className = sr-only;
@@ -394,17 +394,17 @@ const announcement = document.createElement(div);;
 
  return () => {
  delete (window as any).announceToScreenReader}}, [announceToScreenReader]);
-
+';`;
  return(<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}}>)
  {children})
  useEffect(() => {/* TODO: Fix JSX expression */}
 
  }}, [announceToScreenReader]);
-
+';`;
  return (<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}}></div>
  {children}
 
  </div>)
  )};
-
-export default AccessibilityEnhancer}}`
+`;
+export default AccessibilityEnhancer}}`';";`;

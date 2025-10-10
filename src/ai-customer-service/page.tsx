@@ -1,5 +1,5 @@
 'use client;
-
+';
 import { Helmet } from 'react-helmet-async;
 
 export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
@@ -7,8 +7,8 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
 
   return (<div><Helmet><
         <title>AI Customer Service Solutions - Zion Tech Group<
-        <meta name="description" content=Revolutionary AI-powered customer service solutions with 24/7 support, multilingual capabilities, and 95% customer satisfaction rates. Starting at $299/month. /><
-        <meta name="keywords" content=AI customer service, chatbot, virtual assistant, customer support automation, multilingual support /><
+        <meta name="description" content=Revolutionary AI-powered customer service solutions with 24/7 support, multilingual capabilities, and 95% customer satisfaction rates. Starting at $299/month. /><";
+        <meta name="keywords" content=AI customer service, chatbot, virtual assistant, customer support automation, multilingual support /><";
         <link rel="canonical" href=http,
   s://ziontechgroup.com/ai-customer-service /><
       <
@@ -93,7 +93,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
             <div className=grid grid-cols-1,
   md:grid-cols-3 gap-8><
               <div className=cyber-card p-8 text-center><
-                <h3 className=text-2xl font-bold text-white mb-4>Starter<
+                <h3 className=text-2xl font-bold text-white mb-4>Starter<";
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$299<span className=text-lg>/month</span><
                 <ul className=text-gray-300 space-y-3 mb-8><
                   <li>Up to 1,000 conversations/month<
@@ -101,12 +101,12 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                   <li>Basic analytics<
                   <li>Email support<
                   <li>Standard integrations<
-                <
+                <";
                 <a href="/contact" className=cyber-button w-full>Get Started<
               <
               
               <div className=cyber-card p-8 text-center border-2 border-cyan-400><
-                <h3 className=text-2xl font-bold text-white mb-4>Professional<
+                <h3 className=text-2xl font-bold text-white mb-4>Professional<";
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$799<span className=text-lg>/month</span><
                 <ul className=text-gray-300 space-y-3 mb-8><
                   <li>Up to 10,000 conversations/month<
@@ -115,7 +115,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                   <li>Priority support<
                   <li>Custom integrations<
                   <li>Voice support<
-                <
+                <";
                 <a href="/contact" className=cyber-button w-full>Get Started<
               <
               
@@ -129,7 +129,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
                   <li>24/7 dedicated support<
                   <li>White-label solution<
                   <li>Custom AI training<
-                <
+                <";
                 <a href="/contact" className=cyber-button w-full>Contact Sales<
               <
             <
@@ -178,7 +178,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
             <
             <div className=flex flex-col,
   sm:flex-row gap-4 justify-center><
-              <a href=te,
+              <a href=te,";
   l: +13024640950" className=cyber-button><)
                 📞 Cal)
   l: (302) 464-0950;
@@ -197,5 +197,5 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression *
         
         <Footer /></Footer>
       </div>
-    </div>
-  )}"
+    </div>';";
+  )}"';';";

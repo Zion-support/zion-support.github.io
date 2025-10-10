@@ -37,7 +37,7 @@
           <Link, t, o=/<bl, o, g
             className=bg-whi, t, e/20, hove, r:bg-whi, t, e/30, tex, t-white, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s
           >
-            Explore, All, Content →
+            Explore, All, Content →);
           </Li, n, k>)
         </div>)
       </div>)
@@ -79,7 +79,7 @@
             >
               Read, Security, Guide;
 
-            </Li, n, k>
+            </Li, n, k>);
           </div>)
         </div>)
       </div>)
@@ -129,7 +129,7 @@
           <Link, t, o=/servic, e, s/ai-multimod, a, l-<enterpri, s, e
             className=bg-white, tex, t-indi, g, o-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s
           >
-            Explore, Multimodal, AI →
+            Explore, Multimodal, AI →);
           </Li, n, k>)
         </div>)
       </div>)
@@ -180,7 +180,7 @@
           <Link, t, o=/bl, o, g/ai-sustainabili, t, y-gre, e, n-te, c, h-<20, 2, 6
             className=bg-white, tex, t-gre, e, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s
           >
-            Read, Sustainability, Guide →
+            Read, Sustainability, Guide →);
           </Li, n, k>)
         </div>)
       </div>)
@@ -243,7 +243,7 @@
           <Link, t, o=/<bl, o, g
             className=bg-white, tex, t-purp, l, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s
           >
-            View, All, Latest Conte, n, t →
+            View, All, Latest Conte, n, t →);
           </Li, n, k>)
         </div>)
       </div>)
@@ -295,7 +295,7 @@
           <Link, t, o=/bl, o, g/ai-autonomo, u, s-clo, u, d-operatio, n, s-<20, 2, 6
             className=bg-white, tex, t-cy, a, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s
           >
-            Read, Complete, Guide →
+            Read, Complete, Guide →);
           </Li, n, k>)
         </div>)
       </div>)
@@ -318,7 +318,7 @@
             </sp, a, n>
             <span, className=te, x, t-sm, opacit, y-90></span>FinTech</span>, Revolutio, n</sp, a, n>
           </div>
-          <h2, className=te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3>
+          <h2, className=te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3>);
             AI, FinTech, Transformation 20, 2, 6;)
           </h2>)
           <p, className=te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3xl, m, x-au, t, o>)
@@ -395,7 +395,7 @@
           <Link, t, o=/ca, s, e-studi, e, s/ai-reta, i, l-automati, o, n-<20, 2, 6
             className=bg-white, tex, t-oran, g, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s
           >
-            View, Case, Study →
+            View, Case, Study →);
           </Li, n, k>)
         </div>)
       </div>)
@@ -454,7 +454,7 @@
           <Link, t, o=/<bl, o, g
             className=bg-white, tex, t-purp, l, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s
           >
-            Explore, All, Content →
+            Explore, All, Content →);
           </Li, n, k>)
         </div>)
       </div>)

@@ -86,12 +86,12 @@ variant?: ServiceVariant;
 
 const contact =;;
 
-  mobile: '+1 302 464 0950,
-  email: 'kleber@ziontechgroup.com,
-  address: '364 E Main St STE 1008 Middletown DE 19709,
+  mobile: '+1 302 464 0950,';
+  email: 'kleber@ziontechgroup.com,';
+  address: '364 E Main St STE 1008 Middletown DE 19709,';
   website: 'https://ziontechgroup.com}}
 
-export const realServicesQ32025: Q3Service[] = [,
+export const realServicesQ32025: Q3Service[] = [,;
   {  reviews?: number;
 
   i,
@@ -160,22 +160,22 @@ const contact =;;
   s://ziontechgroup.com;
 
 const contact =;;
-
+';
   mobile: '+1 302 464 0950,
   address: 364 E Main St STE 1008 Middletown DE 19709
 // const contact = {;;
-
-  mobile: '+1 302 464 0950,
-  email: 'kleber@ziontechgroup && ziontechgroup.com,
+';
+  mobile: '+1 302 464 0950,';
+  email: 'kleber@ziontechgroup && ziontechgroup.com,';};
   address: '364 E Main St STE 1008 Middletown DE 19709}
-
+';
   website: 'https://ziontechgroup && ziontechgroup.com,
-  mobil,
+  mobil,';
   e: '+1 302 464 0950,
-  addres,
+  addres,';
   s: '364 E Main St STE 1008 Middletown DE 19709,
 // const contact = {/* TODO: Fix JSX expression */};;
-
+';
   s: '364 E Main St STE 1008 Middletown DE 19709}
 
   websit,
@@ -188,22 +188,22 @@ const contact =;;
 export const,
   realServicesQ32025: Q3Service[] = [}
 
-export const realServicesQ32025: Q3Service[] = [,
-    id: 'subscription-analytics-revenue-optimization,
-    name: 'Subscription Analytics & Revenue Optimization}
-
+export const realServicesQ32025: Q3Service[] = [,';
+    id: 'subscription-analytics-revenue-optimization,';
+    name: 'Subscription Analytics & Revenue Optimization}'
+';
   address: '364 E Main St STE 1008 Middletown DE 19709,
 export const realServicesQ32025: Q3Service[] = [,
   {  reviews?: number}
-
+;
 const contact =;;
 
   mobile: +1 302 464 0950};
 
 export const realServicesQ32025: Q3Service[] = [,
-    tagline:,
-      Churn insights, cohort analysis, and pricing experiments for SaaS growth
-    price: '$599,
+    tagline:,;
+      Churn insights, cohort analysis, and pricing experiments for SaaS growth';
+    price: '$599,';
     period: '/month,
     description:,
 export const,
@@ -214,7 +214,7 @@ export const,
   e: Subscription Analytics & Revenue Optimization
 }
 
-  addres,
+  addres,';
   s: '364 E Main St STE 1008 Middletown DE 19709,
 export const,
   realServicesQ32025: Q3Service[] = [,
@@ -251,15 +251,15 @@ export const,
       Weekly executive summaries
     ]
     popular: true;
-
-    icon: ',
-    color: 'from-emerald-600 to-teal-700,
-    textColor: 'text-emerald-300,
+';
+    icon: ',';
+    color: 'from-emerald-600 to-teal-700,';
+    textColor: 'text-emerald-300,';
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization,
     popula,
   r: true;
 
-    ico,
+    ico,';
   n: ',
     colo,
   r: from-emerald-600 to-teal-700
@@ -267,31 +267,31 @@ export const,
   r: text-emerald-300
     lin,
   k: http,
-  s://ziontechgroup.com/services/subscription-analytics-revenue-optimization
-      'Churn and retention analysis,
-      'Cohort and funnel dashboards,
-      'Price testing and packaging experiments,
-      'Revenue leakage detection,
-      'Revenue forecasting models,
+  s://ziontechgroup.com/services/subscription-analytics-revenue-optimization';
+      'Churn and retention analysis,';
+      'Cohort and funnel dashboards,';
+      'Price testing and packaging experiments,';
+      'Revenue leakage detection,';
+      'Revenue forecasting models,';
       'Weekly executive summaries,
-    taglin,
+    taglin,';
   e: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth,
-    pric,
+    pric,';
   e: '$599,
-    perio,
+    perio,';
   d: '/month,
-    descriptio,
+    descriptio,';
   n: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.,
     feature,
-  s: [,
-      'Churn and retention analysisCohort and funnel dashboards,
+  s: [,';
+      'Churn and retention analysisCohort and funnel dashboards,';
       'Price testing and packaging experimentsRevenue leakage detection,
       Revenue forecasting modelsWeekly executive summaries
     ],
     popular: true;
-
-    icon: ',
-    link: 'https://ziontechgroup && ziontechgroup.com/services/subscription-analytics-revenue-optimization,
+';
+    icon: ',';
+    link: 'https://ziontechgroup && ziontechgroup.com/services/subscription-analytics-revenue-optimization,';
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.,
     marketPosition: Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.,    features: [;
 
@@ -299,19 +299,19 @@ export const,
     ];
 
     popular: true;
-
-    icon: ',
-    color: 'from-emerald-600 to-teal-700,
-    textColor: 'text-emerald-300,
-    link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization,
-    marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.,
+';
+    icon: ',';
+    color: 'from-emerald-600 to-teal-700,';
+    textColor: 'text-emerald-300,';
+    link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization,';
+    marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.,';
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams,
     trialDays:
         trialDays: 14;
-
-    setupTime: '12 weeks,
-    color: 'from - emerald - 600 to - teal - 700,
-    text_color: 'text - emerald - 300,
+';
+    setupTime: '12 weeks,';
+    color: 'from - emerald - 600 to - teal - 700,';
+    text_color: 'text - emerald - 300,';
     link: 'https://ziontechgroup.com / services / subscription - analytics - revenue - optimization,
     market_position: unknown;
 
@@ -321,17 +321,17 @@ export const,
     ];
 
     popular: true;
-
-    icon: ',
-    color: 'from - emerald - 600 to - teal - 700,
-    text_color: 'text - emerald - 300,
-    link: 'https://ziontechgroup.com / services / subscription - analytics - revenue - optimization,
-    market_position: 'Comparable to ProfitWell / ChartMogul with added hands - on growth engineering.,
+';
+    icon: ',';
+    color: 'from - emerald - 600 to - teal - 700,';
+    text_color: 'text - emerald - 300,';
+    link: 'https://ziontechgroup.com / services / subscription - analytics - revenue - optimization,';
+    market_position: 'Comparable to ProfitWell / ChartMogul with added hands - on growth engineering.,';
     target_audience: 'SaaS startups, PLG companies, finance and growth teams,
     trial_days:
         trial_days: 14;
-
-    setup_time: '12 weeks,
+';
+    setup_time: '12 weeks,';
     category: 'AI & Data,
     real_service: true;
 
@@ -340,13 +340,13 @@ export const,
     integrations: [StripePaddleChargebeeLemon Squeezy];
 
     use_cases: [Reduce churn_price optimization_board - ready revenue KPIs];
-
+';
 roi: '310% ARR lift from churn reduction and pricing wins.,
     competitors:
         competitors: [ProfitWell MetricsChartMogulBaremetrics];
-
-    market_size: '$30 B+ subscription economy tooling,
-    growth_rate: '30% YoY,
+';
+    market_size: '$30 B+ subscription economy tooling,';
+    growth_rate: '30% YoY,';
     variant: 'ai - futuristic,
     customers:
         customers: 24;
@@ -354,7 +354,7 @@ roi: '310% ARR lift from churn reduction and pricing wins.,
     rating: 4 && 4.9;
 
     reviews: 31;
-
+';
     roi: 'Launch revenue in under 2 weeks, save 4080 hours of setup.,
     competitors:
         competitors: [Lemon SqueezyGumroadPaddle];
@@ -371,33 +371,33 @@ roi: '310% ARR lift from churn reduction and pricing wins.,
 
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
     contact_info: contact}
-
-    id: 'digital - product - commerce - stack,
-    name: 'Digital Product Commerce Stack,
-    tagline: 'End - to - end setup for selling downloads, licenses, and subscriptions,
-    price: '$1, 200,
-    period: '/project,
+';
+    id: 'digital - product - commerce - stack,';
+    name: 'Digital Product Commerce Stack,';
+    tagline: 'End - to - end setup for selling downloads, licenses, and subscriptions,';
+    price: '$1, 200,';
+    period: '/project,';
     description: 'We stand up a production - grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.,
     features:
         features: [,
       Payments, taxes, and invoicing_license keys and subscriptionsEU / US tax and compliance guidance_storefront templates and checkout_sales analytics and email hooks1 - week launch plan
     ];
-
-    icon: ',
-    color: 'from - cyan - 600 to - blue - 700,
-    text_color: 'text - cyan - 300,
-    link: 'https://ziontechgroup.com / services / digital - product - commerce - stack,
-    market_position: 'Implementation partner alternative to Lemon Squeezy / Gumroad do - it - yourself.,
-    target_audience: 'Indie SaaS, creators, agencies launching digital products,
-    setup_time: '57 days,
+';
+    icon: ',';
+    color: 'from - cyan - 600 to - blue - 700,';
+    text_color: 'text - cyan - 300,';
+    link: 'https://ziontechgroup.com / services / digital - product - commerce - stack,';
+    market_position: 'Implementation partner alternative to Lemon Squeezy / Gumroad do - it - yourself.,';
+    target_audience: 'Indie SaaS, creators, agencies launching digital products,';
+    setup_time: '57 days,';
     category: 'Developer Tools,
     real_service:
         real_service: true;
 
     technology: [Next.jsStripeLemon Squeezy APIPostgreSQL];
-
-    integrations: ['StripeLemon SqueezyGumroadMake / Zapier],
-    use_cases: ['Course sales_plugin licenses_templates marketplace],
+';
+    integrations: ['StripeLemon SqueezyGumroadMake / Zapier],';
+    use_cases: ['Course sales_plugin licenses_templates marketplace],';
     roi: 'Launch revenue in under 2 weeks, save 4080 hours of setup.,
     competitors:
         competitors: [Lemon SqueezyGumroadPaddle];
@@ -410,36 +410,36 @@ roi: '310% ARR lift from churn reduction and pricing wins.,
 
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
     contact_info: contact}
-
-    id: 'wordpress - internal - linking - automation,
-    name: 'WordPress Internal Linking Automation,
-    tagline: 'AI - guided internal links that improve SEO structure and topical authority,
-    price: '$299,
-    period: '/month,
+';
+    id: 'wordpress - internal - linking - automation,';
+    name: 'WordPress Internal Linking Automation,';
+    tagline: 'AI - guided internal links that improve SEO structure and topical authority,';
+    price: '$299,';
+    period: '/month,';
     description: 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments.,
     features:
         features: [;
 
       Automatic link suggestions and anchors_orphan page and pillar clustering_click - through rate experiments_reporting and recommendations_sitemap and crawl improvements
     ];
-
-    icon: ',
-    link: 'https://ziontechgroup && ziontechgroup.com/services/wordpress-internal-linking-automation,
-    marketPosition: 'Comparable to Link Whisper with managed tuning and reporting.,
+';
+    icon: ',';
+    link: 'https://ziontechgroup && ziontechgroup.com/services/wordpress-internal-linking-automation,';
+    marketPosition: 'Comparable to Link Whisper with managed tuning and reporting.,';
     targetAudience: 'Content sites, ecommerce, publishers on WordPress,
     trialDays:
         trialDays: 7;
-
-    setupTime: '24 days,
-    color: 'from - purple - 600 to - pink - 600,
-    text_color: 'text - purple - 200,
-    link: 'https://ziontechgroup.com / services / wordpress - internal - linking - automation,
-    market_position: 'Comparable to Link Whisper with managed tuning and reporting.,
+';
+    setupTime: '24 days,';
+    color: 'from - purple - 600 to - pink - 600,';
+    text_color: 'text - purple - 200,';
+    link: 'https://ziontechgroup.com / services / wordpress - internal - linking - automation,';
+    market_position: 'Comparable to Link Whisper with managed tuning and reporting.,';
     target_audience: 'Content sites, ecommerce, publishers on WordPress,
     trial_days:
         trial_days: 7;
-
-    setup_time: '24 days,
+';
+    setup_time: '24 days,';
     category: 'Growth & Marketing,
     real_service: true;
 
@@ -448,7 +448,7 @@ roi: '310% ARR lift from churn reduction and pricing wins.,
     integrations: [Link WhisperYoast / RankMathSearch Console];
 
     use_cases: [Boost organic traffic_fix site structure_improve crawl and CTR];
-
+';
     roi: '525% organic uplift in 812 weeks on content libraries.,
     competitors:
         competitors: [Link WhisperInternal Link Juicer];
@@ -465,11 +465,11 @@ roi: '310% ARR lift from churn reduction and pricing wins.,
 
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
     contact_info: contact}
-
-    name: 'Ecommerce Reviews & UGC Activation,
-    tagline: 'Deploy reviews and UGC workflows that increase trust and conversion,
-    price: '$999,
-    period: '/project,
+';
+    name: 'Ecommerce Reviews & UGC Activation,';
+    tagline: 'Deploy reviews and UGC workflows that increase trust and conversion,';
+    price: '$999,';
+    period: '/project,';
     description: 'We implement reviews and UGC collection across your storefront with on - brand widgets, post - purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.,
     features:
         features: [;
@@ -478,13 +478,13 @@ roi: '310% ARR lift from churn reduction and pricing wins.,
     ];
 
     icon: ;
-
-    color: 'from - amber - 600 to - rose - 600,
-    text_color: 'text - amber - 200,
-    link: 'https://ziontechgroup.com / services / ecommerce - reviews - ugc - activation,
-    market_position: 'Managed alternative to do - it - yourself Yotpo / Judge.me setups.,
-    target_audience: 'Shopify and custom ecommerce brands,
-    setup_time: '36 days,
+';
+    color: 'from - amber - 600 to - rose - 600,';
+    text_color: 'text - amber - 200,';
+    link: 'https://ziontechgroup.com / services / ecommerce - reviews - ugc - activation,';
+    market_position: 'Managed alternative to do - it - yourself Yotpo / Judge.me setups.,';
+    target_audience: 'Shopify and custom ecommerce brands,';
+    setup_time: '36 days,';
     category: 'Quality & Monitoring,
     real_service:
         real_service: true;
@@ -494,7 +494,7 @@ roi: '310% ARR lift from churn reduction and pricing wins.,
     integrations: [YotpoJudge.meLooxStamped];
 
     use_cases: [Increase trust_lift CVRCollect UGC for ads];
-
+';
     roi: '210% CVR lift on PDPs post - deployment.,
     competitors:
         competitors: [YotpoJudge.meLooxStamped.io];
@@ -507,14 +507,14 @@ roi: '310% ARR lift from churn reduction and pricing wins.,
 
     popula,
   r: true,
-    ico,
+    ico,';
   n: ',
     lin,
   k: http,
   s://ziontechgroup && ziontechgroup.com/services/subscription-analytics-revenue-optimization
-    marketPositio,
+    marketPositio,';
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.,
-    marketPositio,
+    marketPositio,';
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.,    feature,
   s: [;
 
@@ -524,7 +524,7 @@ roi: '310% ARR lift from churn reduction and pricing wins.,
     popula,
   r: true;
 
-    ico,
+    ico,';
   n: ',
     colo,
   r: from-emerald-600 to-teal-700
@@ -541,15 +541,15 @@ roi: '310% ARR lift from churn reduction and pricing wins.,
   s: 14,
     setupTim,
   e: 12 weeks
-    colo,
+    colo,';
   r: 'from - emerald - 600 to - teal - 700,
-    text_colo,
+    text_colo,';
   r: 'text - emerald - 300,
     lin,
   k: http,
   s://ziontechgroup.com / services / subscription - analytics - revenue - optimization,
     market_positio,
-  n: unknown,
+  n: unknown,';
       'Comparable to ProfitWell / ChartMogul with added hands - on growth engineering.,    feature,
   s: [;
 
@@ -559,7 +559,7 @@ roi: '310% ARR lift from churn reduction and pricing wins.,
     popula,
   r: true;
 
-    ico,
+    ico,';
   n: ',
     colo,
   r: from - emerald - 600 to - teal - 700
@@ -568,7 +568,7 @@ roi: '310% ARR lift from churn reduction and pricing wins.,
     lin,
   k: http,
   s://ziontechgroup.com / services / subscription - analytics - revenue - optimization
-    market_positio,
+    market_positio,';
   n: 'Comparable to ProfitWell / ChartMogul with added hands - on growth engineering.,
     target_audienc,
   e: SaaS startups, PLG companies, finance and growth teams
@@ -632,13 +632,13 @@ varian,
 
     i,
   d: digital - product - commerce - stack
-    nam,
+    nam,';
   e: 'Digital Product Commerce Stack,
     taglin,
   e: End - to - end setup for selling downloads, licenses, and subscriptions
     pric,
   e: $1, 200
-    perio,
+    perio,';
   d: '/project,
     descriptio,
   n: We stand up a production - grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.
@@ -647,7 +647,7 @@ varian,
       Payments, taxes, and invoicing_license keys and subscriptionsEU / US tax and compliance guidance_storefront templates and checkout_sales analytics and email hooks1 - week launch plan
     ];
 
-    ico,
+    ico,';
   n: ',
     colo,
   r: from - cyan - 600 to - blue - 700
@@ -656,7 +656,7 @@ varian,
     lin,
   k: http,
   s://ziontechgroup.com / services / digital - product - commerce - stack
-    market_positio,
+    market_positio,';
   n: 'Implementation partner alternative to Lemon Squeezy / Gumroad do - it - yourself.,
     target_audienc,
   e: Indie SaaS, creators, agencies launching digital products
@@ -670,9 +670,9 @@ varian,
     technolog,
   y: [Next.jsStripeLemon Squeezy APIPostgreSQL];
 
-    integration,
+    integration,';
   s: ['StripeLemon SqueezyGumroadMake / Zapier],
-    use_case,
+    use_case,';
   s: ['Course sales_plugin licenses_templates marketplace],
     ro,
   i: Launch revenue in under 2 weeks, save 4080 hours of setup.
@@ -709,12 +709,12 @@ varian,
       Automatic link suggestions and anchors_orphan page and pillar clustering_click - through rate experiments_reporting and recommendations_sitemap and crawl improvements
     ];
 
-    ico,
+    ico,';
   n: ',
     lin,
   k: http,
   s://ziontechgroup && ziontechgroup.com/services/wordpress-internal-linking-automation
-    marketPositio,
+    marketPositio,';
   n: 'Comparable to Link Whisper with managed tuning and reporting.,
     targetAudienc,
   e: Content sites, ecommerce, publishers on WordPress
@@ -729,7 +729,7 @@ varian,
     lin,
   k: http,
   s://ziontechgroup.com / services / wordpress - internal - linking - automation
-    market_positio,
+    market_positio,';
   n: 'Comparable to Link Whisper with managed tuning and reporting.,
     target_audienc,
   e: Content sites, ecommerce, publishers on WordPress
@@ -778,7 +778,7 @@ varian,
   e: Deploy reviews and UGC workflows that increase trust and conversion
     pric,
   e: $999
-    perio,
+    perio,';
   d: '/project,
     descriptio,
   n: We implement reviews and UGC collection across your storefront with on - brand widgets, post - purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.
@@ -829,16 +829,16 @@ varian,
     ratin,
   g: 4 && 4.8,
     review,
-  s: 12,
-      'Reviews widget integration,
-      'Email / SMS post - purchase triggers,
-      'Photo / video UGC capture,
-      'Moderation and syndication,
-      'Conversion impact reporting],
-    icon: ',
-    id: 'subscription-analytics-revenue-optimization', name: 'Subscription Analytics & Revenue Optimization,
-    tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth,
-    price: '$599', period: '/month,
+  s: 12,';
+      'Reviews widget integration,';
+      'Email / SMS post - purchase triggers,';
+      'Photo / video UGC capture,';
+      'Moderation and syndication,';
+      'Conversion impact reporting],';
+    icon: ',';
+    id: 'subscription-analytics-revenue-optimization', name: 'Subscription Analytics & Revenue Optimization,';
+    tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth,';
+    price: '$599', period: '/month,';
     description: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.,
     features: [;
 
@@ -847,20 +847,20 @@ varian,
 contactInfo: contact;
 
   }
-
+';
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams,
     trialDays:
         trialDays: 14;
-
+';
     category: 'AI & Data,
     realService: true;
-
-    technology: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python]
+';
+    technology: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python]';
     integrations: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy]
-    useCases: [,
-    competitors: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics]
-marketSize: '$30 B+ subscription economy tooling,
-    growthRate: '30% YoY,
+    useCases: [,';
+    competitors: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics]';
+marketSize: '$30 B+ subscription economy tooling,';
+    growthRate: '30% YoY,';
     variant: 'ai-futuristic,
     customers:
         customers: 24;
@@ -871,25 +871,25 @@ marketSize: '$30 B+ subscription economy tooling,
 
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
     contactInfo: contact}
-
-    id: 'digital-product-commerce-stack,
+';
+    id: 'digital-product-commerce-stack,';
     name: 'Digital Product Commerce Stack,
-    tagline:,
-      End-to-end setup for selling downloads, licenses, and subscriptions
-    price: '$1,200,
+    tagline:,'
+      End-to-end setup for selling downloads, licenses, and subscriptions';
+    price: '$1,200,';
     period: '/project,
     description:,
-    ico,
+    ico,';
   n: ',
-    i,
-  d: 'subscription-analytics-revenue-optimization, nam,
+    i,';
+  d: 'subscription-analytics-revenue-optimization, nam,';
   e: 'Subscription Analytics & Revenue Optimization,
-    taglin,
+    taglin,';
   e: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth,
-    pric,
-  e: '$599, perio,
+    pric,';
+  e: '$599, perio,';
   d: '/month,
-    descriptio,
+    descriptio,';
   n: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.,
     feature,
   s: [;
@@ -906,13 +906,13 @@ marketSize: '$30 B+ subscription economy tooling,
   y: AI & Data
     realServic,
   e: true,
-    technolog,
+    technolog,';
   y: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python]
-    integration,
+    integration,';
   s: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy]
     useCase,
   s: [,
-    competitor,
+    competitor,';
   s: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics]
     marketSiz,
   e: $30B+ subscription economy tooling
@@ -946,13 +946,13 @@ varian,
   d: /project
     descriptio,
   n:
-      We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.
-      'Reviews widget integration,
-      'Email / SMS post - purchase triggers,
-      'Photo / video UGC capture,
-      'Moderation and syndication,
+      We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.';
+      'Reviews widget integration,';
+      'Email / SMS post - purchase triggers,';
+      'Photo / video UGC capture,';
+      'Moderation and syndication,';
       'Conversion impact reporting],
-    ico,
+    ico,';
   n: ',
     feature,
   s: [,
@@ -962,21 +962,21 @@ varian,
       Storefront templates and checkout
       Sales analytics and email hooks
       1-week launch plan
-    ]
-    icon: ',
-    color: 'from-cyan-600 to-blue-700,
-    textColor: 'text-cyan-300,
-    link: 'https://ziontechgroup.com/services/digital-product-commerce-stack,
-    marketPosition: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.,
-    targetAudience: 'Indie SaaS, creators, agencies launching digital products,
-    setupTime: '57 days,
+    ]';
+    icon: ',';
+    color: 'from-cyan-600 to-blue-700,';
+    textColor: 'text-cyan-300,';
+    link: 'https://ziontechgroup.com/services/digital-product-commerce-stack,';
+    marketPosition: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.,';
+    targetAudience: 'Indie SaaS, creators, agencies launching digital products,';
+    setupTime: '57 days,';
     category: 'Developer Tools,
     realService: true;
-
-    technology: ['Next.js', 'Stripe', 'Lemon Squeezy API', 'PostgreSQL]
-    integrations: ['Stripe', 'Lemon Squeezy', 'Gumroad', 'Make/Zapier]
-    useCases: ['Course sales', 'Plugin licenses', 'Templates marketplace]
-    roi: 'Launch revenue in under 2 weeks, save 4080 hours of setup.,
+';
+    technology: ['Next.js', 'Stripe', 'Lemon Squeezy API', 'PostgreSQL]';
+    integrations: ['Stripe', 'Lemon Squeezy', 'Gumroad', 'Make/Zapier]';
+    useCases: ['Course sales', 'Plugin licenses', 'Templates marketplace]';
+    roi: 'Launch revenue in under 2 weeks, save 4080 hours of setup.,';
   competitors: ['Lemon Squeezy', 'Gumroad', 'Paddle]
     customers: 12;
 
@@ -988,14 +988,14 @@ varian,
 contactInfo: contact;
 
   }
-
-    id: 'wordpress-internal-linking-automation,
-    name: 'WordPress Internal Linking Automation,
-    tagline: 'AI-guided internal links that improve SEO structure and topical authority,
-    price: '$299,
+';
+    id: 'wordpress-internal-linking-automation,';
+    name: 'WordPress Internal Linking Automation,';
+    tagline: 'AI-guided internal links that improve SEO structure and topical authority,';
+    price: '$299,';
     period: '/month,
     description:,
-    ico,
+    ico,';
   n: ',
     colo,
   r: from-cyan-600 to-blue-700
@@ -1014,15 +1014,15 @@ contactInfo: contact;
   y: Developer Tools
     realServic,
   e: true,
-    technolog,
+    technolog,';
   y: ['Next.js', 'Stripe', 'Lemon Squeezy API', 'PostgreSQL]
-    integration,
+    integration,';
   s: ['Stripe', 'Lemon Squeezy', 'Gumroad', 'Make/Zapier]
-    useCase,
+    useCase,';
   s: ['Course sales', 'Plugin licenses', 'Templates marketplace]
-    ro,
+    ro,';
   i: 'Launch revenue in under 2 weeks, save 4080 hours of setup.,
-  competitor,
+  competitor,';
   s: ['Lemon Squeezy', 'Gumroad', 'Paddle]
     customer,
   s: 12;
@@ -1057,27 +1057,27 @@ contactInfo: contact;
       Click-through rate experiments
       Reporting and recommendations
       Sitemap and crawl improvements
-    ]
-    icon: ',
-    color: 'from-purple-600 to-pink-600,
-    textColor: 'text-purple-200,
-    link: 'https://ziontechgroup.com/services/wordpress-internal-linking-automation,
-    marketPosition: 'Comparable to Link Whisper with managed tuning and reporting.,
+    ]';
+    icon: ',';
+    color: 'from-purple-600 to-pink-600,';
+    textColor: 'text-purple-200,';
+    link: 'https://ziontechgroup.com/services/wordpress-internal-linking-automation,';
+    marketPosition: 'Comparable to Link Whisper with managed tuning and reporting.,';
     targetAudience: 'Content sites, ecommerce, publishers on WordPress,
     trialDays:
         trialDays: 7;
-
-    setupTime: '24 days,
+';
+    setupTime: '24 days,';
     category: 'Growth & Marketing,
     realService: true;
-
-    technology: ['WordPress', 'GA4', 'Looker Studio]
+';
+    technology: ['WordPress', 'GA4', 'Looker Studio]';
     integrations: ['Link Whisper', 'Yoast/RankMath', 'Search Console]
-    useCases: [
-      'Boost organic traffic,
-      'Fix site structure,
-      'Improve crawl and CTR],
-    roi: '525% organic uplift in 812 weeks on content libraries.,
+    useCases: [';
+      'Boost organic traffic,';
+      'Fix site structure,';
+      'Improve crawl and CTR],';
+    roi: '525% organic uplift in 812 weeks on content libraries.,';
     competitors: ['Link Whisper', 'Internal Link Juicer]
     customers: 30;
 
@@ -1089,14 +1089,14 @@ contactInfo: contact;
 contactInfo: contact;
 
   }
-
-    id: 'reviews-ugc-activation,
-    name: 'Ecommerce Reviews & UGC Activation,
-    tagline: 'Deploy reviews and UGC workflows that increase trust and conversion,
-    price: '$999,
+';
+    id: 'reviews-ugc-activation,';
+    name: 'Ecommerce Reviews & UGC Activation,';
+    tagline: 'Deploy reviews and UGC workflows that increase trust and conversion,';
+    price: '$999,';
     period: '/project,
     description:,
-    ico,
+    ico,';
   n: ',
     colo,
   r: from-purple-600 to-pink-600
@@ -1118,9 +1118,9 @@ contactInfo: contact;
   y: Growth & Marketing
     realServic,
   e: true,
-    technolog,
+    technolog,';
   y: ['WordPress', 'GA4', 'Looker Studio]
-    integration,
+    integration,';
   s: ['Link Whisper', 'Yoast/RankMath', 'Search Console]
     useCase,
   s: [,
@@ -1130,7 +1130,7 @@ contactInfo: contact;
     ]
     ro,
   i: 525% organic uplift in 812 weeks on content libraries.
-    competitor,
+    competitor,';
   s: ['Link Whisper', 'Internal Link Juicer]
     customer,
   s: 30;
@@ -1167,20 +1167,20 @@ contactInfo: contact;
       Conversion impact reporting
     ]
     icon: ;
-
-    color: 'from-amber-600 to-rose-600,
-    textColor: 'text-amber-200,
-    link: 'https://ziontechgroup.com/services/ecommerce-reviews-ugc-activation,
-    marketPosition: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.,
-    targetAudience: 'Shopify and custom ecommerce brands,
-    setupTime: '36 days,
+';
+    color: 'from-amber-600 to-rose-600,';
+    textColor: 'text-amber-200,';
+    link: 'https://ziontechgroup.com/services/ecommerce-reviews-ugc-activation,';
+    marketPosition: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.,';
+    targetAudience: 'Shopify and custom ecommerce brands,';
+    setupTime: '36 days,';
     category: 'Quality & Monitoring,
     realService: true;
-
-    technology: ['Shopify', 'Klaviyo', 'Next.js]
-    integrations: ['Yotpo', 'Judge.me', 'Loox', 'Stamped]
-    useCases: ['Increase trust', 'Lift CVR', 'Collect UGC for ads]
-    roi: '210% CVR lift on PDPs post-deployment.,
+';
+    technology: ['Shopify', 'Klaviyo', 'Next.js]';
+    integrations: ['Yotpo', 'Judge.me', 'Loox', 'Stamped]';
+    useCases: ['Increase trust', 'Lift CVR', 'Collect UGC for ads]';
+    roi: '210% CVR lift on PDPs post-deployment.,';
     competitors: ['Yotpo', 'Judge.me', 'Loox', 'Stamped.io]
     customers: 10;
 
@@ -1211,15 +1211,15 @@ contactInfo: contact;
   y: Quality & Monitoring
     realServic,
   e: true,
-    technolog,
+    technolog,';
   y: ['Shopify', 'Klaviyo', 'Next.js]
-    integration,
+    integration,';
   s: ['Yotpo', 'Judge.me', 'Loox', 'Stamped]
-    useCase,
+    useCase,';
   s: ['Increase trust', 'Lift CVR', 'Collect UGC for ads]
     ro,
   i: 210% CVR lift on PDPs post-deployment.
-    competitor,
+    competitor,';
   s: ['Yotpo', 'Judge.me', 'Loox', 'Stamped.io]
     customer,
   s: 10;
@@ -1235,29 +1235,29 @@ contactInfo: contact;
   o: contact}
 
 ];
-
-      'Churn and retention analysisCohort and funnel dashboards,
+';
+      'Churn and retention analysisCohort and funnel dashboards,';
       'Price testing and packaging experimentsRevenue leakage detection,
       Revenue forecasting modelsWeekly executive summaries
     ],
     popular: true;
-
-    icon: ',
-    color: 'from-emerald-600 to-teal-700,
-    textColor: 'text-emerald-300,
-    link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization,
+';
+    icon: ',';
+    color: 'from-emerald-600 to-teal-700,';
+    textColor: 'text-emerald-300,';
+    link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization,';
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.,
-    contactInfo: contact},
-    marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.,
+    contactInfo: contact},';
+    marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.,';
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams,
     trialDays: 14;
-
-    setupTime: '12 weeks,
+';
+    setupTime: '12 weeks,';
     category: 'AI & Data,
     realService: true;
-
-marketSize: '$30B+ subscription economy tooling,
-    growthRate: '30% YoY,
+';
+marketSize: '$30B+ subscription economy tooling,';
+    growthRate: '30% YoY,';
     variant: 'ai-futuristic,
     customers:
         customers: 24;
@@ -1268,37 +1268,37 @@ marketSize: '$30B+ subscription economy tooling,
 
     popula,
   r: true,
-    ico,
+    ico,';
   n: ',
-    colo,
+    colo,';
   r: 'from-emerald-600 to-teal-700,
-    textColo,
+    textColo,';
   r: 'text-emerald-300,
     lin,
   k: http,
   s://ziontechgroup.com/services/subscription-analytics-revenue-optimization,
-    marketPositio,
+    marketPositio,';
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.,
     contactInf,
   o: contact},
-    marketPositio,
+    marketPositio,';
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.,
-    targetAudienc,
+    targetAudienc,';
   e: 'SaaS startups, PLG companies, finance and growth teams,
     trialDay,
   s: 14,
-    setupTim,
+    setupTim,';
   e: '12 weeks,
-    categor,
+    categor,';
   y: 'AI & Data,
     realServic,
   e: true,
-    marketSiz,
+    marketSiz,';
   e: '$30B+ subscription economy tooling,
     growthRat,
   e: 30% YoY,;
 
-varian,
+varian,';
   t: 'ai-futuristic,
     customer,
   s: 24,
@@ -1307,16 +1307,16 @@ varian,
     review,
   s: 31,
     // @ts-expect-error augment common shape for UI components that expect contactInfo},
-    i,
+    i,';
   d: 'digital-product-commerce-stack,
-    nam,
-  e: 'Digital Product Commerce Stack],
-    icon: ',
-    color: 'from-cyan-600 to-blue-700,
-    textColor: 'text-cyan-300,
-    link: 'https://ziontechgroup.com/services/digital-product-commerce-stack,
-    targetAudience: 'Indie SaaS, creators, agencies launching digital products,
-    setupTime: '57 days,
+    nam,';
+  e: 'Digital Product Commerce Stack],';
+    icon: ',';
+    color: 'from-cyan-600 to-blue-700,';
+    textColor: 'text-cyan-300,';
+    link: 'https://ziontechgroup.com/services/digital-product-commerce-stack,';
+    targetAudience: 'Indie SaaS, creators, agencies launching digital products,';
+    setupTime: '57 days,';
     category: 'Developer Tools,
     realService: true;
 
@@ -1326,20 +1326,20 @@ varian,
 
     reviews: 18;
 
-    ico,
+    ico,';
   n: ',
-    colo,
+    colo,';
   r: 'from-cyan-600 to-blue-700,
-    textColo,
+    textColo,';
   r: 'text-cyan-300,
     lin,
   k: http,
   s://ziontechgroup.com/services/digital-product-commerce-stack,
-    targetAudienc,
+    targetAudienc,';
   e: 'Indie SaaS, creators, agencies launching digital products,
-    setupTim,
+    setupTim,';
   e: '57 days,
-    categor,
+    categor,';
   y: 'Developer Tools,
     realServic,
   e: true,
@@ -1350,18 +1350,18 @@ varian,
     review,
   s: 18,
     // @ts-expect-error augment common shape for UI components that expect contactInfo},
-    i,
+    i,';
   d: 'wordpress-internal-linking-automation,
-    nam,
-  e: 'WordPress Internal Linking Automation],
-    icon: ',
-    color: 'from-purple-600 to-pink-600,
-    textColor: 'text-purple-200,
-    link: 'https://ziontechgroup.com/services/wordpress-internal-linking-automation,
+    nam,';
+  e: 'WordPress Internal Linking Automation],';
+    icon: ',';
+    color: 'from-purple-600 to-pink-600,';
+    textColor: 'text-purple-200,';
+    link: 'https://ziontechgroup.com/services/wordpress-internal-linking-automation,';
     targetAudience: 'Content sites, ecommerce, publishers on WordPress,
     trialDays: 7;
-
-    setupTime: '24 days,
+';
+    setupTime: '24 days,';
     category: 'Growth & Marketing,
     realService: true;
 
@@ -1371,22 +1371,22 @@ varian,
 
     reviews: 22;
 
-    ico,
+    ico,';
   n: ',
-    colo,
+    colo,';
   r: 'from-purple-600 to-pink-600,
-    textColo,
+    textColo,';
   r: 'text-purple-200,
     lin,
   k: http,
   s://ziontechgroup.com/services/wordpress-internal-linking-automation,
-    targetAudienc,
+    targetAudienc,';
   e: 'Content sites, ecommerce, publishers on WordPress,
     trialDay,
   s: 7,
-    setupTim,
+    setupTim,';
   e: '24 days,
-    categor,
+    categor,';
   y: 'Growth & Marketing,
     realServic,
   e: true,
@@ -1397,16 +1397,16 @@ varian,
     review,
   s: 22,
     // @ts-expect-error augment common shape for UI components that expect contactInfo},
-    i,
+    i,';
   d: 'reviews-ugc-activation,
-    nam,
-  e: 'Ecommerce Reviews & UGC Activation],
-    icon: ',
-    color: 'from-amber-600 to-rose-600,
-    textColor: 'text-amber-200,
-    link: 'https://ziontechgroup.com/services/ecommerce-reviews-ugc-activation,
-    targetAudience: 'Shopify and custom ecommerce brands,
-    setupTime: '36 days,
+    nam,';
+  e: 'Ecommerce Reviews & UGC Activation],';
+    icon: ',';
+    color: 'from-amber-600 to-rose-600,';
+    textColor: 'text-amber-200,';
+    link: 'https://ziontechgroup.com/services/ecommerce-reviews-ugc-activation,';
+    targetAudience: 'Shopify and custom ecommerce brands,';
+    setupTime: '36 days,';
     category: 'Quality & Monitoring,
     realService:
         realService: true;
@@ -1417,20 +1417,20 @@ varian,
 
     reviews: 12;
 
-    ico,
+    ico,';
   n: ',
-    colo,
+    colo,';
   r: 'from-amber-600 to-rose-600,
-    textColo,
+    textColo,';
   r: 'text-amber-200,
     lin,
   k: http,
   s://ziontechgroup.com/services/ecommerce-reviews-ugc-activation,
-    targetAudienc,
+    targetAudienc,';
   e: 'Shopify and custom ecommerce brands,
-    setupTim,
+    setupTim,';
   e: '36 days,
-    categor,
+    categor,';
   y: 'Quality & Monitoring,
     realServic,
   e: true,
@@ -1450,88 +1450,88 @@ varian,
 
 export const,
   realServicesQ32025: Q3Service[] = [,
-    i,
+    i,';
   d: 'subscription-analytics-revenue-optimization,
-    nam,
+    nam,';
   e: 'Subscription Analytics & Revenue Optimization,
-    taglin,
+    taglin,';
   e: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth,
-    pric,
+    pric,';
   e: '$599,
-    perio,
+    perio,';
   d: '/month,
-    descriptio,
+    descriptio,';
   n: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.,
     feature,
-  s: [,
-      'Churn and retention analysisCohort and funnel dashboards,
+  s: [,';
+      'Churn and retention analysisCohort and funnel dashboards,';
       'Price testing and packaging experimentsRevenue leakage detection,
       Revenue forecasting modelsWeekly executive summaries
     ],
     popular: true;
-
-    icon: ',
-    color: 'from-emerald-600 to-teal-700,
-    textColor: 'text-emerald-300,
-    link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization,
+';
+    icon: ',';
+    color: 'from-emerald-600 to-teal-700,';
+    textColor: 'text-emerald-300,';
+    link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization,';
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.,
-    contactInfo: contact},
-    marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.,
+    contactInfo: contact},';
+    marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.,';
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams,
     trialDays: 14;
-
-    setupTime: '12 weeks,
+';
+    setupTime: '12 weeks,';
     category: 'AI & Data,
     realService: true;
-
-    technology: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python],
+';
+    technology: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python],';
     integrations: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy],
     useCases: [,
     popula,
   r: true,
-    ico,
+    ico,';
   n: ',
-    colo,
+    colo,';
   r: 'from-emerald-600 to-teal-700,
-    textColo,
+    textColo,';
   r: 'text-emerald-300,
     lin,
   k: http,
   s://ziontechgroup.com/services/subscription-analytics-revenue-optimization,
-    marketPositio,
+    marketPositio,';
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.,
     contactInf,
   o: contact},
-    marketPositio,
+    marketPositio,';
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.,
-    targetAudienc,
+    targetAudienc,';
   e: 'SaaS startups, PLG companies, finance and growth teams,
     trialDay,
   s: 14,
-    setupTim,
+    setupTim,';
   e: '12 weeks,
-    categor,
+    categor,';
   y: 'AI & Data,
     realServic,
   e: true,
-    technolog,
+    technolog,';
   y: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python],
-    integration,
+    integration,';
   s: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy],
     useCase,
-  s: [,
-      'Reduce churn,
-      'Price optimization,
-      'Board-ready revenue KPIs],
-    roi: '310% ARR lift from churn reduction and pricing wins.,
-    competitors: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics],
-    technology: ['dbtSnowflake/BigQuery', 'Segment/GA4 Python],
-    integrations: ['StripePaddle', 'ChargebeeLemon Squeezy],
-    useCases: ['Reduce churnPrice optimization', 'Board-ready revenue KPIs],
-    roi: '310% ARR lift from churn reduction and pricing wins.,
-    competitors: ['ProfitWell MetricsChartMogul', 'Baremetrics],
-marketSize: '$30B+ subscription economy tooling,
-    growthRate: '30% YoY,
+  s: [,';
+      'Reduce churn,';
+      'Price optimization,';
+      'Board-ready revenue KPIs],';
+    roi: '310% ARR lift from churn reduction and pricing wins.,';
+    competitors: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics],';
+    technology: ['dbtSnowflake/BigQuery', 'Segment/GA4 Python],';
+    integrations: ['StripePaddle', 'ChargebeeLemon Squeezy],';
+    useCases: ['Reduce churnPrice optimization', 'Board-ready revenue KPIs],';
+    roi: '310% ARR lift from churn reduction and pricing wins.,';
+    competitors: ['ProfitWell MetricsChartMogul', 'Baremetrics],';
+marketSize: '$30B+ subscription economy tooling,';
+    growthRate: '30% YoY,';
     variant: 'ai-futuristic,
     customers:
         customers: 24;
@@ -1548,26 +1548,26 @@ marketSize: '$30B+ subscription economy tooling,
 
     contactInfo: contact;
 
-    ro,
+    ro,';
   i: '310% ARR lift from churn reduction and pricing wins.,
-    competitor,
+    competitor,';
   s: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics],
-    technolog,
+    technolog,';
   y: ['dbtSnowflake/BigQuery', 'Segment/GA4Python],
-    integration,
+    integration,';
   s: ['StripePaddle', 'ChargebeeLemon Squeezy],
-    useCase,
+    useCase,';
   s: ['Reduce churnPrice optimization', 'Board-ready revenue KPIs],
-    ro,
+    ro,';
   i: '310% ARR lift from churn reduction and pricing wins.,
-    competitor,
+    competitor,';
   s: ['ProfitWell MetricsChartMogul', 'Baremetrics],
-    marketSiz,
+    marketSiz,';
   e: '$30B+ subscription economy tooling,
     growthRat,
   e: 30% YoY,;
 
-varian,
+varian,';
   t: 'ai-futuristic,
     customer,
   s: 24,
@@ -1581,61 +1581,61 @@ varian,
   o: contact,
     contactInf,
   o: contact},
-    i,
+    i,';
   d: 'digital-product-commerce-stack,
-    nam,
+    nam,';
   e: 'Digital Product Commerce Stack,
-    taglin,
+    taglin,';
   e: 'End-to-end setup for selling downloads, licenses, and subscriptions,
-    pric,
+    pric,';
   e: '$1,200,
-    perio,
+    perio,';
   d: '/project,
-    descriptio,
+    descriptio,';
   n: 'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.,
     feature,
-  s: [,
-      'Payments, taxes, and invoicing,
-      'License keys and subscriptions,
-      'EU/US tax and compliance guidance,
-      'Storefront templates and checkout,
-      'Sales analytics and email hooks,
+  s: [,';
+      'Payments, taxes, and invoicing,';
+      'License keys and subscriptions,';
+      'EU/US tax and compliance guidance,';
+      'Storefront templates and checkout,';
+      'Sales analytics and email hooks,';
       '1-week launch plan,
-    taglin,
+    taglin,';
   e: 'End-to-end setup for selling downloads, licenses, and subscriptions,
-    pric,
+    pric,';
   e: '$1,200,
-    perio,
+    perio,';
   d: '/project,
-    descriptio,
+    descriptio,';
   n: 'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.,
     feature,
-  s: [,
-      'Payments, taxes, and invoicingLicense keys and subscriptions,
+  s: [,';
+      'Payments, taxes, and invoicingLicense keys and subscriptions,';
       'EU/US tax and compliance guidanceStorefront templates and checkout,
       Sales analytics and email hooks1-week launch plan
-    ],
-    icon: ',
-    color: 'from-cyan-600 to-blue-700,
-    textColor: 'text-cyan-300,
-    link: 'https://ziontechgroup.com/services/digital-product-commerce-stack,
-    marketPosition: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.,
-    marketPosition: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.,
-    marketPosition: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.,
-    targetAudience: 'Indie SaaS, creators, agencies launching digital products,
-    setupTime: '57 days,
+    ],';
+    icon: ',';
+    color: 'from-cyan-600 to-blue-700,';
+    textColor: 'text-cyan-300,';
+    link: 'https://ziontechgroup.com/services/digital-product-commerce-stack,';
+    marketPosition: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.,';
+    marketPosition: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.,';
+    marketPosition: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.,';
+    targetAudience: 'Indie SaaS, creators, agencies launching digital products,';
+    setupTime: '57 days,';
     category: 'Developer Tools,
     realService: true;
-
-    technology: ['Next.js', 'Stripe', 'Lemon Squeezy API', 'PostgreSQL],
-    integrations: ['Stripe', 'Lemon Squeezy', 'Gumroad', 'Make/Zapier],
-    useCases: ['Course sales', 'Plugin licenses', 'Templates marketplace],
-    roi: 'Launch revenue in under 2 weeks, save 4080 hours of setup.,
-    competitors: ['Lemon Squeezy', 'Gumroad', 'Paddle],
-    technology: ['Next.jsStripe', 'Lemon Squeezy APIPostgreSQL],
-    integrations: ['StripeLemon Squeezy', 'GumroadMake/Zapier],
-    useCases: ['Course salesPlugin licenses', 'Templates marketplace],
-    roi: 'Launch revenue in under 2 weeks, save 4080 hours of setup.,
+';
+    technology: ['Next.js', 'Stripe', 'Lemon Squeezy API', 'PostgreSQL],';
+    integrations: ['Stripe', 'Lemon Squeezy', 'Gumroad', 'Make/Zapier],';
+    useCases: ['Course sales', 'Plugin licenses', 'Templates marketplace],';
+    roi: 'Launch revenue in under 2 weeks, save 4080 hours of setup.,';
+    competitors: ['Lemon Squeezy', 'Gumroad', 'Paddle],';
+    technology: ['Next.jsStripe', 'Lemon Squeezy APIPostgreSQL],';
+    integrations: ['StripeLemon Squeezy', 'GumroadMake/Zapier],';
+    useCases: ['Course salesPlugin licenses', 'Templates marketplace],';
+    roi: 'Launch revenue in under 2 weeks, save 4080 hours of setup.,';
     competitors: ['Lemon SqueezyGumroad', 'Paddle],
     customers: 12;
 
@@ -1651,48 +1651,48 @@ varian,
 
     contactInfo: contact;
 
-    ico,
+    ico,';
   n: ',
-    colo,
+    colo,';
   r: 'from-cyan-600 to-blue-700,
-    textColo,
+    textColo,';
   r: 'text-cyan-300,
     lin,
   k: http,
   s://ziontechgroup.com/services/digital-product-commerce-stack,
-    marketPositio,
+    marketPositio,';
   n: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.,
-    marketPositio,
+    marketPositio,';
   n: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.,
-    marketPositio,
+    marketPositio,';
   n: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.,
-    targetAudienc,
+    targetAudienc,';
   e: 'Indie SaaS, creators, agencies launching digital products,
-    setupTim,
+    setupTim,';
   e: '57 days,
-    categor,
+    categor,';
   y: 'Developer Tools,
     realServic,
   e: true,
-    technolog,
+    technolog,';
   y: ['Next.js', 'Stripe', 'Lemon Squeezy API', 'PostgreSQL],
-    integration,
+    integration,';
   s: ['Stripe', 'Lemon Squeezy', 'Gumroad', 'Make/Zapier],
-    useCase,
+    useCase,';
   s: ['Course sales', 'Plugin licenses', 'Templates marketplace],
-    ro,
+    ro,';
   i: 'Launch revenue in under 2 weeks, save 4080 hours of setup.,
-    competitor,
+    competitor,';
   s: ['Lemon Squeezy', 'Gumroad', 'Paddle],
-    technolog,
+    technolog,';
   y: ['Next.jsStripe', 'Lemon Squeezy APIPostgreSQL],
-    integration,
+    integration,';
   s: ['StripeLemon Squeezy', 'GumroadMake/Zapier],
-    useCase,
+    useCase,';
   s: ['Course salesPlugin licenses', 'Templates marketplace],
-    ro,
+    ro,';
   i: 'Launch revenue in under 2 weeks, save 4080 hours of setup.,
-    competitor,
+    competitor,';
   s: ['Lemon SqueezyGumroad', 'Paddle],
     customer,
   s: 12,
@@ -1706,97 +1706,97 @@ varian,
   o: contact,
     contactInf,
   o: contact},
-    i,
+    i,';
   d: 'wordpress-internal-linking-automation,
-    nam,
+    nam,';
   e: 'WordPress Internal Linking Automation,
-    taglin,
+    taglin,';
   e: 'AI-guided internal links that improve SEO structure and topical authority,
-    pric,
+    pric,';
   e: '$299,
-    perio,
+    perio,';
   d: '/month,
-    descriptio,
+    descriptio,';
   n: 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments.,
     feature,
-  s: [,
-      'Automatic link suggestions and anchors,
-      'Orphan page and pillar clustering,
-      'Click-through rate experiments,
-      'Reporting and recommendations,
+  s: [,';
+      'Automatic link suggestions and anchors,';
+      'Orphan page and pillar clustering,';
+      'Click-through rate experiments,';
+      'Reporting and recommendations,';
       'Sitemap and crawl improvements,
-    taglin,
+    taglin,';
   e: 'AI-guided internal links that improve SEO structure and topical authority,
-    pric,
+    pric,';
   e: '$299,
-    perio,
+    perio,';
   d: '/month,
-    descriptio,
+    descriptio,';
   n: 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments.,
     feature,
-  s: [,
-      'Automatic link suggestions and anchorsOrphan page and pillar clustering,
+  s: [,';
+      'Automatic link suggestions and anchorsOrphan page and pillar clustering,';
       'Click-through rate experimentsReporting and recommendations,
       Sitemap and crawl improvements
-    ],
-    icon: ',
-    color: 'from-purple-600 to-pink-600,
-    textColor: 'text-purple-200,
-    link: 'https://ziontechgroup.com/services/wordpress-internal-linking-automation,
-    marketPosition: 'Comparable to Link Whisper with managed tuning and reporting.,
-    marketPosition: 'Comparable to Link Whisper with managed tuning and reporting.,
-    marketPosition: 'Comparable to Link Whisper with managed tuning and reporting.,
+    ],';
+    icon: ',';
+    color: 'from-purple-600 to-pink-600,';
+    textColor: 'text-purple-200,';
+    link: 'https://ziontechgroup.com/services/wordpress-internal-linking-automation,';
+    marketPosition: 'Comparable to Link Whisper with managed tuning and reporting.,';
+    marketPosition: 'Comparable to Link Whisper with managed tuning and reporting.,';
+    marketPosition: 'Comparable to Link Whisper with managed tuning and reporting.,';
     targetAudience: 'Content sites, ecommerce, publishers on WordPress,
     trialDays: 7;
-
-    setupTime: '24 days,
+';
+    setupTime: '24 days,';
     category: 'Growth & Marketing,
     realService: true;
-
-    technology: ['WordPress', 'GA4', 'Looker Studio],
+';
+    technology: ['WordPress', 'GA4', 'Looker Studio],';
     integrations: ['Link Whisper', 'Yoast/RankMath', 'Search Console],
     useCases: [,
-    ico,
+    ico,';
   n: ',
-    colo,
+    colo,';
   r: 'from-purple-600 to-pink-600,
-    textColo,
+    textColo,';
   r: 'text-purple-200,
     lin,
   k: http,
   s://ziontechgroup.com/services/wordpress-internal-linking-automation,
-    marketPositio,
+    marketPositio,';
   n: 'Comparable to Link Whisper with managed tuning and reporting.,
-    marketPositio,
+    marketPositio,';
   n: 'Comparable to Link Whisper with managed tuning and reporting.,
-    marketPositio,
+    marketPositio,';
   n: 'Comparable to Link Whisper with managed tuning and reporting.,
-    targetAudienc,
+    targetAudienc,';
   e: 'Content sites, ecommerce, publishers on WordPress,
     trialDay,
   s: 7,
-    setupTim,
+    setupTim,';
   e: '24 days,
-    categor,
+    categor,';
   y: 'Growth & Marketing,
     realServic,
   e: true,
-    technolog,
+    technolog,';
   y: ['WordPress', 'GA4', 'Looker Studio],
-    integration,
+    integration,';
   s: ['Link Whisper', 'Yoast/RankMath', 'Search Console],
     useCase,
-  s: [,
-      'Boost organic traffic,
-      'Fix site structure,
-      'Improve crawl and CTR],
+  s: [,';
+      'Boost organic traffic,';
+      'Fix site structure,';
+      'Improve crawl and CTR],';
+    roi: '525% organic uplift in 812 weeks on content libraries.,';
+    competitors: ['Link Whisper', 'Internal Link Juicer],';
+    technology: ['WordPressGA4', 'Looker Studio],';
+    integrations: ['Link WhisperYoast/RankMath', 'Search Console],';
+    useCases: ['Boost organic trafficFix site structure', 'Improve crawl and CTR],';
     roi: '525% organic uplift in 812 weeks on content libraries.,
-    competitors: ['Link Whisper', 'Internal Link Juicer],
-    technology: ['WordPressGA4', 'Looker Studio],
-    integrations: ['Link WhisperYoast/RankMath', 'Search Console],
-    useCases: ['Boost organic trafficFix site structure', 'Improve crawl and CTR],
-    roi: '525% organic uplift in 812 weeks on content libraries.,
-    competitors:
+    competitors:';
         competitors: ['Link WhisperInternal Link Juicer]
     customers: 30;
 
@@ -1812,19 +1812,19 @@ varian,
 
     contactInfo: contact;
 
-    ro,
+    ro,';
   i: '525% organic uplift in 812 weeks on content libraries.,
-    competitor,
+    competitor,';
   s: ['Link Whisper', 'Internal Link Juicer],
-    technolog,
+    technolog,';
   y: ['WordPressGA4', 'Looker Studio],
-    integration,
+    integration,';
   s: ['Link WhisperYoast/RankMath', 'Search Console],
-    useCase,
+    useCase,';
   s: ['Boost organic trafficFix site structure', 'Improve crawl and CTR],
-    ro,
+    ro,';
   i: '525% organic uplift in 812 weeks on content libraries.,
-    competitor,
+    competitor,';
   s: ['Link WhisperInternal Link Juicer],
     customer,
   s: 30,
@@ -1838,60 +1838,60 @@ varian,
   o: contact,
     contactInf,
   o: contact},
-    i,
+    i,';
   d: 'reviews-ugc-activation,
-    nam,
+    nam,';
   e: 'Ecommerce Reviews & UGC Activation,
-    taglin,
+    taglin,';
   e: 'Deploy reviews and UGC workflows that increase trust and conversion,
-    pric,
+    pric,';
   e: '$999,
-    perio,
+    perio,';
   d: '/project,
-    descriptio,
+    descriptio,';
   n: 'We implement reviews and UGC collection across your storefront with on-brand widgets, post-purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.,
     feature,
-  s: [,
-      'Reviews widget integration,
-      'Email/SMS post-purchase triggers,
-      'Photo/video UGC capture,
-      'Moderation and syndication,
+  s: [,';
+      'Reviews widget integration,';
+      'Email/SMS post-purchase triggers,';
+      'Photo/video UGC capture,';
+      'Moderation and syndication,';
       'Conversion impact reporting,
-    taglin,
+    taglin,';
   e: 'Deploy reviews and UGC workflows that increase trust and conversion,
-    pric,
+    pric,';
   e: '$999,
-    perio,
+    perio,';
   d: '/project,
-    descriptio,
+    descriptio,';
   n: 'We implement reviews and UGC collection across your storefront with on-brand widgets, post-purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.,
     feature,
-  s: [,
-      'Reviews widget integrationEmail/SMS post-purchase triggers,
+  s: [,';
+      'Reviews widget integrationEmail/SMS post-purchase triggers,';
       'Photo/video UGC captureModeration and syndication,
       Conversion impact reporting
-    ],
-    icon: ',
-    color: 'from-amber-600 to-rose-600,
-    textColor: 'text-amber-200,
-    link: 'https://ziontechgroup.com/services/ecommerce-reviews-ugc-activation,
-    marketPosition: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.,
-    marketPosition: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.,
-    marketPosition: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.,
-    targetAudience: 'Shopify and custom ecommerce brands,
-    setupTime: '36 days,
+    ],';
+    icon: ',';
+    color: 'from-amber-600 to-rose-600,';
+    textColor: 'text-amber-200,';
+    link: 'https://ziontechgroup.com/services/ecommerce-reviews-ugc-activation,';
+    marketPosition: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.,';
+    marketPosition: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.,';
+    marketPosition: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.,';
+    targetAudience: 'Shopify and custom ecommerce brands,';
+    setupTime: '36 days,';
     category: 'Quality & Monitoring,
     realService: true;
-
-    technology: ['Shopify', 'Klaviyo', 'Next.js],
-    integrations: ['Yotpo', 'Judge.me', 'Loox', 'Stamped],
-    useCases: ['Increase trust', 'Lift CVR', 'Collect UGC for ads],
-    roi: '210% CVR lift on PDPs post-deployment.,
-    competitors: ['Yotpo', 'Judge.me', 'Loox', 'Stamped.io],
-    technology: ['ShopifyKlaviyo', 'Next.js],
-    integrations: ['YotpoJudge.me', 'LooxStamped],
-    useCases: ['Increase trustLift CVR', 'Collect UGC for ads],
-    roi: '210% CVR lift on PDPs post-deployment.,
+';
+    technology: ['Shopify', 'Klaviyo', 'Next.js],';
+    integrations: ['Yotpo', 'Judge.me', 'Loox', 'Stamped],';
+    useCases: ['Increase trust', 'Lift CVR', 'Collect UGC for ads],';
+    roi: '210% CVR lift on PDPs post-deployment.,';
+    competitors: ['Yotpo', 'Judge.me', 'Loox', 'Stamped.io],';
+    technology: ['ShopifyKlaviyo', 'Next.js],';
+    integrations: ['YotpoJudge.me', 'LooxStamped],';
+    useCases: ['Increase trustLift CVR', 'Collect UGC for ads],';
+    roi: '210% CVR lift on PDPs post-deployment.,';
     competitors: ['YotpoJudge.me', 'LooxStamped.io],
     customers: 10;
 
@@ -1907,48 +1907,48 @@ varian,
 
     contactInfo: contact;
 
-    ico,
+    ico,';
   n: ',
-    colo,
+    colo,';
   r: 'from-amber-600 to-rose-600,
-    textColo,
+    textColo,';
   r: 'text-amber-200,
     lin,
   k: http,
   s://ziontechgroup.com/services/ecommerce-reviews-ugc-activation,
-    marketPositio,
+    marketPositio,';
   n: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.,
-    marketPositio,
+    marketPositio,';
   n: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.,
-    marketPositio,
+    marketPositio,';
   n: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.,
-    targetAudienc,
+    targetAudienc,';
   e: 'Shopify and custom ecommerce brands,
-    setupTim,
+    setupTim,';
   e: '36 days,
-    categor,
+    categor,';
   y: 'Quality & Monitoring,
     realServic,
   e: true,
-    technolog,
+    technolog,';
   y: ['Shopify', 'Klaviyo', 'Next.js],
-    integration,
+    integration,';
   s: ['Yotpo', 'Judge.me', 'Loox', 'Stamped],
-    useCase,
+    useCase,';
   s: ['Increase trust', 'Lift CVR', 'Collect UGC for ads],
-    ro,
+    ro,';
   i: '210% CVR lift on PDPs post-deployment.,
-    competitor,
+    competitor,';
   s: ['Yotpo', 'Judge.me', 'Loox', 'Stamped.io],
-    technolog,
+    technolog,';
   y: ['ShopifyKlaviyo', 'Next.js],
-    integration,
+    integration,';
   s: ['YotpoJudge.me', 'LooxStamped],
-    useCase,
+    useCase,';
   s: ['Increase trustLift CVR', 'Collect UGC for ads],
-    ro,
+    ro,';
   i: '210% CVR lift on PDPs post-deployment.,
-    competitor,
+    competitor,';
   s: ['YotpoJudge.me', 'LooxStamped.io],
     customer,
   s: 10,
@@ -1997,511 +1997,511 @@ i,
   k: string; market_position?: string; target_audience?: string; trial_days?: number; setup_time?: string; categor,
   y: string; real_servic,
   e: boolean; technology?: string[]; integrations?: string[]; use_cases?: string[]; roi?: string; competitors?: string[]; market_size?: string; growth_rate?: string; variant?: ServiceVariant; customers?: number; rating?: number, const contact = mobil,;;
-
-  e: '+1 302 464 0950' emai,
-  l: 'kleber@ziontechgroup.com' addres,
+';
+  e: '+1 302 464 0950' emai,';
+  l: 'kleber@ziontechgroup.com' addres,';
   s: '364 E Main St STE 1008 Middletown DE 19709' websit,
   e: http,
   s://ziontechgroup.com} export const,
   realServicesQ32025: Q3Service[] = [ { reviews?: number } const contact =  mobil,;;
-
-  e: '+1 302 464 0950' emai,
-  l: 'kleber@ziontechgroup.com' addres,
+';
+  e: '+1 302 464 0950' emai,';
+  l: 'kleber@ziontechgroup.com' addres,';
   s: '364 E Main St STE 1008 Middletown DE 19709' websit,
   e: http,
   s://ziontechgroup.com const contact =  mobil,;;
-
+';
   e: '+1 302 464 0950',  addres,
   s: 364 E Main St STE 1008 Middletown DE 19709, const contact = {/* TODO: Fix JSX expression */};;
-
+';
   s: '364 E Main St STE 1008 Middletown DE 19709'} websit,
   e: http,
   s://ziontechgroup && ziontechgroup.com } }; export const,
   realServicesQ32025: Q3Service[] = [ } export const,
-  realServicesQ32025: Q3Service[] = [  i,
-  d: 'subscription-analytics-revenue-optimization' nam,
-  e: 'Subscription Analytics & Revenue Optimization' } addres,
+  realServicesQ32025: Q3Service[] = [  i,';
+  d: 'subscription-analytics-revenue-optimization' nam,';
+  e: 'Subscription Analytics & Revenue Optimization' } addres,';
   s: '364 E Main St STE 1008 Middletown DE 19709, export const,
   realServicesQ32025: Q3Service[] = [ { reviews?: number } const contact =  mobil,;;
-
+';
   e: '+1 302 464 0950 }; export const,
-  realServicesQ32025: Q3Service[] = [ taglin,
-  e:' 'Churn insights, cohort analysis, and pricing experiments for SaaS growth' pric,
-  e: '$599' perio,
-  d: '/month descriptio,
-  n:' 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports. feature,
+  realServicesQ32025: Q3Service[] = [ taglin,';
+  e:' 'Churn insights, cohort analysis, and pricing experiments for SaaS growth' pric,';
+  e: '$599' perio,';
+  d: '/month descriptio,';
+  n:' 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports. feature,';
   s: [' 'Churn and retention analysis'' 'Cohort and funnel dashboards'' 'Price testing and packaging experiments'' 'Revenue leakage detection'' 'Revenue forecasting models'' 'Weekly executive summaries ] popula,
-  r: true ico,
-  n: '📊' colo,
-  r: 'from-emerald-600 to-teal-700' textColo,
+  r: true ico,';
+  n: '📊' colo,';
+  r: 'from-emerald-600 to-teal-700' textColo,';
   r: 'text-emerald-300' lin,
-  k: http,
-  s://ziontechgroup.com/services/subscription-analytics-revenue-optimization'' 'Churn and retention analysis',' 'Cohort and funnel dashboards',' 'Price testing and packaging experiments',' 'Revenue leakage detection',' 'Revenue forecasting models',' 'Weekly executive summaries',  taglin,
-  e: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth', pric,
-  e: '$599', perio,
-  d: '/month', descriptio,
-  n: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports., feature,
+  k: http,';
+  s://ziontechgroup.com/services/subscription-analytics-revenue-optimization'' 'Churn and retention analysis',' 'Cohort and funnel dashboards',' 'Price testing and packaging experiments',' 'Revenue leakage detection',' 'Revenue forecasting models',' 'Weekly executive summaries',  taglin,';
+  e: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth', pric,';
+  e: '$599', perio,';
+  d: '/month', descriptio,';
+  n: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports., feature,';
   s: [' 'Churn and retention analysisCohort and funnel dashboards',' 'Price testing and packaging experimentsRevenue leakage detection',' 'Revenue forecasting modelsWeekly executive summaries ], popula,
-  r: true, ico,
+  r: true, ico,';
   n: '📊',  lin,
-  k: http,
-  s://ziontechgroup && ziontechgroup.com/services/subscription-analytics-revenue-optimization' marketPositio,
-  n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering., marketPositio,
-  n: ' 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering., feature,
+  k: http,';
+  s://ziontechgroup && ziontechgroup.com/services/subscription-analytics-revenue-optimization' marketPositio,';
+  n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering., marketPositio,';
+  n: ' 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering., feature,';
   s: [' 'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries ]; popula,
-  r: true, ico,
-  n: '📊' colo,
-  r: 'from-emerald-600 to-teal-700' textColo,
+  r: true, ico,';
+  n: '📊' colo,';
+  r: 'from-emerald-600 to-teal-700' textColo,';
   r: 'text-emerald-300' lin,
-  k: http,
-  s://ziontechgroup.com/services/subscription-analytics-revenue-optimization' marketPositio,
-  n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.' targetAudienc,
+  k: http,';
+  s://ziontechgroup.com/services/subscription-analytics-revenue-optimization' marketPositio,';
+  n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.' targetAudienc,';
   e: 'SaaS startups, PLG companies, finance and growth teams trialDay,
-  s: 14, setupTim,
-  e: '1–2 weeks' colo,
-  r: 'from - emerald - 600 to - teal - 700', text_colo,
+  s: 14, setupTim,';
+  e: '1–2 weeks' colo,';
+  r: 'from - emerald - 600 to - teal - 700', text_colo,';
   r: 'text - emerald - 300', lin,
   k: http,
-  s://ziontechgroup.com / services / subscription - analytics - revenue - optimization, market_positio,
-  n:  ,' 'Comparable to ProfitWell / ChartMogul with added hands - on growth engineering., feature,
+  s://ziontechgroup.com / services / subscription - analytics - revenue - optimization, market_positio,';
+  n:  ,' 'Comparable to ProfitWell / ChartMogul with added hands - on growth engineering., feature,';
   s: [;' 'Churn and retention analysis_cohort and funnel dashboards_price testing and packaging experiments_revenue leakage detection_revenue forecasting models_weekly executive summaries ]; popula,
-  r: true, ico,
-  n: '📊' colo,
-  r: 'from - emerald - 600 to - teal - 700' text_colo,
+  r: true, ico,';
+  n: '📊' colo,';
+  r: 'from - emerald - 600 to - teal - 700' text_colo,';
   r: 'text - emerald - 300' lin,
-  k: http,
-  s://ziontechgroup.com / services / subscription - analytics - revenue - optimization' market_positio,
-  n: 'Comparable to ProfitWell / ChartMogul with added hands - on growth engineering.', target_audienc,
+  k: http,';
+  s://ziontechgroup.com / services / subscription - analytics - revenue - optimization' market_positio,';
+  n: 'Comparable to ProfitWell / ChartMogul with added hands - on growth engineering.', target_audienc,';
   e: 'SaaS startups, PLG companies, finance and growth teams trial_day,
-  s: 14; setup_tim,
-  e: '1–2 weeks' categor,
+  s: 14; setup_tim,';
+  e: '1–2 weeks' categor,';
   y: 'AI & Data real_servic,
-  e: true; technolog,
-  y: ['dbt_snowflake / BigQuerySegment / GA4Python']; integration,
-  s: ['StripePaddleChargebeeLemon Squeezy']; use_case,
-  s: ['Reduce churn_price optimization_board - ready revenue KPIs']; ro,
-  i: '3–10% ARR lift from churn reduction and pricing wins.' competitor,
-  s: ['ProfitWell MetricsChartMogulBaremetrics']; market_siz,
-  e: '$30B+ subscription economy tooling' growth_rat,
-  e: '30% YoY' varian,
+  e: true; technolog,';
+  y: ['dbt_snowflake / BigQuerySegment / GA4Python']; integration,';
+  s: ['StripePaddleChargebeeLemon Squeezy']; use_case,';
+  s: ['Reduce churn_price optimization_board - ready revenue KPIs']; ro,';
+  i: '3–10% ARR lift from churn reduction and pricing wins.' competitor,';
+  s: ['ProfitWell MetricsChartMogulBaremetrics']; market_siz,';
+  e: '$30B+ subscription economy tooling' growth_rat,';
+  e: '30% YoY' varian,';
   t: 'ai - futuristic customer,
   s: 24; ratin,
   g: 4 && 4.9, review,
-  s: 31,  ro,
-  i: 'Launch revenue in under 2 weeks, save 40–80 hours of setup.' competitor,
+  s: 31,  ro,';
+  i: 'Launch revenue in under 2 weeks, save 40–80 hours of setup.' competitor,';
   s: ['Lemon SqueezyGumroadPaddle]; customer,
   s: 12; ratin,
   g: 4 && 4.8, review,
   s: 18, // @ts-expect-error augment common shape for UI components that expect contactInfo,
   contactInfo: contact // @ts - expect - error augment common shape for UI components that expect contact_info; contact_inf,
-  o: contact}  i,
-  d: 'digital - product - commerce - stack' nam,
-  e: 'Digital Product Commerce Stack', taglin,
-  e: 'End - to - end setup for selling downloads, licenses, and subscriptions' pric,
-  e: '$1, 200' perio,
-  d: '/project', descriptio,
-  n: 'We stand up a production - grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations. feature,
-  s: [,' 'Payments, taxes, and invoicing_license keys and subscriptionsEU / US tax and compliance guidance_storefront templates and checkout_sales analytics and email hooks1 - week launch plan' ]; ico,
-  n: '🛒' colo,
-  r: 'from - cyan - 600 to - blue - 700' text_colo,
+  o: contact}  i,';
+  d: 'digital - product - commerce - stack' nam,';
+  e: 'Digital Product Commerce Stack', taglin,';
+  e: 'End - to - end setup for selling downloads, licenses, and subscriptions' pric,';
+  e: '$1, 200' perio,';
+  d: '/project', descriptio,';
+  n: 'We stand up a production - grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations. feature,';
+  s: [,' 'Payments, taxes, and invoicing_license keys and subscriptionsEU / US tax and compliance guidance_storefront templates and checkout_sales analytics and email hooks1 - week launch plan' ]; ico,';
+  n: '🛒' colo,';
+  r: 'from - cyan - 600 to - blue - 700' text_colo,';
   r: 'text - cyan - 300' lin,
-  k: http,
-  s://ziontechgroup.com / services / digital - product - commerce - stack' market_positio,
-  n: 'Implementation partner alternative to Lemon Squeezy / Gumroad do - it - yourself.', target_audienc,
-  e: 'Indie SaaS, creators, agencies launching digital products' setup_tim,
-  e: '5–7 days' categor,
+  k: http,';
+  s://ziontechgroup.com / services / digital - product - commerce - stack' market_positio,';
+  n: 'Implementation partner alternative to Lemon Squeezy / Gumroad do - it - yourself.', target_audienc,';
+  e: 'Indie SaaS, creators, agencies launching digital products' setup_tim,';
+  e: '5–7 days' categor,';
   y: 'Developer Tools real_servic,
-  e: true; technolog,
-  y: ['Next.jsStripeLemon Squeezy APIPostgreSQL']; integration,
-  s: ['StripeLemon SqueezyGumroadMake / Zapier'], use_case,
-  s: ['Course sales_plugin licenses_templates marketplace'], ro,
-  i: 'Launch revenue in under 2 weeks, save 40–80 hours of setup.' competitor,
+  e: true; technolog,';
+  y: ['Next.jsStripeLemon Squeezy APIPostgreSQL']; integration,';
+  s: ['StripeLemon SqueezyGumroadMake / Zapier'], use_case,';
+  s: ['Course sales_plugin licenses_templates marketplace'], ro,';
+  i: 'Launch revenue in under 2 weeks, save 40–80 hours of setup.' competitor,';
   s: ['Lemon SqueezyGumroadPaddle]; customer,
   s: 12; ratin,
   g: 4 && 4.8, review,
   s: 18, // @ts - expect - error augment common shape for UI components that expect contact_info; contact_inf,
-  o: contact}  i,
-  d: 'wordpress - internal - linking - automation'  nam,
-  e: 'WordPress Internal Linking Automation' taglin,
-  e: 'AI - guided internal links that improve SEO structure and topical authority' pric,
-  e: '$299' perio,
-  d: '/month' descriptio,
-  n: 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments. feature,
-  s: [;' 'Automatic link suggestions and anchors_orphan page and pillar clustering_click - through rate experiments_reporting and recommendations_sitemap and crawl improvements' ], ico,
+  o: contact}  i,';
+  d: 'wordpress - internal - linking - automation'  nam,';
+  e: 'WordPress Internal Linking Automation' taglin,';
+  e: 'AI - guided internal links that improve SEO structure and topical authority' pric,';
+  e: '$299' perio,';
+  d: '/month' descriptio,';
+  n: 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments. feature,';
+  s: [;' 'Automatic link suggestions and anchors_orphan page and pillar clustering_click - through rate experiments_reporting and recommendations_sitemap and crawl improvements' ], ico,';
   n: '🔗'  lin,
-  k: http,
-  s://ziontechgroup && ziontechgroup.com/services/wordpress-internal-linking-automation' marketPositio,
-  n: 'Comparable to Link Whisper with managed tuning and reporting.',  targetAudienc,
+  k: http,';
+  s://ziontechgroup && ziontechgroup.com/services/wordpress-internal-linking-automation' marketPositio,';
+  n: 'Comparable to Link Whisper with managed tuning and reporting.',  targetAudienc,';
   e: 'Content sites, ecommerce, publishers on WordPress trialDay,
-  s: 7, setupTim,
-  e: '2–4 days' colo,
-  r: 'from - purple - 600 to - pink - 600' text_colo,
+  s: 7, setupTim,';
+  e: '2–4 days' colo,';
+  r: 'from - purple - 600 to - pink - 600' text_colo,';
   r: 'text - purple - 200' lin,
-  k: http,
-  s://ziontechgroup.com / services / wordpress - internal - linking - automation' market_positio,
-  n: 'Comparable to Link Whisper with managed tuning and reporting.', target_audienc,
+  k: http,';
+  s://ziontechgroup.com / services / wordpress - internal - linking - automation' market_positio,';
+  n: 'Comparable to Link Whisper with managed tuning and reporting.', target_audienc,';
   e: 'Content sites, ecommerce, publishers on WordPress trial_day,
-  s: 7; setup_tim,
-  e: '2–4 days' categor,
+  s: 7; setup_tim,';
+  e: '2–4 days' categor,';
   y: 'Growth & Marketing real_servic,
-  e: true; technolog,
-  y: ['WordPressGA4Looker Studio']; integration,
-  s: ['Link WhisperYoast / RankMathSearch Console']; use_case,
-  s: ['Boost organic traffic_fix site structure_improve crawl and CTR']; ro,
-  i: '5–25% organic uplift in 8–12 weeks on content libraries.' competitor,
+  e: true; technolog,';
+  y: ['WordPressGA4Looker Studio']; integration,';
+  s: ['Link WhisperYoast / RankMathSearch Console']; use_case,';
+  s: ['Boost organic traffic_fix site structure_improve crawl and CTR']; ro,';
+  i: '5–25% organic uplift in 8–12 weeks on content libraries.' competitor,';
   s: ['Link WhisperInternal Link Juicer]; customer,
   s: 30; ratin,
   g: 4 && 4.7, review,
   s: 22, // @ts-expect-error augment common shape for UI components that expect contactInfo,
   contactInfo: contact // @ts - expect - error augment common shape for UI components that expect contact_info; contact_inf,
-  o: contact}  nam,
-  e: 'Ecommerce Reviews & UGC Activation' taglin,
-  e: 'Deploy reviews and UGC workflows that increase trust and conversion' pric,
-  e: '$999'  perio,
-  d: '/project', descriptio,
-  n: 'We implement reviews and UGC collection across your storefront with on - brand widgets, post - purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift. feature,
-  s: [;' 'Reviews widget integration_email / SMS post - purchase triggers_photo / video UGC capture_moderation and syndication_conversion impact reporting' ]; ico,
-  n: '⭐' colo,
-  r: 'from - amber - 600 to - rose - 600' text_colo,
+  o: contact}  nam,';
+  e: 'Ecommerce Reviews & UGC Activation' taglin,';
+  e: 'Deploy reviews and UGC workflows that increase trust and conversion' pric,';
+  e: '$999'  perio,';
+  d: '/project', descriptio,';
+  n: 'We implement reviews and UGC collection across your storefront with on - brand widgets, post - purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift. feature,';
+  s: [;' 'Reviews widget integration_email / SMS post - purchase triggers_photo / video UGC capture_moderation and syndication_conversion impact reporting' ]; ico,';
+  n: '⭐' colo,';
+  r: 'from - amber - 600 to - rose - 600' text_colo,';
   r: 'text - amber - 200' lin,
-  k: http,
-  s://ziontechgroup.com / services / ecommerce - reviews - ugc - activation' market_positio,
-  n: 'Managed alternative to do - it - yourself Yotpo / Judge.me setups.' target_audienc,
-  e: 'Shopify and custom ecommerce brands' setup_tim,
-  e: '3–6 days' categor,
+  k: http,';
+  s://ziontechgroup.com / services / ecommerce - reviews - ugc - activation' market_positio,';
+  n: 'Managed alternative to do - it - yourself Yotpo / Judge.me setups.' target_audienc,';
+  e: 'Shopify and custom ecommerce brands' setup_tim,';
+  e: '3–6 days' categor,';
   y: 'Quality & Monitoring real_servic,
-  e: true; technolog,
-  y: ['ShopifyKlaviyoNext.js']; integration,
-  s: ['YotpoJudge.meLooxStamped']; use_case,
-  s: ['Increase trust_lift CVRCollect UGC for ads']; ro,
-  i: '2–10% CVR lift on PDPs post - deployment.' competitor,
+  e: true; technolog,';
+  y: ['ShopifyKlaviyoNext.js']; integration,';
+  s: ['YotpoJudge.meLooxStamped']; use_case,';
+  s: ['Increase trust_lift CVRCollect UGC for ads']; ro,';
+  i: '2–10% CVR lift on PDPs post - deployment.' competitor,';
   s: ['YotpoJudge.meLooxStamped.io]; customer,
   s: 10; ratin,
-  g: 4 && 4.8, review,
-  s: 12, ' 'Reviews widget integration',' 'Email / SMS post - purchase triggers',' 'Photo / video UGC capture',' 'Moderation and syndication',' 'Conversion impact reporting'], ico,
-  n: '⭐',  i,
-  d: 'subscription-analytics-revenue-optimization, nam,
-  e: 'Subscription Analytics & Revenue Optimization', taglin,
-  e: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth', pric,
-  e: '$599, perio,
-  d: '/month', descriptio,
+  g: 4 && 4.8, review,';
+  s: 12, ' 'Reviews widget integration',' 'Email / SMS post - purchase triggers',' 'Photo / video UGC capture',' 'Moderation and syndication',' 'Conversion impact reporting'], ico,';
+  n: '⭐',  i,';
+  d: 'subscription-analytics-revenue-optimization, nam,';
+  e: 'Subscription Analytics & Revenue Optimization', taglin,';
+  e: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth', pric,';
+  e: '$599, perio,';
+  d: '/month', descriptio,';
   n: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports., feature,
   s: [ // @ts-expect-error augment common shape for UI components that expect contactInfo,
-  contactInfo: contact } targetAudienc,
+  contactInfo: contact } targetAudienc,';
   e: 'SaaS startups, PLG companies, finance and growth teams trialDay,
-  s: 14 categor,
+  s: 14 categor,';
   y: 'AI & Data realServic,
-  e: true technolog,
-  y: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python'] integration,
+  e: true technolog,';
+  y: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python'] integration,';
   s: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy] useCase,
-  s: [ competitor,
-  s: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics'] marketSiz,
-  e: '$30B+ subscription economy tooling' growthRat,
-  e: '30% YoY' varian,
+  s: [ competitor,';
+  s: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics'] marketSiz,';
+  e: '$30B+ subscription economy tooling' growthRat,';
+  e: '30% YoY' varian,';
   t: 'ai-futuristic customer,
   s: 24,
   rating: 4.9,
   reviews: 31 // @ts-expect-error augment common shape for UI components that expect contactInfo,
-  contactInfo: contact }  i,
-  d: 'digital-product-commerce-stack' nam,
-  e: 'Digital Product Commerce Stack taglin,
-  e:' 'End-to-end setup for selling downloads, licenses, and subscriptions' pric,
-  e: '$1,200' perio,
-  d: '/project descriptio,
-  n:' 'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.'' 'Reviews widget integration',' 'Email / SMS post - purchase triggers',' 'Photo / video UGC capture',' 'Moderation and syndication',' 'Conversion impact reporting'], ico,
-  n: '⭐, feature,
-  s: [' 'Payments, taxes, and invoicing'' 'License keys and subscriptions'' 'EU/US tax and compliance guidance'' 'Storefront templates and checkout'' 'Sales analytics and email hooks'' '1-week launch plan' ] ico,
-  n: '🛒' colo,
-  r: 'from-cyan-600 to-blue-700' textColo,
+  contactInfo: contact }  i,';
+  d: 'digital-product-commerce-stack' nam,';
+  e: 'Digital Product Commerce Stack taglin,';
+  e:' 'End-to-end setup for selling downloads, licenses, and subscriptions' pric,';
+  e: '$1,200' perio,';
+  d: '/project descriptio,';
+  n:' 'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.'' 'Reviews widget integration',' 'Email / SMS post - purchase triggers',' 'Photo / video UGC capture',' 'Moderation and syndication',' 'Conversion impact reporting'], ico,';
+  n: '⭐, feature,';
+  s: [' 'Payments, taxes, and invoicing'' 'License keys and subscriptions'' 'EU/US tax and compliance guidance'' 'Storefront templates and checkout'' 'Sales analytics and email hooks'' '1-week launch plan' ] ico,';
+  n: '🛒' colo,';
+  r: 'from-cyan-600 to-blue-700' textColo,';
   r: 'text-cyan-300' lin,
   k: http,
-  s://ziontechgroup.com/services/digital-product-commerce-stack marketPositio,
-  n:' 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.' targetAudienc,
-  e: 'Indie SaaS, creators, agencies launching digital products' setupTim,
-  e: '5–7 days' categor,
+  s://ziontechgroup.com/services/digital-product-commerce-stack marketPositio,';
+  n:' 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.' targetAudienc,';
+  e: 'Indie SaaS, creators, agencies launching digital products' setupTim,';
+  e: '5–7 days' categor,';
   y: 'Developer Tools realServic,
-  e: true technolog,
-  y: ['Next.js', 'Stripe', 'Lemon Squeezy API', 'PostgreSQL'] integration,
-  s: ['Stripe', 'Lemon Squeezy', 'Gumroad', 'Make/Zapier'] useCase,
-  s: ['Course sales', 'Plugin licenses', 'Templates marketplace'] ro,
-  i: 'Launch revenue in under 2 weeks, save 40–80 hours of setup.' competitor,
+  e: true technolog,';
+  y: ['Next.js', 'Stripe', 'Lemon Squeezy API', 'PostgreSQL'] integration,';
+  s: ['Stripe', 'Lemon Squeezy', 'Gumroad', 'Make/Zapier'] useCase,';
+  s: ['Course sales', 'Plugin licenses', 'Templates marketplace'] ro,';
+  i: 'Launch revenue in under 2 weeks, save 40–80 hours of setup.' competitor,';
   s: ['Lemon Squeezy', 'Gumroad', 'Paddle] customer,
   s: 12,
   rating: 4.8,
   reviews: 18 // @ts-expect-error augment common shape for UI components that expect contactInfo,
-  contactInfo: contact }  i,
-  d: 'wordpress-internal-linking-automation' nam,
-  e: 'WordPress Internal Linking Automation taglin,
-  e:' 'AI-guided internal links that improve SEO structure and topical authority' pric,
-  e: '$299' perio,
-  d: '/month descriptio,
-  n:' 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments. feature,
-  s: [' 'Automatic link suggestions and anchors'' 'Orphan page and pillar clustering'' 'Click-through rate experiments'' 'Reporting and recommendations'' 'Sitemap and crawl improvements' ] ico,
-  n: '🔗' colo,
-  r: 'from-purple-600 to-pink-600' textColo,
+  contactInfo: contact }  i,';
+  d: 'wordpress-internal-linking-automation' nam,';
+  e: 'WordPress Internal Linking Automation taglin,';
+  e:' 'AI-guided internal links that improve SEO structure and topical authority' pric,';
+  e: '$299' perio,';
+  d: '/month descriptio,';
+  n:' 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments. feature,';
+  s: [' 'Automatic link suggestions and anchors'' 'Orphan page and pillar clustering'' 'Click-through rate experiments'' 'Reporting and recommendations'' 'Sitemap and crawl improvements' ] ico,';
+  n: '🔗' colo,';
+  r: 'from-purple-600 to-pink-600' textColo,';
   r: 'text-purple-200' lin,
   k: http,
-  s://ziontechgroup.com/services/wordpress-internal-linking-automation marketPositio,
-  n:' 'Comparable to Link Whisper with managed tuning and reporting.' targetAudienc,
+  s://ziontechgroup.com/services/wordpress-internal-linking-automation marketPositio,';
+  n:' 'Comparable to Link Whisper with managed tuning and reporting.' targetAudienc,';
   e: 'Content sites, ecommerce, publishers on WordPress trialDay,
-  s: 7 setupTim,
-  e: '2–4 days' categor,
+  s: 7 setupTim,';
+  e: '2–4 days' categor,';
   y: 'Growth & Marketing realServic,
-  e: true technolog,
-  y: ['WordPress', 'GA4', 'Looker Studio'] integration,
-  s: ['Link Whisper', 'Yoast/RankMath', 'Search Console] useCase,
-  s: [' 'Boost organic traffic'' 'Fix site structure'' 'Improve crawl and CTR' ] ro,
-  i: '5–25% organic uplift in 8–12 weeks on content libraries.' competitor,
+  e: true technolog,';
+  y: ['WordPress', 'GA4', 'Looker Studio'] integration,';
+  s: ['Link Whisper', 'Yoast/RankMath', 'Search Console] useCase,';
+  s: [' 'Boost organic traffic'' 'Fix site structure'' 'Improve crawl and CTR' ] ro,';
+  i: '5–25% organic uplift in 8–12 weeks on content libraries.' competitor,';
   s: ['Link Whisper', 'Internal Link Juicer] customer,
   s: 30,
   rating: 4.7,
   reviews: 22 // @ts-expect-error augment common shape for UI components that expect contactInfo,
-  contactInfo: contact }  i,
-  d: 'reviews-ugc-activation' nam,
-  e: 'Ecommerce Reviews & UGC Activation taglin,
-  e:' 'Deploy reviews and UGC workflows that increase trust and conversion' pric,
-  e: '$999' perio,
-  d: '/project descriptio,
-  n:' 'We implement reviews and UGC collection across your storefront with on-brand widgets, post-purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift. feature,
-  s: [' 'Reviews widget integration'' 'Email/SMS post-purchase triggers'' 'Photo/video UGC capture'' 'Moderation and syndication'' 'Conversion impact reporting' ] ico,
-  n: '⭐' colo,
-  r: 'from-amber-600 to-rose-600' textColo,
+  contactInfo: contact }  i,';
+  d: 'reviews-ugc-activation' nam,';
+  e: 'Ecommerce Reviews & UGC Activation taglin,';
+  e:' 'Deploy reviews and UGC workflows that increase trust and conversion' pric,';
+  e: '$999' perio,';
+  d: '/project descriptio,';
+  n:' 'We implement reviews and UGC collection across your storefront with on-brand widgets, post-purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift. feature,';
+  s: [' 'Reviews widget integration'' 'Email/SMS post-purchase triggers'' 'Photo/video UGC capture'' 'Moderation and syndication'' 'Conversion impact reporting' ] ico,';
+  n: '⭐' colo,';
+  r: 'from-amber-600 to-rose-600' textColo,';
   r: 'text-amber-200' lin,
   k: http,
-  s://ziontechgroup.com/services/ecommerce-reviews-ugc-activation marketPositio,
-  n:' 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.' targetAudienc,
-  e: 'Shopify and custom ecommerce brands' setupTim,
-  e: '3–6 days' categor,
+  s://ziontechgroup.com/services/ecommerce-reviews-ugc-activation marketPositio,';
+  n:' 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.' targetAudienc,';
+  e: 'Shopify and custom ecommerce brands' setupTim,';
+  e: '3–6 days' categor,';
   y: 'Quality & Monitoring realServic,
-  e: true technolog,
-  y: ['Shopify', 'Klaviyo', 'Next.js'] integration,
-  s: ['Yotpo', 'Judge.me', 'Loox', 'Stamped'] useCase,
-  s: ['Increase trust', 'Lift CVR', 'Collect UGC for ads'] ro,
-  i: '2–10% CVR lift on PDPs post-deployment.' competitor,
+  e: true technolog,';
+  y: ['Shopify', 'Klaviyo', 'Next.js'] integration,';
+  s: ['Yotpo', 'Judge.me', 'Loox', 'Stamped'] useCase,';
+  s: ['Increase trust', 'Lift CVR', 'Collect UGC for ads'] ro,';
+  i: '2–10% CVR lift on PDPs post-deployment.' competitor,';
   s: ['Yotpo', 'Judge.me', 'Loox', 'Stamped.io] customer,
   s: 10,
   rating: 4.8,
   reviews: 12 // @ts-expect-error augment common shape for UI components that expect contactInfo,
-  contactInfo: contact }]; contactInf,
+  contactInfo: contact }]; contactInf,';
   o: contact } ]; ' 'Churn and retention analysisCohort and funnel dashboards',' 'Price testing and packaging experimentsRevenue leakage detection',' 'Revenue forecasting modelsWeekly executive summaries ], popula,
-  r: true, ico,
-  n: '📊', colo,
-  r: 'from-emerald-600 to-teal-700', textColo,
+  r: true, ico,';
+  n: '📊', colo,';
+  r: 'from-emerald-600 to-teal-700', textColo,';
   r: 'text-emerald-300', lin,
-  k: http,
-  s://ziontechgroup.com/services/subscription-analytics-revenue-optimization', marketPositio,
+  k: http,';
+  s://ziontechgroup.com/services/subscription-analytics-revenue-optimization', marketPositio,';
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering., contactInf,
-  o: contact}, marketPositio,
-  n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.', targetAudienc,
+  o: contact}, marketPositio,';
+  n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.', targetAudienc,';
   e: 'SaaS startups, PLG companies, finance and growth teams, trialDay,
-  s: 14, setupTim,
-  e: '1–2 weeks', categor,
+  s: 14, setupTim,';
+  e: '1–2 weeks', categor,';
   y: 'AI & Data, realServic,
-  e: true, marketSiz,
-  e: '$30B+ subscription economy tooling', growthRat,
-  e: '30% YoY', varian,
+  e: true, marketSiz,';
+  e: '$30B+ subscription economy tooling', growthRat,';
+  e: '30% YoY', varian,';
   t: 'ai-futuristic, customer,
   s: 24, ratin,
   g: 4.9, review,
-  s: 31, // @ts-expect-error augment common shape for UI components that expect contactInfo },  i,
-  d: 'digital-product-commerce-stack', nam,
-  e: 'Digital Product Commerce Stack'], ico,
-  n: '🛒', colo,
-  r: 'from-cyan-600 to-blue-700', textColo,
+  s: 31, // @ts-expect-error augment common shape for UI components that expect contactInfo },  i,';
+  d: 'digital-product-commerce-stack', nam,';
+  e: 'Digital Product Commerce Stack'], ico,';
+  n: '🛒', colo,';
+  r: 'from-cyan-600 to-blue-700', textColo,';
   r: 'text-cyan-300', lin,
-  k: http,
-  s://ziontechgroup.com/services/digital-product-commerce-stack', targetAudienc,
-  e: 'Indie SaaS, creators, agencies launching digital products', setupTim,
-  e: '5–7 days', categor,
+  k: http,';
+  s://ziontechgroup.com/services/digital-product-commerce-stack', targetAudienc,';
+  e: 'Indie SaaS, creators, agencies launching digital products', setupTim,';
+  e: '5–7 days', categor,';
   y: 'Developer Tools, realServic,
   e: true, customer,
   s: 12, ratin,
   g: 4.8, review,
-  s: 18, // @ts-expect-error augment common shape for UI components that expect contactInfo },  i,
-  d: 'wordpress-internal-linking-automation', nam,
-  e: 'WordPress Internal Linking Automation'], ico,
-  n: '🔗', colo,
-  r: 'from-purple-600 to-pink-600', textColo,
+  s: 18, // @ts-expect-error augment common shape for UI components that expect contactInfo },  i,';
+  d: 'wordpress-internal-linking-automation', nam,';
+  e: 'WordPress Internal Linking Automation'], ico,';
+  n: '🔗', colo,';
+  r: 'from-purple-600 to-pink-600', textColo,';
   r: 'text-purple-200', lin,
-  k: http,
-  s://ziontechgroup.com/services/wordpress-internal-linking-automation', targetAudienc,
+  k: http,';
+  s://ziontechgroup.com/services/wordpress-internal-linking-automation', targetAudienc,';
   e: 'Content sites, ecommerce, publishers on WordPress, trialDay,
-  s: 7, setupTim,
-  e: '2–4 days', categor,
+  s: 7, setupTim,';
+  e: '2–4 days', categor,';
   y: 'Growth & Marketing, realServic,
   e: true, customer,
   s: 30, ratin,
   g: 4.7, review,
-  s: 22, // @ts-expect-error augment common shape for UI components that expect contactInfo },  i,
-  d: 'reviews-ugc-activation', nam,
-  e: 'Ecommerce Reviews & UGC Activation'], ico,
-  n: '⭐', colo,
-  r: 'from-amber-600 to-rose-600', textColo,
+  s: 22, // @ts-expect-error augment common shape for UI components that expect contactInfo },  i,';
+  d: 'reviews-ugc-activation', nam,';
+  e: 'Ecommerce Reviews & UGC Activation'], ico,';
+  n: '⭐', colo,';
+  r: 'from-amber-600 to-rose-600', textColo,';
   r: 'text-amber-200', lin,
-  k: http,
-  s://ziontechgroup.com/services/ecommerce-reviews-ugc-activation', targetAudienc,
-  e: 'Shopify and custom ecommerce brands', setupTim,
-  e: '3–6 days', categor,
+  k: http,';
+  s://ziontechgroup.com/services/ecommerce-reviews-ugc-activation', targetAudienc,';
+  e: 'Shopify and custom ecommerce brands', setupTim,';
+  e: '3–6 days', categor,';
   y: 'Quality & Monitoring, realServic,
   e: true, customer,
   s: 10, ratin,
   g: 4.8, review,
   s: 12, // @ts-expect-error augment common shape for UI components that expect contactInfo } ]} }; export const,
-  realServicesQ32025: Q3Service[] = [  i,
-  d: 'subscription-analytics-revenue-optimization', nam,
-  e: 'Subscription Analytics & Revenue Optimization', taglin,
-  e: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth', pric,
-  e: '$599', perio,
-  d: '/month', descriptio,
-  n: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports., feature,
+  realServicesQ32025: Q3Service[] = [  i,';
+  d: 'subscription-analytics-revenue-optimization', nam,';
+  e: 'Subscription Analytics & Revenue Optimization', taglin,';
+  e: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth', pric,';
+  e: '$599', perio,';
+  d: '/month', descriptio,';
+  n: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports., feature,';
   s: [' 'Churn and retention analysisCohort and funnel dashboards',' 'Price testing and packaging experimentsRevenue leakage detection',' 'Revenue forecasting modelsWeekly executive summaries ], popula,
-  r: true, ico,
-  n: '📊', colo,
-  r: 'from-emerald-600 to-teal-700', textColo,
+  r: true, ico,';
+  n: '📊', colo,';
+  r: 'from-emerald-600 to-teal-700', textColo,';
   r: 'text-emerald-300', lin,
-  k: http,
-  s://ziontechgroup.com/services/subscription-analytics-revenue-optimization', marketPositio,
+  k: http,';
+  s://ziontechgroup.com/services/subscription-analytics-revenue-optimization', marketPositio,';
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering., contactInf,
-  o: contact}, marketPositio,
-  n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.', targetAudienc,
+  o: contact}, marketPositio,';
+  n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.', targetAudienc,';
   e: 'SaaS startups, PLG companies, finance and growth teams, trialDay,
-  s: 14, setupTim,
-  e: '1–2 weeks', categor,
+  s: 14, setupTim,';
+  e: '1–2 weeks', categor,';
   y: 'AI & Data, realServic,
-  e: true, technolog,
-  y: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python'], integration,
-  s: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy], useCase,
-  s: [' 'Reduce churn',' 'Price optimization',' 'Board-ready revenue KPIs'], ro,
-  i: '3–10% ARR lift from churn reduction and pricing wins.', competitor,
-  s: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics'], technolog,
-  y: ['dbtSnowflake/BigQuery', 'Segment/GA4Python'], integration,
-  s: ['StripePaddle', 'ChargebeeLemon Squeezy'], useCase,
-  s: ['Reduce churnPrice optimization', 'Board-ready revenue KPIs'], ro,
-  i: '3–10% ARR lift from churn reduction and pricing wins.', competitor,
-  s: ['ProfitWell MetricsChartMogul', 'Baremetrics'], marketSiz,
-  e: '$30B+ subscription economy tooling', growthRat,
-  e: '30% YoY', varian,
+  e: true, technolog,';
+  y: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python'], integration,';
+  s: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy], useCase,';
+  s: [' 'Reduce churn',' 'Price optimization',' 'Board-ready revenue KPIs'], ro,';
+  i: '3–10% ARR lift from churn reduction and pricing wins.', competitor,';
+  s: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics'], technolog,';
+  y: ['dbtSnowflake/BigQuery', 'Segment/GA4Python'], integration,';
+  s: ['StripePaddle', 'ChargebeeLemon Squeezy'], useCase,';
+  s: ['Reduce churnPrice optimization', 'Board-ready revenue KPIs'], ro,';
+  i: '3–10% ARR lift from churn reduction and pricing wins.', competitor,';
+  s: ['ProfitWell MetricsChartMogul', 'Baremetrics'], marketSiz,';
+  e: '$30B+ subscription economy tooling', growthRat,';
+  e: '30% YoY', varian,';
   t: 'ai-futuristic, customer,
   s: 24, ratin,
   g: 4.9, review,
   s: 31, // @ts-expect-error augment common shape for UI components that expect contactInfo,
   contactInfo: contact,
   contactInfo: contact, contactInf,
-  o: contact },  i,
-  d: 'digital-product-commerce-stack', nam,
-  e: 'Digital Product Commerce Stack, taglin,
-  e: ' 'End-to-end setup for selling downloads, licenses, and subscriptions', pric,
-  e: '$1,200', perio,
-  d: '/project, descriptio,
-  n: ' 'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations., feature,
-  s: [' 'Payments, taxes, and invoicing',' 'License keys and subscriptions',' 'EU/US tax and compliance guidance',' 'Storefront templates and checkout',' 'Sales analytics and email hooks',' '1-week launch plan', taglin,
-  e: 'End-to-end setup for selling downloads, licenses, and subscriptions', pric,
-  e: '$1,200', perio,
-  d: '/project', descriptio,
-  n: 'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations., feature,
-  s: [' 'Payments, taxes, and invoicingLicense keys and subscriptions',' 'EU/US tax and compliance guidanceStorefront templates and checkout',' 'Sales analytics and email hooks1-week launch plan' ], ico,
-  n: '🛒', colo,
-  r: 'from-cyan-600 to-blue-700', textColo,
+  o: contact },  i,';
+  d: 'digital-product-commerce-stack', nam,';
+  e: 'Digital Product Commerce Stack, taglin,';
+  e: ' 'End-to-end setup for selling downloads, licenses, and subscriptions', pric,';
+  e: '$1,200', perio,';
+  d: '/project, descriptio,';
+  n: ' 'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations., feature,';
+  s: [' 'Payments, taxes, and invoicing',' 'License keys and subscriptions',' 'EU/US tax and compliance guidance',' 'Storefront templates and checkout',' 'Sales analytics and email hooks',' '1-week launch plan', taglin,';
+  e: 'End-to-end setup for selling downloads, licenses, and subscriptions', pric,';
+  e: '$1,200', perio,';
+  d: '/project', descriptio,';
+  n: 'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations., feature,';
+  s: [' 'Payments, taxes, and invoicingLicense keys and subscriptions',' 'EU/US tax and compliance guidanceStorefront templates and checkout',' 'Sales analytics and email hooks1-week launch plan' ], ico,';
+  n: '🛒', colo,';
+  r: 'from-cyan-600 to-blue-700', textColo,';
   r: 'text-cyan-300', lin,
-  k: http,
-  s://ziontechgroup.com/services/digital-product-commerce-stack', marketPositio,
-  n: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself., marketPositio,
-  n: ' 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.', marketPositio,
-  n: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.', targetAudienc,
-  e: 'Indie SaaS, creators, agencies launching digital products', setupTim,
-  e: '5–7 days', categor,
+  k: http,';
+  s://ziontechgroup.com/services/digital-product-commerce-stack', marketPositio,';
+  n: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself., marketPositio,';
+  n: ' 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.', marketPositio,';
+  n: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.', targetAudienc,';
+  e: 'Indie SaaS, creators, agencies launching digital products', setupTim,';
+  e: '5–7 days', categor,';
   y: 'Developer Tools, realServic,
-  e: true, technolog,
-  y: ['Next.js', 'Stripe', 'Lemon Squeezy API', 'PostgreSQL'], integration,
-  s: ['Stripe', 'Lemon Squeezy', 'Gumroad', 'Make/Zapier'], useCase,
-  s: ['Course sales', 'Plugin licenses', 'Templates marketplace'], ro,
-  i: 'Launch revenue in under 2 weeks, save 40–80 hours of setup.', competitor,
-  s: ['Lemon Squeezy', 'Gumroad', 'Paddle'], technolog,
-  y: ['Next.jsStripe', 'Lemon Squeezy APIPostgreSQL'], integration,
-  s: ['StripeLemon Squeezy', 'GumroadMake/Zapier'], useCase,
-  s: ['Course salesPlugin licenses', 'Templates marketplace'], ro,
-  i: 'Launch revenue in under 2 weeks, save 40–80 hours of setup.', competitor,
+  e: true, technolog,';
+  y: ['Next.js', 'Stripe', 'Lemon Squeezy API', 'PostgreSQL'], integration,';
+  s: ['Stripe', 'Lemon Squeezy', 'Gumroad', 'Make/Zapier'], useCase,';
+  s: ['Course sales', 'Plugin licenses', 'Templates marketplace'], ro,';
+  i: 'Launch revenue in under 2 weeks, save 40–80 hours of setup.', competitor,';
+  s: ['Lemon Squeezy', 'Gumroad', 'Paddle'], technolog,';
+  y: ['Next.jsStripe', 'Lemon Squeezy APIPostgreSQL'], integration,';
+  s: ['StripeLemon Squeezy', 'GumroadMake/Zapier'], useCase,';
+  s: ['Course salesPlugin licenses', 'Templates marketplace'], ro,';
+  i: 'Launch revenue in under 2 weeks, save 40–80 hours of setup.', competitor,';
   s: ['Lemon SqueezyGumroad', 'Paddle], customer,
   s: 12, ratin,
   g: 4.8, review,
   s: 18, // @ts-expect-error augment common shape for UI components that expect contactInfo,
   contactInfo: contact,
   contactInfo: contact, contactInf,
-  o: contact },  i,
-  d: 'wordpress-internal-linking-automation', nam,
-  e: 'WordPress Internal Linking Automation, taglin,
-  e: ' 'AI-guided internal links that improve SEO structure and topical authority', pric,
-  e: '$299', perio,
-  d: '/month, descriptio,
-  n: ' 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments., feature,
-  s: [' 'Automatic link suggestions and anchors',' 'Orphan page and pillar clustering',' 'Click-through rate experiments',' 'Reporting and recommendations',' 'Sitemap and crawl improvements', taglin,
-  e: 'AI-guided internal links that improve SEO structure and topical authority', pric,
-  e: '$299', perio,
-  d: '/month', descriptio,
-  n: 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments., feature,
-  s: [' 'Automatic link suggestions and anchorsOrphan page and pillar clustering',' 'Click-through rate experimentsReporting and recommendations',' 'Sitemap and crawl improvements' ], ico,
-  n: '🔗', colo,
-  r: 'from-purple-600 to-pink-600', textColo,
+  o: contact },  i,';
+  d: 'wordpress-internal-linking-automation', nam,';
+  e: 'WordPress Internal Linking Automation, taglin,';
+  e: ' 'AI-guided internal links that improve SEO structure and topical authority', pric,';
+  e: '$299', perio,';
+  d: '/month, descriptio,';
+  n: ' 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments., feature,';
+  s: [' 'Automatic link suggestions and anchors',' 'Orphan page and pillar clustering',' 'Click-through rate experiments',' 'Reporting and recommendations',' 'Sitemap and crawl improvements', taglin,';
+  e: 'AI-guided internal links that improve SEO structure and topical authority', pric,';
+  e: '$299', perio,';
+  d: '/month', descriptio,';
+  n: 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments., feature,';
+  s: [' 'Automatic link suggestions and anchorsOrphan page and pillar clustering',' 'Click-through rate experimentsReporting and recommendations',' 'Sitemap and crawl improvements' ], ico,';
+  n: '🔗', colo,';
+  r: 'from-purple-600 to-pink-600', textColo,';
   r: 'text-purple-200', lin,
-  k: http,
-  s://ziontechgroup.com/services/wordpress-internal-linking-automation', marketPositio,
-  n: 'Comparable to Link Whisper with managed tuning and reporting., marketPositio,
-  n: ' 'Comparable to Link Whisper with managed tuning and reporting.', marketPositio,
-  n: 'Comparable to Link Whisper with managed tuning and reporting.', targetAudienc,
+  k: http,';
+  s://ziontechgroup.com/services/wordpress-internal-linking-automation', marketPositio,';
+  n: 'Comparable to Link Whisper with managed tuning and reporting., marketPositio,';
+  n: ' 'Comparable to Link Whisper with managed tuning and reporting.', marketPositio,';
+  n: 'Comparable to Link Whisper with managed tuning and reporting.', targetAudienc,';
   e: 'Content sites, ecommerce, publishers on WordPress, trialDay,
-  s: 7, setupTim,
-  e: '2–4 days', categor,
+  s: 7, setupTim,';
+  e: '2–4 days', categor,';
   y: 'Growth & Marketing, realServic,
-  e: true, technolog,
-  y: ['WordPress', 'GA4', 'Looker Studio'], integration,
-  s: ['Link Whisper', 'Yoast/RankMath', 'Search Console], useCase,
-  s: [' 'Boost organic traffic',' 'Fix site structure',' 'Improve crawl and CTR'], ro,
-  i: '5–25% organic uplift in 8–12 weeks on content libraries.', competitor,
-  s: ['Link Whisper', 'Internal Link Juicer'], technolog,
-  y: ['WordPressGA4', 'Looker Studio'], integration,
-  s: ['Link WhisperYoast/RankMath', 'Search Console'], useCase,
-  s: ['Boost organic trafficFix site structure', 'Improve crawl and CTR'], ro,
-  i: '5–25% organic uplift in 8–12 weeks on content libraries.', competitor,
+  e: true, technolog,';
+  y: ['WordPress', 'GA4', 'Looker Studio'], integration,';
+  s: ['Link Whisper', 'Yoast/RankMath', 'Search Console], useCase,';
+  s: [' 'Boost organic traffic',' 'Fix site structure',' 'Improve crawl and CTR'], ro,';
+  i: '5–25% organic uplift in 8–12 weeks on content libraries.', competitor,';
+  s: ['Link Whisper', 'Internal Link Juicer'], technolog,';
+  y: ['WordPressGA4', 'Looker Studio'], integration,';
+  s: ['Link WhisperYoast/RankMath', 'Search Console'], useCase,';
+  s: ['Boost organic trafficFix site structure', 'Improve crawl and CTR'], ro,';
+  i: '5–25% organic uplift in 8–12 weeks on content libraries.', competitor,';
   s: ['Link WhisperInternal Link Juicer], customer,
   s: 30, ratin,
   g: 4.7, review,
   s: 22, // @ts-expect-error augment common shape for UI components that expect contactInfo,
   contactInfo: contact,
   contactInfo: contact, contactInf,
-  o: contact },  i,
-  d: 'reviews-ugc-activation', nam,
-  e: 'Ecommerce Reviews & UGC Activation, taglin,
-  e: ' 'Deploy reviews and UGC workflows that increase trust and conversion', pric,
-  e: '$999', perio,
-  d: '/project, descriptio,
-  n: ' 'We implement reviews and UGC collection across your storefront with on-brand widgets, post-purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift., feature,
-  s: [' 'Reviews widget integration',' 'Email/SMS post-purchase triggers',' 'Photo/video UGC capture',' 'Moderation and syndication',' 'Conversion impact reporting', taglin,
-  e: 'Deploy reviews and UGC workflows that increase trust and conversion', pric,
-  e: '$999', perio,
-  d: '/project', descriptio,
-  n: 'We implement reviews and UGC collection across your storefront with on-brand widgets, post-purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift., feature,
-  s: [' 'Reviews widget integrationEmail/SMS post-purchase triggers',' 'Photo/video UGC captureModeration and syndication',' 'Conversion impact reporting' ], ico,
-  n: '⭐', colo,
-  r: 'from-amber-600 to-rose-600', textColo,
+  o: contact },  i,';
+  d: 'reviews-ugc-activation', nam,';
+  e: 'Ecommerce Reviews & UGC Activation, taglin,';
+  e: ' 'Deploy reviews and UGC workflows that increase trust and conversion', pric,';
+  e: '$999', perio,';
+  d: '/project, descriptio,';
+  n: ' 'We implement reviews and UGC collection across your storefront with on-brand widgets, post-purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift., feature,';
+  s: [' 'Reviews widget integration',' 'Email/SMS post-purchase triggers',' 'Photo/video UGC capture',' 'Moderation and syndication',' 'Conversion impact reporting', taglin,';
+  e: 'Deploy reviews and UGC workflows that increase trust and conversion', pric,';
+  e: '$999', perio,';
+  d: '/project', descriptio,';
+  n: 'We implement reviews and UGC collection across your storefront with on-brand widgets, post-purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift., feature,';
+  s: [' 'Reviews widget integrationEmail/SMS post-purchase triggers',' 'Photo/video UGC captureModeration and syndication',' 'Conversion impact reporting' ], ico,';
+  n: '⭐', colo,';
+  r: 'from-amber-600 to-rose-600', textColo,';
   r: 'text-amber-200', lin,
-  k: http,
-  s://ziontechgroup.com/services/ecommerce-reviews-ugc-activation', marketPositio,
-  n: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups., marketPositio,
-  n: ' 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.', marketPositio,
-  n: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.', targetAudienc,
-  e: 'Shopify and custom ecommerce brands', setupTim,
-  e: '3–6 days', categor,
+  k: http,';
+  s://ziontechgroup.com/services/ecommerce-reviews-ugc-activation', marketPositio,';
+  n: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups., marketPositio,';
+  n: ' 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.', marketPositio,';
+  n: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.', targetAudienc,';
+  e: 'Shopify and custom ecommerce brands', setupTim,';
+  e: '3–6 days', categor,';
   y: 'Quality & Monitoring, realServic,
-  e: true, technolog,
-  y: ['Shopify', 'Klaviyo', 'Next.js'], integration,
-  s: ['Yotpo', 'Judge.me', 'Loox', 'Stamped'], useCase,
-  s: ['Increase trust', 'Lift CVR', 'Collect UGC for ads'], ro,
-  i: '2–10% CVR lift on PDPs post-deployment.', competitor,
-  s: ['Yotpo', 'Judge.me', 'Loox', 'Stamped.io'], technolog,
-  y: ['ShopifyKlaviyo', 'Next.js'], integration,
-  s: ['YotpoJudge.me', 'LooxStamped'], useCase,
-  s: ['Increase trustLift CVR', 'Collect UGC for ads'], ro,
-  i: '2–10% CVR lift on PDPs post-deployment.', competitor,
+  e: true, technolog,';
+  y: ['Shopify', 'Klaviyo', 'Next.js'], integration,';
+  s: ['Yotpo', 'Judge.me', 'Loox', 'Stamped'], useCase,';
+  s: ['Increase trust', 'Lift CVR', 'Collect UGC for ads'], ro,';
+  i: '2–10% CVR lift on PDPs post-deployment.', competitor,';
+  s: ['Yotpo', 'Judge.me', 'Loox', 'Stamped.io'], technolog,';
+  y: ['ShopifyKlaviyo', 'Next.js'], integration,';
+  s: ['YotpoJudge.me', 'LooxStamped'], useCase,';
+  s: ['Increase trustLift CVR', 'Collect UGC for ads'], ro,';
+  i: '2–10% CVR lift on PDPs post-deployment.', competitor,';
   s: ['YotpoJudge.me', 'LooxStamped.io], customer,
   s: 10, ratin,
   g: 4.8, review,
@@ -2510,3 +2510,4 @@ i,
   contactInfo: contact}]; contactInf,
   o: contact,
   contactInfo: contact } ]} ];
+';

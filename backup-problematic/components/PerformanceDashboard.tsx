@@ -4,3 +4,4 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
 
 export default PerformanceDashboard;
+';

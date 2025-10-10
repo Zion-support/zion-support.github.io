@@ -1,6 +1,6 @@
 #!/usr/bin
-import fs from 'fs;
-
+import fs from 'fs;';
+';';
 import path from 'path;
 
 import { fileURLToPath } from url;
@@ -17,8 +17,8 @@ function fixUnusedVariables(content) {
 
 const fixedVars = vars.split(,).map(v => {);;
 
-const trimmed = v.trim();;
-
+const trimmed = v.trim();;';
+';';
       if (trimmed && !trimmed.startsWith('_') && !trimmed.includes(:)) {;
 
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
@@ -26,18 +26,18 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
 
         return `_${trimmed}}
-
+';
       return trimmed}).join(', ');
-
+`;
     return `const { ${fixedVars} } = ${assignment};});
 
   // Fix unused variables in function parameters;
 
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
-    return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
+    return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {';
       if (varName !== 'function' && varName !== 'async' && !varName.startsWith('_)) {
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {/* TODO: Fix JSX expression */}
-
+`;
         return `_${varName}}
 
       return varName})});
@@ -45,10 +45,10 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
   // Fix arrow function parameters;
 
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {
-    return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
+    return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {';
       if (varName !== 'function' && varName !== 'async' && !varName.startsWith('_)) {
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */}
-
+`;
         return `_${varName}}
 
       return varName})});
@@ -77,7 +77,7 @@ function fixJSXErrors(content) {
 
   content = content.replace(/<div([^>]*)>(?!.*<\/div>)/gs, (match, attrs) => {
   return (
-
+';
     if (!content.includes('</div>)) {
       return match + </div>
 );
@@ -103,18 +103,18 @@ function fixJSXErrors(content) {/* TODO: Fix JSX expression *
   content = content.replace(/<React.Fragment>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) => {
   return (
 
-  content = content.replace(/<React.Fragment>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>
+  content = content.replace(/<React.Fragment>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>);
 );
 
 }/gs, (match) => {/* TODO: Fix JSX expression */}
-
+';`;
     return `<div>${match.replace(/<React.Fragment>\s*|<\/>/g, '')}</div>});
 
   return content}
 
 /
 function removeUnusedImports(content) {
-  /
+  /';
   const lines = content.split('\n);;
 
   const usedImports = new Set();;
@@ -122,7 +122,7 @@ function removeUnusedImports(content) {
   // Find all used identifiers;
 
   const identifierRegex = /\b[a-zA-Z_$][a-zA-Z0-9_$]*\b/g;;
-
+';
   const body = lines.slice(1).join('\n); // Skip first line (imports);;
 
 let match;
@@ -131,7 +131,7 @@ let match;
 
   /
   const filteredLines = lines.filter(line => {);;;
-
+';
     if (line.trim().startsWith('import)) {
       /
 function removeUnusedImports(content) {/* TODO: Fix JSX expression *
@@ -150,7 +150,7 @@ const importMatch = line.match(/import\s*{([^}]+)}/);;
       return true; // Keep default imports and other patterns}
 
     return true});
-
+';
   return filteredLines.join('\n)}
 
 /
@@ -207,7 +207,7 @@ const fullPath = path.join(currentPath, item);;
       const stat = fs.statSync(fullPath);;
 
       if (stat.isDirectory()) {
-        /
+        /';
         if (!['node_modules', '.git', 'dist', 'build', '.next].includes(item)) {
           walkDir(fullPath)}
 
@@ -236,9 +236,9 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression *
 
 // console.log removed for production
 ;
-
+';
 const srcDir = path.join(__dirname, 'src);;
-
+';
 const appDir = path.join(__dirname, 'app);;
 
 const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];;
@@ -254,7 +254,7 @@ let processedCount = 0;for (const file of files) {/* TODO: Fix JSX expression */
 
 // console.log removed for production
 // Also process root level files;
-
+';
 const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx];;
 
 for (const file of rootFiles) {/* TODO: Fix JSX expression */}
@@ -263,5 +263,5 @@ for (const file of rootFiles) {/* TODO: Fix JSX expression */}
 
   }}
 
-// console.log removed for production
-`
+// console.log removed for production`;
+`';`;

@@ -69,7 +69,7 @@ constructor(props: Props) {,
 
             </h1>
             <p className=text-gray-600 mb-6>
-              Were sorry, but something unexpected happened. Please try refreshing the page.
+              Were sorry, but something unexpected happened. Please try refreshing the page.);
             </p>)
             <div className=space-y-4>)
               <button;)
@@ -97,7 +97,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 
   r: true, error }}
 
-  componentDidCatch(erro,
+  componentDidCatch(erro,);
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
 
@@ -129,8 +129,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 
   }
 
-      return (<div className="min-h-screen flex items-center justify-center bg-gray-50></div>
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center></div>
+      return (<div className="min-h-screen flex items-center justify-center bg-gray-50></div>";
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center></div>";
             <div className="text-6xl mb-4>⚠️</div>
             <h1 className=text-2xl font-bold text-gray-900 mb-4></h1>
               Oops! Something went wrong;
@@ -181,7 +181,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       )}
 
     return this.props.children}
-
-}
-
-export default EnhancedErrorBoundary;"
+"
+}"
+";
+export default EnhancedErrorBoundary;"';";

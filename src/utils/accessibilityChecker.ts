@@ -2,7 +2,7 @@
 
 /**
  * Accessibility Checker Utility
-
+';
 import React from 'react;
 
 use client
@@ -36,12 +36,12 @@ export enum A11ySeverity {
 export enum A11ySeverity {// TODO: Add content}
 
 }
-
-  /** Minor issue that may affect some users */
+';
+  /** Minor issue that may affect some users */';';
   MINOR = 'MINOR,
-  /** Moderate issue that affects usability */
+  /** Moderate issue that affects usability */';
   MODERATE = 'MODERATE,
-  /** Serious issue that significantly impacts accessibility */
+  /** Serious issue that significantly impacts accessibility */';
   SERIOUS = 'SERIOUS,
   /** Critical issue that makes content inaccessible */
   CRITICAL = CRITICAL
@@ -59,9 +59,9 @@ export enum WCAGLevel {// TODO: Add content}
 
 }
 
-  /** Level A - Basic accessibility */
+  /** Level A - Basic accessibility */';
   A = 'A,
-  /** Level AA - Recommended level (most common requirement) */
+  /** Level AA - Recommended level (most common requirement) */';
   AA = 'AA,
   /** Level AAA - Enhanced accessibility */
   AAA = AAA
@@ -114,7 +114,7 @@ export interface A11yIssue {// TODO: Add content}
 
   wcagLeve,
   l: WCAGLevel;
-
+";
   /** WCAG success criterion (e.g., "1.1.1", "2.4.7) */
   wcagCriterio,
   n: string;
@@ -162,7 +162,7 @@ export interface A11yCheckResult {
  * const result = checker.checkElement(document.getElementById(main));;
 
  * if (import.meta.env.DEV) {}
-
+`;
  * ``
  */
 export class AccessibilityChecker {
@@ -215,13 +215,13 @@ export interface A11yCheckResult {// TODO: Add content}
 
  *
  * @example;
-
+`;
  * ```typescript;
 
  * const result = checker.checkElement(document.getElementById(main));;
 
  * if (import.meta.env.DEV) {}
-
+`;
  * ``
  */
 export class AccessibilityChecker {/* TODO: Fix JSX expression */}
@@ -283,7 +283,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
    *
    * @returns Accessibility check result
    */
-  public checkDocument(): A11yCheckResult {
+  public checkDocument(): A11yCheckResult {';
     if (typeof document === 'undefined) {
       return {
         passed: true,
@@ -311,9 +311,9 @@ const alt = img.getAttribute(alt);;
 
       const role = img.getAttribute(role);;
 
-      // Check for missing alt attribute
+      // Check for missing alt attribute';
       if (alt === null && role !== 'presentation) {
-        this.addIssue({
+        this.addIssue({';
           type: 'missing-alt-text,
     return {/* TODO: Fix JSX expression */}
 
@@ -323,7 +323,7 @@ const alt = img.getAttribute(alt);;
 
   passed: this.issues.length === 0,
       issueCount: this.issues.length,
-      issues: [...this.issues],
+      issues: [...this.issues],);
       timestamp: new Date(),
 
 //       score}}
@@ -339,7 +339,7 @@ const alt = img.getAttribute(alt);;
   public checkDocument(): A11yCheckResult {// TODO: Add content}
 
 }
-
+';
     if (typeof document === 'undefined) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -388,7 +388,7 @@ const alt = img.getAttribute(alt);;
       const role = img.getAttribute(role);;
 
       // Check for missing alt attribute;
-
+';
       if (alt === null && role !== 'presentation) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -400,20 +400,20 @@ const alt = img.getAttribute(alt);;
   O: Add content}
 
 };
-
+';
   type: 'missing-alt-text,
           severity: A11ySeverity.CRITICAL,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '1.1.1,
-          message: `Image ${index + 1} is missing alt text,
-          element: `img[src="${img['src']}"],
-          fix: 'Add descriptive alt text to the image,
-          codeExample: '<img src="..." alt=Description of image />
+          wcagLevel: WCAGLevel.A,';
+          wcagCriterion: '1.1.1,`;
+          message: `Image ${index + 1} is missing alt text,';";`;
+          element: `img[src="${img['src']}"],';
+          fix: 'Add descriptive alt text to the image,';";
+          codeExample: '<img src="..." alt=Description of image />);
         })}
 
-      // Check for empty alt on decorative images without role
+      // Check for empty alt on decorative images without role';
       if (alt === '' && role !== 'presentation) {
-        this.addIssue({
+        this.addIssue({';
           type: 'empty-alt-without-role,
           codeExample: 
           
@@ -425,14 +425,14 @@ const alt = img.getAttribute(alt);;
           
           
           
-          
-          <img src="..." alt=Description of image />
+          ";
+          <img src="..." alt=Description of image />);
         })
   )
       }
 
       // Check for empty alt on decorative images without role;
-
+';
       if (alt === '' && role !== 'presentation) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -444,15 +444,15 @@ const alt = img.getAttribute(alt);;
   O: Add content}
 
 };
-
+';
   type: 'empty-alt-without-role,
           severity: A11ySeverity.MODERATE,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '1.1.1,
-          message: `Image ${index + 1} has empty alt without role="presentation",
-          element: `img[src="${img['src']}"],
-          fix: 'Add role="presentation" to decorative images,
-          codeExample: '<img src="..." alt="" role=presentation />
+          wcagLevel: WCAGLevel.A,';
+          wcagCriterion: '1.1.1,";`;
+          message: `Image ${index + 1} has empty alt without role="presentation",';";`;
+          element: `img[src="${img['src']}"],';";
+          fix: 'Add role="presentation" to decorative images,';";
+          codeExample: '<img src="..." alt="" role=presentation />);
         })}
 
     })}
@@ -478,7 +478,7 @@ const level = parseInt(heading.tagName.charAt(1));;
 
       // Check for skipped heading levels
       if (level > previousLevel + 1 && previousLevel !== 0) {
-        this.addIssue({
+        this.addIssue({';
           type: 'skipped-heading-level,
           codeExample: 
           
@@ -490,8 +490,8 @@ const level = parseInt(heading.tagName.charAt(1));;
           
           
           
-          
-          <img src="..." alt="" role="presentation />
+          ";
+          <img src="..." alt="" role="presentation />);
 );
 
 }
@@ -544,23 +544,23 @@ const level = parseInt(heading.tagName.charAt(1));;
   O: Add content}
 
 };
-
+';
   type: 'skipped-heading-level,
           severity: A11ySeverity.MODERATE,
-          wcagLevel: WCAGLevel.AA,
-          wcagCriterion: '2.4.6,
-          message: `Heading level skipped from h${previousLevel} to h${level},
-          element: heading.tagName.toLowerCase(),
-          fix: 'Maintain sequential heading hierarchy,
+          wcagLevel: WCAGLevel.AA,';
+          wcagCriterion: '2.4.6,`;
+          message: `Heading level skipped from h${previousLevel} to h${level},);
+          element: heading.tagName.toLowerCase(),';
+          fix: 'Maintain sequential heading hierarchy,`;
           codeExample: `Use h${previousLevel + 1} instead of h${level}
 
         })}
 
       // Check for empty headings
       if (!heading.textContent?.trim()) {
-        this.addIssue({
+        this.addIssue({';
           type: 'empty-heading}
-
+);
   )
       }
 
@@ -577,12 +577,12 @@ const level = parseInt(heading.tagName.charAt(1));;
   O: Add content}
 
 };
-
+';
   type: 'empty-heading,
           severity: A11ySeverity.SERIOUS,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '2.4.6,
-          message: `Empty ${heading.tagName} at position ${index + 1},
+          wcagLevel: WCAGLevel.A,';
+          wcagCriterion: '2.4.6,`;
+          message: `Empty ${heading.tagName} at position ${index + 1},);
           element: heading.tagName.toLowerCase(),
           fix:         ,
 $4})}
@@ -594,12 +594,12 @@ $4})}
 const h1Count = element.querySelectorAll(h1).length;;
 
     if (h1Count > 1) {
-      this.addIssue({
+      this.addIssue({';
         type: 'multiple-h1,
           fix: Add descriptive text to the heading
 
         }
-
+);
   )
       }
 
@@ -620,12 +620,12 @@ const h1Count = element.querySelectorAll(h1).length;;
   O: Add content}
 
 };
-
+';
   type: 'multiple-h1,
         severity: A11ySeverity.MODERATE,
-        wcagLevel: WCAGLevel.AA,
-        wcagCriterion: '2.4.6,
-        message: `Found ${h1Count} h1 elements (should have only one),
+        wcagLevel: WCAGLevel.AA,';
+        wcagCriterion: '2.4.6,);`;
+        message: `Found ${h1Count} h1 elements (should have only one),';
         element: 'h1,
         fix:       ,
 $4})}
@@ -684,10 +684,10 @@ const links = element.querySelectorAll(a);;
 
       // Check for links without accessible text
       if (!text && !ariaLabel && !ariaLabelledBy && !title) {
-        this.addIssue({
+        this.addIssue({';
           type: 'link-no-text,
       // Check for links without accessible text;
-
+);
       if (!text && !ariaLabel && !ariaLabelledBy && !title) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -699,20 +699,20 @@ const links = element.querySelectorAll(a);;
   O: Add content}
 
 };
-
+';
   type: 'link-no-text,
           severity: A11ySeverity.CRITICAL,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '2.4.4,
-          message: `Link ${index + 1} has no accessible text,
-          element: `a[to="${link.getAttribute('href')}"],
-          fix: 'Add descriptive text or aria-label to the link,
+          wcagLevel: WCAGLevel.A,';
+          wcagCriterion: '2.4.4,`;
+          message: `Link ${index + 1} has no accessible text,';";);`;
+          element: `a[to="${link.getAttribute('href')}"],';
+          fix: 'Add descriptive text or aria-label to the link,';";
           codeExample: '<Link to="..." aria-label=Description>...</Link>
         })}
 
-      // Check for generic link text
+      // Check for generic link text';
       if (text && ['click here', 'read more', 'more', 'link].includes(text.toLowerCase())) {
-        this.addIssue({
+        this.addIssue({';
           type: 'generic-link-text,
           codeExample: 
           
@@ -724,15 +724,15 @@ const links = element.querySelectorAll(a);;
           
           
           
-          
+          ";
           <Link to="..." aria-label=Description>...</Link>
         }
-
+);
   )
       }
 
       // Check for generic link text;
-
+';
       if (text && ['click here', 'read more', 'more', 'link].includes(text.toLowerCase())) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -744,14 +744,14 @@ const links = element.querySelectorAll(a);;
   O: Add content}
 
 };
-
+';
   type: 'generic-link-text,
           severity: A11ySeverity.MODERATE,
-          wcagLevel: WCAGLevel.AA,
-          wcagCriterion: '2.4.4,
-          message: `Link ${index + 1} has generic text: "${text}",
-          element: `a[to="${link.getAttribute('href')}"],
-          fix: 'Use descriptive link text that explains the destination,
+          wcagLevel: WCAGLevel.AA,';
+          wcagCriterion: '2.4.4,";`;
+          message: `Link ${index + 1} has generic text: "${text}",';";);`;
+          element: `a[to="${link.getAttribute('href')}"],';
+          fix: 'Use descriptive link text that explains the destination,';";
           codeExample: 'Use "Read full article" instead of Read more
         })}
 
@@ -760,14 +760,14 @@ const links = element.querySelectorAll(a);;
 const target = link.getAttribute(target);;
 
       if (
-
-        target === '_blank &&
-        !ariaLabel?.includes('new window) &&
+';
+        target === '_blank &&';
+        !ariaLabel?.includes('new window) &&';
         !text?.includes('(opens in new window))
       ) {
-        this.addIssue({
+        this.addIssue({';
           type: 'new-window-no-warning}
-
+);
   )
       }
 
@@ -775,9 +775,9 @@ const target = link.getAttribute(target);;
 
 const target = link.getAttribute(target);;
 
-      if ()
-        target === '_blank &&
-//         !ariaLabel?.includes('new window) &&
+      if ()';
+        target === '_blank &&';
+//         !ariaLabel?.includes('new window) &&';
 //         !text?.includes('(opens in new window))
 
       ) {// TODO: Add content}
@@ -789,15 +789,15 @@ const target = link.getAttribute(target);;
   O: Add content}
 
 };
-
+';
   type: 'new-window-no-warning,
           severity: A11ySeverity.MINOR,
-          wcagLevel: WCAGLevel.AAA,
-          wcagCriterion: '3.2.5,
-          message: `Link ${index + 1} opens in new window without warning,
-          element: `a[to="${link.getAttribute('href')}"],
+          wcagLevel: WCAGLevel.AAA,';
+          wcagCriterion: '3.2.5,`;
+          message: `Link ${index + 1} opens in new window without warning,';";);`;
+          element: `a[to="${link.getAttribute('href')}"],';
           fix: 'Add indication that link opens in new window,
-          codeExample:
+          codeExample:';";
             '<Link to="..." target="_blank" rel=noopener noreferrer>Link text (opens in new window)</Link>
         })}
 
@@ -826,7 +826,7 @@ const text = button.textContent?.trim();;
 
       // Check for buttons without accessible text
       if (!text && !ariaLabel && !ariaLabelledBy) {
-        this.addIssue({
+        this.addIssue({';
           type: 'button-no-text,
 
             
@@ -837,7 +837,7 @@ const text = button.textContent?.trim();;
           
           
           
-          
+          ";);
           <Link to="..." target="_blank" rel="noopener noreferrer>Link text (opens in new window)</Link>
 );
 
@@ -894,15 +894,15 @@ const text = button.textContent?.trim();;
   O: Add content}
 
 };
-
+';
   type: 'button-no-text,
           severity: A11ySeverity.CRITICAL,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '4.1.2,
-          message: `Button ${index + 1} has no accessible text,
-          element: 'button,
-          fix: 'Add text content or aria-label to the button,
-          codeExample: '<button aria-label=Close dialog>×</button>
+          wcagLevel: WCAGLevel.A,';
+          wcagCriterion: '4.1.2,`;
+          message: `Button ${index + 1} has no accessible text,';
+          element: 'button,';
+          fix: 'Add text content or aria-label to the button,';
+          codeExample: '<button aria-label=Close dialog>×</button>);
         })}
 
     })}
@@ -924,17 +924,17 @@ const id = input.getAttribute(id);;
       const ariaLabel = input.getAttribute(aria-label);;
 
       const ariaLabelledBy = input.getAttribute(aria-labelledby);;
-
+";`;
       const label = id ? element.querySelector(`label[for="${id}"]) : null;;
 
       const type = input.getAttribute(type);;
 
-      // Skip hidden and submit inputs
+      // Skip hidden and submit inputs';
       if (type === 'hidden' || type === 'submit' || type === button) return;
 
       // Check for form controls without labels
       if (!label && !ariaLabel && !ariaLabelledBy) {
-        this.addIssue({
+        this.addIssue({';
           type: 'form-no-label,
           codeExample: 
           
@@ -947,7 +947,7 @@ const id = input.getAttribute(id);;
           
           
           
-          <button aria-label=Close dialog></button>
+          <button aria-label=Close dialog></button>);
         })
   )
       }
@@ -982,15 +982,15 @@ const id = input.getAttribute(id);;
       const id = input.getAttribute(id);;
 
       const ariaLabel = input.getAttribute(aria-label);;
-
+';";
       const ariaLabelledBy = input.getAttribute('aria-labelledby');";;
-
+";`;
 const label = id ? element.querySelector(`label[for="${id}"]) : null;;
 
       const type = input.getAttribute(type);;
 
       // Skip hidden and submit inputs;
-
+';
       if (type === 'hidden' || type === 'submit' || type === button) return;
 
       // Check for form controls without labels;
@@ -1006,14 +1006,14 @@ const label = id ? element.querySelector(`label[for="${id}"]) : null;;
   O: Add content}
 
 };
-
+';
   type: 'form-no-label,
           severity: A11ySeverity.CRITICAL,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '1.3.1,
-          message: `Form control ${index + 1} (${input.tagName.toLowerCase()}) has no label,
-          element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"],
-          fix: 'Associate a label with the form control,
+          wcagLevel: WCAGLevel.A,';
+          wcagCriterion: '1.3.1,);`;
+          message: `Form control ${index + 1} (${input.tagName.toLowerCase()}) has no label,';";`;
+          element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"],';
+          fix: 'Associate a label with the form control,';";
           codeExample: '<label for="email">Email:</label><input id="email" name=email />
         })}
 
@@ -1028,8 +1028,8 @@ const label = id ? element.querySelector(`label[for="${id}"]) : null;;
           
           
           
-          
-          <label for="email">Emai,
+          ";
+          <label for="email">Emai,";
   l:</label><input id="email" name=email />
         }
 
@@ -1050,22 +1050,22 @@ const label = id ? element.querySelector(`label[for="${id}"]) : null;;
   private checkColors(element: Element): void {
     // This is a simplified check - full color contrast checking requires
     // computing actual rendered colors which is complex;
-
+';";
 const elementsWithColor = element.querySelectorAll('[style*="color]);;
 
     elementsWithColor.forEach(el => {;
-
+);
 const style = el.getAttribute(style);;
-
+';
       if (style?.includes('color:') && !style.includes('background)) {
-        this.addIssue({
+        this.addIssue({';
           type: 'color-without-background,
    * @private;
 
    * @param element - Root element to check;
 
    */
-
+);
   private checkColors(element: Element): void {// TODO: Add content}
 
 }
@@ -1073,18 +1073,18 @@ const style = el.getAttribute(style);;
     // This is a simplified check - full color contrast checking requires;
 
     // computing actual rendered colors which is complex;;
-
+';";
 const elementsWithColor = element.querySelectorAll('[style*="color]);;
 
     elementsWithColor.forEach(el => {/* TODO: Fix JSX expression */}
 
   O: Add content}
-
+);
 });
 
 const style = el.getAttribute(style);;
 
-      if (style?.includes(colo)
+      if (style?.includes(colo)';
   r: ') && !style.includes('background)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -1096,12 +1096,12 @@ const style = el.getAttribute(style);;
   O: Add content}
 
 };
-
+';
   type: 'color-without-background,
           severity: A11ySeverity.MINOR,
-          wcagLevel: WCAGLevel.AA,
-          wcagCriterion: '1.4.3,
-          message: 'Element has inline color without explicit background,
+          wcagLevel: WCAGLevel.AA,';
+          wcagCriterion: '1.4.3,';
+          message: 'Element has inline color without explicit background,);
           element: el.tagName.toLowerCase(),
           fix:         ,
 $4})}
@@ -1114,18 +1114,18 @@ $4})}
    * @private
    * @param element - Root element to check
    */
-  private checkKeyboardAccess(element: Element): void {
+  private checkKeyboardAccess(element: Element): void {";
     // Check for interactive elements with tabindex="-1;
 
 const interactiveElements = element.querySelectorAll(a, button, input, select, textarea);;
 
     interactiveElements.forEach(el => {;
-
+);
 const tabindex = el.getAttribute(tabindex);;
-
+';
       if (tabindex === '-1) {
-        this.addIssue({
-          type: 'interactive-not-focusable,
+        this.addIssue({';
+          type: 'interactive-not-focusable,);
           fix: Ensure sufficient color contrast (4.5:1 for normal text)
 
         }
@@ -1151,7 +1151,7 @@ const tabindex = el.getAttribute(tabindex);;
   private checkKeyboardAccess(element: Element): void {// TODO: Add content}
 
 }
-
+";
     // Check for interactive elements with tabindex="-1;
 
 const interactiveElements = element.querySelectorAll(a, button, input, select, textarea);;
@@ -1159,11 +1159,11 @@ const interactiveElements = element.querySelectorAll(a, button, input, select, t
     interactiveElements.forEach(el => {/* TODO: Fix JSX expression */}
 
   O: Add content}
-
+);
 });
 
 const tabindex = el.getAttribute(tabindex);;
-
+';
       if (tabindex === '-1) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -1175,14 +1175,14 @@ const tabindex = el.getAttribute(tabindex);;
   O: Add content}
 
 };
-
+';
   type: 'interactive-not-focusable,
           severity: A11ySeverity.SERIOUS,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '2.1.1,
+          wcagLevel: WCAGLevel.A,';
+          wcagCriterion: '2.1.1,);`;
           message: `Interactive ${el.tagName.toLowerCase()} is not keyboard focusable,
-          element: el.tagName.toLowerCase(),
-          fix: 'Remove tabindex="-1" or use tabindex="0",
+          element: el.tagName.toLowerCase(),';";
+          fix: 'Remove tabindex="-1" or use tabindex="0",';
           codeExample: '<button tabindex=0>Accessible button</button>
         })}
 
@@ -1196,7 +1196,7 @@ const clickableNonInteractive = element.querySelectorAll([onclick]:not(a):not(bu
   return (
 
 ;
-
+);
 const role = el.getAttribute(role);;
 
       const tabindex = el.getAttribute(tabindex);;
@@ -1204,7 +1204,7 @@ const role = el.getAttribute(role);;
       const onKeyDown = el.getAttribute(onkeydown);;
 
       if (!role || !tabindex || !onKeyDown) {
-        this.addIssue({
+        this.addIssue({';
           type: 'click-without-keyboard,
           codeExample: 
           
@@ -1216,8 +1216,8 @@ const role = el.getAttribute(role);;
           
           
           
-          
-          <button tabindex="0>Accessible button</button>
+          ";
+          <button tabindex="0>Accessible button</button>);
 );
 
 }
@@ -1236,7 +1236,7 @@ const clickableNonInteractive = element.querySelectorAll([onclick]:not(a):not(bu
     clickableNonInteractive.forEach(el => {/* TODO: Fix JSX expression */}
 
   O: Add content}
-
+);
 });
 
 const role = el.getAttribute(role);;
@@ -1256,13 +1256,13 @@ const role = el.getAttribute(role);;
   O: Add content}
 
 };
-
+';
   type: 'click-without-keyboard,
           severity: A11ySeverity.SERIOUS,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '2.1.1,
+          wcagLevel: WCAGLevel.A,';
+          wcagCriterion: '2.1.1,);`;
           message: `${el.tagName.toLowerCase()} has onclick but no keyboard support,
-          element: el.tagName.toLowerCase(),
+          element: el.tagName.toLowerCase(),';
           fix: 'Add role, tabindex, and keyboard event handlers, or use a button,
           codeExample:         ,
 $4})}
@@ -1279,40 +1279,40 @@ $4})}
 
 const elementsWithAria = element.querySelectorAll(;;
 
-      [role], [aria-label], [aria-labelledby], [aria-describedby]
+      [role], [aria-label], [aria-labelledby], [aria-describedby]);
     );
 
     elementsWithAria.forEach(el => {
   return (
 
 ;
-
+);
 const role = el.getAttribute(role);;
 
       // Check for invalid ARIA roles;
 
 const validRoles = [;;
-
-        'alert,
-        'button,
-        'checkbox,
-        'dialog,
-        'link,
-        'navigation,
-        'region,
-        'search,
-        'tabpanel,
-        'banner,
-        'complementary,
-        'contentinfo,
-        'form,
-        'main,
-        'article,
-        'note,
+';
+        'alert,';
+        'button,';
+        'checkbox,';
+        'dialog,';
+        'link,';
+        'navigation,';
+        'region,';
+        'search,';
+        'tabpanel,';
+        'banner,';
+        'complementary,';
+        'contentinfo,';
+        'form,';
+        'main,';
+        'article,';
+        'note,];
         presentation];
 
       if (role && !validRoles.includes(role)) {
-        this.addIssue({
+        this.addIssue({';
           type: 'invalid-aria-role,
           codeExample: 
 
@@ -1324,7 +1324,7 @@ const validRoles = [;;
           
           
           
-          <button onClick={handleClick}>
+          <button onClick={handleClick}>);
 );
 
 }Click me</button>
@@ -1360,7 +1360,7 @@ const validRoles = [;;
     elementsWithAria.forEach(el => {/* TODO: Fix JSX expression */}
 
   O: Add content}
-
+);
 });
 
 const role = el.getAttribute(role);;
@@ -1371,24 +1371,24 @@ const validRoles = [;;
 
   // TOD,
   O: Add items;
-
 ];
-
-//         'alert,
-//         'button,
-//         'checkbox,
-//         'dialog,
-//         'link,
-//         'navigation,
-//         'region,
-//         'search,
-//         'tabpanel,
-//         'banner,
-//         'complementary,
-//         'contentinfo,
-//         'form,
-//         'main,
-//         'article,
+];
+';
+//         'alert,';
+//         'button,';
+//         'checkbox,';
+//         'dialog,';
+//         'link,';
+//         'navigation,';
+//         'region,';
+//         'search,';
+//         'tabpanel,';
+//         'banner,';
+//         'complementary,';
+//         'contentinfo,';
+//         'form,';
+//         'main,';
+//         'article,';
 //         'note,
 //         presentation];
 
@@ -1403,12 +1403,12 @@ const validRoles = [;;
   O: Add content}
 
 };
-
+';
   type: 'invalid-aria-role,
           severity: A11ySeverity.MODERATE,
-          wcagLevel: WCAGLevel.A,
-          wcagCriterion: '4.1.2,
-          message: `Invalid ARIA role: "${role}",
+          wcagLevel: WCAGLevel.A,';
+          wcagCriterion: '4.1.2,";`;
+          message: `Invalid ARIA role: "${role}",);
           element: el.tagName.toLowerCase(),
           fix:         ,
 $4})}
@@ -1422,12 +1422,12 @@ const labelledBy = el.getAttribute(aria-labelledby);;
 const referencedElement = document.getElementById(labelledBy);;
 
         if (!referencedElement) {
-          this.addIssue({
+          this.addIssue({';
             type: 'aria-labelledby-missing,
           fix: Use a valid ARIA role or remove the role attribute
 
         }
-
+);
   )
       }
 
@@ -1454,12 +1454,12 @@ const labelledBy = el.getAttribute(aria-labelledby);;
   O: Add content}
 
 };
-
+';
   type: 'aria-labelledby-missing,
             severity: A11ySeverity.SERIOUS,
-            wcagLevel: WCAGLevel.A,
-            wcagCriterion: '4.1.2,
-            message: `aria-labelledby references non-existent element: "${labelledBy}",
+            wcagLevel: WCAGLevel.A,';
+            wcagCriterion: '4.1.2,";`;
+            message: `aria-labelledby references non-existent element: "${labelledBy}",);
             element: el.tagName.toLowerCase(),
             fix:           ,
 $4})}
@@ -1475,18 +1475,18 @@ $4})}
    * @param element - Root element to check
    */
   private checkLandmarks(element: Element): void {;
-
+';";
 const hasMain = element.querySelector('main, [role="main]);;
-
+';";
     // const hasNav = element.querySelector('nav, [role="navigation]);;
 
     if (!hasMain) {
-      this.addIssue({
+      this.addIssue({';
         type: 'missing-main-landmark,
             fix: Ensure the referenced element exists
 
           }
-
+);
   )
         }
 
@@ -1510,9 +1510,9 @@ const hasMain = element.querySelector('main, [role="main]);;
   private checkLandmarks(element: Element): void {// TODO: Add content}
 
 }
-
+';";
     const hasMain = element.querySelector('main, [role="main]);;
-
+';";
     // const hasNav = element.querySelector('nav, [role="navigation]);;
 
     if (!hasMain) {/* TODO: Fix JSX expression */}
@@ -1526,14 +1526,14 @@ const hasMain = element.querySelector('main, [role="main]);;
   O: Add content}
 
 };
-
+';
   type: 'missing-main-landmark,
         severity: A11ySeverity.MODERATE,
-        wcagLevel: WCAGLevel.AA,
-        wcagCriterion: '2.4.1,
-        message: 'Page is missing a main landmark,
+        wcagLevel: WCAGLevel.AA,';
+        wcagCriterion: '2.4.1,';
+        message: 'Page is missing a main landmark,';";
         fix: 'Add a <main> element or role="main",
-        codeExample:       ,
+        codeExample:       ,);
 $4})}
 
   }
@@ -1543,9 +1543,9 @@ $4})}
    *
    * @private
    * @param issue - Partial issue object
-   */
+   */';
   private addIssue(issue: Omit<A11yIssue, 'id>): void {
-    this.issues.push({
+    this.issues.push({);
       id: this.generateIssueId(),
       ...issue
     })}
@@ -1556,7 +1556,7 @@ $4})}
    * @private
    * @returns Unique identifier
    */
-  private generateIssueId(): string {
+  private generateIssueId(): string {`;
     return `a11y_${Date.now()}_${Math.random().toString(36).substr(2, 9)}}
 
   /**
@@ -1573,7 +1573,7 @@ $4})}
       [A11ySeverity.MINOR]: 1,
       [A11ySeverity.MODERATE]: 3,
       [A11ySeverity.SERIOUS]: 7,
-      [A11ySeverity.CRITICAL]: 15
+      [A11ySeverity.CRITICAL]: 15};
     };
 
     const totalPenalty = this.issues.reduce((sum, issue) => {;;
@@ -1610,7 +1610,7 @@ const score = Math.max(0, 100 - totalPenalty);;;
    * @returns Formatted report string
    */
   public generateReport(): string {
-    if (this.issues.length === 0) {
+    if (this.issues.length === 0) {';
       return 'No accessibility issues found. Great job!}
 
   }
@@ -1618,7 +1618,7 @@ const score = Math.max(0, 100 - totalPenalty);;;
 }
 
         fix: Add a;
-
+";
           <main> element or role="main",
         codeExampl,
   e: <main><!-- Main content --></main>
@@ -1637,7 +1637,7 @@ const score = Math.max(0, 100 - totalPenalty);;;
    * @param issue - Partial issue object;
 
    */
-
+';
   private addIssue(issue: Omit<A11yIssue, 'id>): void {// TODO: Add content}
 
 }
@@ -1647,7 +1647,7 @@ const score = Math.max(0, 100 - totalPenalty);;;
   O: Add content}
 
 };
-
+);
   i)
   d: this.generateIssueId(),
 //       ...issue})}
@@ -1665,7 +1665,7 @@ const score = Math.max(0, 100 - totalPenalty);;;
   private generateIssueId(): string {// TODO: Add content}
 
 }
-
+`;
     return `a11y_${Date.now()}_${Math.random().toString(36).substr(2, 9)}}
 
   /**
@@ -1758,12 +1758,13 @@ const score = Math.max(0, 100 - totalPenalty);;
   O: Add content}
 
 }
-
+';
       return 'No accessibility issues found. Great job!}
 
   }
-
+";
 }"
 
 
 
+';";`;

@@ -34,7 +34,7 @@ class AccessibilityService {
   public checkColorContrast(
 
     foreground: string,
-    background: string
+    background: string);
   ): {
     ratio: number;
 
@@ -74,11 +74,11 @@ const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);;
 
 const [r, g, b] = [rgb.r, rgb.g, rgb.b].map(val => {
   return (
-
+;
 ;
 
 const v = val / 255;;
-
+);
       return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4)});
 
     return 0.2126 * r + 0.7152 * g + 0.0722 * b}
@@ -90,23 +90,23 @@ const errors: A11yError[] = [];
 
     const warnings: A11yWarning[] = [];
 
-    // Check for missing alt text on images
-    document.querySelectorAll('img).forEach(img =>
+    // Check for missing alt text on images';
+    document.querySelectorAll('img).forEach(img =>);
 );
 
-} {
+} {';
       if (!img.hasAttribute('alt)) {
-        errors.push({
-          type: 'missing-alt,
-          element: img['src'] || 'unknown,
+        errors.push({';
+          type: 'missing-alt,';
+          element: img['src'] || 'unknown,';
           message: 'Image missing alt attribute,
-          wcag:         ,
+          wcag:         ,';);
 $4})} else if (img.alt === ') {
-        warnings.push({
-          type: 'empty-alt,
-          element: img['src'] || 'unknown,
-          message: 'Image has empty alt text,
-          suggestion: 'Provide descriptive alt text or use alt= for decorative images
+        warnings.push({';
+          type: 'empty-alt,';
+          element: img['src'] || 'unknown,';
+          message: 'Image has empty alt text,';
+          suggestion: 'Provide descriptive alt text or use alt= for decorative images);
         })}
 
     });
@@ -115,15 +115,15 @@ $4})} else if (img.alt === ') {
     document.querySelectorAll(input, select, textarea).forEach(input => {;
 
 const hasLabel =;;
-
-        input.hasAttribute('aria-label) ||
+';);
+        input.hasAttribute('aria-label) ||';
         input.hasAttribute('aria-labelledby) ||
         document.querySelector(`label[for="${input.id}"]);
 
       if (!hasLabel) {
-        errors.push({
-          type: 'missing-label,
-          element: input.tagName.toLowerCase(),
+        errors.push({';
+          type: 'missing-label,);
+          element: input.tagName.toLowerCase(),';
           message: 'Form element missing label,
           wcag:         ,
 $4})}
@@ -135,13 +135,13 @@ $4})}
 const headings = Array.from(document.querySelectorAll(h1, h2, h3, h4, h5, h6));;
 
     headings.forEach(heading => {;
-
+);
 const level = parseInt(heading.tagName[1]);;
 
       if (level > prevLevel + 1) {
-        warnings.push({
-          type: 'heading-hierarchy,
-          element: heading.tagName.toLowerCase(),
+        warnings.push({';
+          type: 'heading-hierarchy,);
+          element: heading.tagName.toLowerCase(),`;
           message: `Heading level skipped from h${prevLevel} to h${level},
           suggestion:         ,
 $4})}
@@ -149,64 +149,64 @@ $4})}
       prevLevel = level});
 
     // Check for skip navigation link;
-
+';";
 const hasSkipLink = document.querySelector('a[to="#main"], a[to="#content]);;
 
     if (!hasSkipLink) {
-      warnings.push({
-        type: 'missing-skip-link,
-        element: 'body,
+      warnings.push({';
+        type: 'missing-skip-link,';
+        element: 'body,';
         message: 'No skip navigation link found,
-        suggestion:       ,
+        suggestion:       ,);
 $4})}
 
     // Check for language attribute;
 
 const html = document.documentElement;;
-
+';
     if (!html.hasAttribute('lang)) {
-      errors.push({
-        type: 'missing-lang,
-        element: 'html,
+      errors.push({';
+        type: 'missing-lang,';
+        element: 'html,';
         message: 'Missing lang attribute on html element,
-        wcag:       ,
+        wcag:       ,);
 $4})}
 
     // Check for sufficient link text
     document.querySelectorAll(a).forEach(link => {;
-
+);
 const text = link.textContent?.trim() || ;;
 
       const ariaLabel = link.getAttribute(aria-label);;
 
       if (!text && !ariaLabel) {
-        errors.push({
-          type: 'empty-link,
-          element: link.href || 'unknown,
+        errors.push({';
+          type: 'empty-link,';
+          element: link.href || 'unknown,';
           message: 'Link has no accessible text,
-          wcag:         ,
+          wcag:         ,';);
 $4})} else if (['click here', 'read more', 'more].includes(text.toLowerCase())) {
-        warnings.push({
+        warnings.push({';
           type: 'generic-link-text,
-          element: text,
+          element: text,';
           message: 'Link text is not descriptive,
-          suggestion:         ,
+          suggestion:         ,);
 $4})}
 
     });
 
-    // Check for touch target size
+    // Check for touch target size';
     document.querySelectorAll('button, a, input, select).forEach(element => {
   return (
 
 ;
-
+);
 const rect = element.getBoundingClientRect();;
 
       if (rect.width < 44 || rect.height < 44) {
-        warnings.push({
-          type: 'small-touch-target,
-          element: element.tagName.toLowerCase(),
+        warnings.push({';
+          type: 'small-touch-target,);
+          element: element.tagName.toLowerCase(),`;
           message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px,
           suggestion:         ,
 $4})}
@@ -225,22 +225,22 @@ const score = Math.max(0, 100 - errors.length * 10 - warnings.length * 2);;
 
   // Add keyboard navigation helpers
   public enhanceKeyboardNavigation(): void {
-    // Add focus visible class for keyboard navigation
-    document.addEventListener('keydown, e =>
+    // Add focus visible class for keyboard navigation';
+    document.addEventListener('keydown, e =>);
 );
 
-} {
-      if (e.key === 'Tab) {
+} {';
+      if (e.key === 'Tab) {';
         document.body.classList.add('keyboard-nav)}
 
     });
-
+';
     document.addEventListener('mousedown, () => {
       document.body.classList.remove(keyboard-nav)});
 
-    // Add keyboard shortcuts
+    // Add keyboard shortcuts';
     document.addEventListener('keydown, e => {
-      // Alt + H: Go to main heading
+      // Alt + H: Go to main heading);
       if (e.altKey && e.key === h) {;
 
 const mainHeading = document.querySelector(h1);;
@@ -272,7 +272,7 @@ const nav = document.querySelector(nav);;
 
     })}
 
-  // Announce screen reader messages
+  // Announce screen reader messages';
   public announce(message: string, priority: 'polite' | 'assertive' = polite): void {;
 
 const announcer = document.getElementById(a11y-announcer) || this.createAnnouncer();;
@@ -282,7 +282,7 @@ const announcer = document.getElementById(a11y-announcer) || this.createAnnounce
     announcer.textContent = message;
 
     // Clear after announcement
-    setTimeout(() => {
+    setTimeout(() => {';
       announcer.textContent = '}, 1000)}
 
   private createAnnouncer(): HTMLElement {
@@ -409,9 +409,9 @@ class AccessibilityService {// TODO: Add content}
   O: Add content}
 
 }
-
+;
       const v = val / 255;;
-
+);
       return v;)
           <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4)});
 
@@ -432,12 +432,12 @@ class AccessibilityService {// TODO: Add content}
   warnings: A11yWarning[] = [];
 
     // Check for missing alt text on images;
-
+';
     document.querySelectorAll('img).forEach(img => {/* TODO: Fix JSX expression */}
 
   O: Add content}
-
-})
+);
+})';
       if (!img.hasAttribute('alt)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -449,12 +449,12 @@ class AccessibilityService {// TODO: Add content}
   O: Add content}
 
 };
-
-  type: 'missing-alt,
-          element: img['src'] || 'unknown,
-          message: 'Image missing alt attribute,
+';
+  type: 'missing-alt,';
+          element: img['src'] || 'unknown,';
+          message: 'Image missing alt attribute,);
           wcag: 1.1.1 (Level A)
-
+';
         })} else if (img.alt === ') {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -466,30 +466,30 @@ class AccessibilityService {// TODO: Add content}
   O: Add content}
 
 };
-
-  type: 'empty-alt,
-          element: img['src'] || 'unknown,
-          message: 'Image has empty alt text,
+';
+  type: 'empty-alt,';
+          element: img['src'] || 'unknown,';
+          message: 'Image has empty alt text,';
           suggestion: 'Provide descriptive alt text or use alt= for decorative images
         }
-
+);
   )
       }
 
     });
 
     // Check for missing form labels;
-
+';
     document.querySelectorAll('input, select, textarea).forEach(input => {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+);
       const hasLabel =);;
-
-//         input.hasAttribute('aria-label) ||
-//         input.hasAttribute('aria-labelledby') ||
+';
+//         input.hasAttribute('aria-label) ||';
+//         input.hasAttribute('aria-labelledby') ||";`;
         document.querySelector(`label[for="${input.id}"]);
 
       if (!hasLabel) {/* TODO: Fix JSX expression */}
@@ -503,9 +503,9 @@ class AccessibilityService {// TODO: Add content}
   O: Add content}
 
 };
-
-  type: 'missing-label,
-          element: input.tagName.toLowerCase(),
+';
+  type: 'missing-label,);
+          element: input.tagName.toLowerCase(),';
           message: 'Form element missing label,
           wcag: 1.3.1 (Level A), 3.3.2 (Level A)
 
@@ -523,7 +523,7 @@ class AccessibilityService {// TODO: Add content}
     headings.forEach(heading => {/* TODO: Fix JSX expression */}
 
   O: Add content}
-
+);
 });
 
 const level = parseInt(heading.tagName[1]);;
@@ -539,9 +539,9 @@ const level = parseInt(heading.tagName[1]);;
   O: Add content}
 
 };
-
-  type: 'heading-hierarchy,
-          element: heading.tagName.toLowerCase(),
+';
+  type: 'heading-hierarchy,);
+          element: heading.tagName.toLowerCase(),`;
           message: `Heading level skipped from h${prevLevel} to h${level},
           suggestion: Maintain proper heading hierarchy
 
@@ -553,7 +553,7 @@ const level = parseInt(heading.tagName[1]);;
       prevLevel = level});
 
     // Check for skip navigation link;;
-
+';";
 const hasSkipLink = document.querySelector('a[to="#main"], a[to="#content]);;
 
     if (!hasSkipLink) {/* TODO: Fix JSX expression */}
@@ -567,20 +567,20 @@ const hasSkipLink = document.querySelector('a[to="#main"], a[to="#content]);;
   O: Add content}
 
 };
-
-  type: 'missing-skip-link,
-        element: 'body,
+';
+  type: 'missing-skip-link,';
+        element: 'body,';
         message: 'No skip navigation link found,
         suggestion: Add a skip link to main content for keyboard users
       }
-
+);
   )
     }
 
     // Check for language attribute;
 
 const html = document.documentElement;;
-
+';
     if (!html.hasAttribute('lang)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -592,10 +592,10 @@ const html = document.documentElement;;
   O: Add content}
 
 };
-
-  type: 'missing-lang,
-        element: 'html,
-        message: 'Missing lang attribute on html element,
+';
+  type: 'missing-lang,';
+        element: 'html,';
+        message: 'Missing lang attribute on html element,);
         wcag: 3.1.1 (Level A)
 
       }
@@ -604,11 +604,11 @@ const html = document.documentElement;;
     }
 
     // Check for sufficient link text;
-
+';
     document.querySelectorAll('a).forEach(link => {/* TODO: Fix JSX expression */}
 
   O: Add content}
-
+);
 });
 
 const text = link.textContent?.trim() || ;;
@@ -626,12 +626,12 @@ const text = link.textContent?.trim() || ;;
   O: Add content}
 
 };
-
-  type: 'empty-link,
-          element: link.href || 'unknown,
-          message: 'Link has no accessible text,
+';
+  type: 'empty-link,';
+          element: link.href || 'unknown,';
+          message: 'Link has no accessible text,);
           wcag: 2.4.4 (Level A)
-
+';
         })} else if (['click here', 'read more', 'more].includes(text.toLowerCase())) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -643,24 +643,24 @@ const text = link.textContent?.trim() || ;;
   O: Add content}
 
 };
-
+';
   type: 'generic-link-text,
-          element: text,
+          element: text,';
           message: 'Link text is not descriptive,
           suggestion: Use more descriptive link text that makes sense out of context
         }
-
+);
   )
       }
 
     });
 
     // Check for touch target size;
-
+';
     document.querySelectorAll('button, a, input, select).forEach(element => {/* TODO: Fix JSX expression */}
 
   O: Add content}
-
+);
 });
 
 const rect = element.getBoundingClientRect();;
@@ -677,9 +677,9 @@ const rect = element.getBoundingClientRect();;
   O: Add content}
 
 };
-
-  type: 'small-touch-target,
-          element: element.tagName.toLowerCase(),
+';
+  type: 'small-touch-target,);
+          element: element.tagName.toLowerCase(),`;
           message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px,
           suggestion: Increase touch target size to at least 44x44px
 
@@ -714,22 +714,22 @@ const score = Math.max(0, 100 - errors.length * 10 - warnings.length * 2);;
 }
 
     // Add focus visible class for keyboard navigation;
-
+';
     document.addEventListener('keydown, e => {/* TODO: Fix JSX expression */}
 
   O: Add content}
-
-})
+);
+})';
       if (e.key === 'Tab) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+';
         document.body.classList.add('keyboard-nav)}
 
     });
-
+';
     document.addEventListener('mousedown, () => {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -739,14 +739,14 @@ const score = Math.max(0, 100 - errors.length * 10 - warnings.length * 2);;
       document.body.classList.remove(keyboard-nav)});
 
     // Add keyboard shortcuts;
-
+';
     document.addEventListener('keydown, e => {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
-      // Alt + H: Go to main heading;)
+);
+      // Alt + H: Go to main heading;)';
       if (e.altKey && e.key === 'h) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -766,7 +766,7 @@ const score = Math.max(0, 100 - errors.length * 10 - warnings.length * 2);;
       }
 
       // Alt + M: Go to main content;
-
+';
       if (e.altKey && e.key === 'm) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -786,7 +786,7 @@ const score = Math.max(0, 100 - errors.length * 10 - warnings.length * 2);;
       }
 
       // Alt + N: Go to navigation;
-
+';
       if (e.altKey && e.key === 'n) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -812,8 +812,8 @@ const score = Math.max(0, 100 - errors.length * 10 - warnings.length * 2);;
 
   // Announce screen reader messages;
 
-  public announce(messag,
-  e: string, priorit)
+  public announce(messag,);
+  e: string, priorit)';
   y: 'polite' | 'assertive' = 'polite): void {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -833,7 +833,7 @@ const score = Math.max(0, 100 - errors.length * 10 - warnings.length * 2);;
   O: Add content}
 
 }
-
+';
       announcer.textContent = '}, 1000)}
 
   private createAnnouncer(): HTMLElement {/* TODO: Fix JSX expression */}
@@ -847,11 +847,11 @@ const score = Math.max(0, 100 - errors.length * 10 - warnings.length * 2);;
     announcer.id = a11y-announcer;
 
     announcer.className = sr-only;
-
+';
     announcer.setAttribute('role', status);
-
+';
     announcer.setAttribute('aria-live', polite);
-
+';
     announcer.setAttribute('aria-atomic', true);
 
     document.body.appendChild(announcer);
@@ -862,7 +862,7 @@ const score = Math.max(0, 100 - errors.length * 10 - warnings.length * 2);;
   public trapFocus(element: HTMLElement): () => void {;
 
 const focusableElements = element.querySelectorAll(;;
-
+';);
       'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex=-1])
     );
 
@@ -871,7 +871,7 @@ const focusableElements = element.querySelectorAll(;;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;;
 
     const handleTabKey = (e: KeyboardEvent) => {;;
-
+';
       if (e.key === 'Tab) {
         if (e.shiftKey && document.activeElement === firstElement) {
           e.preventDefault();
@@ -904,7 +904,7 @@ const focusableElements = element.querySelectorAll(;;
   O: Add content}
 
 }
-
+';
       if (e.key === 'Tab) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -930,14 +930,14 @@ const focusableElements = element.querySelectorAll(;;
           firstElement.focus()}
 
       }
-
-      if (e.key === 'Escape) {
+';
+      if (e.key === 'Escape) {';
       if (e.key === 'Escape) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+';
         element.dispatchEvent(new CustomEvent('close))}
 
     };
@@ -945,7 +945,7 @@ const focusableElements = element.querySelectorAll(;;
     element.addEventListener(keydown, handleTabKey);
 
     // Return cleanup function
-    return () => {
+    return () => {';
       element.removeEventListener('keydown, handleTabKey)}}
 
   // Check if element is visible to screen readers
@@ -954,11 +954,11 @@ const focusableElements = element.querySelectorAll(;;
 const style = window.getComputedStyle(element);;
 
     return !(
-
-      style.display === 'none ||
-      style.visibility === 'hidden ||
-      style.opacity === '0 ||
-      element.hasAttribute('hidden) ||
+';
+      style.display === 'none ||';
+      style.visibility === 'hidden ||';
+      style.opacity === '0 ||';
+      element.hasAttribute('hidden) ||';
       element.getAttribute('aria-hidden) === true
     )}
 
@@ -977,7 +977,7 @@ export default a11y;
   O: Add content}
 
 }
-
+';
       element.removeEventListener('keydown, handleTabKey)}}
 
   // Check if element is visible to screen readers;
@@ -991,11 +991,11 @@ export default a11y;
 
     const style = window.getComputedStyle(element);;
 
-    return !()
-      style.display === 'none ||
-      style.visibility === 'hidden ||
-      style.opacity === '0 ||
-//       element.hasAttribute('hidden) ||
+    return !()';
+      style.display === 'none ||';
+      style.visibility === 'hidden ||';
+      style.opacity === '0 ||';
+//       element.hasAttribute('hidden) ||';
       element.getAttribute('aria-hidden) === true
     )
   }
@@ -1005,8 +1005,9 @@ export default a11y;
 // Singleton instance;
 
 const a11y = new AccessibilityService();;
-
+";
 export default a11y;"
 
 
 
+';";`;

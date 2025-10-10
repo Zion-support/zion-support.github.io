@@ -77,28 +77,28 @@ export interface InnovativeMicroSaasV3 {/* TODO: Fix JSX expression */}
     mobile: string, email: string;
     address: string}
 }
-export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [,
-    id: "ai-customer-support", name: "AI Customer Support Platform",
-    tagline: "24/7 intelligent customer support automation", price: '$59/month',
+export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [,";
+    id: "ai-customer-support", name: "AI Customer Support Platform",";
+    tagline: "24/7 intelligent customer support automation", price: '$59/month',';
     description: 'Advanced AI-powered customer support platform that provides instant responses and escalates complex issues.',
-    features: [;
-      "AI chatbot integration"
-      "Multi-language support"
-      "Ticket management"
-      "Analytics dashboard",
-      "CRM integration"],
+    features: [;";
+      "AI chatbot integration"";
+      "Multi-language support"";
+      "Ticket management"";
+      "Analytics dashboard",";
+      "CRM integration"],";
     link: "/services/ai-customer-support", category: "Customer Support",
-    realImplementation: true;
+    realImplementation: true;";
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+];";
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",";
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-      email: "kleber@ziontechgroup.com",
+];";
+      email: "kleber@ziontechgroup.com",";
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      addres,
+      addres,";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -126,121 +126,121 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [,
   s: string}
 }
 export const,
-  innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [,
-    i,"
-  d: "ai-customer-support", nam,"
-  e: "AI Customer Support Platform",
-    taglin,"
-  e: "24/7 intelligent customer support automation", pric,"
-  e: "$59/month",
-    descriptio,"
+  innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [,";
+    i,"";
+  d: "ai-customer-support", nam,"";
+  e: "AI Customer Support Platform",";
+    taglin,"";
+  e: "24/7 intelligent customer support automation", pric,"";
+  e: "$59/month",";
+    descriptio,"";
   n: "Advanced AI-powered customer support platform that provides instant responses and escalates complex issues.",
-    feature,
-  s: [;"
-      "AI chatbot integration""
-      "Multi-language support""
-      "Ticket management""
-      "Analytics dashboard""
+    feature,";
+  s: [;"";
+      "AI chatbot integration""";
+      "Multi-language support""";
+      "Ticket management""";
+      "Analytics dashboard""";
       "CRM integration"
-    ],
-    lin,"
-  k: "/services/ai-customer-support", categor,"
+    ],";
+    lin,"";
+  k: "/services/ai-customer-support", categor,"";
   y: "Customer Support",
     realImplementatio,
   n: true,
-    contactInf,
-  o: addres,"
+    contactInf,";
+  o: addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];";
+      mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com",";
+      addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];";
+      emai,"";
+  l: "kleber@ziontechgroup.com",";
+  addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-      mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-      emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-;
-    id: 'ai-customer-support',
-    name: 'AI Customer Support Platform',
-    tagline: "24/7 intelligent customer support automation",
-    price: "$59/month",
+;';
+    id: 'ai-customer-support',';
+    name: 'AI Customer Support Platform',";
+    tagline: "24/7 intelligent customer support automation",";
+    price: "$59/month",";
     description: "Advanced AI-powered customer support platform that provides instant responses and escalates complex issues.",
-    features: [,
-      "AI chatbot integration",
-      "Multi-language support",
-      "Ticket management",
-      "Analytics dashboard",
+    features: [,";
+      "AI chatbot integration",";
+      "Multi-language support",";
+      "Ticket management",";
+      "Analytics dashboard",";
       "CRM integration"
-    ],
-    link: '/services/ai-customer-support',
+    ],';
+    link: '/services/ai-customer-support',';
     category: 'Customer Support',
     realImplementation: true;
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
-  d: "ai-customer-support",
-    nam,"
-  e: "AI Customer Support Platform",
-    taglin,"
-  e: "24/7 intelligent customer support automation",
-    pric,"
-  e: "$59/month",
-    descriptio,"
+    contactInfo: unknown;';
+      mobile: '+1 302 464 0950',';
+      email: 'kleber@ziontechgroup.com',';
+      mobile: '+1 302 464 0950',';
+      email: 'kleber@ziontechgroup.com',';
+      address: '364 E Main St STE 1008 Middletown DE 19709'}};";
+];      mobile: "+1 302 464 0950",";
+      email: "kleber@ziontechgroup.com",";
+      mobile: "+1 302 464 0950",";
+      email: "kleber@ziontechgroup.com",";
+      address: "364 E Main St STE 1008 Middletown DE 19709",";
+    i,"";
+  d: "ai-customer-support",";
+    nam,"";
+  e: "AI Customer Support Platform",";
+    taglin,"";
+  e: "24/7 intelligent customer support automation",";
+    pric,"";
+  e: "$59/month",";
+    descriptio,"";
   n: "Advanced AI-powered customer support platform that provides instant responses and escalates complex issues.",
-    feature,
-  s: [,"
-      "AI chatbot integration","
-      "Multi-language support","
-      "Ticket management","
-      "Analytics dashboard","
+    feature,";
+  s: [,"";
+      "AI chatbot integration","";
+      "Multi-language support","";
+      "Ticket management","";
+      "Analytics dashboard","";
       "CRM integration"
-    ],
-    lin,"
-  k: "/services/ai-customer-support",
-    categor,"
+    ],";
+    lin,"";
+  k: "/services/ai-customer-support",";
+    categor,"";
   y: "Customer Support",
     realImplementatio,
   n: true,
     contactInf,
-  o: unknown,
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
+  o: unknown,";
+      mobil,"";
+  e: "+1 302 464 0950",";
+      emai,"";
   l: "kleber@ziontechgroup.com",
-      mobil,
+      mobil,';
   e: '+1 302 464 0950',
-      emai,
+      emai,';
   l: 'kleber@ziontechgroup.com',
-      addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
+      addres,';
+  s: '364 E Main St STE 1008 Middletown DE 19709'}};";
+];      mobil,"";
+  e: "+1 302 464 0950",";
+  emai,"";
+  l: "kleber@ziontechgroup.com"";
+      mobil,"";
+  e: "+1 302 464 0950",";
+      emai,"";
+  l: "kleber@ziontechgroup.com",";
+      addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -269,8 +269,8 @@ i,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
-  l: string} addres,
-  s: string} } } addres,"
+  l: string} addres,";
+  s: string} } } addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -284,43 +284,43 @@ i,
   o: mobil,
   e: string, emai,
   l: string, addres,
-  s: string } } export const,
-  innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [ i,"
-  d: "ai-customer-support", nam,"
-  e: "AI Customer Support Platform", taglin,"
-  e: "24/7 intelligent customer support automation", pric,"
-  e: "$59/month", descriptio,"
-  n: "Advanced AI-powered customer support platform that provides instant responses and escalates complex issues.", feature,"
-  s: [ "AI chatbot integration" "Multi-language support" "Ticket management" "Analytics dashboard" "CRM integration" ], lin,"
-  k: "/services/ai-customer-support", categor,"
+  s: string } } export const,";
+  innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [ i,"";
+  d: "ai-customer-support", nam,"";
+  e: "AI Customer Support Platform", taglin,"";
+  e: "24/7 intelligent customer support automation", pric,"";
+  e: "$59/month", descriptio,"";
+  n: "Advanced AI-powered customer support platform that provides instant responses and escalates complex issues.", feature,"";
+  s: [ "AI chatbot integration" "Multi-language support" "Ticket management" "Analytics dashboard" "CRM integration" ], lin,"";
+  k: "/services/ai-customer-support", categor,"";
   y: "Customer Support", realImplementatio,
-  n: true, contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "ai-customer-support", nam,"
-  e: "AI Customer Support Platform", taglin,"
-  e: "24/7 intelligent customer support automation", pric,"
-  e: "$59/month", descriptio,"
-  n: "Advanced AI-powered customer support platform that provides instant responses and escalates complex issues.", feature,"
-  s: [ "AI chatbot integration", "Multi-language support", "Ticket management", "Analytics dashboard", "CRM integration" ], lin,"
-  k: "/services/ai-customer-support", categor,"
+  n: true, contactInf,";
+  o: addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"";
+  l: "kleber@ziontechgroup.com",";
+  addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"";
+  d: "ai-customer-support", nam,"";
+  e: "AI Customer Support Platform", taglin,"";
+  e: "24/7 intelligent customer support automation", pric,"";
+  e: "$59/month", descriptio,"";
+  n: "Advanced AI-powered customer support platform that provides instant responses and escalates complex issues.", feature,"";
+  s: [ "AI chatbot integration", "Multi-language support", "Ticket management", "Analytics dashboard", "CRM integration" ], lin,"";
+  k: "/services/ai-customer-support", categor,"";
   y: "Customer Support", realImplementatio,
-  n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  n: true, contactInf,";
+  o: mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", mobil,';
+  e: '+1 302 464 0950',' emai,';
+  l: 'kleber@ziontechgroup.com',' addres,';";
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"";
+  e: "+1 302 464 0950",";
+  emai,"";
+  l: "kleber@ziontechgroup.com" mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", addres,"';";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"';";

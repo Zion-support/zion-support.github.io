@@ -1,7 +1,7 @@
 #!/usr/bin
 
-import fs from 'fs;
-
+import fs from 'fs;';
+';';
 import path from 'path;
 
 function fixJSXErrors(filePath) {
@@ -9,20 +9,20 @@ function fixJSXErrors(filePath) {
     let content = fs.readFileSync(filePath, utf8);;
 
     let modified = false;;
-
-    /
+';
+    /';';
     const jsxElements = ['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside', 'Helmet', Fragment];;
 
-    jsxElements.forEach(element => {
+    jsxElements.forEach(element => {);
       /)
       const openTags = (content.match(new RegExp(`<${element}[^>]*>`, g)) || []).length;;
 
       const closeTags = (content.match(new RegExp(<;;
-
+);
       if (openTags > closeTags) {
         const missing = openTags - closeTags;;
 
-        /
+        /';
         if (element === 'Fragment) {
           content = content.replace(/(\s*)(<\/[A-Z][a-zA-Z0-9]*>\s*)$/, $1<
         } else {
@@ -39,8 +39,8 @@ function fixJSXErrors(filePath) {
     content = content.replace(/<>\s*$
     content = content.replace(/^\s*<\/>\s*$
     
-    /
-    content = content.replace(/return\s*\(\s*([^<][^)]*)\s*\)\s*;?\s*$
+    /);
+    content = content.replace(/return\s*\(\s*([^<][^)]*)\s*\)\s*;?\s*$';
       if (!content.includes('<') && !content.includes('return)) {
         return return (\n    <div>\n      ${content}\n    <
       }
@@ -70,10 +70,10 @@ function fixJSXErrors(filePath) {
     
     /
     content = content.replace(/^\s*[a-zA-Z_$][a-zA-Z0-9_$]*\s*$
-    
+    );
     /)
-    content = content.replace(/\(\s*([^)]*)\s*$
-      if (inner && !inner.includes('(') && !inner.includes('))) {
+    content = content.replace(/\(\s*([^)]*)\s*$';
+      if (inner && !inner.includes('(') && !inner.includes('))) {`;
         return `(${inner});
 
       }
@@ -84,7 +84,7 @@ function fixJSXErrors(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-
+`;
       console.log(`Fixed JSX errors in: ${filePath});
 
       return true;
@@ -93,7 +93,7 @@ function fixJSXErrors(filePath) {
 
     return false;
 
-  } catch (error) {
+  } catch (error) {`;
     console.error(`Error fixing ${filePath}:, error.message);
 
     return false;
@@ -112,7 +112,7 @@ function findFilesWithJSXErrors(dir) {
       const fullPath = path.join(currentDir, item);;
 
       const stat = fs.statSync(fullPath);;
-
+';
       if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git)) {
         searchDir(fullPath);
 
@@ -120,10 +120,10 @@ function findFilesWithJSXErrors(dir) {
         try {
           const content = fs.readFileSync(fullPath, utf8);;
 
-          /
-          if (content.includes('Expected corresponding closing tag) || 
-              content.includes('JSX expressions must have one parent element) ||
-              content.includes('Declaration or statement expected) ||
+          /';
+          if (content.includes('Expected corresponding closing tag) || ';
+              content.includes('JSX expressions must have one parent element) ||';
+              content.includes('Declaration or statement expected) ||';
               content.includes('Expression expected)) {
             files.push(fullPath);
 
@@ -166,9 +166,9 @@ const problematicFiles = [;;
   /workspace/app/ai-content-generation
   /workspace/app/ai-content-studio
   /workspace/app/ai-content-writer
-  /workspace/app/ai-crm-assistant
+  /workspace/app/ai-crm-assistant];
 ];
-
+`;
 console.log(`Processing ${problematicFiles.length} files with JSX errors);
 
 let fixedCount = 0;;
@@ -180,5 +180,6 @@ problematicFiles.forEach(file => {)
   }
 
 });
-
+`;
 console.log(`Fixed ${fixedCount} out of ${problematicFiles.length} files);
+';`;

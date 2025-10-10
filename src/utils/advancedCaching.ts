@@ -50,7 +50,7 @@ class AdvancedCache;
 
   private,
   options: Required<CacheOptions>;
-
+';
   private storageKey = 'advanced-cache;
 
   constructor(_option)
@@ -68,13 +68,13 @@ class AdvancedCache;
 
   tt,
   l: options.ttl || 5 * 60 * 1000, // Default 5 minutes,
-  storag,
+  storag,';
   e: options.storage || 'memory',
       maxSiz,
   e: options.maxSize || 100};
 
     // Load from persistent storage if needed;
-
+';
     if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -92,7 +92,7 @@ class AdvancedCache;
   O: Add content}
 
 }
-
+';
     if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -116,7 +116,7 @@ class AdvancedCache;
   O: Add content}
 
 }
-
+';
     if (typeof window === 'undefined) return;
 
     try {const data = storage?.getItem(this.storageKey)};;
@@ -148,7 +148,7 @@ class AdvancedCache;
   O: Add content}
 
 }
-
+';
     if (typeof window === 'undefined' || this.options.storage === 'memory) return;
 
     try {/* TODO: Fix JSX expression */}
@@ -185,15 +185,15 @@ class AdvancedCache;
   O: Add content}
 
 }
-
+';
     if (typeof window === 'undefined) return null;
-
+';
     if (this.options.storage === 'localStorage') {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+';
       return window.localStorage} else if (this.options.storage === 'sessionStorage') {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -229,7 +229,7 @@ class AdvancedCache;
 //       value,
 //       expiry,
 
-      hits: 0,
+      hits: 0,);
       lastAccessed: Date.now()
 
     });
@@ -239,7 +239,7 @@ class AdvancedCache;
     this.updateAccessOrder(key);
 
     // Save to storage if needed;
-
+';
     if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -335,7 +335,7 @@ class AdvancedCache;
     this.cache.clear();
 
     this.accessOrder = [];
-
+';
     if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -426,7 +426,7 @@ class AdvancedCache;
     });
 
     keysToDelete.forEach(key => this.delete(key));
-
+';
     if (keysToDelete.length > 0 && this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -495,7 +495,7 @@ class AdvancedCache;
 //         key,
         hit,
   s: entry.hits,
-        ag,
+        ag,);
   e: now - entry.lastAccessed;)
       })});
 
@@ -563,3 +563,4 @@ export function createCache;
 // Export default cache instance;
 
 export const defaultCache = new AdvancedCache();;
+';

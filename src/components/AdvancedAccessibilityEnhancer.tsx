@@ -67,7 +67,7 @@ const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expre
     }
 
     // Apply font scaling;
-
+';
     root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : 1)}, [accessibilitySettings]);
 
   // Keyboard navigation enhancement;
@@ -79,7 +79,7 @@ const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expre
       }
 
       // Escape key to close modals/dropdowns;
-
+';
       if (event.key === 'Escape) {/* TODO: Fix JSX expression */}
 
         }
@@ -87,7 +87,7 @@ const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expre
       }
 
       // Arrow keys for menu navigation;
-
+';
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp) {/* TODO: Fix JSX expression */}
 
         }
@@ -145,7 +145,7 @@ const originalPushState = history.pushState;;
       return () => element.removeEventListener(keydown, handleTabKey)};
 
     // Apply focus trap to modals;
-
+';
     const modals = document.querySelectorAll('[role="dialog]);;
 
     modals.forEach(modal => {/* TODO: Fix JSX expression */})
@@ -156,7 +156,7 @@ const originalPushState = history.pushState;;
   const enhanceARIALabels = useCallback(() => {/* TODO: Fix JSX expression */};;
 
       } else {/* TODO: Fix JSX expression */}
-
+';
         button.setAttribute('aria-label', `Button ${index + 1})}
 
     });
@@ -168,7 +168,7 @@ const originalPushState = history.pushState;;
   g:not([alt]));
 
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}
-
+';`;
       img.setAttribute('alt', `Image ${index + 1})});
 
     // Add ARIA labels to form inputs;
@@ -182,7 +182,7 @@ const originalPushState = history.pushState;;
       } else if (label) {/* TODO: Fix JSX expression */}
 
       } else {/* TODO: Fix JSX expression */}
-
+';`;
         input.setAttribute('aria-label', `Input ${index + 1})}
 
     })}, []);
@@ -190,13 +190,13 @@ const originalPushState = history.pushState;;
   // Skip links;
 
   const addSkipLinks = useCallback(() => {/* TODO: Fix JSX expression */};;
-
+';
   t: 'Skip to main content },
       {/* TODO: Fix JSX expression */}
-
+';
   t: 'Skip to navigation },
       {/* TODO: Fix JSX expression */}
-
+';
   t: 'Skip to footer }
 
     ];
@@ -206,7 +206,7 @@ const originalPushState = history.pushState;;
 const skipLinksContainer = document.createElement(div);;
 
     skipLinksContainer.className = skip-links;
-
+';
     skipLinksContainer.setAttribute('aria-label', Skip links);
 
     skipLinks.forEach(({ href, text }) => {/* TODO: Fix JSX expression */}
@@ -232,15 +232,15 @@ const elements = document.querySelectorAll(p, h1, h2, h3, h4, h5, h6, span, div)
   // Voice navigation support;
 
   const setupVoiceNavigation = useCallback(() => {/* TODO: Fix JSX expression */};;
-
+';
       } else if (command.includes('go to about)) {/* TODO: Fix JSX expression */}
-
+';
       } else if (command.includes('go to contact)) {/* TODO: Fix JSX expression */}
-
+';
       } else if (command.includes('go to services)) {/* TODO: Fix JSX expression */}
-
+';
       } else if (command.includes('call phone)) {/* TODO: Fix JSX expression */}
-
+';
       } else if (command.includes('send email)) {/* TODO: Fix JSX expression */}
 
       }
@@ -254,13 +254,13 @@ const elements = document.querySelectorAll(p, h1, h2, h3, h4, h5, h6, span, div)
     voiceButton.textContent = Voice Navigation;
 
     voiceButton.className = voice-navigation-button;
-
+';
     voiceButton.setAttribute('aria-label', Start voice navigation);
 
     voiceButton.onclick = () => recognition.start();
 
     ;
-
+';
 const header = document.querySelector('header') || document.querySelector(nav);;
 
     if (header) {/* TODO: Fix JSX expression */}
@@ -302,5 +302,5 @@ const header = document.querySelector('header') || document.querySelector(nav);;
   }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation]);
 
   return null};
-
-export default AdvancedAccessibilityEnhancer;"`
+";`;
+export default AdvancedAccessibilityEnhancer;"`';";`;

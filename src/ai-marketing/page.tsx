@@ -1,11 +1,11 @@
 'use client;
-
-import React from 'react;
-
-import { Target, ArrowRight } from 'lucide-react;
-
-import Navigation from '../components/Navigation;
-
+';
+import React from 'react;';
+';';
+import { Target, ArrowRight } from 'lucide-react;';
+';';
+import Navigation from '../components/Navigation;';
+';';
 import Footer from '../components/Footer;
 
 export default function AIMarketingPage() {
@@ -36,4 +36,5 @@ export default function AIMarketingPage() {
         </div>
       </div>
     </div>
-  )}
+  )}';
+';';

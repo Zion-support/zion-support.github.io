@@ -1,11 +1,11 @@
-import fs from 'fs;
-
-import path from 'path;
-
+import fs from 'fs;';
+';';
+import path from 'path;';
+';';
 import { execSync } from 'child_process;
 
-// Get all TypeScript/JavaScript files;
-
+// Get all TypeScript/JavaScript files;';
+';';
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', .jsx]) {;
 
 let results = [];;
@@ -20,10 +20,10 @@ const filePath = path.join(dir, file);;
 
     if (stat && stat.isDirectory()) {
       // Skip node_modules and other common directories;
-
+';
       if (!['node_modules', '.git', 'dist', '.next', 'out].includes(file)) {
         results = results.concat(getAllFiles(filePath, extensions));
-
+';
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx]) {/* TODO: Fix JSX expression */}
 
       }
@@ -50,14 +50,14 @@ let content = fs.readFileSync(filePath, utf8);;
     // Get unused imports using ESLint;
 
     try {;
-
+';
 const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config='{"extends":["@typescript-eslint/recommended"],"parser":"@typescript-eslint/parser","rules":{"@typescript-eslint/no-unused-vars":"error"}}', { );;
-
+';
         encoding: 'utf8),
         stdio: pipe,;
 
 function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
-
+';";`;
       const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config='{"extends":["@typescript-eslint/recommended"],"parser":"@typescript-eslint/parser","rules":{"@typescript-eslint/no-unused-vars":"error"}}', {/* TODO: Fix JSX expression */});;
 
       });
@@ -71,8 +71,8 @@ const lintResults = JSON.parse(result);;
       ;
 
 const unusedVars = lintResults[0].messages;;
-
-        .filter(msg => msg.ruleId === '@typescript-eslint/no-unused-vars' && msg.message.includes('is defined but never used))
+';
+        .filter(msg => msg.ruleId === '@typescript-eslint/no-unused-vars' && msg.message.includes('is defined but never used))';
         .map(msg => msg.message.match(/'([^']+)/)?.[1])
         .filter(Boolean);
 
@@ -84,20 +84,20 @@ const unusedVars = lintResults[0].messages;;
 
       const newLines = lines.filter(line => {);;
 
-        // Check if line is an import statement;)
+        // Check if line is an import statement;)';
         if (line.trim().startsWith('import )) {
           // Check if any of the unused vars are in this import;
 
           const hasUnusedVar = unusedVars.some(varName => );;;
-
-            line.includes(`{ ${varName}) || 
-            line.includes(`{${varName}) ||
-            line.includes(` ${varName},) ||
-            line.includes(` ${varName} ) ||
-            line.includes(`,${varName}) ||
-            line.includes(`, ${varName}) ||
-            line.includes(`${varName},) ||
-            line.includes(`${varName} ) ||
+`;
+            line.includes(`{ ${varName}) || `;
+            line.includes(`{${varName}) ||`;
+            line.includes(` ${varName},) ||`;
+            line.includes(` ${varName} ) ||`;
+            line.includes(`,${varName}) ||`;
+            line.includes(`, ${varName}) ||`;
+            line.includes(`${varName},) ||`;
+            line.includes(`${varName} ) ||';`;
             line.includes(`${varName}`) && line.includes('from)
           );
 
@@ -119,15 +119,15 @@ const imports = importMatch[1].split(,).map(imp => imp.trim());;
                 const newImportList = usedImports.join(, );;
 
       const newLines = lines.filter(line => {/* TODO: Fix JSX expression */});;
-
-            line.includes(`{ ${varName}`) || 
-            line.includes(`{${varName}`) ||
-            line.includes(` ${varName},`) ||
-            line.includes(` ${varName} `) ||
-            line.includes(`,${varName}`) ||
-            line.includes(`, ${varName}`) ||
-            line.includes(`${varName},`) ||
-            line.includes(`${varName} `) ||
+`;
+            line.includes(`{ ${varName}`) || `;
+            line.includes(`{${varName}`) ||`;
+            line.includes(` ${varName},`) ||`;
+            line.includes(` ${varName} `) ||`;
+            line.includes(`,${varName}`) ||`;
+            line.includes(`, ${varName}`) ||`;
+            line.includes(`${varName},`) ||`;
+            line.includes(`${varName} `) ||';`;
             line.includes(`${varName}`) && line.includes('from)
           );
 
@@ -138,7 +138,7 @@ const imports = importMatch[1].split(,).map(imp => imp.trim());;
             if (importMatch) {/* TODO: Fix JSX expression */}
 
               } else {/* TODO: Fix JSX expression */}
-
+`;
                 return line.replace(importMatch[0], `import { ${newImportList} } from)}
 
             }
@@ -176,14 +176,14 @@ const newContent = newLines.join(\n);;
 
 // console.log removed for production
 ;
-
+';
 const files = getAllFiles('.', ['.ts', '.tsx', '.js', .jsx]);;
 
-  .filter(file => )
-    !file.includes('node_modules) && 
-    !file.includes('.git) &&
-    !file.includes('dist) &&
-    !file.includes('.next) &&
+  .filter(file => )';
+    !file.includes('node_modules) && ';
+    !file.includes('.git) &&';
+    !file.includes('dist) &&';
+    !file.includes('.next) &&';
     !file.includes('out)
   );
 
@@ -196,9 +196,9 @@ files.forEach(file => {)
     fixedCount++}
 
 files.forEach(file => {/* TODO: Fix JSX expression */}
-
+);
   })
 });
 
-// console.log removed for production
-}"`
+// console.log removed for production";`;
+}"`';";`;

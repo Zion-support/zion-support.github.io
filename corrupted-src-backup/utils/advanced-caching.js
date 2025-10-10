@@ -151,7 +151,7 @@ const _now = Date.now();;
   }
 
   removeFromStorage(key) {/* TODO: Fix JSX expression */}
-
+`;
       localStorage.removeItem(`cache_${key})} catch (error) {/* TODO: Fix JSX expression */}
 
       //       }
@@ -186,7 +186,7 @@ const _keys = Object.keys(localStorage);;
 
       keys.forEach(key => {
   return (
-
+);
 )
         if (key.startsWith(cache_)) {;
 
@@ -195,7 +195,7 @@ const _item = JSON.parse(localStorage.getItem(key));;
           if (item && item.expiry>now</expiry>
 );
 
-}) {
+}) {';
             //             const cacheKey = key.replace('cache_', );;
 
             this.cache.set(cacheKey, item.value);
@@ -221,7 +221,7 @@ const _item = JSON.parse(localStorage.getItem(key));;
 
   setupMemoryPressureHandling() {
     // Monitor memory usage;
-
+';
     if ('memory in performance) {
       setInterval(() => {;
 
@@ -393,5 +393,5 @@ export default cacheSystem;
 // Global cache instance;
 
 window.cacheSystem = cacheSystem;
-
-`
+`;
+`';`;

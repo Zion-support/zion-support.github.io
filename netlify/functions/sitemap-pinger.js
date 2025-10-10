@@ -9,7 +9,7 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 200;
 
-      body: JSON.stringify({)
+      body: JSON.stringify({)';
         message: 'Sitemap pinged successfully'),
         sitemapUrl),
         timestamp: new Date().toISOString()})
@@ -17,7 +17,7 @@ exports.handler = async (event, context) => {
     return {
       statusCode: 500;
 
-      body: JSON.stringify({),
+      body: JSON.stringify({),';
         error: 'Failed to ping sitemap'),
         message: error.message;
 
@@ -30,3 +30,4 @@ exports.handler = async (event, context) => {/* TODO: Fix JSX expression */}
     }}
 
 };
+';

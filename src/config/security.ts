@@ -18,49 +18,49 @@ export const _securityHeaders = {// TODO: Add content};;
 
 // defaultSr,
   c: ["'self'"],
-// scriptSr,
-  c: ["
-// "'self'","
-// "'unsafe-inline'","
-// "'unsafe-eval'",
-// 'http,
-  s://www.googletagmanager.com',
-// 'http,
+// scriptSr,";
+  c: ["';";
+// "'self'","';";
+// "'unsafe-inline'","';";
+// "'unsafe-eval'",';
+// 'http,';
+  s://www.googletagmanager.com',';
+// 'http,';
   s://www.google-analytics.com',
-// ],
-// styleSr,"
-  c: ["'self'", "'unsafe-inline'", 'http,
-  s://fonts.googleapis.com'],
-// fontSr,"
-  c: ["'self'", 'http,
-  s://fonts.gstatic.com'],
-// imgSr,"
-  c: ["'self'", 'dat,
-  a:', 'http,
-  s:', 'blo,
-  b: '],
+// ],";
+// styleSr,"';";
+  c: ["'self'", "'unsafe-inline'", 'http,';
+  s://fonts.googleapis.com'],";
+// fontSr,"';";
+  c: ["'self'", 'http,';
+  s://fonts.gstatic.com'],";
+// imgSr,"';";
+  c: ["'self'", 'dat,';
+  a:', 'http,';
+  s:', 'blo,';
+  b: '],';
 // connectSr,',
-  c:
-        c: ["'self'", 'http,
-  s://www.google-analytics.com', 'http,
-  s://analytics.google.com'],
-// frameSr,"
-  c: ["'self'"],
-// objectSr,"
+  c:';";
+        c: ["'self'", 'http,';
+  s://www.google-analytics.com', 'http,';
+  s://analytics.google.com'],";
+// frameSr,"';";
+  c: ["'self'"],";
+// objectSr,"';";
   c: ["'none'"],
 // upgradeInsecureRequest,
   s: true}
 
   },
   // Security Headers,
-  header,
+  header,';
   s: {// 'X-DNS-Prefetch-Control': 'on'}
-
-// 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
-// 'X-XSS-Protection': '1; mode=block',
-// 'X-Frame-Options': 'SAMEORIGIN',
-// 'X-Content-Type-Options': 'nosniff',
-// 'Referrer-Policy': 'strict-origin-when-cross-origin',
+';
+// 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',';
+// 'X-XSS-Protection': '1; mode=block',';
+// 'X-Frame-Options': 'SAMEORIGIN',';
+// 'X-Content-Type-Options': 'nosniff',';
+// 'Referrer-Policy': 'strict-origin-when-cross-origin',';
 // 'Permissions-Policy': camera=(), microphone=(), geolocation=(), interest-cohort=()
 };
 
@@ -85,9 +85,9 @@ export const corsConfig = {/* TODO: Fix JSX expression */};;
   O: Add content}
 
 };
-
-  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+';
+  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],';
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],';
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
   maxAge: 86400, // 24 hours;
@@ -100,7 +100,7 @@ export const sessionConfig = {/* TODO: Fix JSX expression */};;
 
 };
 
-  secre,
+  secre,';
   t: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
   resav,
   e: false,
@@ -113,14 +113,14 @@ export const sessionConfig = {/* TODO: Fix JSX expression */};;
 
 };
 
-  secur,
+  secur,';
   e: process.env['NODE_ENV'] === 'production',
     httpOnl,
   y: true,
 maxAg,
   e: 24 * 60 * 60 * 1000, // 24 hours;
 
-    sameSit,
+    sameSit,';
   e: 'strict as const;
 
  * Input validation patterns;
@@ -155,14 +155,14 @@ export function sanitizeInput(inpu)
           
           
           
-          
-          )
+          );
+          )';
           <React.Fragment>]/g, ') // Remove;
 
           < and >
-
+';
     .replace(/javascript:/gi, ') // Remove javascript: protocol;
-
+';
     .replace(/on\w+\s*=/gi, ') // Remove event handlers;
 
     .trim();
@@ -202,7 +202,7 @@ export function generateSecureToken(_lengt)
 }
 
   const _array = new Uint8Array(length);;
-
+';
   if (typeof window !== 'undefined' && window.crypto) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -226,7 +226,7 @@ export function generateSecureToken(_lengt)
 }
 
       array[i] = Math.floor(Math.random() * 256);
-
+';
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(');
 
 export default {securityHeaders}
@@ -237,8 +237,9 @@ export default {securityHeaders}
   validationPatterns,
   sanitizeInput,
   validateEmail,
-  validateUrl,
+  validateUrl,";
   generateSecureToken;"
 
 
 
+';";

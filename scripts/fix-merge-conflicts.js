@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
-
+import fs from 'fs;';
+';';
 import path from 'path;
 
 import { fileURLToPath } from url;
@@ -11,8 +11,8 @@ import { fileURLToPath } from url;
 const __filename = fileURLToPath(import.meta.url);;;
 
 // __dirname removed
-// Find all TypeScript and JavaScript files;
-
+// Find all TypeScript and JavaScript files;';
+';';
 const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', .jsx]) => {;;
 
 let files = [];;
@@ -24,7 +24,7 @@ let files = [];;
 const fullPath = path.join(dir, item);;
 
     const stat = fs.statSync(fullPath);;
-
+';
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
       files = files.concat(findFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
       files.push(fullPath)}
@@ -68,9 +68,9 @@ return false}
 };
 
 // Main execution;
-
+';
 const srcDir = path.join(__dirname, '..', src);;
-
+';
 const appDir = path.join(__dirname, '..', app);;
 
 // console.log removed for production
@@ -95,3 +95,4 @@ for (const file of allFiles) {
 
 // console.log removed for production
 // console.log removed for production
+';

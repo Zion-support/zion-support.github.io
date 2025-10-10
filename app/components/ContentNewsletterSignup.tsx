@@ -4,26 +4,26 @@
   onSubscribe?: (email: string) => void;);
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({)
-  title = "Stay Updated with Our Latest Insights),
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({
-  title = "Stay Updated with Our Latest Insights,
-  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",  placeholder = "Enter your email address,
+  title = "Stay Updated with Our Latest Insights),;
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({";
+  title = "Stay Updated with Our Latest Insights,";
+  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",  placeholder = "Enter your email address,";
   buttonText = "Subscribe Now,
   features = [
     {
-      icon: CheckCircle,
+      icon: CheckCircle,";
       text: "Weekly industry insights]
     },
     {
-      icon: Star,
+      icon: Star,";
       text: "Exclusive content and tips]
     },
     {
-      icon: Users,
+      icon: Users,";
       text: "Join 10,000+ subscribers]
     },
     {
-      icon: Globe,
+      icon: Globe,";
       text: "Global community access;);
 
   ],
@@ -37,7 +37,7 @@ const [isSubscribed, setIsSubscribed] = useState(false);
 
 const [isLoading, setIsLoading] = useState(false);
 
-const handleSubmit = async (e: React.FormEvent) => {;
+const handleSubmit = async (e: React.FormEvent) => {;';
   const [email, setEmail] = useState(');  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const [isLoading, setIsLoading] = useState(false);
@@ -64,7 +64,7 @@ const handleSubmit = async (e: React.FormEvent) => {;
       }
 
             setIsSubscribed(true);
-
+';
       setEmail(');)
 } catch (error) {
       // console.error removed for production
@@ -76,9 +76,9 @@ const handleSubmit = async (e: React.FormEvent) => {;
     }
 
       setIsSubscribed(true);
-
+';
       setEmail(')]
-    } catch (error) {
+    } catch (error) {';
       console.error('Subscription failed:, error)]
     } finally {
       setIsLoading(false)]
@@ -86,19 +86,19 @@ const handleSubmit = async (e: React.FormEvent) => {;
 
   };
 
-  if (isSubscribed) {
-    return (<div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4>
+  if (isSubscribed) {";
+    return (<div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4>";
         <div className="max-w-4xl mx-auto text-center>
           <div className=w-16 h-16 bg-white
-            
-            Welcome to Our Community!
-          <
+            "
+            Welcome to Our Community!"
+          <";
           <p className="text-xl text-blue-100 mb-8>
             Thank you for subscribing. Youll receive our latest insights and updates soon.
           <
-          <button)
-            onClick = { () => setIsSubscribed(false) };
-
+          <button)"
+            onClick = { () => setIsSubscribed(false) };"
+";
             className="text-white underline hover:text-blue-200 transition-colors
           >
             Subscribe another email
@@ -106,42 +106,42 @@ const handleSubmit = async (e: React.FormEvent) => {;
         <
       <
     );
-
-  }
-
-  return (<div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4>
-      <div className="max-w-6xl mx-auto>
+"
+  }"
+";
+  return (<div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4>";
+      <div className="max-w-6xl mx-auto>";
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center>
           {/* Content *
           <div>
             <h2 className=text-4xl m,
     d:text-5xl font-bold text-white mb-6>
-              {title}
-
-            <
-            <p className="text-xl text-blue-100 mb-8>
-              {subtitle}            <
-            
-            <div className="space-y-4>)
-              {features.map((feature, index) => (<div key={index} className="flex items-center space-x-3>
-                  <div className=w-6 h-6 bg-white
-                    <feature.icon className="w-4 h-4 text-white 
-                  <
+              {title}"
+"
+            <";
+            <p className="text-xl text-blue-100 mb-8>"
+              {subtitle}            <"
+            ";
+            <div className="space-y-4>)";
+              {features.map((feature, index) => (<div key={index} className="flex items-center space-x-3>"
+                  <div className=w-6 h-6 bg-white";
+                    <feature.icon className="w-4 h-4 text-white "
+                  <";
                   <span className="text-blue-100>{feature.text}<
                 <)
               ))}
 
             <
           <
-
-          {/* Newsletter Form *
-          <div className=bg-white/10 backdrop-blur-sm border border-white
-            <form onSubmit={handleSubmit} className="space-y-6>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-white mb-2>
-                  Email Address                <
-                <input
-                  type="email
+"
+          {/* Newsletter Form *"
+          <div className=bg-white/10 backdrop-blur-sm border border-white";
+            <form onSubmit={handleSubmit} className="space-y-6>"
+              <div>";
+                <label htmlFor="email" className="block text-sm font-medium text-white mb-2>"
+                  Email Address                <"
+                <input";
+                  type="email";
                   id="email
                   value = { email };
 
@@ -154,14 +154,14 @@ const handleSubmit = async (e: React.FormEvent) => {;
                 
               <
               
-              <button
+              <button";
                 type="submit
                 disabled = { isLoading || !email };
 
                 className=w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover: bg-blue-50 disabled:opacity-50 disable,
     d:cursor-not-allowed transition-all duration-300 flex items-center justify-center
               >
-                {isLoading ? (<>
+                {isLoading ? (<>";
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2><
                     <div>
                     Subscribing...
@@ -187,5 +187,6 @@ const handleSubmit = async (e: React.FormEvent) => {;
     };
 
 };
-
-export default ContentNewsletterSignup;}
+"
+export default ContentNewsletterSignup;}"
+';";

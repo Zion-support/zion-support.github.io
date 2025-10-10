@@ -5,7 +5,7 @@ export const generateId = (prefix: string = id): string => {;;
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}}
 
 export const createAriaLabel = (text: string, context?: string): string => {;;
-
+`;
   return context ? `${text}, ${context} : text}
 
 export const announceToScreenReader = (message: string): void => {;;
@@ -13,7 +13,7 @@ export const announceToScreenReader = (message: string): void => {;;
 const announcement = document.createElement(div);;
 
   announcement.setAttribute('aria-live', polite);
-
+';
   announcement.setAttribute('aria-atomic', true);
 
   announcement.className = sr-only;
@@ -34,7 +34,7 @@ export const focusElement = (element: HTMLElement | null): void => {;;
 export const trapFocus = (container: HTMLElement): (() => void) => {;;
 
 const focusableElements = container.querySelectorAll(;;
-
+';);
     'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
   );
 
@@ -47,7 +47,7 @@ const lastElement = focusableElements[focusableElements.length - 1] as HTMLEleme
   ;
 
 const handleTabKey = (e: KeyboardEvent) => {;;
-
+';
     if (e.key === 'Tab) {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
@@ -69,17 +69,17 @@ const handleTabKey = (e: KeyboardEvent) => {;;
 
   container.addEventListener(keydown, handleTabKey);
 
-  return () => {
+  return () => {';
     container.removeEventListener('keydown, handleTabKey)}}
 
 export const validateAriaAttributes = (element: HTMLElement): string[] => {;;
 
 const errors: string[] = [];
 
-  // Check for required ARIA attributes
-  if (element.getAttribute('role') === 'button' && !element.getAttribute('aria-label) && !element.textContent?.trim()) {
+  // Check for required ARIA attributes';
+  if (element.getAttribute('role') === 'button' && !element.getAttribute('aria-label) && !element.textContent?.trim()) {';
     errors.push('Button with role="button must have aria-label or accessible text);
-
+';
   if (element.getAttribute('aria-expanded') !== null && !element.getAttribute('aria-controls)) {
     errors.push(Element with aria-expanded must have aria-controls);
 
@@ -91,10 +91,10 @@ const ariaLabelledBy = element.getAttribute(aria-labelledby);;
   return errors}
 
 export const enhanceKeyboardNavigation = (element: HTMLElement): void => {;;
-
+';
   element.setAttribute('tabindex', 0);
-
-  element.addEventListener('keydown, (e) => {
+';
+  element.addEventListener('keydown, (e) => {';
     if (e.key === 'Enter' || e.key === ' ) {
       e.preventDefault();
 
@@ -104,7 +104,7 @@ export const enhanceKeyboardNavigation = (element: HTMLElement): void => {;;
 export const createSkipLink = (targetId: string, text: string = Skip to main content): HTMLElement => {;;
 
 const skipLink = document.createElement(a);;
-
+`;
   skipLink.href = `#${targetId};
 
   skipLink.textContent = text;
@@ -127,9 +127,9 @@ const rgb = color.match(/\d+/g);;
 
     ;
 
-const [r, g, b] = rgb.map(Number).map(c => {
+const [r, g, b] = rgb.map(Number).map(c => {;
       c = c / 255;
-
+);
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)});
 
     return 0.2126 * r + 0.7152 * g + 0.0722 * b};
@@ -208,3 +208,4 @@ const interactiveElements = document.querySelectorAll(button, a, input, select, 
 
   interactiveElements.forEach((element) => {
     enhanceKeyboardNavigation(element as HTMLElement)});
+';";`;

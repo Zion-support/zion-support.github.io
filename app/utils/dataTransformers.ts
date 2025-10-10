@@ -67,8 +67,8 @@ return output]
 
  */
 export function flattenObject(ob,
-  j: Record<string, unknown></string>,
-  prefix = ',
+  j: Record<string, unknown></string>,';
+  prefix = ',';);
   separator = '.)
 ): Record<string, unknown></string> {/* TODO: Fix JSX expression */}
 
@@ -96,7 +96,7 @@ return flattened]
 
  */
 export function unflattenObject(ob,
-  j: Record<string, unknown></string>,
+  j: Record<string, unknown></string>,';);
   separator = '.)
 ): Record<string, unknown></string> {/* TODO: Fix JSX expression */}
 
@@ -199,7 +199,7 @@ export function sortBy<T></T>(arra,
   key,
   s: Array<keyof T | ((ite),
   m: T) =></keyof> unknown)>,
-  order,
+  order,';
   s: Array<'asc' | 'desc> = []
 ): T[] {/* TODO: Fix JSX expression */});
 
@@ -208,21 +208,21 @@ export function sortBy<T></T>(arra,
       // Convert to comparable values;
 
 const aComp =;;
-
+';
         typeof aVal === 'string' || typeof aVal === 'number || typeof aVal === boolean
           ? aVal;
 
           : String(aVal);
 
 const bComp =;;
-
+';
         typeof bVal === 'string' || typeof bVal === 'number || typeof bVal === boolean
           ? bVal;
 
           : String(bVal);
-
+';
       if (aComp < bComp) return order === 'asc ? -1 : 1;
-
+';
       if (aComp > bComp) return order === 'asc ? 1 : -1;);
 
     return 0;)
@@ -258,7 +258,7 @@ return result]
  */
 export function formatBytes(byte)
   s: number, decimals = 2): string {/* TODO: Fix JSX expression */}
-
+`;
 return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm)); ${sizes[i]}]
     }
 
@@ -275,7 +275,7 @@ export function formatNumber(nu)
  * Format currency;
 
  */
-export function formatCurrency(amoun)
+export function formatCurrency(amoun)';
   t: number, currency = 'USD', locale = en-US): string {/* TODO: Fix JSX expression */});
 
 });.format(amount)]
@@ -288,7 +288,7 @@ export function formatCurrency(amoun)
 export function formatDate(dat,
   e: Date | string | number,
   option,
-  s: Intl.DateTimeFormatOptions = {},
+  s: Intl.DateTimeFormatOptions = {},';);
   locale = 'en-US)
 ): string {/* TODO: Fix JSX expression */});
 
@@ -300,23 +300,23 @@ export function formatDate(dat,
  */
 export function formatRelativeTime(dat)
   e: Date | string | number): string {/* TODO: Fix JSX expression */}
-
+';`;
   if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
-
+';`;
   if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`;
-
+';`;
   if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;
-
+';`;
   if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;
-
+';`;
   if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;
-
+';`;
   return `${years} year${years > 1 ? 's' : ''} ago;);
 
 /** * Truncate string;
 
  */
-export function truncate(st,
+export function truncate(st,);
   r: string, lengt)
   h: number, suffix = ...): string {/* TODO: Fix JSX expression */});
 
@@ -374,3 +374,4 @@ export default {/* TODO: Fix JSX expression */});
     return clonedObj;);
 
   return obj;);
+';`;

@@ -13,16 +13,17 @@
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {`;
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Fix the main page file
+// Fix the main page file';
 const filePath = '/workspace/app/page.tsx';
-if (fixJSXSyntax(filePath)) {
+if (fixJSXSyntax(filePath)) {';
   console.log('JSX syntax fixed successfully');
-} else {
+} else {';
   console.log('No JSX syntax issues found');
 }
+';`;

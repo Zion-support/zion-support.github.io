@@ -30,11 +30,11 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
       // Update title;
       document.title = this.config.title;
       
-      // Update meta description;
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {metaDescription = document.createElement('meta')}
+      // Update meta description;';
+      let metaDescription = document.querySelector('meta[name="description"]');';
+      if (!metaDescription) {metaDescription = document.createElement('meta')}';
         metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription)}
+        document.head.appendChild(metaDescription)}';
       metaDescription.setAttribute('content', this.config.description)
     }
   }
@@ -45,8 +45,9 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
     this.updateMetaTags()
   }
 }
-
+";
 export default SEOEnhancer;"
 
 
 
+';";

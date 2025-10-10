@@ -23,7 +23,7 @@ export function debounce<T extends (...args: unknown[]) => unknown>(),
   let,
   timeout: NodeJS.Timeout | null = null;
 
-  return function executedFunction(...arg,
+  return function executedFunction(...arg,);
   s: Parameters;)
           <T>) {timeout = null}
 
@@ -66,7 +66,7 @@ export function throttle;
   let,
   inThrottle: boolean;
 
-  return function executedFunction(...arg,
+  return function executedFunction(...arg,);
   s: Parameters;)
           <T>) {/* TODO: Fix JSX expression */}
 
@@ -305,7 +305,7 @@ export function runWhenIdle()
   options?: IdleRequestOptions): number {// TODO: Add content}
 
 }
-
+';
   if (typeof window !== 'undefined' && 'requestIdleCallback in window) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -315,7 +315,7 @@ export function runWhenIdle()
     return window.requestIdleCallback(callback, options)}
 
   // Fallback for browsers that dont support requestIdleCallback;
-
+';
   if (typeof window !== 'undefined) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -336,13 +336,13 @@ export function runWhenIdle()
 export function cancelIdle(id: number): void {// TODO: Add content}
 
 }
-
+';
   if (typeof window !== 'undefined) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
-
+';
     if ('cancelIdleCallback in window) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -383,7 +383,7 @@ export class VirtualScroller;
   items: T[];
 
   constructor(item,
-  s: T[], itemHeigh,
+  s: T[], itemHeigh,);
   t: number, containerHeigh)
   t: number) {/* TODO: Fix JSX expression */}
 
@@ -449,7 +449,7 @@ export class VirtualScroller;
  * Image lazy loading helper;
 
  */
-export function setupLazyImages()
+export function setupLazyImages()';
   selector = 'img[data-src],
   options?: IntersectionObserverInit): () => void {// TODO: Add content}
 
@@ -509,7 +509,7 @@ export function setupLazyImages()
  */
 
 export function preloadResources(resources: Array;
-
+);
           <{ url: string; as: string }>): void {// TODO: Add content}
 
 }
@@ -548,7 +548,7 @@ export function supportsCodeSplitting(): boolean {// TODO: Add content}
   O: Add content}
 
 }
-
+';
     new Function('return import("dat,)
   a:text/javascript,));
 
@@ -598,7 +598,7 @@ export function getMemoryUsage(): {// TODO: Add content}
   O: Add content}
 
 }
-
+';
   if ('memory in performance) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -734,3 +734,4 @@ export default {/* TODO: Fix JSX expression */}
 //   prefetchBundle,
 //   getMemoryUsage,
 //   FPSMonitor};
+';";

@@ -11,7 +11,7 @@ const file = path.join(dir, subscribers.json);;
 export default function handler(req, res) {
   if (req.method !== 'POST) {
     res.statusCode = 405;
-
+';
     res.setHeader('Content-Type', application/json);
 
     res.end(JSON.stringify({ error: Method not allowed }));
@@ -24,7 +24,7 @@ const { email, name, preferences } = req.body || {};
 
   if (!email) {
     res.statusCode = 400;
-
+';
     res.setHeader('Content-Type', application/json);
 
     res.end(JSON.stringify({ error: Email is required }));
@@ -57,7 +57,7 @@ const existingSubscriber = existing.find(sub => sub.email === email);;
 
   if (existingSubscriber) {
     res.statusCode = 400;
-
+';
     res.setHeader('Content-Type', application/json);
 
     res.end(JSON.stringify({ error: Email already subscribed }));
@@ -69,8 +69,8 @@ const existingSubscriber = existing.find(sub => sub.email === email);;
 const newSubscriber = {;;
 
     id: Date.now().toString(),
-    email,
-    name: name || ',
+    email,';
+    name: name || ',};
     preferences: preferences || {},
     timestamp: new Date().toISOString(),
     status: active
@@ -82,19 +82,20 @@ const newSubscriber = {;;
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
 
     res.statusCode = 200;
-
+';
     res.setHeader('Content-Type', application/json);
 
     res.end(JSON.stringify({ 
-      success: true, 
+      success: true, ';
       message: 'Successfully subscribed to newsletter,
-      id: newSubscriber.id
+      id: newSubscriber.id);
     }))} catch (error) {
     // console.error removed for production
 res.statusCode = 500;
-
+';
     res.setHeader('Content-Type', application/json);
-
+';
     res.end(JSON.stringify({ error: 'Failed to save subscription }))}
 
 }
+';

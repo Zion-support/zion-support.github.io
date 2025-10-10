@@ -5,7 +5,7 @@ import React from react;
 const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
 
-//Fallbac,
+//Fallbac,;
   k: simple passthrough provider while ThemeContext is absent;
 
 const,

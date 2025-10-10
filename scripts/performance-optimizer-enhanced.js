@@ -16,7 +16,7 @@ const optimizations = {;;
 
   removeUnusedCSS: (content) => {,
     // This is a simplified version - in production, use tools like PurgeCSS;
-
+};
     return content},
 
   // Optimize images (placeholder - would need actual image processing)
@@ -25,8 +25,8 @@ const optimizations = {;;
 
     return content;
 
-      .replace(/\.jpg/g, '.webp)
-      .replace(/\.png/g, '.webp)
+      .replace(/\.jpg/g, '.webp)';
+      .replace(/\.png/g, '.webp)';
       .replace(/\.jpeg/g, '.webp)},
 
   // Minify inline styles;
@@ -35,41 +35,41 @@ const optimizations = {;;
     return content.replace(/style="([^"]*)/g, (match, styles) => {;
 
 const minified = styles;;
-
-        .replace(/\s+/g, ' )
-        .replace(/;\s*/g, ';)
+';
+        .replace(/\s+/g, ' )';
+        .replace(/;\s*/g, ';)';
         .replace(/:\s*/g, ':)
         .trim();
-
+";
       return `style="${minified}"})},
 
   // Remove empty lines and extra whitespace;
 
   removeExtraWhitespace: (content) => {,
     return content;
-
-      .replace(/\n\s*\n\s*\n/g, '\n\n)
-      .replace(/[ \t]+$/gm, ')
+';
+      .replace(/\n\s*\n\s*\n/g, '\n\n)';
+      .replace(/[ \t]+$/gm, ')';
       .replace(/\n{3}/g, '\n\n)},
 
   // Optimize React components;
 
   optimizeReactComponents: (content) => {
     // Add React.memo to functional components;
-
+';
     if (content.includes('const ') && content.includes(': React.FC)) {
       content = content.replace(
-
+;);
         /const (\w+): React\.FC = \(/g;
-
-        'const $1: React.FC = React.memo(()
+';
+        'const $1: React.FC = React.memo(();
       );
 
       // Add closing parenthesis for React.memo;
 
       content = content.replace()
         /(\w+)\.displayName = \w+;/g;
-
+';
         '$1.displayName = \$1\;\n});
 
       )}
@@ -86,12 +86,12 @@ const minified = styles;;
     if (content.includes(<head>)) {;
 
 const preloadHints = ;;
-
-    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script crossorigin>,
-    <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script crossorigin>,
+";
+    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script crossorigin>,";
+    <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script crossorigin>,";
     <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">;
-
-      content = content.replace('<head>', <head>
+';
+      content = content.replace('<head>', <head>);
 );
 
 }${preloadHints})}
@@ -103,34 +103,34 @@ const preloadHints = ;;
 // Files to process;
 
 const filePatterns = [;;
-
-  'app/**/*.{ts,tsx,js,jsx},
-  'src/**/*.{ts,tsx,js,jsx},
-  'components/**/*.{ts,tsx,js,jsx},
-  'pages/**/*.{ts,tsx,js,jsx},
-  'utils/**/*.{ts,tsx,js,jsx},
-  'hooks/**/*.{ts,tsx,js,jsx},
+';
+  'app/**/*.{ts,tsx,js,jsx},';
+  'src/**/*.{ts,tsx,js,jsx},';
+  'components/**/*.{ts,tsx,js,jsx},';
+  'pages/**/*.{ts,tsx,js,jsx},';
+  'utils/**/*.{ts,tsx,js,jsx},';
+  'hooks/**/*.{ts,tsx,js,jsx},';
   'lib/**/*.{ts,tsx,js,jsx},
   dist/**/*.{html,css,js}
-
+];
 ];
 
 // Files to exclude;
 
 const excludePatterns = [;;
-
-  '**/node_modules/**,
-  '**/.next/**,
-  '**/build/**,
-  '**/coverage/**,
-  '**/*.test.{ts,tsx,js,jsx},
-  '**/*.spec.{ts,tsx,js,jsx},
-  '**/scripts/**,
-  '**/automation/**,
-  '**/backup*/**,
-  '**/disabled*/**,
+';
+  '**/node_modules/**,';
+  '**/.next/**,';
+  '**/build/**,';
+  '**/coverage/**,';
+  '**/*.test.{ts,tsx,js,jsx},';
+  '**/*.spec.{ts,tsx,js,jsx},';
+  '**/scripts/**,';
+  '**/automation/**,';
+  '**/backup*/**,';
+  '**/disabled*/**,';
   '**/corrupted*/**,
-  **/temp*/**
+  **/temp*/**];
 ];
 
 ;
@@ -208,8 +208,9 @@ const files = await glob(pattern, {);;
 // console.log removed for production
 // console.log removed for production
 }
-
+`;
 if (import.meta.url === `file://${process.argv[1]}) {
   main()}
 
 export { processFile, optimizations };
+';";`;

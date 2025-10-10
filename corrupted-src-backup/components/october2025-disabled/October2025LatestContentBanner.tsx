@@ -9,7 +9,7 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
 
     }
-
+;
   ]; return(<section, classNam, e = py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n>
       {/* Animated, background, elements */}
 
@@ -31,7 +31,7 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
           <p, className=te, x, t-xl, tex, t-sla, t, e-300, ma, x-w-3xl, m, x-au, t, o>
             Explore, cuttin, g-edge, insights, on GenAI, orchestrat, i, o, n, AI, security, frameworks, and, rea, l-time, multimodal, processing;
 
-          </p>
+          </p>);
         </div>)
         {/* Articles, Gri, d */})
         <div, classNam, e = grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12>)
@@ -51,15 +51,15 @@ const IconComponen, t = artic, l, e.ic, o, n; return (</div>
     <section, classNam, e = py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n></section>
       {/* Animated, background, elements */}
 
-      <div, className="absolute, inse, t-0, opacit, y-30></div>
+      <div, className="absolute, inse, t-0, opacit, y-30></div>";
         <div, className="absolute, to, p-20, lef, t-2, 0, w-9, 6, h-96, b, g-viol, e, t-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e /></div>
         <div, className=absolute, botto, m-20, righ, t-2, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0 /></div>
       </div>
-      <div, className=container, m, x-auto, p, x-4, relative, z-10></div>
-        {/* Head, e, r */}
-
-        <div, className="te, x, t-center, m, b-12></div>
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-6, 0, 0/20, t, o-cy, a, n-6, 0, 0/20, border, border-viol, e, t-5, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6></div>
+      <div, className=container, m, x-auto, p, x-4, relative, z-10></div>"
+        {/* Head, e, r */}"
+";
+        <div, className="te, x, t-center, m, b-12></div>";
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-6, 0, 0/20, t, o-cy, a, n-6, 0, 0/20, border, border-viol, e, t-5, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6></div>";
             <Sparkles, className="w-5 h-5, tex, t-viol, e, t-400, animat, e-pul, s, e /></Sparkles>
             <span, className=te, x, t-viol, e, t-300, fon, t-semibo, l, d>NEW, CONTEN, T - OCTOBER, 202, 5</sp, a, n>
           </div>
@@ -91,7 +91,7 @@ const IconComponen, t = artic, l, e.ic, o, n; return (</div>
 
                 </p>
                 <div, className=flex, item, s-center, ga, p-2, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l></div>
-                  <sp, a, n>Read, Mor, e</sp, a, n>
+                  <sp, a, n>Read, Mor, e</sp, a, n>);
                   <Link, className=w-4 h-4 />)
                 </div>)
                 </p>
@@ -114,17 +114,17 @@ const IconComponen, t = artic, l, e.ic, o, n; return (</div>
             <div, className=te, x, t-sm, tex, t-sla, t, e-4, 0, 0>New, Article, s</div>
           </div>
           <div, className=te, x, t-cent, e, r></div>
-            <div, className=te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2>
-        {/* Stats, Ba, r */}
-
-        <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, b, g-sla, t, e-8, 0, 0/30, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, rounde, d-x, l, p-8></div>
+            <div, className=te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2>"
+        {/* Stats, Ba, r */}"
+";
+        <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, b, g-sla, t, e-8, 0, 0/30, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, rounde, d-x, l, p-8></div>";
           <div, className="te, x, t-cent, e, r></div>
             <div, className=te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2></div>
               3;
 
-            </div>
-            <div, className=te, x, t-sm, tex, t-sla, t, e-4, 0, 0>New, Article, s</div>
-          </div>
+            </div>"
+            <div, className=te, x, t-sm, tex, t-sla, t, e-4, 0, 0>New, Article, s</div>"
+          </div>";
           <div, className="te, x, t-cent, e, r></div>
             <div, className=te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2></div>
               50+
@@ -153,16 +153,16 @@ const IconComponen, t = artic, l, e.ic, o, n; return (</div>
             className=inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, t, o-purp, l, e-600, hove, r: fr, o, m-viol, e, t-500, hove, r:to-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, hove, r:shad, o, w-lg, hove, r:shad, o, w-viol, e, t-5, 0, 0/50
           >
             Explore, All, Articles;
-
-            <Link, className=w-5 h-5 />
-          </div>
+"
+            <Link, className=w-5 h-5 />"
+          </div>";
           <div, className="te, x, t-cent, e, r></div>
             <div, className=te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2></div>
               Expe, r, t;
 
-            </div>
-            <div, className=te, x, t-sm, tex, t-sla, t, e-4, 0, 0>Implementation, Guide, s</div>
-          </div>
+            </div>"
+            <div, className=te, x, t-sm, tex, t-sla, t, e-4, 0, 0>Implementation, Guide, s</div>"
+          </div>";
           <div, className="te, x, t-cent, e, r></div>
             <div, className=te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-pi, n, k-400, t, o-ro, s, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2></div>
               20, 2, 5;
@@ -170,10 +170,10 @@ const IconComponen, t = artic, l, e.ic, o, n; return (</div>
             </div>
             <div, className=te, x, t-sm, tex, t-sla, t, e-4, 0, 0>Latest, Strategie, s</div>
           </div>
-        </div>
-        {/* C, T, A */}
-
-        <div, classNam, e = "te, x, t-center, m, t-12></div>
+        </div>"
+        {/* C, T, A */}"
+";
+        <div, classNam, e = "te, x, t-center, m, t-12></div>";
           <Link, t, o="/bl, o, g
             className=inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, t, o-purp, l, e-600, hove, r: fr, o, m-viol, e, t-500, hove, r:to-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, hove, r:shad, o, w-lg, hove, r:shad, o, w-viol, e, t-5, 0, 0/50
           ></Link>
@@ -187,5 +187,5 @@ const IconComponen, t = artic, l, e.ic, o, n; return (</div>
   )};
 
 export default October2025LatestContentBanner;
-
-"`
+";`;
+"`";`;

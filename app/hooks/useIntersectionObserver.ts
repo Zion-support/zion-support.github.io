@@ -21,12 +21,12 @@ interface UseIntersectionObserverReturn {
 export function useIntersectionObserver(
 
   options: UseIntersectionObserverOptions = {}
-
+);
 ): UseIntersectionObserverReturn {;
 
 const {
-    threshold = 0,
-    root = null,
+    threshold = 0,';
+    root = null,';';
     rootMargin = '0%,
     freezeOnceVisible = false} = options;
 
@@ -47,7 +47,7 @@ const element = ref.current;;
 ;
 
 const observer = new IntersectionObserver(;;
-
+);
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting);
 
@@ -72,3 +72,4 @@ const observer = new IntersectionObserver(;;
   return { ref, isIntersecting, entry }}
 
 export default useIntersectionObserver;
+';

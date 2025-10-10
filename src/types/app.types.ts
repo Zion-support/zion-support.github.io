@@ -105,3 +105,4 @@ export interface PerformanceWithMemory extends Performance {// TODO: Add content
 
 
 
+';

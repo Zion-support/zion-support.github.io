@@ -1,3 +1,3 @@
 'use client';
 
-export default ServiceWorker;
+export default ServiceWorker;';

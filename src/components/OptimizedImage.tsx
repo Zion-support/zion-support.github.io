@@ -10,16 +10,16 @@ const,
       alt={alt}
       width={width}
       height={height}
-      className={`${className}`}
+      className={`${className}`}';
       loading={priority ? 'eager' : 'lazy'}
-      decoding="async"
-      style={/* TODO: Fix JSX expression */}`
-  h: width ? `${width}px` : 'auto',
-        heigh,`
+      decoding="async"`;
+      style={/* TODO: Fix JSX expression */}`';`;
+  h: width ? `${width}px` : 'auto',`;
+        heigh,`';`;
   t: height ? `${height}px` : 'auto'
       }}
     />
   )};
 
-export default OptimizedImage;
-"`
+export default OptimizedImage;";`;
+"`';";`;

@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
-
+import fs from 'fs;';
+';';
 import path from 'path;
 
 import { fileURLToPath } from url;
@@ -14,8 +14,8 @@ const __filename = fileURLToPath(import.meta.url);;;
 // Website audit script to check all links and identify missing pages;
 
 // console.log removed for production
-// Get all page files from the app directory;
-
+// Get all page files from the app directory;';
+';';
 const appDir = path.join(__dirname, '..', app);;
 
 const allPages = [];;
@@ -47,7 +47,7 @@ const route = basePath + / + item;;
           exists: true})}
 
       // Recursively scan subdirectories;
-
+';
       scanDirectory(fullPath, basePath + '/ + item)}
 
   }
@@ -64,13 +64,13 @@ allPages.forEach(page => {),
 });
 
 // Check for missing pages referenced in Footer;
-
+';
 const footerFile = path.join(__dirname, '..', 'app', 'components', Footer.tsx);;
 
 const footerContent = fs.readFileSync(footerFile, utf8);;
 
 // Extract all href links from Footer;
-
+';
 const hrefRegex = /href: \s*['"`]([^'"`]+)['"]/g;;
 
 const footerLinks = [];;
@@ -92,7 +92,7 @@ const missingPages = [];;
 
 const existingRoutes = allPages.map(p => p.path);;
 
-footerLinks.forEach(link => {)
+footerLinks.forEach(link => {)';
   if (link.startsWith('/) && !existingRoutes.includes(link)) {
     missingPages.push(link)}
 
@@ -108,25 +108,25 @@ missingPages.forEach(page => {)
 // Check for other common missing pages;
 
 const commonPages = [;;
-
-  '/about,
-  '/contact,
-  '/team,
-  '/careers,
-  '/case-studies,
-  '/blog,
-  '/pricing,
-  '/support,
-  '/docs,
-  '/api-docs,
-  '/status,
-  '/health,
-  '/privacy,
-  '/terms,
-  '/cookies,
-  '/gdpr,
+';
+  '/about,';
+  '/contact,';
+  '/team,';
+  '/careers,';
+  '/case-studies,';
+  '/blog,';
+  '/pricing,';
+  '/support,';
+  '/docs,';
+  '/api-docs,';
+  '/status,';
+  '/health,';
+  '/privacy,';
+  '/terms,';
+  '/cookies,';
+  '/gdpr,';
   '/security,
-  /compliance
+  /compliance];
 ];
 
 ;
@@ -157,7 +157,7 @@ allPages.forEach(page => {)
 const content = fs.readFileSync(page.file, utf8);;
 
     // Find all internal links in the page;
-
+';";`;
     const internalLinkRegex = /href: \s*['"`](\/[^'"`]+)['"]/g;;
 
     let linkMatch;
@@ -165,7 +165,7 @@ const content = fs.readFileSync(page.file, utf8);;
     while ((linkMatch = internalLinkRegex.exec(content)) !== null) {;
 
 const link = linkMatch[1];;
-
+';
       if (!existingRoutes.includes(link) && !link.startsWith('http)) {
         brokenLinks.push({),
           page: page.path),
@@ -203,11 +203,11 @@ const report = {;;
   additionalMissing: additionalMissing;
 
   brokenLinks: brokenLinks;
-
+};
   existingPages: allPages.map(p => p.path)};
 
 fs.writeFileSync(
-
+';);
   path.join(__dirname, '..', 'website-audit-report.json),
   JSON.stringify(report, null, 2)
 );
@@ -226,3 +226,4 @@ fs.writeFileSync(
 // console.log removed for production
 ,
 // console.log removed for production
+';";`;

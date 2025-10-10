@@ -21,14 +21,14 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       modified = true}
 
     // Fix malformed closing tags with semicolons;
-
+';
     if (content.includes('</div>;)) {
       content = content.replace(/<\/div>;/g, ;);
 
       modified = true}
 
     // Fix malformed closing tags with commas;
-
+';
     if (content.includes('</div>,') && !content.includes('</div>, )) {
       content = content.replace(/<\/div>,/g, ,);
 
@@ -54,19 +54,19 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
         if (line.match(/^\s*[a-zA-Z_][a-zA-Z0-9_]*\s+[a-zA-Z_][a-zA-Z0-9_]*\s*$/)) {
           line = line.replace(
-
+);
             /^(\s*[a-zA-Z_][a-zA-Z0-9 _]*)\s+([a-zA-Z_][a-zA-Z0-9 _]*)\s*$/,
             $1: $2,
           );
-
+};
           modified = true}
-
+';
     if (content.includes('</div>;)) {/* TODO: Fix JSX expression */}
 
     }
 
     // Fix malformed closing tags with commas;
-
+';
     if (content.includes('</div>,') && !content.includes('</div>, )) {/* TODO: Fix JSX expression */}
 
     }
@@ -80,7 +80,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     // Fix malformed object properties;
 
     if (content.includes(const config = {/* TODO: Fix JSX expression */};;
-
+);
         })
         newLines.push(line)}
 
@@ -116,8 +116,9 @@ async function main() {/* TODO: Fix JSX expression */}
   // Find all TypeScript/JavaScript files in app directory;
 
   files.forEach(file => {/* TODO: Fix JSX expression */}
-
+);
     })
   })}
 
 main().catch(console.error);
+';

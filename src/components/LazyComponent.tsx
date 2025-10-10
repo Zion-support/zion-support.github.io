@@ -4,16 +4,16 @@ interface LazyComponentProps {
   fallback?: React.ReactNode;
 
   children: React.ReactNode}
-
-export default function LazyComponent({
+';
+export default function LazyComponent({';';
   className = ',
-  children
+  children);
 }: LazyComponentProps) {;
 
 const DefaultFallback = () => (;;
 
-  <div className="flex items-center justify-center p-8></div>
-    <div className="cyber-loader></div>
+  <div className="flex items-center justify-center p-8></div>";
+    <div className="cyber-loader></div>";
     <span className="ml-3 text-cyan-400>Loading...</span>
   </div>
 );
@@ -24,7 +24,7 @@ const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallb
 }) => {
   return (
 
-    <Suspense fallback={fallback}>
+    <Suspense fallback={fallback}>;
 );
 
 }</Suspens>
@@ -150,7 +150,7 @@ const,
           
           <LoadingSpinner />,
   delay = 0,
-  threshold = 0.1,
+  threshold = 0.1,';
   rootMargin = '50px)
 }) => {/* TODO: Fix JSX expression */}
 
@@ -309,7 +309,7 @@ const fontPreloads = [;;
 
   // TOD,
   O: Add items;
-
+];
 ];
 
     http,
@@ -341,9 +341,9 @@ const imagePreloads = [;;
 
   // TOD,
   O: Add items;
-
 ];
-
+];
+';
 //     '/og-image.jpg,
 //     /favicon.ico];
 
@@ -362,5 +362,6 @@ const imagePreloads = [;;
     link.href = src;
 
     document.head.appendChild(link)})};
-
-export default LazyComponent;
+"
+export default LazyComponent;"
+';";`;

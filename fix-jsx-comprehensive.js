@@ -39,7 +39,7 @@ const sectionDivPattern = /<section([^>]*)>[\s\S]*?<\/div>/g;;
 
 return (
 
-      return match.replace(/<\/div>$/, </section>
+      return match.replace(/<\/div>$/, </section>);
 );
 
 })};
@@ -79,9 +79,9 @@ const files = [];;
 
 const fullPath = path.join(dir, item);;
 
-    const stat = fs.statSync(fullPath);;
-
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
+    const stat = fs.statSync(fullPath);;';
+';';
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {';
       files.push(...findTsxFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.ts)) {
       files.push(fullPath)}
 
@@ -97,7 +97,7 @@ const tsxFiles = findTsxFiles(/workspace);;
 
 let fixedCount = 0;;
 
-tsxFiles.forEach(file => {
+tsxFiles.forEach(file => {);
   if (fixJsxFile(file)) {
     fixedCount++}
 
@@ -105,3 +105,4 @@ tsxFiles.forEach(file => {
 
 // console.log removed for production
 // console.log removed for production
+';

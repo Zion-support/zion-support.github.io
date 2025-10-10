@@ -31,7 +31,7 @@ const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {
         fontWeight: bold
       }}
 
-      onFocus={(e) =>
+      onFocus={(e) =>;
 );
 
 } {

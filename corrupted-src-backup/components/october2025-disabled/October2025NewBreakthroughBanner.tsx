@@ -7,7 +7,7 @@ impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m ../conte, n, t/octob, e, r-20, 2, 5-n, e, w-breakthrou, g, h-conte, n, t;
 
 const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
-
+;
    };
 
   return(<div, classNam, e = bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n>
@@ -97,7 +97,7 @@ const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
               <Link, ke, y = { conte, n, t., i, d  }, to = {/bl, o, g/${conte, n, t.slug}}
 
                 className=group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0
-              ></Link>
+              ></Link>';
                 <div, className='flex, item, s-start, ga, p-4, m, b-6' > <div, classNam, e = { bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-4, rounde, d-xl, shado, w-lg}
 
                   ></div>
@@ -116,7 +116,7 @@ const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
                 </div>
                 <p, classNam, e = te, x, t-sm, tex, t-purp, l, e-200, m, b-6, leadin, g-relax, e, d></p>
                   {conte, n, t.description}
-
+);
                 </p>)
                 {/* Key, Metric, s */})
                 <div, className=grid, gri, d-co, l, s-2, ga, p-3, m, b-6>)
@@ -325,7 +325,7 @@ const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
               N, L, P,
               Enterprise, Automatio, n,
               Cloud, Managemen, t].m, a, p(t, a, g = > (</div>
-              <span, ke, y = { ta, g  }, classNa, m, e = bg-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s
+              <span, ke, y = { ta, g  }, classNa, m, e = bg-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s);
               >)
                 {t, a, g})
               </sp, a, n>)
@@ -347,4 +347,4 @@ const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
 
 export default October2025NewBreakthroughBanner;
 
-`
+`';`;

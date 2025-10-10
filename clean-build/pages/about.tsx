@@ -5,9 +5,9 @@ export default function About() {
         <title>About Us - Zion Tech Group</title>
         <meta;
 
-          name="description
-          content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions that transform businesses.        /><
-        <meta name="viewport" content=width=device-width, initial-scale=1 /><
+          name="description";
+          content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions that transform businesses.        /><";
+        <meta name="viewport" content=width=device-width, initial-scale=1 /><";
         <link rel="icon" href=/favicon.ico /><
       <
       <div className=min-h-screen bg-gray-50>
@@ -29,7 +29,7 @@ export default function About() {
                 through innovative digital solutions and cutting-edge technology.
               <
             <
-          <
+          <);
         <)
 ),
         {/* Mission Section *
@@ -98,7 +98,7 @@ export default function About() {
               <div className=grid md:grid-cols-2 l,
     g:grid-cols-4 gap-8><
                 <div className=text-center p-6 bg-gray-50 rounded-lg><
-                  <div className=text-4xl mb-4><
+                  <div className=text-4xl mb-4><";
                     <span role="img" aria-label=target>
                       🎯,
                     <
@@ -111,7 +111,7 @@ export default function About() {
                   <
                 <
                 <div className=text-center p-6 bg-gray-50 rounded-lg><
-                  <div className=text-4xl mb-4><
+                  <div className=text-4xl mb-4><";
                     <span role="img" aria-label=handshake>
                       🤝
                     <
@@ -124,7 +124,7 @@ export default function About() {
                   <
                 <
                 <div className=text-center p-6 bg-gray-50 rounded-lg><
-                  <div className=text-4xl mb-4><
+                  <div className=text-4xl mb-4><";
                     <span role="img" aria-label=lightbulb>
                       💡
                     <
@@ -137,7 +137,7 @@ export default function About() {
                   <
                 <
                 <div className=text-center p-6 bg-gray-50 rounded-lg><
-                  <div className=text-4xl mb-4><
+                  <div className=text-4xl mb-4><";
                     <span role="img" aria-label=lock>
                       🔒
                     <
@@ -150,10 +150,10 @@ export default function About() {/* TODO: Fix JSX expression *
   return (<React.Fragment>
       <Head></Head>
         <title>About Us - Zion Tech Group</title>
-        <meta></meta>
-          name="description"
-          content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions that transform businesses.        
-        <meta name="viewport" content=width=device-width, initial-scale=1 /><
+        <meta></meta>";
+          name="description"';";
+          content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions that transform businesses.        ";
+        <meta name="viewport" content=width=device-width, initial-scale=1 /><";
         <link rel="icon" href=/favicon.ico /><
       <
       <div className=min-h-screen bg-gray-50><
@@ -236,7 +236,7 @@ export default function About() {/* TODO: Fix JSX expression *
   md:grid-cols-2,
   lg:grid-cols-4 gap-8><
                 <div className=text-center p-6 bg-gray-50 rounded-lg><
-                  <div className=text-4xl mb-4><
+                  <div className=text-4xl mb-4><";
                     <span role="img" aria-label=target><
                       🎯
                     <
@@ -249,7 +249,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   <
                 <
                 <div className=text-center p-6 bg-gray-50 rounded-lg><
-                  <div className=text-4xl mb-4><
+                  <div className=text-4xl mb-4><";
                     <span role="img" aria-label=handshake><
                       🤝
                     <
@@ -262,7 +262,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   <
                 <
                 <div className=text-center p-6 bg-gray-50 rounded-lg><
-                  <div className=text-4xl mb-4><
+                  <div className=text-4xl mb-4><";
                     <span role="img" aria-label=lightbulb><
                       💡
                     <
@@ -275,7 +275,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   <
                 <
                 <div className=text-center p-6 bg-gray-50 rounded-lg><
-                  <div className=text-4xl mb-4><
+                  <div className=text-4xl mb-4><";
                     <span role="img" aria-label=lock><
                       🔒
                     <
@@ -312,7 +312,7 @@ export default function About() {/* TODO: Fix JSX expression *
               <div className=grid m,
     d:grid-cols-3 gap-8><
                 <div className=text-center p-6 bg-white rounded-lg shadow-lg><
-                  <div className=text-5xl mb-4><
+                  <div className=text-5xl mb-4><";
                     <span role="img" aria-label=developer>
                       👨‍💻
                     <
@@ -326,7 +326,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   <
                 <
                 <div className=text-center p-6 bg-white rounded-lg shadow-lg><
-                  <div className=text-5xl mb-4><
+                  <div className=text-5xl mb-4><";
                     <span role="img" aria-label=designer>
                       🎨
                     <
@@ -340,7 +340,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   <
                 <
                 <div className=text-center p-6 bg-white rounded-lg shadow-lg><
-                  <div className=text-5xl mb-4><
+                  <div className=text-5xl mb-4><";
                     <span role="img" aria-label=robot>
                       🤖
                     <
@@ -365,7 +365,7 @@ export default function About() {/* TODO: Fix JSX expression *
               <div className=grid,
   md:grid-cols-3 gap-8><
                 <div className=text-center p-6 bg-white rounded-lg shadow-lg><
-                  <div className=text-5xl mb-4><
+                  <div className=text-5xl mb-4><";
                     <span role="img" aria-label=developer><
                       👨‍💻
                     <
@@ -379,7 +379,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   <
                 <
                 <div className=text-center p-6 bg-white rounded-lg shadow-lg><
-                  <div className=text-5xl mb-4><
+                  <div className=text-5xl mb-4><";
                     <span role="img" aria-label=designer><
                       🎨
                     <
@@ -393,7 +393,7 @@ export default function About() {/* TODO: Fix JSX expression *
                   <
                 <
                 <div className=text-center p-6 bg-white rounded-lg shadow-lg><
-                  <div className=text-5xl mb-4><
+                  <div className=text-5xl mb-4><";
                     <span role="img" aria-label=robot><
                       🤖
                     <
@@ -472,5 +472,5 @@ export default function About() {/* TODO: Fix JSX expression *
       </div>
     </React.Fragment>)
   )}
-
-"
+";
+"';";

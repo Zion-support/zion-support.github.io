@@ -5,7 +5,7 @@ import React, { useState, useCallback } from react;
 ;
 
 const Image: React.FC = () => {
-interface ImageProps {
+interface ImageProps {;
   src: string;
 
   alt: string;
@@ -19,7 +19,7 @@ interface ImageProps {
   priority?: boolean;
 
   _quality?: number;
-
+';
   _placeholder?: 'blur' | empty;
 
   _blurDataURL?: string;
@@ -40,8 +40,8 @@ export const Image: React.FC<ImageProps> = ({
   width,
   height,
   className,
-  priority = false,
-  quality = 75,
+  priority = false,;
+  quality = 75,';
   placeholder = 'empty,
   blurDataURL,
   fill = false,
@@ -69,12 +69,12 @@ const [, setIsLoaded] = useState(false);
     if (onError) onError()}, [onError]);
 
   const imageStyle: React.CSSProperties = {
-    ...style,
-    ...(fill && {
+    ...style,;
+    ...(fill && {';
       position: 'absolute,
       top: 0,
-      left: 0,
-      width: '100%,
+      left: 0,';
+      width: '100%,';
       height: '100%,
       objectFit:     ,
 $4})
@@ -111,7 +111,7 @@ $4})
       style={imageStyle}
 
       sizes={sizes}
-
+';
       loading={priority ? 'eager' : 'lazy}
 
       onLoad={handleLoad}
@@ -124,9 +124,9 @@ $4})
   )};
 
 export default Image;
-
+';
 'use client;
-
+';
 import React, { useState, useCallback } from 'react;
 
 const,
@@ -141,8 +141,8 @@ const,
   height?: number
   className?: string
   priority?: boolean
-  _quality?: number
-
+  _quality?: number';
+';';
   _placeholder?: 'blur | empty
   _blurDataURL?: string;
 
@@ -167,8 +167,8 @@ export const Image: React.FC;
 //   width,
 //   height,
 //   className,
-  priority = false,
-quality = 75,
+  priority = false,;
+quality = 75,';
   placeholder = 'empty,
   blurDataURL,
   fill = false,
@@ -218,11 +218,11 @@ quality = 75,
   O: Add content}
 
 };
-
+';
   position: 'absolute,
       top: 0,
-      left: 0,
-      width: '100%,
+      left: 0,';
+      width: '100%,';
       height: '100%,
       objectFit: cover
 
@@ -241,7 +241,7 @@ quality = 75,
 
   )
       
-          <div></div>
+          <div></div>`;
 className={`bg-gray-200 flex items-center justify-center ${className}}
 
         style={imageStyle}
@@ -255,9 +255,9 @@ className={`bg-gray-200 flex items-center justify-center ${className}}
           
           
           
-          
-          
-          
+          "
+          "
+          ";
           <span className="text-gray-500 text-sm>Failed to load image</span>
       </div>
     )
@@ -280,7 +280,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}}
       style={imageStyle}
 
       sizes={sizes}
-
+';
       loading={priority ? 'eager' : 'lazy}
 
       onLoad={handleLoad}
@@ -290,10 +290,11 @@ className={`bg-gray-200 flex items-center justify-center ${className}}
       {...props}
 
 //     />
-  )
-}
-
+  )"
+}"
+";
 export default Image;"
 
 
 
+';";`;

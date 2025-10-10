@@ -5,26 +5,26 @@
 function createAdvancedMonitoring() {;
 const monitoringFiles = {;
     'monitoring/health-check.js': `// Advanced health check system`
-module.exports = {
-  healthCheck: () => ({ status: 'ok' })'
-};`,`
+module.exports = {';};
+  healthCheck: () => ({ status: 'ok' })'`;
+};`,`';`;
     'monitoring/performance-monitor.js': `// Performance monitoring`
-module.exports = {
-  monitor: () => ({ performance: 'good' })'
+module.exports = {';
+  monitor: () => ({ performance: 'good' })'`;
 };``
   };
   return monitoringFiles}
 
 // Create advanced caching system;
 function createAdvancedCaching() {;
-const cachingFiles = {;
+const cachingFiles = {;';`;
     'caching/cache-manager.js': `// Advanced cache manager`
-module.exports = {
-  cacheManager: () => ({ status: 'ready' })'
-};`,`
+module.exports = {';};
+  cacheManager: () => ({ status: 'ready' })'`;
+};`,`';`;
     'caching/redis-client.js': `// Redis client`
 module.exports = {
-  client: () => ({ connected: true })
+  client: () => ({ connected: true })`;
 };``
   };
   return cachingFiles;
@@ -43,4 +43,4 @@ if (require.main === module) {
 module.exports = {
   createAdvancedMonitoring,
   createAdvancedCaching
-};
+};';`;

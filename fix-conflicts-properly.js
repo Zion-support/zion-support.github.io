@@ -45,18 +45,18 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
       .replace(/[\s\S]*?)
       // Fix common syntax patterns;)
-      .replace(/\{\s*$/gm, '{\n  // TODO: Add content\n})
-      .replace(/\[\s*$/gm, '[\n  // TODO: Add items\n]),
+      .replace(/\{\s*$/gm, '{\n  // TODO: Add content\n})';
+      .replace(/\[\s*$/gm, '[\n  // TODO: Add items\n]),';
       .replace(/\(\s*$/gm, '(\n  // TODO: Add parameters\n)),
       // Fix missing semicolons;
-
+';
       .replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class|interface|type)/g, '$1;\n$2)
       // Fix missing commas in object literals;
-
+';
       .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2: ),
       .replace(/[\s\S]*?
       // Fix common syntax patterns;
-
+);
       .replace(/\{/* TODO: Fix JSX expression */})
   O: Add content\n})
       .replace(/\[\s*$/gm, [\n  // TOD)
@@ -64,22 +64,22 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       .replace(/\(\s*$/gm, (\n  // TOD)
   O: Add parameters\n))
       // Fix missing semicolons;
-
+';
       .replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class|interface|type)/g, '$1;\n$2)
       // Fix missing commas in object literals;
-
+';
       .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2:)
       // Fix missing commas in arrays;
-
+';
       .replace(/(\w+)\s*\n\s*\]/g, '$1,\n])
       // Fix missing commas in function parameters;
-
+';
       .replace(/(\w+)\s*\n\s*\)/g, '$1,\n))
       // Fix invalid characters;
-
+';
       .replace(/[^\x00-\x7F]/g, ')
       // Fix duplicate use client directives;
-
+';
       .replace(/'use client';\s*'use client';/g, "'use client';)
       // Fix duplicate React imports;
 
@@ -93,7 +93,7 @@ const lines = match.split(\n);;
 
       })
       // Remove empty lines with just spaces;
-
+';
       .replace(/^\s*\n/gm, '\n)
       // Fix missing closing braces;
 
@@ -123,14 +123,14 @@ let line = lines[i];;
       const trimmed = line.trim();;
 
       // Track JSX state;
-
+';
       if (trimmed.includes('<') && !trimmed.includes('</)) {
         inJSX = true;
 
     for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};;
 
       }
-
+';
       if (trimmed.includes('</') || trimmed.includes('/>)) {/* TODO: Fix JSX expression */}
 
       }
@@ -151,12 +151,12 @@ let line = lines[i];;
       parenCount -= (line.match(/\)/g) || []).length;
 
       // Fix common issues;
-
+';
       if (trimmed === ') {
         cleanedLines.push(line);
 
         continue;
-
+';
       if (trimmed === ') {/* TODO: Fix JSX expression */}
 
       }
@@ -169,13 +169,13 @@ let line = lines[i];;
       }
 
       // Fix missing semicolons;
-
+';
       if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while)) {
         if (i === lines.length - 1 || lines[i + 1].trim().match(/^(import|export|const|let|var|function|class|interface|type)/)) {
           line = line.replace(/\s*$/, ;);
 
           modified = true;
-
+';
       if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while)) {/* TODO: Fix JSX expression */}
 
         }
@@ -188,7 +188,7 @@ let line = lines[i];;
         for (let j = 0; j < braceCount; j++) {;;
 
       if (braceCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
-
+';
           line += '\n}}
 
         modified = true}
@@ -251,7 +251,7 @@ return false}
 }
 
 // Function to find all TypeScript/React files;
-
+';
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', .js]) {;
 
 const files = [];;
@@ -267,11 +267,11 @@ const items = fs.readdirSync(currentDir);;
 const fullPath = path.join(currentDir, item);;
 
       const stat = fs.statSync(fullPath);;
-
+';
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
         traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
-
+';
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js]) {/* TODO: Fix JSX expression */}
 
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
@@ -317,11 +317,11 @@ errorCount++}
   complete:`);
 
 // console.log removed for production
-
+`;
   processed: ${files.length}`);
 
 // console.log removed for production
-
+`;
   fixed: ${fixedCount}`);
 
 // console.log removed for production
@@ -341,5 +341,5 @@ try {/* TODO: Fix JSX expression */}
 
   // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}
-
-}"`
+";`;
+}"`';";`;

@@ -1,20 +1,20 @@
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
-  if (req.method !== 'POST') {,
+  if (req.method !== 'POST') {,';
     return res.status(405).json({ error: 'Method not allowed });
 
-export default async function handler(re,
+export default async function handler(re,);
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
-
+';
   r: 'Method not allowed' })}
 
   try {/* TODO: Fix JSX expression */}
-
+';
     const { markdown, targetLanguage = 'en } = req.body || {};
 
     if (!markdown) {/* TODO: Fix JSX expression */}
-
+';
   r: 'Markdown content required' })}
 
 ;
@@ -26,13 +26,13 @@ const _openai = new OpenAI({/* TODO: Fix JSX expression */});;
 ;
 
 const completion = await openai.chat.completions.create({;;
-
+';
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [,
-        {,
-          role: 'system',
-          content: 'You are a professional translator for policy and development documents.'},
-        {)
+        {,';
+          role: 'system',';
+          content: 'You are a professional translator for policy and development documents.'},);
+        {)';
           role: 'user')
           content: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}`)
         })
@@ -43,20 +43,20 @@ const completion = await openai.chat.completions.create({/* TODO: Fix JSX expres
 
         },
         {/* TODO: Fix JSX expression */}
-
+`;
   t: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}`}],
-      temperatur,
+      temperatur,);
   e: 0.2)
     });
-
+';
     //     const translated = completion.choices?.[0]?.message?.content?.trim() || ';;
 
-    return res.status(200).json({ translated })} catch (error: unknown) {,
+    return res.status(200).json({ translated })} catch (error: unknown) {,';
     //     return res.status(500).json({ error: 'Translation failed' })} catch (erro)
   r: unknown) {/* TODO: Fix JSX expression */}
-
+';
   r: 'Translation failed' })}
 
 }
-
-`
+`;
+`';`;

@@ -8,7 +8,7 @@ export const _performanceConfig = {;;
   metrics: {
 // lcp: {
 // good: 2500,
-// needsImprovement: 4000
+// needsImprovement: 4000};
     },
     fid: {
       good: 100,
@@ -47,13 +47,13 @@ export const _performanceConfig = {;;
   // Resource hints
   preload: [
     { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }],
-  prefetch: [
-    '/api/health',
+  prefetch: [';
+    '/api/health',';
     '/api/config'],
   // Image optimization
   images: {
 // deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-// imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+// imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],';
 // formats: ['image/avif', 'image/webp'],
 // minimumCacheTTL: 60,
 // dangerouslyAllowSVG: false
@@ -176,14 +176,14 @@ export const _performanceConfig = {// TODO: Add content};;
   // TOD,
   O: Add items]
     {/* TODO: Fix JSX expression */}
-
+';
   n: 'anonymous' },
 //   ],
   prefetc,
   h: [
   // TOD,
-  O: Add items]
-//     '/api/health',
+  O: Add items]';
+//     '/api/health',';
 //     '/api/config',
 //   ],
   // Image optimization,
@@ -194,7 +194,7 @@ export const _performanceConfig = {// TODO: Add content};;
 
 // imageSize,
   s: [16, 32, 48, 64, 96, 128, 256, 384],
-// format,
+// format,';
   s: ['image/avif', 'image/webp'],
 // minimumCacheTT,
   L: 60,
@@ -259,3 +259,4 @@ export const _performanceConfig = {// TODO: Add content};;
 export type PerformanceConfig = typeof performanceConfig;
 
 export default performanceConfig;
+';

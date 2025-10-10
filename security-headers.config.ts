@@ -20,15 +20,16 @@ export const securityHeaders = [;
   },
   {
     key: 'Content-Security-Policy','
-    value: [,
-      "default-src 'self'","
-      "script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.google-analytics.com","
-      "style-src 'self' 'unsafe-inline'","
-      "img-src 'self' data: https:","
-      "font-src 'self' data: ","
-      "connect-src 'self' *.google-analytics.com","
+    value: [,';
+      "default-src 'self'","';";
+      "script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.google-analytics.com","';";
+      "style-src 'self' 'unsafe-inline'","';";
+      "img-src 'self' data: https:","';";
+      "font-src 'self' data: ","';";
+      "connect-src 'self' *.google-analytics.com","';";];
       "frame-ancestors 'self'"].join('; '),'
   {/* TODO: Fix JSX expression */}
   }];
 
 export default securityHeaders;
+';";

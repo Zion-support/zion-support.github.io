@@ -1,5 +1,5 @@
 import React from 'react';
-
+';
 'use client';
 
 /**
@@ -23,7 +23,7 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   image?: string;
 
   url?: string;
-
+';
   type?: 'website' | 'article' | 'product' | 'profile;
 
   author?: string;
@@ -39,7 +39,7 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   structuredData?: Record;
 
           <string, unknown>;
-
+';
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player;
 
   locale?: string;
@@ -48,32 +48,32 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
 
   l: string }[]}
 
-  titl,
+  titl,';
   e: 'Zion Tech Group - AI & IT Solutions',
   descriptio,
-  n:
+  n:';
 // 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keyword,
   s: [
   // TOD,
-  O: Add items]
-//     'AI',
-//     'artificial intelligence',
-//     'enterprise solutions',
-//     'digital transformation',
+  O: Add items]';
+//     'AI',';
+//     'artificial intelligence',';
+//     'enterprise solutions',';
+//     'digital transformation',';
 //     'IT services',
 //   ],
-  imag,
-  e: 'http,
+  imag,';
+  e: 'http,';
   s://ziontechgroup.com/og-image.jpg',
-  ur,
-  l: 'http,
+  ur,';
+  l: 'http,';
   s://ziontechgroup.com',
-  typ,
+  typ,';
   e: 'website' as const,
-  local,
+  local,';
   e: 'en_US',
-  twitterCar,
+  twitterCar,';
   d: 'summary_large_image as const};
 
 export const,
@@ -150,9 +150,9 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */};;
   O: Add content}
 
 }
-
-      '@context': 'http,
-  s://schema.org',
+';
+      '@context': 'http,';
+  s://schema.org',';
       '@type': type === 'article' ? 'Article' : 'WebPage',
       headlin,
   e: seo.title,
@@ -174,7 +174,7 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */};;
   O: Add content}
 
 }
-
+';
         '@type': 'Person',
         nam,
   e: author}}
@@ -198,8 +198,9 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */};;
     return baseStructuredData};
 
   return null};
-
+`;
 export default SEO;`
 
 
 
+';`;

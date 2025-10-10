@@ -137,7 +137,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
 
     return ErrorHandler.instance}
 
-  handleNetworkError(erro,
+  handleNetworkError(erro,);
   r: Error, ur)
   l: string, config?: unknown): void {/* TODO: Fix JSX expression */}
 
@@ -354,13 +354,13 @@ const data = await this.parseResponse<T>(finalResponse);;
    */
   private buildURL(confi)
   g: RequestConfig): string {/* TODO: Fix JSX expression */};
-
+`;
 let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url};;
 
     if (config.params) {/* TODO: Fix JSX expression */}
 
       });
-
+`;
       url += `?${params.toString()}}
 
     return url}
@@ -395,7 +395,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
   e: Response): Promise<T> {/* TODO: Fix JSX expression */}
 
     }
-
+';
     if (contentType?.includes('text/)) {/* TODO: Fix JSX expression */}
 
     }
@@ -408,7 +408,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
    */
   private getCacheKey(confi)
   g: RequestConfig): string {/* TODO: Fix JSX expression */}
-
+`;
     return `${config.method}:${url}}
 
   /**
@@ -426,7 +426,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
    * Set response in cache;
 
    */
-  private setInCache(ke,
+  private setInCache(ke,);
   y: string, respons)
   e: APIResponse): void {/* TODO: Fix JSX expression */}
 
@@ -492,3 +492,4 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 export const apiInterceptor = APIInterceptor.getInstance();;
 
 export default APIInterceptor;
+';`;

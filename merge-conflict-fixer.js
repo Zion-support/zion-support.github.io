@@ -2,7 +2,7 @@
 
 } } else { let resolvedCount = 0; for (const file of conflictFiles) {if (resolveMergeConflicts(file)) { resolvedCount++} } } // // console.log removed for production;;
 
-  y: `), if (resolvedCount === conflictFiles.length) { // // console.log removed for production
-} } else { // // console.log removed for production
-} } } } catch (error) {' process.exit(1)}'
-`
+  y: `), if (resolvedCount === conflictFiles.length) { // // console.log removed for production;
+} } else { // // console.log removed for production';
+} } } } catch (error) {' process.exit(1)}'`;
+`';`;

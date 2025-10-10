@@ -9,7 +9,7 @@ async function main() {
 
   //   files.forEach(file => {
   return (
-
+);
 )
     try {)
       //Fix common JSX syntax issues;)
@@ -29,7 +29,7 @@ async function main() {/* TODO: Fix JSX expression */}
   //Find all TSX files in src/components;
 
   //   files.forEach(file => {/* TODO: Fix JSX expression */}
-
+);
   placement: <div>\nkey={...} -> <div\nkey={...})
       if (keyPropFix !== content) {/* TODO: Fix JSX expression */}
 
@@ -81,7 +81,7 @@ async function main() {/* TODO: Fix JSX expression */}
       //6. Fix unclosed input tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button;
 
       const inputFix = content.replace(;;
-
+);
         /<input([^>]*?)\n\s*\n\s*<button/g;
 
         <input$1\n/>\n\n<button
@@ -131,4 +131,5 @@ const inputFix = content.replace();;
 
   //   }
 
-// main().catch(console.error);
+// main().catch(console.error);';
+';';

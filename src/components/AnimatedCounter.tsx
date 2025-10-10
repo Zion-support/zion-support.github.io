@@ -14,8 +14,8 @@ interface AnimatedCounterProps {
 ;
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps>end</AnimatedCounterProps>,
-  duration = 2000,
-  prefix = ',
+  duration = 2000,;
+  prefix = ',';
   suffix = ',
   className = 
 }) => {
@@ -34,7 +34,7 @@ const [count, setCount] = useState(0);
 }(() => {;
 
 const observer = new IntersectionObserver(;;
-
+);
       ([entry]) => {
         if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
@@ -103,3 +103,4 @@ const easeOutQuart = 1 - Math.pow(1 - progress, 4);;
   )};
 
 export default AnimatedCounter;
+';

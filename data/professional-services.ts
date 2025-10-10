@@ -77,28 +77,28 @@ export interface ProfessionalService {/* TODO: Fix JSX expression */}
     mobile: string, email: string;
     address: string}
 }
-export const professionalServices: ProfessionalService[] = [,
-    id: "it-consulting", name: "IT Consulting Services",
-    tagline: "Expert IT consulting for business growth", price: '$120/hour',
+export const professionalServices: ProfessionalService[] = [,";
+    id: "it-consulting", name: "IT Consulting Services",";
+    tagline: "Expert IT consulting for business growth", price: '$120/hour',';
     description: 'Professional IT consulting services to help businesses optimize their technology investments.',
-    features: [;
-      "Technology assessment"
-      "Strategic planning"
-      "Implementation guidance"
-      "Performance optimization",
-      "Ongoing support"],
+    features: [;";
+      "Technology assessment"";
+      "Strategic planning"";
+      "Implementation guidance"";
+      "Performance optimization",";
+      "Ongoing support"],";
     link: "/services/it-consulting", category: "Professional Services",
-    realImplementation: true;
+    realImplementation: true;";
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+];";
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",";
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-];
-      email: "kleber@ziontechgroup.com",
+];";
+      email: "kleber@ziontechgroup.com",";
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      addres,
+      addres,";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -126,121 +126,121 @@ export const professionalServices: ProfessionalService[] = [,
   s: string}
 }
 export const,
-  professionalServices: ProfessionalService[] = [,
-    i,"
-  d: "it-consulting", nam,"
-  e: "IT Consulting Services",
-    taglin,"
-  e: "Expert IT consulting for business growth", pric,"
-  e: "$120/hour",
-    descriptio,"
+  professionalServices: ProfessionalService[] = [,";
+    i,"";
+  d: "it-consulting", nam,"";
+  e: "IT Consulting Services",";
+    taglin,"";
+  e: "Expert IT consulting for business growth", pric,"";
+  e: "$120/hour",";
+    descriptio,"";
   n: "Professional IT consulting services to help businesses optimize their technology investments.",
-    feature,
-  s: [;"
-      "Technology assessment""
-      "Strategic planning""
-      "Implementation guidance""
-      "Performance optimization""
+    feature,";
+  s: [;"";
+      "Technology assessment""";
+      "Strategic planning""";
+      "Implementation guidance""";
+      "Performance optimization""";
       "Ongoing support"
-    ],
-    lin,"
-  k: "/services/it-consulting", categor,"
+    ],";
+    lin,"";
+  k: "/services/it-consulting", categor,"";
   y: "Professional Services",
     realImplementatio,
   n: true,
-    contactInf,
-  o: addres,"
+    contactInf,";
+  o: addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];";
+      mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com",";
+      addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];";
+      emai,"";
+  l: "kleber@ziontechgroup.com",";
+  addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-      mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-      emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-;
-    id: 'it-consulting',
-    name: 'IT Consulting Services',
-    tagline: "Expert IT consulting for business growth",
-    price: "$120/hour",
+;';
+    id: 'it-consulting',';
+    name: 'IT Consulting Services',";
+    tagline: "Expert IT consulting for business growth",";
+    price: "$120/hour",";
     description: "Professional IT consulting services to help businesses optimize their technology investments.",
-    features: [,
-      "Technology assessment",
-      "Strategic planning",
-      "Implementation guidance",
-      "Performance optimization",
+    features: [,";
+      "Technology assessment",";
+      "Strategic planning",";
+      "Implementation guidance",";
+      "Performance optimization",";
       "Ongoing support"
-    ],
-    link: '/services/it-consulting',
+    ],';
+    link: '/services/it-consulting',';
     category: 'Professional Services',
     realImplementation: true;
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
-  d: "it-consulting",
-    nam,"
-  e: "IT Consulting Services",
-    taglin,"
-  e: "Expert IT consulting for business growth",
-    pric,"
-  e: "$120/hour",
-    descriptio,"
+    contactInfo: unknown;';
+      mobile: '+1 302 464 0950',';
+      email: 'kleber@ziontechgroup.com',';
+      mobile: '+1 302 464 0950',';
+      email: 'kleber@ziontechgroup.com',';
+      address: '364 E Main St STE 1008 Middletown DE 19709'}};";
+];      mobile: "+1 302 464 0950",";
+      email: "kleber@ziontechgroup.com",";
+      mobile: "+1 302 464 0950",";
+      email: "kleber@ziontechgroup.com",";
+      address: "364 E Main St STE 1008 Middletown DE 19709",";
+    i,"";
+  d: "it-consulting",";
+    nam,"";
+  e: "IT Consulting Services",";
+    taglin,"";
+  e: "Expert IT consulting for business growth",";
+    pric,"";
+  e: "$120/hour",";
+    descriptio,"";
   n: "Professional IT consulting services to help businesses optimize their technology investments.",
-    feature,
-  s: [,"
-      "Technology assessment","
-      "Strategic planning","
-      "Implementation guidance","
-      "Performance optimization","
+    feature,";
+  s: [,"";
+      "Technology assessment","";
+      "Strategic planning","";
+      "Implementation guidance","";
+      "Performance optimization","";
       "Ongoing support"
-    ],
-    lin,"
-  k: "/services/it-consulting",
-    categor,"
+    ],";
+    lin,"";
+  k: "/services/it-consulting",";
+    categor,"";
   y: "Professional Services",
     realImplementatio,
   n: true,
     contactInf,
-  o: unknown,
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
+  o: unknown,";
+      mobil,"";
+  e: "+1 302 464 0950",";
+      emai,"";
   l: "kleber@ziontechgroup.com",
-      mobil,
+      mobil,';
   e: '+1 302 464 0950',
-      emai,
+      emai,';
   l: 'kleber@ziontechgroup.com',
-      addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};
-];      mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
+      addres,';
+  s: '364 E Main St STE 1008 Middletown DE 19709'}};";
+];      mobil,"";
+  e: "+1 302 464 0950",";
+  emai,"";
+  l: "kleber@ziontechgroup.com"";
+      mobil,"";
+  e: "+1 302 464 0950",";
+      emai,"";
+  l: "kleber@ziontechgroup.com",";
+      addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -269,8 +269,8 @@ i,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: {/* TODO: Fix JSX expression */}
-  l: string} addres,
-  s: string} } } addres,"
+  l: string} addres,";
+  s: string} } } addres,"";
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
   d: string, nam,
   e: string, taglin,
@@ -284,43 +284,43 @@ i,
   o: mobil,
   e: string, emai,
   l: string, addres,
-  s: string } } export const,
-  professionalServices: ProfessionalService[] = [ i,"
-  d: "it-consulting", nam,"
-  e: "IT Consulting Services", taglin,"
-  e: "Expert IT consulting for business growth", pric,"
-  e: "$120/hour", descriptio,"
-  n: "Professional IT consulting services to help businesses optimize their technology investments.", feature,"
-  s: [ "Technology assessment" "Strategic planning" "Implementation guidance" "Performance optimization" "Ongoing support" ], lin,"
-  k: "/services/it-consulting", categor,"
+  s: string } } export const,";
+  professionalServices: ProfessionalService[] = [ i,"";
+  d: "it-consulting", nam,"";
+  e: "IT Consulting Services", taglin,"";
+  e: "Expert IT consulting for business growth", pric,"";
+  e: "$120/hour", descriptio,"";
+  n: "Professional IT consulting services to help businesses optimize their technology investments.", feature,"";
+  s: [ "Technology assessment" "Strategic planning" "Implementation guidance" "Performance optimization" "Ongoing support" ], lin,"";
+  k: "/services/it-consulting", categor,"";
   y: "Professional Services", realImplementatio,
-  n: true, contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "it-consulting", nam,"
-  e: "IT Consulting Services", taglin,"
-  e: "Expert IT consulting for business growth", pric,"
-  e: "$120/hour", descriptio,"
-  n: "Professional IT consulting services to help businesses optimize their technology investments.", feature,"
-  s: [ "Technology assessment", "Strategic planning", "Implementation guidance", "Performance optimization", "Ongoing support" ], lin,"
-  k: "/services/it-consulting", categor,"
+  n: true, contactInf,";
+  o: addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"";
+  l: "kleber@ziontechgroup.com",";
+  addres,"";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"";
+  d: "it-consulting", nam,"";
+  e: "IT Consulting Services", taglin,"";
+  e: "Expert IT consulting for business growth", pric,"";
+  e: "$120/hour", descriptio,"";
+  n: "Professional IT consulting services to help businesses optimize their technology investments.", feature,"";
+  s: [ "Technology assessment", "Strategic planning", "Implementation guidance", "Performance optimization", "Ongoing support" ], lin,"";
+  k: "/services/it-consulting", categor,"";
   y: "Professional Services", realImplementatio,
-  n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  n: true, contactInf,";
+  o: mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", mobil,';
+  e: '+1 302 464 0950',' emai,';
+  l: 'kleber@ziontechgroup.com',' addres,';";
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"";
+  e: "+1 302 464 0950",";
+  emai,"";
+  l: "kleber@ziontechgroup.com" mobil,"";
+  e: "+1 302 464 0950", emai,"";
+  l: "kleber@ziontechgroup.com", addres,"';";
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"';";
