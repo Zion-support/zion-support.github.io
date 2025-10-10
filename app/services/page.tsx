@@ -1002,6 +1002,36 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Enhanced Services CTA */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="cyber-card hologram-card p-8 border border-cyan-500/20 text-center">
+              <h2 className="text-3xl font-bold text-white mb-4 neon-text">
+                Explore Our Enhanced Services
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Discover our comprehensive collection of 50+ real AI services, IT solutions, and micro SAAS tools 
+                with transparent pricing, free trials, and comprehensive support.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="/services/enhanced"
+                  className="cyber-button text-center py-4 px-8"
+                >
+                  View Enhanced Services
+                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >
+                  📞 Call: (302) 464-0950
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">

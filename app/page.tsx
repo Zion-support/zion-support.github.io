@@ -106,7 +106,7 @@ const HomePage: React.FC = () => {
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-advanced neural-network-bg matrix-rain">
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -133,7 +133,7 @@ const HomePage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <h1 
               id="hero-heading" 
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text glitch-text cyber-glow"
               data-text="Zion Tech Group"
             >
               Zion Tech Group
@@ -744,13 +744,53 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
+        {/* Enhanced Services Showcase */}
+        <section className="mb-16" aria-labelledby="enhanced-services-heading">
+          <div className="max-w-6xl mx-auto text-center mb-12">
+            <h2 id="enhanced-services-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 neon-text glitch-text" data-text="50+ Real Services">
+              50+ Real Services
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Discover our comprehensive collection of real AI services, IT solutions, and micro SAAS tools 
+              with transparent pricing, free trials, and comprehensive support.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+              <div className="cyber-card hologram-card p-6 text-center">
+                <div className="text-4xl mb-4">🤖</div>
+                <h3 className="text-xl font-bold text-white mb-2">AI Services</h3>
+                <p className="text-gray-300 text-sm mb-4">Voice assistants, predictive maintenance, supply chain optimization, and more</p>
+                <div className="text-cyan-400 font-bold">25+ Services</div>
+              </div>
+              <div className="cyber-card hologram-card p-6 text-center">
+                <div className="text-4xl mb-4">💻</div>
+                <h3 className="text-xl font-bold text-white mb-2">IT Services</h3>
+                <p className="text-gray-300 text-sm mb-4">Cloud migration, cybersecurity, DevOps, and infrastructure management</p>
+                <div className="text-cyan-400 font-bold">15+ Services</div>
+              </div>
+              <div className="cyber-card hologram-card p-6 text-center">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-xl font-bold text-white mb-2">Micro SAAS</h3>
+                <p className="text-gray-300 text-sm mb-4">AI writing tools, analytics dashboards, schedulers, and productivity apps</p>
+                <div className="text-cyan-400 font-bold">20+ Tools</div>
+              </div>
+            </div>
+            <a 
+              href="/services/enhanced"
+              className="cyber-button text-center py-4 px-8 inline-flex items-center"
+            >
+              Explore All Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+          </div>
+        </section>
+
         {/* Micro SAAS Solutions Section */}
         <section className="mb-16" aria-labelledby="micro-saas-heading">
           <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Micro SAAS Solutions
           </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-            Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
+            Affordable, powerful AI-driven tools for modern businesses. 20+ ready-to-use applications.
           </p>
           {/* Productivity Tools */}
           <div className="mb-12">
