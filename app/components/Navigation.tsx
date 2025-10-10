@@ -71,15 +71,41 @@ const Navigation: React.FC = () => {
                 </button>
                 
                 {servicesOpen && (
-                  <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                  <div className="absolute left-0 mt-2 w-64 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">AI Services</div>
                     <Link href="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
-                      AI Services
+                      AI Solutions
                     </Link>
+                    <Link href="/ai-marketing" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      AI Marketing
+                    </Link>
+                    <Link href="/ai-customer-support" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      AI Customer Support
+                    </Link>
+                    <Link href="/ai-data-analytics" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      AI Data Analytics
+                    </Link>
+                    <div className="border-t border-gray-700 my-1"></div>
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">IT Services</div>
                     <Link href="/it-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
-                      IT Services
+                      IT Solutions
                     </Link>
+                    <Link href="/cloud-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Cloud Services
+                    </Link>
+                    <Link href="/cybersecurity" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Cybersecurity
+                    </Link>
+                    <Link href="/devops" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      DevOps & CI/CD
+                    </Link>
+                    <div className="border-t border-gray-700 my-1"></div>
+                    <div className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Solutions</div>
                     <Link href="/micro-saas" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
                       Micro SaaS
+                    </Link>
+                    <Link href="/pricing" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Pricing
                     </Link>
                   </div>
                 )}
@@ -87,6 +113,12 @@ const Navigation: React.FC = () => {
 
               <Link href="/about" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 About
+              </Link>
+              <Link href="/blog" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Blog
+              </Link>
+              <Link href="/case-studies" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Case Studies
               </Link>
               <Link href="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Contact
@@ -112,8 +144,53 @@ const Navigation: React.FC = () => {
               <Link href="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Home
               </Link>
+              <div className="px-3 py-2">
+                <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">AI Services</div>
+                <Link href="/ai-services" className="text-gray-300 hover:text-white block px-3 py-1 rounded-md text-sm">
+                  AI Solutions
+                </Link>
+                <Link href="/ai-marketing" className="text-gray-300 hover:text-white block px-3 py-1 rounded-md text-sm">
+                  AI Marketing
+                </Link>
+                <Link href="/ai-customer-support" className="text-gray-300 hover:text-white block px-3 py-1 rounded-md text-sm">
+                  AI Customer Support
+                </Link>
+                <Link href="/ai-data-analytics" className="text-gray-300 hover:text-white block px-3 py-1 rounded-md text-sm">
+                  AI Data Analytics
+                </Link>
+              </div>
+              <div className="px-3 py-2">
+                <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">IT Services</div>
+                <Link href="/it-services" className="text-gray-300 hover:text-white block px-3 py-1 rounded-md text-sm">
+                  IT Solutions
+                </Link>
+                <Link href="/cloud-services" className="text-gray-300 hover:text-white block px-3 py-1 rounded-md text-sm">
+                  Cloud Services
+                </Link>
+                <Link href="/cybersecurity" className="text-gray-300 hover:text-white block px-3 py-1 rounded-md text-sm">
+                  Cybersecurity
+                </Link>
+                <Link href="/devops" className="text-gray-300 hover:text-white block px-3 py-1 rounded-md text-sm">
+                  DevOps & CI/CD
+                </Link>
+              </div>
+              <div className="px-3 py-2">
+                <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Solutions</div>
+                <Link href="/micro-saas" className="text-gray-300 hover:text-white block px-3 py-1 rounded-md text-sm">
+                  Micro SaaS
+                </Link>
+                <Link href="/pricing" className="text-gray-300 hover:text-white block px-3 py-1 rounded-md text-sm">
+                  Pricing
+                </Link>
+              </div>
               <Link href="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 About
+              </Link>
+              <Link href="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Blog
+              </Link>
+              <Link href="/case-studies" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Case Studies
               </Link>
               <Link href="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Contact
