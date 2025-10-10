@@ -11,8 +11,8 @@ const Ai2026AutonomousAgentFactoriesPage: React.FC = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Ai 2026 Autonomous Agent Factories</h1>
           <p className="text-gray-300 mb-8">Coming Soon - Advanced ai 2026 autonomous agent factories solutions</p>
-          <Link 
-            to="/contact" 
+          <Link
+            to="/contact"
             className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
           >
             Contact Us

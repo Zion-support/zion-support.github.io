@@ -76,7 +76,7 @@ export class CacheManager<T = unknown> {
    */
   get(key: string): T | null {
     const entry = this.cache.get(key);
-    
+
     if (!entry) {
       this.stats.misses++;
       this.updateHitRate();
@@ -102,7 +102,7 @@ export class CacheManager<T = unknown> {
    */
   has(key: string): boolean {
     const entry = this.cache.get(key);
-    
+
     if (!entry) {
       return false;
     }
@@ -124,7 +124,7 @@ export class CacheManager<T = unknown> {
     const deleted = this.cache.delete(key);
     if (deleted) {
       this.stats.entries = this.cache.size;
-      
+
       // Save to persistent storage if needed
       if (this.config.storage !== CacheStorage.Memory) {
         this.saveToStorage();
@@ -139,7 +139,7 @@ export class CacheManager<T = unknown> {
   clear(): void {
     this.cache.clear();
     this.stats.entries = 0;
-    
+
     // Clear persistent storage if needed
     if (this.config.storage !== CacheStorage.Memory) {
       this.clearStorage();
@@ -173,21 +173,21 @@ export class CacheManager<T = unknown> {
   cleanExpired(): number {
     const now = Date.now();
     let cleaned = 0;
-    
+
     for (const [key, entry] of this.cache.entries()) {
       if (now - entry.timestamp > entry.ttl) {
         this.cache.delete(key);
         cleaned++;
       }
     }
-    
+
     this.stats.entries = this.cache.size;
-    
+
     // Save to persistent storage if needed
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {
       this.saveToStorage();
     }
-    
+
     return cleaned;
   }
 
@@ -204,7 +204,7 @@ export class CacheManager<T = unknown> {
    */
   private saveToStorage(): void {
     if (typeof window === 'undefined') return;
-    
+
     try {
       const storage = this.getStorage();
       if (storage) {
@@ -224,7 +224,7 @@ export class CacheManager<T = unknown> {
    */
   private loadFromStorage(): void {
     if (typeof window === 'undefined') return;
-    
+
     try {
       const storage = this.getStorage();
       if (storage) {
@@ -244,7 +244,7 @@ export class CacheManager<T = unknown> {
    */
   private clearStorage(): void {
     if (typeof window === 'undefined') return;
-    
+
     try {
       const storage = this.getStorage();
       if (storage) {
@@ -259,7 +259,7 @@ export class CacheManager<T = unknown> {
    */
   private getStorage(): Storage | null {
     if (typeof window === 'undefined') return null;
-    
+
     switch (this.config.storage) {
       case CacheStorage.LocalStorage:
         return window.localStorage;
@@ -273,13 +273,12 @@ export class CacheManager<T = unknown> {
 
 // Create singleton instances for different use cases
 export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });
-export const localStorageCache = new CacheManager({ 
-  storage: CacheStorage.LocalStorage, 
+export const localStorageCache = new CacheManager({
+  storage: CacheStorage.LocalStorage,
   defaultTTL: 30 * 60 * 1000 // 30 minutes
-});
-export const sessionStorageCache = new CacheManager({ 
-  storage: CacheStorage.SessionStorage, 
+
+export const sessionStorageCache = new CacheManager({
+  storage: CacheStorage.SessionStorage,
   defaultTTL: 60 * 60 * 1000 // 1 hour
-});
 
 export default CacheManager;

@@ -1,6 +1,5 @@
 'use client';
-import React, { useState } from 'react';
-import { Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Star, Zap, Cpu, HardDrive, Wifi, Server, Code, Globe, Target, TrendingUp, Award, DollarSign, Clock as ClockIcon, Shield as ShieldIcon, Users as UsersIcon, TrendingUp as TrendingUpIcon, MessageSquare, Calendar } from 'lucide-react';
+import { Cloud, Shield, Settings, Database, BarChart, CheckCircle, ArrowRight, Phone, Clock, Zap, Cpu, Wifi, Server, Code, TrendingUp, DollarSign, Clock, Shield, TrendingUp, MessageSquare } from 'lucide-react';
 
 export default function ITServicesPage() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -427,7 +426,150 @@ name: 'AI-Powered Infrastructure Management',
           popular: false
         }
       ]
-
+    },
+    {
+      category: 'Advanced AI-Powered IT Solutions',
+      icon: Brain,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      services: [
+        {
+          name: 'AI Quantum Security Implementation',
+          description: 'Next-generation quantum-resistant security solutions for future-proof cybersecurity',
+          features: ['Quantum Cryptography', 'Post-Quantum Algorithms', 'Future-Proof Security', 'Migration Planning', 'Compliance Assurance', 'Quantum Key Distribution'],
+          pricing: 'Starting at $15,999',
+          trial: 'Free security audit',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/ai-quantum-security',
+          popular: true
+        },
+        {
+          name: 'AI Neural Network Infrastructure',
+          description: 'Advanced neural network infrastructure for AI model training and deployment',
+          features: ['Neural Network Training', 'Model Deployment', 'GPU Clusters', 'Distributed Computing', 'Auto-scaling', 'Performance Optimization'],
+          pricing: 'Starting at $12,999/mo',
+          trial: 'Free infrastructure assessment',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/ai-neural-infrastructure',
+          popular: true
+        },
+        {
+          name: 'AI Edge Computing Platform',
+          description: 'Intelligent edge computing platform with AI-powered decision making at the edge',
+          features: ['Edge AI Processing', 'Real-time Decision Making', 'Low Latency', 'Distributed Intelligence', 'Edge Analytics', 'Autonomous Operations'],
+          pricing: 'Starting at $8,999/mo',
+          trial: 'Free edge assessment',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/ai-edge-computing-platform',
+          popular: true
+        },
+        {
+          name: 'AI Quantum Computing Infrastructure',
+          description: 'Quantum computing infrastructure for complex problem solving and optimization',
+          features: ['Quantum Processors', 'Quantum Algorithms', 'Hybrid Computing', 'Quantum Simulation', 'Optimization Problems', 'Cryptographic Security'],
+          pricing: 'Starting at $25,999/mo',
+          trial: 'Free quantum assessment',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/ai-quantum-infrastructure',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'Specialized Industry IT Solutions',
+      icon: Building,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      services: [
+        {
+          name: 'Healthcare IT Solutions Pro',
+          description: 'HIPAA-compliant healthcare IT solutions with AI-powered patient care and medical data management',
+          features: ['HIPAA Compliance', 'Electronic Health Records', 'Medical Imaging AI', 'Patient Monitoring', 'Telemedicine Platform', 'Medical Data Security'],
+          pricing: 'Starting at $18,999',
+          trial: 'Free healthcare assessment',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/healthcare-it-solutions-pro',
+          popular: true
+        },
+        {
+          name: 'Financial Services IT Pro',
+          description: 'SOX-compliant financial IT solutions with AI-powered fraud detection and risk management',
+          features: ['SOX Compliance', 'Fraud Detection AI', 'Risk Management', 'Financial Data Security', 'Regulatory Reporting', 'Transaction Monitoring'],
+          pricing: 'Starting at $22,999',
+          trial: 'Free financial assessment',
+          timeline: '10-20 weeks',
+          link: 'https://ziontechgroup.com/financial-it-solutions-pro',
+          popular: true
+        },
+        {
+          name: 'Manufacturing IT Solutions Pro',
+          description: 'Industrial IT solutions with AI-powered manufacturing optimization and predictive maintenance',
+          features: ['Industrial IoT', 'Predictive Maintenance', 'Quality Control AI', 'Supply Chain Integration', 'Manufacturing Analytics', 'Safety Monitoring'],
+          pricing: 'Starting at $16,999',
+          trial: 'Free manufacturing assessment',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/manufacturing-it-solutions-pro',
+          popular: true
+        },
+        {
+          name: 'Retail IT Solutions Pro',
+          description: 'E-commerce and retail IT solutions with AI-powered customer experience and inventory management',
+          features: ['E-commerce Platform', 'Customer Analytics', 'Inventory AI', 'Personalization Engine', 'Payment Processing', 'Omnichannel Integration'],
+          pricing: 'Starting at $14,999',
+          trial: 'Free retail assessment',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/retail-it-solutions-pro',
+          popular: true
+        }
+      ]
+    },
+    {
+      category: 'Emerging Technology Solutions',
+      icon: Rocket,
+      color: 'text-pink-400',
+      bgColor: 'bg-pink-500/10',
+      services: [
+        {
+          name: '5G Network Implementation Pro',
+          description: 'Advanced 5G network implementation with AI-powered optimization and edge computing integration',
+          features: ['5G Infrastructure', 'Edge Computing', 'Network Slicing', 'AI Optimization', 'Low Latency', 'High Bandwidth'],
+          pricing: 'Starting at $35,999',
+          trial: 'Free 5G assessment',
+          timeline: '16-32 weeks',
+          link: 'https://ziontechgroup.com/5g-implementation-pro',
+          popular: false
+        },
+        {
+          name: 'AR/VR Infrastructure Pro',
+          description: 'Immersive technology infrastructure for augmented and virtual reality applications',
+          features: ['AR/VR Hardware', 'Spatial Computing', 'Haptic Feedback', 'Motion Tracking', 'Content Management', 'User Analytics'],
+          pricing: 'Starting at $19,999',
+          trial: 'Free AR/VR assessment',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/ar-vr-infrastructure-pro',
+          popular: true
+        },
+        {
+          name: 'Digital Twin Platform Pro',
+          description: 'Digital twin technology for real-time monitoring and simulation of physical assets',
+          features: ['Real-time Monitoring', 'Predictive Simulation', 'Asset Management', 'Performance Analytics', 'Maintenance Optimization', 'Virtual Testing'],
+          pricing: 'Starting at $24,999',
+          trial: 'Free digital twin assessment',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/digital-twin-platform-pro',
+          popular: true
+        },
+        {
+          name: 'Metaverse Infrastructure Pro',
+          description: 'Infrastructure for metaverse applications with AI-powered virtual worlds and social interaction',
+          features: ['Virtual Worlds', 'Avatar Technology', 'Social Interaction', 'Virtual Economy', 'Content Creation', 'User Management'],
+          pricing: 'Starting at $29,999',
+          trial: 'Free metaverse assessment',
+          timeline: '16-32 weeks',
+          link: 'https://ziontechgroup.com/metaverse-infrastructure-pro',
+          popular: false
+        }
+      ]
     }
   ];
 
@@ -521,7 +663,7 @@ name: 'AI-Powered Infrastructure Management',
       challenge: 'Outdated IT infrastructure causing production delays',
       solution: 'Complete infrastructure modernization and cloud migration',
       results: ['50% faster processing', '99.9% uptime', '40% cost reduction'],
-      image: '/images/case-studies/manufacturing.jpg'
+      image: '/images/case-studies/manufacturing.webp'
     },
     {
       company: 'FinanceFirst Bank',
@@ -529,7 +671,7 @@ name: 'AI-Powered Infrastructure Management',
       challenge: 'Security vulnerabilities and compliance issues',
       solution: 'Comprehensive cybersecurity suite and compliance framework',
       results: ['Zero security incidents', '100% compliance', '60% faster audits'],
-      image: '/images/case-studies/banking.jpg'
+      image: '/images/case-studies/banking.webp'
     },
     {
       company: 'RetailMax Stores',
@@ -537,7 +679,7 @@ name: 'AI-Powered Infrastructure Management',
       challenge: 'Disconnected systems and poor customer experience',
       solution: 'System integration and unified platform development',
       results: ['30% improved efficiency', '25% better customer satisfaction', '200% ROI'],
-      image: '/images/case-studies/retail.jpg'
+      image: '/images/case-studies/retail.webp'
     }
   ];
 
@@ -545,7 +687,6 @@ name: 'AI-Powered Infrastructure Management',
 
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg">
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced quantum-particles">
-
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -559,18 +700,18 @@ name: 'AI-Powered Infrastructure Management',
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">
 
-              Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently. 
+              Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently.
               From infrastructure to security, we've got you covered.
             </p>
-            
+
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">100+</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">150+</div>
                 <div className="text-gray-300">IT Services</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
-                <div className="text-3xl font-bold text-purple-400 mb-2">500+</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">750+</div>
                 <div className="text-gray-300">Enterprise Clients</div>
               </div>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
@@ -651,17 +792,16 @@ name: 'AI-Powered Infrastructure Management',
 <div key={serviceIndex} className="futuristic-card hover-lift p-6 relative">
 <div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">
 
-
                       {service.popular && (
                         <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
                           Popular
                         </div>
                       )}
-                      
+
                       <div className="relative z-10">
                         <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">{service.name}</h4>
                         <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                        
+
                         <div className="space-y-4 mb-6">
                           <h5 className="text-lg font-semibold text-white flex items-center">
                             <Zap className="w-4 h-4 mr-2 text-cyan-400" />
@@ -681,7 +821,7 @@ name: 'AI-Powered Infrastructure Management',
                             )}
                           </ul>
                         </div>
-                        
+
                         <div className="space-y-3 mb-6">
                           <div className="flex justify-between items-center">
                             <span className="text-sm text-gray-400">Pricing:</span>
@@ -696,7 +836,7 @@ name: 'AI-Powered Infrastructure Management',
                             <span className="text-sm font-medium text-purple-400">{service.timeline}</span>
                           </div>
                         </div>
-                        
+
                         <div className="space-y-3">
                           <a
                             href={service.link}
@@ -727,7 +867,6 @@ name: 'AI-Powered Infrastructure Management',
                           Get Started
                         </a>
                       </div>
-
 
                     </div>
                   ))}
@@ -855,7 +994,7 @@ name: 'AI-Powered Infrastructure Management',
         {/* Animated Background */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        
+
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text">
             Ready to Modernize Your IT Infrastructure?
@@ -869,7 +1008,6 @@ name: 'AI-Powered Infrastructure Management',
 className="neon-button-enhanced px-8 py-3 rounded-lg font-bold transition-colors inline-flex items-center"
 
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
-
 
             >
               <MessageSquare className="w-5 h-5 mr-2" />

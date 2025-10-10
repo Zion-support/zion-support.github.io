@@ -8,20 +8,13 @@ export type IntegrationProviderId =
   | 'workable'
   | 'bamboohr';
 
-
-
+export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
@@ -33,22 +26,17 @@ export interface IntegrationProviderMeta {
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 }
 
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 }
-
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
@@ -59,7 +47,6 @@ export interface IntegrationProviderMeta {
   description: string;
 }
 }
-
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
@@ -117,7 +104,6 @@ export interface ProviderConnection {
   config?: Record<string, any>;
 }
 
-
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
   status: SyncStatus;
@@ -125,7 +111,6 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
   createdAt: number;
   expiresAt?: number;
 }
-
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
@@ -186,17 +171,6 @@ export interface ManualOverride {
   disableCrmSync?: boolean;
   disableAtsSync?: boolean;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 export interface ZapierEvent {
   id: string;

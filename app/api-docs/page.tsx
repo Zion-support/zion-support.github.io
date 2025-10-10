@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
@@ -82,7 +82,7 @@ const APIDocsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg particle-system">
       <Navigation />
-      
+
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
@@ -94,10 +94,10 @@ const APIDocsPage: React.FC = () => {
               Complete API Reference
             </p>
             <p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Comprehensive API documentation for all our services. Get started with our APIs 
+              Comprehensive API documentation for all our services. Get started with our APIs
               and integrate our AI and micro SAAS solutions into your applications.
             </p>
-            
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-12">
               <div className="relative">
@@ -125,7 +125,7 @@ const APIDocsPage: React.FC = () => {
                     <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
                     <p className="text-gray-300">{category.description}</p>
                   </div>
-                  
+
                   <div className="space-y-6">
                     {category.endpoints.map((endpoint, endpointIndex) => (
                       <div key={endpointIndex} className="cyber-card hologram-card p-6">
@@ -142,9 +142,9 @@ const APIDocsPage: React.FC = () => {
                             <code className="text-cyan-400 font-mono text-lg">{endpoint.path}</code>
                           </div>
                         </div>
-                        
+
                         <p className="text-gray-300 mb-4">{endpoint.description}</p>
-                        
+
                         <div className="bg-slate-900/50 rounded-lg p-4">
                           <div className="flex items-center justify-between mb-2">
                             <span className="text-sm text-gray-400">Example Request</span>
@@ -192,7 +192,7 @@ const APIDocsPage: React.FC = () => {
                     API Key Authentication
                   </h3>
                   <p className="text-gray-300 mb-4">
-                    All API requests require authentication using an API key. Include your API key 
+                    All API requests require authentication using an API key. Include your API key
                     in the Authorization header of each request.
                   </p>
                   <div className="bg-slate-900/50 rounded-lg p-4">
@@ -265,13 +265,13 @@ const APIDocsPage: React.FC = () => {
               Get your API key and start building with our powerful AI and micro SAAS services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="cyber-button px-8 py-4"
               >
                 Get API Key
                 <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
+              </Link>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
@@ -282,7 +282,7 @@ const APIDocsPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );

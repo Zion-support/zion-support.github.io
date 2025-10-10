@@ -1,33 +1,32 @@
-import React from 'react';
-import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
+import { Users, CheckCircle, Shield, Award, Target, Globe, Brain, Cloud, TrendingUp, Calendar, MessageSquare, Award, Shield, Users } from 'lucide-react';
 
 export default function AboutPage() {
   const teamMembers = [
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
-      image: '/images/team/kleber-santos.jpg',
+      image: '/images/team/kleber-santos.webp',
       bio: 'Visionary leader with 15+ years in AI and enterprise solutions',
       expertise: ['AI Strategy', 'Enterprise Architecture', 'Digital Transformation']
     },
     {
       name: 'Dr. Sarah Chen',
       role: 'Chief Technology Officer',
-      image: '/images/team/sarah-chen.jpg',
+      image: '/images/team/sarah-chen.webp',
       bio: 'AI research pioneer with expertise in machine learning and quantum computing',
       expertise: ['Machine Learning', 'Quantum Computing', 'Research & Development']
     },
     {
       name: 'Michael Rodriguez',
       role: 'Head of Engineering',
-      image: '/images/team/michael-rodriguez.jpg',
+      image: '/images/team/michael-rodriguez.webp',
       bio: 'Full-stack architect specializing in scalable AI systems',
       expertise: ['System Architecture', 'Cloud Infrastructure', 'DevOps']
     },
     {
       name: 'Dr. Emily Watson',
       role: 'Head of AI Research',
-      image: '/images/team/emily-watson.jpg',
+      image: '/images/team/emily-watson.webp',
       bio: 'Leading researcher in natural language processing and computer vision',
       expertise: ['NLP', 'Computer Vision', 'Deep Learning']
     }
@@ -112,7 +111,7 @@ export default function AboutPage() {
               About Zion Tech Group
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Leading the future of AI-powered enterprise solutions with cutting-edge technology, 
+              Leading the future of AI-powered enterprise solutions with cutting-edge technology,
               innovative thinking, and unwavering commitment to client success.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -142,7 +141,7 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                To democratize artificial intelligence and cutting-edge technology for enterprises worldwide, 
+                To democratize artificial intelligence and cutting-edge technology for enterprises worldwide,
                 enabling them to achieve unprecedented levels of efficiency, innovation, and growth.
               </p>
               <div className="space-y-4">
@@ -165,8 +164,8 @@ export default function AboutPage() {
                 Our Vision
               </h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                To be the world's leading provider of AI and quantum computing solutions, 
-                creating a future where technology seamlessly integrates with human potential 
+                To be the world's leading provider of AI and quantum computing solutions,
+                creating a future where technology seamlessly integrates with human potential
                 to solve the world's most complex challenges.
               </p>
               <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 p-6 rounded-lg">

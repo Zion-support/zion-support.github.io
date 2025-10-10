@@ -61,7 +61,7 @@ export class MiddlewareExecutor {
  */
 export const loggingMiddleware: Middleware = async (context, next) => {
   const startTime = Date.now();
-  
+
   try {
     const result = await next();
     const duration = Date.now() - startTime;
@@ -145,7 +145,7 @@ export const cachingMiddleware = (ttl: number): Middleware => {
     cache.set(key, {
       data: result,
       timestamp: Date.now()
-    });
+
     return result;
   };
 };

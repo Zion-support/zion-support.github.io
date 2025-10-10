@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { FileText, Shield, AlertTriangle, CheckCircle, Phone, Mail } from 'lucide-react';
+import { FileText, Shield, AlertTriangle, CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -172,7 +172,7 @@ const TermsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */}
         <section className="text-center mb-16">
@@ -208,7 +208,7 @@ const TermsPage: React.FC = () => {
                 <section.icon className="w-8 h-8 text-cyan-400 mr-4" />
                 <h2 className="text-2xl font-bold text-white neon-text">{section.title}</h2>
               </div>
-              
+
               <div className="space-y-6">
                 {section.content.map((subsection, subIndex) => (
                   <div key={subIndex}>

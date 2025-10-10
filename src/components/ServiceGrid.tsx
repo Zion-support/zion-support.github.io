@@ -107,16 +107,15 @@ const ServiceCard = memo(({ service, showPricing = true }: { service: Service; s
       </div>
     </div>
   );
-});
 
 ServiceCard.displayName = 'ServiceCard';
 
-const ServiceGrid: React.FC<ServiceGridProps> = memo(({ 
-  services, 
-  title, 
-  description, 
-  showPricing = true, 
-  maxItems 
+const ServiceGrid: React.FC<ServiceGridProps> = memo(({
+  services,
+  title,
+  description,
+  showPricing = true,
+  maxItems
 }) => {
   const displayedServices = useMemo(() => {
     return maxItems ? services.slice(0, maxItems) : services;
@@ -153,7 +152,6 @@ const ServiceGrid: React.FC<ServiceGridProps> = memo(({
       </div>
     </div>
   );
-});
 
 ServiceGrid.displayName = 'ServiceGrid';
 

@@ -5,9 +5,9 @@ interface PerformanceDashboardProps {
   children?: React.ReactNode;
 }
 
-export default function PerformanceDashboard({ 
-  className = '', 
-  children 
+export default function PerformanceDashboard({
+  className = '',
+  children
 }: PerformanceDashboardProps) {
   return (
     <div className={`performancedashboard ${className}`}>

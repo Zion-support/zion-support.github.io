@@ -55,7 +55,6 @@
     "optimize:production": "npm run build:production && npm run analyze:bundle",
     "optimize:performance-final": "node scripts/final-performance-optimizer.js",
     "enhance:performance": "node scripts/performance-enhancer.js",
-    "optimize:performance": "node scripts/performance-optimizer.js",
     "enhance:accessibility": "node scripts/accessibility-enhancer.cjs",
     "enhance:seo": "node scripts/seo-enhancer.cjs",
     "optimize:all": "npm run clean && npm run build && npm run optimize:assets",
@@ -97,7 +96,8 @@
     "optimize:enhanced": "npm run optimize:performance && npm run build:optimized",
     "deploy:production": "npm run optimize:enhanced && npm run build:check && echo 'Ready for production deployment'",
     "generate:sitemap": "node scripts/generate-sitemap.js",
-    "postbuild": "npm run generate:sitemap && node scripts/performance-optimizer.js && echo \"Build completed successfully\""
+    "optimize:performance": "node scripts/performance-optimizer.js",
+    "postbuild": "npm run generate:sitemap && npm run optimize:performance && echo \"Build completed successfully\""
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",

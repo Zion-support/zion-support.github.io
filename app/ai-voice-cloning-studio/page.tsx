@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Mic, 
-  Play, 
-  Pause, 
-  Download, 
-  Upload, 
-  Settings, 
-  Zap, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Clock, 
+import {
+  Mic,
+  Play,
+  Pause,
+  Download,
+  Upload,
+  Settings,
+  Zap,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
   Globe,
   Phone,
   Mail,
@@ -719,7 +718,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
     speed: 1,
     emotion: 'neutral',
     language: 'en-US'
-  });
+
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedAudio, setGeneratedAudio] = useState<string | null>(null);
 
@@ -846,7 +845,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
 
   const handleGenerateVoice = async () => {
     if (!textToSpeak.trim()) return;
-    
+
     setIsGenerating(true);
     // Simulate voice generation
     setTimeout(() => {
@@ -871,24 +870,24 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       {/* Hero Section */}
       <div className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-purple-500/10 border border-purple-400/20 rounded-full px-6 py-3 mb-8">
               <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
               <span className="text-purple-300 font-medium">AI Voice Cloning Studio Pro</span>
             </div>
-            
+
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent neon-text">
               Professional Voice Synthesis
             </h1>
-            
+
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
               Clone Any Voice with AI Precision
             </p>
-            
+
             <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Create realistic voice clones with just 30 seconds of audio. Perfect for content creators, 
+              Create realistic voice clones with just 30 seconds of audio. Perfect for content creators,
               businesses, and developers. Support for 50+ languages with emotion control and real-time processing.
             </p>
 
@@ -898,7 +897,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               </button>
-              
+
               <button className="group inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Watch Demo
@@ -1203,7 +1202,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -1223,8 +1222,8 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                 </ul>
 
                 <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular 
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 transform hover:scale-105' 
+                  plan.popular
+                    ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 transform hover:scale-105'
                     : 'bg-white/10 text-white hover:bg-white/20'
                 }`}>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}

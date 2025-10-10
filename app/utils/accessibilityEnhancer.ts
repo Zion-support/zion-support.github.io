@@ -90,7 +90,7 @@ class AccessibilityEnhancer {
       if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
         this.handleArrowNavigation(event);
       }
-    });
+
   }
   /**
    * Handle tab navigation
@@ -117,13 +117,13 @@ class AccessibilityEnhancer {
     modals.forEach(modal => {
       const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
       closeButton?.click();
-    });
+
     // Close any open menus
     const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
     menus.forEach(menu => {
       const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
       trigger?.click();
-    });
+
   }
   /**
    * Handle arrow key navigation
@@ -253,7 +253,7 @@ class AccessibilityEnhancer {
         element.setAttribute('aria-invalid', 'true');
         this.announceToScreenReader('Error in form field');
       }
-    });
+
   }
   /**
    * Add ARIA landmarks
@@ -302,10 +302,10 @@ class AccessibilityEnhancer {
     // Track focus changes
     document.addEventListener('focusin', (event) => {
       this.handleFocusIn(event);
-    });
+
     document.addEventListener('focusout', (event) => {
       this.handleFocusOut(event);
-    });
+
   }
   /**
    * Handle focus in
@@ -342,7 +342,7 @@ class AccessibilityEnhancer {
       } else {
         document.body.classList.remove('high-contrast');
       }
-    });
+
   }
   /**
    * Setup reduced motion
@@ -360,7 +360,7 @@ class AccessibilityEnhancer {
       } else {
         document.body.classList.remove('reduced-motion');
       }
-    });
+
   }
   /**
    * Setup ARIA labels
@@ -373,7 +373,7 @@ class AccessibilityEnhancer {
       if (!element.textContent?.trim()) {
         element.setAttribute('aria-label', 'Button');
       }
-    });
+
     // Add ARIA labels to links without text
     const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
     links.forEach((link) => {
@@ -381,7 +381,7 @@ class AccessibilityEnhancer {
       if (!element.textContent?.trim()) {
         element.setAttribute('aria-label', 'Link');
       }
-    });
+
   }
   /**
    * Setup color contrast checking
@@ -401,7 +401,7 @@ class AccessibilityEnhancer {
       if (!img.alt) {
         this.metrics.imagesWithoutAlt++;
       }
-    });
+
   }
   /**
    * Setup heading structure checking
@@ -413,7 +413,7 @@ class AccessibilityEnhancer {
       if (!heading.textContent?.trim()) {
         this.metrics.headingsWithoutContent++;
       }
-    });
+
   }
   /**
    * Setup form accessibility
@@ -433,8 +433,8 @@ class AccessibilityEnhancer {
             element.setAttribute('aria-labelledby', id);
           }
         }
-      });
-    });
+
+
   }
   /**
    * Setup navigation accessibility
@@ -450,7 +450,7 @@ class AccessibilityEnhancer {
       if (!nav.getAttribute('aria-label')) {
         nav.setAttribute('aria-label', 'Main navigation');
       }
-    });
+
   }
   /**
    * Setup content announcements
@@ -469,14 +469,14 @@ class AccessibilityEnhancer {
                 this.announceToScreenReader(element.textContent || '');
               }
             }
-          });
+
         }
-      });
-    });
+
+
     observer.observe(document.body, {
       childList: true,
       subtree: true
-    });
+
     this.observers.push(observer);
   }
   /**
@@ -495,7 +495,7 @@ class AccessibilityEnhancer {
     this.metrics.focusableElements = this.getFocusableElements().length;
     this.metrics.imagesWithoutAlt = document.querySelectorAll('img:not([alt])').length;
     this.metrics.linksWithoutText = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby]):empty').length;
-    this.metrics.headingsWithoutContent = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length - 
+    this.metrics.headingsWithoutContent = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length -
       Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6')).filter(h => h.textContent?.trim()).length;
     this.calculateScores();
   }

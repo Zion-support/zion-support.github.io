@@ -131,7 +131,7 @@ const AISolutionsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
       <Navigation />
-      
+
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Header */}
         <section className="text-center mb-16">
@@ -151,7 +151,7 @@ const AISolutionsPage: React.FC = () => {
           <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
             Comprehensive AI solutions tailored to your business needs
           </p>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
             {aiServices.map((service, index) => (
               <a
@@ -188,7 +188,7 @@ const AISolutionsPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Why Choose Our AI Solutions?
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -197,7 +197,7 @@ const AISolutionsPage: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-3">Cutting-Edge Technology</h3>
                 <p className="text-gray-300">We use the latest AI technologies and frameworks to deliver state-of-the-art solutions.</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
@@ -205,7 +205,7 @@ const AISolutionsPage: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-3">Custom Solutions</h3>
                 <p className="text-gray-300">Every AI solution is tailored to your specific business needs and requirements.</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-white" />

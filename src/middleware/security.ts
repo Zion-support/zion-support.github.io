@@ -48,15 +48,15 @@ export const securityHeaders: SecurityHeaders = {
 export function applySecurityHeaders(headers: Headers): void {
   Object.entries(securityHeaders).forEach(([key, value]) => {
     headers.set(key, value);
-  });
+
 }
 
 export function createSecurityResponse(body: string, init?: ResponseInit): Response {
   const headers = new Headers(init?.headers);
   applySecurityHeaders(headers);
-  
+
   return new Response(body, {
     ...init,
     headers
-  });
+
 }

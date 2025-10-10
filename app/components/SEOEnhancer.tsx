@@ -27,7 +27,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     'machine learning',
   ],
   canonicalUrl,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  ogImage = 'https://ziontechgroup.com/og-image.webp',
   ogType = 'website',
   structuredData,
   noIndex = false,
@@ -38,7 +38,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     name: 'Zion Tech Group',
     description,
     url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
+    logo: 'https://ziontechgroup.com/logo.webp',
     sameAs: [
       'https://linkedin.com/company/zion-tech-group',
       'https://twitter.com/ziontechgroup',

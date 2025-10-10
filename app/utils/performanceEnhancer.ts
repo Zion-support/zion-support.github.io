@@ -73,8 +73,8 @@ export class PerformanceMonitor {
         if (entry.duration > 50) { // Tasks longer than 50ms
           }ms`);
         }
-      });
-    });
+
+
     observer.observe({ entryTypes: ['longtask'] });
     this.observers.push(observer);
   }
@@ -117,8 +117,8 @@ export const lazyLoadImages = () => {
         img.classList.remove('lazy');
         imageObserver.unobserve(img);
       }
-    });
-  });
+
+
   images.forEach((img) => imageObserver.observe(img));
 };
 // Preload critical resources
@@ -137,7 +137,7 @@ export const preloadCriticalResources = () => {
       link.crossOrigin = 'anonymous';
     }
     document.head.appendChild(link);
-  });
+
 };
 // Optimize scroll performance
 export const optimizeScrollPerformance = () => {
@@ -171,7 +171,7 @@ export const optimizeScrollPerformance = () => {
           clsValue += layoutEntry.value;
         }
       }
-    });
+
     observer.observe({ entryTypes: ['layout-shift'] });
     return () => {
       observer.disconnect();
@@ -184,7 +184,7 @@ export const optimizeScrollPerformance = () => {
         if (process.env['NODE_ENV'] === 'development') {
           }
       }
-    });
+
     observer.observe({ entryTypes: ['largest-contentful-paint'] });
     return () => observer.disconnect();
   };
@@ -199,7 +199,7 @@ export const optimizeScrollPerformance = () => {
         if (process.env['NODE_ENV'] === 'development') {
           }
       }
-    });
+
     observer.observe({ entryTypes: ['first-input'] });
     return () => observer.disconnect();
   };

@@ -16,7 +16,6 @@ export const UserExperienceEnhancer: React.FC = () => {
     language: 'en',
     notifications: true,
     analytics: true,
-  });
 
   const [isLoading, setIsLoading] = useState(true);
   const [showWelcome, setShowWelcome] = useState(false);
@@ -46,7 +45,7 @@ export const UserExperienceEnhancer: React.FC = () => {
   // Apply theme
   const applyTheme = useCallback((theme: 'light' | 'dark' | 'auto') => {
     const root = document.documentElement;
-    
+
     if (theme === 'auto') {
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       root.classList.toggle('dark', prefersDark);
@@ -66,10 +65,10 @@ export const UserExperienceEnhancer: React.FC = () => {
     if (isLoading) return;
 
     applyTheme(preferences.theme);
-    
+
     // Store preferences
     localStorage.setItem('user-preferences', JSON.stringify(preferences));
-    
+
     logger.info('User preferences applied', preferences);
   }, [preferences, isLoading, applyTheme]);
 
@@ -89,36 +88,36 @@ export const UserExperienceEnhancer: React.FC = () => {
   // Handle notification preference
   const handleNotificationChange = useCallback((notifications: boolean) => {
     setPreferences(prev => ({ ...prev, notifications }));
-    
+
     if (notifications && 'Notification' in window) {
       Notification.requestPermission().then(permission => {
         if (permission === 'granted') {
           logger.info('Notification permission granted');
         }
-      });
+
     }
   }, []);
 
   // Show notification
   const showNotification = useCallback((title: string, body: string) => {
     if (!preferences.notifications || !('Notification' in window)) return;
-    
+
     if (Notification.permission === 'granted') {
-      new Notification(title, { body, icon: '/logo.png' });
+      new Notification(title, { body, icon: '/logo.webp' });
     }
   }, [preferences.notifications]);
 
   // Track user interactions
   const trackInteraction = useCallback((action: string, element: string) => {
     if (!preferences.analytics) return;
-    
+
     logger.info('User interaction tracked', { action, element });
-    
+
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', action, {
         event_category: 'User Interaction',
         event_label: element,
-      });
+
     }
   }, [preferences.analytics]);
 
@@ -128,7 +127,7 @@ export const UserExperienceEnhancer: React.FC = () => {
       const target = event.target as HTMLElement;
       const element = target.tagName.toLowerCase();
       const text = target.textContent?.slice(0, 50) || '';
-      
+
       trackInteraction('click', `${element}: ${text}`);
     };
 
@@ -195,7 +194,7 @@ export const UserExperienceEnhancer: React.FC = () => {
       {/* User Preferences Panel */}
       <div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-40 max-w-xs">
         <h3 className="text-sm font-bold mb-3">Preferences</h3>
-        
+
         <div className="space-y-2 text-sm">
           <div>
             <label className="block text-xs text-gray-300 mb-1">Theme</label>

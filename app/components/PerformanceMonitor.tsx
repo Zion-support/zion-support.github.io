@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BarChart3, Zap, Clock, Wifi } from 'lucide-react';
+import { BarChart3, Clock, Wifi } from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -19,7 +19,7 @@ const PerformanceMonitor: React.FC = () => {
     const isDebugMode = localStorage.getItem('debug-mode') === 'true';
     const isDevelopment = process.env.NODE_ENV === 'development';
     const isProduction = process.env.NODE_ENV === 'production';
-    
+
     // Always measure performance, but only show UI in debug mode or development
     if (!isDebugMode && !isDevelopment) {
       // Still measure performance for analytics, but don't show UI
@@ -34,14 +34,14 @@ const PerformanceMonitor: React.FC = () => {
 
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paintEntries = performance.getEntriesByType('paint');
-        
+
         const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
         const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-        
+
         // Estimate connection speed
         const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
-        const connectionSpeed = connection ? 
-          `${Math.round(connection.downlink)} Mbps` : 
+        const connectionSpeed = connection ?
+          `${Math.round(connection.downlink)} Mbps` :
           'Unknown';
 
         const performanceMetrics: PerformanceMetrics = {
@@ -72,14 +72,14 @@ const PerformanceMonitor: React.FC = () => {
 
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
-      
+
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-      
+
       // Estimate connection speed
       const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
-      const connectionSpeed = connection ? 
-        `${Math.round(connection.downlink)} Mbps` : 
+      const connectionSpeed = connection ?
+        `${Math.round(connection.downlink)} Mbps` :
         'Unknown';
 
       const performanceMetrics: PerformanceMetrics = {
@@ -92,15 +92,14 @@ const PerformanceMonitor: React.FC = () => {
       };
 
       // Send to analytics (you can implement this)
-      console.log('Performance metrics:', performanceMetrics);
-      
+
       // Store in localStorage for later analysis
       localStorage.setItem('performance-metrics', JSON.stringify({
         ...performanceMetrics,
         timestamp: Date.now()
       }));
     } catch (error) {
-      console.error('Error measuring performance silently:', error);
+
     }
   };
 

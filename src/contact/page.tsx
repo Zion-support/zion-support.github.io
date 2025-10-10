@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
   MessageSquare,
   Send,
   CheckCircle,
@@ -94,7 +93,7 @@ const ContactPage: React.FC = () => {
     budget: '',
     message: '',
     urgency: 'normal'
-  });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -124,7 +123,7 @@ const ContactPage: React.FC = () => {
         budget: '',
         message: '',
         urgency: 'normal'
-      });
+
     } catch (error) {
       setSubmitStatus('error');
     } finally {
@@ -142,7 +141,7 @@ const ContactPage: React.FC = () => {
 
   const services = [
     'AI Services',
-    'IT Services', 
+    'IT Services',
     'Cloud Migration',
     'Cybersecurity',
     'Digital Transformation',
@@ -157,7 +156,7 @@ const ContactPage: React.FC = () => {
 
   const budgetRanges = [
     '$10K - $50K',
-    '$50K - $100K', 
+    '$50K - $100K',
     '$100K - $500K',
     '$500K - $1M',
     '$1M+',
@@ -196,21 +195,21 @@ const ContactPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer 
+      <SEOOptimizer
         title="Contact Zion Tech Group - Get Your Free AI Assessment"
         description="Contact Zion Tech Group for AI and IT solutions. Get a free consultation and discover how our AI solutions can transform your business. Call (302) 464-0950 or email us."
         keywords={["Contact Zion Tech Group", "AI Consultation", "IT Services Contact", "Free Assessment", "AI Solutions"]}
         canonicalUrl="https://ziontechgroup.com/contact"
       />
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0">
           <div className="cyber-grid h-full"></div>
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
         </div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
@@ -222,8 +221,8 @@ const ContactPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Ready to transform your business with AI? Get your free consultation and discover 
-              how our solutions can deliver <span className="text-cyan-400 font-semibold">300% ROI</span> and 
+              Ready to transform your business with AI? Get your free consultation and discover
+              how our solutions can deliver <span className="text-cyan-400 font-semibold">300% ROI</span> and
               <span className="text-purple-400 font-semibold"> 70% cost reduction</span>.
             </p>
           </div>
@@ -240,7 +239,7 @@ const ContactPage: React.FC = () => {
                 Get Your Free AI Assessment
               </h2>
               <p className="text-gray-300 mb-8">
-                Fill out the form below and our AI experts will analyze your business needs 
+                Fill out the form below and our AI experts will analyze your business needs
                 and provide a customized solution proposal within 24 hours.
               </p>
 
@@ -417,7 +416,7 @@ const ContactPage: React.FC = () => {
                   Get In Touch
                 </h2>
                 <p className="text-gray-300 mb-8">
-                  Ready to start your AI transformation? Contact us through any of these channels 
+                  Ready to start your AI transformation? Contact us through any of these channels
                   and we'll respond within 24 hours.
                 </p>
               </div>

@@ -5,9 +5,9 @@ interface ToastProps {
   children?: React.ReactNode;
 }
 
-export default function Toast({ 
-  className = '', 
-  children 
+export default function Toast({
+  className = '',
+  children
 }: ToastProps) {
   return (
     <div className={`toast ${className}`}>

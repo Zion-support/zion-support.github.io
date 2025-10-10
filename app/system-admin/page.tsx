@@ -92,7 +92,7 @@ const SystemAdminPage: React.FC = () => {
             System <span className="text-cyan-400">Administration</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Professional system administration services to keep your infrastructure running smoothly. 
+            Professional system administration services to keep your infrastructure running smoothly.
             Our certified administrators provide 24/7 monitoring, maintenance, and optimization for your critical systems.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

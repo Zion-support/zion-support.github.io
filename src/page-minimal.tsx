@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
 
@@ -31,7 +30,7 @@ export default function HomePage() {
           </div>
         </div>
       </header>
-      
+
       <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -52,7 +51,7 @@ export default function HomePage() {
                 Explore Our Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
@@ -62,7 +61,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        
+
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -111,7 +110,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        
+
         {/* CTA Section */}
         <section className="py-20 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -140,7 +139,7 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-      
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
