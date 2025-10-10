@@ -1,399 +1,379 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, BarChart, TrendingUp, Target, Database, Zap, Brain, PieChart, Phone, Mail, MapPin } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
+import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, Globe, Smartphone, Database, BarChart3, Mail, Calendar, FileText, Image, Video, Music, Code, Palette, Search, Lock, Cloud, Wifi, Monitor, Headphones, Camera, Printer, HardDrive, Cpu, MemoryStick, Wrench, Settings, Bell, Heart, ThumbsUp, Share2, Download, Upload, Eye, Edit, Trash2, Plus, Minus, X, Check, AlertCircle, Info, HelpCircle, ExternalLink, Brain, Cpu as CpuIcon, Bot, Target, Layers, BarChart, PieChart, LineChart, Activity, Zap as ZapIcon, Sparkles, Atom, Cpu as CpuIcon2 } from 'lucide-react';
+
+const biServices = [
+  {
+    id: 1,
+    name: 'Data Analytics Platform',
+    description: 'Comprehensive data analysis and visualization platform for business insights',
+    price: '$2,999/month',
+    features: [
+      'Real-time Data Processing',
+      'Interactive Dashboards',
+      'Predictive Analytics',
+      'Custom Report Builder',
+      'Data Integration',
+      'Advanced Visualizations',
+      'Mobile Access',
+      'API Integration'
+    ],
+    icon: <BarChart3 className="w-8 h-8" />,
+    category: 'Analytics',
+    popular: true,
+    rating: 4.9,
+    users: '1,500+',
+    color: 'from-blue-500 to-purple-600',
+    capabilities: [
+      'Process 50TB+ data daily',
+      '99.9% uptime guarantee',
+      'Real-time insights',
+      'Custom dashboard creation'
+    ]
+  },
+  {
+    id: 2,
+    name: 'Business Intelligence Suite',
+    description: 'End-to-end BI solution with advanced reporting and data management',
+    price: '$4,499/month',
+    features: [
+      'Executive Dashboards',
+      'KPI Monitoring',
+      'Trend Analysis',
+      'Automated Reports',
+      'Data Warehousing',
+      'ETL Processes',
+      'Security Controls',
+      'Multi-tenant Support'
+    ],
+    icon: <Database className="w-8 h-8" />,
+    category: 'Business Intelligence',
+    popular: true,
+    rating: 4.8,
+    users: '2,200+',
+    color: 'from-green-500 to-teal-600',
+    capabilities: [
+      '360° business view',
+      'Automated insights',
+      'Scalable architecture',
+      'Enterprise security'
+    ]
+  },
+  {
+    id: 3,
+    name: 'Predictive Analytics Engine',
+    description: 'AI-powered predictive modeling for forecasting and trend prediction',
+    price: '$3,599/month',
+    features: [
+      'Machine Learning Models',
+      'Forecasting Algorithms',
+      'Risk Assessment',
+      'Scenario Planning',
+      'Model Management',
+      'A/B Testing',
+      'Performance Monitoring',
+      'Custom Algorithms'
+    ],
+    icon: <Brain className="w-8 h-8" />,
+    category: 'Predictive Analytics',
+    popular: false,
+    rating: 4.7,
+    users: '1,800+',
+    color: 'from-purple-500 to-pink-600',
+    capabilities: [
+      '95% prediction accuracy',
+      'Real-time forecasting',
+      'Custom model training',
+      'Automated insights'
+    ]
+  },
+  {
+    id: 4,
+    name: 'Data Visualization Studio',
+    description: 'Create stunning interactive visualizations and infographics',
+    price: '$1,999/month',
+    features: [
+      'Interactive Charts',
+      'Custom Visualizations',
+      'Animation Effects',
+      'Export Options',
+      'Template Library',
+      'Collaboration Tools',
+      'Version Control',
+      'Mobile Responsive'
+    ],
+    icon: <PieChart className="w-8 h-8" />,
+    category: 'Visualization',
+    popular: false,
+    rating: 4.6,
+    users: '1,200+',
+    color: 'from-orange-500 to-red-600',
+    capabilities: [
+      '50+ chart types',
+      'Real-time updates',
+      'Interactive features',
+      'Professional templates'
+    ]
+  },
+  {
+    id: 5,
+    name: 'Data Integration Hub',
+    description: 'Seamlessly connect and integrate data from multiple sources',
+    price: '$2,499/month',
+    features: [
+      'API Integration',
+      'Database Connectors',
+      'Cloud Integration',
+      'Real-time Sync',
+      'Data Transformation',
+      'Error Handling',
+      'Monitoring Tools',
+      'Custom Connectors'
+    ],
+    icon: <Cloud className="w-8 h-8" />,
+    category: 'Integration',
+    popular: false,
+    rating: 4.8,
+    users: '1,600+',
+    color: 'from-indigo-500 to-blue-600',
+    capabilities: [
+      '100+ data sources',
+      'Real-time processing',
+      'Automated mapping',
+      'Error recovery'
+    ]
+  },
+  {
+    id: 6,
+    name: 'Self-Service Analytics',
+    description: 'Empower business users with self-service data exploration tools',
+    price: '$1,799/month',
+    features: [
+      'Drag & Drop Interface',
+      'Natural Language Queries',
+      'Data Discovery',
+      'Collaborative Workspace',
+      'Template Library',
+      'User Management',
+      'Access Controls',
+      'Training Resources'
+    ],
+    icon: <Users className="w-8 h-8" />,
+    category: 'Self-Service',
+    popular: true,
+    rating: 4.7,
+    users: '2,500+',
+    color: 'from-teal-500 to-cyan-600',
+    capabilities: [
+      'No-code analytics',
+      'Business user friendly',
+      'Collaborative features',
+      'Guided workflows'
+    ]
+  }
+];
+
+const categories = ['All', 'Analytics', 'Business Intelligence', 'Predictive Analytics', 'Visualization', 'Integration', 'Self-Service'];
 
 const BusinessIntelligencePage: React.FC = () => {
-  const features = [
-    {
-      title: 'Real-Time Analytics Dashboard',
-      description: 'Live business intelligence dashboards with real-time data visualization and interactive reporting.',
-      icon: BarChart,
-      price: 'Starting at $2,800/month',
-      features: ['Real-time data streaming', 'Interactive dashboards', 'Custom visualizations', 'Mobile responsive', 'Automated alerts'],
-      benefits: ['Make faster decisions', 'Identify trends immediately', 'Improve operational efficiency'],
-      marketPrice: '$4,500-12,000/month',
-      category: 'Analytics',
-      technologies: ['Tableau', 'Power BI', 'Looker', 'Apache Superset', 'Custom Dashboards']
-    },
-    {
-      title: 'Predictive Analytics & Forecasting',
-      description: 'Advanced forecasting models for sales, demand, inventory, and business trend prediction.',
-      icon: TrendingUp,
-      price: 'Starting at $3,500/month',
-      features: ['Time series forecasting', 'Demand prediction', 'Sales forecasting', 'Risk assessment', 'Scenario modeling'],
-      benefits: ['Improve planning accuracy by 50%', 'Reduce inventory costs', 'Optimize resource allocation'],
-      marketPrice: '$6,000-18,000/month',
-      category: 'Predictive Analytics',
-      technologies: ['Prophet', 'ARIMA', 'LSTM', 'XGBoost', 'Time Series DB']
-    },
-    {
-      title: 'Data Warehouse Design & Implementation',
-      description: 'Comprehensive data warehouse solutions for centralized data storage and analytics.',
-      icon: Database,
-      price: 'Starting at $4,200/month',
-      features: ['Data modeling', 'ETL processes', 'Data quality management', 'Schema design', 'Performance optimization'],
-      benefits: ['Centralize all business data', 'Improve data quality', 'Enable advanced analytics'],
-      marketPrice: '$7,000-20,000/month',
-      category: 'Data Engineering',
-      technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Apache Airflow', 'dbt']
-    },
-    {
-      title: 'AI-Powered Business Intelligence',
-      description: 'Intelligent BI systems that automatically identify patterns and generate insights.',
-      icon: Brain,
-      price: 'Starting at $4,500/month',
-      features: ['Automated insights', 'Anomaly detection', 'Natural language queries', 'Pattern recognition', 'Smart recommendations'],
-      benefits: ['Discover hidden patterns', 'Reduce analysis time by 80%', 'Make data-driven decisions'],
-      marketPrice: '$8,000-25,000/month',
-      category: 'AI-Powered BI',
-      technologies: ['Machine Learning', 'NLP', 'Computer Vision', 'AutoML', 'Custom AI Models']
-    }
-  ];
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const [searchTerm, setSearchTerm] = React.useState('');
 
-  const benefits = [
-    'Transform raw data into actionable insights',
-    'Make data-driven decisions with confidence',
-    'Identify new business opportunities',
-    'Improve operational efficiency',
-    'Reduce costs through better resource allocation',
-    'Enhance customer experience',
-    'Predict future trends and patterns',
-    'Comply with regulatory requirements'
-  ];
-
-  const processSteps = [
-    {
-      step: '01',
-      title: 'Data Assessment',
-      description: 'Analyze your current data landscape and identify opportunities',
-      icon: Database
-    },
-    {
-      step: '02',
-      title: 'Strategy Development',
-      description: 'Create a comprehensive BI strategy tailored to your needs',
-      icon: Target
-    },
-    {
-      step: '03',
-      title: 'Implementation',
-      description: 'Build and deploy your BI solution with best practices',
-      icon: Zap
-    },
-    {
-      step: '04',
-      title: 'Optimization',
-      description: 'Continuously improve and optimize your BI capabilities',
-      icon: TrendingUp
-    }
-  ];
+  const filteredServices = biServices.filter(service => {
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Business Intelligence Services - Zion Tech Group</title>
-        <meta name="description" content="Transform your data into strategic insights with our comprehensive business intelligence services." />
-      </Helmet>
-      
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Header */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Business Intelligence Services
             </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your data into strategic insights that drive business growth. 
+              Make informed decisions with our comprehensive BI solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Free Consultation
+              </Link>
+              <Link
+                to="/about"
+                className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
           </div>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your data into strategic insights that drive business growth. 
-            Make informed decisions with our comprehensive BI solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="cyber-button px-8 py-4 text-lg">
-              Get Free Consultation
-            </a>
-            <a href="tel:+13024640950" className="cyber-button-outline px-8 py-4 text-lg">
-              Call (302) 464-0950
-            </a>
-          </div>
-        </section>
+        </div>
+      </div>
 
-        {/* Features Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Key Features</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="cyber-card p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-white" />
+      {/* Search and Filter */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex flex-col md:flex-row gap-6 mb-12">
+          <div className="flex-1">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search BI services..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                  selectedCategory === category
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service) => (
+            <div
+              key={service.id}
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 group"
+            >
+              <div className="flex items-center justify-between mb-6">
+                <div className={`p-3 rounded-xl bg-gradient-to-r ${service.color}`}>
+                  {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="text-sm text-gray-400 space-y-1">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx}>• {benefit}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Use Cases Section */}
-        <section className="mb-16 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-lg p-8">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Use Cases</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="cyber-card p-6">
-                <div className="text-4xl mb-4">{useCase.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300 mb-4">{useCase.description}</p>
-                <ul className="text-sm text-gray-400 space-y-1">
-                  {useCase.examples.map((example, idx) => (
-                    <li key={idx}>• {example}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Pricing Plans</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((plan, index) => (
-              <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-indigo-500' : ''}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
+                {service.popular && (
+                  <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    Popular
+                  </span>
                 )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-indigo-400 mb-2">
-                    {plan.price}
-                    <span className="text-lg text-gray-400">{plan.period}</span>
+              </div>
+
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                {service.name}
+              </h3>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                {service.description}
+              </p>
+
+              <div className="space-y-4 mb-6">
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold text-white">{service.price}</span>
+                  <div className="flex items-center space-x-1">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-gray-300">{service.rating}</span>
+                    <span className="text-gray-500">({service.users})</span>
                   </div>
-                  <p className="text-gray-300">{plan.description}</p>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0" />
+                <div className="flex items-center space-x-4 text-sm text-gray-400">
+                  <span className="flex items-center">
+                    <Users className="w-4 h-4 mr-1" />
+                    {service.users} users
+                  </span>
+                  <span className="flex items-center">
+                    <TrendingUp className="w-4 h-4 mr-1" />
+                    {service.category}
+                  </span>
+                </div>
+              </div>
+
+              <div className="space-y-3 mb-6">
+                <h4 className="font-semibold text-white">Key Features:</h4>
+                <ul className="space-y-2">
+                  {service.features.slice(0, 4).map((feature, index) => (
+                    <li key={index} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
-                  plan.popular 
-                    ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700' 
-                    : 'bg-slate-700 text-white hover:bg-slate-600'
-                }`}>
-                  Get Started
-                </button>
               </div>
-            ))}
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="text-center">
-          <div className="cyber-card p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-              Ready to Transform Your Data?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join hundreds of businesses who have unlocked the power of their data with our BI solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                +1 302 464 0950
-              </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center"
-              >
-                <Mail className="w-5 h-5 mr-2" />
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="mt-8 text-sm text-purple-200 flex items-center justify-center">
-              <MapPin className="w-4 h-4 mr-2" />
-              <p>364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our BI Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive business intelligence solutions to unlock the power of your data.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {biServices.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-                <div className="flex items-center mb-4">
-                  <service.icon className="w-12 h-12 text-purple-400 mr-4" />
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
-                    <span className="text-sm text-purple-400 bg-purple-400/20 px-3 py-1 rounded-full">
-                      {service.category}
+              <div className="space-y-3 mb-8">
+                <h4 className="font-semibold text-white">Capabilities:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {service.capabilities.map((capability, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 bg-white/10 text-gray-300 rounded-full text-xs"
+                    >
+                      {capability}
                     </span>
-                  </div>
+                  ))}
                 </div>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-2xl font-bold text-white">{service.price}</span>
-                    <span className="text-sm text-gray-400">Market: {service.marketPrice}</span>
-                  </div>
-                </div>
+              </div>
 
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
-                  <ul className="space-y-2">
-                    {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <Star className="w-4 h-4 text-yellow-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Technologies:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {service.technologies.map((tech, idx) => (
-                      <span key={idx} className="bg-purple-600/30 text-purple-300 px-3 py-1 rounded-full text-sm">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition-colors">
+              <div className="flex space-x-3">
+                <Link
+                  to="/contact"
+                  className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                >
                   Get Started
+                </Link>
+                <button className="px-4 py-3 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300">
+                  <Eye className="w-5 h-5" />
                 </button>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
 
-      {/* Process Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our BI Process
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A proven methodology to deliver successful business intelligence solutions.
-            </p>
+        {filteredServices.length === 0 && (
+          <div className="text-center py-12">
+            <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
+            <p className="text-gray-400">Try adjusting your search or filter criteria</p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">{step.step}</span>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                <p className="text-gray-300">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our BI Services?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of data-driven decision making with our expert BI solutions.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <p className="text-white font-medium">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        )}
+      </div>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Data?
-          </h2>
-          <p className="text-xl text-gray-200 mb-8">
-            Get started with our business intelligence services and unlock the power of your data.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:+13024640950"
-              className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call Now
-            </a>
-            <a 
-              href="mailto:kleber@ziontechgroup.com"
-              className="border border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
-            >
-              <Mail className="w-5 h-5 mr-2" />
-              Email Us
-            </a>
+      <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Data into Insights?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join hundreds of businesses who have unlocked the power of their data 
+              with our comprehensive BI solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Start Your BI Journey
+              </Link>
+              <Link
+                to="/about"
+                className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+              >
+                Schedule a Demo
+              </Link>
+            </div>
           </div>
         </div>
-      </section>
-
-      <Footer />
+      </div>
     </div>
   );
 };

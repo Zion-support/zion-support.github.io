@@ -1,19 +1,20 @@
 // Type definitions for Next.js compatibility in Vite
+
 export interface Metadata {
   title?: string
   description?: string
-  keywords?: string[];}
+  keywords?: string[]
   authors?: Array<{ name: string; url?: string }> | string[]
   creator?: string
   publisher?: string
   formatDetection?: {
     email?: boolean
     address?: boolean
-    telephone?: boolean;}
+    telephone?: boolean
   }
   metadataBase?: URL
   alternates?: {
-    canonical?: string;}
+    canonical?: string
   }
   openGraph?: {
     title?: string
@@ -24,20 +25,18 @@ export interface Metadata {
       url: string
       width?: number
       height?: number
-      alt?: string;}
+      alt?: string
     }>
     locale?: string
     type?: string
-    authors?: Array<{ name: string; url?: string }> | string[]
-    publishedTime?: string
   }
   twitter?: {
-    card?: string
+    card?: 'summary' | 'summary_large_image' | 'app' | 'player'
     title?: string
     description?: string
     images?: string[]
+    creator?: string
     site?: string
-    creator?: string;}
   }
   robots?: {
     index?: boolean
@@ -46,23 +45,46 @@ export interface Metadata {
       index?: boolean
       follow?: boolean
       'max-video-preview'?: number
-      'max-image-preview'?: string
-      'max-snippet'?: number;}
+      'max-image-preview'?: 'none' | 'standard' | 'large'
+      'max-snippet'?: number
     }
   }
   verification?: {
-    google?: string;}
+    google?: string
+    yandex?: string
+    yahoo?: string
+    other?: Record<string, string>
   }
+  category?: string
+  classification?: string
+  referrer?: 'no-referrer' | 'origin' | 'no-referrer-when-downgrade' | 'origin-when-cross-origin' | 'same-origin' | 'strict-origin' | 'strict-origin-when-cross-origin' | 'unsafe-url'
+  colorScheme?: 'normal' | 'light' | 'dark' | 'light dark'
+  themeColor?: string | Array<{ media: string; color: string }>
+  viewport?: {
+    width?: number | 'device-width'
+    initialScale?: number
+    maximumScale?: number
+    userScalable?: boolean
+    viewportFit?: 'auto' | 'contain' | 'cover'
+  }
+  icons?: {
+    icon?: string | Array<{ url: string; sizes?: string; type?: string }>
+    shortcut?: string | Array<{ url: string; sizes?: string }>
+    apple?: string | Array<{ url: string; sizes?: string }>
+    other?: Array<{ rel: string; url: string }>
+  }
+  manifest?: string
+  other?: Record<string, string | number | boolean | null | undefined>
 }
-export interface MetadataRoute {
-  sitemap?: string
-  robots?: string
-  manifest?: string;}
+
+export interface Viewport {
+  width?: number | 'device-width'
+  initialScale?: number
+  maximumScale?: number
+  userScalable?: boolean
+  viewportFit?: 'auto' | 'contain' | 'cover'
 }
-export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest'
-export interface MetadataRouteSitemap {
-  url: string
-  lastModified?: Date | string
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number;}
-}
+
+// Re-export common types
+export type { Metadata as MetadataExport }
+export type { Viewport as ViewportExport }
