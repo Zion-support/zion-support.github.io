@@ -92,65 +92,486 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     },
     {
-      title: 'AI Quantum Task Optimizer',
-      description: 'Revolutionary quantum-inspired task optimization that processes millions of task combinations to find the perfect workflow. Achieve 99.9% efficiency.',
-      icon: '⚛️',
-      price: '$199/month',
-      originalPrice: '$299/month',
-      features: ['Quantum algorithms', 'Multi-dimensional optimization', 'Real-time adaptation', 'Predictive scheduling', 'Energy efficiency', 'Parallel processing', 'Quantum encryption', 'Neural networks'],
-      benefits: ['99.9% efficiency', 'Quantum speed', 'Zero waste', 'Future-proof'],
-      link: '/ai-quantum-task-optimizer',
+      title: 'AI Content Writer Pro',
+      description: 'Generate high-quality content with AI-powered writing assistance for blogs, social media, and marketing materials. Create 10x more content in half the time.',
+      icon: '✍️',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['Blog posts', 'Social media content', 'Product descriptions', 'SEO optimization', 'Brand voice consistency', 'Multi-language support', 'Content templates', 'Plagiarism check'],
+      benefits: ['10x content output', 'SEO optimized', 'Brand voice consistency', '50% time saved'],
+      link: '/ai-content-writer',
       popular: true,
-      category: 'Productivity',
-      rating: 4.9,
-      users: '2,500+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Holographic Workspace',
-      description: 'Immersive 3D workspace with holographic project visualization, spatial computing, and AR collaboration. The future of remote work.',
-      icon: '🌐',
-      price: '$299/month',
-      originalPrice: '$399/month',
-      features: ['3D holographic display', 'AR collaboration', 'Spatial computing', 'Gesture control', 'Voice commands', 'Real-time sync', 'VR integration', 'Haptic feedback'],
-      benefits: ['Immersive experience', 'Better collaboration', 'Spatial awareness', 'Next-gen interface'],
-      link: '/ai-holographic-workspace',
-      popular: true,
-      category: 'Productivity',
+      category: 'Content',
       rating: 4.8,
-      users: '1,200+',
+      users: '12,000+',
       freeTrial: '14 days'
     },
     {
-      title: 'AI Neural Memory Assistant',
-      description: 'Advanced AI that learns your work patterns and automatically organizes information, creates connections, and retrieves data instantly.',
-      icon: '🧠',
-      price: '$149/month',
-      originalPrice: '$199/month',
-      features: ['Pattern learning', 'Auto-organization', 'Instant retrieval', 'Context awareness', 'Memory mapping', 'Predictive search', 'Knowledge graphs', 'Semantic analysis'],
-      benefits: ['Perfect memory', 'Instant access', 'Smart organization', 'Learning system'],
-      link: '/ai-neural-memory-assistant',
+      title: 'AI Social Media Manager Pro',
+      description: 'Automate your social media with AI-powered content creation, smart scheduling, and audience intelligence. Increase engagement by 200%.',
+      icon: '📱',
+      price: '$69/month',
+      originalPrice: '$99/month',
+      features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence', 'Multi-platform management', 'Hashtag optimization', 'Engagement tracking', 'Competitor analysis'],
+      benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach', 'Better audience targeting'],
+      link: '/ai-social-media-manager',
       popular: true,
-      category: 'Productivity',
-      rating: 4.9,
-      users: '5,000+',
-      freeTrial: '21 days'
+      category: 'Marketing',
+      rating: 4.7,
+      users: '15,000+',
+      freeTrial: '14 days'
     },
     {
-      title: 'AI Telepathic Interface Pro',
-      description: 'Mind-controlled computing interface using advanced EEG and neural pattern recognition. Control your digital workspace with thoughts.',
-      icon: '🔮',
-      price: '$399/month',
-      originalPrice: '$599/month',
-      features: ['EEG integration', 'Neural pattern recognition', 'Thought commands', 'Mental shortcuts', 'Focus enhancement', 'Brain training', 'Privacy protection', 'Medical grade'],
-      benefits: ['Hands-free control', 'Mental efficiency', 'Accessibility', 'Cutting-edge tech'],
-      link: '/ai-telepathic-interface',
+      title: 'AI Email Marketing Suite',
+      description: 'Transform your email marketing with AI-powered content generation, automation, and personalization. Boost open rates by 65%.',
+      icon: '📧',
+      price: '$59/month',
+      originalPrice: '$89/month',
+      features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns', 'A/B testing', 'Personalization', 'Deliverability optimization', 'Template library'],
+      benefits: ['65% open rate increase', '40% revenue growth', '80% time saved', 'Better engagement'],
+      link: '/ai-email-marketing',
       popular: true,
-      category: 'Productivity',
+      category: 'Marketing',
+      rating: 4.6,
+      users: '9,500+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI SEO Optimizer Pro',
+      description: 'AI-powered SEO analysis and optimization recommendations to boost your search rankings and organic traffic. Increase traffic by 150%.',
+      icon: '🔍',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['Keyword research', 'Content optimization', 'Technical SEO', 'Competitor analysis', 'Rank tracking', 'Backlink analysis', 'Site audit', 'Performance monitoring'],
+      benefits: ['150% traffic increase', 'Top 3 rankings', '40% more leads', 'ROI tracking'],
+      link: '/ai-seo-optimizer',
+      popular: true,
+      category: 'Marketing',
+      rating: 4.8,
+      users: '7,200+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Lead Generation Pro',
+      description: 'Automated lead generation and qualification system with AI-powered prospecting and outreach. Generate 35% more qualified leads.',
+      icon: '🎯',
+      price: '$99/month',
+      originalPrice: '$149/month',
+      features: ['Lead scoring', 'Contact discovery', 'Email outreach', 'CRM integration', 'Prospect research', 'Follow-up automation', 'Lead nurturing', 'Conversion tracking'],
+      benefits: ['35% more leads', '50% conversion increase', '25% revenue growth', 'Automated follow-ups'],
+      link: '/ai-lead-generation',
+      popular: true,
+      category: 'Marketing',
       rating: 4.7,
-      users: '800+',
+      users: '6,800+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Customer Support Bot Pro',
+      description: 'Provide 24/7 intelligent customer support with AI-powered chatbot and ticket management. Handle 80% of queries automatically.',
+      icon: '🤖',
+      price: '$99/month',
+      originalPrice: '$149/month',
+      features: ['Natural language processing', '24/7 availability', 'Human handoff', 'Analytics & insights', 'Multi-language support', 'Integration APIs', 'Knowledge base', 'Sentiment analysis'],
+      benefits: ['90% response time reduction', '45% satisfaction increase', '80% queries handled automatically', '24/7 support'],
+      link: '/ai-customer-support-bot',
+      popular: true,
+      category: 'Support',
+      rating: 4.8,
+      users: '11,500+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Code Review Assistant Pro',
+      description: 'Advanced automated code analysis with AI-powered bug detection, security scanning, and optimization suggestions. Reduce bugs by 70%.',
+      icon: '💻',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Git integration', 'Best practice recommendations', 'Code quality metrics', 'Team collaboration', 'CI/CD integration'],
+      benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality', 'Better security'],
+      link: '/ai-code-generation',
+      popular: true,
+      category: 'Development',
+      rating: 4.7,
+      users: '7,800+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Data Analytics Pro',
+      description: 'Transform your data into actionable insights with AI-powered analytics and business intelligence. Increase revenue by 45%.',
+      icon: '📈',
+      price: '$99/month',
+      originalPrice: '$149/month',
+      features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking', 'Predictive modeling', 'Custom reports', 'Data visualization', 'Integration APIs'],
+      benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift', 'Data-driven decisions'],
+      link: '/ai-data-analytics',
+      popular: true,
+      category: 'Analytics',
+      rating: 4.8,
+      users: '9,600+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Video Generator Pro',
+      description: 'Create professional videos with AI-powered editing, content generation, and automated production. Reduce production time by 90%.',
+      icon: '🎬',
+      price: '$149/month',
+      originalPrice: '$199/month',
+      features: ['AI video editing', 'Auto-generated content', 'Voice synthesis', 'Multi-language support', 'Template library', 'Brand customization', 'Export options', 'Analytics'],
+      benefits: ['90% time reduction', 'Professional quality', 'Unlimited exports', 'Cost effective'],
+      link: '/ai-video-generation',
+      popular: true,
+      category: 'Creative',
+      rating: 4.7,
+      users: '7,400+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Sales Automation Pro',
+      description: 'Boost sales with AI-powered lead generation, conversion optimization, and sales process automation. Increase sales by 35%.',
+      icon: '💰',
+      price: '$149/month',
+      originalPrice: '$199/month',
+      features: ['Lead scoring', 'Automated follow-ups', 'Sales forecasting', 'CRM integration', 'Email sequences', 'Call scheduling', 'Performance analytics', 'A/B testing'],
+      benefits: ['35% more leads', '50% conversion increase', '25% revenue growth', 'Automated processes'],
+      link: '/ai-sales-automation',
+      popular: true,
+      category: 'Sales',
+      rating: 4.7,
+      users: '8,100+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Cybersecurity Shield Pro',
+      description: 'Advanced AI-powered security monitoring, threat detection, and vulnerability assessment. Achieve 99.9% security uptime.',
+      icon: '🛡️',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['Threat detection', 'Vulnerability scanning', 'Security monitoring', 'Incident response', 'Compliance checking', 'Risk assessment', 'Security reports', '24/7 monitoring'],
+      benefits: ['99.9% security uptime', 'Faster threat response', 'Compliance ready', 'Peace of mind'],
+      link: '/ai-cybersecurity',
+      popular: true,
+      category: 'Security',
+      rating: 4.9,
+      users: '6,200+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Financial Analyzer Pro',
+      description: 'Advanced financial analysis with AI-powered insights, forecasting, and investment recommendations. Improve returns by 25%.',
+      icon: '💳',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['Financial forecasting', 'Investment analysis', 'Risk assessment', 'Portfolio optimization', 'Tax planning', 'Budget tracking', 'Expense categorization', 'Financial reports'],
+      benefits: ['25% better returns', 'Risk management', 'Tax optimization', 'Financial clarity'],
+      link: '/ai-financial-analyzer',
+      popular: false,
+      category: 'Finance',
+      rating: 4.6,
+      users: '4,200+',
       freeTrial: '7 days'
     },
+    {
+      title: 'AI CRM Intelligence Pro',
+      description: 'Smart CRM with AI-powered insights, automation, and customer relationship management. Increase sales by 30%.',
+      icon: '👥',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['AI insights', 'Automated workflows', 'Lead scoring', 'Customer segmentation', 'Sales forecasting', 'Pipeline management', 'Email integration', 'Analytics dashboard'],
+      benefits: ['30% sales increase', '40% better lead quality', '50% time saved', 'Better customer insights'],
+      link: '/ai-crm',
+      popular: true,
+      category: 'Business',
+      rating: 4.7,
+      users: '8,900+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Website Builder Pro',
+      description: 'Create stunning websites with AI-powered design, content generation, and optimization tools. Build sites 90% faster.',
+      icon: '🌐',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['AI design generation', 'Content creation', 'SEO optimization', 'Mobile responsive', 'E-commerce integration', 'Analytics dashboard', 'Custom domains', 'SSL certificates'],
+      benefits: ['90% time reduction', 'Professional quality', 'SEO optimized', 'Mobile-first design'],
+      link: '/ai-website-builder',
+      popular: false,
+      category: 'Marketing',
+      rating: 4.6,
+      users: '5,400+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Mobile App Builder Pro',
+      description: 'Build native mobile apps with AI-powered design, development, and deployment tools. Develop apps 90% faster.',
+      icon: '📱',
+      price: '$149/month',
+      originalPrice: '$199/month',
+      features: ['No-code development', 'AI design generation', 'Cross-platform support', 'App store optimization', 'Analytics integration', 'Push notifications', 'Backend services', 'Testing automation'],
+      benefits: ['90% faster development', 'No coding required', 'Professional quality', 'Faster time to market'],
+      link: '/ai-mobile-app-development',
+      popular: false,
+      category: 'Development',
+      rating: 4.6,
+      users: '4,500+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Document Processor Pro',
+      description: 'Intelligent document analysis, data extraction, and automated processing with AI technology. Achieve 95% accuracy.',
+      icon: '📄',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['OCR processing', 'Data extraction', 'Document classification', 'Workflow automation', 'Form recognition', 'Batch processing', 'API integration', 'Cloud storage'],
+      benefits: ['95% accuracy', '80% time saved', 'Automated workflows', 'Better data quality'],
+      link: '/ai-document-processing',
+      popular: false,
+      category: 'Development',
+      rating: 4.6,
+      users: '5,100+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Voice Cloning Studio Pro',
+      description: 'Create realistic voice clones for content creation, accessibility, and personalized experiences. Achieve 99% voice accuracy.',
+      icon: '🎤',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['High-quality voice cloning', 'Multiple voice options', 'Real-time synthesis', 'API integration', 'Emotion control', 'Multi-language support', 'Custom voices', 'Commercial license'],
+      benefits: ['99% voice accuracy', 'Multiple languages', 'Real-time processing', 'Professional quality'],
+      link: '/ai-voice-cloning',
+      popular: false,
+      category: 'Creative',
+      rating: 4.6,
+      users: '3,900+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Music Composer Pro',
+      description: 'Compose original music with AI-powered composition tools and professional audio production. Create unlimited royalty-free music.',
+      icon: '🎵',
+      price: '$59/month',
+      originalPrice: '$89/month',
+      features: ['AI composition', 'Multiple genres', 'Instrument simulation', 'Royalty-free music', 'Custom styles', 'Export options', 'Collaboration tools', 'Commercial license'],
+      benefits: ['Unlimited compositions', 'Professional quality', 'No copyright issues', 'Creative freedom'],
+      link: '/ai-music-composition',
+      popular: false,
+      category: 'Creative',
+      rating: 4.5,
+      users: '2,600+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Fashion Design Studio Pro',
+      description: 'Create stunning fashion designs with AI-powered design tools and trend analysis. Reduce design time by 50%.',
+      icon: '👗',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['AI design generation', 'Trend analysis', 'Color matching', 'Pattern creation', '3D visualization', 'Fabric simulation', 'Size optimization', 'Export options'],
+      benefits: ['50% design time reduction', 'Trend-aware designs', 'Unlimited creativity', 'Professional quality'],
+      link: '/ai-fashion-design',
+      popular: false,
+      category: 'Creative',
+      rating: 4.6,
+      users: '3,200+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI 3D Generation Studio Pro',
+      description: 'Create 3D models and environments with AI technology for games, VR, and visual content. Generate professional 3D content instantly.',
+      icon: '🎮',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support', 'Rendering', 'Export options', 'Collaboration tools', 'Template library'],
+      benefits: ['Professional 3D content', 'Time savings', 'Creative freedom', 'High quality'],
+      link: '/ai-3d-generation',
+      popular: false,
+      category: 'Creative',
+      rating: 4.7,
+      users: '2,800+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Healthcare Assistant Pro',
+      description: 'Personalized healthcare guidance with AI-powered symptom analysis and health monitoring. Improve health awareness and proactive care.',
+      icon: '🏥',
+      price: '$49/month',
+      originalPrice: '$79/month',
+      features: ['Symptom analysis', 'Health monitoring', 'Medication reminders', 'Appointment scheduling', 'Health reports', 'Emergency alerts', 'Family management', 'Privacy protection'],
+      benefits: ['Better health awareness', 'Proactive care', 'Family safety', 'Peace of mind'],
+      link: '/ai-healthcare',
+      popular: false,
+      category: 'Health',
+      rating: 4.6,
+      users: '5,300+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Fitness Coach Pro',
+      description: 'Personalized fitness coaching with AI-powered workout plans and nutrition guidance. Achieve better results with personalized approach.',
+      icon: '💪',
+      price: '$39/month',
+      originalPrice: '$59/month',
+      features: ['Personalized workouts', 'Progress tracking', 'Nutrition advice', 'Goal setting', 'Form analysis', 'Injury prevention', 'Community features', 'Wearable integration'],
+      benefits: ['Better results', 'Motivation boost', 'Flexible scheduling', 'Personalized approach'],
+      link: '/ai-fitness-coach',
+      popular: false,
+      category: 'Health',
+      rating: 4.5,
+      users: '6,700+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Password Manager Pro',
+      description: 'Secure password management with AI-powered security analysis and breach monitoring. Enhance security and convenience.',
+      icon: '🔐',
+      price: '$19/month',
+      originalPrice: '$29/month',
+      features: ['Password generation', 'Security analysis', 'Breach monitoring', 'Auto-fill', 'Multi-device sync', '2FA integration', 'Family sharing', 'Dark web monitoring'],
+      benefits: ['Enhanced security', 'Convenience', 'Breach protection', 'Peace of mind'],
+      link: '/ai-password-manager',
+      popular: false,
+      category: 'Security',
+      rating: 4.7,
+      users: '8,200+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Invoice Generator Pro',
+      description: 'Automated invoice generation with AI-powered customization, payment tracking, and financial management. Save 80% of your time.',
+      icon: '🧾',
+      price: '$49/month',
+      originalPrice: '$79/month',
+      features: ['Auto invoice generation', 'Payment tracking', 'Custom templates', 'Multi-currency support', 'Tax calculations', 'Recurring billing', 'Client portal', 'Financial reports'],
+      benefits: ['80% time saved', 'Faster payments', 'Professional invoices', 'Better cash flow'],
+      link: '/ai-invoice-generator',
+      popular: false,
+      category: 'Finance',
+      rating: 4.5,
+      users: '3,600+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Expense Tracker Pro',
+      description: 'Smart expense tracking with AI-powered categorization, receipt scanning, and budget management. Achieve 90% automation.',
+      icon: '💸',
+      price: '$29/month',
+      originalPrice: '$49/month',
+      features: ['Receipt scanning', 'Auto categorization', 'Budget tracking', 'Expense reports', 'Tax preparation', 'Multi-currency', 'Team management', 'Integration APIs'],
+      benefits: ['90% automation', 'Tax ready', 'Better budgeting', 'Time savings'],
+      link: '/ai-expense-tracker',
+      popular: false,
+      category: 'Finance',
+      rating: 4.4,
+      users: '2,800+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Stock Portfolio Manager',
+      description: 'Intelligent portfolio management with AI-powered analysis, rebalancing, and investment recommendations. Optimize your investments.',
+      icon: '📊',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: ['Portfolio analysis', 'AI rebalancing', 'Risk assessment', 'Market insights', 'Performance tracking', 'Tax optimization', 'Diversification', 'Alert system'],
+      benefits: ['Better returns', 'Risk management', 'Tax efficiency', 'Peace of mind'],
+      link: '/ai-stock-portfolio-manager',
+      popular: false,
+      category: 'Finance',
+      rating: 4.6,
+      users: '3,100+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Logo Designer Pro',
+      description: 'Design professional logos with AI-powered creativity and brand identity tools. Create stunning logos in minutes.',
+      icon: '🎨',
+      price: '$59/month',
+      originalPrice: '$89/month',
+      features: ['AI logo generation', 'Brand identity', 'Multiple formats', 'Color schemes', 'Typography', 'Vector graphics', 'Commercial license', 'Revision rounds'],
+      benefits: ['Professional logos', 'Brand consistency', 'Multiple options', 'Cost effective'],
+      link: '/ai-logo-designer',
+      popular: false,
+      category: 'Creative',
+      rating: 4.5,
+      users: '4,100+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Chatbot Builder Pro',
+      description: 'Build custom chatbots with AI-powered conversation design and no-code interface. Deploy chatbots without coding.',
+      icon: '💬',
+      price: '$69/month',
+      originalPrice: '$99/month',
+      features: ['No-code builder', 'AI conversation design', 'Multi-channel deployment', 'Analytics dashboard', 'Integration APIs', 'Custom branding', 'A/B testing', 'Voice support'],
+      benefits: ['No coding required', 'Faster deployment', 'Better engagement', 'Cost effective'],
+      link: '/ai-chatbot-builder',
+      popular: false,
+      category: 'Support',
+      rating: 4.6,
+      users: '5,700+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Email Assistant Pro',
+      description: 'Smart email management with AI-powered response suggestions, scheduling, and organization. Respond 50% faster.',
+      icon: '📬',
+      price: '$39/month',
+      originalPrice: '$59/month',
+      features: ['Email classification', 'Response suggestions', 'Scheduling', 'Follow-up reminders', 'Spam filtering', 'Priority sorting', 'Template library', 'Analytics'],
+      benefits: ['50% faster responses', 'Better organization', 'Reduced email stress', 'Improved productivity'],
+      link: '/ai-email-assistant',
+      popular: false,
+      category: 'Support',
+      rating: 4.5,
+      users: '4,300+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Data Visualization Pro',
+      description: 'Create stunning data visualizations with AI-powered chart generation and interactive dashboards. Make data beautiful.',
+      icon: '📊',
+      price: '$69/month',
+      originalPrice: '$99/month',
+      features: ['Interactive dashboards', 'Real-time visualization', 'Custom charts', 'Data storytelling', 'Export options', 'Collaboration tools', 'Template library', 'Mobile responsive'],
+      benefits: ['Faster insights', 'Better decisions', 'Stunning presentations', 'Easy sharing'],
+      link: '/ai-data-visualization',
+      popular: false,
+      category: 'Analytics',
+      rating: 4.6,
+      users: '4,800+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Scheduler Pro',
+      description: 'Intelligent scheduling with AI-powered optimization for meetings, appointments, and resource allocation. Perfect coordination.',
+      icon: '📅',
+      price: '$39/month',
+      originalPrice: '$59/month',
+      features: ['Smart scheduling', 'Conflict resolution', 'Time zone handling', 'Resource booking', 'Recurring events', 'Calendar sync', 'Meeting optimization', 'Availability management'],
+      benefits: ['50% scheduling efficiency', '90% conflict reduction', '30% time saved', 'Perfect coordination'],
+      link: '/ai-scheduler',
+      popular: false,
+      category: 'Productivity',
+      rating: 4.6,
+      users: '4,100+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Time Tracker Pro',
+      description: 'Advanced time tracking with AI insights, productivity analysis, and automated reporting. Understand your time better.',
+      icon: '⏱️',
+      price: '$34/month',
+      originalPrice: '$49/month',
+      features: ['Automatic time tracking', 'AI insights', 'Productivity analysis', 'Project billing', 'Team monitoring', 'Detailed reports', 'Goal setting', 'Distraction alerts'],
+      benefits: ['25% time awareness', '40% productivity insights', '30% better focus', 'Accurate billing'],
+      link: '/ai-time-tracker',
+      popular: false,
+      category: 'Productivity',
+      rating: 4.5,
+      users: '3,800+',
+      freeTrial: '7 days'
+    }
+  ];
     {
       title: 'AI Task Manager Pro',
       description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',
@@ -228,66 +649,6 @@ const HomePage: React.FC = () => {
       freeTrial: '7 days'
     },
     {
-      title: 'AI Holographic Content Studio',
-      description: 'Create immersive 3D holographic content with AI-powered design, spatial storytelling, and interactive experiences. The future of content creation.',
-      icon: '🎭',
-      price: '$399/month',
-      originalPrice: '$599/month',
-      features: ['3D holographic creation', 'Spatial storytelling', 'Interactive experiences', 'AR/VR integration', 'Gesture-based editing', 'Real-time collaboration', 'Haptic feedback', 'Spatial audio'],
-      benefits: ['Immersive content', 'Next-gen storytelling', 'Interactive experiences', 'Future-ready'],
-      link: '/ai-holographic-content-studio',
-      popular: true,
-      category: 'Content',
-      rating: 4.8,
-      users: '1,500+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Quantum Content Optimizer',
-      description: 'Revolutionary content optimization using quantum algorithms to analyze millions of content variations and find the perfect combination for maximum engagement.',
-      icon: '⚡',
-      price: '$249/month',
-      originalPrice: '$349/month',
-      features: ['Quantum content analysis', 'Multi-dimensional optimization', 'Engagement prediction', 'A/B testing automation', 'Viral potential scoring', 'Audience targeting', 'Content clustering', 'Performance forecasting'],
-      benefits: ['Maximum engagement', 'Viral content', 'Perfect targeting', 'Quantum precision'],
-      link: '/ai-quantum-content-optimizer',
-      popular: true,
-      category: 'Content',
-      rating: 4.9,
-      users: '3,200+',
-      freeTrial: '21 days'
-    },
-    {
-      title: 'AI Neural Story Architect',
-      description: 'Advanced AI that creates compelling narratives by analyzing human psychology, cultural patterns, and emotional triggers. Craft stories that resonate deeply.',
-      icon: '📚',
-      price: '$179/month',
-      originalPrice: '$249/month',
-      features: ['Psychology analysis', 'Cultural pattern recognition', 'Emotional trigger mapping', 'Narrative structure optimization', 'Character development', 'Plot generation', 'Audience resonance', 'Story arc prediction'],
-      benefits: ['Compelling narratives', 'Deep resonance', 'Cultural awareness', 'Emotional impact'],
-      link: '/ai-neural-story-architect',
-      popular: true,
-      category: 'Content',
-      rating: 4.8,
-      users: '2,800+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Telepathic Marketing Pro',
-      description: 'Mind-reading marketing that analyzes subconscious consumer patterns and creates campaigns that speak directly to the target audience\'s deepest desires.',
-      icon: '🎯',
-      price: '$299/month',
-      originalPrice: '$399/month',
-      features: ['Subconscious analysis', 'Desire mapping', 'Emotional targeting', 'Neuromarketing insights', 'Behavioral prediction', 'Campaign optimization', 'ROI maximization', 'Consumer psychology'],
-      benefits: ['Deep targeting', 'Higher conversion', 'Emotional connection', 'Subconscious appeal'],
-      link: '/ai-telepathic-marketing',
-      popular: true,
-      category: 'Marketing',
-      rating: 4.9,
-      users: '1,800+',
-      freeTrial: '7 days'
-    },
-    {
       title: 'AI Social Media Manager Pro',
       description: 'Automated social media management with AI-powered content creation, scheduling, and analytics. Grow your audience by 300%.',
       icon: '📱',
@@ -362,66 +723,6 @@ const HomePage: React.FC = () => {
       rating: 4.7,
       users: '32,000+',
       freeTrial: '14 days'
-    },
-    {
-      title: 'AI Quantum Financial Oracle',
-      description: 'Revolutionary financial prediction system using quantum computing to analyze market patterns and predict economic trends with 99.7% accuracy.',
-      icon: '🔮',
-      price: '$499/month',
-      originalPrice: '$799/month',
-      features: ['Quantum market analysis', 'Economic trend prediction', 'Risk assessment', 'Portfolio optimization', 'Crisis prediction', 'Market timing', 'Global economic modeling', 'Real-time adaptation'],
-      benefits: ['99.7% accuracy', 'Crisis prevention', 'Optimal timing', 'Quantum precision'],
-      link: '/ai-quantum-financial-oracle',
-      popular: true,
-      category: 'Finance',
-      rating: 4.9,
-      users: '1,200+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Holographic Boardroom',
-      description: 'Immersive 3D boardroom experience with holographic data visualization, spatial analytics, and telepathic decision-making interfaces.',
-      icon: '🏢',
-      price: '$599/month',
-      originalPrice: '$899/month',
-      features: ['3D holographic displays', 'Spatial data visualization', 'Telepathic interfaces', 'Real-time collaboration', 'Gesture controls', 'AR/VR integration', 'Haptic feedback', 'Neural decision support'],
-      benefits: ['Immersive meetings', 'Better decisions', 'Spatial understanding', 'Next-gen collaboration'],
-      link: '/ai-holographic-boardroom',
-      popular: true,
-      category: 'Business',
-      rating: 4.8,
-      users: '800+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Neural Business Strategist',
-      description: 'Advanced AI that analyzes market patterns, competitor behavior, and business ecosystems to provide strategic insights and recommendations.',
-      icon: '🧠',
-      price: '$299/month',
-      originalPrice: '$399/month',
-      features: ['Market pattern analysis', 'Competitor intelligence', 'Ecosystem mapping', 'Strategic recommendations', 'Scenario planning', 'Risk assessment', 'Opportunity identification', 'Trend prediction'],
-      benefits: ['Strategic advantage', 'Market insights', 'Competitive edge', 'Future planning'],
-      link: '/ai-neural-business-strategist',
-      popular: true,
-      category: 'Business',
-      rating: 4.8,
-      users: '2,100+',
-      freeTrial: '21 days'
-    },
-    {
-      title: 'AI Telepathic Sales Pro',
-      description: 'Mind-reading sales system that analyzes customer thoughts, emotions, and buying signals to close deals with unprecedented success rates.',
-      icon: '💼',
-      price: '$399/month',
-      originalPrice: '$599/month',
-      features: ['Thought analysis', 'Emotion detection', 'Buying signal recognition', 'Sales coaching', 'Objection prediction', 'Closing optimization', 'Customer psychology', 'Success rate tracking'],
-      benefits: ['Higher close rates', 'Customer insight', 'Sales mastery', 'Psychological advantage'],
-      link: '/ai-telepathic-sales',
-      popular: true,
-      category: 'Sales',
-      rating: 4.9,
-      users: '1,500+',
-      freeTrial: '7 days'
     },
     {
       title: 'AI Financial Analyzer Pro',
@@ -638,66 +939,6 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     },
     {
-      title: 'AI Holographic Design Studio',
-      description: 'Create stunning 3D holographic designs with spatial computing, gesture-based editing, and immersive visualization. The future of design.',
-      icon: '🎨',
-      price: '$399/month',
-      originalPrice: '$599/month',
-      features: ['3D holographic design', 'Spatial computing', 'Gesture-based editing', 'Immersive visualization', 'AR/VR integration', 'Haptic feedback', 'Real-time collaboration', 'Spatial audio'],
-      benefits: ['Immersive design', 'Spatial creativity', 'Next-gen interface', 'Future-ready'],
-      link: '/ai-holographic-design-studio',
-      popular: true,
-      category: 'Creative',
-      rating: 4.9,
-      users: '1,800+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Quantum Art Generator',
-      description: 'Revolutionary art creation using quantum algorithms to generate infinite unique artworks, exploring dimensions beyond human imagination.',
-      icon: '🌌',
-      price: '$299/month',
-      originalPrice: '$399/month',
-      features: ['Quantum art generation', 'Infinite variations', 'Multi-dimensional art', 'Quantum aesthetics', 'Pattern generation', 'Color theory mastery', 'Style fusion', 'Unlimited creativity'],
-      benefits: ['Infinite creativity', 'Unique artworks', 'Quantum beauty', 'Beyond imagination'],
-      link: '/ai-quantum-art-generator',
-      popular: true,
-      category: 'Creative',
-      rating: 4.8,
-      users: '2,500+',
-      freeTrial: '21 days'
-    },
-    {
-      title: 'AI Neural Music Composer',
-      description: 'Advanced AI that creates music by analyzing neural patterns, emotions, and cultural influences to compose deeply resonant musical experiences.',
-      icon: '🎵',
-      price: '$199/month',
-      originalPrice: '$299/month',
-      features: ['Neural pattern analysis', 'Emotional composition', 'Cultural influence integration', 'Genre fusion', 'Mood matching', 'Instrument selection', 'Harmony generation', 'Rhythm optimization'],
-      benefits: ['Emotional resonance', 'Cultural depth', 'Perfect mood matching', 'Neural creativity'],
-      link: '/ai-neural-music-composer',
-      popular: true,
-      category: 'Creative',
-      rating: 4.9,
-      users: '3,200+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Telepathic Creative Assistant',
-      description: 'Mind-controlled creative tool that translates your thoughts, emotions, and visions directly into digital art, music, and content.',
-      icon: '🔮',
-      price: '$499/month',
-      originalPrice: '$699/month',
-      features: ['Thought-to-art translation', 'Emotion visualization', 'Vision capture', 'Mind-controlled editing', 'Creative flow enhancement', 'Inspiration generation', 'Mental shortcut creation', 'Subconscious creativity'],
-      benefits: ['Direct thought translation', 'Unlimited creativity', 'Mental efficiency', 'Pure expression'],
-      link: '/ai-telepathic-creative-assistant',
-      popular: true,
-      category: 'Creative',
-      rating: 4.7,
-      users: '1,200+',
-      freeTrial: '7 days'
-    },
-    {
       title: 'AI Voice Cloning Studio Pro',
       description: 'Realistic voice synthesis with AI-powered voice cloning and text-to-speech. Create professional voiceovers in minutes.',
       icon: '🎤',
@@ -772,66 +1013,6 @@ const HomePage: React.FC = () => {
       rating: 4.9,
       users: '35,000+',
       freeTrial: '14 days'
-    },
-    {
-      title: 'AI Quantum Health Optimizer',
-      description: 'Revolutionary health optimization using quantum computing to analyze molecular patterns and optimize your body\'s quantum field for perfect health.',
-      icon: '⚛️',
-      price: '$399/month',
-      originalPrice: '$599/month',
-      features: ['Quantum molecular analysis', 'Quantum field optimization', 'Cellular regeneration', 'Energy balance', 'Quantum healing', 'Molecular repair', 'Quantum nutrition', 'Biofield enhancement'],
-      benefits: ['Perfect health', 'Quantum healing', 'Molecular optimization', 'Energy balance'],
-      link: '/ai-quantum-health-optimizer',
-      popular: true,
-      category: 'Health',
-      rating: 4.9,
-      users: '1,500+',
-      freeTrial: '30 days'
-    },
-    {
-      title: 'AI Holographic Medical Scanner',
-      description: 'Advanced 3D holographic medical scanning that provides real-time health visualization, diagnosis, and treatment recommendations.',
-      icon: '🔬',
-      price: '$599/month',
-      originalPrice: '$899/month',
-      features: ['3D holographic scanning', 'Real-time health visualization', 'AI diagnosis', 'Treatment recommendations', 'Organ mapping', 'Disease detection', 'Health monitoring', 'Medical imaging'],
-      benefits: ['Complete health picture', 'Early detection', 'Visual diagnosis', 'Comprehensive monitoring'],
-      link: '/ai-holographic-medical-scanner',
-      popular: true,
-      category: 'Health',
-      rating: 4.8,
-      users: '800+',
-      freeTrial: '14 days'
-    },
-    {
-      title: 'AI Neural Wellness Coach',
-      description: 'Advanced AI that analyzes your neural patterns, stress levels, and emotional state to provide personalized wellness recommendations and mental health support.',
-      icon: '🧠',
-      price: '$199/month',
-      originalPrice: '$299/month',
-      features: ['Neural pattern analysis', 'Stress monitoring', 'Emotional state tracking', 'Mental health support', 'Wellness recommendations', 'Meditation guidance', 'Sleep optimization', 'Cognitive enhancement'],
-      benefits: ['Mental wellness', 'Stress reduction', 'Emotional balance', 'Cognitive enhancement'],
-      link: '/ai-neural-wellness-coach',
-      popular: true,
-      category: 'Health',
-      rating: 4.8,
-      users: '2,800+',
-      freeTrial: '21 days'
-    },
-    {
-      title: 'AI Telepathic Therapy Pro',
-      description: 'Mind-reading therapy system that analyzes your thoughts, emotions, and mental patterns to provide personalized therapeutic interventions and mental health support.',
-      icon: '🔮',
-      price: '$299/month',
-      originalPrice: '$399/month',
-      features: ['Thought analysis', 'Emotion detection', 'Mental pattern recognition', 'Therapeutic interventions', 'Crisis prevention', 'Mental health monitoring', 'Personalized therapy', 'Privacy protection'],
-      benefits: ['Personalized therapy', 'Mental health support', 'Crisis prevention', 'Emotional healing'],
-      link: '/ai-telepathic-therapy',
-      popular: true,
-      category: 'Health',
-      rating: 4.9,
-      users: '1,200+',
-      freeTrial: '7 days'
     },
     {
       title: 'AI Fitness Coach Pro',
@@ -1241,79 +1422,624 @@ const HomePage: React.FC = () => {
           <Navigation />
           
           {/* Hero Section */}
-          <section className="relative pt-20 pb-16 overflow-hidden cyber-grid neural-network-bg particle-field">
+          <section className="relative pt-20 pb-16 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
-            <div className="absolute inset-0 quantum-field"></div>
             <div className="container mx-auto px-4 relative z-10">
               <div className="text-center max-w-4xl mx-auto">
-                <div className="cyber-scan-effect mb-8">
-                  <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text-3d neon-text">
-                    Transform Your Business with
-                    <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent holographic">
-                      AI-Powered Solutions
-                    </span>
-                  </h1>
-                </div>
-                <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed neon-pulse">
+                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                  Transform Your Business with
+                  <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    AI-Powered Solutions
+                  </span>
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                   Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. 
                   Achieve 300% ROI with our cutting-edge technology.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
                     href="/contact"
-                    className="cyber-button px-8 py-4 text-lg font-semibold energy-pulse"
+                    className="cyber-button px-8 py-4 text-lg font-semibold"
                     onClick={handlePhoneClick}
                   >
                     Get Started Today
                   </a>
                   <a
                     href="tel:+13024640950"
-                    className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors text-lg font-medium neon-glow"
+                    className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors text-lg font-medium"
                     onClick={handlePhoneClick}
                   >
                     <Phone className="w-5 h-5" />
                     <span>+1 302 464 0950</span>
                   </a>
                 </div>
-                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                  <div className="quantum-card p-6 text-center">
-                    <div className="text-4xl mb-4">⚛️</div>
-                    <h3 className="text-xl font-bold text-white mb-2">Quantum Computing</h3>
-                    <p className="text-gray-300 text-sm">Revolutionary quantum algorithms for exponential performance</p>
-                  </div>
-                  <div className="quantum-card p-6 text-center">
-                    <div className="text-4xl mb-4">🧠</div>
-                    <h3 className="text-xl font-bold text-white mb-2">Neural Networks</h3>
-                    <p className="text-gray-300 text-sm">Advanced AI that learns and adapts to your needs</p>
-                  </div>
-                  <div className="quantum-card p-6 text-center">
-                    <div className="text-4xl mb-4">🌐</div>
-                    <h3 className="text-xl font-bold text-white mb-2">Holographic Tech</h3>
-                    <p className="text-gray-300 text-sm">Immersive 3D interfaces and spatial computing</p>
-                  </div>
-                </div>
               </div>
             </div>
           </section>
 
           {/* Micro SAAS Services Section */}
-          <section className="py-20 bg-slate-800/50 cyber-scan-effect">
+          <section className="py-20 bg-slate-800/50">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   Micro SAAS Solutions
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto neon-pulse">
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                   Powerful, affordable AI-powered tools designed for modern businesses. 
                   Choose from our comprehensive suite of micro SAAS solutions.
                 </p>
+<<<<<<< HEAD
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">Starting at $399/month</div>
+                  <a href="/ai-predictive-analytics" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Image Recognition</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Computer vision solutions for object detection, facial recognition, and automated image analysis.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-rose-400 mb-2">Starting at $249/month</div>
+                  <a href="/ai-image-recognition" className="text-rose-400 hover:text-rose-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗣️</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Voice Processing</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Speech recognition, voice synthesis, and natural language processing for voice-enabled applications.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-teal-400 mb-2">Starting at $179/month</div>
+                  <a href="/ai-voice-processing" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔮</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Recommendation Engine</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Personalized recommendation systems for e-commerce, content, and product suggestions.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-violet-400 mb-2">Starting at $299/month</div>
+                  <a href="/ai-recommendation-engine" className="text-violet-400 hover:text-violet-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎭</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Sentiment Analysis</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Real-time sentiment analysis of social media, reviews, and customer feedback with emotion detection.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-amber-400 mb-2">Starting at $129/month</div>
+                  <a href="/ai-sentiment-analysis" className="text-amber-400 hover:text-amber-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔬</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Research Assistant</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered research tools for data analysis, literature review, and scientific discovery.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-emerald-400 mb-2">Starting at $199/month</div>
+                  <a href="/ai-research-assistant" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+          {/* Emerging Technologies Grid */}
+          <div className="mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
+              Emerging Technologies
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Robotics</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Intelligent robotic solutions for manufacturing, healthcare, and service industries.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-cyan-400 mb-2">Custom Pricing</div>
+                  <a href="/robotics" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌐</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">IoT & Edge</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Connected devices and edge computing solutions for smart cities and industrial automation.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-green-400 mb-2">Starting at $499/month</div>
+                  <a href="/iot-edge-computing" className="text-green-400 hover:text-green-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔗</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Blockchain & Web3</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Decentralized solutions, smart contracts, and Web3 applications for the future of business.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-yellow-400 mb-2">Starting at $699/month</div>
+                  <a href="/blockchain-web3" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🧠</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Business Intelligence</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Data-driven insights and predictive analytics to optimize business performance and decision-making.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-pink-400 mb-2">Starting at $399/month</div>
+                  <a href="/business-intelligence" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+          {/* IT Services Grid */}
+          <div className="mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
+              IT Services & Infrastructure
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">DevOps & CI/CD</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Streamline development workflows with automated testing, deployment, and monitoring solutions.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-blue-400 mb-2">Starting at $299/month</div>
+                  <a href="/devops" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Mobile Development</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Native and cross-platform mobile applications with AI integration and modern UX design.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-indigo-400 mb-2">Starting at $1,299/month</div>
+                  <a href="/ai-mobile-app-development" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗄️</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Database Services</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Database design, optimization, migration, and management with AI-powered performance tuning.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-teal-400 mb-2">Starting at $199/month</div>
+                  <a href="/database" className="text-teal-400 hover:text-teal-300 font-medium text-sm">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        {/* Micro SAAS Solutions Section */}
+        <section className="mb-16" aria-labelledby="micro-saas-heading">
+          <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            Micro SAAS Solutions
+          </h2>
+          <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+            Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
+          </p>
+          {/* Productivity Tools */}
+          <div className="mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
+              Productivity & Business Tools
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📝</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Writing Assistant</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Advanced AI writing tool for blogs, emails, reports, and content creation with 50+ templates.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-blue-400 mb-2">$29/month</div>
+                  <a href="/ai-writing-assistant" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Smart Analytics</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Real-time business analytics with AI insights, automated reports, and predictive forecasting.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-green-400 mb-2">$49/month</div>
+                  <a href="/smart-analytics" className="text-green-400 hover:text-green-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📅</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Scheduler</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Intelligent scheduling with calendar optimization, meeting coordination, and time management.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-purple-400 mb-2">$19/month</div>
+                  <a href="/ai-scheduler" className="text-purple-400 hover:text-purple-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💰</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Expense Tracker</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered expense management with receipt scanning, categorization, and budget insights.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-yellow-400 mb-2">$15/month</div>
+                  <a href="/expense-tracker" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Task Manager Pro</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Advanced task management with AI prioritization, team collaboration, and progress tracking.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-indigo-400 mb-2">$39/month</div>
+                  <a href="/task-manager-pro" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">CRM Lite</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Lightweight CRM with AI lead scoring, contact management, and sales pipeline automation.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-pink-400 mb-2">$59/month</div>
+                  <a href="/crm-lite" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📧</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Email Optimizer</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered email optimization with subject line suggestions, send time optimization, and A/B testing.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-cyan-400 mb-2">$25/month</div>
+                  <a href="/email-optimizer" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Social Media Manager</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-driven social media management with content creation, scheduling, and performance analytics.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-orange-400 mb-2">$45/month</div>
+                  <a href="/social-media-manager" className="text-orange-400 hover:text-orange-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+          {/* Marketing & Sales Tools */}
+          <div className="mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
+              Marketing & Sales Tools
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Design Studio</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Create stunning graphics, logos, and marketing materials with AI-powered design tools.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-pink-400 mb-2">$35/month</div>
+                  <a href="/ai-design-studio" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Landing Page Builder</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Build high-converting landing pages with AI optimization and A/B testing capabilities.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-blue-400 mb-2">$29/month</div>
+                  <a href="/landing-page-builder" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">SEO Optimizer</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered SEO analysis and optimization with keyword research and content suggestions.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-green-400 mb-2">$49/month</div>
+                  <a href="/seo-optimizer" className="text-green-400 hover:text-green-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Ad Campaign Manager</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Automated ad campaign management with AI optimization across Google, Facebook, and LinkedIn.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-yellow-400 mb-2">$79/month</div>
+                  <a href="/ad-campaign-manager" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+          {/* Developer Tools */}
+          <div className="mb-12">
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
+              Developer Tools
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💻</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Code Assistant</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered code completion, debugging, and optimization for multiple programming languages.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-cyan-400 mb-2">$39/month</div>
+                  <a href="/code-assistant" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔧</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">API Builder</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Create and manage APIs with AI assistance, documentation generation, and testing tools.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-indigo-400 mb-2">$59/month</div>
+                  <a href="/api-builder" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🐛</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Bug Tracker Pro</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Advanced bug tracking with AI-powered issue detection, prioritization, and resolution suggestions.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-red-400 mb-2">$25/month</div>
+                  <a href="/bug-tracker-pro" className="text-red-400 hover:text-red-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📚</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Doc Generator</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Automatically generate technical documentation, API docs, and user guides from code.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-purple-400 mb-2">$19/month</div>
+                  <a href="/doc-generator" className="text-purple-400 hover:text-purple-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Project Manager</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered project management with intelligent planning, analytics, and team coordination.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-purple-400 mb-2">$79/month</div>
+                  <a href="/ai-project-manager" className="text-purple-400 hover:text-purple-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Social Media</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered social media management with content creation, scheduling, and analytics.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-pink-400 mb-2">$99/month</div>
+                  <a href="/ai-social-media-manager" className="text-pink-400 hover:text-pink-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📧</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Email Marketing</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  AI-powered email marketing automation with personalization and advanced analytics.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-blue-400 mb-2">$79/month</div>
+                  <a href="/ai-email-marketing-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Customer Support</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Advanced AI customer support chatbot with 24/7 availability and multi-channel support.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-green-400 mb-2">$199/month</div>
+                  <a href="/ai-customer-support-chatbot" className="text-green-400 hover:text-green-300 font-medium text-sm">
+                    Try Free →
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        {/* Statistics Section */}
+        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
+          <ContentStatistics />
+        </Suspense>
+        {/* Content Carousel */}
+        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>
+          <ContentCarousel />
+        </Suspense>
+        {/* Dynamic Content Showcase */}
+        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
+          <DynamicContentShowcase />
+        </Suspense>
+        {/* Newsletter Signup */}
+        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
+          <ContentNewsletterSignup />
+        </Suspense>
+
+        {/* Contact Section */}
+        <section className="mb-16" aria-labelledby="contact-heading">
+          <div className="max-w-6xl mx-auto">
+            <h2 id="contact-heading" className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center neon-text">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+              Get in touch with our experts to discuss your AI and IT needs. We're here to help you achieve unprecedented growth.
+            </p>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Contact Information */}
+              <div className="cyber-card hologram-card p-8">
+                <h3 className="text-2xl font-bold text-white mb-6 neon-text">Contact Information</h3>
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                      <Phone className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-gray-300 text-sm">Phone</p>
+                      <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
+                        +1 (302) 464-0950
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+                      <Mail className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-gray-300 text-sm">Email</p>
+                      <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
+                        kleber@ziontechgroup.com
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center">
+                      <MapPin className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-gray-300 text-sm">Address</p>
+                      <p className="text-white font-semibold">
+                        364 E Main St STE 1008<br />
+                        Middletown, DE 19709
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+                      <Clock className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-gray-300 text-sm">Business Hours</p>
+                      <p className="text-white font-semibold">
+                        Monday - Friday: 9:00 AM - 6:00 PM EST<br />
+                        24/7 Emergency Support Available
+                      </p>
+                    </div>
+                  </div>
+                </div>
+=======
+>>>>>>> origin/main
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 md:gap-6">
                 {microSAASServices.map((service, index) => (
                   <div
                     key={index}
-                    className="quantum-card cyber-card bg-slate-900/80 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-4 md:p-6 hover:border-cyan-400/40 transition-all duration-300 group h-full flex flex-col energy-pulse"
+                    className="bg-slate-900/80 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-4 md:p-6 hover:border-cyan-400/40 transition-all duration-300 group h-full flex flex-col"
                   >
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-3xl">{service.icon}</div>
@@ -1365,13 +2091,13 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* AI Services Section */}
-          <section className="py-20 bg-slate-900/50 neural-network-bg particle-field">
+          <section className="py-20 bg-slate-900/50">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   AI Services & Solutions
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto neon-pulse">
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                   Advanced AI solutions for enterprise clients. Transform your business with cutting-edge artificial intelligence.
                 </p>
               </div>
@@ -1380,7 +2106,7 @@ const HomePage: React.FC = () => {
                 {aiServices.map((service, index) => (
                   <div
                     key={index}
-                    className="quantum-card cyber-card bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-purple-400/40 transition-all duration-300 group h-full flex flex-col energy-pulse"
+                    className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-purple-400/40 transition-all duration-300 group h-full flex flex-col"
                   >
                     <div className="flex items-center justify-between mb-4 md:mb-6">
                       <service.icon className="w-8 h-8 md:w-12 md:h-12 text-purple-400" />
@@ -1432,13 +2158,13 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* IT Services Section */}
-          <section className="py-20 bg-slate-800/50 cyber-grid quantum-field">
+          <section className="py-20 bg-slate-800/50">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   IT Services & Solutions
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto neon-pulse">
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                   Comprehensive IT services to modernize your infrastructure and accelerate your digital transformation.
                 </p>
               </div>
@@ -1447,7 +2173,7 @@ const HomePage: React.FC = () => {
                 {itServices.map((service, index) => (
                   <div
                     key={index}
-                    className="quantum-card cyber-card bg-slate-900/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-green-400/40 transition-all duration-300 group h-full flex flex-col energy-pulse"
+                    className="bg-slate-900/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-green-400/40 transition-all duration-300 group h-full flex flex-col"
                   >
                     <div className="flex items-center justify-between mb-4 md:mb-6">
                       <service.icon className="w-8 h-8 md:w-12 md:h-12 text-green-400" />
@@ -1499,13 +2225,13 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* Specialized Services Section */}
-          <section className="py-20 bg-slate-900/50 matrix-rain neural-network-bg">
+          <section className="py-20 bg-slate-900/50">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   Specialized Solutions
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto neon-pulse">
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                   Cutting-edge specialized solutions for the future. Quantum computing, autonomous systems, and more.
                 </p>
               </div>
@@ -1514,7 +2240,7 @@ const HomePage: React.FC = () => {
                 {specializedServices.map((service, index) => (
                   <div
                     key={index}
-                    className="quantum-card cyber-card bg-slate-800/80 backdrop-blur-sm border border-orange-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-orange-400/40 transition-all duration-300 group h-full flex flex-col energy-pulse"
+                    className="bg-slate-800/80 backdrop-blur-sm border border-orange-400/20 rounded-xl p-4 md:p-6 lg:p-8 hover:border-orange-400/40 transition-all duration-300 group h-full flex flex-col"
                   >
                     <div className="flex items-center justify-between mb-4 md:mb-6">
                       <service.icon className="w-8 h-8 md:w-12 md:h-12 text-orange-400" />
@@ -1566,51 +2292,34 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* Contact Section */}
-          <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600 cyber-grid neural-network-bg">
+          <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-600">
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text-3d neon-text">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   Ready to Transform Your Business?
                 </h2>
-                <p className="text-xl text-cyan-100 mb-8 neon-pulse">
+                <p className="text-xl text-cyan-100 mb-8">
                   Contact us today to discuss your AI and IT needs. Our experts are ready to help you achieve your goals.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
                     href="/contact"
-                    className="cyber-button bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-50 transition-colors energy-pulse"
+                    className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-50 transition-colors"
                   >
                     Get Free Consultation
                   </a>
                   <a
                     href="tel:+13024640950"
-                    className="flex items-center space-x-2 text-white hover:text-cyan-100 transition-colors text-lg font-medium neon-glow"
+                    className="flex items-center space-x-2 text-white hover:text-cyan-100 transition-colors text-lg font-medium"
                     onClick={handlePhoneClick}
                   >
                     <Phone className="w-5 h-5" />
                     <span>+1 302 464 0950</span>
                   </a>
                 </div>
-                <div className="mt-8 text-cyan-100 neon-pulse">
+                <div className="mt-8 text-cyan-100">
                   <p>Email: kleber@ziontechgroup.com</p>
                   <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
-                </div>
-                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                  <div className="quantum-card p-6 text-center bg-white/10 backdrop-blur-sm">
-                    <div className="text-4xl mb-4">🚀</div>
-                    <h3 className="text-xl font-bold text-white mb-2">Fast Implementation</h3>
-                    <p className="text-cyan-100 text-sm">Get started in 24 hours with our rapid deployment</p>
-                  </div>
-                  <div className="quantum-card p-6 text-center bg-white/10 backdrop-blur-sm">
-                    <div className="text-4xl mb-4">🛡️</div>
-                    <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>
-                    <p className="text-cyan-100 text-sm">Bank-level security and compliance standards</p>
-                  </div>
-                  <div className="quantum-card p-6 text-center bg-white/10 backdrop-blur-sm">
-                    <div className="text-4xl mb-4">⚡</div>
-                    <h3 className="text-xl font-bold text-white mb-2">24/7 Support</h3>
-                    <p className="text-cyan-100 text-sm">Round-the-clock expert support and monitoring</p>
-                  </div>
                 </div>
               </div>
             </div>
