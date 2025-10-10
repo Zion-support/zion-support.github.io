@@ -1,97 +1,4 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Users, Shield } from 'lucide-react';
-
-const ConsultationPage: React.FC = () => {
-  const services = [
-    {
-      icon: Star,
-      title: 'AI Strategy',
-      description: 'Develop a comprehensive AI strategy tailored to your business needs.',
-      benefits: ['AI readiness assessment', 'Technology roadmap', 'ROI analysis', 'Implementation planning']
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity Audit',
-      description: 'Comprehensive security assessment and recommendations.',
-      benefits: ['Security vulnerability analysis', 'Compliance review', 'Risk assessment', 'Remediation plan']
-    },
-    {
-      icon: Users,
-      title: 'Digital Transformation',
-      description: 'Guide your organization through digital transformation.',
-      benefits: ['Process optimization', 'Technology integration', 'Change management', 'Training programs']
-    }
-  ];
-
-  const process = [
-    {
-      step: '1',
-      title: 'Initial Assessment',
-      description: 'We analyze your current technology landscape and business objectives.'
-    },
-    {
-      step: '2',
-      title: 'Strategy Development',
-      description: 'Create a customized strategy based on your specific needs and goals.'
-    },
-    {
-      step: '3',
-      title: 'Implementation Plan',
-      description: 'Develop a detailed roadmap with timelines and milestones.'
-    },
-    {
-      step: '4',
-      title: 'Ongoing Support',
-      description: 'Provide continuous guidance and support throughout implementation.'
-=======
-import { Phone, Mail, Calendar, CheckCircle, ArrowRight } from 'lucide-react';
-
-const ConsultationPage: React.FC = () => {
-  const consultationTypes = [
-    {
-      title: 'AI Strategy Consultation',
-      description: 'Get expert guidance on implementing AI solutions that align with your business goals.',
-      duration: '2-4 hours',
-      price: 'Starting at $500/hour',
-      features: [
-        'AI readiness assessment',
-        'Technology roadmap development',
-        'ROI analysis and projections',
-        'Implementation timeline planning'
-      ]
-    },
-    {
-      title: 'Cloud Migration Planning',
-      description: 'Comprehensive cloud strategy and migration planning for your infrastructure.',
-      duration: '4-8 hours',
-      price: 'Starting at $400/hour',
-      features: [
-        'Current infrastructure analysis',
-        'Cloud platform selection',
-        'Migration strategy development',
-        'Cost optimization recommendations'
-      ]
-    },
-    {
-      title: 'Cybersecurity Audit',
-      description: 'Complete security assessment and recommendations for your digital infrastructure.',
-      duration: '6-12 hours',
-      price: 'Starting at $600/hour',
-      features: [
-        'Security vulnerability assessment',
-        'Compliance review',
-        'Security policy development',
-        'Incident response planning'
-      ]
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
-=======
-
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -170,7 +77,6 @@ const ConsultationPage: React.FC = () => {
         'Incident response planning'
       ],
       popular: false
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     }
   ];
 
@@ -212,142 +118,7 @@ const ConsultationPage: React.FC = () => {
         <meta name="keywords" content="IT consultation, AI consulting, cloud consulting, cybersecurity audit, technology strategy" />
       </Helmet>
 
-<<<<<<< HEAD
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Expert IT Consultation
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Get expert guidance on AI, cloud computing, cybersecurity, and digital transformation from our experienced team.
-            </p>
-            <button className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
-              Book Consultation
-            </button>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Consultation Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive consulting services to help you make informed technology decisions.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="h-8 w-8 text-purple-400 mr-3" />
-                    <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                  </div>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Expert IT Consultation
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Get personalized guidance from our experts to transform your business with cutting-edge AI and IT solutions.
-              </p>
-            </div>
-
-            {/* Consultation Types */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {consultationTypes.map((type, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300"
-                >
-                  <h3 className="text-2xl font-bold text-white mb-4">{type.title}</h3>
-                  <p className="text-gray-300 mb-6">{type.description}</p>
-                  
-                  <div className="mb-6">
-                    <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
-                      <span>Duration</span>
-                      <span className="text-cyan-400 font-medium">{type.duration}</span>
-                    </div>
-                    <div className="flex items-center justify-between text-sm text-gray-400">
-                      <span>Price</span>
-                      <span className="text-cyan-400 font-medium">{type.price}</span>
-                    </div>
-                  </div>
-
-                  <ul className="space-y-2 mb-6">
-                    {type.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                    Schedule Consultation
-                  </button>
-                </div>
-              ))}
-            </div>
-
-            {/* Contact Information */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-                <p className="text-gray-300 mb-8">
-                  Contact our experts to discuss your specific needs and schedule a consultation.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Phone className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                  <p className="text-gray-300 mb-2">(302) 464-0950</p>
-                  <p className="text-sm text-gray-400">Mon-Fri: 9AM-6PM EST</p>
-                </div>
-
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Mail className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                  <p className="text-gray-300 mb-2">kleber@ziontechgroup.com</p>
-                  <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
-                </div>
-
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Calendar className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Schedule Online</h3>
-                  <p className="text-gray-300 mb-2">Book a consultation</p>
-                  <p className="text-sm text-gray-400">Available 24/7</p>
-=======
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -378,43 +149,19 @@ const ConsultationPage: React.FC = () => {
                 <div className="text-left">
                   <div className="text-2xl font-bold">Proven Results</div>
                   <div className="text-gray-400">98% client satisfaction</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
                 </div>
               </div>
+            </div>
 
-              <div className="text-center mt-8">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center">
-                  Schedule Your Consultation
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
-              </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
+            <div className="text-center mt-8">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 inline-flex items-center">
+                Schedule Your Consultation
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Process Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Consultation Process
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                A structured approach to delivering the best consultation experience.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {process.map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">{step.step}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-gray-300">{step.description}</p>
-=======
         {/* Consultation Types */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -472,32 +219,12 @@ const ConsultationPage: React.FC = () => {
                   >
                     Book Consultation
                   </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Book a consultation with our experts and take the first step towards digital transformation.
-            </p>
-            <button className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
-              Schedule Consultation
-            </button>
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
-=======
         {/* Expert Team */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -547,21 +274,21 @@ const ConsultationPage: React.FC = () => {
                     <Phone className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
+                  <p className="text-gray-300">+1 (302) 464-0950</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <Mail className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-                  <p className="text-gray-300">consultation@ziontech.com</p>
+                  <p className="text-gray-300">kleber@ziontechgroup.com</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <MapPin className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-                  <p className="text-gray-300">123 Tech Street, Silicon Valley</p>
+                  <p className="text-gray-300">364 E Main St STE 1008, Middletown, DE 19709</p>
                 </div>
               </div>
 
@@ -583,97 +310,9 @@ const ConsultationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
-      {/* Services Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Consultation Services</h2>
-            <p className="text-xl text-gray-300">Comprehensive technology consulting tailored to your business needs</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {consultationServices.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                  <CheckCircle className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service}</h3>
-                <p className="text-gray-300">Expert guidance and strategic planning for your technology initiatives.</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-16 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Our Process</h2>
-            <p className="text-xl text-gray-300">How we deliver exceptional consultation services</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">1</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Discovery</h3>
-              <p className="text-gray-300">We analyze your current technology landscape and business objectives.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">2</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Strategy</h3>
-              <p className="text-gray-300">We develop a customized roadmap aligned with your goals.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">3</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Implementation</h3>
-              <p className="text-gray-300">We guide you through execution and provide ongoing support.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Schedule a consultation with our experts and discover how technology can drive your success.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-              <Calendar className="mr-2 h-5 w-5" />
-              Schedule Consultation
-            </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
-              <Mail className="mr-2 h-5 w-5" />
-              Contact Us
-            </button>
-          </div>
-        </div>
-      </section>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     </>
   );
 };
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 export default ConsultationPage;
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
-=======
-export default ConsultationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
