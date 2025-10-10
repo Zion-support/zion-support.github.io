@@ -52,7 +52,7 @@ function fixTsxFile(filePath) {
     });
 
     // Fix 3: Fix missing closing braces in object literals
-    const missingBracePattern = /(\w+):\s*([^,}\n]+)\s*\n\s*(\w+):/g;
+    const missingBracePattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g;
     content = content.replace(missingBracePattern, (match, key1, value1, key2) => {
       if (!value1.trim().endsWith(',') && !value1.trim().endsWith('}')) {
         modified = true;

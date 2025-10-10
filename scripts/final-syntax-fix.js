@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -9,26 +8,25 @@ const __dirname = path.dirname(__filename);
 
 console.log('🔧 Final comprehensive syntax fix...');
 
-// Final syntax fixes
+// Final syntax fixes;
 const fixes = [
-  // Fix missing commas in object arrays
+  // Fix missing commas in object arrays;
   { pattern: /icon: '[^']+'}\s*},/g, replacement: (match) => match.replace('}', '') },
   { pattern: /color: 'text-\w+-\d+'\s*}\s*},/g, replacement: (match) => match.replace('}', '') },
   { pattern: /price: '[^']+'\s*}\s*},/g, replacement: (match) => match.replace('}', '') },
-  // Fix missing commas in arrays
+  // Fix missing commas in arrays;
   { pattern: /}\s*}\s*];/g, replacement: '}]' },
-  // Fix stray semicolons
+  // Fix stray semicolons;
   { pattern: /;\s*$/gm, replacement: '' },
-  // Fix console statements
-  { pattern: /console\.(log|warn|error|info|debug)\([^)]*\);/g, replacement: '' },
-];
+  // Fix console statements;
+  { pattern: /console\.(log|warn|error|info|debug)\([^)]*\);/g, replacement: '' }];
 
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    fixes.forEach(fix => {
+    fixes.forEach(fix => {)
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
@@ -48,7 +46,7 @@ function fixFile(filePath) {
   }
 }
 
-// Find all TypeScript/JavaScript files
+// Find all TypeScript/JavaScript files;
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   let files = [];
   
@@ -68,19 +66,19 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       }
     }
   } catch (error) {
-    // Skip directories we can't read
+    // Skip directories we can't read;
   }
   
   return files;
 }
 
-// Main fix process
+// Main fix process;
 const files = findFiles('./app');
 let fixedCount = 0;
 
 console.log(`Found ${files.length} files to process...`);
 
-files.forEach(file => {
+files.forEach(file => {)
   if (fixFile(file)) {
     fixedCount++;
   }

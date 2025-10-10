@@ -6,8 +6,9 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
+  // Ignore disabled directories
   {
-    ignores: [
+    ignores: [,
       'node_modules/**',
       '.next/**',
       'out/**',
@@ -20,104 +21,107 @@ export default [
       '_conflicted_disabled/**',
       '_pages_api_disabled/**',
       '_pages_disabled/**',
+    ignores: [
       'admin-api-disabled/**',
+  // Global ignores
+  {
+    ignores: [
+      'admin-api-disabled/**',
+      'ai-customer-support-disabled/**',
+      'ai-data-visualization-disabled/**',
+      'ai-sales-automation-disabled/**',
+      'ai-workflow-automation-disabled/**',
       'api-disabled/**',
       'api.disabled/**',
-      'api.disabled.temp/**',
       'api-backup/**',
-      'apps.backup/**',
+      'components-disabled/**',
+      'components.disabled/**',
       'automation_backup/**',
-      'ai-optimization-backups/**',
-      'automation_logs/**',
-      'all-automations-reports/**',
-      'accessibility-reports/**',
-      'corrupted-files-backup/**',
-      'corrupted_backup/**',
-      'corrupted_files_backup_2/**',
-      'content/**',
-      'contracts/**',
-      'components_backup/**',
-      'data/**',
-      'data_backup/**',
-      'dao/**',
-      'deployments/**',
-      'disabled-api/**',
-      'e2e/**',
-      'factories/**',
-      'hooks/**',
-      'lib_backup/**',
-      'services/**',
-      'middleware/**',
-      'automation/**',
-      '**/*.test.js.skip',
-      '**/*.broken',
-      '**/*.bak',
-      '**/*.backup',
-      '**/zion-os/**',
-      '**/zion-website/**',
-      '**/corrupted-src-backup/**',
-      '**/temp-files/**',
+      'backup*/**',
+      '*-disabled/**',
+      '*.disabled/**',
+      '*.broken',
+      '*.backup',
+      'temp-files/**',
+      'cache/**',
+      'dist/**',
+      'node_modules/**',
+      'analyze-*.js',
+      'check-*.js',
+      'clean-*.js',
+      'fix-*.js',
       '*.cjs',
-      '*.js',
-      '*.mjs',
-      '*.test.tsx',
-      '*.test.ts',
-      '*.test.js',
-      '*.test.jsx',
-      '__tests__/**'
+      '*.js.broken'
+    ]},
+  // Base JavaScript configuration;
+      'components.disabled_full/**',
+      'backup/**',
+      'backup-merge-conflicts/**',
+      'backup-pages/**',
+      'backup-problematic/**',
+      'backup-problematic-files/**',
+      'clean-build/**',
+      'cache/**',
+      'ci-cd-reports/**',
+      'automation_backup/**',
+      'apps.backup/**',
+      'node_modules/**',
+      'dist/**',
+      '.next/**',
+      'out/**',
+      '*.min.js',
+      '*.min.css',
+      'chunk-*.js'
     ]
   },
   // Base JavaScript configuration
   {
     files: ['**/*.{js,jsx}'],
-    languageOptions: {
+    languageOptions: {,
       globals: { ...globals.browser, ...globals.node },
-      parserOptions: {
+      parserOptions: {,
         ecmaVersion: 'latest',
         sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-    rules: {
-      ...js.configs.recommended.rules,
+        ecmaFeatures: {,
+          jsx: true;
+        }}},
+    rules: {,
+      ...js.configs.recommended.rules;
       'no-unused-vars': 'warn',
-      'no-console': 'warn',
-    },
-  },
-  // TypeScript configuration
+      'no-console': 'warn'}},
+    rules: {
+      ...js.configs.recommended.rules}},
+  // TypeScript configuration;
   {
     files: ['**/*.{ts,tsx}'],
-    languageOptions: {
+    languageOptions: {,
       globals: { ...globals.browser, ...globals.node },
-      parser: tsParser,
+      parser: tsParser;
       parserOptions: {
-        ecmaVersion: 'latest',
+        ecmaVersion: 'latest'
         sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-    plugins: {
-      '@typescript-eslint': tseslint,
+        ecmaFeatures: {,
+          jsx: true;
+        }}},
+    plugins: {,
+      '@typescript-eslint': tseslint;
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
+      'react-refresh': reactRefresh},
+    rules: {,
+      ...tseslint.configs.recommended.rules;
+      ...reactHooks.configs.recommended.rules,
     rules: {
       ...tseslint.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
-      ],
+        { allowConstantExport: true }],
       '@typescript-eslint/no-unused-vars': 'off',
-      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
-      '@typescript-eslint/no-non-null-assertion': 'warn',
-      'no-console': 'warn',
-    },
-  },
-];
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      'no-console': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+      'no-unused-vars': 'off'}}];

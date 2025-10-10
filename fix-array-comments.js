@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 
 const filePath = './src/micro-saas/page-original.tsx';
@@ -14,33 +13,21 @@ let realEstateEndLine = -1;
 let categoriesStartLine = -1;
 let categoriesEndLine = -1;
 
-for (let i = 0; i < lines.length; i++) {
-  const line = lines[i];
-  
-  if (line.includes('// const _realEstateSaaS = [')) {
-    inRealEstateArray = true;
-    realEstateStartLine = i;
-  } else if (inRealEstateArray && line.includes('// ];')) {
-    inRealEstateArray = false;
-    realEstateEndLine = i;
-  } else if (line.includes('// const _categories = [')) {
-    inCategoriesArray = true;
-    categoriesStartLine = i;
-  } else if (inCategoriesArray && line.includes('// ];')) {
-    inCategoriesArray = false;
-    categoriesEndLine = i;
+for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
+  } else if (inRealEstateArray && line.includes('// ];')) {/* TODO: Fix JSX expression */}
+  } else if (line.includes('// const _categories = [')) {/* TODO: Fix JSX expression */}
+  } else if (inCategoriesArray && line.includes('// ];')) {/* TODO: Fix JSX expression */}
   }
   
-  // Comment out lines within the arrays
+  // Comment out lines within the arrays;
   if (inRealEstateArray && i > realEstateStartLine && !line.includes('// const _realEstateSaaS = [')) {
     if (!line.trim().startsWith('//')) {
       lines[i] = '  // ' + line;
+  if (inRealEstateArray && i > realEstateStartLine && !line.includes('// const _realEstateSaaS = [')) {/* TODO: Fix JSX expression */}
     }
   }
   
-  if (inCategoriesArray && i > categoriesStartLine && !line.includes('// const _categories = [')) {
-    if (!line.trim().startsWith('//')) {
-      lines[i] = '  // ' + line;
+  if (inCategoriesArray && i > categoriesStartLine && !line.includes('// const _categories = [')) {/* TODO: Fix JSX expression */}
     }
   }
 }

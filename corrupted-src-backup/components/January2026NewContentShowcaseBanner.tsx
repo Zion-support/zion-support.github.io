@@ -1,3 +1,3 @@
 import React from 'react';
 
-export default January2026NewContentShowcaseBanner;
+export default January2026 NewContentShowcaseBanner;

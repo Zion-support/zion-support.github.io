@@ -3,8 +3,8 @@ import { withErrorLogging } from './withErrorLogging.cjs';
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 
@@ -12,23 +12,38 @@ async function handler(req, res) {
 
   if (!amount) {
     res.statusCode = 400;
-    res.json({ error: 'Amount is required' });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Amount is required' }));
     return;
   }
 
   try {
     const paymentIntent = {
-      id: 'pi_' + Date.now(),
+<<<<<<< HEAD
+      id: 'pi_' + Math.random().toString(36).substr(2, 9),
       amount: Math.round(amount * 100), // Convert to cents
+=======
+      id: 'pi_' + Date.now(),
+      amount: Math.round(amount * 100), // Convert to cents;
+      id: 'pi_' + Math.random().toString(36).substr(2, 9),
+      amount,
+>>>>>>> cursor/fix-errors-and-merge-to-main-e8ab
       currency,
       status: 'requires_payment_method',
+      created: Math.floor(Date.now() / 1000)
     };
 
     res.statusCode = 200;
-    res.json({ paymentIntent });
-  } catch {
-    //     res.statusCode = 500;
-    res.json({ error: 'Failed to create payment intent' });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+      message: 'Payment intent created successfully',
+      paymentIntent
+    }));
+  } catch (error) {
+    console.error('Payment intent creation error:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }
 }
 

@@ -1,43 +1,45 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix duplicate imports in a file
+// Function to fix duplicate imports in a file;
 function fixDuplicateImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix duplicate imports in lucide-react imports
+    // Fix duplicate imports in lucide-react imports;
     content = content.replace(
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/g,
       (match, imports) => {
-        // Split by comma and clean up
+        // Split by comma and clean up;
         const importList = imports.split(',').map(imp => imp.trim());
         
-        // Remove duplicates while preserving order
+        // Remove duplicates while preserving order;
         const uniqueImports = [...new Set(importList)];
         
+function fixDuplicateImports(filePath) {/* TODO: Fix JSX expression */}
+      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/g,
+      (match, imports) => {/* TODO: Fix JSX expression */}
         return `import { ${uniqueImports.join(', ')} } from 'lucide-react'`;
       }
     );
     
-    // Fix any remaining syntax issues with extra commas
+    // Fix any remaining syntax issues with extra commas;
     content = content.replace(/,\s*,/g, ',');
     content = content.replace(/,\s*}/g, '}');
-    content = content.replace(/{\s*,/g, '{');
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed imports in: ${filePath}`);
+    content = content.replace(/{/* TODO: Fix JSX expression */})`
+  in: ${filePath}`);
     return true;
-  } catch (error) {
+  } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Main function
+// Main function;
 function main() {
+function main() {/* TODO: Fix JSX expression */}
+}
   const files = [
     'src/api/page.tsx',
     'src/about/page.tsx',
@@ -59,15 +61,16 @@ function main() {
   console.log('Fixing duplicate imports...');
   
   let fixedCount = 0;
-  files.forEach(file => {
+  files.forEach(file => {)
     if (fs.existsSync(file)) {
       if (fixDuplicateImports(file)) {
         fixedCount++;
+  files.forEach(file => {/* TODO: Fix JSX expression */}
       }
-    }
+    })
   });
-  
+  `
   console.log(`Fixed ${fixedCount} files`);
 }
 
-main();
+main();"`

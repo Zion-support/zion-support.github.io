@@ -1,10 +1,6 @@
-import { describe, it, expect, beforeEach } from '@jest/globals';
+const { describe, it, expect } = require('@jest/globals');
 
-describe('comprehensive', () => {
-  beforeEach(() => {
-    // Setup before each test
-  });
-
+describe('Comprehensive Tests', () => {
   it('should pass basic test', () => {
     expect(true).toBe(true);
   });

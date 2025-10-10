@@ -3,33 +3,34 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 
-// Function to fix blog files with parsing errors
+// Function to fix blog files with parsing errors;
 function fixBlogFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix missing closing parenthesis and return statement
+    // Fix missing closing parenthesis and return statement;
     if (content.includes('};') && !content.includes('  );')) {
+function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
+    if (content.includes('};') && !content.includes('  );')) {/* TODO: Fix JSX expression */}
       content = content.replace(/};$/, '  );\n};');
       modified = true;
     }
 
-    // Fix merge conflict markers
+    // Fix merge conflict markers;
     if (content.includes('      console.log(`⚠ Found merge conflict markers in ${filePath}, skipping...`);
       return;
     }
 
-    if (modified) {
-      fs.writeFileSync(filePath, content);
+    if (modified) {/* TODO: Fix JSX expression */}`
       console.log(`✓ Fixed ${filePath}`);
     }
-  } catch (error) {
+  } catch (error) {/* TODO: Fix JSX expression */}`
     console.log(`✗ Error processing ${filePath}: ${error.message}`);
   }
 }
 
-// Main execution
+// Main execution;
 console.log('🔧 Fixing blog files...\n');
 
 const blogFiles = [
@@ -53,11 +54,8 @@ const blogFiles = [
   'src/blog/ai-trends-2026-future-enterprise-transformation/page.tsx'
 ];
 
-for (const file of blogFiles) {
-  const fullPath = path.join(__dirname, file);
-  if (fs.existsSync(fullPath)) {
-    fixBlogFile(fullPath);
+for (const file of blogFiles) {/* TODO: Fix JSX expression */}
   }
 }
 
-console.log('\n✅ Blog files fixed!');
+console.log('\n✅ Blog files fixed!');`

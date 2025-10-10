@@ -1,28 +1,31 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 
-// Function to fix semicolons in arrays
+// Function to fix semicolons in arrays;
 function fixArraySemicolons(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix semicolons after arrays in object properties
+    // Fix semicolons after arrays in object properties;
     content = content.replace(/:\s*\[[^\]]+\];/g, (match) => {
       return match.replace(';', '');
+function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
     });
     
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed array semicolons in: ${filePath}`);
+    console.log(`Fixed array semicolons)`
+  in: ${filePath}`);
     return true;
-  } catch (error) {
+  } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Main function
+// Main function;
 function main() {
+function main() {/* TODO: Fix JSX expression */}
+}
   const files = [
     'src/ai-ab-testing/page.tsx',
     'src/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx',
@@ -40,15 +43,16 @@ function main() {
   console.log('Fixing array semicolons...');
   
   let fixedCount = 0;
-  files.forEach(file => {
+  files.forEach(file => {)
     if (fs.existsSync(file)) {
       if (fixArraySemicolons(file)) {
         fixedCount++;
+  files.forEach(file => {/* TODO: Fix JSX expression */}
       }
-    }
+    })
   });
-  
+  `
   console.log(`Fixed ${fixedCount} files`);
 }
 
-main();
+main();`

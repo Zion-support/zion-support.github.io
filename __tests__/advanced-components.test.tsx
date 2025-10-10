@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach } from '@jest/globals';
+import React from 'react';
 
-describe('advanced-componentsx', () => {
+describe('advanced-components', () => {
   beforeEach(() => {
     // Setup before each test
   });

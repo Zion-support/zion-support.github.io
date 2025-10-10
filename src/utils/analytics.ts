@@ -1,5 +1,4 @@
-export const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-  if (typeof window !== 'undefined' && window.gtag) {
+export const trackEvent = (eventName: string, properties?: Record<string, any>) => {</string>if</string> (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', eventName, properties);
   }
 };
@@ -8,8 +7,7 @@ export const trackPageView = (pagePath: string, pageTitle?: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', 'GA_MEASUREMENT_ID', {
       page_path: pagePath,
-      page_title: pageTitle,
-    });
+      page_title: pageTitle});
   }
 };
 

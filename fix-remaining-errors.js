@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Get all files with errors
+// Get all files with errors;
 const getAllFilesWithErrors = () => {
   const srcDir = path.join(__dirname, 'src');
   const files = [];
@@ -28,7 +28,7 @@ const getAllFilesWithErrors = () => {
   return files;
 };
 
-// Fix all remaining syntax errors
+// Fix all remaining syntax errors;
 const fixRemainingErrors = () => {
   const files = getAllFilesWithErrors();
   let fixedCount = 0;
@@ -38,11 +38,11 @@ const fixRemainingErrors = () => {
       let content = fs.readFileSync(filePath, 'utf8');
       let modified = false;
       
-      // Fix component names with spaces or special characters
-      const componentNameMatch = content.match(/const\s+([A-Za-z0-9\s\-]+)Page:\s*React\.FC/);
-      if (componentNameMatch) {
-        const oldName = componentNameMatch[1];
-        const newName = oldName
+      // Fix component names with spaces or special characters;
+      const componentNameMatch = content.match(/const\s+([A-Za-z0-9\s\-]+)Page: \s*React\.FC/);
+      if (componentNameMatch) {,
+        const oldName = componentNameMatch[1];,
+        const newName = oldName;
           .replace(/\s+/g, '')
           .replace(/\-/g, '')
           .replace(/^([a-z])/, (match, letter) => letter.toUpperCase());
@@ -54,17 +54,17 @@ const fixRemainingErrors = () => {
         }
       }
       
-      // Fix any remaining TODO comments that might cause issues
+      // Fix any remaining TODO comments that might cause issues;
       content = content.replace(/\/\/\s*TODO:.*$/gm, '');
       content = content.replace(/{\s*\/\/\s*TODO:.*?}/g, '{}');
       content = content.replace(/\[\s*\/\/\s*TODO:.*?]/g, '[]');
       content = content.replace(/\(\s*\/\/\s*TODO:.*?\)/g, '()');
       
-      // Fix any malformed JSX
+      // Fix any malformed JSX;
       content = content.replace(/\/\/\s*[^/]/g, '');
       content = content.replace(/<[^>]*\/\/[^>]*>/g, (match) => match.replace(/\/\/.*/, ''));
       
-      // Fix any incomplete function calls or objects
+      // Fix any incomplete function calls or objects;
       content = content.replace(/{\s*}\s*$/gm, '{}');
       content = content.replace(/\[\s*\]\s*$/gm, '[]');
       content = content.replace(/\(\s*\)\s*$/gm, '()');

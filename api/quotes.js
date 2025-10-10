@@ -1,8 +1,8 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 
@@ -11,31 +11,38 @@ export default async function handler(req, res) {
 
     if (!name || !email || !phone || !details) {
       res.statusCode = 400;
-      res.json({ error: 'Name, email, phone, and details are required' });
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }));
       return;
     }
 
     // Process quote submission logic here
     const quote = {
-      id: 'quote_' + Date.now(),
+      id: Date.now().toString(),
       name,
       email,
       phone,
       details,
-      country: country || 'US',
-      service: service || 'general',
-      submittedAt: new Date().toISOString(),
+      country,
+      service,
+      timestamp: new Date().toISOString(),
+      status: 'pending'
     };
 
     // In a real application, you would save this to a database
-    //     res.statusCode = 200;
-    res.json({
-      success: true,
-      message: 'Quote submitted successfully',
-      quote,
-    });
+    // For now, we'll just log it
+    console.log('Quote submitted:', quote);
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+      message: 'Quote request submitted successfully',
+      quoteId: quote.id
+    }));
   } catch (error) {
-    //     res.statusCode = 500;
-    res.json({ error: error.message || 'Quote submission failed' });
+    console.error('Quote submission error:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to submit quote request' }));
   }
 }

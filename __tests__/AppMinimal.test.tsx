@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach } from '@jest/globals';
+import React from 'react';
 
-describe('AppMinimalx', () => {
+describe('AppMinimal', () => {
   beforeEach(() => {
     // Setup before each test
   });

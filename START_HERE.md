@@ -97,10 +97,10 @@ This removes Next.js packages to prevent future issues.
 - [x] Code fixed
 - [x] Build tested locally
 - [x] Documentation created
-- [ ] **← YOU ARE HERE:** Remove plugin from Netlify UI
-- [ ] Deploy to Netlify
-- [ ] Verify production site
-- [ ] (Optional) Run `./remove-nextjs.sh`
+- [] **← YOU ARE HERE:** Remove plugin from Netlify UI
+- [] Deploy to Netlify
+- [] Verify production site
+- [] (Optional) Run `./remove-nextjs.sh`
 
 ---
 
