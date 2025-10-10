@@ -1,7 +1,7 @@
 // Performance optimization utilities;
 export const debounce = <T extends (...args: any[]) => any>(
-  func: T;
-  wait: number;
+  func: T,
+  wait: number,
 ): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {,
@@ -16,16 +16,16 @@ export const debounce = <T extends (...args: any[]) => any>(
 };
 
 export const throttle = <T extends (...args: any[]) => any>(
-  func: T;
-  limit: number;
+  func: T,
+  limit: number,
 ): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean;
+  let inThrottle: boolean,
   return (...args: Parameters<T>) => {
     if (!inThrottle) {,
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {}
-  let inThrottle: boolean;
+  let inThrottle: boolean,
   return (...args: Parameters<T>) => {}
     if (!inThrottle) {}
       func(...args);
@@ -393,9 +393,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     if (typeof window === 'undefined' || !('memory' in window.performance)) return;
     const memory = (window.performance as Performance & {}
       memory?: {}
-        usedJSHeapSize: number;
-        totalJSHeapSize: number;
-        jsHeapSizeLimit: number;
+        usedJSHeapSize: number,
+        totalJSHeapSize: number,
+        jsHeapSizeLimit: number,
       };
     }).memory;
     if (memory) {}

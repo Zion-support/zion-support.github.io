@@ -155,6 +155,7 @@ const consultationTypes = [
         <meta name="description" content="Schedule a free consultation with our AI and IT experts. Get personalized advice on how to transform your business with technology." />
         <meta name="keywords" content="free consultation, AI consultation, IT consultation, business transformation, Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
 
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <div className="container mx-auto px-4">
@@ -237,6 +238,33 @@ const consultationTypes = [
                   </button>
 
                 </div>
+=======
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
+        <Navigation />
+        
+        <main className="pt-20">
+          <div className="container mx-auto px-4 py-16"></div>
+            <div className="max-w-4xl mx-auto"></div>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+                Free Consultation</h1>
+              </h1>
+              
+              <div className="prose prose-lg max-w-none"></div>
+                <p className="text-xl text-gray-600 mb-8">
+                  Get expert advice on how AI and IT solutions can transform your business.
+                </p>
+                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">What to Expect</h2>
+                <p className="text-gray-700 mb-6">
+                  Our 30-minute consultation will help you understand how our services can benefit your business.
+                </p>
+                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Schedule Your Call</h2>
+                <p className="text-gray-700 mb-6">
+                  Contact us at (302) 464-0950 or email info@ziontechgroup.com to schedule your free consultation.
+                </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             </div>
           </div>

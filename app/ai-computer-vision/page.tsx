@@ -97,7 +97,24 @@ const AIComputerVisionPage: React.FC = () => {
         <meta name="keywords" content="AI computer vision, object detection, image analysis, deep learning, computer vision AI, visual recognition" />
       </Helmet>
 
+<<<<<<< HEAD
       <Navigation />
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Computer Vision<p className="text-xl text-gray-300 mb-8">Professional ai computer vision services powered by advanced AI and cutting-edge technology.</p>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
+              Ai Computer Vision;</h1>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional ai computer vision services powered by advanced AI and cutting-edge technology.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Computer Vision</h1><p className="text-xl text-gray-300 mb-8">Professional ai computer vision services powered by advanced AI and cutting-edge technology.</p>
+            </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -125,6 +142,7 @@ const AIComputerVisionPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -223,6 +241,28 @@ const AIComputerVisionPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                   Schedule Demo
                 </button>
+=======
+            <div className="space-y-4"></div>
+              <a;
+            <div className="space-y-4"></div>
+              <a
+                href="/contact"
+                className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+              >Get Started Today</a>
+              >
+                Get Started Today;
+              </a>
+              <div></div>
+                <a;
+              <div></div>
+                <a
+                  href="/"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                >← Back to Home</a>
+                >
+                  ← Back to Home;
+                </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             </div>
           </div>

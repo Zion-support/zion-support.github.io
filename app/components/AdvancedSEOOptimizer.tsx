@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const AdvancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
@@ -24,6 +25,48 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
+=======
+interface SEOData {}
+  title: string,
+  description: string,
+  keywords: string[];
+  canonicalUrl: string,
+  author?: string;
+  robots?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;,
+  twitterImage?: string;
+  structuredData?: Record<string, unknown>;
+  faq?: Array<{ question: string; answer: string }>;
+}
+
+interface AdvancedSEOOptimizerProps {}
+  seoData: SEOData,
+  enableStructuredData?: boolean;
+  enableOpenGraph?: boolean;
+  enableTwitterCards?: boolean;
+  enableSchemaMarkup?: boolean;
+}
+
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
+  seoData;
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
+  seoData,
+  enableStructuredData = true,
+  enableOpenGraph = true,
+  enableTwitterCards = true,
+  enableSchemaMarkup = true}) => {}
+  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
+
+  const generateStructuredData = useCallback(() => {}
+    if (!enableStructuredData || !seoData.structuredData) {}
+      return null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 

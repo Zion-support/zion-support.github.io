@@ -23,11 +23,11 @@ export interface LogContext {
 class Logger {
   private logLevel: LogLevel = LogLevel.INFO;
   private logs: Array<{
-    level: LogLevel;
-    message: string;
+    level: LogLevel,
+    message: string,
     context?: LogContext;
     metadata?: Record<string, unknown>
-    timestamp: number;
+    timestamp: number,
   }> = []
 
   setLogLevel(level: LogLevel): void {,
@@ -156,24 +156,21 @@ class Logger {/* TODO: Fix JSX expression */}
     const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaStr}`
 
     switch (level) {
-      case LogLevel.DEBUG: break;
-      case LogLevel.INFO:
-        break;
-      case LogLevel.WARN:
-        break;
-      case LogLevel.ERROR:
-        break;
+      case LogLevel.DEBUG: break,
+      case LogLevel.INFO: break,
+      case LogLevel.WARN: break,
+      case LogLevel.ERROR: break,
       case LogLevel.FATAL:,
         break;
     }
   }
 
   getLogs(level?: LogLevel): Array<{
-    level: LogLevel;
-    message: string;
+    level: LogLevel,
+    message: string,
     context?: LogContext;
     metadata?: Record<string, unknown>
-    timestamp: number;
+    timestamp: number,
   }> {
     if (level !== undefined) {
       return this.logs.filter(log => log.level === level)

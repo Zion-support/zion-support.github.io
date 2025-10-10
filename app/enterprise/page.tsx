@@ -91,7 +91,7 @@ const EnterprisePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer
         title="Enterprise Solutions - Zion Tech Group"
         description="Comprehensive enterprise-grade solutions for large-scale business operations."
@@ -101,11 +101,11 @@ const EnterprisePage: React.FC = () => {
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Enterprise
+            Enterprise</h1>
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Solutions
             </span>
@@ -114,7 +114,7 @@ const EnterprisePage: React.FC = () => {
             Comprehensive enterprise-grade solutions designed for large-scale business operations. 
             Transform your organization with cutting-edge technology and expert implementation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
               Get Enterprise Consultation
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
@@ -145,8 +145,8 @@ const EnterprisePage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">
               Enterprise-Grade Features
             </h2>
@@ -156,9 +156,15 @@ const EnterprisePage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
                 <div className="flex items-center mb-4">
+=======
+            {enterpriseFeatures.map((feature, index) => (</div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"></div>
+                <div className="flex items-center mb-4"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                   <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
@@ -177,10 +183,17 @@ const EnterprisePage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Solutions Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
+=======
+      {/* Industries */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Solutions
             </h2>
@@ -189,6 +202,7 @@ const EnterprisePage: React.FC = () => {
             </p>
           </div>
           
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((solution, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300">
@@ -202,6 +216,19 @@ const EnterprisePage: React.FC = () => {
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                       {benefit}
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industries.map((industry, index) => (</div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"></div>
+                <industry.icon className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">{industry.name}</h3>
+                <p className="text-gray-300 mb-4">{industry.description}</p>
+                <ul className="space-y-2">
+                  {industry.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {feature}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                     </li>
                   ))}
                 </ul>
@@ -213,6 +240,7 @@ const EnterprisePage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
+<<<<<<< HEAD
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -242,6 +270,50 @@ const EnterprisePage: React.FC = () => {
                 </button>
                 <button className="w-full border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
                   Download Brochure
+=======
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Enterprise Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Flexible pricing options designed to scale with your organization's needs.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index) => (</div>
+              <div key={index} className={`bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${tier.popular ? 'border-purple-400 bg-purple-500/10' : 'border-white/10'} hover:bg-white/10 transition-all duration-300`}>
+                {tier.popular && (</div>
+                  <div className="text-center mb-4"></div>
+                    <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                <div className="text-center mb-6"></div>
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <div className="text-4xl font-bold text-purple-400 mb-2">
+                    {tier.price}</div>
+                    <span className="text-lg text-gray-400">{tier.period}</span>
+                  </div>
+                  <p className="text-gray-300">{tier.description}</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {tier.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  tier.popular 
+                    ? 'bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white' 
+                    : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'
+                }`}>
+                  {tier.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 </button>
               </div>
             </div>
@@ -251,14 +323,14 @@ const EnterprisePage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Enterprise?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Contact Enterprise Sales
               <ArrowRight className="inline-block ml-2 w-5 h-5" />

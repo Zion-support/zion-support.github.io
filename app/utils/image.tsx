@@ -11,8 +11,8 @@ interface ImageProps {}
   className?: string
   priority?: boolean
   _quality?: number
-  src: string;
-  alt: string;
+  src: string,
+  alt: string,
   width?: number;
   height?: number;
   className?: string;
@@ -60,8 +60,8 @@ export const Image: React.FC<ImageProps> = ({,
     ...style;
     ...(fill && {
       position: 'absolute'
-      top: 0;
-      left: 0;
+      top: 0,
+      left: 0,
   const imageStyle: React.CSSProperties = {}
     ...style,
     ...(fill && {}
@@ -98,7 +98,7 @@ export const,
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props})
-      >)
+      >)</div>
         <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
       </div>)
     ),

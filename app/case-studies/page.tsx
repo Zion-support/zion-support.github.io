@@ -77,6 +77,7 @@ return (
         <meta name="description" content="Explore our success stories and case studies showcasing how we've helped businesses transform with AI and technology solutions." />
         <meta name="keywords" content="case studies, success stories, AI solutions, business transformation, Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
 
 {/* Stats Section */}
       <section className="py-20 px-4">
@@ -89,6 +90,27 @@ return (
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-400">{stat.label}</div>
+=======
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
+        <Navigation />
+        
+        <main className="pt-20">
+          <div className="container mx-auto px-4 py-16"></div>
+            <div className="max-w-4xl mx-auto"></div>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+                Case Studies</h1>
+              </h1>
+              
+              <div className="prose prose-lg max-w-none"></div>
+                <p className="text-xl text-gray-600 mb-8">
+                  Real success stories from our clients.
+                </p>
+                
+                <p className="text-gray-700 mb-6">
+                  Coming soon - stay tuned for our case studies!
+                </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>

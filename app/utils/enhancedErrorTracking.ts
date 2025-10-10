@@ -11,11 +11,11 @@ export interface ErrorContext {
   metadata?: Record<string, unknown>;}
 }
 export interface TrackedError {
-  message: string;
+  message: string,
   stack?: string;
-  context: ErrorContext;
-  timestamp: string;
-  userAgent: string;
+  context: ErrorContext,
+  timestamp: string,
+  userAgent: string,
 export interface ErrorContext {}
   component?: string
   action?: string
@@ -34,7 +34,7 @@ export interface TrackedError {}
 class EnhancedErrorTracker {}
   private errors: TrackedError[] = []
   private maxErrors = 100;
-  private sessionId: string;
+  private sessionId: string,
   constructor() {,
     this.sessionId = this.generateSessionId(),
   private maxErrors = 100
@@ -142,7 +142,7 @@ class EnhancedErrorTracker {}
     this.errors = [];}
   }
   public getErrorStats(): {
-    total: number;
+    total: number,
   public getErrorStats(): {}
     total: number
     byComponent: Record<string, number>

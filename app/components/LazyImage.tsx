@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const LazyImagePage: React.FC = () => {
   const features = [
     {
@@ -24,6 +25,52 @@ const LazyImagePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
+=======
+interface LazyImageProps {
+  src: string;,
+    alt: string,
+interface LazyImageProps {}
+  src: string,
+  alt: string,
+  className?: string;
+  placeholder?: string;
+  onLoad?: () => void;
+  onError?: () => void;
+}
+
+const LazyImage: React.FC<LazyImageProps>= ({
+const LazyImage: React.FC<LazyImageProps> = ({}
+  src,
+const LazyImage: React.FC<LazyImageProps> = ({,
+  src;
+  alt,
+  className = '',
+  placeholder = 'data:image/svg+xml;base64,PHN2 ZyB3 aWR0 aD0 iMjAwIiBoZWlnaHQ9 IjIwMCIgeG1 sbnM9 Imh0 dHA6 Ly93 d3 cudzMub3 JnLzIwMDAvc3 ZnIj48 cmVjdCB3 aWR0 aD0 iMTAwJSIgaGVpZ2 h0 PSIxMDAlIiBmaWxsPSIjZjNmNGY2 Ii8 vPjx0 ZXh0 IHg9 IjUwJSIgeT0 iNTAlIiBkb21 pbmFudC1 iYXNlbGluZT0 ibWlkZGxlIiB0 ZXh0 LWFuY2 hvcj0 ibWlkZGxlIiBmaWxsPSIjOWNhM2 FmIiBmb250 LWZhbWlseT0 ic2 Fucy1 zZXJpZiI+TG9 hZGluZy4 uLjwvdGV4 dD48 L3 N2 Zz4=',
+  onLoad,
+  onError}) => {}
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);</LazyImageProps>
+  const [hasError, setHasError] = useState(false);</LazyImageProps>
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  const [setNode, entry] = useIntersectionObserver({
+    threshold: 0.1,
+    rootMargin: '50 px')
+    React.useEffect(() => {
+    if (entry?.isIntersecting) {
+  const [setNode, entry] = useIntersectionObserver({)
+    threshold: 0.1),
+    rootMargin: '50px'),
+  React.useEffect(() => {,
+    if (entry?.isIntersecting) {,
+  const [setNode, entry] = useIntersectionObserver({)}
+    threshold: 0.1,
+    rootMargin: '50px',
+
+  React.useEffect(() => {}
+    if (entry?.isIntersecting) {}
+      setIsInView(true);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
@@ -38,6 +85,7 @@ const LazyImagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -45,6 +93,44 @@ const LazyImagePage: React.FC = () => {
         <meta name="description" content="Professional LazyImage services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="LazyImage, AI solutions, IT services, Zion Tech Group, lazyimage" />
       </Helmet>
+=======
+  const handleError = () => {}
+    setHasError(true);
+    onError?.();
+  };
+</HTMLImageElement>
+  return (<div ref={setNode} className={`relative overflow-hidden ${className}`}>{isInView && (<img
+
+  return(<div ref={setNode} className={`relative overflow-hidden ${className}`}>
+      {isInView && (</div>
+        <img;
+  return (<div ref={setNode} className={`relative overflow-hidden ${className}`}>{isInView && (</div><img
+  return (
+    <div ref={setNode} className={`relative overflow-hidden ${className}`}>
+      {isInView && (}</div>
+        <img
+          ref={imgRef}
+          src={src}
+          alt={alt}
+          onLoad={handleLoad}
+          onError={handleError}
+          className={`transition-opacity duration-300 ${
+          className={`transition-opacity duration-300 ${}
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          } ${className}`}
+          loading="lazy"
+        >)}</img>
+</img>
+      {!isLoaded && !hasError && (</img>
+        </img><div className="absolute inset-0 flex items-center justify-center bg-gray-200">
+          <img
+          className={`transition-opacity duration-300 ${})
+            isLoaded ? 'opacity-100' : 'opacity-0'})
+          } ${className}`})
+          loading="lazy")
+        />)
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -74,6 +160,7 @@ const LazyImagePage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -97,6 +184,13 @@ const LazyImagePage: React.FC = () => {
               </div>
             ))}
           </div>
+=======
+      {hasError && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500">
+      {hasError && (}
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500">
+          <span>Failed to load image</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
         </div>
       </section>
 

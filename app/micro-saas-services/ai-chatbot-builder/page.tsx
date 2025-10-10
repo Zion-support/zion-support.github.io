@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -68,6 +69,79 @@ const PagePage: React.FC = () => {
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
+=======
+const $1: React.FC = () => {
+  const [botName, setBotName] = useState('');
+  const [botPurpose, setBotPurpose] = useState('');
+
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+  return (</div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <div className="max-w-4xl mx-auto"></div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Chatbot Builder<p className="text-xl text-gray-300 text-center mb-12">Create intelligent chatbots for your website without coding</p>
+        <div className="max-w-4xl mx-auto"></div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Chatbot Builder</h1><p className="text-xl text-gray-300 text-center mb-12">Create intelligent chatbots for your website without coding</p>
+          </p>
+
+          <div className="cyber-card p-8 mb-8"></div>
+            <h2 className="text-2xl font-bold text-white mb-6">Build Your Chatbot</h2>
+            <div className="space-y-6"></div>
+              <div></div>
+                <label className="block text-white font-medium mb-2">Bot Name<input
+                  type="text"
+                  value={botName}
+                  onChange={(e) =>setBotName(e.target.value)}</input></<<<inpu>className</inpu></inpu>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"
+                  placeholder="Enter your bot name..."</input>
+                /></input>
+              </div>
+              <div></div>
+                <label className="block text-white font-medium mb-2">Bot Purpose<select
+                  value={botPurpose}
+                  onChange={(e) =>setBotPurpose(e.target.value)}</select></<<<selec>className</selec></selec>="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none"</select>
+                ></select>
+                  <option value="">Select purpose...<option value="customer-support">Customer Support</option>
+                  <option value="sales">Sales Assistant<option value="lead-generation">Lead Generation</option>
+                  <option value="faq">FAQ Bot<option value="booking">Booking Assistant<button className="cyber-button w-full">Create Chatbot</button>
+          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text text-center">
+            AI Chatbot Builder;</h1>
+          </h1>
+          <p className="text-xl text-gray-300 text-center mb-12">
+            Create intelligent chatbots for your website without coding;
+          </p>
+
+          <div className="cyber-card p-8 mb-8"></div>
+            <h2 className="text-2xl font-bold text-white mb-6">Build Your Chatbot</h2>)
+            <div className="space-y-6">)</div>
+              <div>)</div>
+                <label className="block text-white font-medium mb-2">Bot Name</label>)
+                <input;),
+                  type="text"),
+                  value={botName}
+                  onChange={(e) => setBotName(e.target.value)}
+                  className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"
+                  placeholder="Enter your bot name..."
+                />,
+              </div>,
+              <div>,</div>
+                <label className="block text-white font-medium mb-2">Bot Purpose</label>,
+                <select;
+                  value={botPurpose}
+                  onChange={(e) => setBotPurpose(e.target.value)}
+                  className="w-full p-3 bg-gray-800 text-white rounded-lg border border-gray-600 focus: border-cyan-400 focus:outline-none"
+                >
+                  <option value="">Select purpose...</option>
+                  <option value="customer-support">Customer Support</option>
+                  <option value="sales">Sales Assistant</option>
+                  <option value="lead-generation">Lead Generation</option>
+                  <option value="faq">FAQ Bot</option>
+                  <option value="booking">Booking Assistant</option>
+                </select>
+              </div>
+              <button className="cyber-button w-full">
+                Create Chatbot;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </button>
             </div>
           </div>
@@ -86,6 +160,7 @@ const PagePage: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -96,6 +171,62 @@ const PagePage: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
+            <div className="cyber-card p-6 text-center"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Basic<div className="text-3xl font-bold text-cyan-400 mb-4">$49/month</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
+            <div className="cyber-card p-6 text-center"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Basic</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$49/month</div>
+              <ul className="text-gray-300 space-y-2">
+                <li>1 chatbot<li>1,000 conversations/month</li>
+                <li>Basic templates<li>Email support</li>
+              <h3 className="text-xl font-bold text-white mb-4">Basic</h3>
+              <div className="text-3xl font-bold text-cyan-400 mb-4">$49/month</div>,
+              <ul className="text-gray-300 space-y-2">,
+                <li>1 chatbot</li>,
+                <li>1,000 conversations/month</li>
+                <li>Basic templates</li>
+                <li>Email support</li>
+              </ul>
+            </div>
+            <div className="cyber-card p-6 text-center border-2 border-cyan-400"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Professional</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$149/month</div>
+              <ul className="text-gray-300 space-y-2">
+                <li>5 chatbots<li>10,000 conversations/month</li>
+                <li>Advanced features<li>Priority support<li>Analytics</li>
+              </ul>
+            </div>
+            <div className="cyber-card p-6 text-center"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$399/month</div>
+              <ul className="text-gray-300 space-y-2">
+                <li>Unlimited chatbots<li>Unlimited conversations</li>
+                <li>Custom integrations<li>24/7 support<li>White-label option</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center"></div>
+            <a;
+              href="tel: +13024640950"
+          <div className="text-center"></div>
+            <a
+              href="tel:+13024640950"
+              className="cyber-button mr-4"
+            >📞 Call: (302) 464-0950<a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+            >Start Building</a>
+            >
+              📞 Call: (302) 464-0950;
+            </a>
+            <a;
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+            >
+              Start Building;
+            </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>

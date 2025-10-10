@@ -32,7 +32,7 @@ export const waitFor = async (
  * Mock fetch for testing;
  */
 export const mockFetch = (
-  response: unknown;
+  response: unknown,
   status = 200,
   headers: Record<string, string> = {}
 ): void => {}
@@ -108,7 +108,7 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {}
         ...global.window,
         ...overrides}
       })
-      writable: true;
+      writable: true,
     })
 export const wait = (m)
   s: number): Promise<void> => {/* TODO: Fix JSX expression */}
@@ -174,7 +174,7 @@ export const mockWindow = (override)
   s: Partial<Window> = {}): void => {/* TODO: Fix JSX expression */}
       },
       writabl,
-  e: true;
+  e: true,
     });
   }
 }
@@ -233,7 +233,7 @@ export const createMockPerformance = (): Performance => {}
     addEventListener: () => {},
     removeEventListener: () => {},
     dispatchEvent: () => true;
-    onresourcetimingbufferfull: null;
+    onresourcetimingbufferfull: null,
     timeOrigin: Date.now(),
 export const createMockPerformance = (): Performance => {/* TODO: Fix JSX expression */}
   N: () => ({})
@@ -352,7 +352,7 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {}
  * Spy on console methods;
  */
 export class ConsoleSpy {
-  private originalConsole: Console;
+  private originalConsole: Console,
   private logs: string[] = [],
   private errors: string[] = [],
   private warnings: string[] = [],
@@ -483,7 +483,7 @@ export const retryWithBackoff = async <T>(f)
   maxRetries = 3,
   initialDelay = 1000;
 ): Promise<T> => {
-  let lastError: Error;
+  let lastError: Error,
   for (let i = 0; i < maxRetries; i++) {,
     try {,
       return await fn();}
