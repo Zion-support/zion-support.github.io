@@ -99,42 +99,6 @@ const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({
   return <>{children}</>;
 };
 
-const App: React.FC = memo(() => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SkipLink />
-      <SEOHead structuredData={structuredData} />
-      <Navigation />
-      <Breadcrumb />
-      
-      <main id="main-content" className="relative">
-        <Suspense fallback={<PageLoader />}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/case-studies" element={<CaseStudiesPage />} />
-            <Route path="/enterprise" element={<EnterprisePage />} />
-            <Route path="/docs" element={<DocsPage />} />
-            <Route path="/api-docs" element={<ApiDocsPage />} />
-            <Route path="/support" element={<SupportPage />} />
-            <Route path="/status" element={<StatusPage />} />
-            <Route path="/demo" element={<DemoPage />} />
-            <Route path="/consultation" element={<ConsultationPage />} />
-          </Routes>
-        </Suspense>
-      </main>
-      
-      <Footer />
-      <PerformanceMonitor />
-    </div>
-  );
-});
-
-AppWithPerformanceMonitoring.displayName = 'AppWithPerformanceMonitoring';
-
 // Main App component
 const App = memo(() => {
   return (
@@ -145,7 +109,35 @@ const App = memo(() => {
             <EnhancedAccessibility>
               <AccessibilityEnhancer>
                 <Router>
-                  <AppWithPerformanceMonitoring />
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                    <SkipLink />
+                    <SEOHead structuredData={structuredData} />
+                    <Navigation />
+                    <Breadcrumb />
+                    
+                    <main id="main-content" className="relative">
+                      <Suspense fallback={<PageLoader />}>
+                        <Routes>
+                          <Route path="/" element={<HomePage />} />
+                          <Route path="/about" element={<AboutPage />} />
+                          <Route path="/services" element={<ServicesPage />} />
+                          <Route path="/contact" element={<ContactPage />} />
+                          <Route path="/blog" element={<BlogPage />} />
+                          <Route path="/case-studies" element={<CaseStudiesPage />} />
+                          <Route path="/enterprise" element={<EnterprisePage />} />
+                          <Route path="/docs" element={<DocsPage />} />
+                          <Route path="/api-docs" element={<ApiDocsPage />} />
+                          <Route path="/support" element={<SupportPage />} />
+                          <Route path="/status" element={<StatusPage />} />
+                          <Route path="/demo" element={<DemoPage />} />
+                          <Route path="/consultation" element={<ConsultationPage />} />
+                        </Routes>
+                      </Suspense>
+                    </main>
+                    
+                    <Footer />
+                    <PerformanceMonitor />
+                  </div>
                 </Router>
               </AccessibilityEnhancer>
             </EnhancedAccessibility>

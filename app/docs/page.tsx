@@ -1,322 +1,338 @@
 'use client';
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } from 'lucide-react';
+import SEOOptimizer from '../components/SEOOptimizer';
 
-const DocsPage: React.FC = () => {,
+const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const docCategories = [
     {
       title: 'Getting Started',
-      icon: 'rocket',
-      description: 'Quick start guides and basic setup instructions',
-      docs: [,
-        { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },
-        { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' },
-        { title: 'Configuration', description: 'Configure your environment', link: '/docs/configuration' }
-      ]
-    },
-    {
-      title: 'API Reference',
-      icon: '📚',
-      description: 'Complete API documentation and reference',
-      docs: [,
-        { title: 'Authentication', description: 'API authentication methods', link: '/docs/api/auth' },
-        { title: 'Endpoints', description: 'All available API endpoints', link: '/docs/api/endpoints' },
-        { title: 'SDKs', description: 'Software development kits', link: '/docs/api/sdks' }
+      icon: BookOpen,
+      description: 'Learn the basics and get up and running quickly',
+      docs: [
+        {
+          title: 'Quick Start Guide',
+          description: 'Get started with our platform in under 5 minutes',
+          url: '/docs/quick-start',
+          type: 'guide',
+          duration: '5 min read'
+        },
+        {
+          title: 'Installation',
+          description: 'Step-by-step installation instructions',
+          url: '/docs/installation',
+          type: 'tutorial',
+          duration: '10 min read'
+        },
+        {
+          title: 'Configuration',
+          description: 'Configure your environment and settings',
+          url: '/docs/configuration',
+          type: 'tutorial',
+          duration: '15 min read'
+        }
       ]
     },
     {
       title: 'AI Services',
-      icon: '🤖',
-      description: 'AI and machine learning service documentation',
-      docs: [,
-        { title: 'AI Content Generation', description: 'Generate content with AI', link: '/docs/ai/content' },
-        { title: 'AI Analytics', description: 'AI-powered analytics tools', link: '/docs/ai/analytics' },
-        { title: 'AI Automation', description: 'Automate workflows with AI', link: '/docs/ai/automation' }
+      icon: Code,
+      description: 'Comprehensive guides for our AI solutions',
+      docs: [
+        {
+          title: 'AI Analytics API',
+          description: 'Complete API reference for AI analytics services',
+          url: '/docs/ai-analytics-api',
+          type: 'api',
+          duration: '30 min read'
+        },
+        {
+          title: 'Machine Learning Models',
+          description: 'Guide to using our pre-trained ML models',
+          url: '/docs/ml-models',
+          type: 'guide',
+          duration: '20 min read'
+        },
+        {
+          title: 'AI Workflow Automation',
+          description: 'Automate business processes with AI',
+          url: '/docs/ai-workflow',
+          type: 'tutorial',
+          duration: '25 min read'
+        }
       ]
     },
     {
-      title: 'Micro SAAS',
-      icon: 'laptop',
-      description: 'Micro SAAS solutions and tools',
-      docs: [,
-        { title: 'Available Tools', description: 'List of all micro SAAS tools', link: '/docs/micro-saas/tools' },
-        { title: 'Integration Guide', description: 'Integrate with your existing systems', link: '/docs/micro-saas/integration' },
-        { title: 'Pricing & Plans', description: 'Pricing information and plans', link: '/docs/micro-saas/pricing' }
+      title: 'Cloud Solutions',
+      icon: FileText,
+      description: 'Cloud infrastructure and deployment guides',
+      docs: [
+        {
+          title: 'Cloud Migration',
+          description: 'Migrate your applications to the cloud',
+          url: '/docs/cloud-migration',
+          type: 'guide',
+          duration: '45 min read'
+        },
+        {
+          title: 'Container Deployment',
+          description: 'Deploy applications using containers',
+          url: '/docs/container-deployment',
+          type: 'tutorial',
+          duration: '20 min read'
+        },
+        {
+          title: 'Auto-scaling Setup',
+          description: 'Configure automatic scaling for your applications',
+          url: '/docs/auto-scaling',
+          type: 'tutorial',
+          duration: '15 min read'
+        }
       ]
     },
     {
       title: 'Security',
-      icon: 'lock',
-      description: 'Security best practices and compliance',
-      docs: [,
-        { title: 'Security Overview', description: 'Our security measures', link: '/docs/security/overview' },
-        { title: 'Compliance', description: 'Compliance and certifications', link: '/docs/security/compliance' },
-        { title: 'Data Protection', description: 'How we protect your data', link: '/docs/security/data-protection' }
-      ]
-    },
-    {
-      title: 'Support',
-      icon: '🆘',
-      description: 'Help and support resources',
-      docs: [,
-        { title: 'FAQ', description: 'Frequently asked questions', link: '/docs/support/faq' },
-        { title: 'Troubleshooting', description: 'Common issues and solutions', link: '/docs/support/troubleshooting' },
-        { title: 'Contact Support', description: 'Get help from our team', link: '/docs/support/contact' }
+      icon: FileText,
+      description: 'Security best practices and implementation',
+      docs: [
+        {
+          title: 'Security Best Practices',
+          description: 'Essential security guidelines for your applications',
+          url: '/docs/security-best-practices',
+          type: 'guide',
+          duration: '30 min read'
+        },
+        {
+          title: 'Authentication Setup',
+          description: 'Implement secure authentication in your apps',
+          url: '/docs/authentication',
+          type: 'tutorial',
+          duration: '25 min read'
+        },
+        {
+          title: 'Data Encryption',
+          description: 'Encrypt sensitive data in your applications',
+          url: '/docs/data-encryption',
+          type: 'tutorial',
+          duration: '20 min read'
+        }
       ]
     }
   ];
 
   const filteredDocs = docCategories.map(category => ({
     ...category,
-    docs: category.docs.filter(doc =>)
-    doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    docs: category.docs.filter(doc =>
+      doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       doc.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  const filteredDocs = docCategories.map(category => ({)
-    ...category)
-    docs: category.docs.filter(doc =>),
-      doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
-      doc.description.toLowerCase().includes(searchQuery.toLowerCase()))})).filter(category => category.docs.length > 0);
+  })).filter(category => category.docs.length > 0);
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg particle-system">
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case 'guide': return 'text-blue-400 bg-blue-500/10';
+      case 'tutorial': return 'text-green-400 bg-green-500/10';
+      case 'api': return 'text-purple-400 bg-purple-500/10';
+      default: return 'text-gray-400 bg-gray-500/10';
+    }
+  };
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'guide': return BookOpen;
+      case 'tutorial': return Code;
+      case 'api': return FileText;
+      default: return FileText;
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg particle-system"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer
+        title="Documentation - Zion Tech Group"
+        description="Comprehensive documentation for our AI, cloud, and cybersecurity solutions. Get started with guides, tutorials, and API references."
+        keywords={["documentation","API reference","guides","tutorials","AI documentation","cloud docs"]}
+        canonicalUrl="https://ziontechgroup.com/docs"
+      />
+
       <Navigation />
 
-      <main className="relative z-10 pt-20">{/* Hero Section */}</main>
-        <section className="py-20 px-4 text-center">
-          <div className="max-w-6xl mx-auto"></section>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text-enhanced floating">Documentation</h1><p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">Everything You Need to Get Started</p><p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">Comprehensive documentation for all our services, APIs, and tools.</p>
-              Find guides, tutorials, and reference materials to help you succeed.</p>
-      <main className="relative z-10 pt-20">
+      <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
-        <section className="py-20 px-4 text-center">
-          <div className="max-w-6xl mx-auto">
-            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text cyber-text-enhanced floating">
-              Documentation;)
-            </h1>)
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">)
-              Everything You Need to Get Started;)
-            </p>),
-            <p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">),
-              Comprehensive documentation for all our services, APIs, and tools.
-              Find guides, tutorials, and reference materials to help you succeed.
+        <section className="text-center mb-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <BookOpen className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Documentation
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Comprehensive guides, tutorials, and API references to help you get the most out of our AI, cloud, and cybersecurity solutions.
             </p>
+          </div>
+        </section>
 
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-12"></div>
-              <div className="relative"></div>
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input;
-                  type="text"
-                  placeholder="Search documentation..."
-                  value={searchQuery}
-                  onChange={(e) =>setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 backdrop-blur-sm"</input>
-                /></input>
-              </div>
+        {/* Search Section */}
+        <section className="mb-16">
+          <div className="max-w-2xl mx-auto">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search documentation..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              />
             </div>
           </div>
         </section>
 
         {/* Documentation Categories */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Documentation Categories</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{filteredDocs.map((category, index) => (</div>
-                <div key={index} className="cyber-card-enhanced p-6 data-stream"></div>
-                  <div className="flex items-center mb-4"></div>
-                    <span className="text-3xl mr-3">{category.icon}</span><h3 className="text-xl font-bold text-white">{category.title}</h3><p className="text-gray-300 mb-6">{category.description}</p><div className="space-y-3">{category.docs.map((doc, docIndex) => (</div>
-                      <Link
-                        key={docIndex}
-                        to={doc.link}
-                        className="block p-3 bg-slate-800/50 rounded-lg hover:bg-slate-700/50 transition-colors group"
-                      >
-                        <div className="flex items-center justify-between"></div>
-                          <div></div>
-                            <h4 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">{doc.title}<p className="text-sm text-gray-400">{doc.description}</p>
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 backdrop-blur-sm"
-                />
-              </div>,
-            </div>,
-          </div>,
-        </section>,
-,
-        {/* Documentation Categories */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-              Documentation Categories;
-            </h2>,
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-              {filteredDocs.map((category, index) => (
-                <div key={index} className="cyber-card-enhanced p-6 data-stream">
-                  <div className="flex items-center mb-4">
-                    <span className="text-3xl mr-3">{category.icon}</span>
-                    <h3 className="text-xl font-bold text-white">{category.title}</h3>
+        <section className="mb-16">
+          <div className="max-w-6xl mx-auto">
+            {filteredDocs.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="mb-12">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+                    <category.icon className="w-6 h-6 text-white" />
                   </div>
-                  <p className="text-gray-300 mb-6">{category.description}</p>
-                  <div className="space-y-3">
-                    {category.docs.map((doc, docIndex) => (
-                      <Link;
-                        key={docIndex}
-                        to={doc.link}
-                        className="block p-3 bg-slate-800/50 rounded-lg hover: bg-slate-700/50 transition-colors group",
-                      >,
-                        <div className="flex items-center justify-between">,
-                          <div>,
-                            <h4 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">,
-                              {doc.title}
-                            </h4>
-                            <p className="text-sm text-gray-400">{doc.description}</p>
-                          </div>
-                          <ChevronRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 transition-colors" />,
-                        </div>,
-                      </Link>))}
+                  <div>
+                    <h2 className="text-2xl font-bold text-white">{category.title}</h2>
+                    <p className="text-gray-300">{category.description}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-
-            {filteredDocs.length === 0 && searchQuery && (
-              <div className="text-center py-16">
-                <div className="text-6xl mb-4">🔍<h3 className="text-2xl font-bold text-white mb-4">No results found</h3>
-                <p className="text-gray-300 mb-8">Try adjusting your search terms<button
-              <div className="text-center py-16"></div>
-                <div className="text-6xl mb-4">🔍</div><h3 className="text-2xl font-bold text-white mb-4">No results found</h3>
-                <p className="text-gray-300 mb-8">Try adjusting your search terms</p><button
-                  onClick={() =>setSearchQuery('')}
-                  className="cyber-button px-6 py-3"
-                ></button>
-                  Clear Search</button>
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-4">No results found</h3>
-                <p className="text-gray-300 mb-8">Try adjusting your search terms</p>
-                <button;
-                  onClick={() => setSearchQuery('')}
-                  className="cyber-button px-6 py-3"
-                >
-                  Clear Search;
-                </button>
+                
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {category.docs.map((doc, docIndex) => {
+                    const TypeIcon = getTypeIcon(doc.type);
+                    return (
+                      <div key={docIndex} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:scale-105 transition-all duration-300">
+                        <div className="flex items-start gap-4 mb-4">
+                          <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <TypeIcon className="w-5 h-5 text-white" />
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-2">
+                              <span className={`px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(doc.type)}`}>
+                                {doc.type}
+                              </span>
+                              <span className="text-xs text-gray-400">{doc.duration}</span>
+                            </div>
+                            <h3 className="text-lg font-semibold text-white mb-2">{doc.title}</h3>
+                            <p className="text-gray-300 text-sm mb-4">{doc.description}</p>
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-center justify-between">
+                          <Link
+                            to={doc.url}
+                            className="text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-2"
+                          >
+                            Read More
+                            <ArrowRight className="w-4 h-4" />
+                          </Link>
+                          <button className="text-gray-400 hover:text-white transition-colors">
+                            <Download className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-            )}
+            ))}
           </div>
         </section>
 
         {/* Quick Links */}
-        <section className="py-16 px-4 bg-slate-800/30">
-          <div className="max-w-6xl mx-auto">
-          <div className="max-w-6xl mx-auto"></section>
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Quick Links</h2>
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-              Quick Links;
-            </h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              <Link;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-              <Link
-                to="/api-docs"
-        className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
-      >
-                <Code className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">API Reference<p className="text-sm text-gray-400">Complete API documentation</p>
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
-                  API Reference;
-                </h3>
-                <p className="text-sm text-gray-400">Complete API documentation</p>
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">API Reference</h3><p className="text-sm text-gray-400">Complete API documentation</p>
-              </Link>
-
-              <Link;
-                to="/micro-saas"
-        className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
-      >
-                <BookOpen className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Micro SAAS<p className="text-sm text-gray-400">Micro SAAS solutions guide</p>
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
-                  Micro SAAS;
-                </h3>
-                <p className="text-sm text-gray-400">Micro SAAS solutions guide</p>
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Micro SAAS</h3><p className="text-sm text-gray-400">Micro SAAS solutions guide</p>
-              </Link>
-
-              <Link;
-                to="/compliance"
-        className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
-      >
-                <FileText className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Compliance<p className="text-sm text-gray-400">Security and compliance info</p>
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
-                  Compliance;
-                </h3>
-                <p className="text-sm text-gray-400">Security and compliance info</p>
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Compliance</h3><p className="text-sm text-gray-400">Security and compliance info</p>
-              </Link>
-
-              <Link;
-                to="/contact"
-        className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
-      >
-                <Download className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Get Help<p className="text-sm text-gray-400">Contact our support team</p>
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
-                  Get Help;
-                </h3>
-                <p className="text-sm text-gray-400">Contact our support team</p>
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Get Help</h3><p className="text-sm text-gray-400">Contact our support team</p>
-              </Link>
+        <section className="mb-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold text-white mb-6 text-center">Quick Links</h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-white mb-4">Popular Guides</h3>
+                  <div className="space-y-3">
+                    <a href="/docs/quick-start" className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
+                      <ChevronRight className="w-4 h-4" />
+                      Quick Start Guide
+                    </a>
+                    <a href="/docs/ai-analytics-api" className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
+                      <ChevronRight className="w-4 h-4" />
+                      AI Analytics API
+                    </a>
+                    <a href="/docs/cloud-migration" className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
+                      <ChevronRight className="w-4 h-4" />
+                      Cloud Migration
+                    </a>
+                    <a href="/docs/security-best-practices" className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
+                      <ChevronRight className="w-4 h-4" />
+                      Security Best Practices
+                    </a>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-white mb-4">API References</h3>
+                  <div className="space-y-3">
+                    <a href="/docs/api/ai-services" className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
+                      <ChevronRight className="w-4 h-4" />
+                      AI Services API
+                    </a>
+                    <a href="/docs/api/cloud-management" className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
+                      <ChevronRight className="w-4 h-4" />
+                      Cloud Management API
+                    </a>
+                    <a href="/docs/api/security" className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
+                      <ChevronRight className="w-4 h-4" />
+                      Security API
+                    </a>
+                    <a href="/docs/api/analytics" className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
+                      <ChevronRight className="w-4 h-4" />
+                      Analytics API
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>,
-        </section>,
-,
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Can't Find What You're Looking For?<p className="text-lg text-gray-300 mb-8">Our support team is here to help you with any questions or issues you might have.</p>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
-              Can't Find What You're Looking For?
+          </div>
+        </section>
+
+        {/* Support Section */}
+        <section className="text-center">
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-2xl font-bold text-white mb-4">
+              Need Help?
             </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Our support team is here to help you with any questions or issues you might have.
+            <p className="text-gray-300 mb-8">
+              Can't find what you're looking for? Our support team is here to help.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a;
-          <div className="max-w-4xl mx-auto text-center"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Can't Find What You're Looking For?</h2><p className="text-lg text-gray-300 mb-8">Our support team is here to help you with any questions or issues you might have.</p>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="/contact"
-                className="cyber-button px-8 py-4"
-              >Contact Support</a>
-                <ArrowRight className="w-4 h-4 ml-2" /></ArrowRigh>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >Call: (302) 464-0950</a>
+                href="/support"
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
               >
-                Contact Support;
-                <ArrowRight className="w-4 h-4 ml-2" />
+                Contact Support
               </a>
-              <a;
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              <a
+                href="mailto:support@ziontechgroup.com"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
-                Call: (302) 464-0950;
+                Email Us
               </a>
             </div>
           </div>
         </section>
       </main>
 
-      <Footer />,
-    </div>);
+      <Footer />
+    </div>
+  );
 };
 
 export default DocsPage;

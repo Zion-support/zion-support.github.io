@@ -17,12 +17,12 @@ import {
   ArrowRight,
   ChevronRight,
   Star,
-  Users,
-  Shield,
-  Zap;
-} from 'lucide-react';
+    Users,
+    Shield,
+    Zap
+  } from 'lucide-react';
 
-const SupportPage: React.FC = () => {,
+const SupportPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 

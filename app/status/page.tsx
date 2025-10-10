@@ -14,12 +14,12 @@ import {
   Cloud, 
   Shield,
   Activity,
-  TrendingUp,
-  TrendingDown,
-  AlertTriangle;
-} from 'lucide-react';
+    TrendingUp,
+    TrendingDown,
+    AlertTriangle
+  } from 'lucide-react';
 
-const StatusPage: React.FC = () => {,
+const StatusPage: React.FC = () => {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 import React from 'react';
