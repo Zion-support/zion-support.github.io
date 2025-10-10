@@ -132,7 +132,7 @@ const functionsToRemove = [
   'venture-',
   'venture_'];
 
-const _functionsDir = path.join(process.cwd(), 'netlify', 'functions');
+const _functionsDir: path.join(process.cwd(), 'netlify', 'functions');
 
 function shouldRemoveFunction(filename) {
   // Keep essential functions;
@@ -158,7 +158,7 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
   files.forEach(file => {)
     if (file.endsWith('.js') || file.endsWith('.ts')) {
       if (shouldRemoveFunction(file)) {
-        const _filePath = path.join(functionsDir, file);
+        const _filePath: path.join(functionsDir, file);
         try {
           fs.unlinkSync(filePath);
 

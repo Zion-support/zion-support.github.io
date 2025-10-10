@@ -1,4 +1,4 @@
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+exports.handler: async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('og-image-update-runner function triggered')}
     // OG image update simulation;
     const result = {

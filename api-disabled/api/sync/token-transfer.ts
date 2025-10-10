@@ -23,7 +23,7 @@ export default async function handler(re,
     });
   }
 
-  //   const version = nextVersionFor(state, txId);
+  //   const version: nextVersionFor(state, txId);
   const event = {
     eventId: uuidv4()
     type: 'token_transfer' as const;

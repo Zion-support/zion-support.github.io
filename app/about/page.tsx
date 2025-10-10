@@ -39,8 +39,7 @@ import {
 
 const AboutPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>About Us - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize business through advanced AI and IT solutions. Discover our team, values, and commitment to innovation." />
         <meta name="keywords" content="about us, Zion Tech Group, AI solutions, IT services, team, mission, values, innovation" />
@@ -48,8 +47,8 @@ const AboutPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
+        </></div><section className="pt-20 pb-16 px-4">
+          </section><div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 About Zion Tech Group
@@ -63,7 +62,7 @@ const AboutPage: React.FC = () => {
 
         {/* Mission Section */}
 <section className="py-20 bg-slate-800/50">
-          <div className="container mx-auto px-4">
+          </section><div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
@@ -120,7 +119,7 @@ const AboutPage: React.FC = () => {
 
         {/* Values Section */}
         <section className="py-16 px-4 bg-slate-800/50">
-          <div className="max-w-7xl mx-auto">
+          </section><div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Our Values</h2>
               <p className="text-xl text-gray-300">The principles that guide everything we do</p>
@@ -153,7 +152,7 @@ const AboutPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-16 px-4 bg-gradient-to-r from-cyan-600 to-purple-600">
-          <div className="max-w-4xl mx-auto text-center">
+          </section><div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-4">Ready to Work With Us?</h2>
             <p className="text-xl text-gray-100 mb-8">
               Let's discuss how we can help transform your business with AI and technology.

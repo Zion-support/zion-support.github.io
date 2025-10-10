@@ -98,7 +98,7 @@ namename: 'Channel Partners',
         'Competitive margins'
       color: 'text-orange-400',
       bgColor: 'bg-orange-500/10'
-
+;
   const partnerTypes = [];
   return (
     {// TODO: Add content;}
@@ -186,8 +186,7 @@ icon: Globe,
 
 const PagePage: React.FC = () => {
   return (
-    <>
-      <Navigation />
+    <><Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
@@ -199,7 +198,7 @@ const PagePage: React.FC = () => {
               We work with industry-leading technology partners to deliver comprehensive solutions 
               that drive innovation and business success.
             </p>
-          </div>
+          </></div>
 
           {/* Partner Types */}
           <div className="mb-16">
@@ -358,12 +357,12 @@ const PagePage: React.FC = () => {
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
             <h2 className="text-2xl font-bold text-white mb-4"></h2>
               Become Our Partner;"
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
+            <p className = "text-gray-300 mb-6 max-w-2xl mx-auto"></p>
               Join our partner ecosystem and unlock new opportunities for growth, innovation, and success.
-
+;
               Let's build the future together.
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
+              <a;
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 
 // >
@@ -383,8 +382,8 @@ const PagePage: React.FC = () => {
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950;
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
+                href = "mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                <Mail className="w-4 h-4 mr-2" />;
                 Email Us;
       <Footer />
 

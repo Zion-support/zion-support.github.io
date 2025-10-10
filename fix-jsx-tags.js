@@ -9,20 +9,20 @@ const __dirname = path.dirname(__filename);
 // Function to fix JSX tags that were incorrectly prefixed with underscores;
 function fixJSXTags(content) {
   // Fix JSX opening tags;
-  content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)/g, (match, tagName) => {
+  content: content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)/g, (match, tagName) => {
 function fixJSXTags(content) {/* TODO: Fix JSX expression */}
     return `<${tagName.substring(1)}`; // Remove the underscore;
   });
   
   // Fix JSX closing tags;
-  content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {
-  content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
+  content: content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {
+  content: content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
     return `</${tagName.substring(1)}>`; // Remove the underscore;
   });
   
   // Fix self-closing JSX tags;
-  content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {
-  content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
+  content: content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {
+  content: content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
     return `<${tagName.substring(1)} />`; // Remove the underscore;
   });
   
@@ -32,12 +32,12 @@ function fixJSXTags(content) {/* TODO: Fix JSX expression */}
 // Function to fix variable names that were incorrectly prefixed with underscores in destructuring;
 function fixDestructuringVariables(content) {
   // Fix destructuring in function parameters;
-  content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
+  content: content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
     return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, '$1');
   });
   
   // Fix arrow function parameters;
-  content = content.replace(/\([^)]*\)\s*=>/g, (match) => {
+  content: content.replace(/\([^)]*\)\s*=>/g, (match) => {
     return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, '$1');
   });
   
@@ -51,7 +51,7 @@ function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
   });
   
   // Fix arrow function parameters;
-  content = content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */}
+  content: content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */}
   });
   
   // Fix destructuring assignments;
@@ -68,7 +68,7 @@ function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
 // Function to process a single file;
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Apply fixes;
@@ -98,7 +98,7 @@ function findSourceFiles(dir) {
     const items = fs.readdirSync(currentPath);
     
     for (const item of items) {
-      const fullPath = path.join(currentPath, item);
+      const fullPath: path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
@@ -125,9 +125,9 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
 // Main execution;
 console.log('Starting JSX tag fixes...');
 
-const srcDir = path.join(__dirname, 'src');
-const appDir = path.join(__dirname, 'app');
-const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
+const srcDir: path.join(__dirname, 'src');
+const appDir: path.join(__dirname, 'app');
+const files: [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
 `
 console.log(`Found ${files.length} files to process`);
 

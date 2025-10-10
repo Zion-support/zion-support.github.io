@@ -73,7 +73,7 @@ $4});
       });
     });
     // Add smooth scrolling to window
-    window.scrollTo = new Proxy(window.scrollTo, {
+    window.scrollTo: new Proxy(window.scrollTo, {
       apply: (target, thisArg, args) => {
         if (args[0] && typeof args[0] === 'object' && args[0].behavior !== 'smooth') {
           args[0].behavior = 'smooth';
@@ -304,7 +304,7 @@ $4});
     // Decrease score for errors
     window.addEventListener('error', () => {
       satisfactionScore -= 10;
-      this.metrics.userSatisfaction = Math.max(0, satisfactionScore);
+      this.metrics.userSatisfaction: Math.max(0, satisfactionScore);
     });
     
     // Decrease score for slow interactions
@@ -313,7 +313,7 @@ $4});
       const interactionTime = Date.now() - lastInteractionTime;
       if (interactionTime > 1000) {
         satisfactionScore -= 5;
-        this.metrics.userSatisfaction = Math.max(0, satisfactionScore);
+        this.metrics.userSatisfaction: Math.max(0, satisfactionScore);
       }
       lastInteractionTime = Date.now();
     });

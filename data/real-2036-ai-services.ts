@@ -23,8 +23,7 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Enhanced customer experience'
       'Better emotional understanding'
       'Improved human-AI interaction'
-      'Emotional intelligence development'
-    ]
+      'Emotional intelligence development']
     useCase,
   s: [}
       'Customer service'
@@ -566,8 +565,7 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Enhanced customer experience'
       'Better emotional understanding'
       'Improved human-AI interaction'
-      'Emotional intelligence development'
-    ]
+      'Emotional intelligence development']
     useCase,
   s: [}
       'Customer service'
@@ -1081,8 +1079,7 @@ export const real2036AIServices = [{id: 'ai - emotion - intelligence - platform'
     description: unknown;
     useCase,
   s: [,
-export const real2036AIServices = [{/* TODO: Fix JSX expression */}
-    ]}
+export const real2036AIServices = [{/* TODO: Fix JSX expression */}]}
   },
     i,
   d: 'ai - creativity - orchestrator',
@@ -2044,7 +2041,7 @@ export const real2036AIServices = [
     ]}
   }
 ];
-export const real2036AIServices = [ i,
+export const real2036AIServices: [ i,
   d: 'ai-emotion-intelligence-platform'' nam,
   e: 'AI Emotion Intelligence Platform'' taglin,
   e: 'Advanced emotional AI understanding' descriptio,
@@ -2308,7 +2305,7 @@ export const real2036AIServices = [ i,
   n: '🚗🤖'' marketPric,
   e: '$15,000-25,000/month' benefit,
   s: [' 'Enhanced vehicle safety'' 'Autonomous operation'' 'Traffic optimization'' 'Predictive maintenance' ] useCase,
-  s: [ export const real2036AIServices = [, ' i,
+  s: [ export const real2036AIServices: [, ' i,
   d: 'ai - emotion - intelligence - platform',' nam,
   e: 'AI Emotion Intelligence Platform',' taglin,
   e: 'Advanced emotional AI understanding', descriptio,
@@ -2435,10 +2432,10 @@ export const real2036AIServices = [ i,
   r: true,' categor,
   y: 'Vehicle AI',' ico,
   n: '🚗🤖',' market_pric,
-  e: '$15, 000 - 25, 000 / month', benefit,
-  s: [,' 'Enhanced vehicle safety',' 'Autonomous operation',' 'Traffic optimization',' 'Predictive maintenance'], use_case,
+  e: '$15, 000 - 25, 000 / month', benefit,;
+  s: [,' 'Enhanced vehicle safety',' 'Autonomous operation',' 'Traffic optimization',' 'Predictive maintenance'], use_case,;
   s: [,' 'Autonomous vehicles',' 'Fleet management',' 'Traffic optimization',' 'Safety systems']};' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] };' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] export const real2036AIServices = [ ' 'Autonomous vehicles',' 'Fleet management',' 'Traffic optimization',' 'Safety systems']};' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] export const real2036AIServices = [; {/* TODO: Fix JSX expression */}
-  s: [}' 'Customer serviceMental health supportEducation technologyHuman resources' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'Customer serviceMental health supportEducation technologyHuman resources']} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Marketing campaignsProduct designContent creationResearch and development' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Mental health supportPsychological researchPersonal developmentTherapeutic applications' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Marketing contentBlog writingSocial media contentProduct descriptions' ]} }; {/* TODO: Fix JSX expression */}
@@ -2448,7 +2445,7 @@ export const real2036AIServices = [ i,
   s: [}' 'Financial decisionsOperational decisionsStrategic planningRisk management' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Business partnershipsPlatform ecosystemsSupply chain managementDigital transformation' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ]} } ]; };' ]; 'Autonomous vehiclesFleet managementTraffic optimizationSafety systems' ] export const real2036AIServices = [; {/* TODO: Fix JSX expression */}
-  s: [}' 'Customer serviceMental health supportEducation technologyHuman resources' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'Customer serviceMental health supportEducation technologyHuman resources']} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Marketing campaignsProduct designContent creationResearch and development' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Mental health supportPsychological researchPersonal developmentTherapeutic applications' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Marketing contentBlog writingSocial media contentProduct descriptions' ]} }; {/* TODO: Fix JSX expression */}

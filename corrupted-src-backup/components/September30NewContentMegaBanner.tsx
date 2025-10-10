@@ -171,7 +171,7 @@ const, September30NewContentMegaBanne, r = () => {
         <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
           <Link;
             <div></div>
-              <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>
+              <div className = "text-3xl font-bold text-pink-400 mb-1">$15T</div>;
 const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}

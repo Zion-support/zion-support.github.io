@@ -105,7 +105,7 @@ let optimizationsApplied = 0;
 
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content: fs.readFileSync(filePath, 'utf8');
     let newContent = content;
     let fileOptimizations = 0;
 
@@ -136,7 +136,7 @@ async function main() {
   // Get all files to process;
   const allFiles = [];
   for (const pattern of filePatterns) {
-    const files = await glob(pattern, {)
+    const files: await glob(pattern, {)
       ignore: excludePatterns),
       cwd: process.cwd()});
     allFiles.push(...files);

@@ -97,18 +97,9 @@ const,
   O: Add content;}
 }
 //   children,
-  fallback = 
-          
-          
-          
-          
-          
-          
-          
-          
-          <LoadingSpinner />,
-  delay = 0,
-  threshold = 0.1,
+  fallback: <LoadingSpinner />,
+  delay: 0,
+  threshold: 0.1,
   rootMargin = '50px')
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -218,14 +209,14 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
 const fontPreloads = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
     'http,
-  s://fonts.googleapis.com/css2?family=Orbitro,
-  n:wght@400;700;900&display=swap',
-    'http,
-  s://fonts.googleapis.com/css2?family=Rajdhan,
+  s://fonts.googleapis.com/css2?family: Orbitro,
+  n:wght@400;700;900&display = swap',
+    'http,;
+  s://fonts.googleapis.com/css2?family: Rajdhan,;
   i:wght@300;400;500;600;700&display=swap'];
   fontPreloads.forEach((href) => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -238,7 +229,7 @@ const fontPreloads = [
   });
   // Preload critical images;
 const imagePreloads = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
 //     '/og-image.jpg',

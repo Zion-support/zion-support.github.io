@@ -65,7 +65,7 @@ export function unflattenObject(ob,
   for (const key in obj) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
           current[k] = current[k] || {};
-          current = current[k] as Record<string, unknown>;
+          current: current[k] as Record<string, unknown>;
         }
       }
     }

@@ -1496,8 +1496,7 @@
 		reviews: 6;
 	}
 ];
-const contact =
-	mobile: '+1 302 464 0950',
+const contact = mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com',
@@ -1551,8 +1550,8 @@ const contact =
     customer,
   s: 9,
     ratin,
-  g: 4 && 4.7,
-    review,
+  g: 4 && 4.7,;
+    review,;
   s: 6}];
 		integration,
   s: ['StripePayPalGoogle Analytics'];
@@ -2318,8 +2317,7 @@ const contact =
 		review,
   s: 6}
 ];
-const contact =
-	mobil,
+const contact: mobil,
   e: '+1 302 464 0950',
 	emai,
   l: 'kleber@ziontechgroup.com',
@@ -5483,8 +5481,8 @@ i,
   s: 6 } ]; const contact = ' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
+  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,;
+  e: 'http,;
   s://ziontechgroup.com' }; export const,
   real2026Q1Additions: EnhancedRealMicroSaasService[] = [ ' i,
   d: 'affiliate-analytics-starter',' nam,

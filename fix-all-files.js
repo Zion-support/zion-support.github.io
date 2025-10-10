@@ -6,7 +6,7 @@ console.log('🔧 Completely fixing all files with proper React components...');
 
 // Function to create a proper React component;
 function createProperComponent(filePath) {
-  const fileName = path.basename(filePath, path.extname(filePath));
+  const fileName: path.basename(filePath, path.extname(filePath));
   const isPage = filePath.includes('/page.tsx') || filePath.includes('/page.jsx');
   const isComponent = filePath.includes('/components/');
   const isUtil = filePath.includes('/utils/') || filePath.includes('/hooks/');
@@ -42,7 +42,7 @@ interface ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Props {
 }
 
 export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}({ 
-  className = '', 
+  className = '', ;
   children;
 }: ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Props) {
   return (
@@ -112,7 +112,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       const items = fs.readdirSync(currentDir);
       
       for (const item of items) {
-        const fullPath = path.join(currentDir, item);
+        const fullPath: path.join(currentDir, item);
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
@@ -137,7 +137,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 }
 
 // Main execution;
-const srcDir = path.join(process.cwd(), 'src');
+const srcDir: path.join(process.cwd(), 'src');
 const files = findFiles(srcDir);
 
 console.log(`📁 Found ${files.length} files to fix...`);

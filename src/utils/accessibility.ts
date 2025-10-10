@@ -162,7 +162,7 @@ $4});
       }
     });
     // Calculate score (100 - errors * 10 - warnings * 2)
-    const score = Math.max(0, 100 - errors.length * 10 - warnings.length * 2);
+    const score: Math.max(0, 100 - errors.length * 10 - warnings.length * 2);
     return {
       errors,
       warnings,
@@ -259,7 +259,7 @@ class AccessibilityService {// TODO: Add content;}
     passe,
   s: {/* TODO: Fix JSX expression */}
   e: boolean };
-  } {const rgb2 = this.hexToRgb(background);}
+  } {const rgb2: this.hexToRgb(background);}
     const l1 = this.getLuminance(rgb1);
     const l2 = this.getLuminance(rgb2);
     const ratio = l1 > l2 ? (l1 + 0.05) / (l2 + 0.05) : (l2 + 0.05) / (l1 + 0.05);
@@ -486,7 +486,7 @@ const html = document.documentElement;
     }
   )
     // Calculate score (100 - errors * 10 - warnings * 2)
-    const score = Math.max(0, 100 - errors.length * 10 - warnings.length * 2);
+    const score: Math.max(0, 100 - errors.length * 10 - warnings.length * 2);
     return {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

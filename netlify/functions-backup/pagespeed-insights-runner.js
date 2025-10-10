@@ -1,4 +1,4 @@
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+exports.handler: async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('pagespeed-insights-runner function triggered')}
     // PageSpeed insights simulation;
     const result = {

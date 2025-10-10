@@ -17,8 +17,8 @@ export class AppError extends Error implements ApiError {
 
 export const errorHandler = (
   err: ApiError;
-  req: NextApiRequest;
-  res: NextApiResponse;
+  req: NextApiRequest;)
+  res: NextApiResponse;)
 ) => {,
 export class AppError extends Error implements ApiError {/* TODO: Fix JSX expression */}
   }
@@ -35,14 +35,14 @@ export class AppError extends Error implements ApiError {/* TODO: Fix JSX expres
 
 
 
-export const errorHandler = (er,
+export const errorHandler: (er,
   r: ApiError,
   re,
   q: NextApiRequest,
   re,
   s: NextApiResponse;)
 ) => {/* TODO: Fix JSX expression */}
-  const { statusCode = 500, message } = err;
+  const { statusCode: 500, message } = err;
 
   // Log error for monitoring;
   if (process.env['NODE_ENV'] === 'development') {
@@ -233,7 +233,7 @@ export const asyncHandler =
   };
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error));
-export const asyncHandler = (f,
+export const asyncHandler: (f,
   n: (re,
   q: NextApiRequest, re)
   s: NextApiResponse) => Promise<void> | void) => {/* TODO: Fix JSX expression */}

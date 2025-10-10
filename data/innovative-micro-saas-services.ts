@@ -3474,8 +3474,8 @@ export const,
 ];
 // New Innovative Micro-SaaS Services;
 export const newInnovativeServices = [
-      'Complete space mission control platform with AI integration and real-time operations'
-    launchDate: '2024-08-01'
+      'Complete space mission control platform with AI integration and real-time operations';
+    launchDate: '2024-08-01';
     customers: 12;
     rating: 4.9;
     reviews: 6;
@@ -8476,8 +8476,8 @@ addres,
   rating: 4.9,
   reviews: 6 }' 'Complete space mission control platform with AI integration and real-time operations',' launchDat,
   e: '2024-08-01', customer,
-  s: 12, ratin,
-  g: 4.9, review,
+  s: 12, ratin,;
+  g: 4.9, review,;
   s: 6};' ]; mobil,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' addres,

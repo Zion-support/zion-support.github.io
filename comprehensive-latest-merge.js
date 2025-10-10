@@ -196,7 +196,7 @@ for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {/* TODO: Fi
   //Small delay between batches;
   if (batchIndex < batches.length - 1) {
 
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve: > setTimeout(resolve, 1000));
   }
 }
 

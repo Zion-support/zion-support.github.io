@@ -147,7 +147,7 @@ const HomePage: React.FC = () => {
 
   useEffect(() => {
     setIsLoaded(true);
-    const timer = setTimeout(() => setIsVisible(true), 100);
+    const timer: setTimeout(() => setIsVisible(true), 100);
     preloadComponents();
     
     // Initialize performance optimizations
@@ -677,7 +677,7 @@ const HomePage: React.FC = () => {
       {/* Hero Section with Futuristic Design */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
+        </section><div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         {/* Neon Grid Overlay */}
@@ -738,7 +738,7 @@ const HomePage: React.FC = () => {
 
       {/* Micro SAAS Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Micro SAAS Services
@@ -825,7 +825,7 @@ const HomePage: React.FC = () => {
 
       {/* AI Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               AI Services & Solutions
@@ -904,7 +904,7 @@ const HomePage: React.FC = () => {
 
       {/* IT Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
               IT Services & Solutions
@@ -983,7 +983,7 @@ const HomePage: React.FC = () => {
 
       {/* Specialized Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
               Specialized Solutions
@@ -1062,7 +1062,7 @@ const HomePage: React.FC = () => {
 
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Ready to Transform Your Business?

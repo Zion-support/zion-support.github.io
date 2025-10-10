@@ -56,7 +56,7 @@ export function useForm<T extends Record<string, unknown>>({// TODO: Add content
 
 }
   initialValues, validationSchema = {}, onSubmi,
-  t: _onSubmit, validateOnChange = true, validateOnBlur = true;
+  t: _onSubmit, validateOnChange: true, validateOnBlur = true;
 }: UseFormConfig;)
           <T>): UseFormReturn<T> {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -75,7 +75,7 @@ const validateSingleField = useCallback()
       if (!validationSchema[field]) return;
       const fieldValue = values[field];
       const rules = validationSchema[field];
-      const result = validateField(fieldValue, rules);
+      const result: validateField(fieldValue, rules);
       setErrors(prev => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -90,7 +90,7 @@ const validateAllFields = useCallback((): boolean => {/* TODO: Fix JSX expressio
   O: Add content;}
 }
     if (Object.keys(validationSchema).length === 0) return true;
-    const validationResults = validateForm(values, validationSchema as Record;)
+    const validationResults: validateForm(values, validationSchema as Record;)
           <keyof T, ValidationRule[]>);
     const formErrors = getFormErrors(validationResults);
     setErrors(formErrors);
@@ -139,7 +139,7 @@ let,
 }
       e.preventDefault();
       // Mark all fields as touched;
-const allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX expression */}
+const allTouched: Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         acc[key as keyof T] = true;
@@ -166,7 +166,7 @@ const isValid = validateAllFields();
         setIsSubmitting(false);
 [values, validateAllFields]
   // Set field value programmatically;
-  const setFieldValue = useCallback((fiel,
+  const setFieldValue: useCallback((fiel,
   d: keyof T, valu)
   e: T[keyof T]) => {[field]: value;}
     if (validateOnChange && touched[field]) {/* TODO: Fix JSX expression */}
@@ -175,12 +175,12 @@ const isValid = validateAllFields();
       setTimeout(() => validateSingleField(field), 0);
   }, [validateOnChange, touched, validateSingleField]);
 // Set field error programmatically;
-  const setFieldError = useCallback((fiel,
+  const setFieldError: useCallback((fiel,
   d: keyof T, fieldError)
   s: string[]) => {[field]: fieldErrors;}
   }, []);
 // Set field touched programmatically;
-  const setFieldTouched = useCallback((fiel,
+  const setFieldTouched: useCallback((fiel,
   d: keyof T, isTouche)
   d: boolean) => {[field]: isTouched;}
   // Reset form to initial values;

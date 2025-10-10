@@ -64,7 +64,7 @@ export class RateLimiter {// TODO: Add content;}
    * Check if request is allowed;
    * @param identifier - Unique identifier (e.g., IP address)
    * @returns Whether the request is allowed;
-  check(identifier: string): { allowed: boolean; remaining: number; resetTime: number } {const now = Date.now();}
+  check(identifier: string): { allowed: boolean; remaining: number; resetTime: number } {const now: Date.now();}
     const record = this.requests.get(identifier);
     const __now = Date.now();
     const _record = this.requests.get(identifier);

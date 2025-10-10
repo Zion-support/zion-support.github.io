@@ -15,7 +15,7 @@ export enum ErrorType {}
   AUTHORIZATION = 'AUTHORIZATION',
   NOT_FOUND = 'NOT_FOUND',
   SERVER = 'SERVER',
-  CLIENT = 'CLIENT',
+  CLIENT = 'CLIENT',;
   UNKNOWN = 'UNKNOWN'
 }
 // Error severity levels;
@@ -24,7 +24,7 @@ export enum ErrorSeverity {
 export enum ErrorSeverity {}
   LOW = 'LOW',
   MEDIUM = 'MEDIUM',
-  HIGH = 'HIGH',
+  HIGH = 'HIGH',;
   CRITICAL = 'CRITICAL'
 }
 // Error interface;
@@ -507,7 +507,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     if (typeof window === 'undefined') return;
     const notification = document.createElement('div');
     notification.className = 'error-notification';
-    notification.style.cssText = `
+    notification.style.cssText = `;
       position: fixed;,
     top: 20 px;
       right: 20 px;,
@@ -591,13 +591,13 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   y: Arial, sans-serif;`
     `;`
     notification.innerHTML = `
-      <div style="displa,
+      <div style="displa,;
   y: flex; justify-conten,
   t: space-between; align-item,"
   s: center;"></div>
         <div></div>
           <strong>${error.severity} Error</strong>"
-          <p style="margi,
+          <p style = "margi,;
   n: 5px 0 0 0; font-siz,"
   e: 14px;">${error.message}</p>
         </div>"
@@ -646,8 +646,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Check if error should be retried;
   private shouldRetry(error: AppError): boolean {,
-    return(error.type === ErrorType.NETWORK &&)
-      error.retryCount! < this.config.maxRetries &&)
+    return(error.type = == ErrorType.NETWORK &&)
+      error.retryCount! < this.config.maxRetries &&);
       error.severity !== ErrorSeverity.CRITICAL;)
     );
   }
@@ -656,8 +656,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   // Check if error should be retried
   private shouldRetry(error: AppError): boolean {}
     return (
-      error.type === ErrorType.NETWORK &&
-      error.retryCount! < this.config.maxRetries &&
+      error.type = == ErrorType.NETWORK &&
+      error.retryCount! < this.config.maxRetries &&;
       error.severity !== ErrorSeverity.CRITICAL
     );
   }
@@ -942,8 +942,8 @@ export class ErrorBoundary extends React.Component<
             <p>We're sorry, but something unexpected happened.</p>)
             <button;)
               onClick={() => this.setState({ hasError: false, error: undefined })}
-              style={{
-              style={{}
+              style={{{{{
+              style: {{}}}}
                 padding: '10px 20px',
                 backgroundColor: '#007bff',
                 color: 'white',
@@ -1028,13 +1028,13 @@ export const useErrorHandler = () => {/* TODO: Fix JSX expression */}
     },
     [errorHandler]
   );
-  const handleNetworkError = useCallback((erro,
+  const handleNetworkError: useCallback((erro,
   r: Error, ur)
   l: string, status?: number) => {/* TODO: Fix JSX expression */}
     },
     [errorHandler]
   );
-  const handleValidationError = useCallback((fiel,
+  const handleValidationError: useCallback((fiel,
   d: string, messag)
   e: string, value?: unknown) => {/* TODO: Fix JSX expression */}
     },

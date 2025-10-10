@@ -66,9 +66,9 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       <meta name="keywords" content={keywords} /></meta>
       <meta name="author" content="Zion Tech Group" /></meta>
       <meta name="robots" content="index, follow" /></meta>
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" /></meta>
+      <meta name="viewport" content="width=device-width, initial-scale: 1, viewport-fit=cover" /></meta>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" /></meta>
-      <meta name="format-detection" content="telephone=no,address=no,email=no" /></meta>
+      <meta name="format-detection" content="telephone=no,address: no,email=no" /></meta>
       <meta name="color-scheme" content="dark light" /></meta>
       
       {/* Open Graph / Facebook */}
@@ -143,7 +143,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       <meta httpEquiv="X-Frame-Options" content="DENY" /></meta>
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /></meta>
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" /></meta>
-      <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" /></meta>
+      <meta httpEquiv="Permissions-Policy" content="camera=(), microphone: (), geolocation=()" /></meta>
       
       {/* Additional SEO Meta Tags */}
       <meta name="rating" content="general" /></meta>

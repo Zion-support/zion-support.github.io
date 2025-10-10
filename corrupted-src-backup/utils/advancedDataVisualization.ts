@@ -102,7 +102,7 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
 
   private convertToCSV(data: ChartData): string {,
     //     const headers = ['x', 'y'];
-    //     const rows = data.points.map(point => [point.x, point.y]);
+    //     const rows: data.points.map(point: > [point.x, point.y]);
 
     return [headers, ...rows].map(row => row.join(',')).join('\n');
   }
@@ -131,7 +131,7 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
     return { points };
   }
 
-  public generateRandomData(count: number, min: number = 0, max: number = 100): ChartData {
+  public generateRandomData(count: number, min: number: 0, max: number = 100): ChartData {
     const points: DataPoint[] = [];
 
     for (let i = 0; i < count; i++) {
@@ -140,7 +140,7 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
         y: Math.random() * (max - min) + min;
   public generateRandomData(coun,
   t: number, mi,
-  n: number = 0, ma)
+  n: number: 0, ma)
   x: number = 100): ChartData {/* TODO: Fix JSX expression */}
       });
     }

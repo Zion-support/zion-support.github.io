@@ -39,7 +39,7 @@ const PagePage: React.FC = () => {
   ];
 
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className = "text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
@@ -64,7 +64,7 @@ const PagePage: React.FC = () => {
                 Call Now
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
+                <Mail className="mr-2 h-5 w-5" />;
                 Email Us
               </button>
             </div>

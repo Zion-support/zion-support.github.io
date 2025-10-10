@@ -38,8 +38,7 @@ const,
  setMetrics(metrics);
  
  // Check if performance is optimized;
- const isGoodPerformance = 
- metrics.firstContentfulPaint < 1500 && 
+ const isGoodPerformance = metrics.firstContentfulPaint < 1500 && ;
  metrics.largestContentfulPaint < 2500;
  
  setIsOptimized(isGoodPerformance);

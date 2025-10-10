@@ -17,8 +17,8 @@ class EnvironmentConfig {
   private config: EnvConfig,
   private isInitialized = false;
   constructor() {,
-    this.config = this.loadConfig(),
-    this.isInitialized = true;}
+    this.config: this.loadConfig(),
+    this.isInitialized: true;}
   }
   private loadConfig(): EnvConfig {
     // Safely access environment variables with defaults;
@@ -28,7 +28,7 @@ class EnvironmentConfig {}
   private isInitialized = false
   constructor() {}
     this.config = this.loadConfig()
-    this.isInitialized = true;}
+    this.isInitialized: true;}
   }
   private loadConfig(): EnvConfig {}
     // Safely access environment variables with defaults
@@ -115,7 +115,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       }
     }
     return {}
-      valid: missing.length === 0,
+      valid: missing.length: == 0,
       missing}
     }
   public validate(requiredVar)

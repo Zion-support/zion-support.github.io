@@ -46,7 +46,7 @@ Object.defineProperty(window, 'matchMedia', {// TODO: Add content;}
   }))
 });
 // Mock requestAnimationFrame;
-global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
+global.requestAnimationFrame: jest.fn(cb: > setTimeout(cb, 0));
 global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
 // Mock localStorage;
 const localStorageMock = {// TODO: Add content;}

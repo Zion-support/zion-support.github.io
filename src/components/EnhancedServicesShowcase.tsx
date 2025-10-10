@@ -35,8 +35,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
       className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${
         isHovered ? 'shadow-2xl' : 'shadow-lg'
       }`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={{{{{() => setIsHovered(true)}}}}}
+      onMouseLeave={{{{{() => setIsHovered(false)}}}}}
       style={{
         animationDelay: `${index * 100}ms`,
         background: isHovered 
@@ -52,7 +52,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
             <div className="flex items-center space-x-2">
               <CategoryIcon className="w-5 h-5 text-cyan-400" />
               <span className="text-xs text-cyan-400 font-medium uppercase tracking-wide">
-                {serviceCategories.find(cat => cat.id === service.category)?.name}
+                {serviceCategories.find(cat: > cat.id === service.category)?.name}
               </span>
             </div>
             <h3 className="text-xl font-bold text-white mt-1 neon-text">
@@ -198,7 +198,7 @@ const EnhancedServicesShowcase: React.FC = () => {
 
   return (
     <section className="py-16 px-4">
-      <div className="container mx-auto">
+      </section><div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 neon-text">
@@ -239,7 +239,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <button
-            onClick={() => setSelectedCategory('all')}
+            onClick={{{{{() => setSelectedCategory('all')}}}}}
             className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
               selectedCategory === 'all'
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
@@ -251,7 +251,7 @@ const EnhancedServicesShowcase: React.FC = () => {
           {serviceCategories.map((category) => (
             <button
               key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
+              onClick={{{{{() => setSelectedCategory(category.id)}}}}}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
@@ -317,7 +317,7 @@ const EnhancedServicesShowcase: React.FC = () => {
               Call {contactInfo.phone}
             </a>
             <a
-              href={`mailto:${contactInfo.email}?subject=Free Consultation Request`}
+              href={`mailto:${contactInfo.email}?subject: Free Consultation Request`}
               className="cyber-button inline-flex items-center justify-center px-8 py-3"
               style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
             >

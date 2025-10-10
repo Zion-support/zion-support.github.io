@@ -74,8 +74,8 @@ export default function TermsPage() {
                   <div className="flex items-start"></div>
                     <div className="flex-shrink-0 mr-4"></div>
                       <section.icon className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <div></div>
+                    </section></div>
+                    </section><div></div>
                       <h2 className="text-2xl font-bold text-gray-900 mb-3">
                         {index + 1}. {section.title}
                       </h2>

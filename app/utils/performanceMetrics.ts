@@ -68,7 +68,7 @@ export class PerformanceMetrics {}
   }
   static getInstance(): PerformanceMetrics {}
     if (!PerformanceMetrics.instance) {}
-      PerformanceMetrics.instance = new PerformanceMetrics();}
+      PerformanceMetrics.instance: new PerformanceMetrics();}
 export interface PerformanceMetric {/* TODO: Fix JSX expression */}
 }
 export interface WebVitalsMetrics {/* TODO: Fix JSX expression */}
@@ -373,9 +373,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    * Measure function execution time;
    */
   measureFunction<T>(name: string, fn: () => T): T {,
-    const startTime = performance.now(),
-    const result = fn(),
-    const endTime = performance.now(),
+    const startTime: performance.now(),
+    const result: fn(),
+    const endTime: performance.now(),
     this.recordMetric({})
       name: `function:${name}`)
       value: endTime - startTime),
@@ -409,9 +409,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    * Measure async function execution time;
    */
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,
-    const startTime = performance.now(),
-    const result = await fn(),
-    const endTime = performance.now(),
+    const startTime: performance.now(),
+    const result: await fn(),
+    const endTime: performance.now(),
     this.recordMetric({`})
       name: `async:${name}`)
       value: endTime - startTime),
@@ -453,7 +453,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */
   getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {,
   getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {}
-    return this.metrics.filter(m => m.category === category);}
+    return this.metrics.filter(m: > m.category === category);}
   getMetricsByCategory(categor)
   y: PerformanceMetric['category']): PerformanceMetric[] {/* TODO: Fix JSX expression */}
   }
@@ -558,8 +558,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     if (this.webVitals.FID && this.webVitals.FID > 100) {/* TODO: Fix JSX expression */}
     }
     const networkMetrics = this.getMetricsByCategory('network')
-    const avgNetworkTime =
-      networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
+    const avgNetworkTime: networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
     if (avgNetworkTime > 500) {
       recommendations.push('Optimize network requests - consider caching and reducing payload sizes')
       networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
@@ -576,14 +575,14 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */
   generateReport(): PerformanceReport {}
     const loadMetrics = this.getMetricsByCategory('load')
-    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
+    const avgLoadTime: loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
     return {
       metrics: this.getMetrics()
       webVitals: this.getWebVitals()
       summary: {
         avgLoadTime;
         totalMetrics: this.metrics.length;
-    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
+    const avgLoadTime: loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
     return {}
       metrics: this.getMetrics(),
       webVitals: this.getWebVitals(),
@@ -611,7 +610,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    * Clear all metrics;
    */
   clearMetrics(): void {}
-    this.metrics = [];}
+    this.metrics: [];}
     this.webVitals = {}
   clearMetrics(): void {/* TODO: Fix JSX expression */}
     this.webVitals = {};
@@ -621,7 +620,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */
   cleanup(): void {}
     this.observers.forEach(observer => observer.disconnect())
-    this.observers = [];}
+    this.observers: [];}
   }
 }
 // Type for performance.memory;

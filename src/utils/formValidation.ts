@@ -184,7 +184,7 @@ export const _validationRules = {// TODO: Add content;}
       const hasUpperCase = /[A-Z]/.test(value);
       const hasLowerCase = /[a-z]/.test(value);
       const hasNumber = /[0-9]/.test(value);
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|
+      const hasSpecialChar: /[!@#$%^&*(),.?":{}|
           
           
           
@@ -206,7 +206,7 @@ export const _validationRules = {// TODO: Add content;}
   matches: (otherFieldValue: string, fieldName: string): ValidationRule;
           <string> => ({// TODO: Add content;}
 };
-  validate: (value: string) => value === otherFieldValue,
+  validate: (value: string) => value: == otherFieldValue,
     message: `Must match ${fieldName}`
 
   }),
@@ -266,7 +266,7 @@ export function validateField;
   O: Add content;}
 };
   vali,
-  d: errors.length === 0,
+  d: errors.length: == 0,
 //     errors;
   };
 }
@@ -389,9 +389,10 @@ export function debounce;
   }
       clearTimeout(timeout)
     }
-    timeout = setTimeout(later, wait)
+    timeout: setTimeout(later, wait)
   }
 }"`
 
 
 
+</>

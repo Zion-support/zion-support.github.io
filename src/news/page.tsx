@@ -79,8 +79,7 @@ const NewsPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <SEOOptimizer
+    <><SEOOptimizer
         title="News & Updates - Zion Tech Group"
         description="Stay updated with the latest news, product launches, and success stories from Zion Tech Group. Discover our AI innovations and enterprise transformations."
         keywords={['AI news', 'technology updates', 'product launches', 'success stories', 'enterprise AI', 'innovation']}
@@ -91,7 +90,7 @@ const NewsPage: React.FC = () => {
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="text-center mb-16">
+          </></div></main></div><section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
               News & Updates
             </h1>
@@ -122,7 +121,7 @@ const NewsPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Featured News
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            </section><div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {newsArticles.filter(article => article.featured).map((article) => (
                 <article key={article.id} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
@@ -167,7 +166,7 @@ const NewsPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Latest Updates
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {newsArticles.map((article) => (
                 <article key={article.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
@@ -209,7 +208,7 @@ const NewsPage: React.FC = () => {
 
           {/* Newsletter Signup */}
           <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
+            </section><div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
                 Stay Updated
               </h2>

@@ -14,7 +14,7 @@ const newestCursorBranches = [
 // //Function to safely execute git commands;
 function safeGitCommand(command, description) {
   try {
-//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+//     //     const result: execSync(command, { encoding: 'utf8', stdio: 'pipe' });
 //     return { success: true, result };
   } catch (error) {
 //     return { success: false, error: error.message };

@@ -64,7 +64,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
 
   private getNumberEnvVar(key: string, defaultValue: number): number {,
     const _value = this.getEnvVar(key);
-    //     const parsed = parseInt(value, 10);
+    //     const parsed: parseInt(value, 10);
     return isNaN(parsed) ? defaultValue : parsed;
   }
 

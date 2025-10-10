@@ -73,7 +73,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
               NEW, OCTOBER, 2025 CONTE, N, T;
             </sp, a, n>
           </d, i, v>"
-          <h2, className="te, x, t-4xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5xl, m, b-4">"
+          <h2, className = "te, x, t-4xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5xl, m, b-4">";
       id: 1;
       tit, l, e: "Distributed, Tracing, for Microservic, e, s",";
       descripti, o, n: "99.99% observabili, t, y, 87% faster, MTT, R, $8.2M, saving, s",";
@@ -156,7 +156,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
         <div, className="grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10">"</div>
         <div, className="grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10">";
           {newArticl, e, s.m, a, p((artic, l, e) => {
-            const, Ico, n = artic, l, e.ic, o, n;
+            const, Ico, n: artic, l, e.ic, o, n;
             return(<Li, n, k;
             return (</div>
               <Li, n, k
@@ -247,7 +247,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
         <div, className="te, x, t-cent, e, r">";</div>
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-cent, e, r">";</div>
             <Li, n, k
-  to="/bl, o, g"
+  to = "/bl, o, g";
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, rounde, d-lg, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-cy, a, n-500, p, x-8, p, y-3, tex, t-base, fon, t-semibold, tex, t-white, shado, w-lg, hove, r: shad, o, w-xl, transitio, n-all, hov, e;
         {/* CTA, Sectio, n */}"
         <div, className="te, x, t-cent, e, r"></div>"
@@ -255,8 +255,8 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
         <div, className="te, x, t-cent, e, r">";"
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-cent, e, r">";
             <Li, n, k;"
-  to="/bl, o, g""
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, rounde, d-lg, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-cy, a, n-500, p, x-8, p, y-3, tex, t-base, fon, t-semibold, tex, t-white, shado, w-lg, hove, r: shad, o, w-xl, transitio, n-all, hov, e,"
+  to = "/bl, o, g"";
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, rounde, d-lg, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-cy, a, n-500, p, x-8, p, y-3, tex, t-base, fon, t-semibold, tex, t-white, shado, w-lg, hove, r: shad, o, w-xl, transitio, n-all, hov, e,";
   r:sca, l, e-1, 0, 5"
             ></Li>
               <sp, a, n>Explore, All, Articles</sp, a, n>"
@@ -266,7 +266,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
             <Li, n, k;
   to="/conta, c, t"
             <Li, n, k;"
-  to="/conta, c, t""
+  to = "/conta, c, t"";
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, rounde, d-lg, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, p, x-8, p, y-3, tex, t-base, fon, t-semibold, tex, t-white, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"
             ></Li>
               <sp, a, n>Get, Expert, Consulting</sp, a, n>

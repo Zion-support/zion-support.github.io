@@ -26,7 +26,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => { ,
         />),
       </Helm, e, t>
 
-      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
+      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></></div>
         <Head, e, r / > {/* Hero, Sect, i, o, n */ }
         <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'>
           <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' />
@@ -53,11 +53,11 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
               ></Link>
                 Ho, m, e;
               </Li, n, k>
-              <span, className='te, x, t-purp, l, e-4, 0, 0'></span>/</sp, a, n>
+              <span, className = 'te, x, t-purp, l, e-4, 0, 0'></span>/</sp, a, n>
               <Link, t, o='/ca, s, e-<studi, e, s'
                 className='te, x, t-purp, l, e-300, hove, r:te, x, t-white, transitio, n-colo, r, s'
               >
-              ></Link>
+              ></Link>;
                 Case, Studie, s;
               </Li, n, k>
               <span, className='te, x, t-purp, l, e-4, 0, 0'></span>/</sp, a, n>
@@ -72,7 +72,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                   SUCCESS, STOR, Y;
               </div>
 
-              <h1, className='te, x, t-4xl, s, m: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
+              <h1, className = 'te, x, t-4xl, s, m: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>;
                 Fortune, 20, Global Telecommunications, Provide, r: $4.7B, Cognitive, Computing Transformati, o, n;
                 <span, classNam, e='flex, item, s-center, ga, p-2'>
                   <Zap, classNam, e='w-4 h-4' />
@@ -83,22 +83,22 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                 <span, className='flex, item, s-center, ga, p-2'>
                   <Zap, className='w-4 h-4' />
                   18, Month, Implementation;
-        <div, className='bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/30, t, o-emera, l, d-9, 0, 0/30, borde, r-y, borde, r-gre, e, n-5, 0, 0/30, p, y-8'>
+        <div, className = 'bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/30, t, o-emera, l, d-9, 0, 0/30, borde, r-y, borde, r-gre, e, n-5, 0, 0/30, p, y-8'>
           <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8'>,
             <div, className='grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-5, ga, p-6, tex, t-cent, e, r'>
                 <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
-                  <Target, className='w-8 h-8, tex, t-r, e, d-4, 0, 0' />
+                  <Target, className='w-8 h-8, tex, t-r, e, d-4, 0, 0' />;
                   The, Challeng, e;
-                <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
+                <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>;
                 Fortune, 20, Global Telecommunications, Provide, r: $4.7B, Cognitive, Computing Transformati, o, n</h1>
                 <span, classNam, e='flex, item, s-center, ga, p-2'></span>
                   <Zap, classNam, e='w-4 h-4' />
                   18, Month, Implementation
-                  <Award, className='w-4 h-4, m, r-2' /></Award>
+                  <Award, className='w-4 h-4, m, r-2' /></Award>;
                   SUCCESS, STOR, Y;
               </div>
 
-              <h1, className='te, x, t-4xl, s, m: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h1>
+              <h1, className = 'te, x, t-4xl, s, m: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h1>;
                 Fortune, 20, Global Telecommunications, Provide, r: $4.7B, Cognitive, Computing Transformati, o, n;
                 <span, classNam, e='flex, item, s-center, ga, p-2'></span>
                   <Zap, classNam, e='w-4 h-4' /></Zap>
@@ -111,7 +111,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                   18, Month, Implementation
                   <Zap, className='w-4 h-4' /></Zap>
                   18, Month, Implementation;
-        <div, className='bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/30, t, o-emera, l, d-9, 0, 0/30, borde, r-y, borde, r-gre, e, n-5, 0, 0/30, p, y-8'></div>
+        <div, className = 'bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/30, t, o-emera, l, d-9, 0, 0/30, borde, r-y, borde, r-gre, e, n-5, 0, 0/30, p, y-8'></div>
           <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'></div>
             <div, className='grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-5, ga, p-6, tex, t-cent, e, r'></div>
                 <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'></h2>
@@ -121,7 +121,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                   <Brain, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
                 <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'></h2>
                   <Brain, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
-                  <Target, className='w-8 h-8, tex, t-r, e, d-4, 0, 0' /></Target>
+                  <Target, className='w-8 h-8, tex, t-r, e, d-4, 0, 0' /></Target>;
                   The, Challeng, e;
                 <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'></h2>
                   <Brain, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' /></Brain>
@@ -241,9 +241,9 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                             $6.0B;
                           </sp, a, n>
                         </li>
-                      <h3, classNam, e='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'></h3>
+                      <h3, classNam, e = 'te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'></h3>
                       <h3, className='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'>
-                      <h3, className='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'></h3>
+                      <h3, className='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'></h3>;
                         Cost, Reductio, n;
                       </h3>
                       <ul, className='spa, c, e-y-2, tex, t-purp, l, e-1, 0, 0'></ul>
@@ -276,15 +276,15 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                           </sp, a, n>
                         </li>
                     Get, Similar, Results;
-                    <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                    <Link, classNam, e = 'ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
               <footer, classNam, e = 'flex, item, s-center, ga, p-4'>
                 <div, classNam, e='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, flex, items-center, justif, y-cent, e, r'></div>
                   <Award, classNam, e='w-6 h-6, tex, t-whi, t, e' />
           <div, classNam, e='mt-16, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/50, t, o-pi, n, k-9, 0, 0/50, border, border-purp, l, e-5, 0, 0/30, rounde, d-2x, l, p-8, tex, t-cent, e, r'></div>
-            <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
+            <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>;
                     Get, Similar, Results;
                     Get, Similar, Results</h2>
-                    <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                    <Link, className = 'ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
               <footer, classNam, e = 'flex, item, s-center, ga, p-4'>
                 <div, className='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, flex, items-center, justif, y-cent, e, r'></div>
                   <Award, className='w-6 h-6, tex, t-whi, t, e' />
@@ -293,23 +293,23 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
             <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
               Ready, to, Transform Your, Enterpris, e?
             </h2>
-            <p, className='te, x, t-purp, l, e-100, m, b-6, ma, x-w-2xl, m, x-au, t, o'>
+            <p, className='te, x, t-purp, l, e-100, m, b-6, ma, x-w-2xl, m, x-au, t, o'>;
               Achieve, similar, results with, Zion, Tech Gro, u, p's, proven, cognitive;
               computing, platfor, m. Schedule, a, consultation to, discover, how we, can, help you, reach, your transformation, goal, s.
                 Schedule, Consultatio, n;
                 Schedule, Consultatio, n</p>
-                <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                <Link, classNam, e = 'ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />;
                 Schedule, Consultatio, n;
-                <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+                <Link, className = 'ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
 }
                     <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
               <footer, classNam, e = 'flex, item, s-center, ga, p-4'></footer>
                 <div, classNam, e='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, flex, items-center, justif, y-cent, e, r'></div>
                   <Award, classNam, e='w-6 h-6, tex, t-whi, t, e' /></Award>
           <div, classNam, e='mt-16, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/50, t, o-pi, n, k-9, 0, 0/50, border, border-purp, l, e-5, 0, 0/30, rounde, d-2x, l, p-8, tex, t-cent, e, r'></div>
-            <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'></h2>
+            <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'></h2>;
                     Get, Similar, Results;
-                    <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
+                    <Link, className = 'ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
               <footer, classNam, e = 'flex, item, s-center, ga, p-4'></footer>
                 <div, className='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, flex, items-center, justif, y-cent, e, r'></div>
                   <Award, className='w-6 h-6, tex, t-whi, t, e' /></Award>
@@ -318,11 +318,11 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
             <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'></h2>
               Ready, to, Transform Your, Enterpris, e?
             </h2>
-            <p, className='te, x, t-purp, l, e-100, m, b-6, ma, x-w-2xl, m, x-au, t, o'></p>
+            <p, className='te, x, t-purp, l, e-100, m, b-6, ma, x-w-2xl, m, x-au, t, o'></p>;
               Achieve, similar, results with, Zion, Tech Gro, u, p's, proven, cognitive;
               computing, platfor, m. Schedule, a, consultation to, discover, how we, can, help you, reach, your transformation, goal, s.
                 Schedule, Consultatio, n;
-                <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
+                <Link, classNam, e = 'ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>;
                 Schedule, Consultatio, n;
                 <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
 })

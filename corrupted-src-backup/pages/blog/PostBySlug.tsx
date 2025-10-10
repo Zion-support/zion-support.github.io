@@ -88,7 +88,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
     }];
 
   // Find the current post;
-  const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug;)
+  const currentPost: [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug;)
   );
 
   if (!currentPost) {
@@ -102,9 +102,9 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
             The blog post you're looking for doesn't exist.
           </p>
           <a;
-            href="/blog"
+            href = "/blog";
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors"
-          >
+          >;
             Back to Blog;)
           </a>)
         </div>)

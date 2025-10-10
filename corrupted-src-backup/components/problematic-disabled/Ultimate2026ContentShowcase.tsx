@@ -65,11 +65,11 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
           <h2, className="te, x, t-7xl, m, d: te, x, t-8xl, fon, t-extrabold, m, b-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Ultimate, 202, 6;
           </h2>
-          <h3, className="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
+          <h3, className = "te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">;
             Content, Showcas, e;
           </h3>
-          <p, className="te, x, t-2 xl, tex, t-gr, a, y-300, ma, x-w-5 xl, m, x-auto, leadin, g-relaxed, m, b-12">
-            Master, the, most advanced, AI, technologies with, our, comprehensive 2026, content, library. 
+          <p, className = "te, x, t-2 xl, tex, t-gr, a, y-300, ma, x-w-5 xl, m, x-auto, leadin, g-relaxed, m, b-12">;
+            Master, the, most advanced, AI, technologies with, our, comprehensive 2026, content, library. ;
             From, quantu, m-neural, computing, to autonomous, operation, s - everything, you, need to, lead, the AI, revolutio, n.
           </p>
           <div, className="flex, item, s-center, justif, y-center, ga, p-12, tex, t-center, fle, x-wr, a, p"></div>
@@ -116,7 +116,7 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
           <h2, className="te, x, t-7xl, m, d: te, x, t-8xl, fon, t-extrabold, m, b-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
             Ultimate, 202, 6;
           </h2>"
-          <h3, className="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h3>
+          <h3, className = "te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h3>;
             Content, Showcas, e;
           </h3>"
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-5xl, m, x-auto, leadin, g-relaxed, m, b-12"></p>
@@ -343,7 +343,7 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
               <h3, className="te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6"></h3>
                 Master, the, AI Revoluti, o, n;
               </h3>"
-              <p, className="te, x, t-gr, a, y-300, m, b-12, ma, x-w-3xl, m, x-auto, tex, t-xl, leadin, g-relax, e, d"></p>
+              <p, className = "te, x, t-gr, a, y-300, m, b-12, ma, x-w-3xl, m, x-auto, tex, t-xl, leadin, g-relax, e, d"></p>
                 Join, the, elite group, of, AI leaders, implementing, these breakthrough, technologie, s. 
                 Get, exclusive, access to, implementation, guide, s, expert, consultation, s, and, Fortune, 500 case, studie, s.
               </p>"
@@ -368,7 +368,7 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
                   <Rocket, className="w-6 h-6" /></Rocket>
                   <sp, a, n>Start, Your, Transformation</sp, a, n>
                 </a>"
-                <a, hre, f="/bl, o, g""
+                <a, hre, f="/bl, o, g"";
                   className="bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"
                 ></a>
                   <sp, a, n>Explore, All, Masterclasses</sp, a, n>"

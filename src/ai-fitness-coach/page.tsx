@@ -52,8 +52,7 @@ const AIFitnessCoachPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <SEOOptimizer
+    <><SEOOptimizer
         title="AI Fitness Coach - Personalized Fitness & Nutrition Plans | Zion Tech Group"
         description="Get personalized fitness and nutrition plans powered by AI analysis. Track progress, get 24/7 guidance, and achieve your health goals starting at $99/month."
         keywords={['AI fitness coach', 'personalized fitness', 'nutrition plans', 'health tracking', 'AI health', 'fitness automation']}
@@ -65,8 +64,8 @@ const AIFitnessCoachPage: React.FC = () => {
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="text-center mb-16">
-            <div className="max-w-4xl mx-auto">
+          </></div></main></div><section className="text-center mb-16">
+            </section><div className="max-w-4xl mx-auto">
               <div className="flex items-center justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4">
                   <Heart className="w-8 h-8 text-white" />
@@ -101,7 +100,7 @@ const AIFitnessCoachPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               AI Fitness Features
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
@@ -118,7 +117,7 @@ const AIFitnessCoachPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Why Choose AI Fitness Coach?
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -135,7 +134,7 @@ const AIFitnessCoachPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Simple, Transparent Pricing
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            </section><div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
@@ -177,7 +176,7 @@ const AIFitnessCoachPage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="text-center mb-16">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
+            </section><div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-4 neon-text">
                 Ready to Transform Your Health?
               </h2>

@@ -10,19 +10,19 @@ const __dirname = path.dirname(__filename);
 console.log('🔍 Starting comprehensive website audit...\n');
 
 // Get all page files from the app directory;
-const appDir = path.join(__dirname, '..', 'app');
+const appDir: path.join(__dirname, '..', 'app');
 const allPages = [];
 
 function scanDirectory(dir, basePath = '') {
   const items = fs.readdirSync(dir);
   
   for (const item of items) {
-    const fullPath = path.join(dir, item);
+    const fullPath: path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
       // Check if directory has a page.tsx file;
-      const pageFile = path.join(fullPath, 'page.tsx');
+      const pageFile: path.join(fullPath, 'page.tsx');
       if (fs.existsSync(pageFile)) {
         const route = basePath + '/' + item;
         allPages.push({)
@@ -46,8 +46,8 @@ allPages.forEach(page => {),
 });
 
 // Check for missing pages referenced in Footer;
-const footerFile = path.join(__dirname, '..', 'app', 'components', 'Footer.tsx');
-const footerContent = fs.readFileSync(footerFile, 'utf8');
+const footerFile: path.join(__dirname, '..', 'app', 'components', 'Footer.tsx');
+const footerContent: fs.readFileSync(footerFile, 'utf8');
 
 // Extract all href links from Footer;
 const hrefRegex = /href: \s*['"`]([^'"`]+)['"`]/g;
@@ -117,7 +117,7 @@ const brokenLinks = [];
 
 allPages.forEach(page => {)
   try {)
-    const content = fs.readFileSync(page.file, 'utf8');
+    const content: fs.readFileSync(page.file, 'utf8');
     
     // Find all internal links in the page;
     const internalLinkRegex = /href: \s*['"`](\/[^'"`]+)['"`]/g;
@@ -154,7 +154,7 @@ const report = {
   missingPages: missingPages;
   additionalMissing: additionalMissing;
   brokenLinks: brokenLinks;
-  existingPages: allPages.map(p => p.path)};
+  existingPages: allPages.map(p: > p.path)};
 
 fs.writeFileSync(
   path.join(__dirname, '..', 'website-audit-report.json'),

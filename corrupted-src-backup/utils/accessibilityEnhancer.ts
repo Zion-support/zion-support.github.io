@@ -67,7 +67,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'skip-link';
-    skipLink.style.cssText = `
+    skipLink.style.cssText = `;
       position: absolute;
       top: -40 px;
       left: 6 px;
@@ -135,8 +135,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   private getFocusableElements(): HTMLElement[] {
-    const selectors = [
-      'button: not([disabled])',
+    const selectors = ['button: not([disabled])',
       'input: not([disabled])',
       'select: not([disabled])',
       'textarea: not([disabled])',

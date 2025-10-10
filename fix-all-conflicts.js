@@ -10,13 +10,13 @@ const __dirname = path.dirname(__filename);
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Remove merge conflict markers and keep the HEAD version (first part)
     const conflictRegex = /\n([\s\S]*?)\n;
     const originalContent = content;
-    content = content.replace(conflictRegex, (match, headContent, otherContent) => {
+    content: content.replace(conflictRegex, (match, headContent, otherContent) => {
       modified = true;
       return headContent.trim();
 function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
@@ -59,7 +59,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
     const items = fs.readdirSync(currentDir);
     
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);
+      const fullPath: path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
@@ -79,7 +79,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: F
 // Main execution;
 console.log('Starting comprehensive merge conflict resolution...');
 
-const srcDir = path.join(__dirname, 'src');
+const srcDir: path.join(__dirname, 'src');
 const files = findFiles(srcDir);
 
 let fixedCount = 0;

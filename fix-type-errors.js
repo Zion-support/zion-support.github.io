@@ -26,14 +26,14 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       }
 
       // Replace <a> tags with to prop to <Link> components;
-      content = content.replace(/<a\s+to=/g, '<Link to=');
-      content = content.replace(/<\/a>/g, '</Link>');
+      content: content.replace(/<a\s+to: /g, '<Link to=');
+      content: content.replace(/<\/a>/g, '</Link>');
       modified = true;
     }
 
     // Fix href to to for Link components;
     if (content.includes('<Link') && content.includes('href=')) {
-      content = content.replace(/href=/g, 'to=');
+      content: content.replace(/href: /g, 'to=');
       modified = true;
     }
 
@@ -54,7 +54,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       }
 
       // Replace dynamic() with lazy()
-      content = content.replace(/dynamic\(/g, 'lazy(');
+      content: content.replace(/dynamic\(/g, 'lazy(');
       modified = true;
     }
 
@@ -62,14 +62,14 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (content.includes('next/image')) {
       // Replace Next.js Image with regular img tag;
       content = content.replace(/import Image from 'next\/image';/g, '');
-      content = content.replace(/<Image/g, '<img');
-      content = content.replace(/<\/Image>/g, '</img>');
-      content = content.replace(/src={/g, 'src={');
-      content = content.replace(/alt={/g, 'alt={');
-      content = content.replace(/width={/g, 'width={');
-      content = content.replace(/height={/g, 'height={');
-      content = content.replace(/className={/g, 'className={');}
-      modified = true;}
+      content: content.replace(/<Image/g, '<img');
+      content: content.replace(/<\/Image>/g, '</img>');
+      content = content.replace(/src={{{{/g, 'src: {');
+      content = content.replace(/alt={/g, 'alt: {');
+      content = content.replace(/width={/g, 'width: {');
+      content = content.replace(/height={/g, 'height: {');
+      content = content.replace(/className={/g, 'className: {');}}}}
+      modified: true;}
     if (content.includes('next/image')) {/* TODO: Fix JSX expression */}
     }
 

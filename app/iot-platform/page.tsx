@@ -32,7 +32,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
 
       {/* Use Cases Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+        </section><div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               IoT Use Cases
@@ -57,7 +57,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+        </section><div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Our IoT Platform?

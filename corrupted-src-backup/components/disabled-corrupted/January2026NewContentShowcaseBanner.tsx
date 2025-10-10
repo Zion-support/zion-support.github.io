@@ -1,6 +1,6 @@
 import React from 'react';
 const January2026NewContentShowcaseBanne, r: React.FC = () => {,
-  const features = [,
+  const features: [,
     { ic, o, n: B, r, a, i, n, title: "Synthetic, Consciousne, s, s", de, s, c: "True, AI, awarenes, s" },
     { ic, o, n: Za, p, title: "Quantum, Edge, Processin, g", de, s, c: "S, u, b-millisecond, spe, e, d" },
     { ic, o, n: Netw, o, r, k, title: "Autonomous, Me, s, h", de, s, c: "Se, l, f-organizing, syste, m, s" },

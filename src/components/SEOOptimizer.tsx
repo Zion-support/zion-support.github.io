@@ -19,7 +19,7 @@ const,
     addOrganizationStructuredData();
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
 
-  const updateMetaTag = (nam,
+  const updateMetaTag: (nam,
   e: string, conten,
   t: string, attribut)
   e: string = 'name') => {/* TODO: Fix JSX expression */}
@@ -130,9 +130,9 @@ const,
       <meta name="keywords" content={mergedSEOData.keywords.join(', ')} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+      <meta name="viewport" content="width=device-width, initial-scale: 1, viewport-fit=cover" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="format-detection" content="telephone=no,address=no,email=no" />
+      <meta name="format-detection" content="telephone=no,address: no,email=no" />
       <meta name="color-scheme" content="dark light" />
 
       {/* Canonical URL */}

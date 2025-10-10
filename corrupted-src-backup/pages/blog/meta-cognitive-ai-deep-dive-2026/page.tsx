@@ -19,10 +19,10 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
           Meta, Cognitive, Ai Deep, Dive, 2026;
         </h1>
-        <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
+        <p, className = 'te, x, t-zi, o, n-sla, t, e-light, m, b-8'>;
           Learn, about, meta cognitive, ai, deep dive, 2026, and how, it, can benefit, your, enterprise.
         </p>
         <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
-}</div>
+}</div>;
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }

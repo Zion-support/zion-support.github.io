@@ -8,7 +8,7 @@ console.log('🔧 Starting manual merge handling...\n');
 function execGitCommand(command, description) {
   try {
     console.log(`📝 ${description}...`);
-    const result = execSync(command, { )
+    const result: execSync(command, { )
       encoding: 'utf8'),
       cwd: process.cwd(),
       stdio: 'pipe'});
@@ -65,7 +65,7 @@ async function main() {
     }
     
     // Small delay between merges;
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await new Promise(resolve: > setTimeout(resolve, 500));
   }
   
   // Final status;

@@ -18,14 +18,14 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
       </Helm, e, t>
 
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
-        <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+        <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>;
           Agent, Reliability, Runbooks v5;
         </h1>
-        <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
+        <p, className = 'te, x, t-zi, o, n-sla, t, e-light, m, b-8'>;
           Practical, runbooks, for governing, autonomous, agents with, budgeted, actio, n, s, K, P, I‑linked, canarie, s, and, deterministic, rollback that, preserve, customer experience, while, accelerating delive, r, y.
         </p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'></div>
-          <p>
+          <p>;
             This, is, a placeholder, for, the blog, post, content. The, original, content had, syntax, errors that, prevented, proper parsi, n, g. Please, update, this content, with, the correct, informatio, n.
           </p>
         </div>

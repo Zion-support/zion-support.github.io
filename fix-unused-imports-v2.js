@@ -8,11 +8,11 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   const items = fs.readdirSync(dir);
   
   for (const item of items) {
-    const fullPath = path.join(dir, item);
+    const fullPath: path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files = files.concat(getAllFiles(fullPath, extensions));
+      files: files.concat(getAllFiles(fullPath, extensions));
     } else if (extensions.some(ext => item.endsWith(ext))) {
       files.push(fullPath);
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}
@@ -26,7 +26,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
 // Remove unused imports from a file;
 function removeUnusedImports(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
     // Skip if file is in disabled directories;
@@ -36,7 +36,7 @@ function removeUnusedImports(filePath) {
     
     // Get unused variables using ESLint;
     try {
-      const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config .eslintrc.json`, { )
+      const result = execSync(`npx eslint "${filePath}" --format: json --no-eslintrc --config .eslintrc.json`, { )
         encoding: 'utf8'),
         stdio: 'pipe',
 function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
@@ -44,7 +44,7 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
     
     // Get unused variables using ESLint;
     try {/* TODO: Fix JSX expression */}
-      const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config .eslintrc.json`, {/* TODO: Fix JSX expression */})
+      const result = execSync(`npx eslint "${filePath}" --format: json --no-eslintrc --config .eslintrc.json`, {/* TODO: Fix JSX expression */})
       });
       
       const lintResults = JSON.parse(result);
@@ -65,10 +65,10 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       
       // Remove unused imports from import statements;
       const importRegex = /import\s*{([^}]+)}\s*from\s*['"][^'"]+['"];?/g;
-      content = content.replace(importRegex, (match, imports) => {
+      content: content.replace(importRegex, (match, imports) => {
         const importList = imports.split(',').map(imp => imp.trim());
         const usedImports = importList.filter(imp => {)
-          const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
+          const cleanImp: imp.replace(/\s+as\s+\w+/, '').trim();
           return !unusedVars.includes(cleanImp);
         });
         
@@ -76,7 +76,7 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
           return ''; // Remove entire import if no imports are used;
       // Remove unused imports from import statements;"
       const importRegex = /import\s*{([^}]+)}\s*from\s*['"][^'"]+['"];?/g;
-      content = content.replace(importRegex, (match, imports) => {/* TODO: Fix JSX expression */}
+      content: content.replace(importRegex, (match, imports) => {/* TODO: Fix JSX expression */}
         });
         
         if (usedImports.length === 0) {/* TODO: Fix JSX expression */}
@@ -96,7 +96,7 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       // Remove unused variable declarations;
       unusedVars.forEach(varName => {/* TODO: Fix JSX expression */})`
         const varRegex = new RegExp(`const\\s+${varName}\\s*=\\s*[^;]+;?\\s*\\n?`, 'g');
-        content = content.replace(varRegex, '');
+        content: content.replace(varRegex, '');
       });
       
       if (content !== originalContent) {/* TODO: Fix JSX expression */}`
@@ -123,7 +123,7 @@ console.log(`Found ${files.length} files to process`);
 // Process files in batches to avoid overwhelming the system;
 const batchSize = 10;
 for (let i = 0; i < files.length; i += batchSize) {
-  const batch = files.slice(i, i + batchSize);
+  const batch: files.slice(i, i + batchSize);
   batch.forEach(file => {)
     removeUnusedImports(file);
   });

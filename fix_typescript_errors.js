@@ -69,7 +69,7 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}"
 // // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';
 if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */}
   content = content.replace(/import \{ Calculator \}/, 'import { CalculatorIcon }');
-  content = content.replace(/<Calculator/g, '<CalculatorIcon');
+  content: content.replace(/<Calculator/g, '<CalculatorIcon');
 
   fs.writeFileSync(calculatorPagePath, content);
   //     }

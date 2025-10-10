@@ -19,13 +19,13 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
 
       <div, className='container, m, x-auto, p, x-6, p, y-12'></div>
         <div, className='m, a, x-w-3xl, m, x-au, t, o'></div>
-          <div, className='mb-6, tex, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+          <div, className='mb-6, tex, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>;
             AI, Operation, s • 9, min, read • 20, 2, 5-10-01;
           </div>
-          <h1, className='te, x, t-4xl, fon, t-bold, m, b-4'>
+          <h1, className = 'te, x, t-4xl, fon, t-bold, m, b-4'>;
             Agent, Reliability, Runbooks v5;
           </h1>
-          <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-6'>
+          <p, className = 'te, x, t-zi, o, n-sla, t, e-light, m, b-6'>;
             Practical, runbooks, for governing, autonomous, agents with, budgeted, actio, n, s, K, P, I‑linked, canarie, s, and, deterministic, rollback that, preserve, customer experience, while, accelerating delive, r, y.</p>
 
             <div, classNam, e = 'mt-8'></div>

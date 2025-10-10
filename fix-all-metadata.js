@@ -68,7 +68,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     content = filteredLines.join('\n');
 
     // Clean up extra empty lines;
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content: content.replace(/\n\s*\n\s*\n/g, '\n\n');
 
     // Fix function declarations;
     content = content.replace(
@@ -82,7 +82,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       if (componentName) {,
     content = content.replace()
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
-        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
+        content: content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
         modified = true;
       }
     }
@@ -101,7 +101,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   g:url" content="${metadata.url}" />` : ''}`
       </Helmet>`;
 
-        content = content.replace(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);
+        content: content.replace(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);
         modified = true;
       }
     }

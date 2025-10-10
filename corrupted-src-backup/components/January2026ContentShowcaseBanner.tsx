@@ -94,7 +94,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
   ];
   return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}
-      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30">
+      <div, className = "absolute, inse, t-0, overflo, w-hidden, opacit, y-30">;
   return (
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}</div>
@@ -134,18 +134,18 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
             <span, className="te, x, t-purp, l, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e"></span>
               🚀 3, REVOLUTIONARY, AI 2026, BREAKTHROUGHS, PUBLISHED • January, 3, 0, 20, 2, 5;
             </sp, a, n>"
-            <Sparkles, className="w-5 h-5, tex, t-cy, a, n-400, animat, e-pul, s, e  /></Sparkles>
+            <Sparkles, className = "w-5 h-5, tex, t-cy, a, n-400, animat, e-pul, s, e  /></Sparkles>
           </d, i, v>"
-          <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-cy, a, n-400, t, o-indi, g, o-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">"
+          <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-cy, a, n-400, t, o-indi, g, o-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">";
             AI, 202, 6: The, Future, is He, r, e;
           </h2>
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
+          <p, className = "te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">;
             Discover, the, three most, revolutionary, AI breakthroughs, of, 2026: Autonomous, Agent, Factories, Quantum, Neural, Optimization;</p>
         <div, className="te, x, t-center, m, b-16">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in">";</div>
             <Sparkles, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" />";
           </h2>"
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>
+          <p, className = "te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>;
             Discover, the, three most, revolutionary, AI breakthroughs, of, 202,
   6: Autonomous, Agent, Factories, Quantum, Neural, Optimization;"
         <div, className="te, x, t-center, m, b-16">";"
@@ -258,9 +258,9 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
               sty, l, e={{ animationDel, a, y: `${ind, e, x * 2, 0, 0}ms` }}`;`
             ></d>
               {/* Card, glow, effect */}"
-              <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-cy, a, n-5, 0, 0/0, t, o-indi, g, o-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-cy, a, n-5, 0, 0/10, grou, p-ho, v, e,"
+              <div, className = "absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-cy, a, n-5, 0, 0/0, t, o-indi, g, o-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-cy, a, n-5, 0, 0/10, grou, p-ho, v, e,";
   r:to-indi, g, o-5, 0, 0/10, transitio, n-all, duratio, n-5, 0, 0"></d, i, v>""
-              <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-cy, a, n-5, 0, 0/0, t, o-indi, g, o-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-cy, a, n-5, 0, 0/10, grou, p-ho, v, e,"
+              <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-cy, a, n-5, 0, 0/0, t, o-indi, g, o-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-cy, a, n-5, 0, 0/10, grou, p-ho, v, e,";
   r:to-indi, g, o-5, 0, 0/10, transitio, n-all, duratio, n-5, 0, 0"></d, i, v>";"
               <div, className="relativ, e, p-8">";
                 {/* Ic, o, n & Badg, e, s */}"
@@ -442,25 +442,25 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
   how, autonomous, agents, quantum, optimizatio, n, and, met, a-cognitive, reasoning, can transform, your, organization.
               </p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
+            <div className = "bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
               <h3 className="text-xl font-semibold mb-2">Quantum Computing</h3>
-              <p className="text-sm opacity-90">
+              <p className="text-sm opacity-90">;
                 Revolutionary quantum processing capabilities;
               </p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
+            <div className = "bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>
               <h3 className="text-xl font-semibold mb-2">Autonomous Systems</h3>
               <p className="text-sm opacity-90">
             </div>"
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
               <h3 className="text-xl font-semibold mb-2">Quantum Computing</h3>"
-              <p className="text-sm opacity-90"></p>
+              <p className="text-sm opacity-90"></p>;
                 Revolutionary quantum processing capabilities;
               </p>
             </div>"
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
+            <div className = "bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
               <h3 className="text-xl font-semibold mb-2">Autonomous Systems</h3>"
-              <p className="text-sm opacity-90"></p>
+              <p className="text-sm opacity-90"></p>;
                 Self-managing and self-optimizing technologies;
               </p>
             </div>

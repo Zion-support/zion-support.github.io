@@ -7,20 +7,20 @@ export default function EnhancedContactForm(): React.JSX.Element {
 
   return(<form;)
       aria-label="Contact form")
-      onSubmit={e => e.preventDefault()}
+      onSubmit={{{{e: > e.preventDefault()}}}}
       className="grid gap-4 max-w-xl mx-auto"
     >
       <input;
         aria-label="Name"
 export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix JSX expression */}
-      onSubmit={e => e.preventDefault()}
+      onSubmit={{{{e: > e.preventDefault()}}}}
       className="grid gap-4 max-w-xl mx-auto"
     >
       <input></input>"
         aria-label="Name""
         placeholder="Name"
         value={name}
-        onChange={e => setName(e.target.value)}"
+        onChange={{{{e: > setName(e.target.value)}}}}"
         className="border p-2 rounded"
       />
       <input;
@@ -29,7 +29,7 @@ export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix J
         aria-label="Email""
         placeholder="Email"
         value={email}
-        onChange={e => setEmail(e.target.value)}"
+        onChange={{{{e: > setEmail(e.target.value)}}}}"
         className="border p-2 rounded"
       />
       <textarea;
@@ -38,7 +38,7 @@ export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix J
         aria-label="Message""
         placeholder="Message"
         value={message}
-        onChange={e => setMessage(e.target.value)}"
+        onChange={{{{e: > setMessage(e.target.value)}}}}"
         className="border p-2 rounded"
       />
       <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">

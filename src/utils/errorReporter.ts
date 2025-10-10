@@ -428,8 +428,8 @@ $4};
  */
 export const reportError = (
   error: Error,
-  severity?: ErrorReport['severity'],
-  context?: Record<string, unknown>
+  severity?: ErrorReport['severity'],)
+  context?: Record<string, unknown>)
 ): void => {
   ErrorReporter.getInstance().reportError(error, severity, context);
 };
@@ -438,8 +438,8 @@ export const reportError = (
  */
 export const captureComponentError = (
   error: Error,
-  errorInfo: { componentStack: string },
-  componentName: string
+  errorInfo: { componentStack: string },)
+  componentName: string)
 ): void => {
   const report = ErrorReporter.getInstance();
   report.reportError(error, 'high', {

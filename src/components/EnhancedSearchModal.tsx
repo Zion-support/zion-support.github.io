@@ -102,7 +102,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         onClose();
       } else if (e.key === 'ArrowDown') {
         e.preventDefault();
-        setSelectedIndex(prev => 
+        setSelectedIndex(prev = > ;
           prev < results.length - 1 ? prev + 1 : prev
         );
       } else if (e.key === 'ArrowUp') {
@@ -129,7 +129,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     setShowSuggestions(false);
 
     // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 300));
+    await new Promise(resolve: > setTimeout(resolve, 300));
 
     const filteredResults = mockSearchResults.filter(result =>
       result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -138,7 +138,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     );
 
     // Sort by popularity and relevance
-    const sortedResults = filteredResults.sort((a, b) => {
+    const sortedResults: filteredResults.sort((a, b) => {
       const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
       const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
       return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance;
@@ -241,7 +241,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                   {recentSearches.map((search, index) => (
                     <button
                       key={index}
-                      onClick={() => handleSuggestionClick(search)}
+                      onClick={{{{{() => handleSuggestionClick(search)}}}}}
                       className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors"
                     >
                       {search}
@@ -260,7 +260,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                   {popularSearches.map((search, index) => (
                     <button
                       key={index}
-                      onClick={() => handleSuggestionClick(search)}
+                      onClick={{{{{() => handleSuggestionClick(search)}}}}}
                       className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors"
                     >
                       {search}
@@ -283,7 +283,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                   {results.map((result, index) => (
                     <button
                       key={result.id}
-                      onClick={() => handleResultClick(result)}
+                      onClick={{{{{() => handleResultClick(result)}}}}}
                       className={`w-full text-left p-3 rounded-lg transition-colors ${
                         index === selectedIndex
                           ? 'bg-cyan-400/20 text-cyan-400'

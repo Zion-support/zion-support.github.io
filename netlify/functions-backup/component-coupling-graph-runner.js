@@ -1,4 +1,4 @@
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+exports.handler: async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('component-coupling-graph-runner function triggered')}
     // Component coupling graph simulation;
     const result = {

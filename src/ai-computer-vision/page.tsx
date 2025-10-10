@@ -46,8 +46,8 @@ const AIComputerVisionPage: React.FC = () => {
       descriptio,
   n: 'Intelligent security monitoring and threat detection systems',
       ico,
-  n: Shield,
-      useCase,
+  n: Shield,;
+      useCase,;
   s: ['Intrusion detection', 'Person tracking', 'Anomaly detection'];
       titl,
   e: 'Manufacturing',
@@ -64,9 +64,9 @@ const AIComputerVisionPage: React.FC = () => {
   e: '$499/month',
       descriptio,
   n: 'Perfect for small projects',
-      feature,
+      feature,;
   s: [
-  // TOD,
+  // TOD,;
   O: Add items];
 //         'Up to 1,000 images/month',
 //         'Basic models',
@@ -82,18 +82,18 @@ const PagePage: React.FC = () => {
 
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+        </div></main></div><section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // AI Computer Vision;
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
 // Advanced Visual Intelligence Solutions;
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,
+          <p className = "text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,;
             our AI-powered visual intelligence solutions help you see and understand the world like never before.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+          </section><div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a;
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
 //               Get Started;
@@ -105,8 +105,8 @@ Transform your business with cutting-edge computer vision technology. From objec
         </section>
 
         {/* Features Section */}
-        <section className="mb-16"></section>"
-          <h2 className="text-3xl,"
+        <section className = "mb-16"></section>"
+          <h2 className="text-3xl,";
   md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Core Capabilities;
           </h2>"
@@ -193,18 +193,18 @@ Most Popular;
           
           
           "
-          <section className="text-center"></section>"
+          <section className = "text-center"></section>"
           <div className="cyber-card p-12 max-w-4xl mx-auto"></div>"
             <h2 className="text-3xl,"
   md:text-4xl font-bold text-white mb-6 neon-text"></h2>
 Ready to See the Future?"
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               Transform your business with AI-powered computer vision solutions that see, understand, and act.
-
+;
                 Start Your Vision Journey;
-                href="/demo" className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+                href = "/demo" className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
                 <Camera className="w-5 h-5" />
-
+;
                 Request Demo;
       </main>
       <Footer /></Footer>

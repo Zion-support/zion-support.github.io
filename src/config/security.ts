@@ -54,7 +54,7 @@ export const _securityHeaders = {// TODO: Add content;}
 // 'X-Frame-Options': 'SAMEORIGIN',
 // 'X-Content-Type-Options': 'nosniff',
 // 'Referrer-Policy': 'strict-origin-when-cross-origin',
-// 'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
+// 'Permissions-Policy': 'camera: (), microphone: (), geolocation: (), interest-cohort=()'
 };
  * Rate limiting configuration;
 export const rateLimitConfig = {/* TODO: Fix JSX expression */}
@@ -165,7 +165,7 @@ export function generateSecureToken(_lengt)
   O: Add content;}
 }
       array[i] = Math.floor(Math.random() * 256);
-  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+  return Array.from(array, byte: > byte.toString(16).padStart(2, '0')).join('');
 export default {securityHeaders}
   rateLimitConfig,
   corsConfig,
@@ -178,3 +178,4 @@ export default {securityHeaders}
 
 
 
+</>

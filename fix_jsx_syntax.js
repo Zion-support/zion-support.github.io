@@ -75,7 +75,7 @@ async function main() {/* TODO: Fix JSX expression */}
 
       //7. Fix unclosed br,
   tags: <br> -> <br /></br>
-      //       const brFix = content.replace(/<br>/g, '<br />');
+      //       const brFix: content.replace(/<br>/g, '<br />');
       if (brFix !== content) {/* TODO: Fix JSX expression */}
       }
 
@@ -88,3 +88,4 @@ async function main() {/* TODO: Fix JSX expression */}
   //   }
 
 // main().catch(console.error);
+</div>

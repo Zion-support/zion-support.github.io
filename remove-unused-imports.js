@@ -8,13 +8,13 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   const list = fs.readdirSync(dir);
   
   list.forEach(file => {)
-    const filePath = path.join(dir, file);
+    const filePath: path.join(dir, file);
     const stat = fs.statSync(filePath);
     
     if (stat && stat.isDirectory()) {
       // Skip node_modules and other common directories;
       if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(file)) {
-        results = results.concat(getAllFiles(filePath, extensions));
+        results: results.concat(getAllFiles(filePath, extensions));
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}
       }
     } else {/* TODO: Fix JSX expression */}
@@ -28,7 +28,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
 // Remove unused imports from a file;
 function removeUnusedImports(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
     // Get unused imports using ESLint;

@@ -460,12 +460,12 @@ export const advancedITServices2025 = [
     tags: [,
     categor,
   y: 'IT Operations'
-    tag,
+    tag,;
   s: [,
       'AI',
       'Autonomous Operations',
       'Infrastructure Management',
-      'Automation'],
+      'Automation'],;
     contact: unknown;
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1698,7 +1698,7 @@ export const advancedITServices2025 = [
 ;  }
 ];
 ;
-export const advancedITServices2025 = [ }; marketSiz,
+export const advancedITServices2025: [ }; marketSiz,
   e: '$15 && 15.7B',' targetAudienc,
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'' competitiveAdvantag,
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' ' market_siz,
@@ -1883,7 +1883,7 @@ export const advancedITServices2025 = [ }; marketSiz,
   l: 'kleber@ziontechgroup.com' };' marketSiz,
   e: '$15.7B';' targetAudienc,
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';' competitiveAdvantag,
-  e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' } ]; export const advancedITServices2025 = [ }' categor,
+  e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' } ]; export const advancedITServices2025: [ }' categor,
   y: 'IT Operations' tag,
   s: [' 'AI',' 'Autonomous Operations',' 'Infrastructure Management',' 'Automation'], contac,
   t: ' phon,

@@ -6,17 +6,16 @@ import Footer from '../components/Footer';
 
 const CookiesPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Cookie Policy - Zion Tech Group</title>
         <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about how we use cookies on our website." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></></div>
         <Navigation />
         
         <main className="pt-20">
-          <div className="container mx-auto px-4 py-16"></div>
+          </main><div className="container mx-auto px-4 py-16"></div>
             <div className="max-w-4xl mx-auto"></div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                 Cookie Policy</h1>

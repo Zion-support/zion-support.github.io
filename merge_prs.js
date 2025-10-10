@@ -20,7 +20,7 @@ function makeGitHubRequest(endpoint, method = 'GET', data = null) {/* TODO: Fix 
     if (data) {/* TODO: Fix JSX expression */}
     }
 
-    const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
+    const req: https.request(options, (res) => {/* TODO: Fix JSX expression */}
       });
       res.on('end', () => {/* TODO: Fix JSX expression */}
   a: jsonData });
@@ -144,7 +144,7 @@ async function mergeAllPRs() {/* TODO: Fix JSX expression */}
       }
       
       // Add a small delay between merges;
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve: > setTimeout(resolve, 1000));
     }
 
 

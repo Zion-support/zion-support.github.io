@@ -86,10 +86,10 @@ key={index}
                       <span className="text-sm text-gray-700">{metric}</span>
                     </div>
                   Read Full Story;
-                  <Link className="w-4 h-4" />
+                  <Link className = "w-4 h-4" />
                 </Link>
               </div>
-            </div>
+            </div>;
             View All Success Stories;
             <Link className="w-6 h-6" />
               </div>"
@@ -102,10 +102,10 @@ key={index}
                       <span className="text-sm text-gray-700">{metric}</span>
                     </div>
                   Read Full Story;"
-                  <Link className="w-4 h-4" /></Link>
+                  <Link className = "w-4 h-4" /></Link>
                 </Link>
               </div>
-            </div>
+            </div>;
             View All Success Stories;"
             <Link className="w-6 h-6" /></Link>
           </Link>

@@ -16,8 +16,8 @@ const,
 }
   className = '',
 //   width,
-//   height,
-  rounded = false,
+//   height,;
+  rounded: false,;
   animated = true;)
 }) => {const roundedClasses = rounded ? 'rounded' : '';}
   const animatedClasses = animated ? 'animate-pulse' : '';
@@ -44,7 +44,7 @@ const,
           <div className="bg-white rounded-lg shadow-lg p-6"><Skeleton height="24px" width="75%" className="mb-4" /><Skeleton height="16px" width="100%" className="mb-2" /><Skeleton height="16px" width="90%" className="mb-4" /><Skeleton height="40px" width="120px" rounded /></div>
 );
 export const,
-  TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => ()
+  TextSkeleton: React.FC<{ lines?: number }> = ({ lines: 3 }) => ()
   "
           <div className="space-y-2"></div>
     {/* TODO: Fix JSX expression */}
@@ -80,7 +80,7 @@ export const,
   ><span className="sr-only">Loading image...</span></div>)
 );
 export const,
-  ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => ()
+  ListSkeleton: React.FC<{ items?: number }> = ({ items: 5 }) => ()
   "
           <div className="space-y-3"></div>
     {/* TODO: Fix JSX expression */}
@@ -93,7 +93,7 @@ export const,
   TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  rows = 5,
+  rows: 5,
   columns = 4;)
 }) => ("
           <div className="overflow-hidden"><div className="grid gap-4 mb-4" style={/* TODO: Fix JSX expression */})

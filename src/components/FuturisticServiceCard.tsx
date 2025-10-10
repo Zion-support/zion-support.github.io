@@ -31,8 +31,8 @@ const,
   return (<div></div>
       className={/* TODO: Fix JSX expression */}
       }`})
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={{{{{() => setIsHovered(true)}}}}}
+      onMouseLeave={{{{{() => setIsHovered(false)}}}}}
     >
       {/* Popular Badge */}
       {/* TODO: Fix JSX expression */}

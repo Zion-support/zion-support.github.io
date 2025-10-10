@@ -115,8 +115,7 @@ namename: 'Emily Rodriguez',
       benefits: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting']
 
   return (
-    <>
-      <SEOOptimizer
+    <><SEOOptimizer
         title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
         description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
         keywords={['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}
@@ -128,8 +127,8 @@ namename: 'Emily Rodriguez',
         
         <main className="pt-24">
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center max-w-4xl mx-auto">
+          </></div></main></div><section className="container mx-auto px-4 py-16">
+            </section><div className="text-center max-w-4xl mx-auto">
               <div className="inline-flex items-center bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-2 mb-6">
                 <Receipt className="w-5 h-5 text-purple-400 mr-2" />
                 <span className="text-purple-400 text-sm font-medium">AI Invoice Generator</span>
@@ -173,7 +172,7 @@ namename: 'Emily Rodriguez',
 
           {/* Features Section */}
           <section className="py-16 bg-slate-800/30">
-            <div className="container mx-auto px-4">
+            </section><div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                   Powerful AI Features
@@ -199,12 +198,12 @@ namename: 'Emily Rodriguez',
                     </ul>
 
           {/* Use Cases Section */}
-          <section className="py-16">
+          </div><section className="py-16">
                   Perfect for Every Business
                   Whether you're a freelancer or a large enterprise, our AI invoice generator 
                   adapts to your specific needs and industry requirements.
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {useCases.map((useCase, index) => (
                   <div key={index} className="text-center group">
                     <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -215,12 +214,12 @@ namename: 'Emily Rodriguez',
                       {useCase.benefits.map((benefit, benefitIndex) => (
 
           {/* Pricing Section */}
-          <section id="pricing" className="py-16 bg-slate-800/30">
+          </div><section id="pricing" className="py-16 bg-slate-800/30">
                   Simple, Transparent Pricing
                   Choose the plan that fits your business needs. All plans include our core AI features 
                   with no hidden fees or setup costs.
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              </section><div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {pricingPlans.map((plan, index) => (
                   <div key={index} className={`relative rounded-lg p-8 ${
                     plan.popular 
@@ -271,7 +270,7 @@ namename: 'Emily Rodriguez',
 
           {/* CTA Section */}
           <section className="py-16 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
-            <div className="container mx-auto px-4 text-center">
+            </section><div className="container mx-auto px-4 text-center">
                 Ready to Transform Your Invoicing?
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Join thousands of businesses already using AI to streamline their invoicing process. 
@@ -283,7 +282,7 @@ namename: 'Emily Rodriguez',
                   href="tel:+13024640950"
                   <Phone className="w-4 h-4 mr-2" />
                   (302) 464-0950
-        </main>
+        </div></main>
         
         <Footer />
     </>
@@ -297,3 +296,4 @@ import { Helmet } from 'react-helmet-async';
 import { FileText, DollarSign, Clock, CheckCircle, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Award, Lock, Database, Cloud, Code, Smartphone, Settings, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 export default AIInvoiceGeneratorPage;
+</div>

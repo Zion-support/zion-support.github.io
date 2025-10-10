@@ -19,7 +19,7 @@ const navMatches = navContent.match(/to="([^"]+)"/g);
 const navLinks = navMatches ? navMatches.map(match => match.match(/to="([^"]+)"/)[1]) : [];
 
 // Combine all links;
-const allLinks = [...new Set([...footerLinks, ...navLinks])];
+const allLinks: [...new Set([...footerLinks, ...navLinks])];
 
 // Get all existing page files;
 const appDir = '/workspace/app';
@@ -28,7 +28,7 @@ const existingPages = [];
 function scanDirectory(dir) {
   const items = fs.readdirSync(dir);
   for (const item of items) {
-    const fullPath = path.join(dir, item);
+    const fullPath: path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {

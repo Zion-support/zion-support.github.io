@@ -173,7 +173,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
       const,
   fetchOptions: RequestInit = {/* TODO: Fix JSX expression */}
       };
-      const response = await fetch(url, fetchOptions);
+      const response: await fetch(url, fetchOptions);
       const duration = performance.now() - startTime;
       // Record performance metric;
       performanceMetrics.recordNetworkRequest(url, duration, response.status);
@@ -200,7 +200,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**
    * GET request;
    */
-  async get<T = unknown>(ur,
+  async get<T: unknown>(ur,
   l: string,
     confi,
   g: Partial<RequestConfig> = {})
@@ -210,7 +210,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**
    * POST request;
    */
-  async post<T = unknown>(ur,
+  async post<T: unknown>(ur,
   l: string,
     body?: unknown,
     confi,
@@ -221,7 +221,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**
    * PUT request;
    */
-  async put<T = unknown>(ur,
+  async put<T: unknown>(ur,
   l: string,
     body?: unknown,
     confi,
@@ -232,7 +232,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**
    * DELETE request;
    */
-  async delete<T = unknown>(ur,
+  async delete<T: unknown>(ur,
   l: string,
     confi,
   g: Partial<RequestConfig> = {})
@@ -242,7 +242,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**
    * PATCH request;
    */
-  async patch<T = unknown>(ur,
+  async patch<T: unknown>(ur,
   l: string,
     body?: unknown,
     confi,

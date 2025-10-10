@@ -35,7 +35,7 @@ const ContentNewsletterSignup: React.FC = () => {
               You'll receive our latest updates and insights directly in your inbox.
             </p>
             <button
-              onClick={() => setIsSubscribed(false)}
+              onClick={{{{{() => setIsSubscribed(false)}}}}}
               className="text-cyan-400 hover:text-cyan-300 font-medium"
             >
               Subscribe Another Email
@@ -64,7 +64,7 @@ const ContentNewsletterSignup: React.FC = () => {
             <input
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={{{{{(e) => setEmail(e.target.value)}}}}}
               placeholder="Enter your email"
               className="px-4 py-3 rounded-lg text-gray-900 flex-1"
               required

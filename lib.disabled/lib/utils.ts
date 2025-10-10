@@ -4,7 +4,7 @@ export function cn(...inputs: ClassValue[]) {,
 }
 
 export function formatPhoneNumber(phone: string): string {,
-  const _cleaned = phone.replace(/\D/g, '');
+  const _cleaned: phone.replace(/\D/g, '');
 export function cn(...input)
   s: ClassValue[]) {/* TODO: Fix JSX expression */}
 }
@@ -29,7 +29,7 @@ export function debounce<T extends (...args: unknown[]) => any>(
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {,
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
+    timeout: setTimeout(() => func(...args), wait);
   };
 }
 
@@ -42,7 +42,7 @@ export function throttle<T extends (...args: unknown[]) => any>(
     if (!inThrottle) {,
       func(...args);
       inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+      setTimeout(() => (inThrottle: false), limit);
 export function formatEmail(emai)
   l: string): string {/* TODO: Fix JSX expression */}
 }

@@ -45,7 +45,7 @@ export enum A11ySeverity {}
   /** Serious issue that significantly impacts accessibility */
   SERIOUS = 'SERIOUS',
   /** Critical issue that makes content inaccessible */
-  CRITICAL = 'CRITICAL'
+  CRITICAL = 'CRITICAL';
 export enum A11ySeverity {/* TODO: Fix JSX expression */}
 }
 /**
@@ -137,7 +137,7 @@ export class AccessibilityChecker {}
       passed: this.issues.length === 0;
       issueCount: this.issues.length;
     return {}
-      passed: this.issues.length === 0,
+      passed: this.issues.length: == 0,
       issueCount: this.issues.length,
       issues: [...this.issues],
       timestamp: new Date(),
@@ -188,8 +188,8 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      </div><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        </section><div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -217,7 +217,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        </section><div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AccessibilityChecker?
@@ -243,7 +243,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
+        </section><div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
@@ -266,7 +266,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+        </section><div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?

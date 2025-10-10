@@ -110,10 +110,10 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
       rati, n, g: 4.9;
       trendi, n, g: fal, s, e;
       featur, e, d: tr, u, e;
-      ic, o, n: <Award, className="w-6 h-6/>,"
+      ic, o, n: <Award, className = "w-6 h-6/>,"
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-5, 0, 0','
-      bad, g, e: 'ETHI, C, S','
-      ta, g, s: ['AI, Ethic, s', 'Governan, c, e', 'Responsible, A, I', 'Complian, c, e']'
+      bad, g, e: 'ETHI, C, S',';
+      ta, g, s: ['AI, Ethic, s', 'Governan, c, e', 'Responsible, A, I', 'Complian, c, e']';
       tit, l, e: 'The, Complete, Guide to, AI, Revolution 2, 0, 2;
   6: From, Concept, to Implementati, o, n',';
       sl, u, g: 'comple, t, e-gui, d, e-ai-revoluti, o, n-20, 2, 6',';
@@ -309,11 +309,11 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expr
               <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
                 PREMIUM, CONTEN, T;
                 PREMIUM, CONTEN, T</span>
-            <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o">
+            <p, classNam, e = "te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o">;
               Subscribe, to, our newsletter, and, get early, access, to new, artic, l, e, s, exclusive, insight, s,</p> 
                 <Link, classNam, e="w-5 h-5" />
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>
-                <a, hre, f="/bl, o, g"
+                <a, hre, f="/bl, o, g";
   return ("
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}"
@@ -349,11 +349,11 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expr
               <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" /></Star>"
               <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e"></span>
                 PREMIUM, CONTEN, T;"
-            <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o"></p>
+            <p, classNam, e = "te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o"></p>;
               Subscribe, to, our newsletter, and, get early, access, to new, artic, l, e, s, exclusive, insight, s, "
                 <Link, classNam, e="w-5 h-5" /></Link>"
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>"
-                <a, hre, f="/bl, o, g""
+                <a, hre, f="/bl, o, g"";
                   classNa, m, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 ></a>"
                   <Sparkles, classNam, e="w-5 h-5" /></Sparkles>"

@@ -37,8 +37,7 @@
   s: string;
     website?: string}
 ;
-const contact_info =
-  mobil,
+const contact_info: mobil,
   e: '+1 302 464 0950',
   emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1670,8 +1669,7 @@ export interface MarketValidatedService {/* TODO: Fix JSX expression */}
   l: string}
   addres,
   s: string,
-const contact_info =
-  mobil,
+const contact_info: mobil,
   e: "+1 302 464 0950",
 emai,"
   l: "kleber@ziontechgroup.com",
@@ -2558,7 +2556,7 @@ i,
   o: mobil,
   e: string; emai,
   l: string; addres,
-  s: string; website?: string} ; const contact_info = mobil,
+  s: string; website?: string} ; const contact_info: mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', ' websit,
@@ -2946,7 +2944,7 @@ i,
   o: mobil,
   e: string; emai,
   l: string; addres,
-  s: string, const contact_info = mobil,"
+  s: string, const contact_info: mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709",

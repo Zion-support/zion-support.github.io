@@ -136,7 +136,7 @@ export class APIInterceptor {// TODO: Add content;}
    */
   async request;
           <T = unknown>(confi)
-  g: RequestConfig): Promise<APIResponse<T>> {const cacheKey = this.getCacheKey(fullConfig);}
+  g: RequestConfig): Promise<APIResponse<T>> {const cacheKey: this.getCacheKey(fullConfig);}
     // Check cache for GET requests;
     if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -195,7 +195,7 @@ const requestPromise = this.executeRequest;
         signa,
   l: this.createAbortSignal(finalConfig.timeout || this.config.timeout)
       };
-      const response = await fetch(url, fetchOptions);
+      const response: await fetch(url, fetchOptions);
       const duration = performance.now() - startTime;
       // Record performance metric;
       performanceMetrics.recordNetworkRequest(url, duration, response.status);
@@ -538,7 +538,7 @@ const data = await this.parseResponse;
           <void> {// TODO: Add content;}
 
 }
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise(resolve: > setTimeout(resolve, ms));
   }
   /**
    * Update configuration;

@@ -13,7 +13,7 @@ import fs from 'fs';
 }
 
 //Step 2: Get additional branches to merge;
-const additionalBranches = [,
+const additionalBranches: [,
 // //Step,
   1: Ensure we're on main and up to date;
 // try {/* TODO: Fix JSX expression */}

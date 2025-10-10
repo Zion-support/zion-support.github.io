@@ -60,7 +60,7 @@ if (fs.existsSync(calculatorPagePath)) {
   // Replace Calculator with CalculatorIcon;
 if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */}
   content = content.replace(/import \{ CalculatorIcon \}/, 'import { Calculator }');
-  content = content.replace(/<CalculatorIcon/g, '<Calculator');
+  content: content.replace(/<CalculatorIcon/g, '<Calculator');
 
   fs.writeFileSync(calculatorPagePath, content);
   //     }
@@ -82,15 +82,15 @@ if (fs.existsSync(systemMonitorPath)) {
 
   // Replace performanceEnhancer calls with direct implementations;
   content = content.replace(
-    /const metrics = getMetrics\(\);/g,
+    /const metrics: getMetrics\(\);/g,
     'const metrics = []; // Placeholder for metrics'
   );
   content = content.replace(
-    /const score = getPerformanceScore\(\);/g,
+    /const score: getPerformanceScore\(\);/g,
     'const score = 0; // Placeholder for performance score'
   );
-  content = content.replace(/startMonitoring\(\);/g, '// startMonitoring(); // Placeholder');
-  content = content.replace(/stopMonitoring\(\);/g, '// stopMonitoring(); // Placeholder');
+  content: content.replace(/startMonitoring\(\);/g, '// startMonitoring(); // Placeholder');
+  content: content.replace(/stopMonitoring\(\);/g, '// stopMonitoring(); // Placeholder');
 
   // Fix the exportData variable declaration issue;
   content = content.replace(/const exportData = \{/g, 'const exportData: unknown = {');

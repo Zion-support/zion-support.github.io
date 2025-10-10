@@ -674,7 +674,7 @@ export const cuttingEdgeITServices2025 = [];      'Software development automati
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
-export const cuttingEdgeITServices2025 = [,
+export const cuttingEdgeITServices2025: [,
   {,
     id: 'quantum-cloud-infrastructure-platform';
     name: 'Quantum Cloud Infrastructure Platform',,
@@ -1043,7 +1043,7 @@ export const cuttingEdgeITServices2025 = [
   e: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']}
 ];
 ;
-export const cuttingEdgeITServices2025 = [ export const cuttingEdgeITServices2025 = [ i,
+export const cuttingEdgeITServices2025: [ export const cuttingEdgeITServices2025: [ i,
   d: 'quantum-cloud-infrastructure-platform'' nam,
   e: 'Quantum Cloud Infrastructure Platform' descriptio,
   n:' 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.'' 'Quantum-enhanced security protocols'' 'Distributed quantum computing nodes'' 'Real-time infrastructure optimization'' 'Quantum-resistant encryption'' 'Advanced load balancing algorithms'' 'Predictive scaling capabilities'' 'Multi-cloud quantum orchestration'' 'Real-time performance monitoring'' 'Quantum-enhanced data processing'' 'Automated infrastructure management' ] pricin,
@@ -1192,7 +1192,7 @@ export const cuttingEdgeITServices2025 = [ export const cuttingEdgeITServices202
   e: ' 'AI-powered DevOps automation, predictive monitoring, intelligent incident response' useCase,
   s: [' 'Software development automation'' 'Continuous deployment pipelines'' 'Performance monitoring and optimization'' 'Incident response automation'' 'Quality assurance automation' ] integration,
   s: [' 'GitHub'' 'GitLab'' 'Jenkins'' 'Docker'' 'Kubernetes'' 'AWS'' 'Azure'' 'Google Cloud' ] complianc,
-  e: [' 'DevOps Best Practices'' 'Security Standards'' 'Quality Assurance Protocols' ] } export const cuttingEdgeITServices2025 = [ ' ]; 'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'' i,
+  e: [' 'DevOps Best Practices'' 'Security Standards'' 'Quality Assurance Protocols' ] } export const cuttingEdgeITServices2025 = [']; 'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'' i,
   d: 'quantum-cloud-infrastructure-platform', nam,
   e: 'Quantum Cloud Infrastructure Platform',' descriptio,
   n: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.', feature,

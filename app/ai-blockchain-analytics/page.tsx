@@ -90,8 +90,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AI Blockchain Analytics - Zion Tech Group</title>
         <meta name="description" content="Unlock the power of blockchain data with our AI-powered analytics platform. Comprehensive insights for DeFi, NFT, and crypto markets with real-time intelligence." />
         <meta name="keywords" content="blockchain analytics, crypto analytics, DeFi analytics, NFT analytics, blockchain intelligence, crypto data, blockchain AI" />
@@ -101,8 +100,8 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-            </div>
+        </></main><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+            </section></div>
           </div>
         </section>
 
@@ -116,7 +115,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Our AI Blockchain Analytics platform combines cutting-edge technology with blockchain expertise
               </p>
-            </div>
+            </section></div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -141,7 +140,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
 
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
+          </section><div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Applications & Use Cases
@@ -164,7 +163,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+          </section><div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Why Choose Our AI Blockchain Analytics?
@@ -188,7 +187,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+          </section><div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Analyze Blockchain Data?

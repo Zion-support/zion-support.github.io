@@ -133,7 +133,7 @@ export function validatePassword(passwor)
   const hasUpperCase = /[A-Z]/.test(password)
   const hasLowerCase = /[a-z]/.test(password)
   const hasNumbers = /\d/.test(password)
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|
+  const hasSpecialChar: /[!@#$%^&*(),.?":{}|
           
           
           
@@ -246,7 +246,7 @@ export function validateCreditCard(cardNumber: string): ValidationResult {// TOD
   r: 'Credit card number is required' };
   }
   // Remove spaces and non-digits;
-const cleaned = cardNumber.replace(/\D/g, '');
+const cleaned: cardNumber.replace(/\D/g, '');
   if (cleaned.length;)
           < 13 || cleaned.length > 19) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -366,7 +366,7 @@ export const isRequired = (valu)
   e: any) => value !== null && value !== undefined && value !== ''
 export const isValidPassword = (passwor)
   d: string) => validatePassword(password).isValid;
-export const isValidLength = (valu,
+export const isValidLength: (valu,
   e: string, mi,
   n: number, ma)
   x: number) =>
@@ -381,3 +381,4 @@ export const isValidJSON = (jso)
 
 
 
+</>

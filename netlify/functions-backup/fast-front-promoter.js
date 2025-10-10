@@ -1,4 +1,4 @@
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+exports.handler: async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('fast-front-promoter function triggered')}
     // Fast front promotion simulation;
     const result = {

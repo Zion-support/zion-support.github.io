@@ -89,7 +89,7 @@ const PagePage: React.FC = () => {
       </Helmet>
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+        </section><div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             AI Analytics Tools
           </h1>
@@ -97,7 +97,7 @@ const PagePage: React.FC = () => {
             Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4"></section>"
+      </div><section className="pt-24 pb-16 px-4"></section>"
         <div className="max-w-7xl mx-auto text-center"></div>"
           <h1 className="text-4xl,
   sm:text-5xl,"
@@ -133,7 +133,7 @@ const PagePage: React.FC = () => {
       </section>
       {/* Analytics Tools Grid */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+        </section><div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
             Our Analytics Tools
           </h2>
@@ -250,7 +250,7 @@ Why Choose Our Analytics Tools?"
 
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
+        </section><div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Unlock Your Data?
           <p className="text-xl text-purple-100 mb-8">
@@ -265,13 +265,13 @@ Why Choose Our Analytics Tools?"
   );
 };
 Ready to Unlock Your Data?
-          <p className="text-xl text-purple-100 mb-8">
+          <p className = "text-xl text-purple-100 mb-8">
             Get started with our AI analytics tools today and transform your data into actionable insights.
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+              href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors";
 Call (302) 464-0950;
-              href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-
+              href = "mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+;
               Email Us;
   );
 };
@@ -280,3 +280,4 @@ Call (302) 464-0950;
 export default AnalyticsToolsPage;
 
 
+</div>

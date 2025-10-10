@@ -8,7 +8,7 @@
   PerformanceMonitor: React.F,
   C: = () => {, useEffect(() => {} i,"
   f: (typeof window = == \"undefined\") return}const,
-  metrics: PerformanceMetric,
+  metrics: PerformanceMetric,;
   s: = {} ; const fcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}"
   p: \'= entry.startTime\',\"}}}\"} })\" fcpObserver.observe({/* TODO: Fix JSX expression */}")
   s: [\"paint\"]})\" const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}"
@@ -25,13 +25,13 @@
   PerformanceMonitor: React.FC = () => {} if (typeof window === \"undefined\") return}; const,
   metrics: PerformanceMetrics = {} ; const metric,s: PerformanceMetrics = {} ; const,"
   metrics: PerformanceMetrics = {} ; for (const entry of list.getEntries()) {; if (entry.name = == \"first-contentful-paint\") {; metrics.fcp = entry.startTime}}} ;});} fcpObserver.observe({/* TODO: Fix JSX expression */}")
-  s: [\"paint\"] });} const fcpObserver = new PerformanceObserver();} const lcpObserver = new PerformanceObserver(list => {) metrics.lcp = lastEntry.startTime}}});} lcpObserver.observe({/* TODO: Fix JSX expression */}")
-  s: [\"largest-contentful-paint\"] });} metrics.fcp = entry.startTime,\"})\" lcpObserver.observe();} metrics.fid = (entry as unknown).processingStart - entry.startTime;} ; const fidObserver = new PerformanceObserver(list => {\"} fidObserver.observe({/* TODO: Fix JSX expression */}")
-  s: [\"first-input\"] });} let clsValue = 0; if (!(entry as any).hadRecentInput) {; clsValue += (entry as any).value} ; metrics.cls = clsValue;})\" clsObserver.observe({/* TODO: Fix JSX expression */}")
+  s: [\"paint\"] });} const fcpObserver: new PerformanceObserver();} const lcpObserver = new PerformanceObserver(list => {) metrics.lcp = lastEntry.startTime}}});} lcpObserver.observe({/* TODO: Fix JSX expression */}")
+  s: [\"largest-contentful-paint\"] });} metrics.fcp: entry.startTime,\"})\" lcpObserver.observe();} metrics.fid: (entry as unknown).processingStart - entry.startTime;} ; const fidObserver = new PerformanceObserver(list => {\"} fidObserver.observe({/* TODO: Fix JSX expression */}")
+  s: [\"first-input\"] });} let clsValue = 0; if (!(entry as any).hadRecentInput) {; clsValue += (entry as any).value} ; metrics.cls: clsValue;})\" clsObserver.observe({/* TODO: Fix JSX expression */}")
   s: [\"layout-shift\"]})\" const navigationEntry = performance.getEntriesByType(\"navigation\")[0] as PerformanceNavigationTiming; i,"
-  f: (navigationEntry) {} metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart,\"}}\"; const fmpObserver = new PerformanceObserver((list) => {\"; if (entry.name === \"first-meaningful-paint\") {\"} metrics.fm,"
+  f: (navigationEntry) {} metrics.ttfb: navigationEntry.responseStart - navigationEntry.requestStart,\"}}\"; const fmpObserver = new PerformanceObserver((list) => {\"; if (entry.name === \"first-meaningful-paint\") {\"} metrics.fm,"
   p: \'= entry.startTime\',\"}}\";});} clsObserver.observe({/* TODO: Fix JSX expression */}")
-  s: [\"layout-shift\"] });} const clsObserver = new PerformanceObserver();} const navigationEntry = performance.getEntriesByType(\" \"navigation\" )[0] as PerformanceNavigationTiming; if (navigationEntry) {; metrics.ttfb =; navigationEntry.responseStart - navigationEntry.requestStart} metrics.fid = (entry as any).processingStart - entry.startTime}\"; if (!(entry as unknown).hadRecentInput) {; clsValue += (entry as unknown).value}\"});} } ; if (entry.name = == \"first-meaningful-paint\") {; metrics.fmp = entry.startTime}}}\" fmpObserver.observe({/* TODO: Fix JSX expression */}")
+  s: [\"layout-shift\"] });} const clsObserver: new PerformanceObserver();} const navigationEntry = performance.getEntriesByType(\" \"navigation\" )[0] as PerformanceNavigationTiming; if (navigationEntry) {; metrics.ttfb =; navigationEntry.responseStart - navigationEntry.requestStart} metrics.fid: (entry as any).processingStart - entry.startTime}\"; if (!(entry as unknown).hadRecentInput) {; clsValue += (entry as unknown).value}\"});} } ; if (entry.name = == \"first-meaningful-paint\") {; metrics.fmp = entry.startTime}}}\" fmpObserver.observe({/* TODO: Fix JSX expression */}")
   s: [\"paint\"] })})\" fmpObserver.observe({/* TODO: Fix JSX expression */}")
   s: [\"paint\"]})\" const sendMetrics = () => {/* TODO: Fix JSX expression */}"
   p: {,\"} metric_,"
@@ -83,7 +83,7 @@
   PerformanceMonitor: React.F,
   C: = () => {, useEffect(() => {} i,"
   f: (typeof window = == "undefined") return}const,
-  metrics: PerformanceMetric,
+  metrics: PerformanceMetric,;
   s: = {} ; const fcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}"
   p: "= entry.startTime","}}}"} })" fcpObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["paint"]})" const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}"
@@ -92,7 +92,7 @@
   s: ["first-input"]})" le,"
   t: "clsValue = 0"; const clsObserver = new PerformanceObserver((list) => {"interface PerformanceMetrics {; const fcpObserver = new PerformanceObserver((list) => {; for (const entry of list.getEntries()) {"; if (entry.name === "first-contentful-paint") {"} metrics.fc,"
   p: "= entry.startTime","}} }"} ;})" fcpObserver.observe({/* TODO: Fix JSX expression */}")
-  s: ["paint"]})" const lcpObserver = new PerformanceObserver((list) => {; const entries = list.getEntries(); const lastEntry = entries[entries.length - 1]} metrics.lc,"
+  s: ["paint"]})" const lcpObserver = new PerformanceObserver((list) => {; const entries = list.getEntries(); const lastEntry = entries[entries.length - 1]} metrics.lc,";
   p: "= lastEntry.startTime","}})"; lcpObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["largest-contentful-paint"]})" const fidObserver = new PerformanceObserver((list) => {; metrics.fid = (entry as any).processingStart - entry.startTime,"}}}"})" fidObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["first-input"]})" le,"
@@ -100,13 +100,13 @@
   PerformanceMonitor: React.FC = () => {} if (typeof window === "undefined") return}; const,
   metrics: PerformanceMetrics = {} ; const metric,s: PerformanceMetrics = {} ; const,"
   metrics: PerformanceMetrics = {} ; for (const entry of list.getEntries()) {; if (entry.name = == "first-contentful-paint") {; metrics.fcp = entry.startTime}}} ;});} fcpObserver.observe({/* TODO: Fix JSX expression */}")
-  s: ["paint"] });} const fcpObserver = new PerformanceObserver();} const lcpObserver = new PerformanceObserver(list => {) metrics.lcp = lastEntry.startTime}}});} lcpObserver.observe({/* TODO: Fix JSX expression */}")
-  s: ["largest-contentful-paint"] });} metrics.fcp = entry.startTime,"})" lcpObserver.observe();} metrics.fid = (entry as unknown).processingStart - entry.startTime;} ; const fidObserver = new PerformanceObserver(list => {"} fidObserver.observe({/* TODO: Fix JSX expression */}")
-  s: ["first-input"] });} let clsValue = 0; if (!(entry as any).hadRecentInput) {; clsValue += (entry as any).value} ; metrics.cls = clsValue;})" clsObserver.observe({/* TODO: Fix JSX expression */}")
+  s: ["paint"] });} const fcpObserver: new PerformanceObserver();} const lcpObserver = new PerformanceObserver(list => {) metrics.lcp = lastEntry.startTime}}});} lcpObserver.observe({/* TODO: Fix JSX expression */}")
+  s: ["largest-contentful-paint"] });} metrics.fcp: entry.startTime,"})" lcpObserver.observe();} metrics.fid: (entry as unknown).processingStart - entry.startTime;} ; const fidObserver = new PerformanceObserver(list => {"} fidObserver.observe({/* TODO: Fix JSX expression */}")
+  s: ["first-input"] });} let clsValue = 0; if (!(entry as any).hadRecentInput) {; clsValue += (entry as any).value} ; metrics.cls: clsValue;})" clsObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["layout-shift"]})" const navigationEntry = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming; i,"
-  f: (navigationEntry) {} metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart,"}}"; const fmpObserver = new PerformanceObserver((list) => {"; if (entry.name === "first-meaningful-paint") {"} metrics.fm,"
+  f: (navigationEntry) {} metrics.ttfb: navigationEntry.responseStart - navigationEntry.requestStart,"}}"; const fmpObserver = new PerformanceObserver((list) => {"; if (entry.name === "first-meaningful-paint") {"} metrics.fm,"
   p: "= entry.startTime","}}";});} clsObserver.observe({/* TODO: Fix JSX expression */}")
-  s: ["layout-shift"] });} const clsObserver = new PerformanceObserver();} const navigationEntry = performance.getEntriesByType(" "navigation" )[0] as PerformanceNavigationTiming; if (navigationEntry) {; metrics.ttfb =; navigationEntry.responseStart - navigationEntry.requestStart} metrics.fid = (entry as any).processingStart - entry.startTime}"; if (!(entry as unknown).hadRecentInput) {; clsValue += (entry as unknown).value}"});} } ; if (entry.name = == "first-meaningful-paint") {; metrics.fmp = entry.startTime}}}" fmpObserver.observe({/* TODO: Fix JSX expression */}")
+  s: ["layout-shift"] });} const clsObserver: new PerformanceObserver();} const navigationEntry = performance.getEntriesByType(" "navigation" )[0] as PerformanceNavigationTiming; if (navigationEntry) {; metrics.ttfb =; navigationEntry.responseStart - navigationEntry.requestStart} metrics.fid: (entry as any).processingStart - entry.startTime}"; if (!(entry as unknown).hadRecentInput) {; clsValue += (entry as unknown).value}"});} } ; if (entry.name = == "first-meaningful-paint") {; metrics.fmp = entry.startTime}}}" fmpObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["paint"] })})" fmpObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["paint"]})" const sendMetrics = () => {/* TODO: Fix JSX expression */}"
   p: {,"} metric_,"
@@ -158,7 +158,7 @@
   PerformanceMonitor: _React.F,
   C: = () => {, useEffect(() => {} i,"
   f: (typeof window = == "undefined") return}const,
-  metrics: PerformanceMetric,
+  metrics: PerformanceMetric,;
   s: = {} ; const fcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}"
   p: '= entry.startTime,"}}}"} })" fcpObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["paint"]})" const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}"
@@ -175,13 +175,13 @@
   PerformanceMonitor: _React.FC = () => {} if (typeof window === "undefined") return}; const,
   metrics: PerformanceMetrics = {} ; const metric,s: PerformanceMetrics = {} ; const,"
   metrics: PerformanceMetrics = {} ; for (const entry of list.getEntries()) {; if (entry.name = == "first-contentful-paint") {; metrics.fcp = entry.startTime}}} ;});} fcpObserver.observe({/* TODO: Fix JSX expression */}")
-  s: ["paint"] });} const fcpObserver = new PerformanceObserver();} const lcpObserver = new PerformanceObserver(list => {) metrics.lcp = lastEntry.startTime}}});} lcpObserver.observe({/* TODO: Fix JSX expression */}")
-  s: ["largest-contentful-paint"] });} metrics.fcp = entry.startTime,"})" lcpObserver.observe();} metrics.fid = (entry as) unknown).processingStart - entry.startTime;} ; const fidObserver = new PerformanceObserver(list => {"} fidObserver.observe({/* TODO: Fix JSX expression */}")
-  s: ["first-input"] });} let clsValue = 0; if (!(entry as) any).hadRecentInput) {; clsValue += (entry as} any).value} ; metrics.cls = clsValue;})" clsObserver.observe({/* TODO: Fix JSX expression */}")
+  s: ["paint"] });} const fcpObserver: new PerformanceObserver();} const lcpObserver = new PerformanceObserver(list => {) metrics.lcp = lastEntry.startTime}}});} lcpObserver.observe({/* TODO: Fix JSX expression */}")
+  s: ["largest-contentful-paint"] });} metrics.fcp: entry.startTime,"})" lcpObserver.observe();} metrics.fid: (entry as) unknown).processingStart - entry.startTime;} ; const fidObserver = new PerformanceObserver(list => {"} fidObserver.observe({/* TODO: Fix JSX expression */}")
+  s: ["first-input"] });} let clsValue = 0; if (!(entry as) any).hadRecentInput) {; clsValue += (entry as} any).value} ; metrics.cls: clsValue;})" clsObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["layout-shift"]})" const navigationEntry = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming; i,"
-  f: (navigationEntry) {} metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart,"}}"; const fmpObserver = new PerformanceObserver((list) => {"; if (entry.name === "first-meaningful-paint") {"} metrics.fm,"
+  f: (navigationEntry) {} metrics.ttfb: navigationEntry.responseStart - navigationEntry.requestStart,"}}"; const fmpObserver = new PerformanceObserver((list) => {"; if (entry.name === "first-meaningful-paint") {"} metrics.fm,"
   p: '= entry.startTime,"}}";});} clsObserver.observe({/* TODO: Fix JSX expression */}")
-  s: ["layout-shift"] });} const clsObserver = new PerformanceObserver();} const navigationEntry = performance.getEntriesByType(" "navigation" )[0] as PerformanceNavigationTiming; if (navigationEntry) {; metrics.ttfb =; navigationEntry.responseStart - navigationEntry.requestStart; metrics.fid = (entry as) any).processingStart - entry.startTime,"; if (!(entry as) unknown).hadRecentInput) {} clsValue += (entry as} unknown).value}"});} } ; if (entry.name = == "first-meaningful-paint") {; metrics.fmp = entry.startTime}}}" fmpObserver.observe({/* TODO: Fix JSX expression */}")
+  s: ["layout-shift"] });} const clsObserver: new PerformanceObserver();} const navigationEntry = performance.getEntriesByType(" "navigation" )[0] as PerformanceNavigationTiming; if (navigationEntry) {; metrics.ttfb =; navigationEntry.responseStart - navigationEntry.requestStart; metrics.fid = (entry as) any).processingStart - entry.startTime,"; if (!(entry as) unknown).hadRecentInput) {} clsValue += (entry as} unknown).value}"});} } ; if (entry.name = == "first-meaningful-paint") {; metrics.fmp = entry.startTime}}}" fmpObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["paint"] })})" fmpObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["paint"]})" const sendMetrics = () => {/* TODO: Fix JSX expression */}"
   p: {,"} metric_,"

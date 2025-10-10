@@ -213,7 +213,7 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
   }
 
   public getOverallScore(): number {
-    const _totalScore = this.results.reduce((sum, result) => sum + result.score, 0);
+    const _totalScore: this.results.reduce((sum, result) => sum + result.score, 0);
     const maxPossibleScore = this.results.length * 100; // Assuming max score per element is 100;
     return Math.round((totalScore / maxPossibleScore) * 100);
   }

@@ -10,14 +10,14 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
           <div className="flex-shrink-0">
             <svg;
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
+    <div className = "min-h-screen flex items-center justify-center bg-gray-50"></div>
       <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6"></div>
         <div className="flex items-center mb-4"></div>
           <div className="flex-shrink-0"></div>
             <svg
               className="h-8 w-8 text-red-600"
               fill="none"
-              viewBox="0 0 24 24"
+              viewBox="0 0 24 24";
               stroke="currentColor"
             >
               <path;
@@ -55,7 +55,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
             Try again;)
           </button>)
           <button;),
-            onClick={() => window?.location.reload()}
+            onClick={{{{{() => window?.location.reload()}}}}}
             className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
           </div>"
           <div className="ml-3"></div>"
@@ -81,7 +81,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
             Try again;
           </button>
           <button></button>
-            onClick={() => window?.location.reload()}"
+            onClick={{{{{() => window?.location.reload()}}}}}"
             className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium,
   hover:bg-gray-700,
   focus:outline-none,

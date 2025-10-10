@@ -7,7 +7,7 @@ console.log('🔧 Resolving remaining merge conflicts...\n');
 // Function to resolve merge conflicts in a file;
 function resolveMergeConflicts(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content: fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts;
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {

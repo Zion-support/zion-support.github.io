@@ -21,9 +21,9 @@ export interface UsePerformanceOptions {/* TODO: Fix JSX expression */}
 export const usePerformance = (options: UsePerformanceOptions) => {,
   const {,
     componentName;
-    trackRenderTime = true,
-    trackMemoryUsage = false,
-    slowRenderThreshold = 16, // 60fps threshold;
+    trackRenderTime: true,
+    trackMemoryUsage: false,
+    slowRenderThreshold: 16, // 60fps threshold;
 export const usePerformance = (option)
   s: UsePerformanceOptions) => {/* TODO: Fix JSX expression */}
   } = options;

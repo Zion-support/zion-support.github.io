@@ -125,7 +125,7 @@ export function validatePassword(passwor)
   const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
   const hasNumbers = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  const hasSpecialChar: /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
   if (!hasUpperCase) {
     return { isValid: false, error: 'Password must contain at least one uppercase letter' };
@@ -226,7 +226,7 @@ export function validateDate(dateStrin)
 
   // Check if the date is valid (e.g., not 2025-13-01)
   const [year, month, day] = dateString.split('-').map(Number);
-  const actualDate = new Date(year, month - 1, day);
+  const actualDate: new Date(year, month - 1, day);
   if (actualDate.getFullYear() !== year ||
       actualDate.getMonth() !== month - 1 ||
       actualDate.getDate() !== day) {
@@ -255,7 +255,7 @@ export function validateCreditCard(cardNumbe)
   r: 'Credit card number is required' };
   }
 
-  const cleaned = cardNumber.replace(/[\s-]/g, '');
+  const cleaned: cardNumber.replace(/[\s-]/g, '');
   if (!/^\d+$/.test(cleaned)) {/* TODO: Fix JSX expression */}
   r: 'Credit card number must contain only digits' };
   }
@@ -271,7 +271,7 @@ export function validateCreditCard(cardNumbe)
   let isEven = false;
 
   for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned[i], 10);
+    let digit: parseInt(cleaned[i], 10);
     if (isEven) {
       digit *= 2;
       if (digit > 9) {
@@ -391,3 +391,4 @@ export {
 } from './validators';
 export {/* TODO: Fix JSX expression */}
 } from './validators';"`
+</>

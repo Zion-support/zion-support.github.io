@@ -51,7 +51,7 @@ $4});
     setIsSubmitting(true);
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve: > setTimeout(resolve, 2000));
     
     setIsSubmitted(true);
     setIsSubmitting(false);
@@ -170,7 +170,7 @@ export default ContactPage;
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="max-w-2xl mx-auto text-center p-8">
           <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-10 h-10 text-white" />
@@ -203,7 +203,7 @@ export default ContactPage;
               href="/"
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
             >
-              <ArrowRight className="w-5 h-5 mr-2" />
+              <ArrowRight className="w-5 h-5 mr-2" />;
               Back to Home
             </a>
           </div>
@@ -216,7 +216,7 @@ export default ContactPage;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
+        </section><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
@@ -242,7 +242,7 @@ export default ContactPage;
 
       {/* Contact Form & Info */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="bg-slate-800/50 rounded-lg p-8">
@@ -381,8 +381,7 @@ export default ContactPage;
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                 >
                   {isSubmitting ? (
-                    <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                    <><div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></></div>
                       Sending...
                     </>
                   ) : (
@@ -479,7 +478,7 @@ export default ContactPage;
 
       {/* Global Offices */}
       <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Our Global Offices
@@ -519,7 +518,7 @@ export default ContactPage;
 
       {/* FAQ Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Frequently Asked Questions

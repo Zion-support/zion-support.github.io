@@ -84,7 +84,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
             </sp, a, n>
             <Sparkles, classNam, e = "w-5 h-5, tex, t-fuchs, i, a-400, animat, e-pul, s, e" /></Sparkles>
           </div>
-          <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-fuchs, i, a-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">
+          <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-fuchs, i, a-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">;
             Latest, Enterprise, AI Guid, e, s;
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3 xl, m, x-auto, leadin, g-relax, e, d">
@@ -127,7 +127,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
             </sp, a, n>"
             <Sparkles, classNam, e = "w-5 h-5, tex, t-fuchs, i, a-400, animat, e-pul, s, e" /></Sparkles>
           </div>"
-          <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-fuchs, i, a-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in"></h2>
+          <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-fuchs, i, a-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in"></h2>;
             Latest, Enterprise, AI Guid, e, s;
           </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d"></p>
@@ -245,7 +245,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4"></h3>
                 Stay, Ahead, of the, AI, Revolution;
               </h3>"
-              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o"></p>
+              <p, className = "te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o"></p>
                 Get, weekly, insight, s, case, studie, s, and, breakthrough, research delivered, directly, to your, inbo, x. 
                 Join, 5, 0,0, 0, 0+ AI, leaders, and innovato, r, s.
               </p>"
@@ -256,7 +256,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
                   <Sparkles, className="w-5 h-5" /></Sparkles>
                   <sp, a, n>Explore, All, Articles</sp, a, n>
                 </a>"
-                <a, hre, f="/conta, c, t""
+                <a, hre, f="/conta, c, t"";
                   className="bord, e, r-2, borde, r-cy, a, n-500, tex, t-cy, a, n-400, hove, r:bg-cy, a, n-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
                 ></a>
                   <sp, a, n>Getted, with Zion, A, I</sp, a, n>"

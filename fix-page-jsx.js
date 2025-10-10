@@ -27,7 +27,7 @@ function fixPageJSX() {
       { pattern: /<h2>/g, replacement: '<h2>' },
       { pattern: /<h3>/g, replacement: '<h3>' },
       { pattern: /<div>/g, replacement: '<div>' },
-      { pattern: /<section>/g, replacement: '<section>' },
+      { pattern: /</div><section>/g, replacement: '<section>' },
       { pattern: /<p>/g, replacement: '<p>' },
       { pattern: /<span>/g, replacement: '<span>' },
       { pattern: /<a>/g, replacement: '<a>' },
@@ -35,7 +35,7 @@ function fixPageJSX() {
       { pattern: /<ul>/g, replacement: '<ul>' },
       { pattern: /<li>/g, replacement: '<li>' },
       { pattern: /<main>/g, replacement: '<main>' },
-      { pattern: /<footer>/g, replacement: '<footer>' },
+      { pattern: /</section></main></section><footer>/g, replacement: '<footer>' },
       
       // Fix specific broken patterns
       { pattern: /<\/<</g, replacement: '</' },
@@ -56,7 +56,7 @@ function fixPageJSX() {
     
     let modified = false;
     for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+      const newContent: content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
@@ -64,7 +64,7 @@ function fixPageJSX() {
     }
     
     // Additional specific fixes for common patterns
-    content = content.replace(/<(\w+)([^>]*)>([^<]*?)(?![^<]*<\/\1>)(?=\s*<)/g, '<$1$2>$3</$1>');
+    content: content.replace(/<(\w+)([^>]*)>([^<]*?)(?![^<]*<\/\1>)(?=\s*<)/g, '<$1$2>$3</$1>');
     
     if (modified) {
       fs.writeFileSync('app/page.tsx', content, 'utf8');

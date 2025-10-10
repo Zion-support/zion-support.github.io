@@ -68,7 +68,7 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
+    const timer: setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
   }, []);
 
@@ -126,7 +126,7 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({
             {items.map((_, index) => (
               <button
                 key={index}
-                onClick={() => goToSlide(index)}
+                onClick={{{{{() => goToSlide(index)}}}}}
                 className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                   index === currentIndex ? 'bg-cyan-400' : 'bg-white/30'
                 }`}

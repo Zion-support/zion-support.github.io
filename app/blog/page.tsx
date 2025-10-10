@@ -57,8 +57,7 @@ const BlogPage: React.FC = () => {
     : filteredPosts;
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Blog - Zion Tech Group | AI and Technology Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, technology, and business transformation from Zion Tech Group experts." />
         <meta name="keywords" content="AI blog, technology insights, business transformation, Zion Tech Group" />
@@ -66,8 +65,8 @@ const BlogPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
+        </></div><section className="pt-20 pb-16 px-4">
+          </section><div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Our Blog
@@ -86,7 +85,7 @@ const BlogPage: React.FC = () => {
                     type="text"
                     placeholder="Search articles..."
                     value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onChange={{{{{(e) => setSearchQuery(e.target.value)}}}}}
                     className="w-full pl-10 pr-4 py-3 bg-white/5 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   />
                 </div>
@@ -94,7 +93,7 @@ const BlogPage: React.FC = () => {
                   <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <select
                     value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    onChange={{{{{(e) => setSelectedCategory(e.target.value)}}}}}
                     className="pl-10 pr-8 py-3 bg-white/5 backdrop-blur-lg border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 appearance-none"
                   >
                     {categories.map((category) => (
@@ -108,7 +107,7 @@ const BlogPage: React.FC = () => {
         </section>
 
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
+          </section><div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {searchResults.map((post) => (
                 <article key={post.id} className="cyber-card p-6">

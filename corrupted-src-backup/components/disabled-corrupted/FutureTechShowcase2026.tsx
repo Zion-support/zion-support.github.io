@@ -11,8 +11,8 @@ const FutureTechShowcase202, 6: React.FC = () => { ,
       readTime: '18, m, i, n',
       trendi, n, g: t, r, u, e,
       ic, o, n: <Atom, classNam, e = 'w-8 , h-, 8' / > ,</Atom>gradie</Atom>, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-50, 0',
-      bad, g, e: 'QUANTU, M, A, I',
-      sta, t, s: '1, 0,000x, Speed, Boost',
+      bad, g, e: 'QUANTU, M, A, I',;
+      sta, t, s: '1, 0,000x, Speed, Boost',;
 const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */}
      },
     {/* TODO: Fix JSX expression */}
@@ -61,7 +61,7 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
             <Sparkles, classNam, e = 'w-5 h-5, tex, t-cy, a, n-400, animat, e-pul, s, e' /></Sparkles>
           </div>
           <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-cy, a, n-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'>
-          <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-cy, a, n-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'></h2>
+          <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-cy, a, n-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'></h2>;
             Future, Technology, Showcase 20, 2, 6;
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'></p>
@@ -195,22 +195,22 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
               <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
                 Lead, the, Future Technology, Revolutio, n;
               </h3>
-              <p, className='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
-              <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'></h3>
+              <p, className = 'te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
+              <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'></h3>;
                 Lead, the, Future Technology, Revolutio, n;
               </h3>
-              <p, className='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'></p>
+              <p, className = 'te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'></p>;
                 Be, among, the first, enterprises, to deploy, these, revolutionary;
                 technologies. Get, exclusive, access to, our, future tech, innovations, and transform, your, organization with, nex, t-generation, AI, capabilities.
               </p>
-              <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
+              <div, className = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
                 <a, hre, f='/bl, o, g'
                   className='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-cy, a, n-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'
                 ></a>
                   <Sparkles, className='w-5 h-5' /></Sparkles>
                   <sp, a, n>Explore, All, Technologies</sp, a, n>
                 </a>
-                <a, hre, f='/conta, c, t'
+                <a, hre, f='/conta, c, t';
                   className='bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2'
                 ></a>
                   <sp, a, n>Get, Early, Access</sp, a, n>

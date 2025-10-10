@@ -46,12 +46,11 @@ const EnhancedAccessibility: React.FC = () => {
   };
 
   return (
-    <>
-      {children}
+    <>{children}
       
       {/* Accessibility Settings Button */}
       <button
-        onClick={() => setIsVisible(true)}
+        onClick={{{{{() => setIsVisible(true)}}}}}
         className="fixed bottom-4 right-4 bg-cyan-600 text-white p-3 rounded-full shadow-lg hover:bg-cyan-700 transition-colors z-50"
         aria-label="Open accessibility settings"
       >
@@ -64,17 +63,17 @@ const EnhancedAccessibility: React.FC = () => {
       {isVisible && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-          onClick={() => setIsVisible(false)}
+          onClick={{{{{() => setIsVisible(false)}}}}}
         >
           <div
             className="bg-white rounded-lg p-6 max-w-md w-full mx-4"
-            onClick={(e) => e.stopPropagation()}
+            onClick={{{{{(e) => e.stopPropagation()}}}}}
             onKeyDown={handleKeyDown}
           >
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-semibold">Accessibility Settings</h2>
               <button
-                onClick={() => setIsVisible(false)}
+                onClick={{{{{() => setIsVisible(false)}}}}}
                 className="text-gray-500 hover:text-gray-700"
                 aria-label="Close accessibility settings"
               >
@@ -82,7 +81,7 @@ const EnhancedAccessibility: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
-            </div>
+            </></div>
 
             <div className="space-y-6">
               <div>
@@ -93,7 +92,7 @@ const EnhancedAccessibility: React.FC = () => {
                   {(['small', 'medium', 'large'] as const).map((size) => (
                     <button
                       key={size}
-                      onClick={() => updateSetting('fontSize', size)}
+                      onClick={{{{{() => updateSetting('fontSize', size)}}}}}
                       className={`px-3 py-1 rounded text-sm ${
                         settings.fontSize === size
                           ? 'bg-blue-600 text-white'
@@ -111,7 +110,7 @@ const EnhancedAccessibility: React.FC = () => {
                   <input
                     type="checkbox"
                     checked={settings.highContrast}
-                    onChange={(e) => updateSetting('highContrast', e.target.checked)}
+                    onChange={{{{{(e) => updateSetting('highContrast', e.target.checked)}}}}}
                     className="mr-2"
                   />
                   <span className="text-sm font-medium text-gray-700">High Contrast Mode</span>
@@ -123,7 +122,7 @@ const EnhancedAccessibility: React.FC = () => {
                   <input
                     type="checkbox"
                     checked={settings.reducedMotion}
-                    onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
+                    onChange={{{{{(e) => updateSetting('reducedMotion', e.target.checked)}}}}}
                     className="mr-2"
                   />
                   <span className="text-sm font-medium text-gray-700">Reduce Motion</span>
@@ -135,7 +134,7 @@ const EnhancedAccessibility: React.FC = () => {
                   <input
                     type="checkbox"
                     checked={settings.screenReader}
-                    onChange={(e) => updateSetting('screenReader', e.target.checked)}
+                    onChange={{{{{(e) => updateSetting('screenReader', e.target.checked)}}}}}
                     className="mr-2"
                   />
                   <span className="text-sm font-medium text-gray-700">Screen Reader Optimized</span>
@@ -147,7 +146,7 @@ const EnhancedAccessibility: React.FC = () => {
                   <input
                     type="checkbox"
                     checked={settings.keyboardNavigation}
-                    onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)}
+                    onChange={{{{{(e) => updateSetting('keyboardNavigation', e.target.checked)}}}}}
                     className="mr-2"
                   />
                   <span className="text-sm font-medium text-gray-700">Enhanced Keyboard Navigation</span>
@@ -167,8 +166,8 @@ const EnhancedAccessibility: React.FC = () => {
                   });
                   localStorage.removeItem('accessibility-settings');
                 }}
-                className="w-full bg-gray-200 text-gray-700 py-2 px-4 rounded hover:bg-gray-300 transition-colors"
-              >
+                className = "w-full bg-gray-200 text-gray-700 py-2 px-4 rounded hover:bg-gray-300 transition-colors"
+              >;
                 Reset to Defaults
               </button>
             </div>

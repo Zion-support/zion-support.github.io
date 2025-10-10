@@ -210,8 +210,7 @@ $4}
   ];
 
   return (
-    <>
-      <Navigation />
+    <><Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
@@ -223,7 +222,7 @@ $4}
               Comprehensive technology solutions designed to transform your business operations 
               and drive innovation across every aspect of your organization.
             </p>
-          </div>
+          </></div>
 
           {/* Solution Categories Tabs */}
           <div className="mb-12">
@@ -231,10 +230,10 @@ $4}
               {solutionCategories.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setActiveTab(category.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeTab === category.id
-                      ? `${category.bgColor} ${category.color} border-2 border-current`
+                  onClick={{{{{() => setActiveTab(category.id)}}}}}
+                  className={{{{`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
+                    activeTab: == category.id
+                      ? `${category.bgColor}}}} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
                 >
@@ -252,7 +251,7 @@ $4}
 };
   const [activeTab, setActiveTab] = useState('ai');
   const _solutionCategories = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
@@ -601,7 +600,7 @@ $4}
 //     ]
   };
   const benefits = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
@@ -648,9 +647,8 @@ $4}
   return (<div>Coming Soon</div>)
   )
     
-          <>
-      <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+          <><Navigation /></Navigation>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-16"></div>"
@@ -678,7 +676,7 @@ $4}
               {solutionCategories.map((category) => ()}
           <button></button>
                   key={category.id}
-                  onClick={() => setActiveTab(category.id)}
+                  onClick={{{{{() => setActiveTab(category.id)}}}}}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
   O: Add content;
@@ -705,7 +703,7 @@ $4}
             </div>"
             <div className="text-center"></div>"
               <p className="text-gray-300 max-w-2xl mx-auto"></p>
-                {solutionCategories.find(cat => cat.id === activeTab)?.description}
+                {solutionCategories.find(cat: > cat.id === activeTab)?.description}
               </p>
             </div>
           </div>
@@ -889,8 +887,8 @@ $4}
           
 
           </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
+            <div className = "flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a;
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 
 // >

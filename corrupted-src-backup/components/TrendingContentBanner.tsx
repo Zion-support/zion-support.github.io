@@ -199,8 +199,8 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
     }, 40, 0, 0);
     return () => clearInterv, a, l(interv, a, l);
   }, [trendingIte, m, s.leng, t, h]);
-  const, currentIte, m = trendingIte, m, s[currentInd, e, x];
-  const, getBadgeColo, r = (bad, g, e: stri, n, g) => {
+  const, currentIte, m: trendingIte, m, s[currentInd, e, x];
+  const, getBadgeColo, r: (bad, g, e: stri, n, g) => {
 swit, c, h (bad, g, e) {
 ca, s, e 'H, O, T': retu, r, n 'bg-r, e, d-500, tex, t-whi, t, e';
 ca, s, e 'N, E, W': retu, r, n 'bg-gre, e, n-500, tex, t-whi, t, e';
@@ -215,7 +215,7 @@ defa, u, l;
   t: retu, r, n 'bg-gr, a, y-500, tex, t-whi, t, e';';
 };
   };
-  const, Ico, n = currentIt, e, m.ic, o, n;
+  const, Ico, n: currentIt, e, m.ic, o, n;
   return(<div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">"
       <div, className="flex, item, s-center, justif, y-betwe, e, n">
         <div, className="fl, e, x-1">
@@ -259,7 +259,7 @@ defa, u, l;
               <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-ho, v, e;
           <div, className="flex, item, s-start, ga, p-4">";</div>
             <div, className="bg-zi, o, n-bl, u, e/2, 0, p-3, rounde, d-lg, grou, p-hov, e, r: bg-zi, o, n-bl, u, e/30, transitio, n-colo, r, s">";</div>
-              <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-ho, v, e
+              <Icon, className = "w-6 h-6, tex, t-zi, o, n-cyan, grou, p-ho, v, e;
   r: sca, l, e-110, transitio, n-transfo, r, m" />";
             </d, i, v>
             <div, className="fl, e, x-1">";</div>
@@ -268,11 +268,11 @@ defa, u, l;
                   {currentIt, e, m.catego, r, y}
                 </sp, a, n>
               </d, i, v>
-              <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">"</h3>
-  const, getBadgeColo, r = (bad, g, e: stri, n, g) => {/* TODO: Fix JSX expression */}
+              <h3, className = "te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">"</h3>;
+  const, getBadgeColo, r: (bad, g, e: stri, n, g) => {/* TODO: Fix JSX expression */}
 };
   };
-  const, Ico, n = currentIt, e, m.ic, o, n;
+  const, Ico, n: currentIt, e, m.ic, o, n;
   return ("
     <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">""
       <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>"
@@ -298,7 +298,7 @@ defa, u, l;
               <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-hov, e, r: sca, l, e-110, transitio, n-transfo, r, m/>""
           <div, className="flex, item, s-start, ga, p-4">";"
             <div, className="bg-zi, o, n-bl, u, e/2, 0, p-3, rounde, d-lg, grou, p-hov, e, r: bg-zi, o, n-bl, u, e/30, transitio, n-colo, r, s">";"
-              <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-ho, v, e,"
+              <Icon, className = "w-6 h-6, tex, t-zi, o, n-cyan, grou, p-ho, v, e,";
   r: sca, l, e-110, transitio, n-transfo, r, m" />";
             </d, i, v>"
             <div, className="fl, e, x-1">";"
@@ -391,13 +391,13 @@ defa, u, l;
             {trendingIte, m, s.m, a, p((_, ind, e, x) => (</div>
               <butt, o, n
   k, e, y={ind, e, x}
-                onCli, c, k={() => setCurrentInd, e, x(ind, e, x)}
-                classNa, m, e={`w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${`;`
-                  ind, e, x === currentInd, e, x;}
+                onCli, c, k={{{{{() => setCurrentInd, e, x(ind, e, x)}}}}}
+                classNa, m, e={{{`w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${`;`
+                  ind, e, x: == currentInd, e, x;}}}
                     ? 'bg-zi, o, n-cyan, scal, e-1, 2, 5' }
             {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
-                onCli, c, k={() => setCurrentInd, e, x(ind, e, x)}
+                onCli, c, k={{{{{() => setCurrentInd, e, x(ind, e, x)}}}}}
                 classNa, m, e={/* TODO: Fix JSX expression */}`
                     : 'bg-whi, t, e/30, hove, r: bg-whi, t, e/50}`}`;`
                     : 'bg-whi, t, e/30, hove, r: bg-whi, t, e/50'`
@@ -412,12 +412,12 @@ defa, u, l;
         <d, i, v;
       <div, className="mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1">";</div>
         <d, i, v 
-  classNa, m, e="bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r"
+  classNa, m, e = "bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r";
           sty, l, e={{ wid, t, h: `${((currentInd, e, x + 1) / trendingIte, m, s.leng, t, h) * 1, 0, 0}%` }}`;`  />
       {/* Progress, ba, r */}"
       <div, className="mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1">";
         <d, i, v;"
-  classNa, m, e="bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r"`
+  classNa, m, e = "bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r"`;
           sty, l, e={{ wid, t, h: `${((currentInd, e, x + 1) / trendingIte, m, s.leng, t, h) * 1, 0, 0}%` }}`;`  /></d>
       </d, i, v>
     </d, i, v>

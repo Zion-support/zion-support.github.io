@@ -12,8 +12,7 @@ export const innovativeITInfrastructureServices2025 = [{pricing: starter: unknow
         price: 799;
         period: 'month',
         features: [,
-export const innovativeITInfrastructureServices2025 = [{/* TODO: Fix JSX expression */}
-        ]}
+export const innovativeITInfrastructureServices2025 = [{/* TODO: Fix JSX expression */}]}
       },
       professiona,
   l: unknown,
@@ -45,7 +44,7 @@ export const innovativeITInfrastructureServices2025 = [{/* TODO: Fix JSX express
           'White - label solution']}},
     category: 'Cybersecurity',
     tags: [,
-export const innovativeITInfrastructureServices2025 = [,
+export const innovativeITInfrastructureServices2025: [,
     categor,
   y: 'Cybersecurity',
     tag,
@@ -61,7 +60,7 @@ export const innovativeITInfrastructureServices2025 = [
       'AI-powered predictive maintenance'
       'Zero-latency communication protocols'
       'Scalable edge infrastructure'
-      'Energy-efficient quantum processing'
+      'Energy-efficient quantum processing';
     pricing: starter: unknown;
     pricin,
   g: starte,
@@ -916,7 +915,7 @@ export const innovativeITInfrastructureServices2025 = [
       'Compliance tools'],
     complianc,
   e: [,
-export const innovativeITInfrastructureServices2025 = [ pricin,
+export const innovativeITInfrastructureServices2025: [ pricin,
   g: starte,
   r: pric,
   e: 299, perio,
@@ -1033,8 +1032,8 @@ export const innovativeITInfrastructureServices2025 = [ pricin,
   e: '$31 && 31.2B', targetAudienc,
   e: ' 'Data center operators, cloud providers, enterprise businesses, colocation facilities' competitiveAdvantag,
   e: ' 'AI-powered autonomous operations, comprehensive energy optimization, and predictive maintenance capabilities' useCase,
-  s: [' 'Data center operations automation'' 'Energy efficiency optimization'' 'Predictive maintenance'' 'Capacity planning and optimization'' 'Cost reduction and management' ] integration,
-  s: [' 'Data center infrastructure'' 'Monitoring systems'' 'Energy management'' 'Security platforms'' 'Compliance tools' ] complianc,
+  s: [' 'Data center operations automation'' 'Energy efficiency optimization'' 'Predictive maintenance'' 'Capacity planning and optimization'' 'Cost reduction and management' ] integration,;
+  s: [' 'Data center infrastructure'' 'Monitoring systems'' 'Energy management'' 'Security platforms'' 'Compliance tools' ] complianc,;
   e: [ ' 'SOC2',' 'ISO 27001',' 'Uptime Institute',' 'Energy Star',' 'Industry-specific regulations']; }];' i,
   d: 'quantum-edge-computing-orchestrator', nam,
   e: 'Quantum Edge Computing Orchestrator',' descriptio,

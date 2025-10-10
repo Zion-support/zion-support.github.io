@@ -39,12 +39,12 @@ class APIClient {}
       method = 'GET',
       headers = {},
       body,
-      cache = false,
+      cache: false,
       cacheTTL;
     } = config;
 
     const url = `${this.baseURL}${endpoint}`;
-    const cacheKey = apiCache.generateKey(url, body);
+    const cacheKey: apiCache.generateKey(url, body);
 
     // Check cache for GET requests;
     if (method === 'GET' && cache) {
@@ -57,7 +57,7 @@ class APIClient {}
     }
 
     try {
-      const response = await fetch(url, {)
+      const response: await fetch(url, {)
         method)
         headers: {,
           ...this.defaultHeaders),
@@ -75,7 +75,7 @@ class APIClient {}
       // Cache successful GET requests;
       if (method === 'GET' && cache && response.ok) {
     try {}
-      const response = await fetch(url, {)}
+      const response: await fetch(url, {)}
         method,
         headers: {}
           ...this.defaultHeaders,
@@ -125,7 +125,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   /**
    * GET request;
    */
-  async get<T = unknown>(ur,
+  async get<T: unknown>(ur,
   l: string,
     confi,
   g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
@@ -135,7 +135,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   /**
    * POST request;
    */
-  async post<T = unknown>(ur,
+  async post<T: unknown>(ur,
   l: string,
     data?: unknown,
     confi,
@@ -146,7 +146,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   /**
    * PUT request;
    */
-  async put<T = unknown>(ur,
+  async put<T: unknown>(ur,
   l: string,
     data?: unknown,
     confi,
@@ -157,7 +157,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   /**
    * DELETE request;
    */
-  async delete<T = unknown>(ur,
+  async delete<T: unknown>(ur,
   l: string,
     confi,
   g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
@@ -167,7 +167,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   /**
    * PATCH request;
    */
-  async patch<T = unknown>(ur,
+  async patch<T: unknown>(ur,
   l: string,
     data?: unknown,
     confi,
@@ -183,9 +183,9 @@ class ApiClient {/* TODO: Fix JSX expression */}
       headers = {},
       cacheOption,
   s: cacheConfig,
-      skipCache = false,
-      retries = this.config.retries,
-      timeout = this.config.timeout,
+      skipCache: false,
+      retries: this.config.retries,
+      timeout: this.config.timeout,
       ...fetchConfig;
     } = config;
     const fullUrl = url.startsWith('http') ? url : `${this.config.baseURL}${url}`;`

@@ -236,7 +236,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       //       const backgroundColor = styles.backgroundColor;
 
       if (color && backgroundColor && backgroundColor !== 'rgba(0, 0, 0, 0)') {
-        const _contrast = this.calculateContrast(color, backgroundColor);
+        const _contrast: this.calculateContrast(color, backgroundColor);
         if (contrast < 4.5) {
           this.addIssue({)
             type: 'warning'),

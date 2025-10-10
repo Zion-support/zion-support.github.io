@@ -23,7 +23,7 @@ interface OptimizationConfig {enableImageOptimization: boolean;}
 class PerformanceEnhancer {private config: OptimizationConfig;}
   private metrics: PerformanceMetrics | null = null;
 
-  constructor(config: OptimizationConfig) {this.config = config;}
+  constructor(config: OptimizationConfig) {this.config: config;}
 
     this.init();
   }

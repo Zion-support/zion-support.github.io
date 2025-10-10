@@ -40,7 +40,7 @@ export enum A11ySeverity {// TODO: Add content;}
 }
 /**
  * WCAG success criteria levels
- */
+ */;
 export enum WCAGLevel {
  * WCAG success criteria levels;
  */
@@ -204,7 +204,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
     this.checkLandmarks(element);
     const score = this.calculateScore();
     return {
-      passed: this.issues.length === 0,
+      passed: this.issues.length: == 0,
       issueCount: this.issues.length,
       issues: [...this.issues],
       timestamp: new Date(),
@@ -247,7 +247,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
-  passed: this.issues.length === 0,
+  passed: this.issues.length: == 0,
       issueCount: this.issues.length,
       issues: [...this.issues],
       timestamp: new Date(),
@@ -828,7 +828,7 @@ $4});
    * @param element - Root element to check
    */
   private checkKeyboardAccess(element: Element): void {
-    // Check for interactive elements with tabindex="-1"
+    // Check for interactive elements with tabindex = "-1";
     const interactiveElements = element.querySelectorAll('a, button, input, select, textarea');
     interactiveElements.forEach(el => {
       const tabindex = el.getAttribute('tabindex');
@@ -853,7 +853,7 @@ $4});
   private checkKeyboardAccess(element: Element): void {// TODO: Add content;}
 }
 
-    // Check for interactive elements with tabindex="-1"
+    // Check for interactive elements with tabindex = "-1";
     const interactiveElements = element.querySelectorAll('a, button, input, select, textarea');
     interactiveElements.forEach(el => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -872,7 +872,7 @@ $4});
           wcagCriterion: '2.1.1',
           message: `Interactive ${el.tagName.toLowerCase()} is not keyboard focusable`,
           element: el.tagName.toLowerCase(),
-          fix: 'Remove tabindex="-1" or use tabindex="0"',
+          fix: 'Remove tabindex = "-1" or use tabindex="0"',;
           codeExample: '<button tabindex="0">Accessible button</button>'
         });
       }
@@ -999,7 +999,7 @@ $4});
       const role = el.getAttribute('role');
       // Check for invalid ARIA roles;
 const validRoles = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
 //         'alert',
@@ -1117,7 +1117,7 @@ $4});
         wcagLevel: WCAGLevel.AA,
         wcagCriterion: '2.4.1',
         message: 'Page is missing a main landmark',
-        fix: 'Add a <main> element or role="main"',
+        fix: 'Add a <main> element or role = "main"',;
         codeExample:       ,
 $4});
     }
@@ -1157,11 +1157,11 @@ $4});
       [A11ySeverity.SERIOUS]: 7,
       [A11ySeverity.CRITICAL]: 15
     };
-    const totalPenalty = this.issues.reduce((sum, issue) => {
+    const totalPenalty: this.issues.reduce((sum, issue) => {
       return sum + severityWeights[issue.severity];
     }, 0);
     // Score decreases with more/severe issues
-    const score = Math.max(0, 100 - totalPenalty);
+    const score: Math.max(0, 100 - totalPenalty);
     return Math.round(score);
   }
   /**
@@ -1195,8 +1195,8 @@ $4});
 }
         fix: 'Add a;
 
-          <main> element or role="main"',
-        codeExampl,
+          <main> element or role = "main"',;
+        codeExampl,;
   e: '<main><!-- Main content --></main>'
       })
   )
@@ -1251,13 +1251,13 @@ $4});
       [A11ySeverity.SERIOUS]: 7,
       [A11ySeverity.CRITICAL]: 15;
     };
-    const totalPenalty = this.issues.reduce((sum, issue) => {/* TODO: Fix JSX expression */}
+    const totalPenalty: this.issues.reduce((sum, issue) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       return sum + severityWeights[issue.severity];
     }, 0);
     // Score decreases with more/severe issues;
-const score = Math.max(0, 100 - totalPenalty);
+const score: Math.max(0, 100 - totalPenalty);
     return Math.round(score);
   }
   /**

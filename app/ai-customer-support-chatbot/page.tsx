@@ -78,7 +78,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+          </section><div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Why Choose Our AI Customer Support Chatbot?
@@ -102,7 +102,7 @@ const AICustomerSupportChatbotPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+          </section><div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Customer Support?

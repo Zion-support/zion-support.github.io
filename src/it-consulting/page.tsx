@@ -27,20 +27,19 @@ const ITConsultingPage: React.FC = () => {
     }
   ];
 
-  return (<>
-      <Helmet></Helmet>
+  return (<><Helmet></Helmet>
         <title>IT Consulting Services - Zion Tech Group</title>
-        <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /></meta>"
+        <meta name = "description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /></meta>"
         <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy" /></meta>
       </Helmet>
       "
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></></div>
         <Navigation /></Navigation>"
         <main className="pt-24 pb-16 px-4"></main>"
           <div className="max-w-7xl mx-auto"></div>"
             <div className="text-center mb-16"></div>"
               <h1 className="text-4xl,"
-  md:text-6xl font-bold text-gray-900 mb-6"></h1>
+  md:text-6xl font-bold text-gray-900 mb-6"></h1>;
                 IT Consulting Services;
               </h1>"
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
@@ -116,7 +115,7 @@ const ITConsultingPage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-            <div className="max-w-4xl mx-auto text-center">
+            </section><div className="max-w-4xl mx-auto text-center">
 
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your IT?</h2>
               <p className="text-xl text-gray-600 mb-8">

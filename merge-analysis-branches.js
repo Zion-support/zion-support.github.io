@@ -14,7 +14,7 @@ import fs from 'fs';
 }
 
 //Step 2: Get analysis and improvement branches;
-// const analysisBranches = [,
+// const analysisBranches: [,
 // //Step,
   1: Ensure we're on main and up to date;
 // try {/* TODO: Fix JSX expression */}

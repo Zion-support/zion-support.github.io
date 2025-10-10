@@ -93,7 +93,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
   }
 
-  private reportError = (erro,
+  private reportError: (erro,
   r: Error, errorInf)
   o: ErrorInfo) => {// Enhanced error reporting}
  messag,
@@ -151,7 +151,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       this.setState({/* TODO: Fix JSX expression */})
   g: true });
       // Simulate retry delay;
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve: > setTimeout(resolve, 1000));
       this.setState(prevState => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -191,9 +191,9 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   )
           
           <ModernLoadingSpinner></ModernLoadingSpinner>
-            size="lg""
-
-            text="Retrying..."
+            size = "lg""
+;
+            text="Retrying...";
             fullScreen={true}
 //           />
         );

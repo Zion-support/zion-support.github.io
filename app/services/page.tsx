@@ -309,8 +309,7 @@ const ServicesPage: React.FC = () => {
   });
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Services - Zion Tech Group | AI and IT Solutions</title>
         <meta name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business. From AI solutions to cloud services and data analytics." />
         <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group" />
@@ -318,8 +317,8 @@ const ServicesPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        </></div><section className="relative py-20 px-4 overflow-hidden">
+          </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -333,7 +332,7 @@ const ServicesPage: React.FC = () => {
 
         {/* Search and Filter Section */}
         <section className="py-8 px-4">
-          <div className="max-w-6xl mx-auto">
+          </section><div className="max-w-6xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
               <div className="flex flex-col md:flex-row gap-4 mb-6">
                 <div className="flex-1">
@@ -343,7 +342,7 @@ const ServicesPage: React.FC = () => {
                       type="text"
                       placeholder="Search services..."
                       value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
+                      onChange={{{{{(e) => setSearchTerm(e.target.value)}}}}}
                       className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
                     />
                   </div>
@@ -353,7 +352,7 @@ const ServicesPage: React.FC = () => {
                     <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <select
                       value={selectedCategory}
-                      onChange={(e) => setSelectedCategory(e.target.value)}
+                      onChange={{{{{(e) => setSelectedCategory(e.target.value)}}}}}
                       className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors appearance-none"
                     >
                       {categories.map((category) => (
@@ -370,7 +369,7 @@ const ServicesPage: React.FC = () => {
                 {categories.slice(1).map((category) => (
                   <button
                     key={category}
-                    onClick={() => setSelectedCategory(category)}
+                    onClick={{{{{() => setSelectedCategory(category)}}}}}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                       selectedCategory === category
                         ? 'bg-cyan-500 text-white'
@@ -387,7 +386,7 @@ const ServicesPage: React.FC = () => {
 
         {/* Services Grid */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
+          </section><div className="max-w-7xl mx-auto">
             <div className="flex justify-between items-center mb-8">
               <h2 className="text-3xl font-bold text-white">
                 {selectedCategory === 'All' ? 'All Services' : `${selectedCategory}`}
@@ -461,7 +460,7 @@ const ServicesPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          </section><div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>

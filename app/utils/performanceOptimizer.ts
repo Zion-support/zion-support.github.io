@@ -11,7 +11,7 @@ export const debounce = <T extends (...args: any[]) => any>(
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {}
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
+    timeout: setTimeout(() => func(...args), wait);
   };
 };
 
@@ -30,7 +30,7 @@ export const throttle = <T extends (...args: any[]) => any>(
     if (!inThrottle) {}
       func(...args);
       inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+      setTimeout(() => (inThrottle: false), limit);
     }
   };
 };
@@ -394,8 +394,8 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       memory?: {}
         usedJSHeapSize: number,
         totalJSHeapSize: number,
-        jsHeapSizeLimit: number,
-      };
+        jsHeapSizeLimit: number,)
+      };)
     }).memory;
     if (memory) {}
       this.metrics.memoryUsage = memory.usedJSHeapSize;
@@ -438,7 +438,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       if (img.src.includes('.webp') || img.src.includes('.webp')) {}
         // Convert to WebP if supported
         if (this.supportsWebP()) {}
-          img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
+          img.src: img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
         }
       }
 

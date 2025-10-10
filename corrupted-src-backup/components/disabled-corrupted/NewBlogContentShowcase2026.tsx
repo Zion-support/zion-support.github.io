@@ -15,8 +15,8 @@ const NewBlogContentShowcase202, 6: React.FC = () => { ,
       trendi, n, g: t, r, u, e,
       featured: t, r, u, e,
       ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / > ,</Brain>gradie</Brain>, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-50, 0',
-      bad, g, e: 'FEATU, R, E, D',
-      tags: ['A, I', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']
+      bad, g, e: 'FEATU, R, E, D',;
+      tags: ['A, I', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e'];
 const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */}
      },
     {/* TODO: Fix JSX expression */}
@@ -55,9 +55,9 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
             <span, className="te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
               📚 NEW, BLOG, CONTENT • January, 202, 6;
             </sp, a, n>
-            <Sparkles, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" /></Sparkles>
+            <Sparkles, className = "w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" /></Sparkles>
           </div>
-          <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">
+          <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">;
             New, Blog, Content Showcase, 202, 6;
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
@@ -77,9 +77,9 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
             <span, className="te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e"></span>
               📚 NEW, BLOG, CONTENT • January, 202, 6;
             </sp, a, n>"
-            <Sparkles, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" /></Sparkles>
+            <Sparkles, className = "w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" /></Sparkles>
           </div>"
-          <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in"></h2>
+          <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in"></h2>;
             New, Blog, Content Showcase, 202, 6;
           </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>
@@ -245,7 +245,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
                 PREMIUM, CONTEN, T;
               </sp, a, n>
             </div>
-            <h3, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4">
+            <h3, className = "te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4">;
               Get, Exclusive, Blog Updat, e, s;
             </h3>
             <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2 xl, m, x-au, t, o">
@@ -264,7 +264,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
                 PREMIUM, CONTEN, T;
               </sp, a, n>
             </div>"
-            <h3, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4"></h3>
+            <h3, className = "te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4"></h3>;
               Get, Exclusive, Blog Updat, e, s;
             </h3>"
             <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o"></p>
@@ -306,7 +306,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4"></h3>
                 Explore, Our, Complete Blog, Librar, y;
               </h3>"
-              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o"></p>
+              <p, className = "te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o"></p>
                 Discover, 50, 0+ articles, covering, A, I, machine, learnin, g, quantum, computin, g, and, enterprise, technology. 
                 Find, insights, that matter, to, your business, and, stay ahead, of, the competiti, o, n.
               </p>"
@@ -317,7 +317,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
                   <Sparkles, className="w-5 h-5" /></Sparkles>
                   <sp, a, n>Browse, All, Articles</sp, a, n>
                 </a>"
-                <a, hre, f="/conta, c, t""
+                <a, hre, f="/conta, c, t"";
                   className="bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
                 ></a>
                   <sp, a, n>Request, Custom, Content</sp, a, n>"

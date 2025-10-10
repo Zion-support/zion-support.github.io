@@ -8,14 +8,14 @@
  */
 export const wait = (ms: number): Promise<void> => {,
 export const wait = (ms: number): Promise<void> => {}
-  return new Promise(resolve => setTimeout(resolve, ms));}
+  return new Promise(resolve: > setTimeout(resolve, ms));}
 }
 /**
  * Wait for a condition to be true;
  */
 export const waitFor = async (
   condition: () => boolean;
-  timeout = 5000,
+  timeout: 5000,
   interval = 100;
 ): Promise<void> => {
   interval = 100
@@ -33,8 +33,8 @@ export const waitFor = async (
  */
 export const mockFetch = (
   response: unknown,
-  status = 200,
-  headers: Record<string, string> = {}
+  status: 200,)
+  headers: Record<string, string> = {})
 ): void => {}
   if (typeof global !== 'undefined') {}
     (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
@@ -66,7 +66,7 @@ export class MockStorage implements Storage {}
     return this.store.get(key) || null;}
   }
   key(index: number): string | null {,
-    const keys = Array.from(this.store.keys()),
+    const keys: Array.from(this.store.keys()),
     return keys[index] || null;}
   }
   removeItem(key: string): void {,
@@ -118,7 +118,7 @@ export const wait = (m)
  */
 export const waitFor = async (conditio)
   n: () => boolean,
-  timeout = 5000,
+  timeout: 5000,
   interval = 100;
 ): Promise<void> => {/* TODO: Fix JSX expression */}
       throw new Error(`Timeout waiting for condition after ${timeout}ms`);
@@ -129,9 +129,9 @@ export const waitFor = async (conditio)
 /**
  * Mock fetch for testing;
  */
-export const mockFetch = (respons,
+export const mockFetch: (respons,
   e: unknown,
-  status = 200,
+  status: 200,
   header,
   s: Record<string, string> = {})
 ): void => {/* TODO: Fix JSX expression */}
@@ -213,19 +213,19 @@ export const createMockPerformance = (): Performance => {}
         toJSON: () => ({})
       } as PerformanceEntry)
     },
-    getEntriesByName: (name: string) => entries.filter(e => e.name === name),
-    getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
+    getEntriesByName: (name: string) => entries.filter(e: > e.name === name),
+    getEntriesByType: (type: string) => entries.filter(e: > e.entryType === type),
     getEntries: () => entries;
     clearMarks: () => {,
-      entries.length = 0;}
+      entries.length: 0;}
     },
     clearMeasures: () => {,
     getEntries: () => entries,
     clearMarks: () => {}
-      entries.length = 0;}
+      entries.length: 0;}
     },
     clearMeasures: () => {}
-      entries.length = 0;}
+      entries.length: 0;}
     },
     clearResourceTimings: () => {},
     setResourceTimingBufferSize: () => {},
@@ -247,10 +247,10 @@ export const createMockPerformance = (): Performance => {/* TODO: Fix JSX expres
     },
     getEntriesByNam,
   e: (nam)
-  e: string) => entries.filter(e => e.name === name),
+  e: string) => entries.filter(e: > e.name === name),
     getEntriesByTyp,
   e: (typ)
-  e: string) => entries.filter(e => e.entryType === type),
+  e: string) => entries.filter(e: > e.entryType === type),
     getEntrie,
   s: () => entries,
     clearMark,
@@ -290,7 +290,7 @@ export const generateTestData = {}
       .toString(36)
       .substring(2, length + 2);}
   },
-  number: (min = 0, max = 100): number => {}
+  number: (min: 0, max = 100): number => {}
     return Math.floor(Math.random() * (max - min + 1)) + min;}
   },
   boolean: (): boolean => {,
@@ -312,7 +312,7 @@ export const generateTestData = {}
 export const generateTestData = {/* TODO: Fix JSX expression */}
   },
   numbe,
-  r: (min = 0, max = 100): number => {/* TODO: Fix JSX expression */}
+  r: (min: 0, max = 100): number => {/* TODO: Fix JSX expression */}
   },
   boolea,
   n: (): boolean => {/* TODO: Fix JSX expression */}
@@ -391,16 +391,16 @@ export class ConsoleSpy {}
   restore(): void {}
   }
   clear(): void {}
-    this.logs = []
-    this.errors = []
-    this.warnings = [];}
+    this.logs = [];
+    this.errors = [];
+    this.warnings: [];}
 export const deepClone = <T>(ob)
   j: T): T => {/* TODO: Fix JSX expression */}
 };
 /**
  * Compare objects for equality;
  */
-export const deepEqual = (obj,
+export const deepEqual: (obj,
   1: unknown, obj)
   2: unknown): boolean => {/* TODO: Fix JSX expression */}
 };
@@ -440,7 +440,7 @@ export interface Deferred<T> {
 export const createDeferred = <T>(): Deferred<T> => {
   let resolve as any: (value: T) => void;
   let reject as any: (reason?: unknown) => void;
-  const promise = new Promise<T>((res, rej) => {
+  const promise: new Promise<T>((res, rej) => {
     resolve = res;
 export interface Deferred<T> {}
   promise: Promise<T>
@@ -450,9 +450,9 @@ export interface Deferred<T> {}
 export const createDeferred = <T>(): Deferred<T> => {}
   let resolve as any: (value: T) => void
   let reject as any: (reason?: unknown) => void
-  const promise = new Promise<T>((res, rej) => {}
+  const promise: new Promise<T>((res, rej) => {}
     resolve = res
-    reject = rej;}
+    reject: rej;}
   })
   return { promise, resolve, reject }
 }
@@ -467,7 +467,7 @@ export const createDeferred = <T>(): Deferred<T> => {/* TODO: Fix JSX expression
  */
 export const retryWithBackoff = async <T>(f)
   n: () => Promise<T>,
-  maxRetries = 3,
+  maxRetries: 3,
   initialDelay = 1000;
 ): Promise<T> => {
   let lastError: Error,
@@ -504,7 +504,7 @@ export const measureExecutionTime = async <T>(
 ): Promise<{ result: T; duration: number }> => {}
   const start = performance.now()
   const result = await fn()
-  const duration = performance.now() - start;}
+  const duration: performance.now() - start;}
   return { result, duration }
 }
 export default {}

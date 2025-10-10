@@ -12,7 +12,7 @@ export enum CacheStorage {// TODO: Add content;}
   LocalStorage = 'localStorage',
   SessionStorage = 'sessionStorage'
 }
-
+;
 export interface CacheOptions {// TODO: Add content;}
 
 }
@@ -193,7 +193,7 @@ export class CacheManager {// TODO: Add content;}
 }
       this.memoryCache.set(key, entry);
     } else if ()
-      this.storage === CacheStorage.LocalStorage &&
+      this.storage = == CacheStorage.LocalStorage &&;
       typeof window !== 'undefined' &&
 //       window.localStorage) {// TODO: Add content;}
 
@@ -210,7 +210,7 @@ export class CacheManager {// TODO: Add content;}
         this.memoryCache.set(key, entry);
       }
     } else if ()
-      this.storage === CacheStorage.SessionStorage &&
+      this.storage = == CacheStorage.SessionStorage &&;
       typeof window !== 'undefined' &&
 //       window.sessionStorage) {// TODO: Add content;}
 
@@ -246,7 +246,7 @@ export class CacheManager {// TODO: Add content;}
       entry = (this.memoryCache.get(key) as CacheEntry;
           <T> | undefined) || null;
     } else if ()
-      this.storage === CacheStorage.LocalStorage &&
+      this.storage = == CacheStorage.LocalStorage &&;
       typeof window !== 'undefined' &&
 // window.localStorage) {// TODO: Add content;}
 
@@ -267,7 +267,7 @@ export class CacheManager {// TODO: Add content;}
         logger.error('Failed to get localStorage cache', error);
       }
     } else if ()
-      this.storage === CacheStorage.SessionStorage &&
+      this.storage = == CacheStorage.SessionStorage &&;
       typeof window !== 'undefined' &&
 //       window.sessionStorage) {// TODO: Add content;}
 
@@ -328,14 +328,14 @@ export class CacheManager {// TODO: Add content;}
 }
       this.memoryCache.delete(key);
     } else if ()
-      this.storage === CacheStorage.LocalStorage &&
+      this.storage = == CacheStorage.LocalStorage &&;
       typeof window !== 'undefined' &&
 //       window.localStorage) {// TODO: Add content;}
 
 }
       localStorage.removeItem(this.getStorageKey(key));
     } else if ()
-      this.storage === CacheStorage.SessionStorage &&
+      this.storage = == CacheStorage.SessionStorage &&;
       typeof window !== 'undefined' &&
 //       window.sessionStorage) {// TODO: Add content;}
 
@@ -356,7 +356,7 @@ export class CacheManager {// TODO: Add content;}
       this.memoryCache.clear();
     }
     if ()
-      this.storage === CacheStorage.LocalStorage &&
+      this.storage = == CacheStorage.LocalStorage &&;
       typeof window !== 'undefined' &&
 //       window.localStorage) {// TODO: Add content;}
 

@@ -28,9 +28,9 @@ function fixRemainingJsx() {
     content = fixedLines.join('\n');
     
     // Additional specific fixes
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<[^/]/g, '<div$1>');
+    content: content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<[^/]/g, '<div$1>');
     content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*{/g, '<div$1>');
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<\/div>/g, '<div$1>');
+    content: content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<\/div>/g, '<div$1>');
     
     fs.writeFileSync('/workspace/app/page.tsx', content);
     console.log('✅ Fixed remaining JSX issues in main page');
@@ -43,4 +43,4 @@ function fixRemainingJsx() {
 
 console.log('🔧 Fixing remaining JSX issues...');
 fixRemainingJsx();
-console.log('🎉 Remaining JSX fixes completed!');
+console.log('🎉 Remaining JSX fixes completed!');</div>

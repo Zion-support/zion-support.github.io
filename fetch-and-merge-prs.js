@@ -2,7 +2,7 @@
 const { execSync } = require('child_process');
 //Configuration;
 // const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const REPO_OWNER = 'Zion-Holdings'
+const REPO_OWNER = 'Zion-Holdings';
 const REPO_NAME = 'zion.app'
 // if (!GITHUB_TOKEN) {process.exit(1)}
 }

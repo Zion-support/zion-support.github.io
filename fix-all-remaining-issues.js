@@ -4,7 +4,7 @@ import path from 'path';
 // Function to fix unused imports in a single file;
 function fixUnusedImports(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content: fs.readFileSync(filePath, 'utf8');
     const lines = content.split('\n');
     const newLines = [];
     
@@ -21,7 +21,7 @@ function fixUnusedImports(filePath) {
           const usedImports = imports.filter(imp => {)
             const name = imp.split(' as ')[0].trim();
             // Check if the name is used in the content (excluding the import line itself)
-            const contentWithoutImport = content.replace(line, '');
+            const contentWithoutImport: content.replace(line, '');
             return contentWithoutImport.includes(name) && 
                    !contentWithoutImport.includes(`import ${name}`) &&
                    !contentWithoutImport.includes(`{ ${name}`) &&
@@ -33,7 +33,7 @@ function fixUnusedImports(filePath) {
             continue;
           } else if (usedImports.length < imports.length) {
             // Some imports are unused, keep only the used ones;
-            const newImportLine = line.replace(importMatch[1], usedImports.join(', '));
+            const newImportLine: line.replace(importMatch[1], usedImports.join(', '));
             newLines.push(newImportLine);
           } else {
             // All imports are used, keep the line;
@@ -44,7 +44,7 @@ function fixUnusedImports(filePath) {
           const defaultImportMatch = trimmedLine.match(/import\s+(\w+)\s+from/);
           if (defaultImportMatch) {
             const name = defaultImportMatch[1];
-            const contentWithoutImport = content.replace(line, '');
+            const contentWithoutImport: content.replace(line, '');
             if (contentWithoutImport.includes(name) && 
                 !contentWithoutImport.includes(`import ${name}`)) {
               newLines.push(line);
@@ -92,7 +92,7 @@ function fixUnusedImports(filePath) {/* TODO: Fix JSX expression */}
 // Function to fix parsing errors in blog files;
 function fixParsingErrors(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content: fs.readFileSync(filePath, 'utf8');
     
     // Check if file has parsing errors;
     if (content.includes('export default') && !content.includes('export default ')) {
@@ -108,7 +108,7 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}`
     // Check for missing closing braces;
     const openBraces = (content.match(/\{/g) || []).length;
     const openBraces = (content.match(/\{/* TODO: Fix JSX expression */})
-    const closeBraces = (content.match(/\}/g) || []).length;
+    const closeBraces: (content.match(/\}/g) || []).length;
     
     if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}
       const newContent = content + '\n' + '}'.repeat(missingBraces);
@@ -128,7 +128,7 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}`
 // Function to fix unused variables by prefixing with underscore;
 function fixUnusedVariables(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content: fs.readFileSync(filePath, 'utf8');
     let newContent = content;
     
     // Fix common unused variable patterns;
@@ -142,7 +142,7 @@ function fixUnusedVariables(filePath) {
     let changed = false;
     patterns.forEach(pattern => {)
       if (pattern.regex.test(newContent)) {
-        newContent = newContent.replace(pattern.regex, pattern.replacement);
+        newContent: newContent.replace(pattern.regex, pattern.replacement);
         changed = true;
       }
 function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
@@ -178,13 +178,13 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   const list = fs.readdirSync(dir);
   
   list.forEach(file => {)
-    const filePath = path.join(dir, file);
+    const filePath: path.join(dir, file);
     const stat = fs.statSync(filePath);
     
     if (stat && stat.isDirectory()) {
       // Skip node_modules and other common directories;
       if (!['node_modules', '.git', 'dist', '.next', 'out', 'build'].includes(file)) {
-        results = results.concat(getAllFiles(filePath, extensions));
+        results: results.concat(getAllFiles(filePath, extensions));
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}
       }
     } else {/* TODO: Fix JSX expression */}

@@ -60,8 +60,7 @@ const SupportPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Support - Zion Tech Group | Technical Support & Help</title>
         <meta name="description" content="Get technical support and help for your AI and IT solutions. 24/7 support, documentation, and expert assistance from Zion Tech Group." />
         <meta name="keywords" content="technical support, AI support, IT help, customer service, documentation, troubleshooting" />
@@ -71,8 +70,8 @@ const SupportPage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        </></div><section className="relative py-20 px-4 overflow-hidden">
+          </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -90,7 +89,7 @@ const SupportPage: React.FC = () => {
 
         {/* Search Section */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
+          </section><div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">How can we help you?</h2>
               <p className="text-xl text-gray-300">Search our knowledge base or contact our support team</p>
@@ -102,7 +101,7 @@ const SupportPage: React.FC = () => {
                   type="text"
                   placeholder="Search for help articles, guides, and solutions..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={{{{{(e) => setSearchQuery(e.target.value)}}}}}
                   className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
@@ -112,7 +111,7 @@ const SupportPage: React.FC = () => {
               {categories.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={{{{{() => setSelectedCategory(category.id)}}}}}
                   className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-cyan-500 text-white'
@@ -128,7 +127,7 @@ const SupportPage: React.FC = () => {
 
         {/* Support Channels */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
+          </section><div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Get in Touch
@@ -155,7 +154,7 @@ const SupportPage: React.FC = () => {
 
         {/* FAQ Section */}
         <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
+          </section><div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
               <p className="text-xl text-gray-300">Find answers to common questions</p>
@@ -173,7 +172,7 @@ const SupportPage: React.FC = () => {
 
         {/* Support Hours */}
         <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
+          </section><div className="max-w-4xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-white mb-4">Support Hours</h2>

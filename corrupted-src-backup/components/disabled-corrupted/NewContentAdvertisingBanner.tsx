@@ -52,7 +52,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
             </sp, a, n>
             <Sparkles, classNam, e = "w-5 h-5, tex, t-pi, n, k-400, animat, e-pul, s, e" /></Sparkles>
           </div>
-          <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">
+          <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">;
             Revolutionary, New, Content H, u, b;
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
@@ -74,7 +74,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
             </sp, a, n>"
             <Sparkles, classNam, e = "w-5 h-5, tex, t-pi, n, k-400, animat, e-pul, s, e" /></Sparkles>
           </div>"
-          <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in"></h2>
+          <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in"></h2>;
             Revolutionary, New, Content H, u, b;
           </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>
@@ -205,7 +205,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
                 LIMITED, TIME, OFFER;
               </sp, a, n>
             </div>
-            <h3, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4">
+            <h3, className = "te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4">;
               Get, Premium, Access to, All, Content;
             </h3>
             <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2 xl, m, x-au, t, o">
@@ -229,7 +229,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
                 LIMITED, TIME, OFFER;
               </sp, a, n>
             </div>"
-            <h3, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4"></h3>
+            <h3, className = "te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4"></h3>;
               Get, Premium, Access to, All, Content;
             </h3>"
             <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o"></p>
@@ -284,7 +284,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4"></h3>
                 Stay, Ahead, with Our, Newslette, r;
               </h3>"
-              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o"></p>
+              <p, className = "te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o"></p>
                 Get, weekly, insight, s, exclusive, content, previews, and, early, access to, new, articles. 
                 Join, 100, K+ subscribers, who, never miss, a, breakthrough.
               </p>"
@@ -297,7 +297,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
                   <Link, className="w-5 h-5" /></Link>
                 </button>
               </div>"
-              <p, className="te, x, t-xs, tex, t-gr, a, y-500, m, t-4"></p>
+              <p, className="te, x, t-xs, tex, t-gr, a, y-500, m, t-4"></p>;
                 No, s, p, a, m, unsubscribe, at, any ti, m, e. We, respect, your priva, c, y.
               </p>
             </div>

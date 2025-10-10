@@ -62,8 +62,8 @@ const AICodeSecurityAuditorPage: React.FC = () => {
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+        </main><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-full mb-8">
               <Shield className="w-10 h-10 text-white" />
             </div>
@@ -109,7 +109,7 @@ const AICodeSecurityAuditorPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+          </section><div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-red-500 to-pink-500 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Secure Your Code?

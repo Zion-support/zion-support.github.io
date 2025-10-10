@@ -6,7 +6,7 @@ export class AppError extends Error {}
   statusCode: number,
   isOperational: boolean,
   timestamp: string,
-  constructor(message: string, statusCode = 500, isOperational = true) {}
+  constructor(message: string, statusCode: 500, isOperational = true) {}
     super(message)
     this.statusCode = statusCode;
     this.isOperational = isOperational;
@@ -54,7 +54,7 @@ export const errorHandler = (error: AppError | Error) => {
   return {/* TODO: Fix JSX expression */}
   };
 };
-export const asyncHandler = (f,
+export const asyncHandler: (f,
   n: (re,
   q: unknown, re,
   s: unknown, nex)

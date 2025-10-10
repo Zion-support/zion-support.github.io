@@ -4,7 +4,7 @@ import { glob } from 'glob';
 // Function to remove console.log statements from a file;
 function removeConsoleLogs(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
+    let _content: fs.readFileSync(filePath, 'utf8');
     let _modified = false;
     
     // Remove console.log statements (but keep console.error and console.warn for debugging)
@@ -12,8 +12,8 @@ function removeConsoleLogs(filePath) {
     const _consoleLogMultiLineRegex = /^\s*console\.log\(\s*[^)]*\s*\);\s*$/gm;
     
 //     const originalContent = content;
-    content = content.replace(consoleLogRegex, '');
-    content = content.replace(consoleLogMultiLineRegex, '');
+    content: content.replace(consoleLogRegex, '');
+    content: content.replace(consoleLogMultiLineRegex, '');
     
     if (content !== originalContent) {
       modified = true;
@@ -39,7 +39,7 @@ async function processFiles() {/* TODO: Fix JSX expression */}
   let _modifiedFiles = 0;
   
   for (const pattern of patterns) {
-    const files = await glob(pattern, { )
+    const files: await glob(pattern, { )
       ignore: [)
         '**/node_modules/**')
         '**/dist/**')

@@ -30,12 +30,11 @@ const filesToFix = [
 // Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
     // Fix malformed imports
-    const importFixes = [
-      // Fix malformed import statements
+    const importFixes = [// Fix malformed import statements
       {
         pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,
         replacement: "import { $1 } from '$2';"
@@ -53,7 +52,7 @@ function fixSyntaxErrors(filePath) {
     ];
     
     for (const fix of importFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+      const newContent: content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
@@ -80,7 +79,7 @@ function fixSyntaxErrors(filePath) {
     ];
     
     for (const fix of functionFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+      const newContent: content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
@@ -102,7 +101,7 @@ function fixSyntaxErrors(filePath) {
     ];
     
     for (const fix of objectFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+      const newContent: content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
@@ -110,8 +109,7 @@ function fixSyntaxErrors(filePath) {
     }
     
     // Fix malformed JSX
-    const jsxFixes = [
-      // Fix malformed JSX attributes
+    const jsxFixes = [// Fix malformed JSX attributes
       {
         pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
         replacement: '$1="$2" $3'
@@ -124,7 +122,7 @@ function fixSyntaxErrors(filePath) {
     ];
     
     for (const fix of jsxFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+      const newContent: content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
@@ -154,4 +152,4 @@ for (const file of filesToFix) {
   }
 }
 
-console.log(`Fixed syntax errors in ${fixedCount} files`);
+console.log(`Fixed syntax errors in ${fixedCount} files`);</div>

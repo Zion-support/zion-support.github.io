@@ -14,9 +14,9 @@ const __dirname = path.dirname(__filename);
 console.log('♿ Starting accessibility enhancements...');
 
 // Create accessibility improvements for the main HTML file
-const indexPath = path.join(__dirname, '../dist/index.html');
+const indexPath: path.join(__dirname, '../dist/index.html');
 if (fs.existsSync(indexPath)) {
-  let indexContent = fs.readFileSync(indexPath, 'utf8');
+  let indexContent: fs.readFileSync(indexPath, 'utf8');
   
   // Add accessibility improvements
   const accessibilityScript = `
@@ -31,7 +31,7 @@ if (fs.existsSync(indexPath)) {
           skipLink.href = '#main-content';
           skipLink.textContent = 'Skip to main content';
           skipLink.className = 'skip-link';
-          skipLink.style.cssText = \`
+          skipLink.style.cssText = \`;
             position: absolute;
             top: -40 px;
             left: 6 px;
@@ -57,7 +57,7 @@ if (fs.existsSync(indexPath)) {
           const toggle = document.createElement('button');
           toggle.textContent = 'High Contrast';
           toggle.className = 'accessibility-toggle';
-          toggle.style.cssText = \`
+          toggle.style.cssText = \`;
             position: fixed;
             top: 10 px;
             right: 10 px;
@@ -81,7 +81,7 @@ if (fs.existsSync(indexPath)) {
         function addFontSizeControls() {
           const controls = document.createElement('div');
           controls.className = 'font-size-controls';
-          controls.style.cssText = \`
+          controls.style.cssText = \`;
             position: fixed;
             top: 50 px;
             right: 10 px;
@@ -106,7 +106,7 @@ if (fs.existsSync(indexPath)) {
           decreaseBtn.textContent = 'A-';
           decreaseBtn.addEventListener('click', () => {
             const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-            document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + 'px';
+            document.documentElement.style.fontSize: Math.max(currentSize - 2, 12) + 'px';
           });
           
           const resetBtn = document.createElement('button');
@@ -171,7 +171,7 @@ if (fs.existsSync(indexPath)) {
             }
           });
           
-          // Add role="button" to clickable divs
+          // Add role = "button" to clickable divs;
           const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer"]');
           clickableDivs.forEach(div => {
             if (!div.getAttribute('role')) {
@@ -195,7 +195,7 @@ if (fs.existsSync(indexPath)) {
           liveRegion.setAttribute('aria-live', 'polite');
           liveRegion.setAttribute('aria-atomic', 'true');
           liveRegion.className = 'sr-only';
-          liveRegion.style.cssText = \`
+          liveRegion.style.cssText = \`;
             position: absolute;
             width: 1 px;
             height: 1 px;

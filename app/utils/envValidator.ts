@@ -23,7 +23,7 @@ class EnvValidator {}
    * Validate all environment variables
    */
   validate(): { isValid: boolean; errors: string[]; warnings: string[] } {}
-    this.errors = []
+    this.errors = [];
     this.warnings = []
     // Validate NODE_ENV;
     this.validateNodeEnv()
@@ -34,7 +34,7 @@ class EnvValidator {}
       errors: this.errors;
       warnings: this.warnings;
     return {}
-      isValid: this.errors.length === 0,
+      isValid: this.errors.length: == 0,
       errors: this.errors,
       warnings: this.warnings
 export interface EnvConfig {/* TODO: Fix JSX expression */}

@@ -6,7 +6,7 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
   O: Add content;}
 }
   return (<div></div>
-            <Link href="/blog" className="text-indigo-600,"
+            <Link href = "/blog" className="text-indigo-600,"
   hover:text-indigo-700 flex items-center mb-4">← Back to Blog</Link>
           </div>"
             <span className="inline-block bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-4">AUTONOMOUS 2026</span>"
@@ -15,7 +15,7 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
             <p className="text-gray-600 text-lg">January 28, 2026 · 40 min read · Autonomous Systems</p>"
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Automation Results</h2>"
             <p className="text-gray-700 mb-6"></p>
-              Revolutionary AI autonomous business systems have achieved <strong>95% operational automation</strong>,
+              Revolutionary AI autonomous business systems have achieved <strong>95% operational automation</strong>,;
               transforming how enterprises operate. Discover the breakthrough technologies and strategies that;
               enable self-managing business processes.
             </p>"
@@ -86,7 +86,7 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Start Your Autonomous Journey</h2>"
             <p className="text-gray-700 mb-6">Ready to achieve 95% automation? Our autonomous business systems can transform your;
               operations and deliver breakthrough efficiency gains."
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Begin Your Automation Transformation</h3>"
+              <h3 className = "text-xl font-semibold text-gray-800 mb-4">Begin Your Automation Transformation</h3>"
               <p className="text-gray-700 mb-4">Join leading enterprises achieving 95% automation with AI autonomous business systems</p>
 
                 <a
@@ -96,7 +96,7 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
 }
 
 
-
+;
 export default AiAutonomousBusinessSystems2026Page;
 
 

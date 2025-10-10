@@ -19,8 +19,8 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
           Ai, 2025, Oct 01, Privacy, First Observability, V, 2;
         </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
+        <p, classNam, e = 'te, x, t-zi, o, n-sla, t, e-light, m, b-8'>;
           Learn, about, ai 2025, oct, 01 privacy, first, observability v2, and, how it, can, benefit your, enterpris, e.
-}</p>
+}</p>;
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }

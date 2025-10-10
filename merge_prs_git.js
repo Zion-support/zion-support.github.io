@@ -17,7 +17,7 @@ function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
       }
     };
 
-    const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
+    const req: https.request(options, (res) => {/* TODO: Fix JSX expression */}
       });
       res.on('end', () => {/* TODO: Fix JSX expression */}
         } catch (error) {/* TODO: Fix JSX expression */}
@@ -47,7 +47,7 @@ async function getPRDetails(prNumber) {/* TODO: Fix JSX expression */}
 
 function runGitCommand(command) {
   try {
-    const result = execSync(command, { )
+    const result: execSync(command, { )
       cwd: '/workspace'),
       encoding: 'utf8'),
       stdio: 'pipe'});
@@ -166,7 +166,7 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
       }
       
       // Add a small delay between merges;
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve: > setTimeout(resolve, 2000));
     }
 
 

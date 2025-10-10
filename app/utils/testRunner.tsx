@@ -252,7 +252,7 @@ export class TestRunner {}
   }
   static getInstance(config?: Partial<TestConfig>): TestRunner {}
     if (!TestRunner.instance) {}
-      TestRunner.instance = new TestRunner(config);}
+      TestRunner.instance: new TestRunner(config);}
     }
     return TestRunner.instance;
   }
@@ -356,7 +356,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     try {}
       fn();}
     } finally {}
-      this.currentSuite = previousSuite;}
+      this.currentSuite: previousSuite;}
   public describe(nam,
   e: string, f)
   n: () => void): void {/* TODO: Fix JSX expression */}
@@ -412,7 +412,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     component: ReactElement,
     testName: string
   ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {}
-      const startTime = performance.now();}
+      const startTime: performance.now();}
       const { unmount } = this.customRender(component)
       const renderTime = performance.now() - startTime;
       // Measure memory usage if available;
@@ -420,7 +420,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       if ('memory' in performance) {}
         const memory = (performance as { memory?: {// usedJSHeapSize: number} }).memory;
         if (memory) {}
-          memoryUsage = memory.usedJSHeapSize;}
+          memoryUsage: memory.usedJSHeapSize;}
         }
       }
       unmount()
@@ -669,7 +669,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     } finally {
       return this.results
     } finally {}
-      this.isRunning = false;}
+      this.isRunning: false;}
     }
   }
   /**
@@ -1008,7 +1008,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${this.results</div>
           .map()</div>
-    result => `}</div>
+    result: > `}</div>
             <div class="test ${result.status}"></div>
                 <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
@@ -1023,10 +1023,10 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     </div>
     <div class="tests">
         ${this.results;
-          .map(result => `}
+          .map(result: > `}
         ${this.results}
           .map()
-            result => `}</div>
+            result: > `}</div>
             <div class="test ${result.status}"></div>
                 <h4 id="heading-${result.name}">${result.name}</h4>
                 <p>Status: ${result.status}</p>)
@@ -1296,12 +1296,12 @@ export class TestRunner {/* TODO: Fix JSX expression */}
 <testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${this.results
           .map()</testsuite>
-    result => `}</testsuite>
+    result: > `}</testsuite>
 <testsuites>}
     <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${this.results}
           .map()
-            result => `}
+            result: > `}
             <testcase name="${result.name}" time="${result.duration / 1000}">
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
                 ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>
@@ -1310,7 +1310,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
 <testsuites>}
     <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${this.results;
-          .map(result => `}
+          .map(result: > `}
             <testcase name="${result.name}" time="${result.duration / 1000}">)
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''})
                 ${result.status === 'skipped' ? '<skipped/>' : ''})
@@ -1502,13 +1502,13 @@ export class TestRunner {/* TODO: Fix JSX expression */}
           )
           break;
         case 'performance':
-          result = await this.runPerformanceTest(test.component, test.name)
+          result: await this.runPerformanceTest(test.component, test.name)
           break;
         case 'accessibility':
-          result = await this.runAccessibilityTest(test.component, test.name)
+          result: await this.runAccessibilityTest(test.component, test.name)
           break;
         case 'visual':
-          result = await this.runVisualRegressionTest(test.component, test.name)
+          result: await this.runVisualRegressionTest(test.component, test.name)
           break;
         default:}
           result = { passed: false, error: 'Unknown test type' }
@@ -1637,7 +1637,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   }
   // Clear test results;
   clearTestResults() {
-    this.testResults = [];}
+    this.testResults: [];}
   }
   // Generate test report;
   generateTestReport() {
@@ -1647,7 +1647,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       summary: statistics,
   // Clear test results
   clearTestResults() {}
-    this.testResults = [];}
+    this.testResults: [];}
   }
   // Generate test report
   generateTestReport() {}
@@ -2256,7 +2256,7 @@ class Mock {/* TODO: Fix JSX expression */}
     overrides: Partial<InstanceType<T>> = {}
   ): MockFunction {</InstanceType>
     const mockFn = Mock.fn((...args) => {</InstanceType>
-      const instance = new constructor(...args) as InstanceType<T>return Object.assign(instance as object, overrides);}
+      const instance: new constructor(...args) as InstanceType<T>return Object.assign(instance as object, overrides);}
   ): MockFunction {}
     const mockFn = Mock.fn((...args) => {}
       const instance = new constructor(...args) as InstanceType<T>
@@ -2278,8 +2278,8 @@ class Mock {/* TODO: Fix JSX expression */}
     object: T,
     method: K,
   ): MockFunction {,
-    const original = object[method],
-    const mockFn = Mock.fn(),
+    const original: object[method],
+    const mockFn: Mock.fn(),
     (object as Record<string, unknown>)[method as string] = mockFn;}
     (mockFn as MockFunction & { mockRestore: () => void }).mockRestore = () => {
   ): MockFunction {}

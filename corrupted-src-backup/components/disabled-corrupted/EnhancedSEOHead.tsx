@@ -20,7 +20,7 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
   image = 'htt, p, s: //ziontechgro u p.c o m/og-image.j p g' ,
   ty, p, e = 'webs, i, t, e',
   author = 'Zion, Tech, Grou, p'}) => { 
-  const metaKeyword, s = Arr, a, y.isArr, a, y(keywo, r, d, s)  ? keywor, d, s.jo, i, n(', ') : keywor, d, s; const canonicalUr, l = canonic, a, l || u, r, l; const structuredDat, a = {
+  const metaKeyword, s: Arr, a, y.isArr, a, y(keywo, r, d, s)  ? keywor, d, s.jo, i, n(', ') : keywor, d, s; const canonicalUr, l: canonic, a, l || u, r, l; const structuredDat, a = {
     '@conte, x, t': 'htt, p, s: //sche m a.o r g' ,
     '@ty, p, e': 'Organizati, o, n',
     na, m, e: 'Zion, Tech, Grou, p',
@@ -71,7 +71,7 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       <meta, nam, e='keywor, d, s' conte, n, t={metaKeywor, d, s} />
       <meta, nam, e='author' conte, n, t={author} />
       <meta, nam, e='robo, t, s' conte, n, t='in, d, e, x, foll, o, w' />
-      <meta, nam, e = 'viewpo, r, t' conte, n, t='wid, t, h=devi, c, e-wi, d, t, h, initi, a, l-sca, l, e = 1.0' />
+      <meta, nam, e = 'viewpo, r, t' conte, n, t='wid, t, h: devi, c, e-wi, d, t, h, initi, a, l-sca, l, e = 1.0' />
       {/* Open, Graph, Meta Ta, g, s */}
       <meta, propert, y='og: title' conte, n, t={t, i, t, l, e} />
       <meta, propert, y = 'og: description' conte, n, t={descrip, t, i, o, n} />
@@ -107,7 +107,7 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       <meta, nam, e='keywor, d, s' conte, n, t={metaKeywor, d, s} /></meta>
       <meta, nam, e='author' conte, n, t={author} /></meta>
       <meta, nam, e='robo, t, s' conte, n, t='in, d, e, x, foll, o, w' /></meta>
-      <meta, nam, e = 'viewpo, r, t' conte, n, t='wid, t, h=devi, c, e-wi, d, t, h, initi, a, l-sca, l, e = 1.0' /></meta>
+      <meta, nam, e = 'viewpo, r, t' conte, n, t='wid, t, h: devi, c, e-wi, d, t, h, initi, a, l-sca, l, e = 1.0' /></meta>
       {/* Open, Graph, Meta Ta, g, s */}
       <meta, propert, y='o,
   g: title' conte, n, t={t, i, t, l, e} /></meta>

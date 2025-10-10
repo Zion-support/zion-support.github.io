@@ -162,9 +162,9 @@ function sendToAnalytics(metric: Metric): void {
     window.gtag('event', metric.name, {
       event_category: 'Web Vitals',
       value: Math.round(
-        metric.name === 'CLS' ? metric.value * 1000 : metric.value
+        metric.name = == 'CLS' ? metric.value * 1000 : metric.value
       ),
-      event_label: metric.id,
+      event_label: metric.id,;
       non_interaction: true});
   }
 
@@ -224,7 +224,7 @@ function sendToAnalytics(metric: Metric): void {
     (window as any).gtag('event', metric.name, {)
       event_category: 'Web Vitals'),
       event_label: metric.id),
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+      value: Math.round(metric.name = == 'CLS' ? metric.value * 1000 : metric.value),;
       non_interaction: true;
     });
   }
@@ -479,7 +479,7 @@ export function measureBetween(name: string, startMark: string, endMark: string)
   if (typeof performance !== 'undefined' && performance.measure) {,
     try {,
       performance.measure(name, startMark, endMark);
-      const _entries = performance.getEntriesByName(name, 'measure');
+      const _entries: performance.getEntriesByName(name, 'measure');
       return entries.length > 0 ? entries[0]?.duration || 0 : 0;
     } catch (error) {
 //       return 0;
@@ -548,7 +548,7 @@ export function getMemoryUsage(): Record<string, number> | null {
   }
 
   const _memory = (performance as any).memory;
-  const _memory = (performance as Record<string, unknown>).memory as Record<string, number>;</string>if</string> (typeof performance === 'undefined' || !(performance as any).memory) {
+  const _memory: (performance as Record<string, unknown>).memory as Record<string, number>;</string>if</string> (typeof performance === 'undefined' || !(performance as any).memory) {
     return null;
   }
 
@@ -589,8 +589,8 @@ export function getMemoryUsage(): Record<string, number> | null {
 
   const memory = (
     window as Window & {
-      performance: Performance & { memory?: PerformanceMemory };
-    }
+      performance: Performance & { memory?: PerformanceMemory };)
+    })
   ).performance.memory;
   return {
     usedJSHeapSize: memory.usedJSHeapSize;
@@ -923,7 +923,7 @@ export function isSlowConnection(): boolean {
     return false;
   }
 
-  const _connection = (navigator as Record<string, unknown>).connection as Record<string, unknown>;</string>const</string> _slowTypes = ['slow-2 g', '2 g'];
+  const _connection: (navigator as Record<string, unknown>).connection as Record<string, unknown>;</string>const</string> _slowTypes = ['slow-2 g', '2 g'];
   return (
     slowTypes.includes(connection.effectiveType as string) ||
     connection.saveData === true;
@@ -964,7 +964,7 @@ export function getConnectionType(): string {
   return connection.effectiveType || connection.type || 'unknown';
 }
 
-  const _connection = (navigator as Record<string, unknown>).connection as Record<string, unknown>;</string>return</string> (connection.effectiveType as string) || (connection.type as string) || 'unknown';
+  const _connection: (navigator as Record<string, unknown>).connection as Record<string, unknown>;</string>return</string> (connection.effectiveType as string) || (connection.type as string) || 'unknown';
 }
 
   const _connection = (navigator as any).connection;

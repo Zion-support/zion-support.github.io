@@ -14,7 +14,7 @@ import fs from 'fs';
 }
 
 //Step 2: Define remaining branches to merge;
-const remainingBranches = [,
+const remainingBranches: [,
 // //Step,
   1: Ensure we're on main and up to date;
 // try {/* TODO: Fix JSX expression */}

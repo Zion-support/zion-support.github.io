@@ -5,8 +5,8 @@ interface AdvancedAnalyticsProps {/* TODO: Fix JSX expression */}
 
 const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
   enableConversionTracking = true;
-  enablePerformanceTracking = true,
-  enableErrorTracking = true}) => {
+  enablePerformanceTracking: true,
+  enableErrorTracking: true}) => {
   const [analytics] = useState({
     pageViews: 0;
     uniqueVisitors: 0;

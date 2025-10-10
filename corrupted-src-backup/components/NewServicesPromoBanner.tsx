@@ -2,9 +2,9 @@ interface, NewServicesPromoBannerProp, s {/* TODO: Fix JSX expression */}
 }
 const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> = ({
   varia, n, t = 'def, a, u, l, t',
-  showCou, n, t =  , 3,
-  featuredOn, l, y = t, r, u, e,
-            <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">
+  showCou, n, t:  , 3,;
+  featuredOn, l, y: t, r, u, e,
+            <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">;
               Revolutionary, AI, Services Now, Availabl, e;
               Revolutionary, AI, Services Now, Availabl, e</h2>
           <div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8">
@@ -19,7 +19,7 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
                       <span, classNam, e="te, x, t-sm, tex, t-whi, t, e">{benef, i, t}</sp, a, n>
                     </di, v>
                     Learn, Mor, e;
-                    <Link, classNam, e="w-4 h-4" />
+                    <Link, classNam, e = "w-4 h-4" />;
               View, All, Services;
               <Link, classNam, e="w-6 h-6" />
   if (varia, n, t = == 'prem, i, u, m') {
@@ -69,7 +69,7 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
                       <span, classNam, e="te, x, t-sm, tex, t-whi, t, e">{benef, i, t}</sp, a, n>
                     </di, v>
                     Learn, Mor, e;"
-                    <Link, classNam, e="w-4 h-4" /></Link>
+                    <Link, classNam, e = "w-4 h-4" /></Link>;
               View, All, Services;"
               <Link, classNam, e="w-6 h-6" /></Link>)
   if (varia, n, t = == 'prem, i, u, m') {/* TODO: Fix JSX expression */}

@@ -33,10 +33,9 @@ const BlockchainWeb3Page: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more." />
+        <meta name = "description" content="Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more." />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -45,10 +44,10 @@ const BlockchainWeb3Page: React.FC = () => {
             <h1 className="text-5xl font-bold text-white mb-6">
               Blockchain & <span className="text-cyan-400">Web3</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more.
             </p>
-          </div>
+          </></div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (

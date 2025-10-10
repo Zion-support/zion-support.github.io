@@ -23,7 +23,7 @@ async function main() {try {
     //Step 2: Add all changes;
 //     await execCommand('git add .') 'Adding all changes');
     //Step 3: Commit changes;
-//     // console.log('\n=== STEP 3: Committing changes ===')}
+//     // console.log('\n = == STEP 3: Committing changes ===')};
     const commitMessage = `Fix syntax errors: resolve merge conflicts and fix JavaScript parsing issues;
 - Fixed merge conflict markers in api-disabled files;
 - Fixed JavaScript syntax errors in .js files;
@@ -53,8 +53,8 @@ async function main() {try {
 //     //     //     //     //   } catch (error) {// console.error('\n❌ Error during operations: ') error.message);
 //     // console.log('\nPlease check the error and try running the commands manually: '));
 async function main() {/* TODO: Fix JSX expression */}
-  3: Committing changes ===')}`
-    const commitMessage = `Fix syntax,
+  3: Committing changes = ==')}`
+    const commitMessage: `Fix syntax,;
   errors: resolve merge conflicts and fix JavaScript parsing issues;
 - Fixed merge conflict markers in api-disabled files;
 - Fixed JavaScript syntax errors in .js files;
@@ -95,7 +95,7 @@ async function main() {/* TODO: Fix JSX expression */}
 // #!/usr/bin/env node const { exec } = require('child_process');' const fs = require('fs');' const path = require('path'); ' //Function to execute commands with promise function execCommand(command) description) {return new Promise((resolve} reject) => {/* TODO: Fix JSX expression */}`
   d: '/workspace' }, (error, stdout) stderr) => { if (error) { // console.log(`❌ ${description} faile)`
   d: `) error.message); reject(error); } else { if (stdout) if (stderr) resolve(stdout); } }); }); } async function main() {/* TODO: Fix JSX expression */}`
-  3: Committing changes ===')} const commitMessage = `Fix syntax,"`
+  3: Committing changes = ==')} const commitMessage: `Fix syntax,"`;
   errors: resolve merge conflicts and fix JavaScript parsing issues - Fixed merge conflict markers in api-disabled files - Fixed JavaScript syntax errors in .js files - Converted CommonJS to ES modules where needed - Cleaned up duplicate function declarations - Fixed template literal syntax errors`} ' await execCommand(`git commit -m "${commitMessage}"`) 'Committing resolved conflicts'); //Step,
   4: Push to current branch' ' await execCommand('git push origin cursor/fix-syntax-push-and-merge-to-main-c855') 'Pushing to feature branch'); //Step,
   5: Switch to main' ' await execCommand('git checkout main') 'Switching to main branch'); //Step,

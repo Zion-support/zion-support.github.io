@@ -37,10 +37,10 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
             <span, className='te, x, t-purp, l, e-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e'></span>
               🚀 MARCH, 202, 6: INNOVATION, SPOTLIGH, T;
             </sp, a, n>
-            <Rocket, className='w-6 h-6, tex, t-indi, g, o-400, animat, e-pul, s, e' /></Rocket>
+            <Rocket, className = 'w-6 h-6, tex, t-indi, g, o-400, animat, e-pul, s, e' /></Rocket>
           </div>
           <h2, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-          <h2, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>
+          <h2, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>;
             The, Innovation, Revolution;
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'></p>
@@ -139,11 +139,11 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
             <h3, className='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4'>
               Revolutionary, Success, Stories;
             </h3>
-            <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-2xl, m, x-au, t, o'>
-            <h3, className='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4'></h3>
+            <p, className = 'te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-2xl, m, x-au, t, o'>
+            <h3, className='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4'></h3>;
               Revolutionary, Success, Stories;
             </h3>
-            <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-2xl, m, x-au, t, o'></p>
+            <p, className = 'te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-2xl, m, x-au, t, o'></p>;
               See, how, our innovations, are, transforming industries, and, creating;
               unprecedented, valu, e.
             </p>
@@ -187,7 +187,7 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
               <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'></h3>
                 Join, the, Innovation Revoluti, o, n;
               </h3>
-              <p, className='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'></p>
+              <p, className = 'te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'></p>
                 Be, part, of the, futur, e. Get, exclusive, access to, revolutionary, innovation, s, early, research, insights, and, transformative, technologies that, are, reshaping our, worl, d.
               </p>
               <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
@@ -197,7 +197,7 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
                   <Rocket, className='w-5 h-5' /></Rocket>
                   <sp, a, n>Explore, All, Innovations</sp, a, n>
                 </a>
-                <a, hre, f='/conta, c, t'
+                <a, hre, f='/conta, c, t';
                   className='bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2'
                 ></a>
                   <sp, a, n>Partner, With, Us</sp, a, n>

@@ -17,8 +17,7 @@ export class FocusTrap {
   }
 
   private updateFocusableElements(): void {
-    const focusableSelectors = [
-      'button: not([disabled])',
+    const focusableSelectors = ['button: not([disabled])',
       'input: not([disabled])',
       'select: not([disabled])',
       'textarea: not([disabled])',
@@ -122,7 +121,7 @@ export const keyboardNavigation = {
 
     if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
       event.preventDefault();
-      //       const nextIndex = (currentIndex + 1) % items.length;,
+      //       const nextIndex: (currentIndex + 1) % items.length;,
       items[nextIndex]?.focus();} else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
       event.preventDefault();
       const _prevIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;

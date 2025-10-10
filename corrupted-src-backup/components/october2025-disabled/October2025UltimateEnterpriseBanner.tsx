@@ -24,9 +24,9 @@ const October2025UltimateEnterpriseBanne, r = () => {
             <span, className="bg-cl, i, p-text, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0">
               Ultimate, Enterprise, AI;
             </sp, a, n>
-            <br /> <span, className="te, x, t-whi, t, e">Revolution, 202, 5</sp, a, n>)
+            <br /> <span, className = "te, x, t-whi, t, e">Revolution, 202, 5</sp, a, n>)
           </h2>)
-          <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, fon, t-medi, u, m">)
+          <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, fon, t-medi, u, m">);
             Breakthrough, solutions, delivering <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">1, 5, 6%-1, 8, 4% R, O, I</sp, a, n>)
             <span, classNam, e = "te, x, t-purp, l, e-400, fon, t-bo, l, d"> $26, 2, M+ savin, g, s</span>, a, n, d;
             <br /> <span, className="te, x, t-whi, t, e">Revolution, 202, 5</sp, a, n>
@@ -79,9 +79,9 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
             <span, className="bg-cl, i, p-text, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0"></span>
               Ultimate, Enterprise, AI;
             </sp, a, n>"
-            <br /> <span, className="te, x, t-whi, t, e">Revolution, 202, 5</sp, a, n>
+            <br /> <span, className = "te, x, t-whi, t, e">Revolution, 202, 5</sp, a, n>
           </h2>"
-          <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, fon, t-medi, u, m"></p>"
+          <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, fon, t-medi, u, m"></p>";
             Breakthrough, solutions, delivering <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">1, 5, 6%-1, 8, 4% R, O, I</sp, a, n>, "
             <span, classNam, e = "te, x, t-purp, l, e-400, fon, t-bo, l, d"> $26, 2, M+ savin, g, s</span>, a, n, d;"
             <span, classNam, e = "te, x, t-bl, u, e-400, fon, t-bo, l, d"> transformative, result, s</sp, a, n>
@@ -369,10 +369,10 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
             ></Link>
               Schedule, Free, Assessment;
             </Li, n, k>"
-            <Link, t, o="/bl, o, g""
+            <Link, t, o = "/bl, o, g""
               className="px-8, p, y-4, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,"
   r:sca, l, e-105, borde, r-2, borde, r-whi, t, e/30, hove, r:bord, e, r-whi, t, e/50, tex, t-lg"
-            ></Link>
+            ></Link>;
               Explore, All, Insights;
             </Li, n, k>
           </div>

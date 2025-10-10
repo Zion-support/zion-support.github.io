@@ -35,17 +35,17 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4'>
             🚀 3, Revolutionary, AI Platform, Breakthrough, s;
           </h2>
-          <p, className='te, x, t-xl, m, d:te, x, t-2xl, tex, t-bl, u, e-100, ma, x-w-4xl, m, x-auto, fon, t-semibo, l, d'>
+          <p, className = 'te, x, t-xl, m, d:te, x, t-2xl, tex, t-bl, u, e-100, ma, x-w-4xl, m, x-auto, fon, t-semibo, l, d'>
         ></moti>
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-6, p, y-2, rounde, d-full, fon, t-bold, tex, t-sm, m, b-4'></div>
-            <Sparkles, className='w-5 h-5, animat, e-pul, s, e' /></Sparkles>
+            <Sparkles, className='w-5 h-5, animat, e-pul, s, e' /></Sparkles>;
             OCTOBER, 2025, BREAKTHROUGH;
             <Sparkles, className='w-5 h-5, animat, e-pul, s, e' /></Sparkles>
           </div>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4'></h2>
             🚀 3, Revolutionary, AI Platform, Breakthrough, s;
           </h2>
-          <p, className='te, x, t-xl, m, d:te, x, t-2xl, tex, t-bl, u, e-100, ma, x-w-4xl, m, x-auto, fon, t-semibo, l, d'></p>
+          <p, className = 'te, x, t-xl, m, d:te, x, t-2xl, tex, t-bl, u, e-100, ma, x-w-4xl, m, x-auto, fon, t-semibo, l, d'></p>;
             Priva, c, y-First, Federated, AI • Unlimited, Synthetic, Data • Enterprise, AI, Governance;
           </p>
           <div, className='flex, fle, x-wrap, justif, y-center, ga, p-4, m, t-6, tex, t-yell, o, w-300, fon, t-bo, l, d'></div>
@@ -94,7 +94,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                     Federated, A, I;
                   </sp, a, n>
                 </div>
-                <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'>
+                <h3, className = 'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'>;
                   Advanced, Federated, AI Enterprise, Revolutio, n;
                 </h3>
                 <p, className='te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'>
@@ -109,10 +109,10 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                     Federated, A, I;
                   </sp, a, n>
                 </div>
-                <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></h3>
+                <h3, className = 'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></h3>;
                   Advanced, Federated, AI Enterprise, Revolutio, n;
                 </h3>
-                <p, className='te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'></p>
+                <p, className = 'te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'></p>;
                   Priva, c, y-first, distributed, intelligence across, 25, 0+ n, o, d, e, s.{' '}
                   <span, classNam, e = 'te, x, t-yell, o, w-300, fon, t-bo, l, d'>$287M, valu, e</span>
                   , 99.8% privacy, complianc, e, 67% faster, trainin, g — zero, data, movement.
@@ -159,7 +159,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                     Synthetic, Dat, a;
                   </sp, a, n>
                 </div>
-                <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'>
+                <h3, className = 'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'>;
                   Synthetic, Data, Generation Enterprise, Breakthroug, h;
                 </h3>
                 <p, className='te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'>
@@ -174,7 +174,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                     Synthetic, Dat, a;
                   </sp, a, n>
                 </div>
-                <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'></h3>
+                <h3, className = 'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'></h3>;
                   Synthetic, Data, Generation Enterprise, Breakthroug, h;
                 </h3>
                 <p, className='te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'></p>
@@ -221,7 +221,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                     AI, Governanc, e;
                   </sp, a, n>
                 </div>
-                <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-gre, e, n-300, transitio, n-colo, r, s'>
+                <h3, className = 'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-gre, e, n-300, transitio, n-colo, r, s'>;
                   AI, Model, Governance & Compliance, Breakthroug, h;
                 </h3>
                 <p, className='te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'>
@@ -236,7 +236,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                     AI, Governanc, e;
                   </sp, a, n>
                 </div>
-                <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-gre, e, n-300, transitio, n-colo, r, s'></h3>
+                <h3, className = 'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-gre, e, n-300, transitio, n-colo, r, s'></h3>;
                   AI, Model, Governance & Compliance, Breakthroug, h;
                 </h3>
                 <p, className='te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'></p>

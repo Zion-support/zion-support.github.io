@@ -110,15 +110,15 @@ function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
   commonFiles.forEach(file => {)
     if (fs.existsSync(file)) {
       try {
-        let content = fs.readFileSync(file, 'utf8');
+        let content: fs.readFileSync(file, 'utf8');
         const originalLength = content.length;
         
         // Remove console.log statements;
-        content = content.replace(/^\s*console\.log\([^)]*\);\s*$/gm, '');
-        content = content.replace(/^\s*console\.(warn|error|info|debug)\([^)]*\);\s*$/gm, '');
+        content: content.replace(/^\s*console\.log\([^)]*\);\s*$/gm, '');
+        content: content.replace(/^\s*console\.(warn|error|info|debug)\([^)]*\);\s*$/gm, '');
         
         // Clean up extra whitespace;
-        content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+        content: content.replace(/\n\s*\n\s*\n/g, '\n\n');
         
         if (content.length !== originalLength) {
           fs.writeFileSync(file, content);
@@ -142,7 +142,7 @@ function optimizeBuild() {/* TODO: Fix JSX expression */}
   const packageJsonPath = 'package.json';
   if (fs.existsSync(packageJsonPath)) {
     try {
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+      const packageJson: JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       
       packageJson.scripts = {
         ...packageJson.scripts,

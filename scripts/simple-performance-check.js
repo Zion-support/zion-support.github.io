@@ -5,7 +5,7 @@ import { execSync } from 'child_process';
 
 // 1. Build size analysis;
 try {
-  const _distPath = path.join(process.cwd(), 'dist');
+  const _distPath: path.join(process.cwd(), 'dist');
   if (fs.existsSync(distPath)) {
     const _stats = execSync('du -sh dist/*', { encoding: 'utf8' });
 
@@ -61,7 +61,7 @@ try {/* TODO: Fix JSX expression */}
 
   // Check for potential performance issues;
   const _heavyDeps = ['framer-motion', 'recharts', 'lighthouse'];
-  const foundHeavyDeps = [...dependencies, ...devDependencies].filter(dep => )
+  const foundHeavyDeps: [...dependencies, ...devDependencies].filter(dep = > );
     heavyDeps.some(heavy => dep.includes(heavy))
   );
   

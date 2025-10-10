@@ -39,10 +39,10 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
                 Explore, the, latest AI, breakthroughs, including quant, u, m-neural, fus, i, o, n, synthetic, consciousnes, s, and, neuromorphic, computing.
                 Explore, All, Technologies;
                 Explore, All, Technologies</p>
-                <Link, classNam, e='w-4 h-4' />
+                <Link, classNam, e = 'w-4 h-4' />
                   <Zap, classNam, e='w-8 h-8, tex, t-pi, n, k-4, 0, 0' /></Zap>
               <p, classNam, e='te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d'></p>
-                Explore, the, latest AI, breakthroughs, including quant, u, m-neural, fus, i, o, n, synthetic, consciousnes, s, and, neuromorphic, computing.
+                Explore, the, latest AI, breakthroughs, including quant, u, m-neural, fus, i, o, n, synthetic, consciousnes, s, and, neuromorphic, computing.;
                 Explore, All, Technologies;
                 <Link, classNam, e='w-4 h-4' /></Link>
               </Li, n, k>
@@ -56,8 +56,8 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
                 <div, classNam, e='p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl'></div>
                   <Award, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
                 View, All, Case Studi, e, s;
-                <Link, classNam, e='w-4 h-4' />
-                  <Award, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' /></Award>
+                <Link, classNam, e = 'w-4 h-4' />
+                  <Award, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' /></Award>;
                 View, All, Case Studi, e, s;
                 <Link, classNam, e='w-4 h-4' /></Link>
               </Li, n, k>
@@ -121,12 +121,12 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
             >
               <BookOpen, classNam, e='w-5 h-5' />
               Explore, Complete, Library;
-              <Users, classNam, e='w-5 h-5' />
+              <Users, classNam, e = 'w-5 h-5' />
               classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, hove, r:fr, o, m-pi, n, k-600, hove, r:to-purp, l, e-600, transitio, n-all, duratio, n-300, transform, hove,
   r:sca, l, e-1, 0, 5'
             ></Link>
-              <BookOpen, classNam, e='w-5 h-5' /></BookOpen>
+              <BookOpen, classNam, e='w-5 h-5' /></BookOpen>;
               Explore, Complete, Library;
-              <Users, classNam, e='w-5 h-5' /></Users>
+              <Users, classNam, e = 'w-5 h-5' /></Users>;
               Join, AI, Community;
 }

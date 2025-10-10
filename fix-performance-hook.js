@@ -67,7 +67,7 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */}
 /**
  * Hook for monitoring component performance;
  */
-export const useComponentPerformance = (componentName: string) => {
+export const useComponentPerformance = (componentName => {
 
   useEffect(() => {
     startTime.current = performance.now();
@@ -78,7 +78,7 @@ export const useComponentPerformance = (componentName: string) => {
 //       const renderTime = endTime - startTime.current;
       ,
 export const useComponentPerformance = (componentNam)
-  e: string) => {/* TODO: Fix JSX expression */}`
+  e => {/* TODO: Fix JSX expression */}`
       analytics.trackPerformance(\`\${componentName}_render\`, renderTime);
       analytics.track('component_performance', 'render', componentName, undefined, renderTime);
     };
@@ -96,14 +96,14 @@ export const useComponentPerformance = (componentNam)
 export const useInteractionPerformance = () => {/* TODO: Fix JSX expression */}
   }, []);
 
-  const trackClick = useCallback((element: string) => {,
+  const trackClick = useCallback((element => {,
     return () => {,
 //       const duration = performance.now() - startTime;
       trackInteraction('click', element, duration);
     };
   }, [trackInteraction]);
 
-  const trackHover = useCallback((element: string) => {,
+  const trackHover = useCallback((element => {,
     return () => {,
 //       const duration = performance.now() - startTime;
       trackInteraction('hover', element, duration);
@@ -115,12 +115,12 @@ export const useInteractionPerformance = () => {/* TODO: Fix JSX expression */}
     trackClick,
     trackHover;
   const trackClick = useCallback((elemen)
-  t: string) => {/* TODO: Fix JSX expression */}
+  t => {/* TODO: Fix JSX expression */}
     };
   }, [trackInteraction]);
 
   const trackHover = useCallback((elemen)
-  t: string) => {/* TODO: Fix JSX expression */}
+  t => {/* TODO: Fix JSX expression */}
     };
   }, [trackInteraction]);
 
@@ -149,7 +149,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
     };
 
     // Check memory every 30 seconds;
-//     const interval = setInterval(checkMemory, 30000);
+//     const interval: setInterval(checkMemory, 30000);
     
     // Initial check;
     return () => clearInterval(interval);
@@ -206,7 +206,7 @@ export const useScrollPerformance = () => {/* TODO: Fix JSX expression */}
     let scrollTimeout: NodeJS.Timeout;
     const handleScroll = () => {,
       clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(handleScrollEnd, 150);
+      scrollTimeout: setTimeout(handleScrollEnd, 150);
     let,
   scrollTimeout: NodeJS.Timeout;
     const handleScroll = () => {/* TODO: Fix JSX expression */}
@@ -226,7 +226,7 @@ export const useScrollPerformance = () => {/* TODO: Fix JSX expression */}
 export const usePerformanceMonitoring = () => {
 
   return {
-    trackCustomMetric: (name: string, value: number, unit: string = 'ms') => {,
+    trackCustomMetric: (name value unit = 'ms') => {,
       analytics.trackPerformance(name, value, unit);
 export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
     }

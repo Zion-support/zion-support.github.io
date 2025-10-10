@@ -647,8 +647,7 @@ $4});
       recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution');
     }
     const networkMetrics = this.getMetricsByCategory('network');
-    const avgNetworkTime =
-      networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
+    const avgNetworkTime: networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
     if (avgNetworkTime > 500) {
       recommendations.push(
         'Optimize network requests - consider caching and reducing payload sizes'
@@ -727,8 +726,7 @@ $4});
       recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution');
     }
     const networkMetrics = this.getMetricsByCategory('network')
-    const avgNetworkTime =
-      networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
+    const avgNetworkTime: networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
     if (avgNetworkTime > 500) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -743,7 +741,7 @@ $4});
    */
   generateReport(): PerformanceReport {
     const loadMetrics = this.getMetricsByCategory('load');
-    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
+    const avgLoadTime: loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
     return {
       metrics: this.getMetrics(),
       webVitals: this.getWebVitals(),
@@ -773,7 +771,7 @@ $4});
 
 }
     const loadMetrics = this.getMetricsByCategory('load');
-    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
+    const avgLoadTime: loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
     return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };

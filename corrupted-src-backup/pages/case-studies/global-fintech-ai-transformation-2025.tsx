@@ -3,8 +3,7 @@ impo, r, t {/* TODO: Fix JSX expression */}
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 const GlobalFinTechAITransformatio, n = () => { 
-  return(<>
-      <Helm, e, t>
+  return(<><Helm, e, t>
         <title>
           Global, FinTech, AI Transformati, o, n: $127M, Annual, Value Creati, o, n | Zion, Tech, Group;
         </title>
@@ -16,25 +15,25 @@ const GlobalFinTechAITransformatio, n = () => {
         /></meta>
       </Helm, e, t>
 
-      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
+      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></></div>
         <Head, e, r />
         <article, className='container, m, x-auto, p, x-6, p, y-20'>
           <Link, t, o='/ca, s, e-studi, e, s'
             className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           >
-            <ArrowLeft, className='w-4 h-4, m, r-2' />
+            <ArrowLeft, className='w-4 h-4, m, r-2' />;
             Back, to, Case Studi, e, s;
-              <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>18-month, engagemen, t</sp, a, n>
+              <span, className = 'te, x, t-zi, o, n-sla, t, e-lig, h, t'>18-month, engagemen, t</sp, a, n>
             </div>
 
-            <h1, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
+            <h1, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>;
               Global, FinTech, AI Transformati, o, n:</h1>
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, m, t-2'>
                 $127M, Annual, Value Creati, o, n;
               </sp, a, n>
             </h1>
 
-            <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
+            <p, className = 'te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>;
               How, a, Fortune 500, digital, banking platform, leveraged, AI to, transform, operatio, n, s, achievi, n, g $127M, in, annual val, u, e, 94% fraud, detection, accuracy, and, 10x, customer growth, through, intelligent;
               automation, and, predictive analyti, c, s.
             </p> {/* Key, Metrics, Banner */ }
@@ -43,11 +42,11 @@ const GlobalFinTechAITransformatio, n = () => {
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
                   $12, 7, M;
                 </div>
-                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                <div, className = 'te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>;
                   Annual, Value, Created;
                 </d, i, v>
-                    <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'></h3>
-                    <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+                    <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'></h3>
+                    <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>;
 const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
             </p> {/* Key, Metrics, Banner */ }
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'></div>
@@ -55,11 +54,11 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'></div>
                   $12, 7, M;
                 </div>
-                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
+                <div, className = 'te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>;
                   Annual, Value, Created;
                 </d, i, v>
-                    <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'></h3>
-                    <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'></h3>
+                    <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'></h3>
+                    <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'></h3>;
                       Company, Overvie, w;
                     </h3>
                     <ul, className='spa, c, e-y-2'></ul>
@@ -167,17 +166,17 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                     invaluab, l, e. We're, now, leading the, industry, in AI-powered, bankin, g."
                     "Our, partnership, with Zion, Tech, Group has, been, transformational. They, did, n't, just, implement AI, technolog, y—they, helped, us reimagine, our, entire business, mode, l. T, h, e $127M, in, annual value, is, significan, t, but, the, strategic positioning, and, capabilities we've, built, are
                     invaluab, l, e. We're, now, leading the, industry, in AI-powered, bankin, g."</p>
-                      <div, className='te, x, t-white, fon, t-semibo, l, d'>
+                      <div, className = 'te, x, t-white, fon, t-semibo, l, d'>;
                         Chief, Technology, Officer;
                       </div>
                       <div, className='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'>
                   <p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'></p>
                     "Our, partnership, with Zion, Tech, Group has, been, transformational. They, did, n't, just, implement AI, technolog, y—they, helped, us reimagine, our, entire business, mode, l. T, h, e $127M, in, annual value, is, significan, t, but, the, strategic positioning, and, capabilities we've, built, are;"
                     invaluab, l, e. We're, now, leading the, industry, in AI-powered, bankin, g."
-                      <div, className='te, x, t-white, fon, t-semibo, l, d'></div>
+                      <div, className = 'te, x, t-white, fon, t-semibo, l, d'></div>;
                         Chief, Technology, Officer;
                       </div>
-                      <div, className='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'></div>
+                      <div, className = 'te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'></div>;
                         Client, Company;
                       </div>
                     </div>
@@ -192,7 +191,7 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                     of, chasing, fraud."
                     Schedule, Consultatio, n;
                     Schedule, Consultatio, n</p>
-                    <Zap, classNam, e='w-5 h-5' />
+                    <Zap, classNam, e = 'w-5 h-5' />;
                     Schedule, Consultatio, n;
                     <Zap, className='w-5 h-5' />
 }}
@@ -202,7 +201,7 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                     down, 9, 2%, and, our, team can, focus, on strategic, work, instead;"
                     of, chasing, fraud."
                     Schedule, Consultatio, n;
-                    <Zap, classNam, e='w-5 h-5' /></Zap>
+                    <Zap, classNam, e = 'w-5 h-5' /></Zap>;
                     Schedule, Consultatio, n;
                     <Zap, className='w-5 h-5' /></Zap>
 }}"

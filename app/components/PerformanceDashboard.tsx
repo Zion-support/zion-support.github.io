@@ -75,7 +75,7 @@ const PerformanceDashboard: React.FC = () => {
   if (!isVisible) {
     return (
       <button
-        onClick={() => setIsVisible(true)}
+        onClick={{{{{() => setIsVisible(true)}}}}}
         className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
       >
         Show Performance
@@ -88,7 +88,7 @@ const PerformanceDashboard: React.FC = () => {
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
         <button
-          onClick={() => setIsVisible(false)}
+          onClick={{{{{() => setIsVisible(false)}}}}}
           className="text-gray-500 hover:text-gray-700"
         >
           ×

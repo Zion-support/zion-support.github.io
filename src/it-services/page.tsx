@@ -356,7 +356,7 @@ const ITServicesPage: React.FC = () => {
       
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
-        <section className="text-center mb-16">
+        </div></main></div><section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               IT Services & Infrastructure
@@ -366,7 +366,7 @@ const ITServicesPage: React.FC = () => {
             Comprehensive IT solutions to support and optimize your business infrastructure. 
             From cloud migration to cybersecurity, we keep your technology running smoothly.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </section><div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
@@ -385,7 +385,7 @@ const ITServicesPage: React.FC = () => {
         {/* Main Services Grid */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Core IT Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
               <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-cyan-400 mb-4">
@@ -454,7 +454,7 @@ const ITServicesPage: React.FC = () => {
         {/* Additional Services */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Additional IT Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {additionalServices.map((service, index) => (
               <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover:bg-slate-800/50 transition-all duration-300">
                 <div className="flex items-center mb-3">
@@ -471,7 +471,7 @@ const ITServicesPage: React.FC = () => {
         {/* Support Tiers */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          </section><div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
               <h3 className="text-xl font-bold text-white mb-4">Basic Support</h3>
               <div className="text-3xl font-bold text-cyan-400 mb-4">$199/month</div>
@@ -557,7 +557,7 @@ const ITServicesPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="text-center">
-          <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">
+          </section><div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your IT Infrastructure?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Get a free IT assessment and discover how our services can improve your technology infrastructure and reduce costs.

@@ -27,7 +27,7 @@ function createBasicComponent(filePath) {/* TODO: Fix JSX expression */}
 interface ${componentName}Props {/* TODO: Fix JSX expression */}
 }
 const ${componentName}: React.FC<${componentName}Props> = ({ 
-  className = '', 
+  className = '', ;
   children;
 }) => {
   return (

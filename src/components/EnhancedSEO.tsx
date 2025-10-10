@@ -38,14 +38,14 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   twitterCard = 'summary_large_image',
   twitterSite = '@ziontechgroup',
 //   structuredData,
-  noindex = false,
-  nofollow = false,
+  noindex: false,
+  nofollow: false,
   lang = 'en',
   author = 'Zion Tech Group',
 //   publishedTime,
 //   modifiedTime,
-//   section,
-  tags = []}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
+//   section,;
+  tags: []}) => {const fullDescription: description.length > 160 ? description.substring(0, 157) + '...' : description;}
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
   return (
     

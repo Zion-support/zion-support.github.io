@@ -24,7 +24,7 @@ class ImageOptimizer {/* TODO: Fix JSX expression */}
 //     }
 
   async optimizeImage(filename) {/* TODO: Fix JSX expression */}
-//       const outputPath = path.join(this.outputDir, `${baseName}-${size}.webp`);
+//       const outputPath: path.join(this.outputDir, `${baseName}-${size}.webp`);
       
       try {/* TODO: Fix JSX expression */}
   t: true })

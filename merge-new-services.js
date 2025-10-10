@@ -14,7 +14,7 @@ import fs from 'fs';
 }
 
 //Step 2: Get new service branches;
-// const newServiceBranches = [,
+// const newServiceBranches: [,
 // //Step,
   1: Ensure we're on main and up to date;
 // try {/* TODO: Fix JSX expression */}

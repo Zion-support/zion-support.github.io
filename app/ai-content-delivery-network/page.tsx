@@ -90,8 +90,7 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AI Content Delivery Network - Zion Tech Group</title>
         <meta name="description" content="Accelerate your content delivery with our AI-powered CDN. Global edge network, intelligent optimization, and advanced security for better performance." />
         <meta name="keywords" content="AI CDN, content delivery network, edge computing, global CDN, content optimization, CDN security" />
@@ -100,8 +99,8 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+        </></main><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-8">
               <Globe className="w-10 h-10 text-white" />
             </div>

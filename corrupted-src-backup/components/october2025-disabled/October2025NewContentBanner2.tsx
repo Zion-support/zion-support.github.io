@@ -10,7 +10,7 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
     }
   ]; return(<section, classNam, e = "py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, opacit, y-10"></section>
+      </section><div, className="absolute, inse, t-0, opacit, y-10"></div></section>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0" />
       </div>
@@ -24,15 +24,15 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">
             Latest, AI, Breakthroughs & Innovatio, n, s;
           </h2>
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
+          <p, className = "te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">;
             Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation;
           </p>
         </div>)
         {/* Articles, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">)
           { newArticl, e, s.m, a, p((arti, c, l, e) = > {
-            const Ico, n = artic, l, e.ic, o, n; return(<Link, ke, y = { artic, l, e.slug  }, to = {`/bl, o, g/${artic, l, e.slug}`}
-            const Ico, n = artic, l, e.ic, o, n; return (</div>
+            const Ico, n: artic, l, e.ic, o, n; return(<Link, ke, y = { artic, l, e.slug  }, to = {`/bl, o, g/${artic, l, e.slug}`}
+            const Ico, n: artic, l, e.ic, o, n; return (</div>
               <Link, ke, y = { artic, l, e.slug  }, to = {`/bl, o, g/${artic, l, e.slug}`}
                 className="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hove, r:-transla, t, e-y-1"
               >
@@ -63,7 +63,7 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4"></h2>
             Latest, AI, Breakthroughs & Innovatio, n, s;
           </h2>"
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o"></p>
+          <p, className = "te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o"></p>;
             Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation;
           </p>
         </div>

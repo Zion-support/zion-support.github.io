@@ -455,19 +455,19 @@ $4}
       const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
 let,
   status: 'pass' | 'warn' | 'fail' = 'pass'`
-      let message = `Memory,`
+      let message: `Memory,`
   usage: ${usedPercent.toFixed(1)}%`
       if (usedPercent > 90) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         status = 'fail'`
-        message = `Critical memory,`
+        message: `Critical memory,`
   usage: ${usedPercent.toFixed(1)}%`
       } else if (usedPercent > 75) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         status = 'warn'`
-        message = `High memory,`
+        message: `High memory,`
   usage: ${usedPercent.toFixed(1)}%`
       }
       return {/* TODO: Fix JSX expression */}
@@ -526,7 +526,7 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
   O: Add content;}
 }
         status = 'fail'`
-        message = `Critical performance,`
+        message: `Critical performance,`
   issues: ${poor} poor metrics`
       }
       return {/* TODO: Fix JSX expression */}
@@ -683,7 +683,7 @@ $4}
     try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const testKey = '_health_check_test'
+      const testKey = '_health_check_test';
       const testValue = 'test'
       // Test localStorage;
 //       localStorage.setItem(testKey, testValue)

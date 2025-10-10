@@ -19,7 +19,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     text = 'Loading...',
     className = '',
     color = 'blue',
-    fullScreen = false,
+    fullScreen: false,
   }) => {
     const sizeClasses = useMemo(
       () => ({

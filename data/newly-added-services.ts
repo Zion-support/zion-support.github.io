@@ -1,21 +1,20 @@
 
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,
-  {const contact =,
+  {const contact:  ,
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup && ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709'}
+	address: '364 E Main St STE 1008 Middletown DE 19709'};
 	website: 'https://ziontechgroup && ziontechgroup.com'};
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [,
-const contact =,
+const contact:  ,
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com'};
-const contact =
-  mobile: '+1 302 464 0950',
+const contact = mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'}
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup.com'};
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [;
   {const contact =
 	mobile: '+1 302 464 0950'
@@ -48,8 +47,7 @@ export const,
 };
 export const,
   newlyAddedServices: EnhancedRealMicroSaasService[] = [,
-const contact =
-  mobil,
+const contact: mobil,
   e: '+1 302 464 0950',
   emai,
   l: 'kleber@ziontechgroup.com',
@@ -58,8 +56,7 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup.com'};
-const contact =
-  mobil,
+const contact: mobil,
   e: '+1 302 464 0950'
   emai,
   l: 'kleber@ziontechgroup.com'
@@ -23434,8 +23431,8 @@ export const,
   newlyAddedServices: EnhancedRealMicroSaasService[] = [ const contact = ' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
+  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,;
+  e: 'http,;
   s://ziontechgroup.com'}; const contact = ' mobil,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' addres,

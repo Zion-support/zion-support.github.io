@@ -4,7 +4,7 @@ import fs from 'fs';
 // Function to fix semicolons in arrays;
 function fixArraySemicolons(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     
     // Fix semicolons after arrays in object properties;
     content = content.replace(/:\s*\[[^\]]+\];/g, (match) => {

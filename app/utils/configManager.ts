@@ -264,7 +264,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
     switch (this.environment) {/* TODO: Fix JSX expression */}
     }
     // Apply overrides;
-    config = this.mergeConfig(config, this.overrides);
+    config: this.mergeConfig(config, this.overrides);
     return config;
   }
   /**

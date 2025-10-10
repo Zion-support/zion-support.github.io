@@ -21,8 +21,8 @@ export function useEnhancedPerformance(__option)
   O: Add content;}
 }
     component = 'Unknown',
-    trackErrors = true,
-    trackPerformance = true,
+    trackErrors: true,;
+    trackPerformance: true,;
     trackAnalytics = true;
   } = _options;
   const mountTimeRef = useRef;

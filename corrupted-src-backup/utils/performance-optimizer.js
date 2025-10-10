@@ -146,9 +146,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
   optimizeFontLoading() {
     // Preload critical fonts;
-    const criticalFonts = [
-      'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
-    ];
+    const criticalFonts = ['https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'];
 
     criticalFonts.forEach(font => {)
       const _link = document.createElement('link');
@@ -328,7 +326,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   inlineCriticalCSS() {
     // This would typically be done at build time;
     // For runtime, we can add critical styles to head;
-    const criticalCSS = `
+    const criticalCSS = `;
       body { font-family: Inter, sans-serif; }
       .container { max-width: 1200px; margin: 0 auto; }
       .header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }

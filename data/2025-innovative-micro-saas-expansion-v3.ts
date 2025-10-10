@@ -38,10 +38,9 @@
   rating: number;
   reviews: number;
 
-const contact =
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup && ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
+const contact = mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup && ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
       customers: 34;
       rating: 4 && 4.9;
       reviews: 28;
@@ -70,9 +69,8 @@ export interface InnovativeMicroSaasService {id: string, name: string;
   rating: number;
   reviews: number;
 }
-const contact =
-  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+const contact = mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com'};
 export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = [,
   // AI-Powered Business Intelligence & Analytics;
@@ -656,8 +654,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
   review,
   s: number;
 ,
-const contact =
-  mobil,
+const contact: mobil,
   e: '+1 302 464 0950',
   emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -684,8 +681,7 @@ export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}
   g: number,
   review,
   s: number}
-const contact =
-  mobil,
+const contact: mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
   addres,
@@ -3604,7 +3600,7 @@ i,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number, const contact = mobil,
+  s: number, const contact: mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', customer,
@@ -3651,8 +3647,8 @@ i,
   s: number } const contact = ' mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
+  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,;
+  e: 'http,;
   s://ziontechgroup.com' }; export const,
   innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = [ // AI-Powered Business Intelligence & Analytics ' i,
   d: 'ai-business-intelligence-platform', nam,

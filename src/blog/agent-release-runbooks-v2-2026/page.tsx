@@ -11,7 +11,7 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+        </div></main></div><section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Page
 
@@ -20,7 +20,7 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
 
             canaries, approvals and one‑click rollback.
           </p>
-          <div></div>
+          </section><div></div>
             <div></div>
               <Calendar /></Calendar>
               <span>Jan 30, 2026</span>
@@ -32,10 +32,10 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
           </div>
         </div>
       </header>
-      <section className='py-16'></section>
+      <section className = 'py-16'></section>
         <div></div>
           <h2>Release Safety Model</h2>
-<p>Operational safety hinges on three,
+<p>Operational safety hinges on three,;
   primitives: hard;
             budgets, lightweight approvals and KPI-linked canaries that trigger;
             automatic rollback when thresholds are breached.
@@ -49,7 +49,7 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
           </ol>
         </div>
       </section>
-      <section className='py-12 bg-white'></section>
+      <section className = 'py-12 bg-white'></section>
 <div></div>
           <div></div>
             <div>Budgets</div>
@@ -101,7 +101,7 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
 
 
 
-
+;
 export default AgentReleaseRunbooksV22026Page;
 
 

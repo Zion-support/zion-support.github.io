@@ -620,10 +620,10 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               Innovation at Scale;
             </div>
           </div>
-          <h1 className="text-left">
+          <h1 className = "text-left">;
             Micro SAAS Services;
           </h1>
-          <p className="text-left">
+          <p className = "text-left">;
             Revolutionary software solutions designed specifically for small businesses, startups, and entrepreneurs.</p>
             <span className="text-left"> Affordable, powerful, and future-ready.</span><
           </p>
@@ -644,7 +644,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
           <div className="text-left"></div>
             <Search className="text-left" />
             <input;
-              type="text"
+              type = "text";
   const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
     <div className="text-left"></div>
       {/* Animated Background */}"
@@ -662,7 +662,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               Innovation at Scale;
             </div>
           </div>"
-          <h1 className="text-left"></h1>
+          <h1 className = "text-left"></h1>;
             Micro SAAS Services;
           </h1>"
           <p className="text-left"></p>
@@ -689,7 +689,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               type="text""
               placeholder="Search for innovative micro SAAS solutions..."
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}"
+              onChange={{{{{(e) => setSearchTerm(e.target.value)}}}}}"
               className="text-left"
             />
             <div className="text-left"></div>
@@ -712,7 +712,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
           <div className="text-left"></div>
             <select></select>
               value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}"
+              onChange={{{{{(e) => setSelectedCategory(e.target.value)}}}}}"
               className="text-left"
             >
               {/* TODO: Fix JSX expression */}"
@@ -855,7 +855,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               <h2 className="text-left">
                 Let's Build the Future Together;
               </h2>
-              <p className="text-left">
+              <p className = "text-left">;
                 Our cutting-edge micro SAAS solutions are designed to scale with your business needs.</p>
                 <span className="text-left"> Start your digital transformation journey today.</span><
               </p>
@@ -884,22 +884,22 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               </div>
               <div className="text-left">
                 <a;
-              <div className="text-left"></div>
-                <a
+              <div className = "text-left"></div>
+                <a;
                   href="mailto: kleber@ziontechgroup.<com" className="text-left"
                 >
-                  <Mail className="text-left" />
+                  <Mail className="text-left" />;
                   Get Started Today;
                 </a>
                 <a;
-                  href="tel:+<13024640950" className="text-left"
+                  href = "tel:+<13024640950" className="text-left"
                 >,
-                  <Phone className="text-left" />,
+                  <Phone className="text-left" />,;
                   Call Now;
               {/* Features */}"
-              <div className="text-left"></div>"
+              <div className = "text-left"></div>"
                 <h4 className="text-left"></h4>"
-                  <Zap className="text-left" /></Zap>
+                  <Zap className="text-left" /></Zap>;
                   Key Features;
                 </h4>"
                 <div className="text-left"></div>
@@ -988,8 +988,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                   Get Started Today;
                 </a>
                 <a></a>"
-                  href="te,"
+                  href = "te,";
   l:+<13024640950" className="text-left"
                 ></13024640950>"
-                  <Phone className="text-left" /></Phone>
+                  <Phone className="text-left" /></Phone>;
                   Call Now;"`

@@ -25,18 +25,18 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
               OCTOBER, 202, 5 - BREAKTHROUGH, AI, OPERATIONS;
             </sp, a, n>
           </div>
-          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">
+          <h2, className = "te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">;
             Transform, Your, Enterprise Operatio, n, s;
           </h2>
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
+          <p, className = "te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">;
             Three, revolutionary, platforms delivering, unprecedented, R, O, I, securi, t, y, and, operational, excellence;
           </p>
         </div>)
         {/* Articles, Gri, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
           { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > {
-            const Ico, n = artic, l, e.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
-            const Ico, n = artic, l, e.ic, o, n; return (</div>
+            const Ico, n: artic, l, e.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
+            const Ico, n: artic, l, e.ic, o, n; return (</div>
               <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
               >
                 {/* Gradient, over, l, a, y */}
@@ -60,10 +60,10 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
               OCTOBER, 202, 5 - BREAKTHROUGH, AI, OPERATIONS;
             </sp, a, n>
           </div>"
-          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4"></h2>
+          <h2, className = "te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4"></h2>;
             Transform, Your, Enterprise Operatio, n, s;
           </h2>"
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o"></p>
+          <p, className = "te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o"></p>;
             Three, revolutionary, platforms delivering, unprecedented, R, O, I, securi, t, y, and, operational, excellence;
           </p>
         </div>

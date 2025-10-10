@@ -56,7 +56,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
     }
   }
 
-  private reportError = (erro,
+  private reportError: (erro,
   r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
         }
@@ -74,16 +74,16 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900"></div>
+        <div className = "min-h-screen flex items-center justify-center bg-gray-900"></div>
           <div className="text-center p-8 max-w-md"></div>
             <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-300 mb-6">;
               We're sorry, but something unexpected happened. Our team has been notified.
             </p>
 :src/components/ErrorBoundary.tsx;
             {this.state.errorId && (
-              <p className="text-gray-400 mb-4 text-sm">
+              <p className = "text-gray-400 mb-4 text-sm">;
                 Error ID: {this.state.errorId}
               </p>
             )}
@@ -106,10 +106,10 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               </button>,
             </div>,
             <button;
-              onClick={() => window.location.reload()}
+              onClick={{{{{() => window.location.reload()}}}}}
               className="mt-4 text-gray-400 hover: text-white text-sm underline",
             <button;
-              onClick={() => window.location.reload()}
+              onClick={{{{{() => window.location.reload()}}}}}
               className="bg-blue-600 hover: bg-blue-700 text-white font-bold py-2 px-4 rounded"
   render() {/* TODO: Fix JSX expression */}
   ID: {this.state.errorId}
@@ -135,11 +135,11 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               </button>
             </div>
             <button></button>
-              onClick={() => window.location.reload()}"
+              onClick={{{{{() => window.location.reload()}}}}}"
               className="mt-4 text-gray-400,"
   hover:text-white text-sm underline"
             <button></button>
-              onClick={() => window.location.reload()}"
+              onClick={{{{{() => window.location.reload()}}}}}"
               className="bg-blue-600,"
   hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >

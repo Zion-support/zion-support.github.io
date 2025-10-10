@@ -30,10 +30,10 @@ interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
  seoData;
- enableStructuredData = true,
- enableOpenGraph = true,
- enableTwitterCards = true,
- enableSchemaMarkup = true}) => {
+ enableStructuredData: true,
+ enableOpenGraph: true,
+ enableTwitterCards: true,
+ enableSchemaMarkup: true}) => {
  const _structuredDataRef = useRef<HTMLScriptElement | null>(null);</HTMLScriptElement>const</HTMLScriptElement> generateStructuredData = useCallback(() => {
  if (!enableStructuredData || !seoData.structuredData) return null;
 
@@ -188,7 +188,7 @@ const,
  // // Remove existing structured data;
  // // if (structuredDataRef.current) {
  // // structuredDataRef.current.remove();
- // const _addMetaTag = (nam,
+ // const _addMetaTag: (nam,
   e: string, conten,
   t: string, attribut)
   e: string = 'name') => {/* TODO: Fix JSX expression */}

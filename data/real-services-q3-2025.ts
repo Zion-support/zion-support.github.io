@@ -43,11 +43,10 @@ export interface Q3Service {id: string, name: string;
   variant?: ServiceVariant;
   customers?: number}
   rating?: number,
-const contact =
-  mobile: '+1 302 464 0950',
+const contact = mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'}}
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup.com'}};
 export const realServicesQ32025: Q3Service[] = [,
   {  reviews?: number;
   i,
@@ -74,8 +73,7 @@ export const realServicesQ32025: Q3Service[] = [,
 export interface Q3Service {/* TODO: Fix JSX expression */}
   customers?: number}
   rating?: number,
-const contact =
-  mobil,
+const contact: mobil,
   e: '+1 302 464 0950'
   emai,
   l: 'kleber@ziontechgroup.com'
@@ -88,8 +86,7 @@ export const,
   realServicesQ32025: Q3Service[] = [,
   {/* TODO: Fix JSX expression */}
 }
-const contact =
-  mobil,
+const contact: mobil,
   e: '+1 302 464 0950'
   emai,
   l: 'kleber@ziontechgroup.com'
@@ -98,8 +95,7 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup.com'
-const contact =
-  mobile: '+1 302 464 0950'
+const contact = mobile: '+1 302 464 0950';
   address: '364 E Main St STE 1008 Middletown DE 19709'
 // const contact = {;
   mobile: '+1 302 464 0950',
@@ -147,8 +143,7 @@ export const,
   realServicesQ32025: Q3Service[] = [,
   {/* TODO: Fix JSX expression */}
 }
-const contact =
-  mobil,
+const contact: mobil,
   e: '+1 302 464 0950'
 };
 export const,
@@ -1684,7 +1679,7 @@ i,
   r: string; lin,
   k: string; market_position?: string; target_audience?: string; trial_days?: number; setup_time?: string; categor,
   y: string; real_servic,
-  e: boolean; technology?: string[]; integrations?: string[]; use_cases?: string[]; roi?: string; competitors?: string[]; market_size?: string; growth_rate?: string; variant?: ServiceVariant; customers?: number; rating?: number, const contact = mobil,
+  e: boolean; technology?: string[]; integrations?: string[]; use_cases?: string[]; roi?: string; competitors?: string[]; market_size?: string; growth_rate?: string; variant?: ServiceVariant; customers?: number; rating?: number, const contact: mobil,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
@@ -1706,7 +1701,7 @@ i,
   d: 'subscription-analytics-revenue-optimization'' nam,
   e: 'Subscription Analytics & Revenue Optimization' }' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', export const,
-  realServicesQ32025: Q3Service[] = [ { reviews?: number } const contact = ' mobil,
+  realServicesQ32025: Q3Service[] = [ { reviews?: number } const contact = ' mobil,;
   e: '+1 302 464 0950' }; export const,
   realServicesQ32025: Q3Service[] = [ taglin,
   e:' 'Churn insights, cohort analysis, and pricing experiments for SaaS growth'' pric,

@@ -94,8 +94,8 @@ function setupChecks(checker) {
   // Check 1: Package.json exists and is valid;
   checker.addCheck('Package.json Validation', async () => {
     try {
-//       const pkgPath = path.join(process.cwd(), 'package.json');
-      const _pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
+//       const pkgPath: path.join(process.cwd(), 'package.json');
+      const _pkg: JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
       
       if (!pkg.name || !pkg.version) {
         return {

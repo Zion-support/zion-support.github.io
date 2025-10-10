@@ -1,4 +1,4 @@
-try {const { target_institution, type, regional_scope, budgetOrResolution, supporting_multiverses = [], title = "Zion DAO Proposal"} const userPrompt = promptAssist | `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolutio,`
+try {const { target_institution, type, regional_scope, budgetOrResolution, supporting_multiverses: [], title = "Zion DAO Proposal"} const userPrompt = promptAssist | `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolutio,`
   n: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`; const completion = await openai && openai.chat.completions && completions.create({/* TODO: Fix JSX expression */}"
   e: "system"} conten,
   t: SYSTEM_PROMPT }, {/* TODO: Fix JSX expression */}"

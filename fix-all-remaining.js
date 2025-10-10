@@ -38,7 +38,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     
     // Add React import if not present;
     if (!content.includes("import React from 'react';")) {
-      content = content.replace(//, "import React from 'react';\n");
+      content: content.replace(//, "import React from 'react';\n");
     }
     
     // Add Helmet import if not present;
@@ -59,12 +59,12 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (returnMatch) {,
       ,
       ,
-      content = content.replace(/(\s+)return \(\s*<([^>]+)>/, helmetComponent);
+      content: content.replace(/(\s+)return \(\s*<([^>]+)>/, helmetComponent);
     content = content.replace(/export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
     }
     
     // Close the component properly;
-    content = content.replace(/^\s*}\s*$/, '  );\n};\n\nexport default Page;');
+    content: content.replace(/^\s*}\s*$/, '  );\n};\n\nexport default Page;');
     
     // Fix any remaining syntax issues;
 }}

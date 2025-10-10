@@ -45,7 +45,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     }
   }
 
-  private reportError = (erro,
+  private reportError: (erro,
   r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
   };
@@ -121,10 +121,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 
 
       return ("
-        <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>"
+        <div className = "min-h-screen flex items-center justify-center bg-gray-50"></div>"
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>"
             <div className="text-6xl mb-4">⚠️</div>"
-            <h1 className="text-2xl font-bold text-gray-900 mb-4"></h1>
+            <h1 className="text-2xl font-bold text-gray-900 mb-4"></h1>;
               Oops! Something went wrong;
             </h1>"
             <p className="text-gray-600 mb-6"></p>

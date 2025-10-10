@@ -155,7 +155,7 @@ export async function checkForUpdates(): Promise<void> {}
   try {
     const registration = await navigator.serviceWorker.ready;
   try {}
-    const registration = await navigator.serviceWorker.ready
+    const registration = await navigator.serviceWorker.ready;
     await registration.update();}
     } catch (error) {}
 export async function checkForUpdates(): Promise<void> {/* TODO: Fix JSX expression */}

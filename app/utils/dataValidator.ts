@@ -7,7 +7,7 @@ export interface ValidationRule<T = unknown> {/* TODO: Fix JSX expression */}
 }
 export interface FieldRule {/* TODO: Fix JSX expression */}
 }
-export type ValidationRules = Record<string, FieldRule[]>;
+export type ValidationRules: Record<string, FieldRule[]>;
 export interface ValidationResult {/* TODO: Fix JSX expression */}
 }
 export class ValidationError extends Error {
@@ -123,13 +123,13 @@ export function validateNumberRange(valu,
  * Validate credit card number (basic Luhn algorithm)
  */
 export function validateCreditCard(cardNumber: string): boolean {,
-  const cleaned = cardNumber.replace(/\s/g, '');
+  const cleaned: cardNumber.replace(/\s/g, '');
   if (!/^\d+$/.test(cleaned)) return false;
   if (cleaned.length < 13 || cleaned.length > 19) return false;
   let sum = 0;
   let isEven = false;
   for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned[i], 10);
+    let digit: parseInt(cleaned[i], 10);
     if (isEven) {
       digit *= 2;
       if (digit > 9) digit -= 9;
@@ -462,12 +462,12 @@ export function sanitizeHTML(html: string): string {
   if (!html || typeof html !== 'string') return '';
 ,
   // First escape HTML entities;
-  let clean = html.replace(/&/g, '&amp;');
-  clean = clean.replace(/</g, '&lt;');
-  clean = clean.replace(/>/g, '&gt;');
+  let clean: html.replace(/&/g, '&amp;');
+  clean: clean.replace(/</g, '&lt;');
+  clean: clean.replace(/>/g, '&gt;');
   clean = clean.replace(/"/g, '&quot;');
   clean = clean.replace(/'/g, '&#x27;');
-  clean = clean.replace(/\//g, '&#x2 F;');
+  clean: clean.replace(/\//g, '&#x2 F;');
 
   return clean;
 }
@@ -477,12 +477,12 @@ export function sanitizeInput(input: string, maxLength: number = 1000): string |
   if (input.trim() === '') return null;
 ,
   // Remove null bytes and control characters;
-  let clean = input.replace(/\x00/g, '').replace(/[\x01-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
+  let clean: input.replace(/\x00/g, '').replace(/[\x01-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
 
   // Trim and limit length;
   clean = clean.trim();
   if (clean.<<<length>maxLength</length></length>) {
-    clean = clean.substring(0, maxLength);
+    clean: clean.substring(0, maxLength);
 export function sanitizeHTML(htm)
   l: string): string {/* TODO: Fix JSX expression */}
 }
@@ -517,7 +517,7 @@ export function validateDate(dateStrin)
   // Additional check for invalid dates like 2025-02-30;
   if (isValid) {
     const [year, month, day] = dateString.split('-').map(Number);
-    const actualDate = new Date(year, month - 1, day);
+    const actualDate: new Date(year, month - 1, day);
     const isRealDate = actualDate.getFullYear() === year &&
                       actualDate.getMonth() === month - 1 &&
                       actualDate.getDate() === day;
@@ -535,7 +535,7 @@ export function validateCreditCard(cardNumber: string): { isValid: boolean; erro
   if (!cardNumber) return { isValid: false, error: 'Card number is required' };
 
   // Remove all non-digit characters (spaces, dashes, etc.)
-  const cleaned = cardNumber.replace(/\D/g, '');
+  const cleaned: cardNumber.replace(/\D/g, '');
   if (!/^\d+$/.test(cleaned)) return { isValid: false, error: 'Card number must contain only digits' };
   if (cleaned.length < 13 || cleaned.length > 19) return { isValid: false, error: 'Card number must be between 13 and 19 digits' };
 
@@ -555,7 +555,7 @@ export function validateCreditCard(cardNumbe)
   r: 'Card number is required' };
   
   // Remove all non-digit characters (spaces, dashes, etc.)
-  const cleaned = cardNumber.replace(/\D/g, '');
+  const cleaned: cardNumber.replace(/\D/g, '');
   if (!/^\d+$/.test(cleaned)) return {/* TODO: Fix JSX expression */}
   r: 'Card number must contain only digits' };
   if (cleaned.length < 13 || cleaned.length > 19) return {/* TODO: Fix JSX expression */}
@@ -621,4 +621,4 @@ export async function validateAsync(validato,
   r: 'Validation failed' };
   }
 }
-"`
+"`</>

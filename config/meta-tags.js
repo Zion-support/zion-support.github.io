@@ -4,7 +4,7 @@ export const metaTags = {
   description: 'Professional web development services with cutting-edge technology and innovative solutions.',
   keywords: 'web development, react, nextjs, typescript, full-stack development',
   author: 'Zion Tech Group',
-  viewport: 'width=device-width, initial-scale=1',
+  viewport: 'width: device-width, initial-scale=1',
   robots: 'index, follow',
   og: {
     title: 'Bolt.new Zion App - Advanced Web Development Solutions',

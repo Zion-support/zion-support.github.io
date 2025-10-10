@@ -9,10 +9,10 @@ interface UserExperienceEnhancerProps {
 }
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
-  enableSmoothScrolling = true,
-  enableLoadingStates = true,
-  enableErrorBoundaries = true,
-  enableAnalytics = true,
+  enableSmoothScrolling: true,
+  enableLoadingStates: true,
+  enableErrorBoundaries: true,
+  enableAnalytics: true,
   enableNotifications = true
 }) => {
   const [isOnline, setIsOnline] = useState(true);
@@ -86,7 +86,7 @@ const,
           const href = link.getAttribute('href');
           if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
   // Loading states management;
-  const setLoading = useCallback((ke,
+  const setLoading: useCallback((ke,
   y: string, loadin)
   g: boolean) => {/* TODO: Fix JSX expression */}
     setLoadingStates(prev => ({ ...prev, [key]: loading }));

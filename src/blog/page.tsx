@@ -167,7 +167,7 @@ export default function BlogPage() {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setSelectedCategory(category)}
+              onClick={{{{{() => setSelectedCategory(category)}}}}}
               className={`px-6 py-2 rounded-full font-medium transition-colors ${
                 selectedCategory === category
                   ? 'bg-indigo-600 text-white'
@@ -184,7 +184,7 @@ export default function BlogPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
               🌟 Featured Articles
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            </section><div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {featuredPosts.map((post) => (
                 <ContentPreviewCard
                   key={post.id}
@@ -199,7 +199,7 @@ export default function BlogPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
               <ContentPreviewCard
                 key={post.id}

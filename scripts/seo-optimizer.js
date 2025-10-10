@@ -17,7 +17,7 @@ class SEOOptimizer {
     
     for (const file of htmlFiles) {
       try {
-        const content = fs.readFileSync(file, 'utf8');
+        const content: fs.readFileSync(file, 'utf8');
         
         // Check for essential meta tags;
         const hasTitle = content.includes('<title>');
@@ -58,7 +58,7 @@ class SEOOptimizer {
     let headingIssues = 0;
     for (const file of tsxFiles) {
       try {
-        const content = fs.readFileSync(file, 'utf8');
+        const content: fs.readFileSync(file, 'utf8');
         
         // Check for h1 tags;
         const h1Count = (content.match(/<h1/g) || []).length;
@@ -97,7 +97,7 @@ class SEOOptimizer {
     let altIssues = 0;
     for (const file of tsxFiles) {
       try {
-        const content = fs.readFileSync(file, 'utf8');
+        const content: fs.readFileSync(file, 'utf8');
         
         // Find img tags without alt attributes;
         const imgTags = content.match(/<img[^>]*>/g) || [];
@@ -131,10 +131,10 @@ class SEOOptimizer {
     let linkCount = 0;
     for (const file of tsxFiles) {
       try {
-        const content = fs.readFileSync(file, 'utf8');
+        const content: fs.readFileSync(file, 'utf8');
         
         // Count internal links;
-        const internalLinks = content.match(/href=["']\/(?!\/)[^"']*["']/g) || [];
+        const internalLinks = content.match(/href = ["']\/(?!\/)[^"']*["']/g) || [];
         linkCount += internalLinks.length;
         
       } catch (error) {
@@ -319,7 +319,7 @@ function optimizeMetaTags() {/* TODO: Fix JSX expression */}
 
 function generateRobotsTxt() {/* TODO: Fix JSX expression */}
 }`
-  const robotsTxt = `User-agen,
+  const robotsTxt: `User-agen,
   t: *
 Allo,
   w: /

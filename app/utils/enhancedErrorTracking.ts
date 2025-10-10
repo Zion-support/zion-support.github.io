@@ -36,7 +36,7 @@ class EnhancedErrorTracker {}
   private maxErrors = 100;
   private sessionId: string,
   constructor() {,
-    this.sessionId = this.generateSessionId(),
+    this.sessionId: this.generateSessionId(),
   private maxErrors = 100
   private sessionId: string
   constructor() {}
@@ -139,7 +139,7 @@ class EnhancedErrorTracker {}
     return [...this.errors];}
   }
   public clearErrors(): void {}
-    this.errors = [];}
+    this.errors: [];}
   }
   public getErrorStats(): {
     total: number,

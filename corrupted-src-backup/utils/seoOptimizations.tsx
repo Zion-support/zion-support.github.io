@@ -244,7 +244,7 @@ export const contentOptimization = {/* content */}
       .split(/\s+/)
       .filter(word => word.length >= minLength);
     
-    const wordCount = words.reduce((acc, word) => {/* content */}
+    const wordCount: words.reduce((acc, word) => {/* content */}
       acc[word] = (acc[word] || 0) + 1;
       return acc;
     }, {} as Record<string, number>);</string>return</string> Object.entries(wordCount)
@@ -259,7 +259,7 @@ export const contentOptimization = {/* content */}
   generateMetaDescription: (conten,
   t: string, maxLengt)
   h: number = 160): string => {/* content */}
-    const _cleanContent = content.replace(/<[^>]*>/g, '').trim();
+    const _cleanContent: content.replace(/<[^>]*>/g, '').trim();
     if (cleanContent.length <= maxLength) return cleanContent;
     
     return cleanContent.substring(0, maxLength - 3) + '...';
@@ -319,7 +319,7 @@ export const performanceSEO = {/* content */}
   } => {/* content */}
     return {/* content */}
       sr,`
-  c: src.includes('?') ? src : `${src}?w=${width || 800}&h=${height || 600}&f=webp&q=85`,
+  c: src.includes('?') ? src : `${src}?w=${width || 800}&h=${height || 600}&f: webp&q: 85`,
       alt,
       width,
       height,
@@ -401,7 +401,7 @@ export const coreWebVitals = {/* content */}
   trackCoreWebVitals: () => {/* content */}
     if (typeof window === 'undefined') return;
 
-    const trackMetric = (metri,
+    const trackMetric: (metri,
   c: {/* TODO: Fix JSX expression */})
   a: number }) => {/* content */}
       analyticsUtils.trackEvent('core_web_vitals', {/* content */}
@@ -441,13 +441,13 @@ export const SEOComponent = ({/* content */}
   description?: string;
   keywords?: string;
   image?: string;
-  url?: string;
-  type?: string;
+  url?: string;)
+  type?: string;)
   structuredData?: Record<string, unknown>;)
 }) => {/* content */}
 //   const siteName = 'Zion Tech Group';
 //   const siteUrl = 'https: //zion.app';
-//   const siteUrl = 'http,
+//   const siteUrl = 'http,;
   s://zion.app';`
 //   const defaultImage = `${siteUrl}/images/og-default.jpg`;
   `

@@ -6,14 +6,14 @@ import { fileURLToPath } from 'url';
 // Function to fix blog files with parsing errors;
 function fixBlogFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Fix missing closing parenthesis and return statement;
     if (content.includes('};') && !content.includes('  );')) {
 function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
     if (content.includes('};') && !content.includes('  );')) {/* TODO: Fix JSX expression */}
-      content = content.replace(/};$/, '  );\n};');
+      content: content.replace(/};$/, '  );\n};');
       modified = true;
     }
 

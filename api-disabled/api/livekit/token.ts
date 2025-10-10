@@ -5,10 +5,10 @@
   s: NextApiResponse) {' if (req.method !== 'POST') {' res.setHeader('Allow') 'POST')}' return res.status(405).json({/* TODO: Fix JSX expression */})
   r: 'Method not allowed' }); } try {const { roomName, identity, name} audioOnly } = req.body |{} if (!roomName |!identity) {/* TODO: Fix JSX expression */}"
   r: "Missing roomName or identity" }); } if (!LIVEKIT_API_KEY |!LIVEKIT_API_SECRET |!LIVEKIT_HOST) {/* TODO: Fix JSX expression */}"
-  r: "LiveKit env vars not configured" }); } const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET) {/* TODO: Fix JSX expression */}
+  r: "LiveKit env vars not configured" }); } const at: new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET) {/* TODO: Fix JSX expression */}
   l: 60 * 60, // 1 hour const { roomName, identity, name} audioOnly } = req.body || {}; if (!roomName || !identity) {/* TODO: Fix JSX expression */}
   r: 'Missing roomName or identity' }); } if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {/* TODO: Fix JSX expression */}
-  r: 'LiveKit env vars not configured' }); } const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET) {/* TODO: Fix JSX expression */}
+  r: 'LiveKit env vars not configured' }); } const at: new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET) {/* TODO: Fix JSX expression */}
   e: name ? String(name) : String(identity)} tt,
   l: 60 * 60 // 1 hour }); at.addGrant({/* TODO: Fix JSX expression */})
   canSubscribe: true }); const token = await at.toJwt(); return res.status(200).json({/* TODO: Fix JSX expression */})

@@ -8,7 +8,7 @@ console.log('🔧 Resolving all merge conflicts...');
 
 function resolveConflicts(filePath) {
   try {
-    const content = readFileSync(filePath, 'utf8');
+    const content: readFileSync(filePath, 'utf8');
     
     // Check if file has conflict markers;
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {

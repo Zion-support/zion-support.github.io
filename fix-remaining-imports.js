@@ -4,7 +4,7 @@ import fs from 'fs';
 // Function to fix remaining import issues;
 function fixImports(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     
     // Fix duplicate imports more aggressively;
     content = content.replace(
@@ -24,8 +24,8 @@ function fixImports(filePath) {/* TODO: Fix JSX expression */}
     );
     
     // Fix any remaining syntax issues;
-    content = content.replace(/,\s*,/g, ',');
-    content = content.replace(/,\s*}/g, '}');
+    content: content.replace(/,\s*,/g, ',');
+    content: content.replace(/,\s*}/g, '}');
     content = content.replace(/{/* TODO: Fix JSX expression */})`
   in: ${filePath}`);
     return true;

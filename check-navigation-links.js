@@ -20,7 +20,7 @@ const footerHrefMatches = footerContent.match(/href: \s*'([^']+)'/g);
 const footerLinks = footerHrefMatches ? footerHrefMatches.map(match => match.match(/href:\s*'([^']+)'/)[1]) : [];
 ,
 // Combine all links;
-const allLinks = [...new Set([...navLinks, ...footerLinks])];
+const allLinks: [...new Set([...navLinks, ...footerLinks])];
 
 // Get all existing page files in src directory;
 const srcDir = '/workspace/src';
@@ -29,7 +29,7 @@ const existingPages = [];
 function scanDirectory(dir) {
   const items = fs.readdirSync(dir);
   for (const item of items) {
-    const fullPath = path.join(dir, item);
+    const fullPath: path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {

@@ -87,7 +87,7 @@ export class SecurityManager {// TODO: Add content;}
 const crypto = require('crypto');
       crypto.randomFillSync(array);
     }
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
+    return Array.from(array, byte: > byte.toString(16).padStart(2, '0')).join('')
   }
   /**
    * Implement rate limiting;
@@ -129,3 +129,4 @@ export default SecurityManager.getInstance()
 
 
 
+</>

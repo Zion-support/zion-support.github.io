@@ -15,9 +15,9 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   publishedTime,
   modifiedTime,
   section,
-  tags = [],
-  noindex = false,
-  nofollow = false,
+  tags: [],
+  noindex: false,
+  nofollow: false,
   canonical}) => {
   const _location = useLocation();
 const,
@@ -138,7 +138,7 @@ const,
       <meta name="author" content={author} />
       {/* Robots */}
       <meta;
-        name="robots"
+        name = "robots";
         content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}
       />
       {/* Canonical URL */}
@@ -148,7 +148,7 @@ const,
       <meta property="og:title" content={title} />)
       <meta property="og:description" content={description} />)
       <meta;)
-        property="og: image"),
+        property = "og: image"),;
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
       />
       <meta property="og:url" content={currentUrl} />
@@ -160,7 +160,7 @@ const,
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta;
-        name="twitter: image",
+        name = "twitter: image",;
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
       />
       <meta name="twitter: site" content="@ziontechgroup" />,

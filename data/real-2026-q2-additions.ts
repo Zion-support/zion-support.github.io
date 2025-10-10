@@ -8,8 +8,8 @@ export const real2026 Q2 Additions = [
       'Vertex AI',
       'Datadog'],
     competitors: ['Monitaur', 'CalypsoAI', 'Credo AI'],
-    price: '$2, 500',
-    period: '/month'
+    price: '$2, 500',;
+    period: '/month';
     trial_days: 14;
     setup_time: 'Fast'
     market_position: 'Strong enterprise traction with compliance - led buyers',
@@ -51,8 +51,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
   s: [}
       'Enterprise AI model governance'
       'Regulatory readiness and audits'
-      'Vendor model risk management'
-    ]
+      'Vendor model risk management']
     integrations: [
       'Jira'
       'ServiceNow'
@@ -610,7 +609,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
       'Ticketing and customer portals'
     ]
     useCases: [,
-export const real2026Q2Additions = [,
+export const real2026Q2Additions: [,
     useCase,
   s: [,
       'Developer portals'
@@ -668,8 +667,8 @@ export const real2026Q2Additions = [
       'Vertex AI',
       'Datadog'],
     competitors: ['Monitaur', 'CalypsoAI', 'Credo AI'],
-    price: '$2, 500',
-    period: '/month'
+    price: '$2, 500',;
+    period: '/month';
     trial_days: 14;
     setup_time: 'Fast'
     market_position: 'Strong enterprise traction with compliance - led buyers',
@@ -838,8 +837,7 @@ export const real2026 Q2 Additions = [{id: 'ai - synthetic - data - factory',
     lin,
   k: 'http,
   s://ziontechgroup.com / services / ecommerce - returns - orchestrator'},
-export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
-    ]}
+export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}]}
     use_case,
   s: [,
       'Training data augmentation',
@@ -2081,8 +2079,7 @@ export const real2026Q2Additions = [
     lin,
   k: 'http,
   s://ziontechgroup.com / services / msp - remote - device - ops'
-export const real2026Q2Additions = [
-  {/* TODO: Fix JSX expression */}
+export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
   e: '$2}500';
@@ -2490,8 +2487,7 @@ export const real2026 Q2 Additions = [
   s://ziontechgroup.com/services/msp-remote-device-ops'
   }
 ];
-export const real2026Q2Additions = [
-  {/* TODO: Fix JSX expression */}
+export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
   e: '$2}500';
@@ -2875,8 +2871,7 @@ export const real2026Q2Additions = [
   s://ziontechgroup.com/services/msp-remote-device-ops'
   }
 ];
-;export const real2026Q2Additions = [
-  {/* TODO: Fix JSX expression */}
+;export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
   e: '$2}500';
@@ -3299,8 +3294,7 @@ export const real2026Q2Additions = [
     lin,
   k: 'http,
   s://ziontechgroup.com / services / msp - remote - device - ops'
-export const real2026Q2Additions = [
-  {/* TODO: Fix JSX expression */}
+export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
   e: '$2}500';
@@ -3868,8 +3862,8 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   d: 'ai - synthetic - data - factory',' nam,
   e: 'AI Synthetic Data Factory',' categor,
   y: 'AI & Data', taglin,
-  e:  ,' 'Generate high - quality, private, and balanced datasets for ML training.', descriptio,
-  n:  ,' 'Produce privacy - preserving synthetic tabular and time - series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built - in quality metrics and drift checks.', feature,
+  e:  ,' 'Generate high - quality, private, and balanced datasets for ML training.', descriptio,;
+  n:  ,' 'Produce privacy - preserving synthetic tabular and time - series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built - in quality metrics and drift checks.', feature,;
   s: [,' 'Differential privacy and k - anonymity options',' 'Data schema import and auto - profiling',' 'Class balancing, minority class boosters',' 'Bias and fairness testing with reports',' 'Evaluation dashboard with KS / JS metrics',' 'SDKs for Python / JS and API access'; ]; use_case,
   s: [,' 'Training data augmentation',' 'Privacy - preserving analytics',' 'Test data generation'],' integration,
   s: ['S3', 'BigQuery', 'Snowflake', 'Databricks'],' competitor,

@@ -668,7 +668,7 @@ export const,
       'Sentiment from tickets/reviews',
       'Playbooks and tasks',
       'Owner assignment'
-    ],
+    ],;
     popular: false;
     icon: ''
     color: 'from-amber-600 to-orange-700'

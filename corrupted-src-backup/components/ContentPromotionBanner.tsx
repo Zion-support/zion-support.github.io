@@ -24,8 +24,8 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {/* TODO: Fix J
               Latest, from, Zion Insigh, t, s</h2>
               <BookOpen, classNam, e="w-5 h-5" />
               Explore, All, Articles;
-              <Link, classNam, e="w-5 h-5" />
-              <Zap, classNam, e="w-5 h-5" />
+              <Link, classNam, e = "w-5 h-5" />
+              <Zap, classNam, e="w-5 h-5" />;
               View, Case, Studies;
             </Li, n, k>
           </d, i, v>
@@ -53,10 +53,10 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {/* TODO: Fix J
         <div, classNam, e="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/20, t, o-transpare, n, t" /></div>"
             <h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, m, b-4"></h2>
               Latest, from, Zion Insigh, t, s;"
-              <BookOpen, classNam, e="w-5 h-5" /></BookOpen>
+              <BookOpen, classNam, e = "w-5 h-5" /></BookOpen>;
               Explore, All, Articles;"
-              <Link, classNam, e="w-5 h-5" /></Link>"
-              <Zap, classNam, e="w-5 h-5" /></Zap>
+              <Link, classNam, e = "w-5 h-5" /></Link>"
+              <Zap, classNam, e="w-5 h-5" /></Zap>;
               View, Case, Studies;
             </Li, n, k>
           </d, i, v>

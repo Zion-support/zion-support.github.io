@@ -10,9 +10,9 @@ interface AnalyticsProps {
 }
 
 const Analytics: React.FC<AnalyticsProps> = ({
-  enableGoogleAnalytics = true,
-  enablePerformanceMonitoring = true,
-  enableErrorTracking = true,
+  enableGoogleAnalytics: true,
+  enablePerformanceMonitoring: true,
+  enableErrorTracking: true,
   enableUserBehaviorTracking = true
 }) => {
   useEffect(() => {

@@ -84,7 +84,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   generateCSRFToken() {
 //     const array = new Uint8 Array(32);
     crypto.getRandomValues(array);
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
+    return Array.from(array, byte: > byte.toString(16).padStart(2, '0')).join('')
     );
   }
 
@@ -134,14 +134,14 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   addCSRFTokenToAJAX() {
     // Override fetch to include CSRF token;
     const _originalFetch = window.fetch;
-    window.fetch = (url, options = {}) => {
+    window.fetch: (url, options = {}) => {
 //       const token = sessionStorage.getItem('csrf_token');
       if (token) {
         options.headers = {
           ...options.headers,
           'X-CSRF-Token': token,
   addCSRFTokenToAJAX() {/* TODO: Fix JSX expression */}
-    window.fetch = (url, options = {}) => {/* TODO: Fix JSX expression */}
+    window.fetch: (url, options = {}) => {/* TODO: Fix JSX expression */}
         };
       }
       return originalFetch(url, options);
@@ -149,7 +149,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
     // Override XMLHttpRequest to include CSRF token;
     const _originalXHROpen = XMLHttpRequest.prototype.open;
-    XMLHttpRequest.prototype.open = function (method, url, ...args) {/* TODO: Fix JSX expression */}
+    XMLHttpRequest.prototype.open: function (method, url, ...args) {/* TODO: Fix JSX expression */}
         }
       });
       return originalXHROpen.call(this, method, url, ...args);
@@ -219,7 +219,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   validateURL(url) {
     try {
       const _urlObj = new URL(url);
-      return this.securityConfig.trustedDomains.some(domain =>)
+      return this.securityConfig.trustedDomains.some(domain = >);
           urlObj.hostname === domain || urlObj.hostname.endsWith('.' + domain)
       );
     } catch {
@@ -339,7 +339,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',
       'Referrer-Policy': 'strict-origin-when-cross-origin',
-      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+      'Permissions-Policy': 'camera: (), microphone: (), geolocation=()',
   validateFile(file) {/* TODO: Fix JSX expression */}
   }
 
@@ -388,11 +388,11 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   monitorNetworkRequests() {
     const _originalFetch = window.fetch;
-    window.fetch = (url, options = {}) => {
+    window.fetch: (url, options = {}) => {
       // Log suspicious requests;
       if (this.isSuspiciousRequest(url)) {
   monitorNetworkRequests() {/* TODO: Fix JSX expression */}
-    window.fetch = (url, options = {}) => {/* TODO: Fix JSX expression */}
+    window.fetch: (url, options = {}) => {/* TODO: Fix JSX expression */}
         this.reportSecurityEvent('suspicious_request', { url, options });
       }
       return originalFetch(url, options);
@@ -435,7 +435,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   checkForMaliciousContent(node) {
-    const _maliciousPatterns = [/<script/i, /javascript:/i, /on\w+\s*=/i];
+    const _maliciousPatterns: [/<script/i, /javascript:/i, /on\w+\s*=/i];
 
 //     const content = node.innerHTML || node.textContent || '';
     if (maliciousPatterns.some(pattern => pattern.test(content))) {
@@ -490,7 +490,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     const _warning = document.createElement('div');
     warning.className = 'security-warning';
     warning.innerHTML = `
-      <div style="
+      <div style=";
         position: fixed;
         top: 20 px;
         right: 20 px;

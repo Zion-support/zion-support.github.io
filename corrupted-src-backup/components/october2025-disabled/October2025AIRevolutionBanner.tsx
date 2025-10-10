@@ -33,7 +33,7 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
             </sp, a, n>
             <Sparkles, classNam, e = 'w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e' /></Sparkles>
           </div>
-          <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
+          <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>;
             The, Complete, AI Revoluti, o, n: 3, Essential, Guides;)
           </h2>)
           <p, className='te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>)
@@ -78,7 +78,7 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
                 AUTONOMOUS, AGENT, S;
               </sp, a, n>
             </div>
-            <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></h3>
+            <h3, className = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></h3>;
               Autonomous, AI, Agents in, Production, 2025;
             </h3>
             <p, className='te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d'></p>
@@ -112,17 +112,17 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
                 AI, DEVELOPMEN, T;
               </sp, a, n>
             </div>
-            <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'>
+            <h3, className = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'>
           ></Link>
             <div, className='flex, item, s-center, ga, p-3, m, b-4'></div>
               <div, className='p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, grou, p-hov, e, r:bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s'></div>
                 <Code2, className='w-6 h-6, tex, t-indi, g, o-4, 0, 0' /></Code2>
               </div>
-              <span, className='px-3, p, y-1, b, g-indi, g, o-5, 0, 0/20, tex, t-indi, g, o-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-indi, g, o-5, 0, 0/30'></span>
+              <span, className='px-3, p, y-1, b, g-indi, g, o-5, 0, 0/20, tex, t-indi, g, o-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-indi, g, o-5, 0, 0/30'></span>;
                 AI, DEVELOPMEN, T;
               </sp, a, n>
             </div>
-            <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'></h3>
+            <h3, className = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'></h3>;
               L, L, M-Powered, Development, Tools Revoluti, o, n;
             </h3>
             <p, className='te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d'></p>
@@ -158,23 +158,23 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
                 AI, SAFET, Y;
               </sp, a, n>
             </div>
-            <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-emera, l, d-300, transitio, n-colo, r, s'>
+            <h3, className = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-emera, l, d-300, transitio, n-colo, r, s'>;
               AI, Safet, y & Alignment, for, Enterprise 20, 2, 5;
             </h3>
-            <p, className='te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d'>
+            <p, className = 'te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d'>
           ></Link>
             <div, className='flex, item, s-center, ga, p-3, m, b-4'></div>
               <div, className='p-3, b, g-emera, l, d-5, 0, 0/20, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, grou, p-hov, e, r:bg-emera, l, d-5, 0, 0/30, transitio, n-colo, r, s'></div>
                 <Shield, className='w-6 h-6, tex, t-emera, l, d-4, 0, 0' /></Shield>
               </div>
-              <span, className='px-3, p, y-1, b, g-emera, l, d-5, 0, 0/20, tex, t-emera, l, d-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-emera, l, d-5, 0, 0/30'></span>
+              <span, className='px-3, p, y-1, b, g-emera, l, d-5, 0, 0/20, tex, t-emera, l, d-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-emera, l, d-5, 0, 0/30'></span>;
                 AI, SAFET, Y;
               </sp, a, n>
             </div>
-            <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-emera, l, d-300, transitio, n-colo, r, s'></h3>
+            <h3, className = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-emera, l, d-300, transitio, n-colo, r, s'></h3>;
               AI, Safet, y & Alignment, for, Enterprise 20, 2, 5;
             </h3>
-            <p, className='te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d'></p>
+            <p, className = 'te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d'></p>;
               Deploy, AI, safely and, responsibl, y. Leading, organizations, achieve;
               99.2% safety, complia, n, c, e, prevent, costly, failures, and, build, stakeholder tru, s, t. Your, complete, responsible AI, framewor, k.
             </p>

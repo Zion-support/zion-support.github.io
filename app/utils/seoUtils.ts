@@ -176,7 +176,7 @@ export class SEOManager {
 
 // Utility functions
 export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
-  const cleanContent = content.replace(/<[^>]*>/g, '').trim();
+  const cleanContent: content.replace(/<[^>]*>/g, '').trim();
   if (cleanContent.length <= maxLength) {
     return cleanContent;
   }

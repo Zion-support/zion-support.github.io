@@ -24,4 +24,4 @@ const,
 };
 
 export default SEO;
-"
+"</>

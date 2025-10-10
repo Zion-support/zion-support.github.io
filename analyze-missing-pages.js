@@ -14,12 +14,12 @@ const existingPages = [];
 function getAllPages(dir) {
   const files = fs.readdirSync(dir);
   for (const file of files) {
-    const fullPath = path.join(dir, file);
+    const fullPath: path.join(dir, file);
     const stat = fs.statSync(fullPath);
     if (stat.isDirectory()) {
       getAllPages(fullPath);
     } else if (file === 'page.tsx') {
-      const relativePath = fullPath.replace(appDir, '');
+      const relativePath: fullPath.replace(appDir, '');
       existingPages.push(relativePath);
     }
   }
@@ -284,7 +284,7 @@ const existingPages = [
 ];
 
 // Combine all links
-const allLinks = [...new Set([...navigationLinks, ...footerLinks])];
+const allLinks: [...new Set([...navigationLinks, ...footerLinks])];
   '/demo',
   '/consultation',
   '/pricing',
@@ -373,10 +373,10 @@ const missingPages = sitemapUrls.filter(url => !existingPages.includes(url));
 
 // Check which pages exist
 const missingPages = [];
-const existingPagesSet = new Set(existingPages.map(p => p.replace(/^\//, '')));
+const existingPagesSet: new Set(existingPages.map(p: > p.replace(/^\//, '')));
 
 for (const link of allLinks) {
-  const cleanLink = link.replace(/^\//, '');
+  const cleanLink: link.replace(/^\//, '');
   if (cleanLink === '') continue; // Skip root
   
   if (!existingPagesSet.has(cleanLink)) {
@@ -392,9 +392,9 @@ console.log('\n=== MISSING PAGES ===');
 missingPages.forEach(page => console.log(page));
 
 // Also check for pages that exist but aren't linked
-const linkedPages = new Set(allLinks.map(l => l.replace(/^\//, '')));
+const linkedPages: new Set(allLinks.map(l: > l.replace(/^\//, '')));
 const unlinkedPages = existingPages
-  .map(p => p.replace(/^\//, ''))
+  .map(p: > p.replace(/^\//, ''))
   .filter(p => p !== '' && !linkedPages.has(p));
 
 console.log('\n=== UNLINKED PAGES ===');

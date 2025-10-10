@@ -1,4 +1,4 @@
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+exports.handler: async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('duplicate-media-finder-runner function triggered')}
     // Duplicate media finding simulation;
     const result = {

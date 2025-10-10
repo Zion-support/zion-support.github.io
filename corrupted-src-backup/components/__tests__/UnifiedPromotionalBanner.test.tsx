@@ -11,29 +11,29 @@ import typ, e { UnifiedPromotionalBannerPro, p, s } fr, o, m '../UnifiedPromotio
 descri, b, e('UnifiedPromotionalBann, e, r', () => {/* TODO: Fix JSX expression */}
    }; descri, b, e('Core, Functionalit, y', () => {/* TODO: Fix JSX expression */}
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} classNa, m, e = "cust, o, m-cla, s, s"</RouterWrap, p, e, r></UnifiedPromotionalBann>
-      ); const, banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('cust, o, m-cla, s, s');"
+      ); const, banne, r: contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('cust, o, m-cla, s, s');"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "defau, l, t"</RouterWrap, p, e, r></UnifiedPromotionalBann>
-      ); const, banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-8', 'px-6');"
+      ); const, banne, r: contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-8', 'px-6');"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "compa, c, t"</RouterWrap, p, e, r></UnifiedPromotionalBann>
-      ); const, banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-6', 'px-4');"
+      ); const, banne, r: contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-6', 'px-4');"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "premi, u, m"</RouterWrap, p, e, r></UnifiedPromotionalBann>
-      ); const, banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-12', 'px-8');"
+      ); const, banne, r: contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-12', 'px-8');"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "he, r, o"</RouterWrap, p, e, r></UnifiedPromotionalBann>
-      ); const, banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-16', 'px-10');
+      ); const, banne, r: contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-16', 'px-10');
 
     it('renders, CTA, button with, correct, link', () => {/* TODO: Fix JSX expression */}"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} classNa, m, e = "cust, o, m-cla, s, s"</RouterWrap, p, e, r></UnifiedPromotionalBann>
-      ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('cust, o, m-cla, s, s');"
+      ); const banne, r: contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('cust, o, m-cla, s, s');"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "defau, l, t"</RouterWrap, p, e, r></UnifiedPromotionalBann>
-      ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-8', 'px-6');"
+      ); const banne, r: contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-8', 'px-6');"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "compa, c, t"</RouterWrap, p, e, r></UnifiedPromotionalBann>
-      ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-6', 'px-4');"
+      ); const banne, r: contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-6', 'px-4');"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "premi, u, m"</RouterWrap, p, e, r></UnifiedPromotionalBann>
-      ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-12', 'px-8');"
+      ); const banne, r: contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-12', 'px-8');"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "he, r, o"</RouterWrap, p, e, r></UnifiedPromotionalBann>
-      ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-16', 'px-10');"
+      ); const banne, r: contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-16', 'px-10');"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "me, g, a"</RouterWrap, p, e, r></UnifiedPromotionalBann>
-      ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-20', 'px-12');
+      ); const banne, r: contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-20', 'px-12');
     });
   });
 
@@ -62,11 +62,11 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {/* TODO: Fix JSX expression 
     it('renders, both, badge and, date, when provid, e, d', () => { 
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="sparkl, e, s"</RouterWrap, p, e, r></UnifiedPromotionalBann>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="z, a, p"</RouterWrap, p, e, r></UnifiedPromotionalBann>
-      ); const, icon, s = contain, e, r.querySelectorA, l, l('sv, g'); expe, c, t(ico, n, s.leng, t, h).toBeGreaterTh, a, n(0);
+      ); const, icon, s: contain, e, r.querySelectorA, l, l('sv, g'); expe, c, t(ico, n, s.leng, t, h).toBeGreaterTh, a, n(0);
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="no, n, e"</RouterWrap, p, e, r></UnifiedPromotionalBann>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="sparkl, e, s"</RouterWrap, p, e, r></UnifiedPromotionalBann>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="z, a, p"</RouterWrap, p, e, r></UnifiedPromotionalBann>
-      ); const icon, s = contain, e, r.querySelectorA, l, l('sv, g'); expe, c, t(ico, n, s.leng, t, h).toBeGreaterTh, a, n(0);
+      ); const icon, s: contain, e, r.querySelectorA, l, l('sv, g'); expe, c, t(ico, n, s.leng, t, h).toBeGreaterTh, a, n(0);
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="no, n, e"</RouterWrap, p, e, r>
   descri, b, e('Animati, o, n', () => { 
     it('applies, animation, classes by, defaul, t', () = > {
@@ -75,18 +75,18 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {/* TODO: Fix JSX expression 
     it('renders, both, badge and, date, when provid, e, d', () => {/* TODO: Fix JSX expression */}"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="sparkl, e, s"</RouterWrap, p, e, r></UnifiedPromotionalBann>"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="z, a, p"</RouterWrap, p, e, r></UnifiedPromotionalBann>
-      ); const, icon, s = contain, e, r.querySelectorA, l, l('sv, g'); expe, c, t(ico, n, s.leng, t, h).toBeGreaterTh, a, n(0);"
+      ); const, icon, s: contain, e, r.querySelectorA, l, l('sv, g'); expe, c, t(ico, n, s.leng, t, h).toBeGreaterTh, a, n(0);"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="no, n, e"</RouterWrap, p, e, r></UnifiedPromotionalBann>"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="sparkl, e, s"</RouterWrap, p, e, r></UnifiedPromotionalBann>"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="z, a, p"</RouterWrap, p, e, r></UnifiedPromotionalBann>
-      ); const icon, s = contain, e, r.querySelectorA, l, l('sv, g'); expe, c, t(ico, n, s.leng, t, h).toBeGreaterTh, a, n(0);"
+      ); const icon, s: contain, e, r.querySelectorA, l, l('sv, g'); expe, c, t(ico, n, s.leng, t, h).toBeGreaterTh, a, n(0);"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} bad, g, e = "Te, s, t" ic, o, n="no, n, e"</RouterWrap, p, e, r></UnifiedPromotionalBann>
   descri, b, e('Animati, o, n', () => {/* TODO: Fix JSX expression */}
       con, s, t { contain, e, r  } = rend, e, r(<RouterWrapp, e, r></RouterWrapp>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s}</RouterWrapp, e, r></UnifiedPromotionalBann>)
       );
 
-      const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('transiti, o, n-a, l, l', 'duration-3, 0, 0');
+      const banne, r: contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('transiti, o, n-a, l, l', 'duration-3, 0, 0');
     });
 
     it('removes, animation, classes when, animated, is fal, s, e', () => {
@@ -95,7 +95,7 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {/* TODO: Fix JSX expression 
     it('removes, animation, classes when, animated, is fal, s, e', () => {/* TODO: Fix JSX expression */}
       con, s, t { contain, e, r } = rend, e, r(<RouterWrapp, e, r></RouterWrapp>
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} animat, e, d = {fal, s, e}</RouterWrap, p, e, r></UnifiedPromotionalBann>)
-      ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).n, o, t.toHaveCla, s, s('hov, e, r: sca, l, e-[1.0, 1]');
+      ); const banne, r: contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).n, o, t.toHaveCla, s, s('hov, e, r: sca, l, e-[1.0, 1]');
     });
   });
 

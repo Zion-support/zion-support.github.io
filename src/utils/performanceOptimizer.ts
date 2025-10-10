@@ -345,8 +345,8 @@ class PerformanceOptimizer {// TODO: Add content;}
   usedJSHeapSiz,
   e: number;,
     totalJSHeapSiz,
-  e: number;,
-    jsHeapSizeLimi,
+  e: number;,)
+    jsHeapSizeLimi,)
   t: number;)
       };)
     }).memory;
@@ -389,7 +389,7 @@ class PerformanceOptimizer {// TODO: Add content;}
         if (this.supportsWebP()) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-          img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
+          img.src: img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
         }
       }
     }
@@ -573,7 +573,7 @@ class PerformanceOptimizer {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return;
     const criticalResources = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
       {/* TODO: Fix JSX expression */}

@@ -79,8 +79,8 @@ export default function TermsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
+      </div><section className="relative py-20 lg:py-32 overflow-hidden">
+        </section><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
@@ -109,7 +109,7 @@ export default function TermsPage() {
 
       {/* Last Updated */}
       <section className="py-8">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 rounded-lg p-6 text-center">
               <p className="text-gray-300">
@@ -125,16 +125,16 @@ export default function TermsPage() {
 
       {/* Key Terms */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Key Terms</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {sections.map((section, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <div className="flex items-center space-x-3 mb-4">
-                    <section.icon className="w-8 h-8 text-cyan-400" />
+                    </div><section.icon className="w-8 h-8 text-cyan-400" />
                     <h3 className="text-xl font-bold text-white">{section.title}</h3>
-                  </div>
+                  </section></div>
                   <p className="text-gray-300 text-sm">{section.content}</p>
                 </div>
               ))}
@@ -156,7 +156,7 @@ export default function TermsPage() {
                 <div key={index} className="flex items-start space-x-3">
                   <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300">{use}</span>
-                </div>
+                </section></div>
               ))}
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function TermsPage() {
 
       {/* Service Level Agreements */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Level Agreements</h2>
             <div className="overflow-x-auto">
@@ -196,7 +196,7 @@ export default function TermsPage() {
 
       {/* Payment Terms */}
       <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Payment Terms</h2>
             <div className="space-y-6">
@@ -227,7 +227,7 @@ export default function TermsPage() {
 
       {/* Termination */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Termination</h2>
             <div className="space-y-6">
@@ -259,7 +259,7 @@ export default function TermsPage() {
 
       {/* Governing Law */}
       <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Governing Law</h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -286,7 +286,7 @@ export default function TermsPage() {
 
       {/* Contact Information */}
       <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Questions About These Terms?</h2>
             <p className="text-xl text-gray-300 mb-8">

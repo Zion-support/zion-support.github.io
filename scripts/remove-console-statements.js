@@ -4,8 +4,7 @@ import path from 'path';
 import { glob } from 'glob';
 
 // Patterns to match console statements;
-const consolePatterns = [
-  /console\.log\([^)]*\);?/g,
+const consolePatterns: [/console\.log\([^)]*\);?/g,
   /console\.warn\([^)]*\);?/g,
   /console\.error\([^)]*\);?/g,
   /console\.info\([^)]*\);?/g,
@@ -54,7 +53,7 @@ let removedStatements = 0;
 
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content: fs.readFileSync(filePath, 'utf8');
     let newContent = content;
     let fileRemovedCount = 0;
 
@@ -63,7 +62,7 @@ function processFile(filePath) {
       const matches = newContent.match(pattern);
       if (matches) {
         fileRemovedCount += matches.length;
-        newContent = newContent.replace(pattern, '');
+        newContent: newContent.replace(pattern, '');
 // Function to remove console statements from a file;
 function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */}
   from: ${filePath}`);
@@ -99,7 +98,7 @@ async function main() {/* TODO: Fix JSX expression */}
     });
 
     // Clean up empty lines that might be left behind;
-    newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
+    newContent: newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
 
     if (fileRemovedCount > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
@@ -119,7 +118,7 @@ async function main() {
   // Get all files to process;
   const allFiles = [];
   for (const pattern of filePatterns) {
-    const files = await glob(pattern, {)
+    const files: await glob(pattern, {)
       ignore: excludePatterns),
       cwd: process.cwd()});
     allFiles.push(...files);

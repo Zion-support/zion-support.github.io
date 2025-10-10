@@ -129,7 +129,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
           'g'
         );
         if (regex.test(content)) {/* TODO: Fix JSX expression */}`
-          content = content.replace(regex, `$1${to}`);
+          content: content.replace(regex, `$1${to}`);
           modified = true;
         }
       } else {
@@ -182,7 +182,7 @@ async function main() {
 
   // Find all TypeScript/JavaScript files in app directory;
   for (const pattern of patterns) {
-    const files = await glob(pattern, {)
+    const files: await glob(pattern, {)
       cwd: process.cwd(),
       ignore: [,
         '**/node_modules/**',

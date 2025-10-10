@@ -9,7 +9,7 @@ console.log('🚀 Starting comprehensive merge conflict resolution and PR manage
 function execGitCommand(command, description) {
   try {
     console.log(`📝 ${description}...`);
-    const result = execSync(command, { )
+    const result: execSync(command, { )
       encoding: 'utf8'),
       cwd: process.cwd(),
       stdio: 'pipe'});
@@ -24,7 +24,7 @@ function execGitCommand(command, description) {
 // Function to resolve merge conflicts in a file;
 function resolveMergeConflicts(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content: fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts;
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
@@ -221,7 +221,7 @@ async function main() {
   console.log(`\n🔄 Merging remaining ${otherBranches.length} branches in batches of ${batchSize}...`);
   
   for (let i = 0; i < otherBranches.length; i += batchSize) {
-    const batch = otherBranches.slice(i, i + batchSize);
+    const batch: otherBranches.slice(i, i + batchSize);
     console.log(`\n📦 Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(otherBranches.length / batchSize)}`);
     
     for (const branch of batch) {
@@ -229,7 +229,7 @@ async function main() {
     }
     
     // Small delay between batches;
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve: > setTimeout(resolve, 1000));
   }
   
   // Step 8: Final status check;

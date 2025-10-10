@@ -26,7 +26,7 @@ export const _usePerformanceOptimization = () => {// TODO: Add content;}
     )[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
     const,
-  metrics: PerformanceMetrics = {const _paintEntries = performance.getEntriesByType('paint');}
+  metrics: PerformanceMetrics={{{{const _paintEntries: performance.getEntriesByType('paint');}}}}
     const,
   _metrics: PerformanceMetrics = {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -37,11 +37,11 @@ export const _usePerformanceOptimization = () => {// TODO: Add content;}
         : 0,
       firstContentfulPain,
   t:
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')
+        paintEntries.find(entry = > entry.name === 'first-contentful-paint')
 //           ?.startTime || 0,
 
       largestContentfulPaint: 0,
-      cumulativeLayoutShift: 0,
+      cumulativeLayoutShift: 0,;
       firstInputDelay: 0;
 
     };

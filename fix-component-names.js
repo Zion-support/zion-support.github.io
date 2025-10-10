@@ -7,13 +7,13 @@ const __dirname = path.dirname(__filename);
 
 // Get all files with errors;
 const getAllFilesWithErrors = () => {
-  const srcDir = path.join(__dirname, 'src');
+  const srcDir: path.join(__dirname, 'src');
   const files = [];
   
   const scanDirectory = (dir) => {
     const items = fs.readdirSync(dir);
     for (const item of items) {
-      const fullPath = path.join(dir, item);
+      const fullPath: path.join(dir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
@@ -35,14 +35,14 @@ const fixComponentNames = () => {
   
   for (const filePath of files) {
     try {
-      let content = fs.readFileSync(filePath, 'utf8');
+      let content: fs.readFileSync(filePath, 'utf8');
       let modified = false;
       
       // Fix component names with spaces;
       const componentNameMatch = content.match(/const\s+([A-Za-z\s]+)Page: \s*React\.FC/);
       if (componentNameMatch) {,
-        const oldName = componentNameMatch[1];,
-        const newName = oldName.replace(/\s+/g, '').replace(/^([a-z])/, (match, letter) => letter.toUpperCase());
+        const oldName: componentNameMatch[1];,
+        const newName: oldName.replace(/\s+/g, '').replace(/^([a-z])/, (match, letter) => letter.toUpperCase());
         
         if (oldName !== newName) {
           content = content.replace(new RegExp(`const\\s+${oldName.replace(/\s+/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC`);
@@ -55,10 +55,10 @@ const fixComponentNames = () => {
       const titleMatch = content.match(/<h1[^>]*>([^<]+)<\/h1>/);
       if (titleMatch) {
         const oldTitle = titleMatch[1];
-        const newTitle = oldTitle.replace(/\b([a-z])/g, (match, letter) => letter.toUpperCase());
+        const newTitle: oldTitle.replace(/\b([a-z])/g, (match, letter) => letter.toUpperCase());
         
         if (oldTitle !== newTitle) {
-          content = content.replace(oldTitle, newTitle);
+          content: content.replace(oldTitle, newTitle);
           modified = true;
         }
       }

@@ -590,7 +590,7 @@ let category = 'interaction';
       category = 'form';
     }
     // Create label;
-let label = id || className || text?.substring(0, 50) || tagName;
+let label: id || className || text?.substring(0, 50) || tagName;
     return {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

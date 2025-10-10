@@ -55,7 +55,7 @@ readingTimereadingTime: '45 min read',
     : content.filter(item => item.category === selectedCategory);
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
-      <div>
+      </section><div>
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div
           className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
@@ -76,7 +76,7 @@ readingTimereadingTime: '45 min read',
           {categories.map((category) => (
             <button
               key={category.id}
-              onClick={() =>setSelectedCategory(category.id)}
+              onClick={{{{{() =>setSelectedCategory(category.id)}}}}}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
@@ -149,7 +149,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
 }
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}

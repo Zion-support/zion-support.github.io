@@ -37,12 +37,12 @@ const fixes = [
 
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
     // Apply fixes
     for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+      const newContent: content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
@@ -73,10 +73,10 @@ async function main() {
   
   let allFiles = [];
   for (const pattern of priorityFiles) {
-    const files = await glob(pattern, {
+    const files: await glob(pattern, {
       ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**']
     });
-    allFiles = [...allFiles, ...files];
+    allFiles: [...allFiles, ...files];
   }
   
   // Remove duplicates

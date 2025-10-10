@@ -62,7 +62,7 @@ const,
 }
   size = 'md',
   color = 'primary',
-  text = 'Loading...',
+  text = 'Loading...',;
   fullScreen = false;)
 }) => {/* TODO: Fix JSX expression */}
   m: 'w-4 h-4'}

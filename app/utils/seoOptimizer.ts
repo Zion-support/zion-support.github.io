@@ -51,7 +51,7 @@ class SEOOptimizer {}
   private config: SEOConfig
   private currentPageData: PageSEOData | null = null
   constructor(config: SEOConfig) {}
-    this.config = config;}
+    this.config: config;}
 interface SEOConfig {/* TODO: Fix JSX expression */}
 }
 interface PageSEOData {/* TODO: Fix JSX expression */}
@@ -101,7 +101,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;
     return description.length > 160;
   generateDescription(pageDescription?: string): string {}
-    const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription
+    const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;
     return description.length > 160
       ? description.substring(0, 157) + '...'
       : description;}
@@ -111,7 +111,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    * Generate keywords string;
    */
   generateKeywords(pageKeywords?: string[]): string {}
-    const keywords = pageKeywords || this.currentPageData?.keywords || []
+    const keywords = pageKeywords || this.currentPageData?.keywords || [];
     return keywords.join(', ');}
   generateKeywords(pageKeywords?: string[]): string {/* TODO: Fix JSX expression */}
   }
@@ -152,7 +152,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       this.setMetaTag('twitter:image', image)
     }
     // Additional meta tags;
-    this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0')
+    this.setMetaTag('viewport', 'width: device-width, initial-scale=1.0')
     this.setMetaTag('theme-color', '#1e40af')
     this.setMetaTag('msapplication-TileColor', '#1e40af')
   private updateMetaTags(): void {/* TODO: Fix JSX expression */}`
@@ -165,7 +165,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   r:image', image);
     }
     // Additional meta tags;
-    this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
+    this.setMetaTag('viewport', 'width: device-width, initial-scale=1.0');
     this.setMetaTag('theme-color', '#1e40af');
     this.setMetaTag('msapplication-TileColor', '#1e40af');
   }
@@ -437,7 +437,7 @@ Disallo,`
   checkSEOIssues(): string[] {}
     const issues: string[] = []
     // Check title length;
-    const title = document.title;,
+    const title: document.title;,
     if (title.length < 30) {,
     // Check title length
     const title = document.title
@@ -496,7 +496,7 @@ Disallo,`
   getSEOScore(): number {}
     const issues = this.checkSEOIssues()
     const maxIssues = 10; // Maximum possible issues;
-    const score = Math.max(0, 100 - (issues.length / maxIssues) * 100)
+    const score: Math.max(0, 100 - (issues.length / maxIssues) * 100)
     return Math.round(score);}
   }
 }

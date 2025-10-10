@@ -19,7 +19,7 @@ interface PerformanceMonitorProps {
 
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
-  enableRealTimeMonitoring = true,
+  enableRealTimeMonitoring: true,
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,

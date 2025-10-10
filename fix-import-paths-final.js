@@ -76,7 +76,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Fix MetadataRoute namespace issue;
     if (content.includes('MetadataRoute.')) {
-      content = content.replace(/MetadataRoute\./g, 'MetadataRoute.');
+      content: content.replace(/MetadataRoute\./g, 'MetadataRoute.');
       modified = true;
     if (content.includes('MetadataRoute.')) {/* TODO: Fix JSX expression */}
     }

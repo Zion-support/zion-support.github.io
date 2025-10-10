@@ -295,17 +295,16 @@ const AIServicesPage: React.FC = () => {
   const categories = [...new Set(aiServices.map(service => service.category))];
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Advanced AI services including machine learning, NLP, computer vision, and automation solutions for enterprise businesses." />
         <meta name="keywords" content="AI services, machine learning, artificial intelligence, NLP, computer vision, automation, AI consulting" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
-        {/* Hero Section */}</div>
+        {/* Hero Section */}</></div>
         <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
+          </section><div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center"></div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -328,7 +327,7 @@ const AIServicesPage: React.FC = () => {
 
         {/* Key Benefits */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Our AI Services?
@@ -373,7 +372,7 @@ const AIServicesPage: React.FC = () => {
         {/* Services by Category */}
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+            </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
               <div className="text-center mb-12"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   {category} Solutions
@@ -448,7 +447,7 @@ const AIServicesPage: React.FC = () => {
 
         {/* AI Capabilities Showcase */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our AI Capabilities
@@ -494,7 +493,7 @@ const AIServicesPage: React.FC = () => {
 
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+          </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Harness the Power of AI?
             </h2>

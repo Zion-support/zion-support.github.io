@@ -1,4 +1,4 @@
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+exports.handler: async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('revenue-ideas-lab function triggered')}
     // Revenue ideas lab simulation;
     const result = {

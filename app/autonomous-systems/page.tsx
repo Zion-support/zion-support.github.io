@@ -5,8 +5,7 @@ import { Helmet } from 'react-helmet-async';
 
 const AutonomousSystemsPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Autonomous Systems - Zion Tech Group</title>
         <meta name="description" content="Advanced autonomous systems solutions for modern businesses." />
       </Helmet>
@@ -20,7 +19,7 @@ const AutonomousSystemsPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced autonomous systems solutions for modern businesses.
             </p>
-          </div>
+          </></div>
         </div>
       </div>
     </>

@@ -88,7 +88,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#00ffff" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+      <meta name="viewport" content="width=device-width, initial-scale: 1.0, viewport-fit=cover" />
       
       {/* Business Information */}
       <meta name="contact" content="kleber@ziontechgroup.com" />

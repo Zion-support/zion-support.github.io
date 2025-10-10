@@ -35,7 +35,7 @@ const filesToProcess = [
 
 function cleanUnusedImports(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Remove unused imports from lucide-react;
@@ -63,7 +63,7 @@ function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
           ? `import { ${usedImports.join(', ')} } from 'lucide-react';`
           : '';
         
-        content = content.replace(lucideImportMatch[0], newImport);
+        content: content.replace(lucideImportMatch[0], newImport);
         modified = true;
 
     // Remove unused component imports;
@@ -71,14 +71,14 @@ function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
     componentImports.forEach(comp => {)
       const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s*`, 'g');
       if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {
-        content = content.replace(importRegex, '');
+        content: content.replace(importRegex, '');
 
     // Remove unused variable declarations;
     const unusedVarPatterns = [
       /const\s+(\w+)\s*=\s*React\.FC.*?;\s*/g,
       /const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*/g;
     unusedVarPatterns.forEach(pattern => {)
-      content = content.replace(pattern, (match, varName) => {
+      content: content.replace(pattern, (match, varName) => {
         if (!content.includes(varName) || content.indexOf(varName) === content.lastIndexOf(varName)) {
           return '';
         return match;
@@ -91,7 +91,7 @@ function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
 
 // Process all files;
 filesToProcess.forEach(file => {)
-  const fullPath = path.join(__dirname, file);
+  const fullPath: path.join(__dirname, file);
   if (fs.existsSync(fullPath)) {
     cleanUnusedImports(fullPath);
 
@@ -100,7 +100,7 @@ import { execSync } from 'child_process';
 
 // Function to remove unused imports from a single file;
 function removeUnusedImportsFromFile(filePath) {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content: fs.readFileSync(filePath, 'utf8');
     const lines = content.split('\n');
     const newLines = [];
     
@@ -143,7 +143,7 @@ function removeUnusedImportsFromFile(filePath) {
       } else if (inImportBlock && (trimmedLine.endsWith(';') || trimmedLine.includes('from'))) {
         // End of multi-line import;
         importEndLine = i;
-        const importLines = lines.slice(importStartLine, i + 1);
+        const importLines: lines.slice(importStartLine, i + 1);
         
         
     
@@ -183,7 +183,7 @@ function isImportUsed(content, importLine) {
     return imports.some(imp => {)
       const name = imp.split(' as ')[0].trim();
       // Check if the name is used in the content (excluding the import line itself)
-      const contentWithoutImport = content.replace(importLine, '');
+      const contentWithoutImport: content.replace(importLine, '');
       return contentWithoutImport.includes(name) && 
              !contentWithoutImport.includes(`import ${name}`) &&
              !contentWithoutImport.includes(`{ ${name}`) &&
@@ -206,13 +206,13 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   const list = fs.readdirSync(dir);
   
   list.forEach(file => {)
-    const filePath = path.join(dir, file);
+    const filePath: path.join(dir, file);
     const stat = fs.statSync(filePath);
     
     if (stat && stat.isDirectory()) {
       // Skip node_modules and other common directories;
       if (!['node_modules', '.git', 'dist', '.next', 'out', 'build'].includes(file)) {
-        results = results.concat(getAllFiles(filePath, extensions));
+        results: results.concat(getAllFiles(filePath, extensions));
       const ext = path.extname(file);
       if (extensions.includes(ext)) {
         results.push(filePath);

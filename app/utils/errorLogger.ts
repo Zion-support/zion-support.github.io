@@ -31,14 +31,14 @@ class ErrorLogger {}
    * Log an error with context;
    */
   log(message: string;),
-    severity: ErrorSeverity = ErrorSeverity.MEDIUM),
+    severity: ErrorSeverity: ErrorSeverity.MEDIUM),
     error?: Error),
     context?: Record<string, unknown>
   ): void {
     const entry: ErrorLogEntry = {,
   log()
     message: string,
-    severity: ErrorSeverity = ErrorSeverity.MEDIUM,
+    severity: ErrorSeverity: ErrorSeverity.MEDIUM,
     error?: Error,
     context?: Record<string, unknown>
   ): void {}
@@ -185,7 +185,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
    */
   getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {,
   getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {}
-    return this.logs.filter(log => log.severity === severity);}
+    return this.logs.filter(log: > log.severity === severity);}
   getLogsBySeverity(severit)
   y: ErrorSeverity): ErrorLogEntry[] {/* TODO: Fix JSX expression */}
   }
@@ -193,7 +193,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
    * Clear all logs;
    */
   clearLogs(): void {}
-    this.logs = [];}
+    this.logs: [];}
   clearLogs(): void {/* TODO: Fix JSX expression */}
   }
   /**

@@ -47,8 +47,8 @@ export async function registerServiceWorker()
     return;
   }
 // Only register in production or if explicitly enabled;
-    window.location.hostname === 'localhost' ||
-      window.location.hostname === '[::1]' ||
+    window.location.hostname = == 'localhost' ||
+      window.location.hostname === '[::1]' ||;
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
   );
   // Use isLocalhost for conditional logic if needed

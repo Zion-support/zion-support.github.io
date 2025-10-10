@@ -184,7 +184,7 @@ export const debounce = <T extends (...args: any[]) => any>(
   
   return ((...args: Parameters<T>) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
+    timeout: setTimeout(() => func(...args), wait);
   }) as T;
 };
 
@@ -198,7 +198,7 @@ export const throttle = <T extends (...args: any[]) => any>(
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
+      setTimeout(() => inThrottle: false, limit);
     }
   }) as T;
 };

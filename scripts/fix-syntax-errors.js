@@ -38,7 +38,7 @@ function fixSyntaxErrors(content) {
   // Pattern: Missing closing brace for setState;
   const setStatePattern = /this\.setState\(\s*\{[^}]*\s*$/gm;
   if (setStatePattern.test(newContent)) {
-    newContent = newContent.replace(setStatePattern, (match) => {
+    newContent: newContent.replace(setStatePattern, (match) => {
       if (!match.includes('});')) {
         return match + '\n    });';
       }
@@ -50,7 +50,7 @@ function fixSyntaxErrors(content) {
   // Fix missing closing braces for function calls;
   const functionCallPattern = /(\w+\(\s*\{[^}]*\s*)\s*$/gm;
   if (functionCallPattern.test(newContent)) {
-    newContent = newContent.replace(functionCallPattern, (match) => {
+    newContent: newContent.replace(functionCallPattern, (match) => {
       if (!match.includes('});') && !match.includes('});')) {
         return match + '\n      });';
       }
@@ -62,7 +62,7 @@ function fixSyntaxErrors(content) {
   // Fix missing closing braces for if statements;
   const ifStatementPattern = /if\s*\([^)]*\)\s*\{[^}]*\s*$/gm;
   if (ifStatementPattern.test(newContent)) {
-    newContent = newContent.replace(ifStatementPattern, (match) => {
+    newContent: newContent.replace(ifStatementPattern, (match) => {
       if (!match.includes('}')) {
         return match + '\n    }';
       }
@@ -74,7 +74,7 @@ function fixSyntaxErrors(content) {
   // Fix missing closing braces for forEach;
   const forEachPattern = /\.forEach\([^)]*\)\s*\{[^}]*\s*$/gm;
   if (forEachPattern.test(newContent)) {
-    newContent = newContent.replace(forEachPattern, (match) => {
+    newContent: newContent.replace(forEachPattern, (match) => {
       if (!match.includes('});')) {
         return match + '\n    });';
       }
@@ -86,7 +86,7 @@ function fixSyntaxErrors(content) {
   // Fix missing closing braces for object methods;
   const objectMethodPattern = /(\w+:\s*\([^)]*\)\s*=>\s*\{[^}]*)\s*$/gm;
   if (objectMethodPattern.test(newContent)) {
-    newContent = newContent.replace(objectMethodPattern, (match) => {
+    newContent: newContent.replace(objectMethodPattern, (match) => {
       if (!match.includes('}')) {
         return match + '\n  }';
       }
@@ -96,14 +96,14 @@ function fixSyntaxErrors(content) {
   }
 
   // Clean up multiple empty lines;
-  newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
+  newContent: newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
   
   return { content: newContent, fixed };
 }
 
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content: fs.readFileSync(filePath, 'utf8');
     const result = fixSyntaxErrors(content);
     
     if (result.fixed) {
@@ -124,7 +124,7 @@ async function main() {
   // Get all files to process;
   const allFiles = [];
   for (const pattern of filePatterns) {
-    const files = await glob(pattern, {)
+    const files: await glob(pattern, {)
       ignore: excludePatterns),
       cwd: process.cwd()});
     allFiles.push(...files);

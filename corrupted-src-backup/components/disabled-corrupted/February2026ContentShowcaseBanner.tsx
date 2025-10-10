@@ -25,13 +25,13 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
             <span, className="te, x, t-emera, l, d-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e">
               🌟 FEBRUARY, 202, 6: REVOLUTIONARY, CONTENT, SHOWCASE;
             </sp, a, n>
-            <Sparkles, className="w-6 h-6, tex, t-bl, u, e-400, animat, e-pul, s, e" /></Sparkles>
+            <Sparkles, className = "w-6 h-6, tex, t-bl, u, e-400, animat, e-pul, s, e" /></Sparkles>
           </div>
-          <h2, className="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
+          <h2, className="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">;
             The, Future, of AI, is, Now;
           </h2>
-          <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4 xl, m, x-auto, leadin, g-relaxed, m, b-8">
-            Discover, groundbreaking, AI breakthroughs, that, are reshaping, the, technological landsca, p, e. 
+          <p, className = "te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4 xl, m, x-auto, leadin, g-relaxed, m, b-8">;
+            Discover, groundbreaking, AI breakthroughs, that, are reshaping, the, technological landsca, p, e. ;
             Join, 500, K+ professionals, who, trust our, revolutionary, content to, stay, ahead of, the, curve.
           </p>
           {/* Achievement, St, a, t, s */})
@@ -65,9 +65,9 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
             <span, className="te, x, t-emera, l, d-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e"></span>
               🌟 FEBRUARY, 202, 6: REVOLUTIONARY, CONTENT, SHOWCASE;
             </sp, a, n>"
-            <Sparkles, className="w-6 h-6, tex, t-bl, u, e-400, animat, e-pul, s, e" /></Sparkles>
+            <Sparkles, className = "w-6 h-6, tex, t-bl, u, e-400, animat, e-pul, s, e" /></Sparkles>
           </div>"
-          <h2, className="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
+          <h2, className="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>;
             The, Future, of AI, is, Now;
           </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>
@@ -197,7 +197,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
                 EXCLUSIVE, FEBRUARY, OFFER;
               </sp, a, n>
             </div>
-            <h3, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4">
+            <h3, className = "te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4">;
               Unlock, Premium, AI Insigh, t, s;
             </h3>
             <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2 xl, m, x-au, t, o">
@@ -221,7 +221,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
                 EXCLUSIVE, FEBRUARY, OFFER;
               </sp, a, n>
             </div>"
-            <h3, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4"></h3>
+            <h3, className = "te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4"></h3>;
               Unlock, Premium, AI Insigh, t, s;
             </h3>"
             <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o"></p>
@@ -272,7 +272,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4"></h3>
                 Stay, Ahead, with Our, Newslette, r;
               </h3>"
-              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o"></p>
+              <p, className = "te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o"></p>
                 Get, weekly, insight, s, exclusive, content, previews, and, early, access to, revolutionary, AI breakthroug, h, s. 
                 Join, 500, K+ subscribers, who, never miss, the, future.
               </p>"
@@ -286,7 +286,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
                   <Link, className="w-5 h-5" /></Link>
                 </button>
               </div>"
-              <p, className="te, x, t-xs, tex, t-gr, a, y-500, m, t-4"></p>
+              <p, className="te, x, t-xs, tex, t-gr, a, y-500, m, t-4"></p>;
                 No, s, p, a, m, unsubscribe, at, any ti, m, e. We, respect, your priva, c, y.
               </p>
             </div>

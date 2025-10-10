@@ -50,13 +50,13 @@ const AboutPage: React.FC = () => {
       description: 'We work closely with our clients as strategic technology partners.'}];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">About Zion Tech Group</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
-          </p>
+          </p>;
 import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
 export default function AboutPage() {
   const teamMembers = [
@@ -157,8 +157,8 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+      </div><section className="relative py-20 px-4">
+        </section><div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             About <span className="text-cyan-400">Zion Tech Group</span>
           </h1>
@@ -209,7 +209,7 @@ export default function AboutPage() {
 
         {/* Stats Section */}
         <section className="py-16 bg-white rounded-xl mb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -227,7 +227,7 @@ export default function AboutPage() {
 
         {/* Mission Section */}
         <section className="py-20 bg-gray-50 rounded-xl mb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -262,7 +262,7 @@ export default function AboutPage() {
 
         {/* Values Section */}
         <section className="py-20 bg-white rounded-xl mb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
@@ -292,7 +292,7 @@ export default function AboutPage() {
 
         {/* Team Section */}
         <section className="py-20 bg-gray-50 rounded-xl mb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Meet Our Team
@@ -329,7 +329,7 @@ export default function AboutPage() {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Work With Us?
             </h2>
@@ -355,7 +355,7 @@ export default function AboutPage() {
       </div>
       {/* Stats Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
@@ -366,7 +366,7 @@ export default function AboutPage() {
                   {stat.label}
                 </div>
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
+        </section><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
@@ -395,7 +395,7 @@ export default function AboutPage() {
       </section>
       {/* Mission & Vision */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -452,7 +452,7 @@ export default function AboutPage() {
       </section>
       {/* Values */}
       <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Our Values
@@ -476,7 +476,7 @@ export default function AboutPage() {
       </section>
       {/* Team */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Meet Our Team
@@ -510,7 +510,7 @@ export default function AboutPage() {
       </section>
       {/* Achievements */}
       <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Our Achievements
@@ -538,7 +538,7 @@ export default function AboutPage() {
       </section>
       {/* Timeline */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Our Journey
@@ -569,7 +569,7 @@ export default function AboutPage() {
       </section>
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
-        <div className="container mx-auto px-4 text-center">
+        </section><div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>

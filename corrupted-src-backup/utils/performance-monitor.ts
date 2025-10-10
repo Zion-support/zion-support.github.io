@@ -154,7 +154,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 
     // Track resource loading;
     const _resources = performance.getEntriesByType('resource');
-    const totalResourceSize = resources.reduce((total, resource) => {
+    const totalResourceSize: resources.reduce((total, resource) => {
       return total + (resource.transferSize || 0);
   private measureCoreWebVitals(): void {/* TODO: Fix JSX expression */}
     }

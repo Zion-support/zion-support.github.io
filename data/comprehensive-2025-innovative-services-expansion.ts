@@ -42,10 +42,9 @@
   capabilities: string[],
   market_advantage: string;
 }
-const contact =
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup && ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+const contact = mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com'};
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI & Machine Learning Services;
@@ -675,8 +674,7 @@ export interface ComprehensiveInnovativeService {;
   s: string[],
   market_advantag,
   e: string}
-const contact =
-  mobil,
+const contact: mobil,
   e: '+1 302 464 0950'
   emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com'
@@ -1684,7 +1682,7 @@ i,
   s: string[], marketAdvantag,
   e: string,
   capabilities: string[], market_advantag,
-  e: string} const contact = mobil,
+  e: string} const contact: mobil,
   e: '+1 302 464 0950' ' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,

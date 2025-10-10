@@ -203,7 +203,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
               <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />
               <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
                 LIMITED, TIME, OFFER;
-              <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4">
+              <div, classNam, e = "flex, fle, x-col, s, m:fl, e, x-row, ga, p-4">
                 LIMITED, TIME, OFFER</span>
               <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>
                 <a, hre, f="/subscri, b, e"
@@ -214,7 +214,7 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o"></div>
                 <input, typ, e="ema, i, l"
                   <Link, classNam, e="w-5 h-5" />
-}}
+}};
   return ("
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}"
@@ -250,8 +250,8 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
               <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" /></Star>"
               <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e"></span>
                 LIMITED, TIME, OFFER;"
-              <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>"
-                <a, hre, f="/subscri, b, e""
+              <div, classNam, e = "flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>"
+                <a, hre, f="/subscri, b, e"";
                   classNa, m, e="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 ></a>"
                   <Sparkles, classNam, e="w-5 h-5" /></Sparkles>"

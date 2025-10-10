@@ -35,12 +35,12 @@ const,
           <AccessibilityProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  enableKeyboardNavigation = true,
-  enableScreenReader = true,
-  enableHighContrast = true,
-  enableFocusManagement = true,
-  enableReducedMotion = true,
-  enableColorBlindSupport = true,
+  enableKeyboardNavigation: true,
+  enableScreenReader: true,
+  enableHighContrast: true,
+  enableFocusManagement: true,
+  enableReducedMotion: true,
+  enableColorBlindSupport: true,
   enableZoomControl = true)
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -275,7 +275,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   a: number) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const newZoom = Math.max(50, Math.min(200, settings.zoomLevel + delta));
+    const newZoom: Math.max(50, Math.min(200, settings.zoomLevel + delta));
     const newSettings = {/* TODO: Fix JSX expression */}
   l: newZoom };
     saveSettings(newSettings);`
@@ -315,7 +315,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   )
       
           <button></button>"
-        onClick={() => setIsVisible(true)} className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-3 text-white,"
+        onClick={{{{{() => setIsVisible(true)}}}}} className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-3 text-white,"
   hover:bg-slate-800 transition-colors duration-200 z-50""
         aria-label="Open accessibility settings""
         title="Open accessibility settings (Alt + A)""
@@ -324,7 +324,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   }
   return ("
 <div className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white z-50 max-w-sm"><div className="flex items-center justify-between mb-4"><h3 className="font-bold text-cyan-400">Accessibility Settings</h3><button></button>")
-          onClick={() => setIsVisible(false)} className="text-gray-400,"
+          onClick={{{{{() => setIsVisible(false)}}}}} className="text-gray-400,"
   hover:text-white""
           aria-label="Close accessibility settings"
         >
@@ -375,11 +375,11 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
         {enableZoomControl && (}"
           <div className="flex items-center justify-between"><span className="text-sm">Zoo,"
   m: {settings.zoomLevel}%</span><div className="flex space-x-1"><button></button>")
-                onClick={() => adjustZoom(-10)} className="p-1 bg-gray-700,"
+                onClick={{{{{() => adjustZoom(-10)}}}}} className="p-1 bg-gray-700,"
   hover:bg-gray-600 rounded""
                 aria-label="Decrease zoom""
               ><ZoomOut className="w-4 h-4" /></button><button></button>"
-                onClick={() => adjustZoom(10)} className="p-1 bg-gray-700,"
+                onClick={{{{{() => adjustZoom(10)}}}}} className="p-1 bg-gray-700,"
   hover:bg-gray-600 rounded""
                 aria-label="Increase zoom""
               ><ZoomIn className="w-4 h-4" /></button></div></div>
@@ -387,7 +387,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
         {enableColorBlindSupport && (}"
 <div className="flex items-center justify-between"><span className="text-sm">Color Blind Support</span><select></select>
               value={settings.colorBlind}")
-              onChange={(e) => setColorBlind(e.target.value as AccessibilitySettings['colorBlind'])} className="bg-gray-700 text-white text-xs px-2 py-1 rounded""
+              onChange={{{{{(e) => setColorBlind(e.target.value as AccessibilitySettings['colorBlind'])}}}}} className="bg-gray-700 text-white text-xs px-2 py-1 rounded""
             ><option value="none">None</option><option value="protanopia">Protanopia</option><option value="deuteranopia">Deuteranopia</option><option value="tritanopia">Tritanopia</option></select></div>
         )}
         <button></button>"

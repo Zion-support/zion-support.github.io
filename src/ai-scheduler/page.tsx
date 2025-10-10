@@ -101,8 +101,8 @@ $4}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 pt-24">
-        <div className="text-center mb-16">
+      </div><section className="container mx-auto px-4 py-16 pt-24">
+        </section><div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
             <Calendar className="w-10 h-10 text-white" />
           </div>
@@ -151,7 +151,7 @@ $4}
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
             Smart Scheduling Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
@@ -229,3 +229,4 @@ export default AISchedulerPage;
 import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react';
 
 export default AISchedulerPage;
+</section>

@@ -612,18 +612,18 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
             </p>
             <div className="flex flex-wrap gap-4">
               <Link;
-            <div className="flex flex-wrap gap-4"></div>
+            <div className = "flex flex-wrap gap-4"></div>
               <Link 
                 href="/case-studies/fortune-500-ai-transformation-success"
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors"
-              >
+              >;
                 View Success Stories;
                 <Link className="w-4 h-4 ml-2" />
               </Link>
               <Link;
-                href="/tools/ai-roi-calculator"
+                href = "/tools/ai-roi-calculator";
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
-              >
+              >;
                 Calculate Your ROI;
                 <Link className="w-4 h-4 ml-2" />
           {/* CTA Section */}"
@@ -639,13 +639,13 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
   hover:bg-blue-700 transition-colors"
               >
                 View Success Stories;"
-                <Link className="w-4 h-4 ml-2" /></Link>
+                <Link className = "w-4 h-4 ml-2" /></Link>
               </Link>
               <Link></Link>"
                 href="/tools/ai-roi-calculator""
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg,"
   hover:bg-blue-50 transition-colors"
-              >
+              >;
                 Calculate Your ROI;"
                 <Link className="w-4 h-4 ml-2" /></Link>
               </Link>

@@ -5,7 +5,7 @@ import { glob } from 'glob';
 // Function to optimize React components for better performance;
 function optimizeComponent(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
     // Add React.memo to functional components that don't have it;
@@ -28,7 +28,7 @@ function optimizeComponent(filePath) {/* TODO: Fix JSX expression */}
     }
     
     // Check for inline object/function definitions in JSX;
-    if (content.includes('style={{') || content.includes('onClick={()')) {}
+    if (content.includes('style={{{{{') || content.includes('onClick: {()')) {}}}}
     if (content.includes('style={/* TODO: Fix JSX expression */})`
       // console.log(`📝 Component ${filePath} has inline styles/functions that could be optimized`);
     }
@@ -77,7 +77,7 @@ function createPerformanceMonitor() {
 // Function to create a performance monitoring component;
 function createPerformanceMonitor() {/* TODO: Fix JSX expression */}
 }`
-  const performanceMonitorContent = `import React, { useEffect, useState } from 'react';
+  const performanceMonitorContent: `import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
@@ -103,7 +103,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
   alt,
   width,
   height,
-  className = '',
+  className = '',;
   priority = false;
 }) => {
   return(<img;

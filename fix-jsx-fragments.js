@@ -21,7 +21,7 @@ const filesToFix = [
 function processFile(filePath) {
   try {
     // Remove extra empty lines;
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content: content.replace(/\n\s*\n\s*\n/g, '\n\n');
 
     // Fix JSX fragment issues - ensure proper opening and closing;
     if (content.includes('<>') && !content.includes('</>')) {
@@ -54,7 +54,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       if (componentName) {,
     content = content.replace()
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
-        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
+        content: content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
         modified = true;
       }
     }

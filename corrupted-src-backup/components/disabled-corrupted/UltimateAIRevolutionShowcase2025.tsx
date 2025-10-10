@@ -45,7 +45,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
         <span, className="te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-4, 0, 0">🚀 ULTIMATE, AI, REVOLUTION SHOWCASE, 202, 5</sp, a, n>
         <Sparkles, className="w-8 h-8, tex, t-purp, l, e-400, animat, e-pul, s, e" />
       </div>
-      <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-viol, e, t-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
+      <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-viol, e, t-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">;
         Revolutionary, AI, Breakthroughs;
       </h2>
       <p, className="te, x, t-xl, tex, t-gr, a, y-300, tex, t-center, m, b-8, ma, x-w-4xl, m, x-au, t, o">
@@ -80,7 +80,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {/* TODO: Fix JSX expression */
         <span, className="te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-4, 0, 0">🚀 ULTIMATE, AI, REVOLUTION SHOWCASE, 202, 5</sp, a, n>"
         <Sparkles, className="w-8 h-8, tex, t-purp, l, e-400, animat, e-pul, s, e" /></Sparkles>
       </div>"
-      <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-viol, e, t-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
+      <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-viol, e, t-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>;
         Revolutionary, AI, Breakthroughs;
       </h2>"
       <p, className="te, x, t-xl, tex, t-gr, a, y-300, tex, t-center, m, b-8, ma, x-w-4xl, m, x-au, t, o"></p>
@@ -143,21 +143,21 @@ const UltimateAIRevolutionShowcase202, 5 = () => {/* TODO: Fix JSX expression */
         >
           <Rocket, className="w-5 h-5" />
           Explore, Revolutionary, Content;
-          <Link, className="w-5 h-5" />
+          <Link, className = "w-5 h-5" />
         </Li, n, k>
         <Link, t, o="/ca, s, e-studi, e, s/ai-20, 2, 6-revolutiona, r, y-breakthrou, g, h-5, 0, 0-billi, o, n-succe, s, s" 
           className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-emera, l, d-600, hove, r:to-te, a, l-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg"
         >
-          <Award, className="w-5 h-5" />
+          <Award, className="w-5 h-5" />;
           View, Success, Stories;
-          <Link, className="w-5 h-5" />
+          <Link, className = "w-5 h-5" />
         </Li, n, k>
         <Link, t, o="/servic, e, s/quant, u, m-consciousne, s, s-ai-servic, e, s" 
           className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-oran, g, e-600, hove, r:to-r, e, d-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg"
         >
-          <Globe, className="w-5 h-5" />
+          <Globe, className="w-5 h-5" />;
           Get, AI, Services;
-          <Link, className="w-5 h-5" />
+          <Link, className = "w-5 h-5" />
         </Li, n, k>
       </div>
       <div, className="mt-8, tex, t-cent, e, r"></div>
@@ -167,21 +167,21 @@ const UltimateAIRevolutionShowcase202, 5 = () => {/* TODO: Fix JSX expression */
         <Link, t, o="/bl, o, g/ai-20, 2, 6-revolutiona, r, y-breakthrou, g, h-announceme, n, t" "
           className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-purp, l, e-600, hove, r:to-bl, u, e-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg"
         ></Link>"
-          <Rocket, className="w-5 h-5" /></Rocket>
+          <Rocket, className="w-5 h-5" /></Rocket>;
           Explore, Revolutionary, Content;"
-          <Link, className="w-5 h-5" /></Link>
+          <Link, className = "w-5 h-5" /></Link>
         </Li, n, k>"
         <Link, t, o="/ca, s, e-studi, e, s/ai-20, 2, 6-revolutiona, r, y-breakthrou, g, h-5, 0, 0-billi, o, n-succe, s, s" "
           className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-emera, l, d-600, hove, r:to-te, a, l-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg"
         ></Link>"
-          <Award, className="w-5 h-5" /></Award>
+          <Award, className="w-5 h-5" /></Award>;
           View, Success, Stories;"
-          <Link, className="w-5 h-5" /></Link>
+          <Link, className = "w-5 h-5" /></Link>
         </Li, n, k>"
         <Link, t, o="/servic, e, s/quant, u, m-consciousne, s, s-ai-servic, e, s" "
           className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-oran, g, e-600, hove, r:to-r, e, d-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg"
         ></Link>"
-          <Globe, className="w-5 h-5" /></Globe>
+          <Globe, className="w-5 h-5" /></Globe>;
           Get, AI, Services;"
           <Link, className="w-5 h-5" /></Link>
         </Li, n, k>

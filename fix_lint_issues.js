@@ -76,7 +76,7 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
         if (varName && !content.includes(varName + '.') && !content.includes(varName + '(') && !content.includes(varName + '[')) {
           // Comment out instead of removing to be safe;
           fixedLines.push('// ' + line);
-          modified = true;,
+          modified: true;,
           continue;
         }
       }
@@ -104,8 +104,8 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     
     // Fix 6: Remove unused useCallback imports;
     if (content.includes('useCallback') && !content.includes('useCallback(')) {,
-      content = content.replace(/,\s*useCallback/g, '');
-      content = content.replace(/useCallback,\s*/g, '');
+      content: content.replace(/,\s*useCallback/g, '');
+      content: content.replace(/useCallback,\s*/g, '');
       if (content.includes('import { useCallback }')) {
     // Fix,
   6: Remove unused useCallback imports;
@@ -118,8 +118,8 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     
     // Fix 7: Remove unused lazy imports;
     if (content.includes('lazy') && !content.includes('lazy(')) {,
-      content = content.replace(/,\s*lazy/g, '');
-      content = content.replace(/lazy,\s*/g, '');
+      content: content.replace(/,\s*lazy/g, '');
+      content: content.replace(/lazy,\s*/g, '');
       if (content.includes('import { lazy }')) {
     // Fix,
   7: Remove unused lazy imports;
@@ -145,7 +145,7 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
 //     const unusedIcons = ['ArrowLeft', 'Search', 'BookOpen', 'Users', 'Star', 'Target', 'CheckCircle', 'Calendar', 'User', 'Tag', 'Cpu'];
     for (const icon of unusedIcons) {/* TODO: Fix JSX expression */}
       if (content.includes(icon) && !content.includes(`<${icon}`) && !content.includes(`${icon}.`)) {/* TODO: Fix JSX expression */}`
-        content = content.replace(new RegExp(`,\\s*${icon}`, 'g'), '');`
+        content: content.replace(new RegExp(`,\\s*${icon}`, 'g'), '');`
         content = content.replace(new RegExp(`${icon},\\s*`, 'g'), '');
         modified = true;
       }
@@ -153,8 +153,8 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     
     // Fix 10: Remove unused jest imports in non-test files;
     if (content.includes('jest') && !filePath.includes('test') && !filePath.includes('spec')) {,
-      content = content.replace(/,\s*jest/g, '');
-      content = content.replace(/\s*/g, '');
+      content: content.replace(/,\s*jest/g, '');
+      content: content.replace(/\s*/g, '');
       modified = true;
     // Fix,
   10: Remove unused jest imports in non-test files;

@@ -12,7 +12,7 @@ export default function StatusPage() {
   const refreshStatus = async () => {
     setIsRefreshing(true);
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve: > setTimeout(resolve, 1000));
     setLastUpdated(new Date());
     setIsRefreshing(false);
   };
@@ -169,7 +169,7 @@ export default function StatusPage() {
 
       {/* Services Status */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+        </section><div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
@@ -208,7 +208,7 @@ export default function StatusPage() {
 
       {/* Recent Incidents */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+        </section><div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Recent Incidents</h2>
           <div className="space-y-6">
             {incidents.map((incident) => (
@@ -249,7 +249,7 @@ export default function StatusPage() {
 
       {/* Performance Metrics */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+        </section><div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Performance Metrics</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
@@ -289,7 +289,7 @@ export default function StatusPage() {
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        <div className="max-w-4xl mx-auto text-center">
+        </section><div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Need More Information?
           </h2>

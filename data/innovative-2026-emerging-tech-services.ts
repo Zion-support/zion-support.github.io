@@ -1026,7 +1026,7 @@ export const,
       review,
   s: 30}];
 export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression */}
-  return innovative2026EmergingTechServices.filter(service => service.popular)}
+  return innovative2026EmergingTechServices.filter(service: > service.popular)}
 }
   return innovative2026 EmergingTechServices && innovative2026 EmergingTechServices.filter(service => service && service.popular);
 };
@@ -1132,7 +1132,7 @@ export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression
       competitor,
   s: [;
   ],
-export const getPopularEmergingTechServices = () =>,
+export const getPopularEmergingTechServices: () =>,
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
       launchDate: '2026-01-25'
       customers: 60;
@@ -1148,7 +1148,7 @@ export const getPopularEmergingTechServices = () =>,
   s: 30};
   ];
 export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression */}
-  return innovative2026EmergingTechServices.filter(service => service.popular)}
+  return innovative2026EmergingTechServices.filter(service: > service.popular)}
 }
 // DNA Computing Platform realImplementation: true;
 implementationDetails: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.'
@@ -1161,7 +1161,7 @@ launchDat,
   e: '2026-01-20'
 ;
 export const getPopularEmergingTechServices = () =>: unknown;
-  return innovative2026EmergingTechServices.filter (service => service.popular)}
+  return innovative2026EmergingTechServices.filter (service: > service.popular)}
 // DNA Computing Platform real_implementation: true;
 implementation_details: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools; and comprehensive computing capabilities. Includes professional bioengineering support.'
 launch_date: '2026 - 01 - 20'
@@ -1218,7 +1218,7 @@ rating: 4 && 4.9;
 reviews: 30;
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>;
-  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>),
+  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service: >),
     service && service.category.toLowerCase().includes(category && category.toLowerCase()));
 }
 export const getEmergingTechServicesByPriceRange = (minPrice: number)
@@ -1318,7 +1318,7 @@ review,
   s: 30}];
 export const getEmergingTechServicesByCategory = (categor)
   y: string) =>;
-  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>)
+  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service = >);
     service && service.category.toLowerCase().includes(category && category.toLowerCase())
   );
 }
@@ -1971,7 +1971,7 @@ export const getPopularEmergingTechServices = () =>
   return innovative2026 EmergingTechServices.filter(service => service.popular)
 };
 export const getEmergingTechServicesByCategory = (category: string) =>,
-  return innovative2026EmergingTechServices.filter(service =>),
+  return innovative2026EmergingTechServices.filter(service: >),
     service.category.toLowerCase().includes(category.toLowerCase()),
   </div>)};
 export const getEmergingTechServicesByPriceRange = (minPrice: number) maxPrice: number) =>,
@@ -1995,17 +1995,17 @@ export const getEmergingTechServicesByPriceRange = (minPric)
 reviews: 30;
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>: unknown;
-  return innovative2026EmergingTechServices.filter (service =>),
+  return innovative2026EmergingTechServices.filter (service: >),
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
 ;
 export const getEmergingTechServicesByPriceRange = (min_price: number)
   max_price: number) =>: unknown;
-  return innovative2026EmergingTechServices.filter(service =>),
+  return innovative2026EmergingTechServices.filter(service: >),
 review,
   s: 30}];
 export const getEmergingTechServicesByCategory = (categor)
   y: string) =>: unknown;
-  return innovative2026EmergingTechServices.filter (service =>)
+  return innovative2026EmergingTechServices.filter (service = >);
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
 ;
 export const getEmergingTechServicesByPriceRange = (min_pric)
@@ -2018,7 +2018,7 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   });}
 ;
 export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown;
-  return innovative2026EmergingTechServices.filter(service =>),
+  return innovative2026EmergingTechServices.filter(service: >),
 export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown,
@@ -2050,12 +2050,12 @@ export interface Innovative2026EmergingTechService {/* TODO: Fix JSX expression 
 reviews: 30;
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>: unknown;
-  return innovative2026EmergingTechServices.filter (service =>),
+  return innovative2026EmergingTechServices.filter (service: >),
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
 ;
 export const getEmergingTechServicesByPriceRange = (min_price: number)
   max_price: number) =>: unknown;
-  return innovative2026EmergingTechServices.filter(service =>),
+  return innovative2026EmergingTechServices.filter(service: >),
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -2072,7 +2072,7 @@ review,
   s: 30}];
 export const getEmergingTechServicesByCategory = (categor)
   y: string) =>: unknown;
-  return innovative2026EmergingTechServices.filter (service =>)
+  return innovative2026EmergingTechServices.filter (service = >);
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
 ;
 export const getEmergingTechServicesByPriceRange = (min_pric)
@@ -2085,7 +2085,7 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   });}
 ;
 export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown;
-  return innovative2026EmergingTechServices.filter(service =>),
+  return innovative2026EmergingTechServices.filter(service: >),
 export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown,
@@ -2097,17 +2097,17 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
 reviews: 30;
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>: unknown;
-  return innovative2026EmergingTechServices.filter (service =>),
+  return innovative2026EmergingTechServices.filter (service: >),
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
 ;
 export const getEmergingTechServicesByPriceRange = (min_price: number)
   max_price: number) =>: unknown;
-  return innovative2026EmergingTechServices.filter(service =>),
+  return innovative2026EmergingTechServices.filter(service: >),
 review,
   s: 30}];
 export const getEmergingTechServicesByCategory = (categor)
   y: string) =>: unknown;
-  return innovative2026EmergingTechServices.filter (service =>)
+  return innovative2026EmergingTechServices.filter (service = >);
     service.category.toLowerCase ().includes (category.toLowerCase ()))}
 ;
 export const getEmergingTechServicesByPriceRange = (min_pric)
@@ -2120,7 +2120,7 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   });}
 ;
 export const getEmergingTechServicesByPriceRange = (min_price: number) max_price: number) =>: unknown;
-  return innovative2026EmergingTechServices.filter(service =>),
+  return innovative2026EmergingTechServices.filter(service: >),
 export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown,
@@ -2407,7 +2407,7 @@ i,
   e: '2026 - 01 - 25', customer,
   s: 60, ratin,
   g: 4 && 4.9, review,
-  s: 30}]; export const getPopularEmergingTechServices = () => {; return innovative2026EmergingTechServices.filter(service => service.popular)} } return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => service && service.popular); };' i,
+  s: 30}]; export const getPopularEmergingTechServices = () => {; return innovative2026EmergingTechServices.filter(service => service.popular)} } return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service: > service && service.popular); };' i,
   d: 'quantum-internet-platform-2026'' nam,
   e: 'Quantum Internet Platform 2026'' taglin,
   e: 'Ultra-secure quantum communication network for the future'' pric,
@@ -2486,7 +2486,7 @@ i,
   s: 60; ratin,
   g: 4 && 4.9, review,
   s: 30 }]; export const getEmergingTechServicesByCategory = (categor)
-  y: string) => return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => service && service.category.toLowerCase().includes(category && category.toLowerCase()) )} export const getEmergingTechServicesByPriceRange = (minPric,
+  y: string) => return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service: > service && service.category.toLowerCase().includes(category && category.toLowerCase()) )} export const getEmergingTechServicesByPriceRange: (minPric,
   e: number)
   maxPrice: number ) => return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => ' const price = parseInt(service && service.price.replace('$') '').replace(')'; '')); return price >= minPrice && price <= maxPrice; });} return price >= minPrice && price <= maxPrice; export interface Innovative2026EmergingTechService,
   id: string, nam,
@@ -2766,12 +2766,12 @@ i,
   e: '2026-01-25', customer,
   s: 60, ratin,
   g: 4.9, review,
-  s: 30 } ]; export const getPopularEmergingTechServices = () => return innovative2026EmergingTechServices.filter(service => service.popular) }; export const getEmergingTechServicesByCategory = (categor)
-  y: string) => return innovative2026EmergingTechServices.filter(service => service.category.toLowerCase().includes(category.toLowerCase()) </div> ) }; export const getEmergingTechServicesByPriceRange = (minPric)
+  s: 30 } ]; export const getPopularEmergingTechServices: () => return innovative2026EmergingTechServices.filter(service: > service.popular) }; export const getEmergingTechServicesByCategory = (categor)
+  y: string) => return innovative2026EmergingTechServices.filter(service: > service.category.toLowerCase().includes(category.toLowerCase()) </div> ) }; export const getEmergingTechServicesByPriceRange = (minPric)
   e: number) maxPric,
   e: number) => return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => ' const price = parseInt(service && service.price.replace('$') '').replace(; '')); return price >= minPrice && price <= maxPrice }) }; }; review,
   s: 30}]; export const getEmergingTechServicesByCategory = (categor)
-  y: string) =>: unknown return innovative2026EmergingTechServices.filter (service =>) service.category.toLowerCase ().includes (category.toLowerCase ()))} ; export const getEmergingTechServicesByPriceRange = (min_pric)
+  y: string) =>: unknown return innovative2026EmergingTechServices.filter (service: >) service.category.toLowerCase ().includes (category.toLowerCase ()))} ; export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (') '; '')); return price >= min_price && price <= max_price; });} ; export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
@@ -2785,13 +2785,13 @@ i,
   g: number; review,
   s: number }; review,
   s: 30}]; export const getEmergingTechServicesByCategory = (categor)
-  y: string) =>: unknown return innovative2026EmergingTechServices.filter (service =>) service.category.toLowerCase ().includes (category.toLowerCase ()))} ; export const getEmergingTechServicesByPriceRange = (min_pric)
+  y: string) =>: unknown return innovative2026EmergingTechServices.filter (service: >) service.category.toLowerCase ().includes (category.toLowerCase ()))} ; export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (') '; '')); return price >= min_price && price <= max_price; });} ; export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (; '')); return price >= min_price && price <= max_price; }) }; review,
   s: 30}]; export const getEmergingTechServicesByCategory = (categor)
-  y: string) =>: unknown return innovative2026EmergingTechServices.filter (service =>) service.category.toLowerCase ().includes (category.toLowerCase ()))} ; export const getEmergingTechServicesByPriceRange = (min_pric)
+  y: string) =>: unknown return innovative2026EmergingTechServices.filter (service: >) service.category.toLowerCase ().includes (category.toLowerCase ()))} ; export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (') '; '')); return price >= min_price && price <= max_price; });} ; export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,

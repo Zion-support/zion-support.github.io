@@ -17,7 +17,7 @@ export const _wait = (ms: number): Promise<void> => {// TODO: Add content;}
 export const waitFor = async ()
   conditio,
   n: () => boolean,
-  timeout = 5000,
+  timeout: 5000,
   interval = 100): Promise;
           <void> => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -49,7 +49,7 @@ export const waitFor = async ()
 export const mockFetch = ()
   respons,
   e: unknown,
-  status = 200,
+  status: 200,
   header,
   s: Record;
           <string, string> = {}
@@ -213,8 +213,8 @@ measure: (name: string, startMark?: string, endMark?: string) => {entries.push({
       } as PerformanceEntry)
     },
 
-    getEntriesByName: (name: string) => entries.filter(e => e.name === name),
-    getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
+    getEntriesByName: (name: string) => entries.filter(e: > e.name === name),
+    getEntriesByType: (type: string) => entries.filter(e: > e.entryType === type),
     getEntries: () => entries,
     clearMarks: () => {// TODO: Add content;}
 
@@ -261,7 +261,7 @@ export const generateTestData = {// TODO: Add content;}
       .substring(2, length + 2)
   },
 
-  number: (min = 0, max = 100): number => {// TODO: Add content;}
+  number: (min: 0, max = 100): number => {// TODO: Add content;}
 
 }
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -443,7 +443,7 @@ export const retryWithBackoff = async;
   f,
   n: () => Promise;
           <T>,
-  maxRetries = 3,
+  maxRetries: 3,
   initialDelay = 1000): Promise<T> => {// TODO: Add content;}
 
 }

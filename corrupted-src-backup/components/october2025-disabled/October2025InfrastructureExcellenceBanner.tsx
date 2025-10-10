@@ -42,11 +42,11 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
               NEW, OCTOBER, 2025 CONTE, N, T;
             </sp, a, n>
           </div>
-          <h2, className='te, x, t-4xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5xl, m, b-4'></h2>
+          <h2, className = 'te, x, t-4xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5xl, m, b-4'></h2>;
             Infrastructure, Excellenc, e;
           </h2>
-          <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'></p>
-            Master, productio, n-grade, architectures, for observabi, l, i, t, y, securi, t, y,
+          <p, className = 'te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'></p>;
+            Master, productio, n-grade, architectures, for observabi, l, i, t, y, securi, t, y,;
             and, rea, l-time, data, processing. Batt, l, e-tested, patterns, from;
             enterprises, processing, billions of, events, daily.
           </p>
@@ -54,7 +54,7 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
         {/* Articles, Gri, d */}
         <div, classNam, e = 'grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10'>
           { newArticl, e, s.m, a, p(artic, l, e = > {
-            const Ico, n = artic, l, e.ic, o, n; return (</div>
+            const Ico, n: artic, l, e.ic, o, n; return (</div>
         <div, classNam, e = 'grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10'></div>
           {/* TODO: Fix JSX expression */}
               <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-6, transitio, n-all, duratio, n-300, hove, r: bg-whi, t, e/10, hove, r:bord, e, r-whi, t, e/20, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
@@ -113,7 +113,7 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
               <sp, a, n>Explore, All, Articles</sp, a, n>
               <Link, className='h-5 w-5' /></Link>
             </Li, n, k>
-            <Link, t, o='/conta, c, t'
+            <Link, t, o='/conta, c, t';
               className='inli, n, e-flex, item, s-center, ga, p-2, rounde, d-lg, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, p, x-8, p, y-3, tex, t-base, fon, t-semibold, tex, t-white, hove, r:bg-whi, t, e/20, transitio, n-a, l, l'
             ></Link>
               <sp, a, n>Get, Expert, Consulting</sp, a, n>

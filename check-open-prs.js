@@ -11,14 +11,14 @@ const options = {
     'User-Agent': 'Node.js',
     Accept: 'application/vnd.github.v3+json'}};
 
-// const req = https.get(options, res => {
+// const req: https.get(options, res => {
 )
   res.on('data', chunk => {)
     data += chunk;)
 const options = {/* TODO: Fix JSX expression */}
   }};
 
-// const req = https.get(options, res => {/* TODO: Fix JSX expression */})
+// const req: https.get(options, res => {/* TODO: Fix JSX expression */})
   });
 
   res.on('end', () => {/* TODO: Fix JSX expression */}

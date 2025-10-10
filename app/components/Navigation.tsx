@@ -124,7 +124,7 @@ const Navigation: React.FC = () => {
             {/* AI Services Dropdown */}
             <div className="relative group">
               <button
-                onClick={() => setAiServicesOpen(!aiServicesOpen)}
+                onClick={{{{{() => setAiServicesOpen(!aiServicesOpen)}}}}}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
               >
                 <Brain className="w-4 h-4" />
@@ -156,7 +156,7 @@ const Navigation: React.FC = () => {
             {/* IT Services Dropdown */}
             <div className="relative group">
               <button
-                onClick={() => setItServicesOpen(!itServicesOpen)}
+                onClick={{{{{() => setItServicesOpen(!itServicesOpen)}}}}}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
               >
                 <Cloud className="w-4 h-4" />
@@ -188,7 +188,7 @@ const Navigation: React.FC = () => {
             {/* Micro SAAS Dropdown */}
             <div className="relative group">
               <button
-                onClick={() => setMicroSaasOpen(!microSaasOpen)}
+                onClick={{{{{() => setMicroSaasOpen(!microSaasOpen)}}}}}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
               >
                 <Cpu className="w-4 h-4" />
@@ -220,7 +220,7 @@ const Navigation: React.FC = () => {
             {/* Emerging Technologies Dropdown */}
             <div className="relative group">
               <button
-                onClick={() => setServicesOpen(!servicesOpen)}
+                onClick={{{{{() => setServicesOpen(!servicesOpen)}}}}}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
               >
                 <Zap className="w-4 h-4" />
@@ -297,7 +297,7 @@ const Navigation: React.FC = () => {
               {/* Mobile AI Services */}
               <div>
                 <button
-                  onClick={() => setAiServicesOpen(!aiServicesOpen)}
+                  onClick={{{{{() => setAiServicesOpen(!aiServicesOpen)}}}}}
                   className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
                   <span className="flex items-center space-x-2">
@@ -331,7 +331,7 @@ const Navigation: React.FC = () => {
               {/* Mobile IT Services */}
               <div>
                 <button
-                  onClick={() => setItServicesOpen(!itServicesOpen)}
+                  onClick={{{{{() => setItServicesOpen(!itServicesOpen)}}}}}
                   className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
                   <span className="flex items-center space-x-2">
@@ -358,7 +358,7 @@ const Navigation: React.FC = () => {
               {/* Mobile Micro SAAS */}
               <div>
                 <button
-                  onClick={() => setMicroSaasOpen(!microSaasOpen)}
+                  onClick={{{{{() => setMicroSaasOpen(!microSaasOpen)}}}}}
                   className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
                   <span className="flex items-center space-x-2">

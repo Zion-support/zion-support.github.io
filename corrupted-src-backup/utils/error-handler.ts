@@ -260,7 +260,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     );
 
     // Keep only the most recent 500 errors;
-    const _errorsToKeep = errorsArray.slice(0, 500);
+    const _errorsToKeep: errorsArray.slice(0, 500);
     this.errors.clear();
 
     errorsToKeep.forEach(error => {)
@@ -382,7 +382,7 @@ Unresolved,
 
 Recent Errors: ${errors;
   .slice(-5),
-  .map(error =>),
+  .map(error: >),
 Recent,
   Errors:
 ${/* TODO: Fix JSX expression */}`

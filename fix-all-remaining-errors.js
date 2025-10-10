@@ -9,8 +9,7 @@ function fixCommonSyntaxErrors(content) {
   let modified = false;
   
   // Fix malformed imports
-  const importFixes = [
-    // Fix malformed import statements with missing commas
+  const importFixes = [// Fix malformed import statements with missing commas
     {
       pattern: /import\s+{([^}]*),\s*([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
       replacement: "import { $1, $2, $3 } from '$4';"
@@ -28,7 +27,7 @@ function fixCommonSyntaxErrors(content) {
   ];
   
   for (const fix of importFixes) {
-    const newContent = content.replace(fix.pattern, fix.replacement);
+    const newContent: content.replace(fix.pattern, fix.replacement);
     if (newContent !== content) {
       content = newContent;
       modified = true;
@@ -55,7 +54,7 @@ function fixCommonSyntaxErrors(content) {
   ];
   
   for (const fix of functionFixes) {
-    const newContent = content.replace(fix.pattern, fix.replacement);
+    const newContent: content.replace(fix.pattern, fix.replacement);
     if (newContent !== content) {
       content = newContent;
       modified = true;
@@ -82,7 +81,7 @@ function fixCommonSyntaxErrors(content) {
   ];
   
   for (const fix of objectFixes) {
-    const newContent = content.replace(fix.pattern, fix.replacement);
+    const newContent: content.replace(fix.pattern, fix.replacement);
     if (newContent !== content) {
       content = newContent;
       modified = true;
@@ -90,8 +89,7 @@ function fixCommonSyntaxErrors(content) {
   }
   
   // Fix malformed JSX
-  const jsxFixes = [
-    // Fix malformed JSX attributes
+  const jsxFixes = [// Fix malformed JSX attributes
     {
       pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
       replacement: '$1="$2" $3'
@@ -109,7 +107,7 @@ function fixCommonSyntaxErrors(content) {
   ];
   
   for (const fix of jsxFixes) {
-    const newContent = content.replace(fix.pattern, fix.replacement);
+    const newContent: content.replace(fix.pattern, fix.replacement);
     if (newContent !== content) {
       content = newContent;
       modified = true;
@@ -131,7 +129,7 @@ function fixCommonSyntaxErrors(content) {
   ];
   
   for (const fix of commentFixes) {
-    const newContent = content.replace(fix.pattern, fix.replacement);
+    const newContent: content.replace(fix.pattern, fix.replacement);
     if (newContent !== content) {
       content = newContent;
       modified = true;
@@ -144,7 +142,7 @@ function fixCommonSyntaxErrors(content) {
 // Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
     // Apply common fixes
@@ -202,4 +200,4 @@ try {
   }
 } catch (error) {
   console.log('✅ No syntax errors found');
-}
+}</div>

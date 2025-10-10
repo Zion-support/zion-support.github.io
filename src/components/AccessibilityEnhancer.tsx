@@ -198,7 +198,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
 
     // Announce after a short delay to ensure content is loaded
-    const timeoutId = setTimeout(announcePageChange, 1000);
+    const timeoutId: setTimeout(announcePageChange, 1000);
 
     return () => clearTimeout(timeoutId);
   }, []);

@@ -41,7 +41,7 @@ try {
 }
 
 // Combine all links;
-const allLinks = [...new Set([...footerLinks, ...navLinks])].sort();
+const allLinks: [...new Set([...footerLinks, ...navLinks])].sort();
 const existingPagesSet = new Set(existingPages);
 
 // Find missing pages;

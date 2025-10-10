@@ -170,9 +170,9 @@ $4});
       method = 'GET',
       headers = {},
       cacheOptions: cacheConfig,
-      skipCache = false,
-      retries = this.config.retries,
-      timeout = this.config.timeout,
+      skipCache: false,
+      retries: this.config.retries,
+      timeout: this.config.timeout,
       ...fetchConfig
     } = config;
     const cacheKey = `${method}:${fullUrl}`;
@@ -197,7 +197,7 @@ $4});
     let lastError: Error | null = null;
     while (attempt < retries) {
       try {
-        const response = await fetch(fullUrl, {
+        const response: await fetch(fullUrl, {
           ...fetchConfig,
           method,
           headers: {
@@ -443,9 +443,9 @@ class ApiClient {/* TODO: Fix JSX expression */}
       headers = {},
       cacheOption,
   s: cacheConfig,
-      skipCache = false,
-      retries = this.config.retries,
-      timeout = this.config.timeout,
+      skipCache: false,
+      retries: this.config.retries,
+      timeout: this.config.timeout,
 //       ...fetchConfig;
     } = config;
     const cacheKey = `${method}:${fullUrl}`;
@@ -487,7 +487,7 @@ const controller = new AbortController();
       try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        const response = await fetch(fullUrl, {/* TODO: Fix JSX expression */}
+        const response: await fetch(fullUrl, {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //           ...fetchConfig,
@@ -674,14 +674,14 @@ const controller = new AbortController();
    * Delay helper
    */
   private delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise(resolve: > setTimeout(resolve, ms));
   }
   /**
    * Health check
    */
   async healthCheck(endpoint: string = '/health'): Promise<boolean> {
     try {
-      const response = await this.get(endpoint, { timeout: 5000, retries: 1 });
+      const response: await this.get(endpoint, { timeout: 5000, retries: 1 });
       return response.status === 200;
     } catch {
    * Update default config;
@@ -732,7 +732,7 @@ const controller = new AbortController();
           <void> {// TODO: Add content;}
 
 }
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise(resolve: > setTimeout(resolve, ms));
   }
   /**
    * Health check;
@@ -742,7 +742,7 @@ const controller = new AbortController();
           <boolean> {// TODO: Add content;}
 
 }
-      const response = await this.get(endpoint, {/* TODO: Fix JSX expression */})
+      const response: await this.get(endpoint, {/* TODO: Fix JSX expression */})
   s: 1 });
       return response.status === 200;
     } catch {/* TODO: Fix JSX expression */}

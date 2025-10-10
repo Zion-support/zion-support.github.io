@@ -12,7 +12,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
           </d, i, v>
           <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l;
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
-          <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l
+          <h1, className = "te, x, t-4xl, m, d: te, x, t-5x, l, l;
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"</h1>
           <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
             AI-Powered, DevOps, Automation Revolut, i, o;
@@ -35,7 +35,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-4">";
               The, future, of DevOps, is, autonomous. AI-powered, DevOps, automation eliminates, manual, intervention, predicts, and, prevents failures, before, they occ, u, r, and, continuously, optimizes your, entire, software delivery, lifecycl, e. Organizations, implementing, AI DevOps, achieve, 10 x faster, deployment, frequency, 98% reduction, in, incidents, and, 8, 5% cost, savings, on infrastructure, operation, s.
             </p>
-            <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-4, m, t-6">"</section>
+            </section><div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-4, m, t-6">"</div></section>
               <div, className="bg-purp, l, e-5, 0, 0/10, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/20"></div>
                 <div, className="te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-300, m, b-2">10x, Faster, Deployments</d, i, v>
                 <p, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">From, monthly, releases to, multiple, daily deployments, with, zero human, interventio, n</p>
@@ -50,24 +50,24 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               </d, i, v>
             </d, i, v>
           </secti, o, n>
-          <section, className="mb-12"></section>
+          <section, className = "mb-12"></section>
             <h2, className="te, x, t-3 xl, fon, t-bold, tex, t-white, m, b-6">The, AI, DevOps Architectu, r, e</h2>
-            <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">
+            <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">;
               Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, laye, r;
   s: </p>,
             <div, className="spa, c, e-y-6">
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-3">🤖 Autonomous, C, I/CD, Agent, s</h3>
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">
-          <section, className="mb-12">";)
+          </div><section, className="mb-12">";)
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">The, AI, DevOps Architectu, r, e</h2>";)
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";)
               Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, layer, s: </p>),
-            <div, className="spa, c, e-y-6">";
+            </section><div, className="spa, c, e-y-6">";
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";
               Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, laye, r
   s: </p>
-            <div, className="spa, c, e-y-6"></section>
+            <div, className="spa, c, e-y-6"></div></section>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10"></div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-3">🤖 Autonomous, C, I/CD, Agent, s</h3>
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d"></p>
@@ -75,7 +75,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">The, AI, DevOps Architectu, r, e</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
               Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, layer, s: </p>
-            <div, className="spa, c, e-y-6">";</section>
+            </section><div, className="spa, c, e-y-6">";</div></section>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-3">🤖 Autonomous, C, I/CD, Agent, s</h3>";
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
@@ -114,7 +114,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <span, className="te, x, t-gr, a, y-4, 0, 0">•</sp, a, n>";"
             <span, className="te, x, t-gr, a, y-400, tex, t-sm">Octobe, r, 1, 20, 2, 5</sp, a, n>";
           </d, i, v>"
-          <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l,"
+          <h1, className = "te, x, t-4xl, m, d: te, x, t-5x, l, l,";
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">""
           <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-pi, n, k-300, t, o-bl, u, e-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
             AI-Powered, DevOps, Automation Revolut, i, o,
@@ -137,7 +137,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-4">";
               The, future, of DevOps, is, autonomous. AI-powered, DevOps, automation eliminates, manual, intervention, predicts, and, prevents failures, before, they occ, u, r, and, continuously, optimizes your, entire, software delivery, lifecycl, e. Organizations, implementing, AI DevOps, achieve, 10x faster, deployment, frequency, 98% reduction, in, incidents, and, 8, 5% cost, savings, on infrastructure, operation, s.
             </p>"
-            <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-4, m, t-6">""
+            </section><div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-4, m, t-6">""
               <div, className="bg-purp, l, e-5, 0, 0/10, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/20"></div>"
                 <div, className="te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-300, m, b-2">10x, Faster, Deployments</d, i, v>"
                 <p, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">From, monthly, releases to, multiple, daily deployments, with, zero human, interventio, n</p>"
@@ -152,10 +152,10 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               </d, i, v>
             </d, i, v>
           </secti, o, n>"
-          <section, className="mb-12"></section>"
+          <section, className = "mb-12"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">The, AI, DevOps Architectu, r, e</h2>"
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6"></p>
-              Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, laye, r,
+              Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, laye, r,;
   s: </p>"
             <div, className="spa, c, e-y-6"></div>"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10"></div>"
@@ -165,7 +165,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">The, AI, DevOps Architectu, r, e</h2>";"
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
               Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, layer, s: </p>"
-            <div, className="spa, c, e-y-6">";"
+            </section><div, className="spa, c, e-y-6">";"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-3">🤖 Autonomous, C, I/CD, Agent, s</h3>";"
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
@@ -201,14 +201,14 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               </d, i, v>
             </d, i, v>
           </secti, o, n>
-          <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2 x, l, p-8, border, border-purp, l, e-5, 0, 0/20"></section>
+          <section, className = "mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2 x, l, p-8, border, border-purp, l, e-5, 0, 0/20"></section>
             <h2, className="te, x, t-3 xl, fon, t-bold, tex, t-white, m, b-6">Re, a, l-World, Impac, t: FinTech, Success, Story</h2>"
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">
               A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platform: </p>,
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">"
-              <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">
+              <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">;
               A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platform: </p>
-            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">"</section>
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">"</div></section>
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6"></div>
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-300, m, b-2">12x, Faste, r</d, i, v>
                 <p, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Deployment, Velocit, y</p>
@@ -221,7 +221,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">";
               A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platfor
   m: </p>
-            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">";</section>
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">";</div></section>
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">";</div>
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-300, m, b-2">12x, Faste, r</d, i, v>";
                 <p, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Deployment, Velocit, y</p>";
@@ -233,10 +233,10 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">";</div>
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-300, m, b-2">$2, 4, M</d, i, v>";
           </secti, o, n>"
-          <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20"></section>"
+          <section, className = "mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Re, a, l-World, Impac, t: FinTech, Success, Story</h2>""
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6"></p>
-              A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platfor,
+              A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platfor,;
   m: </p>"
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">""
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6"></div>"
@@ -247,7 +247,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
               A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platfor,
   m: </p>"
-            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">";"
+            </section><div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">";"
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">";"
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-300, m, b-2">12x, Faste, r</d, i, v>";"
                 <p, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Deployment, Velocit, y</p>";
@@ -265,15 +265,15 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               The, company, went from, 1, release per, week, to 12, per, day, reduced, production, incidents by, 9, 6%, and, cut, infrastructure costs, by, 82%—all, while, eliminating on-call, burden, for their, DevOps, team.
             </p>
           </secti, o, n>
-          <section, className="mb-12">
+          </div><section, className="mb-12">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Implementation, Roadma, p</h2>
-            <div, className="spa, c, e-y-6"></section>
+            </section><div, className="spa, c, e-y-6"></div></section>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10"></div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-3">Phas, e, 1: Assessme, n, t & Quick, Win, s (Wee, k, 1-2)</h3>"
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2, m, l-6, lis, t-di, s, c">
           <section, className="mb-12">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Implementation, Roadma, p</h2>";
-            <div, className="spa, c, e-y-6">";</section>
+            </section><div, className="spa, c, e-y-6">";</div></section>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-3">Phas, e, 1: Assessme, n, t & Quick, Win, s (Wee, k, 1-2)</h3>";
           </secti, o, n>"
@@ -285,7 +285,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2, m, l-6, lis, t-di, s, c"></ul>"
           <section, className="mb-12">";"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Implementation, Roadma, p</h2>";"
-            <div, className="spa, c, e-y-6">";"
+            </section><div, className="spa, c, e-y-6">";"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-3">Phas, e, 1: Assessme, n, t & Quick, Win, s (Wee, k, 1-2)</h3>";"
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2, m, l-6, lis, t-di, s, c">";
@@ -345,19 +345,19 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
           </secti, o, n>
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Key, Technologie, s & Integratio, n, s</h2>
-            <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">"</section>
-          <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30">";
+            </section><div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">"</div></section>
+          </div><section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Key, Technologie, s & Integratio, n, s</h2>";
-            <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";</section>
+            </section><div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";</div></section>
               <d, i, v>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-4">AI/ML, Stac, k</h3>";
           </secti, o, n>"
-          <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30"></section>"
+          </div><section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Key, Technologie, s & Integratio, n, s</h2>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">""
-          <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30">";"
+          </div><section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30">";"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Key, Technologie, s & Integratio, n, s</h2>";"
-            <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";
+            </section><div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";
               <d, i, v></d>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-4">AI/ML, Stac, k</h3>";"
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2">";
@@ -381,12 +381,12 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               </d, i, v>
             </d, i, v>
           </secti, o, n>
-          <section, className="mb-12">
+          </div><section, className = "mb-12">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">ROI, Calculato, r</h2>
-            <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20"></section>
+            </section><div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20"></div></section>
               <p, className="te, x, t-gr, a, y-300, m, b-6">
                 For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: </p>,
-              <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">"
+              <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">";
                 For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: </p>
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">"</div>
                 <d, i, v>
@@ -398,7 +398,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                     <li, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, t-2">Tot, a, l: $3M+ annual, l, y</li>"
           <section, className="mb-12">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">ROI, Calculato, r</h2>";
-            <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20">";</section>
+            </section><div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20">";</div></section>
               <p, className="te, x, t-gr, a, y-300, m, b-6">";
                 For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: </p>,
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">";
@@ -429,7 +429,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                     <li, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, t-2">Tot, a, l: $3M+ annual, l, y</li>""
           <section, className="mb-12">";"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">ROI, Calculato, r</h2>";"
-            <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20">";"
+            </section><div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20">";"
               <p, className="te, x, t-gr, a, y-300, m, b-6">";
                 For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: </p>"
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">";
@@ -454,7 +454,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                     <li, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, t-2">RO;
   I: 8, 5, 0% in, Year, 1</li>"
                     <li>• Zero, o, n-call, burden, from infrastructure, issue, s</li>"
-                    <li, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, t-2">RO,"
+                    <li, className = "te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, t-2">RO,";
   I: 8, 5, 0% in, Year, 1</li>""
                     <li, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, t-2">R, O, I: 8, 5, 0% in, Year, 1</li>";
                   </ul>
@@ -462,18 +462,18 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               </d, i, v>
             </d, i, v>
           </secti, o, n>"
-          <section, className="mb-12, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10">";"
+          </div><section, className="mb-12, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10">";"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Getted, Today</h2>";"
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
               Transform, your, DevOps operations, with, AI-powered, automatio, n. Our, team, of experts, will, help you, design, and implement, a, custom solution, tailored, to your, infrastructure, and business, need, s.
             </p>
-            <div, className="flex, fle, x-co, l, s;
+            </section><div, className="flex, fle, x-co, l, s;
   m: fl, e, x-row, ga, p-4">"
               <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove;
-            <div, className="flex, fle, x-co, l, s
-  m: fl, e, x-row, ga, p-4">"</section>
+            <div, className = "flex, fle, x-co, l, s
+  m: fl, e, x-row, ga, p-4">"</div></section>
               <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove
-  r:sca, l, e-105, shado, w-xl">"
+  r:sca, l, e-105, shado, w-xl">";
                 Schedule, Consultatio, n;
               </a>
               <a, titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-semibold, rounde, d-xl, border, border-whi, t, e/20, transitio, n-a, l, l">"
@@ -483,19 +483,19 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               </a>
               <a, titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hov, e;
             </p>"
-            <div, className="flex, fle, x-co, l, s,"
+            <div, className = "flex, fle, x-co, l, s,"
   m: fl, e, x-row, ga, p-4">""
-              <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove,"
-  r:sca, l, e-105, shado, w-xl">"
-                Schedule, Consultatio, n;
-              </a>"
-              <a, titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-semibold, rounde, d-xl, border, border-whi, t, e/20, transitio, n-a, l, l">""
-            <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";"
               <a, titl, e="Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove,"
   r:sca, l, e-105, shado, w-xl">";
                 Schedule, Consultatio, n;
               </a>"
-              <a, titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hov, e,"
+              <a, titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-semibold, rounde, d-xl, border, border-whi, t, e/20, transitio, n-a, l, l">""
+            <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";"
+              <a, titl, e = "Internal, lin, k" hr, e, f="/conta, c, t" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, transform, hove,";
+  r:sca, l, e-105, shado, w-xl">";
+                Schedule, Consultatio, n;
+              </a>"
+              <a, titl, e = "Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hov, e,";
   r: bg-whi, t, e/20, tex, t-white, fon, t-semibold, rounde, d-xl, border, border-whi, t, e/20, transitio, n-a, l, l">";
                 Request, Dem, o;
               </a>

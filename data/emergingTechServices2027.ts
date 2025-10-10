@@ -199,10 +199,10 @@ export const,
     link: "https://ziontechgroup.com/quantum-internet"
     badge: "Breakthrough",
     icon: "",
-    image: "https://images.unsplash.com/photo-1558494949-ef010 cbdcc31?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1558494949-ef010 cbdcc31?auto = format&fit=crop&w=800&h=500",
     innovationLevel: "Breakthrough",
     marketSize: "$2.1 B by 2027",
-    competitors["IBM Quantum", "Google Quantum", "Microsoft Quantum"],
+    competitors["IBM Quantum", "Google Quantum", "Microsoft Quantum"],;
     technicalSpecs: unknown;
       performance: "Quantum speed advantage",
       scalability: "Global quantum network",
@@ -238,7 +238,7 @@ export const,
   n: "",
     imag,"
   e: "http,"
-  s://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500",
+  s://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto = format&fit=crop&w=800&h=500",
     innovationLeve,"
   l: "Breakthrough",
     marketSiz,"
@@ -348,7 +348,7 @@ export const,
     image: "https://images.unsplash.com/photo-1446776811953-b23 d0 bd8431 d?auto=format&fit=crop&w=800&h=500",
     innovationLevel: "Revolutionary",
     marketSize: "$1.8 B by 2027",
-    competitors["NASA", "SpaceX", "Blue Origin"],
+    competitors["NASA", "SpaceX", "Blue Origin"],;
     technicalSpecs: unknown;
       performance: "Space-optimized quantum processing",
       scalability: "Multi-satellite constellation",
@@ -384,7 +384,7 @@ export const,
   n: "",
     imag,"
   e: "http,"
-  s://images.unsplash.com/photo-1446776811953-b23d0bd8431d?auto=format&fit=crop&w=800&h=500",
+  s://images.unsplash.com/photo-1446776811953-b23d0bd8431d?auto = format&fit=crop&w=800&h=500",
     innovationLeve,"
   l: "Revolutionary",
     marketSiz,"
@@ -494,7 +494,7 @@ export const,
     image: "https://images.unsplash.com/photo-1559757148-5 c350 d0 d3 c56?auto=format&fit=crop&w=800&h=500",
     innovationLevel: "Breakthrough",
     marketSize: "$3.2 B by 2027",
-    competitors["Microsoft Research", "IBM Research", "Google Research"],
+    competitors["Microsoft Research", "IBM Research", "Google Research"],;
     technicalSpecs: unknown;
       performance: "Biological parallel processing",
       scalability: "Cellular network expansion",
@@ -530,7 +530,7 @@ export const,
   n: "",
     imag,"
   e: "http,"
-  s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h=500",
+  s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto = format&fit=crop&w=800&h=500",
     innovationLeve,"
   l: "Breakthrough",
     marketSiz,"
@@ -640,7 +640,7 @@ export const,
     image: "https://images.unsplash.com/photo-1559757148-5 c350 d0 d3 c56?auto=format&fit=crop&w=800&h=500",
     innovationLevel: "Advanced",
     marketSize: "$2.8 B by 2027",
-    competitors["Intel Loihi", "IBM TrueNorth", "BrainChip"],
+    competitors["Intel Loihi", "IBM TrueNorth", "BrainChip"],;
     technicalSpecs: unknown;
       performance: "Neuromorphic processing",
       scalability: "Neural network expansion",
@@ -676,7 +676,7 @@ export const,
   n: "",
     imag,"
   e: "http,"
-  s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h=500",
+  s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto = format&fit=crop&w=800&h=500",
     innovationLeve,"
   l: "Advanced",
     marketSiz,"
@@ -786,7 +786,7 @@ export const,
     image: "https://images.unsplash.com/photo-1559757148-5 c350 d0 d3 c56?auto=format&fit=crop&w=800&h=500",
     innovationLevel: "Revolutionary",
     marketSize: "$4.5 B by 2027",
-    competitors["ITER", "Commonwealth Fusion", "General Fusion"],
+    competitors["ITER", "Commonwealth Fusion", "General Fusion"],;
     technicalSpecs: unknown;
       performance: "Fusion-powered computing",
       scalability: "Modular fusion systems",
@@ -809,7 +809,7 @@ export const,
   n: "",
     imag,"
   e: "http,"
-  s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h=500",
+  s://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto = format&fit=crop&w=800&h=500",
     innovationLeve,"
   l: "Revolutionary",
     marketSiz,"
@@ -838,12 +838,12 @@ export const,
       websit,"
   e: "http,"
   s://ziontechgroup.com",
-      addres,"
+      addres,";
   s: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-export type EmergingTechService2027 = i,
+export type EmergingTechService2027: i,
   d: string; titl,
   e: string; descriptio,
   n: string; categor,
@@ -898,7 +898,7 @@ export type EmergingTechService2027 = i,
   e: "Breakthrough", ico,"
   n: "🌐", imag,"
   e: "http,"
-  s://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500", innovationLeve,"
+  s://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto = format&fit=crop&w=800&h=500", innovationLeve,"
   l: "Breakthrough", marketSiz,"
   e: "$2.1B by 2027", competitors["IBM Quantum", "Google Quantum", "Microsoft Quantum"], technicalSpec,
   s: performanc,"
@@ -1035,5 +1035,5 @@ export type EmergingTechService2027 = i,
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com", websit,"
   e: "http,"
-  s://ziontechgroup.com", addres,"
+  s://ziontechgroup.com", addres,";
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ];'"

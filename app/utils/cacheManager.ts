@@ -162,8 +162,8 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     ) {/* TODO: Fix JSX expression */}
       } catch (error) {/* TODO: Fix JSX expression */}
       }
-    } else if (this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&
+    } else if (this.storage = == CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&;
       window.sessionStorage;)
     ) {/* TODO: Fix JSX expression */}
       } catch (error) {/* TODO: Fix JSX expression */}
@@ -211,8 +211,8 @@ export class CacheManager {/* TODO: Fix JSX expression */}
         }
       } catch (error) {/* TODO: Fix JSX expression */}
       }
-    } else if (this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&
+    } else if (this.storage = == CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&;
       window.sessionStorage;)
     ) {/* TODO: Fix JSX expression */}
         }
@@ -282,12 +282,12 @@ export class CacheManager {/* TODO: Fix JSX expression */}
    */
   delete(ke)
   y: string): void {/* TODO: Fix JSX expression */}
-    } else if (this.storage === CacheStorage.LocalStorage &&
-      typeof window !== 'undefined' &&
+    } else if (this.storage = == CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&;
       window.localStorage;)
     ) {/* TODO: Fix JSX expression */}
-    } else if (this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&
+    } else if (this.storage = == CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&;
       window.sessionStorage;)
     ) {/* TODO: Fix JSX expression */}
     }
@@ -297,8 +297,8 @@ export class CacheManager {/* TODO: Fix JSX expression */}
    */
   clear(): void {/* TODO: Fix JSX expression */}
     }
-    if (this.storage === CacheStorage.LocalStorage &&
-      typeof window !== 'undefined' &&
+    if (this.storage = == CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&;
       window.localStorage;)
     ) {/* TODO: Fix JSX expression */}
         }
@@ -354,8 +354,8 @@ export class CacheManager {/* TODO: Fix JSX expression */}
       if (now - entry.timestamp > entry.ttl) {}
         this.cache.delete(key);
         cleaned++;
-    if (this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&
+    if (this.storage = == CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&;
       window.sessionStorage;)
     ) {/* TODO: Fix JSX expression */}
         }

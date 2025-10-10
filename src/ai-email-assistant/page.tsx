@@ -11,25 +11,25 @@ import Footer from '../components/Footer';
 
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+        </div></main></div><section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text">
 
 // AI Email Assistant;
           </h1>"
-          <p className="text-xl,"
+          <p className = "text-xl,";
   md:text-2xl text-cyan-400 mb-8 font-medium neon-glow"></p>
 // Smart Email Management with AI-Powered Intelligence;
 
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p className = "text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
+          </section><div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
             <a
               href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
 
 // >,
- Cal)
+ Cal);
   l: (302) 464-0950;
           </a>
 
@@ -46,8 +46,8 @@ import Footer from '../components/Footer';
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
 // Key Features;
           </h2>"
-          <div className="grid grid-cols-1,
-  md:grid-cols-2,"
+          <div className = "grid grid-cols-1,;
+  md:grid-cols-2,";
   lg:grid-cols-3 gap-8"></div>"
             <div className="cyber-card hologram-card p-6"></div>"
               <div className="text-4xl mb-4"></div>"
@@ -100,10 +100,10 @@ import Footer from '../components/Footer';
           
           </p>
             </div>"
-            <div className="cyber-card hologram-card p-6"></div>"
+            <div className = "cyber-card hologram-card p-6"></div>"
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Auto Follow-ups</h3>"
-              <p className="text-gray-300"></p>
+              <p className="text-gray-300"></p>;
                 Automated follow-up sequences for sales, customer service, and project management;
 // with personalized timing and content.
               
@@ -158,7 +158,7 @@ import Footer from '../components/Footer';
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
 // Pricing Plans;
           </h2>"
-          <div className="grid grid-cols-1,"
+          <div className = "grid grid-cols-1,";
   md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>"
             <div className="cyber-card hologram-card p-8 text-center"></div>"
               <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>"
@@ -235,12 +235,12 @@ import Footer from '../components/Footer';
           
 
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+          <div className = "flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
 
 // >,
- Cal,
+ Cal,;
   l: (302) 464-0950;
           </a>
 

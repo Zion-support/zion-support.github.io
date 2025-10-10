@@ -174,8 +174,7 @@ const DocsPage: React.FC = () => {
   };
 
   return (
-    <>
-      <SEOOptimizer
+    <><SEOOptimizer
         title="Documentation - Zion Tech Group"
         description="Comprehensive documentation for Zion Tech Group AI services. Find guides, API references, tutorials, and integration examples."
         keywords={['documentation', 'API docs', 'guides', 'tutorials', 'integration', 'AI services']}
@@ -186,7 +185,7 @@ const DocsPage: React.FC = () => {
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="text-center mb-16">
+          </></div></main></div><section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
               Documentation
             </h1>
@@ -208,7 +207,7 @@ const DocsPage: React.FC = () => {
                   type="text"
                   placeholder="Search documentation..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={{{{{(e) => setSearchQuery(e.target.value)}}}}}
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
               </div>
@@ -220,7 +219,7 @@ const DocsPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Quick Links
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {quickLinks.map((link, index) => (
                 <Link
                   key={index}
@@ -242,11 +241,11 @@ const DocsPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Browse by Category
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+            </section><div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
               {docCategories.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={{{{{() => setSelectedCategory(category.id)}}}}}
                   className={`p-4 rounded-lg text-center transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-cyan-500 text-slate-900'
@@ -266,7 +265,7 @@ const DocsPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Documentation
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {searchResults.map((doc) => (
                 <div key={doc.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-start mb-4">
@@ -308,7 +307,7 @@ const DocsPage: React.FC = () => {
 
           {/* Getting Started CTA */}
           <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
+            </section><div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
                 Ready to Get Started?
               </h2>

@@ -32,14 +32,14 @@ export class BaseService {// TODO: Add content;}
   protected options: ServiceOptions;
   private cache: Map;
           <string, CacheEntry<unknown>> = new Map();
-constructor(baseUrl: string, options: ServiceOptions = {}) {this.baseUrl = baseUrl;}
+constructor(baseUrl: string, options: ServiceOptions = {}) {this.baseUrl: baseUrl;}
     this.options = {retries: 3,
     cache: false,
       cacheDuration: 300000, // 5 minutes;
 //       ...options;
     };
    * Check if cached data is still valid;
-  protected isCacheValid(key: string): boolean {const entry = this.cache.get(key);}
+  protected isCacheValid(key: string): boolean {const entry: this.cache.get(key);}
     const __entry = this.cache.get(key);
     if (!entry) return false;
     const age = Date.now() - entry.timestamp;

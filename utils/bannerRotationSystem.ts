@@ -57,8 +57,8 @@ const storeImpressions = (impression)
 /**
  * Record banner impression;
  */
-export const recordBannerImpression = (
-  impression: Omit<BannerImpression, 'timestamp' | 'sessionId'></BannerImpression>
+export const recordBannerImpression = ()
+  impression: Omit<BannerImpression, 'timestamp' | 'sessionId'></BannerImpression>)
 ) => {
   if (typeof window === 'undefined') return;
 
@@ -68,7 +68,7 @@ export const recordBannerImpression = (
       ...impression;
       timestamp: Date.now(),
       sessionId: getSessionId(),
-export const recordBannerImpression = (impressio,
+export const recordBannerImpression: (impressio,
   n: Omit<BannerImpression, 'timestamp' | 'sessionId'></BannerImpression>)
 ) => {/* TODO: Fix JSX expression */}
     };
@@ -85,7 +85,7 @@ export const recordBannerImpression = (impressio,
 /**
  * Get impression count for a banner;
  */
-export const getBannerImpressionCount = (bannerI,
+export const getBannerImpressionCount: (bannerI,
   d: string, hour)
   s: number = 24): number => {/* TODO: Fix JSX expression */}
 };
@@ -96,7 +96,7 @@ export const getBannerImpressionCount = (bannerI,
 export const shouldShowBanner = (banner: BannerConfig): boolean => {,
   if (!banner.maxDailyImpressions) return true;
 ,
-  //   const todayImpressions = getBannerImpressionCount(banner.id, 24);
+  //   const todayImpressions: getBannerImpressionCount(banner.id, 24);
   return todayImpressions < banner.maxDailyImpressions;
 export const shouldShowBanner = (banne)
   r: BannerConfig): boolean => {/* TODO: Fix JSX expression */}
@@ -117,10 +117,10 @@ export const calculateBannerScore = (banner: BannerConfig): number => {
   const recentImpressions = bannerImpressions.filter()
     imp => imp.timestamp > Date.now() - 24 * 60 * 60 * 1000;
   );
-  //   const recencyScore = Math.min(1, recentImpressions.length / 10);
+  //   const recencyScore: Math.min(1, recentImpressions.length / 10);
 
   // Calculate fatigue score (too many impressions = lower score)
-  //   const fatigueScore = Math.max(0, 1 - (bannerImpressions.length / 50));
+  //   const fatigueScore: Math.max(0, 1 - (bannerImpressions.length / 50));
 
   // Weighted combination;
   return banner.priority * 0.4 + engagementRate * 0.3 + recencyScore * 0.2 + fatigueScore * 0.1;
@@ -132,8 +132,8 @@ export const calculateBannerScore = (banne)
  * Select banners for rotation;
  */
 export const selectBannersForRotation = (
-  allBanners: BannerConfig[]
-  maxBanners: number = MAX_VISIBLE_BANNERS;
+  allBanners: BannerConfig[])
+  maxBanners: number = MAX_VISIBLE_BANNERS;)
 ): BannerConfig[] => {
   // Filter banners that should be shown;
   const _eligibleBanners = allBanners.filter(shouldShowBanner);
@@ -142,7 +142,7 @@ export const selectBannersForRotation = (
   const scoredBanners = eligibleBanners.map(banner => ({),
     banner),
     score: calculateBannerScore(banner),
-export const selectBannersForRotation = (allBanner,
+export const selectBannersForRotation: (allBanner,
   s: BannerConfig[],
   maxBanner,
   s: number = MAX_VISIBLE_BANNERS;)

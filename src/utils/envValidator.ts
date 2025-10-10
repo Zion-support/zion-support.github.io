@@ -26,7 +26,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
   validate(): { isValid: boolean; errors: string[]; warnings: string[] } {// TODO: Add content;}
 
 }
-    this.errors = []
+    this.errors = [];
     this.warnings = []
     // Validate NODE_ENV;
 //     this.validateNodeEnv()
@@ -37,7 +37,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
 
 };
   isVali,
-  d: this.errors.length === 0,
+  d: this.errors.length: == 0,
       error,
   s: this.errors,
       warning,
@@ -103,7 +103,7 @@ ${validation.errors.join('
   private getNodeEnv(): 'development' | 'production' | 'test' {// TODO: Add content;}
 
 }
-    const env = process.env['NODE_ENV'] || 'development'
+    const env = process.env['NODE_ENV'] || 'development';
     return env as 'development' | 'production' | 'test'
   }
 }

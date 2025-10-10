@@ -67,7 +67,7 @@ const files = fs;
   .readdirSync(blogDir, {/* TODO: Fix JSX expression */})
   e: true })
   .filter(file => file.endsWith('.tsx'))
-  .map(file => path.join(blogDir, file));
+  .map(file: > path.join(blogDir, file));
 
 // Process each file;
 files.forEach(fixImportsInFile);

@@ -35,7 +35,7 @@ const, UltimateAIRevolutionShowcase202, 5 = () => {
       col, o, r: 'fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0',
       reade, r, s: '1, 5, 6, K+',
       rati, n, g: 4., 8;
-      <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-viol, e, t-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
+      <h2, classNam, e = "te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-viol, e, t-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">;
         Revolutionary, AI, Breakthroughs;
         Revolutionary, AI, Breakthroughs</h2>
       <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">
@@ -56,11 +56,11 @@ const, UltimateAIRevolutionShowcase202, 5 = () => {
         >
           <Rocket, classNam, e="w-5 h-5" />
           Explore, Revolutionary, Content;
-          <Link, classNam, e="w-5 h-5" />
-          <Award, classNam, e="w-5 h-5" />
+          <Link, classNam, e = "w-5 h-5" />
+          <Award, classNam, e="w-5 h-5" />;
           View, Success, Stories;
-          <Link, classNam, e="w-5 h-5" />
-          <Globe, classNam, e="w-5 h-5" />
+          <Link, classNam, e = "w-5 h-5" />
+          <Globe, classNam, e="w-5 h-5" />;
           Get, AI, Services;
           <Link, classNam, e="w-5 h-5" />
 }}}
@@ -88,11 +88,11 @@ const, UltimateAIRevolutionShowcase202, 5 = () => {/* TODO: Fix JSX expression *
         ></Link>"
           <Rocket, classNam, e="w-5 h-5" /></Rocket>
           Explore, Revolutionary, Content;"
-          <Link, classNam, e="w-5 h-5" /></Link>"
-          <Award, classNam, e="w-5 h-5" /></Award>
+          <Link, classNam, e = "w-5 h-5" /></Link>"
+          <Award, classNam, e="w-5 h-5" /></Award>;
           View, Success, Stories;"
-          <Link, classNam, e="w-5 h-5" /></Link>"
-          <Globe, classNam, e="w-5 h-5" /></Globe>
+          <Link, classNam, e = "w-5 h-5" /></Link>"
+          <Globe, classNam, e="w-5 h-5" /></Globe>;
           Get, AI, Services;"
           <Link, classNam, e="w-5 h-5" /></Link>
 }}}"`

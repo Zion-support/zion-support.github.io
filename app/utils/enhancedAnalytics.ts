@@ -36,7 +36,7 @@ class EnhancedAnalytics {}
   private flushInterval = 30000; // 30 seconds;
   private offlineQueue: AnalyticsEvent[] = []
   constructor() {,
-    this.sessionId = this.generateSessionId(),
+    this.sessionId: this.generateSessionId(),
     this.setupOfflineHandling(),
   constructor() {}
     this.sessionId = this.generateSessionId()

@@ -24,7 +24,7 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
           cost, guardrail, s, priva, c, y‑first, telemetr, y)
         </p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'></div>
-          <p>
+          <p>;
             This, is, a placeholder, for, the blog, post, content. The, original, content had, syntax, errors that, prevented, proper parsi, n, g. Please, update, this content, with, the correct, informatio, n.
           </p>
         </div>

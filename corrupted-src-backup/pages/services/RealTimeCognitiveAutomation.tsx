@@ -28,25 +28,25 @@
           ></Link>
             <ArrowLeft, className='w-4 h-4, m, r-2' /></ArrowLeft>
             Back, to, Services;
-              <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'></span>
+              <span, className = 'te, x, t-zi, o, n-sla, t, e-lig, h, t'></span>;
                 Starting, a, t $, 7,9, 9, 9/mon, t, h;
               </sp, a, n>
             </div>
 
-            <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
+            <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>;
               Re, a, l-Time, Cognitive, Automation Platfo, r, m;
               Re, a, l-Time, Cognitive, Automation Platfo, r, m</h1>
-              <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2'>
-            <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h1>
+              <span, className = 'block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2'>
+            <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h1>;
               Re, a, l-Time, Cognitive, Automation Platfo, r, m;
-              <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2'></span>
+              <span, className = 'block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2'></span>;
                 Transform, Business, Operations with, Intelligent, Automation;
               </sp, a, n>
             </h1>
 
-            <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'></p>
+            <p, className = 'te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'></p>
               Revolutionize, your, business operations, with, AI-powered, workflows, that deliver, instant, decision-ma, k, i, n, g, se, l, f-learning, automatio, n,
-              and, 9, 9.97% accura, c, y. Achieve, 8, 7% cost, reduction, and 10x, productivity, gains.</p>
+              and, 9, 9.97% accura, c, y. Achieve, 8, 7% cost, reduction, and 10x, productivity, gains.</p>;
               and, 9, 9.97% accura, c, y. Achieve, 8, 7% cost, reduction, and 10x, productivity, gains.
               <div, classNam, e='bg-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-cy, a, n-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'></div>
                 <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'></div>
@@ -59,11 +59,11 @@
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'></div>
                   94%
                 </div>
-                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
+                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>;
                   Process, Accurac, y;
                 </div>
               </div>
-              <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'></div>
+              <div, className = 'bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'></div>
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
                   85%
                 </div>
@@ -71,14 +71,14 @@
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'></div>
                   85%
                 </div>
-                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
+                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>;
                   Cost, Reductio, n;
                 </div>
               </div>
-              <div, className='bg-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'></div>
+              <div, className = 'bg-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'></div>
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>1, 0, x</div>
                 <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
-                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
+                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>;
                   Productivity, Gai, n;
                 </div>
               </div>
@@ -90,7 +90,7 @@
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'></div>
                   6, M, o;
                 </div>
-                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
+                <div, className = 'te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>;
                   Average, ROI, Time;
                 </d, i, v>
                       <li, classNam, e='flex, item, s-start, ga, p-2'></li>
@@ -196,15 +196,15 @@
                         🚀 October, 2025, Launch Speci, a, l;
                       </h3>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />;
                       Getted, Today;
-                      <Zap, classNam, e='w-5 h-5' />
+                      <Zap, classNam, e = 'w-5 h-5' />;
                   Schedule, Free, Assessment;
-                  <Zap, classNam, e='w-5 h-5' />
+                  <Zap, classNam, e = 'w-5 h-5' />
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />;
                       Getted, Today;
-                      <Zap, className='w-5 h-5' />
+                      <Zap, className = 'w-5 h-5' />;
                   Schedule, Free, Assessment;
                   <Zap, className='w-5 h-5' />
                       <Rocket, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0' /></Rocket>
@@ -212,14 +212,14 @@
                         🚀 October, 2025, Launch Speci, a, l;
                       </h3>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'></li>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
+                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>;
                       Getted, Today;
-                      <Zap, classNam, e='w-5 h-5' /></Zap>
+                      <Zap, classNam, e = 'w-5 h-5' /></Zap>;
                   Schedule, Free, Assessment;
-                  <Zap, classNam, e='w-5 h-5' /></Zap>
+                  <Zap, classNam, e = 'w-5 h-5' /></Zap>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'></li>
-                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
+                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>;
                       Getted, Today;
-                      <Zap, className='w-5 h-5' /></Zap>
+                      <Zap, className = 'w-5 h-5' /></Zap>;
                   Schedule, Free, Assessment;
                   <Zap, className='w-5 h-5' /></Zap>`

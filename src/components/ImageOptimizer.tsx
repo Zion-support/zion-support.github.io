@@ -18,9 +18,9 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   className = '',
   width,
   height,
-  priority = false,
-  placeholder,
-  onLoad,
+  priority: false,
+  placeholder,;
+  onLoad,;
   onError;
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);

@@ -164,24 +164,24 @@ titl,
   md:text-6xl font-bold mb-6"></h1>
 // IoT & Edge Computing Services;
           </h1>"
-              <p className="text-xl,"
+              <p className = "text-xl,";
   md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto"></p>
 // Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions;
           </p>"
-              <div className="flex flex-col,"
+              <div className = "flex flex-col,";
   sm:flex-row gap-4 justify-center"></div>"
-                <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold,"
+                <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold,";
   hover:bg-cyan-50 transition-colors"></button>
 // Explore IoT Solutions;
           </button>"
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
-  hover:bg-white,"
-  hover:text-cyan-600 transition-colors"></button>
+                <button className = "border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
+  hover:bg-white,";
+  hover:text-cyan-600 transition-colors"></button>;
 Schedule Demo;
               </div>
         </section>
         {/* Key Benefits */}"
-        <section className="py-16 bg-white"></section>"
+        <section className = "py-16 bg-white"></section>"
           <div className="max-w-7xl mx-auto px-4,
   sm:px-6,"
   lg:px-8"></div>"
@@ -199,10 +199,10 @@ Schedule Demo;
           
           
           </h2>"
-              <p className="text-xl text-gray-600"></p>
+              <p className="text-xl text-gray-600"></p>;
 Expert IoT engineers delivering scalable, secure, and intelligent connected solutions;"
-            <div className="grid grid-cols-1,
-  md:grid-cols-2,"
+            <div className = "grid grid-cols-1,;
+  md:grid-cols-2,";
   lg:grid-cols-4 gap-8"></div>"
                 <div className="bg-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
                   <Wifi className="w-8 h-8 text-cyan-600" /></Wifi>"
@@ -221,12 +221,12 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>"
                 <p className="text-gray-600">Successfully deployed 500+ IoT projects across industries</p>
         {/* Services by Category */}
-        {categories.map(category => ()}"
+        {categories.map(category: > ()}"
           <section key={category} className="py-16 bg-gray-50"></section>
                   {category} Solutions;
                   Specialized {category.toLowerCase()} services for connected and intelligent systems;"
-              <div className="grid grid-cols-1,
-  md:grid-cols-2,"
+              <div className = "grid grid-cols-1,;
+  md:grid-cols-2,";
   lg:grid-cols-3 gap-8"></div>
                 {iotServices;}
                   .filter(service => service.category === category)

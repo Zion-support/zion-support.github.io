@@ -4,7 +4,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 ,
   if (req.method === 'GET') {,
     //     const scope = state.config.scope;
-    const _scopedEvents = filterEventsByScope(state.events, scope);
+    const _scopedEvents: filterEventsByScope(state.events, scope);
 
     return res.status(200).json({)
       status: 'ok')

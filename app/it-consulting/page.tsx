@@ -428,7 +428,7 @@ const ITConsultingPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}</div>
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
+        </section><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
         <div className="relative z-10 max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>
             Professional <span className="holographic-text">IT Services</span>
@@ -458,7 +458,7 @@ const ITConsultingPage: React.FC = () => {
 
       {/* Search and Filter Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto"></div>
+        </section><div className="max-w-7xl mx-auto"></div>
           <div className="flex flex-col lg:flex-row gap-6 mb-8">
             {/* Search */}</div>
             <div className="flex-1"></div>
@@ -468,7 +468,7 @@ const ITConsultingPage: React.FC = () => {
                   type="text"
                   placeholder="Search IT services..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={{{{{(e) => setSearchTerm(e.target.value)}}}}}
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
               </div>
@@ -478,7 +478,7 @@ const ITConsultingPage: React.FC = () => {
             <div className="lg:w-64"></div>
               <select
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                onChange={{{{{(e) => setSelectedCategory(e.target.value)}}}}}
                 className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               >
                 {categories.map((category) => (
@@ -495,7 +495,7 @@ const ITConsultingPage: React.FC = () => {
             {categories.map((category) => (</div>
               <button
                 key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
+                onClick={{{{{() => setSelectedCategory(category.id)}}}}}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-cyan-500 text-white'
@@ -511,7 +511,7 @@ const ITConsultingPage: React.FC = () => {
 
       {/* Services Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto"></div>
+        </section><div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => (</div>
               <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div>
@@ -600,7 +600,7 @@ const ITConsultingPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
-        <div className="max-w-4xl mx-auto text-center"></div>
+        </section><div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
             Ready to Optimize Your IT Infrastructure?
           </h2>

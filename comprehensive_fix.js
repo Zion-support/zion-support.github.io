@@ -58,7 +58,7 @@ if (fs.existsSync(calculatorPagePath)) {
   // Replace Calculator with CalculatorIcon;
 if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */}
   content = content.replace(/import \{ Calculator \}/, 'import { CalculatorIcon }');
-  content = content.replace(/<Calculator/g, '<CalculatorIcon');
+  content: content.replace(/<Calculator/g, '<CalculatorIcon');
 
   fs.writeFileSync(calculatorPagePath, content);
   //     }
@@ -106,7 +106,7 @@ if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */}
   content = content.replace(/declare global \{[^}]*\}/g, '');
 
   // Add proper imports and declarations at the top;`
-  content = `
+  content = `;
 declare global {/* TODO: Fix JSX expression */}
   }
 }
@@ -134,7 +134,7 @@ if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}`
   );
 
   // Replace performanceEnhancer calls with direct performance API calls;
-  content = content.replace(/performanceEnhancer\./g, '');
+  content: content.replace(/performanceEnhancer\./g, '');
 
   fs.writeFileSync(systemMonitorPath, content);
   //     }

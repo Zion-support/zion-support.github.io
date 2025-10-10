@@ -119,7 +119,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
               <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />
               <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
                 EXCLUSIVE, FEBRUARY, OFFER;
-              <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4">
+              <div, classNam, e = "flex, fle, x-col, s, m:fl, e, x-row, ga, p-4">
                 EXCLUSIVE, FEBRUARY, OFFER</span>
               <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>
                 <a, hre, f="/subscri, b, e"
@@ -128,7 +128,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
                   <Sparkles, classNam, e="w-5 h-5" />
                   <Link, classNam, e="w-5 h-5" />
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o"></div>
-                <input, typ, e="ema, i, l"
+                <input, typ, e="ema, i, l";
                     placehold, e, r="Enter, your, email"
     {/* TODO: Fix JSX expression */}
     }
@@ -168,7 +168,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
               <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" /></Star>"
               <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e"></span>
                 EXCLUSIVE, FEBRUARY, OFFER;"
-              <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>"
+              <div, classNam, e = "flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>"
                 <a, hre, f="/subscri, b, e""
                   classNa, m, e="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-bl, u, e-600, hove, r:fr, o, m-emera, l, d-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 ></a>"
@@ -176,7 +176,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
                   <Link, classNam, e="w-5 h-5" /></Link>"
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o"></div>"
                 <input, typ, e="ema, i, l""
-                    placehold, e, r="Enter, your, email""
+                    placehold, e, r="Enter, your, email"";
                     classNa, m, e="fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-emera, l, d-500, focu, s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0"
                   /></input>"
                 <button, classNam, e="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-bl, u, e-600, hove, r:fr, o, m-emera, l, d-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"></button>

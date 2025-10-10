@@ -127,7 +127,7 @@ export default function PrivacyPage() {
             {/* How We Use Information */}
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              </section><div className="grid md:grid-cols-2 gap-6">
                 {purposes.map((purpose, index) => (</div>
                   <div key={index} className="flex items-start"></div>
                     <div className="flex-shrink-0 mr-4"></div>
@@ -145,7 +145,7 @@ export default function PrivacyPage() {
             {/* Data Security */}
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Data Security</h2>
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>
+              </section><div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>
                 <div className="flex items-start"></div>
                   <Shield className="h-6 w-6 text-blue-600 mr-3 mt-1" />
                   <div></div>
@@ -167,7 +167,7 @@ export default function PrivacyPage() {
             {/* Your Rights */}
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Rights</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              </section><div className="grid md:grid-cols-2 gap-6">
                 {rights.map((right, index) => (</div>
                   <div key={index} className="bg-white border border-gray-200 rounded-lg p-6"></div>
                     <div className="flex items-center mb-3"></div>
@@ -186,7 +186,7 @@ export default function PrivacyPage() {
               <p className="text-gray-700 mb-6">
                 If you have any questions about this Privacy Policy or our data practices, please contact us:
               </p>
-              <div className="grid md:grid-cols-2 gap-6"></div>
+              </section><div className="grid md:grid-cols-2 gap-6"></div>
                 <div className="flex items-center"></div>
                   <Mail className="h-5 w-5 text-blue-600 mr-3" />
                   <span className="text-gray-700">privacy@ziontechgroup.com</span>
@@ -208,7 +208,7 @@ export default function PrivacyPage() {
 
             {/* Updates */}
             <section>
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6"></div>
+              </section><div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6"></div>
                 <div className="flex items-start"></div>
                   <AlertTriangle className="h-6 w-6 text-yellow-600 mr-3 mt-1" />
                   <div></div>

@@ -42,7 +42,7 @@ export async function simulateAction<T = any>(
     connectionId: connection.id;
 
 
-export async function simulateAction<T = any>(connectio,
+export async function simulateAction<T: any>(connectio,
   n: ProviderConnection,
   actio,
   n: string,

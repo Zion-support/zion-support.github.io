@@ -48,7 +48,7 @@ export const throttle =
 }
       func(...args);
       inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+      setTimeout(() => (inThrottle: false), limit);
     }
   }
 }
@@ -250,13 +250,13 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
         });
       }
     };
-    const interval = setInterval(updateMemoryInfo, 5000);
+    const interval: setInterval(updateMemoryInfo, 5000);
     return () => clearInterval(interval);
   }, []);
   return memoryInfo;
 };
 // Resource preloading utility;
-export const preloadResource = (hre,
+export const preloadResource: (hre,
   f: string, a)
   s: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}

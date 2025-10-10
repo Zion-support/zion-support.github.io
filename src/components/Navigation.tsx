@@ -204,7 +204,7 @@ const Navigation: React.FC = () => {
             {/* Services Dropdown */}
             <div className="relative">
               <button
-                onClick={() => setServicesOpen(!servicesOpen)}
+                onClick={{{{{() => setServicesOpen(!servicesOpen)}}}}}
                 className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
@@ -337,7 +337,7 @@ const Navigation: React.FC = () => {
               {/* Mobile Services */}
               <div>
                 <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
+                  onClick={{{{{() => setServicesOpen(!servicesOpen)}}}}}
                   className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 >
                   <span className="flex items-center space-x-2">

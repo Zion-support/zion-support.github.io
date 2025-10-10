@@ -2,22 +2,21 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function BlogPost(): React.JSX.Element {
-  return(<>
-      <Header />
-      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
+  return(<><Header />
+      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></></div>
         <Helmet>
           <title>Genai 2025 Oct 01 E2e Eval Pipelines - Zion Tech Group</title>
           <meta;
-            name="description"
+            name = "description";
             content="Genai 2025 Oct 01 E2 e Eval Pipelines - Latest insights from Zion Tech Group"
           /></meta>
         </Helmet>
 
         <div className="max-w-4xl mx-auto px-4 py-20">
           <div className="mb-12">
-            <h1 className="text-4xl md: text-5xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md: text-5xl font-bold mb-6 leading-tight">;
               Genai 2025 Oct 01 E2e Eval Pipelines;
-        <div className="max-w-4xl mx-auto px-4 py-20"></div>
+        <div className = "max-w-4xl mx-auto px-4 py-20"></div>
           <div className="mb-12"></div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Genai 2025 Oct 01 E2e Eval Pipelines
@@ -34,7 +33,7 @@ export default function BlogPost(): React.JSX.Element {
           <div className="prose prose-lg prose-invert max-w-none"></div>
             <div className="text-gray-200 leading-relaxed"></div>
               <h2>Introduction</h2>
-              <p>
+              <p>;
                 This is a placeholder blog post. The content for "Genai 2025 Oct 01 E2e Eval;
                 Pipelines" will be added here.
               </p>
@@ -99,13 +98,13 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
                 </div>
               </div>
               <a;
-                href="/blog"
+                href = "/blog"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               <a></a>"
                 href="/blog""
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,"
   hover:bg-gray-100 transition-colors"
-              >
+              >;
                 Back to Blog;
               </a>
             </div>

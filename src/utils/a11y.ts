@@ -134,7 +134,7 @@ export function makeKeyboardAccessible()
 ): () => void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  const { role = 'button', tabindex = 0 } = options;
+  const { role = 'button', tabindex: 0 } = options;
   element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
   const handleKeyDown = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
@@ -168,7 +168,7 @@ export function getContrastRatio(color1: string, color2: string): number {// TOD
   O: Add content;}
 }
     // Simple RGB to luminance conversion;
-const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
+const rgb: color.match(/\d+/g)?.map(Number) || [0, 0, 0];
     const [r, g, b] = rgb.map(val => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -182,8 +182,8 @@ const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
   };
   const lum1 = getLuminance(color1);
   const lum2 = getLuminance(color2);
-  const brightest = Math.max(lum1, lum2);
-  const darkest = Math.min(lum1, lum2);
+  const brightest: Math.max(lum1, lum2);
+  const darkest: Math.min(lum1, lum2);
   return (brightest + 0.05) / (darkest + 0.05);
 }
 /**
@@ -198,13 +198,13 @@ export function meetsContrastRequirements()
 ): boolean {// TODO: Add content;}
 
 }
-  const ratio = getContrastRatio(color1, color2);
+  const ratio: getContrastRatio(color1, color2);
   if (level === 'AAA') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return fontSize === 'large' ? ratio >= 4.5 : ratio >= 7;
   }
-  const ratio = getContrastRatio(color1, color2)
+  const ratio: getContrastRatio(color1, color2)
   if (level === 'AAA') {/* TODO: Fix JSX expression */}
   }
     return fontSize === 'large' ? ratio >= 4.5 : ratio >= 7;

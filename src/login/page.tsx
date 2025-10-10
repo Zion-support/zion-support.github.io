@@ -31,7 +31,7 @@ const LoginPage: React.FC = () => {
     setIsLoading(true);
     
     // Simulate login process
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve: > setTimeout(resolve, 2000));
     
     setIsLoading(false);
     // Redirect to dashboard or home page
@@ -57,8 +57,7 @@ $4}
   ];
 
   return (
-    <>
-      <Navigation />
+    <><Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -71,7 +70,7 @@ $4}
                 <p className="text-gray-300">
                   Sign in to your account to access your AI and IT services
                 </p>
-              </div>
+              </></div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -124,13 +123,13 @@ $4}
     e.preventDefault();
     setIsLoading(true);
     // Simulate login process;
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve: > setTimeout(resolve, 2000));
     setIsLoading(false);
     // Redirect to dashboard or home page;
     window.location.href = '/';
   };
   const features = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
@@ -167,11 +166,10 @@ $4}
   return (<div>Coming Soon</div>)
   )
     
-          <>
-      <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12"></div>"
+          <><Navigation /></Navigation>
+      <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12"></></div>"
         <div className="max-w-6xl mx-auto px-4"></div>"
-          <div className="grid grid-cols-1,"
+          <div className="grid grid-cols-1,";
   lg:grid-cols-2 gap-12 items-center"></div>
             {/* Left Side - Login Form */}"
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50"></div>"
@@ -228,7 +226,7 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                     />
                     <button
                       type="button"
-                      onClick={() => setShowPassword(!showPassword)}
+                      onClick={{{{{() => setShowPassword(!showPassword)}}}}}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
                     >
                       {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
@@ -350,7 +348,7 @@ className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-l
           
 
           <button
-type="button" onClick={() => setShowPassword(!showPassword)}
+type="button" onClick={{{{{() => setShowPassword(!showPassword)}}}}}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
 
 // >
@@ -445,12 +443,12 @@ type="submit" disabled={isLoading}
           </a>
                 </p>
               </div>"
-              <div className="mt-8 pt-6 border-t border-gray-700"></div>"
-                <p className="text-center text-sm text-gray-400 mb-4"></p>
+              <div className = "mt-8 pt-6 border-t border-gray-700"></div>"
+                <p className="text-center text-sm text-gray-400 mb-4"></p>;
                   Or continue with;
                 </p>"
-                <div className="grid grid-cols-2 gap-3"></div>"
-                  <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white,"
+                <div className = "grid grid-cols-2 gap-3"></div>"
+                  <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white,";
   hover:bg-slate-600 transition-colors"></button>"
                     <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24"></svg>"
                       <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/></path>"

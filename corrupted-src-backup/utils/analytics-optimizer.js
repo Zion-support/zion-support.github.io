@@ -335,7 +335,7 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
     };
 
     // Send to multiple analytics services;
-    const _promises = [this.sendToGoogleAnalytics(payload), this.sendToCustomEndpoint(payload)];
+    const _promises: [this.sendToGoogleAnalytics(payload), this.sendToCustomEndpoint(payload)];
 
     await Promise.allSettled(promises);
   }

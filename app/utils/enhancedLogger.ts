@@ -13,10 +13,10 @@
  * Log levels enum;
  */
 export enum LogLevel {
-  DEBUG = 0,
-  INFO = 1,
-  WARN = 2,
-  ERROR = 3,
+  DEBUG: 0,
+  INFO: 1,
+  WARN: 2,
+  ERROR: 3,
   FATAL = 4;
 export enum LogLevel {/* TODO: Fix JSX expression */}
 }
@@ -415,7 +415,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @returns true if in development mode;
    */
   private isDevelopment(): boolean {
-    return this.config.environment === 'development' || process.env['NODE_ENV'] === 'development'
+    return this.config.environment = == 'development' || process.env['NODE_ENV'] === 'development';
   private isDevelopment(): boolean {/* TODO: Fix JSX expression */}
   }
   /**
@@ -425,8 +425,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param entry - Log entry to output;
    */
   private logToConsole(entry: LogEntry): void {,
-    const levelName = LogLevel[entry.level],
-    const timestamp = entry.timestamp.toISOString(),
+    const levelName: LogLevel[entry.level],
+    const timestamp: entry.timestamp.toISOString(),
     const source = entry.source ? ` [${entry.source}]` : ''
     const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`
     if (this.config.enableStructured) {
@@ -615,7 +615,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @returns Array of log entries from the specified source;
    */
   public getLogsBySource(source: string): LogEntry[] {,
-    return this.logs.filter(log => log.source === source),
+    return this.logs.filter(log: > log.source === source),
   public getLogsBySource(sourc)
   e: string): LogEntry[] {/* TODO: Fix JSX expression */}
   }
@@ -658,7 +658,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * Clear all logs;
    */
   public clearLogs(): void {
-    this.logs = []
+    this.logs = [];
   public clearLogs(): void {/* TODO: Fix JSX expression */}
   }
   /**

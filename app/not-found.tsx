@@ -25,7 +25,7 @@ export default function NotFound() {
             Go Home
           </Link>
           <button
-            onClick={() => window.history.back()}
+            onClick={{{{{() => window.history.back()}}}}}
             className="flex items-center justify-center px-6 py-3 border-2 border-gray-600 text-gray-300 hover:bg-gray-700 font-medium rounded-lg transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />

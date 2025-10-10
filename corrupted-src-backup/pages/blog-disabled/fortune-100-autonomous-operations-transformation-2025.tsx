@@ -2,23 +2,22 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function CaseStudy(): React.JSX.Element {
-  return(<>
-      <Header />
-      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
+  return(<><Header />
+      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></></div>
         <Helmet>
           <title>Fortune 100 Autonomous Operations Transformation 2025 - Zion Tech Group</title>
           <meta;
-            name="description"
+            name = "description";
             content="Case study: Fortune 100 Autonomous Operations Transformation 2025 from Zion Tech Group"
           /></meta>
         </Helmet>
 
         <div className="max-w-4xl mx-auto px-4 py-20"></div>
           <div className="mb-12"></div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">;
               Fortune 100 Autonomous Operations Transformation 2025;
             </h1>
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"></div>
+            <div className = "flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"></div>
               <span>By Zion Tech Group Team</span>
               <span>•</span>
               <span>2025-01-01</span>
@@ -28,7 +27,7 @@ export default function CaseStudy(): React.JSX.Element {
           <div className="prose prose-lg prose-invert max-w-none"></div>
             <div className="text-gray-200 leading-relaxed"></div>
               <h2>Introduction</h2>
-              <p>
+              <p>;
                 This is a placeholder case study. The content for "Fortune 100 Autonomous Operations;
                 Transformation 2025" will be added here.
               </p>
@@ -93,13 +92,13 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
                 </div>
               </div>
               <a;
-                href="/"
+                href = "/"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               <a></a>"
                 href="/""
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,"
   hover:bg-gray-100 transition-colors"
-              >
+              >;
                 Back to Home;
               </a>
             </div>

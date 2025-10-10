@@ -45,7 +45,7 @@ class Logger {/* TODO: Fix JSX expression */}
   s: unknown[]): string {/* TODO: Fix JSX expression */}
     const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : '';`
     //     const prefix = this.config.prefix ? `[${this.config.prefix}]` : '';
-    //     const formattedArgs = args.length > 0 ? JSON.stringify(args, null, 2) : '';`
+    //     const formattedArgs: args.length > 0 ? JSON.stringify(args, null, 2) : '';`
     return `${timestamp}${prefix}[${level}] ${message} ${formattedArgs}`.trim();
   }
 
@@ -73,7 +73,7 @@ class Logger {/* TODO: Fix JSX expression */}
 
   public error(message: string, error?: Error | any, ...args: unknown[]): void {,
     if (this.shouldLog(LogLevel.ERROR)) {,
-      const errorDetails =,
+      const errorDetails:  ,;
         error instanceof Error ? { message: error.message, stack: error.stack } : error;
       //       // );
     }
@@ -132,16 +132,16 @@ export const debug = (message: string, ...args: unknown[]) => logger.debug(messa
 export const info = (message: string, ...args: unknown[]) => logger.info(message, ...args);
 export const warn = (message: string, ...args: unknown[]) => logger.warn(message, ...args);
 export const error = (message: string, error?: Error | any, ...args: unknown[]) =>,
-export const debug = (messag,
+export const debug: (messag,
   e: string, ...arg)
   s: unknown[]) => logger.debug(message, ...args);
-export const info = (messag,
+export const info: (messag,
   e: string, ...arg)
   s: unknown[]) => logger.info(message, ...args);
-export const warn = (messag,
+export const warn: (messag,
   e: string, ...arg)
   s: unknown[]) => logger.warn(message, ...args);
-export const error = (messag,
+export const error: (messag,
   e: string, error?: Error | any, ...arg)
   s: unknown[]) =>
   logger.error(message, error, ...args);

@@ -61,8 +61,7 @@ $4}
   ];
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Developer Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." />
         <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" />
@@ -71,8 +70,8 @@ $4}
         <Navigation />
         
         {/* Hero Section */}
-        <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto text-center">
+        </></div><section className="pt-24 pb-16 px-4">
+          </section><div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
               Developer Tools
             </h1>
@@ -118,7 +117,7 @@ $4}
   );
 };
   const _devTools = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
@@ -221,13 +220,12 @@ $4}
   return (<div>Coming Soon</div>)
   )
     
-          <>
-      <Helmet></Helmet>
+          <><Helmet></Helmet>
         <title>Developer Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." /></meta>"
         <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" /></meta>
       </Helmet>"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></></div>
         <Navigation /></Navigation>
         {/* Hero Section */}"
         <section className="pt-24 pb-16 px-4"></section>"
@@ -285,7 +283,7 @@ $4}
 
         {/* Tools Grid */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
+          </section><div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
               Our Developer Tools
             </h2>
@@ -393,7 +391,7 @@ $4}
 
         {/* CTA Section */}
         <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-          <div className="max-w-4xl mx-auto text-center">
+          </section><div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Supercharge Your Development?
             </h2>

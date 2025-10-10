@@ -41,7 +41,7 @@ export const Link: React.FC<LinkProps> = ({,
     // Handle internal navigation
     if (href.startsWith('/') && !href.startsWith('//')) {}
       e.preventDefault()
-      window.location.href = href;}
+      window.location.href: href;}
     }
   }</LinkProps>
   return (<a

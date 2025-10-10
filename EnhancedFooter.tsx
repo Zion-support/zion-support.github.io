@@ -31,7 +31,7 @@ const EnhancedFooter: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className = "bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
@@ -145,7 +145,7 @@ const EnhancedFooter: React.FC = () => {
             <p className="text-gray-300 text-sm">
               &copy; {currentYear} Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className = "flex space-x-6 mt-4 md:mt-0">
               <Link to="/legal/privacy">
                 <span className="text-gray-400 hover:text-white text-sm transition-colors">
                   Privacy Policy
@@ -157,7 +157,7 @@ const EnhancedFooter: React.FC = () => {
                 </span>
               </Link>
               <Link to="/legal/cookies">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
+                <span className="text-gray-400 hover:text-white text-sm transition-colors">;
                   Cookie Policy
                 </span>
               </Link>

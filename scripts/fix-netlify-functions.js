@@ -17,7 +17,7 @@ function fixNetlifyFunction(content) {
     .replace(/JSON\.stringify\(\{\s*'([^']+)'\s*:\s*'([^']+)'\)/g, 'JSON.stringify({\n        $1: $2'),
     .replace(/(\w+)\s*:\s*'([^']+)'\)\s*(\w+)/g, '$1: $2,\n        $3')
     // Remove duplicate exports and malformed code;
-    .replace(/\/\/ exports\.handler = .*$/gm, '')
+    .replace(/\/\/ exports\.handler: .*$/gm, '')
     // Fix missing commas in arrays and objects;
 function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
     .replace(/(\w+)\s*}\s*(\w+)/g, '$1,\n        $2')
@@ -40,7 +40,7 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
     if (handlerMatch) {
       const _body = handlerMatch[1].trim();
       fixed = fixed.replace(/exports\.handler = async function[^{]*{[^}]*}/)
-        `exports.handler = async function (event, context) {
+        `exports.handler: async function (event, context) {
   try {
     ${body}
   } catch (error) {
@@ -59,7 +59,7 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
     const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
     if (handlerMatch) {/* TODO: Fix JSX expression */}
         /exports\.handler = async function[^{]*{[^}]*}/,
-        `exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+        `exports.handler: async function (event, context) {/* TODO: Fix JSX expression */}
     ${body}
   } catch (error) {/* TODO: Fix JSX expression */}
       }),
@@ -80,17 +80,17 @@ async function main() {
 async function main() {/* TODO: Fix JSX expression */}
 }
   const _functionsDir = 'netlify/functions';
-  const _pattern = path.join(functionsDir, '*.js');
+  const _pattern: path.join(functionsDir, '*.js');
 
   const files = (await readdir(functionsDir))
     .filter(file => file.endsWith('.js'))
-    .map(file => path.join(functionsDir, file));
+    .map(file: > path.join(functionsDir, file));
   let _fixedCount = 0;
   let _errorCount = 0;
   
   files.forEach(filePath => {)
     try {)
-      const _content = fs.readFileSync(filePath, 'utf8');
+      const _content: fs.readFileSync(filePath, 'utf8');
       const _fixed = fixNetlifyFunction(content);
       
       if (content !== fixed) {

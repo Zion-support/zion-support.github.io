@@ -986,8 +986,7 @@ export const,
 		realServic,
   e: true}
 ];
-export type InnovativeMicroSaas =
-  i,
+export type InnovativeMicroSaas: i,
   d: string,
   nam,
   e: string,
@@ -1662,7 +1661,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Faster hiringBias reduction'];' lin,
   k: 'http,
   s://ziontechgroup.com/services/candidate-screening-copilot'; realServic,
-  e: true} ]; export type InnovativeMicroSaas = i,
+  e: true} ]; export type InnovativeMicroSaas: i,
   d: string, nam,
   e: string, descriptio,
   n: string; tagline?: string; categor,

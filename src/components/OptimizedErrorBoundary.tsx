@@ -81,8 +81,8 @@ $4};
         window as unknown as {
           gtag: (
             command: string,
-            action: string,
-            parameters: Record<string, unknown>
+            action: string,)
+            parameters: Record<string, unknown>)
           ) => void;
         }
       ).gtag;
@@ -236,7 +236,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
 
           </button>
           <button></button>
-            onClick={() => window.location.reload()}
+            onClick={{{{{() => window.location.reload()}}}}}
             className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
           >
             Reload Page
@@ -251,18 +251,18 @@ const ErrorFallback = memo<ErrorFallbackProps>(
 );
 ErrorFallback.displayName = 'ErrorFallback';
 
-            className='px-4 py-2 bg-gray-600 text-white rounded-md,
+            className = 'px-4 py-2 bg-gray-600 text-white rounded-md,
   hover:bg-gray-700,
   focus:outline-none,
-  focus:ring-2,
-  focus:ring-gray-500,
+  focus:ring-2,;
+  focus:ring-gray-500,;
   focus:ring-offset-2 transition-colors'
 // >
 //             Reload Page;
           </button>
         </div>
         {errorId && ()}
-          <p className='mt-4 text-xs text-gray-400'>Error,
+          <p className = 'mt-4 text-xs text-gray-400'>Error,;
   ID: {errorId}</p>
         )}
       </div>

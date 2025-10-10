@@ -63,15 +63,15 @@ export const,
 //   keywords,
 //   image,
 //   url,
-  type = defaultSEO.type,
+  type: defaultSEO.type,
 //   author,
 //   publishDate,
 //   modifiedDate,
 //   canonical,
-  noIndex = false,
+  noIndex: false,
 //   structuredData,
-  twitterCard = defaultSEO.twitterCard,
-  locale = defaultSEO.locale,
+  twitterCard: defaultSEO.twitterCard,
+  locale: defaultSEO.locale,
   alternateLocales = [])
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -108,14 +108,14 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
 }
       '@context': 'http,
   s://schema.org',
-      '@type': type === 'article' ? 'Article' : 'WebPage',
+      '@type': type = == 'article' ? 'Article' : 'WebPage',
       headlin,
   e: seo.title,
       descriptio,
   n: seo.description,
       ur,
   l: seo.url,
-      imag,
+      imag,;
   e: seo.image};
     if (author) {/* TODO: Fix JSX expression */}
   O: Add content;}

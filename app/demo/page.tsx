@@ -45,8 +45,7 @@ const DemoPage: React.FC = () => {
   const selectedDemoData = demos.find(demo => demo.id === selectedDemo) || demos[0];
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Demo - Zion Tech Group | See Our Solutions in Action</title>
         <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
         <meta name="keywords" content="demo, AI demo, technology demo, interactive demo, Zion Tech Group" />
@@ -54,8 +53,8 @@ const DemoPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        </></div><section className="relative py-20 px-4 overflow-hidden">
+          </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -72,7 +71,7 @@ const DemoPage: React.FC = () => {
 
         {/* Demo Selection */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
+          </section><div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Choose a Demo
@@ -86,7 +85,7 @@ const DemoPage: React.FC = () => {
               {demos.map((demo) => (
                 <button
                   key={demo.id}
-                  onClick={() => setSelectedDemo(demo.id)}
+                  onClick={{{{{() => setSelectedDemo(demo.id)}}}}}
                   className={`p-6 rounded-2xl border transition-all duration-300 text-left ${
                     selectedDemo === demo.id
                       ? 'bg-cyan-500/20 border-cyan-400 text-white'
@@ -115,7 +114,7 @@ const DemoPage: React.FC = () => {
 
         {/* Demo Content */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
+          </section><div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Demo Video/Interface */}
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
@@ -197,7 +196,7 @@ const DemoPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          </section><div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?

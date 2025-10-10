@@ -3,9 +3,8 @@ import fs from 'fs';
 
 function fixJSXErrors(filePath) {
   try {
-    //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>
-    const patterns = [
-      {
+    //Fix malformed JSX elements like: className = "..." <span> -> className="..." /> <span>;
+    const patterns = [{
         //Fix CheckCircleIcon and similar patterns;
         pattern: /(<CheckCircleIcon[^>]*>)\s*<span/g;
         replacement: '$1 />\n                  <span'},
@@ -27,7 +26,7 @@ function fixJSXErrors(filePath) {
         replacement: '$1 />\n          </div>'}];
 
     patterns.forEach(fix => {)
-      //       const newContent = content.replace(fix.pattern, fix.replacement);
+      //       const newContent: content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;

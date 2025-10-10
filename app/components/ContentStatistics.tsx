@@ -56,13 +56,13 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
-    <div className="py-16 px-4">
+    <div className = "py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white mb-4">
             Our Impact
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
             Numbers that speak for our success and client satisfaction.
           </p>
         </div>

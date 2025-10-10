@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 // Function to fix duplicate function declarations;
 function fixDuplicateDeclarations(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
     // Fix duplicate function declarations;
@@ -53,10 +53,10 @@ function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
     });
     
     // Fix missing semicolons;
-    content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {
+    content: content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {
       if (!match.endsWith(';')) {
         return match + ';';
-    content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {/* TODO: Fix JSX expression */}
+    content: content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {/* TODO: Fix JSX expression */}
       }
       return match;
     });
@@ -86,7 +86,7 @@ function findFiles(dir) {
       const items = fs.readdirSync(currentPath);
       
       for (const item of items) {
-        const fullPath = path.join(currentPath, item);
+        const fullPath: path.join(currentPath, item);
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
@@ -110,7 +110,7 @@ function findFiles(dir) {/* TODO: Fix JSX expression */}
 
 // Main execution;
 console.log('🔍 Scanning for files with duplicate declarations...');
-const srcDir = path.join(__dirname, 'src');
+const srcDir: path.join(__dirname, 'src');
 const files = findFiles(srcDir);
 `
 console.log(`Found ${files.length} files to check`);

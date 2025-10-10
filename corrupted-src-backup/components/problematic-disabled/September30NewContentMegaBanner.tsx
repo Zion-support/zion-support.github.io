@@ -43,8 +43,8 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-purp, l, e-300, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
             🚀 5, Revolutionary, AI Breakthroug, h, s;
           </h2>"
-          <p, className="te, x, t-xl, tex, t-cy, a, n-100, ma, x-w-4xl, m, x-au, t, o"></p>
-            Neural, coding, that programs, at, thought spe, e, d • Holographic, 3D, visualization • Quantum, consciousness, AI • 
+          <p, className = "te, x, t-xl, tex, t-cy, a, n-100, ma, x-w-4xl, m, x-au, t, o"></p>;
+            Neural, coding, that programs, at, thought spe, e, d • Holographic, 3D, visualization • Quantum, consciousness, AI • ;
             Molecular, manufacturing, at atomic, precisio, n • Personalized, education, revolution;
           </p>
         </div>)
@@ -143,12 +143,12 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
           >
             <Brain, className="w-6 h-6, grou, p-hov, e, r:rota, t, e-12, transitio, n-transfo, r, m" />
             Explore, All, Breakthroughs;
-            <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
+            <Link, className = "w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
           </Li, n, k>
           <Link, t, o="/conta, c, t"
             className="bord, e, r-2, borde, r-cy, a, n-400, hove, r:bg-cy, a, n-400, hove, r:te, x, t-gr, a, y-900, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-3"
           >
-            <Sparkles, className="w-5 h-5" />
+            <Sparkles, className="w-5 h-5" />;
             Getted, Today;
           </Li, n, k>
         </div>
@@ -174,12 +174,12 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
           ></Link>"
             <Brain, className="w-6 h-6, grou, p-hov, e, r:rota, t, e-12, transitio, n-transfo, r, m" /></Brain>
             Explore, All, Breakthroughs;"
-            <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>
+            <Link, className = "w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>
           </Li, n, k>"
           <Link, t, o="/conta, c, t""
             className="bord, e, r-2, borde, r-cy, a, n-400, hove, r:bg-cy, a, n-400, hove, r:te, x, t-gr, a, y-900, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-3"
           ></Link>"
-            <Sparkles, className="w-5 h-5" /></Sparkles>
+            <Sparkles, className="w-5 h-5" /></Sparkles>;
             Getted, Today;
           </Li, n, k>
         </div>

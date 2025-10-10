@@ -592,7 +592,7 @@ export const,
     }
   }
 ];
-export type Zion2026AIMarketplaceService = i,
+export type Zion2026AIMarketplaceService: i,
   d: string; nam,
   e: string; descriptio,
   n: string; categor,

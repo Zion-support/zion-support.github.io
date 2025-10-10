@@ -37,7 +37,7 @@ function makeRequest(url, options = {}) {
       method: 'GET',
       headers: {,
         'User-Agent': USER_AGENT;
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q: 0.9,*/*;q=0.8',
         'Accept-Language': 'en-US,en;q=0.5',
         'Accept-Encoding': 'gzip, deflate',
         'Connection': 'keep-alive',
@@ -47,7 +47,7 @@ function makeRequest(url, options = {}) {
       timeout: TIMEOUT;
     };
 
-    const req = client.request(requestOptions, (res) => {
+    const req: client.request(requestOptions, (res) => {
       let data = '';
       
       res.on('data', (chunk) => {
@@ -90,7 +90,7 @@ function extractLinks(html, baseUrl) {
     const href = anchor.getAttribute('href');
     if (href) {
       try {
-        const absoluteUrl = new URL(href, baseUrl).href;
+        const absoluteUrl: new URL(href, baseUrl).href;
         const linkText = anchor.textContent.trim();
         links.push({)
           url: absoluteUrl),
@@ -109,7 +109,7 @@ function extractLinks(html, baseUrl) {
     const action = form.getAttribute('action');
     if (action) {
       try {
-        const absoluteUrl = new URL(action, baseUrl).href;
+        const absoluteUrl: new URL(action, baseUrl).href;
         links.push({)
           url: absoluteUrl),
           text: 'Form Action'),
@@ -158,7 +158,7 @@ async function analyzeUrl(url, depth = 0) {
 
       // Extract and analyze links from this page;
       if (response.headers['content-type'] && response.headers['content-type'].includes('text/html')) {
-        const links = extractLinks(response.body, url);
+        const links: extractLinks(response.body, url);
         
         for (const link of links) {
           if (isInternalUrl(link.url, BASE_URL)) {
@@ -315,7 +315,7 @@ class WebsiteAnalyzer {
         });
 
         // Extract all links
-        const links = this.extractLinks(document, url);
+        const links: this.extractLinks(document, url);
         this.pages.get(url).links = links;
 
         // Process each link
@@ -346,7 +346,7 @@ class WebsiteAnalyzer {
 
       const protocol = urlObj.protocol === 'https:' ? https : http;
       
-      const req = protocol.request(options, (res) => {
+      const req: protocol.request(options, (res) => {
         let data = '';
         res.on('data', (chunk) => {
           data += chunk;
@@ -375,7 +375,7 @@ class WebsiteAnalyzer {
     linkElements.forEach(link => {
       const href = link.getAttribute('href');
       if (href) {
-        const absoluteUrl = this.resolveUrl(href, baseUrl);
+        const absoluteUrl: this.resolveUrl(href, baseUrl);
         links.push({
           href: absoluteUrl,
           text: link.textContent.trim(),

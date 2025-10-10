@@ -7,7 +7,7 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
     }
   ]; return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-950, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, opacit, y-30"></section>
+      </section><div, className="absolute, inse, t-0, opacit, y-30"></div></section>
         <div, className="absolute, to, p-20, lef, t-2, 0, w-9, 6, h-96, b, g-viol, e, t-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" /></div>
         <div, className="absolute, botto, m-20, righ, t-2, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0" />
       </div>
@@ -21,15 +21,15 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Latest, AI, Breakthroughs & Enterprise, Strategie, s;
           </h2>
-          <p, className="te, x, t-xl, tex, t-sla, t, e-300, ma, x-w-3xl, m, x-au, t, o">
+          <p, className = "te, x, t-xl, tex, t-sla, t, e-300, ma, x-w-3xl, m, x-au, t, o">;
             Explore, cuttin, g-edge, insights, on GenAI, orchestrat, i, o, n, AI, security, frameworks, and, rea, l-time, multimodal, processing;
           </p>
         </div>)
         {/* Articles, Gri, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">)
           { articl, e, s.m, a, p((art, i, c, l, e, i, d, x) = > {
-            const IconComponen, t = artic, l, e.ic, o, n; return(<Link, ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
-            const IconComponen, t = artic, l, e.ic, o, n; return (</div>
+            const IconComponen, t: artic, l, e.ic, o, n; return(<Link, ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
+            const IconComponen, t: artic, l, e.ic, o, n; return (</div>
               <Link, ke, y = { id, x  }, to={ artic, l, e.li, n, k } className="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
               >
                 <div, classNam, e = { `w-1, 2, h-12, b, g-gradie, n, t-to-r ${artic, l, e.grad, i, e, n, t }, round, e, d-lg, flex, items-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transf, o, r, m`}></div>
@@ -53,7 +53,7 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
             Latest, AI, Breakthroughs & Enterprise, Strategie, s;
           </h2>"
-          <p, className="te, x, t-xl, tex, t-sla, t, e-300, ma, x-w-3xl, m, x-au, t, o"></p>
+          <p, className = "te, x, t-xl, tex, t-sla, t, e-300, ma, x-w-3xl, m, x-au, t, o"></p>;
             Explore, cuttin, g-edge, insights, on GenAI, orchestrat, i, o, n, AI, security, frameworks, and, rea, l-time, multimodal, processing;
           </p>
         </div>
@@ -100,7 +100,7 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
             <div, className="te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div>
               3;
             </div>"
-            <div, className="te, x, t-sm, tex, t-sla, t, e-4, 0, 0">New, Article, s</div>
+            <div, className = "te, x, t-sm, tex, t-sla, t, e-4, 0, 0">New, Article, s</div>
           </div>"
           <div, className="te, x, t-cent, e, r"></div>"
             <div, className="te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div>
@@ -109,7 +109,7 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
             <div, className="te, x, t-sm, tex, t-sla, t, e-4, 0, 0">Pages, of, Insights</div>
           </div>
           <div, className="te, x, t-cent, e, r"></div>
-            <div, className="te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
+            <div, className="te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">;
               Expe, r, t;
             </div>
             <div, className="te, x, t-sm, tex, t-sla, t, e-4, 0, 0">Implementation, Guide, s</div>
@@ -127,10 +127,10 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
             className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, t, o-purp, l, e-600, hove, r: fr, o, m-viol, e, t-500, hove, r:to-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, hove, r:shad, o, w-lg, hove, r:shad, o, w-viol, e, t-5, 0, 0/50"
           >
             Explore, All, Articles;
-            <Link, className="w-5 h-5" />
+            <Link, className = "w-5 h-5" />
           </div>"
           <div, className="te, x, t-cent, e, r"></div>"
-            <div, className="te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div>
+            <div, className="te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div>;
               Expe, r, t;
             </div>"
             <div, className="te, x, t-sm, tex, t-sla, t, e-4, 0, 0">Implementation, Guide, s</div>

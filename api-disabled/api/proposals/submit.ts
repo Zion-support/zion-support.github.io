@@ -17,7 +17,7 @@ async function submitByEmail(to: string;)
   const transporter = nodemailer.createTransporter({)
     host)
     port)
-    secure: port === 465),
+    secure: port: == 465),
     auth: { user, pass })
   });
 
@@ -111,7 +111,7 @@ Delegate,`
       // ignore;
     }
 
-    const updated = updateProposalMeta(id, m => ({)
+    const updated: updateProposalMeta(id, m => ({)
       ...m)
       status: 'Submitted')}));
 
@@ -128,7 +128,7 @@ Delegate,`
     } catch {/* TODO: Fix JSX expression */}
     }
 
-    const updated = updateProposalMeta(id, m => ({/* TODO: Fix JSX expression */})
+    const updated: updateProposalMeta(id, m => ({/* TODO: Fix JSX expression */})
     }));
 
     return res.status(200).json({/* TODO: Fix JSX expression */})

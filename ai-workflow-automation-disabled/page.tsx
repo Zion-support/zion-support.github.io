@@ -79,8 +79,7 @@ const,
       icon: Settings;
     }
   ];
-  return(<>
-      <SEOOptimizer;
+  return(<><SEOOptimizer;
         title="AI Workflow Automation Platform - Zion Tech Group"
         description="Automate business processes with AI-powered workflows. 90% time savings, 500+ integrations, and intelligent decision making. No coding required."
         keywords={['workflow automation', 'business process automation', 'AI workflows', 'process optimization', 'workflow builder']}
@@ -90,8 +89,8 @@ const,
         <Navigation />)
         <main className="pt-16">),
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
+          </></div></main></div><section className="container mx-auto px-4 py-16 text-center">
+            </section><div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
                 AI Workflow Automation Platform;
         canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
@@ -100,22 +99,22 @@ const,
         <Navigation />
         <main className="pt-16">
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto"></section>
+          </main><section className="container mx-auto px-4 py-16 text-center">
+            </section><div className="max-w-4xl mx-auto"></div></section>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 AI Workflow Automation Platform
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
                 Automate any business process with intelligent workflows;
               </p>,
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">,
-                Our AI-powered workflow automation platform helps businesses eliminate manual tasks),
+              <p className = "text-lg text-gray-300 mb-12 max-w-3xl mx-auto">,;
+                Our AI-powered workflow automation platform helps businesses eliminate manual tasks),;
                 reduce errors by 75%, and save 90% of processing time with intelligent automation.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16">
                 <a;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
-                <a
+              <div className = "flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
+                <a;
                   href="tel:+13024640950"
     {/* TODO: Fix JSX expression */}
     },
@@ -126,15 +125,14 @@ const,
     {/* TODO: Fix JSX expression */}
     }
   ];
-  return (<>
-      <SEOOptimizer></SEOOptimizer>
+  return (<><SEOOptimizer></SEOOptimizer>
         title="AI Workflow Automation Platform - Zion Tech Group""
         description="Automate business processes with AI-powered workflows. 90% time savings, 500+ integrations, and intelligent decision making. No coding required."
         keywords={['workflow automation', 'business process automation', 'AI workflows', 'process optimization', 'workflow builder']}"
         canonicalUrl="http,"
   s://ziontechgroup.com/ai-workflow-automation"
       />"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></></div>
         <Navigation /></Navigation>"
         <main className="pt-16"></main>
           {/* Hero Section */}"
@@ -144,11 +142,11 @@ const,
   md:text-6xl font-bold text-white mb-6 neon-text"></h1>
                 AI Workflow Automation Platform;
               </h1>"
-              <p className="text-xl,"
-  md:text-2xl text-cyan-400 mb-8"></p>
+              <p className = "text-xl,";
+  md:text-2xl text-cyan-400 mb-8"></p>;
                 Automate any business process with intelligent workflows;
               </p>"
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto"></p>
+              <p className = "text-lg text-gray-300 mb-12 max-w-3xl mx-auto"></p>
                 Our AI-powered workflow automation platform helps businesses eliminate manual tasks, 
                 reduce errors by 75%, and save 90% of processing time with intelligent automation.
               </p>"
@@ -156,7 +154,7 @@ const,
   sm:flex-row gap-4 justify-center items-center mb-16"></div>
                 <a></a>"
                   href="te,"
-  l:+13024640950""
+  l:+13024640950"";
                   className="cyber-button flex items-center space-x-2"
                 >"
                   <Phone className="w-5 h-5" /></Phone>)
@@ -217,40 +215,40 @@ const AIWorkflowAutomationPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
       <Navigation />
       <main className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
+        </main><div className="max-w-7xl mx-auto">
           {/* Hero Section */}</div>
           <section className="text-center mb-16">
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6 neon-text">)
               AI Workflow Automation;)
             </h1>)
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
-              Automate complex business workflows with AI-powered intelligence that learns),
+            <p className = "text-xl text-gray-300 mb-8 max-w-3xl mx-auto">);
+              Automate complex business workflows with AI-powered intelligence that learns),;
               adapts, and optimizes your processes continuously.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            </section><div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
-              <a
-                href="tel:+13024640950"
+            <div className = "flex flex-col sm:flex-row gap-4 justify-center"></div></section>
+              <a;
+                href="tel:+13024640950";
                 className="cyber-button inline-flex items-center space-x-2"
               ></a>
                 <Zap className="w-4 h-4" /></Za></Zap>
                 <<<<span>Get</span></span></<<span>Started</span></span></span>
               </a>
               <a;
-                href="/contact"
+                href = "/contact";
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+              >;
                 Learn More;
               </a>,
             </div>,
           </section>,
           {/* Features Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
+          <section className = "mb-16">
+            <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">;
               Key Features;
             </h2>,
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
+            </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
@@ -258,7 +256,7 @@ const AIWorkflowAutomationPage = () => {
               Key Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (</section>
+              {features.map((feature, index) => (</div></section>
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
@@ -280,7 +278,7 @@ const AIWorkflowAutomationPage = () => {
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
               Automate Any Business Process;
             </h2>,
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
+            </section><div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
               {useCases.map((useCase, index) => (
                 <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">,
                   <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />,
@@ -288,7 +286,7 @@ const AIWorkflowAutomationPage = () => {
               Automate Any Business Process
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (</section>
+              {useCases.map((useCase, index) => (</div></section>
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
                   <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
@@ -303,13 +301,13 @@ const AIWorkflowAutomationPage = () => {
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans;
             </h2>,
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
+            </section><div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
               {pricing.map((plan, index) => (
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (</section>
+              {pricing.map((plan, index) => (</div></section>
                 <div key={index} className={`cyber-card p-8 ${index === 1 ? 'ring-2 ring-cyan-400' : ''}`}>
                   {index === 1 && (</div>
                     <div className="text-center mb-4"></div>
@@ -340,25 +338,25 @@ const AIWorkflowAutomationPage = () => {
             </div>
           </section>
           {/* CTA Section */}
-          <section className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 cyber-card"></sectio></section>
+          <section className = "text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 cyber-card"></sectio></section>
             <h2 className="text-3 xl font-bold text-white mb-4"></h2></<<<h>Ready</h></<<h>to</h> Automate Your Workflows?
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
+            <p className="text-xl text-purple-100 mb-8">;
               Contact us today to learn how AI workflow automation can transform your business processes.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+            <div className = "flex flex-col sm:flex-row gap-4 justify-center"></div></section>
               <a
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-              >
+              >;
                 Call (302) 464-0950;
               </a>
               <a;
-                href="mailto:kleber@ziontechgroup.com"
+                href = "mailto:kleber@ziontechgroup.com";
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-              >
+              >;
                 Email Us;
               </a>
             </div>

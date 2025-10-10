@@ -48,9 +48,9 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
     {/* TODO: Fix JSX expression */}
     }
   ];
-  return(<div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">
+  return(<div, className = "bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">
       <div, className="te, x, t-center, m, b-8">
-        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">
+        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">;
   return (
     <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8"></div>
       <div, className="te, x, t-center, m, b-8"></div>
@@ -88,9 +88,9 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">";)
         {megaArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
           <Li, n, k;
-      <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+      <div, className = "grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
-      <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+      <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
         {megaArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (</div>
           <Li, n, k
@@ -98,9 +98,9 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
             to={artic, l, e.li, n, k}
             classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e;
       </d, i, v>"
-      <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
+      <div, className = "grid, m, d: gr, i, d-co, l, s-2 l,";
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">""
-      <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
+      <div, className="grid, m, d: gr, i, d-co, l, s-2 l,";
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
         {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
@@ -118,15 +118,15 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         <Li, n, k;
       <div, className="te, x, t-cent, e, r">";</div>
         <Li, n, k
-  to="/bl, o, g"
+  to = "/bl, o, g";
           classNa, m, e="bg-white, tex, t-purp, l, e-600, hove, r: bg-purp, l, e-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e;
       </d, i, v>"
       <div, className="te, x, t-cent, e, r">";
         <Li, n, k;"
-  to="/bl, o, g""
+  to = "/bl, o, g""
           classNa, m, e="bg-white, tex, t-purp, l, e-600, hove, r: bg-purp, l, e-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e,"
   r:sca, l, e-1, 0, 5"
-        ></Li>
+        ></Li>;
           Read, All, 7 Articl, e, s;"
           <Link, className="w-5 h-5  /></Link>"
           <Link, className="w-5 h-5" />";

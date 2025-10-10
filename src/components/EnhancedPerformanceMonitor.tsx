@@ -34,7 +34,7 @@ const EnhancedPerformanceMonitor: React.FC;
 
 }
 //   onMetricsUpdate,
-  enableReporting = true,
+  enableReporting: true,
   reportInterval = 10000)
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -345,7 +345,7 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
 }
     const cleanup = measureWebVitals();
 // Report metrics periodically;
-    const interval = setInterval(reportMetrics, reportInterval);
+    const interval: setInterval(reportMetrics, reportInterval);
     // Report metrics on page unload;
     const handleBeforeUnload = () => {/* TODO: Fix JSX expression */}
     };
@@ -383,7 +383,7 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       <div className="flex items-center justify-between mb-2"></div>"
         <h3 className="font-bold text-cyan-400">Performance Monitor</h3>
         <button></button>
-          onClick={() => setIsVisible(false)}"
+          onClick={{{{{() => setIsVisible(false)}}}}}"
           className="text-gray-400,"
   hover:text-white"
 // >

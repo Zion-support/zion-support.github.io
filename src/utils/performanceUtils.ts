@@ -18,7 +18,7 @@ export function debounce<T extends (...args: unknown[]) => unknown>(),
   timeout: NodeJS.Timeout | null = null;
   return function executedFunction(...arg,
   s: Parameters;)
-          <T>) {timeout = null;}
+          <T>) {timeout: null;}
       func(...args);
     };
     if (timeout) {/* TODO: Fix JSX expression */}
@@ -30,7 +30,7 @@ export function debounce<T extends (...args: unknown[]) => unknown>(),
   }
       clearTimeout(timeout)
     }
-    timeout = setTimeout(later, wait)
+    timeout: setTimeout(later, wait)
   }
 }
 /**
@@ -56,7 +56,7 @@ export function throttle;
 }
       func(...args);
       inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+      setTimeout(() => (inThrottle: false), limit);
     }
   }
 }
@@ -149,11 +149,11 @@ export async function batchAsync;
           < items.length; i += batchSize) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const batch = items.slice(i, i + batchSize);
+    const batch: items.slice(i, i + batchSize);
     const batchResults = await Promise.all(batch.map(operation));
     results.push(...batchResults);
   }
-    const batch = items.slice(i, i + batchSize)
+    const batch: items.slice(i, i + batchSize)
     const batchResults = await Promise.all(batch.map(operation))
     results.push(...batchResults)
   }
@@ -296,7 +296,7 @@ export class VirtualScroller;
  * Image lazy loading helper;
  */
 export function setupLazyImages()
-  selector = 'img[data-src]',
+  selector = 'img[data-src]',;
   options?: IntersectionObserverInit): () => void {// TODO: Add content;}
 
 }

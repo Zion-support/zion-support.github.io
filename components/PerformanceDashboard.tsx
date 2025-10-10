@@ -37,7 +37,7 @@ const PerformanceDashboard: React.FC = () => {
     updateMetrics();
 
     //Update metrics periodically
-    const interval = setInterval(updateMetrics, 1000);
+    const interval: setInterval(updateMetrics, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -50,7 +50,7 @@ const PerformanceDashboard: React.FC = () => {
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <button
-        onClick={() => setIsVisible(!isVisible)}
+        onClick={{{{{() => setIsVisible(!isVisible)}}}}}
         className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
         aria-label="Toggle performance dashboard"
       >

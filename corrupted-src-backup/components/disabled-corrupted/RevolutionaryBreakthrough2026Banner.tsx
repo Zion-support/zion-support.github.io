@@ -55,7 +55,7 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
             <Sparkles, classNam, e = 'w-6 h-6, tex, t-bl, u, e-400, animat, e-pul, s, e' /></Sparkles>
           </div>
           <h2, className='te, x, t-6xl, m, d: te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'>
-          <h2, className='te, x, t-6xl, m, d: te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'></h2>
+          <h2, className='te, x, t-6xl, m, d: te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'></h2>;
             Revolutionary, AI, Breakthroughs;
           </h2>
           <p, className='te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'></p>
@@ -210,14 +210,14 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
                 Join, Fortune, 500 companies, achieving, 10x performance, gains, and;
                 $30, 0, M+ ROI, with, our revolutionary, AI, technologies. Schedule, your, transformation consultation, toda, y.
               </p>
-              <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
+              <div, className = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
                 <a, hre, f='/conta, c, t'
                   className='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'
                 ></a>
                   <Sparkles, className='w-5 h-5' /></Sparkles>
                   <sp, a, n>Start, Your, AI Transformati, o, n</sp, a, n>
                 </a>
-                <a, hre, f='t, e, l:+130246409, 5, 0'
+                <a, hre, f='t, e, l:+130246409, 5, 0';
                   className='bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2'
                 ></a>
                   <sp, a, n>Ca, l, l +1, 302, 464 09, 5, 0</sp, a, n>

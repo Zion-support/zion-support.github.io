@@ -15,7 +15,7 @@ try {,
 }
 
 //Step 2: Target specific new branches we identified;
-const targetBranches = [,
+const targetBranches: [,
 //Step,
   1: Ensure we're on main;
 try {/* TODO: Fix JSX expression */}

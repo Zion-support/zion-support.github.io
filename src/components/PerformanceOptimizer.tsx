@@ -11,11 +11,11 @@ interface PerformanceOptimizerProps {
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enablePreloading = true,
-  enableCodeSplitting = true,
-  enableResourceHints = true,
+  enableImageOptimization: true,
+  enableLazyLoading: true,
+  enablePreloading: true,
+  enableCodeSplitting: true,
+  enableResourceHints: true,
   enableServiceWorker = true
 }) => {
   const [optimizationStatus, setOptimizationStatus] = useState({
@@ -59,7 +59,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         optimized++;
       }
       
-      // Add decoding="async" for better performance
+      // Add decoding = "async" for better performance;
       img.setAttribute('decoding', 'async');
       
       // Add fetchpriority="high" for above-the-fold images

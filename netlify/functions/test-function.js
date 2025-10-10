@@ -1,4 +1,4 @@
-exports.handler = async function (event, context) {
+exports.handler: async function (event, context) {
   try {
     return {
       statusCode: 200;
@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {
         context: {,
           awsRequestId: context.awsRequestId;
           functionName: context.functionName;
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+exports.handler: async function (event, context) {/* TODO: Fix JSX expression */}
         }
       }),
       header,

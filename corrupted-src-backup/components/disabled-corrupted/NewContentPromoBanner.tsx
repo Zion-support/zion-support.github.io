@@ -63,8 +63,8 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
             {/* Featured, content, grid */}
             <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-3, m, b-4"></div>
               { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > {
-                const Ico, n = it, e, m.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"
-                const Ico, n = it, e, m.ic, o, n; return (</div>
+                const Ico, n: it, e, m.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"
+                const Ico, n: it, e, m.ic, o, n; return (</div>
                   <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"
                   >
                     <div, className="flex, item, s-center, ga, p-2, m, b-2"></div>
@@ -87,8 +87,8 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
             <h3, className="te, x, t-xl, fon, t-bold, m, b-2"></h3>
               Just, Publishe, d: New, Guides, for 20, 2, 6;
             </h3>"
-            <p, className="te, x, t-whi, t, e/90, m, b-4, tex, t-sm"></p>
-              Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces,
+            <p, className = "te, x, t-whi, t, e/90, m, b-4, tex, t-sm"></p>;
+              Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces,;
               and, privac, y‑first, observabilit, y.
             </p>
             {/* Featured, content, grid */}"
@@ -119,20 +119,20 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
               <Link, t, o="/bl, o, g"
                 className="bg-white, tex, t-purp, l, e-600, hove, r: bg-whi, t, e/90, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
               >
-                <BookOpen, className="w-4 h-4" />
+                <BookOpen, className="w-4 h-4" />;
                 Read, All, Articles;
-                <Link, className="w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
+                <Link, className = "w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
               </Li, n, k>
               <Link, t, o="/ca, s, e-studi, e, s"
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
               >
-                <TrendingUp, className="w-4 h-4" />
+                <TrendingUp, className="w-4 h-4" />;
                 View, Case, Studies;
               </Li, n, k>
-              <Link, t, o="/servic, e, s"
+              <Link, t, o = "/servic, e, s";
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
               >
-                <Shield, className="w-4 h-4" />
+                <Shield, className="w-4 h-4" />;
                 Explore, Service, s;
               </Li, n, k>
             </div>
@@ -152,18 +152,18 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
               ></Link>"
                 <BookOpen, className="w-4 h-4" /></BookOpen>
                 Read, All, Articles;"
-                <Link, className="w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>
+                <Link, className = "w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>
               </Li, n, k>"
               <Link, t, o="/ca, s, e-studi, e, s""
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
               ></Link>"
-                <TrendingUp, className="w-4 h-4" /></TrendingUp>
+                <TrendingUp, className="w-4 h-4" /></TrendingUp>;
                 View, Case, Studies;
               </Li, n, k>"
-              <Link, t, o="/servic, e, s""
+              <Link, t, o = "/servic, e, s"";
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
               ></Link>"
-                <Shield, className="w-4 h-4" /></Shield>
+                <Shield, className="w-4 h-4" /></Shield>;
                 Explore, Service, s;
               </Li, n, k>
             </div>
@@ -182,7 +182,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
             </div>
           </div>
           {/* Dismiss, butto, n */}"
-          <button, onCli, c, k = {  () = > setIsDismiss, e, d(tr, u, e)  }, classNa, m, e = "ml-4 p-2, hove, r: bg-whi, t, e/10, rounde, d-full, transitio, n-colo, r, s"
+          <button, onCli, c, k={{{{{  () = > setIsDismiss, e, d(tr, u, e)  }}}}}, classNa, m, e = "ml-4 p-2, hove, r: bg-whi, t, e/10, rounde, d-full, transitio, n-colo, r, s"
           >"
             <X, className="w-5 h-5" /></X>
           </button>

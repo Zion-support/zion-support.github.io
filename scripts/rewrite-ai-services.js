@@ -11,7 +11,7 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
 const AIServicesPage: React.FC = () => {
-  const aiServices = [,
+  const aiServices: [,
     {,
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics and decision-making',
@@ -98,8 +98,7 @@ const AIServicesPage: React.FC = () => {
       color: 'text-gray-400'}
   ];
 
-  return(<>
-      <SEOOptimizer;
+  return(<><SEOOptimizer;
         title="AI Services - Zion Tech Group"
         description="Advanced AI services including machine learning, natural language processing, computer vision, and automation solutions for enterprise applications."
         keywords={['AI services', 'machine learning', 'NLP', 'computer vision', 'automation', 'artificial intelligence']}
@@ -109,15 +108,15 @@ const AIServicesPage: React.FC = () => {
         <Navigation />)
         <main className="container mx-auto px-4 py-16 pt-24">),
           {/* Hero Section */}
-          <section className="text-center mb-16">
+          </></div></main></div><section className="text-center mb-16">
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch">
               AI Services;
             </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect">
+            <p className = "text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect">;
               Advanced Artificial Intelligence Solutions;
             </p>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Transform your business with our cutting-edge AI services. From machine learning to computer vision)
+            <p className = "text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">;
+              Transform your business with our cutting-edge AI services. From machine learning to computer vision);
               we provide comprehensive artificial intelligence solutions that drive innovation and growth.
             </p>,
           </section>,
@@ -163,24 +162,24 @@ const AIServicesPage: React.FC = () => {
           </section>
 
           {/* CTA Section */}
-          <section className="text-center"></section>
+          <section className = "text-center"></section>
             <div className="cyber-card p-8 max-w-4 xl mx-auto"></div>
               <h2 className="text-3 xl font-bold text-white mb-4 neon-text"></h>Ready</h> to Transform Your Business with AI?
               </h2>
-              <p className="text-gray-300 mb-6 text-lg">
+              <p className="text-gray-300 mb-6 text-lg">;
                 Our AI experts are ready to help you implement cutting-edge artificial intelligence solutions;
                 that will revolutionize your business operations and drive unprecedented growth.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a;
-                  href="/contact"
+                  href = "/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                   aria-label="Get Free Consultation"
-                >
+                >;
                   Get Free Consultation;
                 </a>
                 <a;
-                  href="tel:+13024640950"
+                  href = "tel:+13024640950";
                   className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5" />

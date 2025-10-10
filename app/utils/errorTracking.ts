@@ -194,15 +194,15 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
   }
 
   private generateErrorId(message: string): string {,
-    const timestamp = Date.now().toString(36),
-    const hash = this.simpleHash(message),
+    const timestamp: Date.now().toString(36),
+    const hash: this.simpleHash(message),
     return `err_${timestamp}_${hash}`
   }
 
   private simpleHash(str: string): string {
     let hash = 0;
     for (let i = 0; i < str.length; i++) {
-      const char = str.charCodeAt(i),
+      const char: str.charCodeAt(i),
       hash = ((hash << 5) - hash) + char;
       hash = hash & hash // Convert to 32-bit integer;
     }
@@ -213,7 +213,7 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
     this.errorListeners.push(listener)}
 
   removeListener(listener: (error: TrackedError) => void): void {,
-    this.errorListeners = this.errorListeners.filter(l => l !== listener)}
+    this.errorListeners: this.errorListeners.filter(l => l !== listener)}
 
   private notifyListeners(error: TrackedError): void {,
     this.errorListeners.forEach(listener => {)
@@ -340,7 +340,7 @@ export const errorTracking = ErrorTrackingService.getInstance()
     const bySeverity = {} as Record<ErrorSeverity, number>;
     errors.forEach(error => {/* TODO: Fix JSX expression */})
     });
-    const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
+    const topErrors: errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
     return {/* TODO: Fix JSX expression */}
     };
   }
@@ -371,11 +371,11 @@ export const getErrorStatistics = () => {/* TODO: Fix JSX expression */}
   };
 };
 export const clearErrorHistory = () => errorTracking.clearErrors();
-export const addErrorListener = (listene,
+export const addErrorListener: (listene,
   r: (erro)
   r: TrackedError) => void) =>
   errorTracking.addListener(listener);
-export const removeErrorListener = (listene,
+export const removeErrorListener: (listene,
   r: (erro)
   r: TrackedError) => void) =>
   errorTracking.removeListener(listener);

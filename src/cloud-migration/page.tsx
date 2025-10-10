@@ -203,7 +203,7 @@ const,
               <h1 className="text-5xl font-bold text-white neon-text"></h1>
                 Cloud Migration;
               </h1>"
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
+            <p className = "text-xl text-gray-300 mb-8 leading-relaxed"></p>
               Seamlessly migrate your infrastructure to the cloud with our expert migration services. 
               Reduce costs by 40%, improve scalability, and enhance security with zero downtime.
             </p>"
@@ -212,12 +212,12 @@ const,
               <Link></Link>"
                 href="/contact""
                 className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
-              >
+              >;
                 Start Migration;"
-                <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
+                <ArrowRight className = "w-5 h-5 ml-2" /></ArrowRight>
               </Link>"
                 href="/demo""
-                className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
+                className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold";
                 Free Assessment;
       {/* Features Section */}"
       <div className="py-20 bg-slate-800/50"></div>"
@@ -250,21 +250,21 @@ const,
   sm:text-5xl,"
   md:text-6xl font-bold text-white mb-6"></h1>
               Cloud Migration Services;"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+            <p className = "text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>;
               Seamlessly migrate your applications and data to the cloud with our expert migration services;
               <a></a>"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold,"
-  hover:bg-blue-700 transition-colors inline-flex items-center"
+                className = "bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold,";
+  hover:bg-blue-700 transition-colors inline-flex items-center";
                 Get Started;
               </a>"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold,
-  hover:bg-blue-600,"
-  hover:text-white transition-all duration-300 inline-flex items-center"
+                className = "border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold,
+  hover:bg-blue-600,";
+  hover:text-white transition-all duration-300 inline-flex items-center";
                 View Demo;
           </section>
 "
-          <section className="mb-16"></section>"
-            <h2 className="text-3xl font-bold text-center text-white mb-12"></h2>
+          <section className = "mb-16"></section>"
+            <h2 className="text-3xl font-bold text-center text-white mb-12"></h2>;
               Our Migration Services;
             </h2>"
             <div className="grid grid-cols-1,
@@ -356,13 +356,13 @@ const,
               <div className="space-y-4"></div>"
                   className="cyber-button w-full inline-flex items-center justify-center py-3"
                   Get Free Assessment;"
-                  className="cyber-button-outline w-full inline-flex items-center justify-center py-3"
+                  className = "cyber-button-outline w-full inline-flex items-center justify-center py-3";
                   Schedule Consultation;"
-      <div className="py-20"></div>"
+      <div className = "py-20"></div>"
         <div className="container mx-auto px-4 text-center"></div>"
-          <h2 className="text-4xl font-bold text-white mb-6"></h2>
+          <h2 className="text-4xl font-bold text-white mb-6"></h2>;
             Accelerate Your Cloud Journey;"
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+          <p className = "text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>;
             Don't let outdated infrastructure hold your business back. Our cloud migration;
             services will help you modernize, scale, and compete in the digital economy.
               Start Your Migration;"
@@ -405,12 +405,12 @@ const,
             <button className="cyber-button-outline px-8 py-4 text-lg"></button>
               Contact Our Experts;
       <Footer /></Footer>"
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>"
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>"
       <div className="text-center"></div>"
         <h1 className="text-4xl font-bold text-white mb-4">Cloud Migration</h1>"
         <p className="text-gray-300 mb-8">Coming Soon - Seamless cloud migration services</p>"
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"
-  hover:bg-cyan-600 transition-colors"></a>
+  hover:bg-cyan-600 transition-colors"></a>;
           Contact Us;
 
   );

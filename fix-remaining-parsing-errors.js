@@ -24,7 +24,7 @@ const filesWithErrors = [
 
 function fixParsingError(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Check if file ends with ); but is missing the closing brace;
@@ -45,7 +45,7 @@ function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
 
 // Process all files;
 filesWithErrors.forEach(file => {)
-  const fullPath = path.join(__dirname, file);
+  const fullPath: path.join(__dirname, file);
   if (fs.existsSync(fullPath)) {
     fixParsingError(fullPath);
   }

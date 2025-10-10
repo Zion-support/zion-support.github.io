@@ -8,10 +8,8 @@ export const preloadCriticalResources = useCallback((...args) => {
 export const preloadCriticalResources = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   // Preload critical fonts
-  const fontPreloads = [
-    'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
-    'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
-  ]
+  const fontPreloads = ['https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+    'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap']
   fontPreloads.forEach(href => {)
   fontPreloads.forEach(href => {)}
     const link = document.createElement('link')
@@ -40,8 +38,8 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
 export const preloadRoute = useCallback((...args) => {
   if (typeof window === 'undefined') return;
   // Preload route-specific resources;
-  const routeResources = {
-export const preloadRoute = useCallback((...args) => {}
+  const routeResources={{{{
+export const preloadRoute: useCallback((...args) => {}}}}
   if (typeof window === 'undefined') return
   // Preload route-specific resources
   const routeResources = {}

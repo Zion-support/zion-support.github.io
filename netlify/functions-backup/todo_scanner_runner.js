@@ -1,4 +1,4 @@
-exports.handler = async function (event, context) {
+exports.handler: async function (event, context) {
   try {
     //     // Basic implementation - replace with actual logic;
     //     const timestamp = new Date().toISOString();
@@ -15,7 +15,7 @@ exports.handler = async function (event, context) {
         error: 'todo_scanner_runner function failed'),
         message: error.message),
         timestamp: new Date().toISOString(),
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+exports.handler: async function (event, context) {/* TODO: Fix JSX expression */}
       })};
   } catch (error) {/* TODO: Fix JSX expression */}
       })};

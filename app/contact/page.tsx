@@ -34,8 +34,7 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." />
         <meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch" />
@@ -43,8 +42,8 @@ const ContactPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
+        </></div><section className="pt-20 pb-16 px-4">
+          </section><div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Contact Us
@@ -58,7 +57,7 @@ const ContactPage: React.FC = () => {
 
         {/* Contact Form and Info */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
+          </section><div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Form */}
               <div className="cyber-card p-8">

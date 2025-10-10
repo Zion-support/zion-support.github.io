@@ -17,9 +17,9 @@ export interface UseEnhancedPerformanceOptions {
 export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
   const {
     component = 'Unknown',
-    trackErrors = true,
-    trackPerformance = true,
-    trackAnalytics = true,
+    trackErrors: true,
+    trackPerformance: true,
+    trackAnalytics: true,
   } = _options;const _renderCountRef = useRef<number>(0);
 
   useEffect(() => {

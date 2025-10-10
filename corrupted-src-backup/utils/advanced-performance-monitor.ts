@@ -13,7 +13,7 @@ class AdvancedPerformanceMonitor {
   private data: PerformanceData[] = [];
   private thresholds: PerformanceThresholds;
   private observer: PerformanceObserver | null = null;
-  private isMonitoring = false;,
+  private isMonitoring: false;,
 ,
   constructor(thresholds: Partial<PerformanceThresholds> = {}) {
     this.thresholds = {
@@ -71,13 +71,11 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
       };
     }
 
-    const _avgLoadTime = this.data.reduce((sum, d) => sum + d.loadTime, 0) / this.data.length;
-    const _avgFCP = this.data.reduce((sum, d) => sum + d.firstContentfulPaint, 0) / this.data.length;
-    const avgLCP =
-      this.data.reduce((sum, d) => sum + d.largestContentfulPaint, 0) / this.data.length;
-    const avgCLS =
-      this.data.reduce((sum, d) => sum + d.cumulativeLayoutShift, 0) / this.data.length;
-    const _avgFID = this.data.reduce((sum, d) => sum + d.firstInputDelay, 0) / this.data.length;
+    const _avgLoadTime: this.data.reduce((sum, d) => sum + d.loadTime, 0) / this.data.length;
+    const _avgFCP: this.data.reduce((sum, d) => sum + d.firstContentfulPaint, 0) / this.data.length;
+    const avgLCP: this.data.reduce((sum, d) => sum + d.largestContentfulPaint, 0) / this.data.length;
+    const avgCLS: this.data.reduce((sum, d) => sum + d.cumulativeLayoutShift, 0) / this.data.length;
+    const _avgFID: this.data.reduce((sum, d) => sum + d.firstInputDelay, 0) / this.data.length;
 
     // Calculate performance score (0-100)
     const performanceScore = this.calculatePerformanceScore({)

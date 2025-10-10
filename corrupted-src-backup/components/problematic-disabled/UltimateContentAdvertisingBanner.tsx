@@ -53,11 +53,11 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
           <h2, className="te, x, t-7xl, m, d: te, x, t-8xl, fon, t-extrabold, m, b-8, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Ultimate, Conten, t;
           </h2>
-          <h3, className="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, m, b-8, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
+          <h3, className = "te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, m, b-8, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">;
             Advertising, Hu, b;
           </h3>
-          <p, className="te, x, t-2 xl, tex, t-gr, a, y-300, ma, x-w-5 xl, m, x-auto, leadin, g-relaxed, m, b-12">
-            Discover, the, most advanced, AI, content library, availabl, e. From, quantu, m-neural, computing, to autonomous, operation, s - 
+          <p, className = "te, x, t-2 xl, tex, t-gr, a, y-300, ma, x-w-5 xl, m, x-auto, leadin, g-relaxed, m, b-12">;
+            Discover, the, most advanced, AI, content library, availabl, e. From, quantu, m-neural, computing, to autonomous, operation, s - ;
             everything, you, need to, lead, the AI, revolution, is right, her, e.
           </p>
           {/* Urgency, Ban, n, e, r */}
@@ -93,7 +93,7 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
           <h2, className="te, x, t-7xl, m, d: te, x, t-8xl, fon, t-extrabold, m, b-8, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
             Ultimate, Conten, t;
           </h2>"
-          <h3, className="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, m, b-8, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h3>
+          <h3, className = "te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, m, b-8, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h3>;
             Advertising, Hu, b;
           </h3>"
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-5xl, m, x-auto, leadin, g-relaxed, m, b-12"></p>

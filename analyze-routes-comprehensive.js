@@ -9,7 +9,7 @@ const TIMEOUT = 10000;
 const USER_AGENT = 'Mozilla/5.0 (compatible; ZionTechBot/1.0)';
 
 // All routes defined in the app;
-const definedRoutes = [,
+const definedRoutes: [,
   '/',
   '/about',
   '/contact',
@@ -253,16 +253,16 @@ function makeRequest(url) {
       method: 'GET',
       headers: {,
         'User-Agent': USER_AGENT;
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q: 0.9,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q = 0.5',
         'Accept-Encoding': 'gzip, deflate',
         'Connection': 'keep-alive',
         'Upgrade-Insecure-Requests': '1'
-      },
+      },;
       timeout: TIMEOUT;
     };
 
-    const req = client.request(requestOptions, (res) => {
+    const req: client.request(requestOptions, (res) => {
       let data = '';
       
       res.on('data', (chunk) => {
@@ -338,7 +338,7 @@ async function analyzeAllRoutes() {
   // Process routes in batches to avoid overwhelming the server;
   const batchSize = 10;
   for (let i = 0; i < definedRoutes.length; i += batchSize) {
-    const batch = definedRoutes.slice(i, i + batchSize);
+    const batch: definedRoutes.slice(i, i + batchSize);
     const promises = batch.map(route => analyzeRoute(route));
     
     try {
@@ -349,7 +349,7 @@ async function analyzeAllRoutes() {
     
     // Small delay between batches;
     if (i + batchSize < definedRoutes.length) {
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve: > setTimeout(resolve, 1000));
     }
   }
 

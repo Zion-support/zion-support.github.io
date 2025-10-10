@@ -45,8 +45,8 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, shado, w-lg, animat, e-pul, s, e'>
                   🚀 BRAND, NEW, OCTOBER 20, 2, 5;
                 </sp, a, n>
-                <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-yell, o, w-500, tex, t-black, shado, w-lg'></span>
-                  <Award, className='w-3 h-3, m, r-1' />
+                <span, className = 'inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-yell, o, w-500, tex, t-black, shado, w-lg'></span>
+                  <Award, className='w-3 h-3, m, r-1' />;
                   BREAKTHROUGH, CONTEN, T;
                 </sp, a, n>
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gre, e, n-500, tex, t-white, shado, w-lg'></span>
@@ -54,8 +54,8 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, shado, w-lg, animat, e-pul, s, e'></span>
                   🚀 BRAND, NEW, OCTOBER 20, 2, 5;
                 </sp, a, n>
-                <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-yell, o, w-500, tex, t-black, shado, w-lg'></span>
-                  <Award, className='w-3 h-3, m, r-1' /></Award>
+                <span, className = 'inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-yell, o, w-500, tex, t-black, shado, w-lg'></span>
+                  <Award, className='w-3 h-3, m, r-1' /></Award>;
                   BREAKTHROUGH, CONTEN, T;
                 </sp, a, n>
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gre, e, n-500, tex, t-white, shado, w-lg'></span>
@@ -68,11 +68,11 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
                 🧠 Cognitive, Computing, Revolution: Hum, a, n-Like, AI, Intelligence;
               </h2>
 
-              <p, className='te, x, t-purp, l, e-100, tex, t-sm, s, m:te, x, t-base, leadin, g-relaxed, m, b-3'></p>
+              <p, className = 'te, x, t-purp, l, e-100, tex, t-sm, s, m:te, x, t-base, leadin, g-relaxed, m, b-3'></p>
                 <span, className='fo, n, t-bold, tex, t-yell, o, w-3, 0, 0'>
                   JUST, PUBLISHED, TODAY:
               <h2, className='te, x, t-2xl, s, m: te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2, leadin, g-tig, h, t'></h2>
-                🧠 Cognitive, Computing, Revolutio,
+                🧠 Cognitive, Computing, Revolutio,;
   n: Hum, a, n-Like, AI, Intelligence;
               </h2>
 

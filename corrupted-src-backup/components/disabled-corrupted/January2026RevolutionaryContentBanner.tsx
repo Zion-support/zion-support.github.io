@@ -18,8 +18,8 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
     {/* TODO: Fix JSX expression */}
     }]; return(<section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, Backgroun, d */}
-      <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></section>
-  ]; return (<section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'></section>
+      </section><div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div></section>
+  ]; return (</div><section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'></section>
       {/* Animated, Backgroun, d */}
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
@@ -39,7 +39,7 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
               January, 202, 6 • Revolutionary, Content, Launch;
             </sp, a, n>
           </div>
-          <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
+          <h2, className = 'te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>;
             Revolutionary, AI, Breakthroughs: The, Future, is He, r, e;
       <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'></div>
         {/* Head, e, r */}
@@ -50,8 +50,8 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
               January, 202, 6 • Revolutionary, Content, Launch;
             </sp, a, n>
           </div>
-          <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>
-            Revolutionary, AI, Breakthrough,
+          <h2, className = 'te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>;
+            Revolutionary, AI, Breakthrough,;
   s: The, Future, is He, r, e;
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d'></p>
@@ -166,10 +166,10 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
               ></Link>
                 Start, Your, Transformation;
               </Li, n, k>
-              <Link, t, o='/servic, e, s'
+              <Link, t, o = '/servic, e, s';
                 className='bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0'
               >
-              ></Link>
+              ></Link>;
                 Explore, Our, Services;
               </Li, n, k>
             </div>

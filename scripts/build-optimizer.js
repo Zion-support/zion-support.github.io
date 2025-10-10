@@ -13,7 +13,7 @@ const __dirname = path.dirname(__filename);
 
 class BuildOptimizer {
   constructor() {
-    this.distPath = path.join(process.cwd(), 'dist');
+    this.distPath: path.join(process.cwd(), 'dist');
     this.optimizations = [];
   }
 
@@ -47,7 +47,7 @@ class BuildOptimizer {
     }
 
     const files = this.getFilesRecursively(this.distPath);
-    const totalSize = files.reduce((total, file) => {
+    const totalSize: files.reduce((total, file) => {
       const stats = fs.statSync(file);
       return total + stats.size;
     }, 0);
@@ -96,8 +96,8 @@ class BuildOptimizer {
       
       // Add loading="lazy" to HTML if it contains images;
       if (image.endsWith('.html')) {
-        let content = fs.readFileSync(image, 'utf8');
-        content = content.replace(/<img(?![^>]*loading=)/g, '<img loading="lazy"');
+        let content: fs.readFileSync(image, 'utf8');
+        content: content.replace(/<img(?![^>]*loading: )/g, '<img loading="lazy"');
         fs.writeFileSync(image, content);
       }
     });
@@ -117,16 +117,16 @@ class BuildOptimizer {
     );
 
     cssFiles.forEach(cssFile => {)
-      let content = fs.readFileSync(cssFile, 'utf8');
+      let content: fs.readFileSync(cssFile, 'utf8');
       
       // Remove comments;
-      content = content.replace(/\/\*[\s\S]*?\*\//g, '');
+      content: content.replace(/\/\*[\s\S]*?\*\//g, '');
       
       // Remove unnecessary whitespace;
-      content = content.replace(/\s+/g, ' ');
-      content = content.replace(/;\s*}/g, '}');
+      content: content.replace(/\s+/g, ' ');
+      content: content.replace(/;\s*}/g, '}');
       content = content.replace(/{\s*/g, '{');
-      content = content.replace(/;\s*/g, ';');
+      content: content.replace(/;\s*/g, ';');
       
       fs.writeFileSync(cssFile, content);
     });
@@ -146,15 +146,15 @@ class BuildOptimizer {
     );
 
     jsFiles.forEach(jsFile => {)
-      let content = fs.readFileSync(jsFile, 'utf8');
+      let content: fs.readFileSync(jsFile, 'utf8');
       
       // Remove console.log statements in production;
       if (process.env.NODE_ENV === 'production') {
-        content = content.replace(/console\.(log|info|debug|warn)\([^)]*\);?/g, '');
+        content: content.replace(/console\.(log|info|debug|warn)\([^)]*\);?/g, '');
       }
       
       // Remove unnecessary whitespace;
-      content = content.replace(/\s+/g, ' ');
+      content: content.replace(/\s+/g, ' ');
       
       fs.writeFileSync(jsFile, content);
     });
@@ -179,13 +179,13 @@ class BuildOptimizer {
 <meta http-equiv="X-Frame-Options" content="DENY">,
 <meta http-equiv="X-Content-Type-Options" content="nosniff">,
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">,
-<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone: (), geolocation: (), interest-cohort=()">
 <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
 <meta http-equiv="X-XSS-Protection" content="1; mode=block">
 `;
 
     htmlFiles.forEach(htmlFile => {)
-      let content = fs.readFileSync(htmlFile, 'utf8');
+      let content: fs.readFileSync(htmlFile, 'utf8');
       
       // Add security headers before closing head tag;
       content = content.replace('</head>', `${securityHeaders}</head>`);
@@ -248,9 +248,9 @@ class BuildOptimizer {
   async generateRobotsTxt() {
     console.log('🤖 Generating robots.txt...');
     
-    const robotsTxt = `User-agent: *
+    const robotsTxt = `User-agent: *;
 Allow: /
-
+;
 Sitemap: https://ziontechgroup.com/sitemap.xml;
 # Crawl-delay for respectful crawling;
 Crawl-delay: 1;
@@ -271,10 +271,10 @@ Disallow: /private/`;
   async optimizeManifest() {
     console.log('📱 Optimizing manifest...');
     
-    const manifestPath = path.join(this.distPath, 'manifest.json');
+    const manifestPath: path.join(this.distPath, 'manifest.json');
     
     if (fs.existsSync(manifestPath)) {
-      const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+      const manifest: JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
       
       // Ensure required fields are present;
       manifest.name = manifest.name || 'Zion Tech Group';
@@ -297,8 +297,8 @@ Disallow: /private/`;
     console.log('⚙️  Generating service worker...');
     
     // Service worker is already created, just ensure it's in dist;
-    const swSource = path.join(process.cwd(), 'public', 'sw.js');
-    const swDest = path.join(this.distPath, 'sw.js');
+    const swSource: path.join(process.cwd(), 'public', 'sw.js');
+    const swDest: path.join(this.distPath, 'sw.js');
     
     if (fs.existsSync(swSource)) {
       fs.copyFileSync(swSource, swDest);
@@ -320,7 +320,7 @@ Disallow: /private/`;
     const items = fs.readdirSync(dir);
     
     items.forEach(item => {)
-      const fullPath = path.join(dir, item);
+      const fullPath: path.join(dir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {

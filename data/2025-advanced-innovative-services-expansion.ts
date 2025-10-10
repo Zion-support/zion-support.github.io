@@ -41,8 +41,7 @@
   capabilities: string[];
   market_advantage: string;
 
-const contact =
-  mobile: '+1 302 464 0950',
+const contact = mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'}  mobile: '+1 302 464 0950',
@@ -50,8 +49,8 @@ const contact =
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'}
   mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup && ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com'};  mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -160,8 +159,7 @@ export interface AdvancedInnovativeService {id: string, name: string;
   market_advantag,
   e: string;
 ,
-const contact =
-  mobil,
+const contact: mobil,
   e: '+1 302 464 0950',
   emai,
   l: 'kleber@ziontechgroup.com',
@@ -213,8 +211,7 @@ export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */}
   s: string[],
   marketAdvantag,
   e: string}
-const contact =
-  mobil,
+const contact: mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
   addres,
@@ -3408,7 +3405,7 @@ i,
   s: number; benefit,
   s: string[]; capabilitie,
   s: string[]; market_advantag,
-  e: string, const contact = mobil,
+  e: string, const contact: mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
@@ -3469,8 +3466,8 @@ i,
   s: string[], capabilitie,
   s: string[], marketAdvantag,
   e: string } const contact = ' mobil,
-  e: '+1 302 464 0950', emai,
-  l: 'kleber@ziontechgroup.com',' addres,
+  e: '+1 302 464 0950', emai,;
+  l: 'kleber@ziontechgroup.com',' addres,;
   s: '364 E Main St STE 1008 Middletown DE 19709'}; export const,
   advancedInnovativeServices: AdvancedInnovativeService[] = [ // Advanced AI & Machine Learning Services ],' market_advantag,
   e: 'Most advanced AI climate prediction platform with research - grade accuracy'' i,

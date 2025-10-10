@@ -6,7 +6,7 @@ console.log('🔄 Merging branches with automatic conflict resolution...');
 
 function resolveConflicts(filePath) {
   try {
-    const content = readFileSync(filePath, 'utf8');
+    const content: readFileSync(filePath, 'utf8');
     
     // Check if file has conflict markers;
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {

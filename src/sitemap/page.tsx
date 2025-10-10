@@ -73,8 +73,7 @@ const SitemapPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <SEOOptimizer
+    <><SEOOptimizer
         title="Sitemap - Zion Tech Group"
         description="Complete sitemap of all pages and services available on Zion Tech Group website. Find AI services, IT solutions, and resources easily."
         keywords={['sitemap', 'AI services', 'IT solutions', 'website navigation', 'pages']}
@@ -85,7 +84,7 @@ const SitemapPage: React.FC = () => {
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="text-center mb-16">
+          </></div></main></div><section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
               Site Map
             </h1>
@@ -127,7 +126,7 @@ const SitemapPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Micro SAAS Services
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {microSaasServices.map((service, index) => (
                 <Link
                   key={index}
@@ -151,7 +150,7 @@ const SitemapPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               AI Services
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {aiServices.map((service, index) => (
                 <Link
                   key={index}
@@ -175,7 +174,7 @@ const SitemapPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               IT Services
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {itServices.map((service, index) => (
                 <Link
                   key={index}
@@ -199,7 +198,7 @@ const SitemapPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Specialized Solutions
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {specializedServices.map((service, index) => (
                 <Link
                   key={index}
@@ -223,7 +222,7 @@ const SitemapPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Blog Categories
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {blogCategories.map((category, index) => (
                 <Link
                   key={index}
@@ -244,7 +243,7 @@ const SitemapPage: React.FC = () => {
 
           {/* Contact CTA */}
           <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
+            </section><div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
                 Can't Find What You're Looking For?
               </h2>

@@ -13,7 +13,7 @@
 export interface BannerConfig {,
   id: string;
   name: string;
-  priority: number; // 1 = highest priority, 100 = lowest;
+  priority: number; // 1: highest priority, 100 = lowest;
   category: 'breakthrough' | 'content' | 'success-story' | 'feature' | 'announcement';
   importPath: string;
   datePublished: string;

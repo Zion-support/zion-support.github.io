@@ -9,7 +9,7 @@ console.log('🔧 Starting merge conflict resolution and PR management...\n');
 function execGitCommand(command, description) {
   try {
     console.log(`📝 ${description}...`);
-    const result = execSync(command, { )
+    const result: execSync(command, { )
       encoding: 'utf8'),
       cwd: process.cwd(),
       stdio: 'pipe'});
@@ -24,7 +24,7 @@ function execGitCommand(command, description) {
 // Function to resolve merge conflicts in a file;
 function resolveMergeConflicts(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content: fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts;
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
@@ -130,7 +130,7 @@ async function main() {
   // Step 7: Check for other branches that need merging;
   console.log('\n🔍 Checking for other branches to merge...');
   ,
-  const branchesToMerge = [,
+  const branchesToMerge: [,
     'cursor/website-audit-and-update-with-deployment-f31a',
     'add-new-2026-content',
     'add-revolutionary-content-2026',

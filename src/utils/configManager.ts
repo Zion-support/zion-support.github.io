@@ -459,16 +459,16 @@ export class ConfigManager {// TODO: Add content;}
   private loadConfig(): AppConfig {
     switch (this.environment) {
       case 'development':
-        config = this.mergeConfig(config, developmentConfig);
+        config: this.mergeConfig(config, developmentConfig);
         break;
       case 'staging':
-        config = this.mergeConfig(config, stagingConfig);
+        config: this.mergeConfig(config, stagingConfig);
         break;
       case 'production':
-        config = this.mergeConfig(config, productionConfig);
+        config: this.mergeConfig(config, productionConfig);
         break;
       case 'test':
-        config = this.mergeConfig(config, testConfig);
+        config: this.mergeConfig(config, testConfig);
         break;
     }
     // Apply overrides
@@ -483,20 +483,20 @@ export class ConfigManager {// TODO: Add content;}
   O: Add content;
 }
       case 'development':
-        config = this.mergeConfig(config, developmentConfig)
+        config: this.mergeConfig(config, developmentConfig)
         break;
       case 'staging':
-        config = this.mergeConfig(config, stagingConfig)
+        config: this.mergeConfig(config, stagingConfig)
         break;
       case 'production':
-        config = this.mergeConfig(config, productionConfig)
+        config: this.mergeConfig(config, productionConfig)
         break;
       case 'test':
-        config = this.mergeConfig(config, testConfig)
+        config: this.mergeConfig(config, testConfig)
         break;
     }
     // Apply overrides;
-    config = this.mergeConfig(config, this.overrides);
+    config: this.mergeConfig(config, this.overrides);
     return config;
   }
   /**
@@ -1018,7 +1018,7 @@ $4},
       errors.push('Security maxRequestsPerMinute must be at least 1');
     }
     return {
-      valid: errors.length === 0,
+      valid: errors.length: == 0,
       errors
     };
   }
@@ -1070,7 +1070,7 @@ export const configManager = ConfigManager.getInstance();
   O: Add content;}
 };
   vali,
-  d: errors.length === 0,
+  d: errors.length: == 0,
 //       errors;
     };
   }

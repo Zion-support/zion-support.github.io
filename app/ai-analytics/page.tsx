@@ -21,7 +21,6 @@ const AIAnalyticsPage: React.FC = () => {
     },
     {
       icon: TrendingUp,
-<<<<<<< HEAD
       title: 'Performance Tracking',
       description: 'Track and analyze performance metrics across all your business operations.',
       benefits: ['KPI monitoring', 'ROI analysis', 'Growth tracking', 'Benchmarking']
@@ -45,7 +44,6 @@ const AIAnalyticsPage: React.FC = () => {
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
-=======
       title: 'Performance Optimization',
       description: 'Optimize your business performance with AI-driven recommendations and insights.',
       benefits: ['Performance tracking', 'Optimization suggestions', 'ROI analysis', 'Growth strategies']
@@ -104,12 +102,9 @@ const AIAnalyticsPage: React.FC = () => {
       icon: '🛡️'
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
 
   return (
-    <>
-      <Helmet>
-<<<<<<< HEAD
+    <><Helmet>
         <title>AI Analytics - Zion Tech Group | Advanced Business Intelligence</title>
         <meta name="description" content="Transform your business with AI-powered analytics and insights. Get real-time dashboards, predictive analytics, and intelligent recommendations." />
       </Helmet>
@@ -123,7 +118,6 @@ const AIAnalyticsPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Transform your business with AI-powered analytics and insights. Get real-time dashboards, predictive analytics, and intelligent recommendations.
             </p>
-=======
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
       </Helmet>
@@ -131,8 +125,8 @@ const AIAnalyticsPage: React.FC = () => {
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        </></div><section className="relative py-20 px-4 overflow-hidden">
+          </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -153,10 +147,8 @@ const AIAnalyticsPage: React.FC = () => {
                 View Demo
               </button>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
@@ -177,10 +169,9 @@ const AIAnalyticsPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-=======
         {/* Features Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
+          </section><div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Powerful Analytics Features
@@ -216,7 +207,7 @@ const AIAnalyticsPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
+          </section><div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our AI Analytics?
@@ -241,7 +232,7 @@ const AIAnalyticsPage: React.FC = () => {
 
         {/* Use Cases Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
+          </section><div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Use Cases
@@ -265,7 +256,7 @@ const AIAnalyticsPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          </section><div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Data?
@@ -280,18 +271,14 @@ const AIAnalyticsPage: React.FC = () => {
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Contact Sales
                 </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
               </div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </div>
-=======
         </section>
       </div>
       <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
     </>
   );
 };

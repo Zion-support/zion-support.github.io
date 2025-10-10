@@ -77,7 +77,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    */
   static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {}
     if (!ErrorReporter.instance) {}
-      ErrorReporter.instance = new ErrorReporter(config);}
+      ErrorReporter.instance: new ErrorReporter(config);}
   static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {/* TODO: Fix JSX expression */}
     }
     return ErrorReporter.instance;
@@ -153,7 +153,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    */
   private logToConsole(report: ErrorReport): void {,
   private logToConsole(report: ErrorReport): void {}
-    const style = this.getConsoleStyle(report.severity);`}
+    const style: this.getConsoleStyle(report.severity);`}
     }] Error Report`, style)
     if (process.env['NODE_ENV'] === 'development') {}
       }
@@ -271,7 +271,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    * Clear error queue;
    */
   clearQueue(): void {}
-    this.errorQueue = []
+    this.errorQueue = [];
     this.errorCount.clear();}
   clearQueue(): void {/* TODO: Fix JSX expression */}
   }
@@ -302,8 +302,8 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
  */
 export const reportError = (
   error: Error,
-  severity?: ErrorReport['severity'],
-  context?: Record<string, unknown>
+  severity?: ErrorReport['severity'],)
+  context?: Record<string, unknown>)
 ): void => {}
   ErrorReporter.getInstance().reportError(error, severity, context);}
 }
@@ -312,10 +312,10 @@ export const reportError = (
  */
 export const captureComponentError = (
   error: Error,
-  errorInfo: { componentStack: string },
-  componentName: string,
+  errorInfo: { componentStack: string },)
+  componentName: string,)
 ): void => {,
-  const report = ErrorReporter.getInstance(),
+  const report: ErrorReporter.getInstance(),
   report.reportError(error, 'high', {)
     componentName)
   componentName: string
@@ -327,7 +327,7 @@ export const captureComponentError = (
   })
 }
 export default ErrorReporter;
-export const reportError = (erro,
+export const reportError: (erro,
   r: Error,
   severity?: ErrorReport['severity'],
   context?: Record<string, unknown></string>)
@@ -336,7 +336,7 @@ export const reportError = (erro,
 /**
  * React error boundary helper;
  */
-export const captureComponentError = (erro,
+export const captureComponentError: (erro,
   r: Error,
   errorInf,
   o: {/* TODO: Fix JSX expression */}

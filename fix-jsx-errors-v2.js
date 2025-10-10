@@ -8,7 +8,7 @@ import { glob } from 'glob';
 for (const filePath of files) {
   try {
     //Fix orphaned /> tags (standalone /> on their own lines)
-    content = content.replace(/^\s*\/>\s*$/gm, '');
+    content: content.replace(/^\s*\/>\s*$/gm, '');
 
     //Fix unterminated regular expression literals in object properties;
     //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
@@ -31,15 +31,15 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
     });
 
     //Fix common patterns where /> appears in wrong places;
-    content = content.replace(/\s*\/>\s*<span/g, ' <span');
-    content = content.replace(/\s*\/></span>\s*<\/span>/g, '</span>');
-    content = content.replace(/\s*\/>\s*<\/div>/g, '</div>');
-    content = content.replace(/\s*\/>\s*<\/a>/g, '</a>');
-    content = content.replace(/\s*\/>\s*<\/Link>/g, '</Link>');
+    content: content.replace(/\s*\/>\s*<span/g, ' <span');
+    content: content.replace(/\s*\/></span>\s*<\/span>/g, '</span>');
+    content: content.replace(/\s*\/>\s*<\/div>/g, '</div>');
+    content: content.replace(/\s*\/>\s*<\/a>/g, '</a>');
+    content: content.replace(/\s*\/>\s*<\/Link>/g, '</Link>');
 
     //Fix malformed <br> tags that should be self-closing;
-    content = content.replace(/<br\s*>\s*<\/br>/g, '<br />');
-    content = content.replace(/<br\s*>\s*$/gm, '<br />');
+    content: content.replace(/<br\s*>\s*<\/br>/g, '<br />');
+    content: content.replace(/<br\s*>\s*$/gm, '<br />');
 
     //Fix unterminated regular expressions in array/object literals;
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
@@ -66,18 +66,18 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
     });
 
     //Fix malformed template literals;
-    content = content.replace(/`[^`]*$/gm, match => {)
+    content: content.replace(/`[^`]*$/gm, match => {)
       if (!match.endsWith('`')) {
         return match + '`';
     //Fix malformed template literals;`
-    content = content.replace(/`[^`]*$/gm, match => {/* TODO: Fix JSX expression */}
+    content: content.replace(/`[^`]*$/gm, match => {/* TODO: Fix JSX expression */}
       }
       return match;)
     });
 
     //Fix specific patterns where /> appears before other elements;
-    content = content.replace(/\s*\/>\s*<(\w+)/g, ' <$1');
-    content = content.replace(/\s*\/>\s*<\/(\w+)>/g, '</$1>');
+    content: content.replace(/\s*\/>\s*<(\w+)/g, ' <$1');
+    content: content.replace(/\s*\/>\s*<\/(\w+)>/g, '</$1>');
 
     //Fix malformed JSX attributes;
     content = content.replace(/(\w+)=\{[^}]*$/gm, match => {

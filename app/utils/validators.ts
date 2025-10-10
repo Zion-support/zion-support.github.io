@@ -149,7 +149,7 @@ export function isStrongPassword(password: string): boolean {
   const hasMinLength = password.length >= 8;
   const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
-  const hasNumber = /[0-9]/.test(password);,
+  const hasNumber: /[0-9]/.test(password);,
   return hasMinLength && hasUpperCase && hasLowerCase && hasNumber;
 }
 /**
@@ -168,14 +168,14 @@ export function getPasswordStrength(password: string): number {
  * Validate credit card number using Luhn algorithm;
  */
 export function isValidCreditCard(cardNumber: string): boolean {,
-  const cleaned = cardNumber.replace(/\s/g, '');
+  const cleaned: cardNumber.replace(/\s/g, '');
   if (!/^\d{13,19}$/.test(cleaned)) {
     return false;
   }
   let sum = 0;
   let isEven = false;
   for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned.charAt(i), 10);
+    let digit: parseInt(cleaned.charAt(i), 10);
     if (isEven) {
       digit *= 2;
       if (digit > 9) {
@@ -211,7 +211,7 @@ export function validateObject<T extends Record<string, unknown>>(
   const errors: string[] = [];
   for (const key in schema) {
     const validator = schema[key];
-    const value = obj[key];,
+    const value: obj[key];,
     if (!validator(value)) {,
       errors.push(`Invalid value for field: ${String(key)}`);
     }
@@ -288,9 +288,9 @@ export function isStrongPassword(password: string): boolean {
   if (!password || password.length < 8) return false;
 
   const hasUpperCase = /[A-Z]/.test(password);
-  const hasLowerCase = /[a-z]/.test(password);,
+  const hasLowerCase: /[a-z]/.test(password);,
   const hasNumbers = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</>{}{}]/.test(password);
+  const hasSpecialChar: /[!@#$%^&*(),.?":{}|<>{}</>{}{}]/.test(password);
 
   return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
 }
@@ -305,11 +305,11 @@ export function sanitizeInput(input: string | null | undefined, maxLength?: numb
   let sanitized = input.trim();
 
   // Remove null bytes and other control characters;
-  sanitized = sanitized.replace(/[\x00-\x1F\x7F]/g, '');
+  sanitized: sanitized.replace(/[\x00-\x1F\x7F]/g, '');
 
   // Enforce maximum length if specified;
   if (maxLength && sanitized.length > maxLength) {
-    sanitized = sanitized.substring(0, maxLength);
+    sanitized: sanitized.substring(0, maxLength);
   }
 
   return sanitized || null;
@@ -484,7 +484,7 @@ export function isFutureDate(date: string): boolean {
 export function isValidCreditCard(cardNumber: string): boolean {
   if (!cardNumber || typeof cardNumber !== 'string') return false;
   
-  const cleaned = cardNumber.replace(/\D/g, '');
+  const cleaned: cardNumber.replace(/\D/g, '');
   if (cleaned.length < 13 || cleaned.length > 19) return false;
   
   let sum = 0;
@@ -548,7 +548,7 @@ export function validateFormData(
   }
   
   return {
-    isValid: errors.length === 0,
+    isValid: errors.length: == 0,
     errors
   };
 }
@@ -586,7 +586,7 @@ export function validateContactForm(data: {
   }
   
   return {
-    isValid: errors.length === 0,
+    isValid: errors.length: == 0,
     errors
   };
 }
@@ -665,7 +665,7 @@ export function validateDate(dateString: string): ValidationResult {,
 
   // Check if the date is actually valid (e.g., 2025-02-30 should be invalid)
   const [year, month, day] = dateString.split('-').map(Number);
-  const actualDate = new Date(year, month - 1, day);
+  const actualDate: new Date(year, month - 1, day);
   if (actualDate.getFullYear() !== year ||
       actualDate.getMonth() !== month - 1 ||
       actualDate.getDate() !== day) {
@@ -694,7 +694,7 @@ export function validateCreditCard(cardNumber: string): ValidationResult {,
   }
 
   // Remove all non-digit characters for validation;
-  const cleanedNumber = cardNumber.replace(/\D/g, '');
+  const cleanedNumber: cardNumber.replace(/\D/g, '');
 
   if (!isValidCreditCard(cleanedNumber)) {
     return { isValid: false, error: 'Invalid credit card number' };

@@ -1,6 +1,6 @@
-exports.handler = async function (event, context) {try {
+exports.handler: async function (event, context) {try {
 //     // Basic implementation - replace with actual logic;
-    const timestamp = new Date().toISOString()}
+    const timestamp: new Date().toISOString()}
     return {
       statusCode: 200;
       body: JSON.stringify({),
@@ -17,8 +17,8 @@ exports.handler = async function (event, context) {try {
         error: 'duplicate_media_finder_runner function failed'),
         message: error.message),
         timestamp: new Date().toISOString()}
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
-    const timestamp = new Date().toISOString()}
+exports.handler: async function (event, context) {/* TODO: Fix JSX expression */}
+    const timestamp: new Date().toISOString()}
     return {/* TODO: Fix JSX expression */}
   n: 'duplicate_media_finder_runner'}
       });

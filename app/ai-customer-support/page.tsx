@@ -52,22 +52,19 @@ import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, S
     'Enhance customer experience'
   ];
 
-  const useCases = [
-    {
-    }
-  ];
+  const useCases = [{
+    }];
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AI Customer Support - Zion Tech Group</title>
-        <meta name="description" content="Transform your customer support with our AI Customer Support solutions. Intelligent automation, omnichannel communication, and human-AI collaboration for better customer experience." />
+        <meta name = "description" content="Transform your customer support with our AI Customer Support solutions. Intelligent automation, omnichannel communication, and human-AI collaboration for better customer experience." />
         <meta name="keywords" content="AI customer support, customer service automation, omnichannel support, AI chatbots, customer experience, support AI" />
       </Helmet>
 
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your customer support with our AI Customer Support solutions. Intelligent automation, 
+              Transform your customer support with our AI Customer Support solutions. Intelligent automation, ;
               omnichannel communication, and human-AI collaboration for better customer experience.
             </p>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -80,7 +77,7 @@ import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, S
                       </li>
                     ))}
                   </ul>
-                </div>
+                </></div>
               ))}
             </div>
           </div>

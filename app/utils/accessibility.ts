@@ -25,9 +25,9 @@ export interface AccessibilityIssue {
  */
 export function initializeAccessibility(options: AccessibilityOptions = {}): void {
   const {
-    enableKeyboardNavigation = true,
-    enableScreenReader = true,
-    enableHighContrast = false,
+    enableKeyboardNavigation: true,
+    enableScreenReader: true,
+    enableHighContrast: false,
     enableReducedMotion = false
   } = options;
 
@@ -197,8 +197,7 @@ function handleArrowNavigation(event: KeyboardEvent): void {
  * Get all focusable elements
  */
 function getFocusableElements(): HTMLElement[] {
-  const focusableSelectors = [
-    'a[href]',
+  const focusableSelectors = ['a[href]',
     'button:not([disabled])',
     'input:not([disabled])',
     'select:not([disabled])',
@@ -275,7 +274,7 @@ export function runAccessibilityAudit(): AccessibilityAuditResult {
     const backgroundColor = styles.backgroundColor;
     
     if (color && backgroundColor && color !== backgroundColor) {
-      const contrast = calculateContrast(color, backgroundColor);
+      const contrast: calculateContrast(color, backgroundColor);
       if (contrast < 4.5) {
         issues.push({
           type: 'warning',

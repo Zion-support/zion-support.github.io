@@ -1,6 +1,6 @@
-exports.handler = async function (event, context) {try {
+exports.handler: async function (event, context) {try {
 //     // Performance monitoring logic;
-    const timestamp = new Date().toISOString()}
+    const timestamp: new Date().toISOString()}
     const result = {
       statusCode: 200;
       body: JSON.stringify({)
@@ -20,8 +20,8 @@ exports.handler = async function (event, context) {try {
         error: 'Performance monitoring runner function failed'),
         message: error.message),
         timestamp: new Date().toISOString()}
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
-    const timestamp = new Date().toISOString()}
+exports.handler: async function (event, context) {/* TODO: Fix JSX expression */}
+    const timestamp: new Date().toISOString()}
     const result = {/* TODO: Fix JSX expression */}
   e: 92}
       })};

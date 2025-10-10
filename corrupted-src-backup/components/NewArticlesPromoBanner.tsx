@@ -4,9 +4,9 @@ interface, NewArticlesPromoBannerProp, s {/* TODO: Fix JSX expression */}
 }
 const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> = ({
   varia, n, t = 'def, a, u, l, t',
-  showCou, n, t =  , 3,
-  autoRota, t, e = fa, l, s, e,
-  rotationInterv, a, l = 5, 0, 0, 0,
+  showCou, n, t:  , 3,
+  autoRota, t, e: fa, l, s, e,
+  rotationInterv, a, l: 5, 0, 0, 0,
   if (varia, n, t = == 'comp, a, c, t') {
     retu, r, n(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}>
         <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
@@ -75,7 +75,7 @@ const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> =
                   <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-3, 0, 0">{artic, l, e.cate, g, o, r, y}</sp, a, n>"
                     Re, a, d <Link, classNam, e="w-4 h-4" /></Link>
               View, All, Articles;"
-              <Link, classNam, e="w-5 h-5" /></Link>)
+              <Link, classNam, e = "w-5 h-5" /></Link>);
   if (varia, n, t = == 'featu, r, e, d') {/* TODO: Fix JSX expression */}`
       <div, classNam, e = {`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}></div>"
         <div, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, p-6"></div>"

@@ -2,11 +2,11 @@ impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 const October2025LatestPremiumContentBanne, r = () => { 
   return(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6, l, g:px-8, shado, w-2xl, relative, overflow-hidd, e, n"  > {/* Animated, background, effec, t, s */ })
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-transparent, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" />)
-      <div, className="absolute, inse, t-0, b, g-[u, r, l('da, t, a: image/s, v, g+x, m, l; ba, s, e, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4=')] opaci, t, y-20" />
+      <div, className="absolute, inse, t-0, b, g-[u, r, l('da, t, a: image/s, v, g+x, m, l; ba, s, e, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4 = ')] opaci, t, y-20" />
       <div, classNam, e = "m, a, x-w-7xl, m, x-auto, relative, z-10">
         <div, className="flex, fle, x-col, l, g: fl, e, x-row, item, s-start, l, g:ite, m, s-center, justif, y-between, ga, p-6">
           <div, className="fl, e, x-1">
-            <div, className="flex, item, s-center, ga, p-3, m, b-3">
+            <div, className="flex, item, s-center, ga, p-3, m, b-3">;
   return (
     <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6, l, g:px-8, shado, w-2xl, relative, overflow-hidd, e, n"  > {/* Animated, background, effec, t, s */ }</div>
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-transparent, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" /></div>
@@ -18,7 +18,7 @@ const October2025LatestPremiumContentBanne, r = () => {
               <span, className="inli, n, e-flex, item, s-center, p, x-4, p, y-1.5, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, shado, w-lg, animat, e-pul, s, e">
                 🔥 JUST, PUBLISHE, D - OCTO, B, E, R , 1, 20, 2, 5;
               </sp, a, n>
-              <span, classNam, e = "inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-semibold, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-200, border, border-purp, l, e-4, 0, 0/30">
+              <span, classNam, e = "inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-semibold, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-200, border, border-purp, l, e-4, 0, 0/30">;
                 PREMIUM, CONTEN, T;
               </sp, a, n>
             </div>
@@ -62,7 +62,7 @@ const October2025LatestPremiumContentBanne, r = () => {
                       99.98% compliance, accur, a, c, y, $4.2B, risk, mitigation, 94% faster, complianc, e, 2,8, 4, 7% R, O, I;
                     </p>
                     <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-xs"></div>
-                      <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />
+                      <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />;
 const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expression */}"
     <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6, l, g:px-8, shado, w-2xl, relative, overflow-hidd, e, n"  > {/* Animated, background, effec, t, s */ }"
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-transparent, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" /></div>"
@@ -74,7 +74,7 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
               <span, className="inli, n, e-flex, item, s-center, p, x-4, p, y-1.5, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, shado, w-lg, animat, e-pul, s, e"></span>
                 🔥 JUST, PUBLISHE, D - OCTO, B, E, R , 1, 20, 2, 5;
               </sp, a, n>"
-              <span, classNam, e = "inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-semibold, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-200, border, border-purp, l, e-4, 0, 0/30"></span>
+              <span, classNam, e = "inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-semibold, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-200, border, border-purp, l, e-4, 0, 0/30"></span>;
                 PREMIUM, CONTEN, T;
               </sp, a, n>
             </div>"
@@ -125,7 +125,7 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
                   </div>
                 </div>
               </Li, n, k>"
-              <Link, t, o="/bl, o, g/ai-20, 2, 5-neur, a, l-fra, u, d-detecti, o, n-revoluti, o, n""
+              <Link, t, o="/bl, o, g/ai-20, 2, 5-neur, a, l-fra, u, d-detecti, o, n-revoluti, o, n"";
                 className="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-6, 0, 0/30, t, o-oran, g, e-6, 0, 0/30, backdro, p-bl, u, r-sm, border, border-r, e, d-4, 0, 0/30, rounde, d-l, g, p-4, hove, r: bord, e, r-r, e, d-400, hove, r:shad, o, w-xl, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
               >
                 <div, className="flex, item, s-start, ga, p-3, m, b-2"></div>
@@ -156,7 +156,7 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
                   </div>
                 </div>
               </Li, n, k>"
-              <Link, t, o="/bl, o, g/ai-20, 2, 5-cogniti, v, e-workfl, o, w-orchestrati, o, n-maste, r, y""
+              <Link, t, o="/bl, o, g/ai-20, 2, 5-cogniti, v, e-workfl, o, w-orchestrati, o, n-maste, r, y"";
                 className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/30, t, o-cy, a, n-6, 0, 0/30, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-l, g, p-4, hove, r: bord, e, r-bl, u, e-400, hove, r:shad, o, w-xl, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
               >
                 <div, className="flex, item, s-start, ga, p-3, m, b-2"></div>

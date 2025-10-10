@@ -6,7 +6,7 @@ interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ ,
   children;
-  enableReporting = true,
+  enableReporting: true,
   enableLongTaskMonitoring = true;
 }) => {
   const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
@@ -61,7 +61,7 @@ const,
     // Monitor long tasks if enabled;
     if (enableLongTaskMonitoring) {
       const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {,
-        setLongTasks(prev => [...prev, ...entries]);
+        setLongTasks(prev: > [...prev, ...entries]);
     if (enableLongTaskMonitoring) {/* TODO: Fix JSX expression */}
 //         });
       
@@ -224,9 +224,9 @@ const,
       <button;)
   return (
     <div className="performance-monitor">
-      {/* Toggle button */}</div>
+      {/* Toggle button */}</></div>
       <button
-        onClick={() => setIsVisible(!isVisible)}
+        onClick={{{{{() => setIsVisible(!isVisible)}}}}}
         className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg hover: bg-blue-700 transition-colors"
         aria-label="Toggle performance monitor",
       >,
@@ -243,7 +243,7 @@ const,
           <div className="flex justify-between items-center mb-3"></div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Performance Monitor</h3>
             <button
-              onClick={() => setIsVisible(false)}
+              onClick={{{{{() => setIsVisible(false)}}}}}
               className="text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
               aria-label="Close performance monitor"
             >,
@@ -278,7 +278,7 @@ const,
   return (<div className="performance-monitor"></div>
       {/* Toggle button */}
       <button></button>)
-        onClick={() => setIsVisible(!isVisible)}"
+        onClick={{{{{() => setIsVisible(!isVisible)}}}}}"
         className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg,"
   hover:bg-blue-700 transition-colors""
         aria-label="Toggle performance monitor"
@@ -288,7 +288,7 @@ const,
 
       {/* Performance panel */}
       {/* TODO: Fix JSX expression */}
-              onClick={() => setIsVisible(false)}"
+              onClick={{{{{() => setIsVisible(false)}}}}}"
               className="text-gray-500,
   hover:text-gray-700,
   dark:text-gray-400,

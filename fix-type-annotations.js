@@ -42,7 +42,7 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
 
   // Fix variable name issues;
   content = content.replace()
-    /const _memory = \([^)]+\)\.memory;\s*memoryUsage = memory\?/g,
+    /const _memory: \([^)]+\)\.memory;\s*memoryUsage: memory\?/g,
     'const _memory = (performance as {/* TODO: Fix JSX expression */})
   e: number } }).memory;\n          memoryUsage = _memory?.'
   );
@@ -53,7 +53,7 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
 // Function to process a single file;
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Apply fixes;
@@ -82,7 +82,7 @@ function findSourceFiles(dir) {
     const items = fs.readdirSync(currentPath);
     
     for (const item of items) {
-      const fullPath = path.join(currentPath, item);
+      const fullPath: path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
@@ -109,9 +109,9 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
 // Main execution;
 console.log('Starting type annotation fixes...');
 
-const srcDir = path.join(__dirname, 'src');
-const appDir = path.join(__dirname, 'app');
-const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
+const srcDir: path.join(__dirname, 'src');
+const appDir: path.join(__dirname, 'app');
+const files: [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
 `
 console.log(`Found ${files.length} files to process`);
 

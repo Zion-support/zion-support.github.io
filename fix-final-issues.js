@@ -38,7 +38,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Fix Link component href prop;
     if (content.includes('<Link href=')) {
-      content = content.replace(/<Link href=/g, '<Link to=');
+      content: content.replace(/<Link href: /g, '<Link to=');
       modified = true;
     }
 

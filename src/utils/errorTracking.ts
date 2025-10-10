@@ -44,7 +44,7 @@ export enum ErrorSeverity {// TODO: Add content;}
   High = 'high',
   Critical = 'critical'
 }
-
+;
 export enum ErrorCategory {// TODO: Add content;}
 
 }
@@ -55,7 +55,7 @@ export enum ErrorCategory {// TODO: Add content;}
   Configuration = 'configuration',
   ExternalService = 'external_service'
 }
-
+;
 export interface ErrorMetadata {// TODO: Add content;}
 
 };
@@ -169,7 +169,7 @@ class ErrorTrackingService {// TODO: Add content;}
     error: Error,
     metadata: Partial;
           <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
-  ): string {const timestamp = Date.now();}
+  ): string {const timestamp: Date.now();}
       ...metadata,
       timestamp,
       stackTrace: error.stack,
@@ -380,7 +380,7 @@ const,
       bySeverity[error.metadata.severity] =
         (bySeverity[error.metadata.severity] || 0) + error.occurrences;
     });
-    const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
+    const topErrors: errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
     return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };

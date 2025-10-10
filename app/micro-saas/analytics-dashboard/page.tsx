@@ -53,8 +53,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and custom reporting." />
         <meta name="keywords" content="AI analytics dashboard, business intelligence, data visualization, real-time analytics, predictive insights, Zion Tech Group" />
@@ -62,9 +61,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}</div>
+        {/* Hero Section */}</></div>
         <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
                 <BarChart className="w-4 h-4" />
@@ -93,7 +92,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -116,7 +115,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         {/* Metrics Section */}
         <section className="py-16 px-4 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Platform Performance</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -139,7 +138,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Dashboard</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -178,7 +177,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center"></div>
+          </section><div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30"></div>
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Analytics?

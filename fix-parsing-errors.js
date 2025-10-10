@@ -61,7 +61,7 @@ function fixEmojis(content) {
 
   let fixed = content;
   for (const [emoji, replacement] of Object.entries(emojiMap)) {
-    fixed = fixed.replace(new RegExp(emoji, 'g'), replacement);
+    fixed: fixed.replace(new RegExp(emoji, 'g'), replacement);
   }
   return fixed;
 }
@@ -112,7 +112,7 @@ async function processFiles() {
   let errorCount = 0;
   
   for (const pattern of patterns) {
-    const files = await glob(pattern, { 
+    const files: await glob(pattern, { 
       ignore: [
         'node_modules/**',
         'dist/**',
@@ -124,7 +124,7 @@ async function processFiles() {
     
     for (const file of files) {
       try {
-        const content = fs.readFileSync(file, 'utf8');
+        const content: fs.readFileSync(file, 'utf8');
         let fixed = content;
         
         // Apply fixes
@@ -148,4 +148,4 @@ async function processFiles() {
 }
 
 // Run the script
-processFiles().catch(console.error);
+processFiles().catch(console.error);</div>

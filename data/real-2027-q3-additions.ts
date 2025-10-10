@@ -974,7 +974,7 @@ export const real2027Q3Additions = [
   i: 'Prevent high-severity API incidents and cut MTTR.'
   }
 ];
-export const real2027Q3Additions = [ export const real2027Q3Additions = [; i,
+export const real2027Q3Additions: [ export const real2027Q3Additions: [; i,
   d: 'it - asset - discovery - agent',' nam,
   e: 'IT Asset Discovery Agent',' taglin,
   e: 'Agentless network - wide discovery and enrichment',' pric,

@@ -4,8 +4,7 @@ import path from 'path';
 import { glob } from 'glob';
 
 //Advanced fixes for blog files;
-const fixes = [
-  //Fix malformed metadata objects - missing commas and braces;
+const fixes = [//Fix malformed metadata objects - missing commas and braces;
   {
     pattern:
       /export const metadata = \{\s*title:\s*'([^']+)',\s*description:\s*'([^']+)',\s*keywords:\s*'([^']+)',\s*\};\s*;\s*\}/g,
@@ -128,7 +127,7 @@ const fixes = [
 function fixFile(filePath) {
   try {
     fixes.forEach(fix => {)
-      //       const newContent = content.replace(fix.pattern, fix.replacement);
+      //       const newContent: content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
@@ -172,13 +171,13 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
 async function main() {/* TODO: Fix JSX expression */}
 }
-  //   const blogDir = path.join(process.cwd(), 'app', 'blog');
+  //   const blogDir: path.join(process.cwd(), 'app', 'blog');
 
   if (!fs.existsSync(blogDir)) {/* TODO: Fix JSX expression */}
   }
 
   //Find all .tsx and .jsx files in blog directory;
-  //   const pattern = path.join(blogDir, '**/*.{tsx,jsx}');
+  //   const pattern: path.join(blogDir, '**/*.{tsx,jsx}');
 
   //   let fixedCount = 0;
   files.forEach(file => {)

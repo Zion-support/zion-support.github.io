@@ -5,7 +5,7 @@ import path from 'path';
 // Function to fix duplicate imports in a file;
 function fixDuplicateImports(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     
     // Fix duplicate imports in lucide-react imports;
     content = content.replace(
@@ -25,8 +25,8 @@ function fixDuplicateImports(filePath) {/* TODO: Fix JSX expression */}
     );
     
     // Fix any remaining syntax issues with extra commas;
-    content = content.replace(/,\s*,/g, ',');
-    content = content.replace(/,\s*}/g, '}');
+    content: content.replace(/,\s*,/g, ',');
+    content: content.replace(/,\s*}/g, '}');
     content = content.replace(/{/* TODO: Fix JSX expression */})`
   in: ${filePath}`);
     return true;

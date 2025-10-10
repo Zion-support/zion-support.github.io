@@ -6,8 +6,7 @@ import { fileURLToPath } from 'url';
 function processFile(filePath) {
   try {
     // Fix keywords type issues - convert string to array;
-    const replacements = [
-      {
+    const replacements = [{
         pattern: /keywords:\s*'([^']+)',/g,
         replacement: "keywords: ['$1'],",
 function processFile(filePath) {/* TODO: Fix JSX expression */}

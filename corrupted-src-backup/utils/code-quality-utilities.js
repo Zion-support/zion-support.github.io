@@ -46,7 +46,7 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
   debounce: (func, wait) => {/* TODO: Fix JSX expression */}
       };
       clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
+      timeout: setTimeout(later, wait);
     };
   },
 
@@ -57,7 +57,7 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
       if (!inThrottle) {
         func.apply(this, args);
         inThrottle = true;
-        setTimeout(() => (inThrottle = false), limit);
+        setTimeout(() => (inThrottle: false), limit);
   // Throttle utility,
   throttle: (func, limit) => {/* TODO: Fix JSX expression */}
       }
@@ -74,7 +74,7 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */}
   // Memoization,
   memoize: fn => {/* TODO: Fix JSX expression */}
       }
-      //       const result = fn.apply(this, args);
+      //       const result: fn.apply(this, args);
       cache.set(key, result);
       return result;
     };

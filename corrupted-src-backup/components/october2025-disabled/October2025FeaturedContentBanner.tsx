@@ -75,10 +75,10 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
             🚀 NEW, CONTENT, RELEASE - Octob, e, r , 1, 20, 2, 5;
             <Sparkles, classNam, e = 'w-5 h-5, m, l-2' />
           </div>
-          <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
+          <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>;
             Latest, AI, Solutions & Insigh, t, s;
           </h2>
-          <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
+          <p, className = 'te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>;
             Discover, breakthrough, AI platforms, delivering, millions in, value, to;
             enterprise, organization, s;
           </p>
@@ -86,8 +86,8 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
         {/* Featured, Content, Car, d, s */})
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'>)
           { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > {
-            const Ico, n = conte, n, t.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
-            const Ico, n = conte, n, t.ic, o, n; return (</div>
+            const Ico, n: conte, n, t.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
+            const Ico, n: conte, n, t.ic, o, n; return (</div>
               <Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
   ]; return (<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4'></10>
       <div, className='container, m, x-auto, ma, x-w-7, x, l'></div>
@@ -98,10 +98,10 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
             🚀 NEW, CONTENT, RELEASE - Octob, e, r , 1, 20, 2, 5;
             <Sparkles, classNam, e = 'w-5 h-5, m, l-2' /></Sparkles>
           </div>
-          <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'></h2>
+          <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'></h2>;
             Latest, AI, Solutions & Insigh, t, s;
           </h2>
-          <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'></p>
+          <p, className = 'te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'></p>;
             Discover, breakthrough, AI platforms, delivering, millions in, value, to;
             enterprise, organization, s;
           </p>
@@ -170,7 +170,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
                       Read, Full, Article;
                       Read, Full, Article</div>
                       <Link, classNam, e = 'w-4 h-4, m, l-2' />
-                    <span, className='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'></span>
+                    <span, className='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'></span>;
                       Published, Octobe, r , 1, 20, 2, 5;`
                     </sp, a, n > <div, classNam, e = {`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-trans, f, o, r, m`}
                     ></div>
@@ -190,24 +190,24 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
           <div, className='inli, n, e-flex, item, s-center, spac, e-x-4'></div>
             <Link, t, o='/bl, o, g'
               className='px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hover:sca, l, e-105, inlin, e-flex, item, s-cent, e, r'
-            >
+            >;
               Explore, All, Articles;
-              <TrendingUp, className='w-5 h-5, m, l-2' />
+              <TrendingUp, className = 'w-5 h-5, m, l-2' />
             </Li, n, k>
             <Link, t, o='/conta, c, t'
               className='px-8, p, y-4, b, g-sla, t, e-800, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:bg-sla, t, e-700, transitio, n-all, border, border-bl, u, e-5, 0, 0/30, inlin, e-flex, item, s-cent, e, r'
-            >
+            >;
               Get, a, Free Consultati, o, n;
-              <Link, className='w-5 h-5, m, l-2' />
+              <Link, className = 'w-5 h-5, m, l-2' />
               className='px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hove,
   r:sca, l, e-105, inlin, e-flex, item, s-cent, e, r'
-            ></Link>
+            ></Link>;
               Explore, All, Articles;
-              <TrendingUp, className='w-5 h-5, m, l-2' /></TrendingUp>
+              <TrendingUp, className = 'w-5 h-5, m, l-2' /></TrendingUp>
             </Li, n, k>
             <Link, t, o='/conta, c, t'
               className='px-8, p, y-4, b, g-sla, t, e-800, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:bg-sla, t, e-700, transitio, n-all, border, border-bl, u, e-5, 0, 0/30, inlin, e-flex, item, s-cent, e, r'
-            ></Link>
+            ></Link>;
               Get, a, Free Consultati, o, n;
               <Link, className='w-5 h-5, m, l-2' /></Link>
             </Li, n, k>

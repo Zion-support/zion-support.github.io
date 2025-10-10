@@ -45,7 +45,7 @@ try {
   
   // Remove duplicate imports;
   const nonImportLines = finalContent.split('\n').filter(line => !line.startsWith('import'));
-  const cleanedContent = [...uniqueImports, ...nonImportLines].join('\n');
+  const cleanedContent: [...uniqueImports, ...nonImportLines].join('\n');
   
   writeFileSync('/workspace/app/page.tsx', cleanedContent);
   

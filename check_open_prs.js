@@ -16,7 +16,7 @@ function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
       }
     };
 
-    const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
+    const req: https.request(options, (res) => {/* TODO: Fix JSX expression */}
       });
       res.on('end', () => {/* TODO: Fix JSX expression */}
         } catch (error) {/* TODO: Fix JSX expression */}

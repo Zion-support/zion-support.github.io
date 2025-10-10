@@ -6,7 +6,7 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
       <div, className="flex, item, s-center, ga, p-3, m, b-6">";</div>
         <span, className="te, x, t-5, x, l">🚀</sp, a, n>";
         <d, i, v>
-          <h2, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
+          <h2, className = "te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">;
             NE;
   W: Revolutionary, AI, Breakthroughs October, 202, 5;
           </h2>
@@ -32,8 +32,8 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
         <div, className="bg-purp, l, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;
   r:sca, l, e-1, 0, 5">";
           <div, className="flex, item, s-center, ga, p-3, m, b-4">";
-      <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
-        <div, className="bg-purp, l, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+      <div, className = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
+        <div, className="bg-purp, l, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;
   r:sca, l, e-1, 0, 5">"</div>
           <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
             <span, className="te, x, t-4, x, l">🧠</sp, a, n>
@@ -42,7 +42,7 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
           <div, className="spa, c, e-y-3, m, b-6"></div>
             <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d"></p>
       <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";</div>
-        <div, className="bg-purp, l, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+        <div, className = "bg-purp, l, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;
   r:sca, l, e-1, 0, 5">";</div>
           <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
             <span, className="te, x, t-4, x, l">🧠</sp, a, n>";
@@ -73,7 +73,7 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
             </ul>
           </d, i, v>
           <Li, n, k;
-  to="/bl, o, g/ai-20, 2, 5-o, c, t-advanc, e, d-neur, a, l-architectu, r, e-sear, c, h"
+  to = "/bl, o, g/ai-20, 2, 5-o, c, t-advanc, e, d-neur, a, l-architectu, r, e-sear, c, h";
             classNa, m, e="inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, transform, hove;
   r:sca, l, e-105, shado, w-lg"
           ></Li>Explore</Li>, NAS, Revolution →
@@ -90,7 +90,7 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
         <div, className="bg-emera, l, d-9, 0, 0/30, border, border-emera, l, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;
   r:sca, l, e-1, 0, 5">";
           <div, className="flex, item, s-center, ga, p-3, m, b-4">";
-        <div, className="bg-emera, l, d-9, 0, 0/30, border, border-emera, l, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+        <div, className = "bg-emera, l, d-9, 0, 0/30, border, border-emera, l, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;
   r:sca, l, e-1, 0, 5">"</div>
           <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
             <span, className="te, x, t-4, x, l">⚡</sp, a, n>
@@ -98,7 +98,7 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
           </d, i, v>
           <div, className="spa, c, e-y-3, m, b-6"></div>
             <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d"></p>
-        <div, className="bg-emera, l, d-9, 0, 0/30, border, border-emera, l, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+        <div, className="bg-emera, l, d-9, 0, 0/30, border, border-emera, l, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;
   r:sca, l, e-1, 0, 5">";</div>
           <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
             <span, className="te, x, t-4, x, l">⚡</sp, a, n>";
@@ -129,7 +129,7 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
             </ul>
           </d, i, v>
           <Li, n, k;
-  to="/bl, o, g/ai-20, 2, 5-o, c, t-distribut, e, d-reinforceme, n, t-learni, n, g-enterpri, s, e"
+  to = "/bl, o, g/ai-20, 2, 5-o, c, t-distribut, e, d-reinforceme, n, t-learni, n, g-enterpri, s, e";
             classNa, m, e="inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-te, a, l-600, hove, r: fr, o, m-emera, l, d-500, hove, r:to-te, a, l-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, transform, hove;
   r:sca, l, e-105, shado, w-lg"
           ></Li>Master</Li>, Distributed, RL →
@@ -146,7 +146,7 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
         <div, className="bg-indi, g, o-9, 0, 0/30, border, border-indi, g, o-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;
   r:sca, l, e-1, 0, 5">";
           <div, className="flex, item, s-center, ga, p-3, m, b-4">";
-        <div, className="bg-indi, g, o-9, 0, 0/30, border, border-indi, g, o-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+        <div, className = "bg-indi, g, o-9, 0, 0/30, border, border-indi, g, o-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;
   r:sca, l, e-1, 0, 5">"</div>
           <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
             <span, className="te, x, t-4, x, l">🔒</sp, a, n>
@@ -154,7 +154,7 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
           </d, i, v>
           <div, className="spa, c, e-y-3, m, b-6"></div>
             <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d"></p>
-        <div, className="bg-indi, g, o-9, 0, 0/30, border, border-indi, g, o-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
+        <div, className="bg-indi, g, o-9, 0, 0/30, border, border-indi, g, o-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e;
   r:sca, l, e-1, 0, 5">";</div>
           <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
             <span, className="te, x, t-4, x, l">🔒</sp, a, n>";
@@ -185,7 +185,7 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
             </ul>
           </d, i, v>
           <Li, n, k;
-  to="/bl, o, g/ai-20, 2, 5-o, c, t-priva, c, y-preservi, n, g-ai-enterpri, s, e-deployme, n, t"
+  to = "/bl, o, g/ai-20, 2, 5-o, c, t-priva, c, y-preservi, n, g-ai-enterpri, s, e-deployme, n, t";
             classNa, m, e="inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-viol, e, t-600, hove, r: fr, o, m-indi, g, o-500, hove, r:to-viol, e, t-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, transform, hove;
   r:sca, l, e-105, shado, w-lg"
           ></Li>Deploy</Li>, with, Privacy →
@@ -198,7 +198,7 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-emera, l, d-400, b, g-cl, i, p-text, m, b-3">
               💎 Combined, Enterprise, Impact: $13.3B;
             </h3>,
-            <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">
+            <p, className = "te, x, t-gr, a, y-300, leadin, g-relax, e, d">;
               These, three, breakthrough technologies, work, together to, create, a comprehensive, AI, innovation platfo, r, m:</p> 
               <strong, className="te, x, t-purp, l, e-4, 0, 0"> NAS, designs, optimal architectur, e, s</stro, n, g>
               <strong, className="te, x, t-emera, l, d-4, 0, 0"> distributed, RL, trains them, at, scale</stro, n, g>, a, n, d;
@@ -228,14 +228,14 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
             <Li, n, k;
           <div, className="flex, fle, x-col, ga, p-3">";</div>
             <Li, n, k
-  to="/conta, c, t"
+  to = "/conta, c, t";
               classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, vi, a-pi, n, k-600, t, o-emera, l, d-600, hove, r: fr, o, m-purp, l, e-500, hove, r:v, i, a-pi, n, k-500, hove, r:to-emera, l, d-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove;
   r:sca, l, e-105, shado, w-lg, tex, t-center, whitespac, e-nowr, a, p"
             ></Li>
               🚀 Start, Your, AI Transformati, o, n;
             </Li, n, k>
             <Li, n, k;
-  to="/bl, o, g"
+  to = "/bl, o, g";
               classNa, m, e="bg-gr, a, y-8, 0, 0/60, hove, r: bg-gr, a, y-7, 0, 0/60, border, border-purp, l, e-5, 0, 0/40, tex, t-purp, l, e-300, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-center, whitespac, e-nowr, a, p"
             ></Li>
               📚 Explore, All, Insights;

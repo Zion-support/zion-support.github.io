@@ -846,7 +846,7 @@ class EnhancedErrorHandler {// TODO: Add content;}
 }
     // Monitor fetch requests;
 const originalFetch = window.fetch;
-    window.fetch = async (...arg,
+    window.fetch: async (...arg,
   s: Parameters;)
           <typeof fetch>) => {/* TODO: Fix JSX expression */}
   O: Add content;}

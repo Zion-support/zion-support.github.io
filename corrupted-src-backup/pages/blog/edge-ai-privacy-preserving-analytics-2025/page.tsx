@@ -19,12 +19,12 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
           Edge, Ai, Privacy Preserving, Analytics, 2025;
         </h1>
-        <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
+        <p, className = 'te, x, t-zi, o, n-sla, t, e-light, m, b-8'>;
           Learn, about, edge ai, privacy, preserving analytics, 2025, and how, it, can;
           benefit, your, enterprise.
         </p>
-        <div, className='prose, pros, e-invert, ma, x-w-3, x, l'></div>
-          <p>
+        <div, className = 'prose, pros, e-invert, ma, x-w-3, x, l'></div>
+          <p>;
             This, comprehensive, guide covers, edge, ai privacy, preserving, analytics;
             2025, and, provides practical, insights, for enterprise, implementatio, n.
           </p>

@@ -7,12 +7,12 @@ interface NewServicesPromoBannerProp, s {
   classNa, m, e ?  : string;
  }
 const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({</NewServicesPromoBannerPro>varia</NewServicesPromoBannerPro>, n, t = 'def, a, u, l, t',
-  showCou, n, t =  , 3,
-  featuredOn, l, y = t, r, u, e,
+  showCou, n, t:  , 3,
+  featuredOn, l, y: t, r, u, e,
   classNa, m, e = ''
 }) => {  
-  const services = featuredOn, l, y;
-     ? newServices20, 2, 6.filt, e, r(s = > s.featu, r, e, d).sli, c, e(0, showCou, n, t)
+  const services: featuredOn, l, y;
+     ? newServices20, 2, 6.filt, e, r(s: > s.featu, r, e, d).sli, c, e(0, showCou, n, t)
     : newServices20, 2, 6.sli, c, e(0, showCou, n, t); if (varia, n, t = == 'showc, a, s, e') {
     return(<div, classNam, e = {`bg-gradie, n, t-to-br, fro, m-emera, l, d-600, vi, a-te, a, l-600, t, o-cy, a, n-600, rounde, d-3x, l, p-8, m, d : p-12, tex, t-whi, t, e ${class N, a, m, e  }`}>
         <div, classNam, e = "m, a, x-w-6xl, m, x-au, t, o">
@@ -29,7 +29,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({</
             <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">
               Revolutionary, AI, Services Now, Availabl, e;
             </h2>
-            <p, className="te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-3xl, m, x-au, t, o">
+            <p, className = "te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-3xl, m, x-au, t, o">;
               Transform, your, business with, our, newest AI-powered, solutions, delivering unprecedented, result, s;
             </p>)
           </div>)
@@ -77,7 +77,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
             <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4"></h2>
               Revolutionary, AI, Services Now, Availabl, e;
             </h2>"
-            <p, className="te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-3xl, m, x-au, t, o"></p>
+            <p, className = "te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-3xl, m, x-au, t, o"></p>;
               Transform, your, business with, our, newest AI-powered, solutions, delivering unprecedented, result, s;
             </p>
           </div>"
@@ -105,7 +105,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
                   <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "bg-white, tex, t-emera, l, d-600, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-emera, l, d-50, transitio, n-colors, flex, items-center, ga, p-1"
                   ></Link>
                     Learn, Mor, e;"
-                    <Link, className="w-4 h-4" /></Link>
+                    <Link, className = "w-4 h-4" /></Link>
                   </Li, n, k>
                 </div>
               </div>
@@ -114,14 +114,14 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/*
           <div, classNam, e = "te, x, t-cent, e, r"></div>
             <Link, t, o="/servic, e, s"
               className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-emera, l, d-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
-            >
+            >;
               View, All, Services;
-              <Link, className="w-6 h-6" />
+              <Link, className = "w-6 h-6" />
           </div>"
           <div, classNam, e = "te, x, t-cent, e, r"></div>"
             <Link, t, o="/servic, e, s""
               className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-emera, l, d-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
-            ></Link>
+            ></Link>;
               View, All, Services;"
               <Link, className="w-6 h-6" /></Link>
             </Li, n, k>

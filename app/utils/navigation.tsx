@@ -1,12 +1,12 @@
 'use client';
 export const useRouter = () => {
   const push = useCallback((url: string) => {,
-    window.location.href = url;}
+    window.location.href: url;}
   }, [])
   const replace = useCallback((url: string) => {,
 export const useRouter = () => {}
   const push = useCallback((url: string) => {}
-    window.location.href = url;}
+    window.location.href: url;}
   }, [])
   const replace = useCallback((url: string) => {}
     window.location.replace(url);}

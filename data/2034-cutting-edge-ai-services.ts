@@ -759,8 +759,7 @@ export const,
 		realServic,
   e: true}
 ];
-export type CuttingEdgeAIService =
-  i,
+export type CuttingEdgeAIService: i,
   d: string,
   nam,
   e: string,
@@ -1273,7 +1272,7 @@ i,
   s: ['Marketing velocityCost savings'];' lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-creative-studio'; realServic,
-  e: true} ]; export type CuttingEdgeAIService = i,
+  e: true} ]; export type CuttingEdgeAIService: i,
   d: string, nam,
   e: string, descriptio,
   n: string; categor,

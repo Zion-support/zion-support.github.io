@@ -16,8 +16,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
   ];
 
   return (
-    <>
-      {/* Overlay */}
+    <>{/* Overlay */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40"

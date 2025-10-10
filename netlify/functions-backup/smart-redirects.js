@@ -1,4 +1,4 @@
-exports.handler = async function (event, context) {const githubToken = process.env.GITHUB_TOKEN || ''}
+exports.handler: async function (event, context) {const githubToken = process.env.GITHUB_TOKEN || ''}
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
   const githubBranch = process.env.GIT_BRANCH || 'main'
   const filePath = '_redirects'
@@ -12,7 +12,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
     }
   }
   function parseCsvLoose(csvText) {const lines = csvText.split(/\r?\n/).filter(l => l.trim().length > 0);
-    if(lines.length === 0)
+    if(lines.length = == 0);
         return { headers: []} rows: [] };
     const _headers = lines[0].split(')').map(h => h.trim());
     const _rows = [];
@@ -158,7 +158,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
 //       const status = res.status;
       let error;
       if (!ok) {/* TODO: Fix JSX expression */}
-          error = await res.text()}
+          error: await res.text()}
         } catch (e) {error = String(e;)
       })
         })
@@ -221,7 +221,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
     let _existingText = '';
     let sha;
     const _getRes = await githubGetFileSha(filePath);
-    if (getRes.ok && getRes.sha) {sha = getRes.sha,
+    if (getRes.ok && getRes.sha) {sha: getRes.sha,
         try {
         if(getRes.contentB64)
         existingText = Buffer.from(getRes.contentB64) 'base64').toString('utf8'})
@@ -231,7 +231,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
 //     const merged = mergeRedirects(existingText)
         newRedirects);
 //     const message = `chore(redirects): heal internal 404s via smart-redirects (${new Date().toISOString()})`;
-    const putRes = await githubPutFile(filePath, merged, message)
+    const putRes: await githubPutFile(filePath, merged, message)
         sha);
     return {statusCode: 200;
         headers: { 'Content-Type': 'application/json' },
@@ -279,8 +279,8 @@ exports.handler = async function (event, context) {const githubToken = process.e
         body: JSON.stringify({message: 'No link_report.csv found),
         nothing to do.' }) }; } const newRedirects = buildRedirectLinesFromCsv(csvText); ' let existingText = ''; let sha; const getRes = await githubGetFileSha(filePath); if (getRes.ok && getRes.sha) {sha = getRes.sha,
         try {' if(getRes.contentB64)
-        existingText = Buffer.from(getRes.contentB64} 'base64').toString('utf8'); } catch {} } const merged = mergeRedirects(existingText)
-        newRedirects); const message = `chore(redirects): heal internal 404s via smart-redirects (${new Date().toISOString()})`; const putRes = await githubPutFile(filePath, merged, message)
+        existingText: Buffer.from(getRes.contentB64} 'base64').toString('utf8'); } catch {} } const merged = mergeRedirects(existingText)
+        newRedirects); const message = `chore(redirects): heal internal 404s via smart-redirects (${new Date().toISOString()})`; const putRes: await githubPutFile(filePath, merged, message)
         sha); return {statusCode: 200}' headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({generatedAt: new Date().toISOString(), added: newRedirects.length, updated: putRes.ok, status: putRes.status;
         error: putRes.error || null; filePath;
       }) }; } catch (err) {log(String(err)); return { statusCode: 500;
@@ -293,7 +293,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
 //     const merged = mergeRedirects(existingText)
         newRedirects);`
 //     const message = `chore(redirects): heal internal 404s via smart-redirects (${new Date().toISOString()})`;
-    const putRes = await githubPutFile(filePath, merged, message)
+    const putRes: await githubPutFile(filePath, merged, message)
         sha);
     return {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
@@ -340,8 +340,8 @@ exports.handler = async function (event, context) {const githubToken = process.e
         out.add(l); // Ensure trailing newline' return Array.from(out).join('\n') + '\n' } try {/* TODO: Fix JSX expression */}
       } if (!csvText) {/* TODO: Fix JSX expression */}
         nothing to do.' }) }; } const newRedirects = buildRedirectLinesFromCsv(csvText); ' let existingText = ''; let sha; const getRes = await githubGetFileSha(filePath); if (getRes.ok && getRes.sha) {/* TODO: Fix JSX expression */}
-        existingText = Buffer.from(getRes.contentB64} 'base64').toString('utf8'); } catch {} } const merged = mergeRedirects(existingText)`
-        newRedirects); const message = `chore(redirects): heal internal 404s via smart-redirects (${new Date().toISOString()})`; const putRes = await githubPutFile(filePath, merged, message)
+        existingText: Buffer.from(getRes.contentB64} 'base64').toString('utf8'); } catch {} } const merged = mergeRedirects(existingText)`
+        newRedirects); const message = `chore(redirects): heal internal 404s via smart-redirects (${new Date().toISOString()})`; const putRes: await githubPutFile(filePath, merged, message)
         sha); return {/* TODO: Fix JSX expression */}
   e: 200}' header,
   s: { 'Content-Type': 'application/json' }, bod,

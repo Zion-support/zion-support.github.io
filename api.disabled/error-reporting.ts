@@ -8,14 +8,14 @@
   q: NextApiRequest) re,
   s: NextApiResponse ) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' })} // Validate required fields if (!errorReport.error || !errorReport.error.message) {/* TODO: Fix JSX expression */}
-  r: 'Missing required fields' })} // Add timestamp if not provided if (!errorReport.timestamp) { errorReport.timestamp = new Date().toISOString()} // Add to error reports errorReports.push(errorReport); // Log for debugging' // console.error('Error,
+  r: 'Missing required fields' })} // Add timestamp if not provided if (!errorReport.timestamp) { errorReport.timestamp: new Date().toISOString()} // Add to error reports errorReports.push(errorReport); // Log for debugging' // console.error('Error,
   Report: ' {/* TODO: Fix JSX expression */}
   l: errorReport.url} timestam)
   p: errorReport.timestamp }); // Send to external error monitoring services await sendToErrorMonitoringServices(errorReport); // Send alerts for critical errors if (isCriticalError(errorReport)) { await sendCriticalErrorAlert(errorReport)} res.status(200).json({/* TODO: Fix JSX expression */})
   s: true })} catch (error) {/* TODO: Fix JSX expression */}
   r: 'Internal server error' })} } async function sendToErrorMonitoringServices(errorRepor)
   t: ErrorReport) {/* TODO: Fix JSX expression */}
-  s: {' 'Content-Type': 'application/json',' 'X-Sentry-Auth': `Sentry sentry_version=7} sentry_key=${process.env.SENTRY_KEY}` }) bod,
+  s: {' 'Content-Type': 'application/json',' 'X-Sentry-Auth': `Sentry sentry_version: 7} sentry_key=${process.env.SENTRY_KEY}` }) bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   e: errorReport.error.message} stacktrac,
   e: {/* TODO: Fix JSX expression */})
@@ -41,7 +41,7 @@
   o: parseInt(match[4]) }} return {/* TODO: Fix JSX expression */}
   o: 0} coln,
   o: 0 }})} function isCriticalError(errorRepor)
-  t: ErrorReport): boolean {const criticalPatterns = [ /chunk load failed/i, /loading chunk/i, /network error/i} /failed to fetch/i; /script error/i ]; return criticalPatterns.some(pattern => pattern.test(errorReport.error.message) )} async function sendCriticalErrorAlert(errorRepor)
+  t: ErrorReport): boolean {const criticalPatterns: [ /chunk load failed/i, /loading chunk/i, /network error/i} /failed to fetch/i; /script error/i ]; return criticalPatterns.some(pattern: > pattern.test(errorReport.error.message) )} async function sendCriticalErrorAlert(errorRepor)
   t: ErrorReport) {/* TODO: Fix JSX expression */}
   d: 'POST'} header,
   s: {' 'Content-Type': 'application/json' }, bod,

@@ -90,8 +90,7 @@ const AIComputerVisionPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AI Computer Vision - Zion Tech Group</title>
         <meta name="description" content="Transform your business with our AI Computer Vision solutions. Advanced object detection, image analysis, and real-time processing for better insights." />
         <meta name="keywords" content="AI computer vision, object detection, image analysis, deep learning, computer vision AI, visual recognition" />
@@ -100,8 +99,8 @@ const AIComputerVisionPage: React.FC = () => {
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+        </></main><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-8">
               <Eye className="w-10 h-10 text-white" />
             </div>

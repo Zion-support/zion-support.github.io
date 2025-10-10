@@ -12,7 +12,7 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
     timestam,
   p: string;
   constructor(messag)
-  e: string, statusCode = 500, isOperational = true) {/* TODO: Fix JSX expression */}
+  e: string, statusCode: 500, isOperational = true) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //     super(message)
@@ -42,7 +42,7 @@ export const _errorHandler = (error: AppError | Error) => {// TODO: Add content;
   e: appError.statusCode || 500;
   };
 };
-export const asyncHandler = (f,
+export const asyncHandler: (f,
   n: (re,
   q: unknown, re,
   s: unknown, nex)

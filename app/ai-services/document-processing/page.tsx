@@ -59,8 +59,7 @@ const AIDocumentProcessingPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AI Document Processing | Zion Tech Group - Intelligent Document Analysis</title>
         <meta name="description" content="Automate document processing with AI-powered solutions. Extract data, classify documents, and streamline workflows with 99.9% accuracy." />
         <meta name="keywords" content="AI document processing, document automation, data extraction, OCR, document analysis, Zion Tech Group" />
@@ -68,9 +67,9 @@ const AIDocumentProcessingPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}</div>
+        {/* Hero Section */}</></div>
         <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <div className="inline-flex items-center space-x-2 bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
                 <FileText className="w-4 h-4" />
@@ -99,7 +98,7 @@ const AIDocumentProcessingPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Advanced AI Capabilities</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -122,7 +121,7 @@ const AIDocumentProcessingPage: React.FC = () => {
 
         {/* Document Types Section */}
         <section className="py-16 px-4 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Supported Document Types</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -144,7 +143,7 @@ const AIDocumentProcessingPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -187,7 +186,7 @@ const AIDocumentProcessingPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center"></div>
+          </section><div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 rounded-2xl p-12 border border-purple-500/30"></div>
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Automate Your Document Processing?

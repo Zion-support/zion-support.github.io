@@ -144,8 +144,7 @@ const SupportPage: React.FC = () => {
     : filteredFaqs;
 
   return (
-    <>
-      <SEOOptimizer
+    <><SEOOptimizer
         title="Support Center - Zion Tech Group"
         description="Get help and support for Zion Tech Group services. Find answers to common questions, contact our team, and access comprehensive resources."
         keywords={['support', 'help', 'FAQ', 'technical support', 'customer service', 'AI support']}
@@ -156,7 +155,7 @@ const SupportPage: React.FC = () => {
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="text-center mb-16">
+          </></div></main></div><section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
               Support Center
             </h1>
@@ -178,7 +177,7 @@ const SupportPage: React.FC = () => {
                   type="text"
                   placeholder="Search for help..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={{{{{(e) => setSearchQuery(e.target.value)}}}}}
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
               </div>
@@ -190,7 +189,7 @@ const SupportPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Get Support
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {supportChannels.map((channel, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <channel.icon className={`w-12 h-12 mx-auto mb-4 ${channel.color}`} />
@@ -208,11 +207,11 @@ const SupportPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Browse by Category
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
+            </section><div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
               {supportCategories.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={{{{{() => setSelectedCategory(category.id)}}}}}
                   className={`p-4 rounded-lg text-center transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-cyan-500 text-slate-900'
@@ -232,7 +231,7 @@ const SupportPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Frequently Asked Questions
             </h2>
-            <div className="max-w-4xl mx-auto space-y-4">
+            </section><div className="max-w-4xl mx-auto space-y-4">
               {searchResults.map((faq) => (
                 <div key={faq.id} className="cyber-card p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
@@ -247,7 +246,7 @@ const SupportPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Helpful Resources
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {resources.map((resource, index) => (
                 <Link
                   key={index}
@@ -269,7 +268,7 @@ const SupportPage: React.FC = () => {
 
           {/* Contact CTA */}
           <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
+            </section><div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
                 Still Need Help?
               </h2>

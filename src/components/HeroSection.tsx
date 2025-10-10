@@ -3,7 +3,7 @@ export default function HeroSection() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 particle-field"></div>
+      </section><div className="absolute inset-0 particle-field"></div>
       <div className="absolute inset-0 cyber-scan-effect"></div>
       
       {/* Main Content */}

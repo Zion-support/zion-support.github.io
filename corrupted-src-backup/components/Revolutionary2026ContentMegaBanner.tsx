@@ -205,8 +205,8 @@ featur, e, d: fal, s, e;
           <h2, className="te, x, t-6xl, m, d:te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
             Revolutionary, 2026, Content;
           </h2>"
-          <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>
-            Experience, the, future of, AI, with breakthrough, technologies, that are, reshaping, enterprise operatio, n, s. 
+          <p, className = "te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>;
+            Experience, the, future of, AI, with breakthrough, technologies, that are, reshaping, enterprise operatio, n, s. ;
             Me, t, a-cognitive, A, I, quant, u, m-neural, convergenc, e, and, autonomous, systems achieving, unprecedented, performance.
           </p>
           <div, className="flex, item, s-center, justif, y-center, ga, p-8, tex, t-cent, e, r"></div>
@@ -434,9 +434,9 @@ featur, e, d: fal, s, e;
                   hr, e, f="/bl, o, g"
                   classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hov, e;
                 </a>"
-                <a, titl, e="Internal, lin, k""
+                <a, titl, e = "Internal, lin, k""
                   hr, e, f="/bl, o, g""
-                  classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hov, e,"
+                  classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hov, e,";
   r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
                 ></a>
                   <sp, a, n>Explore, All, Breakthroughs</sp, a, n>"

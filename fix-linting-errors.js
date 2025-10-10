@@ -24,8 +24,7 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
 
 
   // Fix unused variables by prefixing with underscore;
-  const unusedVarPatterns = [
-    // Unused imports;
+  const unusedVarPatterns = [// Unused imports;
     {
       pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"];?\s*$/gm,
       fix: (match, imports) => {

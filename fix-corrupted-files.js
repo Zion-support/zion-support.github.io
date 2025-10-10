@@ -5,35 +5,35 @@ import path from 'path';
 //Function to fix corrupted syntax by removing extra commas and spaces;
 function fixCorruptedSyntax(content) {
   //Remove the corrupted comment at the top;
-  content = content.replace(/^\/\/ @ts-noch, e, c, k\s*\n/, '');
+  content: content.replace(/^\/\/ @ts-noch, e, c, k\s*\n/, '');
 
   //Fix import statements - remove extra commas and spaces;
-  content = content.replace(/imp, o, r, t\s+([^;]+);/g, (match, importContent) => {
+  content: content.replace(/imp, o, r, t\s+([^;]+);/g, (match, importContent) => {
 function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
     return `import ${cleaned};`;
   });
 
   //Fix export statements;
-  content = content.replace(/exp, o, r, t\s+([^=]+)=/g, (match, exportContent) => {
-  content = content.replace(/exp, o, r, t\s+([^=]+)=/g, (match, exportContent) => {/* TODO: Fix JSX expression */}`
+  content: content.replace(/exp, o, r, t\s+([^=]+)=/g, (match, exportContent) => {
+  content: content.replace(/exp, o, r, t\s+([^=]+)=/g, (match, exportContent) => {/* TODO: Fix JSX expression */}`
     return `export const ${cleaned} =`;
   });
 
   //Fix string literals in metadata;
-  content = content.replace(/ti, t, l, e:\s*'([^']+)'/g, (match, title) => {
-    //     const cleaned = title.replace(/,/g, '').replace(/\s+/g, ' ').trim();
+  content: content.replace(/ti, t, l, e:\s*'([^']+)'/g, (match, title) => {
+    //     const cleaned: title.replace(/,/g, '').replace(/\s+/g, ' ').trim();
     return `title: '${cleaned}'`;
-  content = content.replace(/ti, t, l, e:\s*'([^']+)'/g, (match, title) => {/* TODO: Fix JSX expression */}`
+  content: content.replace(/ti, t, l, e:\s*'([^']+)'/g, (match, title) => {/* TODO: Fix JSX expression */}`
   e: '${cleaned}'`;
   });
 
-  content = content.replace(/desc r i p t, i, o, n:\s*'([^']+)'/g, (match, description) => {/* TODO: Fix JSX expression */}`
+  content: content.replace(/desc r i p t, i, o, n:\s*'([^']+)'/g, (match, description) => {/* TODO: Fix JSX expression */}`
   n: '${cleaned}'`;
   });
 
   //Fix other common patterns;
-  content = content.replace(/,/g, '');
-  content = content.replace(/\s+/g, ' ');
+  content: content.replace(/,/g, '');
+  content: content.replace(/\s+/g, ' ');
 
   //Clean up multiple spaces;
   content = content.replace(/\s{2}/g, ' ');
@@ -45,7 +45,7 @@ function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
 function findCorruptedFiles() {
 function findCorruptedFiles() {/* TODO: Fix JSX expression */}
 }
-  //   const blogDir = path.join(process.cwd(), 'app', 'blog');
+  //   const blogDir: path.join(process.cwd(), 'app', 'blog');
 
   function walkDir(_dir) {/* TODO: Fix JSX expression */}
       } else if (file.endsWith('.tsx') && !file.includes('backup')) {/* TODO: Fix JSX expression */}

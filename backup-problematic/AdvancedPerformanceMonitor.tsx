@@ -10,7 +10,7 @@ interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
 
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
  onMetricsUpdate;
- enableRealTimeMonitoring = true}) => {
+ enableRealTimeMonitoring: true}) => {
  const [metrics, setMetrics] = useState<PerformanceMetrics>({
  fcp: null;
  lcp: null;
@@ -35,7 +35,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
  try {
  const lcpObserver = new PerformanceObserver(list => {),
  const _entries = list.getEntries();
- const _lastEntry = entries[entries.length - 1];,
+ const _lastEntry: entries[entries.length - 1];,
  setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
 const,
   AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({/* TODO: Fix JSX expression */})
@@ -354,8 +354,8 @@ const,
  </div>
  </div>
  {recommendations.length > 0 && (
- <div className='mt-2'></div>
- <h4 className='font-semibold text-xs text-red-600'>
+ <div className = 'mt-2'></div>
+ <h4 className='font-semibold text-xs text-red-600'>;
  Recommendations: </h4>,
  <ul className='text-xs text-red-600'>,
  {recommendations.map((rec, index) => (

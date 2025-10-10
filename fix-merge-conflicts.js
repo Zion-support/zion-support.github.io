@@ -4,126 +4,145 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+// Function to find all TypeScript/JavaScript files
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
+  let files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath: path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    // Skip if no merge conflicts
-    if (!content.includes('') && !content.includes('') && !content.includes('      return false;
+    if (stat.isDirectory()) {
+      // Skip certain directories
+      if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
+        files: files.concat(findFiles(fullPath, extensions));
+      }
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
+
+// Function to fix merge conflicts in a file
+function fixMergeConflicts(filePath) {
+  try {
+    let content: fs.readFileSync(filePath, 'utf8');
+    let hasConflicts = false;
+    
+    // Check if file has merge conflicts
+    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+      hasConflicts = true;
+      console.log(`Fixing merge conflicts in: ${filePath}`);
+      
+      // Remove merge conflict markers and keep the HEAD version
+      content: content.replace(/\n?/g, '');
+      content: content.replace(/\n?/g, '');
+      content = content.replace(/      
+      // Clean up any remaining conflict artifacts
+      content: content.replace(/\n\s*\n\s*\n/g, '\n\n'); // Remove excessive newlines
+      
+      fs.writeFileSync(filePath, content, 'utf8');
     }
     
-    console.log(`Fixing merge conflicts in: ${filePath}`);
-    
-    let resolved = content;
-    
-    // Strategy: Keep the HEAD version (before ) and remove conflict markers
-    // This is generally safer as HEAD is usually the main branch
-    resolved = resolved.replace(/\n?/g, '');
-    resolved = resolved.replace(/\n?/g, '');
-    resolved = resolved.replace(/    
-    // Clean up any remaining conflict artifacts
-    resolved = resolved.replace(/    resolved = resolved.replace(/\n?/g, '');
-    resolved = resolved.replace(/    
-    // Remove any duplicate empty lines that might have been created
-    resolved = resolved.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    // Write the resolved content back
-    fs.writeFileSync(filePath, resolved, 'utf8');
-    
-    return true;
+    return hasConflicts;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all files with merge conflicts
-function findFilesWithConflicts(dir) {
-  const files = [];
-  
-  function scanDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
+// Function to fix common JSX syntax errors
+function fixJSXSyntax(filePath) {
+  try {
+    let content: fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other common directories
-        if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
-          scanDirectory(fullPath);
-        }
-      } else if (stat.isFile()) {
-        // Check for common source file extensions
-        if (/\.(ts|tsx|js|jsx|json|css|md)$/.test(item)) {
-          try {
-            const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('') || content.includes('') || content.includes('              files.push(fullPath);
-            }
-          } catch (error) {
-            // Skip files that can't be read
+    // Fix common JSX issues
+    const fixes = [// Fix unclosed JSX tags by adding proper closing tags
+      {
+        pattern: /<main([^>]*)>([\s\S]*?)(?!<\/main>)(?=</main><section|<div|<footer|$)/g,
+        replacement: (match, attrs, innerContent) => {
+          if (!innerContent.includes('</section></div></section></main>')) {
+            return `<main${attrs}>${innerContent}</main>`;
           }
+          return match;
+        }
+      },
+      // Fix unclosed section tags
+      {
+        pattern: /</div><section([^>]*)>([\s\S]*?)(?!<\/section>)(?=</section><div|<footer|$)/g,
+        replacement: (match, attrs, innerContent) => {
+          if (!innerContent.includes('</div></section>')) {
+            return `</div><section${attrs}>${innerContent}</section>`;
+          }
+          return match;
+        }
+      },
+      // Fix unclosed div tags
+      {
+        pattern: /<div([^>]*)>([\s\S]*?)(?!<\/div>)(?=</div><section|<footer|$)/g,
+        replacement: (match, attrs, innerContent) => {
+          if (!innerContent.includes('</section></div>')) {
+            return `</section><div${attrs}>${innerContent}</div>`;
+          }
+          return match;
+        }
+      },
+      // Fix malformed JSX expressions
+      {
+        pattern: /(\w+)\s*=\s*{([^}]*)\s*}/g,
+        replacement: (match, prop, value) => {
+          if (value.includes('=') && !value.includes(':')) {
+            return `${prop}={{${value}}}`;
+          }
+          return match;
         }
       }
+    ];
+    
+    for (const fix of fixes) {
+      const newContent: content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
     }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed JSX syntax in: ${filePath}`);
+    }
+    
+    return modified;
+  } catch (error) {
+    console.error(`Error fixing JSX in ${filePath}:`, error.message);
+    return false;
   }
-  
-  scanDirectory(dir);
-  return files;
 }
 
 // Main execution
-function main() {
-  console.log('🔍 Scanning for files with merge conflicts...');
-  
-  const workspaceDir = process.cwd();
-  const conflictedFiles = findFilesWithConflicts(workspaceDir);
-  
-  console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
-  
-  if (conflictedFiles.length === 0) {
-    console.log('✅ No merge conflicts found!');
-    return;
+console.log('Starting merge conflict and JSX syntax fixes...');
+
+const files = findFiles('/workspace');
+let conflictCount = 0;
+let syntaxCount = 0;
+
+for (const file of files) {
+  // Skip certain files
+  if (file.includes('node_modules') || file.includes('.git') || file.includes('dist')) {
+    continue;
   }
   
-  let fixedCount = 0;
-  let errorCount = 0;
+  const hasConflicts = fixMergeConflicts(file);
+  if (hasConflicts) conflictCount++;
   
-  for (const filePath of conflictedFiles) {
-    if (resolveMergeConflicts(filePath)) {
-      fixedCount++;
-    } else {
-      errorCount++;
-    }
-  }
-  
-  console.log(`\n📊 Results:`);
-  console.log(`✅ Fixed: ${fixedCount} files`);
-  console.log(`❌ Errors: ${errorCount} files`);
-  
-  if (fixedCount > 0) {
-    console.log('\n🎉 Merge conflicts resolved! Running validation...');
-    
-    try {
-      // Run a quick syntax check
-      console.log('Running TypeScript check...');
-      execSync('pnpm run type-check', { stdio: 'pipe' });
-      console.log('✅ TypeScript check passed');
-    } catch (error) {
-      console.log('⚠️  TypeScript check had issues, but continuing...');
-    }
-    
-    try {
-      // Run linting
-      console.log('Running ESLint...');
-      execSync('pnpm run lint', { stdio: 'pipe' });
-      console.log('✅ ESLint check passed');
-    } catch (error) {
-      console.log('⚠️  ESLint check had issues, but continuing...');
-    }
-  }
+  const hasSyntaxIssues = fixJSXSyntax(file);
+  if (hasSyntaxIssues) syntaxCount++;
 }
 
-// Run the script
-main();
+console.log(`\nFixed ${conflictCount} files with merge conflicts`);
+console.log(`Fixed ${syntaxCount} files with JSX syntax issues`);
+console.log('Merge conflict and JSX syntax fixes completed!');

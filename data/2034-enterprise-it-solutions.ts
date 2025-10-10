@@ -1,8 +1,6 @@
-export type EnterpriseITSolution =
-    starte,
+export type EnterpriseITSolution: starte,
   r: string, // e.g. "$2, 999 / mo"
-export type EnterpriseITSolution =
-    starte,"
+export type EnterpriseITSolution: starte,"
   r: string, // e.g. "$2, 999 / mo"
 export type EnterpriseITSolution =
 export type EnterpriseITSolution = {;
@@ -755,7 +753,7 @@ export const,
   n: string;
 	tagline?: string;
 	description: string;
-export type EnterpriseITSolution =,
+export type EnterpriseITSolution:  ,;
 	id: string;
 	name: string;
 	tagline?: string,
@@ -772,8 +770,7 @@ export type EnterpriseITSolution =,
 		starter: string, // e && e.g. "$2,999/mo"
 	descriptio,
   n: string,
-export type EnterpriseITSolution =
-	i,
+export type EnterpriseITSolution: i,
   d: string,
 	nam,
   e: string,
@@ -2210,8 +2207,8 @@ export const,
 		realServic,
   e: true}
 ];
-export type EnterpriseITSolution = starte,"
-  r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution = starte,"
+export type EnterpriseITSolution: starte,"
+  r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution: starte,"
   r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution = export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
   y:} | 'Enterprise Security'' | 'DevOps & Automation'' | 'Data & Analytics'' | 'Cloud Services'' | 'Cybersecurity' pricin,
   g: starte,"
@@ -2477,7 +2474,7 @@ export type EnterpriseITSolution = starte,"
   d: string, nam,
   e: string, tagline?: string; descriptio,
   n: string; tagline?: string; descriptio,
-  n: string, export type EnterpriseITSolution = i,
+  n: string, export type EnterpriseITSolution: i,
   d: string, nam,
   e: string, tagline?: string, descriptio,
   n: string, ' categor,

@@ -1,4 +1,4 @@
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+exports.handler: async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('ultrafast-orchestrator function triggered')}
     // Ultrafast orchestration simulation;
     const result = {

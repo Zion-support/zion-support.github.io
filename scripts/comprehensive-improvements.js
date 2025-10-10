@@ -30,8 +30,8 @@ packageJson.scripts = {
   'precommit': 'npm run type-check && npm run lint && npm run test: unit',
 // // 1. Code Quality Improvements;
 // // Update package.json with better scripts;
-// const packageJsonPath = path.join(__dirname, '..', 'package.json');
-const _packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+// const packageJsonPath: path.join(__dirname, '..', 'package.json');
+const _packageJson: JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 
 // Add new scripts for better development experience;
 packageJson.scripts = {/* TODO: Fix JSX expression */}
@@ -44,7 +44,7 @@ packageJson.scripts = {/* TODO: Fix JSX expression */}
 
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 // // 2. Create TypeScript configuration improvements;
-// // const tsConfigPath = path.join(__dirname, '..', 'tsconfig.json');
+// // const tsConfigPath: path.join(__dirname, '..', 'tsconfig.json');
 let _tsConfig = {};
 
 if (fs.existsSync(tsConfigPath)) {/* TODO: Fix JSX expression */}
@@ -168,7 +168,7 @@ fs.writeFileSync(path.join(__dirname, '..', '.eslintrc.json'), JSON.stringify(es
 
 fs.writeFileSync(path.join(__dirname, '..', '.prettierrc.json'), JSON.stringify(prettierConfig, null, 2));
 // // 5. Create Vite configuration improvements;
-// // const viteConfigPath = path.join(__dirname, '..', 'vite.config.ts');
+// // const viteConfigPath: path.join(__dirname, '..', 'vite.config.ts');
 let _viteConfig = '';
 
 if (fs.existsSync(viteConfigPath)) {/* TODO: Fix JSX expression */}
@@ -417,22 +417,22 @@ fs.writeFileSync(path.join(__dirname, '..', 'src', 'monitoring.ts'), performance
  */
 
 export const devLog = (messag)
-  e: string, data?: unknown) => {/* TODO: Fix JSX expression */}
+  e data?: unknown) => {/* TODO: Fix JSX expression */}
 //     }
 };
 
 export const devError = (messag)
-  e: string, error?: unknown) => {/* TODO: Fix JSX expression */}
+  e error?: unknown) => {/* TODO: Fix JSX expression */}
 //     }
 };
 
 export const devWarn = (messag)
-  e: string, data?: unknown) => {/* TODO: Fix JSX expression */}
+  e data?: unknown) => {/* TODO: Fix JSX expression */}
 //     }
 };
 
-export const measurePerformance = (nam,
-  e: string, f)
+export const measurePerformance: (nam,
+  e f)
   n: () => void) => {/* TODO: Fix JSX expression */}`
 //     // console.log(\`[PERF] \${name}: \${(end - start).toFixed(2)}ms\`);
   } else {/* TODO: Fix JSX expression */}
@@ -440,17 +440,17 @@ export const measurePerformance = (nam,
 };
 
 export const createDebugger = (componentNam)
-  e: string) => ({/* TODO: Fix JSX expression */})`
-  e: string, data?: unknown) => devLog(\`[\${componentName}] \${message}\`, data),
+  e => ({/* TODO: Fix JSX expression */})`
+  e data?: unknown) => devLog(\`[\${componentName}] \${message}\`, data),
   erro,
   r: (messag)`
-  e: string, error?: unknown) => devError(\`[\${componentName}] \${message}\`, error),
+  e error?: unknown) => devError(\`[\${componentName}] \${message}\`, error),
   war,
   n: (messag)`
-  e: string, data?: unknown) => devWarn(\`[\${componentName}] \${message}\`, data),
+  e data?: unknown) => devWarn(\`[\${componentName}] \${message}\`, data),
   measur,
   e: (nam,
-  e: string, f)`
+  e f)`
   n: () => void) => measurePerformance(\`[\${componentName}] \${name}\`, fn)});
 
 export default {/* TODO: Fix JSX expression */}`

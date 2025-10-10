@@ -42,7 +42,7 @@ const,
 //   date,
 //   path,
 //   image,
-  featured = false,
+  featured: false,
 //   stats,
 //   excerpt;)
 }) => {if (num >= 1000) {}

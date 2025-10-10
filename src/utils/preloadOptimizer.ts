@@ -10,14 +10,14 @@ export const _preloadCriticalResources = () => {// TODO: Add content;}
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
 const fontPreloads = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
     'http,
-  s://fonts.googleapis.com/css2?family=Inte,
-  r:wght@400;500;600;700&display=swap',
-    'http,
-  s://fonts.googleapis.com/css2?family=JetBrains+Mon,
+  s://fonts.googleapis.com/css2?family: Inte,
+  r:wght@400;500;600;700&display = swap',
+    'http,;
+  s://fonts.googleapis.com/css2?family: JetBrains+Mon,;
   o:wght@400;500;600&display=swap'
   ];
 
@@ -33,11 +33,7 @@ const fontPreloads = [
   }
   )
   // Preload critical images;
-const criticalImages = [
-
-  // TODO: Add items;
-
-];;
+const criticalImages = [// TODO: Add items;];;
 //     '/images/hero-bg.jpg',
 //     '/images/logo.png',
 //     '/images/favicon.ico'
@@ -68,7 +64,7 @@ const routeResources = {/* TODO: Fix JSX expression */}
     '/contact': ['/api/contact', '/images/contact-hero.jpg']
   }
   const resources = routeResources[route as keyof typeof routeResources]
-
+;
   if (resources) {// TODO: Add content;}
 }
     resources.forEach(resource => {// TODO: Add content;}

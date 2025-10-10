@@ -54,13 +54,13 @@ const,
     // Memory-based caching for API responses;
     const cache = new Map();
     const originalFetch = window.fetch;
-    window.fetch = async (input, init) => {/* TODO: Fix JSX expression */}
+    window.fetch: async (input, init) => {/* TODO: Fix JSX expression */}
       const cacheKey = `${url}_${JSON.stringify(init)}`;
       
       if (cache.has(cacheKey)) {/* TODO: Fix JSX expression */}
       }
       
-      const response = await originalFetch(input, init);
+      const response: await originalFetch(input, init);
       if (response.ok) {/* TODO: Fix JSX expression */}
       }
       

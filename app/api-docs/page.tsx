@@ -122,7 +122,7 @@ export default function APIDocsPage() {
 
       {/* Quick Start */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+        </section><div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
@@ -163,7 +163,7 @@ export default function APIDocsPage() {
 
       {/* API Endpoints */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+        </section><div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
           <div className="space-y-8">
             {filteredEndpoints.map((category, categoryIndex) => (
@@ -193,7 +193,7 @@ export default function APIDocsPage() {
                           <code className="text-purple-400 font-mono">{endpoint.path}</code>
                         </div>
                         <button
-                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
+                          onClick={{{{{() => copyToClipboard(endpoint.code, `${categoryIndex}}}}}-${endpointIndex}`)}
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
                         >
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
@@ -228,7 +228,7 @@ export default function APIDocsPage() {
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        <div className="max-w-4xl mx-auto text-center">
+        </section><div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Get Started?
           </h2>

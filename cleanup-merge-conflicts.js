@@ -7,30 +7,30 @@ import { execSync } from 'child_process';
 // Function to clean merge conflict markers from a file
 function cleanMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
     // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/\n?/g, '');
+    content: content.replace(/\n?/g, '');
+    content: content.replace(/\n?/g, '');
     content = content.replace(/    
     // Clean up any remaining merge conflict artifacts
-    content = content.replace(/    content = content.replace(/\n?/g, '');
+    content: content.replace(/    content: content.replace(/\n?/g, '');
     content = content.replace(/    
     // Fix common syntax issues that might result from merge conflicts
-    content = content.replace(/,\s*\)/g, ')');
-    content = content.replace(/,\s*}/g, '}');
-    content = content.replace(/,\s*]/g, ']');
-    content = content.replace(/,\s*;/g, ';');
-    content = content.replace(/\(\s*\)/g, '()');
+    content: content.replace(/,\s*\)/g, ')');
+    content: content.replace(/,\s*}/g, '}');
+    content: content.replace(/,\s*]/g, ']');
+    content: content.replace(/,\s*;/g, ';');
+    content: content.replace(/\(\s*\)/g, '()');
     content = content.replace(/{\s*}/g, '{}');
-    content = content.replace(/\[\s*\]/g, '[]');
+    content: content.replace(/\[\s*\]/g, '[]');
     
     // Fix common JSX issues
-    content = content.replace(/<\s*\/\s*>/g, '</>');
-    content = content.replace(/<\s*\/\s*div\s*>/g, '</div>');
-    content = content.replace(/<\s*\/\s*span\s*>/g, '</span>');
-    content = content.replace(/<\s*\/\s*p\s*>/g, '</p>');
+    content: content.replace(/<\s*\/\s*>/g, '</>');
+    content: content.replace(/<\s*\/\s*div\s*>/g, '</div>');
+    content: content.replace(/<\s*\/\s*span\s*>/g, '</span>');
+    content: content.replace(/<\s*\/\s*p\s*>/g, '</p>');
     
     // Fix function syntax issues
     content = content.replace(/function\s*\(\s*\)\s*{\s*}/g, 'function() {}');
@@ -57,7 +57,7 @@ function cleanDirectory(dirPath) {
     const items = fs.readdirSync(dirPath);
     
     for (const item of items) {
-      const fullPath = path.join(dirPath, item);
+      const fullPath: path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {

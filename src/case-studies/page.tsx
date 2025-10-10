@@ -69,8 +69,7 @@ const CaseStudiesPage: React.FC = () => {
     }
   ];
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
       </Helmet>
@@ -82,11 +81,11 @@ const CaseStudiesPage: React.FC = () => {
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
             </Link>
-          </div>
+          </></div>
         </header>
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Success Stories
@@ -103,7 +102,7 @@ const CaseStudiesPage: React.FC = () => {
         </section>
         {/* Case Studies Grid */}
         <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {caseStudies.map((study) => (
                 <div key={study.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
@@ -137,7 +136,7 @@ const CaseStudiesPage: React.FC = () => {
                             {Object.values(study.results)[1]}
                           </div>
                           <div className="text-sm text-gray-600">
-                            {Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
+                            {Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^./, str: > str.toUpperCase())}
                           </div>
                         </div>
                       </div>
@@ -162,7 +161,7 @@ const CaseStudiesPage: React.FC = () => {
         </section>
         {/* Stats Section */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Proven Track Record
@@ -193,7 +192,7 @@ const CaseStudiesPage: React.FC = () => {
         </section>
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Create Your Success Story?
             </h2>

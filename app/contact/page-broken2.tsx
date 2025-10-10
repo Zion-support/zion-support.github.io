@@ -43,7 +43,7 @@ phone: '',
     
     try {
       // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve: > setTimeout(resolve, 1000));
       setSubmitStatus('success');
       setFormData({
         name: '',
@@ -102,8 +102,7 @@ phone: '',
   ];
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." />
         <meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch" />
@@ -124,7 +123,7 @@ phone: '',
               how our AI and IT solutions can help you achieve your goals.
             </p>
 
-          </div>
+          </></div>
         </section>
 
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -266,8 +265,7 @@ phone: '',
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    <><div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></></div>
                       <span>Sending...</span>
                     </>
                   ) : (

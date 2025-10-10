@@ -1,7 +1,6 @@
 
 export default function About() {
-  return(<>
-      <Head>
+  return(<><Head>
         <title>About Us - Zion Tech Group</title>
         <meta;
           name="description"
@@ -11,13 +10,13 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" /></link>
       </Head>
       <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}</div>
+        {/* Hero Section */}</></div>
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4">
+          </section><div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md: text-5xl font-bold mb-6">
                 About <span className="text-yellow-300">Zion Tech Group</span>
-          <div className="container mx-auto px-4"></section>
+          <div className="container mx-auto px-4"></div></section>
             <div className="max-w-4xl mx-auto text-center"></div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 About</h1> <span className="text-yellow-300">Zion Tech Group</span>
@@ -31,20 +30,20 @@ export default function About() {
         </section>)
 ),
         {/* Mission Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4"></section>
+        <section className = "py-16">
+          </section><div className="container mx-auto px-4"></div></section>
             <div className="max-w-6xl mx-auto"></div>
               <div className="mb-12"></div>
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">
                   Our</h2> <span className="text-blue-600">Mission</span>
                 </h2>
                 <p className="text-lg text-gray-600 mb-4">
-                  To empower businesses with innovative technology solutions that drive growth)
+                  To empower businesses with innovative technology solutions that drive growth);
                   efficiency, and digital transformation. We believe technology should be;
                   accessible, reliable, and transformative.
                 </p>
-                <p className="text-lg text-gray-600">
-                  Our mission is to bridge the gap between complex technology and business needs)
+                <p className = "text-lg text-gray-600">;
+                  Our mission is to bridge the gap between complex technology and business needs);
                   delivering solutions that not only meet current requirements but also scale for;
                   future growth and innovation.
                 </p>
@@ -75,7 +74,7 @@ export default function About() {
 ,
         {/* Values Section */}
         <section className="py-16 bg-white">
-          <div className="container mx-auto px-4"></section>
+          </section><div className="container mx-auto px-4"></div></section>
             <div className="max-w-6xl mx-auto"></div>
               <div className="text-center mb-12"></div>
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">
@@ -86,7 +85,7 @@ export default function About() {
                   solutions.
                 </p>
               </div>
-              <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className = "grid md: grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center p-6 bg-gray-50 rounded-lg">
                   <div className="text-4xl mb-4">
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
@@ -97,31 +96,31 @@ export default function About() {
                     </span>,
                   </div>,
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Excellence</h3>,
-                  <p className="text-gray-600">,
+                  <p className="text-gray-600">,;
                     We strive for excellence in every project, delivering high-quality solutions;
                     that exceed expectations.
                   </p>
                 </div>
-                <div className="text-center p-6 bg-gray-50 rounded-lg"></div>
+                <div className = "text-center p-6 bg-gray-50 rounded-lg"></div>
                   <div className="text-4xl mb-4"></div>
                     <span role="img" aria-label="handshake">
                       🤝
                     </span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Collaboration</h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600">;
                     We work closely with our clients as partners, ensuring their vision becomes;
                     reality.
                   </p>
                 </div>
-                <div className="text-center p-6 bg-gray-50 rounded-lg"></div>
+                <div className = "text-center p-6 bg-gray-50 rounded-lg"></div>
                   <div className="text-4xl mb-4"></div>
                     <span role="img" aria-label="lightbulb">
                       💡
                     </span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Innovation</h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600">;
                     We embrace cutting-edge technologies and innovative approaches to solve complex;
                     challenges.
                   </p>
@@ -136,8 +135,7 @@ export default function About() {
                   <p className="text-gray-600">
 export default function About() {/* TODO: Fix JSX expression */}
 }
-  return (<>
-      <Head></Head>
+  return (<><Head></Head>
         <title>About Us - Zion Tech Group</title>
         <meta></meta>
           name="description""
@@ -146,7 +144,7 @@ export default function About() {/* TODO: Fix JSX expression */}
         <meta name="viewport" content="width=device-width, initial-scale=1" /></meta>"
         <link rel="icon" href="/favicon.ico" /></link>
       </Head>"
-      <div className="min-h-screen bg-gray-50"></div>
+      <div className="min-h-screen bg-gray-50"></></div>
         {/* Hero Section */}"
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>"
           <div className="container mx-auto px-4"></div>"
@@ -164,7 +162,7 @@ export default function About() {/* TODO: Fix JSX expression */}
         </section>
 
         {/* Mission Section */}"
-        <section className="py-16"></section>"
+        <section className = "py-16"></section>"
           <div className="container mx-auto px-4"></div>"
             <div className="max-w-6xl mx-auto"></div>"
               <div className="mb-12"></div>"
@@ -172,12 +170,12 @@ export default function About() {/* TODO: Fix JSX expression */}
                   Our <span className="text-blue-600">Mission</span>
                 </h2>"
                 <p className="text-lg text-gray-600 mb-4"></p>
-                  To empower businesses with innovative technology solutions that drive growth,
+                  To empower businesses with innovative technology solutions that drive growth,;
                   efficiency, and digital transformation. We believe technology should be;
                   accessible, reliable, and transformative.
                 </p>"
-                <p className="text-lg text-gray-600"></p>
-                  Our mission is to bridge the gap between complex technology and business needs,
+                <p className = "text-lg text-gray-600"></p>;
+                  Our mission is to bridge the gap between complex technology and business needs,;
                   delivering solutions that not only meet current requirements but also scale for;
                   future growth and innovation.
                 </p>
@@ -218,8 +216,8 @@ export default function About() {/* TODO: Fix JSX expression */}
                   solutions.
                 </p>
               </div>"
-              <div className="grid,
-  md:grid-cols-2,"
+              <div className = "grid,
+  md:grid-cols-2,";
   lg:grid-cols-4 gap-8"></div>"
                 <div className="text-center p-6 bg-gray-50 rounded-lg"></div>"
                   <div className="text-4xl mb-4"></div>"
@@ -228,43 +226,43 @@ export default function About() {/* TODO: Fix JSX expression */}
                     </span>
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Excellence</h3>"
-                  <p className="text-gray-600"></p>
+                  <p className="text-gray-600"></p>;
                     We strive for excellence in every project, delivering high-quality solutions;
                     that exceed expectations.
                   </p>
                 </div>"
-                <div className="text-center p-6 bg-gray-50 rounded-lg"></div>"
+                <div className = "text-center p-6 bg-gray-50 rounded-lg"></div>"
                   <div className="text-4xl mb-4"></div>"
                     <span role="img" aria-label="handshake"></span>
                       🤝
                     </span>
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Collaboration</h3>"
-                  <p className="text-gray-600"></p>
+                  <p className="text-gray-600"></p>;
                     We work closely with our clients as partners, ensuring their vision becomes;
                     reality.
                   </p>
                 </div>"
-                <div className="text-center p-6 bg-gray-50 rounded-lg"></div>"
+                <div className = "text-center p-6 bg-gray-50 rounded-lg"></div>"
                   <div className="text-4xl mb-4"></div>"
                     <span role="img" aria-label="lightbulb"></span>
                       💡
                     </span>
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Innovation</h3>"
-                  <p className="text-gray-600"></p>
+                  <p className="text-gray-600"></p>;
                     We embrace cutting-edge technologies and innovative approaches to solve complex;
                     challenges.
                   </p>
                 </div>"
-                <div className="text-center p-6 bg-gray-50 rounded-lg"></div>"
+                <div className = "text-center p-6 bg-gray-50 rounded-lg"></div>"
                   <div className="text-4xl mb-4"></div>"
                     <span role="img" aria-label="lock"></span>
                       🔒
                     </span>
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Integrity</h3>"
-                  <p className="text-gray-600"></p>
+                  <p className="text-gray-600"></p>;
                     We maintain the highest standards of honesty, transparency, and ethical business;
                     practices.
                   </p>
@@ -275,19 +273,19 @@ export default function About() {/* TODO: Fix JSX expression */}
         </section>
 
         {/* Team Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4"></section>
+        <section className = "py-16">
+          </section><div className="container mx-auto px-4"></div></section>
             <div className="max-w-6xl mx-auto"></div>
               <div className="text-center mb-12"></div>
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">
                   Our</h2> <span className="text-blue-600">Team</span>
                 </h2>
-                <p className="text-lg text-gray-600">
+                <p className="text-lg text-gray-600">;
                   Meet the talented individuals who make Zion Tech Group a leader in technology;
                   solutions.
                 </p>
               </div>
-              <div className="grid md: grid-cols-3 gap-8">
+              <div className = "grid md: grid-cols-3 gap-8">
                 <div className="text-center p-6 bg-white rounded-lg shadow-lg">
                   <div className="text-5xl mb-4">
               <div className="grid md:grid-cols-3 gap-8"></div>
@@ -299,12 +297,12 @@ export default function About() {/* TODO: Fix JSX expression */}
                   </div>,
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Development Team</h3>,
                   <p className="text-blue-600 font-medium mb-2">Senior Full-Stack Developers</p>,
-                  <p className="text-gray-600">,
+                  <p className="text-gray-600">,;
                     Expert developers with years of experience in modern web technologies, mobile;
                     development, and cloud architecture.
                   </p>
                 </div>
-                <div className="text-center p-6 bg-white rounded-lg shadow-lg"></div>
+                <div className = "text-center p-6 bg-white rounded-lg shadow-lg"></div>
                   <div className="text-5xl mb-4"></div>
                     <span role="img" aria-label="designer">
                       🎨
@@ -312,7 +310,7 @@ export default function About() {/* TODO: Fix JSX expression */}
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Design Team</h3>
                   <p className="text-blue-600 font-medium mb-2">UI/UX Designers</p>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600">;
                     Creative designers who craft beautiful, intuitive user experiences that engage;
                     users and drive business results.
                   </p>
@@ -339,7 +337,7 @@ export default function About() {/* TODO: Fix JSX expression */}
                   solutions.
                 </p>
               </div>"
-              <div className="grid,"
+              <div className = "grid,";
   md:grid-cols-3 gap-8"></div>"
                 <div className="text-center p-6 bg-white rounded-lg shadow-lg"></div>"
                   <div className="text-5xl mb-4"></div>"
@@ -349,12 +347,12 @@ export default function About() {/* TODO: Fix JSX expression */}
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Development Team</h3>"
                   <p className="text-blue-600 font-medium mb-2">Senior Full-Stack Developers</p>"
-                  <p className="text-gray-600"></p>
+                  <p className="text-gray-600"></p>;
                     Expert developers with years of experience in modern web technologies, mobile;
                     development, and cloud architecture.
                   </p>
                 </div>"
-                <div className="text-center p-6 bg-white rounded-lg shadow-lg"></div>"
+                <div className = "text-center p-6 bg-white rounded-lg shadow-lg"></div>"
                   <div className="text-5xl mb-4"></div>"
                     <span role="img" aria-label="designer"></span>
                       🎨
@@ -362,12 +360,12 @@ export default function About() {/* TODO: Fix JSX expression */}
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Design Team</h3>"
                   <p className="text-blue-600 font-medium mb-2">UI/UX Designers</p>"
-                  <p className="text-gray-600"></p>
+                  <p className="text-gray-600"></p>;
                     Creative designers who craft beautiful, intuitive user experiences that engage;
                     users and drive business results.
                   </p>
                 </div>"
-                <div className="text-center p-6 bg-white rounded-lg shadow-lg"></div>"
+                <div className = "text-center p-6 bg-white rounded-lg shadow-lg"></div>"
                   <div className="text-5xl mb-4"></div>"
                     <span role="img" aria-label="robot"></span>
                       🤖
@@ -375,7 +373,7 @@ export default function About() {/* TODO: Fix JSX expression */}
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">AI Specialists</h3>"
                   <p className="text-blue-600 font-medium mb-2">Machine Learning Engineers</p>"
-                  <p className="text-gray-600"></p>
+                  <p className="text-gray-600"></p>;
                     AI experts who develop intelligent solutions using machine learning, natural;
                     language processing, and computer vision.
                   </p>
@@ -386,20 +384,20 @@ export default function About() {/* TODO: Fix JSX expression */}
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center"></section>
+        <section className = "py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          </section><div className="container mx-auto px-4 text-center"></div></section>
             <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
-            <p className="text-xl mb-8">
+            <p className="text-xl mb-8">;
               Let&apos;s discuss how our team can help transform your business with innovative;
               technology solutions.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className = "flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+              >;
                 Get In Touch;
               </a>
               <a;
@@ -413,21 +411,21 @@ export default function About() {/* TODO: Fix JSX expression */}
               Let&apos;s discuss how our team can help transform your business with innovative;
               technology solutions.
             </p>"
-            <div className="flex flex-col,"
+            <div className = "flex flex-col,"
   sm:flex-row gap-4 justify-center"></div>
               <a></a>"
                 href="/contact""
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold,"
   hover:bg-gray-100 transition-colors"
-              >
+              >;
                 Get In Touch;
               </a>
               <a></a>"
-                href="/services""
+                href = "/services""
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
   hover:text-blue-600 transition-colors"
-              >
+              >;
                 View Our Services;
               </a>
             </div>

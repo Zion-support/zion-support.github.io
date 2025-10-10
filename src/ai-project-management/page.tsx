@@ -20,7 +20,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
   md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
               AI Project Management;
             </h1>"
-            <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
+            <p className = "text-xl text-cyan-400 mb-8 font-medium"></p>;
               Intelligent project management powered by AI;
             </p>"
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p>
@@ -177,9 +177,9 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                 📞 Cal)
   l: (302) 464-0950;
               </a>"
-              <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
+              <a href = "/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
-  hover:text-indigo-600 transition-all duration-300"></a>
+  hover:text-indigo-600 transition-all duration-300"></a>;
                 Get Free Trial;
               </a>
             </div>

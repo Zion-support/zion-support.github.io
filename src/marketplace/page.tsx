@@ -171,8 +171,7 @@ icon$5: Award,
       description: '100% satisfaction guarantee on all purchases'
 
   return (
-    <>
-      <Navigation />
+    <><Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
@@ -184,7 +183,7 @@ icon$5: Award,
               Discover, compare, and purchase AI and IT solutions from verified vendors. 
               Find the perfect tools, talent, and equipment for your business needs.
             </p>
-          </div>
+          </></div>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
@@ -205,7 +204,7 @@ icon$5: Award,
                   type="text"
                   placeholder="Search marketplace..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onChange={{{{{(e) => setSearchTerm(e.target.value)}}}}}
                   className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
               <button className="px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hover:bg-slate-700 transition-colors flex items-center">
@@ -218,10 +217,10 @@ icon$5: Award,
               {categories.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeCategory === category.id
-                      ? `${category.bgColor} ${category.color} border-2 border-current`
+                  onClick={{{{{() => setActiveCategory(category.id)}}}}}
+                  className={{{{`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
+                    activeCategory: == category.id
+                      ? `${category.bgColor}}}} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
                 >
@@ -231,7 +230,7 @@ icon$5: Award,
           {/* Items Grid */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-white mb-8">
-              {categories.find(cat => cat.id === activeCategory)?.name} ({filteredItems.length})
+              {categories.find(cat: > cat.id === activeCategory)?.name} ({filteredItems.length})
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredItems.map((item) => (
@@ -451,9 +450,9 @@ const categories = [
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950;
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href = "mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-
+;
                 Email Us;
       <Footer /></Footer>
 export default MarketplacePage;

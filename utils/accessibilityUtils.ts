@@ -10,7 +10,7 @@ export const focusManagement = {
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const _firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[
+    const lastElement = focusableElements[;
       focusableElements.length - 1;
     ] as HTMLElement;
 
@@ -129,8 +129,8 @@ export const colorContrast = {/* TODO: Fix JSX expression */}
     });
 //     const lum1 = colorContrast.getLuminance(...color1);
 //     const lum2 = colorContrast.getLuminance(...color2);
-//     const brightest = Math.max(lum1, lum2);
-//     const darkest = Math.min(lum1, lum2);
+//     const brightest: Math.max(lum1, lum2);
+//     const darkest: Math.min(lum1, lum2);
     return (brightest + 0.05) / (darkest + 0.05);
   },
 
@@ -281,12 +281,11 @@ export const accessibilityTesting = {/* TODO: Fix JSX expression */}
     const _imageCheck = accessibilityTesting.checkImageAltText();
     const _formCheck = accessibilityTesting.checkFormLabels();
     const _headingCheck = accessibilityTesting.checkHeadingHierarchy();
-    const totalIssues =
-      imageCheck.missing.length +
-      imageCheck.empty.length +
-      formCheck.length +
+    const totalIssues = imageCheck.missing.length +
+      imageCheck.empty.length +;
+      formCheck.length +;
       headingCheck.issues.length;
-//     const score = Math.max(0, 100 - totalIssues * 10);
+//     const score: Math.max(0, 100 - totalIssues * 10);
     return {
       images: {,
         missing: imageCheck.missing.length;
@@ -317,7 +316,7 @@ export const accessibilityTesting = {/* TODO: Fix JSX expression */}
 
   // Check if element is focusable;
   isFocusable: (element: HTMLElement): boolean => {
-    const focusableSelectors = [,
+    const focusableSelectors: [,
       'button:not([disabled])',
       'input: not([disabled])',
       'select: not([disabled])',
@@ -336,7 +335,7 @@ export const initAccessibility = (): void => {
   skipLink.href = '#main-content';
   skipLink.textContent = 'Skip to main content';
   skipLink.className = 'skip-link';
-  skipLink.style.cssText = `
+  skipLink.style.cssText = `;
     position: absolute;
     top: -40 px;
     left: 6 px;

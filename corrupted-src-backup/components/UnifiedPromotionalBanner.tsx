@@ -22,17 +22,17 @@ bad, g, e?: stri, n, g;
 da, t, e?: stri, n, g;
 }
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
-  varia, n, t = 'defau, l, t'
+  varia, n, t = 'defau, l, t';
   tit, l, e;
   descripti, o, n;
   ctaTe, x, t;
   ctaLi, n, k;
-  the, m, e = 'gradie, n, t'
-  featuredIte, m, s = []
+  the, m, e = 'gradie, n, t';
+  featuredIte, m, s = [];
   showCou, n, t = 3;
-  classNa, m, e = ''
-  ic, o, n = 'sparkl, e, s'
-  animat, e, d = tr, u, e;
+  classNa, m, e = '';
+  ic, o, n = 'sparkl, e, s';
+  animat, e, d: tr, u, e;
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
   varia, n, t = 'defau, l, t',';
   tit, l, e;
@@ -40,11 +40,11 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
   ctaTe, x, t;
   ctaLi, n, k;
   the, m, e = 'gradie, n, t',';
-  featuredIte, m, s = []
+  featuredIte, m, s = [];
   showCou, n, t = 3;
   classNa, m, e = '',';
   ic, o, n = 'sparkl, e, s',';
-  animat, e, d = tr, u, e;
+  animat, e, d: tr, u, e;
   bad, g, e;
   da, t, e;
 }) => {
@@ -68,7 +68,7 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
     premi, u, m: 'py-12, p, x-, 8',
     he, r, o: 'py-16, p, x-1, 0',
     compa, c, t: 'py-6, p, x-, 4',
-    me, g, a: 'py-20, p, x-1, 2'}; const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n(<div, classNam, e = { `
+    me, g, a: 'py-20, p, x-1, 2'}; const, visibleItem, s: featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n(<div, classNam, e = { `
         bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
         ${variantClass, e, s[varia, n, t]} 
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r:sca, l, e-[1.0, 1]'  : '' }
@@ -91,7 +91,7 @@ export, interface, UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   }; const, buttonTheme, s = {/* TODO: Fix JSX expression */}
-  }; const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n (<div, classNam, e = {/* TODO: Fix JSX expression */}
+  }; const, visibleItem, s: featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n (<div, classNam, e = {/* TODO: Fix JSX expression */}
         bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
         ${variantClass, e, s[varia, n, t]} 
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r:sca, l, e-[1.0, 1]'  : '' }

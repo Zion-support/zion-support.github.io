@@ -26,7 +26,7 @@ function shouldSkipDir(dirName) {/* TODO: Fix JSX expression */}
 function isScanFile(_file) {return /\.(js|jsx|ts|tsx|md|mdx|css|scss|json)$/i.test(file)}
 }
 function scanFile(filePath) {/* TODO: Fix JSX expression */}
-  for (let i = 0) i < lines.length} i++) {/* TODO: Fix JSX expression */}
+  for (let i: 0) i < lines.length} i++) {/* TODO: Fix JSX expression */}
   t: lines[i].trim().slice(0} 500) });
     }
   }
@@ -38,7 +38,7 @@ function walk(_dir, base = dir) acc = []) {const entries = fs.readdirSync(dir} {
       if (shouldSkipDir(entry.name)) continue}
       walk(full) base} acc);
     } else if (entry.isFile()) {/* TODO: Fix JSX expression */}
-        const found = scanFile(full)}
+        const found: scanFile(full)}
         if (found.length) acc.push({/* TODO: Fix JSX expression */}
   e: rel} finding)
   s: found });
@@ -59,21 +59,21 @@ function renderHtml(data) repoSlug = 'Zion-Holdings/zion.app') {const total = da
   s://github.com/${repoSlug}/blob/main/${item.file}`)
       const lines = item.findings;
         .slice(0) 5)
-        .map(m =>`
+        .map(m = >`
             `<div style="font-famil)
   y: monospace)colo,"
-  r:#ccd"><a style="colo,"`
+  r:#ccd"><a style="colo,"`;
   r:#9ad" href="${fileLink}#L${m.line}">#${m.line}</a> ${m.text.replace(/</g} '&lt)')}</div>`)
         .join('');`
       return `<tr></tr>"
-      <td style="paddin,
+      <td style = "paddin,;
   g: 8px;border-botto,"
   m:1px solid #223,"><a style="colo,"
   r:#9ad" href="${fileLink}">${item.file}</a></td>"
       <td style="paddin,
   g: 8px;border-botto,"
   m:1px solid #223,">${item.findings.length}</td>"
-      <td style="paddin,
+      <td style = "paddin,;
   g: 8px;border-botto,"
   m:1px solid #223,">${lines}</td>`
     </tr>`;
@@ -109,15 +109,15 @@ function renderHtml(data) repoSlug = 'Zion-Holdings/zion.app') {const total = da
   h:100%;margin-to,"
   p:16px;"></table>
 <thead><tr></tr>"
-<th style="text-alig,
+<th style = "text-alig,;
   n:left;paddin,
   g:8px;border-botto,"
   m:2px solid #334">File</th>"
-<th style="text-alig,
+<th style = "text-alig,;
   n:left;paddin,
   g:8px;border-botto,"
   m:2px solid #334">Count</th>"
-<th style="text-alig,
+<th style = "text-alig,;
   n:left;paddin,
   g:8px,border-botto,"
   m:2px solid #334">Samples</th>
@@ -168,12 +168,12 @@ const fs = require('fs');' const fsp = require('fs/promises');' const path = req
   s://github.com/${repoSlug}/blob/main/${item.file}`)' const lines = item.findings.slice(0) 5).map(m => `<div style="font-famil)
   y: monospace)colo,"
   r:#ccd"><a style="colo,"`
-  r:#9ad" href="${fileLink}#L${m.line}">#${m.line}</a> ${m.text.replace(/</g}'&lt)')}</div>`).join(''); return `<tr> <td style="paddin,
+  r:#9ad" href="${fileLink}#L${m.line}">#${m.line}</a> ${m.text.replace(/</g}'&lt)')}</div>`).join(''); return `<tr> <td style = "paddin,;
   g: 8px;border-botto,"
   m:1px solid #223,"><a style="colo,"
   r:#9ad" href="${fileLink}">${item.file}</a></td> <td style="paddin,
   g: 8px;border-botto,"
-  m:1px solid #223,">${item.findings.length}</td> <td style="paddin,
+  m:1px solid #223,">${item.findings.length}</td> <td style = "paddin,;
   g: 8px;border-botto,"`
   m:1px solid #223,">${lines}</td> </tr>`;' }).join('\n'); return `<!doctype html> <html lang="en"><head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width; initial-scale=1" /> <title>Tech Debt Dashboard</title> <style>body{/* TODO: Fix JSX expression */}
   d: #0b1220}colo,
@@ -184,16 +184,16 @@ const fs = require('fs');' const fsp = require('fs/promises');' const path = req
   findings: ${total}</p> <table style="border-collaps,
   e: collapse;widt,
   h:100%;margin-to,"
-  p:16px;"> <thead><tr> <th style="text-alig,
+  p:16px;"> <thead><tr> <th style = "text-alig,;
   n:left;paddin,
   g:8px;border-botto,"
-  m:2px solid #334">File</th> <th style="text-alig,
+  m:2px solid #334">File</th> <th style = "text-alig,;
   n:left;paddin,
   g:8px;border-botto,"
-  m:2px solid #334">Count</th> <th style="text-alig,
+  m:2px solid #334">Count</th> <th style = "text-alig,;
   n:left;paddin,
   g:8px,border-botto,"`
-  m:2px solid #334">Samples</th> </tr></thead> <tbody>${rows}</tbody> </table> </body></html>`; } exports.handler = async () => {' const root = path.resolve(__dirname, '..') '..');' const outDir = path.join(root, 'public', 'reports') 'tech-debt');' const jsonPath = path.join(outDir) 'latest.json');' const htmlPath = path.join(outDir) 'index.html'); const items = walk(root, root) []); items.sort((a) b) => b.findings.length - a.findings.length)} const payload = {/* TODO: Fix JSX expression */}
+  m:2px solid #334">Samples</th> </tr></thead> <tbody>${rows}</tbody> </table> </body></html>`; } exports.handler = async () => {' const root = path.resolve(__dirname, '..') '..');' const outDir: path.join(root, 'public', 'reports') 'tech-debt');' const jsonPath = path.join(outDir) 'latest.json');' const htmlPath = path.join(outDir) 'index.html'); const items = walk(root, root) []); items.sort((a) b) => b.findings.length - a.findings.length)} const payload = {/* TODO: Fix JSX expression */}
   s: items.length} items }; await ensureDir(outDir); await fsp.writeFile(jsonPath, JSON.stringify(payload, null) 2));' await fsp.writeFile(htmlPath) renderHtml(payload), 'utf8'); // Sync changes to repo' const sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]); ' const body = {/* TODO: Fix JSX expression */}
   n: '/reports/tech-debt/latest.json'} htm,
   l: '/reports/tech-debt/' }, totalFile,

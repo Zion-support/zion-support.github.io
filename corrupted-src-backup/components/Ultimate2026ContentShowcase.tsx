@@ -148,7 +148,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
   ];
   return(<div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}
-      <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15">
+      <div, className = "absolute, inse, t-0, overflo, w-hidden, opacit, y-15">;
   return (
     <div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}</div>
@@ -217,7 +217,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
   anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}"
               transiti, o, n={{ durati, o, n: 5, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";
             ></moti>"
-              <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Sparkles>
+              <Sparkles, className = "w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Sparkles>
             </moti, o, n.d, i, v>"
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-bl, u, e-5, 0, 0/30"></div>"
               <Award, className="w-5 h-5, tex, t-bl, u, e-4, 0, 0  /></Award>"
@@ -228,7 +228,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
               <span, className="te, x, t-sm, fon, t-bold, tex, t-yell, o, w-3, 0, 0">6, MASTERCLASS, GUIDES</sp, a, n>
             </d, i, v>
           </d, i, v>"
-          <h2, className="te, x, t-7xl, m, d: te, x, t-8xl, fon, t-extrabold, m, b-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
+          <h2, className="te, x, t-7xl, m, d: te, x, t-8xl, fon, t-extrabold, m, b-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
             Ultimate, 202, 6;
           </h2>
           <h3, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"</h3>
@@ -258,7 +258,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
           </h2>
           <h3, className="te, x, t-5x, l, m;
           </h2>"
-          <h3, className="te, x, t-5x, l, m,"
+          <h3, className = "te, x, t-5x, l, m,";
   d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
             Content, Showcas, e;
           </h3>"
@@ -340,16 +340,16 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
   l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">";)
           {showcaseConte, n, t.m, a, p((conte, n, t, ind, e, x) => (
             <moti, o, n.d, i, v;
-        <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x
+        <div, className = "grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x;
   l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">"</div>
-        <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x
+        <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x;
   l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">";
           {showcaseConte, n, t.m, a, p((conte, n, t, ind, e, x) => (</div>
             <moti, o, n.d, i, v
         {/* Showcase, Gri, d */}"
-        <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x,"
+        <div, className = "grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x,";
   l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">""
-        <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x,"
+        <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x,";
   l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">";
           {/* TODO: Fix JSX expression */}
   k, e, y={conte, n, t.id}
@@ -386,14 +386,14 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
               {/* TODO: Fix JSX expression */})
               )}
               {/* Card, glow, effect */}"
-              <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/0, vi, a-purp, l, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-bl, u, e-5, 0, 0/15, grou, p-hov, e, r:v, i, a-purp, l, e-5, 0, 0/15, grou, p-ho, v, e,"
+              <div, className = "absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/0, vi, a-purp, l, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-bl, u, e-5, 0, 0/15, grou, p-hov, e, r:v, i, a-purp, l, e-5, 0, 0/15, grou, p-ho, v, e,";
   r:to-cy, a, n-5, 0, 0/15, transitio, n-all, duratio, n-700, rounde, d-3, x, l"></d, i, v>""
               <div, className="relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-3x, l, p-10, border, border-whi, t, e/15, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-50, 0, h-fu, l, l">"
                 {/* Ic, o, n & Badg, e, s */}"
                 <div, className="flex, item, s-start, justif, y-between, m, b-8"></div>"
                   <div, className="te, x, t-8xl, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-5, 0, 0">""
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/0, vi, a-purp, l, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-bl, u, e-5, 0, 0/15, grou, p-hov, e, r:v, i, a-purp, l, e-5, 0, 0/15, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/15, transitio, n-all, duratio, n-700, rounde, d-3, x, l"></d, i, v>";"
-              <div, className="relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-3x, l, p-10, border, border-whi, t, e/15, hov, e,"
+              <div, className = "relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-3x, l, p-10, border, border-whi, t, e/15, hov, e,";
   r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-50, 0, h-fu, l, l">";
                 {/* Ic, o, n & Badg, e, s */}"
                 <div, className="flex, item, s-start, justif, y-between, m, b-8">";"
@@ -484,7 +484,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                   classNa, m, e="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-3 w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hove;
                 <a></a>
   hr, e, f={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`"
-                  classNa, m, e="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-3 w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hove,"
+                  classNa, m, e = "gro, u, p/btn, flex, items-center, justif, y-center, ga, p-3 w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hove,";
   r:-transla, t, e-y-2"
                 >
                   <sp, a, n>Access, Masterclas, s</sp, a, n>"
@@ -582,8 +582,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                 </d, i, v>
               </d, i, v>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-cent, e, r">";</div>
-                <a, titl, e="Internal, lin, k"
-                  hr, e, f="/conta, c, t"
+                <a, titl, e = "Internal, lin, k";
+                  hr, e, f="/conta, c, t";
                   classNa, m, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hov, e;
               </p>"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-center, m, b-12">""
@@ -616,22 +616,22 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                 </d, i, v>
               </d, i, v>"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-cent, e, r">";"
-                <a, titl, e="Internal, lin, k""
+                <a, titl, e = "Internal, lin, k""
                   hr, e, f="/conta, c, t""
-                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hov, e,"
+                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hov, e,";
   r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"
                 ></a>"
                   <Rocket, className="w-6 h-6  /></Rocket>"
                   <Rocket, className="w-6 h-6" />";
                   <sp, a, n>Start, Your, Transformation</sp, a, n>
                 </a>
-                <a, titl, e="Internal, lin, k"
-                  hr, e, f="/bl, o, g"
+                <a, titl, e = "Internal, lin, k";
+                  hr, e, f="/bl, o, g";
                   classNa, m, e="bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r: bg-bl, u, e-500, hov, e;
                 </a>"
-                <a, titl, e="Internal, lin, k""
+                <a, titl, e = "Internal, lin, k""
                   hr, e, f="/bl, o, g""
-                  classNa, m, e="bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r: bg-bl, u, e-500, hov, e,"
+                  classNa, m, e="bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r: bg-bl, u, e-500, hov, e,";
   r:te, x, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"
                 ></a>
                   <sp, a, n>Explore, All, Masterclasses</sp, a, n>"

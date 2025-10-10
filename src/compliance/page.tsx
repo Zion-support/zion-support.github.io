@@ -20,7 +20,7 @@ const CompliancePage: React.FC = () => {
 
   ];
   const complianceAreas = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
@@ -60,7 +60,7 @@ const CompliancePage: React.FC = () => {
         <Navigation />
         {/* Header */}
         <section className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex items-center">
               <Link
                 to="/privacy" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
@@ -78,11 +78,11 @@ const CompliancePage: React.FC = () => {
           <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
 // Back to Privacy Policy;
           </Link>"
-              <h1 className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
+              <h1 className = "text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
             </div>
         </section>"
         <main className="max-w-7xl mx-auto px-4,
-  sm:px-6,"
+  sm:px-6,";
   lg:px-8 py-12"></main>
           {/* Overview */}"
           <section className="mb-16"></section>"
@@ -90,8 +90,8 @@ const CompliancePage: React.FC = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-4"></h2>
 // Our Commitment to Compliance;
           </h2>"
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto"></p>
-// At Zion Tech Group, we maintain the highest standards of compliance and security.
+              <p className = "text-lg text-gray-600 max-w-3xl mx-auto"></p>
+// At Zion Tech Group, we maintain the highest standards of compliance and security.;
                 Our certifications and adherence to industry standards ensure your data is protected;
 //                 and our services meet the most stringent requirements.
               

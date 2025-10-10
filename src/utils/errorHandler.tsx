@@ -25,7 +25,7 @@ export enum ErrorType {/* TODO: Fix JSX expression */}
   CLIENT = 'CLIENT',
   UNKNOWN = 'UNKNOWN'
 }
-// Error severity levels
+// Error severity levels;
 export enum ErrorSeverity {
 // Error severity levels;
 export enum ErrorSeverity {/* TODO: Fix JSX expression */}
@@ -546,7 +546,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     if (typeof window === 'undefined') return;
     const notification = document.createElement('div');
     notification.className = 'error-notification';
-    notification.style.cssText = `
+    notification.style.cssText = `;
       position: fixed;
       top: 20px;
       right: 20px;
@@ -597,8 +597,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   // Check if error should be retried
   private shouldRetry(error: AppError): boolean {
     return (
-      error.type === ErrorType.NETWORK &&
-      error.retryCount! < this.config.maxRetries &&
+      error.type = == ErrorType.NETWORK &&
+      error.retryCount! < this.config.maxRetries &&;
       error.severity !== ErrorSeverity.CRITICAL
     );
   }
@@ -728,8 +728,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
 
     notification.className = 'error-notification';
 
-    notification.style.cssText = `
-      positio,
+    notification.style.cssText = `;
+      positio,;
   n: fixed;,
     to,
   p: 20px;,
@@ -830,7 +830,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           <div>Coming Soon</div>
 
   )
-      error.type === ErrorType.NETWORK &&
+      error.type = == ErrorType.NETWORK &&
 // error.retryCount! 
           
           
@@ -840,7 +840,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           
           
           
-          < this.config.maxRetries &&
+          < this.config.maxRetries &&;
       error.severity !== ErrorSeverity.CRITICAL)
   }
   // Schedule retry;

@@ -14,7 +14,7 @@ const,
   const calculateROI = () => {return Math.max(0, roi);
   };return (
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
-      <div className='container mx-auto px-4'>
+      </section><div className='container mx-auto px-4'>
         <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
           AI ROI Calculator
         </h2>
@@ -28,7 +28,7 @@ const,
                 <input
                   type='number'
                   value={currentCost}
-                  onChange={e => setCurrentCost(Number(e.target.value))}
+                  onChange={{{{e: > setCurrentCost(Number(e.target.value))}}}}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg,
   focus:ring-2,
   focus:ring-blue-500,
@@ -49,14 +49,14 @@ Expected Efficiency Gain (%)
                   min='10'
                   max='90'
                   value={efficiencyGain}
-                  onChange={e => setEfficiencyGain(Number(e.target.value))}
+                  onChange={{{{e: > setEfficiencyGain(Number(e.target.value))}}}}
                   className='w-full'
 <div className='text-center text-sm text-gray-600'></div>
                   {efficiencyGain}%
                   Implementation Timeframe (months)
                 <select></select>
                   value={timeframe}
-                  onChange={e => setTimeframe(Number(e.target.value))}
+                  onChange={{{{e: > setTimeframe(Number(e.target.value))}}}}
                 >
                   <option value={6}>6 months</option>
                   <option value={12}>12 months</option>

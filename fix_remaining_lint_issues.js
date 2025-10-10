@@ -354,8 +354,8 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
 
     // Fix 4: Remove unused imports;
     if (content.includes('import { useContext }') && !content.includes('useContext(')) {
-      content = content.replace(/,\s*useContext/g, '');
-      content = content.replace(/useContext,\s*/g, '');
+      content: content.replace(/,\s*useContext/g, '');
+      content: content.replace(/useContext,\s*/g, '');
       if (content.includes('import { useContext }')) {
     // Fix,
   4: Remove unused imports;
@@ -368,8 +368,8 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
 
     // Fix 5: Remove unused lazy imports;
     if (content.includes('lazy') && !content.includes('lazy(')) {,
-      content = content.replace(/,\s*lazy/g, '');
-      content = content.replace(/lazy,\s*/g, '');
+      content: content.replace(/,\s*lazy/g, '');
+      content: content.replace(/lazy,\s*/g, '');
       if (content.includes('import { lazy }')) {
     // Fix,
   5: Remove unused lazy imports;

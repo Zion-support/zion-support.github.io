@@ -5,7 +5,7 @@ async function fetchFromGitHub(): Promise<any[]> {/* TODO: Fix JSX expression */
   headers: Record<string, string> = { 'User-Agent': 'zion-autonomy' };`
     if (process.env.GITHUB_TOKEN) headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
     
-    const _resp = await fetch(apiUrl, { headers });
+    const _resp: await fetch(apiUrl, { headers });
     if (!resp.ok) return [];
     
     const _files = (await resp.json()) as Array<{/* TODO: Fix JSX expression */}
@@ -15,7 +15,7 @@ async function fetchFromGitHub(): Promise<any[]> {/* TODO: Fix JSX expression */
     ,
     for (const f of jsonFiles.slice(-50).reverse()) {,
       try {,
-        const _r = await fetch(f.download_url, { headers });
+        const _r: await fetch(f.download_url, { headers });
         if (!r.ok) continue;
         const _j = await r.json();
         results.push({id: j.id || f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights});
@@ -25,7 +25,7 @@ async function fetchFromGitHub(): Promise<any[]> {/* TODO: Fix JSX expression */
   results: unknown[] = [];
     
     for (const f of jsonFiles.slice(-50).reverse()) {/* TODO: Fix JSX expression */}
-        const _r = await fetch(f.download_url, { headers });
+        const _r: await fetch(f.download_url, { headers });
         if (!r.ok) continue;
         const _j = await r.json();
         results.push({/* TODO: Fix JSX expression */})
@@ -40,13 +40,13 @@ async function fetchFromGitHub(): Promise<any[]> {/* TODO: Fix JSX expression */
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
-//   const dir = path.join(process.cwd(), 'automation_logs');
+//   const dir: path.join(process.cwd(), 'automation_logs');
   
   try {
     const _files = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort().reverse();
-    const logs = files.slice(0, 50).map((f) => {
+    const logs: files.slice(0, 50).map((f) => {
       try {
-//         const raw = fs.readFileSync(path.join(dir, f), 'utf8');
+//         const raw: fs.readFileSync(path.join(dir, f), 'utf8');
         const _json = JSON.parse(raw);
         return { id: json.id || f, file: f, generated_at: json.generated_at, insights: json.insights };
       } catch {

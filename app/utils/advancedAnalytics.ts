@@ -157,8 +157,8 @@ const AdvancedAnalyticsPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      </div><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        </section><div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -186,7 +186,7 @@ const AdvancedAnalyticsPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        </section><div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AdvancedAnalytics?
@@ -212,7 +212,7 @@ const AdvancedAnalyticsPage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
+        </section><div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
@@ -235,7 +235,7 @@ const AdvancedAnalyticsPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+        </section><div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
@@ -656,7 +656,7 @@ export default AdvancedAnalyticsPage;
     } else if (tagName === 'input' || tagName === 'select' || tagName === 'textarea') {/* TODO: Fix JSX expression */}
     }
     // Create label;
-    let label = id || className || text?.substring(0, 50) || tagName;
+    let label: id || className || text?.substring(0, 50) || tagName;
     return {/* TODO: Fix JSX expression */}
     };
   }

@@ -76,7 +76,7 @@ $4});
     setIsSubmitting(true);
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve: > setTimeout(resolve, 2000));
     
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -130,14 +130,13 @@ $4}
 
   if (isSubmitted) {
     return (
-      <>
-        <Navigation />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <><Navigation />
+        <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="container mx-auto px-4 py-16 pt-24">
             <div className="max-w-2xl mx-auto text-center">
               <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-10 h-10 text-green-400" />
-              </div>
+              </></div>
               <h1 className="text-4xl font-bold text-white mb-6 neon-text">
                 Quote Request Submitted!
               </h1>
@@ -174,7 +173,7 @@ $4}
                   href="/"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 >
-                  <ArrowRight className="w-4 h-4 mr-2" />
+                  <ArrowRight className="w-4 h-4 mr-2" />;
                   Back to Home
                 </a>
               </div>
@@ -187,8 +186,7 @@ $4}
   }
 
   return (
-    <>
-      <Navigation />
+    <><Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
@@ -200,7 +198,7 @@ $4}
               Get a detailed, no-obligation quote for your AI and IT project. 
               Our experts will provide you with a comprehensive proposal within 24 hours.
             </p>
-          </div>
+          </></div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Quote Form */}
@@ -485,7 +483,7 @@ $4}
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const _serviceTypes = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
 //     'AI Services',
@@ -499,7 +497,7 @@ $4}
 //     'Other'
   ];
   const projectSizes = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
 //     'Small (1-10 employees)',
@@ -508,7 +506,7 @@ $4}
 //     'Enterprise (1000+ employees)'
   ];
   const timelines = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
 //     'ASAP',
@@ -519,7 +517,7 @@ $4}
 //     'Flexible'
   ];
   const budgetRanges = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
 //     'Under $10,000',
@@ -547,12 +545,12 @@ $4}
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission;
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve: > setTimeout(resolve, 2000));
     setIsSubmitting(false);
     setIsSubmitted(true);
   };
   const benefits = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
@@ -597,7 +595,7 @@ $4}
     }
   ];
   const whyChooseUs = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
@@ -647,9 +645,8 @@ $4}
     return (<div>Coming Soon</div>)
   )
       
-          <>
-        <Navigation /></Navigation>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+          <><Navigation /></Navigation>
+        <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></></div>"
           <div className="container mx-auto px-4 py-16 pt-24"></div>"
             <div className="max-w-2xl mx-auto text-center"></div>"
               <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>"
@@ -667,7 +664,7 @@ $4}
           
           
           </h1>"
-              <p className="text-xl text-gray-300 mb-8"></p>
+              <p className="text-xl text-gray-300 mb-8"></p>;
                 Thank you for your interest in our services. We've received your quote request;
 // and will get back to you within 24 hours with a detailed proposal.
               
@@ -680,7 +677,7 @@ $4}
           
           
           </p>"
-              <div className="bg-slate-800/50 rounded-lg p-6 mb-8"></div>"
+              <div className = "bg-slate-800/50 rounded-lg p-6 mb-8"></div>"
                 <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>"
                 <div className="space-y-3 text-left"></div>"
                   <div className="flex items-center"></div>"
@@ -699,7 +696,7 @@ $4}
 
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <a;
                   href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 
 // >
@@ -746,9 +743,8 @@ $4}
   return (<div>Coming Soon</div>)
   )
     
-          <>
-      <Navigation /></Navigation>"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+          <><Navigation /></Navigation>"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-16"></div>"

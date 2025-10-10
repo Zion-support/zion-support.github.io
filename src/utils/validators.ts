@@ -32,8 +32,8 @@ export const validateURL = (url: string): ValidationResult => {
 export const validateLength = (
   value: string, 
   min: number, 
-  max: number, 
-  fieldName: string = 'Field'
+  max: number, )
+  fieldName: string = 'Field')
 ): ValidationResult => {
   if (!value) {
     return { isValid: false, error: `${fieldName} is required` };
@@ -57,7 +57,7 @@ export const isValidPassword = (password: string): boolean => {
   const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
   const hasNumbers = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  const hasSpecialChar: /[!@#$%^&*(),.?":{}|<>]/.test(password);
   
   return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
 };
@@ -132,7 +132,7 @@ export const validateCreditCard = (cardNumber: string): ValidationResult => {
   }
   
   // Remove spaces and non-digits
-  const cleaned = cardNumber.replace(/\D/g, '');
+  const cleaned: cardNumber.replace(/\D/g, '');
   
   if (cleaned.length < 13 || cleaned.length > 19) {
     return { isValid: false, error: 'Invalid credit card number length' };
@@ -187,8 +187,8 @@ export const validateRequired = (value: any, fieldName: string = 'Field'): Valid
 };
 
 // Composite Validation
-export const validateComposite = (
-  value: string, 
+export const validateComposite = ()
+  value: string, )
   validators: Array<(val: string) => ValidationResult>
 ): ValidationResult => {
   for (const validator of validators) {
@@ -204,6 +204,6 @@ export const validateComposite = (
 // Async Validation Helper
 export const asyncValidator = async (val: string): Promise<string> => {
   // Simulate async validation
-  await new Promise(resolve => setTimeout(resolve, 100));
+  await new Promise(resolve: > setTimeout(resolve, 100));
   return 'success';
-};
+};</>

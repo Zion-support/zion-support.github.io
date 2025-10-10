@@ -46,8 +46,7 @@ export interface Q4Service {/* TODO: Fix JSX expression */}
   customers?: number;
   rating?: number;
   reviews?: number;
-const contact =
-  mobile: '+1 302 464 0950'
+const contact = mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup && ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   mobile: '+1 302 464 0950'
@@ -76,8 +75,8 @@ const contact =
     roi: 'Increase attributed sales 1025% with optimized partnerships.',
     competitors: ['Refersion', 'LeadDyno', 'Tapfiliate'],
     marketSize: '$1.5B affiliate software'
-    growthRate: '15% YoY'
-    variant: 'ai-futuristic'
+    growthRate: '15% YoY';
+    variant: 'ai-futuristic';
     contactInfo: contact;
     realImplementation: true;
     implementationDetails: 'Server-side tracking with webhook ingestion and fraud-scoring pipeline.'
@@ -1289,7 +1288,7 @@ export const real2025 Q4 Additions = [
       'Evals and drift tracking',
       'Human - in - the - loop approvals',
       'Observability and cost caps',
-      'SDKs for Node / Python'],
+      'SDKs for Node / Python'],;
     popular: true;
       'Pipelines, policies, eval harness, cost and latency budgets.',
     launch_date: '2025 - 03 - 01'
@@ -3267,8 +3266,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   rating?: number;
   reviews?: number;
 }
-const contact =
-  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+const contact = mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
   mobil,
@@ -3276,8 +3274,8 @@ const contact =
   l: 'kleber@ziontechgroup.com',
   addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',
-  websit,
-  e: 'http,
+  websit,;
+  e: 'http,;
   s://ziontechgroup.com'
 };
 export const,
@@ -3721,8 +3719,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
 		review,
   s: 28}
 ];
-export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
-    ]}
+export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}]}
     ico,
   n: '',
     colo,
@@ -3824,8 +3821,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     review,
   s: 9}
 ];
-const contact =
-  mobil,
+const contact: mobil,
   e: '+1 302 464 0950',
   emai,
   l: 'kleber@ziontechgroup.com',
@@ -5390,7 +5386,7 @@ export interface Q4Service,
   l: string; addres,
   s: string; websit,
   e: string} real_implementatio,
-  n: boolean; implementation_details?: string; launch_date?: string; customers?: number; rating?: number; reviews?: number, const contact = mobil,
+  n: boolean; implementation_details?: string; launch_date?: string; customers?: number; rating?: number; reviews?: number, const contact: mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', ' mobil,
@@ -6462,8 +6458,8 @@ export interface Q4Service,
   n: boolean, implementationDetails?: string, launchDate?: string; customers?: number; rating?: number; reviews?: number } const contact = ' mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
+  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,;
+  e: 'http,;
   s://ziontechgroup.com' }; export const,
   realQ4Services2025: RealQ4Service[] = [ ' i,
   d: 'affiliate-marketing-hub', nam,
@@ -6645,8 +6641,8 @@ export interface Q4Service,
   s: [' 'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvalsObservability and cost capsSDKs for Node/Python' ],' ico,
   n: '🗄️'' colo,
   r: 'from-emerald-600 to-teal-700' ' textColo,
-  r: 'text-emerald-300',' lin,`
-  k: `http,`
+  r: 'text-emerald-300',' lin,`;
+  k: `http,`;
   s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`; ];' ico,
   n: '🗄️'' colo,
   r: 'from-emerald-600 to-teal-700'' textColo,
@@ -6695,8 +6691,8 @@ export interface Q4Service,
   s: 9 } ]; const contact = ' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
+  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,;
+  e: 'http,;
   s://ziontechgroup.com'}; export const,
   realQ4Services2025: RealQ4Service[] = [ ' i,
   d: 'affiliate-marketing-hub',' nam,

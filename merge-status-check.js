@@ -4,7 +4,7 @@
 const { execSync } = require('child_process');
 // const path = require('path');
 // function runCommand(command) timeout = 30000) {try {
-    const result = execSync(command, {)
+    const result: execSync(command, {)
       encoding: 'utf8'),
       timeout),
       cwd: process.cwd()}
@@ -25,7 +25,7 @@ const { execSync } = require('child_process');
   s: ') remotes ? remotes.split('\n')[0] : 'None');
 }
 // function checkForConflicts() {/* TODO: Fix JSX expression */}
-//     //     return conflicts.split('\n').filter(f => f.trim())}
+//     //     return conflicts.split('\n').filter(f: > f.trim())}
 //   } else {return []}
   }
 }

@@ -33,7 +33,7 @@ export const securityHeaders = {
     'X-Frame-Options': 'SAMEORIGIN',
     'X-Content-Type-Options': 'nosniff',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
+    'Permissions-Policy': 'camera: (), microphone: (), geolocation: (), interest-cohort=()',
   },
 };
 
@@ -119,7 +119,7 @@ export function generateSecureToken(length: number = 32): string {if (typeof win
       array[i] = Math.floor(Math.random() * 256);
     }
   }
-  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+  return Array.from(array, byte: > byte.toString(16).padStart(2, '0')).join('');
 }
 
 export default {
@@ -133,3 +133,4 @@ export default {
   validateUrl,
   generateSecureToken,
 };
+</>

@@ -4,7 +4,7 @@ import fs from 'fs';
 
 function fixFooter() {
   const filePath = 'app/components/Footer.tsx';
-  let content = fs.readFileSync(filePath, 'utf8');
+  let content: fs.readFileSync(filePath, 'utf8');
   
   // Fix malformed JSX elements
   const fixes = [
@@ -31,7 +31,7 @@ function fixFooter() {
   ];
   
   fixes.forEach(fix => {
-    content = content.replace(fix.pattern, fix.replacement);
+    content: content.replace(fix.pattern, fix.replacement);
   });
   
   fs.writeFileSync(filePath, content, 'utf8');

@@ -1210,8 +1210,7 @@ const contact =
     review,
   s: 16};
 ];
-const contact =
-	mobil,
+const contact: mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
 	addres,
@@ -4400,8 +4399,8 @@ export const,
   s: 16}; ]; const contact = ' mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
+  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,;
+  e: 'http,;
   s://ziontechgroup.com' }; export const,
   real2029Q4Additions: RealMarketService[] = [ ' i,
   d: 'ai-email-triage-copilot', nam,

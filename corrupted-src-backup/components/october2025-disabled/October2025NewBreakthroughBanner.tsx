@@ -40,15 +40,15 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
             </sp, a, n>
             <Zap, classNam, e = 'w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e' /></Zap>
           </div>
-          <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
+          <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t'>;
             Ne, x, t-Generation, Enterprise, AI;
             Ne, x, t-Generation, Enterprise, AI</h2>
             <, b, r />{' '}
             <span, classNam, e = 'bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-purp, l, e-300, tex, t-transparent, b, g-cl, i, p-te, x, t'>
-          <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h2>
+          <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h2>;
             Ne, x, t-Generation, Enterprise, AI;
             <, b, r />{' '}
-            <span, classNam, e = 'bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-purp, l, e-300, tex, t-transparent, b, g-cl, i, p-te, x, t'></span>
+            <span, classNam, e = 'bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-purp, l, e-300, tex, t-transparent, b, g-cl, i, p-te, x, t'></span>;
               Systems, That, Transform Operatio, n, s;
             </sp, a, n>
           </h2>
@@ -59,7 +59,7 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
         {/* Content, Card, s */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
           { octoberNewBreakthroughConte, n, t.m, a, p(conte, n, t = > {
-            const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
+            const Ico, n: iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (</div>
               <Link, ke, y = { conte, n, t., i, d  }, to = {`/bl, o, g/${conte, n, t.slug}`}
                 className='group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0'
               >
@@ -126,8 +126,8 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
                 <div, classNam, e = 'flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yell, o, w-300, fon, t-bold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l'>
                   Read, Full, Guide;
                   Read, Full, Guide</div>
-                  <Link, className='w-5 h-5' />
-                <div, classNam, e = 'flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yell, o, w-300, fon, t-bold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l'></div>
+                  <Link, className = 'w-5 h-5' />
+                <div, classNam, e = 'flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yell, o, w-300, fon, t-bold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l'></div>;
                   Read, Full, Guide;
                   <Link, className='w-5 h-5' /></Link>
                 </div>
@@ -152,23 +152,23 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
             <Link, t, o='/conta, c, t'
               className='inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: fr, o, m-yell, o, w-300, hove, r:to-oran, g, e-400, transitio, n-all, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5'
             >
-              <Target, className='w-6 h-6' />
+              <Target, className='w-6 h-6' />;
               Get, Free, Enterprise Assessme, n, t;
-              <Link, className='w-6 h-6' />
+              <Link, className = 'w-6 h-6' />
             </Li, n, k>
             <Link, t, o='/bl, o, g'
               className='inli, n, e-flex, item, s-center, ga, p-3, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/30, tex, t-white, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r:bg-whi, t, e/20, transitio, n-a, l, l'
-            >
+            >;
               Explore, All, Articles;
-              <Link, className='w-6 h-6' />
+              <Link, className = 'w-6 h-6' />
             ></Link>
-              <Target, className='w-6 h-6' /></Target>
+              <Target, className='w-6 h-6' /></Target>;
               Get, Free, Enterprise Assessme, n, t;
-              <Link, className='w-6 h-6' /></Link>
+              <Link, className = 'w-6 h-6' /></Link>
             </Li, n, k>
             <Link, t, o='/bl, o, g'
               className='inli, n, e-flex, item, s-center, ga, p-3, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/30, tex, t-white, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r:bg-whi, t, e/20, transitio, n-a, l, l'
-            ></Link>
+            ></Link>;
               Explore, All, Articles;
               <Link, className='w-6 h-6' /></Link>
             </Li, n, k>

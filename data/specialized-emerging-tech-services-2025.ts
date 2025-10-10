@@ -41,9 +41,8 @@
   capabilities: string[];
   market_advantage: string;
 
-const contact =
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup && ziontechgroup.com',
+const contact = mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'};
@@ -133,8 +132,7 @@ const contact =
   market_advantag,
   e: string;
 ,
-const contact =
-  mobil,
+const contact: mobil,
   e: '+1 302 464 0950',
   emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -856,7 +854,7 @@ i,
   s: number; benefit,
   s: string[]; capabilitie,
   s: string[]; market_advantag,
-  e: string, const contact = mobil,
+  e: string, const contact: mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', ' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' }' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'};' ]; descriptio,

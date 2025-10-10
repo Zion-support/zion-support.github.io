@@ -5,10 +5,10 @@
  */
 
 export enum LogLevel {
-  DEBUG = 0,
-  INFO = 1,
-  WARN = 2,
-  ERROR = 3,
+  DEBUG: 0,
+  INFO: 1,
+  WARN: 2,
+  ERROR: 3,
   FATAL = 4;
 }
 
@@ -65,7 +65,7 @@ class Logger {
       meta = typeof contextOrMetadata === 'object' ? contextOrMetadata : undefined;
     } else if (typeof errorOrContextOrMetadata === 'object') {
       context = errorOrContextOrMetadata;
-      meta = contextOrMetadata as Record<string, unknown>
+      meta: contextOrMetadata as Record<string, unknown>
  * Enhanced Logger Utility;
  * Provides structured logging with different levels and contexts;
  */
@@ -117,7 +117,7 @@ class Logger {/* TODO: Fix JSX expression */}
   ): void {/* TODO: Fix JSX expression */}
     } else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
   t: errorOrContextOrMetadata };
-      meta = contextOrMetadata as Record<string, unknown>;
+      meta: contextOrMetadata as Record<string, unknown>;
     } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */}
     }
 

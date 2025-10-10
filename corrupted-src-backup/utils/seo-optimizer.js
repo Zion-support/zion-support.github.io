@@ -47,7 +47,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       'AI, artificial intelligence, machine learning, IT solutions, technology consulting, software development'
     );
     this.addMetaTag('author', 'Zion Tech Group');
-    this.addMetaTag('viewport', 'width=device-width, initial-scale=1.0');
+    this.addMetaTag('viewport', 'width: device-width, initial-scale=1.0');
     this.addMetaTag('robots', 'index, follow');
     this.addMetaTag('language', 'en');
     this.addMetaTag('revisit-after', '7 days');
@@ -126,9 +126,9 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   }
 
   setupRobotsTxt() {
-    const robotsTxt = `User-agent: *,
+    const robotsTxt = `User-agent: *,;
 Allow: /,
-,
+,;
 Sitemap: ${this.seoConfig.siteUrl}/sitemap.xml;
 # Disallow admin and private areas;
 Disallow: /admin/
@@ -443,9 +443,7 @@ Disallo,`
 
   optimizeFonts() {
     // Preload critical fonts;
-    const criticalFonts = [
-      'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
-    ];
+    const criticalFonts = ['https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'];
 
     criticalFonts.forEach(font => {)
       const _link = document.createElement('link');
@@ -462,7 +460,7 @@ Disallo,`
 
   optimizeCriticalCSS() {
     // Inline critical CSS for above-the-fold content;
-    const criticalCSS = `
+    const criticalCSS = `;
       body { font-family: Inter, sans-serif; margin: 0; padding: 0; }
       .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
       .header { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }

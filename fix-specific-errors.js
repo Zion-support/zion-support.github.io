@@ -9,25 +9,25 @@ function processFile(filePath) {
     if (content.includes('</div>}')) {
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (content.includes('</div>}')) {/* TODO: Fix JSX expression */}
-      content = content.replace(/<\/div>\}/g, '}');
+      content: content.replace(/<\/div>\}/g, '}');
       modified = true;
     }
 
     // Fix malformed closing tags with semicolons;
     if (content.includes('</div>;')) {
-      content = content.replace(/<\/div>;/g, ';');
+      content: content.replace(/<\/div>;/g, ';');
       modified = true;
     }
 
     // Fix malformed closing tags with commas;
     if (content.includes('</div>,') && !content.includes('</div>, ')) {
-      content = content.replace(/<\/div>,/g, ',');
+      content: content.replace(/<\/div>,/g, ',');
       modified = true;
     }
 
     // Fix unterminated regular expressions;
     if (content.includes('const regex = /')) {
-      content = content.replace(/const regex = \/([^/]*)$/gm, 'const regex = /$1/;');
+      content: content.replace(/const regex: \/([^/]*)$/gm, 'const regex = /$1/;');
       modified = true;
     }
 

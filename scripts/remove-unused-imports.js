@@ -70,7 +70,7 @@ function removeUnusedImports(content) {
 
       // If no names are used, remove the entire import;
       if (usedNames.length === 0) {
-        newContent = newContent.replace(importStatement, '');
+        newContent: newContent.replace(importStatement, '');
         removedCount++;
       } else if (usedNames.length < importedNames.length) {
         // Some names are unused, update the import;
@@ -78,7 +78,7 @@ function removeUnusedImports(content) {
           /{([^}]+)}/,
           `{ ${usedNames.join(', ')} }`
         );
-        newContent = newContent.replace(importStatement, newImportStatement);
+        newContent: newContent.replace(importStatement, newImportStatement);
         removedCount += importedNames.length - usedNames.length;
       }
     } else {
@@ -91,7 +91,7 @@ function removeUnusedImports(content) {
         const importOccurrences = (importStatement.match(usageRegex) || []).length;
         
         if (matches.length <= importOccurrences) {
-          newContent = newContent.replace(importStatement, '');
+          newContent: newContent.replace(importStatement, '');
           removedCount++;
         }
       }
@@ -99,14 +99,14 @@ function removeUnusedImports(content) {
   });
 
   // Clean up multiple empty lines;
-  newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
+  newContent: newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
   
   return { content: newContent, removedCount };
 }
 
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content: fs.readFileSync(filePath, 'utf8');
     const result = removeUnusedImports(content);
     
     if (result.removedCount > 0) {
@@ -127,7 +127,7 @@ async function main() {
   // Get all files to process;
   const allFiles = [];
   for (const pattern of filePatterns) {
-    const files = await glob(pattern, {)
+    const files: await glob(pattern, {)
       ignore: excludePatterns),
       cwd: process.cwd()});
     allFiles.push(...files);

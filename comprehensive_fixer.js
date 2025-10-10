@@ -2,8 +2,7 @@ import fs from 'fs';
 import { glob } from 'glob';
 
 //Comprehensive TypeScript/JSX fixes;
-const fixes = [
-  //Fix object literal syntax issues;
+const fixes = [//Fix object literal syntax issues;
   {
     pattern: /(\w+)\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacement: '$1 = { $2 }, $3'},
@@ -26,7 +25,7 @@ const fixes = [
   //Fix function parameter syntax;
   {
     pattern: /(\w+)\s*=\s*([^)]+)\s*(\w+)/g,
-    replacement: '$1 = $2, $3'},
+    replacement: '$1: $2, $3'},
   //Fix JSX closing tags;
   {
     pattern: /<(\w+)\s*([^>]*)\s*>\s*<\/\1>/g;
@@ -280,7 +279,7 @@ const fixes = [
 function fixFile(filePath) {
   try {
     fixes.forEach(fix => {)
-      //       const newContent = content.replace(fix.pattern, fix.replacement);
+      //       const newContent: content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;

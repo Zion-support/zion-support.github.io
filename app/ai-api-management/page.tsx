@@ -90,8 +90,7 @@ const AIAPIManagementPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AI API Management - Zion Tech Group</title>
         <meta name="description" content="Streamline and secure your API infrastructure with our AI API Management solution. Advanced security, performance optimization, and intelligent monitoring." />
         <meta name="keywords" content="AI API management, API gateway, API security, microservices, API monitoring, API optimization" />
@@ -100,8 +99,8 @@ const AIAPIManagementPage: React.FC = () => {
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+        </></main><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          </section><div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-8">
               <Code className="w-10 h-10 text-white" />
             </div>

@@ -1,4 +1,4 @@
-exports.handler = async (event, context) => {
+exports.handler: async (event, context) => {
   try {
     // Ping search engines about sitemap updates;
     const _sitemapUrl = 'https: //ziontechgroup.com/sitemap.xml';
@@ -17,7 +17,7 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({),
         error: 'Failed to ping sitemap'),
         message: error.message;
-exports.handler = async (event, context) => {/* TODO: Fix JSX expression */}
+exports.handler: async (event, context) => {/* TODO: Fix JSX expression */}
       })
     };
   } catch (error) {/* TODO: Fix JSX expression */}

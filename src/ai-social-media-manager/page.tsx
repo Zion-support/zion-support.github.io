@@ -78,8 +78,8 @@ $4}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="container mx-auto max-w-6xl">
+      </div><section className="pt-24 pb-16 px-4">
+        </section><div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-pink-500/10 rounded-full text-pink-400 text-sm font-medium mb-6">
               <Share2 className="w-4 h-4 mr-2" />
@@ -109,7 +109,7 @@ $4}
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Manage all your social media accounts from a single, intelligent dashboard
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          </section><div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {platforms.map((platform, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-slate-800/50 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -120,11 +120,11 @@ $4}
             ))}
 
       {/* Features Section */}
-      <section className="py-16 px-4">
+      </div><section className="py-16 px-4">
               Powerful AI Features
               Leverage cutting-edge AI technology to streamline your social media management
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-pink-400/20 hover:border-pink-400/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-pink-500/10 rounded-lg flex items-center justify-center mb-4">
@@ -185,8 +185,8 @@ $4}
                   {plan.popular ? 'Start Free Trial' : 'Get Started'}
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10">
-        <div className="container mx-auto max-w-4xl text-center">
+      </div><section className="py-16 px-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10">
+        </section><div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Get Started?
           <p className="text-xl text-gray-300 mb-8">
@@ -200,3 +200,4 @@ import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 export default AISocialMediaManagerPage;
+</div>

@@ -1,7 +1,7 @@
 const, October2025CuttingEdgeAIBanne, r = () => {
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">
       {/* Animated, background, elements */};
-      <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">
+      <div, className = "absolute, inse, t-0, overflo, w-hidd, e, n">;
   return (
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">
       {/* Animated, background, elements */};</div>
@@ -51,7 +51,7 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
           <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, b, g-cl, i, p-text, tex, t-transpare, n, t">";
             Ne, x, t-Generation, AI, Technologies & Framewor, k, s;
           </h2>
-          <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o">
+          <p, className = "te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o">;
             Explore, the, forefront of, AI, innovation: Agentic, governanc, e, neur, a, l-symbolic, fusio, n;</p>
           <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o">";
             Explore, the, forefront of, AI, innovation: Agentic, governanc, e, neur, a, l-symbolic, fusio, n;
@@ -65,13 +65,13 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
   g:gr, i, d-co, l, s-4, ga, p-6, m, b-10">";
           {/* Articl, e, 1 - Agentic, Governanc, e */}
           <Li, n, k;
-        <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+        <div, className = "grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-6, m, b-10">"</div>
-        <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+        <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-6, m, b-10">";
           {/* Articl, e, 1 - Agentic, Governanc, e */}</div>
           <Li, n, k
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-agent, i, c-governan, c, e-framewor, k, s"
+  to = "/bl, o, g/ai-20, 2, 5-octob, e, r-agent, i, c-governan, c, e-framewor, k, s";
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/40, t, o-te, a, l-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-emera, l, d-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-emera, l, d-5, 0, 0/50"
           >
@@ -88,11 +88,11 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-emera, l, d-200, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className = "te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-emera, l, d-200, transitio, n-colo, r, s">"</h3>
           </h2>"
           <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o"></p>
-            Explore, the, forefront of, AI, innovatio,
+            Explore, the, forefront of, AI, innovatio,;
   n: Agentic, governanc, e, neur, a, l-symbolic, fusio, n;"
           <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o">";
             Explore, the, forefront of, AI, innovatio,
@@ -101,14 +101,14 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
           </p>
         </d, i, v>
         {/* Featured, Articles, Grid */}"
-        <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
+        <div, className = "grid, m, d: gr, i, d-co, l, s-2 l,";
   g:gr, i, d-co, l, s-4, ga, p-6, m, b-10">""
-        <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
+        <div, className="grid, m, d: gr, i, d-co, l, s-2 l,";
   g:gr, i, d-co, l, s-4, ga, p-6, m, b-10">";
           {/* Articl, e, 1 - Agentic, Governanc, e */}
           <Li, n, k;"
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-agent, i, c-governan, c, e-framewor, k, s""
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/40, t, o-te, a, l-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-emera, l, d-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,"
+  to = "/bl, o, g/ai-20, 2, 5-octob, e, r-agent, i, c-governan, c, e-framewor, k, s"";
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/40, t, o-te, a, l-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-emera, l, d-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,";
   r:shad, o, w-emera, l, d-5, 0, 0/50"
           ></Li>"
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
@@ -122,7 +122,7 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
                 <span, className="te, x, t-xs, tex, t-emera, l, d-300, fon, t-semibold, uppercase, tracking-wi, d, e">AI, Governanc, e</sp, a, n>";
               </d, i, v>
             </d, i, v>"
-            <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
+            <h3, className = "te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,";
   r: te, x, t-emera, l, d-200, transitio, n-colo, r, s">""
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-emera, l, d-200, transitio, n-colo, r, s">";
               Agentic, Governance, Frameworks;
@@ -141,14 +141,14 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
               <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, tex, t-sm">";
                 <sp, a, n>18, min, read</sp, a, n>
               </d, i, v>"
-              <ArrowRight, className="w-5 h-5, tex, t-emera, l, d-300, grou, p-ho, v, e,"
+              <ArrowRight, className = "w-5 h-5, tex, t-emera, l, d-300, grou, p-ho, v, e,";
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
               <Link, className="w-5 h-5, tex, t-emera, l, d-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 2 - Neur, a, l-Symbolic, Fusio, n */}
           <Li, n, k;
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-neur, a, l-symbol, i, c-fusi, o, n"
+  to = "/bl, o, g/ai-20, 2, 5-octob, e, r-neur, a, l-symbol, i, c-fusi, o, n";
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-viol, e, t-8, 0, 0/40, t, o-fuchs, i, a-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-viol, e, t-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-viol, e, t-5, 0, 0/50"
           >
@@ -165,11 +165,11 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-viol, e, t-200, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className = "te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-viol, e, t-200, transitio, n-colo, r, s">"</h3>
           <Li, n, k;"
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-neur, a, l-symbol, i, c-fusi, o, n""
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-viol, e, t-8, 0, 0/40, t, o-fuchs, i, a-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-viol, e, t-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,"
+  to = "/bl, o, g/ai-20, 2, 5-octob, e, r-neur, a, l-symbol, i, c-fusi, o, n"";
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-viol, e, t-8, 0, 0/40, t, o-fuchs, i, a-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-viol, e, t-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,";
   r:shad, o, w-viol, e, t-5, 0, 0/50"
           ></Li>"
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
@@ -183,7 +183,7 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
                 <span, className="te, x, t-xs, tex, t-viol, e, t-300, fon, t-semibold, uppercase, tracking-wi, d, e">AI, Architectur, e</sp, a, n>";
               </d, i, v>
             </d, i, v>"
-            <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
+            <h3, className = "te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,";
   r: te, x, t-viol, e, t-200, transitio, n-colo, r, s">""
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-viol, e, t-200, transitio, n-colo, r, s">";
               Neur, a, l-Symbolic, Fusio, n;
@@ -202,14 +202,14 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
               <div, className="flex, item, s-center, ga, p-2, tex, t-viol, e, t-300, tex, t-sm">";
                 <sp, a, n>22, min, read</sp, a, n>
               </d, i, v>"
-              <ArrowRight, className="w-5 h-5, tex, t-viol, e, t-300, grou, p-ho, v, e,"
+              <ArrowRight, className = "w-5 h-5, tex, t-viol, e, t-300, grou, p-ho, v, e,";
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
               <Link, className="w-5 h-5, tex, t-viol, e, t-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 3 - Continuous, Learnin, g */}
           <Li, n, k;
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-continuo, u, s-learni, n, g-syste, m, s"
+  to = "/bl, o, g/ai-20, 2, 5-octob, e, r-continuo, u, s-learni, n, g-syste, m, s";
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-8, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-cy, a, n-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-cy, a, n-5, 0, 0/50"
           >
@@ -226,11 +226,11 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-cy, a, n-200, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className = "te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-cy, a, n-200, transitio, n-colo, r, s">"</h3>
           <Li, n, k;"
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-continuo, u, s-learni, n, g-syste, m, s""
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-8, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-cy, a, n-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,"
+  to = "/bl, o, g/ai-20, 2, 5-octob, e, r-continuo, u, s-learni, n, g-syste, m, s"";
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-8, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-cy, a, n-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,";
   r:shad, o, w-cy, a, n-5, 0, 0/50"
           ></Li>"
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
@@ -244,7 +244,7 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
                 <span, className="te, x, t-xs, tex, t-cy, a, n-300, fon, t-semibold, uppercase, tracking-wi, d, e">AI, Operation, s</sp, a, n>";
               </d, i, v>
             </d, i, v>"
-            <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
+            <h3, className = "te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,";
   r: te, x, t-cy, a, n-200, transitio, n-colo, r, s">""
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-cy, a, n-200, transitio, n-colo, r, s">";
               Continuous, Learning, Systems;
@@ -263,14 +263,14 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
               <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-300, tex, t-sm">";
                 <sp, a, n>20, min, read</sp, a, n>
               </d, i, v>"
-              <ArrowRight, className="w-5 h-5, tex, t-cy, a, n-300, grou, p-ho, v, e,"
+              <ArrowRight, className = "w-5 h-5, tex, t-cy, a, n-300, grou, p-ho, v, e,";
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
               <Link, className="w-5 h-5, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
           {/* Articl, e, 4 - Distributed, Inferenc, e */}
           <Li, n, k;
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-distribut, e, d-inferen, c, e-optimizati, o, n"
+  to = "/bl, o, g/ai-20, 2, 5-octob, e, r-distribut, e, d-inferen, c, e-optimizati, o, n";
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-amb, e, r-8, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-amb, e, r-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-amb, e, r-5, 0, 0/50"
           >
@@ -291,8 +291,8 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
             </h3>
             <p, className="te, x, t-oran, g, e-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3"></p>
           <Li, n, k;"
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-distribut, e, d-inferen, c, e-optimizati, o, n""
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-amb, e, r-8, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-amb, e, r-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,"
+  to = "/bl, o, g/ai-20, 2, 5-octob, e, r-distribut, e, d-inferen, c, e-optimizati, o, n"";
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-amb, e, r-8, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-amb, e, r-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,";
   r:shad, o, w-amb, e, r-5, 0, 0/50"
           ></Li>"
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
@@ -306,8 +306,8 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
                 <span, className="te, x, t-xs, tex, t-amb, e, r-300, fon, t-semibold, uppercase, tracking-wi, d, e">AI, Infrastructur, e</sp, a, n>";
               </d, i, v>
             </d, i, v>"
-            <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
-  r: te, x, t-amb, e, r-200, transitio, n-colo, r, s">"
+            <h3, className = "te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,";
+  r: te, x, t-amb, e, r-200, transitio, n-colo, r, s">";
               Distributed, Inference, Optimization;
             </h3>"
             <p, className="te, x, t-oran, g, e-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3"></p>"
@@ -337,14 +337,14 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
           <Li, n, k;
         <div, className="te, x, t-center, m, t-10">";</div>
           <Li, n, k
-  to="/bl, o, g"
+  to = "/bl, o, g";
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-pi, n, k-600, hove, r: fr, o, m-indi, g, o-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-bold, tex, t-lg, p, x-10, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg, hov, e;
         {/* CTA, Sectio, n */}"
         <div, className="te, x, t-center, m, t-10">";
           <Li, n, k;"
-  to="/bl, o, g""
+  to = "/bl, o, g""
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-pi, n, k-600, hove, r: fr, o, m-indi, g, o-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-bold, tex, t-lg, p, x-10, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,
-  r:sca, l, e-105, shado, w-lg, hov, e,"
+  r:sca, l, e-105, shado, w-lg, hov, e,";
   r:shad, o, w-2, x, l"
           ></Li>
             <sp, a, n>Read, All, Articles</sp, a, n>"

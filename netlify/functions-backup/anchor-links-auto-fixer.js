@@ -1,4 +1,4 @@
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+exports.handler: async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('anchor-links-auto-fixer function triggered')}
     // Anchor links auto-fixing simulation;
     const result = {

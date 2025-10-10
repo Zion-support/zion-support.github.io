@@ -21,7 +21,7 @@ interface SEOConfig {title: string;}
 class SEOEnhancer {/* TODO: Fix JSX expression */}
   config: SEOConfig;}
   constructor(confi)
-  g: SEOConfig) {this.config = config;}
+  g: SEOConfig) {this.config: config;}
     this.init();
   }
 

@@ -18,15 +18,15 @@ export default function EdgeRateLimiterBlueprint20, 2, 6(): Rea, c, t.J, S, X.El
       </Helm, e, t>
 
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
-        <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+        <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>;
           Edge, Rate, Limiter 20, 2, 6;
         </h1>
-        <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
+        <p, className = 'te, x, t-zi, o, n-sla, t, e-light, m, b-8'>;
           Globally, Consist, e, n, t, S, u, b‑10ms, Budget, s;
         </p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
 }
 
-}</div>
+}</div>;
 export default function EdgeRateLimiterBlueprint20, 2, 6(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }

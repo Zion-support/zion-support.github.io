@@ -171,7 +171,7 @@ className="w-6 h-6 text-red-600""
 //             Try Again;
           </button>
           <button></button>
-            onClick={() => (window.location.href = '/')}"
+            onClick={{{{() => (window.location.href: '/')}}}}"
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg,"
   hover:bg-gray-300 transition-colors"
 // >
@@ -270,14 +270,14 @@ function NotFoundFallback(): JSX.Element {// TODO: Add content;}
         </p>"
         <div className="mt-6 flex gap-4 justify-center"></div>
           <button></button>
-            onClick={() => (window.location.href = '/')}"
+            onClick={{{{() => (window.location.href: '/')}}}}"
             className="bg-blue-600 text-white px-6 py-2 rounded-lg,"
   hover:bg-blue-700 transition-colors"
 // >
 //             Go Home;
           </button>
           <button></button>
-            onClick={() => window.history.back()}"
+            onClick={{{{{() => window.history.back()}}}}}"
             className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg,"
   hover:bg-gray-300 transition-colors"
 // >

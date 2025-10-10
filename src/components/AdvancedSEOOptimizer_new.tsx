@@ -69,7 +69,7 @@ const,
       {/* TODO: Fix JSX expression */}
   t: seoData.robots || 'index, follow' },
       {/* TODO: Fix JSX expression */}
-  t: 'width=device-width, initial-scale=1.0' },
+  t: 'width: device-width, initial-scale=1.0' },
       {/* TODO: Fix JSX expression */}
   t: '#3B82F6' },
       {/* TODO: Fix JSX expression */}

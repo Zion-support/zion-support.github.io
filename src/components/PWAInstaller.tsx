@@ -88,7 +88,7 @@ const PWAInstaller: React.FC = () => {
             </button>
             
             <button
-              onClick={() => setShowInstallButton(false)}
+              onClick={{{{{() => setShowInstallButton(false)}}}}}
               className="text-white/70 text-xs px-3 py-1.5 hover:text-white transition-colors duration-200"
             >
               Maybe later
@@ -97,7 +97,7 @@ const PWAInstaller: React.FC = () => {
         </div>
         
         <button
-          onClick={() => setShowInstallButton(false)}
+          onClick={{{{{() => setShowInstallButton(false)}}}}}
           className="flex-shrink-0 text-white/70 hover:text-white transition-colors duration-200"
         >
           ×

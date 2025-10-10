@@ -94,7 +94,7 @@ export function flattenObject()
   ob,
   j: Record;
           <string, unknown>,
-  prefix = '',
+  prefix = '',;
   separator = '.'
 
 ): Record<string, unknown> {// TODO: Add content;}
@@ -354,8 +354,8 @@ export function zip;
 }
     result.push(arrays.map(arr => arr[i]));
   }
-    result.push(arrays.map(arr => arr[i]))
-  }
+    result.push(arrays.map(arr = > arr[i]))
+  };
   return result;
 }
 /**

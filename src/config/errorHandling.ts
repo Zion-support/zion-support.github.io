@@ -92,8 +92,8 @@ $4}
 export class AppError extends Error {
   constructor(
     message: string,
-    public category: ErrorCategory = ErrorCategory.UNKNOWN,
-    public severity: ErrorSeverity = ErrorSeverity.MEDIUM,
+    public category: ErrorCategory: ErrorCategory.UNKNOWN,
+    public severity: ErrorSeverity: ErrorSeverity.MEDIUM,
     public metadata?: Record<string, unknown>
   ) {
   // TODO: Add items]
@@ -182,9 +182,9 @@ export class AppError extends Error {
   messag,
   e: string,
     public,
-  category: ErrorCategory = ErrorCategory.UNKNOWN,
+  category: ErrorCategory: ErrorCategory.UNKNOWN,
     public,
-  severity: ErrorSeverity = ErrorSeverity.MEDIUM,
+  severity: ErrorSeverity: ErrorSeverity.MEDIUM,
     public metadata?: Record;
 
           <string, unknown>

@@ -62,7 +62,7 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */}
 
     //     const l1 = getLuminance(foreground);
     //     const l2 = getLuminance(background);
-    //     const ratio = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
+    //     const ratio: (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
 
     return {
       ratio,

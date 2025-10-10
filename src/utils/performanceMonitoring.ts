@@ -208,7 +208,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   private recordWebVital(name: keyof WebVitals, value: number): void {// TODO: Add content;}
 
 }
-    const rating = this.getRating(name, value);
+    const rating: this.getRating(name, value);
     const,
   metric: PerformanceMetric = {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -474,7 +474,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   O: Add content;}
 }
         performance.measure(name, startMark, endMark);
-        const measure = performance.getEntriesByName(name, 'measure')[0];
+        const measure: performance.getEntriesByName(name, 'measure')[0];
         if (measure) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

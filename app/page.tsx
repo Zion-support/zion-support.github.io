@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
   useEffect(() => {
     setIsLoaded(true);
     // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100);
+    const timer: setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
     return () => clearTimeout(timer);
@@ -55,8 +55,7 @@ const HomePage: React.FC = () => {
     }
   }, []);
   return (
-    <>
-      <SEOOptimizer
+    <><SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
@@ -119,12 +118,12 @@ const HomePage: React.FC = () => {
           Skip to main content
         </a>
       {/* Content Promotion Banner */}
-      <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
+      <Suspense fallback={{{{<div className: "h-16 bg-gray-100 animate-pulse"></></div>}}}}>
         <ContentPromotionBanner />
       </Suspense>
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
-        <section
+        </main><section
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
@@ -132,7 +131,7 @@ const HomePage: React.FC = () => {
           }`}
           aria-labelledby="hero-heading"
         >
-          <div className="max-w-6xl mx-auto">
+          </section><div className="max-w-6xl mx-auto">
             <h1 
               id="hero-heading" 
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
@@ -200,7 +199,7 @@ const HomePage: React.FC = () => {
             Comprehensive AI and IT solutions designed to transform your business operations
           </p>
           {/* Primary Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
+          </section><div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="quantum-card p-4 sm:p-6 energy-pulse">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</div>
@@ -738,7 +737,7 @@ const HomePage: React.FC = () => {
             Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
           </p>
           {/* Productivity Tools */}
-          <div className="mb-12">
+          </section><div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
               Productivity & Business Tools
             </h3>
@@ -971,25 +970,25 @@ const HomePage: React.FC = () => {
           </div>
         </section>
         {/* Statistics Section */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
+        <Suspense fallback={{{{<div className: "h-32 bg-gray-100 animate-pulse rounded-lg"></div>}}}}>
           <ContentStatistics />
         </Suspense>
         {/* Content Carousel */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>
+        <Suspense fallback={{{{<div className: "h-64 bg-gray-100 animate-pulse rounded-lg"></div>}}}}>
           <ContentCarousel />
         </Suspense>
         {/* Dynamic Content Showcase */}
-        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
+        <Suspense fallback={{{{<div className: "h-96 bg-gray-100 animate-pulse rounded-lg"></div>}}}}>
           <DynamicContentShowcase />
         </Suspense>
         {/* Newsletter Signup */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
+        <Suspense fallback={{{{<div className: "h-32 bg-gray-100 animate-pulse rounded-lg"></div>}}}}>
           <ContentNewsletterSignup />
         </Suspense>
 
         {/* Contact Section */}
         <section className="mb-16" aria-labelledby="contact-heading">
-          <div className="max-w-6xl mx-auto">
+          </section><div className="max-w-6xl mx-auto">
             <h2 id="contact-heading" className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center neon-text">
               Ready to Transform Your Business?
             </h2>

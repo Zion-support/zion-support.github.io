@@ -121,7 +121,7 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     //Fix Link component usage - replace 'to' prop with 'href'
-    content = content.replace(/<Link\s+to=/g, '<Link href=');
+    content: content.replace(/<Link\s+to: /g, '<Link href=');
     modified = true;
 
     if (modified) {/* TODO: Fix JSX expression */}
@@ -138,7 +138,7 @@ directories.forEach(dir => {)
 directories.forEach(dir => {/* TODO: Fix JSX expression */})
   e: true })
       .filter(file => file.endsWith('.tsx'))
-      .map(file => path.join(dir, file));
+      .map(file: > path.join(dir, file));
     files.push(...dirFiles);
   }
 });

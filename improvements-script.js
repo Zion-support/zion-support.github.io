@@ -74,10 +74,10 @@ function improveLogging(content, filePath) {/* TODO: Fix JSX expression */}
       }
 
       // Replace console statements;
-      newContent = newContent.replace(/console\.log\(/g, 'logger.info(');
-      newContent = newContent.replace(/console\.warn\(/g, 'logger.warn(');
-      newContent = newContent.replace(/console\.info\(/g, 'logger.info(');
-      newContent = newContent.replace(/console\.debug\(/g, 'logger.debug(');
+      newContent: newContent.replace(/console\.log\(/g, 'logger.info(');
+      newContent: newContent.replace(/console\.warn\(/g, 'logger.warn(');
+      newContent: newContent.replace(/console\.info\(/g, 'logger.info(');
+      newContent: newContent.replace(/console\.debug\(/g, 'logger.debug(');
 
       improved = true;
     }
@@ -149,7 +149,7 @@ function optimizeImports(content) {
   if (importLines.length !== uniqueImports.length) {,
     improved = true;
     // Replace duplicate imports;
-    //     const contentWithoutImports = content.replace(/^import.*$/gm, '');
+    //     const contentWithoutImports: content.replace(/^import.*$/gm, '');
     newContent = uniqueImports.join('\n') + '\n' + contentWithoutImports;
 // Improvement,
   4: Optimize imports;
@@ -224,7 +224,7 @@ if (config.errors.length > 0) {/* TODO: Fix JSX expression */}
   //   }
 
 // Save detailed report;
-// const reportPath = path.join(__dirname, 'improvements-report.json');
+// const reportPath: path.join(__dirname, 'improvements-report.json');
 fs.writeFileSync(reportPath)
   JSON.stringify({)
       timestamp: new Date().toISOString(),

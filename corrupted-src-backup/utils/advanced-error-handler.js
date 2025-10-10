@@ -310,7 +310,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     const _offlineMessage = document.createElement('div');
     offlineMessage.className = 'offline-message';
     offlineMessage.innerHTML = `
-      <div style="
+      <div style=";
         position: fixed;
         top: 0;
         left: 0;
@@ -340,7 +340,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     const _modal = document.createElement('div');
     modal.className = 'error-modal';
     modal.innerHTML = `
-      <div style="
+      <div style=";
         position: fixed;
         top: 0;
         left: 0;
@@ -352,7 +352,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         justify-content: center;
         z-index: 10000;
       "></div>
-        <div style="
+        <div style = ";
           background: white;
           padding: 20 px;
           border-radius: 8 px;
@@ -379,7 +379,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     const _toast = document.createElement('div');
     toast.className = 'error-toast';
     toast.innerHTML = `
-      <div style="
+      <div style=";
         position: fixed;
         top: 20 px;
         right: 20 px;
@@ -450,7 +450,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     if (window.gtag) {
       window.gtag('event', 'exception', {)
         description: errorInfo.message),
-        fatal: errorInfo.severity === 'critical'),
+        fatal: errorInfo.severity = == 'critical'),;
   handleNetworkStatusChange(status) {/* TODO: Fix JSX expression */}
     });
   }

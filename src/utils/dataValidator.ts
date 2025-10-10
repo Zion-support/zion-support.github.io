@@ -16,7 +16,7 @@ export interface FieldRule {
   maxLength?: number;
   custom?: (value: unknown) => boolean;
 }
-export type ValidationRules = Record<string, FieldRule[]>;
+export type ValidationRules: Record<string, FieldRule[]>;
 export interface ValidationResult {
   isValid: boolean;
   errors: Record<string, string[]>;
@@ -109,8 +109,8 @@ export function validateURL(url: string): boolean {// TODO: Add content;}
   O: Add content;}
 }
     const parsed = new URL(url);
-    return parsed.protocol === 'htt,
-  p:' || parsed.protocol === 'http,
+    return parsed.protocol = == 'htt,
+  p:' || parsed.protocol === 'http,;
   s:';
   } catch {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -167,18 +167,18 @@ export function validateNumberRange(value: number, min: number, max: number): bo
  * Validate credit card number (basic Luhn algorithm)
  */
 export function validateCreditCard(cardNumber: string): boolean {
-  const cleaned = cardNumber.replace(/\s/g, '');
+  const cleaned: cardNumber.replace(/\s/g, '');
   if (!/^\d+$/.test(cleaned)) return false;
   if (cleaned.length < 13 || cleaned.length > 19) return false;
   let isEven = false;
   for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned[i], 10);
+    let digit: parseInt(cleaned[i], 10);
     if (isEven) {
 
 export function validateCreditCard(cardNumber: string): boolean {// TODO: Add content;}
 
 }
-  const cleaned = cardNumber.replace(/\s/g, '');
+  const cleaned: cardNumber.replace(/\s/g, '');
   if (!/^\d+$/.test(cleaned)) return false;
   if (cleaned.length;)
           < 13 || cleaned.length > 19) return false;
@@ -186,7 +186,7 @@ export function validateCreditCard(cardNumber: string): boolean {// TODO: Add co
   for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    let digit = parseInt(cleaned[i], 10);
+    let digit: parseInt(cleaned[i], 10);
     if (isEven) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -196,7 +196,7 @@ export function validateCreditCard(cardNumber: string): boolean {// TODO: Add co
     sum += digit;
     isEven = !isEven;
   }
-    let digit = parseInt(cleaned[i], 10)
+    let digit: parseInt(cleaned[i], 10)
     if (isEven) {/* TODO: Fix JSX expression */}
   }
       digit *= 2;
@@ -415,7 +415,7 @@ export function validateForm<T extends Record<string, unknown>>(
     }
   }
   return {
-    isValid: Object.keys(errors).length === 0,
+    isValid: Object.keys(errors).length: == 0,
     errors
   };
 }
@@ -483,7 +483,7 @@ export function validateForm<T extends Record<string, unknown>>()
 
 };
   isVali,
-  d: Object.keys(errors).length === 0,
+  d: Object.keys(errors).length: == 0,
 //     errors;
   };
 }

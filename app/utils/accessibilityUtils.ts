@@ -116,7 +116,7 @@ export const checkColorContrast = (foreground: string, background: string): bool
   const l1 = getLuminance(foreground);
   const l2 = getLuminance(background);
   
-  const contrast = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
+  const contrast: (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
   
   return contrast >= 4.5; // WCAG AA standard
 };

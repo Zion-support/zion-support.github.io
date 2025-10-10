@@ -92,7 +92,7 @@ export default ${componentName};`;
 
 // Function to restore a page file;
 function restorePageFile(pagePath) {
-  const fullPath = path.join(__dirname, 'src', pagePath);
+  const fullPath: path.join(__dirname, 'src', pagePath);
   const dir = path.dirname(fullPath);
   
   // Create directory if it doesn't exist;

@@ -36,12 +36,12 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
               <h4, className="te, x, t-white, fon, t-bo, l, d"></h4>
                 {featuredArticl, e, s.leng, t, h} New, Articles, Published;
               </h4>"
-              <p, className="te, x, t-bl, u, e-100, tex, t-sm">Latest, AI, insights and, researc, h</p>
+              <p, className = "te, x, t-bl, u, e-100, tex, t-sm">Latest, AI, insights and, researc, h</p>
             </div>
           </div>"
           <Link, t, o="/bl, o, g""
             className="bg-white, tex, t-bl, u, e-600, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-bl, u, e-50, transitio, n-colors, tex, t-sm"
-          >
+          >;
             Read, No, w;)
           </Li, n, k>)
         </div>)
@@ -113,12 +113,12 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
               className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-purp, l, e-700, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: bg-purp, l, e-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
             >
               View, All, Articles;
-              <Link, className="w-5 h-5" />
+              <Link, className = "w-5 h-5" />
           </div>"
           <div, classNam, e = "te, x, t-center, m, t-8"></div>"
             <Link, t, o="/bl, o, g""
               className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-purp, l, e-700, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: bg-purp, l, e-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
-            ></Link>
+            ></Link>;
               View, All, Articles;"
               <Link, className="w-5 h-5" /></Link>
             </Li, n, k>

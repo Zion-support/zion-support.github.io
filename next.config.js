@@ -125,7 +125,7 @@ const nextConfig = {
           },
           {
             key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()',
+            value: 'camera: (), microphone: (), geolocation: (), payment: (), usb: (), interest-cohort=()',
           },
           {
             key: 'Strict-Transport-Security',
@@ -142,7 +142,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
+            value: 'public, max-age: 31536000, immutable',
           },
         ],
       },
@@ -151,7 +151,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=86400, s-maxage=604800, stale-while-revalidate',
+            value: 'public, max-age: 86400, s-maxage: 604800, stale-while-revalidate',
           },
         ],
       },

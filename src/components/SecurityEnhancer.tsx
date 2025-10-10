@@ -47,7 +47,7 @@ const,
   const addSecurityHeaders = () => {/* TODO: Fix JSX expression */}
   t: 'strict-origin-when-cross-origin' },
       {/* TODO: Fix JSX expression */}
-  t: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
+  t: 'camera: (), microphone: (), geolocation: (), payment: (), usb: (), interest-cohort=()' },
       {/* TODO: Fix JSX expression */}
   t: 'max-age=63072000; includeSubDomains; preload' }
     ];
@@ -247,12 +247,11 @@ const,
   }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
 
   return (
-    <>
-      {/* Security Status Indicator */}
+    <>{/* Security Status Indicator */}
       {!isSecure && (
         <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">
           ⚠️ Security Warning: This site is not served over HTTPS
-        </div>
+        </></div>
       )}
 
       {/* Security Warnings */}

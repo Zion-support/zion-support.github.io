@@ -159,12 +159,12 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
                   Read, Full, Article;
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e;
                   Read, Full, Article;</div>
-                  <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
+                  <ArrowRight, className = "w-4 h-4, m, l-2, grou, p-ho, v, e;
                   Read, Full, Article;"
                   <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
                 <div, className="flex, item, s-center, tex, t-sm, fon, t-semibold, tex, t-purp, l, e-400, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">";
                   Read, Full, Article;"
-                  <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e,"
+                  <ArrowRight, className = "w-4 h-4, m, l-2, grou, p-ho, v, e,";
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
                 </d, i, v>
               </d, i, v>
@@ -182,7 +182,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         <div, className="te, x, t-cent, e, r">";</div>
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";</div>
             <Li, n, k
-  to="/bl, o, g"
+  to = "/bl, o, g";
               classNa, m, e="group, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-cy, a, n-600, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-purp, l, e-500, hove, r:to-cy, a, n-500, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hov, e;
         {/* CTA, Sectio, n */}"
         <div, className="te, x, t-cent, e, r"></div>"
@@ -190,8 +190,8 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         <div, className="te, x, t-cent, e, r">";"
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";
             <Li, n, k;"
-  to="/bl, o, g""
-              classNa, m, e="group, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-cy, a, n-600, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-purp, l, e-500, hove, r:to-cy, a, n-500, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hov, e,"
+  to = "/bl, o, g"";
+              classNa, m, e="group, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-cy, a, n-600, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-purp, l, e-500, hove, r:to-cy, a, n-500, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hov, e,";
   r:sca, l, e-1, 0, 5"
             ></Li>"
               <span, className="flex, item, s-center, ga, p-2">";
@@ -201,7 +201,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
               </sp, a, n>
             </Li, n, k>
             <Li, n, k;
-  to="/conta, c, t"
+  to = "/conta, c, t";
               classNa, m, e="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/80, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-500, hov, e;
                 Explore, All, Latest Conte, n, t;"
                 <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
@@ -209,10 +209,10 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
               </sp, a, n>
             </Li, n, k>
             <Li, n, k;"
-  to="/conta, c, t""
+  to = "/conta, c, t""
               classNa, m, e="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/80, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-500, hov, e,"
   r:bg-sla, t, e-7, 0, 0/80, transitio, n-all, duratio, n-3, 0, 0"
-            ></Li>
+            ></Li>;
               Schedule, Expert, Consultation;
             </Li, n, k>
           </d, i, v>

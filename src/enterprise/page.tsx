@@ -36,18 +36,18 @@ const Pagetsx: React.FC = () => {
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></h1>
               tsx;
             </h1>"
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+            <p className = "text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>;
               Advanced tsx solutions powered by AI and cutting-edge technology;
             </p>"
-            <div className="flex flex-col,"
+            <div className = "flex flex-col,"
   sm:flex-row gap-4 justify-center"></div>"
               <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
-  hover:bg-cyan-600 transition-colors"></a>
+  hover:bg-cyan-600 transition-colors"></a>;
                 Get Started;
               </a>"
-              <a href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg,
+              <a href = "/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg,
   hover:bg-cyan-500,"
-  hover:text-white transition-colors"></a>
+  hover:text-white transition-colors"></a>;
                 View Demo;
               </a>
             </div>
@@ -56,7 +56,7 @@ const Pagetsx: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
+          </section><div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {_features.map((feature, index) => (}

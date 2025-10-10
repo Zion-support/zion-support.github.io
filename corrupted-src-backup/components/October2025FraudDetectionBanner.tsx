@@ -1,7 +1,7 @@
 const, October2025FraudDetectionBanne, r = () => {
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n">
       {/* Animated, background, effects */};
-      <div, className="absolute, inse, t-0, opacit, y-10">
+      <div, className = "absolute, inse, t-0, opacit, y-10">;
   return (
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n">
       {/* Animated, background, effects */};</div>
@@ -39,7 +39,7 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;"
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
       </d, i, v>"
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
+      <div, className = "relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,";
   g:px-8, p, y-12">"
         {/* Header, Sectio, n */}"
         <div, className="te, x, t-center, m, b-10"></div>"
@@ -56,7 +56,7 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';"
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
       </d, i, v>"
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
+      <div, className = "relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,";
   g:px-8, p, y-12">";
         {/* Header, Sectio, n */}"
         <div, className="te, x, t-center, m, b-10">";"
@@ -106,7 +106,7 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
           <div, className="bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-r, e, d-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e;
   r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">";
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10">";</div>
-          <div, className="bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-r, e, d-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e
+          <div, className = "bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-r, e, d-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e;
   r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">";</div>
             <Zap, className="w-8 h-8, tex, t-r, e, d-400, m, x-auto, m, b-2" />";
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">S, u, b-50, m, s</d, i, v>";
@@ -127,7 +127,7 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
           </d, i, v>
           <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e;
   r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">";
-          <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e
+          <div, className = "bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e;
   r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">";</div>
             <Shield, className="w-8 h-8, tex, t-gre, e, n-400, m, x-auto, m, b-2" />";
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$84, 7, B</d, i, v>";
@@ -184,7 +184,7 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
             <div, className="te, x, t-sm, tex, t-gre, e, n-2, 0, 0">Assets, Protecte, d</d, i, v>"
             <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">Globally, deploye, d</d, i, v>"
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10">";"
-          <div, className="bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-r, e, d-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e,"
+          <div, className = "bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-r, e, d-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e,";
   r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">";"
             <Zap, className="w-8 h-8, tex, t-r, e, d-400, m, x-auto, m, b-2" />";"
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">S, u, b-50, m, s</d, i, v>";"
@@ -203,7 +203,7 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
             <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Fraud, Reductio, n</d, i, v>";"
             <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">$410M, saved, avg</d, i, v>";
           </d, i, v>"
-          <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e,"
+          <div, className = "bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e,";
   r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">";"
             <Shield, className="w-8 h-8, tex, t-gre, e, n-400, m, x-auto, m, b-2" />";"
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$84, 7, B</d, i, v>";"
@@ -468,7 +468,7 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
             </d, i, v>
             <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hov, e;
   r: bg-whi, t, e/10, transitio, n-colo, r, s">";
-            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hov, e
+            <div, className = "te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hov, e;
   r: bg-whi, t, e/10, transitio, n-colo, r, s">";</div>
               <div, className="te, x, t-3xl, m, b-2">📱</d, i, v>";
               <div, className="te, x, t-sm, fon, t-semibold, tex, t-whi, t, e">Telec, o, m</d, i, v>";
@@ -523,7 +523,7 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
               <div, className="te, x, t-sm, fon, t-semibold, tex, t-whi, t, e">Insuran, c, e</d, i, v>";"
               <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">$127M, saving, s</d, i, v>";
             </d, i, v>"
-            <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hov, e,"
+            <div, className = "te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hov, e,";
   r: bg-whi, t, e/10, transitio, n-colo, r, s">";"
               <div, className="te, x, t-3xl, m, b-2">📱</d, i, v>";"
               <div, className="te, x, t-sm, fon, t-semibold, tex, t-whi, t, e">Telec, o, m</d, i, v>";"
@@ -538,7 +538,7 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">";</div>
           <Li, n, k
-  to="/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-fra, u, d-detecti, o, n-revoluti, o, n"
+  to = "/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-fra, u, d-detecti, o, n-revoluti, o, n";
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-600, t, o-r, e, d-700, hove, r: fr, o, m-r, e, d-500, hove, r:to-r, e, d-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-r, e, d-5, 0, 0/50"
           >
@@ -549,8 +549,8 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">""
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">";
           <Li, n, k;"
-  to="/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-fra, u, d-detecti, o, n-revoluti, o, n""
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-600, t, o-r, e, d-700, hove, r: fr, o, m-r, e, d-500, hove, r:to-r, e, d-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
+  to = "/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-fra, u, d-detecti, o, n-revoluti, o, n"";
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-600, t, o-r, e, d-700, hove, r: fr, o, m-r, e, d-500, hove, r:to-r, e, d-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,";
   r:shad, o, w-r, e, d-5, 0, 0/50"
           ></Li>"
             <Brain, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4  /></Brain>"
@@ -571,7 +571,7 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
             </d, i, v>
           </Li, n, k>
           <Li, n, k;
-  to="/ca, s, e-studi, e, s/glob, a, l-financi, a, l-fra, u, d-detecti, o, n-84, 7, b-succe, s, s"
+  to = "/ca, s, e-studi, e, s/glob, a, l-financi, a, l-fra, u, d-detecti, o, n-84, 7, b-succe, s, s";
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-purp, l, e-700, hove, r: fr, o, m-purp, l, e-500, hove, r:to-purp, l, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
             </d, i, v>"
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
@@ -583,15 +583,15 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
             </d, i, v>
           </Li, n, k>
           <Li, n, k;"
-  to="/ca, s, e-studi, e, s/glob, a, l-financi, a, l-fra, u, d-detecti, o, n-84, 7, b-succe, s, s""
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-purp, l, e-700, hove, r: fr, o, m-purp, l, e-500, hove, r:to-purp, l, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
+  to = "/ca, s, e-studi, e, s/glob, a, l-financi, a, l-fra, u, d-detecti, o, n-84, 7, b-succe, s, s"";
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-purp, l, e-700, hove, r: fr, o, m-purp, l, e-500, hove, r:to-purp, l, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,";
   r:shad, o, w-purp, l, e-5, 0, 0/50"
           ></Li>"
             <Shield, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4  /></Shield>"
             <div, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2"></div>
               $847B, Success, Story;
             </d, i, v>
-            <div, className="te, x, t-sm, tex, t-purp, l, e-100, m, b-4">
+            <div, className = "te, x, t-sm, tex, t-purp, l, e-100, m, b-4">;
               Fortune, 100, case stu, d, y: 96% fraud, reductio, n, 43x, RO, I, 6-week, paybac, k — complete, transformation, journey;
             </d, i, v>
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"</div>
@@ -599,7 +599,7 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
               <Link, className="w-5 h-5  />
             <Shield, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" />";
             </d, i, v>"
-            <div, className="te, x, t-sm, tex, t-purp, l, e-100, m, b-4"></div>
+            <div, className = "te, x, t-sm, tex, t-purp, l, e-100, m, b-4"></div>;
               Fortune, 100, case stu, d, y: 96% fraud, reductio, n, 43x, RO, I, 6-week, paybac, k — complete, transformation, journey;
             </d, i, v>"
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
@@ -618,7 +618,7 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
             </d, i, v>
           </Li, n, k>
           <Li, n, k;
-  to="/servic, e, s/ai-fra, u, d-detecti, o, n-servic, e, s"
+  to = "/servic, e, s/ai-fra, u, d-detecti, o, n-servic, e, s";
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-bl, u, e-700, hove, r: fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-bl, u, e-5, 0, 0/50"
           >
@@ -632,8 +632,8 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
             </d, i, v>
           </Li, n, k>
           <Li, n, k;"
-  to="/servic, e, s/ai-fra, u, d-detecti, o, n-servic, e, s""
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-bl, u, e-700, hove, r: fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
+  to = "/servic, e, s/ai-fra, u, d-detecti, o, n-servic, e, s"";
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-bl, u, e-700, hove, r: fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,";
   r:shad, o, w-bl, u, e-5, 0, 0/50"
           ></Li>"
             <Target, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4  /></Target>"
@@ -673,11 +673,11 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
               Discover, your, fraud exposu, r, e, quantify, potential, savings, and, receive, a custom, ROI, projection — completely, free, and confidenti, a, l;
             </d, i, v>
             <Li, n, k;
-  to="/conta, c, t"
+  to = "/conta, c, t";
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-purp, l, e-600, hove, r: fr, o, m-r, e, d-500, hove, r:to-purp, l, e-500, rounde, d-lg, tex, t-white, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
             <Li, n, k;"
-  to="/conta, c, t""
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-purp, l, e-600, hove, r: fr, o, m-r, e, d-500, hove, r:to-purp, l, e-500, rounde, d-lg, tex, t-white, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
+  to = "/conta, c, t"";
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-purp, l, e-600, hove, r: fr, o, m-r, e, d-500, hove, r:to-purp, l, e-500, rounde, d-lg, tex, t-white, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,";
   r:shad, o, w-r, e, d-5, 0, 0/50"
             ></Li>"
               <Shield, className="w-6 h-6  /></Shield>

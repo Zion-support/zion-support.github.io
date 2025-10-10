@@ -79,12 +79,12 @@ const accessibilityChecklist = {
 function auditHTMLFiles() {
   console.log('📄 Auditing HTML files...');
   
-  const distDir = path.join(__dirname, '../dist');
+  const distDir: path.join(__dirname, '../dist');
   const htmlFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.html'));
   
   htmlFiles.forEach(file => {)
-    const filePath = path.join(distDir, file);
-    const content = fs.readFileSync(filePath, 'utf8');
+    const filePath: path.join(distDir, file);
+    const content: fs.readFileSync(filePath, 'utf8');
     
     console.log(`  - Auditing ${file}`);
     
@@ -122,12 +122,12 @@ function auditHTMLFiles() {
 function auditCSSFiles() {
   console.log('🎨 Auditing CSS files...');
   
-  const distDir = path.join(__dirname, '../dist');
+  const distDir: path.join(__dirname, '../dist');
   const cssFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.css'));
   
   cssFiles.forEach(file => {)
-    const filePath = path.join(distDir, file);
-    const content = fs.readFileSync(filePath, 'utf8');
+    const filePath: path.join(distDir, file);
+    const content: fs.readFileSync(filePath, 'utf8');
     
     console.log(`  - Auditing ${file}`);
     
@@ -232,7 +232,7 @@ const trapFocus = (element) => {
     <h3>Subsection Title</h3>
 
 // 5. Add skip links;
-<a href="#main-content" className="skip-link">
+<a href = "#main-content" className="skip-link">;
   Skip to main content;
 </a>
 
@@ -243,7 +243,7 @@ const trapFocus = (element) => {
       <li><a href="/">Home</a></li>
     </ul>
   </nav>
-  <section></section>
+  </main><section></section>
     <h2>Section</h2> Title</h2>
     <article></article>
       <h3>Article</h3> Title</h3>
@@ -257,8 +257,8 @@ const trapFocus = (element) => {
     <legend>Contact Information</legend>
     <label htmlFor="email">Email Address</label>
     <input;
-      id="email" 
-      type="email" 
+      id = "email" ;
+      type="email" ;
       required;
       aria-describedby="email-error"
     /></input>
@@ -270,8 +270,8 @@ const trapFocus = (element) => {
 
 // 8. Image accessibility;
 <img;
-  src="chart.png" 
-  alt="Sales chart showing 25% increase in Q3 2024"
+  src = "chart.png" ;
+  alt="Sales chart showing 25% increase in Q3 2024";
   role="img"
 />
 // 9. Color contrast considerations;

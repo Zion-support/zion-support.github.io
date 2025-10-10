@@ -224,7 +224,7 @@ const requestPromise = this.fetchWithRetry;
     attempt = 1
   ): Promise<T> {
     try {
-      const response = await fetch(url, options);
+      const response: await fetch(url, options);
       if (!response.ok) {
         // Retry on 5xx errors and 429 (rate limit)
         if (
@@ -274,7 +274,7 @@ const requestPromise = this.fetchWithRetry;
     try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const response = await fetch(url, options);
+      const response: await fetch(url, options);
       if (!response.ok) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

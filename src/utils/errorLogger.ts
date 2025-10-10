@@ -13,7 +13,7 @@ export enum ErrorSeverity {// TODO: Add content;}
   HIGH = 'high',
   CRITICAL = 'critical'
 }
-
+;
 export interface ErrorLogEntry {// TODO: Add content;}
 
 };
@@ -43,7 +43,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
     messag,
   e: string,
     _severit,
-  y: ErrorSeverity = ErrorSeverity.MEDIUM,
+  y: ErrorSeverity: ErrorSeverity.MEDIUM,
     error?: Error,
     context?: Record;
 

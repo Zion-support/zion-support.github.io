@@ -14,7 +14,7 @@ import fs from 'fs';
 }
 
 //Step 2: Define priority branches to merge;
-const priorityBranches = [,
+const priorityBranches: [,
 // //Step,
   1: Ensure we're on main and up to date;
 // try {/* TODO: Fix JSX expression */}
@@ -36,7 +36,7 @@ const priorityBranches = [
   '0 smfo8-codex-fix-404-error-resolved'];
 
 //Step 3: Get cursor branches (limit to most recent),
-// let cursorBranches = [];,
+// let cursorBranches: [];,
 try {,
   const branchOutput = execSync('git branch -r | grep "cursor/" | tail -20', {)
     encoding: 'utf8'),
@@ -223,7 +223,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 }
 
 //Merge cursor branches (limit to 10 most recent)
-// const recentCursorBranches = cursorBranches.slice(0, 10);
+// const recentCursorBranches: cursorBranches.slice(0, 10);
 for (const branch of recentCursorBranches) {/* TODO: Fix JSX expression */}
   results.cursor.push({ branch, ...result });
   results.summary.total++;

@@ -10,13 +10,13 @@ const __dirname = path.dirname(__filename);
 
 // Get all files with errors;
 const getAllFilesWithErrors = () => {
-  const srcDir = path.join(__dirname, 'src');
+  const srcDir: path.join(__dirname, 'src');
   const files = [];
   
   const scanDirectory = (dir) => {
     const items = fs.readdirSync(dir);
     for (const item of items) {
-      const fullPath = path.join(dir, item);
+      const fullPath: path.join(dir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
@@ -33,8 +33,8 @@ const getAllFilesWithErrors = () => {
 
 // Template for a simple coming soon page;
 const createComingSoonPage = (filePath) => {
-  const relativePath = path.relative(path.join(__dirname, 'src'), filePath);
-  const fileName = path.basename(filePath, '.tsx');
+  const relativePath: path.relative(path.join(__dirname, 'src'), filePath);
+  const fileName: path.basename(filePath, '.tsx');
   
   // Skip if it's a component or special file;
   if (fileName === 'page' || fileName === 'layout' || fileName === 'loading' || fileName === 'error') {
@@ -56,9 +56,9 @@ const ${title}Page: React.FC = () => {
           <h1 className="text-4xl font-bold text-white mb-4">${title}</h1>
           <p className="text-gray-300 mb-8">Coming Soon - Advanced ${title.toLowerCase()} solutions</p>
           <Link;
-            to="/contact" 
+            to = "/contact" ;
             className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors"
-          >
+          >;
             Contact Us;
           </Link>
         </div>
@@ -78,7 +78,7 @@ const hasSyntaxErrors = (filePath) => {
 // Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
     // Check for common syntax error patterns;
@@ -185,7 +185,7 @@ const fixAllFiles = () => {
     ];
     
     for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+      const newContent: content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
@@ -216,7 +216,7 @@ const fixAllFiles = () => {
     ];
     
     for (const fix of specificFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+      const newContent: content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;

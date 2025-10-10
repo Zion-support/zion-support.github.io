@@ -2,7 +2,7 @@
  * Performance utility functions;
  */
 
-export const measurePerformance = (nam,
+export const measurePerformance: (nam,
   e: string, f)
   n: () => void) => {/* TODO: Fix JSX expression */}
     //     } else {/* TODO: Fix JSX expression */}

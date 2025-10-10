@@ -73,7 +73,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
 
             <div className="space-y-3">
               <button
-                onClick={() => window.location.reload()}
+                onClick={{{{{() => window.location.reload()}}}}}
                 className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
               >
                 Refresh Page

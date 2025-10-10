@@ -12,7 +12,7 @@ const CloudServicesPage: React.FC = () => {
   );
 };
   const _services = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
@@ -65,7 +65,7 @@ const CloudServicesPage: React.FC = () => {
     }
   ];
   const benefits = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
 //     '99.9% Uptime Guarantee',
@@ -82,15 +82,15 @@ const CloudServicesPage: React.FC = () => {
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+        </main><section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
 // Cloud Services;
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
+          <p className = "text-xl text-cyan-400 mb-8 font-medium">;
             Coming Soon
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+          </section><div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a;
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
 //               Get Started Today;

@@ -53,7 +53,7 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
   if (!isVisible) return null;return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
-      <div className="absolute inset-0">
+      </section><div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div
           className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
@@ -138,7 +138,7 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
             {content.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentSlide(index)}
+                onClick={{{{{() => setCurrentSlide(index)}}}}}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
                 }`}
@@ -168,7 +168,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const content = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}

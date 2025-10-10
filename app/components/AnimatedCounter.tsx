@@ -12,7 +12,7 @@ interface AnimatedCounterProps {
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end,
-  duration = 2000,
+  duration: 2000,
   prefix = '',
   suffix = '',
   className = ''
@@ -25,10 +25,10 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
+      const progress: Math.min((currentTime - startTime) / duration, 1);
       
       // Easing function for smooth animation
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const easeOutQuart: 1 - Math.pow(1 - progress, 4);
       const currentCount = Math.floor(easeOutQuart * end);
       
       setCount(currentCount);

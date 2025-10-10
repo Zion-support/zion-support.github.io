@@ -223,8 +223,7 @@ export default function AIServicesPage() {
   ];
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing</title>
         <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI customer support, AI content generation, AI cybersecurity, ML platform" />
@@ -237,7 +236,7 @@ export default function AIServicesPage() {
       <div className="min-h-screen bg-slate-900 cyber-grid">
         {/* Hero Section */}
         <section className="relative py-20 lg:py-32 overflow-hidden">
-          <div className="container mx-auto px-4">
+          </section><div className="container mx-auto px-4">
             <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h1 className="text-5xl lg:text-7xl font-bold mb-6">
                 <span className="holographic-text cyber-text">AI Services</span>
@@ -261,14 +260,14 @@ export default function AIServicesPage() {
                   <Mail className="w-5 h-5 mr-2" />
                   Get Quote
                 </a>
-              </div>
+              </></div>
             </div>
           </div>
         </section>
 
         {/* Stats Section */}
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
-          <div className="container mx-auto px-4">
+          </section><div className="container mx-auto px-4">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -285,7 +284,7 @@ export default function AIServicesPage() {
 
         {/* Services Section */}
         <section className="py-20">
-          <div className="container mx-auto px-4">
+          </section><div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
                 <span className="neon-text">Our AI Services</span>
@@ -363,7 +362,7 @@ export default function AIServicesPage() {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-          <div className="container mx-auto px-4 text-center">
+          </section><div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             </h2>

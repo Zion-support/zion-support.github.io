@@ -72,13 +72,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
   }, [optimizeImages]);
 
   useEffect(() => {
-    const interval = setInterval(optimizeMemory, 30000); // Check every 30 seconds
+    const interval: setInterval(optimizeMemory, 30000); // Check every 30 seconds
     return () => clearInterval(interval);
   }, [optimizeMemory]);
 
   return (
-    <>
-      {children}
+    <>{children}
       <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-gray-900 flex items-center">
@@ -93,7 +92,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
             <Zap className="h-4 w-4 mr-2" />
             {isOptimizing ? 'Optimizing...' : 'Optimize'}
           </button>
-        </div>
+        </></div>
 
         {optimizations.length > 0 && (
           <div className="space-y-2 mb-4">

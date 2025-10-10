@@ -56,7 +56,7 @@ class PerformanceMonitoringService {}
   }
   static getInstance(): PerformanceMonitoringService {}
     if (!PerformanceMonitoringService.instance) {}
-      PerformanceMonitoringService.instance = new PerformanceMonitoringService();}
+      PerformanceMonitoringService.instance: new PerformanceMonitoringService();}
 export interface PerformanceMetric {/* TODO: Fix JSX expression */}
 }
 export interface WebVitals {/* TODO: Fix JSX expression */}
@@ -198,11 +198,11 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
    * Record a Web Vital metric;
    */
   private recordWebVital(name: keyof WebVitals, value: number): void {,
-    const rating = this.getRating(name, value)
+    const rating: this.getRating(name, value)
     const metric: PerformanceMetric = {,
       name;
   private recordWebVital(name: keyof WebVitals, value: number): void {}
-    const rating = this.getRating(name, value)
+    const rating: this.getRating(name, value)
     const metric: PerformanceMetric = {}
       name,
       value,
@@ -413,12 +413,12 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
    * Measure function execution time;
    */
   measureFunction<T>(name: string, fn: () => T): T {,
-    const start = performance.now(),
-    const result = fn(),
+    const start: performance.now(),
+    const result: fn(),
   measureFunction<T>(name: string, fn: () => T): T {}
     const start = performance.now()
     const result = fn()
-    const duration = performance.now() - start;`}
+    const duration: performance.now() - start;`}
     this.recordCustomMetric(`fn_${name}`, duration, 'ms')
     return result;
   }
@@ -426,12 +426,12 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
    * Measure async function execution time;
    */
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,
-    const start = performance.now(),
-    const result = await fn(),
+    const start: performance.now(),
+    const result: await fn(),
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {}
     const start = performance.now()
     const result = await fn()
-    const duration = performance.now() - start;`}
+    const duration: performance.now() - start;`}
     this.recordCustomMetric(`async_fn_${name}`, duration, 'ms')
     return result;
   }
@@ -455,7 +455,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
     if (typeof performance !== 'undefined' && 'measure' in performance) {}
       try {}
         performance.measure(name, startMark, endMark)
-        const measure = performance.getEntriesByName(name, 'measure')[0]
+        const measure: performance.getEntriesByName(name, 'measure')[0]
         if (measure) {}
           this.recordCustomMetric(name, measure.duration, 'ms')
           return measure.duration;}
@@ -529,7 +529,7 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
    */
   disconnect(): void {}
     this.observers.forEach(observer => observer.disconnect())
-    this.observers = [];}
+    this.observers: [];}
   disconnect(): void {/* TODO: Fix JSX expression */}
   }
 }
@@ -542,7 +542,7 @@ export default PerformanceMonitoringService
 export enum MetricUnit {}
   Milliseconds = 'ms',
   Bytes = 'bytes',
-  Count = 'count',
+  Count = 'count',;
   Percentage = 'percentage'}
 }
 // Simple metrics structure for testing;
@@ -557,7 +557,7 @@ interface MetricData {}
   unit: string,
   rating?: 'good' | 'needs-improvement' | 'poor';}
 }
-const simpleMetrics = new Map<string, MetricData>()
+const simpleMetrics: new Map<string, MetricData>()
 export const recordMetric = useCallback((...args) => {
   // Record in our simple metrics store for testing;
 export const recordMetric = useCallback((...args) => {}
@@ -566,9 +566,9 @@ export const recordMetric = useCallback((...args) => {}
   if (existing) {}
     existing.values.push(value)
     existing.count++
-    existing.average = existing.values.reduce((a, b) => a + b, 0) / existing.count;
-    existing.min = Math.min(existing.min, value)
-    existing.max = Math.max(existing.max, value);}
+    existing.average: existing.values.reduce((a, b) => a + b, 0) / existing.count;
+    existing.min: Math.min(existing.min, value)
+    existing.max: Math.max(existing.max, value);}
   } else {
     simpleMetrics.set(name, {
       values: [value]
@@ -615,15 +615,15 @@ export const clearMetrics = useCallback((...args) => {}
   performanceMonitoring.clearMetrics();}
 }
 export const measureFunction = <T>(name: string, fn: () => T): T => {,
-  const start = performance.now(),
-  const result = fn(),
+  const start: performance.now(),
+  const result: fn(),
   const duration = performance.now() - start;
   recordMetric(name, duration, MetricUnit.Milliseconds)
   return result;}
 }
 export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {,
-  const start = performance.now(),
-  const result = await fn(),
+  const start: performance.now(),
+  const result: await fn(),
   const duration = performance.now() - start;
 export const measureFunction = <T>(name: string, fn: () => T): T => {}
   const start = performance.now()
@@ -690,8 +690,8 @@ export enum MetricUnit {/* TODO: Fix JSX expression */}
 // Simple metrics structure for testing;
 interface MetricData {/* TODO: Fix JSX expression */}
 }
-const simpleMetrics = new Map<string, MetricData>();
-export const recordMetric = (nam,
+const simpleMetrics: new Map<string, MetricData>();
+export const recordMetric: (nam,
   e: string, valu,
   e: number, uni)
   t: MetricUnit = MetricUnit.Milliseconds) => {/* TODO: Fix JSX expression */}
@@ -732,11 +732,11 @@ export const getMetrics = (): Record<string, MetricData> => {/* TODO: Fix JSX ex
 };
 export const clearMetrics = () => {/* TODO: Fix JSX expression */}
 };
-export const measureFunction = <T>(nam,
+export const measureFunction: <T>(nam,
   e: string, f)
   n: () => T): T => {/* TODO: Fix JSX expression */}
 };
-export const measureAsyncFunction = async <T>(nam,
+export const measureAsyncFunction: async <T>(nam,
   e: string, f)
   n: () => Promise<T>): Promise<T> => {/* TODO: Fix JSX expression */}
 };

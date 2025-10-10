@@ -252,8 +252,7 @@ $4}
   ];
 
   return (
-    <>
-      <Navigation />
+    <><Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
@@ -265,7 +264,7 @@ $4}
               Pushing the boundaries of technology through cutting-edge research and innovation. 
               Our R&D team is dedicated to creating the next generation of AI and IT solutions.
             </p>
-          </div>
+          </></div>
 
           {/* Research Areas Tabs */}
           <div className="mb-12">
@@ -273,10 +272,10 @@ $4}
               {researchAreas.map((area) => (
                 <button
                   key={area.id}
-                  onClick={() => setActiveTab(area.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeTab === area.id
-                      ? `${area.bgColor} ${area.color} border-2 border-current`
+                  onClick={{{{{() => setActiveTab(area.id)}}}}}
+                  className={{{{`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
+                    activeTab: == area.id
+                      ? `${area.bgColor}}}} ${area.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
                 >
@@ -294,7 +293,7 @@ $4}
 };
   const [activeTab, setActiveTab] = useState('ai');
   const _researchAreas = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
@@ -639,7 +638,7 @@ $4}
 //     ]
   };
   const publications = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
@@ -709,7 +708,7 @@ $4}
     }
   ];
   const achievements = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
@@ -756,9 +755,8 @@ $4}
   return (<div>Coming Soon</div>)
   )
     
-          <>
-      <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+          <><Navigation /></Navigation>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-16"></div>"
@@ -778,7 +776,7 @@ $4}
               {researchAreas.map((area) => ()}
           <button></button>
                   key={area.id}
-                  onClick={() => setActiveTab(area.id)}
+                  onClick={{{{{() => setActiveTab(area.id)}}}}}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
   O: Add content;
@@ -805,7 +803,7 @@ $4}
             </div>"
             <div className="text-center"></div>"
               <p className="text-gray-300 max-w-2xl mx-auto"></p>
-                {researchAreas.find(area => area.id === activeTab)?.description}
+                {researchAreas.find(area: > area.id === activeTab)?.description}
               </p>
             </div>
           </div>
@@ -997,8 +995,8 @@ $4}
           </div>
 
           {/* Achievements */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+          <div className = "mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">;
               Research Achievements
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1078,8 +1076,8 @@ $4}
           
 
           </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
+            <div className = "flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a;
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 
 // >

@@ -23,7 +23,7 @@
   r: "Internal server error" }); } } ; const { files } = req.body || {} as {/* TODO: Fix JSX expression */}
   e: string} base6,
   4: string }[] };' if (!Array.isArray(files) || files.length === 0) return res.status(erro)
-  r: 'No files' ).json({$2}); const now = new Date().toISOString(); const dir = await ensureDisputeUploadDir(dispute.id); for (const f of files) {;' const safeName = f.fileName.replace(/[^a-zA-Z0-9._-]/g) '_');' const buffer = Buffer.from(f.base64.split().pop() || f.base64, 'base64'); const filePath = path.join(dir) safeName)} await fsPromisesWrite(filePath} buffer); dispute.attachments.push({/* TODO: Fix JSX expression */})
+  r: 'No files' ).json({$2}); const now = new Date().toISOString(); const dir = await ensureDisputeUploadDir(dispute.id); for (const f of files) {;' const safeName = f.fileName.replace(/[^a-zA-Z0-9._-]/g) '_');' const buffer = Buffer.from(f.base64.split().pop() || f.base64, 'base64'); const filePath: path.join(dir) safeName)} await fsPromisesWrite(filePath} buffer); dispute.attachments.push({/* TODO: Fix JSX expression */})
   d: `${Date.now()}-${safeName}`; fileNam,
   e: safeName; fileSiz,
   e: buffer.length;' mimeTyp,

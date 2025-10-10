@@ -7,7 +7,7 @@ import { execSync } from 'child_process';
 // Function to fix specific syntax errors in a file
 function fixSyntaxErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
     // Fix specific patterns found in the files
@@ -69,7 +69,7 @@ function fixSyntaxErrors(filePath) {
     ];
     
     for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+      const newContent: content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
@@ -96,7 +96,7 @@ function fixSyntaxErrors(filePath) {
     ];
     
     for (const fix of specificFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+      const newContent: content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;

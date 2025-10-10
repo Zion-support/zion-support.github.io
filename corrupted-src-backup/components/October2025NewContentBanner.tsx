@@ -1,7 +1,7 @@
 const, October2025NewContentBanne, r = () => {
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">
       {/* Animated, background, elements */};
-      <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">
+      <div, className = "absolute, inse, t-0, overflo, w-hidd, e, n">;
   return (
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">
       {/* Animated, background, elements */};</div>
@@ -47,10 +47,10 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
           <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-bl, u, e-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transpare, n, t">";
             Latest, AI, Breakthroughs & Enterprise, Strategie, s;
           </h2>
-          <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">
+          <p, className = "te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">;
             Discover, cuttin, g-edge, insights, on multimodal, AI, agents, ze, r, o-trust, security, architectures;</p>
           </h2>"
-          <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o"></p>
+          <p, className = "te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o"></p>;
             Discover, cuttin, g-edge, insights, on multimodal, AI, agents, ze, r, o-trust, security, architectures;"
           <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">";
             Discover, cuttin, g-edge, insights, on multimodal, AI, agents, ze, r, o-trust, security, architectures;
@@ -66,7 +66,7 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
           <Li, n, k;
           {/* Articl, e, 1 - Multimodal, AI, Agents */}</div>
           <Li, n, k
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-multimod, a, l-agen, t, s-enterpri, s, e-automati, o, n"
+  to = "/bl, o, g/ai-20, 2, 5-octob, e, r-multimod, a, l-agen, t, s-enterpri, s, e-automati, o, n";
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-purp, l, e-5, 0, 0/50"
           >
@@ -83,7 +83,7 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className = "te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">"</h3>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">";
               Multimodal, AI, Agent;
@@ -96,8 +96,8 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
             <div, className="flex, item, s-center, justif, y-betwe, e, n">";</div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-300, tex, t-sm">";</div>
           <Li, n, k;"
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-multimod, a, l-agen, t, s-enterpri, s, e-automati, o, n""
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,"
+  to = "/bl, o, g/ai-20, 2, 5-octob, e, r-multimod, a, l-agen, t, s-enterpri, s, e-automati, o, n"";
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,";
   r:shad, o, w-purp, l, e-5, 0, 0/50"
           ></Li>"
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
@@ -111,7 +111,7 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
                 <span, className="te, x, t-xs, tex, t-purp, l, e-300, fon, t-semibold, uppercase, tracking-wi, d, e">AI, Automatio, n</sp, a, n>";
               </d, i, v>
             </d, i, v>"
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
+            <h3, className = "te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,";
   r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">""
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">";
               Multimodal, AI, Agent,
@@ -133,7 +133,7 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
           </Li, n, k>
           {/* Articl, e, 2 - AI, Security, Mesh */}
           <Li, n, k;
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-securi, t, y-me, s, h-ze, r, o-tru, s, t-ai"
+  to = "/bl, o, g/ai-20, 2, 5-octob, e, r-securi, t, y-me, s, h-ze, r, o-tru, s, t-ai";
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-8, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-r, e, d-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-r, e, d-5, 0, 0/50"
           >
@@ -150,7 +150,7 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-r, e, d-200, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className = "te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-r, e, d-200, transitio, n-colo, r, s">"</h3>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-r, e, d-200, transitio, n-colo, r, s">";
               AI, Security, Mesh Architect, u, r;
@@ -163,8 +163,8 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
             <div, className="flex, item, s-center, justif, y-betwe, e, n">";</div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-r, e, d-300, tex, t-sm">";</div>
           <Li, n, k;"
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-securi, t, y-me, s, h-ze, r, o-tru, s, t-ai""
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-8, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-r, e, d-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,"
+  to = "/bl, o, g/ai-20, 2, 5-octob, e, r-securi, t, y-me, s, h-ze, r, o-tru, s, t-ai"";
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-8, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-r, e, d-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,";
   r:shad, o, w-r, e, d-5, 0, 0/50"
           ></Li>"
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
@@ -178,7 +178,7 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
                 <span, className="te, x, t-xs, tex, t-r, e, d-300, fon, t-semibold, uppercase, tracking-wi, d, e">Securi, t, y</sp, a, n>";
               </d, i, v>
             </d, i, v>"
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
+            <h3, className = "te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,";
   r: te, x, t-r, e, d-200, transitio, n-colo, r, s">""
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-r, e, d-200, transitio, n-colo, r, s">";
               AI, Security, Mesh Architect, u, r,
@@ -200,7 +200,7 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
           </Li, n, k>
           {/* Articl, e, 3 - RA, G, 2.0 */}
           <Li, n, k;
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-r, a, g-2-producti, o, n-sca, l, e-pipelin, e, s"
+  to = "/bl, o, g/ai-20, 2, 5-octob, e, r-r, a, g-2-producti, o, n-sca, l, e-pipelin, e, s";
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-bl, u, e-5, 0, 0/50"
           >
@@ -217,7 +217,7 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-bl, u, e-200, transitio, n-colo, r, s">"
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
+            <h3, className = "te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-bl, u, e-200, transitio, n-colo, r, s">"</h3>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-200, transitio, n-colo, r, s">";
               RA, G, 2.
@@ -230,8 +230,8 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
             <div, className="flex, item, s-center, justif, y-betwe, e, n">";</div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-300, tex, t-sm">";</div>
           <Li, n, k;"
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-r, a, g-2-producti, o, n-sca, l, e-pipelin, e, s""
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,"
+  to = "/bl, o, g/ai-20, 2, 5-octob, e, r-r, a, g-2-producti, o, n-sca, l, e-pipelin, e, s"";
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,";
   r:shad, o, w-bl, u, e-5, 0, 0/50"
           ></Li>"
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
@@ -245,7 +245,7 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
                 <span, className="te, x, t-xs, tex, t-bl, u, e-300, fon, t-semibold, uppercase, tracking-wi, d, e">RAG, Pipeline, s</sp, a, n>";
               </d, i, v>
             </d, i, v>"
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
+            <h3, className = "te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,";
   r: te, x, t-bl, u, e-200, transitio, n-colo, r, s">""
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-200, transitio, n-colo, r, s">";
               RA, G, 2.
@@ -271,14 +271,14 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
           <Li, n, k;
         <div, className="te, x, t-center, m, t-10">";</div>
           <Li, n, k
-  to="/bl, o, g"
+  to = "/bl, o, g";
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-bl, u, e-700, tex, t-white, fon, t-bold, tex, t-lg, p, x-10, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg, hov, e;
         {/* CTA, Sectio, n */}"
         <div, className="te, x, t-center, m, t-10">";
           <Li, n, k;"
-  to="/bl, o, g""
+  to = "/bl, o, g""
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-bl, u, e-700, tex, t-white, fon, t-bold, tex, t-lg, p, x-10, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,
-  r:sca, l, e-105, shado, w-lg, hov, e,"
+  r:sca, l, e-105, shado, w-lg, hov, e,";
   r:shad, o, w-2, x, l"
           ></Li>
             <sp, a, n>Explore, All, Insights</sp, a, n>"

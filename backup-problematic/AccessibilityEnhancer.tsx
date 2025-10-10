@@ -11,9 +11,9 @@ interface AccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
  */
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
  children;
- enableSkipLinks = true,
- enableKeyboardNav = true,
- enableFocusIndicators = true}) => {
+ enableSkipLinks: true,
+ enableKeyboardNav: true,
+ enableFocusIndicators: true}) => {
  useEffect(() => {
  // Announce route changes to screen readers;
  const announceRouteChange = () => {

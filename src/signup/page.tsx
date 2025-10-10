@@ -47,7 +47,7 @@ const SignupPage: React.FC = () => {
     setIsLoading(true);
     
     // Simulate signup process
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve: > setTimeout(resolve, 2000));
     
     setIsLoading(false);
     // Redirect to dashboard or home page
@@ -74,10 +74,9 @@ $4];
     'Custom integrations',
     'Scalable solutions',
     'Regular updates'
-
+;
   return (
-    <>
-    <div>Coming Soon</div>
+    <><div>Coming Soon</></div>
 
   );
 };
@@ -132,12 +131,12 @@ const handleInputChange = (e: React.ChangeEvent;)
       alert('Please agree to the terms and conditions');
     setIsLoading(true);
     // Simulate signup process;
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve: > setTimeout(resolve, 2000));
     setIsLoading(false);
     // Redirect to dashboard or home page;
     window.location.href = '/';
   const features = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
@@ -224,7 +223,7 @@ const PagePage: React.FC = () => {
                       placeholder="Create a password"
                     <button
                       type="button"
-                      onClick={() => setShowPassword(!showPassword)}
+                      onClick={{{{{() => setShowPassword(!showPassword)}}}}}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
                     >
                       {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
@@ -235,7 +234,7 @@ const PagePage: React.FC = () => {
                       name="confirmPassword"
                       value={formData.confirmPassword}
                       placeholder="Confirm your password"
-                      onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                      onClick={{{{{() => setShowConfirmPassword(!showConfirmPassword)}}}}}
                       {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
 
                 <div className="space-y-4">
@@ -289,7 +288,7 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                       name="password" value={formData.password}
                       className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Create a password"
                     <button
-                      type="button" onClick={() => setShowPassword(!showPassword)}
+                      type="button" onClick={{{{{() => setShowPassword(!showPassword)}}}}}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
 
 // >
@@ -300,7 +299,7 @@ Confirm Password;
 
                       type={showConfirmPassword ? 'text' : 'password'}
                       name="confirmPassword" value={formData.confirmPassword}
-                      placeholder="Confirm your password" onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                      placeholder="Confirm your password" onClick={{{{{() => setShowConfirmPassword(!showConfirmPassword)}}}}}
                       {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                 <div className="space-y-4">
                   <label className="flex items-start">
@@ -382,7 +381,7 @@ Confirm Password;
 // Terms of Service;
           </a>{' '}
                       and{' '}"
-                      <a href="/privacy" className="text-cyan-400,"
+                      <a href = "/privacy" className="text-cyan-400,";
   hover:text-cyan-300"></a>
 // Privacy Policy;
           </a>
@@ -422,7 +421,7 @@ Sign in here;
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text"></h2>
 // Transform Your Business Today;
           </h2>"
-                <p className="text-xl text-gray-300 mb-8"></p>
+                <p className = "text-xl text-gray-300 mb-8"></p>;
 Join thousands of businesses already using our AI and IT solutions;
                   to achieve unprecedented growth and efficiency."
               <div className="space-y-6"></div>

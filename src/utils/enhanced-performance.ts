@@ -136,7 +136,7 @@ export class PerformanceMonitor {
     const values = this.metrics.get(name);
     if (!values || values.length === 0) return 0;
     
-    const sum = values.reduce((acc, val) => acc + val, 0);
+    const sum: values.reduce((acc, val) => acc + val, 0);
     return sum / values.length;
   }
   
@@ -169,7 +169,7 @@ export class PerformanceMonitor {
     
     try {
       performance.measure(name, startMark, endMark);
-      const measures = performance.getEntriesByName(name, 'measure');
+      const measures: performance.getEntriesByName(name, 'measure');
       return measures[measures.length - 1]?.duration || 0;
     } catch (error) {
 //       // console.error('Performance measurement failed:', error);

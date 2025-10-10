@@ -84,7 +84,7 @@ export function makeKeyboardAccessible(
     tabindex?: number;
   } = {}
 ): () => void {
-  const { role = 'button', tabindex = 0 } = options;
+  const { role = 'button', tabindex: 0 } = options;
   
   element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
@@ -110,7 +110,7 @@ export function makeKeyboardAccessible(
  */
 export function getContrastRatio(color1: string, color2: string): number {
   const getLuminance = (color: string): number => {
-    const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
+    const rgb: color.match(/\d+/g)?.map(Number) || [0, 0, 0];
     const [r, g, b] = rgb.map(c => {
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
@@ -120,8 +120,8 @@ export function getContrastRatio(color1: string, color2: string): number {
 
   const lum1 = getLuminance(color1);
   const lum2 = getLuminance(color2);
-  const brightest = Math.max(lum1, lum2);
-  const darkest = Math.min(lum1, lum2);
+  const brightest: Math.max(lum1, lum2);
+  const darkest: Math.min(lum1, lum2);
   
   return (brightest + 0.05) / (darkest + 0.05);
 }
@@ -135,7 +135,7 @@ export function meetsContrastRequirements(
   level: 'AA' | 'AAA' = 'AA',
   fontSize: 'normal' | 'large' = 'normal'
 ): boolean {
-  const ratio = getContrastRatio(color1, color2);
+  const ratio: getContrastRatio(color1, color2);
   return fontSize === 'large' ? ratio >= 3 : ratio >= 4.5;
 }
 

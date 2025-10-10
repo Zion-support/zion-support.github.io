@@ -101,7 +101,7 @@ const EnterprisePage: React.FC = () => {
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+        </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -128,7 +128,7 @@ const EnterprisePage: React.FC = () => {
 
       {/* Stats Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+        </section><div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
@@ -145,7 +145,7 @@ const EnterprisePage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto"></div>
+        </section><div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">
               Enterprise-Grade Features
@@ -194,7 +194,7 @@ const EnterprisePage: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-20 px-4">
                 </button>
-              </div>
+              </section></div>
             </div>
           </div>
         </div>
@@ -202,7 +202,7 @@ const EnterprisePage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center"></div>
+        <div className="max-w-4xl mx-auto text-center"></section></div>
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Enterprise?
           </h2>

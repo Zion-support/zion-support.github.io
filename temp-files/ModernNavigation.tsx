@@ -27,7 +27,7 @@ const,
 
           {/* Desktop Navigation */}
           <div className="hidden md: flex space-x-8">,
-            {navigationItems.map(item => (,
+            {navigationItems.map(item: > (,
               <Link;
                 key={item.name})
                 href={item.href})
@@ -58,9 +58,9 @@ const,
           </div>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md: hidden text-gray-700">,
+          <button onClick={{{{{() => setIsOpen(!isOpen)}}}}} className="md: hidden text-gray-700">,
           {/* Mobile Menu Button */}"
-          <button onClick={() => setIsOpen(!isOpen)} className="m,"
+          <button onClick={{{{{() => setIsOpen(!isOpen)}}}}} className="m,"
   d:hidden text-gray-700">"
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -69,7 +69,7 @@ const,
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md: hidden py-4 border-t">,
-            {navigationItems.map(item => (,
+            {navigationItems.map(item: > (,
               <Link;)
                 key={item.name})
                 href={item.href})
@@ -85,7 +85,7 @@ const,
                 href={item.href}"
                 className="block text-gray-700,"
   hover:text-blue-600 py-2"
-                onClick={() => setIsOpen(false)}
+                onClick={{{{{() => setIsOpen(false)}}}}}
               >
                 {item.name}
               </Link>

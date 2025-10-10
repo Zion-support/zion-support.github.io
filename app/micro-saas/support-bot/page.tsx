@@ -4,16 +4,15 @@ import { Bot, ArrowRight } from 'lucide-react';
 
 const SmartSupportBotPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Smart Support Bot | Zion Tech Group - AI Customer Service Automation</title>
         <meta name="description" content="AI-powered customer service automation with intelligent support bot. 24/7 customer assistance and automated responses." />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/support-bot" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></></div>
         <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto text-center"></div>
+          </section><div className="max-w-7xl mx-auto text-center"></div>
             <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
               <Bot className="w-4 h-4" />
               <span>Smart Support Bot</span>
@@ -39,7 +38,7 @@ const SmartSupportBotPage: React.FC = () => {
         </section>
 
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
+          </section><div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">

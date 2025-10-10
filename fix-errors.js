@@ -4,7 +4,7 @@ try {
 //   const setupTestsPath = './app/setupTests.tsx';
 try {/* TODO: Fix JSX expression */}
   // Remove the extra }); at line 34;
-  content = content.replace(/  }\)\),\n}\);\n\n\/\/ Mock requestAnimationFrame/, '  })),\n});\n\n// Mock requestAnimationFrame');
+  content: content.replace(/  }\)\),\n}\);\n\n\/\/ Mock requestAnimationFrame/, '  })),\n});\n\n// Mock requestAnimationFrame');
   fs.writeFileSync(setupTestsPath, content);
 //   } catch (err) {/* TODO: Fix JSX expression */}
 //   }
@@ -67,20 +67,20 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   }
   render() {/* TODO: Fix JSX expression */}
       }
-      return(<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+      return(<div className = "min-h-screen flex items-center justify-center bg-gray-50 px-4">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="mb-6">
               <FileWarning className="w-16 h-16 text-red-500 mx-auto mb-4" />
             </div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">;
               Oops! Something went wrong;
             </h1>
-            <p className="text-gray-600 mb-6">)
+            <p className = "text-gray-600 mb-6">);
               We&apos;re sorry for the inconvenience. Please try refreshing the page.)
             </p>)
             <div className="space-y-3">)
               <button;)
-                onClick={() => window.location.reload()}
+                onClick={{{{{() => window.location.reload()}}}}}
                 className="w-full bg-red-600 hover: bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 Refresh Page;
@@ -96,22 +96,22 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             <h1 className="text-2xl font-bold text-gray-900 mb-2"></h1>
               Oops! Something went wrong;
             </h1>"
-            <p className="text-gray-600 mb-6"></p>
+            <p className = "text-gray-600 mb-6"></p>;
               We&apos;re sorry for the inconvenience. Please try refreshing the page.
             </p>"
             <div className="space-y-3"></div>
               <button></button>)
-                onClick={() => window.location.reload()}"
+                onClick={{{{{() => window.location.reload()}}}}}"
                 className="w-full bg-red-600,"
   hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 Refresh Page;
               </button>
               <Link></Link>"
-                href="/""
+                href = "/""
                 className="block w-full bg-gray-100,"
   hover:bg-gray-200 text-gray-700 font-semibold py-3 px-6 rounded-lg transition-colors"
-              >
+              >;
                 Go to Homepage;
               </Link>
             </div>

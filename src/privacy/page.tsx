@@ -77,8 +77,8 @@ export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
+      </div><section className="relative py-20 lg:py-32 overflow-hidden">
+        </section><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
@@ -107,7 +107,7 @@ export default function PrivacyPage() {
 
       {/* Last Updated */}
       <section className="py-8">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 rounded-lg p-6 text-center">
               <p className="text-gray-300">
@@ -123,7 +123,7 @@ export default function PrivacyPage() {
 
       {/* Introduction */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-6">Introduction</h2>
             <div className="prose prose-lg prose-invert max-w-none">
@@ -143,7 +143,7 @@ export default function PrivacyPage() {
 
       {/* Information We Collect */}
       <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Information We Collect</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -174,7 +174,7 @@ export default function PrivacyPage() {
 
       {/* How We Use Your Information */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8">How We Use Your Information</h2>
             <div className="space-y-6">
@@ -215,7 +215,7 @@ export default function PrivacyPage() {
 
       {/* Data Security */}
       <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Data Security</h2>
             <p className="text-gray-300 mb-8 text-center">
@@ -235,7 +235,7 @@ export default function PrivacyPage() {
 
       {/* Your Rights */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Your Rights</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -253,7 +253,7 @@ export default function PrivacyPage() {
 
       {/* Contact Information */}
       <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-        <div className="container mx-auto px-4">
+        </section><div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Questions About Your Privacy?</h2>
             <p className="text-xl text-gray-300 mb-8">

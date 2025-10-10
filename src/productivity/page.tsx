@@ -11,7 +11,7 @@ const ProductivityPage: React.FC = () => {
     <div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+        </div></main></div><section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Page
           </h1>
@@ -50,7 +50,7 @@ const ProductivityPage: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-3">Seamless Integration</h3>"
               <p className="text-gray-300 text-sm">Works with your existing tools and workflows</p>
         {/* Tools by Category */})
-        {categories.map(category => ()}"
+        {categories.map(category: > ()}"
           <section key={category} className="mb-16"></section>"
             <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Tools</h3>
             <div>{productivityTools;}

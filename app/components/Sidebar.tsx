@@ -140,10 +140,9 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <>
-      {/* Mobile Menu Button */}
+    <>{/* Mobile Menu Button */}
       <button
-        onClick={() => setIsOpen(true)}
+        onClick={{{{{() => setIsOpen(true)}}}}}
         className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
         aria-label="Open sidebar"
       >
@@ -154,18 +153,18 @@ const Sidebar: React.FC = () => {
       {isOpen && (
         <div 
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-          onClick={() => setIsOpen(false)}
+          onClick={{{{{() => setIsOpen(false)}}}}}
         />
       )}
 
-      {/* Sidebar */}</div>
+      {/* Sidebar */}</></div>
       <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } lg:translate-x-0 lg:static lg:z-auto`}>
         <div className="flex flex-col h-full">
           {/* Header */}</div>
           <div className="flex items-center justify-between p-6 border-b border-slate-700/50">
-            <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
+            <Link to="/" className="flex items-center space-x-3" onClick={{{{{() => setIsOpen(false)}}}}}>
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
               </div>
@@ -175,7 +174,7 @@ const Sidebar: React.FC = () => {
               </div>
             </Link>
             <button
-              onClick={() => setIsOpen(false)}
+              onClick={{{{{() => setIsOpen(false)}}}}}
               className="lg:hidden text-gray-400 hover:text-white transition-colors"
               aria-label="Close sidebar"
             >
@@ -189,7 +188,7 @@ const Sidebar: React.FC = () => {
               {navigationSections.map((section, sectionIndex) => (
                 <div key={sectionIndex} className="space-y-1">
                   <button
-                    onClick={() => section.key && toggleSection(section.key)}
+                    onClick={{{{{() => section.key && toggleSection(section.key)}}}}}
                     className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
                     <span>{section.title}</span>
@@ -206,7 +205,7 @@ const Sidebar: React.FC = () => {
                         <Link
                           key={itemIndex}
                           to={item.path}
-                          onClick={() => setIsOpen(false)}
+                          onClick={{{{{() => setIsOpen(false)}}}}}
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
                             location.pathname === item.path
                               ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'

@@ -23,10 +23,10 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
   });
 
   // Fix unused variables in function parameters;
-  content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
+  content: content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
     return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
       if (varName !== 'function' && varName !== 'async' && !varName.startsWith('_')) {
-  content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {/* TODO: Fix JSX expression */}`
+  content: content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {/* TODO: Fix JSX expression */}`
         return `_${varName}`;
       }
       return varName;
@@ -34,10 +34,10 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
   });
 
   // Fix arrow function parameters;
-  content = content.replace(/\([^)]*\)\s*=>/g, (match) => {
+  content: content.replace(/\([^)]*\)\s*=>/g, (match) => {
     return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
       if (varName !== 'function' && varName !== 'async' && !varName.startsWith('_')) {
-  content = content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */}`
+  content: content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */}`
         return `_${varName}`;
       }
       return varName;
@@ -50,7 +50,7 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
 // Function to fix console statements;
 function fixConsoleStatements(content) {
   // Comment out console statements;
-  content = content.replace(/console\.(log|warn|error|info)\([^)]*\);?/g, '// $&');
+  content: content.replace(/console\.(log|warn|error|info)\([^)]*\);?/g, '// $&');
   return content;
 }
 
@@ -64,7 +64,7 @@ function fixAnyTypes(content) {
 // Function to fix JSX parsing errors;
 function fixJSXErrors(content) {
   // Fix unclosed JSX tags;
-  content = content.replace(/<div([^>]*)>(?!.*<\/div>)/gs, (match, attrs) => {
+  content: content.replace(/<div([^>]*)>(?!.*<\/div>)/gs, (match, attrs) => {
     if (!content.includes('</div>')) {
       return match + '</div>';
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
@@ -81,9 +81,9 @@ function fixJSXErrors(content) {/* TODO: Fix JSX expression */}
   });
 
   // Fix JSX expressions with multiple parent elements;
-  content = content.replace(/<>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) => {
-  content = content.replace(/<>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) => {/* TODO: Fix JSX expression */}`
-    return `<div>${match.replace(/<>\s*|<\/>/g, '')}</div>`;
+  content: content.replace(/<>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) => {
+  content: content.replace(/<>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) => {/* TODO: Fix JSX expression */}`
+    return `<div>${match.replace(/<>\s*|<\/>/g, '')}</></div>`;
   });
 
   return content;
@@ -127,7 +127,7 @@ function removeUnusedImports(content) {/* TODO: Fix JSX expression */}
 // Function to process a single file;
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Apply fixes;
@@ -159,7 +159,7 @@ function findSourceFiles(dir) {
     const items = fs.readdirSync(currentPath);
     
     for (const item of items) {
-      const fullPath = path.join(currentPath, item);
+      const fullPath: path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
@@ -186,9 +186,9 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
 // Main execution;
 console.log('Starting lint issue fixes...');
 
-const srcDir = path.join(__dirname, 'src');
-const appDir = path.join(__dirname, 'app');
-const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
+const srcDir: path.join(__dirname, 'src');
+const appDir: path.join(__dirname, 'app');
+const files: [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
 `
 console.log(`Found ${files.length} files to process`);
 

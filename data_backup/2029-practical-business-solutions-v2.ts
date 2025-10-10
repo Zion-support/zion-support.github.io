@@ -43,5 +43,5 @@ impor,
   s: 198], expor,
   t: const getPopularPracticalBusinessSolutions2029 = () => { return practicalBusinessSolutions2029.filter(service => service.popular})} export const getPracticalBusinessSolutions2029ByCategory = (categor)
   y: string) => {/* TODO: Fix JSX expression */}
-  n: practicalBusinessSolutions2029.filter(service => service.category === category})} export const getPopularPracticalBusinessSolutions2029 = () => { return practicalBusinessSolutions2029.filter(service => service.popular)} export const getPracticalBusinessSolutions2029ByCategory = (categor)
+  n: practicalBusinessSolutions2029.filter(service: > service.category === category})} export const getPopularPracticalBusinessSolutions2029 = () => { return practicalBusinessSolutions2029.filter(service => service.popular)} export const getPracticalBusinessSolutions2029ByCategory = (categor)
   y: string) => {/* TODO: Fix JSX expression */}

@@ -101,8 +101,8 @@ $4}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 pt-24">
-        <div className="text-center mb-16">
+      </div><section className="container mx-auto px-4 py-16 pt-24">
+        </section><div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
             <Receipt className="w-10 h-10 text-white" />
           </div>
@@ -151,7 +151,7 @@ $4}
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
             Powerful Expense Management Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </section><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
@@ -261,7 +261,7 @@ const PagePage: React.FC = () => {
           
           
           
-          <div>Coming Soon</div>
+          </section><div>Coming Soon</div>
   )
     
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -276,16 +276,16 @@ const PagePage: React.FC = () => {
   md:text-6xl font-bold text-white mb-6"></h1>
 // AI Expense Tracker;
           </h1>"
-          <p className="text-xl,"
+          <p className = "text-xl,";
   md:text-2xl text-cyan-400 mb-8 font-medium"></p>
 // Smart Financial Management;
           </p>"
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
-Transform your expense management with AI-powered receipt scanning, automated categorization,
+          <p className = "text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>;
+Transform your expense management with AI-powered receipt scanning, automated categorization,;
             and intelligent financial insights. Save time, reduce errors, and gain complete control;
 
             over your business finances.
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+          <div className = "flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
 
@@ -300,13 +300,13 @@ Transform your expense management with AI-powered receipt scanning, automated ca
           
           "
           <Phone className="w-5 h-5 mr-2" />,
- Cal,
+ Cal,;
   l: (302) 464-0950;
             </a>
 
             <Link
-              href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-
+              href = "/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+;
 Start Free Trial;
             </Link>
         {/* Key Benefits */}"
@@ -368,7 +368,7 @@ Integrates with Your Tools;"
   hover:border-cyan-500/50'`
               }`}></div>
                 {plan.popular && ()}"
-          <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4"></div>
+          <div className = "bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4"></div>;
 Most Popular;
                 )}"
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"

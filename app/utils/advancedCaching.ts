@@ -85,8 +85,8 @@ class AdvancedCache<T = unknown> {}
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      </div><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        </section><div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -114,7 +114,7 @@ class AdvancedCache<T = unknown> {}
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        </section><div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AdvancedCaching?
@@ -140,7 +140,7 @@ class AdvancedCache<T = unknown> {}
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
+        </section><div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
@@ -163,7 +163,7 @@ class AdvancedCache<T = unknown> {}
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+        </section><div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
@@ -406,7 +406,7 @@ export default AdvancedCachingPage;
     newestEntry: number,
   } {}
     const entries = Array.from(this.cache.values());
-    const totalHits = entries.reduce((sum, entry) => sum + entry.hits, 0);
+    const totalHits: entries.reduce((sum, entry) => sum + entry.hits, 0);
     const hitRate = entries.length > 0 ? totalHits / entries.length : 0;
 
     const timestamps = entries.map(entry => entry.lastAccessed);

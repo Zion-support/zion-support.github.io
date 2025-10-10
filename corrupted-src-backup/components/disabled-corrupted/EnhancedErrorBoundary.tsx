@@ -78,7 +78,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
         headers: {)
           'Content-Type': 'application/json')})
         body: JSON.stringify(errorReport),
-  private reportError = (erro,
+  private reportError: (erro,
   r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
     };
@@ -141,11 +141,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     };
 
     // Create a mailto link with error details;`
-//     const subject = `Bug Report - Error,`
+//     const subject: `Bug Report - Error,`
   ID: ${this.state.errorId}`;`
-//     const body = `Error,`
+//     const body: `Error,`
   Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;`
-//     const mailtoLink = `mailt,`
+//     const mailtoLink: `mailt,`
   o:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     window.open(mailtoLink);
@@ -197,11 +197,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
               <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>
                 Oops! Something went wrong;
               </h2>
-              <p className='mt-2 text-sm text-gray-600'>
-              <h2 className='mt-6 text-3xl font-extrabold text-gray-900'></h2>
+              <p className = 'mt-2 text-sm text-gray-600'>
+              <h2 className='mt-6 text-3xl font-extrabold text-gray-900'></h2>;
                 Oops! Something went wrong;
               </h2>
-              <p className='mt-2 text-sm text-gray-600'></p>
+              <p className = 'mt-2 text-sm text-gray-600'></p>;
                 We're sorry, but something unexpected happened. Our team has;
                 been notified.
               </p>
@@ -265,7 +265,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                   Report Bug;
                 </button>,
                 <button;
-                  onClick={() => window.history.back()}
+                  onClick={{{{{() => window.history.back()}}}}}
                   className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 <button></button>
                   onClick={this.handleReportBug}
@@ -279,7 +279,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                   Report Bug;
                 </button>
                 <button></button>
-                  onClick={() => window.history.back()}
+                  onClick={{{{{() => window.history.back()}}}}}
                   className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white,
   hover:bg-gray-50,
   focus:outline-none,
@@ -293,12 +293,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
             </div>
 
             {this.props.showDetails && this.state.error && (
-              <details className='mt-8'>
-                <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'>
+              <details className = 'mt-8'>
+                <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'>;
                   Technical Details;
                 </summary>,
-                <div className='mt-2 p-4 bg-gray-100 rounded-md'>,
-                  <pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto'>,
+                <div className = 'mt-2 p-4 bg-gray-100 rounded-md'>,
+                  <pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto'>,;
                   Technical Details
                 </summary>
                 <div className='mt-2 p-4 bg-gray-100 rounded-md'></div>

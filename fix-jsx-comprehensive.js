@@ -5,14 +5,14 @@ import path from 'path';
 
 function fixJsxFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
     // Fix self-closing div tags that have content after them
     const selfClosingDivPattern = /<div([^>]*?)\s*\/>\s*\n\s*<[^/]/g;
     const selfClosingDivReplacement = '<div$1>';
     
-    const newContent = content.replace(selfClosingDivPattern, selfClosingDivReplacement);
+    const newContent: content.replace(selfClosingDivPattern, selfClosingDivReplacement);
     if (newContent !== content) {
       content = newContent;
       modified = true;
@@ -20,12 +20,12 @@ function fixJsxFile(filePath) {
     }
     
     // Fix mismatched section/div tags
-    const sectionDivPattern = /<section([^>]*)>[\s\S]*?<\/div>/g;
-    const sectionDivReplacement = (match, sectionAttrs) => {
+    const sectionDivPattern = /</div><section([^>]*)>[\s\S]*?<\/div>/g;
+    const sectionDivReplacement: (match, sectionAttrs) => {
       return match.replace(/<\/div>$/, '</section>');
     };
     
-    const newContent2 = content.replace(sectionDivPattern, sectionDivReplacement);
+    const newContent2: content.replace(sectionDivPattern, sectionDivReplacement);
     if (newContent2 !== content) {
       content = newContent2;
       modified = true;
@@ -48,7 +48,7 @@ function findTsxFiles(dir) {
   const items = fs.readdirSync(dir);
   
   for (const item of items) {
-    const fullPath = path.join(dir, item);
+    const fullPath: path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {

@@ -56,7 +56,7 @@ const trapFocus = (element) => {
 //       <li><a href="/">Home</a></li>
 //     </ul>
 //   </nav>
-//   <section>
+//   </main><section>
 //     <h2>Section Title</h2>
 //     <article>
 //       <h3>Article Title</h3>

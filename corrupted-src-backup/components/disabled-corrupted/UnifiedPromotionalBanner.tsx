@@ -35,9 +35,9 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
     premi, u, m: 'py-12, p, x-, 8',
     he, r, o: 'py-16, p, x-1, 0',
     compa, c, t: 'py-6, p, x-, 4',
-    me, g, a: 'py-20, p, x-1, 2'}; const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return(<div, classNam, e = { `
+    me, g, a: 'py-20, p, x-1, 2'}; const visibleItem, s: featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return(<div, classNam, e = { `
   // Varia n t-specific styles const variantClass e s = {/* TODO: Fix JSX expression */}
-  }; const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return (<div, classNam, e = {/* TODO: Fix JSX expression */}
+  }; const visibleItem, s: featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return (<div, classNam, e = {/* TODO: Fix JSX expression */}
         bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
         ${variantClass, e, s[varia, n, t]} 
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2 xl, hove, r:sca, l, e-[1.0, 1]'  : '' }

@@ -31,7 +31,7 @@ ${pages.map(page => `  <url>
   </url>`).join('\n')}
 </urlset>`;
 
-  const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
+  const sitemapPath: path.join(__dirname, '..', 'public', 'sitemap.xml');
   fs.writeFileSync(sitemapPath, sitemap);
   console.log('Sitemap generated successfully');
 };

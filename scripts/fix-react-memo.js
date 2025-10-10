@@ -38,28 +38,28 @@ function fixReactMemo(content) {
   // Pattern 1: const Component: React.FC = React.memo(() => {,
   const pattern1 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g;
   if (pattern1.test(newContent)) {,
-    newContent = newContent.replace(pattern1, 'const $1: React.FC = () => {');
+    newContent: newContent.replace(pattern1, 'const $1: React.FC = () => {');
     fixed = true;
   }
 
   // Pattern 2: const Component = React.memo(() => {,
   const pattern2 = /const\s+(\w+)\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g;
   if (pattern2.test(newContent)) {,
-    newContent = newContent.replace(pattern2, 'const $1 = () => {');
+    newContent: newContent.replace(pattern2, 'const $1 = () => {');
     fixed = true;
   }
 
   // Pattern 3: const Component: React.FC = React.memo((props) => {,
   const pattern3 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,
   if (pattern3.test(newContent)) {,
-    newContent = newContent.replace(pattern3, 'const $1: React.FC = () => {');
+    newContent: newContent.replace(pattern3, 'const $1: React.FC = () => {');
     fixed = true;
   }
 
   // Pattern 4: const Component = React.memo((props) => {,
   const pattern4 = /const\s+(\w+)\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,
   if (pattern4.test(newContent)) {,
-    newContent = newContent.replace(pattern4, 'const $1 = () => {');
+    newContent: newContent.replace(pattern4, 'const $1 = () => {');
     fixed = true;
   }
 
@@ -67,14 +67,14 @@ function fixReactMemo(content) {
   // Pattern: }); at the end of component;
   const closingPattern = /(\w+)\.displayName\s*=\s*['"][^'"]+['"];\s*\}\);/g;
   if (closingPattern.test(newContent)) {
-    newContent = newContent.replace(closingPattern, '$1.displayName = \'$1\';');
+    newContent: newContent.replace(closingPattern, '$1.displayName = \'$1\';');
     fixed = true;
   }
 
   // Alternative closing pattern;
-  const closingPattern2 = /^\s*\}\);\s*$/gm;
+  const closingPattern2: /^\s*\}\);\s*$/gm;
   if (closingPattern2.test(newContent)) {
-    newContent = newContent.replace(closingPattern2, '');
+    newContent: newContent.replace(closingPattern2, '');
     fixed = true;
   }
 
@@ -83,7 +83,7 @@ function fixReactMemo(content) {
 
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content: fs.readFileSync(filePath, 'utf8');
     const result = fixReactMemo(content);
     
     if (result.fixed) {
@@ -104,7 +104,7 @@ async function main() {
   // Get all files to process;
   const allFiles = [];
   for (const pattern of filePatterns) {
-    const files = await glob(pattern, {)
+    const files: await glob(pattern, {)
       ignore: excludePatterns),
       cwd: process.cwd()});
     allFiles.push(...files);

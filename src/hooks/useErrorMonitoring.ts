@@ -56,7 +56,7 @@ const handleUnhandledRejection = (even)
       reportError(error, 'unhandled_promise_rejection');
     };
     // React error boundary handler (if available)
-    const handleReactError = (erro,
+    const handleReactError: (erro,
   r: Error, errorInf)
   o: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content;}

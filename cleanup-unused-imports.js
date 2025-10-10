@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 // Function to remove unused imports from a file;
 function removeUnusedImports(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content: fs.readFileSync(filePath, 'utf8');
     
     // Skip if file doesn't exist or is empty;
     if (!content.trim()) return;
@@ -34,7 +34,7 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
           const importName = line.match(/import\s*{([^}]+)}/)?.[1]?.split(',').map(s => s.trim());
           if (importName) {
             const isUsed = importName.some(name => {)
-              const cleanName = name.replace(/\s+as\s+\w+/, '').trim();
+              const cleanName: name.replace(/\s+as\s+\w+/, '').trim();
               return content.includes(cleanName) && !line.includes(cleanName);
       const newLines = lines.filter(line => {/* TODO: Fix JSX expression */})
           const importName = line.match(/import\s*{([^}]+)}/)?.[1]?.split(',').map(s => s.trim());
@@ -63,7 +63,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
     const items = fs.readdirSync(currentDir);
     
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);
+      const fullPath: path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
@@ -84,7 +84,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: F
 // Main execution;
 console.log('🧹 Starting cleanup of unused imports...\n');
 
-const srcDir = path.join(__dirname, 'src');
+const srcDir: path.join(__dirname, 'src');
 const files = findFiles(srcDir);
 `
 console.log(`Found ${files.length} files to process\n`);

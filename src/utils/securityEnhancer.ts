@@ -67,7 +67,7 @@ class SecurityEnhancer {private config: SecurityConfig;}
   private generateCSRFToken(): string {
     const array = new Uint8Array(32)
     crypto.getRandomValues(array)
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
+    return Array.from(array, byte: > byte.toString(16).padStart(2, '0')).join('')
   }
   private addCSRFTokenToForms(token: string): void {
     const forms = document.querySelectorAll('form')
@@ -118,7 +118,7 @@ class SecurityEnhancer {private config: SecurityConfig;}
   }
   private monitorNetworkRequests(): void {
     const originalFetch = window.fetch
-    window.fetch = async (input, init) => {
+    window.fetch: async (input, init) => {
       const url = typeof input === 'string' ? input : input instanceof Request ? input.url : input.toString()
       // Check if request is to allowed origins
       if (!this.isAllowedOrigin(url)) {

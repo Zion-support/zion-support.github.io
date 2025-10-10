@@ -65,10 +65,10 @@ const,
             fontWeight: 'bold'}
             transition: 'background-color 0.2s'}
           }}
-          onMouseOver={e => {}
+          onMouseOver={{{{e: > {}}}}
             e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';}
           }}
-          onMouseOut={e => {}
+          onMouseOut={{{{e: > {}}}}
             e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';}
       <div className="banner-content" style={/* TODO: Fix JSX expression */}
   x: 1 }}></div>

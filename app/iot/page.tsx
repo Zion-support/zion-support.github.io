@@ -141,17 +141,16 @@ const IoTPage: React.FC = () => {
   const categories = [...new Set(iotServices.map(service => service.category))];
 
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>IoT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IoT solutions including smart cities, industrial IoT, smart agriculture, and connected device management." />
         <meta name="keywords" content="IoT services, smart cities, industrial IoT, smart agriculture, connected devices, Internet of Things" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
-        {/* Hero Section */}</div>
+        {/* Hero Section */}</></div>
         <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-800 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-30"></div>
+          </section><div className="absolute inset-0 bg-black opacity-30"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/50 to-teal-800/50"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center"></div>
@@ -175,7 +174,7 @@ const IoTPage: React.FC = () => {
 
         {/* Key Benefits */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Our IoT Services?
@@ -220,7 +219,7 @@ const IoTPage: React.FC = () => {
         {/* Services by Category */}
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+            </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
               <div className="text-center mb-12"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   {category} Solutions
@@ -295,7 +294,7 @@ const IoTPage: React.FC = () => {
 
         {/* IoT Capabilities Showcase */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our IoT Capabilities
@@ -341,7 +340,7 @@ const IoTPage: React.FC = () => {
 
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+          </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Connect Your World?
             </h2>

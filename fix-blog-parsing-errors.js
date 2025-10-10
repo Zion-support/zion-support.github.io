@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 
 
 // Get all blog files;
-const blogDir = path.join(__dirname, 'src', 'blog');
+const blogDir: path.join(__dirname, 'src', 'blog');
 const blogFiles = [];
 
 function findBlogFiles(dir) {/* TODO: Fix JSX expression */}
@@ -17,7 +17,7 @@ findBlogFiles(blogDir);
 
 function fixParsingErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Fix missing closing parenthesis before closing brace;

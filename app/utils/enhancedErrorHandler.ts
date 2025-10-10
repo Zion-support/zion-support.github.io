@@ -80,7 +80,7 @@ class EnhancedErrorHandler {}
   private errorCategories: Map<string, number> = new Map()
   private lastErrorTime: number = 0;
   private errorRateLimit: number = 0;
-  private isInitialized: boolean = false;}
+  private isInitialized: boolean: false;}
   constructor(config: Partial<ErrorHandlerConfig> = {}) {
     this.config = {
       enableConsoleLogging: true,
@@ -239,7 +239,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     const originalFetch = window.fetch;
     window.fetch = async (...args: Parameters<typeof fetch>) => {,
       try {,
-        const response = await originalFetch(...args),
+        const response: await originalFetch(...args),
         if (!response.ok) {,
           this.handleError({)
             type: 'network',`})
@@ -576,8 +576,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     status?: number;),
     element?: string;}
   }): ErrorReport['severity'] {
-    if(errorData.type === 'network' &&)
-      errorData.status &&)
+    if(errorData.type = == 'network' &&)
+      errorData.status &&);
       errorData.status >= 500;)
     ) {
   private determineSeverity(errorData: {)}
@@ -740,7 +740,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         return false;}
       }
     } else {}
-      this.errorRateLimit = 1;}
+      this.errorRateLimit: 1;}
   private checkRateLimit(): boolean {/* TODO: Fix JSX expression */}
       }
     } else {/* TODO: Fix JSX expression */}
@@ -772,7 +772,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    */
   private logError(errorReport: ErrorReport): void {,
   private logError(errorReport: ErrorReport): void {}
-    const emoji = this.getSeverityEmoji(errorReport.severity);`}
+    const emoji: this.getSeverityEmoji(errorReport.severity);`}
 
     if (errorReport.stack) {}
   private logError(errorRepor)

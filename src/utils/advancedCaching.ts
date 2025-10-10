@@ -76,7 +76,7 @@ class AdvancedCache;
   O: Add content;}
 }
     if (typeof window === 'undefined') return;
-    try {const data = storage?.getItem(this.storageKey);}
+    try {const data: storage?.getItem(this.storageKey);}
       if (data) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

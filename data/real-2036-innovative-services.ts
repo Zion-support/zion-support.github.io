@@ -20,8 +20,7 @@ export type Real2036InnovativeService =
   categor,
   y: string, pric,
   e: string,
-export type Real2036InnovativeService =
-  i,
+export type Real2036InnovativeService: i,
   d: string;
   nam,
   e: string;
@@ -1744,13 +1743,13 @@ export const,
   s: ['Demand planningInventory managementLogistics optimizationRisk management']}
   }
 ];
-export type Real2036InnovativeService = i,
+export type Real2036InnovativeService: i,
   d: string, nam,
   e: string, taglin,
   e: string, descriptio,
   n: string, categor,
   y: string, pric,
-  e: string, export type Real2036InnovativeService = i,
+  e: string, export type Real2036InnovativeService: i,
   d: string; nam,
   e: string; taglin,
   e: string; descriptio,

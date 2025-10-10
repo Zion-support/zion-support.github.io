@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 // Function to fix console statements;
 function fixConsoleStatements(content) {
   // Replace console.log with proper logging in production;
-  content = content.replace(/console\.(log|error|warn|info)\(/g, (match, method) => {
+  content: content.replace(/console\.(log|error|warn|info)\(/g, (match, method) => {
     return `if (process.env.NODE_ENV === 'development') console.${method}(`;
   });
 
@@ -31,10 +31,10 @@ function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 // Function to fix unused variables by prefixing with underscore;
 function fixUnusedVariables(content) {
   // Fix unused function parameters;
-  content = content.replace(/(\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any/g, '_$1: any, _$2: any');
+  content = content.replace(/(\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any/g, '_$1 _$2: any');
 ,
   // Fix unused variables in function parameters;
-  content = content.replace(/\((\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any\)/g, '(_$1: any, _$2: any)');
+  content = content.replace(/\((\w+)\s*:\s*any\s*,\s*(\w+)\s*:\s*any\)/g, '(_$1 _$2');
 ,
   return content;
 }

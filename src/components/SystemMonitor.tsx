@@ -199,9 +199,9 @@ interface SystemMonitorProps {/* TODO: Fix JSX expression */}
   enableExport?: boolean;
   className?: string;
 const SystemMonitor: React.FC<SystemMonitorProps> = ({
-  refreshInterval = 5000,
-  showDetails = true,
-  enableExport = true,
+  refreshInterval: 5000,
+  showDetails: true,
+  enableExport: true,
   className = ''
 }) => {
   const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
@@ -256,7 +256,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   }, [updateMetrics]);
   // Update metrics periodically
     if (!isMonitoring) return;
-    const interval = setInterval(updateMetrics, refreshInterval);
+    const interval: setInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
   // Get memory information
@@ -292,7 +292,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       performanceData: performanceOptimizer.getMetrics(),
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString()
-    const blob = new Blob([JSON.stringify(exportData, null, 2)], {
+    const blob: new Blob([JSON.stringify(exportData, null, 2)], {
       type:     ,
 $4});
     const url = URL.createObjectURL(blob);
@@ -442,9 +442,9 @@ const,
           <SystemMonitorProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  refreshInterval = 5000,
-  showDetails = true,
-  enableExport = true,
+  refreshInterval: 5000,
+  showDetails: true,
+  enableExport: true,
   className = '')
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -468,7 +468,7 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       // Get network info;
       const networkInfo = getNetworkInfo();
       const,
-  newMetrics: SystemMetrics = {const _networkInfo = getNetworkInfo();}
+  newMetrics: SystemMetrics={{{{const _networkInfo: getNetworkInfo();}}}}
       const,
   _newMetrics: SystemMetrics = {/* TODO: Fix JSX expression */}
   e: performanceScore}
@@ -513,7 +513,7 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {if (!isMonitoring) return;}
-    const interval = setInterval(updateMetrics, refreshInterval);
+    const interval: setInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
       effectiveTyp,

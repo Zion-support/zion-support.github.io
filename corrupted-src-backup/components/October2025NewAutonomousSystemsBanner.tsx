@@ -36,7 +36,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
       {/* Floating, particles, effect */}</div>
       <div, className="absolute, to, p-0, lef, t-1/4 w-7, 2, h-72, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";</div>
       <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0" />";</div>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+      <div, className = "relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8, p, y-8">";
         {/* Header, with, badge */}</div>
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">";</div>
@@ -86,7 +86,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
       {/* Floating, particles, effect */}"
       <div, className="absolute, to, p-0, lef, t-1/4 w-7, 2, h-72, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";"
       <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0" />";"
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
+      <div, className = "relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,";
   g:px-8, p, y-8">";
         {/* Header, with, badge */}"
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">";"
@@ -176,7 +176,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
                 </d, i, v>
               </d, i, v>
               <div, className="fl, e, x-1">";</div>
-                <h3, className="te, x, t-2xl, fon, t-black, tex, t-white, m, b-3, grou, p-ho, v, e
+                <h3, className = "te, x, t-2xl, fon, t-black, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">";
                   🌐 Intelligent, Autonomous, Enterprise Me, s, h;
                 </h3>
@@ -196,7 +196,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
                   <div, className="flex, item, s-center, ga, p-2">";</div>
                     <div, className="w-2 h-2, b, g-yell, o, w-400, rounde, d-full, animat, e-pul, s, e" />";</div>
           {/* Car, d, 1: Enterprise, Mes, h */}"
-          <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/80, t, o-indi, g, o-9, 0, 0/80, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
+          <div, className = "bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/80, t, o-indi, g, o-9, 0, 0/80, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,";
   r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, grou, p">""
             <div, className="flex, item, s-start, ga, p-4"></div>"
               <div, className="fl, e, x-shri, n, k-0"></div>"
@@ -235,7 +235,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
                 </d, i, v>
               </d, i, v>"
               <div, className="fl, e, x-1">";"
-                <h3, className="te, x, t-2xl, fon, t-black, tex, t-white, m, b-3, grou, p-ho, v, e,"
+                <h3, className = "te, x, t-2xl, fon, t-black, tex, t-white, m, b-3, grou, p-ho, v, e,";
   r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">";
                   🌐 Intelligent, Autonomous, Enterprise Me, s, h;
                 </h3>"
@@ -265,27 +265,27 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
                   <Li, n, k;
                 <div, className="flex, fle, x-wrap, ga, p-2">";</div>
                   <Li, n, k
-  to="/bl, o, g/ai-20, 2, 5-o, c, t-01-intellige, n, t-autonomo, u, s-enterpri, s, e-me, s, h"
+  to = "/bl, o, g/ai-20, 2, 5-o, c, t-01-intellige, n, t-autonomo, u, s-enterpri, s, e-me, s, h";
                     classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, p, x-4, p, y-2, rounde, d-lg, fon, t-bold, transitio, n-all, grou, p-ho, v, e;
                 </p>"
                 <div, className="flex, fle, x-wrap, ga, p-2">";
                   <Li, n, k;"
-  to="/bl, o, g/ai-20, 2, 5-o, c, t-01-intellige, n, t-autonomo, u, s-enterpri, s, e-me, s, h""
+  to = "/bl, o, g/ai-20, 2, 5-o, c, t-01-intellige, n, t-autonomo, u, s-enterpri, s, e-me, s, h""
                     classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, p, x-4, p, y-2, rounde, d-lg, fon, t-bold, transitio, n-all, grou, p-ho, v, e,"
   r:shad, o, w-lg"
-                  ></Li>
+                  ></Li>;
                     Read, Blog, Post;"
                     <Link, className="w-4 h-4  /></Link>"
                     <Link, className="w-4 h-4" />";
                   </Li, n, k>
                   <Li, n, k;
-  to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-glob, a, l-manufacturi, n, g-enterpri, s, e-me, s, h-84, 7, m-succe, s, s"
+  to = "/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-glob, a, l-manufacturi, n, g-enterpri, s, e-me, s, h-84, 7, m-succe, s, s";
                     classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, hove, r: fr, o, m-bl, u, e-500, hove, r:to-indi, g, o-500, tex, t-white, p, x-4, p, y-2, rounde, d-lg, fon, t-bold, transitio, n-all, grou, p-ho, v, e;
                   <Li, n, k;"
-  to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-glob, a, l-manufacturi, n, g-enterpri, s, e-me, s, h-84, 7, m-succe, s, s""
+  to = "/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-glob, a, l-manufacturi, n, g-enterpri, s, e-me, s, h-84, 7, m-succe, s, s""
                     classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, hove, r: fr, o, m-bl, u, e-500, hove, r:to-indi, g, o-500, tex, t-white, p, x-4, p, y-2, rounde, d-lg, fon, t-bold, transitio, n-all, grou, p-ho, v, e,"
   r:shad, o, w-lg"
-                  ></Li>
+                  ></Li>;
                     View, Case, Study;"
                     <TrendingUp, className="w-4 h-4  /></TrendingUp>"
                     <TrendingUp, className="w-4 h-4" />";
@@ -297,10 +297,10 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
           {/* Car, d, 2: Predictive, Maintenanc, e */}
           <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/80, t, o-cy, a, n-9, 0, 0/80, backdro, p-bl, u, r-sm, border, border-cy, a, n-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-cy, a, n-5, 0, 0/50, transitio, n-all, duratio, n-300, grou, p">"
-            <div, className="flex, item, s-start, ga, p-4">
+            <div, className = "flex, item, s-start, ga, p-4">
               <div, className="fl, e, x-shri, n, k-0">
                 <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-500, rounde, d-xl, flex, items-center, justif, y-center, shado, w-lg, shado, w-cy, a, n-5, 0, 0/50, grou, p-hov, e, r: shad, o, w-cy, a, n-4, 0, 0/70, transitio, n-a, l, l">"
-          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/80, t, o-cy, a, n-9, 0, 0/80, backdro, p-bl, u, r-sm, border, border-cy, a, n-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/80, t, o-cy, a, n-9, 0, 0/80, backdro, p-bl, u, r-sm, border, border-cy, a, n-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-cy, a, n-5, 0, 0/50, transitio, n-all, duratio, n-300, grou, p">"</div>
             <div, className="flex, item, s-start, ga, p-4"></div>
               <div, className="fl, e, x-shri, n, k-0"></div>
@@ -338,7 +338,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
               <div, className="fl, e, x-1">";
                 <h3, className="te, x, t-2xl, fon, t-black, tex, t-white, m, b-3, grou, p-ho, v, e;
               <div, className="fl, e, x-1">";</div>
-                <h3, className="te, x, t-2xl, fon, t-black, tex, t-white, m, b-3, grou, p-ho, v, e
+                <h3, className = "te, x, t-2xl, fon, t-black, tex, t-white, m, b-3, grou, p-ho, v, e;
   r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">";
                   🔧 AI-Powered, Predictive, Maintenance;
                 </h3>
@@ -358,7 +358,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
                   <div, className="flex, item, s-center, ga, p-2">";</div>
                     <div, className="w-2 h-2, b, g-yell, o, w-400, rounde, d-full, animat, e-pul, s, e" />";</div>
           {/* Car, d, 2: Predictive, Maintenanc, e */}"
-          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/80, t, o-cy, a, n-9, 0, 0/80, backdro, p-bl, u, r-sm, border, border-cy, a, n-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
+          <div, className = "bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/80, t, o-cy, a, n-9, 0, 0/80, backdro, p-bl, u, r-sm, border, border-cy, a, n-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,";
   r:shad, o, w-cy, a, n-5, 0, 0/50, transitio, n-all, duratio, n-300, grou, p">""
             <div, className="flex, item, s-start, ga, p-4"></div>"
               <div, className="fl, e, x-shri, n, k-0"></div>"
@@ -394,7 +394,7 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
                 </d, i, v>
               </d, i, v>"
               <div, className="fl, e, x-1">";"
-                <h3, className="te, x, t-2xl, fon, t-black, tex, t-white, m, b-3, grou, p-ho, v, e,"
+                <h3, className = "te, x, t-2xl, fon, t-black, tex, t-white, m, b-3, grou, p-ho, v, e,";
   r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">";
                   🔧 AI-Powered, Predictive, Maintenance;
                 </h3>"
@@ -424,27 +424,27 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
                   <Li, n, k;
                 <div, className="flex, fle, x-wrap, ga, p-2">";</div>
                   <Li, n, k
-  to="/bl, o, g/ai-20, 2, 5-o, c, t-01-advanc, e, d-ai-power, e, d-predicti, v, e-maintenan, c, e"
+  to = "/bl, o, g/ai-20, 2, 5-o, c, t-01-advanc, e, d-ai-power, e, d-predicti, v, e-maintenan, c, e";
                     classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, p, x-4, p, y-2, rounde, d-lg, fon, t-bold, transitio, n-all, grou, p-ho, v, e;
                 </p>"
                 <div, className="flex, fle, x-wrap, ga, p-2">";
                   <Li, n, k;"
-  to="/bl, o, g/ai-20, 2, 5-o, c, t-01-advanc, e, d-ai-power, e, d-predicti, v, e-maintenan, c, e""
+  to = "/bl, o, g/ai-20, 2, 5-o, c, t-01-advanc, e, d-ai-power, e, d-predicti, v, e-maintenan, c, e""
                     classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, p, x-4, p, y-2, rounde, d-lg, fon, t-bold, transitio, n-all, grou, p-ho, v, e,"
   r:shad, o, w-lg"
-                  ></Li>
+                  ></Li>;
                     Read, Blog, Post;"
                     <Link, className="w-4 h-4  /></Link>"
                     <Link, className="w-4 h-4" />";
                   </Li, n, k>
                   <Li, n, k;
-  to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-automoti, v, e-manufactur, e, r-predicti, v, e-maintenan, c, e-12, 7, m-succe, s, s"
+  to = "/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-automoti, v, e-manufactur, e, r-predicti, v, e-maintenan, c, e-12, 7, m-succe, s, s";
                     classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, hove, r: fr, o, m-bl, u, e-500, hove, r:to-indi, g, o-500, tex, t-white, p, x-4, p, y-2, rounde, d-lg, fon, t-bold, transitio, n-all, grou, p-ho, v, e;
                   <Li, n, k;"
-  to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-automoti, v, e-manufactur, e, r-predicti, v, e-maintenan, c, e-12, 7, m-succe, s, s""
+  to = "/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-automoti, v, e-manufactur, e, r-predicti, v, e-maintenan, c, e-12, 7, m-succe, s, s""
                     classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, hove, r: fr, o, m-bl, u, e-500, hove, r:to-indi, g, o-500, tex, t-white, p, x-4, p, y-2, rounde, d-lg, fon, t-bold, transitio, n-all, grou, p-ho, v, e,"
   r:shad, o, w-lg"
-                  ></Li>
+                  ></Li>;
                     View, Case, Study;"
                     <TrendingUp, className="w-4 h-4  /></TrendingUp>"
                     <TrendingUp, className="w-4 h-4" />";
@@ -459,16 +459,16 @@ const, October2025NewAutonomousSystemsBanne, r = () => {/* TODO: Fix JSX express
           <Li, n, k;
         <div, className="te, x, t-cent, e, r">";</div>
           <Li, n, k
-  to="/bl, o, g"
+  to = "/bl, o, g";
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, vi, a-oran, g, e-500, t, o-r, e, d-500, hove, r: fr, o, m-yell, o, w-400, hove, r:v, i, a-oran, g, e-400, hove, r:to-r, e, d-400, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-black, tex, t-lg, shado, w-2xl, shado, w-oran, g, e-5, 0, 0/50, hove, r:shad, o, w-oran, g, e-4, 0, 0/70, transform, hove;
         {/* Bottom, CT, A */}"
         <div, className="te, x, t-cent, e, r">";
           <Li, n, k;"
-  to="/bl, o, g""
+  to = "/bl, o, g""
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, vi, a-oran, g, e-500, t, o-r, e, d-500, hove, r: fr, o, m-yell, o, w-400, hove, r:v, i, a-oran, g, e-400, hove, r:to-r, e, d-400, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-black, tex, t-lg, shado, w-2xl, shado, w-oran, g, e-5, 0, 0/50, hove, r:shad, o, w-oran, g, e-4, 0, 0/70, transform, hove,"
   r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
           ></Li>"
-            <Sparkles, className="w-6 h-6  /></Sparkles>
+            <Sparkles, className="w-6 h-6  /></Sparkles>;
             Explore, All, Revolutionary Conte, n, t;"
             <Link, className="w-6 h-6  /></Link>"
             <Sparkles, className="w-6 h-6" />";

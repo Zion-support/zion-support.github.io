@@ -88,8 +88,7 @@ $4];
   })).filter(category => category.questions.length > 0);
 
   return (
-    <>
-      <Navigation />
+    <><Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
@@ -108,10 +107,10 @@ $4];
                 type="text"
                 placeholder="Search FAQs..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={{{{{(e) => setSearchTerm(e.target.value)}}}}}
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
-            </div>
+            </></div>
 
           {/* FAQ Content */}
           <div className="max-w-4xl mx-auto">
@@ -127,7 +126,7 @@ $4];
                     
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <button
-                          onClick={() => toggleItem(globalIndex)}
+                          onClick={{{{{() => toggleItem(globalIndex)}}}}}
                           className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
                         >
                           <span className="text-white font-medium pr-4">{item.question}</span>
@@ -183,14 +182,14 @@ const FAQPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
 const toggleItem = (inde)
-  x: number) => {setOpenItems(prev =>})
+  x: number) => {setOpenItems(prev: >})
       prev.includes(index)
         ? prev.filter(i => i !== index)
         : [...prev, index]
     );
   };
   const faqData = [
-  // TOD,
+  // TOD,;
   O: Add items;
 ];;
     {/* TODO: Fix JSX expression */}
@@ -326,9 +325,8 @@ const toggleItem = (inde)
   return (<div>Coming Soon</div>)
   )
     
-          <>
-      <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+          <><Navigation /></Navigation>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-12"></div>"
@@ -356,7 +354,7 @@ const toggleItem = (inde)
 type="text" placeholder="Search FAQs..."
 
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}"
+                onChange={{{{{(e) => setSearchTerm(e.target.value)}}}}}"
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400,
   focus:outline-none,
   focus:border-cyan-400,
@@ -398,7 +396,7 @@ type="text" placeholder="Search FAQs..."
           "
           <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50"></div>
                         <button></button>
-                          onClick={() => toggleItem(globalIndex)}"
+                          onClick={{{{{() => toggleItem(globalIndex)}}}}}"
                           className="w-full px-6 py-4 text-left flex items-center justify-between,"
   hover:bg-slate-700/50 transition-colors"
 // >
@@ -437,12 +435,12 @@ type="text" placeholder="Search FAQs..."
                 <Phone className="w-5 h-5 mr-2" />
 // Call (302) 464-0950;
           </a>
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
+                href = "mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                <Mail className="w-4 h-4 mr-2" />;
                 Email Us;
-                href="/contact" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href = "/contact" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <MessageSquare className="w-4 h-4 mr-2" />
-
+;
                 Contact Form;
       <Footer /></Footer>
     </>

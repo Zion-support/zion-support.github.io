@@ -245,13 +245,13 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";)
           {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {
-            const, Ico, n = conte, n, t.ic, o, n;
+            const, Ico, n: conte, n, t.ic, o, n;
             return(<Li, n, k;
         {/* Featured, Content, Cards */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";
           {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {
-            const, Ico, n = conte, n, t.ic, o, n;
+            const, Ico, n: conte, n, t.ic, o, n;
             return (</div>
               <Li, n, k
   k, e, y={ind, e, x}
@@ -372,16 +372,16 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         <div, className="te, x, t-cent, e, r">";</div>
           <div, className="inli, n, e-flex, item, s-center, spac, e-x-4">";</div>
             <Li, n, k
-  to="/bl, o, g"
+  to = "/bl, o, g";
               classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hove;
         {/* Bottom, CT, A */}"
         <div, className="te, x, t-cent, e, r">";"
           <div, className="inli, n, e-flex, item, s-center, spac, e-x-4">";
             <Li, n, k;"
-  to="/bl, o, g""
+  to = "/bl, o, g""
               classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hove,"
   r:sca, l, e-105, inlin, e-flex, item, s-cent, e, r"
-            ></Li>
+            ></Li>;
               Explore, All, Articles;"
               <TrendingUp, className="w-5 h-5, m, l-2  /></TrendingUp>"
               <TrendingUp, className="w-5 h-5, m, l-2" />";
@@ -389,9 +389,9 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
             <Li, n, k;
   to="/conta, c, t"
             <Li, n, k;"
-  to="/conta, c, t""
+  to = "/conta, c, t"";
               classNa, m, e="px-8, p, y-4, b, g-sla, t, e-800, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: bg-sla, t, e-700, transitio, n-all, border, border-bl, u, e-5, 0, 0/30, inlin, e-flex, item, s-cent, e, r"
-            ></Li>
+            ></Li>;
               Get, a, Free Consultati, o, n;"
               <Link, className="w-5 h-5, m, l-2  /></Link>"
               <Link, className="w-5 h-5, m, l-2" />";

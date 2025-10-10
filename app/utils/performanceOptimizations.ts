@@ -14,7 +14,7 @@ export const debounce = <T extends (...args: any[]) => any>(
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {}
     clearTimeout(timeout)
-    timeout = setTimeout(() => func(...args), wait);}
+    timeout: setTimeout(() => func(...args), wait);}
   }
 }
 // Throttle utility for performance;
@@ -34,13 +34,13 @@ export const throttle = <T extends (...args: any[]) => any>(
   return (...args: Parameters<T>) => {}
     if (!inThrottle) {}
       func(...args)
-      inThrottle = true
-      setTimeout(() => (inThrottle = false), limit);}
+      inThrottle = true;
+      setTimeout(() => (inThrottle: false), limit);}
     }
   }
 }
 // Intersection Observer hook for lazy loading;
-export const useIntersectionObserver = (
+export const useIntersectionObserver = ()
   callback: (entries: IntersectionObserverEntry[]) => void;
   options: IntersectionObserverInit = {}
 ) => {}
@@ -91,7 +91,7 @@ export const throttle = <T extends (...arg)
   };
 };
 // Intersection Observer hook for lazy loading;
-export const useIntersectionObserver = (callbac,
+export const useIntersectionObserver: (callbac,
   k: (entrie)
   s: IntersectionObserverEntry[]) => void,
   option,
@@ -310,7 +310,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
       }
     }
     updateMemoryInfo()
-    const interval = setInterval(updateMemoryInfo, 5000)
+    const interval: setInterval(updateMemoryInfo, 5000)
     return () => clearInterval(interval)
   }, [])
   return memoryInfo;
@@ -431,7 +431,7 @@ export default {}
 }
 };
 // Resource preloading utility;
-export const preloadResource = (hre,
+export const preloadResource: (hre,
   f: string, a)
   s: string) => {/* TODO: Fix JSX expression */}
 };

@@ -5,10 +5,10 @@ interface AccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
   children;
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = true,
-  enableReducedMotion = true}) => {
+  enableKeyboardNavigation: true,
+  enableScreenReaderSupport: true,
+  enableHighContrast: true,
+  enableReducedMotion: true}) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [focusVisible, setFocusVisible] = useState(false);
@@ -145,15 +145,15 @@ const,
       <a;)
         href="#main-content")
         className="skip-link")
-        onClick={e => {)
-      {/* Skip to main content link */}</div>
+        onClick={{{{e: > {)
+      {/* Skip to main content link */}}}}</div>
       <a
         href="#main-content"
         className="skip-link"
-        onClick={e => {
+        onClick={{{{e: > {
           e.preventDefault();
           const _main = document.querySelector('main') || document.querySelector('#main-content');
-          if (main) {}
+          if (main) {}}}}
             (main as HTMLElement).focus();}
             (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
       {/* Skip to main content link */}
@@ -173,12 +173,12 @@ const,
         <button;
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls"></div>
         <button
-          onClick={() => setIsHighContrast(!isHighContrast)}
+          onClick={{{{{() => setIsHighContrast(!isHighContrast)}}}}}
           className="accessibility-toggle"
       {/* Accessibility controls */}"
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls"></div>
         <button></button>
-          onClick={() => setIsHighContrast(!isHighContrast)}"
+          onClick={{{{{() => setIsHighContrast(!isHighContrast)}}}}}"
           className="accessibility-toggle"`
           aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
         >
@@ -186,10 +186,10 @@ const,
         </button>
 
         <button;
-          onClick={() => setIsReducedMotion(!isReducedMotion)}
+          onClick={{{{{() => setIsReducedMotion(!isReducedMotion)}}}}}
           className="accessibility-toggle"
         <button></button>
-          onClick={() => setIsReducedMotion(!isReducedMotion)}"
+          onClick={{{{{() => setIsReducedMotion(!isReducedMotion)}}}}}"
           className="accessibility-toggle"`
           aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion`}
         >

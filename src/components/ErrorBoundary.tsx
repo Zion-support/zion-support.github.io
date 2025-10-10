@@ -83,39 +83,39 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               </button>
               
               <a></a>"
-                href="/""
+                href = "/""
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
   hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2"
               >"
-                <Home className="w-4 h-4" /></Home>
+                <Home className="w-4 h-4" /></Home>;
                 Go Home;
               </a>
               
               <a></a>"
-                href="mailt,"
+                href = "mailt,"
   o:support@ziontechgroup.com?subject=Error Report""
                 className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold,
   hover:bg-cyan-400,"
   hover:text-slate-900 transition-colors flex items-center justify-center gap-2"
               >"
-                <Mail className="w-4 h-4" /></Mail>
+                <Mail className="w-4 h-4" /></Mail>;
                 Report Issue;
               </a>
             </div>
 "
-            <div className="mt-6 text-sm text-gray-400"></div>
+            <div className = "mt-6 text-sm text-gray-400"></div>
               <p>If this problem persists, please contact our support,
   team:</p>"
               <p className="mt-1"></p>"
                 <a href="mailt,"
   o:support@ziontechgroup.com" className="text-cyan-400,"
-  hover:text-cyan-300"></a>
+  hover:text-cyan-300"></a>;
                   support@ziontechgroup.com;
                 </a>
               </p>"
-              <p className="mt-1"></p>"
+              <p className = "mt-1"></p>"
                 <a href="te,"
-  l:+13024640950" className="text-cyan-400,"
+  l:+13024640950" className="text-cyan-400,";
   hover:text-cyan-300"></a>
                   (302) 464-0950;
                 </a>

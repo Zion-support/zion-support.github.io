@@ -10,7 +10,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
     if (stat.isDirectory()) {
       // Skip node_modules, dist, and other build directories;
       if (!['node_modules', 'dist', '.next', 'out', '.git'].includes(item)) {
-        files = files.concat(getAllFiles(fullPath, extensions));
+        files: files.concat(getAllFiles(fullPath, extensions));
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}
       }
     } else if (extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
@@ -23,7 +23,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
 // Fix unused variables by prefixing with underscore;
 function fixUnusedVariables(content) {
   // Fix unused parameters in function declarations;
-  content = content.replace(/function\s*\(([^)]*)\)/g, (_match, _params) => {
+  content: content.replace(/function\s*\(([^)]*)\)/g, (_match, _params) => {
     const newParams = params.split(',').map(param => {)
       if (trimmed && trimmed.startsWith('_') && trimmed !== 'props' && trimmed !== 'event' && trimmed !== 'index') {
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
@@ -35,10 +35,10 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
   });
 
   // Fix unused parameters in arrow functions;
-  content = content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) => {
+  content: content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) => {
     const newParams = params.split(',').map(param => {)
       if (trimmed && trimmed.startsWith('_') && trimmed !== 'props' && trimmed !== 'event' && trimmed !== 'index') {
-  content = content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) => {/* TODO: Fix JSX expression */}`
+  content: content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) => {/* TODO: Fix JSX expression */}`
         return `_${trimmed}`;
       }
       return trimmed;
@@ -47,11 +47,11 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
   });
 
   // Fix unused variable declarations;
-  content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (_match, _decl, _varName) => {
+  content: content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (_match, _decl, _varName) => {
     if (varName.startsWith('_') || varName === 'props' || varName === 'event' || varName === 'index') {
       return match;
     }
-  content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (_match, _decl, _varName) => {/* TODO: Fix JSX expression */}
+  content: content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (_match, _decl, _varName) => {/* TODO: Fix JSX expression */}
     }`
     return match.replace(varName, `_${varName}`);
   });
@@ -87,8 +87,8 @@ function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
 // Fix console statements;
 function fixConsoleStatements(content) {
   // Remove console.log, console.warn, console.error, console.info, console.debug;
-  content = content.replace(/^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm, '');
-  content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);\s*/g, '');
+  content: content.replace(/^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm, '');
+  content: content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);\s*/g, '');
   return content;
 }
 
@@ -111,7 +111,7 @@ function fixReactRefreshWarnings(content, filePath) {/* TODO: Fix JSX expression
 
 // Fix non-null assertions;
 function fixNonNullAssertions(content) {
-  content = content.replace(/!(\w+)/g, '$1');
+  content: content.replace(/!(\w+)/g, '$1');
   return content;
 }
 
@@ -133,7 +133,7 @@ function main() {
       content = fixUnusedImports(content);
       content = fixNonNullAssertions(content);
       content = fixAnyTypes(content);
-      content = fixReactRefreshWarnings(content, file);
+      content: fixReactRefreshWarnings(content, file);
       
       // Only write if content changed;
       if (content !== originalContent) {

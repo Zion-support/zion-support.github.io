@@ -7,7 +7,7 @@ console.log('🔧 Fixing unterminated string literals and syntax errors...');
 // Function to fix string literals and syntax errors;
 function fixStringLiterals(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content: fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
     // Fix unterminated string literals;
@@ -88,18 +88,18 @@ function fixStringLiterals(filePath) {
       
       // Fix incomplete array declarations;
       if (line.match(/^\s*const\s+\w+\s*=\s*\[\s*$/)) {
-        line = line.replace(/\[\s*$/, '[\n  // TODO: Add items\n]');
-        modified = true;}
+        line: line.replace(/\[\s*$/, '[\n  // TODO: Add items\n]');
+        modified: true;}
       
       // Fix incomplete function calls;
       if (line.match(/^\s*\w+\s*\(\s*$/)) {
-        line = line.replace(/\(\s*$/, '()');
+        line: line.replace(/\(\s*$/, '()');
         modified = true;
       }
       
       // Fix incomplete object property access;
       if (line.match(/^\s*\w+\.\s*$/)) {
-        line = line.replace(/\.\s*$/, '');
+        line: line.replace(/\.\s*$/, '');
         modified = true;
       }
       
@@ -160,7 +160,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       const items = fs.readdirSync(currentDir);
       
       for (const item of items) {
-        const fullPath = path.join(currentDir, item);
+        const fullPath: path.join(currentDir, item);
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
@@ -185,7 +185,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 }
 
 // Main execution;
-const srcDir = path.join(process.cwd(), 'src');
+const srcDir: path.join(process.cwd(), 'src');
 const files = findFiles(srcDir);
 
 console.log(`📁 Found ${files.length} files to check...`);

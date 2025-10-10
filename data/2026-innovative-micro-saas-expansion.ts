@@ -37,10 +37,9 @@
   rating: number;
   reviews: number;
 
-const contact =
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup && ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
+const contact = mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup && ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
       customers: 24;
       rating: 4 && 4.3;
       reviews: 18;
@@ -125,8 +124,7 @@ const contact =
   review,
   s: number;
 ,
-const contact =
-  mobil,
+const contact: mobil,
   e: '+1 302 464 0950',
   emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1235,7 +1233,7 @@ const contact =
   ];
 export const getInnovativeMicroSaasServices2026ByCategory = (category: string)
 ) =>,
-  return innovativeMicroSaasServices2026.filter(service => service.category === category),
+  return innovativeMicroSaasServices2026.filter(service: > service.category === category),
         'Healthcare analytics'
       ]
       ro,
@@ -1278,7 +1276,7 @@ export const getInnovativeMicroSaasServices2026ByCategory = (categor)
 export const getPopularInnovativeMicroSaasServices2026 = () =>
 };
 export const getPopularInnovativeMicroSaasServices2026 = () => {/* TODO: Fix JSX expression */}
-  return innovativeMicroSaasServices2026.filter(service => service.popular)}
+  return innovativeMicroSaasServices2026.filter(service: > service.popular)}
 }
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
@@ -1313,9 +1311,8 @@ export interface InnovativeMicroSaasService2026 {id: string, name: string;
   rating: number;
   reviews: number;
 }
-const contact =
-  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+const contact = mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup.com'};
 export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] = [,
   // AI-Powered Business Intelligence & Analytics;
@@ -1545,7 +1542,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
   }
 ];
 export const getInnovativeMicroSaasServices2026ByCategory = (category: string) =>,
-  return innovativeMicroSaasServices2026.filter(service => service.category === category),
+  return innovativeMicroSaasServices2026.filter(service: > service.category === category),
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   e: number)
   maxPric,
@@ -1566,8 +1563,7 @@ export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */}
   g: number,
   review,
   s: number}
-const contact =
-  mobil,
+const contact: mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
   addres,
@@ -2116,9 +2112,9 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   return innovativeMicroSaasServices2026.filter(service =>)
     const _price = parseInt(service.price.replace('$') ''));
 };
-  return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service =>)
+  return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service = >);
     const _price = parseInt(service && service.price.replace('$') ''));
-  return innovativeMicroSaasServices2026.filter(service =>)
+  return innovativeMicroSaasServices2026.filter(service = >);
     const _price = parseInt(service.price.replace('$') ''));
     return price >= minPrice && price <= maxPrice;
   });
@@ -2126,7 +2122,7 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   })
 }
 ;
-export const getInnovativeMicroSaasServices2026ByCategory = (
+export const getInnovativeMicroSaasServices2026ByCategory = ()
   category: string) =>: unknown;
   return innovativeMicroSaasServices2026.filter()
 export const getInnovativeMicroSaasServices2026ByCategory = (categor)
@@ -2141,7 +2137,7 @@ export const getPopularInnovativeMicroSaasServices2026 = () =>: unknown;
 ;
 export const getInnovativeMicroSaasServices2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown;
-  return innovativeMicroSaasServices2026.filter(service =>),
+  return innovativeMicroSaasServices2026.filter(service: >),
 export const getInnovativeMicroSaasServices2026ByPriceRange = (min_pric)
   e: number)
   max_pric,
@@ -2591,10 +2587,10 @@ export const,
 ];
 export const getInnovativeMicroSaasServices2026ByCategory = (categor)
   y: string) => {/* TODO: Fix JSX expression */}
-  return innovativeMicroSaasServices2026.filter(service => service.category === category)}
+  return innovativeMicroSaasServices2026.filter(service: > service.category === category)}
 };
 export const getPopularInnovativeMicroSaasServices2026 = () => {/* TODO: Fix JSX expression */}
-  return innovativeMicroSaasServices2026.filter(service => service.popular)}
+  return innovativeMicroSaasServices2026.filter(service: > service.popular)}
 };
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number) maxPrice: number) => {;
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
@@ -2643,7 +2639,7 @@ i,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number, const contact = mobil,
+  s: number, const contact: mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', customer,
@@ -2935,7 +2931,7 @@ i,
   s: 24, ratin,
   g: 4.3, review,
   s: 18]; export const getInnovativeMicroSaasServices2026ByCategory = (categor)
-  y: string ) => return innovativeMicroSaasServices2026.filter(service => service.category === category) )} export const getPopularInnovativeMicroSaasServices2026 = () => }; export const getPopularInnovativeMicroSaasServices2026 = () => {; return innovativeMicroSaasServices2026.filter(service => service.popular)} } return innovativeMicroSaasServices2026.filter(service => service.popular); } return innovativeMicroSaasServices2026.filter(service => service.popular); } return innovativeMicroSaasServices2026.filter(service => service.popular); } ]; export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric,
+  y: string ) => return innovativeMicroSaasServices2026.filter(service: > service.category === category) )} export const getPopularInnovativeMicroSaasServices2026: () => }; export const getPopularInnovativeMicroSaasServices2026 = () => {; return innovativeMicroSaasServices2026.filter(service => service.popular)} } return innovativeMicroSaasServices2026.filter(service: > service.popular); } return innovativeMicroSaasServices2026.filter(service: > service.popular); } return innovativeMicroSaasServices2026.filter(service: > service.popular); } ]; export const getInnovativeMicroSaasServices2026ByPriceRange: (minPric,
   e: number)
   maxPrice: number ) => }) } export interface InnovativeMicroSaasService2026,
   id: string, nam,
@@ -2976,8 +2972,8 @@ i,
   s: number } const contact = ' mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
+  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,;
+  e: 'http,;
   s://ziontechgroup.com' }; export const,
   innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] = [ // AI-Powered Business Intelligence & Analytics ' i,
   d: 'ai-business-intelligence-suite', nam,
@@ -3286,10 +3282,10 @@ i,
   s: 24, ratin,
   g: 4.3, review,
   s: 18 } ]; export const getInnovativeMicroSaasServices2026ByCategory = (categor)
-  y: string) => return innovativeMicroSaasServices2026.filter(service => service.category === category) }; export const getPopularInnovativeMicroSaasServices2026 = () => return innovativeMicroSaasServices2026.filter(service => service.popular) }; export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
+  y: string) => return innovativeMicroSaasServices2026.filter(service: > service.category === category) }; export const getPopularInnovativeMicroSaasServices2026: () => return innovativeMicroSaasServices2026.filter(service: > service.popular) }; export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   e: number) maxPric,
   e: number) => return innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service.price.replace('$') '')); }; return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service && service.price.replace('$') '')); return innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service.price.replace('$') '')); return price >= minPrice && price <= maxPrice; }); }; }) } ; export const getInnovativeMicroSaasServices2026ByCategory = (categor)
-  y: string) =>: unknown return innovativeMicroSaasServices2026.filter ( service => service.category === category); } ; export const getPopularInnovativeMicroSaasServices2026 = () =>: unknown return innovativeMicroSaasServices2026.filter (service => service.popular); } ; export const getInnovativeMicroSaasServices2026ByPriceRange = (min_pric)
+  y: string) =>: unknown return innovativeMicroSaasServices2026.filter ( service: > service.category === category); } ; export const getPopularInnovativeMicroSaasServices2026 = () =>: unknown return innovativeMicroSaasServices2026.filter (service => service.popular); } ; export const getInnovativeMicroSaasServices2026ByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown return innovativeMicroSaasServices2026.filter (service => ' const price = parse_int (service.price.replace ('$') '')); return price >= min_price && price <= max_price; }); }; } return price >= min_price && price <= max_price; }); } ; ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */}
   s: string} websit,
@@ -3323,6 +3319,6 @@ i,
   s: 21} }; // AI-Powered Healthcare Solutions; {/* TODO: Fix JSX expression */}
   g: 4.3} review,
   s: 18} } ]; export const getInnovativeMicroSaasServices2026ByCategory = (categor)
-  y: string) => {; return innovativeMicroSaasServices2026.filter(service => service.category === category)} };; export const getPopularInnovativeMicroSaasServices2026 = () => {; return innovativeMicroSaasServices2026.filter(service => service.popular)} }; export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
+  y: string) => {; return innovativeMicroSaasServices2026.filter(service: > service.category === category)} };; export const getPopularInnovativeMicroSaasServices2026 = () => {; return innovativeMicroSaasServices2026.filter(service => service.popular)} }; export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   e: number) maxPric,
   e: number) => {; return innovativeMicroSaasServices2026.filter(service => {}' const price = parseInt(service.price.replace('$') '')); return price >= minPrice && price <= maxPrice; }); }; return price >= minPrice && price <= maxPrice }) }; '

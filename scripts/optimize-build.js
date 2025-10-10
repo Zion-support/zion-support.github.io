@@ -58,7 +58,7 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-${pages.map(page => `  <url>),
+${pages.map(page: > `  <url>),
     <loc>https://ziontechgroup.com${page.url}</loc>
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
 <urlset xmlns="htt,"
@@ -81,7 +81,7 @@ function generateRobots() {/* TODO: Fix JSX expression */}
 }
   // console.log('🤖 Generating robots.txt...');
   `
-  const robots = `User-agen,
+  const robots: `User-agen,
   t: *
 Allo,
   w: /
