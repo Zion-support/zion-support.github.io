@@ -736,10 +736,262 @@ const AIServicesPage: React.FC = () => {
         'Adaptive memory patterns',
         'Cognitive enhancement'
       ]
-}
+    },
+    {
+      id: 16,
+      name: 'AI Quantum Machine Learning',
+      description: 'Revolutionary quantum machine learning platform for solving complex optimization problems',
+      icon: Brain,
+      features: [
+        'Quantum Neural Networks',
+        'Quantum Optimization',
+        'Quantum Feature Maps',
+        'Quantum Classification',
+        'Quantum Regression',
+        'Quantum Clustering',
+        'Quantum Dimensionality Reduction',
+        'Hybrid Quantum-Classical ML'
+      ],
+      category: 'Quantum ML',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $2,999/mo',
+      capabilities: [
+        '1000x faster optimization',
+        'Exponential speedup potential',
+        'Quantum advantage in ML',
+        'Breakthrough problem solving'
+      ]
+    },
+    {
+      id: 17,
+      name: 'AI Space Exploration Platform',
+      description: 'Advanced AI platform for space exploration, satellite management, and astronomical research',
+      icon: Rocket,
+      features: [
+        'Satellite Operations AI',
+        'Space Mission Planning',
+        'Astronomical Data Analysis',
+        'Orbital Mechanics AI',
+        'Space Weather Prediction',
+        'Mission Control Automation',
+        'Space Debris Management',
+        'Interplanetary Navigation'
+      ],
+      category: 'Space Technology',
+      popular: false,
+      rating: 4.8,
+      users: '80+',
+      color: 'from-indigo-500 to-blue-600',
+      pricing: 'Starting at $4,999/mo',
+      capabilities: [
+        '99.9% mission success rate',
+        'Real-time space monitoring',
+        'Advanced orbital calculations',
+        'Space debris mitigation'
+      ]
+    },
+    {
+      id: 18,
+      name: 'AI Scientific Research Assistant',
+      description: 'AI-powered scientific research platform for hypothesis generation and experimental design',
+      icon: FileText,
+      features: [
+        'Hypothesis Generation',
+        'Experimental Design',
+        'Literature Analysis',
+        'Data Interpretation',
+        'Research Automation',
+        'Scientific Writing',
+        'Peer Review Support',
+        'Research Collaboration'
+      ],
+      category: 'Scientific AI',
+      popular: true,
+      rating: 4.7,
+      users: '400+',
+      color: 'from-emerald-500 to-teal-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        '50% faster research cycles',
+        'Automated hypothesis testing',
+        'Scientific paper generation',
+        'Research collaboration tools'
+      ]
+    },
+    {
+      id: 19,
+      name: 'AI Data Visualization Pro',
+      description: 'Advanced AI-powered data visualization with interactive dashboards and real-time insights',
+      icon: BarChart,
+      features: [
+        'Interactive Dashboards',
+        'Real-time Visualization',
+        '3D Data Rendering',
+        'Predictive Charts',
+        'Custom Visualizations',
+        'Data Storytelling',
+        'Collaborative Analysis',
+        'Mobile Visualization'
+      ],
+      category: 'Data Visualization',
+      popular: true,
+      rating: 4.8,
+      users: '2,200+',
+      color: 'from-blue-500 to-cyan-600',
+      pricing: 'Starting at $399/mo',
+      capabilities: [
+        'Interactive data exploration',
+        'Real-time insights',
+        '3D visualization capabilities',
+        'Collaborative analysis tools'
+      ]
+    },
+    {
+      id: 20,
+      name: 'AI Quantum Security Platform',
+      description: 'Next-generation quantum-resistant security with AI-powered threat detection and encryption',
+      icon: Shield,
+      features: [
+        'Quantum Cryptography',
+        'Post-Quantum Algorithms',
+        'AI Threat Detection',
+        'Quantum Key Distribution',
+        'Future-Proof Security',
+        'Compliance Monitoring',
+        'Security Analytics',
+        'Risk Assessment'
+      ],
+      category: 'Quantum Security',
+      popular: true,
+      rating: 4.9,
+      users: '180+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        'Quantum-resistant encryption',
+        'Future-proof security',
+        'AI-powered threat detection',
+        'Compliance automation'
+      ]
+    },
+    {
+      id: 21,
+      name: 'AI Neural Interface Platform',
+      description: 'Brain-computer interface platform with AI-powered neural signal processing and control',
+      icon: Brain,
+      features: [
+        'Neural Signal Processing',
+        'Brain-Computer Interface',
+        'Thought-to-Text',
+        'Neural Control Systems',
+        'Cognitive Enhancement',
+        'Medical Applications',
+        'Research Tools',
+        'Real-time Analysis'
+      ],
+      category: 'Neural Interface',
+      popular: false,
+      rating: 4.6,
+      users: '120+',
+      color: 'from-purple-500 to-indigo-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        'Direct brain-computer communication',
+        'Neural signal interpretation',
+        'Medical research support',
+        'Cognitive enhancement tools'
+      ]
+    },
+    {
+      id: 22,
+      name: 'AI Quantum Optimization Suite',
+      description: 'Advanced quantum optimization solutions for complex business and scientific problems',
+      icon: Settings,
+      features: [
+        'Quantum Annealing',
+        'Optimization Algorithms',
+        'Portfolio Optimization',
+        'Supply Chain Optimization',
+        'Route Optimization',
+        'Resource Allocation',
+        'Scheduling Optimization',
+        'Financial Modeling'
+      ],
+      category: 'Quantum Optimization',
+      popular: true,
+      rating: 4.8,
+      users: '250+',
+      color: 'from-amber-500 to-orange-600',
+      pricing: 'Starting at $2,499/mo',
+      capabilities: [
+        'Exponential optimization speedup',
+        'Complex problem solving',
+        'Real-time optimization',
+        'Business process improvement'
+      ]
+    },
+    {
+      id: 23,
+      name: 'AI Immersive Learning Platform',
+      description: 'Virtual and augmented reality learning platform with AI-powered personalized education',
+      icon: GraduationCap,
+      features: [
+        'VR/AR Learning',
+        'Personalized Curriculum',
+        'Interactive Simulations',
+        'Adaptive Learning',
+        'Progress Tracking',
+        'Collaborative Learning',
+        'Skill Assessment',
+        'Knowledge Retention'
+      ],
+      category: 'Immersive Learning',
+      popular: true,
+      rating: 4.7,
+      users: '1,800+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $599/mo',
+      capabilities: [
+        'Immersive learning experiences',
+        'Personalized education paths',
+        'Interactive simulations',
+        'Enhanced knowledge retention'
+      ]
+    },
+    {
+      id: 24,
+      name: 'AI Quantum AI Platform',
+      description: 'Hybrid quantum-classical AI platform combining quantum computing with machine learning',
+      icon: Brain,
+      features: [
+        'Quantum-Classical Hybrid',
+        'Quantum Neural Networks',
+        'Quantum Feature Engineering',
+        'Quantum Model Training',
+        'Quantum Inference',
+        'Classical Integration',
+        'Performance Optimization',
+        'Scalable Architecture'
+      ],
+      category: 'Quantum AI',
+      popular: true,
+      rating: 4.9,
+      users: '100+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        'Quantum advantage in AI',
+        'Hybrid quantum-classical processing',
+        'Exponential performance gains',
+        'Next-generation AI capabilities'
+      ]
+    }
   ];
 
-const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Quantum Finance', 'Immersive Design', 'Immersive Analytics', 'Environmental AI'];
+const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Quantum Finance', 'Immersive Design', 'Immersive Analytics', 'Environmental AI', 'Quantum Finance', 'Space Tech', 'Biotech', 'Manufacturing', 'Robotics', 'Aerospace', 'Life Sciences', 'Neural Interface', 'Holographic', 'Quantum Optimization', 'Precision Medicine', 'Synthetic Biology', 'Digital Twin', 'Manufacturing 4.0', 'Autonomous Robotics'];
 
   if (!isLoaded) {
     return (

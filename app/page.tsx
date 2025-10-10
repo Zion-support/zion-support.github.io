@@ -334,6 +334,106 @@ const microSAASServices = [
     popular: true,
     icon: Palette,
     link: "https://ziontechgroup.com/ai-design-studio"
+  },
+  {
+    name: "AI Quantum Financial Oracle",
+    description: "Revolutionary quantum-powered financial modeling and risk assessment for high-frequency trading",
+    price: "$2,999/mo",
+    features: ["Quantum Risk Modeling", "High-Frequency Trading", "Portfolio Optimization", "Market Prediction"],
+    category: "Quantum Finance",
+    popular: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-quantum-financial-oracle"
+  },
+  {
+    name: "AI Neural Memory Assistant",
+    description: "Advanced AI system with persistent memory and contextual understanding for personalized assistance",
+    price: "$399/mo",
+    features: ["Persistent Memory", "Contextual Understanding", "Personalized Responses", "Learning from Interactions"],
+    category: "Advanced AI",
+    popular: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-neural-memory-assistant"
+  },
+  {
+    name: "AI Holographic Workspace",
+    description: "Immersive 3D workspace with AI-powered collaboration tools and virtual reality integration",
+    price: "$1,299/mo",
+    features: ["3D Holographic Interface", "Virtual Collaboration", "AI-Powered Gestures", "Spatial Computing"],
+    category: "Immersive Technology",
+    popular: false,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-holographic-workspace"
+  },
+  {
+    name: "AI Climate Solutions Pro",
+    description: "AI-powered climate monitoring, carbon footprint tracking, and environmental impact optimization",
+    price: "$499/mo",
+    features: ["Carbon Footprint Analysis", "Climate Risk Assessment", "Sustainability Planning", "Environmental Monitoring"],
+    category: "Climate Tech",
+    popular: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-climate-solutions-pro"
+  },
+  {
+    name: "AI Drug Discovery Pro",
+    description: "Advanced AI platform for pharmaceutical research, drug discovery, and molecular analysis",
+    price: "$4,999/mo",
+    features: ["Molecular Modeling", "Drug Target Identification", "Clinical Trial Optimization", "Side Effect Prediction"],
+    category: "Pharmaceutical AI",
+    popular: false,
+    icon: Stethoscope,
+    link: "https://ziontechgroup.com/ai-drug-discovery-pro"
+  },
+  {
+    name: "AI Fashion Design Studio",
+    description: "AI-powered fashion design with trend analysis, virtual try-on, and sustainable fashion recommendations",
+    price: "$299/mo",
+    features: ["Trend Analysis", "Virtual Try-On", "Sustainable Fashion AI", "Color Palette Generation"],
+    category: "Fashion Tech",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-fashion-design"
+  },
+  {
+    name: "AI Music Composition Suite",
+    description: "AI-powered music creation with composition, arrangement, and production capabilities",
+    price: "$199/mo",
+    features: ["AI Composition", "Genre Adaptation", "Lyric Generation", "Instrument Arrangement"],
+    category: "Creative AI",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-music-composition"
+  },
+  {
+    name: "AI Energy Management System",
+    description: "Smart energy optimization with AI-powered grid management and renewable energy integration",
+    price: "$799/mo",
+    features: ["Smart Grid Management", "Renewable Energy Optimization", "Demand Response", "Energy Storage AI"],
+    category: "Energy Tech",
+    popular: false,
+    icon: Zap,
+    link: "https://ziontechgroup.com/ai-energy-management"
+  },
+  {
+    name: "AI Autonomous Systems Platform",
+    description: "AI-powered autonomous vehicle and drone management with real-time decision making",
+    price: "$1,999/mo",
+    features: ["Autonomous Vehicle AI", "Drone Fleet Management", "Real-time Decision Making", "Path Optimization"],
+    category: "Autonomous Systems",
+    popular: true,
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-autonomous-systems"
+  },
+  {
+    name: "AI Blockchain Solutions",
+    description: "AI-powered blockchain technology with smart contracts, DeFi optimization, and crypto analytics",
+    price: "$599/mo",
+    features: ["Smart Contract AI", "DeFi Optimization", "Crypto Analytics", "Blockchain Security"],
+    category: "Blockchain AI",
+    popular: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-blockchain-solutions"
   }
 ];
 

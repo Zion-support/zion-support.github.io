@@ -21,7 +21,15 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
         { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' }
+        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
+        { name: 'AI Quantum Machine Learning', href: '/ai-quantum-ml' },
+        { name: 'AI Scientific Research Assistant', href: '/ai-scientific-research' },
+        { name: 'AI Data Visualization Pro', href: '/ai-data-visualization-pro' },
+        { name: 'AI Quantum Security Platform', href: '/ai-quantum-security' },
+        { name: 'AI Neural Interface Platform', href: '/ai-neural-interface' },
+        { name: 'AI Quantum Optimization Suite', href: '/ai-quantum-optimization' },
+        { name: 'AI Immersive Learning Platform', href: '/ai-immersive-learning' },
+        { name: 'AI Quantum AI Platform', href: '/ai-quantum-ai' }
       ]
     },
     {
@@ -39,7 +47,20 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Infrastructure Monitoring', href: '/ai-infrastructure-monitoring' },
         { name: 'Blockchain Integration', href: '/blockchain-integration-services' },
         { name: 'AI API Management', href: '/ai-api-management' },
-        { name: 'Smart Contract Security', href: '/smart-contract-security-audit' }
+        { name: 'Smart Contract Security', href: '/smart-contract-security-audit' },
+        { name: 'Quantum Computing Infrastructure', href: '/quantum-computing-infrastructure' },
+        { name: 'AI-Powered Quantum Security', href: '/ai-quantum-security' },
+        { name: 'Neural Interface Development', href: '/neural-interface-development' },
+        { name: 'Holographic Display Systems', href: '/holographic-display-systems' },
+        { name: 'Satellite Management Systems', href: '/satellite-management-systems' },
+        { name: 'Space Mission Control', href: '/space-mission-control' },
+        { name: 'Aerospace AI Solutions', href: '/aerospace-ai-solutions' },
+        { name: 'AI Biotech Platform', href: '/ai-biotech-platform' },
+        { name: 'Precision Medicine AI', href: '/precision-medicine-ai' },
+        { name: 'Synthetic Biology Platform', href: '/synthetic-biology-platform' },
+        { name: 'AI Manufacturing 4.0', href: '/ai-manufacturing-4-0' },
+        { name: 'Autonomous Robotics Systems', href: '/autonomous-robotics-systems' },
+        { name: 'Digital Twin Technology', href: '/digital-twin-technology' }
       ]
     },
     {
@@ -57,7 +78,16 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Smart Calendar', href: '/ai-smart-calendar' },
         { name: 'AI Content Writer', href: '/ai-content-writer' },
         { name: 'AI Video Generator', href: '/ai-video-generator' },
-        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' }
+        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' },
+        { name: 'AI Quantum Financial Oracle', href: '/ai-quantum-financial-oracle' },
+        { name: 'AI Neural Memory Assistant', href: '/ai-neural-memory-assistant' },
+        { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
+        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
+        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
+        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
+        { name: 'AI Autonomous Systems Pro', href: '/ai-autonomous-systems' },
+        { name: 'AI Blockchain Solutions Pro', href: '/ai-blockchain-solutions' },
+        { name: 'AI Energy Grid Management', href: '/ai-energy-grid-management' }
       ]
     },
     {

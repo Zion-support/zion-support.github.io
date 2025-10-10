@@ -427,7 +427,168 @@ name: 'AI-Powered Infrastructure Management',
           popular: false
         }
       ]
-
+    },
+    {
+      category: 'Quantum Computing & Advanced Technologies',
+      icon: Brain,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      services: [
+        {
+          name: 'Quantum Computing Infrastructure',
+          description: 'Next-generation quantum computing solutions for complex optimization problems and cryptography',
+          features: ['Quantum Algorithm Development', 'Quantum Machine Learning', 'Cryptographic Security', 'Optimization Problems', 'Quantum Simulation', 'Hybrid Classical-Quantum Computing'],
+          pricing: 'Starting at $15,999/mo',
+          trial: 'Free quantum assessment',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/quantum-computing-infrastructure',
+          popular: true
+        },
+        {
+          name: 'AI-Powered Quantum Security',
+          description: 'Quantum-resistant security solutions with AI-powered threat detection and encryption',
+          features: ['Post-Quantum Cryptography', 'AI Threat Detection', 'Quantum Key Distribution', 'Future-Proof Security', 'Compliance Assurance', 'Migration Planning'],
+          pricing: 'Starting at $8,999/mo',
+          trial: 'Free security audit',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/ai-quantum-security',
+          popular: true
+        },
+        {
+          name: 'Neural Interface Development',
+          description: 'Brain-computer interface solutions with AI-powered neural signal processing',
+          features: ['Neural Signal Processing', 'Brain-Computer Interface', 'AI Pattern Recognition', 'Real-time Analysis', 'Medical Applications', 'Research Support'],
+          pricing: 'Starting at $12,999/mo',
+          trial: 'Free consultation',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/neural-interface-development',
+          popular: false
+        },
+        {
+          name: 'Holographic Display Systems',
+          description: 'Advanced holographic display technology with AI-powered content optimization',
+          features: ['3D Holographic Displays', 'AI Content Optimization', 'Spatial Computing', 'Interactive Holograms', 'Real-time Rendering', 'Multi-user Collaboration'],
+          pricing: 'Starting at $9,999/mo',
+          trial: 'Free demo',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/holographic-display-systems',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'Space Technology & Aerospace',
+      icon: Rocket,
+      color: 'text-indigo-400',
+      bgColor: 'bg-indigo-500/10',
+      services: [
+        {
+          name: 'Satellite Management Systems',
+          description: 'AI-powered satellite operations and space mission management solutions',
+          features: ['Satellite Operations', 'Mission Planning', 'Space Weather Prediction', 'Orbital Mechanics', 'Space Debris Tracking', 'Communication Optimization'],
+          pricing: 'Starting at $19,999/mo',
+          trial: 'Free space assessment',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/satellite-management-systems',
+          popular: true
+        },
+        {
+          name: 'Space Mission Control',
+          description: 'Advanced mission control systems with AI-powered decision support and automation',
+          features: ['Mission Control Systems', 'AI Decision Support', 'Real-time Monitoring', 'Automated Responses', 'Risk Assessment', 'Mission Analytics'],
+          pricing: 'Starting at $24,999/mo',
+          trial: 'Free consultation',
+          timeline: '16-32 weeks',
+          link: 'https://ziontechgroup.com/space-mission-control',
+          popular: false
+        },
+        {
+          name: 'Aerospace AI Solutions',
+          description: 'AI-powered aerospace solutions for aircraft optimization and flight management',
+          features: ['Flight Optimization', 'Predictive Maintenance', 'Weather Analysis', 'Route Planning', 'Fuel Efficiency', 'Safety Monitoring'],
+          pricing: 'Starting at $14,999/mo',
+          trial: 'Free aviation assessment',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/aerospace-ai-solutions',
+          popular: true
+        }
+      ]
+    },
+    {
+      category: 'Biotechnology & Life Sciences',
+      icon: Stethoscope,
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      services: [
+        {
+          name: 'AI Biotech Platform',
+          description: 'Comprehensive biotechnology platform with AI-powered research and development tools',
+          features: ['Molecular Analysis', 'Drug Discovery', 'Protein Folding', 'Genomic Analysis', 'Clinical Trials', 'Regulatory Compliance'],
+          pricing: 'Starting at $18,999/mo',
+          trial: 'Free biotech assessment',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/ai-biotech-platform',
+          popular: true
+        },
+        {
+          name: 'Precision Medicine AI',
+          description: 'AI-powered precision medicine solutions for personalized treatment and diagnosis',
+          features: ['Personalized Treatment', 'Genetic Analysis', 'Drug Response Prediction', 'Diagnostic Support', 'Treatment Optimization', 'Patient Monitoring'],
+          pricing: 'Starting at $16,999/mo',
+          trial: 'Free medical consultation',
+          timeline: '10-20 weeks',
+          link: 'https://ziontechgroup.com/precision-medicine-ai',
+          popular: true
+        },
+        {
+          name: 'Synthetic Biology Platform',
+          description: 'AI-powered synthetic biology platform for bioengineering and genetic design',
+          features: ['Genetic Design', 'Bioengineering Tools', 'Synthetic Organisms', 'Metabolic Engineering', 'Biosafety', 'Regulatory Support'],
+          pricing: 'Starting at $22,999/mo',
+          trial: 'Free biology consultation',
+          timeline: '16-32 weeks',
+          link: 'https://ziontechgroup.com/synthetic-biology-platform',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'Advanced Manufacturing & Robotics',
+      icon: Settings,
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-500/10',
+      services: [
+        {
+          name: 'AI Manufacturing 4.0',
+          description: 'Next-generation smart manufacturing with AI-powered optimization and automation',
+          features: ['Smart Manufacturing', 'Predictive Maintenance', 'Quality Control', 'Supply Chain AI', 'Robotic Automation', 'Digital Twins'],
+          pricing: 'Starting at $21,999/mo',
+          trial: 'Free manufacturing audit',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/ai-manufacturing-4-0',
+          popular: true
+        },
+        {
+          name: 'Autonomous Robotics Systems',
+          description: 'AI-powered autonomous robotics for industrial and service applications',
+          features: ['Autonomous Navigation', 'Object Recognition', 'Task Planning', 'Human-Robot Collaboration', 'Safety Systems', 'Performance Analytics'],
+          pricing: 'Starting at $17,999/mo',
+          trial: 'Free robotics demo',
+          timeline: '10-20 weeks',
+          link: 'https://ziontechgroup.com/autonomous-robotics-systems',
+          popular: true
+        },
+        {
+          name: 'Digital Twin Technology',
+          description: 'Comprehensive digital twin solutions for real-time monitoring and optimization',
+          features: ['Real-time Monitoring', 'Predictive Analytics', 'Virtual Testing', 'Performance Optimization', 'Maintenance Planning', 'Simulation'],
+          pricing: 'Starting at $13,999/mo',
+          trial: 'Free twin assessment',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/digital-twin-technology',
+          popular: false
+        }
+      ]
     }
   ];
 
