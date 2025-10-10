@@ -5,16 +5,16 @@ export interface ToastProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   messag,
-  e: string;
-  type?: ToastType;
-  duration?: number;
+  e: string
+  type?: ToastType
+  duration?: number
   onClose?: () => void;,
     sho,
-  w: boolean;
+  w: boolean
 }
 const,
-  Toast: React.FC;
-          <ToastProps> = ({/* TODO: Fix JSX expression */}
+  Toast: React.FC
+          <ToastProps>= ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //   message,
@@ -36,9 +36,9 @@ const,
       }, duration);
       return () => clearTimeout(timer);
     }
-    return undefined;
+    return undefined
   }, [show, duration, onClose]);
-  if (!isVisible) return null;
+  if (!isVisible) return null
   const getToastStyles = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -65,32 +65,32 @@ const,
   O: Add content;}
 }
       case 'success':
-        return '';
+        return ''</ToastProps>
       case 'error':
-        return '';
+        return ''</ToastProps
       case 'warning':
-        return '';
+        return ''</ToastProps
       case 'info':
-        return '';
+        return ''</ToastProps
       defaul,
   t:
-        return '';
+        return ''</ToastProps
     }
-  };
+  }</ToastProps
   return (<div>Coming Soon</div>)
   )
-          <div></div>
+          <div></div
 className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
       role="alert""
       aria-live="polite"
 // >
           "
-          <span className="text-xl font-bold">{getIcon()}</span>
-      <span>{message}</span>
-      <button></button>
+          <span className="text-xl font-bold">{getIcon()}</span
+      <span>{message}</span
+      <button></button
         onClick={() => {}
   // TOD,
-  O: Add content;
+  O: Add content
 }
           setIsVisible(false);
           if (onClose) onClose();
@@ -100,9 +100,9 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
         aria-label="Close notification"
 //       >
 //
-          </button>
-    </div>
+          </button
+    </div
   );
 };
 export default Toast;"`
-  </ToastProps>
+  </ToastProps

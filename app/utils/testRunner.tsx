@@ -5,7 +5,6 @@
  */;
 import React, { ReactElement, useCallback } from 'react';
 // Test result types;
-<<<<<<< HEAD
 export interface PerformanceMetrics {
   renderTime: number,
     memoryUsage: number,
@@ -14,19 +13,7 @@ export interface PerformanceMetrics {
 export interface CoverageMetrics {
   statements: number,
     branches: number,
-    functions: number,
-=======
-export interface PerformanceMetrics {;
-  renderTime: number,;
-    memoryUsage: number;}
-  timestamp: string;}
-}
-export interface CoverageMetrics {;
-  statements: number,;
-    branches: number;
-  functions: number,;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-    lines: number;}
+    functions: number,    lines: number;}
   renderTime: number,;
   memoryUsage: number,;
   timestamp: string;}
@@ -38,7 +25,6 @@ export interface CoverageMetrics {;
   lines: number;}
 }
 // Test configuration interface;
-<<<<<<< HEAD
 export interface TestConfig {
   enableMocking: boolean,
     enableCoverage: boolean,
@@ -54,29 +40,9 @@ export interface CoverageMetrics {}
   statements: number,
     branches: number
   functions: number,
-    lines: number;}
-=======
-export interface TestConfig {;
-  enableMocking: boolean,;
-    enableCoverage: boolean;
-  enablePerformance: boolean,;
-    enableAccessibility: boolean;
-// Test result types;}
-export interface PerformanceMetrics {}
-  renderTime: number;
-  memoryUsage: number;
-  timestamp: string;}
-}
-export interface CoverageMetrics {}
-  statements: number;
-  branches: number;
-  functions: number;
-  lines: number;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-}
+    lines: number;}}
 // Test configuration interface;
 export interface TestConfig {}
-<<<<<<< HEAD
   enableMocking: boolean,
     enableCoverage: boolean
   enablePerformance: boolean,
@@ -93,15 +59,7 @@ export interface TestConfig {}
   enableCoverage: boolean,
   enablePerformance: boolean,
   enableAccessibility: boolean,
-  enableVisualRegression: boolean,
-=======
-  enableMocking: boolean;
-  enableCoverage: boolean;
-  enablePerformance: boolean;
-  enableAccessibility: boolean;
-  enableVisualRegression: boolean;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  mockDataPath?: string;
+  enableVisualRegression: boolean,  mockDataPath?: string;
   coverageThreshold: number,;
     performanceThreshold: number;
   accessibilityThreshold: number;
@@ -129,7 +87,6 @@ export interface TestConfig {}
   includePattern?: string[],;
   excludePattern?: string[];}
 }
-<<<<<<< HEAD
 // Default test configuration
 export const defaultTestConfig: TestConfig = {,
     enableMocking: true,
@@ -179,123 +136,7 @@ interface TestSuite {
 interface Test {</void>
   name: string,</void>
     fn: () => void | Promise<void>timeout?: number
-  skip?: boolean
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-// Default test configuration;
-export const defaultTestConfig: TestConfig = {,;
-    enableMocking: true,;}
-export const defaultTestConfig: TestConfig = {}
-  enableMocking: true,;
-  enableCoverage: true,;
-  enablePerformance: true,;
-  enableAccessibility: true,;
-  enableVisualRegression: false,;
-  coverageThreshold: 80,;
-  performanceThreshold: 100,;
-  accessibilityThreshold: 90}
-}
-interface TestResult {;
-  name: string,;
-    status: 'passed' | 'failed' | 'skipped' | 'pending';}
-interface TestResult {}
-  name: string;
-  status: 'passed' | 'failed' | 'skipped' | 'pending';
-  duration: number;
-  error?: Error;
-  assertions: AssertionResult[];
-  coverage?: CoverageResult;}
-}
-interface AssertionResult {;
-  name: string,;
-    status: 'passed' | 'failed';}
-interface AssertionResult {}
-  name: string;
-  status: 'passed' | 'failed';
-  expected?: unknown;
-  actual?: unknown;
-  message?: string;}
-}
-interface CoverageResult {;
-  statements: number,;
-    branches: number;
-  functions: number,;
-    lines: number;}
-  uncovered: string[];}
-}
-interface TestSuite {;
-  name: string,;
-    tests: Test[];}
-  beforeAll: (() => void | Promise<void>)[],</void></<<<void>afterAll</void></void>: (() => void | Promise<void>)[]</void></<<<void>beforeEach</void></void>: (() => void | Promise<void>)[],</void></<<<void>afterEach</void></void>: (() => void | Promise<void>)[];}</void>;
-}
-interface Test {</void>;
-  name: string,</void>;
-    fn: () => void | Promise<void>timeout?: number;
-  skip?: boolean;
-// Default test configuration;
-export const defaultTestConfig: TestConfig = {;
-  enableMocking: true,;
-  enableCoverage: true,;
-  enablePerformance: true,;
-  enableAccessibility: true,;
-  enableVisualRegression: false,;
-  coverageThreshold: 80,;
-  performanceThreshold: 100,;}
-  accessibilityThreshold: 90}
-}
-interface TestResult {;
-  name: string,;
-  status: 'passed' | 'failed' | 'skipped' | 'pending';
-  duration: number,;
-  error?: Error;
-  assertions: AssertionResult[],;}
-  coverage?: CoverageResult;}
-}
-interface AssertionResult {;
-  name: string,;
-  status: 'passed' | 'failed',;
-  expected?: unknown;
-  actual?: unknown;}
-  message?: string;}
-}
-interface CoverageResult {;
-  statements: number,;
-  branches: number,;
-  functions: number,;
-  lines: number,;}
-  uncovered: string[];}
-}
-interface TestSuite {;
-  name: string,;}
-interface CoverageResult {}
-<<<<<<< HEAD
-  statements: number,
-    branches: number
-  functions: number,
-    lines: number
-  uncovered: string[];}
-}
-interface TestSuite {}
-  name: string,
-    tests: Test[]
-  beforeAll: (() => void | Promise<void>)[],
-  afterAll: (() => void | Promise<void>)[],
-  beforeEach: (() => void | Promise<void>)[],
-=======
-  statements: number;
-  branches: number;
-  functions: number;
-  lines: number;
-  uncovered: string[];}
-}
-interface TestSuite {}
-  name: string;
-  tests: Test[];
-  beforeAll: (() => void | Promise<void>)[],;
-  afterAll: (() => void | Promise<void>)[],;
-  beforeEach: (() => void | Promise<void>)[],;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  afterEach: (() => void | Promise<void>)[];}
+  skip?: boolean  afterEach: (() => void | Promise<void>)[];}
 }
 interface Test {;
   name: string,;
@@ -318,7 +159,6 @@ interface Test {}
   skip?: boolean;
   only?: boolean;}
 }
-<<<<<<< HEAD
 export class TestRunner {
   private static instance: TestRunner,
   private config: TestConfig,
@@ -347,14 +187,7 @@ export class TestRunner {}
   }> = []
   private isRunning: boolean = false
   private startTime: number = 0
-  constructor(config: Partial<TestConfig>= {}) {
-=======
-export class TestRunner {}
-  private static instance: TestRunner;
-  private config: TestConfig;
-  private suites: TestSuite[] = [];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  private currentSuite: TestSuite | null = null;
+  constructor(config: Partial<TestConfig>= {}) {  private currentSuite: TestSuite | null = null;
   private results: TestResult[] = [];
   private testResults: Array<{}
     name: string;
@@ -615,19 +448,10 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       const renderTime = performance.now() - startTime;
       // Measure memory usage if available;
       let memoryUsage = 0;
-<<<<<<< HEAD
-      if ('memory' in performance) {
-=======
-;
-      if ('memory' in performance) {;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+      if ('memory' in performance) {        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         if (memory) {;
           memoryUsage = memory.usedJSHeapSize;
-<<<<<<< HEAD
-=======
 ;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         }
       }
       unmount();
@@ -1170,7 +994,6 @@ export class TestRunner {/* TODO: Fix JSX expression */}
             <div class="test ${result.status}"></div>;
                 <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>;
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
-<<<<<<< HEAD
             </div>
         <h3 id="heading-summary">Summary</h3>
         <p>Total: ${this.results.length}</p>
@@ -1180,20 +1003,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         <p>Duration: ${Date.now() - this.startTime}ms</p>
     </div>
     <div class="tests">
-        ${this.results;
-=======
-            </div>;
-        <h3 id="heading-summary">Summary</h3>;
-        <p>Total: ${this.results.length}</p>;
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>;
-        <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>;
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>;
-        <p>Duration: ${Date.now() - this.startTime}ms</p>;
-    </div>;
-    <div class="tests"></div>;
-        ${this.results;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-          .map(result => `}
+        ${this.results;          .map(result => `}
         ${this.results}
           .map();
             result => `}</div>;
@@ -1462,7 +1272,6 @@ export class TestRunner {/* TODO: Fix JSX expression */}
    * Generate JUnit report;
    */;
   private generateJunitReport(): void {}
-<<<<<<< HEAD
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${this.results
@@ -1685,21 +1494,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   private generateJunitReport(): void {/* TODO: Fix JSX expression */}"
     <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${/* TODO: Fix JSX expression */}"
-            <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`
-=======
-    const xml = `<?xml version="1.0" encoding="UTF-8"?>;
-<testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
-        ${this.results;
-          .map()</testsuite>;}
-    result => `}</testsuite>;
-<testsuites>}
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
-        ${this.results}
-          .map();
-            result => `}
-            <testcase name="${result.name}" time="${result.duration / 1000}">;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
+            <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
                 ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>;
             </skipped>;
 <testsuites>}
@@ -2765,7 +2560,6 @@ export const testRunner = new TestRunner();
 export { Mock };
 export type {/* TODO: Fix JSX expression */}
 };
-<<<<<<< HEAD
 "`
   </T>
   </T>
@@ -2813,6 +2607,3 @@ export type {/* TODO: Fix JSX expression */}
   </void>
   </void>
   </void>
-=======
-"`;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

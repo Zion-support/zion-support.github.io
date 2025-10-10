@@ -1,18 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, ArrowRight, Clock, TrendingUp, Star } from 'lucide-react';
 interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  url: string;
-  category: string;
+  id: string
+  title: string
+  description: string
+  url: string
+  category: string
   type: 'page' | 'service' | 'blog' | 'documentation';
-  popularity?: number;
-  lastModified?: string;
+  popularity?: number
+  lastModified?: string
 }
 interface SearchModalProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean
+  onClose: () => void
 }
 const mockSearchResults: SearchResult[] = [
   {
@@ -88,7 +88,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
   }, [isOpen]);
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (!isOpen) return;
+      if (!isOpen) return
       if (e.key === 'Escape') {
         onClose();
       } else if (e.key === 'ArrowDown') {
@@ -111,7 +111,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     if (!searchQuery.trim()) {
       setResults([]);
       setShowSuggestions(true);
-      return;
+      return
     }
     setIsSearching(true);
     setShowSuggestions(false);
@@ -124,20 +124,20 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     );
     // Sort by popularity and relevance
     const sortedResults = filteredResults.sort((a, b) => {
-      const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
-      const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
-      return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance;
+      const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1
+      const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1
+      return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance
     });
     setResults(sortedResults);
     setSelectedIndex(-1);
     setIsSearching(false);
   };
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {</HTMLInputElement>const</HTMLInputElement> value = e.target.value;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {</HTMLInputElement>const</HTMLInputElement> value = e.target.value
     setQuery(value);
     searchResults(value);
   };
   const handleResultClick = (result: SearchResult) => {
-    window.location.href = result.url;
+    window.location.href = result.url
     onClose();
   };
   const handleSuggestionClick = (suggestion: string) => {
@@ -174,7 +174,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
         return 'text-gray-400';
     }
   };
-  if (!isOpen) return null;
+  if (!isOpen) return null
   return (
     <div className="fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16">
       {/* Backdrop */}
@@ -199,112 +199,112 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
             onClick={onClose}
             className="p-2 text-gray-400 hover:text-white transition-colors">
             <X className="w-5 h-5" />
-          </button>
-        </div>
+          </button
+        </div
         {/* Content */}
         <div className="max-h-96 overflow-y-auto">
           {showSuggestions && !query && (
             <div className="p-4 space-y-6">
               {/* Recent Searches */}
-              <div>
+              <div
                 <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
                   <Clock className="w-4 h-4 mr-2" />
-                  Recent Searches</span>
+                  Recent Searches</span
                 <div className="flex flex-wrap gap-2">
                   {recentSearches.map((search, index) => (
                     <button
                       key={index}
-                      onClick={() => handleSuggestionClick(search)}
-                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors">
+                      onClick={() =>handleSuggestionClick(search)}
+                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors"</button
                       {search}
-                    </button>
+                    </button
                   ))}
-                </div>
-              </div>
+                </div
+              </div
               {/* Popular Searches */}
-              <div>
+              <div
                 <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
                   <TrendingUp className="w-4 h-4 mr-2" />
-                  Popular Searches</span>
+                  Popular Searches</span
                 <div className="flex flex-wrap gap-2">
                   {popularSearches.map((search, index) => (
                     <button
                       key={index}
-                      onClick={() => handleSuggestionClick(search)}
-                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors">
+                      onClick={() =>handleSuggestionClick(search)}
+                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors"</button
                       {search}
-                    </button>
+                    </button
                   ))}
-                </div>
-              </div>
-            </div>
+                </div
+              </div
+            </div
           )}
           {/* Search Results */}
           {query && (
             <div className="p-4">
               {isSearching ? (
                 <div className="flex items-center justify-center py-8">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div>
-                </div>
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div
+                </div
               ) : results.length > 0 ? (
                 <div className="space-y-2">
                   {results.map((result, index) => (
                     <button
                       key={result.id}
-                      onClick={() => handleResultClick(result)}
+                      onClick={() =>handleResultClick(result)}
                       className={`w-full text-left p-3 rounded-lg transition-colors ${
                         index === selectedIndex
                           ? 'bg-cyan-400/20 text-cyan-400'
                           : 'hover:bg-slate-800/50 text-gray-300'
                       }`}
-                    >
+                    </button
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
                           <div className="flex items-center space-x-2 mb-1">
-                            <span className="text-lg">{getCategoryIcon(result.category)}</span>
-                            <h3 className="font-medium">{result.title}</h3>
+                            <span className="text-lg">{getCategoryIcon(result.category)}</span
+                            <h3 className="font-medium">{result.title}</h3
                             <span className={`text-xs px-2 py-1 rounded ${getTypeColor(result.type)} bg-slate-800/50`}>
                               {result.type}
-                            </span>
-                          </div>
-                          <p className="text-sm text-gray-400 mb-2">{result.description}</p>
+                            </span
+                          </div
+                          <p className="text-sm text-gray-400 mb-2">{result.description}</p
                           <div className="flex items-center space-x-4 text-xs text-gray-500">
-                            <span>{result.category}</span>
+                            <span>{result.category}</span
                             {result.popularity && (
                               <div className="flex items-center space-x-1">
                                 <Star className="w-3 h-3" />
-                                <span>{result.popularity}%</span>
-                              </div>
+                                <span>{result.popularity}%</span
+                              </div
                             )}
                             {result.lastModified && (
-                              <span>Updated {result.lastModified}</span>
+                              <span>Updated {result.lastModified}</span
                             )}
-                          </div>
-                        </div>
+                          </div
+                        </div
                         <ArrowRight className="w-4 h-4 text-gray-400" />
-                      </div>
-                    </button>
+                      </div
+                    </button
                   ))}
-                </div>
+                </div
               ) : (
                 <div className="text-center py-8">
                   <Search className="w-12 h-12 text-gray-600 mx-auto mb-4" />
-                  <h3 className="text-lg font-medium text-gray-300 mb-2">No results found</h3>
+                  <h3 className="text-lg font-medium text-gray-300 mb-2">No results found</h3
                   <p className="text-sm text-gray-500">
-                    Try searching for something else or check your spelling</span>
+                    Try searching for something else or check your spelling</span
                   <div className="text-sm text-gray-500 mt-4">
-                    Popular searches: AI Analytics, Quantum Computing, Workflow Automation</span>
-                </div>
+                    Popular searches: AI Analytics, Quantum Computing, Workflow Automation</span
+                </div
               )}
-            </div>
+            </div
           )}
-        </div>
-      </div>
-    </div>
+        </div
+      </div
+    </div
   );
 };
-export default EnhancedSearchModal</p>
-  </h3>
-  </h3>
-  </div>
-  </div>
+export default EnhancedSearchModal</p
+  </h3
+  </h3
+  </div
+  </div

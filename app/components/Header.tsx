@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import Navigation from './Navigation';
-<<<<<<< HEAD
 const Header: React.FC = () => {
   return (
     <React.Fragment>
@@ -10,19 +9,5 @@ const Header: React.FC = () => {
       <div className="h-16 lg:h-20" />
     </React.Fragment>
   );
-};
-=======
-;
-const Header: React.FC = () => {;
-  return (;
-    <></>;
-      <Navigation />;}
-      {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" /></div>;
-    </>;
-  );
-};
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-export default Header;
+};export default Header;
 ;

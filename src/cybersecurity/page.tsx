@@ -9,25 +9,25 @@ export default function CybersecurityPage() {
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            Cybersecurity</span>
+            Cybersecurity</span
           <p className="text-xl text-gray-300 mb-8">
             Advanced security solutions to protect your business from cyber threats.
-          </p>
+          </p
           <div className="bg-slate-800/50 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Cybersecurity Solutions</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Cybersecurity Solutions</h2
             <p className="text-gray-300 mb-6">
               Protect your business with comprehensive cybersecurity services and monitoring.
-            </p>
+            </p
             <a
               href="/contact"
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
               <ArrowRight className="w-5 h-5 mr-2" />
-              Contact Us</span>
-          </div>
-        </div>
-      </div>
-    </div>
+              Contact Us</span
+          </div
+        </div
+      </div
+    </div
   );
 }
-  </a>
-  </h1>
+  </a
+  </h1

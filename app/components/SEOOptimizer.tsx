@@ -34,7 +34,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       meta.content = description;
       document.head.appendChild(meta);
     }
-<<<<<<< HEAD
     meta.setAttribute('content', content);
   };
   const updateCanonicalUrl = (url: string) => {
@@ -120,20 +119,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     // Remove existing organization data
     const existing = document.getElementById('organization-structured-data');
     if (existing) {
-      existing.remove();
-=======
-
-    // Update meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', keywords.join(', '));
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'keywords';
-      meta.content = keywords.join(', ');
-      document.head.appendChild(meta);
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-    }
+      existing.remove();    }
 
     // Update canonical URL
     const canonical = document.querySelector('link[rel="canonical"]');
@@ -227,10 +213,5 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     </Helmet>
   );
 };
-<<<<<<< HEAD
 export default SEOOptimizer;
   </SEOOptimizerProps>
-=======
-
-export default SEOOptimizer;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

@@ -41,19 +41,9 @@ import {
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const AIServicesPagePage: React.FC = () => {
-  const features = [
-=======
-
-const AIServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const aiServices = [
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-    {
+  const features = [    {
       id: 1,
       title: 'AI-Powered Chatbots',
       description: 'Intelligent conversational AI that provides 24/7 customer support and engagement.',
@@ -224,46 +214,19 @@ const AIServicesPage: React.FC = () => {
       benefits: ['Faster design process', 'Consistent branding', 'Creative inspiration', 'Cost-effective solutions']
     }
   ];
-<<<<<<< HEAD
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-=======
-
-  const categories = ['all', 'Customer Service', 'Content', 'Analytics', 'Computer Vision', 'Voice AI', 'Automation', 'Security', 'Mobile', 'Infrastructure', 'Design'];
-
-  const filteredServices = aiServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  const stats = [
-    { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'AI Models Deployed' },
-    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '95%', label: 'Accuracy Rate' },
-    { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '99.9%', label: 'Uptime' },
-    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '60%', label: 'Cost Reduction' }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  ];
+    'Gain competitive advantage with advanced technology'  ];
   return (
-<<<<<<< HEAD
-    <React.Fragment>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-      <Helmet>
+    <React.Fragment>      <Helmet>
         <title>AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
         <meta name="description" content="Comprehensive AI services including chatbots, content generation, data analytics, computer vision, and more. Transform your business with cutting-edge AI technology." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, chatbots, content generation, data analytics, computer vision, AI automation" />
       </Helmet>
-<<<<<<< HEAD
-=======
       
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       <Navigation />
       
       <main className="pt-20">
@@ -273,19 +236,12 @@ const AIServicesPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-<<<<<<< HEAD
               AI Services;
-  </
-=======
-              AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Services</span>
-            </h1>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+  </            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your business with cutting-edge artificial intelligence solutions. 
               From chatbots to computer vision, we deliver AI that drives real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Get Started;
   </
@@ -310,126 +266,7 @@ const AIServicesPage: React.FC = () => {
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-=======
-              <Link 
-                to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started
-              </Link>
-              <Link 
-                to="/demo"
-                className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
-              >
-                View Demo
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    {stat.icon}
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Search and Filter Section */}
-        <section className="py-10 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search AI services..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                />
-              </div>
-              <div className="relative">
-                <Settings className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="pl-10 pr-8 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent appearance-none"
-                >
-                  {categories.map(category => (
-                    <option key={category} value={category} className="bg-slate-800">
-                      {category === 'all' ? 'All Categories' : category}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Services Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service) => (
-                <div key={service.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  
-                  <div className="mb-4">
-                    <span className="text-sm text-gray-400">Category: </span>
-                    <span className="text-sm text-purple-400 font-medium">{service.category}</span>
-                  </div>
-
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center justify-between">
-                      <span className="text-purple-400 font-semibold">Our Price:</span>
-                      <span className="text-white font-bold">{service.price}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-400 text-sm">Market Price:</span>
-                      <span className="text-gray-300 text-sm line-through">{service.marketPrice}</span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <Link 
-                      to="/contact"
-                      className="flex items-center text-white hover:text-purple-400 transition-colors"
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
-                    <Link 
-                      to="/contact"
-                      className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
-                    >
-                      Get Quote
-                    </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-                  </div>
+                    <feature.icon className="w-8 h-8 text-white" />                  </div>
                 </div>
               ))}
             </div>
@@ -482,35 +319,18 @@ const AIServicesPage: React.FC = () => {
                 Contact our AI experts to discuss your requirements and get a customized solution that drives real results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
                 <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Contact Us;
   </
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More;
-  </
-=======
-                <Link 
-                  to="/contact"
-                  className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-                >
-                  Contact Us
-                </Link>
-                <Link 
-                  to="/consultation"
-                  className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
-                >
-                  Free Consultation
-                </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-              </div>
+  </              </div>
             </div>
           </div>
         </section>
       </main>
       
       <Footer />
-<<<<<<< HEAD
     </React.Fragment>
   );
 };
@@ -523,10 +343,3 @@ export default AIServicesPagePage;
   </button>
   </button>
   </h1>
-=======
-    </div>
-  );
-};
-
-export default AIServicesPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

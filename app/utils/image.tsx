@@ -6,7 +6,6 @@ interface ImageProps {;
   src: string,;
     alt: string;}
 interface ImageProps {}
-<<<<<<< HEAD
   src: string,
     alt: string
   width?: number
@@ -15,12 +14,7 @@ interface ImageProps {}
   priority?: boolean
   _quality?: number
   src: string,
-  alt: string,
-=======
-  src: string;
-  alt: string;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  width?: number;
+  alt: string,  width?: number;
   height?: number;
   className?: string;
   priority?: boolean;
@@ -150,10 +144,6 @@ export default Image;
   );
 };
 export default Image;
-<<<<<<< HEAD
 "`
   </ImageProps>
   </ImageProps>
-=======
-"`;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

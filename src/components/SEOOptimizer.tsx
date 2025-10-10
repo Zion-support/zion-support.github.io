@@ -3,14 +3,14 @@ import React from 'react';
 interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 const,
-  SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */})
+  SEOOptimizer: React.FC<SEOOptimizerProps>= memo(({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
-    // Add breadcrumb structured data;
+    // Add breadcrumb structured data
     addBreadcrumbStructuredData();
-    // Add FAQ structured data;
+    // Add FAQ structured data
     addFAQStructuredData();
-    // Add organization structured data;
+    // Add organization structured data
     addOrganizationStructuredData();
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
   const updateMetaTag = (nam,
@@ -40,7 +40,7 @@ const,
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbData);
     script.id = 'breadcrumb-structured-data';
-    // Remove existing breadcrumb data;
+    // Remove existing breadcrumb data
     const existing = document.getElementById('breadcrumb-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
     }
@@ -61,7 +61,7 @@ const,
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(faqData);
     script.id = 'faq-structured-data';
-    // Remove existing FAQ data;
+    // Remove existing FAQ data
     const existing = document.getElementById('faq-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
     }
@@ -82,19 +82,19 @@ const,
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(organizationData);
     script.id = 'organization-structured-data';
-    // Remove existing organization data;
-    const existing = document.getElementById('organization-structured-data');
+    // Remove existing organization data
+    const existing = document.getElementById('organization-structured-data')</SEOOptimizerProps>
     if (existing) {/* TODO: Fix JSX expression */}
     }
-  };
-  const mergedSEOData = { ...defaultSEOData, ...seoData };
+  }</SEOOptimizerProps
+  const mergedSEOData = { ...defaultSEOData, ...seoData }</SEOOptimizerProps
   useEffect(() => {
     // Log SEO optimization
     logger.info('SEO optimization applied', { 
       page, 
       title: mergedSEOData.title,
       description: mergedSEOData.description 
-    });
+    })</SEOOptimizerProps
     // Track page view for analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
@@ -103,13 +103,13 @@ const,
         custom_map: {
           page_type: page
         }
-      });
+      })</SEOOptimizerProps
     }
-  }, [mergedSEOData, page]);
+  }, [mergedSEOData, page])</SEOOptimizerProps
   return (
-    <Helmet>
+    <Helmet
       {/* Basic Meta Tags */}
-      <title>{mergedSEOData.title}</title>
+      <title>{mergedSEOData.title}</title
       <meta name="description" content={mergedSEOData.description} />
       <meta name="keywords" content={mergedSEOData.keywords.join(', ')} />
       <meta name="author" content="Zion Tech Group" />
@@ -160,7 +160,7 @@ const,
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(mergedSEOData.structuredData)}
-      </script>
+      </script
       {/* Additional structured data for services */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -205,10 +205,10 @@ const,
             ]
           }
         })}
-      </script>
-    </Helmet>
+      </script
+    </Helmet
   );
 };
 SEOOptimizer.displayName = 'SEOOptimizer';
 export default SEOOptimizer;"`
-  </SEOOptimizerProps>
+  </SEOOptimizerProps

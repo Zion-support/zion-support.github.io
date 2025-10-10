@@ -1,8 +1,5 @@
 'use client';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
 interface Slide {
@@ -75,8 +72,6 @@ const ContentCarousel: React.FC = () => {
   }, []);
   const currentSlideData = slides[currentSlide];
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
@@ -84,29 +79,14 @@ const ContentCarousel: React.FC = () => {
             Discover Our Solutions;
   </
           <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-            Explore our comprehensive suite of AI-powered solutions designed to transform your business.
-=======
-    <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We deliver cutting-edge AI and IT solutions that drive real business results
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-          </p>
+            Explore our comprehensive suite of AI-powered solutions designed to transform your business.          </p>
         </div>
         <div className="relative">
-<<<<<<< HEAD
-<div className="overflow-hidden rounded-xl">
-=======
-          <div className="overflow-hidden rounded-2xl">
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-            <div 
+<div className="overflow-hidden rounded-xl">            <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {slides.map((slide, index) => (
-<<<<<<< HEAD
 <div key={index} className="w-full flex-shrink-0">
                   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
                     <div className="text-center mb-8">
@@ -120,30 +100,12 @@ const ContentCarousel: React.FC = () => {
                       {slide.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center">
                           <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                          <span className="text-purple-100">{feature}</span>
-=======
-                <div key={index} className="w-full flex-shrink-0 bg-white/5 backdrop-blur-lg p-12">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-8">
-                      <slide.icon className="w-10 h-10 text-white" />
-                    </div>
-                    <h3 className="text-3xl font-bold text-white mb-6">{slide.title}</h3>
-                    <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8">{slide.description}</p>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                      {slide.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center">
-                          <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                          <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-                        </div>
+                          <span className="text-purple-100">{feature}</span>                        </div>
                       ))}
                     </div>
                   </div>
                 </div>
               ))}
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -155,21 +117,13 @@ const ContentCarousel: React.FC = () => {
             Explore our comprehensive suite of AI and IT solutions designed to transform your business.
           </p>
         </div>
-<<<<<<< HEAD
-        {/* Carousel Container */}
-=======
-
-<<<<<<< HEAD
-        {/* Carousel */}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-        <div className="relative">
+        {/* Carousel Container */}        <div className="relative">
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 overflow-hidden">
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center gap-4">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center">
                   <currentSlideData.icon className="w-8 h-8 text-slate-900" />
                 </div>
-<<<<<<< HEAD
                 {/* Features */}
                 <div className="space-y-4">
                   <h4 className="text-lg font-semibold text-white mb-4">Key Features:</h4>
@@ -220,19 +174,7 @@ const ContentCarousel: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-=======
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    {currentSlideData.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {currentSlideData.description}
-                  </p>
-                </div>
-              </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-            </div>
+              </div>            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {currentSlideData.features.map((feature, index) => (
@@ -258,31 +200,15 @@ const ContentCarousel: React.FC = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-<<<<<<< HEAD
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20">
             <ChevronLeft className="h-6 w-6" />
           </button>
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20">
-            <ChevronRight className="h-6 w-6" />
-=======
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
-          >
-            <ChevronRight className="w-6 h-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-          </button>
+            <ChevronRight className="h-6 w-6" />          </button>
         </div>
 {/* Slide Indicators */}
-=======
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -295,29 +221,10 @@ const ContentCarousel: React.FC = () => {
           </button>
         </div>
 
-<<<<<<< HEAD
         {/* Slide Indicators */}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-        <div className="flex justify-center mt-8 space-x-2">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-<<<<<<< HEAD
-              className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-=======
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-white' : 'bg-white/30'
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-              }`}
             />
           ))}
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Additional Info */}
         <div className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -341,34 +248,13 @@ const ContentCarousel: React.FC = () => {
                 <div className="text-2xl font-bold">99.9%</div>
                 <div className="text-gray-400 text-sm">Uptime</div>
               </div>
-            </div>
-=======
-
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses that have already transformed their operations with our solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
-              <Zap className="w-5 h-5" />
-              Get Started Today
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200 flex items-center justify-center gap-2">
-              <ArrowRight className="w-5 h-5" />
-              Learn More
-            </button>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-          </div>
-=======
+            </div>          </div>
 
         <div className="text-center mt-12">
           <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 font-semibold flex items-center mx-auto">
             Get Started Today
             <ArrowRight className="w-5 h-5 ml-2" />
           </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
         </div>
       </div>
     </div>

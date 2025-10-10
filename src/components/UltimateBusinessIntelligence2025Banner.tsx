@@ -53,29 +53,29 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div
         <div
           className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '2s' }}
-        ></div>
+        ></div
           className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '1s' }}
-      </div>
+      </div
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="text-2xl">🚀</span>
+            <span className="text-2xl">🚀</span
             <span className="text-cyan-400 font-bold text-xl">
-              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025;
+              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025
   </
-            <span className='text-2xl'>⚡</span>
+            <span className='text-2xl'>⚡</span
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             {currentContent.title}
-          </h1>
+          </h1
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
             {currentContent.description}
-          </p>
+          </p
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Link
               to="/services"
@@ -88,8 +88,8 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
                   strokeWidth={2}
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
-              </svg>
-            </Link>
+              </svg
+            </Link
               to="/contact"
               className="inline-flex items-center px-10 py-5 border-2 border-indigo-400 text-indigo-300 font-bold text-lg rounded-xl hover:bg-indigo-400/10 transition-all duration-300"
               Schedule Consultation
@@ -107,7 +107,7 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
                 <div key={key} className="text-center bg-white/5 rounded-xl p-4">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div
                   <div className="text-sm text-gray-300 capitalize">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
               ))}
@@ -122,15 +122,15 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 href={currentContent.url}
                 className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
-                <span className="text-xl">📖</span>
-                <span>Read {currentContent.type}</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
+                <span className="text-xl">📖</span
+                <span>Read {currentContent.type}</span
+                <span className="group-hover:translate-x-1 transition-transform">→</span
               <a
                 href="tel:+13024640950"
                 className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
-                <span className="text-xl">📞</span>
-                <span>Call +1 302 464 0950</span>
-              </a>
+                <span className="text-xl">📞</span
+                <span>Call +1 302 464 0950</span
+              </a
           {/* Slide Indicators */}
           <div className="flex justify-center mt-8 space-x-2">
             {content.map((_, index) => (
@@ -149,11 +149,11 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
             { value: '99.9%', label: 'Success Rate' },
             { value: '5M+', label: 'Data Points Processed' }].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-              <div className="text-gray-300">{stat.label}</div>
-    </section>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div
+              <div className="text-gray-300">{stat.label}</div
+    </section
   );
-export default UltimateBusinessIntelligence2025Banner;
+export default UltimateBusinessIntelligence2025Banner
 'use client';
 import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
@@ -165,7 +165,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   const [isVisible, setIsVisible] = useState(true);
   const content = [
   // TOD,
-  O: Add items;
+  O: Add items
 ];;
     {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -219,8 +219,8 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   e: 'Service',
                   {tag}
             {/* CTA Buttons */}
-          <div className="flex flex-col,"
-  sm:flex-row items-center justify-center gap-6"></div>
+          <div className="flex flex-col,">
+  sm:flex-row items-center justify-center gap-6"></div
                 href={currentContent.url}"
                 className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600,
   hover:from-cyan-600,
@@ -229,8 +229,8 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   hover:shadow-2xl,"
   hover:shadow-cyan-500/25"
         {/* Stats Section */}"
-        <div className="mt-16 grid grid-cols-2,"
-  md:grid-cols-4 gap-8"></div>
+        <div className="mt-16 grid grid-cols-2,">
+  md:grid-cols-4 gap-8"></div
           {[}
   // TOD,
   O: Add items]
@@ -245,28 +245,28 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
           "
           <div key={index} className="text-center"></div>"
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>"
-              <div className="text-gray-300">{stat.label}</div>
-    </section>
+              <div className="text-gray-300">{stat.label}</div
+    </section
   );
 };
 export default UltimateBusinessIntelligence2025Banner;"
-  </div>
-  </div>
-  </button>
-  </div>
-  </div>
-  </span>
-  </div>
-  </div>
-  </div>
-  </div>
-  </svg>
-  </div>
-  </div>
-  </div>
-  </path>
-  </div>
-  </span>
-  </div>
-  </div>
-  </div>
+  </div
+  </div
+  </button
+  </div
+  </div
+  </span
+  </div
+  </div
+  </div
+  </div
+  </svg
+  </div
+  </div
+  </div
+  </path
+  </div
+  </span
+  </div
+  </div
+  </div

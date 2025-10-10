@@ -1,14 +1,14 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 interface PerformanceOptimizerProps {
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
-  enableResourceHints?: boolean;
-  enableServiceWorker?: boolean;
+  enableImageOptimization?: boolean
+  enableLazyLoading?: boolean
+  enablePreloading?: boolean
+  enableCodeSplitting?: boolean
+  enableResourceHints?: boolean
+  enableServiceWorker?: boolean
 }
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
@@ -41,20 +41,20 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       addResourceHints();
     }
     if (enableServiceWorker) {
-      registerServiceWorker();
+      registerServiceWorker()</PerformanceOptimizerProps>
     }
-  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker]);
+  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker])</PerformanceOptimizerProps
   const optimizeImages = () => {
-    const images = document.querySelectorAll('img');
-    let optimized = 0;
+    const images = document.querySelectorAll('img')</PerformanceOptimizerProps
+    let optimized = 0
     images.forEach((img) => {
       // Add loading="lazy" for images below the fold
       if (img.getBoundingClientRect().top > window.innerHeight) {
-        img.setAttribute('loading', 'lazy');
-        optimized++;
+        img.setAttribute('loading', 'lazy')</PerformanceOptimizerProps
+        optimized++</PerformanceOptimizerProps
       }
       // Add decoding="async" for better performance
-      img.setAttribute('decoding', 'async');
+      img.setAttribute('decoding', 'async')</PerformanceOptimizerProps
       // Add fetchpriority="high" for above-the-fold images
       if (img.getBoundingClientRect().top <= window.innerHeight) {
         img.setAttribute('fetchpriority', 'high');
@@ -71,9 +71,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
+            const img = entry.target as HTMLImageElement
             if (img.dataset.src) {
-              img.src = img.dataset.src;
+              img.src = img.dataset.src
               img.removeAttribute('data-src');
               observer.unobserve(img);
             }
@@ -104,10 +104,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     criticalResources.forEach((resource) => {
       const link = document.createElement('link');
       link.rel = 'preload';
-      link.href = resource.href;
-      link.as = resource.as;
+      link.href = resource.href
+      link.as = resource.as
       if (resource.type) {
-        link.type = resource.type;
+        link.type = resource.type
       }
       document.head.appendChild(link);
     });
@@ -128,10 +128,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     ];
     hints.forEach((hint) => {
       const link = document.createElement('link');
-      link.rel = hint.rel;
-      link.href = hint.href;
+      link.rel = hint.rel
+      link.href = hint.href
       if (hint.crossorigin) {
-        link.crossOrigin = hint.crossorigin;
+        link.crossOrigin = hint.crossorigin
       }
       document.head.appendChild(link);
     });
@@ -167,7 +167,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
     }
   }, []);
-  return null;
+  return null
 };
-export default PerformanceOptimizer;
-  </PerformanceOptimizerProps>
+export default PerformanceOptimizer
+  </PerformanceOptimizerProps

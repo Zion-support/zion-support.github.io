@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 interface AnimatedCounterProps {
-  end: number;
-  duration?: number;
-  prefix?: string;
-  suffix?: string;
-  className?: string;
+  end: number
+  duration?: number
+  prefix?: string
+  suffix?: string
+  className?: string
 }
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps>end</AnimatedCounterProps>,
   duration = 2000,
@@ -30,11 +30,11 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
     return () => observer.disconnect();
   }, [isVisible]);
   useEffect(() => {
-    if (!isVisible) return;
-    let startTime: number;
-    let animationFrame: number;
+    if (!isVisible) return
+    let startTime: number
+    let animationFrame: number
     const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
+      if (!startTime) startTime = currentTime
       const progress = Math.min((currentTime - startTime) / duration, 1);
       // Easing function for smooth animation
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
@@ -52,9 +52,9 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
     };
   }, [isVisible, end, duration]);
   return (
-    <div ref={counterRef} className={className}></di>
+    <div ref={counterRef} className={className}></di
       {prefix}{count.toLocaleString()}{suffix}
-    </div>
+    </div
   );
 };
-export default AnimatedCounter;
+export default AnimatedCounter

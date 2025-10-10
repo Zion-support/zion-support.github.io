@@ -3,7 +3,7 @@ import React from 'react';
 interface SecurityEnhancerProps {/* TODO: Fix JSX expression */}
 }
 const,
-  SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({/* TODO: Fix JSX expression */})
+  SecurityEnhancer: React.FC<SecurityEnhancerProps>= ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
     if (enableHTTPSRedirect) {/* TODO: Fix JSX expression */}
@@ -14,9 +14,9 @@ const,
     }
     if (enableContentTypeSniffingProtection) {/* TODO: Fix JSX expression */}
     }
-    // Add security headers;
+    // Add security headers
     addSecurityHeaders();
-    // Add security event listeners;
+    // Add security event listeners
     addSecurityEventListeners();
   }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
   const addContentSecurityPolicy = () => {/* TODO: Fix JSX expression */}
@@ -47,7 +47,7 @@ const,
     document.addEventListener('selectstart', (e) => {/* TODO: Fix JSX expression */}
       }
     });
-    // Prevent drag and drop;
+    // Prevent drag and drop
     document.addEventListener('dragover', (e) => {/* TODO: Fix JSX expression */}
     });
     document.addEventListener('drop', (e) => {/* TODO: Fix JSX expression */}
@@ -55,28 +55,28 @@ const,
     // Prevent F12, Ctrl+Shift+I, Ctrl+U, etc.
     document.addEventListener('keydown', (e) => {/* TODO: Fix JSX expression */}
         }
-        // Ctrl+Shift+I;
+        // Ctrl+Shift+I
         if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {/* TODO: Fix JSX expression */}
         }
-        // Ctrl+U;
+        // Ctrl+U
         if (e.ctrlKey && e.keyCode === 85) {/* TODO: Fix JSX expression */}
         }
-        // Ctrl+S;
+        // Ctrl+S
         if (e.ctrlKey && e.keyCode === 83) {/* TODO: Fix JSX expression */}
         }
-        // Ctrl+A;
+        // Ctrl+A
         if (e.ctrlKey && e.keyCode === 65) {/* TODO: Fix JSX expression */}
         }
       }
     });
-    // Monitor for suspicious activity;
-    let suspiciousActivity = 0;
+    // Monitor for suspicious activity
+    let suspiciousActivity = 0
     const resetSuspiciousActivity = () => {/* TODO: Fix JSX expression */}
     };
-    // Reset suspicious activity counter every 5 minutes;
+    // Reset suspicious activity counter every 5 minutes
     setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
     // Track rapid clicks (potential bot activity)
-    let clickCount = 0;
+    let clickCount = 0
     document.addEventListener('click', () => {/* TODO: Fix JSX expression */}
         }
       });
@@ -94,8 +94,8 @@ const,
         }
       });
     });
-    // Track rapid keyboard input;
-    let keyCount = 0;
+    // Track rapid keyboard input
+    let keyCount = 0
     document.addEventListener('keydown', () => {/* TODO: Fix JSX expression */}
           }
         });
@@ -103,9 +103,9 @@ const,
     };
     checkSuspiciousCode();
     // Monitor for unusual network requests
-    const originalFetch = window.fetch;
+    const originalFetch = window.fetch
     window.fetch = async (...args) => {
-      const url = args[0] as string;
+      const url = args[0] as string
       if (typeof url === 'string' && !validateURL(url)) {
         setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
         logger.warn('Suspicious network request blocked', { url });
@@ -116,7 +116,7 @@ const,
   }, [validateURL]);
   // Security headers validation
   const validateSecurityHeaders = useCallback(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return
     const warnings: string[] = [];
     // Check for HTTPS
     if (location.protocol !== 'https:') {
@@ -124,7 +124,7 @@ const,
       setIsSecure(false);
     }
     // Check for security headers (if available)
-    const headers = (window as any).securityHeaders;
+    const headers = (window as any).securityHeaders
     if (headers) {
       if (!headers['x-frame-options']) {
         warnings.push('X-Frame-Options header missing');
@@ -144,16 +144,16 @@ const,
   // Rate limiting
   const rateLimit = useCallback((key: string, limit: number, windowMs: number) => {
     const now = Date.now();
-    const windowStart = now - windowMs;
+    const windowStart = now - windowMs
     const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
       .filter((timestamp: number) => timestamp > windowStart);
     if (requests.length >= limit) {
       logger.warn('Rate limit exceeded', { key, limit, windowMs });
-      return false;
+      return false
     }
     requests.push(now);
     localStorage.setItem(`rate_limit_${key}`, JSON.stringify(requests));
-    return true;
+    return true
   }, []);
   // Initialize security monitoring
   useEffect(() => {
@@ -165,22 +165,22 @@ const,
       validateSecurityHeaders();
     }, 30000); // Check every 30 seconds
     return () => clearInterval(interval);
-  }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders]);
+  }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders])</SecurityEnhancerProps>
   // Security event handlers
   const handleSecurityEvent = useCallback((event: string, data: any) => {
-    logger.info('Security event', { event, data });
+    logger.info('Security event', { event, data })</SecurityEnhancerProps
     // Rate limit security events
     if (!rateLimit('security_events', 10, 60000)) {
-      return;
+      return
     }
     // Send to security monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'security_event', {
         event_category: 'Security',
         event_label: event,
-        custom_map: data});
+        custom_map: data})</SecurityEnhancerProps
     }
-  }, [rateLimit]);
+  }, [rateLimit])</SecurityEnhancerProps
   // Expose security utilities globally for debugging
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -190,41 +190,41 @@ const,
         rateLimit,
         metrics,
         isSecure,
-        warnings: securityWarnings};
+        warnings: securityWarnings}</SecurityEnhancerProps
     }
-  }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
+  }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings])</SecurityEnhancerProps
   return (
-    <React.Fragment>
+    <React.Fragment
       {/* Security Status Indicator */}
       {!isSecure && (
         <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">
-          ⚠️ Security Warning: This site is not served over HTTPS</span>
+          ⚠️ Security Warning: This site is not served over HTTPS</span
       )}
       {/* Security Warnings */}
       {securityWarnings.length > 0 && (
         <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md">
-          <h4 className="font-bold mb-2">Security Warnings</h4>
+          <h4 className="font-bold mb-2">Security Warnings</h4
           <ul className="text-sm space-y-1">
             {securityWarnings.map((warning, index) => (
-              <li key={index}>• {warning}</li>
+              <li key={index}>• {warning}</li
             ))}
-          </ul>
-        </div>
+          </ul
+        </div
       )}
       {/* Security Metrics (Development Only) */}
       {process.env.NODE_ENV === 'development' && (
         <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs">
-          <h4 className="font-bold mb-2">Security Metrics</h4>
+          <h4 className="font-bold mb-2">Security Metrics</h4
           <div className="space-y-1">
-            <div>CSP Violations: {metrics.cspViolations}</div>
-            <div>XSS Attempts: {metrics.xssAttempts}</div>
-            <div>CSRF Attempts: {metrics.csrfAttempts}</div>
-            <div>Suspicious Activity: {metrics.suspiciousActivity}</div>
-          </div>
-        </div>
+            <div>CSP Violations: {metrics.cspViolations}</div
+            <div>XSS Attempts: {metrics.xssAttempts}</div
+            <div>CSRF Attempts: {metrics.csrfAttempts}</div
+            <div>Suspicious Activity: {metrics.suspiciousActivity}</div
+          </div
+        </div
       )}
-    </React.Fragment>
+    </React.Fragment
   );
 };
-export default SecurityEnhancer</div>
-  </SecurityEnhancerProps>
+export default SecurityEnhancer</div
+  </SecurityEnhancerProps

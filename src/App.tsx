@@ -134,7 +134,7 @@ const BlogAITrends2026FutureEnterpriseTransformationPage = lazy(() => import('./
 const MainLoadingSpinner = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
     <LoadingSpinner size="xl" text="Loading Zion Tech Group..." />
-  </div>
+  </div
 );
 const App: React.FC = () => {
   // Initialize performance monitoring
@@ -142,142 +142,142 @@ const App: React.FC = () => {
     performanceMonitor.reportMetrics();
   }, []);
   return (
-    <ErrorBoundary>
-      <Router>
-        <Suspense fallback={<MainLoadingSpinner />}>
-          <Routes>
+    <ErrorBoundary
+      <Router
+        <Suspense fallback={<MainLoadingSpinner />}</ErrorBoundary
+          <Routes
             {/* Main Pages */}
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/case-studies" element={<CaseStudiesPage />} />
+            <Route path="/" element={<HomePage />} /</Routes
+            <Route path="/about" element={<AboutPage />} /</Route
+            <Route path="/contact" element={<ContactPage />} /</Route
+            <Route path="/services" element={<ServicesPage />} /</Route
+            <Route path="/blog" element={<BlogPage />} /</Route
+            <Route path="/case-studies" element={<CaseStudiesPage />} /</Route
             {/* AI Services Pages */}
-            <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
-            <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
-            <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
-            <Route path="/ai-crm" element={<AICRMPage />} />
-            <Route path="/ai-customer-support" element={<AICustomerSupportPage />} />
-            <Route path="/ai-cybersecurity" element={<AICybersecurityPage />} />
-            <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} />
-            <Route path="/ai-data-visualization" element={<AIDataVisualizationPage />} />
-            <Route path="/ai-document-processing" element={<AIDocumentProcessingPage />} />
-            <Route path="/ai-ecommerce-solutions" element={<AIEcommerceSolutionsPage />} />
-            <Route path="/ai-email-assistant" element={<AIEmailAssistantPage />} />
-            <Route path="/ai-fintech" element={<AIFintechPage />} />
-            <Route path="/ai-healthcare" element={<AIHealthcarePage />} />
-            <Route path="/ai-lead-generation" element={<AILeadGenerationPage />} />
-            <Route path="/ai-marketing" element={<AIMarketingPage />} />
-            <Route path="/ai-mobile-app-development" element={<AIMobileAppDevelopmentPage />} />
-            <Route path="/ai-sales-automation" element={<AISalesAutomationPage />} />
-            <Route path="/ai-scheduler" element={<AISchedulerPage />} />
-            <Route path="/ai-services" element={<AIServicesPage />} />
-            <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
-            <Route path="/ai-writing-assistant" element={<AIWritingAssistantPage />} />
+            <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} /</Route
+            <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} /</Route
+            <Route path="/ai-content-generation" element={<AIContentGenerationPage />} /</Route
+            <Route path="/ai-crm" element={<AICRMPage />} /</Route
+            <Route path="/ai-customer-support" element={<AICustomerSupportPage />} /</Route
+            <Route path="/ai-cybersecurity" element={<AICybersecurityPage />} /</Route
+            <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} /</Route
+            <Route path="/ai-data-visualization" element={<AIDataVisualizationPage />} /</Route
+            <Route path="/ai-document-processing" element={<AIDocumentProcessingPage />} /</Route
+            <Route path="/ai-ecommerce-solutions" element={<AIEcommerceSolutionsPage />} /</Route
+            <Route path="/ai-email-assistant" element={<AIEmailAssistantPage />} /</Route
+            <Route path="/ai-fintech" element={<AIFintechPage />} /</Route
+            <Route path="/ai-healthcare" element={<AIHealthcarePage />} /</Route
+            <Route path="/ai-lead-generation" element={<AILeadGenerationPage />} /</Route
+            <Route path="/ai-marketing" element={<AIMarketingPage />} /</Route
+            <Route path="/ai-mobile-app-development" element={<AIMobileAppDevelopmentPage />} /</Route
+            <Route path="/ai-sales-automation" element={<AISalesAutomationPage />} /</Route
+            <Route path="/ai-scheduler" element={<AISchedulerPage />} /</Route
+            <Route path="/ai-services" element={<AIServicesPage />} /</Route
+            <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} /</Route
+            <Route path="/ai-writing-assistant" element={<AIWritingAssistantPage />} /</Route
             {/* Additional AI Services Pages */}
-            <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
-            <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
-            <Route path="/ai-email-marketing" element={<AIEmailMarketingPage />} />
-            <Route path="/ai-customer-support-bot" element={<AICustomerSupportBotPage />} />
-            <Route path="/ai-seo-optimizer" element={<AISEOOptimizerPage />} />
-            <Route path="/ai-financial-analyzer" element={<AIFinancialAnalyzerPage />} />
-            <Route path="/ai-video-generation" element={<AIVideoGenerationPage />} />
-            <Route path="/ai-voice-cloning" element={<AIVoiceCloningPage />} />
-            <Route path="/ai-music-composition" element={<AIMusicCompositionPage />} />
-            <Route path="/ai-fashion-design" element={<AIFashionDesignPage />} />
-            <Route path="/ai-fitness-coach" element={<AIFitnessCoachPage />} />
-            <Route path="/ai-3d-generation" element={<AI3DGenerationPage />} />
-            <Route path="/machine-learning" element={<MachineLearningPage />} />
-            <Route path="/nlp" element={<NLPPage />} />
-            <Route path="/computer-vision" element={<ComputerVisionPage />} />
-            <Route path="/ai-automation" element={<AIAutomationPage />} />
-            <Route path="/quantum-ai" element={<QuantumAIPage />} />
-            <Route path="/database-services" element={<DatabaseServicesPage />} />
-            <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
-            <Route path="/it-support" element={<ITSupportPage />} />
+            <Route path="/ai-project-manager" element={<AIProjectManagerPage />} /</Route
+            <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} /</Route
+            <Route path="/ai-email-marketing" element={<AIEmailMarketingPage />} /</Route
+            <Route path="/ai-customer-support-bot" element={<AICustomerSupportBotPage />} /</Route
+            <Route path="/ai-seo-optimizer" element={<AISEOOptimizerPage />} /</Route
+            <Route path="/ai-financial-analyzer" element={<AIFinancialAnalyzerPage />} /</Route
+            <Route path="/ai-video-generation" element={<AIVideoGenerationPage />} /</Route
+            <Route path="/ai-voice-cloning" element={<AIVoiceCloningPage />} /</Route
+            <Route path="/ai-music-composition" element={<AIMusicCompositionPage />} /</Route
+            <Route path="/ai-fashion-design" element={<AIFashionDesignPage />} /</Route
+            <Route path="/ai-fitness-coach" element={<AIFitnessCoachPage />} /</Route
+            <Route path="/ai-3d-generation" element={<AI3DGenerationPage />} /</Route
+            <Route path="/machine-learning" element={<MachineLearningPage />} /</Route
+            <Route path="/nlp" element={<NLPPage />} /</Route
+            <Route path="/computer-vision" element={<ComputerVisionPage />} /</Route
+            <Route path="/ai-automation" element={<AIAutomationPage />} /</Route
+            <Route path="/quantum-ai" element={<QuantumAIPage />} /</Route
+            <Route path="/database-services" element={<DatabaseServicesPage />} /</Route
+            <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} /</Route
+            <Route path="/it-support" element={<ITSupportPage />} /</Route
             {/* IT Services Pages */}
-            <Route path="/analytics-tools" element={<AnalyticsToolsPage />} />
-            <Route path="/api-docs" element={<APIDocsPage />} />
-            <Route path="/api" element={<APIPage />} />
-            <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
-            <Route path="/blockchain" element={<BlockchainPage />} />
-            <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
-            <Route path="/business-apps" element={<BusinessAppsPage />} />
-            <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
-            <Route path="/careers" element={<CareersPage />} />
-            <Route path="/cloud-services" element={<CloudServicesPage />} />
-            <Route path="/compliance" element={<CompliancePage />} />
-            <Route path="/consultation" element={<ConsultationPage />} />
-            <Route path="/cookies" element={<CookiesPage />} />
-            <Route path="/cybersecurity" element={<CybersecurityPage />} />
-            <Route path="/database" element={<DatabasePage />} />
-            <Route path="/demo" element={<DemoPage />} />
-            <Route path="/developer-tools" element={<DeveloperToolsPage />} />
-            <Route path="/devops" element={<DevOpsPage />} />
-            <Route path="/docs" element={<DocsPage />} />
-            <Route path="/enterprise" element={<EnterprisePage />} />
-            <Route path="/expense-tracker" element={<ExpenseTrackerPage />} />
-            <Route path="/gdpr" element={<GDPRPage />} />
-            <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
-            <Route path="/iot-edge" element={<IoTEdgePage />} />
-            <Route path="/it-infrastructure" element={<ITInfrastructurePage />} />
-            <Route path="/it-services" element={<ITServicesPage />} />
-            <Route path="/marketing-tools" element={<MarketingToolsPage />} />
-            <Route path="/micro-saas" element={<MicroSAASPage />} />
-            <Route path="/networking" element={<NetworkingPage />} />
-            <Route path="/news" element={<NewsPage />} />
-            <Route path="/offline" element={<OfflinePage />} />
-            <Route path="/pricing" element={<PricingPage />} />
-            <Route path="/privacy" element={<PrivacyPage />} />
-            <Route path="/productivity" element={<ProductivityPage />} />
-            <Route path="/quantum-computing" element={<QuantumComputingPage />} />
-            <Route path="/robotics" element={<RoboticsPage />} />
-            <Route path="/security" element={<SecurityPage />} />
-            <Route path="/services-advertising" element={<ServicesAdvertisingPage />} />
-            <Route path="/sitemap" element={<SitemapPage />} />
-            <Route path="/smart-analytics" element={<SmartAnalyticsPage />} />
-            <Route path="/status" element={<StatusPage />} />
-            <Route path="/support" element={<SupportPage />} />
-            <Route path="/system-status" element={<SystemStatusPage />} />
-            <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
-            <Route path="/team" element={<TeamPage />} />
-            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/analytics-tools" element={<AnalyticsToolsPage />} /</Route
+            <Route path="/api-docs" element={<APIDocsPage />} /</Route
+            <Route path="/api" element={<APIPage />} /</Route
+            <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} /</Route
+            <Route path="/blockchain" element={<BlockchainPage />} /</Route
+            <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} /</Route
+            <Route path="/business-apps" element={<BusinessAppsPage />} /</Route
+            <Route path="/business-intelligence" element={<BusinessIntelligencePage />} /</Route
+            <Route path="/careers" element={<CareersPage />} /</Route
+            <Route path="/cloud-services" element={<CloudServicesPage />} /</Route
+            <Route path="/compliance" element={<CompliancePage />} /</Route
+            <Route path="/consultation" element={<ConsultationPage />} /</Route
+            <Route path="/cookies" element={<CookiesPage />} /</Route
+            <Route path="/cybersecurity" element={<CybersecurityPage />} /</Route
+            <Route path="/database" element={<DatabasePage />} /</Route
+            <Route path="/demo" element={<DemoPage />} /</Route
+            <Route path="/developer-tools" element={<DeveloperToolsPage />} /</Route
+            <Route path="/devops" element={<DevOpsPage />} /</Route
+            <Route path="/docs" element={<DocsPage />} /</Route
+            <Route path="/enterprise" element={<EnterprisePage />} /</Route
+            <Route path="/expense-tracker" element={<ExpenseTrackerPage />} /</Route
+            <Route path="/gdpr" element={<GDPRPage />} /</Route
+            <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} /</Route
+            <Route path="/iot-edge" element={<IoTEdgePage />} /</Route
+            <Route path="/it-infrastructure" element={<ITInfrastructurePage />} /</Route
+            <Route path="/it-services" element={<ITServicesPage />} /</Route
+            <Route path="/marketing-tools" element={<MarketingToolsPage />} /</Route
+            <Route path="/micro-saas" element={<MicroSAASPage />} /</Route
+            <Route path="/networking" element={<NetworkingPage />} /</Route
+            <Route path="/news" element={<NewsPage />} /</Route
+            <Route path="/offline" element={<OfflinePage />} /</Route
+            <Route path="/pricing" element={<PricingPage />} /</Route
+            <Route path="/privacy" element={<PrivacyPage />} /</Route
+            <Route path="/productivity" element={<ProductivityPage />} /</Route
+            <Route path="/quantum-computing" element={<QuantumComputingPage />} /</Route
+            <Route path="/robotics" element={<RoboticsPage />} /</Route
+            <Route path="/security" element={<SecurityPage />} /</Route
+            <Route path="/services-advertising" element={<ServicesAdvertisingPage />} /</Route
+            <Route path="/sitemap" element={<SitemapPage />} /</Route
+            <Route path="/smart-analytics" element={<SmartAnalyticsPage />} /</Route
+            <Route path="/status" element={<StatusPage />} /</Route
+            <Route path="/support" element={<SupportPage />} /</Route
+            <Route path="/system-status" element={<SystemStatusPage />} /</Route
+            <Route path="/task-manager-pro" element={<TaskManagerProPage />} /</Route
+            <Route path="/team" element={<TeamPage />} /</Route
+            <Route path="/terms" element={<TermsPage />} /</Route
             {/* Blog Pages */}
-            <Route path="/blog/agent-release-runbooks-v2-2026" element={<BlogAgentReleaseRunbooksV22026Page />} />
-            <Route path="/blog/ai-2025-2026-mega-trends-breakthrough" element={<BlogAI20252026MegaTrendsBreakthroughPage />} />
-            <Route path="/blog/ai-2025-january-advanced-ai-revolution" element={<BlogAI2025JanuaryAdvancedAIRevolutionPage />} />
-            <Route path="/blog/ai-2025-january-cutting-edge-trends-breakthrough" element={<BlogAI2025JanuaryCuttingEdgeTrendsBreakthroughPage />} />
-            <Route path="/blog/ai-2025-march-autonomous-enterprise-operations-revolution" element={<BlogAI2025MarchAutonomousEnterpriseOperationsRevolutionPage />} />
-            <Route path="/blog/ai-2025-sept-30-operational-trust-scorecards-v3" element={<BlogAI2025Sept30OperationalTrustScorecardsV3Page />} />
-            <Route path="/blog/ai-2026-adaptive-neural-architectures-breakthrough" element={<BlogAI2026AdaptiveNeuralArchitecturesBreakthroughPage />} />
-            <Route path="/blog/ai-2026-advanced-neural-optimization-revolution" element={<BlogAI2026AdvancedNeuralOptimizationRevolutionPage />} />
-            <Route path="/blog/ai-2026-april-revolutionary-breakthrough" element={<BlogAI2026AprilRevolutionaryBreakthroughPage />} />
-            <Route path="/blog/ai-2026-april-ultimate-breakthrough-revolution" element={<BlogAI2026AprilUltimateBreakthroughRevolutionPage />} />
-            <Route path="/blog/ai-2026-autonomous-agent-factories" element={<BlogAI2026AutonomousAgentFactoriesPage />} />
-            <Route path="/blog/ai-2026-autonomous-business-intelligence-breakthrough" element={<BlogAI2026AutonomousBusinessIntelligenceBreakthroughPage />} />
-            <Route path="/blog/ai-2026-autonomous-business-intelligence-mega-breakthrough" element={<BlogAI2026AutonomousBusinessIntelligenceMegaBreakthroughPage />} />
-            <Route path="/blog/ai-2026-autonomous-enterprise-architecture" element={<BlogAI2026AutonomousEnterpriseArchitecturePage />} />
-            <Route path="/blog/ai-2026-autonomous-enterprise-automation-mega-breakthrough" element={<BlogAI2026AutonomousEnterpriseAutomationMegaBreakthroughPage />} />
-            <Route path="/blog/ai-2026-consensus-intelligence-breakthrough" element={<BlogAI2026ConsensusIntelligenceBreakthroughPage />} />
-            <Route path="/blog/ai-2026-enterprise-automation-revolutionary-breakthrough" element={<BlogAI2026EnterpriseAutomationRevolutionaryBreakthroughPage />} />
-            <Route path="/blog/ai-2026-enterprise-breakthrough" element={<BlogAI2026EnterpriseBreakthroughPage />} />
-            <Route path="/blog/ai-2026-february-mega-breakthrough-revolution" element={<BlogAI2026FebruaryMegaBreakthroughRevolutionPage />} />
-            <Route path="/blog/ai-2026-february-ultimate-consciousness-breakthrough" element={<BlogAI2026FebruaryUltimateConsciousnessBreakthroughPage />} />
-            <Route path="/blog/ai-2026-hyperconscious-computing-revolution" element={<BlogAI2026HyperconsciousComputingRevolutionPage />} />
-            <Route path="/blog/ai-autonomous-business-systems-2026" element={<BlogAIAutonomousBusinessSystems2026Page />} />
-            <Route path="/blog/ai-cost-optimization-breakthrough-2026" element={<BlogAICostOptimizationBreakthrough2026Page />} />
-            <Route path="/blog/ai-enterprise-transformation-2025" element={<BlogAIEnterpriseTransformation2025Page />} />
-            <Route path="/blog/ai-enterprise-transformation-ultimate-guide-2025" element={<BlogAIEnterpriseTransformationUltimateGuide2025Page />} />
-            <Route path="/blog/ai-innovation-labs-product-development-2025" element={<BlogAIInnovationLabsProductDevelopment2025Page />} />
-            <Route path="/blog/ai-powered-autonomous-business-processes-2026" element={<BlogAIPoweredAutonomousBusinessProcesses2026Page />} />
-            <Route path="/blog/ai-trends-2026-future-enterprise-transformation" element={<BlogAITrends2026FutureEnterpriseTransformationPage />} />
+            <Route path="/blog/agent-release-runbooks-v2-2026" element={<BlogAgentReleaseRunbooksV22026Page />} /</Route
+            <Route path="/blog/ai-2025-2026-mega-trends-breakthrough" element={<BlogAI20252026MegaTrendsBreakthroughPage />} /</Route
+            <Route path="/blog/ai-2025-january-advanced-ai-revolution" element={<BlogAI2025JanuaryAdvancedAIRevolutionPage />} /</Route
+            <Route path="/blog/ai-2025-january-cutting-edge-trends-breakthrough" element={<BlogAI2025JanuaryCuttingEdgeTrendsBreakthroughPage />} /</Route
+            <Route path="/blog/ai-2025-march-autonomous-enterprise-operations-revolution" element={<BlogAI2025MarchAutonomousEnterpriseOperationsRevolutionPage />} /</Route
+            <Route path="/blog/ai-2025-sept-30-operational-trust-scorecards-v3" element={<BlogAI2025Sept30OperationalTrustScorecardsV3Page />} /</Route
+            <Route path="/blog/ai-2026-adaptive-neural-architectures-breakthrough" element={<BlogAI2026AdaptiveNeuralArchitecturesBreakthroughPage />} /</Route
+            <Route path="/blog/ai-2026-advanced-neural-optimization-revolution" element={<BlogAI2026AdvancedNeuralOptimizationRevolutionPage />} /</Route
+            <Route path="/blog/ai-2026-april-revolutionary-breakthrough" element={<BlogAI2026AprilRevolutionaryBreakthroughPage />} /</Route
+            <Route path="/blog/ai-2026-april-ultimate-breakthrough-revolution" element={<BlogAI2026AprilUltimateBreakthroughRevolutionPage />} /</Route
+            <Route path="/blog/ai-2026-autonomous-agent-factories" element={<BlogAI2026AutonomousAgentFactoriesPage />} /</Route
+            <Route path="/blog/ai-2026-autonomous-business-intelligence-breakthrough" element={<BlogAI2026AutonomousBusinessIntelligenceBreakthroughPage />} /</Route
+            <Route path="/blog/ai-2026-autonomous-business-intelligence-mega-breakthrough" element={<BlogAI2026AutonomousBusinessIntelligenceMegaBreakthroughPage />} /</Route
+            <Route path="/blog/ai-2026-autonomous-enterprise-architecture" element={<BlogAI2026AutonomousEnterpriseArchitecturePage />} /</Route
+            <Route path="/blog/ai-2026-autonomous-enterprise-automation-mega-breakthrough" element={<BlogAI2026AutonomousEnterpriseAutomationMegaBreakthroughPage />} /</Route
+            <Route path="/blog/ai-2026-consensus-intelligence-breakthrough" element={<BlogAI2026ConsensusIntelligenceBreakthroughPage />} /</Route
+            <Route path="/blog/ai-2026-enterprise-automation-revolutionary-breakthrough" element={<BlogAI2026EnterpriseAutomationRevolutionaryBreakthroughPage />} /</Route
+            <Route path="/blog/ai-2026-enterprise-breakthrough" element={<BlogAI2026EnterpriseBreakthroughPage />} /</Route
+            <Route path="/blog/ai-2026-february-mega-breakthrough-revolution" element={<BlogAI2026FebruaryMegaBreakthroughRevolutionPage />} /</Route
+            <Route path="/blog/ai-2026-february-ultimate-consciousness-breakthrough" element={<BlogAI2026FebruaryUltimateConsciousnessBreakthroughPage />} /</Route
+            <Route path="/blog/ai-2026-hyperconscious-computing-revolution" element={<BlogAI2026HyperconsciousComputingRevolutionPage />} /</Route
+            <Route path="/blog/ai-autonomous-business-systems-2026" element={<BlogAIAutonomousBusinessSystems2026Page />} /</Route
+            <Route path="/blog/ai-cost-optimization-breakthrough-2026" element={<BlogAICostOptimizationBreakthrough2026Page />} /</Route
+            <Route path="/blog/ai-enterprise-transformation-2025" element={<BlogAIEnterpriseTransformation2025Page />} /</Route
+            <Route path="/blog/ai-enterprise-transformation-ultimate-guide-2025" element={<BlogAIEnterpriseTransformationUltimateGuide2025Page />} /</Route
+            <Route path="/blog/ai-innovation-labs-product-development-2025" element={<BlogAIInnovationLabsProductDevelopment2025Page />} /</Route
+            <Route path="/blog/ai-powered-autonomous-business-processes-2026" element={<BlogAIPoweredAutonomousBusinessProcesses2026Page />} /</Route
+            <Route path="/blog/ai-trends-2026-future-enterprise-transformation" element={<BlogAITrends2026FutureEnterpriseTransformationPage />} /</Route
             {/* 404 Page */}
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-        </Suspense>
-      </Router>
-    </ErrorBoundary>
+            <Route path="*" element={<NotFoundPage />} /</Route
+          </Routes
+        </Suspense
+      </Router
+    </ErrorBoundary
   );
 };
-export default App;
+export default App

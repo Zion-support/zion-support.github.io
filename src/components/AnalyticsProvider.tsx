@@ -1,15 +1,15 @@
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, any>) => void;
-  page: (name: string, properties?: Record<string, any>) => void;
-  identify: (userId: string, traits?: Record<string, any>) => void;
+  track: (event: string, properties?: Record<string, any>) => void
+  page: (name: string, properties?: Record<string, any>) => void
+  identify: (userId: string, traits?: Record<string, any>) => void
 }
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)</AnalyticsContextType
 interface AnalyticsProviderProps {
-  children: ReactNode;
-  trackingId?: string;
+  children: ReactNode
+  trackingId?: string
 }
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ 
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps>= ({ 
   children, 
   trackingId = 'G-XXXXXXXXXX' 
 }) => {
@@ -18,61 +18,61 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (typeof window !== 'undefined' && trackingId !== 'G-XXXXXXXXXX') {
       // Load Google Analytics script
       const script = document.createElement('script');
-      script.async = true;
+      script.async = true
       script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-      document.head.appendChild(script);
+      document.head.appendChild(script)</AnalyticsProviderProps>
       // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || []</AnalyticsProviderProps
       function gtag(...args: any[]) {
-        window.dataLayer.push(args);
+        window.dataLayer.push(args)</AnalyticsProviderProps
       }
-      window.gtag = gtag;
-      gtag('js', new Date());
+      window.gtag = gtag
+      gtag('js', new Date())</AnalyticsProviderProps
       gtag('config', trackingId, {
         page_title: document.title,
-        page_location: window.location.href});
+        page_location: window.location.href})</AnalyticsProviderProps
     }
-  }, [trackingId]);
+  }, [trackingId])</AnalyticsProviderProps
   const track = (event: string, properties?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', event, properties);
+      window.gtag('event', event, properties)</string
     }
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', event, properties);
+      console.log('Analytics Event:', event, properties)</string
     }
-  };
+  }</string
   const page = (name: string, properties?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         page_title: name,
         page_location: window.location.href,
-        ...properties});
+        ...properties})</string
     }
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Page:', name, properties);
+      console.log('Analytics Page:', name, properties)</string
     }
-  };
+  }</string
   const identify = (userId: string, traits?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         user_id: userId,
-        ...traits});
+        ...traits})</string
     }
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Identify:', userId, traits);
+      console.log('Analytics Identify:', userId, traits)</string
     }
-  };
+  }</string
   const value: AnalyticsContextType = {
     track,
     page,
-    identify};
+    identify}</string
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContext.Provider>
+    </AnalyticsContext.Provider
   );
 };
 export const useAnalytics = (): AnalyticsContextType => {
@@ -80,14 +80,14 @@ export const useAnalytics = (): AnalyticsContextType => {
   if (context === undefined) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
-  return context;
+  return context
 };
 // Declare global gtag function
 declare global {
   interface Window {
     dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    gtag: (...args: any[]) => void
   }
 }
-  </AnalyticsProviderProps>
-  </AnalyticsContextType>
+  </AnalyticsProviderProps
+  </AnalyticsContextType
