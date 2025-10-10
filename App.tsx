@@ -138,8 +138,14 @@ const App: React.FC = memo(() => {
           />
           <meta
             name="keywords"
-            content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services"
+            content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services, machine learning, quantum computing, automation, cybersecurity, cloud computing"
           />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="theme-color" content="#06b6d4" />
+          <meta name="robots" content="index, follow" />
+          <meta name="author" content="Zion Tech Group" />
+          <meta name="language" content="en" />
+          <meta name="revisit-after" content="7 days" />
           <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
           <meta
             property="og:description"
@@ -147,26 +153,46 @@ const App: React.FC = memo(() => {
           />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com" />
+          <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:site_name" content="Zion Tech Group" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
           <meta
             name="twitter:description"
             content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
           />
+          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+          <link rel="canonical" href="https://ziontechgroup.com" />
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Helmet>
         <Router>
           <div className="min-h-screen bg-white">
+            <a 
+              href="#main-content" 
+              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg z-50"
+            >
+              Skip to main content
+            </a>
             <Navigation />
-            <main>
+            <main id="main-content" role="main" aria-label="Main content">
               <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
                   <Route path="/" element={
                     <>
-                      <UnifiedContentPromotion />
-                      <InteractiveAIROICalculator />
-                      <ContentShowcase />
-                      <InteractiveContentShowcase2026 />
+                      <section aria-label="Hero section">
+                        <UnifiedContentPromotion />
+                      </section>
+                      <section aria-label="ROI Calculator">
+                        <InteractiveAIROICalculator />
+                      </section>
+                      <section aria-label="Services showcase">
+                        <ContentShowcase />
+                      </section>
+                      <section aria-label="Interactive solutions">
+                        <InteractiveContentShowcase2026 />
+                      </section>
                     </>
                   } />
                   <Route path="/about" element={<AboutPage />} />

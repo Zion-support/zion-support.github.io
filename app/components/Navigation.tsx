@@ -187,71 +187,10 @@ const Navigation: React.FC = () => {
         { name: 'Business Intelligence', path: '/business-intelligence' }
       ]
     }
-<<<<<<< HEAD
   ];
-
-=======
-  };
-
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
-  };
-<<<<<<< HEAD
-
-  const microSAASServices = [
-    { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity', price: '$199/mo' },
-    { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar', icon: Calendar, category: 'Productivity', price: '$89/mo' },
-    { name: 'AI Content Writer Pro', href: '/ai-content-writer', icon: FileText, category: 'Content', price: '$129/mo' },
-    { name: 'AI Video Generator Pro', href: '/ai-video-generator', icon: Video, category: 'Content', price: '$199/mo' },
-    { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager', icon: Smartphone, category: 'Marketing', price: '$99/mo' },
-    { name: 'AI Email Marketing Suite', href: '/ai-email-marketing', icon: Mail, category: 'Marketing', price: '$79/mo' },
-    { name: 'AI CRM Assistant Pro', href: '/ai-crm-assistant', icon: Users, category: 'Business', price: '$149/mo' },
-    { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer', icon: DollarSign, category: 'Finance', price: '$299/mo' },
-    { name: 'AI Code Assistant Pro', href: '/ai-code-assistant', icon: Code, category: 'Development', price: '$99/mo' },
-    { name: 'AI API Manager Pro', href: '/ai-api-manager', icon: Settings, category: 'Development', price: '$179/mo' },
-    { name: 'AI Cybersecurity Monitor Pro', href: '/ai-cybersecurity-monitor', icon: Shield, category: 'Security', price: '$249/mo' },
-    { name: 'AI Password Manager Pro', href: '/ai-password-manager', icon: Lock, category: 'Security', price: '$49/mo' }
-  ];
-
-  const aiServices = [
-    { name: 'AI-Powered Drug Discovery Pro', href: '/ai-drug-discovery-pro', icon: Stethoscope, price: '$4,500/mo' },
-    { name: 'AI Climate Change Solutions Pro', href: '/ai-climate-solutions-pro', icon: Globe, price: '$3,200/mo' },
-    { name: 'AI-Powered Space Technology Pro', href: '/ai-space-technology-pro', icon: Rocket, price: '$5,500/mo' },
-    { name: 'AI-Powered Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro', icon: Shield, price: '$2,800/mo' },
-    { name: 'AI-Powered Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro', icon: Truck, price: '$2,200/mo' },
-    { name: 'AI-Powered Energy Grid Management Pro', href: '/ai-energy-grid-management-pro', icon: Zap, price: '$3,500/mo' },
-    { name: 'AI-Powered Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro', icon: Sprout, price: '$1,800/mo' },
-    { name: 'AI-Powered Legal Research Pro', href: '/ai-legal-research-pro', icon: Scale, price: '$2,500/mo' }
-  ];
-
-  const itServices = [
-    { name: 'AI-Powered Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring', icon: Activity, price: '$1,800/mo' },
-    { name: 'Blockchain Integration Services Pro', href: '/blockchain-integration-services', icon: Shield, price: '$2,500/mo' },
-    { name: 'AI-Powered API Management Pro', href: '/ai-api-management', icon: Settings, price: '$1,400/mo' },
-    { name: 'Intelligent Database Migration Pro', href: '/intelligent-database-migration', icon: Database, price: '$2,200/mo' },
-    { name: 'AI-Powered Load Testing Pro', href: '/ai-load-testing', icon: BarChart, price: '$1,200/mo' },
-    { name: 'Smart Contract Security Audit Pro', href: '/smart-contract-security-audit', icon: Shield, price: '$3,000/mo' },
-    { name: 'AI-Powered Content Delivery Network Pro', href: '/ai-content-delivery-network', icon: Globe, price: '$1,600/mo' },
-    { name: 'Intelligent Email Infrastructure Pro', href: '/intelligent-email-infrastructure', icon: Mail, price: '$1,000/mo' }
-  ];
-
-  const specializedServices = [
-    { name: 'Quantum Computing Solutions', href: '/quantum-computing', icon: Cpu, price: '$5,000/mo' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings, price: '$4,000/mo' },
-    { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock, price: '$2,500/mo' },
-    { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe, price: '$1,800/mo' },
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, price: '$1,500/mo' },
-    { name: 'Robotics Solutions', href: '/robotics', icon: Settings, price: '$3,500/mo' }
-  ];
-
->>>>>>> cursor/fix-errors-and-merge-to-main-a74d
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-<<<<<<< HEAD
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg cyber-border-glow' : 'bg-transparent'
-=======
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5b7f
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -264,11 +203,7 @@ const Navigation: React.FC = () => {
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
               <Zap className="w-5 h-5 text-white" />
             </div>
-<<<<<<< HEAD
-            <span className="text-white neon-text-advanced cyber-text">
-=======
             <span className="text-white bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5b7f
               Zion Tech Group
             </span>
           </Link>
@@ -277,7 +212,7 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-8">
             <Link
               to="/"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-glow"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
               Home
@@ -493,5 +428,3 @@ const Navigation: React.FC = () => {
 };
 
 export default Navigation;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e12a

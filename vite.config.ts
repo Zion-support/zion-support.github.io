@@ -26,13 +26,8 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.warn'],
-        passes: 3,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-        unsafe_regexp: true,
-        unsafe_undefined: true,
+        passes: 2,
+        unsafe: false,
         conditionals: true,
         dead_code: true,
         evaluate: true,
@@ -79,10 +74,10 @@ export default defineConfig({
         wrap_func_args: true,
       }
     },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: false,
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: true,
     cssCodeSplit: true,
-    assetsInlineLimit: 2048, // Reduced for better caching
+    assetsInlineLimit: 4096,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -111,31 +106,6 @@ export default defineConfig({
         },
       },
     },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.warn'],
-        passes: 3,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-      },
-      mangle: {
-        safari10: true,
-        properties: {
-          regex: /^_/,
-        },
-      },
-      format: {
-        comments: false,
-      },
-    },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
-    cssCodeSplit: true,
-    assetsInlineLimit: 4096,
   },
   server: {
     port: 3000,
