@@ -4597,11 +4597,27 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
+<<<<<<< HEAD
 // Preload critical components
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     setTimeout(() => {
       // Preload components after initial render
+=======
+// Dynamically import heavy components for better performance;
+const ContentPromotionBanner = lazy(() => import('../src/components/ContentPromotionBanner'));
+const ContentCarousel = lazy(() => import('../src/components/ContentCarousel'));
+const DynamicContentShowcase = lazy(() => import('../src/components/DynamicContentShowcase'));
+const ContentStatistics = lazy(() => import('../src/components/ContentStatistics'));
+const ContentNewsletterSignup = lazy(() => import('../src/components/ContentNewsletterSignup'));
+
+
+// Preload critical components with better timing
+const preloadComponents = () => {
+  if (typeof window !== 'undefined') {
+    setTimeout(() => {
+      // Preload components here
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01af
     }, 100);
   }
 };
@@ -4612,6 +4628,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   </div>
 );
@@ -4638,6 +4655,11 @@ const stats = [
     icon: Globe
   }
 ];
+=======
+  </div>
+));
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01af
 
 <<<<<<< HEAD
 const HomePage: React.FC = () => {
@@ -5718,6 +5740,7 @@ const HomePage: React.FC = memo(() => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Lazy loaded components */}
       <Suspense fallback={<ServiceCardSkeleton />}>
         <ContentPromotionBanner />
@@ -5739,6 +5762,38 @@ const HomePage: React.FC = memo(() => {
         <ContentNewsletterSignup />
       </Suspense>
       
+=======
+        {/* Enhanced Services Section */}
+        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
+          <div className="cyber-card p-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">Our Services</h2>
+            <p className="text-gray-300">Comprehensive AI and IT solutions for your business</p>
+          </div>
+        </Suspense>
+
+        {/* Statistics Section */}
+        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
+          <ContentStatistics />
+        </Suspense>
+
+        {/* Content Carousel */}
+        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>
+          <ContentCarousel />
+        </Suspense>
+
+        {/* Dynamic Content Showcase */}
+        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
+          <DynamicContentShowcase />
+        </Suspense>
+
+        {/* Newsletter Signup */}
+        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
+          <ContentNewsletterSignup />
+        </Suspense>
+      </main>
+
+      {/* Footer */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01af
       <Footer />
     </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
