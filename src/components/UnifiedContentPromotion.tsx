@@ -268,9 +268,17 @@ export default function UnifiedContentPromotion({
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
                       <service.icon className="w-6 h-6 text-white" />
                     </div>
-                    <span className="text-xs font-semibold text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">
-                      {service.category}
-                    </span>
+                    <div className="flex items-center space-x-2">
+                      {service.popular && (
+                        <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
+                          <Star className="w-3 h-3 mr-1" />
+                          Popular
+                        </span>
+                      )}
+                      <span className="text-xs font-semibold text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">
+                        {service.category}
+                      </span>
+                    </div>
                   </div>
                   
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors neon-glow-cyan">
@@ -304,6 +312,9 @@ export default function UnifiedContentPromotion({
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
+                    <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all">
+                      Get Started
+                    </button>
                   </div>
                 </div>
               </div>
