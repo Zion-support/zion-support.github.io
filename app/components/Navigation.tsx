@@ -100,6 +100,8 @@ const Navigation: React.FC = () => {
     { name: 'AI Cybersecurity Shield Pro', href: '/ai-cybersecurity', icon: Shield, category: 'Security', price: '$199/mo' },
     { name: 'AI Document Processor Pro', href: '/ai-document-processing', icon: FileText, category: 'Development', price: '$79/mo' },
     { name: 'AI Password Manager Pro', href: '/ai-password-manager', icon: Lock, category: 'Security', price: '$19/mo' },
+    { name: 'AI Website Builder Pro', href: '/ai-website-builder', icon: Globe, category: 'Marketing', price: '$89/mo' },
+    { name: 'AI Logo Designer Pro', href: '/ai-logo-designer', icon: Palette, category: 'Creative', price: '$59/mo' },
     
     // Analytics & Data
     { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3, category: 'Analytics', price: '$99/mo' },
@@ -148,7 +150,8 @@ const Navigation: React.FC = () => {
     { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone, price: '$1,400/mo' },
     { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users, price: '$1,200/mo' },
     { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, price: '$800/mo' },
-    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, price: '$900/mo' }
+    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, price: '$900/mo' },
+    { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Settings, price: '$2,500/mo' }
   ];
 
   const itServices = [
@@ -174,7 +177,8 @@ const Navigation: React.FC = () => {
     { name: 'Compliance & Governance', href: '/compliance', icon: FileText, price: '$1,500/mo' },
     { name: 'Developer Tools', href: '/developer-tools', icon: Code, price: '$1,200/mo' },
     { name: 'Marketing Tools', href: '/marketing-tools', icon: Target, price: '$1,000/mo' },
-    { name: 'Productivity Solutions', href: '/productivity', icon: BarChart, price: '$1,100/mo' }
+    { name: 'Productivity Solutions', href: '/productivity', icon: BarChart, price: '$1,100/mo' },
+    { name: 'IT Infrastructure Management', href: '/it-infrastructure', icon: Settings, price: '$2,500/mo' }
   ];
 
   const specializedServices = [

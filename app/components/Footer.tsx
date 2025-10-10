@@ -46,7 +46,12 @@ const Footer: React.FC = () => {
     'Development': [
       { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
       { name: 'AI Mobile App Builder', url: '/ai-mobile-app-development', description: 'Mobile app development' },
-      { name: 'AI Document Processor', url: '/ai-document-processing', description: 'Document automation' }
+      { name: 'AI Document Processor', url: '/ai-document-processing', description: 'Document automation' },
+      { name: 'AI Website Builder Pro', url: '/ai-website-builder', description: 'AI-powered website creation' }
+    ],
+    'Security': [
+      { name: 'AI Password Manager Pro', url: '/ai-password-manager', description: 'Advanced password security' },
+      { name: 'AI Cybersecurity Shield', url: '/ai-cybersecurity', description: 'AI-powered security monitoring' }
     ],
     'Analytics': [
       { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Data insights & analytics' },
@@ -88,6 +93,7 @@ const Footer: React.FC = () => {
     { name: 'AI Biotechnology', href: '/ai-biotechnology' },
     { name: 'AI Robotics', href: '/ai-robotics' },
     { name: 'AI Digital Twin', href: '/ai-digital-twin' },
+    { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance' },
   ];
 
   const itServices = [
@@ -118,6 +124,7 @@ const Footer: React.FC = () => {
     { name: 'HealthTech Infrastructure', href: '/healthtech-infrastructure' },
     { name: 'EdTech Solutions', href: '/edtech-solutions' },
     { name: 'RetailTech Solutions', href: '/retailtech-solutions' },
+    { name: 'IT Infrastructure Management', href: '/it-infrastructure' },
   ];
 
   const socialLinks = [

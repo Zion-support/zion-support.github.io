@@ -609,6 +609,37 @@ const HomePage: React.FC = () => {
       rating: 4.8,
       users: '30,000+',
       freeTrial: '7 days'
+    },
+    // Additional Micro SAAS Services
+    {
+      title: 'AI Website Builder Pro',
+      description: 'Create stunning, professional websites in minutes with AI-powered design generation and drag-and-drop interface. No coding required.',
+      icon: '🌐',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['AI design generation', 'Drag-and-drop editor', 'Mobile responsive', 'SEO optimization', 'E-commerce integration', 'Custom domains', 'SSL included', 'Analytics dashboard'],
+      benefits: ['Build 10x faster', 'No coding needed', 'Professional results', 'SEO ready'],
+      link: '/ai-website-builder',
+      popular: true,
+      category: 'Marketing',
+      rating: 4.8,
+      users: '100,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Logo Designer Pro',
+      description: 'Create stunning, professional logos in minutes with AI-powered design generation. Unlimited variations and commercial rights included.',
+      icon: '🎨',
+      price: '$59/month',
+      originalPrice: '$89/month',
+      features: ['AI logo generation', 'Unlimited variations', 'High-resolution downloads', 'Vector format support', 'Brand guidelines', 'Social media templates', 'Business cards', 'Commercial rights'],
+      benefits: ['Create in minutes', 'Professional quality', 'Unlimited revisions', 'Commercial use'],
+      link: '/ai-logo-designer',
+      popular: true,
+      category: 'Creative',
+      rating: 4.9,
+      users: '75,000+',
+      freeTrial: '7 days'
     }
   ];
 
@@ -762,6 +793,21 @@ const HomePage: React.FC = () => {
       rating: 4.8,
       users: '1,000+',
       freeTrial: '14 days'
+    },
+    {
+      title: 'AI Predictive Maintenance',
+      description: 'Transform maintenance operations with AI-powered predictive analytics. Reduce costs by 30-50%, prevent unexpected failures, and optimize equipment performance.',
+      icon: Settings,
+      price: '$2,500/month',
+      originalPrice: '$3,500/month',
+      features: ['Machine learning algorithms', 'Real-time monitoring', 'Failure prediction', 'Cost optimization', 'Asset management', 'IoT integration', 'Custom dashboards', 'Mobile access'],
+      benefits: ['30-50% cost reduction', '25% uptime increase', 'Prevent breakdowns', 'Extend asset life'],
+      link: '/ai-predictive-maintenance',
+      popular: true,
+      category: 'AI Solutions',
+      rating: 4.9,
+      users: '200+',
+      freeTrial: '14 days'
     }
   ];
 
@@ -840,6 +886,21 @@ const HomePage: React.FC = () => {
       rating: 4.9,
       users: '200+',
       freeTrial: '30 days'
+    },
+    {
+      title: 'IT Infrastructure Management',
+      description: 'Complete IT infrastructure setup, migration, and management for AWS, Azure, and Google Cloud. 99.9% uptime guarantee.',
+      icon: Settings,
+      price: '$2,500/month',
+      originalPrice: '$3,500/month',
+      features: ['Cloud migration', 'Infrastructure as Code', 'Auto-scaling', 'Cost optimization', 'Security compliance', '24/7 monitoring', 'Network design', 'Data center solutions'],
+      benefits: ['99.9% uptime', 'Cost optimization', 'Scalable solutions', 'Expert support'],
+      link: '/it-infrastructure',
+      popular: true,
+      category: 'Infrastructure',
+      rating: 4.9,
+      users: '500+',
+      freeTrial: '14 days'
     }
   ];
 
