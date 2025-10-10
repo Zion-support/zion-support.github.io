@@ -10,56 +10,58 @@ const Footer: React.FC = memo(() => {
       title: 'AI Services',
       icon: Brain,
       services: [
-        { name: 'AI Services Overview', href: '/ai-services' },
-        { name: 'AI Marketing', href: '/ai-marketing' },
-        { name: 'AI Automation', href: '/ai-automation' },
-        { name: 'AI Healthcare', href: '/ai-healthcare' },
-        { name: 'AI Fintech', href: '/ai-fintech' },
-        { name: 'AI Data Analytics', href: '/ai-data-analytics' },
-        { name: 'AI Cybersecurity', href: '/ai-cybersecurity' },
-        { name: 'AI Content Generation', href: '/ai-content-generation' }
+        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
+        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
+        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
+        { name: 'AI Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro' },
+        { name: 'AI Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro' },
+        { name: 'AI Energy Grid Management Pro', href: '/ai-energy-grid-management-pro' },
+        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
+        { name: 'AI Legal Research Pro', href: '/ai-legal-research-pro' }
       ]
     },
     {
       title: 'IT Services',
       icon: Cloud,
       services: [
-        { name: 'IT Services Overview', href: '/it-services' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'Cloud Services', href: '/cloud-services' },
-        { name: 'DevOps', href: '/devops' },
-        { name: 'Database Services', href: '/database-services' },
-        { name: 'Network Solutions', href: '/network-solutions' },
-        { name: 'IT Consulting', href: '/it-consulting' },
-        { name: 'Managed IT', href: '/managed-it' }
+        { name: 'AI Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring' },
+        { name: 'Blockchain Integration Services Pro', href: '/blockchain-integration-services' },
+        { name: 'AI API Management Pro', href: '/ai-api-management' },
+        { name: 'Intelligent Database Migration Pro', href: '/intelligent-database-migration' },
+        { name: 'AI Load Testing Pro', href: '/ai-load-testing' },
+        { name: 'Smart Contract Security Audit Pro', href: '/smart-contract-security-audit' },
+        { name: 'AI Content Delivery Network Pro', href: '/ai-content-delivery-network' },
+        { name: 'Intelligent Email Infrastructure Pro', href: '/intelligent-email-infrastructure' }
       ]
     },
     {
       title: 'Micro SAAS',
       icon: Code,
       services: [
-        { name: 'Micro SAAS Overview', href: '/micro-saas' },
-        { name: 'AI Project Manager', href: '/ai-project-manager' },
-        { name: 'AI Task Manager', href: '/ai-task-manager' },
-        { name: 'AI Expense Tracker', href: '/ai-expense-tracker' },
-        { name: 'AI Password Manager', href: '/ai-password-manager' },
-        { name: 'AI Invoice Generator', href: '/ai-invoice-generator' },
-        { name: 'AI Email Assistant', href: '/ai-email-assistant' },
-        { name: 'AI Content Writer', href: '/ai-content-writer' }
+        { name: 'AI Project Manager Pro', href: '/ai-project-manager' },
+        { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar' },
+        { name: 'AI Content Writer Pro', href: '/ai-content-writer' },
+        { name: 'AI Video Generator Pro', href: '/ai-video-generator' },
+        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager' },
+        { name: 'AI Email Marketing Suite', href: '/ai-email-marketing' },
+        { name: 'AI CRM Assistant Pro', href: '/ai-crm-assistant' },
+        { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer' },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant' },
+        { name: 'AI API Manager Pro', href: '/ai-api-manager' },
+        { name: 'AI Cybersecurity Monitor Pro', href: '/ai-cybersecurity-monitor' },
+        { name: 'AI Password Manager Pro', href: '/ai-password-manager' }
       ]
     },
     {
       title: 'Specialized',
       icon: Zap,
       services: [
-        { name: 'Quantum Computing', href: '/quantum-computing' },
+        { name: 'Quantum Computing Solutions', href: '/quantum-computing' },
         { name: 'Autonomous Systems', href: '/autonomous-systems' },
         { name: 'Blockchain & Web3', href: '/blockchain-web3' },
         { name: 'IoT & Edge Computing', href: '/iot-edge-computing' },
         { name: 'Business Intelligence', href: '/business-intelligence' },
-        { name: 'Robotics Solutions', href: '/robotics' },
-        { name: 'AR/VR Solutions', href: '/ar-vr-solutions' },
-        { name: 'Smart Cities', href: '/smart-cities' }
+        { name: 'Robotics Solutions', href: '/robotics' }
       ]
     }
   ];
@@ -70,9 +72,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
-    { name: 'News', href: '/news' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Demo', href: '/demo' }
+    { name: 'Pricing', href: '/pricing' }
   ];
 
   const supportLinks = [
@@ -94,17 +94,22 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-slate-900/95 backdrop-blur-sm border-t border-cyan-400/30">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-sm border-t border-cyan-400/30 relative overflow-hidden">
+      {/* Futuristic Background Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.05)_0%,transparent_50%)] animate-pulse" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.02)_1px,transparent_1px)] bg-[length:50px_50px]" />
+      
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center cyber-glow">
-                <Zap className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-white font-bold text-xl neon-text">Zion Tech Group</span>
+            <div className="flex items-center space-x-2 mb-6 group">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
+              <Zap className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Zion Tech Group</span>
             </div>
             
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -252,7 +257,7 @@ const Footer: React.FC = memo(() => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
-              <button className="cyber-button px-6 py-3">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center">
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>

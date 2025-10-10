@@ -347,6 +347,7 @@ export const scheduleCleanup = () => {
   // Schedule cleanup every 5 minutes
   setInterval(cleanupMemory, 5 * 60 * 1000);
 };
+
 /**
  * Performance Utilities
  * Provides performance monitoring, optimization, and metrics collection

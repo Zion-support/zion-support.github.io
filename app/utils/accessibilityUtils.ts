@@ -246,6 +246,7 @@ export const setupLandmarkNavigation = (): void => {
     subtree: true
   });
 };
+
 /**
  * Accessibility Utilities
  * Provides accessibility enhancements and monitoring
