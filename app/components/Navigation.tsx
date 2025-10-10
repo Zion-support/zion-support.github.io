@@ -204,9 +204,12 @@ const Navigation: React.FC = () => {
     { name: 'Home', path: '/', icon: Home },
     { name: 'About', path: '/about', icon: Users },
     { name: 'Services', path: '/services', icon: Settings },
-    { name: 'Pricing', path: '/pricing', icon: BarChart },
+    { name: 'AI Services', path: '/ai-services', icon: Brain },
+    { name: 'IT Services', path: '/it-services', icon: Cloud },
+    { name: 'Micro SAAS', path: '/micro-saas', icon: Code },
     { name: 'Case Studies', path: '/case-studies', icon: FileText },
     { name: 'Blog', path: '/blog', icon: MessageSquare },
+    { name: 'Pricing', path: '/pricing', icon: BarChart },
     { name: 'Contact', path: '/contact', icon: Phone }
   ];
 
@@ -297,13 +300,6 @@ const Navigation: React.FC = () => {
               </div>
 
               <Link 
-                to="/micro-saas" 
-                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
-                onClick={closeAllMenus}
-              >
-                Micro SAAS
-              </Link>
-              <Link 
                 to="/ai-services" 
                 className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
                 onClick={closeAllMenus}
@@ -318,11 +314,25 @@ const Navigation: React.FC = () => {
                 IT Services
               </Link>
               <Link 
+                to="/micro-saas" 
+                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+                onClick={closeAllMenus}
+              >
+                Micro SAAS
+              </Link>
+              <Link 
                 to="/case-studies" 
                 className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
                 onClick={closeAllMenus}
               >
                 Case Studies
+              </Link>
+              <Link 
+                to="/blog" 
+                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+                onClick={closeAllMenus}
+              >
+                Blog
               </Link>
               <Link 
                 to="/pricing" 
