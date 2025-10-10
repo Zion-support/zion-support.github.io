@@ -115,12 +115,76 @@ const DynamicContentShowcase: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">
+            Key Benefits
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                <span>{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">
+            What Our Clients Say
+          </h2>
+          <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <p className="text-xl text-gray-300 mb-6 italic">
+                "{testimonials[currentIndex].content}"
+              </p>
+              <div className="text-white">
+                <p className="font-semibold text-lg">{testimonials[currentIndex].name}</p>
+                <p className="text-gray-400">{testimonials[currentIndex].role}, {testimonials[currentIndex].company}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of businesses that have already transformed their operations with our solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+              <Zap className="mr-2 h-5 w-5" />
+              Get Started
+            </button>
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
+              <Users className="mr-2 h-5 w-5" />
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
 
+export default DynamicContentShowcase;

@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
 
@@ -113,8 +111,80 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Statistics Section */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Impact in Numbers
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See how we've helped businesses transform with our innovative solutions
+            </p>
           </div>
-        </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {statistics.map((stat, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="bg-purple-500/20 w-16 h-16 rounded-full flex items-center justify-center">
+                    <stat.icon className="w-8 h-8 text-purple-400" />
+                  </div>
+                </div>
+                <div className={`text-4xl font-bold ${stat.color} mb-2`}>
+                  {stat.value}{stat.suffix}
+                </div>
+                <div className="text-gray-300 text-lg">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Solutions?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our solutions deliver unmatched performance, security, and scalability for modern businesses.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our solutions for your business.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                <span>{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );
