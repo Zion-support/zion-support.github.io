@@ -347,7 +347,280 @@ const AIServicesPage: React.FC = () => {
         'Smart contract optimization',
         'Crypto market analysis',
         'Blockchain security enhancement'
-      ]
+      ],
+      link: 'https://ziontechgroup.com/ai-blockchain-solutions'
+    },
+
+    // New Advanced AI Services
+    {
+      id: 21,
+      name: 'AI Quantum Financial Oracle',
+      description: 'Revolutionary quantum-powered financial prediction system with 99.7% accuracy in market forecasting',
+      icon: Brain,
+      features: [
+        'Quantum Market Analysis',
+        'Real-time Risk Assessment',
+        'Portfolio Optimization',
+        'Crypto Prediction',
+        'Economic Modeling',
+        'Quantum Encryption'
+      ],
+      category: 'Quantum AI',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-indigo-500 to-purple-600',
+      pricing: 'Starting at $2,999/mo',
+      capabilities: [
+        '99.7% prediction accuracy',
+        'Quantum advantage in finance',
+        'Real-time risk modeling',
+        'Ultra-fast calculations'
+      ],
+      link: 'https://ziontechgroup.com/ai-quantum-financial-oracle'
+    },
+    {
+      id: 22,
+      name: 'AI Neural Memory Assistant',
+      description: 'Advanced AI system that learns and remembers everything about your business for instant recall and decision making',
+      icon: Brain,
+      features: [
+        'Infinite Memory Storage',
+        'Contextual Recall',
+        'Pattern Recognition',
+        'Predictive Memory',
+        'Knowledge Graphs',
+        'Smart Search'
+      ],
+      category: 'AI Memory',
+      popular: true,
+      rating: 4.8,
+      users: '800+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $399/mo',
+      capabilities: [
+        'Perfect memory retention',
+        'Context-aware responses',
+        'Predictive insights',
+        'Instant knowledge recall'
+      ],
+      link: 'https://ziontechgroup.com/ai-neural-memory-assistant'
+    },
+    {
+      id: 23,
+      name: 'AI Holographic Workspace',
+      description: 'Next-generation 3D holographic workspace for immersive collaboration and data visualization',
+      icon: Globe,
+      features: [
+        '3D Data Visualization',
+        'Holographic Meetings',
+        'Spatial Computing',
+        'AR/VR Integration',
+        'Gesture Controls',
+        'Real-time Collaboration'
+      ],
+      category: 'Immersive Tech',
+      popular: false,
+      rating: 4.7,
+      users: '200+',
+      color: 'from-emerald-500 to-teal-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        'Immersive collaboration',
+        '3D data visualization',
+        'Virtual presence',
+        'Next-gen workspace'
+      ],
+      link: 'https://ziontechgroup.com/ai-holographic-workspace'
+    },
+    {
+      id: 24,
+      name: 'AI Climate Solutions Pro',
+      description: 'Advanced AI system for climate modeling, carbon tracking, and environmental impact optimization',
+      icon: Globe,
+      features: [
+        'Climate Modeling',
+        'Carbon Footprint Tracking',
+        'Renewable Energy Optimization',
+        'Environmental Impact Analysis',
+        'Sustainability Reporting',
+        'Green Tech Integration'
+      ],
+      category: 'Climate Tech',
+      popular: true,
+      rating: 4.8,
+      users: '300+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $2,499/mo',
+      capabilities: [
+        '50% carbon footprint reduction',
+        'Real-time environmental monitoring',
+        'Sustainability optimization',
+        'Climate risk assessment'
+      ],
+      link: 'https://ziontechgroup.com/ai-climate-solutions-pro'
+    },
+    {
+      id: 25,
+      name: 'AI Drug Discovery Pro',
+      description: 'Revolutionary AI platform for pharmaceutical drug discovery with molecular simulation and clinical trial optimization',
+      icon: Stethoscope,
+      features: [
+        'Molecular Simulation',
+        'Drug Target Identification',
+        'Clinical Trial Design',
+        'Side Effect Prediction',
+        'Patent Analysis',
+        'Regulatory Compliance'
+      ],
+      category: 'Pharmaceutical AI',
+      popular: true,
+      rating: 4.9,
+      users: '50+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $4,999/mo',
+      capabilities: [
+        '10x faster drug discovery',
+        '95% accuracy in predictions',
+        'Reduced clinical trial costs',
+        'Personalized treatment options'
+      ],
+      link: 'https://ziontechgroup.com/ai-drug-discovery-pro'
+    },
+    {
+      id: 26,
+      name: 'AI Space Technology Pro',
+      description: 'Cutting-edge AI platform for space mission planning, satellite optimization, and space resource management',
+      icon: Rocket,
+      features: [
+        'Mission Planning',
+        'Satellite Optimization',
+        'Space Resource Mapping',
+        'Orbital Mechanics',
+        'Space Weather Prediction',
+        'Launch Optimization'
+      ],
+      category: 'Space Tech',
+      popular: false,
+      rating: 4.9,
+      users: '25+',
+      color: 'from-slate-500 to-gray-600',
+      pricing: 'Starting at $9,999/mo',
+      capabilities: [
+        'Autonomous space mission planning',
+        'Real-time satellite optimization',
+        'Space resource discovery',
+        'Interplanetary mission support'
+      ],
+      link: 'https://ziontechgroup.com/ai-space-technology-pro'
+    },
+    {
+      id: 27,
+      name: 'AI Financial Crime Detection Pro',
+      description: 'Advanced AI system for real-time financial crime detection, fraud prevention, and compliance monitoring',
+      icon: Shield,
+      features: [
+        'Real-time Fraud Detection',
+        'Money Laundering Prevention',
+        'Transaction Analysis',
+        'Risk Scoring',
+        'Compliance Monitoring',
+        'Regulatory Reporting'
+      ],
+      category: 'FinTech AI',
+      popular: true,
+      rating: 4.8,
+      users: '400+',
+      color: 'from-yellow-500 to-orange-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        '99.9% fraud detection accuracy',
+        'Real-time transaction monitoring',
+        'Automated compliance reporting',
+        'Risk assessment automation'
+      ],
+      link: 'https://ziontechgroup.com/ai-financial-crime-detection-pro'
+    },
+    {
+      id: 28,
+      name: 'AI Agricultural Intelligence Pro',
+      description: 'Precision agriculture AI platform with crop monitoring, yield prediction, and sustainable farming optimization',
+      icon: Globe,
+      features: [
+        'Crop Monitoring',
+        'Yield Prediction',
+        'Soil Analysis',
+        'Pest Detection',
+        'Irrigation Optimization',
+        'Sustainability Tracking'
+      ],
+      category: 'AgTech AI',
+      popular: true,
+      rating: 4.7,
+      users: '600+',
+      color: 'from-green-500 to-lime-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        '30% increase in crop yields',
+        '50% reduction in water usage',
+        'Automated pest detection',
+        'Sustainable farming practices'
+      ],
+      link: 'https://ziontechgroup.com/ai-agricultural-intelligence-pro'
+    },
+    {
+      id: 29,
+      name: 'AI Energy Grid Management Pro',
+      description: 'Smart energy grid management system with real-time optimization, renewable integration, and demand response',
+      icon: Zap,
+      features: [
+        'Grid Optimization',
+        'Renewable Integration',
+        'Demand Response',
+        'Energy Storage',
+        'Predictive Maintenance',
+        'Carbon Tracking'
+      ],
+      category: 'Energy AI',
+      popular: false,
+      rating: 4.8,
+      users: '150+',
+      color: 'from-yellow-500 to-amber-600',
+      pricing: 'Starting at $5,999/mo',
+      capabilities: [
+        '40% improvement in grid efficiency',
+        '60% renewable energy integration',
+        'Real-time demand response',
+        'Predictive maintenance'
+      ],
+      link: 'https://ziontechgroup.com/ai-energy-grid-management-pro'
+    },
+    {
+      id: 30,
+      name: 'AI Legal Research Platform Pro',
+      description: 'Advanced AI legal research platform with case analysis, document review, and automated legal insights',
+      icon: Scale,
+      features: [
+        'Legal Research',
+        'Document Analysis',
+        'Case Law Analysis',
+        'Contract Review',
+        'Compliance Tracking',
+        'Legal Writing'
+      ],
+      category: 'Legal AI',
+      popular: true,
+      rating: 4.7,
+      users: '250+',
+      color: 'from-purple-500 to-indigo-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        '90% faster legal research',
+        'Automated document review',
+        'Case outcome prediction',
+        'Compliance monitoring'
+      ],
+      link: 'https://ziontechgroup.com/ai-legal-research-platform-pro'
     },
     {
       id: 2,
@@ -1175,16 +1448,7 @@ const AIServicesPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI'];
-=======
-  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Finance', 'Climate Tech', 'Space Tech', 'Pharmaceutical AI', 'Cognitive AI'];
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
-=======
-  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Autonomous Systems', 'Space Technology', 'Environmental AI', 'Pharmaceutical AI'];
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
->>>>>>> origin/main
+  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum AI', 'AI Memory', 'Immersive Tech', 'Climate Tech', 'Pharmaceutical AI', 'Space Tech', 'FinTech AI', 'AgTech AI', 'Energy AI', 'Legal AI', 'Blockchain AI'];
 
   if (!isLoaded) {
     return (
