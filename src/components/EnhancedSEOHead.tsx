@@ -13,7 +13,7 @@ interface SEOHeadProps {
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions",
-  description = "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
+  description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with cutting-edge technology.",
   keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, cybersecurity, business intelligence, micro SAAS",
   image = "https://ziontechgroup.com/og-image.jpg",
   url = "https://ziontechgroup.com",

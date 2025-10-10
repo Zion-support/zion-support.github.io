@@ -273,6 +273,13 @@ const Navigation: React.FC = () => {
             >
               Services
             </Link>
+            <Link 
+              to="/pricing" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              Pricing
+            </Link>
 
             {/* Services Dropdown */}
             <div className="relative">
@@ -393,6 +400,13 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 Services
+              </Link>
+              <Link 
+                to="/pricing" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Pricing
               </Link>
 
               {/* Mobile Services */}

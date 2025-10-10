@@ -140,7 +140,7 @@ export default function UnifiedContentPromotion({
         <div className="text-center mb-16">
           <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text">
-              {currentSlideData.title}
+              Zion Tech Group - {currentSlideData.title}
             </h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
               {currentSlideData.subtitle}

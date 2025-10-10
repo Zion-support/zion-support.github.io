@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-10-10T04:19:12.401Z",
+  "summary": {
+    "totalPages": 1,
+    "workingLinks": 0,
+    "brokenLinks": 0,
+    "contentIssues": 0,
+    "seoIssues": 1
+  },
+  "details": {
+    "totalPages": 1,
+    "brokenLinks": [],
+    "missingPages": [],
+    "workingLinks": [],
+    "contentIssues": [],
+    "navigationIssues": [],
+    "seoIssues": [
+      {
+        "url": "http://localhost:3000",
+        "issues": [
+          "Missing H1 tag",
+          "Meta description length issue: 200 characters (should be 120-160)"
+        ]
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "category": "SEO Issues",
+      "action": "Optimize page titles, descriptions, and heading structure",
+      "count": 1
+    }
+  ]
+}
