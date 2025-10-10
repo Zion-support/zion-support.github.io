@@ -65,7 +65,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({,
 <<<<<<< HEAD
       page_title: document.title,
       page_location: window.location.href,
-      send_page_view: true,
+      send_page_view: true
+    });
 
     // Enhanced ecommerce tracking
     gtag('config', GA_MEASUREMENT_ID, {)

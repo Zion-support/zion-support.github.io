@@ -150,7 +150,6 @@ const AccessibilityEnhancer: React.FC = () => {,
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',
-<<<<<<< HEAD
     focusVisible: true,
     screenReader: false,
     keyboardNavigation: true,
