@@ -48,10 +48,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       });
     }
 
-    // Console logging for development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', eventName, parameters);
-    }
+    // Analytics event tracked
   };
 
   const trackPageView = (pageName: string, pagePath: string) => {
@@ -66,10 +63,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       });
     }
 
-    // Console logging for development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Page View:', pageName, pagePath);
-    }
+    // Page view tracked
   };
 
   const value: AnalyticsContextType = {

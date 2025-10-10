@@ -3,7 +3,7 @@ import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'r
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
+import OptimizedSEOHead from './components/OptimizedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 // import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
 import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package, Heart, DollarSign as Dollar, Award as Trophy, Rocket as Launch, Layers as Stack, Workflow as Process, BarChart3 as Analytics, MessageSquare as Chat, Headphones as Support, Monitor as Screen, HardDrive as Storage, Wifi as Network, Printer as Print, Router as Gateway, Package as Box, Eye, Mic } from 'lucide-react';
@@ -628,7 +628,7 @@ description: 'Custom API development, third-party integrations, and microservice
 
   return (
     <React.Fragment>
-      <SEOOptimizer
+      <OptimizedSEOHead
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}

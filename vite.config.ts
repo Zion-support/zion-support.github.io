@@ -29,7 +29,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
@@ -37,8 +37,11 @@ export default defineConfig({
             if (id.includes('react-router')) {
               return 'vendor-router';
             }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui';
+            if (id.includes('framer-motion')) {
+              return 'vendor-framer';
+            }
+            if (id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-icons';
             }
             if (id.includes('recharts')) {
               return 'vendor-charts';
@@ -46,17 +49,32 @@ export default defineConfig({
             if (id.includes('web-vitals')) {
               return 'vendor-analytics';
             }
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'vendor-utils';
+            }
+            if (id.includes('axios')) {
+              return 'vendor-http';
+            }
             return 'vendor-misc';
           }
-          // App chunks
+          // App chunks - better organization
           if (id.includes('/app/ai-')) {
             return 'ai-services';
           }
           if (id.includes('/app/it-')) {
             return 'it-services';
           }
+          if (id.includes('/app/micro-saas')) {
+            return 'micro-saas';
+          }
           if (id.includes('/app/components/')) {
             return 'components';
+          }
+          if (id.includes('/app/hooks/')) {
+            return 'hooks';
+          }
+          if (id.includes('/app/utils/')) {
+            return 'utils';
           }
           return 'app';
         },
@@ -81,18 +99,40 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 2,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 3,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+        conditionals: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true,
+        loops: true,
+        reduce_vars: true,
+        sequences: true,
+        side_effects: true,
+        switches: true,
+        top_retain: true,
+        toplevel: true,
+        typeofs: true,
+        unused: true
       },
       mangle: {
         safari10: true,
         properties: {
           regex: /^_/
-        }
+        },
+        toplevel: true
       },
       format: {
         comments: false,
-        ascii_only: true
+        ascii_only: true,
+        beautify: false
       }
     },
     chunkSizeWarningLimit: 500,

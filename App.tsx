@@ -9,7 +9,7 @@ import Footer from './app/components/Footer';
 import HomePage from './app/page';
 import { PageLoader } from './app/components/LoadingStates';
 import ErrorBoundary from './app/components/ErrorBoundary';
-import SEOHead from './app/components/EnhancedSEOHead';
+import OptimizedSEOHead from './app/components/OptimizedSEOHead';
 import SkipLink from './app/components/EnhancedSkipLink';
 import Breadcrumb from './app/components/Breadcrumb';
 import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
@@ -57,7 +57,7 @@ const App: React.FC = () => {
   return (
     <EnhancedErrorBoundary>
       <HelmetProvider>
-        <SEOHead />
+        <OptimizedSEOHead />
         <SkipLink />
         <ServiceWorker />
         <Router>

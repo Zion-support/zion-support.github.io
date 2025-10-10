@@ -12,7 +12,7 @@ const AnalyticsContext = createContext<AnalyticsContextType | null>(null);
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (!context) {
-    console.warn('useAnalytics must be used within an AnalyticsProvider');
+    // useAnalytics must be used within an AnalyticsProvider
     return null;
   }
   return context;
