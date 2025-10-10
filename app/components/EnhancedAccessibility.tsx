@@ -1,5 +1,18 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
+interface AccessibilitySettings {
+  highContrast: boolean;
+  reducedMotion: boolean;
+  fontSize: string;
+  focusVisible: boolean;
+}
+
+const useAnalytics = () => ({
+  trackEvent: (event: string, data?: any) => {
+    console.log('Analytics event:', event, data);
+  }
+});
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
