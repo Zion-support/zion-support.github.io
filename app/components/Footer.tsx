@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle, DollarSign, Settings, FileText, Target, Cpu, Database, Lock, Wifi, Package, RefreshCw, Headphones, Server, Mic, Camera, Video, Music, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, ChefHat, Rocket, Sprout, Scale } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
@@ -10,42 +10,54 @@ const Footer: React.FC = memo(() => {
       title: 'AI Services',
       icon: Brain,
       services: [
-        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
-        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
-        { name: 'AI Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro' },
-        { name: 'AI Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro' },
-        { name: 'AI Energy Grid Management Pro', href: '/ai-energy-grid-management-pro' },
-        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
-        { name: 'AI Legal Research Pro', href: '/ai-legal-research-pro' }
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
+        { name: 'AI Content Generation Suite', href: '/ai-content-generation-suite' },
+        { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation' },
+        { name: 'AI Marketing Automation Platform', href: '/ai-marketing-automation-platform' },
+        { name: 'AI Document Processing System', href: '/ai-document-processing-system' },
+        { name: 'AI Image & Video Analysis', href: '/ai-image-video-analysis' },
+        { name: 'AI Financial Analysis Platform', href: '/ai-financial-analysis-platform' },
+        { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics' },
+        { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain-optimization' },
+        { name: 'AI Voice & Speech Processing', href: '/ai-voice-speech-processing' },
+        { name: 'AI Cybersecurity Platform', href: '/ai-cybersecurity-platform' },
+        { name: 'AI Research & Development', href: '/ai-research-development' }
       ]
     },
     {
       title: 'IT Services',
       icon: Cloud,
       services: [
-        { name: 'AI Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring' },
-        { name: 'Blockchain Integration Services Pro', href: '/blockchain-integration-services' },
-        { name: 'AI API Management Pro', href: '/ai-api-management' },
-        { name: 'Intelligent Database Migration Pro', href: '/intelligent-database-migration' },
-        { name: 'AI Load Testing Pro', href: '/ai-load-testing' },
-        { name: 'Smart Contract Security Audit Pro', href: '/smart-contract-security-audit' },
-        { name: 'AI Content Delivery Network Pro', href: '/ai-content-delivery-network' },
-        { name: 'Intelligent Email Infrastructure Pro', href: '/intelligent-email-infrastructure' }
+        { name: 'Cloud Migration Pro', href: '/cloud-migration-pro' },
+        { name: 'IT Infrastructure Design', href: '/it-infrastructure-design' },
+        { name: 'Database Management Pro', href: '/database-management-pro' },
+        { name: 'Cloud Cost Optimization', href: '/cloud-cost-optimization' },
+        { name: 'Enterprise Cybersecurity Suite', href: '/enterprise-cybersecurity-suite' },
+        { name: 'Compliance Management Platform', href: '/compliance-management-platform' },
+        { name: '24/7 IT Support & Monitoring', href: '/24-7-it-support-monitoring' },
+        { name: 'System Administration Services', href: '/system-administration-services' },
+        { name: 'Custom Software Development', href: '/custom-software-development' },
+        { name: 'System Integration & APIs', href: '/system-integration-apis' },
+        { name: 'DevOps & CI/CD Implementation', href: '/devops-cicd-implementation' },
+        { name: 'Network Design & Implementation', href: '/network-design-implementation' }
       ]
     },
     {
       title: 'Micro SAAS',
       icon: Code,
       services: [
-        { name: 'AI Voice Cloning Studio Pro', href: '/ai-voice-cloning-studio' },
-        { name: 'AI Code Security Auditor Pro', href: '/ai-code-security-auditor' },
-        { name: 'AI Mental Health Companion Pro', href: '/ai-mental-health-companion' },
-        { name: 'AI Smart Home Controller Pro', href: '/ai-smart-home-controller' },
-        { name: 'AI Investment Portfolio Optimizer Pro', href: '/ai-investment-optimizer' },
-        { name: 'AI Language Learning Tutor Pro', href: '/ai-language-tutor' },
-        { name: 'AI Fitness Coach Pro', href: '/ai-fitness-coach' },
-        { name: 'AI Email Security Shield Pro', href: '/ai-email-security-shield' }
+        { name: 'AI Project Manager Pro', href: '/ai-project-manager-pro' },
+        { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
+        { name: 'AI Email Marketing Suite', href: '/ai-email-marketing-suite' },
+        { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot' },
+        { name: 'AI Lead Generation Engine', href: '/ai-lead-generation-engine' },
+        { name: 'AI Content Studio', href: '/ai-content-studio' },
+        { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer' },
+        { name: 'AI Invoice Generator', href: '/ai-invoice-generator' },
+        { name: 'AI Expense Tracker', href: '/ai-expense-tracker' },
+        { name: 'AI Financial Advisor', href: '/ai-financial-advisor' },
+        { name: 'AI Workflow Automation', href: '/ai-workflow-automation' }
       ]
     },
     {
@@ -68,7 +80,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
-    { name: 'News', href: '/news' }
+    { name: 'News', href: '/news' },
+    { name: 'Press Kit', href: '/press' },
+    { name: 'Partners', href: '/partners' }
   ];
 
   const supportLinks = [
@@ -77,7 +91,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Documentation', href: '/docs' },
     { name: 'API Reference', href: '/api-docs' },
     { name: 'Status Page', href: '/status' },
-    { name: 'System Health', href: '/health' }
+    { name: 'System Health', href: '/health' },
+    { name: 'Knowledge Base', href: '/knowledge-base' },
+    { name: 'Community Forum', href: '/forum' }
   ];
 
   const legalLinks = [
@@ -86,16 +102,40 @@ const Footer: React.FC = memo(() => {
     { name: 'Cookie Policy', href: '/cookies' },
     { name: 'GDPR Compliance', href: '/gdpr' },
     { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' }
+    { name: 'Compliance', href: '/compliance' },
+    { name: 'Data Processing Agreement', href: '/dpa' },
+    { name: 'Service Level Agreement', href: '/sla' }
+  ];
+
+  const quickLinks = [
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Free Trial', href: '/trial' },
+    { name: 'Demo', href: '/demo' },
+    { name: 'Consultation', href: '/consultation' },
+    { name: 'White Paper', href: '/whitepaper' },
+    { name: 'Webinar', href: '/webinar' },
+    { name: 'Events', href: '/events' },
+    { name: 'Newsletter', href: '/newsletter' }
+  ];
+
+  const industrySolutions = [
+    { name: 'Healthcare', href: '/industries/healthcare' },
+    { name: 'Finance', href: '/industries/finance' },
+    { name: 'Manufacturing', href: '/industries/manufacturing' },
+    { name: 'Retail', href: '/industries/retail' },
+    { name: 'Education', href: '/industries/education' },
+    { name: 'Government', href: '/industries/government' },
+    { name: 'Technology', href: '/industries/technology' },
+    { name: 'Non-Profit', href: '/industries/nonprofit' }
   ];
 
   return (
     <footer className="bg-slate-900/95 backdrop-blur-sm border-t border-cyan-400/30">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center cyber-glow">
                 <Zap className="w-5 h-5 text-white" />
@@ -105,7 +145,7 @@ const Footer: React.FC = memo(() => {
             
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, 
-              autonomous systems, and digital transformation services.
+              autonomous systems, and digital transformation services. Transform your business with our advanced AI capabilities.
             </p>
 
             {/* Contact Info */}
@@ -140,11 +180,17 @@ const Footer: React.FC = memo(() => {
 
             {/* Social Links */}
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Globe className="w-5 h-5" />
+              <a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Users className="w-5 h-5" />
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="https://github.com/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
+              <a href="https://youtube.com/@ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                <Youtube className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -152,7 +198,7 @@ const Footer: React.FC = memo(() => {
           {/* Services */}
           <div className="lg:col-span-2">
             <h3 className="text-white font-semibold text-lg mb-6 neon-text">Our Services</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {serviceCategories.map((category, index) => (
                 <div key={index}>
                   <div className="flex items-center space-x-2 mb-4">
@@ -160,7 +206,7 @@ const Footer: React.FC = memo(() => {
                     <h4 className="text-white font-medium">{category.title}</h4>
                   </div>
                   <ul className="space-y-2">
-                    {category.services.map((service, serviceIndex) => (
+                    {category.services.slice(0, 6).map((service, serviceIndex) => (
                       <li key={serviceIndex}>
                         <Link 
                           to={service.href}
@@ -177,8 +223,8 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* Quick Links */}
-          <div className="lg:col-span-1">
-            <div className="space-y-8">
+          <div className="lg:col-span-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Company */}
               <div>
                 <h4 className="text-white font-semibold mb-4">Company</h4>
@@ -229,7 +275,47 @@ const Footer: React.FC = memo(() => {
                   ))}
                 </ul>
               </div>
+
+              {/* Quick Links */}
+              <div>
+                <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+                <ul className="space-y-2">
+                  {quickLinks.map((link, index) => (
+                    <li key={index}>
+                      <Link 
+                        to={link.href}
+                        className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
+          </div>
+        </div>
+
+        {/* Industry Solutions */}
+        <div className="mt-12 pt-8 border-t border-gray-700">
+          <div className="text-center mb-6">
+            <h3 className="text-white font-semibold text-lg mb-4 neon-text">
+              Industry Solutions
+            </h3>
+            <p className="text-gray-300 text-sm">
+              Specialized solutions tailored to your industry needs
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            {industrySolutions.map((industry, index) => (
+              <Link
+                key={index}
+                to={industry.href}
+                className="px-4 py-2 bg-slate-800/50 text-gray-300 hover:bg-cyan-600 hover:text-white rounded-lg transition-colors text-sm"
+              >
+                {industry.name}
+              </Link>
+            ))}
           </div>
         </div>
 
