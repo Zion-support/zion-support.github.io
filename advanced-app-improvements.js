@@ -34,13 +34,9 @@ module.exports = {
 }
 
 function main() {
-  createAdvancedMonitoring();
-  createAdvancedCaching();
-  createAPIOptimization();
   //   }
 
 if (require.main === module) {
-  main();
 }
 
 module.exports = {

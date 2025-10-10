@@ -98,7 +98,6 @@ function mergeServiceBranch(branchName) {
 };
 
 for (const branch of newServiceBranches) {
-  const _result = mergeServiceBranch(branch);
   results.branches.push({ branch, ...result });
   results.summary.total++;
 

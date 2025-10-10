@@ -113,19 +113,14 @@ class Logger {
 
     switch (level) {
       case LogLevel.DEBUG:
-        console.debug(logMessage)
         break
       case LogLevel.INFO:
-        console.info(logMessage)
         break
       case LogLevel.WARN:
-        console.warn(logMessage)
         break
       case LogLevel.ERROR:
-        console.error(logMessage)
         break
       case LogLevel.FATAL:
-        console.error(`FATAL: ${logMessage}`)
         break
     }
   }
@@ -142,9 +137,19 @@ class Logger {
     }
     return [...this.logs]
   }
-
-  clearLogs(): void {
-    this.logs = []
+  /**
+   * Send log entry to external logging service
+   */
+  private sendToLoggingService(entry: LogMetadata): void {
+    // In a real application, you would send this to your logging service
+    // For example: Sentry, LogRocket, DataDog, etc.
+    // Example implementation:
+    // fetch('/api/logs', {
+    //   method: 'POST',
+    //   headers: {// 'Content-Type': 'application/json'},
+    //   body: JSON.stringify(entry)
+    // }).catch(err => {
+    //   // });
   }
 
   exportLogs(): string {

@@ -1,36 +1,102 @@
 'use client';
-import React, { lazy } from 'react';
-import { Sparkles, ArrowRight, Star } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, Sparkles, ArrowRight, Star, Zap } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = React.memo((props) => {
+const ContentPromotionBanner: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [currentBanner, setCurrentBanner] = useState(0);
+
+  const banners = [
+    {
+      id: 1,
+      title: "🚀 New AI Solutions Available!",
+      description: "Discover our latest AI-powered tools and services",
+      cta: "Explore Now",
+      link: "/ai-services",
+      color: "from-cyan-500 to-blue-600",
+      icon: Sparkles
+    },
+    {
+      id: 2,
+      title: "⚡ Special Offer: 30% Off First Month",
+      description: "Get started with our AI services at a discounted rate",
+      cta: "Claim Offer",
+      link: "/contact",
+      color: "from-purple-500 to-pink-600",
+      icon: Star
+    },
+    {
+      id: 3,
+      title: "🎯 Free AI Consultation",
+      description: "Book a free consultation to discuss your AI needs",
+      cta: "Book Now",
+      link: "/consultation",
+      color: "from-green-500 to-emerald-600",
+      icon: Zap
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBanner((prev) => (prev + 1) % banners.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [banners.length]);
+
+  if (!isVisible) return null;
+
+  const currentBannerData = banners[currentBanner];
+
   return (
-    <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white py-4 relative overflow-hidden">}
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 via-purple-600/20 to-pink-600/20 animate-pulse"></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
-          <div className="flex items-center space-x-2 mb-2 sm:mb-0">
-            <Sparkles className="w-5 h-5 animate-pulse" />
-            <span className="font-semibold text-sm sm:text-base"><span className="sr-only">Screen reader: </span>New AI Solutions Available</span>
-            <Star className="w-4 h-4 text-yellow-300 animate-bounce" />
-          </div>
-          
-          <div className="flex items-center space-x-4 ml-0 sm:ml-6">
-            <span className="text-sm sm:text-base"><span className="sr-only">Screen reader: </span>
-              Transform your business with cutting-edge AI technology
+    <div className={`relative bg-gradient-to-r ${currentBannerData.color} text-white py-3 px-4 transition-all duration-500`}>
+      <div className="container mx-auto flex items-center justify-between">
+        <div className="flex items-center space-x-3">
+          <currentBannerData.icon className="w-5 h-5 animate-pulse" />
+          <div>
+            <span className="font-semibold text-sm sm:text-base">
+              {currentBannerData.title}
             </span>
-            <a
-              href="/services"
-              className="flex items-center space-x-1 bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
-            >
-              <span><span className="sr-only">Screen reader: </span>Learn More</span>
-              <ArrowRight className="w-3 h-3" />
-            </a>
+            <span className="hidden sm:inline ml-2 text-sm opacity-90">
+              {currentBannerData.description}
+            </span>
           </div>
         </div>
+        
+        <div className="flex items-center space-x-2">
+          <a
+            href={currentBannerData.link}
+            className="bg-white/20 hover:bg-white/30 text-white px-4 py-1 rounded-full text-sm font-medium transition-all duration-300 flex items-center space-x-1"
+          >
+            <span>{currentBannerData.cta}</span>
+            <ArrowRight className="w-3 h-3" />
+          </a>
+          
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-white/80 hover:text-white transition-colors p-1"
+            aria-label="Close banner"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+      
+      {/* Banner indicators */}
+      <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 flex space-x-1">
+        {banners.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentBanner(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentBanner ? 'bg-white' : 'bg-white/50'
+            }`}
+            aria-label={`Go to banner ${index + 1}`}
+          />
+        ))}
       </div>
     </div>
-  )
-}
-export default ContentPromotionBanner
+  );
+};
+
+export default ContentPromotionBanner;

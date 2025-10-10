@@ -5,8 +5,6 @@
  * Applies production-ready optimizations to the codebase
  */
 
-const _fs = require('fs');
-const _path = require('path');
 
 // Configuration
 const config = {
@@ -17,10 +15,8 @@ const config = {
 
 // Helper function to read files recursively
 function getAllFiles(_dir, fileList = []) {
-  const _files = fs.readdirSync(dir);
 
   files.forEach(file => {
-    const _filePath = path.join(dir, file);
     if (fs.statSync(filePath).isDirectory()) {
       // Skip node_modules and .git directories
       if (!file.startsWith('.') && file !== 'node_modules') {
@@ -41,8 +37,6 @@ function getAllFiles(_dir, fileList = []) {
 
 // Improvement 1: Replace unwrapped console statements with logger
 function improveLogging(content, filePath) {
-  let _improved = false;
-  let _newContent = content;
 
   // Only replace console statements not in logger/test files and not wrapped in dev checks
   if (
@@ -89,8 +83,6 @@ function improveLogging(content, filePath) {
 
 // Improvement 2: Add error boundaries to components that don't have them
 function addErrorHandling(content, filePath) {
-  let _improved = false;
-  let _newContent = content;
 
   // Check if it's a page component without error boundary
   if (
@@ -110,7 +102,6 @@ function addErrorHandling(content, filePath) {
 
 // Improvement 3: Check for security best practices
 function checkSecurity(content, filePath) {
-  const _issues = [];
 
   // Check for dangerous patterns
   if (content.includes('dangerouslySetInnerHTML') && !content.includes('DOMPurify')) {
@@ -136,12 +127,8 @@ function checkSecurity(content, filePath) {
 
 // Improvement 4: Optimize imports
 function optimizeImports(content) {
-  let _improved = false;
-  let _newContent = content;
 
   // Remove duplicate imports (basic check)
-  const _importLines = content.match(/^import.*$/gm) || [];
-  const _uniqueImports = [...new Set(importLines)];
 
   if (importLines.length !== uniqueImports.length) {
     improved = true;
@@ -156,30 +143,23 @@ function optimizeImports(content) {
 // Main processing function
 function processFile(filePath) {
   try {
-    const _content = fs.readFileSync(filePath, 'utf8');
-    let _newContent = content;
-    let _fileImproved = false;
 
     // Apply improvements
-    const _loggingResult = improveLogging(newContent, filePath);
     if (loggingResult.improved) {
       newContent = loggingResult.content;
       fileImproved = true;
       config.improvements.push(`Improved logging in: ${path.relative(process.cwd(), filePath)}`);
     }
 
-    const _errorHandlingResult = addErrorHandling(newContent, filePath);
     if (errorHandlingResult.improved) {
       newContent = errorHandlingResult.content;
       fileImproved = true;
     }
 
-    const _securityIssues = checkSecurity(newContent, filePath);
     if (securityIssues.length > 0) {
       config.improvements.push(...securityIssues);
     }
 
-    const _importsResult = optimizeImports(newContent);
     if (importsResult.improved) {
       newContent = importsResult.content;
       fileImproved = true;
@@ -201,7 +181,6 @@ function processFile(filePath) {
 
 // Run improvements
 // const files = getAllFiles(config.appDir);
-let _filesImproved = 0;
 
 files.forEach(file => {
   if (processFile(file)) {
@@ -244,3 +223,5 @@ fs.writeFileSync(
 );
 
 // // process.exit(config.errors.length > 0 ? 1 : 0);
+
+}}

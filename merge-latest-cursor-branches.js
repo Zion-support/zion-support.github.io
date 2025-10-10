@@ -48,9 +48,6 @@ function branchExists(branchName) {
 safeGitCommand('git checkout main', 'Switch to main branch');
 safeGitCommand('git pull origin main', 'Pull latest changes from main');
 
-let _mergedCount = 0;
-let _notFoundCount = 0;
-const _results = [];
 
 //Process each branch
 for (const branch of latestCursorBranches) {
@@ -94,15 +91,10 @@ for (const branch of latestCursorBranches) {
 
 //Run system checks
 
-const _typeCheck = safeGitCommand('pnpm run type-check', 'TypeScript type checking');
-const _lintCheck = safeGitCommand('pnpm run lint', 'ESLint linting');
-const _testCheck = safeGitCommand('pnpm run test', 'Jest testing');
-const _buildCheck = safeGitCommand('pnpm run build:no-check', 'Production build');
 
 //Push changes if any were merged
 if (mergedCount > 0) {
 
-  const _pushResult = safeGitCommand('git push origin main', 'Push changes to main');
   if (pushResult.success) {
 
   } else {

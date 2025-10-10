@@ -15,8 +15,5 @@ const optimizeJS = () => {
 };
 
 // Run optimizations
-optimizeImages();
-optimizeCSS();
-optimizeJS();
 
 // 

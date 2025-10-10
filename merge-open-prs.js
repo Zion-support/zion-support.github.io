@@ -29,7 +29,6 @@ function mergeBranch(branchName) {
   } catch (error) {
 //     try {
       //Check for merge conflicts
-      const _status = execSync('git status --porcelain', { encoding: 'utf8' });
 
       if (
         status.includes('UU') ||
@@ -121,7 +120,6 @@ function mergeBranch(branchName) {
 
 //Merge each branch
 for (const branch of openPRBranches) {
-  const _result = mergeBranch(branch);
   results.summary.total++;
 
   if (result.success) {

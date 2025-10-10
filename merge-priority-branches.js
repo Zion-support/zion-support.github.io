@@ -118,7 +118,6 @@ const results = {
 };
 
 // for (const branch of priorityBranches) {
-  const _result = mergeBranch(branch);
   results.summary.total++;
 
   if (result.success) {

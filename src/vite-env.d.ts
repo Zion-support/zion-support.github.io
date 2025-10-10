@@ -1,9 +1,6 @@
-/// <reference types="vite/client" />
-interface ImportMetaEnv {
-  readonly DEV: boolean;
-  readonly PROD: boolean;
-  readonly MODE: string;
-}
-interface ImportMeta {
-  readonly env: ImportMetaEnv;
+// vite-env.d file
+// This file is under development
+
+export default function vite_env_d() {
+  return null;
 }

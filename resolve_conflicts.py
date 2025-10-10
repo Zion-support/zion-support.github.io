@@ -3,10 +3,8 @@ import os
 import re
 import subprocess
 
-def resolve_merge_conflicts():
-    """Resolve all merge conflicts by keeping the main branch version"""
-    
-    # Find all files with merge conflicts
+def resolve_conflicts(file_path):
+    """Resolve merge conflicts by keeping the HEAD version"""
     try:
         result = subprocess.run(['git', 'grep', '-l', '<<<<<<< HEAD'], 
                               capture_output=True, text=True, cwd='/workspace')
@@ -14,47 +12,66 @@ def resolve_merge_conflicts():
             print("No merge conflicts found")
             return
         
-        files_with_conflicts = result.stdout.strip().split('\n')
-        print(f"Found {len(files_with_conflicts)} files with merge conflicts")
+        # Remove all conflict markers and keep only the HEAD version
+        # Pattern to match conflict blocks:  ... 
+        pattern = r'(.*?)
         
-        for file_path in files_with_conflicts:
-            if not file_path or not os.path.exists(file_path):
-                continue
-                
-            print(f"Resolving conflicts in: {file_path}")
-            
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-            
-            if '<<<<<<< HEAD' not in content:
-                continue
-            
-            # Pattern 1: Keep everything after ======= (main branch version)
-            pattern1 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n?'
-            content = re.sub(pattern1, r'\2\n', content, flags=re.DOTALL)
-            
-            # Pattern 2: Remove simple HEAD markers
-            pattern2 = r'<<<<<<< HEAD\n=======\n(.*?)\n>>>>>>> [^\n]+\n?'
-            content = re.sub(pattern2, r'\1\n', content, flags=re.DOTALL)
-            
-            # Pattern 3: Remove any remaining conflict markers
-            content = re.sub(r'<<<<<<< HEAD\n.*?=======\n.*?>>>>>>> [^\n]+\n?', '', content, flags=re.DOTALL)
-            content = re.sub(r'^<<<<<<< HEAD\n', '', content, flags=re.MULTILINE)
-            content = re.sub(r'^=======\n', '', content, flags=re.MULTILINE)
-            content = re.sub(r'^>>>>>>> [^\n]+\n?', '', content, flags=re.MULTILINE)
-            
-            # Clean up any double newlines
-            content = re.sub(r'\n\n\n+', '\n\n', content)
-            
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            
-            print(f"✓ Resolved conflicts in {file_path}")
+        def replace_conflict(match):
+            head_content = match.group(1)
+            return head_content
         
-        print("All merge conflicts resolved!")
+        # Replace all conflict blocks with HEAD content
+        resolved_content = re.sub(pattern, replace_conflict, content, flags=re.DOTALL)
+        
+        # Also handle cases where there might be multiple ======= markers
+        # Remove any remaining conflict markers
+        resolved_content = re.sub(r'\n?', '', resolved_content)
+        resolved_content = re.sub(r'
+        
+        # Clean up any extra newlines
+        resolved_content = re.sub(r'\n\s*\n\s*\n', '\n\n', resolved_content)
+        
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(resolved_content)
+        
+        print(f"Resolved conflicts in: {file_path}")
+        return True
         
     except Exception as e:
-        print(f"Error resolving conflicts: {e}")
+        print(f"Error resolving conflicts in {file_path}: {e}")
+        return False
+
+def main():
+    # Find all TypeScript/JavaScript files in the app directory
+    patterns = [
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        'app/**/*.js',
+        'app/**/*.jsx'
+    ]
+    
+    files_processed = 0
+    files_with_conflicts = 0
+    
+    for pattern in patterns:
+        for file_path in glob.glob(pattern, recursive=True):
+            if os.path.isfile(file_path):
+                files_processed += 1
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                    
+                    if '' in content or '
+                        files_with_conflicts += 1
+                        if resolve_conflicts(file_path):
+                            print(f"✓ Resolved: {file_path}")
+                        else:
+                            print(f"✗ Failed: {file_path}")
+                except Exception as e:
+                    print(f"Error processing {file_path}: {e}")
+    
+    print(f"\nProcessed {files_processed} files")
+    print(f"Found conflicts in {files_with_conflicts} files")
 
 if __name__ == "__main__":
     resolve_merge_conflicts()

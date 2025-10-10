@@ -7,7 +7,6 @@ impo, r, t {
   Rock, e, t,
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-import Header, from '../../componen, t, s/Head, e, r';
 
 const NextGenIntelligentAutomationBreakthroug, h = () => { 
   return (
@@ -105,3 +104,4 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {
                   >
                     Book, Free, Assessment
                     <Rocket, classNam, e='w-5 h-5' />
+}}

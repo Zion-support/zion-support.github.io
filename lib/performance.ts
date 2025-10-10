@@ -1,9 +1,11 @@
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
+import type { Metric } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
+
 /**
  * Performance Monitoring Utility
  * Tracks and reports web vitals and performance metrics
  */
-import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
-import type { Metric } from 'web-vitals';
 
 // Extend Window interface for gtag
 declare global {
@@ -11,8 +13,9 @@ declare global {
     gtag?: (...args: unknown[]) => void;
   }
 }
-import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';;
-import { onCimport { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';;CLS, onFCP, oimport { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';;formanceMetric {
+
+// Types
+interface PerformanceMetric {
   name: string;
   value: number;
   rating: 'good' | 'needs-improvement' | 'poor';
@@ -240,7 +243,6 @@ export function generatePerformanceReport(): PerformanceReport {
     url: typeof window !== 'undefined' ? window.location.href : '',
 }
 
-
   if (typeof window === 'undefined') return;
 
   // Track Core Web Vitals
@@ -296,10 +298,6 @@ export function generatePerformanceReport(): PerformanceReport {
   if (process.env['NODE_ENV'] === 'development') {
 //     // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
   }
-
-
-
-
 
   // Monitor Core Web Vitals
   onCLS(sendToAnalytics);
@@ -380,11 +378,6 @@ export function markPerformance(name: string): void {
 }
 
 /**
-
-
-
-
-
 
 export function measureBetween(name: string, startMark: string, endMark: string): number {
   if (typeof performance === 'undefined') return 0;
@@ -479,11 +472,6 @@ export function getNavigationTiming(): Record<string, number> | null {
 }
 
 /**
-
-
-
-
-
 
   try {
     return performance.getEntriesByType('resource') as PerformanceResourceTiming[];
@@ -592,14 +580,12 @@ export function getMemoryUsage(): Record<string, number> | null {
 //   const navigationTiming = getNavigationTiming();
   const metrics: PerformanceMetric[] = [];
 
-
 //   const navigationTiming = getNavigationTiming();
 
 //   const navigationTiming = getNavigationTiming();
 //   const memoryUsage = getMemoryUsage();
 //   const slowResources = getSlowResources();
   const metrics: PerformanceMetric[] = [];
-
 
 //   const navigationTiming = getNavigationTiming();
   // const memoryUsage = getMemoryUsage();
@@ -645,17 +631,12 @@ export function generatePerformanceReport(): PerformanceReport | null {
     });
   }
 
-
-
-
-
         rating: getRating(name, value),
         delta: value,
         id: `nav-${name}-${Date.now()}`
       });
     });
   }
-  
 
         id: `nav-${name}`,
       });
@@ -792,14 +773,12 @@ const performanceUtils = {
  */
 export function monitorLongTasks(
 
-
   callback: (entries: PerformanceEntry[]) => void,
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
   callback: (entries: PerformanceEntry[]) => void
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
-
 
   try {
     const observer = new PerformanceObserver(list => {
@@ -818,14 +797,12 @@ export function monitorLongTasks(
  */
 export function monitorLayoutShifts(
 
-
   callback: (entries: PerformanceEntry[]) => void,
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
   callback: (entries: PerformanceEntry[]) => void
 ): PerformanceObserver | null {
   if (typeof PerformanceObserver === 'undefined') return null;
-
 
   try {
     const observer = new PerformanceObserver(list => {

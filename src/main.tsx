@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './globals.css';
-import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
+import { performanceOptimizations } from './utils/performanceOptimizations';
 
 // Initialize performance optimizations immediately
 if (typeof window !== 'undefined') {
-  initializePerformanceOptimizations();
+  performanceOptimizations.init();
 }
 
 // Register service worker

@@ -1,7 +1,6 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 
-
 /**
  * October 2025 Cognitive Mesh Orchestration Platform Launch Banner
  * Promotes the new Cognitive Mesh content including blog case study and services

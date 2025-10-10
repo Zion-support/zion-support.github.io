@@ -114,14 +114,12 @@ const results = {
 for (let batch = 0; batch < totalBatches; batch++) {
 //   const start = batch * batchSize;
 //   const end = Math.min(start + batchSize, relevantBranches.length);
-  const _batchBranches = relevantBranches.slice(start, end);
 
 //   // console.log(
     `\n📦 Processing batch ${batch + 1}/${totalBatches} (${batchBranches.length} branches)...`
   );
 
   for (const branch of batchBranches) {
-    const _result = mergeBranch(branch);
     results.summary.total++;
 
     if (result.success) {

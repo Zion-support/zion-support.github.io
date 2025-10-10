@@ -1,18 +1,7 @@
-/**
- * Google Analytics gtag types
- */
-interface GtagEvent {
-  event_category?: string;
-  event_label?: string;
-  value?: number;
-  [key: string]: unknown;
+// Type definitions for gtag.d
+
+export interface Gtag.d {
+  // Add type definitions here
 }
-type GtagCommand = 'config' | 'set' | 'event' | 'js';
-interface Window {
-  gtag?: (
-    command: GtagCommand,
-    targetId: string | Date,
-    config?: GtagEvent
-  ) => void;
-  dataLayer?: unknown[];
-}
+
+export default Gtag.d;
