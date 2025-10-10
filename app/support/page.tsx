@@ -6,11 +6,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const SupportPage: React.FC = () => {
-<<<<<<< HEAD
-=======
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
 
   const supportChannels = [
     {
@@ -47,15 +44,13 @@ const SupportPage: React.FC = () => {
       availability: 'By appointment',
       responseTime: 'Within 2 hours',
       contact: 'Schedule Call',
-      color: 'from-orange-500 to-red-600'
-    }
-<<<<<<< HEAD
-  ];];];
+        color: 'from-orange-500 to-red-600'
+      }
+    ];
   const filteredFaqs = faqs.filter(faq =>
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
-=======
-  ];
+  );
 
   const faqCategories = [
     {
@@ -151,10 +146,9 @@ const SupportPage: React.FC = () => {
   const filteredQuestions = filteredCategories.flatMap(category => 
     category.questions.filter(q => 
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      q.answer.toLowerCase().includes(searchTerm.toLowerCase())
-    )
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
-  );
+        q.answer.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    );
 
   return (
     <>
@@ -313,16 +307,10 @@ const SupportPage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </section>
-    </div>
-
-=======
       </main>
       
       <Footer />
     </>
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
   );
 };
 
