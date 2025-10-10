@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 <<<<<<< HEAD
@@ -340,3 +341,20 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 };
 
 export default EnhancedPerformanceOptimizer;
+=======
+import React from 'react';
+
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
+}
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+  return (
+    <div className="performance-optimizer">
+      {children}
+    </div>
+  );
+};
+
+export default PerformanceOptimizer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

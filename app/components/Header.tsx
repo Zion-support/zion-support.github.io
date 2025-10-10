@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from './Navigation';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const Header: React.FC = () => {
 return (
     <React.Fragment></React>
@@ -10,5 +13,8 @@ return (
     </React.Fragment>
   );
 };
+<<<<<<< HEAD
 export default Header;
 ;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

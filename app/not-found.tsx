@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import { Home, ArrowLeft, RefreshCw } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
@@ -34,8 +37,11 @@ export default function NotFound() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
   </button>
   </Link>
   </h1>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

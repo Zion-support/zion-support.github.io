@@ -1,6 +1,8 @@
-'use client';
-import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
+'use client';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
+import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
 interface Feature {
   icon: React.ComponentType<any>
@@ -11,6 +13,7 @@ interface Feature {
     label: string
   }[]
 }
+<<<<<<< HEAD
 
 interface Testimonial {
   id: number
@@ -179,6 +182,8 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
     return () => clearInterval(timer);
   }, []);
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -189,6 +194,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
+<<<<<<< HEAD
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -522,3 +528,5 @@ export default DynamicContentShowcase
 };
 
 export default DynamicContentShowcase;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

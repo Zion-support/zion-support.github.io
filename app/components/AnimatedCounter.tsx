@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 interface AnimatedCounterProps {
@@ -116,3 +117,7 @@ return () => {
 };
 export default AnimatedCounter;
   </AnimatedCounterProps>
+=======
+interface AnimatedCounterProps {
+  end: number,
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

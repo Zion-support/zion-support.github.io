@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
@@ -19,19 +20,21 @@ interface Partner {
 import { CheckCircle, ArrowRight, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
 
 >>>>>>> cursor/analyze-improve-and-deploy-application-e765
+=======
+import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const PartnersPage: React.FC = () => {
   const partners = [
     {
       name: 'Microsoft',
-<<<<<<< HEAD
-      logo: '/images/partners/microsoft.png',
-      description: 'Strategic cloud and AI partnership for enterprise solutions',
-      category: 'Technology',
-      website: 'https://microsoft.com',
-      tier: 'strategic'
+      logo: '/partners/microsoft.png',
+      description: 'Strategic partnership for Azure cloud solutions and AI services',
+      category: 'Technology Partner'
     },
     {
       name: 'Amazon Web Services',
+<<<<<<< HEAD
       logo: '/images/partners/aws.png',
       description: 'Preferred cloud infrastructure and AI services partner',
       category: 'Cloud',
@@ -65,17 +68,24 @@ logo: '/api/placeholder/200/100',
     {
       name: 'Amazon Web Services',
       description: 'Scalable cloud computing services',
+=======
+      logo: '/partners/aws.png',
+      description: 'Premier AWS partner delivering scalable cloud infrastructure',
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
       category: 'Cloud Partner'
     },
     {
       name: 'Google Cloud',
-      description: 'AI and machine learning platforms',
+      logo: '/partners/google-cloud.png',
+      description: 'Google Cloud partner specializing in AI and machine learning',
       category: 'AI Partner'
     },
     {
       name: 'IBM',
-      description: 'Enterprise AI and data analytics',
+      logo: '/partners/ibm.png',
+      description: 'IBM partner for enterprise AI and cognitive solutions',
       category: 'Enterprise Partner'
+<<<<<<< HEAD
     }
   ]
   const benefits = [
@@ -134,10 +144,13 @@ logo: '/api/placeholder/200/100',
         'Cognitive services',
         'Consulting services'
       ]
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
     },
     {
       name: 'Salesforce',
       logo: '/partners/salesforce.png',
+<<<<<<< HEAD
       description: 'Salesforce partner for CRM and customer experience solutions',
       category: 'CRM & CX',
       benefits: [
@@ -146,11 +159,16 @@ logo: '/api/placeholder/200/100',
         'Integration services',
         'Training and support'
       ]
+=======
+      description: 'Salesforce partner for CRM and business automation',
+      category: 'Business Partner'
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
     },
     {
       name: 'Oracle',
       logo: '/partners/oracle.png',
       description: 'Oracle partner for database and enterprise applications',
+<<<<<<< HEAD
       category: 'Database & ERP',
       benefits: [
         'Oracle database solutions',
@@ -165,11 +183,21 @@ logo: '/api/placeholder/200/100',
     'Access to cutting-edge technology platforms',
     'Joint go-to-market strategies',
     'Co-marketing opportunities',
+=======
+      category: 'Database Partner'
+    }
+  ];
+
+  const benefits = [
+    'Access to cutting-edge technology',
+    'Joint go-to-market opportunities',
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
     'Technical training and certification',
     'Co-marketing and co-selling programs',
-    'Dedicated partner success manager',
-    'Priority support and resources'
+    'Priority support and resources',
+    'Innovation collaboration'
   ];
+<<<<<<< HEAD
   const partnershipTiers = [
 =======
   ];
@@ -225,13 +253,17 @@ logo: '/api/placeholder/200/100',
   const getTierInfo = (tier: string) => {
     return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2];
   };
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   return (
     <React.Fragment>
       <Helmet>
-        <title>Partners | Zion Tech Group</title>
-        <meta name="description" content="Our strategic partners and ecosystem that help us deliver world-class AI and IT solutions." />
-        <meta name="keywords" content="partners, strategic partnerships, technology partners, AI solutions, IT services" />
+        <title>Partners - Zion Tech Group | Strategic Partnerships</title>
+        <meta name="description" content="Strategic partnerships with leading technology companies to deliver the best AI and IT solutions." />
+        <meta name="keywords" content="partners, partnerships, technology alliances, strategic relationships, Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
       <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -264,34 +296,25 @@ logo: '/api/placeholder/200/100',
         <meta name="keywords" content="technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Partnerships</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Our Partners
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-              We partner with industry leaders to deliver cutting-edge AI and IT solutions. Our strategic alliances ensure you get the best technology available.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Strategic partnerships with leading technology companies to deliver the best AI and IT solutions.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">50+</div>
-                <div className="text-gray-400">Technology Partners</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">15+</div>
-                <div className="text-gray-400">Years of Partnership</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">100%</div>
-                <div className="text-gray-400">Certified Solutions</div>
-              </div>
-            </div>
           </div>
         </section>
-        {/* Partnership Tiers */}
-        <section className="py-16 px-4">
+
+        {/* Partners Grid Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Partnership Tiers</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -532,12 +555,16 @@ logo: '/api/placeholder/200/100',
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Our Partners</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
               {partners.map((partner, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-                  <div className="flex items-center mb-4">
-                    <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center mr-4">
-                      <div className="w-12 h-12 bg-gray-200 rounded"></div>
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="text-center">
+                    <div className="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                      <Award className="w-10 h-10 text-purple-400" />
                     </div>
+<<<<<<< HEAD
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900">{partner.name}</h3>
                       <span className={`px-2 py-1 text-xs rounded-full ${
@@ -562,12 +589,24 @@ logo: '/api/placeholder/200/100',
                         Visit <ExternalLink className="w-4 h-4 ml-1" />
                       </a>
                     )}
+=======
+                    <h3 className="text-2xl font-bold text-white mb-2">{partner.name}</h3>
+                    <span className="inline-block bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                      {partner.category}
+                    </span>
+                    <p className="text-gray-300 mb-6">{partner.description}</p>
+                    <button className="flex items-center text-purple-400 hover:text-purple-300 transition-colors group mx-auto">
+                      Learn More
+                      <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -593,14 +632,31 @@ logo: '/api/placeholder/200/100',
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Partner Benefits</h2>
             <div className="grid md:grid-cols-2 gap-6">
+=======
+
+        {/* Partnership Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Partnership Benefits
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our strategic partnerships provide significant advantages for our clients and partners.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">{benefit}</span>
+                <div key={index} className="flex items-center">
+                  <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
                 </div>
               ))}
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
       {/* CTA Section */}
@@ -616,42 +672,90 @@ logo: '/api/placeholder/200/100',
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-12 border border-slate-700">
+=======
+        </section>
+
+        {/* Become a Partner Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
             <h2 className="text-4xl font-bold text-white mb-6">
               Become a Partner
             </h2>
             <p className="text-xl text-gray-300 mb-8">
+<<<<<<< HEAD
               Join our partner ecosystem and unlock new opportunities for growth. 
               Let's work together to deliver exceptional value to our clients.
 >>>>>>> cursor/analyze-improve-and-deploy-application-e765
+=======
+              Join our partner ecosystem and unlock new opportunities for growth and innovation.
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
             </p>
+            
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 mb-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Why Partner With Us?</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <div className="flex items-start">
+                  <TrendingUp className="w-6 h-6 text-purple-400 mr-4 mt-1" />
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Growth Opportunities</h4>
+                    <p className="text-gray-300">Access to new markets and revenue streams through our client base.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <Users className="w-6 h-6 text-purple-400 mr-4 mt-1" />
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Expert Support</h4>
+                    <p className="text-gray-300">Dedicated partner success team to help you grow your business.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <Handshake className="w-6 h-6 text-purple-400 mr-4 mt-1" />
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Collaborative Approach</h4>
+                    <p className="text-gray-300">Work together to deliver innovative solutions to our clients.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <Award className="w-6 h-6 text-purple-400 mr-4 mt-1" />
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Recognition</h4>
+                    <p className="text-gray-300">Get recognized as a trusted partner in our ecosystem.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
               <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 Apply to Become a Partner
               </button>
               <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+=======
+              <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Apply to Become a Partner
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
                 Download Partner Kit
               </button>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
     </div>
+=======
+        </section>
+      </div>
+    </React.Fragment>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   );
 };
-<<<<<<< HEAD
-export default PartnersPage;
-  </button>
-  </h2>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </section>
-  </h1>
-=======
 
 export default PartnersPage;
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-e765
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

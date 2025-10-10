@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'import React from 'react'
 import { useLocation  } from 'react-router-dom'import { ChevronRight, Home  } from 'lucide-react'const Breadcrumb: React.FC  = () => {
   const location = useLocation()
@@ -91,3 +92,12 @@ const Breadcrumb: React.FC = () => {
 
 export default Breadcrumb;
 >>>>>>> cursor/analyze-improve-and-deploy-application-e765
+=======
+import React from 'react';
+
+const Breadcrumb: React.FC = () => {
+  return null;
+};
+
+export default Breadcrumb;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

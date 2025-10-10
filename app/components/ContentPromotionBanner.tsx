@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'import React from 'react'
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'const ContentPromotionBanner: React.FC  = () => {
   const features = [
@@ -269,6 +270,9 @@ const ContentPromotionBanner: React.FC<PromotionBannerProps> = ({
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Solutions?</h2>
           <div className="grid md:grid-cols-2 gap-4">
+=======
+<div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -309,6 +313,7 @@ const ContentPromotionBanner: React.FC<PromotionBannerProps> = ({
               </button>
 >>>>>>> cursor/analyze-improve-and-deploy-application-e765
             </div>
+<<<<<<< HEAD
           </div>
 
           {/* Image */}
@@ -356,3 +361,5 @@ export default ContentPromotionBanner
 
 export default ContentPromotionBanner;
 >>>>>>> cursor/analyze-improve-and-deploy-application-e765
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

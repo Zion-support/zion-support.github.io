@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 'use client'
 /**
  * Comprehensive Test Runner and Testing Utilities
  * Provides advanced testing capabilities, mocking, and test automation
  */
 import React, { ReactElement, useCallback } from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 // Test result types;
 export interface PerformanceMetrics {
   renderTime: number,
@@ -14,6 +17,7 @@ export interface CoverageMetrics {
   statements: number,
     branches: number,
     functions: number,
+<<<<<<< HEAD
     lines: number;}
   renderTime: number,;
   memoryUsage: number,;
@@ -51,6 +55,8 @@ export interface CoverageMetrics {}
   branches: number;
   functions: number;
   lines: number;}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 }
 // Test configuration interface;
 export interface TestConfig {}
@@ -82,6 +88,7 @@ export interface TestConfig {}
   enablePerformance: boolean,
   enableAccessibility: boolean,
   enableVisualRegression: boolean,
+<<<<<<< HEAD
   mockDataPath?: string;
   coverageThreshold: number,;
     performanceThreshold: number;
@@ -2422,3 +2429,6 @@ export const expect = (actual: unknown) => ({
 // Export everything
 export * from '@testing-library/react';
 export { customRender as render };
+=======
+  afterEach: (() => void | Promise<void>)[];}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

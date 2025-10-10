@@ -1,6 +1,5 @@
-'use client';
-<<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
     }
@@ -231,5 +230,19 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return this.props.children
   }
 }
+=======
+
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+const EnhancedErrorBoundary: React.FC<ErrorBoundaryProps> = ({ children }) => {
+  return (
+    <div className="error-boundary">
+      {children}
+    </div>
+  );
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 
 export default EnhancedErrorBoundary;

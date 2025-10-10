@@ -1,6 +1,5 @@
-'use client';
-<<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const EnhancedAnalyticsPage: React.FC = () => {
@@ -236,3 +235,17 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
 export default AnalyticsProvider;
 >>>>>>> cursor/analyze-improve-and-deploy-application-e765
+=======
+
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  return (
+    <div className="analytics-provider">
+      {children}
+    </div>
+  );
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const EnhancedServicesShowcase: React.FC = () => {
 const services = [
     {
@@ -61,6 +64,7 @@ return (
                 {service.features.map((feature, featureIndex) => (</ul>
                   <li key={featureIndex} className="flex items-center text-sm text-gray-400"></li>
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+<<<<<<< HEAD
                     {feature}
                   </CheckCircle>;
                 ))}
@@ -72,3 +76,5 @@ export default EnhancedServicesShowcase
   </p>
   </a>
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

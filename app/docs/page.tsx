@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, Globe, Brain, Cloud, Shield, Settings, Users, Database, Zap, Eye, Sparkles } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 export default function DocsPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const docCategories = [
@@ -14,6 +17,7 @@ export default function DocsPage() {
       docs: [
         { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },
         { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' },
+<<<<<<< HEAD
         { title: 'Configuration', description: 'Configure your environment', link: '/docs/configuration' }
       ];
     },;
@@ -167,3 +171,5 @@ return (
   </button>
   </button>
   </SEOOptimizer>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

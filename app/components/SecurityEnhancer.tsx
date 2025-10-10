@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 'use client';
 import React, { useEffect } from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 interface SecurityEnhancerProps {
   children: React.ReactNode
 }
@@ -19,6 +22,7 @@ const securityHeaders = {
         'Referrer-Policy': 'strict-origin-when-cross-origin'
       };
       // Add CSP meta tag
+<<<<<<< HEAD
       const cspMeta = document.createElement('meta');
       cspMeta.httpEquiv = 'Content-Security-Policy';
       cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
@@ -39,3 +43,5 @@ const securityHeaders = {
 };
 export default SecurityEnhancer;
   </SecurityEnhancerProps>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

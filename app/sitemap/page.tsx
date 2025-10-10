@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const SitemapPage: React.FC = () => {
 const pages = [
     { path: '/', title: 'Home', description: 'Zion Tech Group - Advanced AI and IT Solutions' },
@@ -46,6 +49,7 @@ return (
                   <a 
                     href={page.path} 
                     className="text-blue-600 hover:text-blue-700 transition-colors">
+<<<<<<< HEAD
                     {page.title}
                   </a>;
                 </h3>;
@@ -59,3 +63,5 @@ export default SitemapPage
   </p>
   </p>
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

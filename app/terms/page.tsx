@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 export default function TermsPage() {
   const lastUpdated = 'January 1, 2024';
   const sections = [
@@ -75,6 +78,7 @@ return (
                     </section>
                     <div></div>
                       <h2 className="text-2xl font-bold text-gray-900 mb-3">
+<<<<<<< HEAD
                         {index + 1}. {section.title}
                       </h2>;
                       <p className="text-gray-700 leading-relaxed">;
@@ -121,3 +125,5 @@ return (
   )
 }
   </p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

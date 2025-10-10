@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 'use client';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AutonomousSystemsPage: React.FC = () => {
@@ -23,4 +26,7 @@ return (
     </React.Fragment>
   );
 };
+<<<<<<< HEAD
 export default AutonomousSystemsPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

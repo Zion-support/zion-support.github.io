@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'import React, { useState } from 'react'
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
 interface ContentNewsletterSignupProps {
@@ -52,11 +53,14 @@ const ContentNewsletterSignup: React.FC<NewsletterSignupProps> = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
     setIsLoading(true);
+<<<<<<< HEAD
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000))
@@ -252,3 +256,5 @@ export default ContentNewsletterSignup;
 
 export default ContentNewsletterSignup;
 >>>>>>> cursor/analyze-improve-and-deploy-application-e765
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

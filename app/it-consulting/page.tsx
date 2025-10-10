@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import React, { useState, useEffect } from 'react';
@@ -74,6 +75,8 @@ import {;
   Keyboard as KeyboardIcon, Mouse as MouseIcon,;
   Webcam as WebcamIcon, Speaker as SpeakerIcon;}
 } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const ITConsultingPage: React.FC = () => {
 const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -416,6 +419,7 @@ const categories = [
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
   ];
   const filteredServices = itServices.filter(service => {
+<<<<<<< HEAD
     ;
 
 const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
@@ -496,3 +500,5 @@ export default ITConsultingPage
   </a>
   </a>
   </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

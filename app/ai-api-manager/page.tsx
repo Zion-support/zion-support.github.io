@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -113,3 +114,7 @@ export default AiApiManagerPage
   </button>
   </span></React.Fragment>
 }
+=======
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+const AiApiManagerPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

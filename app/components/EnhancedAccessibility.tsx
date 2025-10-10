@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useEffect } from 'react';
 
@@ -204,6 +205,20 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
 
   return <>{children}</>;
 >>>>>>> cursor/analyze-improve-and-deploy-application-e765
+=======
+import React from 'react';
+
+interface AccessibilityProps {
+  children: React.ReactNode;
+}
+
+const EnhancedAccessibility: React.FC<AccessibilityProps> = ({ children }) => {
+  return (
+    <div className="accessibility-enhancer">
+      {children}
+    </div>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 };
 
 export default EnhancedAccessibility;

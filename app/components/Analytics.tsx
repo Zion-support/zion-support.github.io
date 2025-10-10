@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import React, { useEffect } from 'react';
@@ -194,3 +195,6 @@ export const AnalyticsProvider: React.FC</AnalyticsProps><{ children: React.Reac
   );
 };
   </AnalyticsProps>
+=======
+interface AnalyticsProps {
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

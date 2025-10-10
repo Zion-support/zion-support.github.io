@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
@@ -175,6 +176,8 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({
         </div>
         {/* Carousel Container */}
         {/* Carousel */}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
         <div className="relative">
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 overflow-hidden">
             <div className="flex items-center justify-between mb-8">
@@ -233,6 +236,7 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -418,3 +422,5 @@ export default ContentCarousel
 
 export default ContentCarousel;
 >>>>>>> cursor/analyze-improve-and-deploy-application-e765
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

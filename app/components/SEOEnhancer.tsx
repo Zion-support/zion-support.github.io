@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -113,3 +114,5 @@ export default SEOEnhancerPage;
   </h2>
   </button>
   </span>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

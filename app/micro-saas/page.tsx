@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -985,3 +986,6 @@ export default MicroSaasPage;
 
 export default MicroSaasPage;
 >>>>>>> cursor/analyze-improve-and-deploy-application-e765
+=======
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

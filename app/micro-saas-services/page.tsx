@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Real Micro SAAS Services for Zion Tech Group
 export interface MicroSaasService {
   id: string,
@@ -878,3 +879,6 @@ export const contactInfo = {;
   website: 'https://ziontechgroup.com',;
   hours: '24/7 Support Available',;}
   timezone: 'EST (Eastern Standard Time)'};
+=======
+export const microSaasServices: MicroSaasService[] = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

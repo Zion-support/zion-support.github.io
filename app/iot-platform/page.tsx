@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
     },
     {
       icon: Clock,
@@ -19,6 +22,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
               Internet of Things solutions for any industry or use case.
             </p>
           </div>
+<<<<<<< HEAD
                   ))}
                 </ul>;
 </div>;
@@ -32,3 +36,5 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
 export default PagePage
   </button>
   </h2>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

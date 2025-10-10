@@ -1,8 +1,8 @@
-'use client';
 import { useEffect } from 'react';
 
 export const usePerformanceMonitor = () => {
   useEffect(() => {
+<<<<<<< HEAD
     if (typeof window === 'undefined') ;
 
 return;
@@ -26,5 +26,8 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
     return () => {
       window.removeEventListener('load', monitorWebVitals);
     };
+=======
+    // Performance monitoring logic can be added here
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   }, []);
 };

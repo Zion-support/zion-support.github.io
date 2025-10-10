@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [
   '/',
@@ -25,3 +26,5 @@ self.addEventListener('fetch', (event) => {
     )
   );
 });
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

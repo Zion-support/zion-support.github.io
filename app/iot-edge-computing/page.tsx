@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   const features = [
     {
       icon: Brain,
@@ -55,6 +58,7 @@ return (
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>;
               </div>;
@@ -71,3 +75,5 @@ return (
   );
 };
 export default PagePage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

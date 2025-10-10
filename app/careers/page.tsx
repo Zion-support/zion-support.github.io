@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -720,3 +721,6 @@ export default CareersPage
 
 export default CareersPage;
 >>>>>>> cursor/analyze-improve-and-deploy-application-e765
+=======
+import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Zap } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

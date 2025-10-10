@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const FinancialITPage: React.FC = () => {
 const features = [
     {
@@ -130,6 +133,7 @@ return (
                   {feature.benefits.map((benefit, benefitIndex) => (</ul>
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+<<<<<<< HEAD
                       {benefit}
                     </CheckCircle>;
                   ))}
@@ -151,3 +155,5 @@ export default FinancialITPage
   </button>
   </span>
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

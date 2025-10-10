@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps {
@@ -91,3 +92,6 @@ return (</SEOHeadProps>
 };
 export default SEOHead;
   </SEOHeadProps>
+=======
+interface SEOHeadProps {
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

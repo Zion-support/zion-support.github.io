@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react'
 'use client';
@@ -6,6 +7,8 @@ interface ImageProps {
   src: string,
     alt: string}
 interface ImageProps {}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   src: string,
     alt: string
   width?: number
@@ -21,6 +24,7 @@ interface ImageProps {}
   _quality?: number
   src: string,
   alt: string,
+<<<<<<< HEAD
   width?: number;
   height?: number;
   className?: string;
@@ -117,3 +121,5 @@ export default Image;
 "`
   </div>
   </ImageProps>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

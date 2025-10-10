@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
@@ -14,12 +15,15 @@ export default {
     '^@/content/(.*)$': '<rootDir>/content/$1'
   },
   transform: {
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
     '^.+\\.(ts|tsx)$': ['ts-jest', {
       tsconfig: {
         jsx: 'react-jsx'
       }
     }],
     '^.+\\.(js|jsx)$': 'babel-jest'
+<<<<<<< HEAD
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
@@ -44,3 +48,5 @@ export default {
     'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
   ]
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

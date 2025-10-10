@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import React, { memo, useState, useEffect } from 'react';
@@ -20,6 +21,8 @@ import {;
   MapPin,;
   Clock;}
 } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const Sidebar: React.FC = () => {
 const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']));
@@ -34,6 +37,7 @@ const [isOpen, setIsOpen] = useState(false);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   const toggleSection = (section: string) => {
+<<<<<<< HEAD
     ;
 
 const newExpanded = new Set(expandedSections);
@@ -192,3 +196,5 @@ const contactInfo = {
 export default Sidebar
   </div>
   </string></React.Fragment>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

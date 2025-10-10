@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Bot, ArrowRight } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const SmartSupportBotPage: React.FC = () => {
 return (
     <React.Fragment></React>

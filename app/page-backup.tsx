@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 'use client';
 <<<<<<< HEAD
 import React from 'react';
 'use client';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const PageBackupPage: React.FC = () => {
 =======
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
@@ -597,6 +600,7 @@ const HomePage: React.FC = memo(() => {
 export default PageBackupPage
   </button>
   </button>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
               <button 
@@ -930,3 +934,5 @@ export default HomePage;
 export default HomePage;
 >>>>>>> cursor/analyze-improve-and-deploy-application-3800
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6aba
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

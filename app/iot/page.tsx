@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 const IoTPage: React.FC = () => {
 const iotServices = [
     {
@@ -248,6 +251,7 @@ return (
                           {service.features.map((feature, featureIndex) => (</ul>
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+<<<<<<< HEAD
                               {feature}
                             </CheckCircle>;
                           ))}
@@ -300,3 +304,5 @@ export default IoTPage
   </button>
   </p></React.Fragment>
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

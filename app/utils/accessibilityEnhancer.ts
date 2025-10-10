@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Accessibility Enhancer Utility
  * Provides comprehensive accessibility improvements for web applications
@@ -125,3 +126,6 @@ focusableElements[nextIndex]?.focus();
 
 export const focusLastElement = () => {
   accessibilityEnhancer.focusLast()}
+=======
+focusableElements[nextIndex]?.focus();
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

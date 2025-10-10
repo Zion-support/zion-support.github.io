@@ -1,9 +1,5 @@
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 =======
 import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight, CheckCircle, Star, Users, Clock } from 'lucide-react';
 
@@ -533,3 +529,5 @@ const ItServicesPage: React.FC = () => {
 };
 
 export default ItServicesPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

@@ -1,6 +1,5 @@
-'use client';
-<<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -144,3 +143,11 @@ const ServiceWorker: React.FC = () => {
 
 export default ServiceWorker;</React.Fragment>
 }
+=======
+
+const ServiceWorker: React.FC = () => {
+  return null;
+};
+
+export default ServiceWorker;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

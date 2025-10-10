@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
@@ -432,3 +433,5 @@ export default ContentStatistics
 
 export default ContentStatistics;
 >>>>>>> cursor/analyze-improve-and-deploy-application-e765
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

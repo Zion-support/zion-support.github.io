@@ -1,5 +1,6 @@
 'use client';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -121,10 +122,12 @@ const BlogPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, User, Tag } from 'lucide-react';
+import { Calendar, User, ArrowRight } from 'lucide-react';
+
 const BlogPage: React.FC = () => {
 =======
 import React, { useState } from 'react';
@@ -139,6 +142,7 @@ const BlogPage: React.FC = () => {
   const blogPosts = [
     {
       id: 1,
+<<<<<<< HEAD
       title: 'The Future of AI in Business: Trends and Predictions for 2024',
       excerpt: 'Explore the latest AI trends and how they will transform business operations in the coming year.',
       author: 'Kleber Santos',
@@ -229,9 +233,39 @@ const BlogPage: React.FC = () => {
   const regularPosts = filteredPosts.filter(post => !post.featured);
 
 >>>>>>> cursor/analyze-improve-and-deploy-application-e765
+=======
+      title: 'The Future of AI in Business',
+      excerpt: 'Exploring how artificial intelligence is transforming modern business operations and creating new opportunities.',
+      author: 'John Smith',
+      date: '2024-01-15',
+      category: 'AI',
+      readTime: '5 min read'
+    },
+    {
+      id: 2,
+      title: 'Cybersecurity Best Practices for 2024',
+      excerpt: 'Essential security measures every business should implement to protect against evolving cyber threats.',
+      author: 'Sarah Johnson',
+      date: '2024-01-10',
+      category: 'Security',
+      readTime: '7 min read'
+    },
+    {
+      id: 3,
+      title: 'Cloud Migration Strategies',
+      excerpt: 'A comprehensive guide to successfully migrating your infrastructure to the cloud.',
+      author: 'David Chen',
+      date: '2024-01-05',
+      category: 'Cloud',
+      readTime: '6 min read'
+    }
+  ];
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+<<<<<<< HEAD
         <title>Blog | Zion Tech Group</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends from Zion Tech Group experts." />
 <<<<<<< HEAD
@@ -311,9 +345,17 @@ const BlogPage: React.FC = () => {
         <meta name="keywords" content="tech blog, AI insights, blockchain news, cloud computing, IT solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+        <title>Blog - Zion Tech Group | AI and IT Insights</title>
+        <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, and technology trends from Zion Tech Group experts." />
+        <meta name="keywords" content="blog, AI insights, IT trends, technology news, Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
         {/* Hero Section */}
-        <section className="relative py-20 px-4">
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
+<<<<<<< HEAD
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Tech Insights & News
   </
@@ -540,39 +582,60 @@ const BlogPage: React.FC = () => {
                         <h3 className="text-xl font-bold mb-2">{post.title}</h3>
                         <p className="text-blue-100 text-sm">{post.excerpt}</p>
                       </div>
-                    </div>
-                    <div className="p-6">
-                      <div className="flex items-center text-sm text-gray-500 mb-3">
-                        <User className="w-4 h-4 mr-2" />
-                        <span className="mr-4">{post.author}</span>
-                        <Calendar className="w-4 h-4 mr-2" />
-                        <span className="mr-4">{new Date(post.date).toLocaleDateString()}</span>
-                        <Clock className="w-4 h-4 mr-2" />
-                        <span>{post.readTime}</span>
-                      </div>
-                      <div className="flex items-center mb-3">
-                        <Tag className="w-4 h-4 mr-2 text-gray-400" />
-                        <span className="text-sm text-gray-600">{post.category}</span>
-                      </div>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {post.tags.slice(0, 3).map((tag) => (
-                          <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      <Link
-                        to={`/blog/${post.id}`}
-                        className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
-                      >
-                        Read More <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            )}
+=======
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Our Blog
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Stay updated with the latest insights on AI, IT solutions, and technology trends.
+            </p>
           </div>
+        </section>
+
+        {/* Blog Posts Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogPosts.map((post) => (
+                <article key={post.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="mb-4">
+                    <span className="inline-block bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm font-medium">
+                      {post.category}
+                    </span>
+                  </div>
+                  
+                  <h2 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
+                    {post.title}
+                  </h2>
+                  
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {post.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
+                    <div className="flex items-center">
+                      <User className="w-4 h-4 mr-2" />
+                      <span>{post.author}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
+                    </div>
+                    <div className="flex items-center">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      <span>{post.date}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-sm">{post.readTime}</span>
+                    <button className="flex items-center text-purple-400 hover:text-purple-300 transition-colors group">
+                      Read More
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+<<<<<<< HEAD
         </div>
       </section>
 =======
@@ -630,23 +693,41 @@ const BlogPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-12 border border-slate-700">
+=======
+        </section>
+
+        {/* Newsletter Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-4xl mx-auto text-center">
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
             <h2 className="text-4xl font-bold text-white mb-6">
               Stay Updated
             </h2>
             <p className="text-xl text-gray-300 mb-8">
+<<<<<<< HEAD
               Subscribe to our newsletter and never miss the latest insights on AI and technology.
+=======
+              Subscribe to our newsletter for the latest AI and IT insights delivered to your inbox.
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
+<<<<<<< HEAD
                 className="flex-1 px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
               />
               <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+=======
+                className="flex-1 px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              />
+              <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
                 Subscribe
               </button>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
     </div>
@@ -675,9 +756,11 @@ export default BlogPage;
               </button>
             </div>
           </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 =======

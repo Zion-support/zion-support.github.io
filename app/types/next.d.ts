@@ -94,6 +94,7 @@ return (
 };
 
 export default Next.dPage;
+<<<<<<< HEAD
 // Type definitions for Next.js compatibility in Vite
 export interface Metadata {
   title?: string
@@ -223,3 +224,5 @@ declare module 'next' {
 export {};
 export {};
 </Response>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

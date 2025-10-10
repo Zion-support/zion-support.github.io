@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 ;
 ;
@@ -23,3 +24,20 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
+=======
+import React from 'react';
+
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ children }) => {
+  return (
+    <div className="error-boundary">
+      {children}
+    </div>
+  );
+};
+
+export default ErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'import React, { useEffect, useState } from 'react'
 interface PerformanceMetrics {
   lcp?: number
@@ -152,3 +153,12 @@ const PerformanceMonitor: React.FC = () => {
 
 export default PerformanceMonitor;
 >>>>>>> cursor/analyze-improve-and-deploy-application-e765
+=======
+import React from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  return null;
+};
+
+export default PerformanceMonitor;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b853
