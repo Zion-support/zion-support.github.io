@@ -53,15 +53,22 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo');
       }
+      const header = document.querySelector('header');
+      if (header && !header.getAttribute('role')) {
+        header.setAttribute('role', 'banner');
+      }
     };
 
     // Add skip links
     const addSkipLinks = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
+      const existingSkipLink = document.querySelector('a[href="#main-content"]');
+      if (!existingSkipLink) {
+        const skipLink = document.createElement('a');
+        skipLink.href = '#main-content';
+        skipLink.textContent = 'Skip to main content';
+        skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold z-50';
+        document.body.insertBefore(skipLink, document.body.firstChild);
+      }
     };
 
     // Enhance focus management
@@ -88,8 +95,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           position: static;
           width: auto;
           height: auto;
-          padding: inherit;
-          margin: inherit;
+          padding: 0.5rem;
+          margin: 0;
           overflow: visible;
           clip: auto;
           white-space: normal;
@@ -98,24 +105,11 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       document.head.appendChild(style);
     };
 
-    // Add keyboard navigation support
+    // Add keyboard navigation
     const addKeyboardNavigation = () => {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content with Tab
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-          if (skipLink) {
-            skipLink.focus();
-            event.preventDefault();
-          }
-        }
-
-        // Close dropdowns with Escape
-        if (event.key === 'Escape') {
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
-          openDropdowns.forEach(dropdown => {
-            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
-          });
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Tab') {
+          document.body.classList.add('keyboard-navigation');
         }
       };
 
@@ -129,16 +123,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     enhanceFocusManagement();
     const cleanup = addKeyboardNavigation();
 
-      const header = document.querySelector('header');
-      if (header && !header.getAttribute('role')) {
-        header.setAttribute('role', 'banner');
-    // Cleanup function
-    return () => {
-      const skipLink = document.querySelector('a[href="#main-content"]');
-      if (skipLink) {
-        skipLink.remove();
-      }
-    // Check for user preferences
+    // Get user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
 
@@ -181,8 +166,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     return () => {
       motionQuery.removeEventListener('change', handleMotionChange);
       contrastQuery.removeEventListener('change', handleContrastChange);
+      cleanup();
     };
-  }, []);
+  }, [settings]);
+
   return <React.Fragment>{children}</React.Fragment>;
 };
 
