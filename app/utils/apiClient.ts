@@ -1,6 +1,6 @@
 /**
- * API Client Utility
- * Provides a centralized API client with error handling and caching
+ * API Client Utility;
+ * Provides a centralized API client with error handling and caching;
  */
 
 import { apiCache } from './apiCache';
@@ -28,12 +28,12 @@ class APIClient {
     this.baseURL = baseURL;
     this.defaultHeaders = {
       'Content-Type': 'application/json',
-      ...defaultHeaders
+      ...defaultHeaders;
     };
   }
 
   private async makeRequest<T>(
-    endpoint: string,
+    endpoint: string;
     config: RequestConfig = {}
   ): Promise<APIResponse<T>> {
     const {
@@ -41,13 +41,13 @@ class APIClient {
       headers = {},
       body,
       cache = false,
-      cacheTTL
+      cacheTTL;
     } = config;
 
     const url = `${this.baseURL}${endpoint}`;
     const cacheKey = apiCache.generateKey(url, body);
 
-    // Check cache for GET requests
+    // Check cache for GET requests;
     if (method === 'GET' && cache) {
       const cachedData = apiCache.get(cacheKey);
       if (cachedData) {
@@ -56,24 +56,23 @@ class APIClient {
     }
 
     try {
-      const response = await fetch(url, {
-        method,
-        headers: {
-          ...this.defaultHeaders,
-          ...headers
-        },
-        body: body ? JSON.stringify(body) : undefined
-
+      const response = await fetch(url, {)
+        method)
+        headers: {,
+          ...this.defaultHeaders),
+          ...headers;
+        })
+        body: body ? JSON.stringify(body) : undefined;
       const data = await response.json();
 
       const apiResponse: APIResponse<T> = {
-        data,
-        status: response.status,
-        statusText: response.statusText,
-        headers: Object.fromEntries(response.headers.entries())
+        data;
+        status: response.status;
+        statusText: response.statusText;
+        headers: Object.fromEntries(response.headers.entries()),
       };
 
-      // Cache successful GET requests
+      // Cache successful GET requests;
       if (method === 'GET' && cache && response.ok) {
         apiCache.set(cacheKey, apiResponse, cacheTTL);
       }
@@ -104,23 +103,23 @@ class APIClient {
     return this.makeRequest<T>(endpoint, { ...config, method: 'DELETE' });
   }
 
-  // Set base URL
-  setBaseURL(baseURL: string): void {
+  // Set base URL;
+  setBaseURL(baseURL: string): void {,
     this.baseURL = baseURL;
   }
 
-  // Set default headers
+  // Set default headers;
   setDefaultHeaders(headers: Record<string, string>): void {
     this.defaultHeaders = { ...this.defaultHeaders, ...headers };
   }
 
-  // Clear cache
+  // Clear cache;
   clearCache(): void {
     apiCache.clear();
   }
 }
 
-// Create singleton instance
+// Create singleton instance;
 export const apiClient = new APIClient();
 
 export default APIClient;

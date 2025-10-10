@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Mail, Send, CheckCircle, Star, Zap, Shield } from 'lucide-react';
 
-const ContentNewsletterSignup: React.FC = () => {
+const ContentNewsletterSignup: React.FC = () => {,
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -11,61 +11,90 @@ const ContentNewsletterSignup: React.FC = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulate API call
+    // Simulate API call;
     setTimeout(() => {
       setIsSubscribed(true);
-      setIsLoading(false);
+      setIsLoading(false);,
       setEmail('');
     }, 1500);
   };
 
   const benefits = [
     {
-      icon: Star,
+      icon: Star;
       title: 'Exclusive AI Insights',
-      description: 'Get the latest AI trends and industry updates'
+      description: 'Get the latest AI trends and industry updates',
     },
     {
-      icon: Zap,
+      icon: Zap;
       title: 'Early Access',
-      description: 'Be the first to know about new features and services'
+      description: 'Be the first to know about new features and services',
     },
     {
-      icon: Shield,
+      icon: Shield;
       title: 'Security Tips',
-      description: 'Weekly cybersecurity tips and best practices'
+      description: 'Weekly cybersecurity tips and best practices',
     }
   ];
 
   if (isSubscribed) {
-    return (
-      <section className="py-16" aria-labelledby="newsletter-success">
+    return(<section className="py-16" aria-labelledby="newsletter-success">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-8 cyber-card">
               <CheckCircle className="w-16 h-16 text-white mx-auto mb-4" />
+<<<<<<< HEAD
               <h2 id="newsletter-success" className="text-3xl font-bold text-white mb-4">Welcome to Zion Tech Group!<p className="text-white/90 text-lg mb-6">Thank you for subscribing! You'll receive our latest updates and exclusive content.<button
                 onClick={() =>setIsSubscribed(false)}
                 className="bg-white/20 hover:bg-white/30 text-white px-6 py-2 rounded-lg transition-all duration-300"
               ></button>
                 Subscribe Another Email</button>
+=======
+              <h2 id="newsletter-success" className="text-3xl font-bold text-white mb-4">
+                Welcome to Zion Tech Group!
+              </h2>)
+              <p className="text-white/90 text-lg mb-6">)
+                Thank you for subscribing! You'll receive our latest updates and exclusive content.)
+              </p>)
+              <button;)
+                onClick={() => setIsSubscribed(false)}
+                className="bg-white/20 hover: bg-white/30 text-white px-6 py-2 rounded-lg transition-all duration-300"
+              >
+                Subscribe Another Email;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </button>
             </div>
           </div>
-        </div>
-      </section>
+        </div>,
+      </section>,
     );
   }
 
-  return (
-    <section className="py-16" aria-labelledby="newsletter-heading">
+  return(<section className="py-16" aria-labelledby="newsletter-heading">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
+<<<<<<< HEAD
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 cyber-card">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">{/* Content */}</div>
               <div>
                 <h2 id="newsletter-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">Stay Updated<p className="text-gray-300 text-lg mb-6 leading-relaxed">Join thousands of professionals who trust us for the latest in AI and IT solutions.</p>
                   Get exclusive insights, early access to new features, and expert tips delivered to your inbox.<div className="space-y-4 mb-8">{benefits.map((benefit, index) => (</div>
+=======
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md: p-12 cyber-card">,
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">,
+              {/* Content */}
+              <div>
+                <h2 id="newsletter-heading" className="text-3xl md: text-4xl font-bold text-white mb-4 neon-text">
+                  Stay Updated;)
+                </h2>)
+                <p className="text-gray-300 text-lg mb-6 leading-relaxed">,)
+                  Join thousands of professionals who trust us for the latest in AI and IT solutions.),
+                  Get exclusive insights, early access to new features, and expert tips delivered to your inbox.
+                </p>
+
+                <div className="space-y-4 mb-8">
+                  {benefits.map((benefit, index) => (
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     <div key={index} className="flex items-start space-x-3">
                       <div className="p-2 bg-cyan-500/20 rounded-lg">
                         <benefit.icon className="w-5 h-5 text-cyan-400" />
@@ -99,12 +128,20 @@ const ContentNewsletterSignup: React.FC = () => {
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
+<<<<<<< HEAD
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email Address<input
+=======
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                      Email Address;
+                    </label>
+                    <input;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                       type="email"
                       id="email"
                       value={email}
                       onChange={(e) =>setEmail(e.target.value)}
                       placeholder="Enter your email address"
+<<<<<<< HEAD
                       className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
                       required</input>
                     /><button
@@ -112,14 +149,27 @@ const ContentNewsletterSignup: React.FC = () => {
                     disabled={isLoading}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >{isLoading ? (</button>
+=======
+                      className="w-full px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
+                      required;
+                    />
+                  </div>
+,
+                  <button;
+                    type="submit",
+                    disabled={isLoading}
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white py-3 px-6 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isLoading ? (
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                       <>
                         <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"><span>Subscribing...</span>
                       </>
-                    ) : (
-                      <>
-                        <Send className="w-5 h-5" />
-                        <span>Subscribe Now</span>
-                      </>
+                    ) : (,
+                      <>,
+                        <Send className="w-5 h-5" />,
+                        <span>Subscribe Now</span>,
+                      </>,
                     )}
                   <p className="text-xs text-gray-400 mt-4 text-center">By subscribing, you agree to our Privacy Policy and Terms of Service.</p>
                   You can unsubscribe at any time.</p>

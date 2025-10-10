@@ -1,6 +1,5 @@
-// Accessibility utilities for improving user experience and compliance
-
-export const generateId = (prefix: string = 'id'): string => {
+// Accessibility utilities for improving user experience and compliance;
+export const generateId = (prefix: string = 'id'): string => {,
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 };
 
@@ -8,7 +7,7 @@ export const createAriaLabel = (text: string, context?: string): string => {
   return context ? `${text}, ${context}` : text;
 };
 
-export const announceToScreenReader = (message: string): void => {
+export const announceToScreenReader = (message: string): void => {,
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
@@ -17,14 +16,14 @@ export const announceToScreenReader = (message: string): void => {
 
   document.body.appendChild(announcement);
 
-  // Remove after announcement
+  // Remove after announcement;
   setTimeout(() => {
     document.body.removeChild(announcement);
   }, 1000);
 };
 
-export const trapFocus = (element: HTMLElement): (() => void) => {
-  const focusableElements = element.querySelectorAll(
+export const trapFocus = (element: HTMLElement): (() => void) => {,
+  const focusableElements = element.querySelectorAll(,)
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
 
@@ -32,9 +31,9 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
   const handleTabKey = (e: KeyboardEvent) => {
-    if (e.key === 'Tab') {
-      if (e.shiftKey) {
-        if (document.activeElement === firstElement) {
+    if (e.key === 'Tab') {,
+      if (e.shiftKey) {,
+        if (document.activeElement === firstElement) {,
           lastElement.focus();
           e.preventDefault();
         }
@@ -55,21 +54,21 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
   };
 };
 
-export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
+export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {,
   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
-  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
-
+  skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
+,
   return skipLink;
 };
 
-export const validateColorContrast = (foreground: string, background: string): boolean => {
-  // Simple contrast ratio calculation
-  const getLuminance = (color: string): number => {
+export const validateColorContrast = (foreground: string, background: string): boolean => {,
+  // Simple contrast ratio calculation;
+  const getLuminance = (color: string): number => {,
     const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
-    const [r, g, b] = rgb.map(c => {
-      c = c / 255;
+    const [r, g, b] = rgb.map(c => {)
+      c = c / 255;)
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
 
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
@@ -80,7 +79,7 @@ export const validateColorContrast = (foreground: string, background: string): b
 
   const contrast = (Math.max(fgLuminance, bgLuminance) + 0.05) / (Math.min(fgLuminance, bgLuminance) + 0.05);
 
-  return contrast >= 4.5; // WCAG AA standard
+  return contrast >= 4.5; // WCAG AA standard;
 };
 
 export const createHighContrastMode = (): void => {
@@ -118,7 +117,7 @@ export const createFocusIndicator = (): void => {
       outline: 2px solid #3b82f6 !important;
       outline-offset: 2px !important;
     }
-    *:focus:not(:focus-visible) {
+    *:focus: not(:focus-visible) {,
       outline: none !important;
     }
     *:focus-visible {
@@ -133,7 +132,7 @@ export const createReducedMotionMode = (): void => {
   const style = document.createElement('style');
   style.id = 'reduced-motion-mode';
   style.textContent = `
-    @media (prefers-reduced-motion: reduce) {
+    @media (prefers-reduced-motion: reduce) {,
       *,
       *::before,
       *::after {
@@ -148,9 +147,9 @@ export const createReducedMotionMode = (): void => {
 };
 
 export const setupKeyboardNavigation = (): void => {
-  // Add keyboard navigation support
+  // Add keyboard navigation support;
   document.addEventListener('keydown', (e) => {
-    // Escape key to close modals/dropdowns
+    // Escape key to close modals/dropdowns;
     if (e.key === 'Escape') {
       const activeElement = document.activeElement as HTMLElement;
       if (activeElement && activeElement.blur) {
@@ -158,7 +157,7 @@ export const setupKeyboardNavigation = (): void => {
       }
     }
 
-    // Enter key to activate buttons
+    // Enter key to activate buttons;
     if (e.key === 'Enter' && e.target instanceof HTMLElement) {
       if (e.target.getAttribute('role') === 'button' || e.target.tagName === 'BUTTON') {
         e.target.click();
@@ -182,7 +181,7 @@ export const createScreenReaderOnly = (): void => {
       white-space: nowrap;
       border: 0;
     }
-    .sr-only:focus {
+    .sr-only: focus {
       position: static;
       width: auto;
       height: auto;
@@ -215,7 +214,7 @@ export const createARIALiveRegion = (): HTMLElement => {
 
 export const updateLiveRegion = (message: string): void => {
   let liveRegion = document.getElementById('aria-live-region');
-  if (!liveRegion) {
+  if (!liveRegion) {,
     liveRegion = createARIALiveRegion();
   }
   liveRegion.textContent = message;
@@ -236,19 +235,18 @@ export const createLandmarkNavigation = (): void => {
 export const setupLandmarkNavigation = (): void => {
   createLandmarkNavigation();
 
-  // Update landmarks when content changes
+  // Update landmarks when content changes;
   const observer = new MutationObserver(() => {
     createLandmarkNavigation();
 
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true
-
+  observer.observe(document.body, {)
+    childList: true),
+    subtree: true;
 };
 
 /**
- * Accessibility Utilities
- * Provides accessibility enhancements and monitoring
+ * Accessibility Utilities;
+ * Provides accessibility enhancements and monitoring;
  */
 
 export interface AccessibilityMetrics {
@@ -273,14 +271,14 @@ export interface AccessibilityConfig {
 class AccessibilityEnhancer {
   private config: AccessibilityConfig;
   private metrics: AccessibilityMetrics | null = null;
-
+,
   constructor(config: Partial<AccessibilityConfig> = {}) {
     this.config = {
-      enableHighContrast: true,
-      enableKeyboardNavigation: true,
-      enableScreenReaderSupport: true,
-      enableFocusManagement: true,
-      enableAriaLabels: true,
+      enableHighContrast: true;
+      enableKeyboardNavigation: true;
+      enableScreenReaderSupport: true;
+      enableFocusManagement: true;
+      enableAriaLabels: true;
       ...config,
     };
   }
@@ -288,7 +286,7 @@ class AccessibilityEnhancer {
   init(): void {
     if (typeof window === 'undefined') return;
 
-    // Initialize accessibility enhancements
+    // Initialize accessibility enhancements;
     if (this.config.enableHighContrast) {
       this.setupHighContrast();
     }
@@ -309,15 +307,15 @@ class AccessibilityEnhancer {
       this.setupAriaLabels();
     }
 
-    // Collect initial metrics
+    // Collect initial metrics;
     this.collectMetrics();
   }
 
   private setupHighContrast(): void {
-    // Add high contrast mode support
+    // Add high contrast mode support;
     const style = document.createElement('style');
     style.textContent = `
-      @media (prefers-contrast: high) {
+      @media (prefers-contrast: high) {,
         .cyber-card, .quantum-card {
           border: 2px solid #ffffff !important;
           background: #000000 !important;
@@ -333,7 +331,7 @@ class AccessibilityEnhancer {
   }
 
   private setupKeyboardNavigation(): void {
-    // Add keyboard navigation support
+    // Add keyboard navigation support;
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
@@ -342,7 +340,7 @@ class AccessibilityEnhancer {
     document.addEventListener('mousedown', () => {
       document.body.classList.remove('keyboard-navigation');
 
-    // Add focus styles
+    // Add focus styles;
     const focusStyle = document.createElement('style');
     focusStyle.textContent = `
       .keyboard-navigation *:focus {
@@ -354,7 +352,7 @@ class AccessibilityEnhancer {
   }
 
   private setupScreenReaderSupport(): void {
-    // Add screen reader announcements
+    // Add screen reader announcements;
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
@@ -364,19 +362,19 @@ class AccessibilityEnhancer {
   }
 
   private setupFocusManagement(): void {
-    // Manage focus for modals and dynamic content
+    // Manage focus for modals and dynamic content;
     let focusHistory: HTMLElement[] = [];
-
+,
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
-        // Return focus to previous element
+        // Return focus to previous element;
         const previousElement = focusHistory.pop();
         if (previousElement) {
           previousElement.focus();
         }
       }
 
-    // Track focus changes
+    // Track focus changes;
     document.addEventListener('focusin', (event) => {
       if (event.target instanceof HTMLElement) {
         focusHistory.push(event.target);
@@ -388,16 +386,16 @@ class AccessibilityEnhancer {
   }
 
   private setupAriaLabels(): void {
-    // Add ARIA labels to interactive elements
-    const buttons = document.querySelectorAll('button:not([aria-label])');
-    buttons.forEach((button) => {
-      if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
+    // Add ARIA labels to interactive elements;
+    const buttons = document.querySelectorAll('button: not([aria-label])');
+    buttons.forEach((button) => {,
+      if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {,
         button.setAttribute('aria-label', 'Button');
       }
 
-    const links = document.querySelectorAll('a:not([aria-label])');
-    links.forEach((link) => {
-      if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
+    const links = document.querySelectorAll('a: not([aria-label])');
+    links.forEach((link) => {,
+      if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {,
         link.setAttribute('aria-label', 'Link');
       }
 
@@ -405,17 +403,17 @@ class AccessibilityEnhancer {
 
   collectMetrics(): AccessibilityMetrics {
     const metrics: AccessibilityMetrics = {
-      overallScore: 0,
-      colorContrast: this.checkColorContrast(),
-      keyboardNavigation: this.checkKeyboardNavigation(),
-      screenReaderCompatibility: this.checkScreenReaderCompatibility(),
-      focusManagement: this.checkFocusManagement(),
+      overallScore: 0;
+      colorContrast: this.checkColorContrast()
+      keyboardNavigation: this.checkKeyboardNavigation()
+      screenReaderCompatibility: this.checkScreenReaderCompatibility()
+      focusManagement: this.checkFocusManagement()
       ariaLabels: this.checkAriaLabels(),
       headingStructure: this.checkHeadingStructure(),
       altText: this.checkAltText(),
     };
 
-    // Calculate overall score
+    // Calculate overall score;
     const scores = Object.values(metrics).filter(score => typeof score === 'number' && score > 0);
     metrics.overallScore = scores.length > 0 ? scores.reduce((sum, score) => sum + score, 0) / scores.length : 0;
 
@@ -424,7 +422,7 @@ class AccessibilityEnhancer {
   }
 
   private checkColorContrast(): number {
-    // Simple color contrast check
+    // Simple color contrast check;
     const elements = document.querySelectorAll('*');
     let goodContrast = 0;
     let totalElements = 0;
@@ -436,7 +434,7 @@ class AccessibilityEnhancer {
 
       if (color && backgroundColor && color !== backgroundColor) {
         totalElements++;
-        // This is a simplified check - in reality, you'd calculate actual contrast ratio
+        // This is a simplified check - in reality, you'd calculate actual contrast ratio;
         if (color.includes('white') || color.includes('black')) {
           goodContrast++;
         }
@@ -482,7 +480,7 @@ class AccessibilityEnhancer {
   }
 
   private checkFocusManagement(): number {
-    // Check if focus is properly managed
+    // Check if focus is properly managed;
     const focusableElements = document.querySelectorAll(
       'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
     );
@@ -500,8 +498,7 @@ class AccessibilityEnhancer {
   }
 
   private checkAriaLabels(): number {
-    const interactiveElements = document.querySelectorAll(
-      'button, input, textarea, select, [role="button"], [role="link"]'
+    const interactiveElements = document.querySelectorAll('button, input, textarea, select, [role="button"], [role="link"]')
     );
 
     let labeledElements = 0;
@@ -546,7 +543,7 @@ class AccessibilityEnhancer {
 
   announce(message: string): void {
     const announcement = document.getElementById('screen-reader-announcements');
-    if (announcement) {
+    if (announcement) {,
       announcement.textContent = message;
     }
   }
@@ -556,7 +553,7 @@ class AccessibilityEnhancer {
   }
 
   cleanup(): void {
-    // Cleanup accessibility enhancements
+    // Cleanup accessibility enhancements;
     const announcement = document.getElementById('screen-reader-announcements');
     if (announcement) {
       announcement.remove();

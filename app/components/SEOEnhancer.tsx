@@ -12,10 +12,17 @@ interface SEOEnhancerProps {
   ogType?: string;
   structuredData?: Record<string, unknown>;
   noIndex?: boolean;
+<<<<<<< HEAD
 }</string>
 </string>
 const SEOEnhancer: React.FC<SEOEnhancerProps>= ({
   children,
+=======
+}
+
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
+  children;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with cutting-edge technology.',
   keywords = [
@@ -27,31 +34,31 @@ const SEOEnhancer: React.FC<SEOEnhancerProps>= ({
     'machine learning',
   ],
   canonicalUrl,
-  ogImage = 'https://ziontechgroup.com/og-image.webp',
+  ogImage = 'https: //ziontechgroup.com/og-image.webp',
   ogType = 'website',
   structuredData,
   noIndex = false,
 }) => {
   const defaultStructuredData = {
-    '@context': 'https://schema.org',
+    '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     description,
-    url: 'https://ziontechgroup.com',
+    url: 'https://ziontechgroup.com'
     logo: 'https://ziontechgroup.com/logo.webp',
-    sameAs: [
+    sameAs: [,
       'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://github.com/zion-tech-group',
+      'https: //twitter.com/ziontechgroup',
+      'https: //github.com/zion-tech-group',
     ],
-    contactPoint: {
+    contactPoint: {,
       '@type': 'ContactPoint',
       telephone: '+1-555-ZION-TECH',
       contactType: 'customer service',
       availableLanguage: 'English',
     },
     address: {
-      '@type': 'PostalAddress',
+      '@type': 'PostalAddress'
       streetAddress: '123 Tech Innovation Drive',
       addressLocality: 'San Francisco',
       addressRegion: 'CA',
@@ -61,11 +68,20 @@ const SEOEnhancer: React.FC<SEOEnhancerProps>= ({
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
+<<<<<<< HEAD
 </SEOEnhancerProps>
   return (</SEOEnhancerProps>
     <>
       <Helmet>{/* Basic Meta Tags */}<title>{title}</title>
         <meta name="description" content={description} />
+=======
+
+  return(<>)
+      <Helmet>)
+        {/* Basic Meta Tags */})
+        <title>{title}</title>)
+        <meta name="description" content={description} />)
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
         <meta name="keywords" content={keywords.join(', ')} />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
@@ -74,15 +90,25 @@ const SEOEnhancer: React.FC<SEOEnhancerProps>= ({
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <meta name="distribution" content="global" />
+<<<<<<< HEAD
         <meta name="rating" content="general" >{/* Canonical URL */}</meta>
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} >}
 </link>
         {/* Open Graph Tags */}</link>
         </link><meta property="og:type" content={ogType} />
+=======
+        <meta name="rating" content="general" />
+        {/* Canonical URL */}
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+
+        {/* Open Graph Tags */}
+        <meta property="og:type" content={ogType} />
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:url" content={canonicalUrl || 'https://ziontechgroup.com'} />
+<<<<<<< HEAD
         <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" >{/* Twitter Card Tags */}</meta>
         </meta><meta name="twitter:card" content="summary_large_image" />
@@ -103,6 +129,36 @@ const SEOEnhancer: React.FC<SEOEnhancerProps>= ({
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" >{/* DNS Prefetch */}</link>
         </link><link rel="dns-prefetch" href="//fonts.googleapis.com" />
+=======
+        <meta property="og: site_name" content="Zion Tech Group" />,
+        <meta property="og:locale" content="en_US" />,
+,
+        {/* Twitter Card Tags */}
+        <meta name="twitter: card" content="summary_large_image" />,
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter: site" content="@ziontechgroup" />,
+        <meta name="twitter:creator" content="@ziontechgroup" />,
+,
+        {/* Additional SEO Tags */}
+        <meta name="theme-color" content="#1f2937" />
+        <meta name="msapplication-TileColor" content="#1f2937" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+        {/* Structured Data */}
+        <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
+
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https: //fonts.googleapis.com" />,
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
+        <link rel="preconnect" href="https://www.google-analytics.com" />,
+        <link rel="preconnect" href="https://www.googletagmanager.com" />,
+,
+        {/* DNS Prefetch */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
       </Helmet>

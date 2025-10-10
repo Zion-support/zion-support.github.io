@@ -3,19 +3,19 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 
-// Function to fix blog files with parsing errors
+// Function to fix blog files with parsing errors;
 function fixBlogFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix missing closing parenthesis and return statement
+    // Fix missing closing parenthesis and return statement;
     if (content.includes('};') && !content.includes('  );')) {
       content = content.replace(/};$/, '  );\n};');
       modified = true;
     }
 
-    // Fix merge conflict markers
+    // Fix merge conflict markers;
     if (content.includes('      console.log(`⚠ Found merge conflict markers in ${filePath}, skipping...`);
       return;
     }
@@ -29,7 +29,7 @@ function fixBlogFile(filePath) {
   }
 }
 
-// Main execution
+// Main execution;
 console.log('🔧 Fixing blog files...\n');
 
 const blogFiles = [

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
+  content: [,
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -10,26 +10,26 @@ export default {
     extend: {
       colors: {
         neon: {
-          cyan: '#00ffff',
+          cyan: '#00ffff'
           purple: '#8b5cf6',
           pink: '#ec4899',
           green: '#10b981',
           orange: '#f59e0b',
           blue: '#3b82f6',
         },
-        dark: {
+        dark: {,
           bg: '#0f0f23',
           surface: '#1a1a2e',
           elevated: '#16213e',
         },
-        text: {
+        text: {,
           primary: '#ffffff',
           secondary: '#a1a1aa',
           muted: '#71717a',
         },
       },
-      fontFamily: {
-        sans: [
+      fontFamily: {,
+        sans: [,
           'Inter',
           '-apple-system',
           'BlinkMacSystemFont',
@@ -44,7 +44,7 @@ export default {
           'sans-serif',
         ],
       },
-      animation: {
+      animation: {,
         'neon-glow': 'neon-glow 2s ease-in-out infinite alternate',
         'neon-pulse': 'neon-pulse 2s ease-in-out infinite alternate',
         'matrix-rain': 'matrix-rain 3s linear infinite',
@@ -55,8 +55,8 @@ export default {
         'scale-in': 'scaleIn 0.6s ease-out forwards',
         'loading': 'loading 1.5s infinite',
       },
-      keyframes: {
-        'neon-glow': {
+      keyframes: {,
+        'neon-glow': {,
           '0%, 100%': {
             textShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
           },
@@ -107,31 +107,31 @@ export default {
           },
         },
         'fadeIn': {
-          from: {
+          from: {,
             opacity: '0',
             transform: 'translateY(20px)',
           },
-          to: {
+          to: {,
             opacity: '1',
             transform: 'translateY(0)',
           },
         },
         'slideIn': {
-          from: {
+          from: {,
             opacity: '0',
             transform: 'translateX(-20px)',
           },
-          to: {
+          to: {,
             opacity: '1',
             transform: 'translateX(0)',
           },
         },
         'scaleIn': {
-          from: {
+          from: {,
             opacity: '0',
             transform: 'scale(0.9)',
           },
-          to: {
+          to: {,
             opacity: '1',
             transform: 'scale(1)',
           },
@@ -145,39 +145,39 @@ export default {
           },
         },
       },
-      backgroundImage: {
-        'cyber-grid': `
+      backgroundImage: {,
+        'cyber-grid': `,
           linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
           linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
         `,
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-      backgroundSize: {
+      backgroundSize: {,
         'grid': '20px 20px',
       },
-      backdropBlur: {
+      backdropBlur: {,
         xs: '2px',
       },
-      boxShadow: {
+      boxShadow: {,
         'neon': '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
         'neon-lg': '0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor',
         'cyber': '0 20px 40px rgba(0, 255, 255, 0.2)',
       },
-      textShadow: {
+      textShadow: {,
         'neon': '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
         'neon-lg': '0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor',
       },
-      screens: {
+      screens: {,
         'xs': '475px',
         '3xl': '1600px',
       },
-      spacing: {
+      spacing: {,
         '18': '4.5rem',
         '88': '22rem',
         '128': '32rem',
       },
-      zIndex: {
+      zIndex: {,
         '60': '60',
         '70': '70',
         '80': '80',
@@ -186,7 +186,7 @@ export default {
       },
     },
   },
-  plugins: [
+  plugins: [,
     function({ addUtilities }) {
       const newUtilities = {
         '.neon-text': {
@@ -210,7 +210,7 @@ export default {
           border: '1px solid rgba(255, 255, 255, 0.2)',
         },
         '.cyber-grid': {
-          backgroundImage: `
+          backgroundImage: `,
             linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
           `,
@@ -218,18 +218,18 @@ export default {
         },
         '.cyber-button': {
           background: 'linear-gradient(45deg, var(--neon-cyan), var(--neon-purple))',
-          border: 'none',
-          color: 'white',
-          padding: '12px 24px',
-          borderRadius: '8px',
-          fontWeight: '600',
+          border: 'none'
+          color: 'white'
+          padding: '12px 24px'
+          borderRadius: '8px'
+          fontWeight: '600'
           textTransform: 'uppercase',
           letterSpacing: '1px',
           position: 'relative',
           overflow: 'hidden',
           transition: 'all 0.3s ease',
         },
-        '.cyber-button:hover': {
+        '.cyber-button: hover': {,
           transform: 'translateY(-2px)',
           boxShadow: '0 10px 20px rgba(0, 255, 255, 0.3)',
         },
@@ -242,7 +242,7 @@ export default {
           overflow: 'hidden',
           transition: 'all 0.3s ease',
         },
-        '.cyber-card:hover': {
+        '.cyber-card: hover': {,
           transform: 'translateY(-5px)',
           borderColor: 'var(--neon-cyan)',
           boxShadow: '0 20px 40px rgba(0, 255, 255, 0.2)',
@@ -253,7 +253,7 @@ export default {
           animation: 'loading 1.5s infinite',
         },
         '.sr-only': {
-          position: 'absolute',
+          position: 'absolute'
           width: '1px',
           height: '1px',
           padding: '0',
@@ -263,10 +263,10 @@ export default {
           whiteSpace: 'nowrap',
           border: '0',
         },
-        '.sr-only:focus': {
-          position: 'static',
-          width: 'auto',
-          height: 'auto',
+        '.sr-only: focus': {
+          position: 'static'
+          width: 'auto'
+          height: 'auto'
           padding: 'inherit',
           margin: 'inherit',
           overflow: 'visible',

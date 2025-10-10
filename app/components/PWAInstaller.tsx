@@ -5,26 +5,26 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 
-const PWAInstaller: React.FC = () => {
+const PWAInstaller: React.FC = () => {,
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallButton, setShowInstallButton] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
 
   useEffect(() => {
-    // Check if app is already installed
-    if (window.matchMedia('(display-mode: standalone)').matches) {
+    // Check if app is already installed;
+    if (window.matchMedia('(display-mode: standalone)').matches) {,
       setIsInstalled(true);
       return;
     }
 
-    // Listen for the beforeinstallprompt event
+    // Listen for the beforeinstallprompt event;
     const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowInstallButton(true);
     };
 
-    // Listen for the appinstalled event
+    // Listen for the appinstalled event;
     const handleAppInstalled = () => {
       setIsInstalled(true);
       setShowInstallButton(false);
@@ -60,9 +60,14 @@ const PWAInstaller: React.FC = () => {
   if (isInstalled || !showInstallButton) {
     return null;
   }
+<<<<<<< HEAD
 </BeforeInstallPromptEvent>
   return (</BeforeInstallPromptEvent>
     <div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+=======
+
+  return(<div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
       <div className="flex items-start space-x-3">
         <div className="flex-shrink-0">
           <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">📱</div>
@@ -74,8 +79,9 @@ const PWAInstaller: React.FC = () => {
           </p>
 
           <div className="flex space-x-2">
-            <button
+            <button;
               onClick={handleInstallClick}
+<<<<<<< HEAD
               className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200"
             >Install<button
               onClick={() =>setShowInstallButton(false)}
@@ -89,6 +95,30 @@ const PWAInstaller: React.FC = () => {
         </button>
       </div>
     </div>
+=======
+              className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover: bg-white/90 transition-colors duration-200")
+            >)
+              Install;)
+            </button>)
+),
+            <button;),
+              onClick={() => setShowInstallButton(false)}
+              className="text-white/70 text-xs px-3 py-1.5 hover: text-white transition-colors duration-200"
+            >
+              Maybe later;
+            </button>
+          </div>
+        </div>,
+,
+        <button;
+          onClick={() => setShowInstallButton(false)}
+          className="flex-shrink-0 text-white/70 hover: text-white transition-colors duration-200"
+        >
+          ×,
+        </button>,
+      </div>,
+    </div>,
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
   );
 };
 

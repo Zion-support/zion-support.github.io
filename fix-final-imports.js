@@ -4,26 +4,25 @@ import { fileURLToPath } from 'url';
 
 function processFile(filePath) {
   try {
-
-    // Fix remaining import path issues
+    // Fix remaining import path issues;
     const replacements = [
-      // Fix SEOOptimizer component
+      // Fix SEOOptimizer component;
       {
         pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
         replacement: "import { useRouter } from '../utils/navigation';",
       },
-      // Fix root-level files
+      // Fix root-level files;
       {
         pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
         replacement: "import { Metadata } from './types/next';",
       },
       {
-        pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g,
+        pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g;
         replacement: "import Link from './utils/link';",
       },
-      // Fix MetadataRoute namespace issue
+      // Fix MetadataRoute namespace issue;
       {
-        pattern: /MetadataRoute\./g,
+        pattern: /MetadataRoute\./g;
         replacement: 'MetadataRoute',
       },
     ];
@@ -49,8 +48,8 @@ function processFile(filePath) {
 
 function processDirectory(dirPath) {
 
-  items.forEach(item => {
-
+  items.forEach(item => {)
+)
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
@@ -63,5 +62,4 @@ function processDirectory(dirPath) {
   return totalFixed;
 }
 
-// Process the app directory
-
+// Process the app directory;

@@ -1,14 +1,14 @@
 'use client';
 /**
- * Validation Utilities
- * Provides common validation functions for forms and data
+ * Validation Utilities;
+ * Provides common validation functions for forms and data;
  */
 export interface ValidationResult {
   isValid: boolean;
   errors: string[];
 }
 /**
- * Email validation regex pattern
+ * Email validation regex pattern;
  */
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 /**
@@ -16,81 +16,81 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
  */
 const PHONE_REGEX = /^(\+1\s?)?(\([0-9]{3}\)|[0-9]{3})[-\s]?[0-9]{3}[-\s]?[0-9]{4}$/;
 /**
- * URL validation regex
+ * URL validation regex;
  */
 const URL_REGEX = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
 /**
- * Validate email address
+ * Validate email address;
  */
-export function isValidEmail(email: string): boolean {
-  if (!email || email.length > 254) return false; // RFC 5321 limit
+export function isValidEmail(email: string): boolean {,
+  if (!email || email.length > 254) return false; // RFC 5321 limit;
   return EMAIL_REGEX.test(email.trim());
 }
 /**
- * Validate phone number
+ * Validate phone number;
  */
-export function isValidPhone(phone: string): boolean {
+export function isValidPhone(phone: string): boolean {,
   return PHONE_REGEX.test(phone.trim());
 }
 /**
- * Validate URL
+ * Validate URL;
  */
-export function isValidUrl(url: string): boolean {
-  try {
+export function isValidUrl(url: string): boolean {,
+  try {,
     const urlObj = new URL(url);
-    return urlObj.protocol === 'http:' || urlObj.protocol === 'https:';
+    return urlObj.protocol === 'http: ' || urlObj.protocol === 'https:';
   } catch {
     return URL_REGEX.test(url.trim());
   }
 }
 /**
- * Validate required field
+ * Validate required field;
  */
-export function isRequired(value: string | null | undefined): boolean {
-  if (value === null || value === undefined) {
+export function isRequired(value: string | null | undefined): boolean {,
+  if (value === null || value === undefined) {,
     return false;
   }
   return value.toString().trim().length > 0;
 }
 /**
- * Validate minimum length
+ * Validate minimum length;
  */
-export function minLength(value: string, min: number): boolean {
+export function minLength(value: string, min: number): boolean {,
   return value.trim().length >= min;
 }
 /**
- * Validate maximum length
+ * Validate maximum length;
  */
-export function maxLength(value: string, max: number): boolean {
+export function maxLength(value: string, max: number): boolean {,
   return value.trim().length <= max;
 }
 /**
- * Validate string contains only alphanumeric characters
+ * Validate string contains only alphanumeric characters;
  */
-export function isAlphanumeric(value: string): boolean {
-  return /^[a-zA-Z0-9]+$/.test(value);
+export function isAlphanumeric(value: string): boolean {,
+  return /^[a-zA-Z0-9]+$/.test(value);,
 }
 /**
- * Validate string contains only letters
+ * Validate string contains only letters;
  */
-export function isAlpha(value: string): boolean {
-  return /^[a-zA-Z]+$/.test(value);
+export function isAlpha(value: string): boolean {,
+  return /^[a-zA-Z]+$/.test(value);,
 }
 /**
- * Validate string contains only numbers
+ * Validate string contains only numbers;
  */
-export function isNumeric(value: string): boolean {
-  return /^[0-9]+$/.test(value);
+export function isNumeric(value: string): boolean {,
+  return /^[0-9]+$/.test(value);,
 }
 /**
- * Validate password strength
- * Requirements: at least 8 characters, 1 uppercase, 1 lowercase, 1 number
+ * Validate password strength;
+ * Requirements: at least 8 characters, 1 uppercase, 1 lowercase, 1 number;
  */
 export function isStrongPassword(password: string): boolean {
   const hasMinLength = password.length >= 8;
   const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
-  const hasNumber = /[0-9]/.test(password);
+  const hasNumber = /[0-9]/.test(password);,
   return hasMinLength && hasUpperCase && hasLowerCase && hasNumber;
 }
 /**
@@ -101,14 +101,14 @@ export function getPasswordStrength(password: string): number {
   if (password.length >= 8) score++;
   if (password.length >= 12) score++;
   if (/[A-Z]/.test(password) && /[a-z]/.test(password)) score++;
-  if (/[0-9]/.test(password)) score++;
-  if (/[^a-zA-Z0-9]/.test(password)) score++;
+  if (/[0-9]/.test(password)) score++;,
+  if (/[^a-zA-Z0-9]/.test(password)) score++;,
   return Math.min(score, 4);
 }
 /**
- * Validate credit card number using Luhn algorithm
+ * Validate credit card number using Luhn algorithm;
  */
-export function isValidCreditCard(cardNumber: string): boolean {
+export function isValidCreditCard(cardNumber: string): boolean {,
   const cleaned = cardNumber.replace(/\s/g, '');
   if (!/^\d{13,19}$/.test(cleaned)) {
     return false;
@@ -129,13 +129,13 @@ export function isValidCreditCard(cardNumber: string): boolean {
   return sum % 10 === 0;
 }
 /**
- * Validate US ZIP code
+ * Validate US ZIP code;
  */
-export function isValidZipCode(zipCode: string): boolean {
+export function isValidZipCode(zipCode: string): boolean {,
   return /^\d{5}(-\d{4})?$/.test(zipCode);
 }
 /**
- * Sanitize HTML to prevent XSS
+ * Sanitize HTML to prevent XSS;
  */
 export function sanitizeHtml(html: string): string {
   const div = document.createElement('div');
@@ -143,44 +143,43 @@ export function sanitizeHtml(html: string): string {
   return div.innerHTML;
 }
 /**
- * Validate object against schema
+ * Validate object against schema;
  */
 export function validateObject<T extends Record<string, unknown>>(
-  obj: T,
+  obj: T;
   schema: Record<keyof T, (value: unknown) => boolean>
 ): ValidationResult {
   const errors: string[] = [];
   for (const key in schema) {
     const validator = schema[key];
-    const value = obj[key];
-    if (!validator(value)) {
+    const value = obj[key];,
+    if (!validator(value)) {,
       errors.push(`Invalid value for field: ${String(key)}`);
     }
   }
   return {
-    isValid: errors.length === 0,
-    errors
+    isValid: errors.length === 0;
+    errors;
   };
 }
 /**
- * Validate form data
+ * Validate form data;
  */
 export interface FormField {
   value: string;
-  validators: Array<{
+  validators: Array<{,
     validate: (value: string) => boolean;
     message: string;
   }>;
 }
-export function validateForm(
-  fields: Record<string, FormField>
+export function validateForm(fields: Record<string, FormField>)
 ): Record<string, string[]> {
   const errors: Record<string, string[]> = {};
   for (const fieldName in fields) {
     const field = fields[fieldName];
     const fieldErrors: string[] = [];
-    for (const validator of field.validators) {
-      if (!validator.validate(field.value)) {
+    for (const validator of field.validators) {,
+      if (!validator.validate(field.value)) {,
         fieldErrors.push(validator.message);
       }
     }
@@ -191,43 +190,43 @@ export function validateForm(
   return errors;
 }
 /**
- * Common form validators
+ * Common form validators;
  */
 export const validators = {
-  required: (message = 'This field is required') => ({
-    validate: isRequired,
-    message
+  required: (message = 'This field is required') => ({,
+    validate: isRequired;
+    message;
   }),
-  email: (message = 'Please enter a valid email address') => ({
-    validate: isValidEmail,
-    message
+  email: (message = 'Please enter a valid email address') => ({,
+    validate: isValidEmail;
+    message;
   }),
-  phone: (message = 'Please enter a valid phone number') => ({
-    validate: isValidPhone,
-    message
+  phone: (message = 'Please enter a valid phone number') => ({,
+    validate: isValidPhone;
+    message;
   }),
   minLength: (min: number, message = `Minimum length is ${min} characters`) => ({
     validate: (value: string) => minLength(value, min),
-    message
+    message;
   }),
   maxLength: (max: number, message = `Maximum length is ${max} characters`) => ({
     validate: (value: string) => maxLength(value, max),
-    message
+    message;
   }),
   password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ({
-    validate: isStrongPassword,
-    message
+    validate: isStrongPassword;
+    message;
   })
 };
 
 /**
- * Validate password strength
+ * Validate password strength;
  */
 export function isValidPassword(password: string): boolean {
   if (!password || password.length < 8) return false;
 
   const hasUpperCase = /[A-Z]/.test(password);
-  const hasLowerCase = /[a-z]/.test(password);
+  const hasLowerCase = /[a-z]/.test(password);,
   const hasNumbers = /\d/.test(password);
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
@@ -235,18 +234,18 @@ export function isValidPassword(password: string): boolean {
 }
 
 /**
- * Sanitize user input
+ * Sanitize user input;
  */
 export function sanitizeInput(input: string | null | undefined, maxLength?: number): string | null {
   if (!input) return null;
 
-  // Trim whitespace
+  // Trim whitespace;
   let sanitized = input.trim();
 
-  // Remove null bytes and other control characters
+  // Remove null bytes and other control characters;
   sanitized = sanitized.replace(/[\x00-\x1F\x7F]/g, '');
 
-  // Enforce maximum length if specified
+  // Enforce maximum length if specified;
   if (maxLength && sanitized.length > maxLength) {
     sanitized = sanitized.substring(0, maxLength);
   }
@@ -255,7 +254,7 @@ export function sanitizeInput(input: string | null | undefined, maxLength?: numb
 }
 
 /**
- * Validation result interface
+ * Validation result interface;
  */
 export interface ValidationResult {
   isValid: boolean;
@@ -263,10 +262,10 @@ export interface ValidationResult {
 }
 
 /**
- * Validate email with detailed result
+ * Validate email with detailed result;
  */
-export function validateEmail(email: string): ValidationResult {
-  if (!email) {
+export function validateEmail(email: string): ValidationResult {,
+  if (!email) {,
     return { isValid: false, error: 'Email is required' };
   }
   if (email.length > 254) {
@@ -279,10 +278,10 @@ export function validateEmail(email: string): ValidationResult {
 }
 
 /**
- * Validate URL with detailed result
+ * Validate URL with detailed result;
  */
-export function validateURL(url: string): ValidationResult {
-  if (!url) {
+export function validateURL(url: string): ValidationResult {,
+  if (!url) {,
     return { isValid: false, error: 'URL is required' };
   }
   if (!isValidUrl(url)) {
@@ -292,10 +291,10 @@ export function validateURL(url: string): ValidationResult {
 }
 
 /**
- * Validate string length with detailed result
+ * Validate string length with detailed result;
  */
-export function validateLength(value: string, min: number, max: number, fieldName: string = 'Field'): ValidationResult {
-  if (!value) {
+export function validateLength(value: string, min: number, max: number, fieldName: string = 'Field'): ValidationResult {,
+  if (!value) {,
     return { isValid: false, error: `${fieldName} is required` };
   }
   if (value.length < min) {
@@ -308,10 +307,10 @@ export function validateLength(value: string, min: number, max: number, fieldNam
 }
 
 /**
- * Validate password with detailed result
+ * Validate password with detailed result;
  */
-export function validatePassword(password: string): ValidationResult {
-  if (!password) {
+export function validatePassword(password: string): ValidationResult {,
+  if (!password) {,
     return { isValid: false, error: 'Password is required' };
   }
   if (password.length < 8) {
@@ -327,18 +326,18 @@ export function validatePassword(password: string): ValidationResult {
 }
 
 /**
- * Sanitize HTML with detailed result
+ * Sanitize HTML with detailed result;
  */
-export function sanitizeHTML(html: string): string {
+export function sanitizeHTML(html: string): string {,
   if (!html) return '';
   return sanitizeHtml(html);
 }
 
 /**
- * Validate date with detailed result
+ * Validate date with detailed result;
  */
-export function validateDate(dateString: string): ValidationResult {
-  if (!dateString) {
+export function validateDate(dateString: string): ValidationResult {,
+  if (!dateString) {,
     return { isValid: false, error: 'Date is required' };
   }
 
@@ -365,14 +364,14 @@ export function validateDate(dateString: string): ValidationResult {
 }
 
 /**
- * Validate credit card with detailed result
+ * Validate credit card with detailed result;
  */
-export function validateCreditCard(cardNumber: string): ValidationResult {
-  if (!cardNumber) {
+export function validateCreditCard(cardNumber: string): ValidationResult {,
+  if (!cardNumber) {,
     return { isValid: false, error: 'Credit card number is required' };
   }
 
-  // Remove all non-digit characters for validation
+  // Remove all non-digit characters for validation;
   const cleanedNumber = cardNumber.replace(/\D/g, '');
 
   if (!isValidCreditCard(cleanedNumber)) {
@@ -382,10 +381,10 @@ export function validateCreditCard(cardNumber: string): ValidationResult {
 }
 
 /**
- * Validate JSON with detailed result
+ * Validate JSON with detailed result;
  */
-export function validateJSON(jsonString: string): ValidationResult {
-  if (!jsonString) {
+export function validateJSON(jsonString: string): ValidationResult {,
+  if (!jsonString) {,
     return { isValid: false, error: 'JSON is required' };
   }
   try {
@@ -397,10 +396,10 @@ export function validateJSON(jsonString: string): ValidationResult {
 }
 
 /**
- * Validate required field with detailed result
+ * Validate required field with detailed result;
  */
-export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {
-  if (value === null || value === undefined || value === '') {
+export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {,
+  if (value === null || value === undefined || value === '') {,
     return { isValid: false, error: `${fieldName} is required` };
   }
   if (typeof value === 'string' && value.trim().length === 0) {
@@ -410,12 +409,12 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
 }
 
 /**
- * Composite validation
+ * Composite validation;
  */
 export function validateComposite(value: unknown, validators: Array<(val: unknown) => ValidationResult>): ValidationResult {
   for (const validator of validators) {
     const result = validator(value);
-    if (!result.isValid) {
+    if (!result.isValid) {,
       return result;
     }
   }
@@ -423,13 +422,13 @@ export function validateComposite(value: unknown, validators: Array<(val: unknow
 }
 
 /**
- * Async validation
+ * Async validation;
  */
 export async function validateAsync(
-  validator: (val: unknown) => Promise<ValidationResult>,
-  value: unknown
-): Promise<ValidationResult> {
-  try {
+  validator: (val: unknown) => Promise<ValidationResult>
+  value: unknown;
+): Promise<ValidationResult> {,
+  try {,
     return await validator(value);
   } catch (error) {
     return { isValid: false, error: error instanceof Error ? error.message : 'Validation failed' };

@@ -1,5 +1,5 @@
 /**
- * Advanced data visualization utilities
+ * Advanced data visualization utilities;
  */
 
 import { DataPoint, ChartData, StoredChart, VisualizationConfig, ChartType, ColorScheme } from '../types/visualization';;
@@ -12,24 +12,23 @@ export class AdvancedDataVisualization {
     this.config = {
       defaultChartType: 'line',
       defaultColorScheme: 'blue',
-      animationDuration: 300,
-      responsive: true,
+      animationDuration: 300;
+      responsive: true;
       ...config,
     };
   }
 
-  public createChart(
-    id: string,
-    data: ChartData,
-    type: ChartType = this.config.defaultChartType
-  ): StoredChart {
-    const chart: StoredChart = {
-      id,
+  public createChart(id: string)
+    data: ChartData)
+    type: ChartType = this.config.defaultChartType;
+  ): StoredChart {,
+    const chart: StoredChart = {,
+      id;
       type,
       data,
-      config: {
-        ...this.config,
-        colorScheme: this.config.defaultColorScheme,
+      config: {,
+        ...this.config;
+        colorScheme: this.config.defaultColorScheme;
       },
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -48,11 +47,11 @@ export class AdvancedDataVisualization {
     return true;
   }
 
-  public getChart(id: string): StoredChart | undefined {
+  public getChart(id: string): StoredChart | undefined {,
     return this.charts.get(id);
   }
 
-  public deleteChart(id: string): boolean {
+  public deleteChart(id: string): boolean {,
     return this.charts.delete(id);
   }
 
@@ -60,7 +59,7 @@ export class AdvancedDataVisualization {
     return Array.from(this.charts.values());
   }
 
-  public exportChart(id: string, format: 'json' | 'csv' = 'json'): string {
+  public exportChart(id: string, format: 'json' | 'csv' = 'json'): string {,
     const _chart = this.charts.get(id);
     if (!chart) throw new Error(`Chart with id ${id} not found`);
 
@@ -71,8 +70,8 @@ export class AdvancedDataVisualization {
     }
   }
 
-  public importChart(data: string, format: 'json' | 'csv' = 'json'): StoredChart {
-    if (format === 'json') {
+  public importChart(data: string, format: 'json' | 'csv' = 'json'): StoredChart {,
+    if (format === 'json') {,
       const _chart = JSON.parse(data) as StoredChart;
       this.charts.set(chart.id, chart);
       return chart;
@@ -83,24 +82,24 @@ export class AdvancedDataVisualization {
     }
   }
 
-  private convertToCSV(data: ChartData): string {
+  private convertToCSV(data: ChartData): string {,
     //     const headers = ['x', 'y'];
     //     const rows = data.points.map(point => [point.x, point.y]);
 
     return [headers, ...rows].map(row => row.join(',')).join('\n');
   }
 
-  private parseCSV(csv: string): ChartData {
+  private parseCSV(csv: string): ChartData {,
     const _lines = csv.trim().split('\n');
     //     const headers = lines[0].split(',');
     const points: DataPoint[] = [];
-
-    for (let i = 1; i < lines.length; i++) {
+,
+    for (let i = 1; i < lines.length; i++) {,
       const _values = lines[i].split(',');
       if (values.length >= 2) {
-        points.push({
-          x: parseFloat(values[0]) || 0,
-          y: parseFloat(values[1]) || 0,
+        points.push({)
+          x: parseFloat(values[0]) || 0;
+          y: parseFloat(values[1]) || 0;
         });
       }
     }
@@ -112,16 +111,16 @@ export class AdvancedDataVisualization {
     const points: DataPoint[] = [];
 
     for (let i = 0; i < count; i++) {
-      points.push({
-        x: i,
-        y: Math.random() * (max - min) + min,
+      points.push({),
+        x: i),
+        y: Math.random() * (max - min) + min;
       });
     }
 
     return { points };
   }
 
-  public applyColorScheme(chart: StoredChart, colorScheme: ColorScheme): StoredChart {
+  public applyColorScheme(chart: StoredChart, colorScheme: ColorScheme): StoredChart {,
     const _updatedChart = { ...chart };
     updatedChart.config.colorScheme = colorScheme;
     updatedChart.updatedAt = new Date();
@@ -130,7 +129,7 @@ export class AdvancedDataVisualization {
     return updatedChart;
   }
 
-  public getChartStatistics(id: string): {
+  public getChartStatistics(id: string): {,
     pointCount: number;
     xRange: { min: number; max: number };
     yRange: { min: number; max: number };
@@ -146,12 +145,12 @@ export class AdvancedDataVisualization {
     const _yValues = points.map(p => p.y);
 
     return {
-      pointCount: points.length,
-      xRange: {
+      pointCount: points.length;
+      xRange: {,
         min: Math.min(...xValues),
         max: Math.max(...xValues),
       },
-      yRange: {
+      yRange: {,
         min: Math.min(...yValues),
         max: Math.max(...yValues),
       },

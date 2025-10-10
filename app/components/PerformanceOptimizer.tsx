@@ -16,16 +16,16 @@ interface OptimizationStatus {
     optimized: boolean;
 }
 
-export const PerformanceOptimizer: React.FC = () => {
+export const PerformanceOptimizer: React.FC = () => {,
   const [optimizationStatus, setOptimizationStatus] = useState<OptimizationStatus>({
-    preloaded: 0,
-    codeSplit: false,
-    serviceWorker: false,
-    optimized: false
-
+    preloaded: 0;
+    codeSplit: false;
+    serviceWorker: false;
+    optimized: false;
   const collectWebVitals = useCallback(() => {
     if (typeof window === 'undefined') return;
 
+<<<<<<< HEAD
     // Collect Core Web Vitals
     const vitals: PerformanceMetrics = {,
     lcp: 0,
@@ -33,9 +33,18 @@ export const PerformanceOptimizer: React.FC = () => {
       cls: 0,
       fcp: 0,
       ttfb: 0,
+=======
+    // Collect Core Web Vitals;
+    const vitals: PerformanceMetrics = {
+      lcp: 0;
+      fid: 0;
+      cls: 0;
+      fcp: 0;
+      ttfb: 0;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
     };
 
-    // LCP - Largest Contentful Paint
+    // LCP - Largest Contentful Paint;
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
@@ -43,7 +52,7 @@ export const PerformanceOptimizer: React.FC = () => {
 
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-    // FID - First Input Delay
+    // FID - First Input Delay;
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
@@ -52,7 +61,7 @@ export const PerformanceOptimizer: React.FC = () => {
 
     fidObserver.observe({ entryTypes: ['first-input'] });
 
-    // CLS - Cumulative Layout Shift
+    // CLS - Cumulative Layout Shift;
     const clsObserver = new PerformanceObserver((list) => {
       let clsValue = 0;
       for (const entry of list.getEntries()) {
@@ -64,7 +73,7 @@ export const PerformanceOptimizer: React.FC = () => {
 
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
-    // FCP - First Contentful Paint
+    // FCP - First Contentful Paint;
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
@@ -73,7 +82,7 @@ export const PerformanceOptimizer: React.FC = () => {
 
     fcpObserver.observe({ entryTypes: ['paint'] });
 
-    // TTFB - Time to First Byte
+    // TTFB - Time to First Byte;
     const ttfbObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
@@ -95,7 +104,11 @@ export const PerformanceOptimizer: React.FC = () => {
     ];
 
     criticalResources.forEach(resource => {)
+<<<<<<< HEAD
     const link = document.createElement('link');
+=======
+      const link = document.createElement('link');
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
       link.rel = 'preload';
       link.href = resource;
       link.as = resource.endsWith('.css') ? 'style' : 'script';
@@ -105,7 +118,7 @@ export const PerformanceOptimizer: React.FC = () => {
   }, []);
 
   const setupCodeSplitting = () => {
-    // This would be handled by Next.js dynamic imports
+    // This would be handled by Next.js dynamic imports;
     setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
   };
 
@@ -120,7 +133,11 @@ export const PerformanceOptimizer: React.FC = () => {
     ];
 
     hints.forEach(hint => {)
+<<<<<<< HEAD
     const link = document.createElement('link');
+=======
+      const link = document.createElement('link');
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
       link.rel = hint.rel;
       link.href = hint.href;
       document.head.appendChild(link);
@@ -149,7 +166,7 @@ export const PerformanceOptimizer: React.FC = () => {
     }
   }, [collectWebVitals, preloadCriticalResources]);
 
-  // This component doesn't render anything visible
+  // This component doesn't render anything visible;
   return null;
 };
 </OptimizationStatus>

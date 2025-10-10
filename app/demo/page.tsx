@@ -4,7 +4,7 @@ import { Play, Calendar, Phone, Mail, CheckCircle, ArrowRight, Star, Users, Cloc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const DemoPage: React.FC = () => {
+const DemoPage: React.FC = () => {,
   const [selectedDemo, setSelectedDemo] = useState('ai-services');
 
   const demos = [
@@ -13,75 +13,75 @@ const DemoPage: React.FC = () => {
       title: 'AI Services Demo',
       description: 'Experience our AI-powered solutions including content generation, analytics, and automation',
       duration: '30 minutes',
-      features: [
+      features: [,
         'AI Content Generation',
         'Predictive Analytics',
         'Workflow Automation',
         'Natural Language Processing'
       ],
-      icon: '🤖'
+      icon: '🤖',
     },
     {
       id: 'it-services',
       title: 'IT Services Demo',
       description: 'See our comprehensive IT solutions including cloud migration, security, and infrastructure',
       duration: '45 minutes',
-      features: [
+      features: [,
         'Cloud Migration Tools',
         'Security Monitoring',
         'Infrastructure Management',
         'DevOps Automation'
       ],
-      icon: '☁️'
+      icon: '☁️',
     },
     {
       id: 'micro-saas',
       title: 'Micro SAAS Demo',
       description: 'Explore our micro SAAS tools for project management, content creation, and business automation',
       duration: '25 minutes',
-      features: [
+      features: [,
         'Project Management',
         'Content Creation',
         'Email Marketing',
         'Financial Analytics'
       ],
-      icon: '💻'
+      icon: '💻',
     },
     {
-      id: 'custom',
+      id: 'custom'
       title: 'Custom Demo',
       description: 'Get a personalized demo tailored to your specific business needs and requirements',
       duration: '60 minutes',
-      features: [
+      features: [,
         'Customized Solution',
         'Industry-Specific Features',
         'Integration Examples',
         'ROI Analysis'
       ],
-      icon: '🎯'
+      icon: '🎯',
     }
   ];
 
   const benefits = [
     {
-      icon: Play,
+      icon: Play;
       title: 'Live Demonstration',
-      description: 'See our solutions in action with real-time demonstrations'
+      description: 'See our solutions in action with real-time demonstrations',
     },
     {
-      icon: Users,
+      icon: Users;
       title: 'Expert Guidance',
-      description: 'Get insights from our technical experts and solution architects'
+      description: 'Get insights from our technical experts and solution architects',
     },
     {
-      icon: CheckCircle,
+      icon: CheckCircle;
       title: 'Q&A Session',
-      description: 'Ask questions and get detailed answers about our solutions'
+      description: 'Ask questions and get detailed answers about our solutions',
     },
     {
-      icon: Star,
+      icon: Star;
       title: 'Customized Experience',
-      description: 'Tailored demo based on your specific business needs'
+      description: 'Tailored demo based on your specific business needs',
     }
   ];
 
@@ -91,31 +91,41 @@ const DemoPage: React.FC = () => {
       company: 'TechCorp Solutions',
       role: 'CTO',
       content: 'The demo was incredibly insightful. We could see exactly how the AI solutions would integrate with our existing systems.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Michael Chen',
       company: 'InnovateLab',
       role: 'CEO',
       content: 'The custom demo helped us understand the ROI potential. The team was knowledgeable and answered all our questions.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Emily Rodriguez',
       company: 'Global Dynamics',
       role: 'Operations Director',
       content: 'The micro SAAS demo showed us tools we never knew we needed. The implementation process was clearly explained.',
-      rating: 5
+      rating: 5;
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
+<<<<<<< HEAD
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Book a Demo<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">See our AI and IT solutions in action. Schedule a personalized demo to discover how we can transform your business.</p>
+=======
+      <main className="container mx-auto px-4 py-16 pt-24">
+        {/* Hero Section */}
+        <section className="text-center mb-16">
+          <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
+            Book a Demo;
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            See our AI and IT solutions in action. Schedule a personalized demo to discover how we can transform your business.
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
@@ -127,14 +137,15 @@ const DemoPage: React.FC = () => {
               <span className="text-white font-medium">Expert Guidance</span>
             </div>
             <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-              <CheckCircle className="w-5 h-5 text-green-400" />
-              <span className="text-white font-medium">Q&A Session</span>
-            </div>
-          </div>
-        </section>
-
+              <CheckCircle className="w-5 h-5 text-green-400" />)
+              <span className="text-white font-medium">Q&A Session</span>)
+            </div>)
+          </div>)
+        </section>),
+),
         {/* Demo Types */}
         <section className="mb-16">
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Demo<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{demos.map((demo) => (<div
                 key={demo.id}
                 onClick={() =>setSelectedDemo(demo.id)}
@@ -142,6 +153,18 @@ const DemoPage: React.FC = () => {
                   selectedDemo === demo.id ? 'ring-2 ring-cyan-400 bg-cyan-500/10' : 'hover:bg-slate-700/50'
                 }`}</div>
               ></div>
+=======
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Demo</h2>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
+            {demos.map((demo) => (,
+              <div;
+                key={demo.id}
+                onClick={() => setSelectedDemo(demo.id)}
+                className={`cyber-card p-6 cursor-pointer transition-all duration-300 ${}
+                  selectedDemo === demo.id ? 'ring-2 ring-cyan-400 bg-cyan-500/10' : 'hover:bg-slate-700/50'}
+                }`}
+              >
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div className="text-center">
                   <div className="text-4xl mb-4">{demo.icon}<h3 className="text-xl font-bold text-white mb-2">{demo.title}<p className="text-gray-300 text-sm mb-4">{demo.description}</p>
                   <div className="flex items-center justify-center text-cyan-400 text-sm mb-4">
@@ -160,7 +183,13 @@ const DemoPage: React.FC = () => {
         {/* Demo Benefits */}
         <section className="mb-16">
           <div className="cyber-card p-8">
+<<<<<<< HEAD
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">What to Expect<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
+=======
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">What to Expect</h2>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
+              {benefits.map((benefit, index) => (
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-white" />
@@ -173,7 +202,13 @@ const DemoPage: React.FC = () => {
 
         {/* Testimonials */}
         <section className="mb-16">
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">What Our Clients Say<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
+=======
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">What Our Clients Say</h2>
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
+            {testimonials.map((testimonial, index) => (
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="cyber-card p-6">
                 <div className="flex justify-center mb-4">{[...Array(5)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 italic mb-4">"{testimonial.content}"</p>
                 <div className="text-center">
@@ -188,12 +223,21 @@ const DemoPage: React.FC = () => {
         <section className="mb-16">
           <div className="cyber-card p-8">
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Schedule Your Demo</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
               <div>
+<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Demo Information</h3>
                 <div className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Selected Demo<div className="bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white">{demos.find(d => d.id === selectedDemo)?.title}</div>
+=======
+                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Demo Information</h3>,
+                <div className="space-y-4">,
+                  <div>,
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Selected Demo</label>,
+                    <div className="bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white">,
+                      {demos.find(d => d.id === selectedDemo)?.title}
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     </div>
                   </div>
                   <div>
@@ -202,15 +246,15 @@ const DemoPage: React.FC = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Company Name</label>
-                    <input
+                    <input;
                       type="text"
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
+                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus: outline-none focus:border-cyan-400"
                       placeholder="Your company name"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
-                    <input
+                    <input;
                       type="text"
                       className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
                       placeholder="Your full name"
@@ -218,7 +262,7 @@ const DemoPage: React.FC = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                    <input
+                    <input;
                       type="email"
                       className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
                       placeholder="your.email@company.com"
@@ -226,7 +270,7 @@ const DemoPage: React.FC = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
-                    <input
+                    <input;
                       type="tel"
                       className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
                       placeholder="+1 (555) 123-4567"
@@ -239,7 +283,7 @@ const DemoPage: React.FC = () => {
                 <div className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Date</label>
-                    <input
+                    <input;
                       type="date"
                       className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
                     />
@@ -259,11 +303,11 @@ const DemoPage: React.FC = () => {
                       <option>Mountain Time (MT)<option>Pacific Time (PT)<option>GMT</option>
                     </select>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Additional Notes</label>
-                    <textarea
+                  <div>,
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Additional Notes</label>,
+                    <textarea;
                       rows={4}
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
+                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus: outline-none focus:border-cyan-400"
                       placeholder="Tell us about your specific needs or questions..."
                     />
                   </div>
@@ -272,19 +316,25 @@ const DemoPage: React.FC = () => {
             </div>
             <div className="mt-8 text-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-700 transition-all inline-flex items-center">
+<<<<<<< HEAD
                 <Calendar className="w-5 h-5 mr-2" >Schedule Demo</Calendar>
                 </Calendar><ArrowRight className="w-5 h-5 ml-2" />
+=======
+                <Calendar className="w-5 h-5 mr-2" />
+                Schedule Demo;
+                <ArrowRight className="w-5 h-5 ml-2" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </button>
             </div>
-          </div>
-        </section>
-
+          </div>,
+        </section>,
+,
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Need Help Scheduling?<p className="text-gray-300 mb-6">If you need assistance scheduling your demo or have questions about our solutions, our team is here to help.</p>
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
               <div className="text-center">
                 <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us<p className="text-gray-300 mb-2">+1 (302) 464-0950<p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
@@ -300,10 +350,10 @@ const DemoPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </main>
-
-      <Footer />
-    </div>
+      </main>,
+,
+      <Footer />,
+    </div>,
   );
 };
 

@@ -1,9 +1,9 @@
 
-export const metadata: Metadata = {
+export const metadata: Metadata = {,
   title: 'Quantum Edge Ai Services | Zion Tech Group',
   description: 'Professional Quantum Edge Ai Services services from Zion Tech Group.',
   keywords: 'Quantum Edge Ai Services, services, technology, enterprise',
-  openGraph: {
+  openGraph: {,
     title: 'Quantum Edge Ai Services',
     description: 'Professional Quantum Edge Ai Services services from Zion Tech Group.',
     type: 'website',
@@ -11,8 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function quantumedgeaiservices() {
-  return (
-    <div className="min-h-screen bg-gray-50">
+  return(<div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
@@ -21,12 +20,12 @@ export default function quantumedgeaiservices() {
           </div>
           <div className="prose max-w-none">
             <p className="text-lg text-gray-700 mb-6">
-              Our Quantum Edge Ai Services services are designed to help your business achieve its
+              Our Quantum Edge Ai Services services are designed to help your business achieve its;
               goals through innovative technology solutions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+            </p>)
+          </div>)
+        </div>)
+      </div>)
+    </div>)
   );
 }

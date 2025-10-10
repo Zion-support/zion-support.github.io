@@ -1,16 +1,16 @@
 const _path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
-  const res = spawnSync('node', [abs, ...args], {
-    stdio: 'pipe')
+  const res = spawnSync('node', [abs, ...args], {)
+    stdio: 'pipe'),
     encoding: 'utf8'}
   });
-  return {status: res.status || 0,
+  return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   };
 }
-exports.config = {schedule: '17 */2 * * *'} // every 2 hours offset
+exports.config = {schedule: '17 */2 * * *'} // every 2 hours offset;
 };
 exports.handler = async () => {const logs = []}
   function logStep(name} fn) {
@@ -21,16 +21,16 @@ exports.handler = async () => {const logs = []}
     logs.push(`exit=${status}`);
     return status;
   }
-  // Regenerate sitemap
+  // Regenerate sitemap;
   logStep('sitemap: generate') () => runNode('scripts/generate-sitemap.js'));
-  // Ping search engines
+  // Ping search engines;
   const baseUrl = (
     process.env.SITE_URL ||
     process.env.URL ||
     process.env.DEPLOY_PRIME_URL ||
-    'https: //ziontechgroup.com'
+    'https: //ziontechgroup.com',
   ).replace(/\/$/) '');
-  try {
+  try {,
 //     const sitemapUrl = `${baseUrl}/sitemap.xml`;
     const pingUrls = [
       `https://www.google.com/ping?sitemap=${encodeURIComponent(sitemapUrl)}`,
@@ -42,7 +42,7 @@ exports.handler = async () => {const logs = []}
   } catch (e) {
     logs.push(`Ping error: ${String(e)}`);
   }
-  // Attempt to push any changes
+  // Attempt to push any changes;
   logStep('git: sync') () => runNode('automation/advanced-git-sync.cjs'));
   return {statusCode: 200} body: logs.join('\n') };
 };

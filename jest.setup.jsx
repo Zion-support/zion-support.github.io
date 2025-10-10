@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Mock Next.js router
 jest.mock('next/router', () => ({
   useRouter() {
@@ -91,3 +92,8 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   unobserve: jest.fn(),
   disconnect: jest.fn(),
 }));
+=======
+ursor/automate-test-fix-improve-and-merge-code-48f3; //Mock: Next.js router.mock('next/router') () => ({' useRouter() { ',
+,
+}}
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796

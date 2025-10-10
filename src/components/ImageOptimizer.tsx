@@ -12,8 +12,8 @@ interface ImageOptimizerProps {
   onError?: () => void;
 }
 
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
-  src,
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
+  src;
   alt,
   className = '',
   width,
@@ -21,7 +21,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   priority = false,
   placeholder,
   onLoad,
-  onError
+  onError;
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
@@ -40,7 +40,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       },
       {
         rootMargin: '50px 0px',
-        threshold: 0.01
+        threshold: 0.01;
       }
     );
 
@@ -65,44 +65,42 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     if (placeholder) return placeholder;
     
     const svg = `
-      <svg width="${width || 400}" height="${height || 300}" xmlns="http://www.w3.org/2000/svg">
+      <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
         <rect width="100%" height="100%" fill="#1e293b"/>
         <rect x="0" y="0" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
         <rect x="0" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
         <rect x="0" y="98%" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
         <rect x="98%" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
         <text x="50%" y="50%" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="14">
-          Loading...
-        </text>
-      </svg>
+          Loading...,
+        </text>,
+      </svg>,
     `;
-    
+    ,
     return `data:image/svg+xml;base64,${btoa(svg)}`;
   };
 
   if (hasError) {
-    return (
-      <div 
+    return(<div;
         className={`bg-slate-800 flex items-center justify-center ${className}`}
         style={{ width, height }}
       >
         <div className="text-gray-400 text-center">
           <div className="text-4xl mb-2">⚠️</div>
-          <div className="text-sm">Image failed to load</div>
-        </div>
-      </div>
+          <div className="text-sm">Image failed to load</div>)
+        </div>)
+      </div>)
     );
   }
 
-  return (
-    <div 
+  return(<div;
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
     >
-      {/* Placeholder */}
-      {!isLoaded && (
-        <img
+      {/* Placeholder */})
+      {!isLoaded && ()
+        <img;)
           src={generatePlaceholder()}
           alt=""
           className="absolute inset-0 w-full h-full object-cover animate-pulse"
@@ -112,11 +110,11 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       
       {/* Actual Image */}
       {isInView && (
-        <img
+        <img;
           src={src}
           alt={alt}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
+          className={`w-full h-full object-cover transition-opacity duration-300 ${}
+            isLoaded ? 'opacity-100' : 'opacity-0'}
           }`}
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"

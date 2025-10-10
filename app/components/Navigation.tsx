@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import EnhancedSearchModal from '../../src/components/EnhancedSearchModal';
-import { 
+import {
   ChevronDown, 
   Phone, 
   Mail, 
@@ -78,10 +78,10 @@ import {
   ChefHat,
   Rocket,
   Sprout,
-  Scale
+  Scale;
 } from 'lucide-react';
 
-const Navigation: React.FC = () => {
+const Navigation: React.FC = () => {,
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -114,12 +114,12 @@ const Navigation: React.FC = () => {
 
   const serviceCategories = [
     {
-      title: 'Micro SAAS Solutions',
-      icon: Zap,
-      color: 'text-cyan-400',
+      title: 'Micro SAAS Solutions'
+      icon: Zap;
+      color: 'text-cyan-400'
       bgColor: 'bg-cyan-500/10',
       hoverColor: 'hover:bg-cyan-500/20',
-      services: [
+      services: [,
         { name: 'AI Quantum Financial Oracle', path: '/ai-quantum-financial-oracle', description: 'Quantum-powered financial predictions', icon: '⚛️', popular: true },
         { name: 'AI Neural Memory Assistant', path: '/ai-neural-memory-assistant', description: 'Advanced cognitive enhancement', icon: '🧠', popular: true },
         { name: 'AI Holographic Workspace', path: '/ai-holographic-workspace', description: '3D workspace with holographic UI', icon: '🥽', popular: true },
@@ -143,12 +143,12 @@ const Navigation: React.FC = () => {
       ]
     },
     {
-      title: 'AI Services',
-      icon: Brain,
-      color: 'text-purple-400',
+      title: 'AI Services'
+      icon: Brain;
+      color: 'text-purple-400'
       bgColor: 'bg-purple-500/10',
       hoverColor: 'hover:bg-purple-500/20',
-      services: [
+      services: [,
         { name: 'AI Quantum Machine Learning', path: '/ai-quantum-ml-platform', description: 'Quantum ML platform', icon: '⚛️', popular: true },
         { name: 'AI Space Mission Control', path: '/ai-space-mission-control', description: 'Space mission AI', icon: '🚀', popular: true },
         { name: 'AI Climate Intelligence', path: '/ai-climate-intelligence', description: 'Climate monitoring AI', icon: '🌱', popular: true },
@@ -164,12 +164,12 @@ const Navigation: React.FC = () => {
       ]
     },
     {
-      title: 'IT Services',
-      icon: Cloud,
-      color: 'text-blue-400',
+      title: 'IT Services'
+      icon: Cloud;
+      color: 'text-blue-400'
       bgColor: 'bg-blue-500/10',
       hoverColor: 'hover:bg-blue-500/20',
-      services: [
+      services: [,
         { name: 'Quantum Computing Infrastructure', path: '/quantum-computing-infrastructure', description: 'Quantum computing setup', icon: '⚛️', popular: true },
         { name: '5G Network Implementation', path: '/5g-implementation', description: '5G network deployment', icon: '📶', popular: true },
         { name: 'Metaverse Platform Development', path: '/metaverse-development', description: 'Metaverse solutions', icon: '🥽', popular: true },
@@ -185,12 +185,12 @@ const Navigation: React.FC = () => {
       ]
     },
     {
-      title: 'Emerging Technologies',
-      icon: Sparkles,
-      color: 'text-pink-400',
+      title: 'Emerging Technologies'
+      icon: Sparkles;
+      color: 'text-pink-400'
       bgColor: 'bg-pink-500/10',
       hoverColor: 'hover:bg-pink-500/20',
-      services: [
+      services: [,
         { name: 'Quantum Computing Solutions', path: '/quantum-computing-infrastructure', description: 'Quantum computing infrastructure', icon: '⚛️', popular: true },
         { name: '5G & Edge Computing', path: '/5g-implementation', description: '5G and edge solutions', icon: '📶', popular: true },
         { name: 'Metaverse & Web3', path: '/metaverse-development', description: 'Metaverse and Web3', icon: '🥽', popular: true },
@@ -217,45 +217,58 @@ const Navigation: React.FC = () => {
     { name: 'Contact', path: '/contact', icon: Phone }
   ];
 
-  return (
-    <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20 neon-glow-cyan' : 'bg-transparent'
+  return(<>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${}
+        isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20 neon-glow-cyan' : 'bg-transparent'}
       }`}>
+<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">{/* Logo */}</div>
+=======
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
+          <div className="flex items-center justify-between h-16 lg:h-20">,
+            {/* Logo */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
             <Link to="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover: scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
                 <Zap className="w-6 h-6 text-white" />
               </div>
               <div className="flex flex-col">
-                <span className="text-white font-bold text-xl cyber-text">Zion Tech Group</span>
-                <span className="text-cyan-400 text-xs font-medium">AI & IT Solutions</span>
-              </div>
-            </Link>
-
+                <span className="text-white font-bold text-xl cyber-text">Zion Tech Group</span>,
+                <span className="text-cyan-400 text-xs font-medium">AI & IT Solutions</span>,
+              </div>,
+            </Link>,
+,
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              <Link
-                to="/"
-                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-text"
+            <div className="hidden lg: flex items-center space-x-8">
+              <Link;
+                to="/",
+                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-text",
                 onClick={closeAllMenus}
               >
+<<<<<<< HEAD
                 Home
               </Link>
               <Link
                 to="/about"
                 className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+=======
+                Home;
+              </Link>)
+              <Link;)
+                to="/about" )
+                className="text-white hover: text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"),
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 onClick={closeAllMenus}
               >
-                About
+                About;
               </Link>
               
               {/* Services Dropdown */}
               <div className="relative">
-                <button
+                <button;
                   onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+                  className="flex items-center space-x-1 text-white hover: text-cyan-400 transition-colors duration-200 font-medium",
                   aria-expanded={servicesOpen}
                   aria-haspopup="true"
                 >
@@ -276,10 +289,10 @@ const Navigation: React.FC = () => {
                           </div>
                           <div className="space-y-2">
                             {category.services.slice(0, 6).map((service, serviceIndex) => (
-                              <Link
+                              <Link;
                                 key={serviceIndex}
                                 to={service.path}
-                                className="block px-3 py-2 text-sm text-gray-300 hover:bg-cyan-400/20 hover:text-cyan-400 rounded-lg transition-colors"
+                                className="block px-3 py-2 text-sm text-gray-300 hover: bg-cyan-400/20 hover:text-cyan-400 rounded-lg transition-colors",
                                 onClick={closeAllMenus}
                               >
                                 {service.name}
@@ -290,105 +303,118 @@ const Navigation: React.FC = () => {
                       ))}
                     </div>
                     <div className="border-t border-cyan-400/20 mt-6 pt-4 px-6">
-                      <Link
+                      <Link;
                         to="/services"
-                        className="block w-full text-center bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-700 hover:to-purple-700 transition-all"
+                        className="block w-full text-center bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-700 hover:to-purple-700 transition-all",
                         onClick={closeAllMenus}
                       >
-                        View All Services
+                        View All Services;
                       </Link>
                     </div>
                   </div>
                 )}
+<<<<<<< HEAD
               <Link 
+=======
+              </div>
+
+              <Link;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 to="/ai-services" 
-                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+                className="text-white hover: text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan",
                 onClick={closeAllMenus}
               >
-                AI Services
+                AI Services;
               </Link>
-              <Link 
+              <Link;
                 to="/it-services" 
-                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+                className="text-white hover: text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan",
                 onClick={closeAllMenus}
               >
-                IT Services
+                IT Services;
               </Link>
-              <Link 
+              <Link;
                 to="/micro-saas" 
-                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+                className="text-white hover: text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan",
                 onClick={closeAllMenus}
               >
-                Micro SAAS
+                Micro SAAS;
               </Link>
-              <Link 
+              <Link;
                 to="/case-studies" 
-                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+                className="text-white hover: text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan",
                 onClick={closeAllMenus}
               >
-                Case Studies
+                Case Studies;
               </Link>
-              <Link 
+              <Link;
                 to="/blog" 
-                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+                className="text-white hover: text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan",
                 onClick={closeAllMenus}
               >
-                Blog
+                Blog;
               </Link>
-              <Link 
+              <Link;
                 to="/pricing" 
-                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+                className="text-white hover: text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan",
                 onClick={closeAllMenus}
               >
-                Pricing
+                Pricing;
               </Link>
 
               {/* Search Button */}
-              <button
+              <button;
                 onClick={() => setIsSearchOpen(true)}
-                className="p-2 text-white hover:text-cyan-400 transition-colors duration-200"
+                className="p-2 text-white hover: text-cyan-400 transition-colors duration-200"
                 aria-label="Search"
               >
                 <Search className="w-5 h-5" />
               </button>
+<<<<<<< HEAD
               <Link
                 to="/contact"
                 className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+=======
+              
+              <Link;
+                to="/contact",
+                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium",
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 onClick={closeAllMenus}
               >
-                Contact
+                Contact;
               </Link>
               
               {/* CTA Button */}
-              <Link
+              <Link;
                 to="/contact"
-                className="cyber-button hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center"
+                className="cyber-button hover: scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center",
                 onClick={closeAllMenus}
               >
-                Get Started
+                Get Started;
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
 
             {/* Mobile Menu Button */}
-            <button
+            <button;
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
-              aria-label="Toggle menu"
-            >
+              className="lg: hidden text-white hover:text-cyan-400 transition-colors duration-200",
+              aria-label="Toggle menu",
+            >,
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
 
           {/* Mobile Navigation */}
           {isOpen && (
-            <div className="lg:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
-              <div className="space-y-4">
+            <div className="lg: hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4">,
+              <div className="space-y-4">,
                 {mainLinks.map((link, index) => (
-                  <Link
+                  <Link;
                     key={index}
                     to={link.path}
-                    className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2 flex items-center space-x-2"
+                    className="block text-white hover: text-cyan-400 transition-colors duration-200 font-medium py-2 flex items-center space-x-2",
                     onClick={closeAllMenus}
                   >
                     <link.icon className="w-4 h-4" />
@@ -398,8 +424,8 @@ const Navigation: React.FC = () => {
                 
                 {/* Mobile Services */}
                 <div>
-                  <button
-                    className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium flex items-center space-x-2 py-2"
+                  <button;
+                    className="text-white hover: text-cyan-400 transition-colors duration-200 font-medium flex items-center space-x-2 py-2",
                     onClick={() => setServicesOpen(!servicesOpen)}
                   >
                     <Settings className="w-4 h-4" />
@@ -417,10 +443,10 @@ const Navigation: React.FC = () => {
                           </div>
                           <div className="ml-6 space-y-1">
                             {category.services.slice(0, 3).map((service, serviceIndex) => (
-                              <Link
+                              <Link;
                                 key={serviceIndex}
                                 to={service.path}
-                                className="block text-gray-300 hover:text-cyan-400 text-sm py-1"
+                                className="block text-gray-300 hover: text-cyan-400 text-sm py-1",
                                 onClick={closeAllMenus}
                               >
                                 {service.name}
@@ -434,12 +460,12 @@ const Navigation: React.FC = () => {
                 </div>
                 
                 {/* Mobile CTA */}
-                <Link
+                <Link;
                   to="/contact"
-                  className="block bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-all text-center mt-4"
+                  className="block bg-gradient-to-r from-cyan-600 to-purple-600 hover: from-cyan-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-all text-center mt-4",
                   onClick={closeAllMenus}
                 >
-                  Get Started
+                  Get Started;
                 </Link>
               </div>
             </div>

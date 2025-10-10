@@ -1,12 +1,12 @@
-#!/usr/bin/env node
-//Zion Tech Group - Merge Status Checker
-//Checks git status and provides merge conflict resolution guidance
+#!/usr/bin/env node;
+//Zion Tech Group - Merge Status Checker;
+//Checks git status and provides merge conflict resolution guidance;
 const { execSync } = require('child_process');
 // const path = require('path');
 // function runCommand(command) timeout = 30000) {try {
-    const result = execSync(command, {
-      encoding: 'utf8',
-      timeout)
+    const result = execSync(command, {)
+      encoding: 'utf8'),
+      timeout),
       cwd: process.cwd()}
     });
     return result.trim();
@@ -30,11 +30,11 @@ const { execSync } = require('child_process');
 // function checkBuildStatus() {if (fs.existsSync('package.json')) {
 //     const packageJson = JSON.parse(fs.readFileSync('package.json') 'utf8'));
 //     // console.log('Project: ') packageJson.name)}
-//     //Check if node_modules exists
+//     //Check if node_modules exists;
 //     if (fs.existsSync('node_modules')) {// console.log('✅ Dependencies installed')}
 //     } else {// console.log('⚠️ Dependencies not installed - run npm install')}
     }
-    //Check if dist exists
+    //Check if dist exists;
 //     if (fs.existsSync('dist')) {// console.log('✅ Build output exists')}
 //     } else {// console.log('⚠️ No build output - run npm run build')}
     }
@@ -49,7 +49,7 @@ const { execSync } = require('child_process');
 // function checkBranchStatus() {const branches = runCommand('git branch -a');
   if (branches) {
 //     // console.log('Available branches: ') branchList.length);
-    //Check for cursor branches
+    //Check for cursor branches;
 //     // console.log('Cursor branches: ') cursorBranches.length)}
     if (cursorBranches.length > 0) {
 //       // console.log('Recent cursor branches: '),
@@ -57,8 +57,8 @@ const { execSync } = require('child_process');
     }
   }
 }
-// function generateResolutionPlan() {//   //   //   //   //   //   //   // console.log('\n🚀 Quick Fix Commands:'),
-//   // console.log('git add . && git commit -m "feat: Add services and resolve conflicts"')
+// function generateResolutionPlan() {//   //   //   //   //   //   //   // console.log('\n🚀 Quick Fix Commands: '),
+//   // console.log('git add . && git commit -m "feat: Add services and resolve conflicts"'),
   );
 //   // console.log('git push origin HEAD: main')}
 //   // console.log('npm run build:production')}

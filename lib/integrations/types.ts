@@ -25,9 +25,9 @@ export interface IntegrationProviderMeta {
   description: string;
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
+,
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
+,
 }
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -176,7 +176,7 @@ export interface ZapierEvent {
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
-export interface IntegrationProviderMeta {
+export interface IntegrationProviderMeta {,
   status: 'success' | 'error' | 'warning';
   message: string;
   details?: Record<string, unknown>;
@@ -237,7 +237,7 @@ export interface IntegrationsState {
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
   events: ZapierEvent[];
-  lastError?: string | null;
+  lastError?: string | null;,
 }
 }
 }
@@ -293,7 +293,7 @@ export interface IntegrationsState {
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
   events: ZapierEvent[];
-  lastError?: string | null;
+  lastError?: string | null;,
 }
 }
 }

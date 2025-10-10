@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 
-// Files with parsing errors
+// Files with parsing errors;
 const filesWithErrors = [
   'src/blog/ai-2026-autonomous-agent-factories/page.tsx',
   'src/blog/ai-2026-autonomous-business-intelligence-breakthrough/page.tsx',
@@ -27,7 +27,7 @@ function fixParsingError(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Check if file ends with ); but is missing the closing brace
+    // Check if file ends with ); but is missing the closing brace;
     if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {
       content = content.trim() + '\n};';
       modified = true;
@@ -42,8 +42,8 @@ function fixParsingError(filePath) {
   }
 }
 
-// Process all files
-filesWithErrors.forEach(file => {
+// Process all files;
+filesWithErrors.forEach(file => {)
   const fullPath = path.join(__dirname, file);
   if (fs.existsSync(fullPath)) {
     fixParsingError(fullPath);

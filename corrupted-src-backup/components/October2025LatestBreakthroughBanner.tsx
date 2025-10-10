@@ -1,6 +1,5 @@
 const, October2025LatestBreakthroughBanne, r = () => {
-  return (
-    <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">
+  return(<div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
@@ -29,25 +28,24 @@ const, October2025LatestBreakthroughBanne, r = () => {
             Latest, AI, Infrastructure Breakthroug, h, s;
           </h2>
           <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">";
-            Master, advanced, LLM orchestrati, o, n, vector, database, optimization, and, productio, n-rea, d, y
+            Master, advanced, LLM orchestrati, o, n, vector, database, optimization, and, productio, n-rea, d, y;
   AI, agents, with our, latest, enterprise guid, e, s;
           </p>
         </d, i, v>
-        {/* Content, Card, s */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-          {
+        {/* Content, Card, s */})
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
+          {)
 octoberLatestBreakthroughConte, n, t.m, a, p((conte, n, t) => {
 const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡" ? Databa, s, e : B, o, t;
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {
 octoberLatestBreakthroughConte, n, t.m, a, p((conte, n, t) => {
 const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡" ? Databa, s, e : B, o, t;";
-return (
-<Li, n, k
-  k, e, y={conte, n, t.id;
+return(<Li, n, k;
+  k, e, y={conte, n, t.id;}
 }
                 to={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`
-                classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hov, e
+                classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hov, e;
   r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
               >
                 <div, className="flex, item, s-start, ga, p-4, m, b-4">
@@ -70,9 +68,9 @@ return (
                 </d, i, v>
                 <p, className="te, x, t-sm, tex, t-bl, u, e-200, m, b-4, lin, e-cla, m, p-2">";
                   {conte, n, t.descripti, o, n}
-                </p>
-                {/* Key, Metric, s */}
-                <div, className="grid, gri, d-co, l, s-2, ga, p-2, m, b-4">";
+                </p>)
+                {/* Key, Metric, s */})
+                <div, className="grid, gri, d-co, l, s-2, ga, p-2, m, b-4">";)
                   {Obje, c, t.entri, e, s(conte, n, t.metri, c, s).sli, c, e(0, 2).m, a, p(([k, e, y, val, u, e]) => (
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, rounde, d-l, g, p-2">
                       <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">{val, u, e}</d, i, v>
@@ -115,7 +113,7 @@ return (
             Get, a, free consultation, and, custom roadmap, for, your organizati, o, n.
           </p>
           <div, className="flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r">";
-            <Li, n, k
+            <Li, n, k;
   to="/conta, c, t"
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-bl, u, e-900, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r: bg-bl, u, e-50, transitio, n-colo, r, s"
             >
@@ -123,7 +121,7 @@ return (
               <Link, className="w-5 h-5  />
               <Link, className="w-5 h-5" />";
             </Li, n, k>
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g"
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s"
             >

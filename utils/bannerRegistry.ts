@@ -1,17 +1,16 @@
 /**
- * Banner Registry - Centralized banner management system
+ * Banner Registry - Centralized banner management system;
  *
- * This module provides:
- * - Organized banner categorization
- * - Priority-based rendering
- * - Dynamic banner loading
- * - Banner analytics tracking
+ * This module provides: * - Organized banner categorization;
+ * - Priority-based rendering;
+ * - Dynamic banner loading;
+ * - Banner analytics tracking;
  */
 
-export interface BannerConfig {
+export interface BannerConfig {,
   id: string;
   name: string;
-  priority: number; // 1 = highest priority, 100 = lowest
+  priority: number; // 1 = highest priority, 100 = lowest;
   category: 'breakthrough' | 'content' | 'success-story' | 'feature' | 'announcement';
   importPath: string;
   datePublished: string;
@@ -20,7 +19,7 @@ export interface BannerConfig {
   metadata?: {
     description?: string;
     author?: string;
-    version?: string;
+    version?: string;,
     lastModified?: string;
   };
 }

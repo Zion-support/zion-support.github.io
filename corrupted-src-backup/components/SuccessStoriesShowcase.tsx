@@ -1,13 +1,13 @@
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
   const, storie, s = [
     {
-      comp, a, n
+      comp, a, n;
   y: "TechCorp, Internationa, l"
       indust, r, y: "Technolo, g, y"
       ic, o, n: <TrendingUp, className="w-8 h-8" />
       resu, l, t: "3, 0, 0% Revenue, Growt, h"
       descripti, o, n: "Implemented, multimodal, AI achieving, unprecedented, customer engagement, and, conversion rat, e, s."
-      metri, c, s: [
+      metri, c, s: [,
         "98% prediction, accurac, y"
         "60% cost, reductio, n"
         "2M, users, impacted"
@@ -20,7 +20,7 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
       ic, o, n: <Target, className="w-8 h-8" />
       resu, l, t: "85% Downtime, Reductio, n"
       descripti, o, n: "AI, predictive, maintenance transformed, operation, s, eliminating, unplanned, downtime and, reducing, costs."
-      metri, c, s: [
+      metri, c, s: [,
         "$2M, annual, savings"
         "40% lower, maintenance, costs"
         "99.9% uptime, achieve, d"
@@ -28,24 +28,24 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
     }
     {
-      company: "FinanceFirst Bank",
-      industry: "Financial Services",
+      company: "FinanceFirst Bank"
+      industry: "Financial Services"
       icon: <Users className="w-8 h-8" />,
       result: "99.95% Fraud Detection",
       description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",
-      metrics: [
+      metrics: [,
         "$5M fraud prevented",
         "Sub-100ms detection",
         "95% fewer false positives"
       ],
-      color: "from-purple-500 to-pink-500"
-        </div>
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
+      color: "from-purple-500 to-pink-500",
+        </div>,
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">,
           {stories.map((story, index) => (
-            <div
+            <div;
 key={index}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"
-            >
+              className="bg-white rounded-2xl shadow-xl overflow-hidden hover: scale-105 transition-all duration-300",
+            >,
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}>
                 <div className="flex items-center gap-3 mb-4">
                   {story.icon}
@@ -64,12 +64,12 @@ key={index}
                       <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                       <span className="text-sm text-gray-700">{metric}</span>
                     </div>
-                  Read Full Story
+                  Read Full Story;
                   <Link className="w-4 h-4" />
                 </Link>
               </div>
             </div>
-            View All Success Stories
+            View All Success Stories;
             <Link className="w-6 h-6" />
           </Link>
         </div>

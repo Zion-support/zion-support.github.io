@@ -1,12 +1,11 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Define the replacements
+// Define the replacements;
 const replacements = [
-  // Next.js imports to React Router
+  // Next.js imports to React Router;
   { from: "import Link from 'next/link';", to: "import { Link } from 'react-router-dom';" },
   {
     from: "import { useRouter } from 'next/router';",
@@ -32,29 +31,29 @@ const replacements = [
     to: "import { Helmet } from 'react-helmet-async';",
   },
 
-  // Next.js specific patterns
+  // Next.js specific patterns;
   { from: 'export const metadata: Metadata = {', to: '// Metadata moved to Helmet component' },
   { from: 'export const metadata = {', to: '// Metadata moved to Helmet component' },
   { from: "'use client';", to: '' },
   { from: "'use server';", to: '' },
 
-  // Router usage patterns
+  // Router usage patterns;
   {
     from: 'const router = useRouter();',
     to: 'const navigate = useNavigate();\n  const location = useLocation();',
   },
-  { from: 'router.push(', to: 'navigate(' },
-  { from: 'router.replace(', to: 'navigate(' },
+  { from: 'router.push(', to: 'navigate(' })
+  { from: 'router.replace(', to: 'navigate(' })
   { from: 'router.back()', to: 'navigate(-1)' },
   { from: 'router.pathname', to: 'location.pathname' },
   { from: 'router.query', to: 'new URLSearchParams(location.search)' },
 
-  // Link patterns
+  // Link patterns;
   { from: 'href=', to: 'to=', context: 'Link' },
   { from: '<Link href=', to: '<Link to=' },
 
-  // Dynamic import patterns
-  { from: 'dynamic(() => import(', to: 'lazy(() => import(' },
+  // Dynamic import patterns;
+  { from: 'dynamic(() => import(', to: 'lazy(() => import(' })
   { from: 'loading: () => <', to: 'fallback={<' },
 
   // Image patterns (replace with regular img or custom component)
@@ -68,14 +67,13 @@ const replacements = [
   { from: 'blurDataURL', to: '' },
 ];
 
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {
   try {
-
-    // Apply replacements
+    // Apply replacements;
     replacements.forEach(({ from, to, context }) => {
       if (context) {
-        // Context-specific replacement
+        // Context-specific replacement;
         const regex = new RegExp(
           `(${context}[^>]*?)${from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`,
           'g'
@@ -85,24 +83,24 @@ function processFile(filePath) {
           modified = true;
         }
       } else {
-        // Simple replacement
+        // Simple replacement;
         if (content.includes(from)) {
           content = content.replace(
             new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'),
-            to
+            to;
           );
           modified = true;
         }
       }
     });
 
-    // Additional cleanup
-    content = content
-      .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines
-      .replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, '') // Remove empty imports
-      .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {
-        // Merge consecutive imports from same module
-        lines.forEach(line => {
+    // Additional cleanup;
+    content = content;
+      .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines;
+      .replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, '') // Remove empty imports;
+      .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {)
+        // Merge consecutive imports from same module;)
+        lines.forEach(line => {)
           if (match) {
             const [, importsStr, module] = match;
             if (!imports[module]) imports[module] = [];
@@ -129,16 +127,14 @@ function processFile(filePath) {
   }
 }
 
-// Main execution
+// Main execution;
 async function main() {
 
-  // Find all TypeScript/JavaScript files in app directory
-
-
+  // Find all TypeScript/JavaScript files in app directory;
   for (const pattern of patterns) {
-    const files = await glob(pattern, {
+    const files = await glob(pattern, {)
       cwd: process.cwd(),
-      ignore: [
+      ignore: [,
         '**/node_modules/**',
         '**/dist/**',
         '**/build/**',
@@ -150,8 +146,8 @@ async function main() {
       ],
     });
 
-    files.forEach(file => {
-      totalFiles++;
+    files.forEach(file => {)
+      totalFiles++;)
       if (processFile(file)) {
         fixedFiles++;
       }
@@ -164,7 +160,6 @@ async function main() {
   if (fixedFiles > 0) {
 
   } else {
-
   }
 }
 

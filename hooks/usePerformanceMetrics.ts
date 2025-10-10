@@ -19,8 +19,8 @@ export function usePerformanceMetrics() {
 
     setIsSupported(true);
 
-    // First Contentful Paint
-    new PerformanceObserver(list => {
+    // First Contentful Paint;
+    new PerformanceObserver(list => {)
       const _entries = list.getEntries();
       const _fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
@@ -28,34 +28,34 @@ export function usePerformanceMetrics() {
       }
     }).observe({ entryTypes: ['paint'] });
 
-    // Largest Contentful Paint
-    new PerformanceObserver(list => {
+    // Largest Contentful Paint;
+    new PerformanceObserver(list => {)
       const _entries = list.getEntries();
       const _lastEntry = entries[entries.length - 1];
       setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
     }).observe({ entryTypes: ['largest-contentful-paint'] });
 
-    // First Input Delay
-    new PerformanceObserver(list => {
+    // First Input Delay;
+    new PerformanceObserver(list => {)
       const _entries = list.getEntries();
-      entries.forEach(entry => {
-        const _inputEntry = entry as PerformanceEventTiming;
-        setMetrics(prev => ({
-          ...prev,
-          fid: inputEntry.processingStart - inputEntry.startTime,
+      entries.forEach(entry => {)
+        const _inputEntry = entry as PerformanceEventTiming;)
+        setMetrics(prev => ({)
+          ...prev)
+          fid: inputEntry.processingStart - inputEntry.startTime),
         }));
       });
     }).observe({ entryTypes: ['first-input'] });
 
-    // Cumulative Layout Shift
+    // Cumulative Layout Shift;
     let _clsValue = 0;
-    new PerformanceObserver(list => {
+    new PerformanceObserver(list => {)
       const _entries = list.getEntries();
-      entries.forEach(entry => {
-        const layoutEntry = entry as PerformanceEntry & {
-          hadRecentInput?: boolean;
-          value?: number;
-        };
+      entries.forEach(entry => {)
+        const layoutEntry = entry as PerformanceEntry & {)
+          hadRecentInput?: boolean;)
+          value?: number;)
+        };)
         if (!layoutEntry.hadRecentInput) {
           clsValue += layoutEntry.value || 0;
         }
@@ -63,16 +63,16 @@ export function usePerformanceMetrics() {
       setMetrics(prev => ({ ...prev, cls: clsValue }));
     }).observe({ entryTypes: ['layout-shift'] });
 
-    // Time to First Byte
-    new PerformanceObserver(list => {
+    // Time to First Byte;
+    new PerformanceObserver(list => {)
       const _entries = list.getEntries();
-      const ttfbEntry = entries.find(entry =>
+      const ttfbEntry = entries.find(entry =>)
         entry.name.includes('document')
       ) as PerformanceNavigationTiming;
       if (ttfbEntry) {
-        setMetrics(prev => ({
-          ...prev,
-          ttfb: ttfbEntry.responseStart - ttfbEntry.requestStart,
+        setMetrics(prev => ({)
+          ...prev)
+          ttfb: ttfbEntry.responseStart - ttfbEntry.requestStart),
         }));
       }
     }).observe({ entryTypes: ['navigation'] });

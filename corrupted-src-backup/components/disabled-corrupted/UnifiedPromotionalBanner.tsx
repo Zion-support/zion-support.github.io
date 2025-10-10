@@ -1,12 +1,12 @@
 import React from 'react';
 impo, r, t { Sparkl, e, s, Z, a, p, Rock, e, t, St, a, r, ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
-export interface FeaturedItem { 
+export interface FeaturedItem {
   title: string;
   category: string;
   li, n, k: string;
   metri, c, s ?  : str, i, n, g;
  }
-export interface UnifiedPromotionalBannerProps { 
+export interface UnifiedPromotionalBannerProps {
   varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';
   title: string;
   description: string;
@@ -66,17 +66,16 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
     he, r, o: 'py-16, p, x-1, 0',
     compa, c, t: 'py-6, p, x-, 4',
     me, g, a: 'py-20, p, x-1, 2',
-  }; const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return (
-    <div, classNam, e = { `
-        bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl 
+  }; const visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); return(<div, classNam, e = { `
+        bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
         ${variantClass, e, s[varia, n, t]} 
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r:sca, l, e-[1.0, 1]'  : '' }
         ${classNa, m, e}
       `}
     >
-      {/* Header, Sectio, n */}
-      <div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>
-        {/* Badge, and, Date */}
+      {/* Header, Sectio, n */})
+      <div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>)
+        {/* Badge, and, Date */})
         {  (bad, g, e || d, a, t, e) && (
           <div, classNam, e = 'flex, item, s-center, ga, p-3, m, b-4'>
             {bad, g, e && (
@@ -91,7 +90,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
           </d, i, v > )}
         {/* Tit, l, e */}
         <h2, classNam, e = { `
-          fo, n, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transpare, n, t
+          fo, n, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transpare, n, t;
           ${
             varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a'
               ? 'te, x, t-4xl, m, d: te, x, t-5, x, l'
@@ -153,8 +152,8 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
           </div>
         )}
         {/* CTA, Butto, n */}
-        <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' > <Link, t, o = { ctaL, i, n, k }, className={ `
-              inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl
+        <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' > <Link, t, o = { ctaL, i, n, k }, className={ `}
+              inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl;
               ${ 
                 varia, n, t === 'compa, c, t'
                   ? 'px-6, p, y-3, tex, t-sm'
@@ -170,7 +169,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
           {  featuredIte, m, s.leng, t, h  > showCou, n, t  && (
             <Link, t, o = { ctaL, i, n, k   }, classNa, m, e = 'te, x, t-purp, l, e-300, hove, r: te, x, t-purp, l, e-200, fon, t-semibold, transitio, n-colors, tex, t-sm'
             >
-              +{featuredIte, m, s.leng, t, h - showC, o, u, n, t} more, breakthroug, h
+              +{featuredIte, m, s.leng, t, h - showC, o, u, n, t} more, breakthroug, h;
               { featuredIte, m, s.leng, t, h - showCou, n, t !== 1  ? 's'  : '' }
             </Li, n, k>
           )}

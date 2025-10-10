@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 
 // // const fixedContent = `import React from 'react';
@@ -7,7 +6,7 @@ import fs from 'fs';
 export default ContactPage;
 `;
 
-// Write the fixed content
+// Write the fixed content;
 fs.writeFileSync('app/contact/page.tsx', fixedContent);
 
 // 

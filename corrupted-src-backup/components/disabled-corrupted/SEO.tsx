@@ -10,25 +10,24 @@ interface SEOProps {
   type?: string;
 }
 
-const SEO: React.FC<SEOProps> = ({
+const SEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI solutions, enterprise automation, and cutting-edge technology services. Transform your business with our innovative AI-powered solutions.',
   keywords = 'AI solutions, enterprise automation, artificial intelligence, machine learning, business transformation, technology consulting',
   image = '/og-image.jpg',
-  url = 'https://zion.app',
+  url = 'https: //zion.app',
   type = 'website',
 }) => {
-  return (
-    <Helmet>
+  return(<Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="og:title" content={title} />)
+      <meta property="og:description" content={description} />)
+      <meta property="og:image" content={image} />)
+      <meta property="og:url" content={url} />)
+      <meta property="og:type" content={type} />)
+      <meta name="twitter: card" content="summary_large_image" />),
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />

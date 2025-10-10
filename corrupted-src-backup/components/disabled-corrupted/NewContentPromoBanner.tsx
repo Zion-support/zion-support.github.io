@@ -1,5 +1,5 @@
 import Reac, t, { useState } fr, o, m 'rea, c, t';
-interface NewContentPromoBannerProp, s { 
+interface NewContentPromoBannerProp, s {
   varia, n, t?: 'in, f, o' | 'premi, u, m' | 'succe, s, s' | 'warni, n, g';
   classNa, m, e ?  : string;
  }
@@ -98,8 +98,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({
       category: "AI, Strate, g, y"
     }
   ]; if (isDismiss, e, d) return, nul, l;
-  return (
-    <div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
+  return(<div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10">
         <div, className="absolute, to, p-0, lef, t-0 w-3, 2, h-32, b, g-white, rounde, d-full, animat, e-pul, s, e" />
@@ -115,17 +114,16 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({
               <Star, className="w-5 h-5, animat, e-sp, i, n" />
             </div>
             <h3, className="te, x, t-xl, fon, t-bold, m, b-2">
-              Just, Publishe, d: New, Guides, for 20, 2, 6
-            </h3>
-            <p, className="te, x, t-whi, t, e/90, m, b-4, tex, t-sm">
-              Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces,
+              Just, Publishe, d: New, Guides, for 20, 2, 6;)
+            </h3>)
+            <p, className="te, x, t-whi, t, e/90, m, b-4, tex, t-sm">)
+              Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces)
               and, privac, y‑first, observabilit, y.
             </p>
             {/* Featured, content, grid */}
             <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-3, m, b-4">
               { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > {
-                const Ico, n = it, e, m.ic, o, n; return (
-                  <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"
+                const Ico, n = it, e, m.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"
                   >
                     <div, className="flex, item, s-center, ga, p-2, m, b-2">
                       <Icon, className="w-4 h-4, tex, t-whi, t, e/80" />
@@ -135,9 +133,9 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({
                       {it, e, m.t, i, t, l, e}
                     </h4>
                     <p, classNam, e = "te, x, t-xs, tex, t-whi, t, e/70, m, t-1, lin, e-cla, m, p-2">
-                      {it, e, m.description}
-                    </p>
-                  </L, i, n, k>
+                      {it, e, m.description})
+                    </p>)
+                  </L, i, n, k>)
                 );
               })}
             </div>
@@ -147,20 +145,20 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({
                 className="bg-white, tex, t-purp, l, e-600, hove, r: bg-whi, t, e/90, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
               >
                 <BookOpen, className="w-4 h-4" />
-                Read, All, Articles
+                Read, All, Articles;
                 <Link, className="w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
               </Li, n, k>
               <Link, t, o="/ca, s, e-studi, e, s"
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
               >
                 <TrendingUp, className="w-4 h-4" />
-                View, Case, Studies
+                View, Case, Studies;
               </Li, n, k>
               <Link, t, o="/servic, e, s"
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
               >
                 <Shield, className="w-4 h-4" />
-                Explore, Service, s
+                Explore, Service, s;
               </Li, n, k>
             </div>
             {/* S, t, a, t, s */}

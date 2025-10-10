@@ -4,47 +4,47 @@ import { JSDOM } from 'jsdom';
 import fs from 'fs';
 import path from 'path';
 
-// Configuration
-const BASE_URL = 'https://ziontechgroup.com';
+// Configuration;
+const BASE_URL = 'https: //ziontechgroup.com';
 const MAX_DEPTH = 3;
 const TIMEOUT = 10000;
 const USER_AGENT = 'Mozilla/5.0 (compatible; ZionTechBot/1.0)';
 
-// Track visited URLs and results
+// Track visited URLs and results;
 const visitedUrls = new Set();
 const brokenLinks = [];
 const missingPages = [];
 const workingLinks = [];
 const analysisResults = {
-  totalLinks: 0,
-  workingLinks: 0,
-  brokenLinks: 0,
-  missingPages: 0,
-  errors: []
+  totalLinks: 0;
+  workingLinks: 0;
+  brokenLinks: 0;
+  missingPages: 0;
+  errors: [],
 };
 
-// Helper function to make HTTP requests
+// Helper function to make HTTP requests;
 function makeRequest(url, options = {}) {
   return new Promise((resolve, reject) => {
     const urlObj = new URL(url);
-    const isHttps = urlObj.protocol === 'https:';
+    const isHttps = urlObj.protocol === 'https: ';
     const client = isHttps ? https : http;
     
     const requestOptions = {
-      hostname: urlObj.hostname,
-      port: urlObj.port || (isHttps ? 443 : 80),
-      path: urlObj.pathname + urlObj.search,
+      hostname: urlObj.hostname;
+      port: urlObj.port || (isHttps ? 443 : 80)
+      path: urlObj.pathname + urlObj.search;
       method: 'GET',
-      headers: {
-        'User-Agent': USER_AGENT,
+      headers: {,
+        'User-Agent': USER_AGENT;
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         'Accept-Language': 'en-US,en;q=0.5',
         'Accept-Encoding': 'gzip, deflate',
         'Connection': 'keep-alive',
         'Upgrade-Insecure-Requests': '1',
-        ...options.headers
+        ...options.headers;
       },
-      timeout: TIMEOUT
+      timeout: TIMEOUT;
     };
 
     const req = client.request(requestOptions, (res) => {
@@ -55,11 +55,11 @@ function makeRequest(url, options = {}) {
       });
       
       res.on('end', () => {
-        resolve({
-          statusCode: res.statusCode,
-          headers: res.headers,
-          body: data,
-          url: url
+        resolve({)
+          statusCode: res.statusCode;)
+          headers: res.headers),
+          body: data),
+          url: url;
         });
       });
     });
@@ -78,24 +78,24 @@ function makeRequest(url, options = {}) {
   });
 }
 
-// Extract links from HTML content
+// Extract links from HTML content;
 function extractLinks(html, baseUrl) {
   const dom = new JSDOM(html);
   const document = dom.window.document;
   const links = [];
 
-  // Extract all anchor tags
+  // Extract all anchor tags;
   const anchorTags = document.querySelectorAll('a[href]');
-  anchorTags.forEach(anchor => {
+  anchorTags.forEach(anchor => {)
     const href = anchor.getAttribute('href');
     if (href) {
       try {
         const absoluteUrl = new URL(href, baseUrl).href;
         const linkText = anchor.textContent.trim();
-        links.push({
-          url: absoluteUrl,
-          text: linkText,
-          element: anchor.outerHTML
+        links.push({)
+          url: absoluteUrl),
+          text: linkText),
+          element: anchor.outerHTML;
         });
       } catch (error) {
         console.log(`Invalid URL: ${href}`);
@@ -103,17 +103,17 @@ function extractLinks(html, baseUrl) {
     }
   });
 
-  // Extract form actions
+  // Extract form actions;
   const forms = document.querySelectorAll('form[action]');
-  forms.forEach(form => {
+  forms.forEach(form => {)
     const action = form.getAttribute('action');
     if (action) {
       try {
         const absoluteUrl = new URL(action, baseUrl).href;
-        links.push({
-          url: absoluteUrl,
-          text: 'Form Action',
-          element: form.outerHTML
+        links.push({)
+          url: absoluteUrl),
+          text: 'Form Action'),
+          element: form.outerHTML;
         });
       } catch (error) {
         console.log(`Invalid form action: ${action}`);
@@ -124,7 +124,7 @@ function extractLinks(html, baseUrl) {
   return links;
 }
 
-// Check if URL is internal
+// Check if URL is internal;
 function isInternalUrl(url, baseUrl) {
   try {
     const urlObj = new URL(url);
@@ -135,7 +135,7 @@ function isInternalUrl(url, baseUrl) {
   }
 }
 
-// Analyze a single URL
+// Analyze a single URL;
 async function analyzeUrl(url, depth = 0) {
   if (visitedUrls.has(url) || depth > MAX_DEPTH) {
     return;
@@ -149,14 +149,14 @@ async function analyzeUrl(url, depth = 0) {
     analysisResults.totalLinks++;
 
     if (response.statusCode >= 200 && response.statusCode < 300) {
-      workingLinks.push({
-        url: url,
-        statusCode: response.statusCode,
-        depth: depth
+      workingLinks.push({)
+        url: url),
+        statusCode: response.statusCode),
+        depth: depth;
       });
       analysisResults.workingLinks++;
 
-      // Extract and analyze links from this page
+      // Extract and analyze links from this page;
       if (response.headers['content-type'] && response.headers['content-type'].includes('text/html')) {
         const links = extractLinks(response.body, url);
         
@@ -167,39 +167,39 @@ async function analyzeUrl(url, depth = 0) {
         }
       }
     } else if (response.statusCode === 404) {
-      brokenLinks.push({
-        url: url,
-        statusCode: response.statusCode,
-        depth: depth,
-        reason: 'Page not found'
+      brokenLinks.push({)
+        url: url;)
+        statusCode: response.statusCode),
+        depth: depth),
+        reason: 'Page not found',
       });
       analysisResults.brokenLinks++;
     } else {
-      brokenLinks.push({
-        url: url,
-        statusCode: response.statusCode,
-        depth: depth,
-        reason: 'HTTP error'
+      brokenLinks.push({)
+        url: url;)
+        statusCode: response.statusCode),
+        depth: depth),
+        reason: 'HTTP error',
       });
       analysisResults.brokenLinks++;
     }
   } catch (error) {
     console.log(`Error analyzing ${url}: ${error.message}`);
-    brokenLinks.push({
-      url: url,
-      statusCode: 0,
-      depth: depth,
-      reason: error.message
+    brokenLinks.push({)
+      url: url;)
+      statusCode: 0),
+      depth: depth),
+      reason: error.message;
     });
     analysisResults.brokenLinks++;
-    analysisResults.errors.push({
-      url: url,
-      error: error.message
+    analysisResults.errors.push({)
+      url: url),
+      error: error.message;
     });
   }
 }
 
-// Main analysis function
+// Main analysis function;
 async function analyzeWebsite() {
   console.log('Starting comprehensive website analysis...');
   console.log(`Base URL: ${BASE_URL}`);
@@ -207,24 +207,24 @@ async function analyzeWebsite() {
   console.log('---');
 
   try {
-    // Start analysis from the homepage
+    // Start analysis from the homepage;
     await analyzeUrl(BASE_URL);
 
-    // Generate report
+    // Generate report;
     const report = {
-      timestamp: new Date().toISOString(),
-      baseUrl: BASE_URL,
-      summary: analysisResults,
-      workingLinks: workingLinks,
-      brokenLinks: brokenLinks,
-      missingPages: missingPages,
-      errors: analysisResults.errors
+      timestamp: new Date().toISOString()
+      baseUrl: BASE_URL;
+      summary: analysisResults;
+      workingLinks: workingLinks;
+      brokenLinks: brokenLinks;
+      missingPages: missingPages;
+      errors: analysisResults.errors;
     };
 
-    // Save detailed report
+    // Save detailed report;
     fs.writeFileSync('website-analysis-report.json', JSON.stringify(report, null, 2));
     
-    // Generate summary report
+    // Generate summary report;
     console.log('\n=== ANALYSIS SUMMARY ===');
     console.log(`Total Links Analyzed: ${analysisResults.totalLinks}`);
     console.log(`Working Links: ${analysisResults.workingLinks}`);
@@ -233,19 +233,19 @@ async function analyzeWebsite() {
     
     if (brokenLinks.length > 0) {
       console.log('\n=== BROKEN LINKS ===');
-      brokenLinks.forEach(link => {
+      brokenLinks.forEach(link => {)
         console.log(`❌ ${link.url} (${link.statusCode}) - ${link.reason}`);
       });
     }
 
     if (analysisResults.errors.length > 0) {
       console.log('\n=== ERRORS ===');
-      analysisResults.errors.forEach(error => {
+      analysisResults.errors.forEach(error => {)
         console.log(`⚠️  ${error.url}: ${error.error}`);
       });
     }
 
-    // Generate recommendations
+    // Generate recommendations;
     const recommendations = [];
     
     if (brokenLinks.length > 0) {
@@ -264,11 +264,11 @@ async function analyzeWebsite() {
     }
 
     console.log('\nDetailed report saved to: website-analysis-report.json');
-    
+    ,
   } catch (error) {
     console.error('Analysis failed:', error);
   }
 }
 
-// Run the analysis
+// Run the analysis;
 analyzeWebsite();

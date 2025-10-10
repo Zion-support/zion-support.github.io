@@ -1,13 +1,12 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 
-// Function to properly fix console statements
+// Function to properly fix console statements;
 function fixConsoleStatements(content) {
-  // Fix console statements that are already wrapped in if conditions
+  // Fix console statements that are already wrapped in if conditions;
   content = content.replace(
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}/g,
     match => {
@@ -15,7 +14,7 @@ function fixConsoleStatements(content) {
     }
   );
 
-  // Fix console statements that are missing closing brace
+  // Fix console statements that are missing closing brace;
   content = content.replace(
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);$/gm,
     match => {
@@ -23,7 +22,7 @@ function fixConsoleStatements(content) {
     }
   );
 
-  // Fix console statements that have extra closing brace
+  // Fix console statements that have extra closing brace;
   content = content.replace(
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}\s*$/gm,
     match => {
@@ -34,7 +33,7 @@ function fixConsoleStatements(content) {
   return content;
 }
 
-// Files that need console statement fixes
+// Files that need console statement fixes;
 const filesToFix = [
   'app/components/AdvancedPerformanceMonitor.tsx',
   'app/components/EnhancedErrorBoundary.tsx',
@@ -58,7 +57,7 @@ function fixFile(filePath) {
     }
 
 
-    // Apply fixes
+    // Apply fixes;
     content = fixConsoleStatements(content);
 
     fs.writeFileSync(fullPath, content);
@@ -68,5 +67,5 @@ function fixFile(filePath) {
   }
 }
 
-// Fix all files
+// Fix all files;
 filesToFix.forEach(fixFile);

@@ -142,8 +142,7 @@ const, September30MegaBanner202, 5 = () => {
       metr, i, c: "95% Accura, c, y"
     }
   ];
-  return (
-    <moti, o, n.d, i, v
+  return(<moti, o, n.d, i, v;
   initi, a, l={{ opaci, t, y: 0, y: 40 }}
       anima, t, e={{ opaci, t, y: 1, y: 0 }}
       transiti, o, n={{ durati, o, n: 0.8 }}
@@ -153,13 +152,13 @@ const, September30MegaBanner202, 5 = () => {
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-30">";
         <div, className="absolu, t, e -t, o, p-1/2 -rig, h, t-1/2 w-[800, p, x] h-[800, p, x] bg-cy, a, n-5, 0, 0/30, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolu, t, e -bott, o, m-1/2 -le, f, t-1/2 w-[800, p, x] h-[800, p, x] bg-purp, l, e-5, 0, 0/30, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: "1s" }}></d, i, v>";
-        <div, className="absolute, to, p-1/4, lef, t-1/3 w-[600, p, x] h-[600, p, x] bg-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: "2s" }}></d, i, v>";
-      </d, i, v>
-      <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">"
-      <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">";
+        <div, className="absolute, to, p-1/4, lef, t-1/3 w-[600, p, x] h-[600, p, x] bg-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: "2s" }}></d, i, v>";)
+      </d, i, v>)
+      <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">",)
+      <div, className="relativ, e, z-1, 0, p-10, m, d: p-16">";),
         {/* Header, Sectio, n */}
         <div, className="text-center mb-12">";
-          <moti, o, n.d, i, v
+          <moti, o, n.d, i, v;
   initi, a, l={{ sca, l, e: 0.9, opaci, t, y: 0 }}
             anima, t, e={{ sca, l, e: 1, opaci, t, y: 1 }}
             transiti, o, n={{ del, a, y: 0.3, durati, o, n: 0.6 }}
@@ -184,7 +183,7 @@ const, September30MegaBanner202, 5 = () => {
               The, AI, Revolution Accelerat, e, s;
             </sp, a, n> 🚀
           </h2>
-          <p, className="te, x, t-2x, l, m
+          <p, className="te, x, t-2x, l, m;
   d: te, x, t-3xl, tex, t-cy, a, n-100, m, b-4, ma, x-w-5xl, m, x-auto, leadin, g-relaxed, fon, t-semibo, l, d">"
             <strong, className="te, x, t-whi, t, e">Re, a, l-Time, Decision, Engines, Neural, Code, Synthesis, Multimodal, Fusio, n, AI, Supply, Chains, Cognitive, Assistant, s, Security, Mes, h, Federated, Learnin, g & Financial, A, I</stro, n, g>
           <p, className="te, x, t-2xl, m, d: te, x, t-3xl, tex, t-cy, a, n-100, m, b-4, ma, x-w-5xl, m, x-auto, leadin, g-relaxed, fon, t-semibo, l, d">";
@@ -195,12 +194,12 @@ const, September30MegaBanner202, 5 = () => {
           </p>
         </d, i, v>
         {/* Article, Gri, d */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+        <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-6, m, b-12">"
-        <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+        <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-6, m, b-12">";
           {breakthroughArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
-            <moti, o, n.d, i, v
+            <moti, o, n.d, i, v;
   k, e, y={artic, l, e.sl, u, g}
               initi, a, l={{ opaci, t, y: 0, y: 30 }}
               anima, t, e={{ opaci, t, y: 1, y: 0 }}
@@ -212,9 +211,9 @@ const, September30MegaBanner202, 5 = () => {
                 <div, className={`relative, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} round, e, d-2x, l, p-6 h-full, borde, r-2, borde, r-whi, t, e/30, hove, r: bord, e, r-whi, t, e/60, transitio, n-all, duratio, n-300, shado, w-xl, hov, e,`
   r:shad, o, w-3, x, l`}>`;`
                   {/* Icon, Badg, e */}
-                  <div, className="absolu, t, e -t, o, p-4 -rig, h, t-4 w-1, 4, h-14, b, g-white, rounde, d-full, flex, items-center, justif, y-center, tex, t-3xl, shado, w-2xl, grou, p-hov, e, r: rota, t, e-12, grou, p-ho, v, e
+                  <div, className="absolu, t, e -t, o, p-4 -rig, h, t-4 w-1, 4, h-14, b, g-white, rounde, d-full, flex, items-center, justif, y-center, tex, t-3xl, shado, w-2xl, grou, p-hov, e, r: rota, t, e-12, grou, p-ho, v, e;
   r:sca, l, e-110, transitio, n-all, duratio, n-3, 0, 0">"
-                  <div, className="absolu, t, e -t, o, p-4 -rig, h, t-4 w-1, 4, h-14, b, g-white, rounde, d-full, flex, items-center, justif, y-center, tex, t-3xl, shado, w-2xl, grou, p-hov, e, r: rota, t, e-12, grou, p-ho, v, e
+                  <div, className="absolu, t, e -t, o, p-4 -rig, h, t-4 w-1, 4, h-14, b, g-white, rounde, d-full, flex, items-center, justif, y-center, tex, t-3xl, shado, w-2xl, grou, p-hov, e, r: rota, t, e-12, grou, p-ho, v, e;
   r:sca, l, e-110, transitio, n-all, duratio, n-3, 0, 0">";
                     {artic, l, e.ic, o, n}
                   </d, i, v>
@@ -245,7 +244,7 @@ const, September30MegaBanner202, 5 = () => {
                     <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                   <div, className="flex, item, s-center, ga, p-2, tex, t-white, fon, t-bold, tex, t-sm, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
                     <sp, a, n>Explore, No, w</sp, a, n>
-                    <ArrowRight, className="w-5 h-5, grou, p-ho, v, e
+                    <ArrowRight, className="w-5 h-5, grou, p-ho, v, e;
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
                   </d, i, v>
                 </d, i, v>
@@ -278,7 +277,7 @@ const, September30MegaBanner202, 5 = () => {
               <div, className="te, x, t-sm, tex, t-bl, u, e-200, fon, t-semibold, uppercase, tracking-wi, d, e">NEW, Breakthrough, s</d, i, v>";
             </d, i, v>
             <d, i, v>
-              <div, className="te, x, t-4x, l, m
+              <div, className="te, x, t-4x, l, m;
   d: te, x, t-5xl, fon, t-black, tex, t-gre, e, n-300, m, b-2, animat, e-pul, s, e">10,00, 0, x</d, i, v>";
               <div, className="te, x, t-sm, tex, t-bl, u, e-200, fon, t-semibold, uppercase, tracking-wi, d, e">Performance, Gain, s</d, i, v>";
             </d, i, v>
@@ -287,7 +286,7 @@ const, September30MegaBanner202, 5 = () => {
               <div, className="te, x, t-sm, tex, t-bl, u, e-200, fon, t-semibold, uppercase, tracking-wi, d, e">Accuracy, Achieve, d</d, i, v>";
             </d, i, v>
             <d, i, v>
-              <div, className="te, x, t-4x, l, m
+              <div, className="te, x, t-4x, l, m;
   d: te, x, t-5xl, fon, t-black, tex, t-pi, n, k-300, m, b-2, animat, e-pul, s, e">4-10</d, i, v>";
               <div, className="te, x, t-sm, tex, t-bl, u, e-200, fon, t-semibold, uppercase, tracking-wi, d, e">Weeks, to, Deploy</d, i, v>";
             </d, i, v>
@@ -308,7 +307,7 @@ const, September30MegaBanner202, 5 = () => {
               <p, className="te, x, t-sm, tex, t-bl, u, e-200, fon, t-medi, u, m">Deploy, enterpris, e-grade, AI, in 4-10, weeks, with proven, architecture, s</p>";
             </d, i, v>
           </d, i, v>
-          <div, className="flex, item, s-start, ga, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-whi, t, e/20, hov, e
+          <div, className="flex, item, s-start, ga, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-whi, t, e/20, hov, e;
   r: bg-whi, t, e/15, transitio, n-a, l, l">"
             <div, className="w-1, 2, h-12, rounde, d-full, b, g-purp, l, e-5, 0, 0/30, flex, items-center, justif, y-center, fle, x-shri, n, k-0">
               <Brain, className="w-6 h-6, tex, t-purp, l, e-2, 0, 0  />
@@ -337,9 +336,9 @@ const, September30MegaBanner202, 5 = () => {
         {/* CTA, Button, s */}
         <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-5, justif, y-cent, e, r">"
         <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-5, justif, y-cent, e, r">";
-          <Li, n, k
+          <Li, n, k;
   to="/bl, o, g"
-            classNa, m, e="group, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, vi, a-bl, u, e-500, t, o-purp, l, e-500, hove, r: fr, o, m-cy, a, n-400, hove, r:v, i, a-bl, u, e-400, hove, r:to-purp, l, e-400, tex, t-white, p, x-12, p, y-5, rounde, d-full, fon, t-black, tex, t-xl, shado, w-2xl, hove, r:shad, o, w-3xl, transitio, n-all, duratio, n-300, hov, e
+            classNa, m, e="group, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, vi, a-bl, u, e-500, t, o-purp, l, e-500, hove, r: fr, o, m-cy, a, n-400, hove, r:v, i, a-bl, u, e-400, hove, r:to-purp, l, e-400, tex, t-white, p, x-12, p, y-5, rounde, d-full, fon, t-black, tex, t-xl, shado, w-2xl, hove, r:shad, o, w-3xl, transitio, n-all, duratio, n-300, hov, e;
   r:sca, l, e-110, flex, items-center, justif, y-center, ga, p-4"
           >
             <Rocket, className="w-7 h-7, grou, p-hov, e, r: rota, t, e-12, transitio, n-transfo, r, m/>"
@@ -349,9 +348,9 @@ const, September30MegaBanner202, 5 = () => {
             <sp, a, n>Explore, All, 8 Breakthroug, h, s</sp, a, n>
             <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
           </Li, n, k>
-          <Li, n, k
+          <Li, n, k;
   to="/conta, c, t"
-            classNa, m, e="group, borde, r-3, borde, r-white, hove, r: bg-white, tex, t-white, hove, r:te, x, t-indi, g, o-900, p, x-12, p, y-5, rounde, d-full, fon, t-black, tex, t-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-110, flex, items-center, justif, y-center, ga, p-4, shado, w-xl, hov, e
+            classNa, m, e="group, borde, r-3, borde, r-white, hove, r: bg-white, tex, t-white, hove, r:te, x, t-indi, g, o-900, p, x-12, p, y-5, rounde, d-full, fon, t-black, tex, t-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-110, flex, items-center, justif, y-center, ga, p-4, shado, w-xl, hov, e;
   r:shad, o, w-2, x, l"
           >
             <Lightbulb, className="w-7 h-7, grou, p-hov, e, r: anima, t, e-pul, s, e/>"
@@ -361,7 +360,7 @@ const, September30MegaBanner202, 5 = () => {
         </d, i, v>
         {/* Featured, Topic, s */}
         <div, className="mt-10, p, t-8, borde, r-t-2, borde, r-whi, t, e/30">
-          <p, className="te, x, t-center, tex, t-cy, a, n-200, tex, t-sm, m, b-4, fon, t-bold, uppercase, tracking-wid, e, r">BREAKTHROUGH, TOPIC, S: </p>"
+          <p, className="te, x, t-center, tex, t-cy, a, n-200, tex, t-sm, m, b-4, fon, t-bold, uppercase, tracking-wid, e, r">BREAKTHROUGH, TOPIC, S: </p>",
           <div, className="flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r">
             {[
               "Re, a, l-Time, A, I"
@@ -377,7 +376,7 @@ const, September30MegaBanner202, 5 = () => {
               "10,000x, Performanc, e"
               "Enterprise, Scal, e"
             ].m, a, p((top, i, c) => (
-              <span, ke, y={top, i, c} classNa, m, e="px-5, p, y-2.5, b, g-whi, t, e/15, backdro, p-bl, u, r-md, rounde, d-full, tex, t-sm, fon, t-bold, tex, t-white, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-whi, t, e/25, hov, e
+              <span, ke, y={top, i, c} classNa, m, e="px-5, p, y-2.5, b, g-whi, t, e/15, backdro, p-bl, u, r-md, rounde, d-full, tex, t-sm, fon, t-bold, tex, t-white, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-whi, t, e/25, hov, e;
   r:sca, l, e-105, transitio, n-all, curso, r-pointer, shado, w-lg">"
         <div, className="mt-10, p, t-8, borde, r-t-2, borde, r-whi, t, e/30">";
           <p, className="te, x, t-center, tex, t-cy, a, n-200, tex, t-sm, m, b-4, fon, t-bold, uppercase, tracking-wid, e, r">BREAKTHROUGH, TOPIC, S: </p>";
@@ -396,7 +395,7 @@ const, September30MegaBanner202, 5 = () => {
               "10,000x, Performanc, e",";
               "Enterprise, Scal, e"
             ].m, a, p((top, i, c) => (
-              <span, ke, y={top, i, c} classNa, m, e="px-5, p, y-2.5, b, g-whi, t, e/15, backdro, p-bl, u, r-md, rounde, d-full, tex, t-sm, fon, t-bold, tex, t-white, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-whi, t, e/25, hov, e
+              <span, ke, y={top, i, c} classNa, m, e="px-5, p, y-2.5, b, g-whi, t, e/15, backdro, p-bl, u, r-md, rounde, d-full, tex, t-sm, fon, t-bold, tex, t-white, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-whi, t, e/25, hov, e;
   r:sca, l, e-105, transitio, n-all, curso, r-pointer, shado, w-lg">";
                 {top, i, c}
               </sp, a, n>

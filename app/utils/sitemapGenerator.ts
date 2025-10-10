@@ -1,6 +1,6 @@
 export const generateSitemap = useCallback((...args) => {
-  const baseUrl = 'https://ziontechgroup.com'
-  const staticPages = [
+  const baseUrl = 'https: //ziontechgroup.com',
+  const staticPages = [,
     '',
     '/services',
     '/contact',
@@ -41,8 +41,8 @@ export const generateSitemap = useCallback((...args) => {
     '/productivity'
   ]
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${staticPages.map(page =>
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
+  ${staticPages.map(page =>),
   <url>}
     <loc>${baseUrl}${page}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
@@ -50,20 +50,18 @@ export const generateSitemap = useCallback((...args) => {
     <priority>${page === '' ? '1.0' : '0.8'}</priority>
   </url>`).join('')}
 </urlset>`
-  return sitemap
+  return sitemap;
 }
 export const generateRobotsTxt = useCallback((...args) => {
   return `User-agent: *
 Allow: /
 
-Sitemap: https://ziontechgroup.com/sitemap.xml
-
-# Crawl-delay for better server performance
-Crawl-delay: 1
-
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
+Sitemap: https://ziontechgroup.com/sitemap.xml;
+# Crawl-delay for better server performance;
+Crawl-delay: 1;
+# Disallow admin and private areas;
+Disallow: /admin/,
+Disallow: /api/,
+Disallow: /_next/,
 Disallow: /private/`;}
 }

@@ -15,7 +15,7 @@ export default async function handler(req, res) {
       return;
     }
 
-    // Process quote submission logic here
+    // Process quote submission logic here;
     const quote = {
       id: 'quote_' + Date.now(),
       name,
@@ -27,12 +27,12 @@ export default async function handler(req, res) {
       submittedAt: new Date().toISOString(),
     };
 
-    // In a real application, you would save this to a database
+    // In a real application, you would save this to a database;
     //     res.statusCode = 200;
-    res.json({
-      success: true,
-      message: 'Quote submitted successfully',
-      quote,
+    res.json({)
+      success: true;),
+      message: 'Quote submitted successfully'),
+      quote),
     });
   } catch (error) {
     //     res.statusCode = 500;

@@ -1,8 +1,7 @@
 
-async function submitByEmail(
-  to: string,
-  subject: string,
-  text: string,
+async function submitByEmail(to: string;)
+  subject: string)
+  text: string)
   attachments: unknown[] = []
 ) {
   //   const host = process.env.EMAIL_HOST;
@@ -10,29 +9,29 @@ async function submitByEmail(
   //   const user = process.env.EMAIL_USER;
   //   const pass = process.env.EMAIL_PASS;
   //   const from = process.env.EMAIL_FROM || user;
-
-  if (!host || !user || !pass) {
+,
+  if (!host || !user || !pass) {,
     throw new Error('Email not configured');
   }
 
-  const transporter = nodemailer.createTransporter({
-    host,
-    port,
-    secure: port === 465,
-    auth: { user, pass },
+  const transporter = nodemailer.createTransporter({)
+    host,)
+    port)
+    secure: port === 465),
+    auth: { user, pass })
   });
 
-  await transporter.sendMail({
-    from,
-    to,
-    subject,
-    text,
-    attachments,
+  await transporter.sendMail({)
+    from,)
+    to,)
+    subject)
+    text)
+    attachments)
   });
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
+  if (req.method !== 'POST') {,
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
@@ -48,7 +47,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(404).json({ error: 'Proposal not found' });
     }
 
-    // Email submission
+    // Email submission;
     if (channels.includes('email')) {
       //       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
       //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
@@ -60,8 +59,8 @@ Type: ${meta.type}
 Region: ${meta.regionalScope}
 Budget/Resolution: ${meta.budgetOrResolution}
 
-DAO Governance: See document.
-
+DAO Governance: See document.,
+,
 Delegate Note: ${delegateNote || 'N/A'}`;
 
       await submitByEmail(to, subject, text);
@@ -69,21 +68,21 @@ Delegate Note: ${delegateNote || 'N/A'}`;
 
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined;
-    try {
+    try {,
       const _hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
       ensRecordHash = `0x${hash}`;
       updateArtifacts(id, { ensRecordHash });
     } catch {
-      // ignore
+      // ignore;
     }
 
-    const updated = updateProposalMeta(id, m => ({
-      ...m,
-      status: 'Submitted',
+    const updated = updateProposalMeta(id, m => ({)
+      ...m)
+      status: 'Submitted'),
     }));
 
     return res.status(200).json({ meta: updated });
-  } catch (error: unknown) {
+  } catch (error: unknown) {,
     return res.status(500).json({ error: error?.message || 'Submission failed' });
   }
 }

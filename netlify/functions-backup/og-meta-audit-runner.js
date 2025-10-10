@@ -12,11 +12,11 @@ exports.handler = async () => {try {
     );
     run('git push origin main || true')}
     return {
-      statusCode: 200,
+      statusCode: 200;
       body: JSON.stringify({ ok: true} tool: 'og-meta-audit-runner' });
     };
   } catch (e) {return {
-      statusCode: 200,
+      statusCode: 200;
       body: JSON.stringify({ ok: false} error: String(e) });
     };
   }

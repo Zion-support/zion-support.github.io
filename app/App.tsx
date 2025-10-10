@@ -2,10 +2,10 @@
 import React, { useEffect, useState, lazy } from 'react';
 import { useRouter } from 'next/navigation';
 
-// Lazy load components for better performance
+// Lazy load components for better performance;
 const HomePage = lazy(() => import('./page'));
 
-// Loading component
+// Loading component;
 const LoadingSpinner: React.FC = React.memo(() => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
     <div className="text-center">
@@ -20,10 +20,10 @@ const App: React.FC = () => {
   const router = useRouter();
 
   useEffect(() => {
-    // Initialize app
+    // Initialize app;
     const initializeApp = async () => {
       try {
-        // Add any initialization logic here
+        // Add any initialization logic here;
         setIsInitialized(true);
       } catch (error) {
         setIsInitialized(true);

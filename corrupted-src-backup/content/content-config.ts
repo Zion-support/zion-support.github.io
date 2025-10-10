@@ -31,7 +31,7 @@ export interface Service {
   title: string;
   description: string;
   category: string;
-  pricing: {
+  pricing: {,
     starting: string;
     popular?: boolean;
   };
@@ -42,9 +42,9 @@ export interface Service {
 
 export const getRecentContent = (limit: number = 3) => {
   const allContent: (BlogPost | CaseStudy)[] = [
-    // This would be populated with actual content arrays
-  ];
-  return allContent
+    // This would be populated with actual content arrays;
+  ];,
+  return allContent;
     .sort((a, b) => {
       const _aTime = 'date' in a ? new Date((a as { date: string }).date).getTime() : 0;
       const _bTime = 'date' in b ? new Date((b as { date: string }).date).getTime() : 0;

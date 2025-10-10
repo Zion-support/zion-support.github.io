@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to remove console.log statements from a file
+// Function to remove console.log statements from a file;
 function removeConsoleLogs(filePath) {
   try {
     let _content = fs.readFileSync(filePath, 'utf8');
@@ -26,7 +26,7 @@ function removeConsoleLogs(filePath) {
   }
 }
 
-// Function to process all TypeScript and JavaScript files
+// Function to process all TypeScript and JavaScript files;
 async function processFiles() {
   const patterns = [
     'src/**/*.{ts,tsx,js,jsx}',
@@ -37,18 +37,18 @@ async function processFiles() {
   let _modifiedFiles = 0;
   
   for (const pattern of patterns) {
-    const files = await glob(pattern, { 
-      ignore: [
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/*.test.*',
+    const files = await glob(pattern, { )
+      ignore: [,)
+        '**/node_modules/**',)
+        '**/dist/**')
+        '**/build/**')
+        '**/*.test.*')
         '**/*.spec.*'
       ]
     });
     
-    files.forEach(file => {
-      totalFiles++;
+    files.forEach(file => {)
+      totalFiles++;)
       if (removeConsoleLogs(file)) {
         modifiedFiles++;
       }
@@ -57,5 +57,5 @@ async function processFiles() {
   
 //   //   //   }
 
-// Run the cleanup
+// Run the cleanup;
 // processFiles().catch(console.error);

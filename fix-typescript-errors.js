@@ -1,9 +1,9 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+<<<<<<< HEAD
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -25,10 +25,25 @@ const filesToFix = [
   'app/ai-social-media-scheduler/page.tsx',
   'app/ai-video-generator/page.tsx',
   'app/ai-voice-cloning-studio/page.tsx'
+=======
+// Pattern to match commented-out variable declarations;
+const patterns = [
+  // Match commented-out const/let/var declarations;
+  { regex: /\/\/\s*(const|let|var)\s+(\w+)\s*=/g, replacement: '$1 $2 =' },
+  // Match commented-out variable assignments;
+  { regex: /\/\/\s*(\w+)\s*=/g, replacement: '$1 =' },
+  // Match commented-out variable references;
+  { regex: /\/\/\s*(\w+)\s*[;,)]/g, replacement: '$1' },
+  // Match commented-out object property assignments;
+  { regex: /\/\/\s*(\w+):\s*(\w+)/g, replacement: '$1: $2' },
+  // Match commented-out function calls;
+  { regex: /\/\/\s*(\w+)\s*\(/g, replacement: '$1(' })
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
 ];
 
 function fixFile(filePath) {
   try {
+<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -36,6 +51,11 @@ function fixFile(filePath) {
     const useStatePattern = /useState\(\s*\{([^}]+)\s*$/gm;
     content = content.replace(useStatePattern, (match, objContent) => {
       if (!objContent.includes('}')) {
+=======
+    patterns.forEach(pattern => {)
+      if (newContent !== content) {
+        content = newContent;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
         modified = true;
         return match + '}';
       }
@@ -120,12 +140,19 @@ function fixFile(filePath) {
   }
 }
 
+<<<<<<< HEAD
 console.log('Starting TypeScript error fixes...');
 
 let fixedCount = 0;
 filesToFix.forEach(filePath => {
   const fullPath = path.join(__dirname, filePath);
   if (fs.existsSync(fullPath)) {
+=======
+async function main() {
+  
+  
+  files.forEach(file => {)
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
     if (fixFile(fullPath)) {
       fixedCount++;
     }

@@ -1,6 +1,6 @@
 /**
- * Advanced Error Handler
- * Comprehensive error handling, logging, and recovery system
+ * Advanced Error Handler;
+ * Comprehensive error handling, logging, and recovery system;
  */
 
 class AdvancedErrorHandler {
@@ -21,62 +21,61 @@ class AdvancedErrorHandler {
   }
 
   setupGlobalErrorHandlers() {
-    // Global error handler
+    // Global error handler;
     window.addEventListener('error', event => {
       this.handleError({
-        type: 'JavaScript Error',
-        message: event.message,
-        filename: event.filename,
-        lineno: event.lineno,
-        colno: event.colno,
-        stack: event.error?.stack,
+        type: 'JavaScript Error'
+        message: event.message;)
+        filename: event.filename;)
+        lineno: event.lineno;)
+        colno: event.colno)
+        stack: event.error?.stack)
         timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
+        userAgent: navigator.userAgent;
+        url: window.location.href;
       });
     });
 
-    // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', event => {
-      this.handleError({
-        type: 'Unhandled Promise Rejection',
-        message: event.reason?.message || 'Unknown promise rejection',
-        stack: event.reason?.stack,
+    // Unhandled promise rejection handler;
+    window.addEventListener('unhandledrejection', event => {)
+      this.handleError({)
+        type: 'Unhandled Promise Rejection')
+        message: event.reason?.message || 'Unknown promise rejection'),
+        stack: event.reason?.stack),
         timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
+        userAgent: navigator.userAgent;
+        url: window.location.href;
       });
     });
   }
 
   setupUnhandledRejectionHandler() {
-    // Additional promise rejection handling
-    window.addEventListener('rejectionhandled', event => {
+    // Additional promise rejection handling;
+    window.addEventListener('rejectionhandled', event => {)
       //       });
   }
 
   setupResourceErrorHandler() {
-    // Handle resource loading errors
-    document.addEventListener(
-      'error',
+    // Handle resource loading errors;
+    document.addEventListener('error')
       event => {
         if (event.target !== document) {
-          this.handleError({
-            type: 'Resource Error',
-            message: `Failed to load resource: ${event.target.src || event.target.href}`,
-            element: event.target.tagName,
-            src: event.target.src || event.target.href,
+          this.handleError({)
+            type: 'Resource Error',)
+            message: `Failed to load resource: ${event.target.src || event.target.href}`)
+            element: event.target.tagName),
+            src: event.target.src || event.target.href),
             timestamp: new Date().toISOString(),
-            url: window.location.href,
+            url: window.location.href;
           });
         }
       },
-      true
+      true;
     );
   }
 
   setupNetworkErrorHandler() {
-    // Handle network-related errors
+    // Handle network-related errors;
     window.addEventListener('online', () => {
       this.handleNetworkStatusChange('online');
     });
@@ -87,7 +86,7 @@ class AdvancedErrorHandler {
   }
 
   setupRecoveryStrategies() {
-    // Define recovery strategies for different error types
+    // Define recovery strategies for different error types;
     this.recoveryStrategies.set('network', this.handleNetworkError.bind(this));
     this.recoveryStrategies.set('resource', this.handleResourceError.bind(this));
     this.recoveryStrategies.set('javascript', this.handleJavaScriptError.bind(this));
@@ -95,30 +94,30 @@ class AdvancedErrorHandler {
   }
 
   handleError(errorInfo) {
-    // Log error
+    // Log error;
     this.logError(errorInfo);
 
-    // Attempt recovery
+    // Attempt recovery;
     this.attemptRecovery(errorInfo);
 
-    // Report to external service
+    // Report to external service;
     if (this.reportingEnabled) {
       this.reportError(errorInfo);
     }
 
-    // Show user-friendly message
+    // Show user-friendly message;
     this.showUserError(errorInfo);
   }
 
   logError(errorInfo) {
     this.errorLog.push(errorInfo);
 
-    // Maintain log size
+    // Maintain log size;
     if (this.errorLog.length > this.maxLogSize) {
       this.errorLog.shift();
     }
 
-    // Console logging
+    // Console logging;
     //     }
 
   attemptRecovery(errorInfo) {
@@ -150,13 +149,13 @@ class AdvancedErrorHandler {
   }
 
   handleNetworkError(errorInfo) {
-    // Retry failed network requests
+    // Retry failed network requests;
     if (errorInfo.retryCount < 3) {
       setTimeout(
         () => {
           this.retryFailedRequest(errorInfo);
         },
-        Math.pow(2, errorInfo.retryCount || 0) * 1000
+        Math.pow(2, errorInfo.retryCount || 0) * 1000;
       );
     } else {
       this.showOfflineMessage();
@@ -164,7 +163,7 @@ class AdvancedErrorHandler {
   }
 
   handleResourceError(errorInfo) {
-    // Try to load fallback resources
+    // Try to load fallback resources;
     if (errorInfo.element === 'IMG') {
       this.loadFallbackImage(errorInfo.src);
     } else if (errorInfo.element === 'SCRIPT') {
@@ -175,7 +174,7 @@ class AdvancedErrorHandler {
   }
 
   handleJavaScriptError(errorInfo) {
-    // Try to recover from JavaScript errors
+    // Try to recover from JavaScript errors;
     if (errorInfo.message?.includes('Cannot read property')) {
       this.handlePropertyAccessError(errorInfo);
     } else if (errorInfo.message?.includes('is not a function')) {
@@ -186,28 +185,28 @@ class AdvancedErrorHandler {
   }
 
   handleMemoryError(errorInfo) {
-    // Clear caches and free memory
+    // Clear caches and free memory;
     this.clearCaches();
     this.garbageCollect();
   }
 
   retryFailedRequest(errorInfo) {
-    // Implement retry logic for failed requests
+    // Implement retry logic for failed requests;
     //     const retryCount = (errorInfo.retryCount || 0) + 1;
     errorInfo.retryCount = retryCount;
 
-    // Retry the original request
+    // Retry the original request;
     if (errorInfo.originalRequest) {
       fetch(errorInfo.originalRequest)
-        .then(response => {
+        .then(response => {)
           if (response.ok) {
             //             }
         })
-        .catch(error => {
-          this.handleError({
-            ...errorInfo,
-            message: `Retry ${retryCount} failed: ${error.message}`,
-            retryCount,
+        .catch(error => {)
+          this.handleError({)
+            ...errorInfo)
+            message: `Retry ${retryCount} failed: ${error.message}`)
+            retryCount)
           });
         });
     }
@@ -222,43 +221,43 @@ class AdvancedErrorHandler {
   }
 
   loadFallbackScript(src) {
-    // Load from CDN or local fallback
+    // Load from CDN or local fallback;
     const _script = document.createElement('script');
     script.src = src.replace('cdn.example.com', 'fallback.example.com');
     script.onerror = () => {
-      // Load local fallback
+      // Load local fallback;
       script.src = '/js/fallback.js';
     };
     document.head.appendChild(script);
   }
 
   loadFallbackStylesheet(src) {
-    // Load fallback stylesheet
+    // Load fallback stylesheet;
     const _link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = src.replace('cdn.example.com', 'fallback.example.com');
     link.onerror = () => {
-      // Load local fallback
+      // Load local fallback;
       link.href = '/css/fallback.css';
     };
     document.head.appendChild(link);
   }
 
   handlePropertyAccessError(errorInfo) {
-    // Try to fix property access errors
-    //     // Implementation would depend on specific error
+    // Try to fix property access errors;
+    //     // Implementation would depend on specific error;
   }
 
   handleFunctionCallError(errorInfo) {
-    // Try to fix function call errors
-    //     // Implementation would depend on specific error
+    // Try to fix function call errors;
+    //     // Implementation would depend on specific error;
   }
 
   clearCaches() {
-    // Clear various caches
+    // Clear various caches;
     if ('caches' in window) {
-      caches.keys().then(cacheNames => {
-        cacheNames.forEach(cacheName => {
+      caches.keys().then(cacheNames => {)
+        cacheNames.forEach(cacheName => {)
           caches.delete(cacheName);
         });
       });
@@ -266,21 +265,21 @@ class AdvancedErrorHandler {
   }
 
   garbageCollect() {
-    // Force garbage collection if available
+    // Force garbage collection if available;
     if (window.gc) {
       window.gc();
     }
   }
 
   reloadPage() {
-    // Reload page as last resort
+    // Reload page as last resort;
     setTimeout(() => {
       window.location.reload();
     }, 1000);
   }
 
   showOfflineMessage() {
-    // Show offline message to user
+    // Show offline message to user;
     const _offlineMessage = document.createElement('div');
     offlineMessage.className = 'offline-message';
     offlineMessage.innerHTML = `
@@ -296,13 +295,13 @@ class AdvancedErrorHandler {
         z-index: 9999;
       ">
         You're offline. Some features may not be available.
-      </div>
+      </div>,
     `;
     document.body.appendChild(offlineMessage);
   }
 
   showUserError(errorInfo) {
-    // Show user-friendly error message
+    // Show user-friendly error message;
     if (errorInfo.severity === 'critical') {
       this.showCriticalErrorModal(errorInfo);
     } else {
@@ -332,8 +331,8 @@ class AdvancedErrorHandler {
           border-radius: 8px;
           max-width: 500px;
           text-align: center;
-        ">
-          <h2>Something went wrong</h2>
+        ">,
+          <h2>Something went wrong</h2>,
           <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
           <button onclick="window.location.reload()" style="
             background: #007bff;
@@ -344,7 +343,7 @@ class AdvancedErrorHandler {
             cursor: pointer;
           ">Refresh Page</button>
         </div>
-      </div>
+      </div>,
     `;
     document.body.appendChild(modal);
   }
@@ -363,7 +362,7 @@ class AdvancedErrorHandler {
         border-radius: 4px;
         z-index: 9999;
         max-width: 300px;
-      ">
+      ">,
         <strong>Error:</strong> ${errorInfo.message}
         <button onclick="this.parentElement.parentElement.remove()" style="
           background: none;
@@ -376,9 +375,9 @@ class AdvancedErrorHandler {
     `;
     document.body.appendChild(toast);
 
-    // Auto-remove after 5 seconds
-    setTimeout(() => {
-      if (toast.parentElement) {
+    // Auto-remove after 5 seconds;
+    setTimeout(() => {,
+      if (toast.parentElement) {,
         toast.remove();
       }
     }, 5000);
@@ -386,34 +385,34 @@ class AdvancedErrorHandler {
 
   handleNetworkStatusChange(status) {
     const _message = status === 'online' ? 'Connection restored' : 'Connection lost';
-    this.showErrorToast({
-      message,
-      type: 'Network Status',
-      severity: 'info',
+    this.showErrorToast({)
+      message)
+      type: 'Network Status'),
+      severity: 'info'),
     });
   }
 
   reportError(errorInfo) {
-    // Send error to external service
+    // Send error to external service;
     if (window.gtag) {
-      window.gtag('event', 'exception', {
-        description: errorInfo.message,
-        fatal: errorInfo.severity === 'critical',
+      window.gtag('event', 'exception', {)
+        description: errorInfo.message),
+        fatal: errorInfo.severity === 'critical'),
       });
     }
 
-    // Send to custom error reporting service
-    fetch('/api/errors', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+    // Send to custom error reporting service;
+    fetch('/api/errors', {)
+      method: 'POST',)
+      headers: {,)
+        'Content-Type': 'application/json'),
+      })
       body: JSON.stringify(errorInfo),
-    }).catch(error => {
+    }).catch(error => {)
       //       });
   }
 
-  // Public methods
+  // Public methods;
   getErrorLog() {
     return this.errorLog;
   }
@@ -431,11 +430,11 @@ class AdvancedErrorHandler {
   }
 }
 
-// Initialize error handler
+// Initialize error handler;
 // const errorHandler = new AdvancedErrorHandler();
 
-// Export for use in other modules
+// Export for use in other modules;
 export default errorHandler;
 
-// Global error handler instance
+// Global error handler instance;
 window.errorHandler = errorHandler;

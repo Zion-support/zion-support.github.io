@@ -1,18 +1,17 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import { execSync } from 'child_process';
 import fs from 'fs';
 
 console.log('🔧 Starting manual merge handling...\n');
 
-// Function to execute git commands safely
+// Function to execute git commands safely;
 function execGitCommand(command, description) {
   try {
     console.log(`📝 ${description}...`);
-    const result = execSync(command, { 
-      encoding: 'utf8',
+    const result = execSync(command, { )
+      encoding: 'utf8'),
       cwd: process.cwd(),
-      stdio: 'pipe'
+      stdio: 'pipe',
     });
     console.log(`✅ ${description} completed`);
     return result;
@@ -22,7 +21,7 @@ function execGitCommand(command, description) {
   }
 }
 
-// List of important branches to merge
+// List of important branches to merge;
 const importantBranches = [
   'cursor/enhance-app-with-new-services-and-futuristic-design-2e4e',
   'cursor/enhance-app-with-new-services-and-futuristic-design-7bf2',
@@ -38,20 +37,20 @@ const importantBranches = [
 async function main() {
   console.log('🚀 Starting manual merge handling for important branches...\n');
   
-  // Check current status
-  console.log('📊 Current Status:');
+  // Check current status;
+  console.log('📊 Current Status: ');
   execGitCommand('git status --porcelain', 'Checking git status');
   
-  // Try to merge each important branch
+  // Try to merge each important branch;
   for (const branch of importantBranches) {
     console.log(`\n🔄 Attempting to merge ${branch}...`);
     
     try {
-      // Check if branch exists
+      // Check if branch exists;
       const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branch}`, `Checking if ${branch} exists`);
       
       if (branchExists !== null) {
-        // Try to merge
+        // Try to merge;
         const mergeResult = execGitCommand(`git merge origin/${branch} --no-edit`, `Merging ${branch}`);
         
         if (mergeResult) {
@@ -66,12 +65,12 @@ async function main() {
       console.log(`❌ Error with ${branch}: ${error.message}`);
     }
     
-    // Small delay between merges
+    // Small delay between merges;
     await new Promise(resolve => setTimeout(resolve, 500));
   }
   
-  // Final status
-  console.log('\n📊 Final Status:');
+  // Final status;
+  console.log('\n📊 Final Status: ');
   execGitCommand('git status', 'Final git status');
   execGitCommand('git log --oneline -5', 'Recent commits');
   

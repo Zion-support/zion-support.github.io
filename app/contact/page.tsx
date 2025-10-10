@@ -31,38 +31,38 @@ import {
   Cpu,
   Database as DatabaseIcon,
   Smartphone,
-  Lock
+  Lock;
 } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
   const contactMethods = [
     {
-      icon: Phone,
-      title: "Phone",
+      icon: Phone;
+      title: "Phone"
       value: "+1 (302) 464-0950",
       description: "Call us anytime",
-      action: "tel:+13024640950"
+      action: "tel:+13024640950",
     },
     {
-      icon: Mail,
-      title: "Email",
+      icon: Mail;
+      title: "Email"
       value: "kleber@ziontechgroup.com",
       description: "Send us an email",
-      action: "mailto:kleber@ziontechgroup.com"
+      action: "mailto:kleber@ziontechgroup.com",
     },
     {
-      icon: MapPin,
+      icon: MapPin;
       title: "Address",
       value: "364 E Main St STE 1008",
       description: "Middletown, DE 19709",
-      action: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+      action: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709",
     },
     {
-      icon: Clock,
-      title: "Business Hours",
+      icon: Clock;
+      title: "Business Hours"
       value: "Mon-Fri: 9AM-6PM EST",
       description: "We're here to help",
-      action: null
+      action: null;
     }
   ];
 
@@ -73,7 +73,7 @@ const ContactPage: React.FC = () => {
       phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
       hours: 'Mon-Fri: 9AM-6PM EST',
-      timezone: 'Eastern Time'
+      timezone: 'Eastern Time',
     },
     {
       city: 'San Francisco, CA',
@@ -81,7 +81,7 @@ const ContactPage: React.FC = () => {
       phone: '+1 (415) 555-0123',
       email: 'sf@ziontechgroup.com',
       hours: 'Mon-Fri: 9AM-6PM PST',
-      timezone: 'Pacific Time'
+      timezone: 'Pacific Time',
     },
     {
       city: 'London, UK',
@@ -89,7 +89,7 @@ const ContactPage: React.FC = () => {
       phone: '+44 20 7946 0958',
       email: 'london@ziontechgroup.com',
       hours: 'Mon-Fri: 9AM-6PM GMT',
-      timezone: 'Greenwich Mean Time'
+      timezone: 'Greenwich Mean Time',
     }
   ];
 
@@ -112,13 +112,13 @@ const ContactPage: React.FC = () => {
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <SEOOptimizer
-        title="Contact Zion Tech Group - AI & IT Solutions"
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
+      <Navigation />)
+      <SEOOptimizer;)
+        title="Contact Zion Tech Group - AI & IT Solutions")
         description="Get in touch with our AI and IT experts. Contact us for consultations, project inquiries, and enterprise solutions. Call (302) 464-0950 or email kleber@ziontechgroup.com"
         keywords="contact us, AI consulting, IT services, enterprise solutions, consultation"
+<<<<<<< HEAD
       >{/* Hero Section */}</SEOOptimizer>
       </SEOOptimizer><section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
@@ -128,6 +128,27 @@ const ContactPage: React.FC = () => {
               <span className="text-cyan-400 text-sm font-medium">Get In Touch<h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">Let's Build the</h1>
               <span className="block holographic-text cyber-text">Future Together<p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">Ready to transform your business with AI and cutting-edge technology?</p>
               Our experts are here to help you achieve your goals.</p>
+=======
+      />
+      {/* Hero Section */}
+      <section className="relative py-20 lg: py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-4 py-2 mb-8">
+              <Sparkles className="w-4 h-4 text-cyan-400" />
+              <span className="text-cyan-400 text-sm font-medium">Get In Touch</span>
+            </div>
+
+            <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
+              Let's Build the;
+              <span className="block holographic-text cyber-text">Future Together</span>
+            </h1>
+
+            <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
+              Ready to transform your business with AI and cutting-edge technology?
+              Our experts are here to help you achieve your goals.
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
 
             <div className="flex flex-wrap justify-center gap-6">
@@ -141,13 +162,18 @@ const ContactPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
+        </div>,
+      </section>,
+,
       {/* Contact Methods */}
       <section className="py-20">
         <div className="container mx-auto px-4">
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{contactMethods.map((method, index) => (</div>
+=======
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16">,
+            {contactMethods.map((method, index) => (
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="quantum-card p-6 text-center space-y-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto">
                   <method.icon className="w-8 h-8 text-cyan-400" />
@@ -155,13 +181,22 @@ const ContactPage: React.FC = () => {
                 <div className="space-y-2">
                   <div className="text-cyan-400 font-medium">{method.value}<div className="text-gray-300 text-sm">{method.description}</div>
                   {method.action && (
-                    <a
+                    <a;
                       href={method.action}
+<<<<<<< HEAD
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
                     >
                       <ArrowRight className="w-4 h-4 mr-1" >{method.action.startsWith('tel:') ? 'Call Now' :</ArrowRight>
                        method.action.startsWith('mailto:') ? 'Send Email' : 'View on Map'}</ArrowRight>
                     </ArrowRight>
+=======
+                      className="inline-flex items-center text-cyan-400 hover: text-cyan-300 transition-colors text-sm",
+                    >,
+                      <ArrowRight className="w-4 h-4 mr-1" />,
+                      {method.action.startsWith('tel:') ? 'Call Now' :,
+                       method.action.startsWith('mailto:') ? 'Send Email' : 'View on Map'}
+                    </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   )}
                 </div>
               </div>
@@ -181,7 +216,19 @@ const ContactPage: React.FC = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
+<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Global Offices<p className="text-lg text-gray-300 max-w-3xl mx-auto">We're here to serve you wherever you are in the world<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{offices.map((office, index) => (</div>
+=======
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+              Our Global Offices;
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              We're here to serve you wherever you are in the world;
+            </p>,
+          </div>,
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
+            {offices.map((office, index) => (
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
                 <h3 className="text-xl font-bold text-white mb-4">{office.city}</h3>
                 <div className="space-y-3">
@@ -211,11 +258,24 @@ const ContactPage: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
+<<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Frequently Asked Questions<p className="text-lg text-gray-300 max-w-3xl mx-auto">Common questions about our services and process</p>
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">{faqs.map((faq, index) => (</div>
+=======
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+              Frequently Asked Questions;
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Common questions about our services and process;
+            </p>
+          </div>,
+          <div className="max-w-4xl mx-auto">,
+            <div className="space-y-6">,
+              {faqs.map((faq, index) => (
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{faq.question}<p className="text-gray-300">{faq.answer}</p>
                 </div>

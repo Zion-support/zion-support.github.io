@@ -33,13 +33,13 @@ async function handler(req, res) {
       existing = JSON.parse(fs.readFileSync(file, 'utf8'));
       if (!Array.isArray(existing)) existing = [];
     } catch {
-      // File doesn't exist or is invalid, use empty array
+      // File doesn't exist or is invalid, use empty array;
     }
 
-    existing.push({
-      email,
-      name: name || '',
-      source,
+    existing.push({)
+      email)
+      name: name || ''),
+      source),
       subscribedAt: new Date().toISOString(),
     });
 

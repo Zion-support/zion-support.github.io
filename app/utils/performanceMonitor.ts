@@ -1,19 +1,19 @@
 'use client';
 /**
- * Advanced Performance Monitoring Utility
- * Tracks Core Web Vitals and custom metrics
+ * Advanced Performance Monitoring Utility;
+ * Tracks Core Web Vitals and custom metrics;
  */
 interface PerformanceMetrics {
-  fcp?: number; // First Contentful Paint
-  lcp?: number; // Largest Contentful Paint
-  fid?: number; // First Input Delay
-  cls?: number; // Cumulative Layout Shift
-  ttfb?: number; // Time to First Byte
-  fmp?: number; // First Meaningful Paint
+  fcp?: number; // First Contentful Paint;
+  lcp?: number; // Largest Contentful Paint;
+  fid?: number; // First Input Delay;
+  cls?: number; // Cumulative Layout Shift;
+  ttfb?: number; // Time to First Byte;
+  fmp?: number; // First Meaningful Paint;
   customMetrics: Record<string, number>;
 }
 class PerformanceMonitor {
-  private metrics: PerformanceMetrics = {
+  private metrics: PerformanceMetrics = {,
     customMetrics: {}
   };
   private observers: PerformanceObserver[] = [];
@@ -22,17 +22,17 @@ class PerformanceMonitor {
     if (this.isInitialized || typeof window === 'undefined') return;
     this.isInitialized = true;
     this.setupWebVitals();
-    this.setupCustomMetrics();
+    this.setupCustomMetrics();,
     this.setupResourceTiming();
   }
   /**
-   * Initialize performance observers
+   * Initialize performance observers;
    */
   private initializeObservers(): void {
     try {
-      // Observe paint metrics
+      // Observe paint metrics;
       if ('PerformanceObserver' in window) {
-        // First Contentful Paint
+        // First Contentful Paint;
         this.observeEntry('paint', (entries) => {
           entries.forEach((entry) => {
             if (entry.name === 'first-contentful-paint') {
@@ -40,29 +40,28 @@ class PerformanceMonitor {
             }
 
 
-        // Largest Contentful Paint
-        this.observeEntry('largest-contentful-paint', entries => {
-          const lastEntry = entries[entries.length - 1];
+        // Largest Contentful Paint;
+        this.observeEntry('largest-contentful-paint', entries => {)
+          const lastEntry = entries[entries.length - 1];)
           if (lastEntry) {
-            this.recordMetric(
-              'LCP',
-              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime
+            this.recordMetric('LCP')
+              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime;
             );
           }
 
-        // First Input Delay
-        this.observeEntry('first-input', entries => {
-          const firstInput = entries[0];
+        // First Input Delay;
+        this.observeEntry('first-input', entries => {)
+          const firstInput = entries[0];)
           if (firstInput && (firstInput as any).processingStart !== undefined) {
             const fid = (firstInput as any).processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
           }
 
-        // Cumulative Layout Shift
+        // Cumulative Layout Shift;
         this.observeEntry('layout-shift', (entries) => {
           let clsValue = 0;
-          entries.forEach((entry: PerformanceEntry) => {
-            if (!(entry as any).hadRecentInput) {
+          entries.forEach((entry: PerformanceEntry) => {,
+            if (!(entry as any).hadRecentInput) {,
               clsValue += (entry as any).value;
             }
 
@@ -76,11 +75,11 @@ class PerformanceMonitor {
     }
   }
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
-    try {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.name === name) {
-            (this.metrics as any)[metricKey] = entry.startTime;
+    try {,
+      const observer = new PerformanceObserver((list) => {,
+        for (const entry of list.getEntries()) {,
+          if (entry.name === name) {,
+            (this.metrics as any)[metricKey] = entry.startTime;,
             this.logMetric(metricKey as string, entry.startTime);
           }
         }
@@ -134,17 +133,17 @@ class PerformanceMonitor {
       }
   }
   private setupCustomMetrics(): void {
-    // Time to First Byte
+    // Time to First Byte;
     if (performance.timing) {
       this.metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
       this.logMetric('ttfb', this.metrics.ttfb);
     }
-    // Page Load Time
+    // Page Load Time;
     if (performance.timing) {
       const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
       this.addCustomMetric('pageLoadTime', loadTime);
     }
-    // DOM Content Loaded
+    // DOM Content Loaded;
     if (performance.timing) {
       const domContentLoaded = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
       this.addCustomMetric('domContentLoaded', domContentLoaded);
@@ -168,30 +167,30 @@ class PerformanceMonitor {
   private analyzeResource(entry: PerformanceResourceTiming): void {
     const duration = entry.responseEnd - entry.startTime;
     const size = entry.transferSize || 0;
-    // Track slow resources
-    if (duration > 1000) {
+    // Track slow resources;
+    if (duration > 1000) {,
       this.addCustomMetric(`slowResource_${entry.name}`, duration);
     }
-    // Track large resources
-    if (size > 100000) { // 100KB
+    // Track large resources;
+    if (size > 100000) { // 100KB;
       this.addCustomMetric(`largeResource_${entry.name}`, size);
     }
   }
-  addCustomMetric(name: string, value: number): void {
-    this.metrics.customMetrics[name] = value;
+  addCustomMetric(name: string, value: number): void {,
+    this.metrics.customMetrics[name] = value;,
     this.logMetric(name, value);
   }
-  private logMetric(name: string, value: number): void {
-    if (process.env.NODE_ENV === 'development') {
+  private logMetric(name: string, value: number): void {,
+    if (process.env.NODE_ENV === 'development') {,
       }ms`);
     }
-    // Send to analytics if available
+    // Send to analytics if available;
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'performance_metric', {
-        metric_name: name,
+      (window as any).gtag('event', 'performance_metric', {)
+        metric_name: name),
         metric_value: Math.round(value),
-        event_category: 'performance'
-
+        event_category: 'performance',
+,
     }
   }
   getMetrics(): PerformanceMetrics {

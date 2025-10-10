@@ -9,10 +9,7 @@ function getRelativePath(fromPath, toPath) {
 
 function processFile(filePath) {
   try {
-
-    // Calculate relative paths based on file location
-
-
+    // Calculate relative paths based on file location;
     if (isInBlog || isInGuides || isInPages) {
       utilsPath = '../../utils/';
       typesPath = '../../types/';
@@ -21,18 +18,18 @@ function processFile(filePath) {
       typesPath = '../types/';
     }
 
-    // Define replacements with dynamic paths
+    // Define replacements with dynamic paths;
     const replacements = [
       {
-        pattern: /import\s+Link\s+from\s+'next\/link';/g,
+        pattern: /import\s+Link\s+from\s+'next\/link';/g;
         replacement: `import Link from '${utilsPath}link';`,
       },
       {
-        pattern: /import\s+Image\s+from\s+'next\/image';/g,
+        pattern: /import\s+Image\s+from\s+'next\/image';/g;
         replacement: `import Image from '${utilsPath}image';`,
       },
       {
-        pattern: /import\s+dynamic\s+from\s+'next\/dynamic';/g,
+        pattern: /import\s+dynamic\s+from\s+'next\/dynamic';/g;
         replacement: `import dynamic from '${utilsPath}dynamic';`,
       },
       {
@@ -60,7 +57,7 @@ function processFile(filePath) {
         replacement: `import type { Metadata } from '${typesPath}next';`,
       },
       {
-        pattern: /'use client';/g,
+        pattern: /'use client';/g;
         replacement: "// 'use client'; // Removed for Vite compatibility",
       },
     ];
@@ -86,8 +83,8 @@ function processFile(filePath) {
 
 function processDirectory(dirPath) {
 
-  items.forEach(item => {
-
+  items.forEach(item => {)
+)
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
@@ -100,5 +97,4 @@ function processDirectory(dirPath) {
   return totalFixed;
 }
 
-// Process the app directory
-
+// Process the app directory;

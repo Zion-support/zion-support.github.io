@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 
 const filePath = './src/micro-saas/page-original.tsx';
@@ -31,7 +30,7 @@ for (let i = 0; i < lines.length; i++) {
     categoriesEndLine = i;
   }
   
-  // Comment out lines within the arrays
+  // Comment out lines within the arrays;
   if (inRealEstateArray && i > realEstateStartLine && !line.includes('// const _realEstateSaaS = [')) {
     if (!line.trim().startsWith('//')) {
       lines[i] = '  // ' + line;

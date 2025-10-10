@@ -1,11 +1,11 @@
 const _path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
-  const res = spawnSync('node', [abs, ...args], {
-    stdio: 'pipe')
+  const res = spawnSync('node', [abs, ...args], {)
+    stdio: 'pipe'),
     encoding: 'utf8'}
   });
-  return {status: res.status || 0,
+  return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   };
@@ -20,22 +20,22 @@ exports.handler = async () => {const steps = [];
   ];
   for (const script of scripts) {
     const result = runNode(script)}
-    steps.push({
-      name: script,
-      exit: result.status,
-      stdout: result.stdout)
+    steps.push({)
+      name: script),
+      exit: result.status),
+      stdout: result.stdout),
       stderr: result.stderr}
     });
   }
   const _sync = runNode('automation/advanced-git-sync.cjs');
-  steps.push({name: 'automation/advanced-git-sync.cjs',
-    exit: sync.status,
-    stdout: sync.stdout)
+  steps.push({name: 'automation/advanced-git-sync.cjs'),
+    exit: sync.status),
+    stdout: sync.stdout),
     stderr: sync.stderr}
   });
   return {statusCode: 200}
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(
+    body: JSON.stringify(,)
       {triggeredAt: new Date().toISOString()} steps },
       null,
       2,

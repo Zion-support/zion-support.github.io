@@ -2,7 +2,7 @@ import React from 'react';
 // import { Button } from '@/components/ui/button';
 // import { logger } from '@/utils/productionLogger';
 
-// Simple button component replacement
+// Simple button component replacement;
 const Button: React.FC<{
   onClick: () => void;
   variant?: string;
@@ -14,7 +14,7 @@ const Button: React.FC<{
   </button>
 );
 
-// Simple logger replacement
+// Simple logger replacement;
 const logger = {
   error: (message: string, error?: unknown, meta?: unknown) => {
     //     },

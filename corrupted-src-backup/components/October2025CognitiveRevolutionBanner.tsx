@@ -1,11 +1,10 @@
 const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
-  return (
-    <div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n">";
-      {/* Animated, background, effects */}
+  return(<div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n">";)
+      {/* Animated, background, effects */})
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 3, 0%_, 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent_, 5, 0%)]  />
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 7, 0%_, 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent_, 5, 0%)]  />
       {/* Conte, n, t */}
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8, p, y-6">"
         <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">
           {/* Left, sid, e - Badge, and, Title */}
@@ -17,7 +16,7 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 3, 0%_, 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent_, 5, 0%)]" />";
       <div, className="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle_at_, 7, 0%_, 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent_, 5, 0%)]" />";
       {/* Conte, n, t */}
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8, p, y-6">";
         <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">";
           {/* Left, sid, e - Badge, and, Title */}
@@ -49,31 +48,31 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
                 </sp, a, n>
               </d, i, v>
               <h2, className="te, x, t-2xl, s, m: te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2, leadin, g-tig, h, t">"
-                🧠 Cognitive, Computing, Revolution: Hum, a, n-Like, AI, Intelligence
+                🧠 Cognitive, Computing, Revolution: Hum, a, n-Like, AI, Intelligence;
               </h2>
               <p, className="te, x, t-purp, l, e-100, tex, t-sm, s, m: te, x, t-base, leadin, g-relaxed, m, b-3">
-                <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA
+                <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA;
   Y:</sp, a, n> Discover, how, Fortune 500, companies, are deploying, cognitive, AI systems, that, understand, reas, o, n, and, learn, like huma, n, s — achievi, n, g{' '}
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">98.7% decision, accurac, y</sp, a, n>,{' '}
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">$4.7B+ in, value, creation</sp, a, n>, a, n, d{' '}
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">3,6, 0, 0% R, O, I</sp, a, n>. 
                 Explore, mult, i-agent, orchestratio, n (97.8% automati, o, n, $84, 7, M+ val, u, e), cognitive, enterprise, transformation;
               <h2, className="te, x, t-2xl, s, m: te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2, leadin, g-tig, h, t">";
-                🧠 Cognitive, Computing, Revolutio
-  n: Hum, a, n-Like, AI, Intelligence
+                🧠 Cognitive, Computing, Revolutio;
+  n: Hum, a, n-Like, AI, Intelligence;
               </h2>
               <p, className="te, x, t-purp, l, e-100, tex, t-sm, s, m: te, x, t-base, leadin, g-relaxed, m, b-3">";
-                <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA
+                <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">JUST, PUBLISHED, TODA;
   Y:</sp, a, n> Discover, how, Fortune 500, companies, are deploying, cognitive, AI systems, that, understand, reas, o, n, and, learn, like huma, n, s — achievi, n, g{' '}';
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">98.7% decision, accurac, y</sp, a, n>,{' '}';
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">$4.7B+ in, value, creation</sp, a, n>, a, n, d{' '}';
                 <span, className="fo, n, t-bold, tex, t-gre, e, n-3, 0, 0">3,6, 0, 0% R, O, I</sp, a, n>. ";
-                Explore, mult, i-agent, orchestratio, n (97.8% automati, o, n, $84, 7, M+ val, u, e), cognitive, enterprise, transformation
+                Explore, mult, i-agent, orchestratio, n (97.8% automati, o, n, $84, 7, M+ val, u, e), cognitive, enterprise, transformation;
                 and, rea, l-world, telecom, success story, with, transformational resul, t, s!
               </p>
               {/* Featured, content, links */}
               <div, className="flex, fle, x-wrap, ga, p-3, tex, t-sm">";
-                <Li, n, k
+                <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-multiage, n, t-enterpri, s, e-orchestrati, o, n-revoluti, o, n"
                   classNa, m, e="inli, n, e-flex, item, s-center, tex, t-purp, l, e-200, hove, r: te, x, t-white, transitio, n-colors, grou, p"
                 >
@@ -87,9 +86,9 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
                   <Link, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
                 </Li, n, k>
                 <span, className="te, x, t-purp, l, e-4, 0, 0">•</sp, a, n>";
-                <Li, n, k
+                <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-cogniti, v, e-computi, n, g-enterpri, s, e-transformati, o, n"
-                  classNa, m, e="inli, n, e-flex, item, s-center, tex, t-purp, l, e-200, hov, e
+                  classNa, m, e="inli, n, e-flex, item, s-center, tex, t-purp, l, e-200, hov, e;
   r: te, x, t-white, transitio, n-colors, grou, p"
                 >
                   <Brain, className="w-4 h-4, m, r-1, tex, t-pi, n, k-400, grou, p-hov, e, r: anima, t, e-pul, s, e/>"
@@ -102,9 +101,9 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
                   <Link, className="w-3 h-3, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
                 </Li, n, k>
                 <span, className="te, x, t-purp, l, e-4, 0, 0">•</sp, a, n>";
-                <Li, n, k
+                <Li, n, k;
   to="/ca, s, e-studi, e, s/glob, a, l-telec, o, m-cogniti, v, e-transformati, o, n-4-7-billi, o, n"
-                  classNa, m, e="inli, n, e-flex, item, s-center, tex, t-purp, l, e-200, hov, e
+                  classNa, m, e="inli, n, e-flex, item, s-center, tex, t-purp, l, e-200, hov, e;
   r: te, x, t-white, transitio, n-colors, grou, p"
                 >
                   <Award, className="w-4 h-4, m, r-1, tex, t-gre, e, n-400, grou, p-hov, e, r: anima, t, e-pul, s, e/>"
@@ -119,9 +118,9 @@ const, October2025CognitiveRevolutionBanne, r: Rea, c, t.FC = () => {
           </d, i, v>
           {/* Right, sid, e - CTA, Butto, n */}
           <div, className="fl, e, x-shri, n, k-0">";
-            <Li, n, k
+            <Li, n, k;
   to="/bl, o, g"
-              classNa, m, e="inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-xl, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hov, e
+              classNa, m, e="inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-xl, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hov, e;
   r:sca, l, e-105, grou, p"
             >
               <sp, a, n>Explore, Cognitive, AI Revoluti, o, n</sp, a, n>

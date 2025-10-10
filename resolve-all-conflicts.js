@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import { execSync } from 'child_process';
 import { readFileSync, writeFileSync } from 'fs';
 
@@ -9,14 +8,14 @@ function resolveConflicts(filePath) {
   try {
     const content = readFileSync(filePath, 'utf8');
     
-    // Check if file has conflict markers
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return false; // No conflicts
+    // Check if file has conflict markers;
+    if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
+      return false; // No conflicts;
     }
 
     console.log(`🔧 Resolving conflicts in ${filePath}...`);
     
-    // Split by conflict markers and keep the incoming version (after =======)
+    // Split by conflict markers and keep the incoming version (after )
     const lines = content.split('\n');
     const resolvedLines = [];
     let skipUntilNextMarker = false;
@@ -24,12 +23,12 @@ function resolveConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.includes('<<<<<<< HEAD')) {
+      if (line.includes('')) {
         skipUntilNextMarker = true;
         continue;
       }
       
-      if (line.includes('=======')) {
+      if (line.includes('')) {
         skipUntilNextMarker = false;
         continue;
       }
@@ -43,7 +42,7 @@ function resolveConflicts(filePath) {
       }
     }
     
-    // Write the resolved content
+    // Write the resolved content;
     writeFileSync(filePath, resolvedLines.join('\n'));
     console.log(`✅ Resolved conflicts in ${filePath}`);
     return true;
@@ -55,7 +54,7 @@ function resolveConflicts(filePath) {
 }
 
 try {
-  // Get list of files with conflicts
+  // Get list of files with conflicts;
   const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
   
   if (!conflictFiles.trim()) {
@@ -63,15 +62,15 @@ try {
     process.exit(0);
   }
 
-  console.log('📋 Files with conflicts:');
+  console.log('📋 Files with conflicts: ');
   console.log(conflictFiles);
 
   const files = conflictFiles.trim().split('\n');
   let resolvedCount = 0;
 
   for (const file of files) {
-    if (file.trim()) {
-      if (resolveConflicts(file.trim())) {
+    if (file.trim()) {,
+      if (resolveConflicts(file.trim())) {,
         resolvedCount++;
       }
     }
@@ -79,10 +78,10 @@ try {
 
   console.log(`\n📊 Resolved conflicts in ${resolvedCount} files`);
 
-  // Add all resolved files
+  // Add all resolved files;
   execSync('git add .', { stdio: 'inherit' });
 
-  // Commit the resolution
+  // Commit the resolution;
   execSync('git commit -m "feat: Resolve all merge conflicts and integrate latest enhancements"', { stdio: 'inherit' });
 
   console.log('✅ All conflicts resolved and committed!');

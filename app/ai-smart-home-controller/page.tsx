@@ -676,7 +676,7 @@ import {
   Femto as FemtoIcon,
   Atto as AttoIcon,
   Zepto as ZeptoIcon,
-  Yocto as YoctoIcon
+  Yocto as YoctoIcon;
 } from 'lucide-react';
 
 interface SmartHomeControllerProps {
@@ -684,89 +684,89 @@ interface SmartHomeControllerProps {
 }
 
 export default function SmartHomeController({ className = '' }: SmartHomeControllerProps) {
-  const [devices, setDevices] = useState([
-    { id: 1, name: 'Living Room Light', type: 'light', status: 'on', brightness: 80, room: 'Living Room' },
-    { id: 2, name: 'Bedroom Light', type: 'light', status: 'off', brightness: 0, room: 'Bedroom' },
-    { id: 3, name: 'Thermostat', type: 'thermostat', status: 'on', temperature: 72, room: 'Living Room' },
-    { id: 4, name: 'Security Camera', type: 'camera', status: 'on', room: 'Front Door' },
-    { id: 5, name: 'Smart Speaker', type: 'speaker', status: 'on', volume: 50, room: 'Living Room' },
+  const [devices, setDevices] = useState([)
+    { id: 1, name: 'Living Room Light', type: 'light', status: 'on', brightness: 80, room: 'Living Room' },)
+    { id: 2, name: 'Bedroom Light', type: 'light', status: 'off', brightness: 0, room: 'Bedroom' },)
+    { id: 3, name: 'Thermostat', type: 'thermostat', status: 'on', temperature: 72, room: 'Living Room' })
+    { id: 4, name: 'Security Camera', type: 'camera', status: 'on', room: 'Front Door' })
+    { id: 5, name: 'Smart Speaker', type: 'speaker', status: 'on', volume: 50, room: 'Living Room' })
     { id: 6, name: 'Door Lock', type: 'lock', status: 'locked', room: 'Front Door' }
   ]);
 
-  const [scenes, setScenes] = useState([
-    { id: 1, name: 'Good Morning', icon: Sun, devices: ['Living Room Light', 'Thermostat'], active: false },
-    { id: 2, name: 'Movie Night', icon: Video, devices: ['Living Room Light', 'Smart Speaker'], active: false },
-    { id: 3, name: 'Sleep Mode', icon: Moon, devices: ['All Lights', 'Thermostat'], active: false },
+  const [scenes, setScenes] = useState([)
+    { id: 1, name: 'Good Morning', icon: Sun, devices: ['Living Room Light', 'Thermostat'], active: false })
+    { id: 2, name: 'Movie Night', icon: Video, devices: ['Living Room Light', 'Smart Speaker'], active: false })
+    { id: 3, name: 'Sleep Mode', icon: Moon, devices: ['All Lights', 'Thermostat'], active: false })
     { id: 4, name: 'Away Mode', icon: Shield, devices: ['All Lights', 'Door Lock', 'Security Camera'], active: false }
   ]);
 
   const [energyUsage, setEnergyUsage] = useState({
-    today: 45.2,
-    thisWeek: 312.8,
-    thisMonth: 1284.5,
-    savings: 15.3
+    today: 45.2;
+    thisWeek: 312.8;
+    thisMonth: 1284.5;
+    savings: 15.3;
   };
 
   const features = [
     {
       title: "Voice Control",
       description: "Control your home with natural voice commands using AI",
-      icon: Microphone,
-      price: "Included"
+      icon: Microphone;
+      price: "Included",
     },
     {
       title: "Predictive Maintenance",
       description: "AI predicts when devices need maintenance or replacement",
-      icon: Brain,
-      price: "Included"
+      icon: Brain;
+      price: "Included",
     },
     {
       title: "Energy Optimization",
       description: "Automatically optimize energy usage to reduce costs",
-      icon: Zap,
-      price: "Included"
+      icon: Zap;
+      price: "Included",
     },
     {
       title: "Security Integration",
       description: "Comprehensive security monitoring and alerts",
-      icon: Shield,
-      price: "Included"
+      icon: Shield;
+      price: "Included",
     },
     {
       title: "Custom Scenes",
       description: "Create and manage custom automation scenes",
-      icon: Settings,
-      price: "Included"
+      icon: Settings;
+      price: "Included",
     },
     {
       title: "Mobile App",
       description: "Control your home from anywhere with our mobile app",
-      icon: Smartphone,
-      price: "Included"
+      icon: Smartphone;
+      price: "Included",
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
+      name: "Starter"
       price: "$29",
       period: "/month",
       description: "Perfect for small apartments and single rooms",
-      features: [
+      features: [,
         "Up to 10 devices",
         "Basic voice control",
         "Mobile app access",
         "Email support",
         "Basic automation"
       ],
-      popular: false
+      popular: false;
     },
     {
-      name: "Home",
+      name: "Home"
       price: "$79",
       period: "/month",
       description: "Ideal for medium-sized homes and families",
-      features: [
+      features: [,
         "Up to 50 devices",
         "Advanced voice control",
         "Predictive maintenance",
@@ -775,71 +775,74 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
         "Custom scenes",
         "Security monitoring"
       ],
-      popular: true
+      popular: true;
     },
     {
-      name: "Mansion",
+      name: "Mansion"
       price: "$199",
       period: "/month",
       description: "For large homes and estates with complex needs",
-      features: [
+      features: [,
         "Unlimited devices",
         "Premium voice control",
-        "Full predictive maintenance",
-        "Advanced energy optimization",
-        "24/7 support",
-        "Custom integrations",
-        "Professional installation",
+        "Full predictive maintenance",)
+        "Advanced energy optimization",)
+        "24/7 support",)
+        "Custom integrations")
+        "Professional installation")
         "SLA guarantee"
-      ],
-      popular: false
+      ])
+      popular: false;
     }
   ];
 
-  const toggleDevice = (deviceId: number) => {
-    setDevices(devices.map(device =>
-      device.id === deviceId
+  const toggleDevice = (deviceId: number) => {,
+    setDevices(devices.map(device =>,)
+      device.id === deviceId;),
         ? { ...device, status: device.status === 'on' ? 'off' : 'on' }
-        : device
+        : device;
     ));
   };
 
-  const adjustBrightness = (deviceId: number, brightness: number) => {
-    setDevices(devices.map(device =>
-      device.id === deviceId
+  const adjustBrightness = (deviceId: number, brightness: number) => {,
+    setDevices(devices.map(device =>,)
+      device.id === deviceId;),
         ? { ...device, brightness }
-        : device
+        : device;
     ));
   };
 
-  const adjustTemperature = (deviceId: number, temperature: number) => {
-    setDevices(devices.map(device =>
-      device.id === deviceId
+  const adjustTemperature = (deviceId: number, temperature: number) => {,
+    setDevices(devices.map(device =>,)
+      device.id === deviceId;),
         ? { ...device, temperature }
-        : device
+        : device;
     ));
   };
 
-  const activateScene = (sceneId: number) => {
-    setScenes(scenes.map(scene =>
-      scene.id === sceneId
+  const activateScene = (sceneId: number) => {,
+    setScenes(scenes.map(scene =>,)
+      scene.id === sceneId;),
         ? { ...scene, active: !scene.active }
-        : scene
+        : scene;
     ));
   };
 
-  return (
-    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 ${className}`}>
+  return(<div className={`min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 ${className}`}>
       <Helmet>
         <title>AI Smart Home Controller Pro - Intelligent Home Automation | Zion Tech Group</title>
         <meta name="description" content="Control your smart home with AI-powered automation. Voice control, predictive maintenance, energy optimization, and security integration for the ultimate smart home experience." />
-        <meta name="keywords" content="smart home, home automation, voice control, IoT, energy optimization, security, predictive maintenance" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-smart-home-controller" />
-      </Helmet>
-
+        <meta name="keywords" content="smart home, home automation, voice control, IoT, energy optimization, security, predictive maintenance" />)
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-smart-home-controller" />,)
+      </Helmet>,)
+),
       {/* Hero Section */}
       <div className="relative py-20 overflow-hidden">
+<<<<<<< HEAD
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+=======
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
@@ -849,19 +852,19 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
             </div>
 
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent neon-text">
-              Intelligent Home Automation
+              Intelligent Home Automation;
             </h1>
 
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
-              Control Your Home with AI-Powered Intelligence
-            </p>
-
-            <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Control Your Home with AI-Powered Intelligence;
+            </p>,
+,
+            <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">,
               Transform your home into a smart, energy-efficient, and secure environment.
               Control everything with voice commands, automate routines, and optimize energy usage with advanced AI.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
               <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25">
                 <span className="relative z-10">Start Free Trial</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -870,12 +873,12 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
 
               <button className="group inline-flex items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-xl hover:bg-green-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Watch Demo
-              </button>
-            </div>
-
+                Watch Demo;
+              </button>,
+            </div>,
+,
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
                 <div className="text-gray-400">Device Types</div>
@@ -892,45 +895,45 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                 <div className="text-3xl font-bold text-yellow-400 mb-2">99.9%</div>
                 <div className="text-gray-400">Uptime</div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+,
       {/* Smart Home Dashboard */}
       <div className="py-20 bg-gradient-to-br from-slate-800 via-green-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Smart Home Dashboard
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+              Smart Home Dashboard;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Control and monitor all your smart devices from one place
+              Control and monitor all your smart devices from one place;
             </p>
           </div>
-
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+,
+          <div className="max-w-7xl mx-auto">,
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">,
               {/* Devices Control */}
-              <div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+              <div className="lg: col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                   <Home className="w-8 h-8 text-green-400 mr-3" />
-                  Smart Devices
+                  Smart Devices;
                 </h3>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {devices.map((device) => (
+,
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">,
+                  {devices.map((device) => (,
                     <div key={device.id} className="bg-white/5 rounded-lg p-4 border border-white/10">
                       <div className="flex items-center justify-between mb-3">
                         <h4 className="text-white font-semibold">{device.name}</h4>
-                        <button
+                        <button;
                           onClick={() => toggleDevice(device.id)}
-                          className={`w-12 h-6 rounded-full transition-colors ${
-                            device.status === 'on' ? 'bg-green-500' : 'bg-gray-600'
+                          className={`w-12 h-6 rounded-full transition-colors ${}
+                            device.status === 'on' ? 'bg-green-500' : 'bg-gray-600'}
                           }`}
                         >
-                          <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                            device.status === 'on' ? 'translate-x-6' : 'translate-x-0.5'
+                          <div className={`w-5 h-5 bg-white rounded-full transition-transform ${}
+                            device.status === 'on' ? 'translate-x-6' : 'translate-x-0.5'}
                           }`} />
                         </button>
                       </div>
@@ -940,7 +943,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                       {device.type === 'light' && (
                         <div className="space-y-2">
                           <label className="text-gray-300 text-sm">Brightness: {device.brightness}%</label>
-                          <input
+                          <input;
                             type="range"
                             min="0"
                             max="100"
@@ -954,7 +957,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                       {device.type === 'thermostat' && (
                         <div className="space-y-2">
                           <label className="text-gray-300 text-sm">Temperature: {device.temperature}°F</label>
-                          <input
+                          <input;
                             type="range"
                             min="60"
                             max="80"
@@ -968,13 +971,13 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                       {device.type === 'speaker' && (
                         <div className="space-y-2">
                           <label className="text-gray-300 text-sm">Volume: {device.volume}%</label>
-                          <input
+                          <input;
                             type="range"
                             min="0"
                             max="100"
                             value={device.volume}
-                            onChange={(e) => setDevices(devices.map(d =>
-                              d.id === device.id ? { ...d, volume: parseInt(e.target.value) } : d
+                            onChange={(e) => setDevices(devices.map(d =>})
+                              d.id === device.id ? { ...d, volume: parseInt(e.target.value) } : d;
                             ))}
                             className="w-full"
                           />
@@ -991,17 +994,17 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center">
                     <Settings className="w-6 h-6 text-green-400 mr-2" />
-                    Scenes
+                    Scenes;
                   </h3>
                   <div className="space-y-3">
                     {scenes.map((scene) => (
-                      <button
+                      <button;
                         key={scene.id}
                         onClick={() => activateScene(scene.id)}
                         className={`w-full p-3 rounded-lg border transition-all ${
-                          scene.active
-                            ? 'border-green-400 bg-green-400/10'
-                            : 'border-white/20 hover:border-green-400/50'
+                          scene.active;
+                            ? 'border-green-400 bg-green-400/10'}
+                            : 'border-white/20 hover:border-green-400/50'}
                         }`}
                       >
                         <div className="flex items-center">
@@ -1017,7 +1020,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center">
                     <Zap className="w-6 h-6 text-green-400 mr-2" />
-                    Energy Usage
+                    Energy Usage;
                   </h3>
                   <div className="space-y-4">
                     <div className="flex justify-between">
@@ -1048,20 +1051,20 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       <div className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Smart Home Features
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+              Smart Home Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced AI-powered features for the ultimate smart home experience
+              Advanced AI-powered features for the ultimate smart home experience;
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          </div>,
+,
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">,
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-green-400/50 transition-all duration-300 transform hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-green-400/50 transition-all duration-300 transform hover:scale-105">,
+                <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mb-4">,
+                  <feature.icon className="w-6 h-6 text-white" />,
+                </div>,
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-400 mb-4">{feature.description}</p>
                 <div className="flex items-center justify-between">
@@ -1078,21 +1081,21 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       <div className="py-20 bg-gradient-to-br from-slate-800 via-green-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Smart Home Plans
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+              Smart Home Plans;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the smart home plan that fits your needs
+              Choose the smart home plan that fits your needs;
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          </div>,
+,
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">,
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-green-400/50 ring-2 ring-green-400/30' : 'border-white/10'}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-green-400 to-blue-600 text-white text-sm font-bold px-4 py-2 rounded-full">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -1116,9 +1119,9 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                 </ul>
 
                 <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700 transform hover:scale-105'
-                    : 'bg-white/10 text-white hover:bg-white/20'
+                  plan.popular;
+                    ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover: from-green-600 hover:to-blue-700 transform hover:scale-105',}
+                    : 'bg-white/10 text-white hover:bg-white/20'}
                 }`}>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
                 </button>
@@ -1132,11 +1135,11 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       <div className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Transform Your Home Today
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+              Transform Your Home Today;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Contact our smart home experts to get started with your AI-powered home automation
+              Contact our smart home experts to get started with your AI-powered home automation;
             </p>
           </div>
 
@@ -1148,19 +1151,19 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                   <div className="flex items-center">
                     <Phone className="w-5 h-5 text-green-400 mr-3" />
                     <a href="tel:+13024640950" className="text-gray-300 hover:text-green-400 transition-colors">
-                      +1 (302) 464-0950
+                      +1 (302) 464-0950;
                     </a>
                   </div>
                   <div className="flex items-center">
                     <Mail className="w-5 h-5 text-green-400 mr-3" />
                     <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-green-400 transition-colors">
-                      kleber@ziontechgroup.com
+                      kleber@ziontechgroup.com;
                     </a>
                   </div>
                   <div className="flex items-start">
-                    <MapPin className="w-5 h-5 text-green-400 mr-3 mt-1" />
-                    <div className="text-gray-300">
-                      <div>364 E Main St STE 1008</div>
+                    <MapPin className="w-5 h-5 text-green-400 mr-3 mt-1" />,
+                    <div className="text-gray-300">,
+                      <div>364 E Main St STE 1008</div>,
                       <div>Middletown, DE 19709</div>
                     </div>
                   </div>
@@ -1187,14 +1190,14 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                     <span className="text-gray-300">24/7 support</span>
                   </div>
                 </div>
-                <button className="w-full mt-6 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                  Schedule Consultation
+                <button className="w-full mt-6 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold py-4 px-6 rounded-lg hover: from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                  Schedule Consultation;
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div>,
+    </div>,
   );
 }

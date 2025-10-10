@@ -1,8 +1,7 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 /**
- * SEO Enhancement Script
- * Enhances SEO for better search engine visibility
+ * SEO Enhancement Script;
+ * Enhances SEO for better search engine visibility;
  */
 
 import fs from 'fs';
@@ -14,17 +13,17 @@ const __dirname = path.dirname(__filename);
 
 console.log('🔍 Starting SEO enhancement...');
 
-// 1. Generate structured data
+// 1. Generate structured data;
 function generateStructuredData() {
   console.log('📊 Generating structured data...');
   
   const structuredData = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "description": "Advanced AI and IT Solutions Provider",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
+    "url": "https: //ziontechgroup.com",
+    "logo": "https: //ziontechgroup.com/logo.png",
     "foundingDate": "2020",
     "numberOfEmployees": "50-100",
     "industry": "Technology",
@@ -43,10 +42,10 @@ function generateStructuredData() {
       "addressCountry": "US"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup"
+      "https: //www.linkedin.com/company/ziontechgroup",
+      "https: //twitter.com/ziontechgroup",
     ],
-    "offers": {
+    "offers": {,
       "@type": "AggregateOffer",
       "offerCount": "50+",
       "lowPrice": "19",
@@ -79,14 +78,14 @@ function generateStructuredData() {
   console.log('✅ Structured data generated');
 }
 
-// 2. Generate meta tags
+// 2. Generate meta tags;
 function generateMetaTags() {
   console.log('🏷️ Generating meta tags...');
   
   const metaTags = {
     title: "Zion Tech Group - Advanced AI and IT Solutions",
     description: "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
-    keywords: [
+    keywords: [,
       "AI solutions",
       "quantum computing",
       "autonomous systems",
@@ -106,18 +105,18 @@ function generateMetaTags() {
       "AI tools",
       "business automation"
     ],
-    og: {
+    og: {,
       title: "Zion Tech Group - Advanced AI and IT Solutions",
       description: "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
       image: "https://ziontechgroup.com/og-image.jpg",
       url: "https://ziontechgroup.com",
-      type: "website"
+      type: "website",
     },
-    twitter: {
+    twitter: {,
       card: "summary_large_image",
       title: "Zion Tech Group - Advanced AI and IT Solutions",
       description: "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
-      image: "https://ziontechgroup.com/og-image.jpg"
+      image: "https://ziontechgroup.com/og-image.jpg",
     }
   };
 
@@ -128,19 +127,19 @@ function generateMetaTags() {
   console.log('✅ Meta tags generated');
 }
 
-// 3. Generate Open Graph images
+// 3. Generate Open Graph images;
 function generateOpenGraphImages() {
   console.log('🖼️ Generating Open Graph images...');
-  // This would typically use a library like canvas or sharp
+  // This would typically use a library like canvas or sharp;
   console.log('✅ Open Graph images generated');
 }
 
-// 4. Generate FAQ schema
+// 4. Generate FAQ schema;
 function generateFAQSchema() {
   console.log('❓ Generating FAQ schema...');
   
   const faqSchema = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
@@ -185,31 +184,31 @@ function generateFAQSchema() {
   console.log('✅ FAQ schema generated');
 }
 
-// 5. Generate breadcrumb schema
+// 5. Generate breadcrumb schema;
 function generateBreadcrumbSchema() {
   console.log('🍞 Generating breadcrumb schema...');
   
   const breadcrumbSchema = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://ziontechgroup.com"
+        "item": "https: //ziontechgroup.com",
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://ziontechgroup.com/services"
+        "item": "https: //ziontechgroup.com/services",
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "AI Solutions",
-        "item": "https://ziontechgroup.com/ai-services"
+        "item": "https: //ziontechgroup.com/ai-services",
       }
     ]
   };
@@ -221,16 +220,16 @@ function generateBreadcrumbSchema() {
   console.log('✅ Breadcrumb schema generated');
 }
 
-// 6. Generate local business schema
+// 6. Generate local business schema;
 function generateLocalBusinessSchema() {
   console.log('🏢 Generating local business schema...');
   
   const localBusinessSchema = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "LocalBusiness",
     "name": "Zion Tech Group",
     "description": "Advanced AI and IT Solutions Provider",
-    "url": "https://ziontechgroup.com",
+    "url": "https: //ziontechgroup.com",
     "telephone": "+1-302-464-0950",
     "email": "kleber@ziontechgroup.com",
     "address": {
@@ -246,7 +245,7 @@ function generateLocalBusinessSchema() {
       "latitude": "39.4496",
       "longitude": "-75.7163"
     },
-    "openingHours": "Mo-Fr 09:00-17:00",
+    "openingHours": "Mo-Fr 09: 00-17:00",
     "priceRange": "$$",
     "serviceArea": {
       "@type": "Country",
@@ -261,7 +260,7 @@ function generateLocalBusinessSchema() {
   console.log('✅ Local business schema generated');
 }
 
-// Run all SEO enhancements
+// Run all SEO enhancements;
 async function runSEOEnhancements() {
   try {
     generateStructuredData();

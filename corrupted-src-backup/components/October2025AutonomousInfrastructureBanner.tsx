@@ -1,13 +1,12 @@
 const, October2025AutonomousInfrastructureBanne, r = () => {
-  return (
-    <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n">
+  return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n">
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-10">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
       </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8, p, y-12">"
         {/* Header, Sectio, n */}
         <div, className="te, x, t-center, m, b-10">
@@ -21,10 +20,10 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-10">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
-        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
-      </d, i, v>
-      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+        <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';)
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';)
+      </d, i, v>)
+      <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;),
   g:px-8, p, y-12">";
         {/* Header, Sectio, n */}
         <div, className="te, x, t-center, m, b-10">";
@@ -91,7 +90,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             <div, className="te, x, t-sm, tex, t-purp, l, e-2, 0, 0">Ze, r, o-Touch, Op, s</d, i, v>";
             <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">Fully, autonomou, s</d, i, v>";
           </d, i, v>
-          <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e
+          <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e;
   r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">";
             <TrendingUp, className="w-8 h-8, tex, t-gre, e, n-400, m, x-auto, m, b-2" />";
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">4, 2, x</d, i, v>";
@@ -165,7 +164,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             </d, i, v>
             <d, i, v>
               <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2">";
-                Fortune, 100, Financial Servic, e, s: $410M, Annual, Value Creati, o, n
+                Fortune, 100, Financial Servic, e, s: $410M, Annual, Value Creati, o, n;
               </h3>
               <p, className="te, x, t-gr, a, y-3, 0, 0">";
                 $2.3T, assets, under manageme, n, t • 24/7, trading, operations • 8,500, microservice, s • 47, countrie, s;
@@ -194,7 +193,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
               <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">396, incidents, prevented</d, i, v>";
             </d, i, v>
           </d, i, v>
-          <div, className="gri, d, m
+          <div, className="gri, d, m;
   d: gr, i, d-co, l, s-2, ga, p-4">"
             <div, className="flex, item, s-start, ga, p-3">
               <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
@@ -275,7 +274,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
               <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1">Technolo, g, y</d, i, v>
               <div, className="te, x, t-xs, tex, t-gr, a, y-4, 0, 0">Scale, without, team grow, t, h</d, i, v>
           <div, className="grid, m, d: gr, i, d-co, l, s-5, ga, p-4">";
-            <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hov, e
+            <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hov, e;
   r: bg-bla, c, k/30, transitio, n-colo, r, s">";
               <div, className="te, x, t-2xl, m, b-2">🏦</d, i, v>";
               <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1">Financial, Service, s</d, i, v>";
@@ -296,7 +295,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
               <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1">Manufacturi, n, g</d, i, v>";
               <div, className="te, x, t-xs, tex, t-gr, a, y-4, 0, 0">Zero, production, downtime</d, i, v>";
             </d, i, v>
-            <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hov, e
+            <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hov, e;
   r: bg-bla, c, k/30, transitio, n-colo, r, s">";
               <div, className="te, x, t-2xl, m, b-2">📡</d, i, v>";
               <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1">Technolo, g, y</d, i, v>";
@@ -307,9 +306,9 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
         {/* Ca, l, l-to-Action, Button, s */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
-          <Li, n, k
+          <Li, n, k;
   to="/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-autonomo, u, s-infrastructu, r, e-orchestrati, o, n-revoluti, o, n"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hov, e
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hov, e;
   r:shad, o, w-2, x, l"
           >
             <div, className="flex, item, s-center, justif, y-between, m, b-3">
@@ -324,13 +323,13 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             </d, i, v>
             <div, className="fo, n, t-bold, tex, t-lg, m, b-2">Read, Technical, Deep Di, v, e</d, i, v>";
             <div, className="te, x, t-sm, tex, t-cy, a, n-1, 0, 0">";
-              18-min, re, a
-  d: Complete, architectur, e, ML, model, s, Python, code, examples, implementation, roadma, p
+              18-min, re, a;
+  d: Complete, architectur, e, ML, model, s, Python, code, examples, implementation, roadma, p;
             </d, i, v>
           </Li, n, k>
-          <Li, n, k
+          <Li, n, k;
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-glob, a, l-financi, a, l-servic, e, s-autonomo, u, s-infrastructu, r, e-4, 1, 0-milli, o, n-succe, s, s"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-500, hove, r:to-purp, l, e-500, tex, t-white, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hov, e
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-500, hove, r:to-purp, l, e-500, tex, t-white, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hov, e;
   r:shad, o, w-2, x, l"
           >
             <div, className="flex, item, s-center, justif, y-between, m, b-3">
@@ -345,13 +344,13 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             </d, i, v>
             <div, className="fo, n, t-bold, tex, t-lg, m, b-2">Vi, e, w $410M, Success, Story</d, i, v>";
             <div, className="te, x, t-sm, tex, t-bl, u, e-1, 0, 0">";
-              Fortune, 100, case st, u, d
-  y: 99.9, 9, 4% upti, m, e, 87% cost, reductio, n, 47x, RO, I, 12-month, journe, y
+              Fortune, 100, case st, u, d;
+  y: 99.9, 9, 4% upti, m, e, 87% cost, reductio, n, 47x, RO, I, 12-month, journe, y;
             </d, i, v>
           </Li, n, k>
-          <Li, n, k
+          <Li, n, k;
   to="/servic, e, s/autonomo, u, s-infrastructu, r, e-orchestrati, o, n-servic, e, s"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hov, e
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hov, e;
   r:shad, o, w-2, x, l"
           >
             <div, className="flex, item, s-center, justif, y-between, m, b-3">
@@ -378,9 +377,9 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
           </p>
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">"
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">";
-            <Li, n, k
+            <Li, n, k;
   to="/conta, c, t"
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-cy, a, n-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-gr, a, y-100, transitio, n-colors, transform, hove
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-cy, a, n-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-gr, a, y-100, transitio, n-colors, transform, hove;
   r:sca, l, e-1, 0, 5"
             >
               Request, Free, Assessment;
@@ -392,7 +391,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             </Li, n, k>
             <div, className="te, x, t-white, tex, t-sm">";
               <Clock, className="w-4 h-4, inline, mr-1" />";
-              Typical, assessment, value: $7, 5, K • Yours, fre, e
+              Typical, assessment, value: $7, 5, K • Yours, fre, e;
             </d, i, v>
           </d, i, v>
         </d, i, v>

@@ -4,10 +4,10 @@ type NewServices2026BannerProp, s = {
   classNa, m, e ?  : string;
  };
 
-export default function NewServices2026Bann, e, r({
-  varia, n, t = 'showc, a, s, e',
-  showCou, n, t =  , 6,
-  classNa, m, e = '',
+export default function NewServices2026Bann, e, r({)
+  varia, n, t = 'showc, a, s, e')
+  showCou, n, t =  , 6)
+  classNa, m, e = '')
 }: NewServices2026BannerPro, p, s) {
   const services = [
     {
@@ -40,8 +40,7 @@ export default function NewServices2026Bann, e, r({
       li, n, k: '/servic, e, s/ai-reta, i, l-automat, i, o, n',
       t, a, g: 'Ret, a, i, l',
     },
-  ].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return (
-    <section, classNam, e = { `w-fu, l, l ${
+  ].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return(<section, classNam, e = { `w-fu, l, l ${
         varia, n, t === 'he, r, o'
           ? 'bg-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-6, 0, 0'
           : varia, n, t === 'in, f, o'
@@ -52,14 +51,14 @@ export default function NewServices2026Bann, e, r({
       <div, className='container, m, x-auto, p, x-6'>
         <div, className='te, x, t-center, m, b-8' > <div, className={ `inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, m, b-4 ${
               varia, n, t === 'in, f, o'
-                 ? 'bg-white, tex, t-gr, a, y-9, 0, 0'
-                 : 'bg-whi, t, e/20, tex, t-whi, t, e'
+                 ? 'bg-white, tex, t-gr, a, y-9, 0, 0'}
+                 : 'bg-whi, t, e/20, tex, t-whi, t, e'}
              }`}
           >
-            NEW, 2026, SERVICES
+            NEW, 2026, SERVICES;
           </d, i, v > <h2, className={ `te, x, t-3xl, fon, t-bold, m, b-2 ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }`}
           >
-            Latest, AI, Services
+            Latest, AI, Services;
           </h2 > <p, classNam, e = {  `${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-6, 0, 0'  : 'te, x, t-whi, t, e/8, 0'  }, m, a, x-w-3xl, m, x-au, t, o`}
           >
             Accelerate, transformation, with our, newest, AI-powered, solution, s.
@@ -77,9 +76,9 @@ export default function NewServices2026Bann, e, r({
                 {s.title}
               </d, i, v > <div, classNam, e = {  `${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-5, 0, 0'  : 'te, x, t-whi, t, e/7, 0'  }, mt-2, tex, t-sm`}
               >
-                Learn, mor, e →
-              </div>
-            </Li, n, k>
+                Learn, mor, e →)
+              </div>)
+            </Li, n, k>)
           ))}
         </div>
       </div>

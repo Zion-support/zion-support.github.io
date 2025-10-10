@@ -1,11 +1,11 @@
 import '../src/index.css';
 
-const preview: Preview = {
-  parameters: {
+const preview: Preview = {,
+  parameters: {,
     actions: { argTypesRegex: '^on[A-Z].*' },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
+    controls: {,
+      matchers: {,
+        color: /(background|color)$/i;
         date: /Date$/,
       },
     },

@@ -1,10 +1,10 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
-//Files that need to be fixed
+//Files that need to be fixed;
 const filesToFix = [
   'src/components/SiteHeader.tsx',
   'src/components/SiteSidebar.tsx',
@@ -35,7 +35,7 @@ interface ${componentName}Props {
 }
 const ${componentName}: React.FC<${componentName}Props> = ({ 
   className = '', 
-  children 
+  children;
 }) => {
   return (
     <div className={\`${componentName.toLowerCase()}-component \${className}\`}>
@@ -51,21 +51,21 @@ const ${componentName}: React.FC<${componentName}Props> = ({
 export default ${componentName};
 `;
   } else if (isTs) {
-    return `//${componentName} - TypeScript definitions and utilities
+    return `//${componentName} - TypeScript definitions and utilities;
 export interface ${componentName}Config {
-  //Configuration properties
+  //Configuration properties;
 }
 export const default${componentName}Config: ${componentName}Config = {
-  //Default configuration
+  //Default configuration;
 };
 export default {
-  default${componentName}Config
+  default${componentName}Config;
 };
 `;
   } else {
-    return `//${componentName} - JavaScript module
+    return `//${componentName} - JavaScript module;
 export const ${componentName} = {
-  //Module implementation
+  //Module implementation;
 };
 export default ${componentName};
 `;
@@ -77,7 +77,7 @@ function fixFile(filePath) {
     if (!fs.existsSync(fullPath)) {
       //       return;
     }
-    // Check if file has severe corruption
+    // Check if file has severe corruption;
     if (
       content.includes('<< HEAD') ||
       content.includes('import, Reac, t') ||

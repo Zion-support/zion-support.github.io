@@ -1,8 +1,8 @@
 import React from 'react';
-const FutureTechShowcase202, 6: React.FC = () => { 
+const FutureTechShowcase202, 6: React.FC = () => { ,
   const futureTechArticle, s = [
     {
-      id: 1,
+      id: 1;
       title: 'Neur, a, l-Quantum, Hybrid, Computin, g',
       slug: 'neur, a, l-quant, u, m-hybr, i, d-2, 0, 2, 6',
       excerpt: 'Breakthrough, fusion, of quantum, computing, and neural, networks, achieving unprecedented, processing, speeds. Experienc, e, 1, 0,000x, faster, AI inference, with, quantum-enhanced, deep, learning.',
@@ -85,8 +85,7 @@ const FutureTechShowcase202, 6: React.FC = () => {
       bad, g, e: 'ME, T, A-COGNIT, I, V, E',
       sta, t, s: 'Autonomous, Orchestrati, o, n',
      },
-  ]; return (
-    <div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
+  ]; return(<div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
@@ -103,20 +102,20 @@ const FutureTechShowcase202, 6: React.FC = () => {
           <div, className='inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in'>
             <Sparkles, className='w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e' />
             <span, className='te, x, t-purp, l, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e'>
-              🚀 6, REVOLUTIONARY, FUTURE TECH, BREAKTHROUGH, S • Januar, y, 2, 0, 20, 2, 6
+              🚀 6, REVOLUTIONARY, FUTURE TECH, BREAKTHROUGH, S • Januar, y, 2, 0, 20, 2, 6;
             </sp, a, n>
             <Sparkles, classNam, e = 'w-5 h-5, tex, t-cy, a, n-400, animat, e-pul, s, e' />
           </div>
           <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-cy, a, n-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'>
-            Future, Technology, Showcase 20, 2, 6
+            Future, Technology, Showcase 20, 2, 6;
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
             Experience, the, next generation, of, AI and, technology, breakthroughs.
             From, quantu, m-neural, fusion, to se, l, f-evolving, AI, ecosyste, m, s, discover, technologies, that will, reshape, the future, of, enterprise computi, n, g.
           </p>
-        </div>
-        {/* Future, Tech, Articles Gr, i, d */}
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
+        </div>)
+        {/* Future, Tech, Articles Gr, i, d */})
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>)
           { futureTechArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (
             <div, ke, y = { artic, l, e.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
@@ -170,10 +169,10 @@ const FutureTechShowcase202, 6: React.FC = () => {
                     {artic, l, e.readTime}
                   </sp, a, n>
                   <sp, a, n>
-                    {new, Dat, e(artic, l, e.d, a, t, e).toLocaleDateStri, n, g('en-US', {
-                      mon, t, h: 'sh, o, r, t',
-                      d, a, y: 'nume, r, i, c',
-                      ye, a, r: 'nume, r, i, c',
+                    {new, Dat, e(artic, l, e.d, a, t, e).toLocaleDateStri, n, g('en-US', {)
+                      mon, t, h: 'sh, o, r, t')
+                      d, a, y: 'nume, r, i, c')
+                      ye, a, r: 'nume, r, i, c')
                     })}
                   </sp, a, n>
                 </d, i, v > {/* CTA, Butto, n */}
@@ -211,10 +210,10 @@ const FutureTechShowcase202, 6: React.FC = () => {
           <div, className='inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-cy, a, n-500, t, o-pi, n, k-5, 0, 0'>
             <div, className='bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10'>
               <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
-                Lead, the, Future Technology, Revolutio, n
+                Lead, the, Future Technology, Revolutio, n;
               </h3>
               <p, className='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
-                Be, among, the first, enterprises, to deploy, these, revolutionary
+                Be, among, the first, enterprises, to deploy, these, revolutionary;
                 technologies. Get, exclusive, access to, our, future tech, innovations, and transform, your, organization with, nex, t-generation, AI, capabilities.
               </p>
               <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>

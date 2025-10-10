@@ -6,52 +6,51 @@ interface AdvancedAnalyticsProps {
   enableErrorTracking?: boolean;
 }
 
-const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
-  enableConversionTracking = true,
+const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
+  enableConversionTracking = true;
   enablePerformanceTracking = true,
   enableErrorTracking = true,
 }) => {
   const [analytics] = useState({
-    pageViews: 0,
-    uniqueVisitors: 0,
-    bounceRate: 0,
-    conversionRate: 0,
-    avgSessionDuration: 0,
-    topPages: [],
-    trafficSources: [],
-    deviceBreakdown: [],
+    pageViews: 0;
+    uniqueVisitors: 0;
+    bounceRate: 0;
+    conversionRate: 0;
+    avgSessionDuration: 0;
+    topPages: []
+    trafficSources: []
+    deviceBreakdown: []
     performanceMetrics: {
-      loadTime: 0,
-      firstContentfulPaint: 0,
-      largestContentfulPaint: 0,
-      cumulativeLayoutShift: 0,
-    },
-    conversions: 0,
-    performance: 0,
-    errors: 0,
+      loadTime: 0;)
+      firstContentfulPaint: 0;)
+      largestContentfulPaint: 0;)
+      cumulativeLayoutShift: 0;,)
+    })
+    conversions: 0;
+    performance: 0),
+    errors: 0),
   });
 
   useEffect(() => {
-    // Initialize analytics tracking
+    // Initialize analytics tracking;
     if (enableConversionTracking) {
-      // Track conversion events
+      // Track conversion events;
       //       }
 
     if (enablePerformanceTracking) {
-      // Track performance metrics
+      // Track performance metrics;
       //       }
 
     if (enableErrorTracking) {
-      // Track errors
+      // Track errors;
       //       }
   }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
 
-  return (
-    <div className="advanced-analytics">
-      <h2>Advanced Analytics Dashboard</h2>
-      <div className="metrics-grid">
-        <div className="metric-card">
-          <h3>Page Views</h3>
+  return(<div className="advanced-analytics">)
+      <h2>Advanced Analytics Dashboard</h2>)
+      <div className="metrics-grid">)
+        <div className="metric-card">)
+          <h3>Page Views</h3>)
           <p className="metric-value">{analytics.pageViews.toLocaleString()}</p>
         </div>
         <div className="metric-card">

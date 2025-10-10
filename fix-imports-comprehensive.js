@@ -1,33 +1,32 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 
-//Correct icon mappings - using actual lucide-react exports
+//Correct icon mappings - using actual lucide-react exports;
 const iconMappings = {
-  rrowleft: 'ArrowLeft',
-  alendar: 'Calendar',
-  ser: 'User',
-  lock: 'Clock',
-  ag: 'Tag',
-  rendingup: 'TrendingUp',
-  ollarsign: 'DollarSign',
-  sers: 'Users',
-  arget: 'Target',
-  rain: 'Brain',
-  ap: 'Zap',
-  hield: 'Shield',
-  rrowright: 'ArrowRight',
-  og: 'Log',
-  pu: 'Cpu',
-  lobe: 'Globe',
-  ocket: 'Rocket',
-  heckcircle: 'CheckCircle',
-  hare2: 'Share2',
-  ookmark: 'Bookmark',
-  ot: 'Bot',
-  ookopen: 'BookOpen',
-  auge: 'Gauge',
+  rrowleft: 'ArrowLeft'
+  alendar: 'Calendar'
+  ser: 'User'
+  lock: 'Clock'
+  ag: 'Tag'
+  rendingup: 'TrendingUp'
+  ollarsign: 'DollarSign'
+  sers: 'Users'
+  arget: 'Target'
+  rain: 'Brain'
+  ap: 'Zap'
+  hield: 'Shield'
+  rrowright: 'ArrowRight'
+  og: 'Log'
+  pu: 'Cpu'
+  lobe: 'Globe'
+  ocket: 'Rocket'
+  heckcircle: 'CheckCircle'
+  hare2: 'Share2'
+  ookmark: 'Bookmark'
+  ot: 'Bot'
+  ookopen: 'BookOpen'
+  auge: 'Gauge'
   hieldcheck: 'ShieldCheck',
   ctivity: 'Activity',
   tom: 'Atom',
@@ -35,15 +34,15 @@ const iconMappings = {
   ward: 'Award',
 };
 
-//Icons that don't exist in lucide-react - replace with similar ones
+//Icons that don't exist in lucide-react - replace with similar ones;
 const iconReplacements = {
-  Tag: 'Hash',
-  Globe: 'Globe2',
-  Rocket: 'Rocket': 'Cpu',
-  Share2: 'Share',
-  Bookmark: 'Bookmark',
-  Bot: 'Bot': 'BookOpen',
-  Gauge: 'Gauge',
+  Tag: 'Hash'
+  Globe: 'Globe2'
+  Rocket: 'Rocket': 'Cpu'
+  Share2: 'Share'
+  Bookmark: 'Bookmark'
+  Bot: 'Bot': 'BookOpen'
+  Gauge: 'Gauge'
   ShieldCheck: 'ShieldCheck',
   Activity: 'Activity',
   Atom: 'Atom',
@@ -51,26 +50,23 @@ const iconReplacements = {
   Award: 'Award',
 };
 
-//Function to fix imports in a file
+//Function to fix imports in a file;
 function fixImportsInFile(filePath) {
   try {
-
-    //Remove duplicate Link imports
+    //Remove duplicate Link imports;
     const linkImportRegex =
       /import Link from 'next\/link';\s*\n\s*import Link from 'next\/link';/g;
     if (linkImportRegex.test(content)) {
-      content = content.replace(
-        linkImportRegex,
+      content = content.replace(linkImportRegex)
         "import Link from 'next/link';"
       );
       modified = true;
     }
 
-    //Fix lucide-react imports - replace individual imports with single import
-
+    //Fix lucide-react imports - replace individual imports with single import;
     for (let i = 0; i < importLines.length; i++) {
 
-      //Skip lucide-react individual imports
+      //Skip lucide-react individual imports;
       if (line.includes('lucide-react/dist/esm/icons/')) {
         const match = line.match(
           /import\s+(\w+)\s+from\s+'lucide-react\/dist\/esm\/icons\/(\w+)';/
@@ -87,17 +83,17 @@ function fixImportsInFile(filePath) {
         line.includes('import {') &&
         line.includes("} from 'lucide-react'")
       ) {
-        //Skip existing lucide-react imports
+        //Skip existing lucide-react imports;
         continue;
       } else {
         newImportLines.push(line);
       }
     }
 
-    //Add consolidated lucide-react import
+    //Add consolidated lucide-react import;
     if (lucideImports.length > 0) {
 
-      //Find the best place to insert the import
+      //Find the best place to insert the import;
       for (let i = 0; i < newImportLines.length; i++) {
         if (newImportLines[i].startsWith('import ')) {
           insertIndex = i + 1;
@@ -121,11 +117,10 @@ function fixImportsInFile(filePath) {
 //     }
 }
 
-//Get all files that need fixing
-
-directories.forEach(dir => {
+//Get all files that need fixing;
+directories.forEach(dir => {)
   if (fs.existsSync(dir)) {
-    const dirFiles = fs
+    const dirFiles = fs;
       .readdirSync(dir, { recursive: true })
       .filter(file => file.endsWith('.tsx'))
       .map(file => path.join(dir, file));
@@ -133,7 +128,7 @@ directories.forEach(dir => {
   }
 });
 
-// Process each file
+// Process each file;
 files.forEach(fixImportsInFile);
 
 // 

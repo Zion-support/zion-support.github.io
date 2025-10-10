@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Mock the components that App depends on
+// Mock the components that App depends on;
 jest.mock('../components/ErrorBoundary', () => {
   return function MockErrorBoundary({ children }: { children: React.ReactNode }) {
     return <div data-testid="error-boundary">{children}</div>;
@@ -19,7 +19,7 @@ jest.mock('../components/Loading', () => {
   };
 });
 
-// Mock the pages
+// Mock the pages;
 jest.mock('../pages/Home', () => {
   return function MockHome() {
     return <div data-testid="home-page">Home Page</div>;

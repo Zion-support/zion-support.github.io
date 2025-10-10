@@ -7,8 +7,7 @@ Helm, e, t;
 impo, r, t {
 } fr, o, m "luci, d, e-rea, c, t";';
 const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
-  return (
-    <>
+  return(<>
       <Helmet>
         <title>Smart, Appointment, Scheduler - Zion, Tech, Group</title>
         <meta name="descripti, o, n" content="Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." /></Helmet>
@@ -34,7 +33,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
               Smart, Appointment, Scheduler;
             </h1>
             <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-auto, m, b-8">";
-              Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management
+              Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management;
               and, automated, reminders. Streamline, your, practice with, intelligent, scheduling.
             </p>
             <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-2xl, m, x-au, t, o">";
@@ -45,14 +44,14 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
               <p, className="te, x, t-gr, a, y-600, m, b-6">Perfect, for, hospitals, clini, c, s, and, private, practices looking, to, modernize their, appointment, system.</p>";
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
-                <a
-  hr, e, f="te
+                <a;
+  hr, e, f="te;
   l: +130246409, 5, 0" 
                   classNa, m, e="bg-gre, e, n-600, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-700, transitio, n-colors, tex, t-cent, e, r"
                 >
                   Ca, l, l +1, 302, 464 09, 5, 0;
                 </a>
-                <a
+                <a;
   hr, e, f="mail, t, o: kleb, e, r@ziontechgro, u, p.c, o, m" 
                   classNa, m, e="bord, e, r-2, borde, r-gre, e, n-600, tex, t-gre, e, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-50, transitio, n-colors, tex, t-cent, e, r"
                 >
@@ -64,14 +63,14 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
           {/* Featur, e, s */}
           <section, className="mb-16">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s</h2>
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">
                 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">
                   <Calendar, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0  />
           <section, className="mb-16">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s</h2>";
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">";
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";
                 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";
@@ -178,8 +177,8 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
                     Email, suppor, t;
                   </li>
                 </ul>
-                <a
-  hr, e, f="te
+                <a;
+  hr, e, f="te;
   l: +130246409, 5, 0" 
                   classNa, m, e="w-full, b, g-gre, e, n-600, tex, t-white, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-700, transitio, n-colors, tex, t-center, bloc, k"
                 >
@@ -235,7 +234,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
                     Priority, suppor, t;
                   </li>
                 </ul>
-                <a
+                <a;
   hr, e, f="t, e, l: +130246409, 5, 0" 
                   classNa, m, e="w-full, b, g-white, tex, t-gre, e, n-600, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colors, tex, t-center, bloc, k"
                 >
@@ -289,7 +288,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
                     Whi, t, e-label, option, s;
                   </li>
                 </ul>
-                <a
+                <a;
   hr, e, f="mail, t, o: kleb, e, r@ziontechgro, u, p.c, o, m" 
                   classNa, m, e="w-full, b, g-gre, e, n-600, tex, t-white, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-700, transitio, n-colors, tex, t-center, bloc, k"
                 >
@@ -307,14 +306,14 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
-                <a
-  hr, e, f="te
+                <a;
+  hr, e, f="te;
   l: +130246409, 5, 0" 
                   classNa, m, e="bg-gre, e, n-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-700, transitio, n-colors, tex, t-cent, e, r"
                 >
                   Ca, l, l +1, 302, 464 09, 5, 0;
                 </a>
-                <a
+                <a;
   hr, e, f="mail, t, o: kleb, e, r@ziontechgro, u, p.c, o, m" 
                   classNa, m, e="bord, e, r-2, borde, r-gre, e, n-600, tex, t-gre, e, n-600, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, hove, r: bg-gre, e, n-50, transitio, n-colors, tex, t-cent, e, r"
                 >
@@ -326,9 +325,9 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
               </p>
             </d, i, v>
           </secti, o, n>
-        </d, i, v>
-      </d, i, v>
-    < />
+        </d, i, v>)
+      </d, i, v>)
+    < />)
   );
 };
 export default SmartAppointmentScheduler;
