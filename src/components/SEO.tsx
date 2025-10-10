@@ -5,9 +5,9 @@ interface SEOProps {
   children?: React.ReactNode;
 }
 
-export default function SEO({ 
-  className = '', 
-  children 
+export default function SEO({
+  className = '',
+  children
 }: SEOProps) {
   return (
     <div className={`seo ${className}`}>

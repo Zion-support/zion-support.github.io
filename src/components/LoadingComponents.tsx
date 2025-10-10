@@ -5,9 +5,9 @@ interface LoadingComponentsProps {
   children?: React.ReactNode;
 }
 
-export default function LoadingComponents({ 
-  className = '', 
-  children 
+export default function LoadingComponents({
+  className = '',
+  children
 }: LoadingComponentsProps) {
   return (
     <div className={`loadingcomponents ${className}`}>

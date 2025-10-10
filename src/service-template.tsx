@@ -48,7 +48,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
             </a>
           </div>
         </section>
-        
+
         {/* Services Grid */}
         <section className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
@@ -78,7 +78,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
             ))}
           </div>
         </section>
-        
+
         {/* Benefits Section */}
         <section className="container mx-auto px-4 py-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -95,7 +95,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
             ))}
           </div>
         </section>
-        
+
         {/* CTA Section */}
         <section className="container mx-auto px-4 py-16">
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">

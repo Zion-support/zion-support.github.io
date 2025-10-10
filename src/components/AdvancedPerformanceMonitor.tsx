@@ -5,9 +5,9 @@ interface AdvancedPerformanceMonitorProps {
   children?: React.ReactNode;
 }
 
-export default function AdvancedPerformanceMonitor({ 
-  className = '', 
-  children 
+export default function AdvancedPerformanceMonitor({
+  className = '',
+  children
 }: AdvancedPerformanceMonitorProps) {
   return (
     <div className={`advancedperformancemonitor ${className}`}>

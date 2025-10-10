@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Cloud, Server, Database, Shield, CheckCircle, ArrowRight, Phone, Mail, MapPin, Star, Zap, Target, Globe, Award, Users, Cpu, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Eye, AlertTriangle, Lock } from 'lucide-react';
+import { Cloud, Server, Database, Shield, CheckCircle, Phone, Mail, Shield, CheckCircle, Phone, Mail } from 'lucide-react';
 
 const AICloudInfrastructurePage: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -140,13 +140,13 @@ const AICloudInfrastructurePage: React.FC = memo(() => {
             <Cloud className="w-4 h-4" />
             <span>AI-Powered Cloud</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Cloud Infrastructure
           </h1>
-          
+
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your cloud infrastructure with AI-powered management, optimization, and security. 
+            Transform your cloud infrastructure with AI-powered management, optimization, and security.
             Reduce costs by 50% and achieve 99.9% uptime with intelligent cloud solutions.
           </p>
 
@@ -287,7 +287,6 @@ const AICloudInfrastructurePage: React.FC = memo(() => {
       </div>
     </div>
   );
-});
 
 AICloudInfrastructurePage.displayName = 'AICloudInfrastructurePage';
 

@@ -1,4 +1,3 @@
-import type { ProviderConnection, SyncLogEntry } from './types';
 import { ProviderConnection, SyncLogEntry } from './types';
 
 export async function simulateAction<T = unknown>(
@@ -12,8 +11,6 @@ export async function simulateAction<T = unknown>(
 const generateId = (): string => {
   return Math.random().toString(36).substr(2, 9);
 };
-
-
 
 export async function simulateAction<T = any>(
   connection: ProviderConnection,
@@ -65,15 +62,14 @@ export async function simulateAction<T = any>(
 
   return { log, result };
 }
-  
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-    return simulateAction(connection, 'crm.addProjectNote', { note });
-  },
 
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
 
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
 
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
@@ -94,7 +90,6 @@ export const ats = {
   async pushApplicant(connection: ProviderConnection, applicant: Record<string, unknown>) {
     return simulateAction(connection, 'ats.pushApplicant', { applicant });
   },
-  
 
 export async function testConnection(
   connection: ProviderConnection
@@ -139,11 +134,11 @@ export const crm = {
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
-  
+
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
-  
+
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
@@ -165,7 +160,6 @@ export const crm = {
     });
   }
 
-
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
@@ -174,7 +168,7 @@ export const crm = {
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-  
+
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
     return simulateAction(connection, 'ats.updateStatus', { change });

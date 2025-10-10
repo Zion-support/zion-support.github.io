@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Cpu, Brain, Zap, Shield, Database, Target, ArrowRight, CheckCircle, Star, Users, Award, Lock, BarChart, Settings, Eye, MessageSquare, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react';
+import { Cpu, Brain, Zap, Shield, Database, Target, ArrowRight, CheckCircle, Lock, Search, CreditCard, Stethoscope, Clock3, Navigation, Zap, Target, Shield, CheckCircle, ArrowRight, Truck } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -158,7 +158,7 @@ const AIQuantumComputingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -171,7 +171,7 @@ const AIQuantumComputingPage: React.FC = () => {
               AI Quantum <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Computing</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Harness the power of quantum computing with AI to solve complex problems that are impossible for classical computers. 
+              Harness the power of quantum computing with AI to solve complex problems that are impossible for classical computers.
               Experience exponential speedup and breakthrough capabilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -208,7 +208,7 @@ const AIQuantumComputingPage: React.FC = () => {
               Revolutionary Quantum AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our quantum computing platform combines the power of quantum mechanics with artificial intelligence 
+              Our quantum computing platform combines the power of quantum mechanics with artificial intelligence
               to deliver unprecedented computational capabilities.
             </p>
           </div>
@@ -284,8 +284,8 @@ const AIQuantumComputingPage: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
-                plan.popular 
-                  ? 'border-cyan-400/40 ring-2 ring-cyan-400/20' 
+                plan.popular
+                  ? 'border-cyan-400/40 ring-2 ring-cyan-400/20'
                   : 'border-gray-600/50'
               }`}>
                 {plan.popular && (

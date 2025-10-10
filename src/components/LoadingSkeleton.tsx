@@ -5,9 +5,9 @@ interface LoadingSkeletonProps {
   children?: React.ReactNode;
 }
 
-export default function LoadingSkeleton({ 
-  className = '', 
-  children 
+export default function LoadingSkeleton({
+  className = '',
+  children
 }: LoadingSkeletonProps) {
   return (
     <div className={`loadingskeleton ${className}`}>

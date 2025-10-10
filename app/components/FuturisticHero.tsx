@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Play, Star, Users, Zap, Shield, Brain, Cloud, Code, BarChart, TrendingUp, CheckCircle, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, Award, Calendar, FileText, Settings, CheckSquare } from 'lucide-react';
+import { ArrowRight, Play, Users, Shield, Brain, Cloud, Code, TrendingUp, Sparkles, Award } from 'lucide-react';
 
 const FuturisticHero: React.FC = memo(() => {
   const [currentText, setCurrentText] = useState(0);
@@ -8,7 +8,7 @@ const FuturisticHero: React.FC = memo(() => {
 
   const heroTexts = [
     "AI-Powered Enterprise Solutions",
-    "Quantum Computing Excellence", 
+    "Quantum Computing Excellence",
     "Autonomous Systems Innovation",
     "Digital Transformation Mastery"
   ];
@@ -64,7 +64,7 @@ const FuturisticHero: React.FC = memo(() => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 leading-relaxed max-w-lg">
-                Unlock the power of artificial intelligence, quantum computing, and autonomous systems 
+                Unlock the power of artificial intelligence, quantum computing, and autonomous systems
                 to revolutionize your business operations and achieve unprecedented growth.
               </p>
             </div>
@@ -165,7 +165,6 @@ const FuturisticHero: React.FC = memo(() => {
       </div>
     </section>
   );
-});
 
 FuturisticHero.displayName = 'FuturisticHero';
 export default FuturisticHero;

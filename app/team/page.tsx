@@ -1,14 +1,13 @@
 'use client';
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  Award, 
-  Star, 
-  CheckCircle, 
-  ArrowRight, 
-  Phone, 
-  Mail, 
+import {
+  Users,
+  Award,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
   MapPin,
   Linkedin,
   Twitter,
@@ -72,7 +71,7 @@ export default function TeamPage() {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       title: 'Chief Executive Officer',
-      image: '/images/team/kleber-santos.jpg',
+      image: '/images/team/kleber-santos.webp',
       bio: 'Visionary leader with 15+ years in AI and enterprise solutions. Former CTO at Fortune 500 companies, Kleber founded Zion Tech Group to democratize AI for businesses worldwide.',
       expertise: ['AI Strategy', 'Enterprise Architecture', 'Digital Transformation', 'Leadership'],
       experience: '15+ years',
@@ -91,7 +90,7 @@ export default function TeamPage() {
       name: 'Dr. Sarah Chen',
       role: 'CTO',
       title: 'Chief Technology Officer',
-      image: '/images/team/sarah-chen.jpg',
+      image: '/images/team/sarah-chen.webp',
       bio: 'AI research pioneer with expertise in machine learning and quantum computing. Published 50+ papers in top-tier journals and holds 15 patents in AI technology.',
       expertise: ['Machine Learning', 'Quantum Computing', 'Research & Development', 'Algorithm Design'],
       experience: '12+ years',
@@ -110,7 +109,7 @@ export default function TeamPage() {
       name: 'Michael Rodriguez',
       role: 'Head of Engineering',
       title: 'VP of Engineering',
-      image: '/images/team/michael-rodriguez.jpg',
+      image: '/images/team/michael-rodriguez.webp',
       bio: 'Full-stack architect specializing in scalable AI systems. Led engineering teams at Google and Microsoft, building systems that serve millions of users.',
       expertise: ['System Architecture', 'Cloud Infrastructure', 'DevOps', 'Microservices'],
       experience: '10+ years',
@@ -129,7 +128,7 @@ export default function TeamPage() {
       name: 'Dr. Emily Watson',
       role: 'Head of AI Research',
       title: 'VP of AI Research',
-      image: '/images/team/emily-watson.jpg',
+      image: '/images/team/emily-watson.webp',
       bio: 'Leading researcher in natural language processing and computer vision. Former research scientist at OpenAI and Google DeepMind.',
       expertise: ['NLP', 'Computer Vision', 'Deep Learning', 'Neural Networks'],
       experience: '8+ years',
@@ -148,7 +147,7 @@ export default function TeamPage() {
       name: 'David Kim',
       role: 'Head of Product',
       title: 'VP of Product',
-      image: '/images/team/david-kim.jpg',
+      image: '/images/team/david-kim.webp',
       bio: 'Product strategist with 12+ years experience building AI-powered products. Former product manager at Salesforce and Adobe.',
       expertise: ['Product Strategy', 'User Experience', 'AI Product Design', 'Market Analysis'],
       experience: '12+ years',
@@ -167,7 +166,7 @@ export default function TeamPage() {
       name: 'Lisa Wang',
       role: 'Head of Data Science',
       title: 'VP of Data Science',
-      image: '/images/team/lisa-wang.jpg',
+      image: '/images/team/lisa-wang.webp',
       bio: 'Data science leader with expertise in big data analytics and machine learning. Former data scientist at Netflix and Spotify.',
       expertise: ['Data Science', 'Big Data', 'Machine Learning', 'Statistics'],
       experience: '9+ years',
@@ -269,7 +268,7 @@ export default function TeamPage() {
               Meet Our Team
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              World-class experts in AI, quantum computing, and enterprise technology 
+              World-class experts in AI, quantum computing, and enterprise technology
               working together to transform your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -329,7 +328,7 @@ export default function TeamPage() {
                 <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
                 <p className="text-cyan-400 font-medium mb-3">{member.role}</p>
                 <p className="text-gray-300 text-sm mb-4">{member.bio}</p>
-                
+
                 <div className="space-y-2 mb-6">
                   <div className="text-sm text-gray-400">
                     <strong>Experience:</strong> {member.experience}
@@ -443,7 +442,7 @@ export default function TeamPage() {
             Join Our Team
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            We're always looking for talented individuals who share our passion for AI and technology. 
+            We're always looking for talented individuals who share our passion for AI and technology.
             Join us in building the future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

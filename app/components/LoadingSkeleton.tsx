@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 
-export const ServiceCardSkeleton: React.FC = () => (
+export const ServiceCardSkeleton: React.FC = React.memo(() => (
   <div className="cyber-card p-6 animate-pulse">
     <div className="w-16 h-16 bg-gray-700 rounded-xl mx-auto mb-6"></div>
     <div className="h-6 bg-gray-700 rounded mb-3"></div>
@@ -15,7 +15,7 @@ export const ServiceCardSkeleton: React.FC = () => (
   </div>
 );
 
-export const HeroSkeleton: React.FC = () => (
+export const HeroSkeleton: React.FC = React.memo(() => (
   <div className="text-center mb-16 animate-pulse">
     <div className="h-16 bg-gray-700 rounded mb-6 mx-auto max-w-2xl"></div>
     <div className="h-8 bg-gray-700 rounded mb-8 mx-auto max-w-4xl"></div>
@@ -27,7 +27,7 @@ export const HeroSkeleton: React.FC = () => (
   </div>
 );
 
-export const ContentSkeleton: React.FC = () => (
+export const ContentSkeleton: React.FC = React.memo(() => (
   <div className="animate-pulse">
     <div className="h-8 bg-gray-700 rounded mb-4"></div>
     <div className="h-4 bg-gray-700 rounded mb-2"></div>
@@ -36,7 +36,7 @@ export const ContentSkeleton: React.FC = () => (
   </div>
 );
 
-export const CardSkeleton: React.FC = () => (
+export const CardSkeleton: React.FC = React.memo(() => (
   <div className="cyber-card p-6 animate-pulse">
     <div className="h-6 bg-gray-700 rounded mb-4"></div>
     <div className="h-4 bg-gray-700 rounded mb-2"></div>

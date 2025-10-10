@@ -225,12 +225,12 @@ export const validators = {
  */
 export function isValidPassword(password: string): boolean {
   if (!password || password.length < 8) return false;
-  
+
   const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
   const hasNumbers = /\d/.test(password);
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
-  
+
   return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
 }
 
@@ -239,18 +239,18 @@ export function isValidPassword(password: string): boolean {
  */
 export function sanitizeInput(input: string | null | undefined, maxLength?: number): string | null {
   if (!input) return null;
-  
+
   // Trim whitespace
   let sanitized = input.trim();
-  
+
   // Remove null bytes and other control characters
   sanitized = sanitized.replace(/[\x00-\x1F\x7F]/g, '');
-  
+
   // Enforce maximum length if specified
   if (maxLength && sanitized.length > maxLength) {
     sanitized = sanitized.substring(0, maxLength);
   }
-  
+
   return sanitized || null;
 }
 
@@ -341,26 +341,26 @@ export function validateDate(dateString: string): ValidationResult {
   if (!dateString) {
     return { isValid: false, error: 'Date is required' };
   }
-  
+
   // Check if it's a valid ISO date format (YYYY-MM-DD)
   if (!/^\d{4}-\d{2}-\d{2}$/.test(dateString)) {
     return { isValid: false, error: 'Date must be in YYYY-MM-DD format' };
   }
-  
+
   const date = new Date(dateString);
   if (isNaN(date.getTime())) {
     return { isValid: false, error: 'Invalid date format' };
   }
-  
+
   // Check if the date is actually valid (e.g., 2025-02-30 should be invalid)
   const [year, month, day] = dateString.split('-').map(Number);
   const actualDate = new Date(year, month - 1, day);
-  if (actualDate.getFullYear() !== year || 
-      actualDate.getMonth() !== month - 1 || 
+  if (actualDate.getFullYear() !== year ||
+      actualDate.getMonth() !== month - 1 ||
       actualDate.getDate() !== day) {
     return { isValid: false, error: 'Invalid date' };
   }
-  
+
   return { isValid: true };
 }
 
@@ -371,10 +371,10 @@ export function validateCreditCard(cardNumber: string): ValidationResult {
   if (!cardNumber) {
     return { isValid: false, error: 'Credit card number is required' };
   }
-  
+
   // Remove all non-digit characters for validation
   const cleanedNumber = cardNumber.replace(/\D/g, '');
-  
+
   if (!isValidCreditCard(cleanedNumber)) {
     return { isValid: false, error: 'Invalid credit card number' };
   }

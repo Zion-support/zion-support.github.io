@@ -6,8 +6,7 @@ const ServiceWorkerRegistration: React.FC = () => {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
           .then((registration) => {
-            console.log('SW registered: ', registration);
-            
+
             // Check for updates
             registration.addEventListener('updatefound', () => {
               const newWorker = registration.installing;
@@ -19,21 +18,19 @@ const ServiceWorkerRegistration: React.FC = () => {
                       window.location.reload();
                     }
                   }
-                });
+
               }
-            });
+
           })
           .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
-          });
-      });
+
 
       // Listen for service worker messages
       navigator.serviceWorker.addEventListener('message', (event) => {
         if (event.data && event.data.type === 'CACHE_UPDATED') {
-          console.log('Cache updated:', event.data.payload);
+
         }
-      });
+
     }
   }, []);
 

@@ -34,7 +34,7 @@ export default function OptimizedHomePage() {
         <div />
       </AccessibilityEnhancer>
       <PerformanceMonitor />
-      
+
       {/* Main Content */}
       <main className="relative">
         {/* Hero Section */}
@@ -44,7 +44,7 @@ export default function OptimizedHomePage() {
             <div className="cyber-grid h-full"></div>
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
           </div>
-          
+
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center">
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
@@ -56,9 +56,9 @@ export default function OptimizedHomePage() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Transform your enterprise with cutting-edge AI solutions that deliver 
-                <span className="text-cyan-400 font-semibold"> 300% ROI</span>, 
-                <span className="text-purple-400 font-semibold"> 70% cost reduction</span>, and 
+                Transform your enterprise with cutting-edge AI solutions that deliver
+                <span className="text-cyan-400 font-semibold"> 300% ROI</span>,
+                <span className="text-purple-400 font-semibold"> 70% cost reduction</span>, and
                 <span className="text-pink-400 font-semibold"> 90% efficiency gains</span>.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
@@ -75,7 +75,7 @@ export default function OptimizedHomePage() {
                   <span className="relative z-10">View Success Stories</span>
                 </a>
               </div>
-              
+
               {/* Stats */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div className="cyber-card-advanced p-6 text-center">
@@ -106,7 +106,7 @@ export default function OptimizedHomePage() {
                 Comprehensive AI services designed to revolutionize your business operations
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* AI Services */}
               <div className="quantum-card-advanced p-8 group hover:scale-105 transition-all duration-300">

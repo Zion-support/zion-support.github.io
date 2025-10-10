@@ -1,6 +1,5 @@
 'use client';
-import React, { useState } from 'react';
-import { CheckCircle, X, Star, Phone, Mail, Calendar, MessageSquare, ArrowRight, Zap, Brain, Cloud, Shield, Code, BarChart, Users, Award, DollarSign, Clock, Globe, Target, TrendingUp } from 'lucide-react';
+import { CheckCircle, X, Calendar, MessageSquare, ArrowRight, Zap, Brain, Cloud, Shield, Code, BarChart } from 'lucide-react';
 
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState('monthly');
@@ -154,7 +153,7 @@ export default function PricingPage() {
               Pricing Plans
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Choose the perfect plan for your business. All plans include our core AI services 
+              Choose the perfect plan for your business. All plans include our core AI services
               with flexible options to scale as you grow.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -228,7 +227,7 @@ export default function PricingPage() {
                       </div>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <div className={`w-16 h-16 ${plan.bgColor} rounded-lg flex items-center justify-center mx-auto mb-4`}>
                       <plan.icon className={`w-8 h-8 ${plan.color}`} />

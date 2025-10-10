@@ -14,18 +14,20 @@ export class PerformanceMonitor {
   measureRender(componentName: string, startTime: number): void {
     const renderTime = performance.now() - startTime;
     this.metrics.set(`${componentName}_render`, renderTime);
-    
+
     if (renderTime > 16) { // More than one frame at 60fps
-      }
+      console.warn(`Slow render detected for ${componentName}: ${renderTime}ms`);
+    }
   }
 
   // Measure API call performance
   measureApiCall(endpoint: string, startTime: number): void {
     const duration = performance.now() - startTime;
     this.metrics.set(`${endpoint}_api`, duration);
-    
+
     if (duration > 1000) { // More than 1 second
-      }
+      console.warn(`Slow API call detected for ${endpoint}: ${duration}ms`);
+    }
   }
 
   // Get performance metrics
@@ -41,7 +43,7 @@ export class PerformanceMonitor {
   // Report performance to analytics
   reportMetrics(): void {
     const metrics = this.getMetrics();
-    
+
     if (typeof window !== 'undefined' && 'gtag' in window) {
       Object.entries(metrics).forEach(([key, value]) => {
         (window as any).gtag('event', 'performance_metric', {
@@ -62,13 +64,15 @@ export const measureWebVitals = () => {
   new PerformanceObserver((list) => {
     const entries = list.getEntries();
     const lastEntry = entries[entries.length - 1];
-    }).observe({ entryTypes: ['largest-contentful-paint'] });
+    console.log('LCP:', lastEntry.startTime);
+  }).observe({ entryTypes: ['largest-contentful-paint'] });
 
   // Measure First Input Delay (FID)
   new PerformanceObserver((list) => {
     const entries = list.getEntries();
     entries.forEach((entry) => {
-      });
+      console.log('FID:', (entry as any).processingStart - (entry as any).startTime);
+    });
   }).observe({ entryTypes: ['first-input'] });
 
   // Measure Cumulative Layout Shift (CLS)
@@ -80,7 +84,8 @@ export const measureWebVitals = () => {
         clsValue += (entry as any).value;
       }
     });
-    }).observe({ entryTypes: ['layout-shift'] });
+    console.log('CLS:', clsValue);
+  }).observe({ entryTypes: ['layout-shift'] });
 };
 
 // Image optimization utility
@@ -90,7 +95,7 @@ export const optimizeImage = (src: string, width?: number, quality: number = 80)
   if (width) params.set('w', width.toString());
   params.set('q', quality.toString());
   params.set('f', 'auto'); // Auto format
-  
+
   return `${src}?${params.toString()}`;
 };
 
@@ -104,7 +109,7 @@ export const createIntersectionObserver = (
     threshold: 0.1,
     ...options
   };
-  
+
   return new IntersectionObserver(callback, defaultOptions);
 };
 

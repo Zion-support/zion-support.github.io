@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Star, Users, TrendingUp, Clock, Shield, Zap, Brain } from 'lucide-react';
+import { ArrowRight, Star, TrendingUp, Clock, Shield, Zap, Brain } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -82,7 +82,7 @@ const DynamicContentShowcase: React.FC = () => {
         <h2 id="showcase-heading" className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
           Our Solutions
         </h2>
-        
+
         <div className="max-w-6xl mx-auto">
           {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -134,7 +134,7 @@ const DynamicContentShowcase: React.FC = () => {
               {/* Stats */}
               <div className="space-y-6">
                 <h4 className="text-xl font-semibold text-white mb-6">Key Metrics</h4>
-                
+
                 <div className="space-y-4">
                   {currentTab.content.stats.map((stat, index) => (
                     <div key={index} className="flex items-center justify-between bg-slate-700/30 rounded-lg p-4">

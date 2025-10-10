@@ -3,12 +3,12 @@
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { 
-  Users, 
-  MessageSquare, 
-  Star, 
-  ThumbsUp, 
-  Share2, 
+import {
+  Users,
+  MessageSquare,
+  Star,
+  ThumbsUp,
+  Share2,
   Plus,
   Search,
   Filter,
@@ -139,11 +139,11 @@ const CommunityPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Community
@@ -151,7 +151,7 @@ const CommunityPage: React.FC = () => {
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Connect, learn, and grow with AI professionals and enthusiasts worldwide
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Join Community
@@ -227,7 +227,7 @@ const CommunityPage: React.FC = () => {
                   New Discussion
                 </button>
               </div>
-              
+
               {discussions.map((discussion) => (
                 <div key={discussion.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-start space-x-4">
@@ -322,8 +322,8 @@ const CommunityPage: React.FC = () => {
                     <p className="text-gray-300 mb-4">{resource.description}</p>
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-400">
-                        {resource.downloads ? `${resource.downloads} downloads` : 
-                         resource.views ? `${resource.views} views` : 
+                        {resource.downloads ? `${resource.downloads} downloads` :
+                         resource.views ? `${resource.views} views` :
                          `${resource.stars} stars`}
                       </span>
                       <button className="text-cyan-400 hover:text-cyan-300 font-semibold text-sm">

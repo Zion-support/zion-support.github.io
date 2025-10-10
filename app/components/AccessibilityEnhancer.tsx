@@ -22,13 +22,12 @@ export const AccessibilityEnhancer: React.FC = () => {
     keyboardNavigation: true,
     colorBlind: false,
     dyslexia: false
-  });
 
   const [isVisible, setIsVisible] = useState(false);
 
   const applyAccessibilitySettings = useCallback((newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
+
     // High contrast mode
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
@@ -87,7 +86,7 @@ export const AccessibilityEnhancer: React.FC = () => {
 
     // Store settings in localStorage
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-    
+
     }, []);
 
   // Initialize accessibility settings

@@ -5,9 +5,9 @@ interface ModernLoadingSpinnerProps {
   children?: React.ReactNode;
 }
 
-export default function ModernLoadingSpinner({ 
-  className = '', 
-  children 
+export default function ModernLoadingSpinner({
+  className = '',
+  children
 }: ModernLoadingSpinnerProps) {
   return (
     <div className={`modernloadingspinner ${className}`}>

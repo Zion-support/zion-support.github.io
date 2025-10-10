@@ -1,16 +1,11 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import { Cloud, Code, Navigation } from 'lucide-react';
 
 // Import components from the correct path
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
-
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
@@ -27,7 +22,7 @@ const preloadComponents = () => {
         import('./components/ContentPromotionBanner');
         import('./components/ContentCarousel');
         import('./components/DynamicContentShowcase');
-      });
+
     } else {
       setTimeout(() => {
         import('./components/ContentPromotionBanner');
@@ -58,7 +53,7 @@ const HomePage: React.FC = () => {
     const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
-    
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -68,7 +63,7 @@ const HomePage: React.FC = () => {
       (window as { gtag: (command: string, action: string, parameters: Record<string, string>) => void }).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number',
-      });
+
     }
   }, []);
 
@@ -76,7 +71,7 @@ const HomePage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       {/* Navigation */}
       <Navigation />
-      
+
       {/* Skip to main content for accessibility */}
       <a
         href="#main-content"
@@ -92,7 +87,7 @@ const HomePage: React.FC = () => {
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        
+
         {/* Neon Grid Overlay */}
         <div className="absolute inset-0" style={{
           backgroundImage: `
@@ -105,14 +100,14 @@ const HomePage: React.FC = () => {
         {/* Hero Section */}
         <section
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
-            isLoaded && isVisible 
-              ? 'opacity-100 translate-y-0' 
+            isLoaded && isVisible
+              ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-8'
           }`}
           aria-labelledby="hero-heading"
         >
-          <h1 
-            id="hero-heading" 
+          <h1
+            id="hero-heading"
             className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text"
           >
             Zion Tech Group
@@ -124,7 +119,7 @@ const HomePage: React.FC = () => {
             Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
             Transform your business with our cutting-edge technology and achieve unprecedented growth.
           </p>
-          
+
           {/* Key Benefits */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-12">
             <div className="cyber-card hologram-card p-4 sm:p-6">
@@ -143,7 +138,7 @@ const HomePage: React.FC = () => {
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
             </div>
           </div>
-          
+
           {/* CTA Buttons */}
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -172,7 +167,7 @@ const HomePage: React.FC = () => {
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
             Comprehensive AI and IT solutions designed to transform your business operations
           </p>
-          
+
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>

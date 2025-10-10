@@ -30,7 +30,6 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     fid: 0,
     cls: 0,
     ttfb: 0
-  });
 
   // Web Vitals monitoring
   useEffect(() => {
@@ -94,16 +93,16 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     window.fetch = async (input, init) => {
       const url = typeof input === 'string' ? input : input.url;
       const cacheKey = `${url}_${JSON.stringify(init)}`;
-      
+
       if (cache.has(cacheKey)) {
         return cache.get(cacheKey);
       }
-      
+
       const response = await originalFetch(input, init);
       if (response.ok) {
         cache.set(cacheKey, response.clone());
       }
-      
+
       return response;
     };
   }, [enableServiceWorker]);
@@ -122,19 +121,18 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
             // Check for WebP support
             const canvas = document.createElement('canvas');
             const webpSupported = canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
-            
+
             if (webpSupported && !src.includes('.webp')) {
               img.src = src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
             } else {
               img.src = src;
             }
-            
+
             img.classList.remove('lazy');
             imageObserver.unobserve(img);
           }
         }
-      });
-    });
+
 
     images.forEach((img) => imageObserver.observe(img));
   }, []);
@@ -155,7 +153,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       link.href = resource;
       link.as = resource.endsWith('.css') ? 'style' : 'script';
       document.head.appendChild(link);
-    });
+
   }, []);
 
   // Resource hints for better performance
@@ -177,7 +175,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         link.crossOrigin = 'anonymous';
       }
       document.head.appendChild(link);
-    });
+
   }, []);
 
   // Critical CSS inlining
@@ -212,7 +210,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           fid: Math.round(performanceMetrics.fid),
           cls: Math.round(performanceMetrics.cls * 1000) / 1000
         }
-      });
+
     }
   }, [performanceMetrics]);
 

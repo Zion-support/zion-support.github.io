@@ -5,9 +5,9 @@ interface ContentPreviewCardProps {
   children?: React.ReactNode;
 }
 
-export default function ContentPreviewCard({ 
-  className = '', 
-  children 
+export default function ContentPreviewCard({
+  className = '',
+  children
 }: ContentPreviewCardProps) {
   return (
     <div className={`contentpreviewcard ${className}`}>

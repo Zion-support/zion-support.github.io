@@ -1,6 +1,5 @@
 'use client';
 
-import React, { useState } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import ScrollToTop from '../../components/ScrollToTop';
@@ -142,7 +141,7 @@ export default function AIContentWriterPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
-      
+
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
@@ -155,10 +154,10 @@ export default function AIContentWriterPage() {
               Advanced AI-powered content creation platform
             </p>
             <p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Transform your content strategy with our cutting-edge AI technology. Generate high-quality, 
+              Transform your content strategy with our cutting-edge AI technology. Generate high-quality,
               SEO-optimized content at scale while maintaining your unique brand voice.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a
                 href="#pricing"
@@ -223,7 +222,7 @@ export default function AIContentWriterPage() {
                     Why Choose AI Content Writer Pro?
                   </h2>
                   <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-                    Our platform combines the power of GPT-4 with advanced SEO optimization and brand customization 
+                    Our platform combines the power of GPT-4 with advanced SEO optimization and brand customization
                     to deliver content that not only engages your audience but also drives results.
                   </p>
                 </div>
@@ -309,7 +308,7 @@ export default function AIContentWriterPage() {
                           </span>
                         </div>
                       )}
-                      
+
                       <div className="text-center mb-8">
                         <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                         <p className="text-gray-300 mb-4">{plan.description}</p>

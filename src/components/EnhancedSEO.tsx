@@ -5,9 +5,9 @@ interface EnhancedSEOProps {
   children?: React.ReactNode;
 }
 
-export default function EnhancedSEO({ 
-  className = '', 
-  children 
+export default function EnhancedSEO({
+  className = '',
+  children
 }: EnhancedSEOProps) {
   return (
     <div className={`enhancedseo ${className}`}>

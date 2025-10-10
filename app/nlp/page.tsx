@@ -7,8 +7,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-import { AnalyticsProvider } from '../components/Analytics';
-
 const NLPPage: React.FC = () => {
   const services = [
     {
@@ -76,10 +74,10 @@ const NLPPage: React.FC = () => {
         enableClickjackingProtection={true}
       />
       <Analytics />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
         <Navigation />
-        
+
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -90,8 +88,8 @@ const NLPPage: React.FC = () => {
               Advanced Text Intelligence Solutions
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform unstructured text data into actionable insights with our advanced NLP solutions. 
-              From sentiment analysis to multilingual translation, we help you understand and process 
+              Transform unstructured text data into actionable insights with our advanced NLP solutions.
+              From sentiment analysis to multilingual translation, we help you understand and process
               human language at scale.
             </p>
           </section>
@@ -178,7 +176,7 @@ const NLPPage: React.FC = () => {
                 Ready to Unlock the Power of Text Data?
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                Our NLP experts are ready to help you extract valuable insights from your text data. 
+                Our NLP experts are ready to help you extract valuable insights from your text data.
                 Contact us today for a free consultation and discover the potential of natural language processing.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

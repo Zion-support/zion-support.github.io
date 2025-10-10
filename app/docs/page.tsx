@@ -1,6 +1,5 @@
 'use client';
 
-import React, { useState } from 'react';
 import Link from 'next/link';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -71,7 +70,7 @@ import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } 
 
   const filteredDocs = docCategories.map(category => ({
     ...category,
-    docs: category.docs.filter(doc => 
+    docs: category.docs.filter(doc =>
       doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       doc.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
@@ -80,7 +79,7 @@ import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg particle-system">
       <Navigation />
-      
+
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
@@ -92,10 +91,10 @@ import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } 
               Everything You Need to Get Started
             </p>
             <p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Comprehensive documentation for all our services, APIs, and tools. 
+              Comprehensive documentation for all our services, APIs, and tools.
               Find guides, tutorials, and reference materials to help you succeed.
             </p>
-            
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-12">
               <div className="relative">
@@ -148,7 +147,7 @@ import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } 
                 </div>
               ))}
             </div>
-            
+
             {filteredDocs.length === 0 && searchQuery && (
               <div className="text-center py-16">
                 <div className="text-6xl mb-4">🔍</div>
@@ -182,7 +181,7 @@ import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } 
                 </h3>
                 <p className="text-sm text-gray-400">Complete API documentation</p>
               </Link>
-              
+
               <Link
                 href="/micro-saas"
                 className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
@@ -193,7 +192,7 @@ import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } 
                 </h3>
                 <p className="text-sm text-gray-400">Micro SAAS solutions guide</p>
               </Link>
-              
+
               <Link
                 href="/compliance"
                 className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
@@ -204,7 +203,7 @@ import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } 
                 </h3>
                 <p className="text-sm text-gray-400">Security and compliance info</p>
               </Link>
-              
+
               <Link
                 href="/contact"
                 className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
@@ -246,7 +245,7 @@ import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } 
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );

@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Video, Play, Zap, Target, Users, Globe, Shield, Clock, DollarSign, CheckCircle, ArrowRight, Brain, Camera, Film, Sparkles } from 'lucide-react';
+import { Video, Play, Target, Users, Globe, CheckCircle, Brain } from 'lucide-react';
 
 const AIVideoGenerator: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -133,13 +133,13 @@ const AIVideoGenerator: React.FC = memo(() => {
             <Video className="w-4 h-4" />
             <span>AI Video Creation</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Video Generator
           </h1>
-          
+
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Create professional videos from text prompts in minutes. Our AI-powered platform generates 
+            Create professional videos from text prompts in minutes. Our AI-powered platform generates
             engaging content with custom branding, multiple formats, and 4K quality for any platform.
           </p>
 
@@ -293,7 +293,6 @@ const AIVideoGenerator: React.FC = memo(() => {
       </div>
     </div>
   );
-});
 
 AIVideoGenerator.displayName = 'AIVideoGenerator';
 

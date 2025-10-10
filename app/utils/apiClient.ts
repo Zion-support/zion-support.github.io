@@ -63,7 +63,6 @@ class APIClient {
           ...headers
         },
         body: body ? JSON.stringify(body) : undefined
-      });
 
       const data = await response.json();
 

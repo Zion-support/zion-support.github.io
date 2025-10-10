@@ -4,7 +4,7 @@ import { CheckCircle, TrendingUp } from 'lucide-react';
 
 const Navigation = lazy(() => import('../components/Navigation'))
 const Footer = lazy(() => import('../components/Footer'))
-const AIAnalyticsPage: React.FC = React.memo((props) => {
+const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -121,7 +121,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -275,8 +275,8 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
                   ))}
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
-                  plan.popular 
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
+                  plan.popular
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`} aria-label="Get Started" tabIndex="0">
                   Get Started

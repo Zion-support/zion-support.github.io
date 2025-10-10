@@ -75,29 +75,29 @@ class AdvancedAnalytics {
 
     // Track page views
     this.trackPageView()
-    
+
     // Track clicks
     this.trackClicks()
-    
+
     // Track scrolls
     this.trackScrolls()
-    
+
     // Track form submissions
     this.trackFormSubmissions()
-    
+
     // Track downloads
     this.trackDownloads()
-    
+
     // Track performance
     if (this.config.enablePerformanceTracking) {
       this.trackPerformance()
     }
-    
+
     // Track user journey
     if (this.config.enableUserJourneyTracking) {
       this.trackUserJourney()
     }
-    
+
     // Setup network monitoring
     this.setupNetworkMonitoring()
   }
@@ -165,7 +165,7 @@ class AdvancedAnalytics {
     document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement
       const element = target.closest('a, button, [role="button"]')
-      
+
       if (element) {
         this.trackEvent('click', undefined, {
           element: element.tagName.toLowerCase(),
@@ -182,14 +182,14 @@ class AdvancedAnalytics {
    */
   private trackScrolls(): void {
     let scrollTimeout: NodeJS.Timeout
-    
+
     window.addEventListener('scroll', () => {
       clearTimeout(scrollTimeout)
       scrollTimeout = setTimeout(() => {
         const scrollPercent = Math.round(
           (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
         )
-        
+
         this.trackEvent('scroll', scrollPercent, {
           scrollY: window.scrollY,
           scrollPercent
@@ -220,7 +220,7 @@ class AdvancedAnalytics {
     document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement
       const link = target.closest('a[href]') as HTMLAnchorElement
-      
+
       if (link && this.isDownloadLink(link.href)) {
         this.trackEvent('download', undefined, {
           fileName: link.href.split('/').pop(),
@@ -241,7 +241,7 @@ class AdvancedAnalytics {
       setTimeout(() => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         const paint = performance.getEntriesByType('paint')
-        
+
         this.trackEvent('performance', undefined, {
           loadTime: navigation.loadEventEnd - navigation.loadEventStart,
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
@@ -294,7 +294,7 @@ class AdvancedAnalytics {
   private addEvent(event: UserEvent): void {
     this.eventQueue.push(event)
     this.currentSession.events.push(event)
-    
+
     // Send to analytics service (implement based on your needs)
     this.sendToAnalytics(event)
   }
@@ -304,4 +304,3 @@ class AdvancedAnalytics {
    */
   private sendToAnalytics(event: UserEvent): void {
     // Implement your analytics service integration here
-    

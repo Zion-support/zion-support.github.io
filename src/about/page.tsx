@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Code, 
-  BarChart, 
-  Users, 
-  Zap, 
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Code,
+  BarChart,
+  Users,
+  Zap,
   Star,
   TrendingUp,
   Award,
@@ -80,28 +80,28 @@ const AboutPage: React.FC = () => {
     {
       name: "Dr. Kleber Santos",
       role: "CEO & Founder",
-      image: "/team/kleber-santos.jpg",
+      image: "/team/kleber-santos.webp",
       bio: "AI researcher with 15+ years in machine learning and quantum computing",
       expertise: ["AI Research", "Quantum Computing", "Leadership"]
     },
     {
       name: "Sarah Chen",
       role: "CTO",
-      image: "/team/sarah-chen.jpg", 
+      image: "/team/sarah-chen.webp",
       bio: "Full-stack architect specializing in scalable AI systems and cloud infrastructure",
       expertise: ["Cloud Architecture", "AI Systems", "DevOps"]
     },
     {
       name: "Marcus Johnson",
       role: "Head of AI Research",
-      image: "/team/marcus-johnson.jpg",
+      image: "/team/marcus-johnson.webp",
       bio: "PhD in Computer Science with expertise in neural networks and deep learning",
       expertise: ["Deep Learning", "Neural Networks", "Research"]
     },
     {
       name: "Elena Rodriguez",
       role: "Head of Product",
-      image: "/team/elena-rodriguez.jpg",
+      image: "/team/elena-rodriguez.webp",
       bio: "Product strategist with 10+ years in AI product development and user experience",
       expertise: ["Product Strategy", "UX Design", "AI Products"]
     }
@@ -150,21 +150,21 @@ const AboutPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer 
+      <SEOOptimizer
         title="About Zion Tech Group - Leading AI & IT Solutions Provider"
         description="Learn about Zion Tech Group, a leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Meet our expert team and discover our mission."
         keywords={["About Zion Tech Group", "AI Company", "IT Solutions Provider", "Team", "Mission", "Values"]}
         canonicalUrl="https://ziontechgroup.com/about"
       />
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0">
           <div className="cyber-grid h-full"></div>
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
         </div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
@@ -176,7 +176,7 @@ const AboutPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Pioneering the future of AI and IT solutions with cutting-edge technology, 
+              Pioneering the future of AI and IT solutions with cutting-edge technology,
               innovative thinking, and unwavering commitment to client success.
             </p>
           </div>
@@ -191,12 +191,12 @@ const AboutPage: React.FC = () => {
               <span className="neon-text-advanced">Our Mission</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              To democratize advanced AI and IT solutions, making cutting-edge technology accessible 
-              to businesses of all sizes while maintaining the highest standards of security, 
+              To democratize advanced AI and IT solutions, making cutting-edge technology accessible
+              to businesses of all sizes while maintaining the highest standards of security,
               performance, and innovation.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div key={index} className="quantum-card-advanced p-8 text-center group hover:scale-105 transition-all duration-300">
@@ -222,7 +222,7 @@ const AboutPage: React.FC = () => {
               Measurable results that speak to our commitment to excellence and client success
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {achievements.map((achievement, index) => (
               <div key={index} className="cyber-card-advanced p-8 text-center group hover:scale-105 transition-all duration-300">
@@ -248,7 +248,7 @@ const AboutPage: React.FC = () => {
               World-class experts in AI, quantum computing, and IT solutions
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <div key={index} className="quantum-card-advanced p-6 group hover:scale-105 transition-all duration-300">
@@ -282,7 +282,7 @@ const AboutPage: React.FC = () => {
               Cutting-edge technologies that power our innovative solutions
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => (
               <div key={index} className="cyber-card-advanced p-6 group hover:scale-105 transition-all duration-300">

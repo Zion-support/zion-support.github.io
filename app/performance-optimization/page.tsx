@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Zap, Gauge, Database, Cloud, ArrowRight, Phone, Mail, CheckCircle, TrendingUp, Shield, Clock } from 'lucide-react';
+import { Zap, Gauge, Database, Cloud, ArrowRight, CheckCircle, TrendingUp, Shield, Clock } from 'lucide-react';
 import Link from 'next/link';
 
 const PerformanceOptimizationPage: React.FC = () => {
@@ -82,7 +82,7 @@ const PerformanceOptimizationPage: React.FC = () => {
             Performance <span className="text-cyan-400">Optimization</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Maximize your system performance with our comprehensive optimization services. 
+            Maximize your system performance with our comprehensive optimization services.
             We analyze, tune, and optimize every aspect of your infrastructure for maximum speed and efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

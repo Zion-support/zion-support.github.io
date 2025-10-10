@@ -75,7 +75,7 @@ const ContentNewsletterSignup: React.FC = () => {
                   Stay Updated
                 </h2>
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-                  Join thousands of professionals who trust us for the latest in AI and IT solutions. 
+                  Join thousands of professionals who trust us for the latest in AI and IT solutions.
                   Get exclusive insights, early access to new features, and expert tips delivered to your inbox.
                 </p>
 
@@ -112,7 +112,7 @@ const ContentNewsletterSignup: React.FC = () => {
               {/* Form */}
               <div className="bg-slate-700/50 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-white mb-4">Get Started Today</h3>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">

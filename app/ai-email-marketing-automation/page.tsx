@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Calendar, FileText, GitBranch, AlertCircle, CheckSquare, Timer, DollarSign, PieChart, Activity, Send, MailCheck, UserPlus, MousePointer, BarChart3, Filter, Settings, ShoppingCart, RefreshCw, Gift, HelpCircle, AlertTriangle } from 'lucide-react';
+import { CheckCircle, Star, Users, TrendingUp, Brain, Target, Sparkles, Phone, DollarSign, Send, MailCheck, UserPlus, BarChart3, ShoppingCart, RefreshCw, Gift } from 'lucide-react';
 
 const AIEmailMarketingAutomationPage: React.FC = () => {
   const features = [
@@ -184,10 +184,10 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
             AI Email Marketing Automation
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your email marketing with AI-powered automation, personalization, and analytics. 
+            Transform your email marketing with AI-powered automation, personalization, and analytics.
             Increase open rates by 40% and revenue by 60% with our intelligent platform.
           </p>
-          
+
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             {stats.map((stat, index) => (

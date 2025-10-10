@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Globe, Brain, Target, BarChart, MessageSquare, Eye, ArrowRight } from 'lucide-react';
+import { CheckCircle, Star, ArrowRight } from 'lucide-react';
 
 const AIContentGenerationPage: React.FC = () => {
   const contentServices = [
@@ -65,7 +64,7 @@ const AIContentGenerationPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Transform your content strategy with our AI-powered content generation services. 
+              Transform your content strategy with our AI-powered content generation services.
               Create high-quality blog posts, social media content, and marketing copy 10x faster.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

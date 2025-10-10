@@ -461,10 +461,10 @@ class EnhancedErrorHandler {
    */
   private logError(errorReport: ErrorReport): void {
     const emoji = this.getSeverityEmoji(errorReport.severity);`}
-    console.group(`${emoji} Error Report: ${errorReport.id}`)
+
     if (errorReport.stack) {}
       }
-    console.groupEnd()
+
   }
   /**
    * Get severity emoji

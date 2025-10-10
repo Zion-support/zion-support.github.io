@@ -5,9 +5,9 @@ interface ServicesSectionProps {
   children?: React.ReactNode;
 }
 
-export default function ServicesSection({ 
-  className = '', 
-  children 
+export default function ServicesSection({
+  className = '',
+  children
 }: ServicesSectionProps) {
   return (
     <div className={`servicessection ${className}`}>
