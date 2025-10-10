@@ -20,6 +20,39 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   twitterCard = 'summary_large_image',
   structuredData}
 }) => {
+<<<<<<< HEAD
+=======
+  const defaultStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    description,
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
+    sameAs: [
+      'https://linkedin.com/company/zion-tech-group',
+      'https://twitter.com/ziontechgroup',
+      'https://github.com/zion-tech-group',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-555-ZION-TECH',
+      contactType: 'customer service',
+      availableLanguage: 'English',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '123 Tech Innovation Drive',
+      addressLocality: 'San Francisco',
+      addressRegion: 'CA',
+      postalCode: '94105',
+      addressCountry: 'US',
+    },
+  };
+
+  const finalStructuredData = structuredData || defaultStructuredData;
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-4927
   return (
     <Head>}
       {/* Basic Meta Tags */}
