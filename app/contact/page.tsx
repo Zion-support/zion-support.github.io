@@ -12,18 +12,18 @@ const ContactPage: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-    message: '';)
-});;
+    message: ''
+  });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev,
-      [e.target.name]: e.target.value;)
-}););)
-}, []);
+      [e.target.name]: e.target.value
+    }));
+  }, []);
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,22 +39,24 @@ const ContactPage: React.FC = () => {
         company: '',
         phone: '',
         service: '',
-        message: '';)
-});;)
-} catch (error) {
-      setSubmitStatus('error');)
-} finally {
-      setIsSubmitting(false);)
-}
+        message: ''
+      });
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
-        <title></titl>Contact Us - Zion Tech Group | Get in Touch</title>
+    <>
+      <Helmet>
+        <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get a free consultation, quote, or support. Call +1-302-464-0950 or email kleber@ziontechgroup.com" />
         <meta name="keywords" content="contact us, AI consulting, IT support, free consultation, get quote, technical support" />
       </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
       <Navigation />
       
@@ -62,14 +64,14 @@ const ContactPage: React.FC = () => {
       <section className="relative py-20 px-4 overflow-hidden"></section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Get in
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent"></span>
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Touch
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Ready to transform your business? Let's discuss your project and explore 
             how our AI and IT solutions can help you achieve your goals.
           </p>
@@ -77,25 +79,25 @@ const ContactPage: React.FC = () => {
       </section>
 
       {/* Contact Form and Info */}
-      <section className="py-20 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
-              <h2 className="text-3xl font-bold text-white mb-6"></h>Send us a message</h2>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-6">Send us a message</h2>
               
               {submitStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center"></div>
+                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                  <span className="text-green-400"></spa>Message sent successfully!</span>
+                  <span className="text-green-400">Message sent successfully!</span>
                 </div>
-              );
+              )}
 
               {submitStatus === 'error' && (
-                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg"></div>
-                  <span className="text-red-400"></spa>Failed to send message. Please try again.</span>
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
+                  <span className="text-red-400">Failed to send message. Please try again.</span>
                 </div>
-              );
+              )}
 
               <form onSubmit={handleSubmit} className="space-y-6"></form>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>

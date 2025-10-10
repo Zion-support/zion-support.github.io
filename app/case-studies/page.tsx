@@ -3,11 +3,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, ExternalLink, Calendar, User, Building, Award, TrendingUp, Shield, Zap } from 'lucide-react';
-=======
 import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 
 interface CaseStudy {
   id: string;
@@ -31,19 +27,11 @@ const CaseStudiesPage: React.FC = () => {
   const caseStudies: CaseStudy[] = [
     {
       id: '1',
-<<<<<<< HEAD
-      title: 'AI-Powered Healthcare Analytics Platform',
-      client: 'MedTech Solutions',
-      industry: 'Healthcare',
-      challenge: 'MedTech Solutions needed to analyze large volumes of patient data to identify patterns and improve treatment outcomes, but their existing systems were unable to process the data efficiently.',
-      solution: 'We developed a comprehensive AI-powered analytics platform that processes patient data in real-time, uses machine learning algorithms to identify patterns, and provides actionable insights to healthcare providers.',
-=======
       title: 'AI-Powered Customer Service Transformation',
       client: 'TechCorp Solutions',
       industry: 'Technology',
       challenge: 'High customer service costs and long response times affecting customer satisfaction.',
       solution: 'Implemented AI-powered chatbots and automated ticket routing system with natural language processing.',
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
       results: [
         '40% improvement in treatment accuracy',
         '60% reduction in data processing time',

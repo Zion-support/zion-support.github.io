@@ -1,13 +1,8 @@
 'use client';
 
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
 
 interface BlogPost {
