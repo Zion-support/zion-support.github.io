@@ -2,10 +2,11 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import { Search, Phone, Mail, MessageCircle, Clock, CheckCircle, ArrowRight } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
-<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState('');
 
   const faqs = [
@@ -26,8 +27,6 @@ const SupportPage: React.FC = () => {
       answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'
     }
   ];
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
   const supportChannels = [
     {
       title: 'Email Support',
@@ -152,7 +151,6 @@ const SupportPage: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
   );
 };
 
