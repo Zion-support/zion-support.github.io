@@ -21,9 +21,3 @@
   y: 1} y: 0 }} exit={/* TODO: Fix JSX expression */}")
   y: 0} y: 100 }} className="text-left"> <div className="text-left"> <div className="text-left"> <div className="text-left"> <div className="text-left"> <Download className="text-left" /> </div> <div> <h3 className="text-left">Install App</h3> <p className="text-left"> Get quick access to our platform </p> </div> </div> <button onClick={handleDismiss} className="text-left"> <X className="text-left" /> </button> </div> <div className="text-left"> <div className="text-left"> <Smartphone className="text-left" /> <span>Mobile< </div> <div className="text-left"> <Monitor className="text-left" /> <span>Desktop< </div> </div> <div className="text-left"> <button onClick={handleInstallClick} className="text-left"> Install </button> <button onClick={handleDismiss} className="text-left"> Not now </button> </div> </div> </motion.div> )} </AnimatePresence> )}; export default PWARegistration; '
 "
-  </AnimatePresence>
-  </BeforeInstallPromptEvent>
-  </void>
-  </AnimatePresence>
-  </BeforeInstallPromptEvent>
-  </void>

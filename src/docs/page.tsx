@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from 'lucide-react';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from 'lucide-react'
 const DocsPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const docCategories = [
     { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 8 },
@@ -14,7 +14,7 @@ const DocsPage: React.FC = () => {
     { id: 'api', name: 'API Reference', icon: Code, count: 15 },
     { id: 'integration', name: 'Integration', icon: Settings, count: 6 },
     { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4 }
-  ];
+  ]
   const documentation = [
     {
       id: 1,
@@ -116,7 +116,7 @@ const DocsPage: React.FC = () => {
       icon: Zap,
       content: 'Advanced techniques for optimizing API calls, reducing latency, and minimizing costs.'
     }
-  ];
+  ]
   const quickLinks = [
     {
       title: 'API Reference',
@@ -146,25 +146,25 @@ const DocsPage: React.FC = () => {
       link: '/community',
       color: 'text-cyan-400'
     }
-  ];
+  ]
   const filteredDocs = selectedCategory === 'all' 
     ? documentation 
-    : documentation.filter(doc => doc.category === selectedCategory);
+    : documentation.filter(doc => doc.category === selectedCategory)
   const searchResults = searchQuery 
     ? documentation.filter(doc => 
         doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.content.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : filteredDocs;
+    : filteredDocs
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'Beginner': return 'text-green-400 bg-green-500/20';
-      case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';
-      case 'Advanced': return 'text-red-400 bg-red-500/20';
-      default: return 'text-gray-400 bg-gray-500/20';
+      case 'Beginner': return 'text-green-400 bg-green-500/20'
+      case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20'
+      case 'Advanced': return 'text-red-400 bg-red-500/20'
+      default: return 'text-gray-400 bg-gray-500/20'
     }
-  };
+  }
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -178,17 +178,11 @@ const DocsPage: React.FC = () => {
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Documentation;
-  </
-            <p className="text-xl text-cyan-400 mb-8">
-              Everything you need to build with AI;
-  </
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">Documentation
+            <p className="text-xl text-cyan-400 mb-8">Everything you need to build with AI
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Comprehensive guides, API references, and tutorials to help you 
               integrate and optimize our AI services for your business.
-            </p>
-          </section>
           {/* Search Section */}
           <section className="mb-16">
             <div className="max-w-2xl mx-auto">
@@ -201,14 +195,9 @@ const DocsPage: React.FC = () => {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
-              </div>
-            </div>
-          </section>
           {/* Quick Links */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Quick Links;
-  </
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Quick Links
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {quickLinks.map((link, index) => (
                 <Link
@@ -218,17 +207,11 @@ const DocsPage: React.FC = () => {
                   <link.icon className={`w-12 h-12 mx-auto mb-4 ${link.color}`} />
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     {link.title}
-                  </h3>
-                  <p className="text-gray-300">{link.description}</p>
-                </Link>
+                  <p className="text-gray-300">{link.description}
               ))}
-            </div>
-          </section>
           {/* Categories */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Browse by Category;
-  </
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Browse by Category
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
               {docCategories.map((category) => (
                 <button
@@ -241,17 +224,12 @@ const DocsPage: React.FC = () => {
                   }`}
                 >
                   <category.icon className="w-6 h-6 mx-auto mb-2" />
-                  <div className="text-sm font-semibold">{category.name}</div>
-                  <div className="text-xs opacity-75">{category.count} docs</div>
-                </button>
+                  <div className="text-sm font-semibold">{category.name}
+                  <div className="text-xs opacity-75">{category.count} docs
               ))}
-            </div>
-          </section>
           {/* Documentation List */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Documentation;
-  </
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Documentation
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {searchResults.map((doc) => (
                 <div key={doc.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -261,73 +239,39 @@ const DocsPage: React.FC = () => {
                       <div className="flex items-center gap-2 mb-2">
                         <span className={`px-2 py-1 rounded text-xs font-semibold ${getDifficultyColor(doc.difficulty)}`}>
                           {doc.difficulty}
-                        </span>
-                        <span className="text-gray-400 text-xs">{doc.readTime}</span>
-                      </div>
-                    </div>
-                  </div>
+                        <span className="text-gray-400 text-xs">{doc.readTime}
                   <h3 className="text-xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors">
                     {doc.title}
-                  </h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">
                     {doc.description}
-                  </p>
                   <p className="text-gray-400 text-sm mb-4">
                     {doc.content}
-                  </p>
                   <div className="flex items-center justify-between">
                     <Link
                       to={`/docs/${doc.id}`}
                       className="inline-flex items-center text-cyan-400 hover:text-white transition-colors">
                       Read More
                       <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
                     <span className="text-gray-500 text-xs">
                       {doc.category}
-                    </span>
-                  </div>
-                </div>
               ))}
-            </div>
-          </section>
           {/* Getting Started CTA */}
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Start building with our AI services today;
-  </
+              <h2 className="text-3xl font-bold text-white mb-6 neon-text">Ready to Get Started?
+              <p className="text-xl text-gray-300 mb-8">Start building with our AI services today
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <MessageSquare className="w-5 h-5 mr-2" />
-                  Contact Our Team;
-  </
+                  Contact Our Team
                 <Link
                   to="/demo"
                   className="cyber-button-secondary px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <Play className="w-5 h-5 mr-2" />
-                  Request Demo;
-  </
-              </div>
-            </div>
-          </section>
-        </main>
+                  Request Demo
         <Footer />
-      </div>
-    </React.Fragment>
-  );
-};
-export default DocsPage;
-  </Link>
-  </Link>
-  </p>
-  </h2>
-  </h2>
-  </h2>
-  </p>
-  </h1>
-  </SEOOptimizer>
+    </React.Fragment>)
+}
+export default $1

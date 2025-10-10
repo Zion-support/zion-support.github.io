@@ -1,10 +1,10 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+'use client'
+import React, { useState, useEffect } from 'react'
 const UltimateBusinessIntelligence2025Banner = () => {
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 const _UltimateBusinessIntelligence2025Banner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [isVisible, setIsVisible] = useState(true)
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -39,43 +39,38 @@ tagstags: ['Case Study', 'Fortune 500', 'ROI', '2025']
         cost:       ,
 tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     }
-  ];
+  ]
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [content.length]);
+      setCurrentSlide((prev) => (prev + 1) % content.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [content.length])
   const handleClose = () => {
-    setIsVisible(false);
-  };
+    setIsVisible(false)
+  }
   if (!isVisible) return null;return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse">
         <div
           className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '2s' }}
-        ></div>
+        >
           className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '1s' }}
-      </div>
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="text-2xl">🚀</span>
-            <span className="text-cyan-400 font-bold text-xl">
-              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025;
-  </
-            <span className='text-2xl'>⚡</span>
+            <span className="text-2xl">🚀
+            <span className="text-cyan-400 font-bold text-xl">BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025
+            <span className='text-2xl'>⚡
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             {currentContent.title}
-          </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
             {currentContent.description}
-          </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Link
               to="/services"
@@ -88,8 +83,6 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
                   strokeWidth={2}
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
-              </svg>
-            </Link>
               to="/contact"
               className="inline-flex items-center px-10 py-5 border-2 border-indigo-400 text-indigo-300 font-bold text-lg rounded-xl hover:bg-indigo-400/10 transition-all duration-300"
               Schedule Consultation
@@ -107,7 +100,7 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
                 <div key={key} className="text-center bg-white/5 rounded-xl p-4">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}
                   <div className="text-sm text-gray-300 capitalize">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
               ))}
@@ -122,15 +115,14 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 href={currentContent.url}
                 className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
-                <span className="text-xl">📖</span>
-                <span>Read {currentContent.type}</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
+                <span className="text-xl">📖
+                <span>Read {currentContent.type}
+                <span className="group-hover:translate-x-1 transition-transform">→
               <a
                 href="tel:+13024640950"
                 className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
-                <span className="text-xl">📞</span>
-                <span>Call +1 302 464 0950</span>
-              </a>
+                <span className="text-xl">📞
+                <span>Call +1 302 464 0950
           {/* Slide Indicators */}
           <div className="flex justify-center mt-8 space-x-2">
             {content.map((_, index) => (
@@ -149,27 +141,26 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
             { value: '99.9%', label: 'Success Rate' },
             { value: '5M+', label: 'Data Points Processed' }].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-              <div className="text-gray-300">{stat.label}</div>
-    </section>
-  );
-export default UltimateBusinessIntelligence2025Banner;
-'use client';
-import React, { useState, useEffect } from 'react';
+              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}
+              <div className="text-gray-300">{stat.label}
+  )
+export default UltimateBusinessIntelligence2025Banner
+'use client'
+import React, { useState, useEffect } from 'react'
 const UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [isVisible, setIsVisible] = useState(true)
   const content = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+]
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   i,
   d: 'ultimate-business-intelligence-revolution',
       titl,
@@ -178,13 +169,13 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
       descriptio,
   n: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       ur,
-  l: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough';
+  l: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough'
       typ,
   e: 'Blog Post',
       metric,
   s: {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   efficienc,
   y: '300%',
         accurac,
@@ -214,13 +205,13 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
       descriptio,
   n: 'Automate your entire business process with our comprehensive automation suite, reducing manual work by 95% and increasing productivity by 300%.',
       ur,
-  l: '/services/automation';
+  l: '/services/automation'
       typ,
   e: 'Service',
                   {tag}
             {/* CTA Buttons */}
           <div className="flex flex-col,"
-  sm:flex-row items-center justify-center gap-6"></div>
+  sm:flex-row items-center justify-center gap-6">
                 href={currentContent.url}"
                 className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600,
   hover:from-cyan-600,
@@ -230,7 +221,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   hover:shadow-cyan-500/25"
         {/* Stats Section */}"
         <div className="mt-16 grid grid-cols-2,"
-  md:grid-cols-4 gap-8"></div>
+  md:grid-cols-4 gap-8">
           {[}
   // TOD,
   O: Add items]
@@ -245,28 +236,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
           "
           <div key={index} className="text-center"></div>"
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>"
-              <div className="text-gray-300">{stat.label}</div>
-    </section>
-  );
-};
+              <div className="text-gray-300">{stat.label}
+  )
+}
 export default UltimateBusinessIntelligence2025Banner;"
-  </div>
-  </div>
-  </button>
-  </div>
-  </div>
-  </span>
-  </div>
-  </div>
-  </div>
-  </div>
-  </svg>
-  </div>
-  </div>
-  </div>
-  </path>
-  </div>
-  </span>
-  </div>
-  </div>
-  </div>

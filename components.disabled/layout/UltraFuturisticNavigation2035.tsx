@@ -791,12 +791,3 @@ import React,{useState}useEffect } from \'react\' import { Link } from \'next/li
   hover:bg-gray-800/50' }`} onClick={closeMobileMenu} > {action.icon} <span>{action.name}< </Link> ))} </div> </div> {} <div className="text-left"> <div className="text-left"> <a href={/* TODO: Fix JSX expression */}"`
   l:${contactInfo.mobile}`} className="text-left"> <Phone className="text-left" /> <span>{contactInfo.mobile}< </a> <a href={/* TODO: Fix JSX expression */}"`
   o:${contactInfo.email}`} className="text-left"> <Mail className="text-left" /> <span>{contactInfo.email}< </a> <div className="text-left"> <MapPin className="text-left" /> <span className="text-left">{contactInfo.address}< </div> </div> </div> </div> </div> </motion.div> )} </AnimatePresence> </div> </nav> )}; export default UltraFuturisticNavigation2035;'"`
-  </span>
-  </span>
-  </string>
-  </span>
-  </span>
-  </string>
-  </span>
-  </span>
-  </string>

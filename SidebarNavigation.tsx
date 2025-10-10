@@ -1,9 +1,9 @@
-import { X, Home, User, Settings, HelpCircle } from 'lucide-react';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { X, Home, User, Settings, HelpCircle } from 'lucide-react'
+import React from 'react'
+import { Link } from 'react-router-dom'
 interface SidebarNavigationProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean
+  onClose: () => void
 }
 const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
@@ -11,7 +11,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
     { name: 'About', href: '/about', icon: User },
     { name: 'Services', href: '/services', icon: Settings },
     { name: 'Contact', href: '/contact', icon: HelpCircle },
-  ];
+  ]
   return (
     <React.Fragment>
       {/* Overlay */}
@@ -28,13 +28,11 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
         }`}
       >
         <div className="flex items-center justify-between p-4 border-b border-cyan-500/20">
-          <h2 className="text-white font-bold text-xl">Navigation</h2>
+          <h2 className="text-white font-bold text-xl">Navigation
           <button
             onClick={onClose}
             className="text-gray-300 hover:text-cyan-400 transition-colors">
             <X className="w-6 h-6" />
-          </button>
-        </div>
         <nav className="mt-8">
           {navigationItems.map((item) => (
             <Link
@@ -44,13 +42,8 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
               onClick={onClose}
             >
               <item.icon className="w-5 h-5" />
-              <span>{item.name}</span>
-            </Link>
+              <span>{item.name}
           ))}
-        </nav>
-      </div>
-    </React.Fragment>
-  );
-};
-
-export default SidebarNavigation;
+  )
+}
+export default SidebarNavigation

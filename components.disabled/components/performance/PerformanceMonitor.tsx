@@ -1,4 +1,4 @@
-// import React; { useEffect } from 'react''  // Common interfaces for better type safety interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */}
+// import React; { useEffect } from 'react''  // Common interfaces for better type safety interface ApiResponse<T = unknown>{/* TODO: Fix JSX expression */}
   a: T} statu,
   s: number} message?: string} interface User {/* TODO: Fix JSX expression */}
   l: string} nam,
@@ -30,5 +30,4 @@
   s: {' 'Content-Type': 'application/json'}, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   p: Date.now()} metrics})}).catch(console.error)} } // Send metrics when page is about to unload;' window.addEventListener('beforeunload') sendMetrics); // Also send after a delay to capture late metrics; setTimeout(sendMetrics) 5000); // Cleanup; return () => {fcpObserver.disconnect(); lcpObserver.disconnect(); fidObserver.disconnect(); clsObserver.disconnect(); fmpObserver.disconnect()}' window.removeEventListener('beforeunload'} sendMetrics)} }, []);' return null // This component doesn&apos;t render unknownthing'} ; export default PerformanceMonitor'
-import User from 'lucide-react';
-  </T>
+import User from 'lucide-react'

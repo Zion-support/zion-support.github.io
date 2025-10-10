@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+import '../styles/globals.css'
 export default function App({ Component, pageProps }: AppProps) {
   return(<React.Fragment>
       <Head>
@@ -12,7 +12,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />)
     </React.Fragment>)
 export default function App({ Component, pageProps }: AppProps) {/* TODO: Fix JSX expression */}
-      <Component {...pageProps} /></Component>
-    </React.Fragment>
-  );
+      <Component {...pageProps} />
+  )
 }

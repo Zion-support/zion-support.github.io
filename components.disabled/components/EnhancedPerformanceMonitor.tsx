@@ -38,6 +38,3 @@
   y: 0} y: 20 }} animate={/* TODO: Fix JSX expression */}
   y: 1} y: 0 }} transition={/* TODO: Fix JSX expression */}"
   y: 0.3 }} className="text-left"> <div className="text-left"> <h3 className="text-left">Time to First Byte</h3> <div className="text-left"> {Math.round(metrics.ttfb)}ms </div> <div className="text-left">Server response time</div> </div> <div className="text-left"> <h3 className="text-left">Status</h3> <div className="text-left"> <CheckCircle className="text-left" /> <span className="text-left">Monitoring Active< </div> <div className="text-left"> Real-time performance tracking </div> </div> </motion.div> </div> </div> )}; export default EnhancedPerformanceMonitor; '"`
-  </div>
-  </button>
-  </PerformanceMetrics>
