@@ -2,115 +2,6 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-
-interface ConsultationType {
-  id: string;
-  name: string;
-  description: string;
-  duration: string;
-  price: string;
-  features: string[];
-  popular: boolean;
-}
-
-const ConsultationPage: React.FC = () => {
-  const [selectedType, setSelectedType] = useState<string>('');
-
-  const consultationTypes: ConsultationType[] = [
-    {
-      id: 'strategy',
-      name: 'IT Strategy Consultation',
-      description: 'Comprehensive analysis of your current IT infrastructure and strategic planning for digital transformation.',
-      duration: '2-4 hours',
-      price: '$500',
-      features: [
-        'Current IT assessment',
-        'Technology roadmap development',
-        'ROI analysis and recommendations',
-        'Implementation timeline',
-        'Follow-up support included'
-      ],
-      popular: false
-    },
-    {
-      id: 'ai',
-      name: 'AI Implementation Consultation',
-      description: 'Expert guidance on integrating AI solutions into your business processes and workflows.',
-      duration: '3-5 hours',
-      price: '$750',
-      features: [
-        'AI readiness assessment',
-        'Use case identification',
-        'Technology stack recommendations',
-        'Implementation strategy',
-        'Training and support planning'
-      ],
-      popular: true
-    },
-    {
-      id: 'cloud',
-      name: 'Cloud Migration Consultation',
-      description: 'Strategic planning and execution guidance for migrating your infrastructure to the cloud.',
-      duration: '4-6 hours',
-      price: '$1,000',
-      features: [
-        'Cloud readiness assessment',
-        'Migration strategy development',
-        'Cost optimization analysis',
-        'Security and compliance review',
-        'Implementation roadmap'
-      ],
-      popular: false
-    },
-    {
-      id: 'security',
-      name: 'Cybersecurity Audit',
-      description: 'Comprehensive security assessment and recommendations to protect your digital assets.',
-      duration: '6-8 hours',
-      price: '$1,500',
-      features: [
-        'Security vulnerability assessment',
-        'Compliance review',
-        'Penetration testing',
-        'Security policy development',
-        'Incident response planning'
-      ],
-      popular: false
-    }
-  ];
-
-  const experts = [
-    {
-      name: 'Dr. Sarah Chen',
-      role: 'AI & Machine Learning Specialist',
-      experience: '15+ years',
-      expertise: ['AI Strategy', 'Machine Learning', 'Data Science'],
-      image: '/images/experts/sarah-chen.jpg'
-    },
-    {
-      name: 'Michael Rodriguez',
-      role: 'Cloud Architecture Expert',
-      experience: '12+ years',
-      expertise: ['Cloud Migration', 'DevOps', 'Infrastructure'],
-      image: '/images/experts/michael-rodriguez.jpg'
-    },
-    {
-      name: 'Alex Thompson',
-      role: 'Cybersecurity Consultant',
-      experience: '10+ years',
-      expertise: ['Security Audits', 'Compliance', 'Risk Management'],
-      image: '/images/experts/alex-thompson.jpg'
-    }
-  ];
-
-  const handleBooking = (typeId: string) => {
-    setSelectedType(typeId);
-    // In a real app, this would open a booking modal or redirect to a booking page
-    console.log(`Booking consultation: ${typeId}`);
-=======
 import { Calendar, Clock, User, Mail, Phone, MessageCircle, CheckCircle, ArrowRight, Zap, Target, Users, Award } from 'lucide-react';
 
 const ConsultationPage: React.FC = () => {
@@ -188,7 +79,6 @@ const ConsultationPage: React.FC = () => {
     e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData);
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
   };
 
   return (
@@ -207,35 +97,6 @@ const ConsultationPage: React.FC = () => {
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Consultation</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-              Get personalized guidance from our experienced team of IT experts. Transform your business with strategic technology solutions.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <div className="flex items-center justify-center gap-4 text-white">
-                <Calendar className="w-8 h-8 text-purple-400" />
-                <div className="text-left">
-                  <div className="text-2xl font-bold">Flexible Scheduling</div>
-                  <div className="text-gray-400">Book at your convenience</div>
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-4 text-white">
-                <Users className="w-8 h-8 text-purple-400" />
-                <div className="text-left">
-                  <div className="text-2xl font-bold">Expert Team</div>
-                  <div className="text-gray-400">15+ years experience</div>
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-4 text-white">
-                <CheckCircle className="w-8 h-8 text-purple-400" />
-                <div className="text-left">
-                  <div className="text-2xl font-bold">Proven Results</div>
-                  <div className="text-gray-400">98% client satisfaction</div>
-=======
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Expert Consultation
@@ -263,7 +124,6 @@ const ConsultationPage: React.FC = () => {
                   </h3>
                   <p className="text-gray-300 mb-3">{service.description}</p>
                   <p className="text-cyan-400 text-sm font-medium">{service.duration}</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
                 </div>
               ))}
             </div>
