@@ -1,1198 +1,464 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Heart, 
-  Brain, 
-  MessageCircle, 
-  Calendar, 
-  BarChart3, 
-  Shield, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Clock, 
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight,
-  Zap,
-  Target,
-  Award,
-  Sparkles,
-  RefreshCw,
-  Play,
-  Pause,
-  Stop,
-  RotateCcw,
-  RotateCw,
-  SkipBack,
-  SkipForward,
-  Repeat,
-  Shuffle,
-  VolumeX,
-  Volume1,
-  Volume2,
-  Maximize,
-  Minimize,
-  Fullscreen,
-  FullscreenExit,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Laptop,
-  Desktop,
-  Server,
-  Cloud,
-  Database,
-  HardDrive,
-  Wifi,
-  WifiOff,
-  Signal,
-  SignalZero,
-  SignalLow,
-  SignalMedium,
-  SignalHigh,
-  Battery,
-  BatteryLow,
-  BatteryMedium,
-  BatteryHigh,
-  BatteryFull,
-  Power,
-  PowerOff,
-  Sun,
-  Moon,
-  Sunrise,
-  Sunset,
-  CloudRain,
-  CloudSnow,
-  CloudLightning,
-  CloudDrizzle,
-  CloudHail,
-  Wind,
-  Thermometer,
-  Droplets,
-  Umbrella,
-  SunIcon,
-  MoonIcon,
-  StarIcon,
-  Heart as HeartIcon,
-  ThumbsUp,
-  ThumbsDown,
-  Smile,
-  Frown,
-  Meh,
-  Laugh,
-  Angry,
-  Surprised,
-  Confused,
-  Sad,
-  Happy,
-  Wink,
-  Kiss,
-  Tongue,
-  Disappointed,
-  Worried,
-  Excited,
-  Proud,
-  Grateful,
-  Blessed,
-  Loved,
-  Hopeful,
-  Motivated,
-  Inspired,
-  Creative,
-  Confident,
-  Strong,
-  Brave,
-  Kind,
-  Gentle,
-  Caring,
-  Supportive,
-  Understanding,
-  Patient,
-  Calm,
-  Peaceful,
-  Relaxed,
-  Focused,
-  Determined,
-  Persistent,
-  Resilient,
-  Optimistic,
-  Positive,
-  Enthusiastic,
-  Energetic,
-  Active,
-  Dynamic,
-  Vibrant,
-  Lively,
-  Spirited,
-  Passionate,
-  Intense,
-  Powerful,
-  Mighty,
-  Strong2,
-  Tough,
-  Hard,
-  Soft,
-  Smooth,
-  Rough,
-  Sharp,
-  Dull,
-  Bright,
-  Dark,
-  Light,
-  Heavy,
-  Fast,
-  Slow,
-  Quick,
-  Rapid,
-  Swift,
-  Speedy,
-  Agile,
-  Nimble,
-  Flexible,
-  Adaptable,
-  Versatile,
-  Multi,
-  Single,
-  Double,
-  Triple,
-  Quad,
-  Multiple,
-  Many,
-  Few,
-  Some,
-  All,
-  None,
-  Zero,
-  One,
-  Two,
-  Three,
-  Four,
-  Five,
-  Six,
-  Seven,
-  Eight,
-  Nine,
-  Ten,
-  Hundred,
-  Thousand,
-  Million,
-  Billion,
-  Trillion,
-  Infinity,
-  Plus,
-  Minus,
-  X,
-  Check,
-  ArrowUp,
-  ArrowDown,
-  ArrowLeft,
-  ArrowRight as ArrowRightIcon,
-  ChevronUp,
-  ChevronLeft,
-  ChevronDown,
-  ChevronRight,
-  CaretUp,
-  CaretDown,
-  CaretLeft,
-  CaretRight,
-  Triangle,
-  Circle,
-  Square,
-  Rectangle,
-  Pentagon,
-  Hexagon,
-  Octagon,
-  Diamond,
-  Heart as HeartIcon2,
-  Star as StarIcon2,
-  Moon as MoonIcon2,
-  Sun as SunIcon2,
-  Cloud as CloudIcon,
-  Zap as ZapIcon,
-  Shield as ShieldIcon,
-  Lock,
-  Unlock,
-  Eye,
-  EyeOff,
-  Search,
-  Filter,
-  Sort,
-  List,
-  Grid,
-  Layout,
-  Sidebar,
-  Menu,
-  MoreHorizontal,
-  MoreVertical,
-  Dot,
-  DotHorizontal,
-  DotVertical,
-  Line,
-  Bar,
-  Pie,
-  Area,
-  Scatter,
-  Bubble,
-  Candlestick,
-  Radar,
-  Polar,
-  Treemap,
-  Sunburst,
-  Sankey,
-  Funnel,
-  Gauge,
-  Meter,
-  Progress,
-  Slider,
-  Toggle,
-  Switch,
-  Button,
-  Input,
-  Textarea,
-  Select,
-  Option,
-  Checkbox,
-  Radio,
-  Date,
-  Time,
-  DateTime,
-  Color,
-  File,
-  Image,
-  Video,
-  Audio,
-  Document,
-  Spreadsheet,
-  Presentation,
-  Pdf,
-  Word,
-  Excel,
-  Powerpoint,
-  Text,
-  Code,
-  Json,
-  Xml,
-  Html,
-  Css,
-  Javascript,
-  Typescript,
-  Python,
-  Java,
-  C,
-  Cpp,
-  Csharp,
-  Php,
-  Ruby,
-  Go,
-  Rust,
-  Swift,
-  Kotlin,
-  Dart,
-  R,
-  Matlab,
-  Scala,
-  Perl,
-  Haskell,
-  Clojure,
-  Erlang,
-  Elixir,
-  Fsharp,
-  Ocaml,
-  Lisp,
-  Prolog,
-  Assembly,
-  Bash,
-  Powershell,
-  Vb,
-  Vbnet,
-  Cobol,
-  Fortran,
-  Pascal,
-  Ada,
-  Smalltalk,
-  Lua,
-  Tcl,
-  Awk,
-  Sed,
-  Gawk,
-  Mawk,
-  Nawk,
-  Gnu,
-  Linux,
-  Unix,
-  Windows,
-  Macos,
-  Ios,
-  Android,
-  Web,
-  Mobile,
-  Desktop as DesktopIcon,
-  Laptop as LaptopIcon,
-  Tablet as TabletIcon,
-  Smartphone as SmartphoneIcon,
-  Watch,
-  Tv,
-  Camera,
-  Microphone,
-  Speaker,
-  Headphone,
-  Keyboard,
-  Mouse,
-  Touchpad,
-  Trackpad,
-  Joystick,
-  Gamepad,
-  Controller,
-  Remote,
-  Cable,
-  Wire,
-  Plug,
-  Socket,
-  Outlet,
-  Switch as SwitchIcon,
-  Button as ButtonIcon,
-  Knob,
-  Dial,
-  Lever,
-  Handle,
-  Grip,
-  Hold,
-  Grab,
-  Catch,
-  Throw,
-  Drop,
-  Place,
-  Put,
-  Set,
-  Get,
-  Take,
-  Give,
-  Send,
-  Receive,
-  Deliver,
-  Ship,
-  Transport,
-  Move,
-  Carry,
-  Lift,
-  Push,
-  Pull,
-  Drag,
-  Slide,
-  Roll,
-  Spin,
-  Turn,
-  Rotate,
-  Flip,
-  Toss,
-  Shake,
-  Vibrate,
-  Oscillate,
-  Pulse,
-  Beat,
-  Rhythm,
-  Tempo,
-  Speed,
-  Velocity,
-  Acceleration,
-  Momentum,
-  Force,
-  Energy,
-  Power as PowerIcon,
-  Strength,
-  Weakness,
-  Strong as StrongIcon,
-  Weak,
-  Hard as HardIcon,
-  Easy,
-  Simple,
-  Complex,
-  Basic,
-  Advanced,
-  Beginner,
-  Intermediate,
-  Expert,
-  Professional,
-  Amateur,
-  Novice,
-  Master,
-  Guru,
-  Teacher,
-  Student,
-  Learner,
-  Instructor,
-  Coach,
-  Mentor,
-  Guide,
-  Leader,
-  Follower,
-  Boss,
-  Employee,
-  Worker,
-  Manager,
-  Director,
-  CEO,
-  President,
-  Owner,
-  Founder,
-  Creator,
-  Inventor,
-  Designer,
-  Developer,
-  Programmer,
-  Coder,
-  Engineer,
-  Architect,
-  Builder,
-  Maker,
-  Artist,
-  Writer,
-  Author,
-  Editor,
-  Publisher,
-  Producer,
-  Director as DirectorIcon,
-  Actor,
-  Actress,
-  Performer,
-  Entertainer,
-  Comedian,
-  Musician,
-  Singer,
-  Dancer,
-  Painter,
-  Sculptor,
-  Photographer,
-  Videographer,
-  Filmmaker,
-  Animator,
-  Illustrator,
-  Cartoonist,
-  Composer,
-  Songwriter,
-  Lyricist,
-  Poet,
-  Novelist,
-  Journalist,
-  Reporter,
-  Blogger,
-  Vlogger,
-  Podcaster,
-  Streamer,
-  Gamer,
-  Player,
-  Competitor,
-  Champion,
-  Winner,
-  Loser,
-  Victor,
-  Defeat,
-  Success,
-  Failure,
-  Achievement,
-  Accomplishment,
-  Goal,
-  Target as TargetIcon,
-  Objective,
-  Mission,
-  Vision,
-  Dream,
-  Hope,
-  Wish,
-  Desire,
-  Want,
-  Need,
-  Require,
-  Demand,
-  Request,
-  Ask,
-  Question,
-  Answer,
-  Reply,
-  Response,
-  Feedback,
-  Comment,
-  Suggestion,
-  Recommendation,
-  Advice,
-  Tip,
-  Hint,
-  Clue,
-  Secret,
-  Mystery,
-  Puzzle,
-  Riddle,
-  Problem,
-  Solution,
-  Fix,
-  Repair,
-  Maintenance,
-  Update,
-  Upgrade,
-  Improve,
-  Enhance,
-  Optimize,
-  Maximize,
-  Minimize,
-  Reduce,
-  Increase,
-  Decrease,
-  Add,
-  Remove,
-  Delete,
-  Create,
-  Build,
-  Make,
-  Generate,
-  Produce,
-  Manufacture,
-  Assemble,
-  Construct,
-  Develop,
-  Design,
-  Plan,
-  Organize,
-  Arrange,
-  Sort as SortIcon,
-  Order,
-  Sequence,
-  List as ListIcon,
-  Catalog,
-  Inventory,
-  Stock,
-  Supply,
-  Demand as DemandIcon,
-  Market,
-  Economy,
-  Business,
-  Company,
-  Corporation,
-  Organization,
-  Institution,
-  Agency,
-  Department,
-  Division,
-  Section,
-  Unit,
-  Team,
-  Group,
-  Squad,
-  Crew,
-  Staff,
-  Personnel,
-  Workforce,
-  Employees,
-  Workers,
-  Colleagues,
-  Partners,
-  Associates,
-  Allies,
-  Friends,
-  Family,
-  Relatives,
-  Parents,
-  Children,
-  Siblings,
-  Spouse,
-  Partner,
-  Lover,
-  Boyfriend,
-  Girlfriend,
-  Husband,
-  Wife,
-  Son,
-  Daughter,
-  Brother,
-  Sister,
-  Father,
-  Mother,
-  Grandfather,
-  Grandmother,
-  Uncle,
-  Aunt,
-  Cousin,
-  Nephew,
-  Niece,
-  Grandson,
-  Granddaughter,
-  Great,
-  Great2,
-  Great3,
-  Great4,
-  Great5,
-  Great6,
-  Great7,
-  Great8,
-  Great9,
-  Great10,
-  Super,
-  Ultra,
-  Mega,
-  Giga,
-  Tera,
-  Peta,
-  Exa,
-  Zetta,
-  Yotta,
-  Kilo,
-  Hecto,
-  Deca,
-  Deci,
-  Centi,
-  Milli,
-  Micro,
-  Nano,
-  Pico,
-  Femto,
-  Atto,
-  Zepto,
-  Yocto,
-  Yotta as YottaIcon,
-  Zetta as ZettaIcon,
-  Exa as ExaIcon,
-  Peta as PetaIcon,
-  Tera as TeraIcon,
-  Giga as GigaIcon,
-  Mega as MegaIcon,
-  Kilo as KiloIcon,
-  Hecto as HectoIcon,
-  Deca as DecaIcon,
-  Deci as DeciIcon,
-  Centi as CentiIcon,
-  Milli as MilliIcon,
-  Micro as MicroIcon,
-  Nano as NanoIcon,
-  Pico as PicoIcon,
-  Femto as FemtoIcon,
-  Atto as AttoIcon,
-  Zepto as ZeptoIcon,
-  Yocto as YoctoIcon
-} from 'lucide-react';
+'use client';
 
-interface MentalHealthCompanionProps {
-  className?: string;
-}
+import React from 'react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Heart, Brain, Users, Shield, Clock, Award, Target, BarChart, Globe, Home, Video, Palette, Code, Music, Camera, Headphones, MessageSquare, Smile, Activity, Zap, Settings, Database, Lock, Eye, Search, FileText } from 'lucide-react';
+import Footer from '../components/Footer';
 
-export default function MentalHealthCompanion({ className = '' }: MentalHealthCompanionProps) {
-  const [currentMood, setCurrentMood] = useState('neutral');
-  const [chatMessages, setChatMessages] = useState<any[]>([]);
-  const [userInput, setUserInput] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
-  const [moodHistory, setMoodHistory] = useState<any[]>([]);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-
-  const moods = [
-    { id: 'happy', label: 'Happy', icon: Smile, color: 'text-yellow-400' },
-    { id: 'sad', label: 'Sad', icon: Frown, color: 'text-blue-400' },
-    { id: 'anxious', label: 'Anxious', icon: Worried, color: 'text-orange-400' },
-    { id: 'calm', label: 'Calm', icon: Calm, color: 'text-green-400' },
-    { id: 'angry', label: 'Angry', icon: Angry, color: 'text-red-400' },
-    { id: 'excited', label: 'Excited', icon: Excited, color: 'text-pink-400' },
-    { id: 'tired', label: 'Tired', icon: Meh, color: 'text-gray-400' },
-    { id: 'confident', label: 'Confident', icon: Confident, color: 'text-purple-400' }
+const AIMentalHealthCompanionPage: React.FC = () => {
+  const features = [
+    "24/7 Emotional Support",
+    "Personalized Therapy Sessions",
+    "Mood Tracking & Analytics",
+    "Crisis Intervention Support",
+    "Meditation & Mindfulness",
+    "Cognitive Behavioral Therapy",
+    "Sleep Quality Monitoring",
+    "Stress Management Tools",
+    "Progress Tracking",
+    "Professional Therapist Network",
+    "Privacy & Confidentiality",
+    "Multi-language Support"
   ];
 
-  const features = [
+  const therapyModules = [
     {
-      title: "24/7 AI Companion",
-      description: "Always available mental health support powered by advanced AI",
+      title: "Anxiety Management",
+      icon: Brain,
+      description: "Evidence-based techniques to manage anxiety and panic attacks",
+      techniques: [
+        "Breathing exercises",
+        "Progressive muscle relaxation",
+        "Cognitive restructuring",
+        "Exposure therapy",
+        "Mindfulness meditation"
+      ]
+    },
+    {
+      title: "Depression Support",
       icon: Heart,
-      price: "Included"
+      description: "Comprehensive support for managing depression and low mood",
+      techniques: [
+        "Behavioral activation",
+        "Thought challenging",
+        "Activity scheduling",
+        "Gratitude practice",
+        "Social connection"
+      ]
     },
     {
-      title: "Mood Tracking",
-      description: "Track your daily mood and emotional patterns over time",
-      icon: BarChart3,
-      price: "Included"
+      title: "Stress Relief",
+      icon: Activity,
+      description: "Tools and techniques to reduce stress and build resilience",
+      techniques: [
+        "Stress identification",
+        "Relaxation techniques",
+        "Time management",
+        "Boundary setting",
+        "Self-care planning"
+      ]
     },
     {
-      title: "Crisis Support",
-      description: "Immediate support and resources during mental health crises",
-      icon: Shield,
-      price: "Included"
-    },
-    {
-      title: "Therapy Sessions",
-      description: "AI-powered therapy sessions with evidence-based techniques",
-      icon: MessageCircle,
-      price: "Included"
-    },
-    {
-      title: "Progress Monitoring",
-      description: "Track your mental health journey and celebrate milestones",
-      icon: Target,
-      price: "Included"
-    },
-    {
-      title: "Professional Referrals",
-      description: "Connect with licensed mental health professionals when needed",
-      icon: Users,
-      price: "Pro Feature"
+      title: "Sleep Improvement",
+      icon: Clock,
+      description: "Sleep hygiene and techniques for better rest and recovery",
+      techniques: [
+        "Sleep schedule optimization",
+        "Relaxation routines",
+        "Sleep environment setup",
+        "Sleep restriction therapy",
+        "Dream journaling"
+      ]
     }
   ];
 
-  const pricingPlans = [
+  const pricingTiers = [
     {
-      name: "Basic",
+      name: "Basic Support",
       price: "$19",
       period: "/month",
       description: "Essential mental health support for individuals",
       features: [
-        "AI companion chat",
+        "Daily mood check-ins",
+        "Basic meditation library",
         "Mood tracking",
-        "Basic therapy sessions",
         "Crisis support",
+        "Community access",
         "Email support"
       ],
-      popular: false
+      popular: false,
+      cta: "Start Free Trial"
     },
     {
-      name: "Professional",
+      name: "Therapy Plus",
       price: "$49",
       period: "/month",
-      description: "Comprehensive mental health support with advanced features",
+      description: "Comprehensive therapy and support for serious mental health needs",
       features: [
-        "Advanced AI companion",
-        "Detailed mood analytics",
-        "Full therapy sessions",
-        "Crisis support",
+        "Unlimited therapy sessions",
+        "Personalized treatment plans",
+        "Advanced mood analytics",
+        "Sleep monitoring",
+        "Stress management tools",
+        "Priority support",
         "Progress tracking",
-        "Professional referrals",
-        "Priority support"
+        "Therapist matching"
       ],
-      popular: true
+      popular: true,
+      cta: "Start Free Trial"
     },
     {
-      name: "Family",
+      name: "Family Plan",
       price: "$99",
       period: "/month",
       description: "Mental health support for the whole family",
       features: [
-        "Up to 5 family members",
-        "Family mood tracking",
-        "Group therapy sessions",
-        "Crisis support",
-        "Family progress reports",
-        "Professional referrals",
-        "24/7 support",
+        "Up to 6 family members",
+        "Individual therapy sessions",
+        "Family therapy sessions",
+        "Child-specific support",
+        "Parenting guidance",
+        "Family progress tracking",
+        "Dedicated support",
+        "Crisis intervention",
+        "Educational resources",
         "Custom family plans"
       ],
-      popular: false
+      popular: false,
+      cta: "Contact Sales"
     }
   ];
 
-  const handleMoodSelection = (moodId: string) => {
-    setCurrentMood(moodId);
-    const newMoodEntry = {
-      id: Date.now(),
-      mood: moodId,
-      timestamp: new Date(),
-      note: ''
-    };
-    setMoodHistory(prev => [...prev, newMoodEntry]);
-  };
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "Marketing Manager",
+      company: "Tech Startup",
+      content: "The AI Mental Health Companion has been a lifesaver during my anxiety episodes. The 24/7 support and personalized techniques have helped me manage my mental health much better than traditional therapy alone.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "Student",
+      company: "University of California",
+      content: "As a student dealing with depression, this app provided me with accessible mental health support when I needed it most. The AI companion is surprisingly empathetic and the techniques actually work.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Dr. Emily Rodriguez",
+      role: "Clinical Psychologist",
+      company: "Mental Health Clinic",
+      content: "I recommend this AI companion to my patients as a supplement to traditional therapy. The evidence-based techniques and 24/7 availability make it an excellent tool for ongoing mental health support.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
 
-  const handleSendMessage = async () => {
-    if (!userInput.trim()) return;
-
-    const userMessage = {
-      id: Date.now(),
-      type: 'user',
-      content: userInput,
-      timestamp: new Date()
-    };
-
-    setChatMessages(prev => [...prev, userMessage]);
-    setUserInput('');
-    setIsTyping(true);
-
-    // Simulate AI response
-    setTimeout(() => {
-      const aiResponse = {
-        id: Date.now() + 1,
-        type: 'ai',
-        content: "I understand how you're feeling. It's important to acknowledge your emotions. Would you like to talk about what's on your mind?",
-        timestamp: new Date()
-      };
-      setChatMessages(prev => [...prev, aiResponse]);
-      setIsTyping(false);
-    }, 2000);
-  };
-
-  const handleCrisisSupport = () => {
-    const crisisMessage = {
-      id: Date.now(),
-      type: 'system',
-      content: "Crisis support activated. Please know that you're not alone. If you're having thoughts of self-harm, please contact the National Suicide Prevention Lifeline at 988 or text HOME to 741741.",
-      timestamp: new Date()
-    };
-    setChatMessages(prev => [...prev, crisisMessage]);
-  };
+  const safetyFeatures = [
+    { name: "HIPAA Compliant", description: "Full compliance with healthcare privacy regulations", icon: Shield },
+    { name: "Crisis Detection", description: "AI-powered crisis intervention and emergency support", icon: AlertTriangle },
+    { name: "Professional Oversight", description: "Licensed therapists monitor and guide AI responses", icon: Users },
+    { name: "Data Encryption", description: "End-to-end encryption for all personal data", icon: Lock },
+    { name: "Anonymous Support", description: "Option for completely anonymous mental health support", icon: Eye },
+    { name: "Emergency Contacts", description: "Automatic emergency contact notification when needed", icon: Phone }
+  ];
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 ${className}`}>
-      <Helmet>
-        <title>AI Mental Health Companion Pro - 24/7 Mental Health Support | Zion Tech Group</title>
-        <meta name="description" content="AI-powered mental health companion with mood tracking, therapy sessions, and crisis support. Get 24/7 mental health support with our advanced AI technology." />
-        <meta name="keywords" content="mental health, AI therapy, mood tracking, mental health support, crisis support, therapy sessions, emotional wellness" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-mental-health-companion" />
-      </Helmet>
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <div className="relative py-20 overflow-hidden">
+      <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-pink-500/10 border border-pink-400/20 rounded-full px-6 py-3 mb-8">
-              <Heart className="w-5 h-5 text-pink-400 mr-2" />
-              <span className="text-pink-300 font-medium">AI Mental Health Companion Pro</span>
+            <div className="inline-flex items-center space-x-2 bg-green-500/10 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Heart className="w-4 h-4" />
+              <span>AI Mental Health Support</span>
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">
-              24/7 Mental Health Support
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              AI Mental Health Companion
             </h1>
             
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
-              Your AI-Powered Mental Health Companion
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Your personal AI companion for mental health support. Available 24/7 with evidence-based 
+              therapy techniques, crisis intervention, and personalized care.
             </p>
             
-            <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Get compassionate, professional mental health support anytime, anywhere. 
-              Track your mood, engage in therapy sessions, and access crisis support with our advanced AI technology.
-            </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/25">
-                <span className="relative z-10">Start Free Trial</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+              <button className="bg-gradient-to-r from-green-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-green-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              
-              <button className="group inline-flex items-center px-8 py-4 border-2 border-pink-400 text-pink-400 font-semibold rounded-xl hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Watch Demo
+              <button className="border-2 border-green-400 text-green-400 font-semibold py-4 px-8 rounded-xl hover:bg-green-400 hover:text-slate-900 transition-all duration-300 flex items-center">
+                <MessageSquare className="w-5 h-5 mr-2" />
+                Chat Now
               </button>
             </div>
 
-            {/* Stats */}
+            {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">24/7</div>
-                <div className="text-gray-400">Support Available</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+                <div className="text-gray-400">Always Available</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
                 <div className="text-gray-400">User Satisfaction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">10K+</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">50k+</div>
                 <div className="text-gray-400">Lives Improved</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">HIPAA</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">HIPAA</div>
                 <div className="text-gray-400">Compliant</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Mental Health Companion Interface */}
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-pink-900 to-slate-800">
-        <div className="container mx-auto px-4">
+      {/* Therapy Modules Section */}
+      <section className="py-16 bg-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Your Mental Health Companion
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Evidence-Based Therapy Modules
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Track your mood, chat with your AI companion, and access professional support
+              Comprehensive mental health support based on proven therapeutic techniques
             </p>
           </div>
-
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Mood Tracking Section */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <Heart className="w-8 h-8 text-pink-400 mr-3" />
-                  How are you feeling today?
-                </h3>
-
-                <div className="space-y-6">
-                  <div className="grid grid-cols-2 gap-4">
-                    {moods.map((mood) => (
-                      <button
-                        key={mood.id}
-                        onClick={() => handleMoodSelection(mood.id)}
-                        className={`p-4 rounded-lg border-2 transition-all duration-300 ${
-                          currentMood === mood.id
-                            ? 'border-pink-400 bg-pink-400/10'
-                            : 'border-white/20 hover:border-pink-400/50'
-                        }`}
-                      >
-                        <mood.icon className={`w-8 h-8 mx-auto mb-2 ${mood.color}`} />
-                        <p className="text-white text-sm font-medium">{mood.label}</p>
-                      </button>
-                    ))}
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {therapyModules.map((module, index) => (
+              <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-purple-600 rounded-xl flex items-center justify-center">
+                    <module.icon className="w-6 h-6 text-white" />
                   </div>
-
-                  <div className="bg-white/5 rounded-lg p-4">
-                    <h4 className="text-white font-semibold mb-2">Mood History</h4>
-                    <div className="space-y-2">
-                      {moodHistory.slice(-5).map((entry) => (
-                        <div key={entry.id} className="flex items-center justify-between text-sm">
-                          <span className="text-gray-300">
-                            {entry.timestamp.toLocaleDateString()}
-                          </span>
-                          <span className="text-pink-400 capitalize">
-                            {entry.mood}
-                          </span>
-                        </div>
-                      ))}
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{module.title}</h3>
+                    <p className="text-gray-300">{module.description}</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-3">
+                  {module.techniques.map((technique, techniqueIndex) => (
+                    <div key={techniqueIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      {technique}
                     </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Chat Interface */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <MessageCircle className="w-8 h-8 text-pink-400 mr-3" />
-                  Chat with Your AI Companion
-                </h3>
-
-                <div className="space-y-4">
-                  {/* Chat Messages */}
-                  <div className="h-64 overflow-y-auto space-y-4 mb-4">
-                    {chatMessages.length === 0 ? (
-                      <div className="text-center py-8">
-                        <MessageCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                        <p className="text-gray-400">Start a conversation with your AI companion</p>
-                      </div>
-                    ) : (
-                      chatMessages.map((message) => (
-                        <div
-                          key={message.id}
-                          className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-                        >
-                          <div
-                            className={`max-w-xs px-4 py-2 rounded-lg ${
-                              message.type === 'user'
-                                ? 'bg-pink-500 text-white'
-                                : message.type === 'system'
-                                ? 'bg-red-500 text-white'
-                                : 'bg-white/10 text-gray-300'
-                            }`}
-                          >
-                            <p className="text-sm">{message.content}</p>
-                            <p className="text-xs opacity-70 mt-1">
-                              {message.timestamp.toLocaleTimeString()}
-                            </p>
-                          </div>
-                        </div>
-                      ))
-                    )}
-                    {isTyping && (
-                      <div className="flex justify-start">
-                        <div className="bg-white/10 text-gray-300 px-4 py-2 rounded-lg">
-                          <div className="flex space-x-1">
-                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Message Input */}
-                  <div className="flex space-x-2">
-                    <input
-                      type="text"
-                      value={userInput}
-                      onChange={(e) => setUserInput(e.target.value)}
-                      onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                      placeholder="Type your message..."
-                      className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-400/20"
-                    />
-                    <button
-                      onClick={handleSendMessage}
-                      disabled={!userInput.trim()}
-                      className="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      Send
-                    </button>
-                  </div>
-
-                  {/* Crisis Support Button */}
-                  <button
-                    onClick={handleCrisisSupport}
-                    className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
-                  >
-                    Crisis Support
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Features Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Mental Health Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive mental health support powered by advanced AI technology
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-pink-400/50 transition-all duration-300 transform hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-400 mb-4">{feature.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-pink-400 font-semibold">{feature.price}</span>
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  ))}
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Pricing Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-pink-900 to-slate-800">
-        <div className="container mx-auto px-4">
+      {/* Features Section */}
+      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Mental Health Plans
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Comprehensive Mental Health Support
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the mental health support plan that's right for you
+              Advanced AI technology combined with proven therapeutic techniques
             </p>
           </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-purple-600 rounded-lg flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white">{feature}</h3>
+                </div>
+                <p className="text-gray-300 text-sm">
+                  Professional-grade mental health support with AI-powered personalization and 24/7 availability.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-pink-400/50 ring-2 ring-pink-400/30' : 'border-white/10'}`}>
-                {plan.popular && (
+      {/* Safety Features Section */}
+      <section className="py-16 bg-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Your Privacy & Safety Matter
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We prioritize your mental health and privacy with industry-leading security measures
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {safetyFeatures.map((feature, index) => (
+              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-center space-x-3 mb-4">
+                  <feature.icon className="w-6 h-6 text-green-400" />
+                  <h3 className="text-lg font-semibold text-white">{feature.name}</h3>
+                </div>
+                <p className="text-gray-300 text-sm">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Mental Health Support Plans
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the support level that's right for you or your family
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index) => (
+              <div
+                key={index}
+                className={`cyber-card p-8 hover:scale-105 transition-all duration-300 relative ${
+                  tier.popular ? 'ring-2 ring-green-400/50' : ''
+                }`}
+              >
+                {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-pink-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">
+                    <span className="bg-gradient-to-r from-green-400 to-purple-600 text-white text-sm font-bold px-4 py-1 rounded-full flex items-center">
+                      <Star className="w-4 h-4 mr-1" />
                       Most Popular
                     </span>
                   </div>
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-2">{plan.period}</span>
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <p className="text-gray-300 mb-6">{tier.description}</p>
+                  
+                  <div className="mb-6">
+                    <span className="text-5xl font-bold text-white">{tier.price}</span>
+                    <span className="text-gray-400 text-lg">{tier.period}</span>
                   </div>
+                  
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    tier.popular
+                      ? 'bg-gradient-to-r from-green-500 to-purple-600 text-white hover:from-green-600 hover:to-purple-700'
+                      : 'bg-gray-700 text-white hover:bg-gray-600'
+                  }`}>
+                    {tier.cta}
+                  </button>
                 </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-pink-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
+                
+                <div className="space-y-4">
+                  {tier.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </div>
                   ))}
-                </ul>
-
-                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular 
-                    ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 transform hover:scale-105' 
-                    : 'bg-white/10 text-white hover:bg-white/20'
-                }`}>
-                  {plan.popular ? 'Get Started' : 'Choose Plan'}
-                </button>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Contact Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
-        <div className="container mx-auto px-4">
+      {/* Testimonials Section */}
+      <section className="py-16 bg-gradient-to-r from-green-500/10 to-purple-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Start Your Mental Health Journey
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Real Stories, Real Impact
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Contact our mental health team to learn more about our AI companion
+              Hear from people whose lives have been improved by our AI mental health companion
             </p>
           </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-pink-400 mr-3" />
-                    <a href="tel:+13024640950" className="text-gray-300 hover:text-pink-400 transition-colors">
-                      +1 (302) 464-0950
-                    </a>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                <div className="flex items-center mb-4">
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-current" />
+                    ))}
                   </div>
-                  <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-pink-400 mr-3" />
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-pink-400 transition-colors">
-                      kleber@ziontechgroup.com
-                    </a>
+                </div>
+                <p className="text-gray-300 mb-6 italic">
+                  "{testimonial.content}"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    {testimonial.avatar}
                   </div>
-                  <div className="flex items-start">
-                    <MapPin className="w-5 h-5 text-pink-400 mr-3 mt-1" />
-                    <div className="text-gray-300">
-                      <div>364 E Main St STE 1008</div>
-                      <div>Middletown, DE 19709</div>
-                    </div>
+                  <div>
+                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                    <p className="text-gray-500 text-xs">{testimonial.company}</p>
                   </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Get Started</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Free 14-day trial</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">HIPAA compliant</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">24/7 support</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Crisis support</span>
-                  </div>
-                </div>
-                <button className="w-full mt-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial
-                </button>
+      {/* Crisis Support Section */}
+      <section className="py-16 bg-gradient-to-r from-red-500/10 to-pink-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Crisis Support Available 24/7
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            If you're experiencing a mental health crisis, our AI companion can provide immediate support 
+            and connect you with professional help when needed.
+          </p>
+          
+          <div className="bg-red-900/20 border border-red-500/30 rounded-xl p-8 mb-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Emergency Resources</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-2">National Suicide Prevention Lifeline</h4>
+                <p className="text-gray-300 mb-2">Call or text 988 for 24/7 crisis support</p>
+                <a href="tel:988" className="text-red-400 hover:text-red-300 font-medium">Call 988</a>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-2">Crisis Text Line</h4>
+                <p className="text-gray-300 mb-2">Text HOME to 741741 for crisis support</p>
+                <a href="sms:741741&body=HOME" className="text-red-400 hover:text-red-300 font-medium">Text HOME to 741741</a>
               </div>
             </div>
           </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button className="bg-gradient-to-r from-green-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-green-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+              Start Free Trial
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="border-2 border-green-400 text-green-400 font-semibold py-4 px-8 rounded-xl hover:bg-green-400 hover:text-slate-900 transition-all duration-300">
+              Chat with AI Companion
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
   );
-}
+};
+
+export default AIMentalHealthCompanionPage;

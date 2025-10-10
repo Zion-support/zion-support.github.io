@@ -1,1192 +1,501 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  TrendingUp, 
-  TrendingDown, 
-  DollarSign, 
-  BarChart3, 
-  PieChart, 
-  Target, 
-  Shield, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Clock, 
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight,
-  Brain,
-  Zap,
-  Award,
-  Sparkles,
-  RefreshCw,
-  Play,
-  Pause,
-  Stop,
-  RotateCcw,
-  RotateCw,
-  SkipBack,
-  SkipForward,
-  Repeat,
-  Shuffle,
-  VolumeX,
-  Volume1,
-  Volume2,
-  Maximize,
-  Minimize,
-  Fullscreen,
-  FullscreenExit,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Laptop,
-  Desktop,
-  Server,
-  Cloud,
-  Database,
-  HardDrive,
-  Wifi,
-  WifiOff,
-  Signal,
-  SignalZero,
-  SignalLow,
-  SignalMedium,
-  SignalHigh,
-  Battery,
-  BatteryLow,
-  BatteryMedium,
-  BatteryHigh,
-  BatteryFull,
-  Power,
-  PowerOff,
-  Sun,
-  Moon,
-  Sunrise,
-  Sunset,
-  CloudRain,
-  CloudSnow,
-  CloudLightning,
-  CloudDrizzle,
-  CloudHail,
-  Wind,
-  Thermometer,
-  Droplets,
-  Umbrella,
-  SunIcon,
-  MoonIcon,
-  StarIcon,
-  Heart,
-  ThumbsUp,
-  ThumbsDown,
-  Smile,
-  Frown,
-  Meh,
-  Laugh,
-  Angry,
-  Surprised,
-  Confused,
-  Sad,
-  Happy,
-  Wink,
-  Kiss,
-  Tongue,
-  Disappointed,
-  Worried,
-  Excited,
-  Proud,
-  Grateful,
-  Blessed,
-  Loved,
-  Hopeful,
-  Motivated,
-  Inspired,
-  Creative,
-  Confident,
-  Strong,
-  Brave,
-  Kind,
-  Gentle,
-  Caring,
-  Supportive,
-  Understanding,
-  Patient,
-  Calm,
-  Peaceful,
-  Relaxed,
-  Focused,
-  Determined,
-  Persistent,
-  Resilient,
-  Optimistic,
-  Positive,
-  Enthusiastic,
-  Energetic,
-  Active,
-  Dynamic,
-  Vibrant,
-  Lively,
-  Spirited,
-  Passionate,
-  Intense,
-  Powerful,
-  Mighty,
-  Strong2,
-  Tough,
-  Hard,
-  Soft,
-  Smooth,
-  Rough,
-  Sharp,
-  Dull,
-  Bright,
-  Dark,
-  Light,
-  Heavy,
-  Fast,
-  Slow,
-  Quick,
-  Rapid,
-  Swift,
-  Speedy,
-  Agile,
-  Nimble,
-  Flexible,
-  Adaptable,
-  Versatile,
-  Multi,
-  Single,
-  Double,
-  Triple,
-  Quad,
-  Multiple,
-  Many,
-  Few,
-  Some,
-  All,
-  None,
-  Zero,
-  One,
-  Two,
-  Three,
-  Four,
-  Five,
-  Six,
-  Seven,
-  Eight,
-  Nine,
-  Ten,
-  Hundred,
-  Thousand,
-  Million,
-  Billion,
-  Trillion,
-  Infinity,
-  Plus,
-  Minus,
-  X,
-  Check,
-  ArrowUp,
-  ArrowDown,
-  ArrowLeft,
-  ArrowRight as ArrowRightIcon,
-  ChevronUp,
-  ChevronLeft,
-  ChevronDown,
-  ChevronRight,
-  CaretUp,
-  CaretDown,
-  CaretLeft,
-  CaretRight,
-  Triangle,
-  Circle,
-  Square,
-  Rectangle,
-  Pentagon,
-  Hexagon,
-  Octagon,
-  Diamond,
-  Heart as HeartIcon,
-  Star as StarIcon2,
-  Moon as MoonIcon2,
-  Sun as SunIcon2,
-  Cloud as CloudIcon,
-  Zap as ZapIcon,
-  Shield as ShieldIcon,
-  Lock,
-  Unlock,
-  Eye,
-  EyeOff,
-  Search,
-  Filter,
-  Sort,
-  List,
-  Grid,
-  Layout,
-  Sidebar,
-  Menu,
-  MoreHorizontal,
-  MoreVertical,
-  Dot,
-  DotHorizontal,
-  DotVertical,
-  Line,
-  Bar,
-  Pie,
-  Area,
-  Scatter,
-  Bubble,
-  Candlestick,
-  Radar,
-  Polar,
-  Treemap,
-  Sunburst,
-  Sankey,
-  Funnel,
-  Gauge,
-  Meter,
-  Progress,
-  Slider,
-  Toggle,
-  Switch,
-  Button,
-  Input,
-  Textarea,
-  Select,
-  Option,
-  Checkbox,
-  Radio,
-  Date,
-  Time,
-  DateTime,
-  Color,
-  File,
-  Image,
-  Video,
-  Audio,
-  Document,
-  Spreadsheet,
-  Presentation,
-  Pdf,
-  Word,
-  Excel,
-  Powerpoint,
-  Text,
-  Code,
-  Json,
-  Xml,
-  Html,
-  Css,
-  Javascript,
-  Typescript,
-  Python,
-  Java,
-  C,
-  Cpp,
-  Csharp,
-  Php,
-  Ruby,
-  Go,
-  Rust,
-  Swift,
-  Kotlin,
-  Dart,
-  R,
-  Matlab,
-  Scala,
-  Perl,
-  Haskell,
-  Clojure,
-  Erlang,
-  Elixir,
-  Fsharp,
-  Ocaml,
-  Lisp,
-  Prolog,
-  Assembly,
-  Bash,
-  Powershell,
-  Vb,
-  Vbnet,
-  Cobol,
-  Fortran,
-  Pascal,
-  Ada,
-  Smalltalk,
-  Lua,
-  Tcl,
-  Awk,
-  Sed,
-  Gawk,
-  Mawk,
-  Nawk,
-  Gnu,
-  Linux,
-  Unix,
-  Windows,
-  Macos,
-  Ios,
-  Android,
-  Web,
-  Mobile,
-  Desktop as DesktopIcon,
-  Laptop as LaptopIcon,
-  Tablet as TabletIcon,
-  Smartphone as SmartphoneIcon,
-  Watch,
-  Tv,
-  Camera,
-  Microphone,
-  Speaker,
-  Headphone,
-  Keyboard,
-  Mouse,
-  Touchpad,
-  Trackpad,
-  Joystick,
-  Gamepad,
-  Controller,
-  Remote,
-  Cable,
-  Wire,
-  Plug,
-  Socket,
-  Outlet,
-  Switch as SwitchIcon,
-  Button as ButtonIcon,
-  Knob,
-  Dial,
-  Lever,
-  Handle,
-  Grip,
-  Hold,
-  Grab,
-  Catch,
-  Throw,
-  Drop,
-  Place,
-  Put,
-  Set,
-  Get,
-  Take,
-  Give,
-  Send,
-  Receive,
-  Deliver,
-  Ship,
-  Transport,
-  Move,
-  Carry,
-  Lift,
-  Push,
-  Pull,
-  Drag,
-  Slide,
-  Roll,
-  Spin,
-  Turn,
-  Rotate,
-  Flip,
-  Toss,
-  Shake,
-  Vibrate,
-  Oscillate,
-  Pulse,
-  Beat,
-  Rhythm,
-  Tempo,
-  Speed,
-  Velocity,
-  Acceleration,
-  Momentum,
-  Force,
-  Energy,
-  Power as PowerIcon,
-  Strength,
-  Weakness,
-  Strong as StrongIcon,
-  Weak,
-  Hard as HardIcon,
-  Easy,
-  Simple,
-  Complex,
-  Basic,
-  Advanced,
-  Beginner,
-  Intermediate,
-  Expert,
-  Professional,
-  Amateur,
-  Novice,
-  Master,
-  Guru,
-  Teacher,
-  Student,
-  Learner,
-  Instructor,
-  Coach,
-  Mentor,
-  Guide,
-  Leader,
-  Follower,
-  Boss,
-  Employee,
-  Worker,
-  Manager,
-  Director,
-  CEO,
-  President,
-  Owner,
-  Founder,
-  Creator,
-  Inventor,
-  Designer,
-  Developer,
-  Programmer,
-  Coder,
-  Engineer,
-  Architect,
-  Builder,
-  Maker,
-  Artist,
-  Writer,
-  Author,
-  Editor,
-  Publisher,
-  Producer,
-  Director as DirectorIcon,
-  Actor,
-  Actress,
-  Performer,
-  Entertainer,
-  Comedian,
-  Musician,
-  Singer,
-  Dancer,
-  Painter,
-  Sculptor,
-  Photographer,
-  Videographer,
-  Filmmaker,
-  Animator,
-  Illustrator,
-  Cartoonist,
-  Composer,
-  Songwriter,
-  Lyricist,
-  Poet,
-  Novelist,
-  Journalist,
-  Reporter,
-  Blogger,
-  Vlogger,
-  Podcaster,
-  Streamer,
-  Gamer,
-  Player,
-  Competitor,
-  Champion,
-  Winner,
-  Loser,
-  Victor,
-  Defeat,
-  Success,
-  Failure,
-  Achievement,
-  Accomplishment,
-  Goal,
-  Target as TargetIcon,
-  Objective,
-  Mission,
-  Vision,
-  Dream,
-  Hope,
-  Wish,
-  Desire,
-  Want,
-  Need,
-  Require,
-  Demand,
-  Request,
-  Ask,
-  Question,
-  Answer,
-  Reply,
-  Response,
-  Feedback,
-  Comment,
-  Suggestion,
-  Recommendation,
-  Advice,
-  Tip,
-  Hint,
-  Clue,
-  Secret,
-  Mystery,
-  Puzzle,
-  Riddle,
-  Problem,
-  Solution,
-  Fix,
-  Repair,
-  Maintenance,
-  Update,
-  Upgrade,
-  Improve,
-  Enhance,
-  Optimize,
-  Maximize,
-  Minimize,
-  Reduce,
-  Increase,
-  Decrease,
-  Add,
-  Remove,
-  Delete,
-  Create,
-  Build,
-  Make,
-  Generate,
-  Produce,
-  Manufacture,
-  Assemble,
-  Construct,
-  Develop,
-  Design,
-  Plan,
-  Organize,
-  Arrange,
-  Sort as SortIcon,
-  Order,
-  Sequence,
-  List as ListIcon,
-  Catalog,
-  Inventory,
-  Stock,
-  Supply,
-  Demand as DemandIcon,
-  Market,
-  Economy,
-  Business,
-  Company,
-  Corporation,
-  Organization,
-  Institution,
-  Agency,
-  Department,
-  Division,
-  Section,
-  Unit,
-  Team,
-  Group,
-  Squad,
-  Crew,
-  Staff,
-  Personnel,
-  Workforce,
-  Employees,
-  Workers,
-  Colleagues,
-  Partners,
-  Associates,
-  Allies,
-  Friends,
-  Family,
-  Relatives,
-  Parents,
-  Children,
-  Siblings,
-  Spouse,
-  Partner,
-  Lover,
-  Boyfriend,
-  Girlfriend,
-  Husband,
-  Wife,
-  Son,
-  Daughter,
-  Brother,
-  Sister,
-  Father,
-  Mother,
-  Grandfather,
-  Grandmother,
-  Uncle,
-  Aunt,
-  Cousin,
-  Nephew,
-  Niece,
-  Grandson,
-  Granddaughter,
-  Great,
-  Great2,
-  Great3,
-  Great4,
-  Great5,
-  Great6,
-  Great7,
-  Great8,
-  Great9,
-  Great10,
-  Super,
-  Ultra,
-  Mega,
-  Giga,
-  Tera,
-  Peta,
-  Exa,
-  Zetta,
-  Yotta,
-  Kilo,
-  Hecto,
-  Deca,
-  Deci,
-  Centi,
-  Milli,
-  Micro,
-  Nano,
-  Pico,
-  Femto,
-  Atto,
-  Zepto,
-  Yocto,
-  Yotta as YottaIcon,
-  Zetta as ZettaIcon,
-  Exa as ExaIcon,
-  Peta as PetaIcon,
-  Tera as TeraIcon,
-  Giga as GigaIcon,
-  Mega as MegaIcon,
-  Kilo as KiloIcon,
-  Hecto as HectoIcon,
-  Deca as DecaIcon,
-  Deci as DeciIcon,
-  Centi as CentiIcon,
-  Milli as MilliIcon,
-  Micro as MicroIcon,
-  Nano as NanoIcon,
-  Pico as PicoIcon,
-  Femto as FemtoIcon,
-  Atto as AttoIcon,
-  Zepto as ZeptoIcon,
-  Yocto as YoctoIcon
-} from 'lucide-react';
+'use client';
 
-interface InvestmentOptimizerProps {
-  className?: string;
-}
+import React from 'react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, TrendingUp, BarChart, Target, Shield, Clock, Award, Brain, Globe, Heart, Home, Video, Palette, Code, Music, Camera, Headphones, MessageSquare, Smile, Activity, Zap, Settings, Database, Lock, Eye, Search, FileText, DollarSign, PieChart, LineChart, TrendingDown, Wallet, CreditCard, Banknote, Coins, PiggyBank } from 'lucide-react';
+import Footer from '../components/Footer';
 
-export default function InvestmentOptimizer({ className = '' }: InvestmentOptimizerProps) {
-  const [portfolio, setPortfolio] = useState([
-    { symbol: 'AAPL', name: 'Apple Inc.', shares: 100, price: 175.43, value: 17543, allocation: 25.5, change: 2.34 },
-    { symbol: 'MSFT', name: 'Microsoft Corp.', shares: 50, price: 378.85, value: 18942.5, allocation: 27.6, change: -1.23 },
-    { symbol: 'GOOGL', name: 'Alphabet Inc.', shares: 30, price: 142.56, value: 4276.8, allocation: 6.2, change: 0.87 },
-    { symbol: 'AMZN', name: 'Amazon.com Inc.', shares: 25, price: 155.12, value: 3878, allocation: 5.6, change: -0.45 },
-    { symbol: 'TSLA', name: 'Tesla Inc.', shares: 20, price: 248.50, value: 4970, allocation: 7.2, change: 3.21 },
-    { symbol: 'NVDA', name: 'NVIDIA Corp.', shares: 15, price: 875.28, value: 13129.2, allocation: 19.1, change: 1.56 },
-    { symbol: 'META', name: 'Meta Platforms Inc.', shares: 40, price: 485.20, value: 19408, allocation: 28.3, change: -2.15 }
-  ]);
-
-  const [riskProfile, setRiskProfile] = useState('moderate');
-  const [investmentGoal, setInvestmentGoal] = useState('growth');
-  const [timeHorizon, setTimeHorizon] = useState('5-10 years');
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizationResults, setOptimizationResults] = useState<any>(null);
-
-  const totalValue = portfolio.reduce((sum, stock) => sum + stock.value, 0);
-
+const AIInvestmentOptimizerPage: React.FC = () => {
   const features = [
+    "AI-Powered Portfolio Analysis",
+    "Real-time Market Monitoring",
+    "Risk Assessment & Management",
+    "Automated Rebalancing",
+    "Tax Optimization Strategies",
+    "Diversification Recommendations",
+    "Performance Tracking",
+    "Goal-Based Investing",
+    "Market Trend Analysis",
+    "Custom Investment Strategies",
+    "Retirement Planning",
+    "Educational Resources"
+  ];
+
+  const investmentStrategies = [
     {
-      title: "AI Portfolio Analysis",
-      description: "Advanced AI analyzes your portfolio and suggests optimizations",
-      icon: Brain,
-      price: "Included"
-    },
-    {
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis and diversification recommendations",
+      title: "Conservative Growth",
       icon: Shield,
-      price: "Included"
+      description: "Low-risk strategy focused on capital preservation and steady growth",
+      allocation: [
+        "60% Bonds & Fixed Income",
+        "30% Blue-chip Stocks",
+        "10% Cash & Money Market",
+        "0% High-risk Assets"
+      ],
+      expectedReturn: "4-6% annually",
+      riskLevel: "Low"
     },
     {
-      title: "Market Prediction",
-      description: "AI-powered market predictions and trend analysis",
+      title: "Balanced Portfolio",
+      icon: Target,
+      description: "Moderate risk strategy balancing growth and stability",
+      allocation: [
+        "40% Stocks",
+        "40% Bonds",
+        "15% Real Estate",
+        "5% Alternative Investments"
+      ],
+      expectedReturn: "6-8% annually",
+      riskLevel: "Medium"
+    },
+    {
+      title: "Aggressive Growth",
       icon: TrendingUp,
-      price: "Included"
+      description: "High-growth strategy for long-term wealth building",
+      allocation: [
+        "70% Growth Stocks",
+        "20% International Markets",
+        "10% Emerging Markets",
+        "0% Bonds"
+      ],
+      expectedReturn: "8-12% annually",
+      riskLevel: "High"
     },
     {
-      title: "Auto Rebalancing",
-      description: "Automatically rebalance your portfolio based on market conditions",
-      icon: RefreshCw,
-      price: "Included"
-    },
-    {
-      title: "Tax Optimization",
-      description: "Minimize tax impact with smart tax-loss harvesting",
+      title: "Income Focus",
       icon: DollarSign,
-      price: "Pro Feature"
-    },
-    {
-      title: "Professional Advisor",
-      description: "Access to certified financial advisors for complex strategies",
-      icon: Users,
-      price: "Enterprise"
+      description: "Strategy focused on generating regular income",
+      allocation: [
+        "50% Dividend Stocks",
+        "30% REITs",
+        "15% Corporate Bonds",
+        "5% High-yield Savings"
+      ],
+      expectedReturn: "5-7% annually",
+      riskLevel: "Medium"
     }
   ];
 
-  const pricingPlans = [
+  const pricingTiers = [
     {
-      name: "Individual",
+      name: "Basic Investor",
       price: "$39",
       period: "/month",
-      description: "Perfect for individual investors and small portfolios",
+      description: "Perfect for individual investors getting started",
       features: [
-        "Up to $100K portfolio",
-        "Basic AI analysis",
-        "Risk assessment",
-        "Market predictions",
-        "Email support"
+        "Portfolio analysis",
+        "Basic recommendations",
+        "Market monitoring",
+        "Performance tracking",
+        "Email support",
+        "Mobile app access"
       ],
-      popular: false
+      popular: false,
+      cta: "Start Free Trial"
+    },
+    {
+      name: "Advanced Investor",
+      price: "$99",
+      period: "/month",
+      description: "Comprehensive tools for serious investors",
+      features: [
+        "Advanced AI analysis",
+        "Custom strategies",
+        "Tax optimization",
+        "Automated rebalancing",
+        "Priority support",
+        "Advanced reporting",
+        "Goal tracking",
+        "Educational content"
+      ],
+      popular: true,
+      cta: "Start Free Trial"
     },
     {
       name: "Professional",
-      price: "$99",
-      period: "/month",
-      description: "Ideal for serious investors and larger portfolios",
-      features: [
-        "Up to $1M portfolio",
-        "Advanced AI analysis",
-        "Auto rebalancing",
-        "Tax optimization",
-        "Priority support",
-        "Real-time alerts",
-        "Custom strategies"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
       price: "$299",
       period: "/month",
-      description: "For institutional investors and wealth management firms",
+      description: "For financial advisors and institutions",
       features: [
-        "Unlimited portfolio size",
-        "Full AI analysis suite",
-        "Professional advisor access",
+        "White-label solution",
+        "Client management",
+        "Advanced analytics",
         "Custom integrations",
-        "24/7 support",
-        "White-label options",
-        "SLA guarantee"
+        "Dedicated support",
+        "API access",
+        "Compliance tools",
+        "Multi-account management",
+        "SLA guarantee",
+        "Training & onboarding"
       ],
-      popular: false
+      popular: false,
+      cta: "Contact Sales"
     }
   ];
 
-  const handleOptimizePortfolio = () => {
-    setIsOptimizing(true);
-    // Simulate optimization process
-    setTimeout(() => {
-      setOptimizationResults({
-        expectedReturn: 12.5,
-        riskLevel: 'Moderate',
-        sharpeRatio: 1.8,
-        recommendations: [
-          { action: 'Buy', symbol: 'AAPL', shares: 25, reason: 'Strong fundamentals and growth potential' },
-          { action: 'Sell', symbol: 'META', shares: 10, reason: 'High volatility and regulatory concerns' },
-          { action: 'Hold', symbol: 'MSFT', shares: 50, reason: 'Stable performance and dividend yield' }
-        ]
-      });
-      setIsOptimizing(false);
-    }, 3000);
-  };
+  const testimonials = [
+    {
+      name: "Jennifer Walsh",
+      role: "Portfolio Manager",
+      company: "Wealth Management Firm",
+      content: "The AI Investment Optimizer has revolutionized how we manage client portfolios. The AI-driven insights have consistently outperformed our traditional analysis methods, and our clients are seeing better returns with lower risk.",
+      rating: 5,
+      avatar: "JW"
+    },
+    {
+      name: "David Kim",
+      role: "Retiree",
+      company: "Individual Investor",
+      content: "As someone approaching retirement, I needed a tool that could help me optimize my portfolio for income generation. This AI system has not only increased my returns but also given me peace of mind about my financial future.",
+      rating: 5,
+      avatar: "DK"
+    },
+    {
+      name: "Sarah Chen",
+      role: "Young Professional",
+      company: "Tech Industry",
+      content: "I was overwhelmed by all the investment options available. The AI optimizer created a personalized strategy that matches my risk tolerance and financial goals. It's like having a personal financial advisor available 24/7.",
+      rating: 5,
+      avatar: "SC"
+    }
+  ];
 
-  const getChangeColor = (change: number) => {
-    return change >= 0 ? 'text-green-400' : 'text-red-400';
-  };
-
-  const getChangeIcon = (change: number) => {
-    return change >= 0 ? TrendingUp : TrendingDown;
-  };
+  const marketInsights = [
+    {
+      category: "Stock Market",
+      trend: "Bullish",
+      change: "+2.3%",
+      icon: TrendingUp,
+      description: "Technology and healthcare sectors showing strong growth"
+    },
+    {
+      category: "Bond Market",
+      trend: "Neutral",
+      change: "+0.8%",
+      icon: BarChart,
+      description: "Interest rates stabilizing, corporate bonds attractive"
+    },
+    {
+      category: "Real Estate",
+      trend: "Bullish",
+      change: "+1.5%",
+      description: "REITs performing well, commercial real estate recovering"
+    },
+    {
+      category: "Commodities",
+      trend: "Volatile",
+      change: "-0.5%",
+      icon: TrendingDown,
+      description: "Gold and oil prices fluctuating, diversification recommended"
+    }
+  ];
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 ${className}`}>
-      <Helmet>
-        <title>AI Investment Portfolio Optimizer Pro - Advanced Portfolio Management | Zion Tech Group</title>
-        <meta name="description" content="AI-powered investment portfolio optimization with advanced analytics, risk assessment, and auto-rebalancing. Maximize returns and minimize risk with our intelligent investment platform." />
-        <meta name="keywords" content="investment optimization, portfolio management, AI investing, risk assessment, auto rebalancing, financial planning, wealth management" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-investment-optimizer" />
-      </Helmet>
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <div className="relative py-20 overflow-hidden">
+      <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-blue-500/10 border border-blue-400/20 rounded-full px-6 py-3 mb-8">
-              <TrendingUp className="w-5 h-5 text-blue-400 mr-2" />
-              <span className="text-blue-300 font-medium">AI Investment Portfolio Optimizer Pro</span>
+            <div className="inline-flex items-center space-x-2 bg-green-500/10 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <TrendingUp className="w-4 h-4" />
+              <span>AI Investment Technology</span>
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">
-              Advanced Portfolio Management
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              AI Investment Optimizer
             </h1>
             
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
-              Maximize Returns with AI-Powered Investment Optimization
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Maximize your investment returns with AI-powered portfolio optimization, 
+              risk management, and market analysis. Make smarter investment decisions.
             </p>
             
-            <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Optimize your investment portfolio with advanced AI analytics, risk assessment, 
-              and automated rebalancing. Make smarter investment decisions and achieve better returns.
-            </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
-                <span className="relative z-10">Start Free Trial</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+              <button className="bg-gradient-to-r from-green-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-green-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              
-              <button className="group inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Watch Demo
+              <button className="border-2 border-green-400 text-green-400 font-semibold py-4 px-8 rounded-xl hover:bg-green-400 hover:text-slate-900 transition-all duration-300 flex items-center">
+                <BarChart className="w-5 h-5 mr-2" />
+                View Demo
               </button>
             </div>
 
-            {/* Stats */}
+            {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">15.2%</div>
-                <div className="text-gray-400">Average Return</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">23%</div>
+                <div className="text-gray-400">Average Returns</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">23%</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">15%</div>
                 <div className="text-gray-400">Risk Reduction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">$2.3M</div>
-                <div className="text-gray-400">Assets Managed</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">50k+</div>
+                <div className="text-gray-400">Portfolios Optimized</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">98%</div>
-                <div className="text-gray-400">Accuracy Rate</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
+                <div className="text-gray-400">Market Monitoring</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Portfolio Dashboard */}
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800">
-        <div className="container mx-auto px-4">
+      {/* Investment Strategies Section */}
+      <section className="py-16 bg-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Portfolio Dashboard
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              AI-Powered Investment Strategies
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Monitor and optimize your investment portfolio with real-time analytics
+              Choose from proven investment strategies optimized by advanced AI algorithms
             </p>
           </div>
-
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Portfolio Overview */}
-              <div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-bold text-white flex items-center">
-                    <PieChart className="w-8 h-8 text-blue-400 mr-3" />
-                    Portfolio Holdings
-                  </h3>
-                  <div className="text-right">
-                    <div className="text-3xl font-bold text-white">${totalValue.toLocaleString()}</div>
-                    <div className="text-gray-400">Total Value</div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {investmentStrategies.map((strategy, index) => (
+              <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-purple-600 rounded-xl flex items-center justify-center">
+                    <strategy.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{strategy.title}</h3>
+                    <p className="text-gray-300">{strategy.description}</p>
                   </div>
                 </div>
-
-                <div className="space-y-4">
-                  {portfolio.map((stock) => {
-                    const ChangeIcon = getChangeIcon(stock.change);
-                    return (
-                      <div key={stock.symbol} className="bg-white/5 rounded-lg p-4 border border-white/10">
-                        <div className="flex items-center justify-between mb-2">
-                          <div className="flex items-center space-x-3">
-                            <div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center">
-                              <span className="text-white font-bold text-sm">{stock.symbol.slice(0, 2)}</span>
-                            </div>
-                            <div>
-                              <h4 className="text-white font-semibold">{stock.symbol}</h4>
-                              <p className="text-gray-400 text-sm">{stock.name}</p>
-                            </div>
-                          </div>
-                          <div className="text-right">
-                            <div className="text-white font-semibold">${stock.value.toLocaleString()}</div>
-                            <div className={`flex items-center ${getChangeColor(stock.change)}`}>
-                              <ChangeIcon className="w-4 h-4 mr-1" />
-                              <span className="text-sm">{stock.change > 0 ? '+' : ''}{stock.change}%</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="flex items-center justify-between text-sm text-gray-400">
-                          <span>{stock.shares} shares @ ${stock.price}</span>
-                          <span>{stock.allocation}% allocation</span>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Optimization Panel */}
-              <div className="space-y-8">
-                {/* Risk Profile */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                  <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <Shield className="w-6 h-6 text-blue-400 mr-2" />
-                    Risk Profile
-                  </h3>
-                  <div className="space-y-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">Risk Tolerance</label>
-                      <select
-                        value={riskProfile}
-                        onChange={(e) => setRiskProfile(e.target.value)}
-                        className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
-                      >
-                        <option value="conservative" className="bg-slate-800">Conservative</option>
-                        <option value="moderate" className="bg-slate-800">Moderate</option>
-                        <option value="aggressive" className="bg-slate-800">Aggressive</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">Investment Goal</label>
-                      <select
-                        value={investmentGoal}
-                        onChange={(e) => setInvestmentGoal(e.target.value)}
-                        className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
-                      >
-                        <option value="income" className="bg-slate-800">Income</option>
-                        <option value="growth" className="bg-slate-800">Growth</option>
-                        <option value="balanced" className="bg-slate-800">Balanced</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">Time Horizon</label>
-                      <select
-                        value={timeHorizon}
-                        onChange={(e) => setTimeHorizon(e.target.value)}
-                        className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
-                      >
-                        <option value="1-3 years" className="bg-slate-800">1-3 years</option>
-                        <option value="3-5 years" className="bg-slate-800">3-5 years</option>
-                        <option value="5-10 years" className="bg-slate-800">5-10 years</option>
-                        <option value="10+ years" className="bg-slate-800">10+ years</option>
-                      </select>
-                    </div>
+                
+                <div className="mb-6">
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-sm text-gray-400">Expected Return</span>
+                    <span className="text-green-400 font-semibold">{strategy.expectedReturn}</span>
+                  </div>
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-sm text-gray-400">Risk Level</span>
+                    <span className={`font-semibold ${
+                      strategy.riskLevel === 'Low' ? 'text-green-400' :
+                      strategy.riskLevel === 'Medium' ? 'text-yellow-400' :
+                      'text-red-400'
+                    }`}>{strategy.riskLevel}</span>
                   </div>
                 </div>
-
-                {/* Optimization Results */}
-                {optimizationResults && (
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                      <Target className="w-6 h-6 text-blue-400 mr-2" />
-                      Optimization Results
-                    </h3>
-                    <div className="space-y-4">
-                      <div className="flex justify-between">
-                        <span className="text-gray-300">Expected Return</span>
-                        <span className="text-green-400 font-semibold">{optimizationResults.expectedReturn}%</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-300">Risk Level</span>
-                        <span className="text-yellow-400 font-semibold">{optimizationResults.riskLevel}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-300">Sharpe Ratio</span>
-                        <span className="text-blue-400 font-semibold">{optimizationResults.sharpeRatio}</span>
-                      </div>
+                
+                <div className="space-y-3">
+                  <h4 className="text-sm font-semibold text-white mb-2">Asset Allocation:</h4>
+                  {strategy.allocation.map((allocation, allocationIndex) => (
+                    <div key={allocationIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      {allocation}
                     </div>
-                  </div>
-                )}
-
-                {/* Optimize Button */}
-                <button
-                  onClick={handleOptimizePortfolio}
-                  disabled={isOptimizing}
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                >
-                  {isOptimizing ? (
-                    <>
-                      <RefreshCw className="w-5 h-5 mr-2 animate-spin inline" />
-                      Optimizing...
-                    </>
-                  ) : (
-                    <>
-                      <Zap className="w-5 h-5 mr-2 inline" />
-                      Optimize Portfolio
-                    </>
-                  )}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Features Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Investment Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced AI-powered tools for intelligent portfolio management
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-400 mb-4">{feature.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-blue-400 font-semibold">{feature.price}</span>
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  ))}
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Pricing Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800">
-        <div className="container mx-auto px-4">
+      {/* Market Insights Section */}
+      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Investment Plans
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Real-Time Market Insights
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the investment optimization plan that fits your portfolio size
+              Stay informed with AI-powered market analysis and trend predictions
             </p>
           </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {marketInsights.map((insight, index) => (
+              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-center justify-between mb-4">
+                  <insight.icon className="w-8 h-8 text-green-400" />
+                  <span className={`text-sm font-semibold ${
+                    insight.trend === 'Bullish' ? 'text-green-400' :
+                    insight.trend === 'Bearish' ? 'text-red-400' :
+                    insight.trend === 'Volatile' ? 'text-yellow-400' :
+                    'text-gray-400'
+                  }`}>{insight.trend}</span>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{insight.category}</h3>
+                <div className="text-2xl font-bold text-white mb-2">{insight.change}</div>
+                <p className="text-gray-300 text-sm">{insight.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-blue-400/50 ring-2 ring-blue-400/30' : 'border-white/10'}`}>
-                {plan.popular && (
+      {/* Features Section */}
+      <section className="py-16 bg-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Advanced Investment Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive tools powered by cutting-edge AI technology
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-purple-600 rounded-lg flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white">{feature}</h3>
+                </div>
+                <p className="text-gray-300 text-sm">
+                  AI-powered investment optimization with real-time market analysis and personalized recommendations.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Investment Optimization Plans
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that matches your investment goals and experience level
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index) => (
+              <div
+                key={index}
+                className={`cyber-card p-8 hover:scale-105 transition-all duration-300 relative ${
+                  tier.popular ? 'ring-2 ring-green-400/50' : ''
+                }`}
+              >
+                {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">
+                    <span className="bg-gradient-to-r from-green-400 to-purple-600 text-white text-sm font-bold px-4 py-1 rounded-full flex items-center">
+                      <Star className="w-4 h-4 mr-1" />
                       Most Popular
                     </span>
                   </div>
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-2">{plan.period}</span>
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <p className="text-gray-300 mb-6">{tier.description}</p>
+                  
+                  <div className="mb-6">
+                    <span className="text-5xl font-bold text-white">{tier.price}</span>
+                    <span className="text-gray-400 text-lg">{tier.period}</span>
                   </div>
+                  
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    tier.popular
+                      ? 'bg-gradient-to-r from-green-500 to-purple-600 text-white hover:from-green-600 hover:to-purple-700'
+                      : 'bg-gray-700 text-white hover:bg-gray-600'
+                  }`}>
+                    {tier.cta}
+                  </button>
                 </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
+                
+                <div className="space-y-4">
+                  {tier.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </div>
                   ))}
-                </ul>
-
-                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular 
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transform hover:scale-105' 
-                    : 'bg-white/10 text-white hover:bg-white/20'
-                }`}>
-                  {plan.popular ? 'Get Started' : 'Choose Plan'}
-                </button>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Contact Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4">
+      {/* Testimonials Section */}
+      <section className="py-16 bg-gradient-to-r from-green-500/10 to-purple-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Start Optimizing Today
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Success Stories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Contact our investment experts to discuss your portfolio optimization needs
+              See how our AI optimizer has helped investors achieve their financial goals
             </p>
           </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-blue-400 mr-3" />
-                    <a href="tel:+13024640950" className="text-gray-300 hover:text-blue-400 transition-colors">
-                      +1 (302) 464-0950
-                    </a>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                <div className="flex items-center mb-4">
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-current" />
+                    ))}
                   </div>
-                  <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-blue-400 mr-3" />
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-blue-400 transition-colors">
-                      kleber@ziontechgroup.com
-                    </a>
+                </div>
+                <p className="text-gray-300 mb-6 italic">
+                  "{testimonial.content}"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    {testimonial.avatar}
                   </div>
-                  <div className="flex items-start">
-                    <MapPin className="w-5 h-5 text-blue-400 mr-3 mt-1" />
-                    <div className="text-gray-300">
-                      <div>364 E Main St STE 1008</div>
-                      <div>Middletown, DE 19709</div>
-                    </div>
+                  <div>
+                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                    <p className="text-gray-500 text-xs">{testimonial.company}</p>
                   </div>
                 </div>
               </div>
-
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Get Started</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Free portfolio analysis</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">No minimum investment</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">30-day money back guarantee</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Expert support</span>
-                  </div>
-                </div>
-                <button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                  Start Free Analysis
-                </button>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-green-500/10 to-purple-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Start Optimizing Your Investments Today
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join thousands of investors who trust our AI to optimize their portfolios. 
+            Start your free trial and see the difference AI can make.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <button className="bg-gradient-to-r from-green-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-green-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+              Start Free Trial
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="border-2 border-green-400 text-green-400 font-semibold py-4 px-8 rounded-xl hover:bg-green-400 hover:text-slate-900 transition-all duration-300">
+              Schedule Demo
+            </button>
+          </div>
+          
+          <div className="text-center text-gray-400 text-sm">
+            <p>Questions? Contact us at <a href="tel:+13024640950" className="text-green-400 hover:text-green-300">+1 (302) 464-0950</a></p>
+            <p>or email <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300">kleber@ziontechgroup.com</a></p>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
-}
+};
+
+export default AIInvestmentOptimizerPage;

@@ -129,6 +129,10 @@ const AIMentalHealthCompanionPage = React.lazy(() => import('./app/ai-mental-hea
 const AISmartHomeControllerPage = React.lazy(() => import('./app/ai-smart-home-controller/page'));
 const AIInvestmentOptimizerPage = React.lazy(() => import('./app/ai-investment-optimizer/page'));
 
+// New IT Services
+const AIOpsPage = React.lazy(() => import('./app/ai-ops/page'));
+const HealthcareITPage = React.lazy(() => import('./app/healthcare-it/page'));
+
 // IT Services Pages
 const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'));
 const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'));
@@ -262,6 +266,10 @@ const App: React.FC = memo(() => {
                       <Route path="/ai-mental-health-companion" element={<AIMentalHealthCompanionPage />} />
                       <Route path="/ai-smart-home-controller" element={<AISmartHomeControllerPage />} />
                       <Route path="/ai-investment-optimizer" element={<AIInvestmentOptimizerPage />} />
+
+                      {/* New IT Services */}
+                      <Route path="/ai-ops" element={<AIOpsPage />} />
+                      <Route path="/healthcare-it" element={<HealthcareITPage />} />
 
                       {/* IT Services Pages */}
                       <Route path="/cloud-migration" element={<CloudMigrationPage />} />

@@ -316,13 +316,13 @@
     box-shadow: none !important;
   }
   
-<<<<<<< HEAD
   .neon-glow-cyan,
   .neon-glow-purple,
   .neon-glow-pink {
     animation: none !important;
     text-shadow: none !important;
-=======
+  }
+  
   .text-6xl {
     font-size: 2.5rem;
   }
@@ -1161,6 +1161,5 @@
   
   .quantum-field::before {
     animation-duration: 8s;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-80f7
   }
 }

@@ -142,7 +142,10 @@ const Navigation: React.FC = () => {
         { name: 'AI Code Security Auditor', path: '/ai-code-security-auditor', description: 'Automated code security analysis', icon: '🔒', popular: true },
         { name: 'AI Mental Health Companion', path: '/ai-mental-health-companion', description: 'AI-powered mental health support', icon: '💚', popular: true },
         { name: 'AI Smart Home Controller', path: '/ai-smart-home-controller', description: 'Intelligent home automation', icon: '🏠', popular: true },
-        { name: 'AI Investment Optimizer', path: '/ai-investment-optimizer', description: 'Advanced portfolio management', icon: '📈', popular: true }
+        { name: 'AI Investment Optimizer', path: '/ai-investment-optimizer', description: 'Advanced portfolio management', icon: '📈', popular: true },
+        { name: 'AI Expense Tracker', path: '/ai-expense-tracker', description: 'Smart expense management', icon: '💰', popular: true },
+        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoice creation', icon: '📄', popular: true },
+        { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'Automated lead discovery', icon: '🎯', popular: true }
       ]
     },
     {
@@ -186,7 +189,6 @@ const Navigation: React.FC = () => {
         { name: 'AI Infrastructure Monitoring', path: '/ai-infrastructure-monitoring', description: 'Intelligent infrastructure monitoring', icon: '📊', popular: true },
         { name: 'Blockchain Integration Services', path: '/blockchain-integration-services', description: 'Web3 and blockchain solutions', icon: '⛓️', popular: true },
         { name: 'AI API Management', path: '/ai-api-management', description: 'Intelligent API management', icon: '🔗', popular: true },
-<<<<<<< HEAD
         { name: 'Smart Contract Security Audit', path: '/smart-contract-security-audit', description: 'Blockchain security auditing', icon: '🔒', popular: true },
         { name: 'AI IT Operations (AIOps)', path: '/ai-ops', description: 'AI-powered IT operations', icon: '🤖', popular: true },
         { name: 'Healthcare IT Solutions', path: '/healthcare-it', description: 'HIPAA-compliant healthcare IT', icon: '🏥', popular: true },
