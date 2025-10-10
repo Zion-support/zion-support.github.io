@@ -74,6 +74,7 @@ const Footer: React.FC = memo(() => {,
     {name: 'Workflow Automation', url: '/workflow-automation', description: 'Process automation' ,},
     {name: 'Cloud-Native Security', url: '/cloud-native-security', description: 'Container security' ,}];
 
+<<<<<<< HEAD
   const microSaasServices = [
     {name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence' ,},
     {name: 'Zion Chat AI', url: '/zion-chat-ai', description: 'AI customer support' ,},
@@ -107,6 +108,8 @@ const Footer: React.FC = memo(() => {,
     {name: 'Zion AI Customer Service Pro', url: '/zion-ai-customer-service-pro', description: 'Advanced customer service' ,},
     {name: 'Zion AI Marketing Automation', url: '/zion-ai-marketing-automation', description: 'Marketing AI' ,},
     {name: 'Zion AI Document AI', url: '/zion-ai-document-ai', description: 'Document processing' ,}]
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-1a78
 
   const companyLinks = [
     {name: 'About Us', url: '/about' ,},

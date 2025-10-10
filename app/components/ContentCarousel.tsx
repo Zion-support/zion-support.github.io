@@ -6,6 +6,7 @@ import {Cloud, Zap, Shield, ChevronLeft, ChevronRight}}from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Cloud, Zap, Shield, ChevronLeft, ChevronRight } from 'lucide-react';
 <<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
@@ -17,6 +18,9 @@ import { Cloud, Zap, Shield, ArrowLeft, ArrowRight } from 'lucide-react';
 =======
 import { Cloud, Zap, Shield, ChevronLeft, ChevronRight } from 'lucide-react';
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+import { ChevronLeft, ChevronRight, Cloud, Zap, Shield, Brain } from 'lucide-react';
+>>>>>>> cursor/analyze-improve-and-deploy-application-1a78
 
 const ContentCarousel: React.FC = () => {,
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -24,6 +28,7 @@ const ContentCarousel: React.FC = () => {,
   const slides = [
     {
       id: 1,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,6 +62,8 @@ const ContentCarousel: React.FC = () => {,
 >>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
       color: 'from-purple-500 to-pink-600'
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-1a78
       title: 'AI Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence solutions.',
       features: [
@@ -65,6 +72,7 @@ const ContentCarousel: React.FC = () => {,
         'Computer vision',
         'Predictive analytics'
       ],
+<<<<<<< HEAD
       icon: Zap,
       color: 'from-blue-500 to-purple-600'
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
@@ -80,6 +88,10 @@ const ContentCarousel: React.FC = () => {,
       icon: Zap,
       color: 'from-cyan-500 to-blue-600'
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+      icon: Brain,
+      color: 'from-purple-500 to-pink-600'
+>>>>>>> cursor/analyze-improve-and-deploy-application-1a78
     },
     {
       id: 2,
@@ -108,6 +120,7 @@ const ContentCarousel: React.FC = () => {,
       icon: Zap,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       color: 'from-orange-500 to-red-600',},
     {id: 4,
 =======
@@ -120,6 +133,9 @@ const ContentCarousel: React.FC = () => {,
 =======
       color: 'from-purple-500 to-pink-600'
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+      color: 'from-yellow-500 to-orange-600'
+>>>>>>> cursor/analyze-improve-and-deploy-application-1a78
     },
     {
       id: 3,
@@ -136,6 +152,7 @@ const ContentCarousel: React.FC = () => {,
         'Compliance management'
       ],
       icon: Shield,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -161,6 +178,11 @@ const ContentCarousel: React.FC = () => {,
     }
   ];
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+      color: 'from-red-500 to-pink-600'
+    }
+  ];
+>>>>>>> cursor/analyze-improve-and-deploy-application-1a78
 
   useEffect(() => {const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);}, 5000);
@@ -196,6 +218,7 @@ const ContentCarousel: React.FC = () => {,
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
     <div className="relative w-full max-w-4xl mx-auto">
@@ -205,12 +228,18 @@ const ContentCarousel: React.FC = () => {,
     <div className="relative w-full max-w-6xl mx-auto">
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800">
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+  return (
+    <div className="relative w-full max-w-4xl mx-auto">
+      <div className="relative overflow-hidden rounded-2xl">
+>>>>>>> cursor/analyze-improve-and-deploy-application-1a78
         <div 
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {slides.map((slide) => (
             <div key={slide.id} className="w-full flex-shrink-0">
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className={`bg-gradient-to-r ${slide.color} text-white p-8 md:p-12`}>
                 <div className="flex flex-col md:flex-row items-center gap-8">
@@ -249,6 +278,17 @@ const ContentCarousel: React.FC = () => {,
                   <div>
                     <div className={`w-16 h-16 bg-gradient-to-r ${slide.color} rounded-2xl flex items-center justify-center mb-6`}>
                       <slide.icon className="w-8 h-8 text-white" />
+=======
+              <div className={`bg-gradient-to-br ${slide.color} p-8 rounded-2xl text-white`}>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                      <slide.icon className="w-8 h-8" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold">{slide.title}</h3>
+                      <p className="text-white/90">{slide.description}</p>
+>>>>>>> cursor/analyze-improve-and-deploy-application-1a78
                     </div>
                     <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
                       {slide.title}
@@ -265,6 +305,7 @@ const ContentCarousel: React.FC = () => {,
                       ))}
                     </ul>
                   </div>
+<<<<<<< HEAD
                   <div className="hidden lg:block">
                     <div className={`w-full h-64 bg-gradient-to-r ${slide.color} rounded-2xl flex items-center justify-center`}>
                       <slide.icon className="w-32 h-32 text-white opacity-20" />
@@ -305,11 +346,23 @@ const ContentCarousel: React.FC = () => {,
 >>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  {slide.features.map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                      <span className="text-sm">{feature}</span>
+                    </div>
+                  ))}
+>>>>>>> cursor/analyze-improve-and-deploy-application-1a78
                 </div>
               </div>
             </div>
           ))}
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -357,18 +410,36 @@ const ContentCarousel: React.FC = () => {,
 <<<<<<< HEAD
 <<<<<<< HEAD
           className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+=======
+        
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+>>>>>>> cursor/analyze-improve-and-deploy-application-1a78
         >
           <ChevronRight className="w-6 h-6" />
         </button>
       </div>
       
+<<<<<<< HEAD
       {/* Dots indicator */}
       <div className="flex justify-center mt-6 gap-2">
+=======
+      <div className="flex justify-center space-x-2 mt-6">
+>>>>>>> cursor/analyze-improve-and-deploy-application-1a78
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
+<<<<<<< HEAD
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
             }`}
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
@@ -467,6 +538,12 @@ const ContentCarousel: React.FC = () => {,
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+              index === currentSlide ? 'bg-cyan-500' : 'bg-gray-300'
+            }`}
+          />
+        ))}
+>>>>>>> cursor/analyze-improve-and-deploy-application-1a78
       </div>
     </div>
   );

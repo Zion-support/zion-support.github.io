@@ -7,7 +7,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 # Crawl-delay
 Crawl-delay: 1
 
-# Disallow admin and private areas
+# Disallow admin areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
@@ -17,13 +17,28 @@ Disallow: /private/
 Allow: /
 Allow: /about
 Allow: /services
+<<<<<<< HEAD
+=======
+Allow: /contact
+>>>>>>> cursor/analyze-improve-and-deploy-application-1a78
 Allow: /pricing
 Allow: /contact
 Allow: /blog
 Allow: /case-studies
 Allow: /careers
 
+<<<<<<< HEAD
 # AI Services
 Allow: /ai-*
 Allow: /it-*
 Allow: /micro-saas
+=======
+# Allow AI services
+Allow: /ai-*
+Allow: /it-*
+Allow: /micro-saas
+Allow: /zion-*
+
+# Host
+Host: https://ziontechgroup.com
+>>>>>>> cursor/analyze-improve-and-deploy-application-1a78

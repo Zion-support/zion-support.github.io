@@ -1,5 +1,7 @@
 'use client';
+
 import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,6 +29,11 @@ import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react';
+
+const ContentPromotionBanner: React.FC = () => {
+>>>>>>> cursor/analyze-improve-and-deploy-application-1a78
   const features = [
     {
       title: 'AI-Powered Solutions',
@@ -49,16 +56,20 @@ const ContentPromotionBanner: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-1a78
 
   const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
@@ -135,6 +146,35 @@ const ContentPromotionBanner: React.FC = () => {
             </button>
           </div>
         </div>
+=======
+
+  return (
+    <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-8 mb-16">
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold text-white mb-4">Transform Your Business Today</h2>
+        <p className="text-xl text-gray-300 mb-6">
+          Join thousands of businesses already using our AI and IT solutions
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        {features.map((feature, index) => (
+          <div key={index} className="text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <feature.icon className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+            <p className="text-gray-300 text-sm">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="text-center">
+        <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center">
+          Get Started Now
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </button>
+>>>>>>> cursor/analyze-improve-and-deploy-application-1a78
       </div>
     </div>
   );
