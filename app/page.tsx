@@ -277,9 +277,24 @@ const HomePage: React.FC = () => {
                       </span>
                     )}
                   </div>
-<<<<<<< HEAD
-                </article>
-              </Suspense>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
+                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-purple-400 mb-2">{service.price}</div>
+                  <a href={service.link} className="text-purple-400 hover:text-purple-300 font-medium text-sm transition-all duration-300">
+                    Learn More →
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Additional Services Section */}
+        <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</div>
@@ -860,8 +875,6 @@ const HomePage: React.FC = () => {
                   <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-medium">
                     +1 (302) 464-0950
                   </a>
-=======
->>>>>>> origin/main
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-4">
@@ -906,14 +919,8 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-        <Footer />
-      </div>
-    </>
-=======
       <Footer />
     </div>
->>>>>>> origin/main
   );
 };
 
