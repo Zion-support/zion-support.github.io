@@ -1,6 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import {
   Brain,
   Cloud,
@@ -13,28 +15,41 @@ import {
   CheckCircle,
   ArrowRight,
   Search,
-  Filter
+  Filter,
+  Users,
+  Settings,
+  Lock,
+  Cpu,
+  Target,
+  MessageCircle,
+  FileText,
+  TrendingUp,
+  Calendar,
+  Heart,
+  DollarSign,
+  Box,
+  Monitor,
+  Link as LinkIcon,
+  Server,
+  Code,
+  Mail,
+  Phone,
+  MapPin
 } from 'lucide-react';
-<<<<<<< HEAD
+
 const ServicesPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
   const services = [
-    // AI Services
     {
-      icon: Brain,
+      id: 1,
       title: 'AI Solutions',
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
-      price: 'Starting at $1,500/month',
-      category: 'AI Services',
-      popular: true
-    },
-    {
+      description: 'Comprehensive artificial intelligence solutions for business automation and optimization.',
       icon: Brain,
-      title: 'AI Voice Assistant Platform',
-      description: 'Build custom voice assistants with natural language understanding, multi-language support, and enterprise integration.',
-      features: ['Voice Recognition', 'Natural Language Processing', 'Multi-language Support', 'Enterprise Integration', 'Custom Wake Words'],
-      price: 'Starting at $299/month',
-      category: 'AI Services'
+      category: 'AI',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+      price: 'Starting at $5,000/month'
     },
     {
       icon: Brain,
