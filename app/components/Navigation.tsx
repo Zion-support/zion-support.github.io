@@ -222,7 +222,11 @@ const Navigation: React.FC = () => {,
         isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20 neon-glow-cyan' : 'bg-transparent'}
       }`}>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
           <div className="flex items-center justify-between h-16 lg:h-20">{/* Logo */}</div>
 =======
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -230,6 +234,7 @@ const Navigation: React.FC = () => {,
             {/* Logo */}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
             <Link to="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
+<<<<<<< HEAD
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover: scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
                 <Zap className="w-6 h-6 text-white" />
               </div>
@@ -244,6 +249,22 @@ const Navigation: React.FC = () => {,
               <Link;
                 to="/",
                 className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-text",
+=======
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25"></div>
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <div className="flex flex-col"></div>
+                <span className="text-white font-bold text-xl cyber-text">Zion Tech Group</span>
+                <span className="text-cyan-400 text-xs font-medium">AI & IT Solutions</span>
+              </div>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8"></div>
+              <Link
+                to="/"
+                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-text"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 onClick={closeAllMenus}
               >
 <<<<<<< HEAD
@@ -265,8 +286,13 @@ const Navigation: React.FC = () => {,
               </Link>
               
               {/* Services Dropdown */}
+<<<<<<< HEAD
               <div className="relative">
                 <button;
+=======
+              <div className="relative"></div>
+                <button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   onClick={() => setServicesOpen(!servicesOpen)}
                   className="flex items-center space-x-1 text-white hover: text-cyan-400 transition-colors duration-200 font-medium",
                   aria-expanded={servicesOpen}
@@ -277,19 +303,24 @@ const Navigation: React.FC = () => {,
                 </button>
                 
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20 py-6 z-50">
+                  <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20 py-6 z-50"></div>
                     <div className="grid grid-cols-2 gap-6 px-6">
-                      {serviceCategories.map((category, index) => (
-                        <div key={index} className="space-y-3">
-                          <div className="flex items-center space-x-2 mb-3">
-                            <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
+                      {serviceCategories.map((category, index) => (</div>
+                        <div key={index} className="space-y-3"></div>
+                          <div className="flex items-center space-x-2 mb-3"></div>
+                            <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}></div>
                               <category.icon className={`w-4 h-4 ${category.color}`} />
                             </div>
                             <h3 className="font-semibold text-white text-sm">{category.title}</h3>
                           </div>
                           <div className="space-y-2">
+<<<<<<< HEAD
                             {category.services.slice(0, 6).map((service, serviceIndex) => (
                               <Link;
+=======
+                            {category.services.slice(0, 6).map((service, serviceIndex) => (</div>
+                              <Link
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                                 key={serviceIndex}
                                 to={service.path}
                                 className="block px-3 py-2 text-sm text-gray-300 hover: bg-cyan-400/20 hover:text-cyan-400 rounded-lg transition-colors",
@@ -302,8 +333,13 @@ const Navigation: React.FC = () => {,
                         </div>
                       ))}
                     </div>
+<<<<<<< HEAD
                     <div className="border-t border-cyan-400/20 mt-6 pt-4 px-6">
                       <Link;
+=======
+                    <div className="border-t border-cyan-400/20 mt-6 pt-4 px-6"></div>
+                      <Link
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         to="/services"
                         className="block w-full text-center bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-700 hover:to-purple-700 transition-all",
                         onClick={closeAllMenus}
@@ -408,10 +444,17 @@ const Navigation: React.FC = () => {,
 
           {/* Mobile Navigation */}
           {isOpen && (
+<<<<<<< HEAD
             <div className="lg: hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4">,
               <div className="space-y-4">,
                 {mainLinks.map((link, index) => (
                   <Link;
+=======
+            <div className="lg:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4"></div>
+              <div className="space-y-4">
+                {mainLinks.map((link, index) => (</div>
+                  <Link
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     key={index}
                     to={link.path}
                     className="block text-white hover: text-cyan-400 transition-colors duration-200 font-medium py-2 flex items-center space-x-2",
@@ -423,9 +466,15 @@ const Navigation: React.FC = () => {,
                 ))}
                 
                 {/* Mobile Services */}
+<<<<<<< HEAD
                 <div>
                   <button;
                     className="text-white hover: text-cyan-400 transition-colors duration-200 font-medium flex items-center space-x-2 py-2",
+=======
+                <div></div>
+                  <button
+                    className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium flex items-center space-x-2 py-2"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     onClick={() => setServicesOpen(!servicesOpen)}
                   >
                     <Settings className="w-4 h-4" />
@@ -435,15 +484,20 @@ const Navigation: React.FC = () => {,
 
                   {servicesOpen && (
                     <div className="ml-6 mt-2 space-y-2">
-                      {serviceCategories.map((category, categoryIndex) => (
-                        <div key={categoryIndex} className="space-y-2">
-                          <div className="flex items-center space-x-2">
+                      {serviceCategories.map((category, categoryIndex) => (</div>
+                        <div key={categoryIndex} className="space-y-2"></div>
+                          <div className="flex items-center space-x-2"></div>
                             <category.icon className={`w-4 h-4 ${category.color}`} />
                             <span className="text-cyan-400 font-medium text-sm">{category.title}</span>
                           </div>
                           <div className="ml-6 space-y-1">
+<<<<<<< HEAD
                             {category.services.slice(0, 3).map((service, serviceIndex) => (
                               <Link;
+=======
+                            {category.services.slice(0, 3).map((service, serviceIndex) => (</div>
+                              <Link
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                                 key={serviceIndex}
                                 to={service.path}
                                 className="block text-gray-300 hover: text-cyan-400 text-sm py-1",

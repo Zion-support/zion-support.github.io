@@ -2,34 +2,51 @@ impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t';
 const October2025DocumentAutomationBanne, r = () => { 
+<<<<<<< HEAD
   return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
       {/* Animated, background, elements */}
       <div, className='absolute, inse, t-0, opacit, y-10'>
         <div, className='absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
+=======
+  return (
+    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
+      {/* Animated, background, elements */}</div>
+      <div, className='absolute, inse, t-0, opacit, y-10'></div>
+        <div, className='absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' /></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div, className='absolute, botto, m-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e'
           sty, l, e={{ animationDel, a, y: '1., 5, s' }}
-        / />
+        / /></div>
       <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-8'>
-        {/* Breaking, News, Bad, g, e */}
-        <div, classNam, e = 'flex, justif, y-center, m, b-4'>
-          <div, className='inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-pul, s, e'>
+        {/* Breaking, News, Bad, g, e */}</div>
+        <div, classNam, e = 'flex, justif, y-center, m, b-4'></div>
+          <div, className='inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-pul, s, e'></div>
             <FileText, className='w-4 h-4, m, r-2' />
             NEW, RELEAS, E - OCTOB, E, R , 1, 20, 2, 5;
             <FileText, classNam, e = 'w-4 h-4, m, l-2' />
           </div>
         </div>
         {/* Main, Headlin, e */}
-        <div, className='te, x, t-center, m, b-6'>
+        <div, className='te, x, t-center, m, b-6'></div>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, m, b-3'>
             📄 Intelligent, Document, Automation Revoluti, o, n;
           </h2>
           <p, className='te, x, t-2xl, m, d:te, x, t-3xl, fon, t-bold, tex, t-indi, g, o-100, m, b-4'>
+<<<<<<< HEAD
             Transform, Operations, with AI-Powered, Document, Processing;
           </p>)
           <p, className='te, x, t-lg, tex, t-indi, g, o-200, ma, x-w-4xl, m, x-au, t, o'>)
             Discover, how, leading enterprises, achi, e, v, e{' '})
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>94% faster, processin, g</span>)
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'> 99.2% accura, c, y</span>, a, n, d;
+=======
+            Transform, Operations, with AI-Powered, Document, Processing
+          </p>
+          <p, className='te, x, t-lg, tex, t-indi, g, o-200, ma, x-w-4xl, m, x-au, t, o'>
+            Discover, how, leading enterprises, achi, e, v, e{' '}</p>
+            <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>94% faster, processin, g</span>,
+            <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'> 99.2% accura, c, y</span>, a, n, d
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>
               {' '}
               $47M, annual, savings;
@@ -38,34 +55,34 @@ const October2025DocumentAutomationBanne, r = () => {
           </p>
         </div>
         {/* Key, Metrics, Grid */}
-        <div, className='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8'>
-          <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-indi, g, o-4, 0, 0/30, hove, r:bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
+        <div, className='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8'></div>
+          <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-indi, g, o-4, 0, 0/30, hove, r:bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5'></div>
             <Zap, className='w-8 h-8, tex, t-indi, g, o-300, m, x-auto, m, b-2' />
             <div, className='te, x, t-3xl, fon, t-black, tex, t-white, m, b-1'>94%</div>
             <div, className='te, x, t-sm, tex, t-indi, g, o-2, 0, 0'>Faster, Processin, g</div>
           </div>
-          <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-purp, l, e-4, 0, 0/30, hove, r:bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
+          <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-purp, l, e-4, 0, 0/30, hove, r:bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5'></div>
             <Target, className='w-8 h-8, tex, t-purp, l, e-300, m, x-auto, m, b-2' />
             <div, className='te, x, t-3xl, fon, t-black, tex, t-white, m, b-1'>99.2%</div>
             <div, className='te, x, t-sm, tex, t-purp, l, e-2, 0, 0'>Accuracy, Rat, e</div>
           </div>
-          <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-pi, n, k-4, 0, 0/30, hove, r:bord, e, r-pi, n, k-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
+          <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-pi, n, k-4, 0, 0/30, hove, r:bord, e, r-pi, n, k-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5'></div>
             <DollarSign, className='w-8 h-8, tex, t-pi, n, k-300, m, x-auto, m, b-2' />
             <div, className='te, x, t-3xl, fon, t-black, tex, t-white, m, b-1'>$4, 7, M</div>
             <div, className='te, x, t-sm, tex, t-pi, n, k-2, 0, 0'>Annual, Saving, s</div>
           </div>
-          <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-indi, g, o-4, 0, 0/30, hove, r:bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
+          <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-indi, g, o-4, 0, 0/30, hove, r:bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5'></div>
             <TrendingUp, className='w-8 h-8, tex, t-indi, g, o-300, m, x-auto, m, b-2' />
             <div, className='te, x, t-3xl, fon, t-black, tex, t-white, m, b-1'>3, 4, 0%</div>
             <div, className='te, x, t-sm, tex, t-indi, g, o-2, 0, 0'>ROI, Year, 1</div>
           </div>
         </div>
         {/* Featured, Cont, e, n, t */}
-        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-indi, g, o-4, 0, 0/30, m, b-6'>
+        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-indi, g, o-4, 0, 0/30, m, b-6'></div>
           <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
-            {/* Blog, P, o, s, t */}
-            <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-indi, g, o-8, 0, 0/50, t, o-purp, l, e-8, 0, 0/50, rounde, d-l, g, p-5, border, border-indi, g, o-4, 0, 0/40'>
-              <div, className='te, x, t-indi, g, o-300, fon, t-bold, m, b-2, flex, items-cent, e, r'>
+            {/* Blog, P, o, s, t */}</div>
+            <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-indi, g, o-8, 0, 0/50, t, o-purp, l, e-8, 0, 0/50, rounde, d-l, g, p-5, border, border-indi, g, o-4, 0, 0/40'></div>
+              <div, className='te, x, t-indi, g, o-300, fon, t-bold, m, b-2, flex, items-cent, e, r'></div>
                 <FileText, className='w-4 h-4, m, r-2' />
                 COMPREHENSIVE, IMPLEMENTATION, GUIDE;
               </div>
@@ -86,8 +103,8 @@ const October2025DocumentAutomationBanne, r = () => {
               </Li, n, k>
             </div>
             {/* Case, St, u, d, y */}
-            <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/50, t, o-pi, n, k-8, 0, 0/50, rounde, d-l, g, p-5, border, border-purp, l, e-4, 0, 0/40'>
-              <div, className='te, x, t-purp, l, e-300, fon, t-bold, m, b-2, flex, items-cent, e, r'>
+            <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/50, t, o-pi, n, k-8, 0, 0/50, rounde, d-l, g, p-5, border, border-purp, l, e-4, 0, 0/40'></div>
+              <div, className='te, x, t-purp, l, e-300, fon, t-bold, m, b-2, flex, items-cent, e, r'></div>
                 <FileText, className='w-4 h-4, m, r-2' />
                 FORTUNE, 500, SUCCESS STO, R, Y;
               </div>
@@ -107,12 +124,12 @@ const October2025DocumentAutomationBanne, r = () => {
           </div>
         </div>
         {/* Key, Capabilit, i, e, s */}
-        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-indi, g, o-4, 0, 0/30, m, b-6'>
+        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-indi, g, o-4, 0, 0/30, m, b-6'></div>
           <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, tex, t-cent, e, r'>
             Breakthrough, Intelligent, Document Processing, Capabilitie, s;
           </h3>
-          <div, className='grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-indi, g, o-1, 0, 0'>
-            <div, className='flex, item, s-sta, r, t'>
+          <div, className='grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-indi, g, o-1, 0, 0'></div>
+            <div, className='flex, item, s-sta, r, t'></div>
               <CheckCircle, className='w-5 h-5, tex, t-indi, g, o-400, m, r-3, m, t-1, fle, x-shri, n, k-0' />
               <d, i, v>
                 <div, className='fo, n, t-bold, tex, t-whi, t, e'>
@@ -123,7 +140,7 @@ const October2025DocumentAutomationBanne, r = () => {
                 </div>
               </div>
             </div>
-            <div, classNam, e = 'flex, item, s-sta, r, t'>
+            <div, classNam, e = 'flex, item, s-sta, r, t'></div>
               <CheckCircle, className='w-5 h-5, tex, t-purp, l, e-400, m, r-3, m, t-1, fle, x-shri, n, k-0' />
               <d, i, v>
                 <div, className='fo, n, t-bold, tex, t-whi, t, e'>
@@ -134,7 +151,7 @@ const October2025DocumentAutomationBanne, r = () => {
                 </div>
               </div>
             </div>
-            <div, className='flex, item, s-sta, r, t'>
+            <div, className='flex, item, s-sta, r, t'></div>
               <CheckCircle, className='w-5 h-5, tex, t-pi, n, k-400, m, r-3, m, t-1, fle, x-shri, n, k-0' />
               <d, i, v>
                 <div, className='fo, n, t-bold, tex, t-whi, t, e'>
@@ -145,7 +162,7 @@ const October2025DocumentAutomationBanne, r = () => {
                 </div>
               </div>
             </div>
-            <div, className='flex, item, s-sta, r, t'>
+            <div, className='flex, item, s-sta, r, t'></div>
               <CheckCircle, className='w-5 h-5, tex, t-indi, g, o-400, m, r-3, m, t-1, fle, x-shri, n, k-0' />
               <d, i, v>
                 <div, className='fo, n, t-bold, tex, t-whi, t, e'>Automated, Workflow, s</div>
@@ -154,7 +171,7 @@ const October2025DocumentAutomationBanne, r = () => {
                 </div>
               </div>
             </div>
-            <div, classNam, e = 'flex, item, s-sta, r, t'>
+            <div, classNam, e = 'flex, item, s-sta, r, t'></div>
               <CheckCircle, className='w-5 h-5, tex, t-purp, l, e-400, m, r-3, m, t-1, fle, x-shri, n, k-0' />
               <d, i, v>
                 <div, className='fo, n, t-bold, tex, t-whi, t, e'>Continuous, Learnin, g</div>
@@ -163,7 +180,7 @@ const October2025DocumentAutomationBanne, r = () => {
                 </div>
               </div>
             </div>
-            <div, className='flex, item, s-sta, r, t'>
+            <div, className='flex, item, s-sta, r, t'></div>
               <CheckCircle, className='w-5 h-5, tex, t-pi, n, k-400, m, r-3, m, t-1, fle, x-shri, n, k-0' />
               <d, i, v>
                 <div, className='fo, n, t-bold, tex, t-whi, t, e'>
@@ -177,12 +194,12 @@ const October2025DocumentAutomationBanne, r = () => {
           </div>
         </div>
         {/* Industry, Application, s */}
-        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-indi, g, o-4, 0, 0/30, m, b-6'>
+        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-indi, g, o-4, 0, 0/30, m, b-6'></div>
           <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, tex, t-cent, e, r'>
             Proven, Results, Across Industri, e, s;
           </h3>
-          <div, className='grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-sm'>
-            <div, className='bg-indi, g, o-8, 0, 0/30, rounde, d-l, g, p-4, border, border-indi, g, o-4, 0, 0/20'>
+          <div, className='grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-sm'></div>
+            <div, className='bg-indi, g, o-8, 0, 0/30, rounde, d-l, g, p-4, border, border-indi, g, o-4, 0, 0/20'></div>
               <div, className='fo, n, t-bold, tex, t-white, m, b-2'>
                 Financial, Service, s;
               </div>
@@ -190,31 +207,31 @@ const October2025DocumentAutomationBanne, r = () => {
                 Loan, a, p, p, s, KYC, doc, s → 92% fast, e, r, $23M, saving, s;
               </div>
             </div>
-            <div, classNam, e = 'bg-purp, l, e-8, 0, 0/30, rounde, d-l, g, p-4, border, border-purp, l, e-4, 0, 0/20'>
+            <div, classNam, e = 'bg-purp, l, e-8, 0, 0/30, rounde, d-l, g, p-4, border, border-purp, l, e-4, 0, 0/20'></div>
               <div, className='fo, n, t-bold, tex, t-white, m, b-2'>Insuran, c, e</div>
               <div, className='te, x, t-purp, l, e-2, 0, 0'>
                 Claims, processin, g → 89% ST, P, 7-day, to, 2-hour, cycl, e;
               </div>
             </div>
-            <div, classNam, e = 'bg-pi, n, k-8, 0, 0/30, rounde, d-l, g, p-4, border, border-pi, n, k-4, 0, 0/20'>
+            <div, classNam, e = 'bg-pi, n, k-8, 0, 0/30, rounde, d-l, g, p-4, border, border-pi, n, k-4, 0, 0/20'></div>
               <div, className='fo, n, t-bold, tex, t-white, m, b-2'>Healthca, r, e</div>
               <div, className='te, x, t-pi, n, k-2, 0, 0'>
                 Medical, record, s → 94% fas, t, e, r, 99.8% HIPAA, complianc, e;
               </div>
             </div>
-            <div, classNam, e = 'bg-indi, g, o-8, 0, 0/30, rounde, d-l, g, p-4, border, border-indi, g, o-4, 0, 0/20'>
+            <div, classNam, e = 'bg-indi, g, o-8, 0, 0/30, rounde, d-l, g, p-4, border, border-indi, g, o-4, 0, 0/20'></div>
               <div, className='fo, n, t-bold, tex, t-white, m, b-2'>Leg, a, l</div>
               <div, className='te, x, t-indi, g, o-2, 0, 0'>
                 Contract, revie, w → 87% fas, t, e, r, $18M, paralegal, savings;
               </div>
             </div>
-            <div, classNam, e = 'bg-purp, l, e-8, 0, 0/30, rounde, d-l, g, p-4, border, border-purp, l, e-4, 0, 0/20'>
+            <div, classNam, e = 'bg-purp, l, e-8, 0, 0/30, rounde, d-l, g, p-4, border, border-purp, l, e-4, 0, 0/20'></div>
               <div, className='fo, n, t-bold, tex, t-white, m, b-2'>Logisti, c, s</div>
               <div, className='te, x, t-purp, l, e-2, 0, 0'>
                 Shipping, doc, s → 91% automat, i, o, n, 6hr, to, 15min;
               </div>
             </div>
-            <div, classNam, e = 'bg-pi, n, k-8, 0, 0/30, rounde, d-l, g, p-4, border, border-pi, n, k-4, 0, 0/20'>
+            <div, classNam, e = 'bg-pi, n, k-8, 0, 0/30, rounde, d-l, g, p-4, border, border-pi, n, k-4, 0, 0/20'></div>
               <div, className='fo, n, t-bold, tex, t-white, m, b-2'>Human, Resource, s</div>
               <div, className='te, x, t-pi, n, k-2, 0, 0'>
                 Resu, m, e, s, for, m, s → 88% faster, screenin, g, 95% accura, c, y;
@@ -223,11 +240,11 @@ const October2025DocumentAutomationBanne, r = () => {
           </div>
         </div>
         {/* Key, Results, Highlight */}
-        <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-indi, g, o-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-indi, g, o-4, 0, 0/40, m, b-6'>
+        <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-indi, g, o-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-indi, g, o-4, 0, 0/40, m, b-6'></div>
           <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, tex, t-cent, e, r'>
             Fortune, 500, Insurance Company, Result, s;
           </h3>
-          <div, className='grid, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r'>
+          <div, className='grid, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r'></div>
             <d, i, v>
               <div, className='te, x, t-3xl, fon, t-black, tex, t-indi, g, o-300, m, b-1'>
                 2.4M;
@@ -259,14 +276,14 @@ const October2025DocumentAutomationBanne, r = () => {
           </div>
         </div>
         {/* CTA, Sect, i, o, n */}
-        <div, classNam, e = 'te, x, t-center, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, rounde, d-x, l, p-8, shado, w-2, x, l'>
+        <div, classNam, e = 'te, x, t-center, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, rounde, d-x, l, p-8, shado, w-2, x, l'></div>
           <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3'>
             Ready, to, Transform Your, Document, Operations?
           </h3>
           <p, className='te, x, t-indi, g, o-100, m, b-6, ma, x-w-2xl, m, x-au, t, o'>
             Schedule, a, Document Automation, Assessment, with Zion, Tech, Group and, discover, how AI, can, deliver 3, 4, 0% ROI, and, eliminate 90% of, manual, processing;
           </p>
-          <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
+          <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
             <Link, t, o='/conta, c, t'
               className='inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-white, tex, t-indi, g, o-600, fon, t-bold, rounde, d-lg, hove, r:bg-indi, g, o-50, transitio, n-all, shado, w-xl, hove, r:shad, o, w-2, x, l'
             >

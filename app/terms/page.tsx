@@ -169,12 +169,18 @@ const TermsPage: React.FC = () => {,
     }
   ];
 
+<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
 <<<<<<< HEAD
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
+<<<<<<< HEAD
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Terms of Service<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Please read these terms carefully before using our services. By using our services, you agree to be bound by these terms.<div className="text-sm text-gray-400">Last updated: {lastUpdated}</div>
 =======
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -189,25 +195,28 @@ const TermsPage: React.FC = () => {,
           <div className="text-sm text-gray-400">
             Last updated: {lastUpdated}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Terms of Service</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Please read these terms carefully before using our services. By using our services, you agree to be bound by these terms.</p><div className="text-sm text-gray-400">Last updated: {lastUpdated}</section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
           </div>
         </section>
 
         {/* Introduction */}
         <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Introduction<p className="text-gray-300 mb-4 leading-relaxed">These Terms of Service ("Terms") govern your use of Zion Tech Group's website, services, and applications (collectively, the "Service") operated by Zion Tech Group ("us", "we", or "our").<p className="text-gray-300 leading-relaxed">By accessing or using our Service, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access the Service.</p>
+          <div className="cyber-card p-8"></section>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Introduction</h2><p className="text-gray-300 mb-4 leading-relaxed">These Terms of Service ("Terms") govern your use of Zion Tech Group's website, services, and applications (collectively, the "Service") operated by Zion Tech Group ("us", "we", or "our").</p><p className="text-gray-300 leading-relaxed">By accessing or using our Service, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access the Service.</p>
             </p>
           </div>
         </section>
 
         {/* Main Content */}
         <section className="space-y-12">{sections.map((section, index) => (</section>
-            <div key={index} className="cyber-card p-8">
-              <div className="flex items-center mb-6">
+            <div key={index} className="cyber-card p-8"></section>
+              <div className="flex items-center mb-6"></div>
                 <section.icon className="w-8 h-8 text-cyan-400 mr-4" />
-                <h2 className="text-2xl font-bold text-white neon-text">{section.title}<div className="space-y-6">{section.content.map((subsection, subIndex) => (</div>
-                  <div key={subIndex}>
-                    <h3 className="text-xl font-semibold text-cyan-400 mb-3">{subsection.subtitle}<ul className="space-y-2">{subsection.items.map((item, itemIndex) => (</ul>
+                <h2 className="text-2xl font-bold text-white neon-text">{section.title}</h2><div className="space-y-6">{section.content.map((subsection, subIndex) => (</section>
+                  <div key={subIndex}></div>
+                    <h3 className="text-xl font-semibold text-cyan-400 mb-3">{subsection.subtitle}</h3><ul className="space-y-2">{subsection.items.map((item, itemIndex) => (</ul>
                         <li key={itemIndex} className="flex items-start text-gray-300">
                           <span className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0">{item}</span>
                         </span>
@@ -222,13 +231,19 @@ const TermsPage: React.FC = () => {,
 
         {/* Contact Information */}
         <section className="mb-16">
+<<<<<<< HEAD
           <div className="cyber-card p-8">
 <<<<<<< HEAD
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us<p className="text-gray-300 mb-6">If you have any questions about these Terms of Service, please contact us:</p>
+=======
+          <div className="cyber-card p-8"></section>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us</h2><p className="text-gray-300 mb-6">If you have any questions about these Terms of Service, please contact us:</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+              <div></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Zion Tech Group</h3>
+<<<<<<< HEAD
                 <div className="space-y-2 text-gray-300">
                   <p>364 E Main St STE 1008<p>Middletown, DE 19709<p>United States</p>
 =======
@@ -243,13 +258,17 @@ const TermsPage: React.FC = () => {,
                   <p>Middletown, DE 19709</p>
                   <p>United States</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+                <div className="space-y-2 text-gray-300"></div>
+                  <p>364 E Main St STE 1008</p><p>Middletown, DE 19709</p><p>United States</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </div>
               </div>
-              <div>
+              <div></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Contact Information</h3>
-                <div className="space-y-2 text-gray-300">
-                  <p>Email: <a href="mailto:legal@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">legal@ziontechgroup.com</a>
-                  <p>Phone: <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a>
+                <div className="space-y-2 text-gray-300"></div>
+                  <p>Email:</p> <a href="mailto:legal@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">legal@ziontechgroup.com</a>
+                  <p>Phone:</p> <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a>
                 </div>
               </div>,
             </div>,
@@ -258,8 +277,8 @@ const TermsPage: React.FC = () => {,
 ,
         {/* Updates */}
         <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Changes to Terms<p className="text-gray-300 mb-4">We reserve the right to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect.<p className="text-gray-300">By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.</p>
+          <div className="cyber-card p-8"></section>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Changes to Terms</h2><p className="text-gray-300 mb-4">We reserve the right to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect.</p><p className="text-gray-300">By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.</p>
             </p>
           </div>
         </section>

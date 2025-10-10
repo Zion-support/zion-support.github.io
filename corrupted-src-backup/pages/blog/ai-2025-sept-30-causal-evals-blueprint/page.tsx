@@ -1,7 +1,13 @@
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
+<<<<<<< HEAD
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
   return(<div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
+=======
+export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t { 
+  return (
+    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Helm, e, t>
         <title>Ai, 2025, Sept 30, Causal, Evals Bluepri, n, t</title>
         <meta, nam, e='description'
@@ -12,12 +18,12 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         />),
       </Helm, e, t>
 
-      <div, className='container, m, x-auto, p, x-6, p, y-16'>
+      <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
           Ai, 2025, Sept 30, Causal, Evals Bluepri, n, t;
             This, comprehensive, guide covers, ai, 2025 sept, 30, causal evals, blueprint, and provides, practical, insights for, enterprise, implementation.
         </div>
-        <div, className='mt-8'>
+        <div, className='mt-8'></div>
           <Link, t, o='/bl, o, g' className='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
             ← Back, to, Blog;
           </Li, n, k>

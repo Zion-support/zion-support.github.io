@@ -60,9 +60,16 @@ const, ModernHeade, r: Rea, c, t.FC = () => {
     }
     { na, m, e: 'Conta, c, t', hr, e, f: '/conta, c, t' }
   ];
+<<<<<<< HEAD
   return(<header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   g:px-8">",
+=======
+  return (
+    <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">
+      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">"</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div, className="flex, justif, y-between, item, s-cente, r, h-16">
     { na, m, e: 'Ho, m, e', hr, e, f: '/' },';
     { 
@@ -116,14 +123,21 @@ const, ModernHeade, r: Rea, c, t.FC = () => {
     }
     { na, m, e: 'Conta, c, t', hr, e, f: '/conta, c, t' },';
   ];
+<<<<<<< HEAD
   return ()
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";)
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;,)
   g:px-8">";),
+=======
+  return (</div>
+    <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";
+      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
+  g:px-8">";</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div, className="flex, justif, y-between, item, s-cente, r, h-16">";
-          {/* Lo, g, o */}
+          {/* Lo, g, o */}</div>
           <Link, t, o="/" classNa, m, e="flex, item, s-center, spac, e-x-2">";
-            <div, className="w-8 h-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";
+            <div, className="w-8 h-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";</div>
               <span, className="te, x, t-white, fon, t-bold, tex, t-sm">Z</sp, a, n>";
             </d, i, v>
             <span, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">Zion, Tech, Group</sp, a, n>";
@@ -145,7 +159,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {
                   {it, e, m.na, m, e}
                   {it, e, m.dropdo, w, n && (
                     <svg, className="w-4 h-4, m, l-1" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">
-                      <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M19, 9, l-7 7-7-7  />
+                      <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M19, 9, l-7 7-7-7  /></p>
                     <svg, className="w-4 h-4, m, l-1" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">";
                       <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M19, 9, l-7 7-7-7" />";
                     </s, v, g>
@@ -154,8 +168,13 @@ const, ModernHeade, r: Rea, c, t.FC = () => {
                 {/* Dropdown, Men, u */}
                 {it, e, m.dropdo, w, n && activeDropdo, w, n === it, e, m.na, m, e && (
                   <div, className="absolute, to, p-full, lef, t-0, m, t-1 w-56, b, g-white, rounde, d-lg, shado, w-lg, border, border-gr, a, y-200, p, y-2 z-50">";
+<<<<<<< HEAD
                     {it, e, m.dropdo, w, n.m, a, p((dropdownIt, e, m, ind, e, x) => (
                       <Li, n, k;
+=======
+                    {it, e, m.dropdo, w, n.m, a, p((dropdownIt, e, m, ind, e, x) => (</div>
+                      <Li, n, k
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
   k, e, y={ind, e, x}
                         to={dropdownIt, e, m.hr, e, f}
                         classNa, m, e="block, p, x-4, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hove, r: bg-gr, a, y-100, hov, e;
@@ -170,8 +189,8 @@ const, ModernHeade, r: Rea, c, t.FC = () => {
             ))}
           </n, a, v>
           {/* CTA, Butto, n */}
-          <div, className="hidden, m, d: flex, item, s-center, spac, e-x-4">"
-          <div, className="hidden, m, d: flex, item, s-center, spac, e-x-4">";
+          <div, className="hidden, m, d: flex, item, s-center, spac, e-x-4">"</div>
+          <div, className="hidden, m, d: flex, item, s-center, spac, e-x-4">";</div>
             <a, titl, e="Internal, lin, k"
               hr, e, f="te;
   l: +130246409, 5, 0"
@@ -205,8 +224,13 @@ const, ModernHeade, r: Rea, c, t.FC = () => {
                   strokeLinejo, i, n="rou, n, d"
                   strokeWid, t, h={2}
                   d="M6, 18L18, 6M6 6l12, 1, 2  />
+<<<<<<< HEAD
               ) : (
                 <pa, t, h;
+=======
+              ) : (</p>
+                <pa, t, h 
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
   strokeLinec, a, p="rou, n, d"
                   strokeLinejo, i, n="rou, n, d"
                   strokeWid, t, h={2}
@@ -218,8 +242,9 @@ const, ModernHeade, r: Rea, c, t.FC = () => {
         {/* Mobile, Navigatio, n */}
         {
 isMenuOp, e, n && (
-<div, className="md: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">
+<div, className="md: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0"></div>
 <nav, className="flex, fle, x-col, spac, e-y-1">
+<<<<<<< HEAD
 <div, className="m;
   d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,";
 <nav, className="flex, fle, x-col, spac, e-y-1">";
@@ -227,6 +252,15 @@ isMenuOp, e, n && (
 <div, ke, y={it, e, m.na, m, e;}
 }>
                   <Li, n, k;
+=======
+<div, className="m
+  d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,";</div>
+<nav, className="flex, fle, x-col, spac, e-y-1">";
+{navigationIte, m, s.m, a, p((it, e, m) => (
+<div, ke, y={it, e, m.na, m, e;
+}></div>
+                  <Li, n, k
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
   to={it, e, m.hr, e, f}
                     classNa, m, e="block, p, x-4, p, y-2, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, hov, e;
   r:bg-gr, a, y-100, rounde, d-md, transitio, n-colors, fon, t-medi, u, m"
@@ -236,8 +270,13 @@ isMenuOp, e, n && (
                   </Li, n, k>
                   {it, e, m.dropdo, w, n && (
                     <div, className="ml-4, spac, e-y-1">";
+<<<<<<< HEAD
                       {it, e, m.dropdo, w, n.m, a, p((dropdownIt, e, m, ind, e, x) => (
                         <Li, n, k;
+=======
+                      {it, e, m.dropdo, w, n.m, a, p((dropdownIt, e, m, ind, e, x) => (</div>
+                        <Li, n, k
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
   k, e, y={ind, e, x}
                           to={dropdownIt, e, m.hr, e, f}
                           classNa, m, e="block, p, x-4, p, y-1, tex, t-sm, tex, t-gr, a, y-600, hove, r: te, x, t-bl, u, e-600, hov, e;
@@ -251,7 +290,7 @@ isMenuOp, e, n && (
                   )}
                 </d, i, v>
               ))}
-              <div, className="px-4, p, y-2, borde, r-t, borde, r-gr, a, y-200, m, t-2">";
+              <div, className="px-4, p, y-2, borde, r-t, borde, r-gr, a, y-200, m, t-2">";</div>
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="t, e, l: +130246409, 5, 0"
                   classNa, m, e="block, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, transitio, n-colors, fon, t-medium, m, b-2"

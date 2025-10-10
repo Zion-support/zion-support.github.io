@@ -133,7 +133,12 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
     { metric: 'Zero', label: 'Downtime', color: 'text-orange-400' }
   ];
 
+<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Helmet>
         <title>AI Cloud Infrastructure - Intelligent Cloud Solutions | Zion Tech Group</title>
         <meta name="description" content="Transform your cloud infrastructure with AI-powered management, optimization, and security. Reduce costs by 50% and achieve 99.9% uptime." />
@@ -145,9 +150,9 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
         <meta property="og:url" content="https://ziontechgroup.com/ai-cloud-infrastructure" />
       <div className="container mx-auto px-4 py-16">{/* Hero Section */}</div>
         <section className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-blue-600/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center space-x-2 bg-blue-600/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></section>
             <Cloud className="w-4 h-4" />
-            <span>AI-Powered Cloud<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Cloud Infrastructure<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your cloud infrastructure with AI-powered management, optimization, and security.</p>
+            <span>AI-Powered Cloud</span><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Cloud Infrastructure</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your cloud infrastructure with AI-powered management, optimization, and security.</p>
             Reduce costs by 50% and achieve 99.9% uptime with intelligent cloud solutions.</p>
 =======
         <meta property="og:type" content="website" />,
@@ -172,8 +177,13 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </p>
 
+<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a;
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <a
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="tel:+13024640950"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
@@ -199,6 +209,7 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
         {/* Benefits */}
         <section className="mb-16">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
               </div><div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-blue-500/20">
                 <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}<div className="text-white font-semibold mb-2">{benefit.label}<div className="text-gray-400 text-sm">Industry-leading cloud performance</div>
@@ -210,6 +221,11 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
                 <div className="text-white font-semibold mb-2">{benefit.label}</div>
                 <div className="text-gray-400 text-sm">Industry-leading cloud performance</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</section>
+              </div><div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-blue-500/20"></div>
+                <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}</div><div className="text-white font-semibold mb-2">{benefit.label}</div><div className="text-gray-400 text-sm">Industry-leading cloud performance</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             ))}
           </div>
@@ -217,6 +233,7 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
 
         {/* Features */}
         <section className="mb-16">
+<<<<<<< HEAD
 <<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Cloud Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
               </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all duration-300">
@@ -229,10 +246,16 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
                 <div className="flex items-start space-x-4">,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}>
+=======
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Cloud Features</h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</section>
+              </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all duration-300"></div>
+                <div className="flex items-start space-x-4"></div>
+                  <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <feature.icon className="w-6 h-6" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}<p className="text-gray-400">{feature.description}</p>
+                  <div></div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3><p className="text-gray-400">{feature.description}</p>
                   </div>
                 </div>
               </div>
@@ -242,6 +265,7 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
 
         {/* Use Cases */}
         <section className="mb-16">
+<<<<<<< HEAD
 <<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Solutions<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</div>
               </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all duration-300">
@@ -260,6 +284,13 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                 <p className="text-gray-400 text-sm">{useCase.description}</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Solutions</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</section>
+              </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all duration-300"></div>
+                <div className="flex items-center justify-between mb-4"></div>
+                  <useCase.icon className="w-8 h-8 text-blue-400" />
+                  <div className="text-sm font-semibold text-green-400">{useCase.result}</div><h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3><p className="text-gray-400 text-sm">{useCase.description}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             ))}
           </div>
@@ -268,8 +299,13 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
         {/* Pricing */}
         <section className="mb-16">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Infrastructure Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-gray-700'} hover:border-blue-500/50 transition-all duration-300`}>{plan.popular && (</div>
                   </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+=======
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Infrastructure Plans</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</section><div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-gray-700'} hover:border-blue-500/50 transition-all duration-300`}>{plan.popular && (</div>
+                  </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <div className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
 =======
           <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Infrastructure Plans</h2>
@@ -284,10 +320,10 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
                     </div>
                   </div>
                 )}
-                <div className="text-center mb-6">
+                <div className="text-center mb-6"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}<span className="text-gray-400 ml-1">{plan.period}<p className="text-gray-400 mt-2">{plan.description}<ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
+                  <div className="flex items-baseline justify-center"></div>
+                    <span className="text-4xl font-bold text-white">{plan.price}</span><span className="text-gray-400 ml-1">{plan.period}</span><p className="text-gray-400 mt-2">{plan.description}</p><ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                     </ul><li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -319,10 +355,15 @@ const AICloudInfrastructurePage: React.FC = memo(() => {,
 
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-12 rounded-lg border border-blue-500/30">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your Cloud?<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 2,000+ organizations already using our AI Cloud Infrastructure to reduce costs and improve performance.</p>
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your Cloud?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 2,000+ organizations already using our AI Cloud Infrastructure to reduce costs and improve performance.</p>
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a;
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
+            <a
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="tel:+13024640950"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
 <<<<<<< HEAD

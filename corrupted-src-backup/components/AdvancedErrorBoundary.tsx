@@ -36,10 +36,18 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
       return(this.props.fallback || ()
           <div className="error-boundary">)
             <h2>Something went wrong.</h2>)
             <details style={{ whiteSpace: 'pre-wrap' }}>)
+=======
+      return (
+        this.props.fallback || (
+          <div className="error-boundary"></div>
+            <h2>Something went wrong.</h2>
+            <details style={{ whiteSpace: 'pre-wrap' }}>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               {this.state.error && this.state.error.toString()}
               <br />
               {this.state.errorInfo?.componentStack}

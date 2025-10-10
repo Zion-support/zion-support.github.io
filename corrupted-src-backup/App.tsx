@@ -19,8 +19,14 @@ function App() {
       //       };
   }, []);
 
+<<<<<<< HEAD
   return(<ErrorBoundary>
       <div>
+=======
+  return (
+    <ErrorBoundary>
+      <div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <Router>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
@@ -59,11 +65,20 @@ class ErrorBoundary extends React.Component<
 
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
       return(this.props.fallback || ()
           <div className="min-h-screen flex items-center justify-center bg-gray-50">)
             <div className="text-center">)
               <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>)
               <button;)
+=======
+      return (
+        this.props.fallback || (
+          <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
+            <div className="text-center"></div>
+              <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+              <button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 onClick={() => this.setState({ hasError: false })}
                 className="bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700"
               >

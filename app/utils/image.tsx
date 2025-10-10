@@ -79,11 +79,19 @@ export const Image: React.FC<ImageProps> = ({,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
+<<<<<<< HEAD
         {...props})
       >)
         <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>,)
       </div>,)
     ),
+=======
+        {...props}
+      ></div>
+        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
+      </div>
+    )
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
   }
   return(<img;
       src={src}

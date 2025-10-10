@@ -23,8 +23,9 @@ const EnhancedLoading: React.FC<LoadingProps> = ({,
     />
   );
 
-  const renderDots = () => (
+  const renderDots = () => (</div>
     <div className="flex space-x-1">
+<<<<<<< HEAD
       {[0, 1, 2].map(i => ()
         <div;)
           key={i})
@@ -32,6 +33,15 @@ const EnhancedLoading: React.FC<LoadingProps> = ({,
           style={{})
             animationDelay: `${i * 0.2}s`)
             animationDuration: '1s'),
+=======
+      {[0, 1, 2].map(i => (</div>
+        <div
+          key={i}
+          className={`bg-blue-600 rounded-full animate-pulse ${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-3 h-3' : 'w-4 h-4'}`}
+          style={{
+            animationDelay: `${i * 0.2}s`,
+            animationDuration: '1s',
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
           }}
         />
       ))}
@@ -52,7 +62,12 @@ const EnhancedLoading: React.FC<LoadingProps> = ({,
     }
   };
 
+<<<<<<< HEAD
   return(<div className="flex flex-col items-center justify-center p-8">)
+=======
+  return (</div>
+    <div className="flex flex-col items-center justify-center p-8"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <div className="mb-4">{renderLoader()}</div>
       <p className="text-gray-600 text-sm font-medium">{message}</p>
     </div>

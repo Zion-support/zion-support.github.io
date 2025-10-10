@@ -73,19 +73,25 @@ const MachineLearningPage: React.FC = () => {,
         enableClickjackingProtection={true}
       />
       <Analytics />
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+=======
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <Navigation />
 <<<<<<< HEAD
 
         <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
           <section className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Machine Learning Solutions">Machine Learning Solutions<p className="text-xl text-cyan-400 mb-8 font-medium">Advanced AI Models for Business Intelligence<p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Transform your business with cutting-edge machine learning solutions. From predictive analytics</p>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Machine Learning Solutions">Machine Learning Solutions</h1><p className="text-xl text-cyan-400 mb-8 font-medium">Advanced AI Models for Business Intelligence</p><p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Transform your business with cutting-edge machine learning solutions. From predictive analytics</p>
               to custom AI models, we help you harness the power of data to drive growth and efficiency.</p>
             </p>
           </section>
 
           {/* Services */}
           <section className="mb-16">
+<<<<<<< HEAD
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our ML Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service, index) => (</div>
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
 =======
@@ -111,8 +117,12 @@ const MachineLearningPage: React.FC = () => {,
               {services.map((service, index) => (
                 <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our ML Services</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service, index) => (</section>
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <service.icon className={`w-16 h-16 ${service.color} mx-auto mb-4`} />
-                  <h3 className="text-xl font-bold text-white mb-3 neon-text text-center">{service.title}<p className="text-gray-300 mb-4 text-sm text-center leading-relaxed">{service.description}<ul className="space-y-2">{service.features.map((feature, featureIndex) => (</ul>
+                  <h3 className="text-xl font-bold text-white mb-3 neon-text text-center">{service.title}</h3><p className="text-gray-300 mb-4 text-sm text-center leading-relaxed">{service.description}</p><ul className="space-y-2">{service.features.map((feature, featureIndex) => (</ul>
                       <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" >{feature}</CheckCircle>
                       </CheckCircle>
@@ -125,8 +135,9 @@ const MachineLearningPage: React.FC = () => {,
 
           {/* Benefits */}
           <section className="mb-16">
-            <div className="cyber-card p-8 max-w-4xl mx-auto">
+            <div className="cyber-card p-8 max-w-4xl mx-auto"></section>
               <h2 className="text-3xl font-bold text-white mb-6 text-center neon-text">Why Choose Our ML Solutions?</h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -138,6 +149,11 @@ const MachineLearningPage: React.FC = () => {,
                   <ul className="space-y-3">,
                     {benefits.map((benefit, index) => (
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                <div></div>
+                  <h3 className="text-xl font-bold text-cyan-400 mb-4">Key Benefits</h3><ul className="space-y-3">{benefits.map((benefit, index) => (</ul>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       <li key={index} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span>{benefit}</span>
@@ -145,30 +161,30 @@ const MachineLearningPage: React.FC = () => {,
                     ))}
                   </ul>
                 </div>
-                <div>
+                <div></div>
                   <h3 className="text-xl font-bold text-purple-400 mb-4">Our Approach</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start">
+                  <div className="space-y-4"></div>
+                    <div className="flex items-start"></div>
                       <div className="w-8 h-8 bg-cyan-400 text-slate-900 rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">1</div>
-                      <div>
+                      <div></div>
                         <h4 className="font-semibold text-white">Data Analysis<p className="text-sm text-gray-300">Comprehensive analysis of your data landscape</p>
                       </div>
                     </div>
-                    <div className="flex items-start">
+                    <div className="flex items-start"></div>
                       <div className="w-8 h-8 bg-purple-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">2</div>
-                      <div>
+                      <div></div>
                         <h4 className="font-semibold text-white">Model Development<p className="text-sm text-gray-300">Custom ML models tailored to your needs</p>
                       </div>
                     </div>
-                    <div className="flex items-start">
+                    <div className="flex items-start"></div>
                       <div className="w-8 h-8 bg-green-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">3</div>
-                      <div>
+                      <div></div>
                         <h4 className="font-semibold text-white">Deployment<p className="text-sm text-gray-300">Seamless integration and deployment</p>
                       </div>
                     </div>
-                    <div className="flex items-start">
+                    <div className="flex items-start"></div>
                       <div className="w-8 h-8 bg-yellow-400 text-slate-900 rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">4</div>
-                      <div>
+                      <div></div>
                         <h4 className="font-semibold text-white">Monitoring<p className="text-sm text-gray-300">Continuous monitoring and optimization</p>
                       </div>
                     </div>
@@ -180,12 +196,17 @@ const MachineLearningPage: React.FC = () => {,
 
           {/* CTA Section */}
           <section className="text-center">
-            <div className="cyber-card p-8 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Harness the Power of Machine Learning?<p className="text-lg text-gray-300 mb-8">Our ML experts are ready to help you build custom models that transform your business.</p>
+            <div className="cyber-card p-8 max-w-4xl mx-auto"></section>
+              <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Harness the Power of Machine Learning?</h2><p className="text-lg text-gray-300 mb-8">Our ML experts are ready to help you build custom models that transform your business.</p>
                 Contact us today for a free consultation and discover the potential of your data.</p>
               </p>
+<<<<<<< HEAD
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a;
+=======
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <a
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 <<<<<<< HEAD

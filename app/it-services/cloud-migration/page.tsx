@@ -8,19 +8,29 @@ const CloudMigration: React.FC = () => {,
   const [targetCloud, setTargetCloud] = useState('');
   const [migrationScope, setMigrationScope] = useState('');
 
+<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
+<<<<<<< HEAD
         <div className="max-w-4xl mx-auto">
 <<<<<<< HEAD
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cloud Migration Services<p className="text-xl text-gray-300 text-center mb-12">Seamlessly migrate your infrastructure to the cloud with zero downtime</p>
+=======
+        <div className="max-w-4xl mx-auto"></div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">Cloud Migration Services</h1><p className="text-xl text-gray-300 text-center mb-12">Seamlessly migrate your infrastructure to the cloud with zero downtime</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
           </p>
 
-          <div className="cyber-card p-8 mb-8">
+          <div className="cyber-card p-8 mb-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6">Migration Assessment</h2>
-            <div className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
+            <div className="space-y-6"></div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+                <div></div>
                   <label className="block text-white font-medium mb-2">Current Infrastructure<select
                     value={currentInfrastructure}
                     onChange={(e) =>setCurrentInfrastructure(e.target.value)}
@@ -30,7 +40,7 @@ const CloudMigration: React.FC = () => {,
                     <option value="hybrid">Hybrid Cloud<option value="other-cloud">Other Cloud Provider<option value="legacy">Legacy Systems</option>
                   </select>
                 </div>
-                <div>
+                <div></div>
                   <label className="block text-white font-medium mb-2">Target Cloud<select
                     value={targetCloud}
                     onChange={(e) =>setTargetCloud(e.target.value)}
@@ -40,7 +50,7 @@ const CloudMigration: React.FC = () => {,
                     <option value="azure">Microsoft Azure<option value="gcp">Google Cloud Platform<option value="multi-cloud">Multi-Cloud</option>
                   </select>
                 </div>
-                <div>
+                <div></div>
                   <label className="block text-white font-medium mb-2">Migration Scope<select
                     value={migrationScope}
                     onChange={(e) =>setMigrationScope(e.target.value)}
@@ -110,74 +120,75 @@ const CloudMigration: React.FC = () => {,
             </div>
           </div>
 
-          <div className="cyber-card p-8 mb-8">
+          <div className="cyber-card p-8 mb-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6">Our Migration Process</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold">1<span className="text-gray-300">Assessment & Planning</span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+              <div className="space-y-4"></div>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold">1</div><span className="text-gray-300">Assessment & Planning</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold">2<span className="text-gray-300">Architecture Design</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold">2</div><span className="text-gray-300">Architecture Design</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold">3<span className="text-gray-300">Migration Execution</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold">3</div><span className="text-gray-300">Migration Execution</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold">4<span className="text-gray-300">Testing & Validation</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center text-black font-bold">4</div><span className="text-gray-300">Testing & Validation</span>
                 </div>
               </div>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center text-black font-bold">5<span className="text-gray-300">Go-Live Support</span>
+              <div className="space-y-4"></div>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center text-black font-bold">5</div><span className="text-gray-300">Go-Live Support</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center text-black font-bold">6<span className="text-gray-300">Optimization</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center text-black font-bold">6</div><span className="text-gray-300">Optimization</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center text-black font-bold">7<span className="text-gray-300">Training & Documentation</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center text-black font-bold">7</div><span className="text-gray-300">Training & Documentation</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center text-black font-bold">8<span className="text-gray-300">Ongoing Support</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center text-black font-bold">8</div><span className="text-gray-300">Ongoing Support</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="cyber-card p-8 mb-8">
+          <div className="cyber-card p-8 mb-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6">Migration Benefits</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"><span className="text-gray-300">Reduced infrastructure costs</span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+              <div className="space-y-4"></div>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div><span className="text-gray-300">Reduced infrastructure costs</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"><span className="text-gray-300">Improved scalability</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div><span className="text-gray-300">Improved scalability</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"><span className="text-gray-300">Enhanced security</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div><span className="text-gray-300">Enhanced security</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"><span className="text-gray-300">Better performance</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div><span className="text-gray-300">Better performance</span>
                 </div>
               </div>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"><span className="text-gray-300">Disaster recovery</span>
+              <div className="space-y-4"></div>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div><span className="text-gray-300">Disaster recovery</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"><span className="text-gray-300">Global accessibility</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div><span className="text-gray-300">Global accessibility</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"><span className="text-gray-300">Automated backups</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div><span className="text-gray-300">Automated backups</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-pink-400 rounded-full"><span className="text-gray-300">Compliance support</span>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="w-2 h-2 bg-pink-400 rounded-full"></div><span className="text-gray-300">Compliance support</span>
                 </div>
               </div>
             </div>
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="cyber-card p-6 text-center">
@@ -188,20 +199,25 @@ const CloudMigration: React.FC = () => {,
               <h3 className="text-xl font-bold text-white mb-4">Small Business</h3>,
               <div className="text-3xl font-bold text-cyan-400 mb-4">$2,500</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
+            <div className="cyber-card p-6 text-center"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Small Business</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$2,500</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <ul className="text-gray-300 space-y-2">
                 <li>Up to 10 servers<li>Basic migration</li>
                 <li>1-month support<li>Documentation</li>
               </ul>
             </div>
-            <div className="cyber-card p-6 text-center border-2 border-cyan-400">
-              <h3 className="text-xl font-bold text-white mb-4">Enterprise<div className="text-3xl font-bold text-cyan-400 mb-4">$15,000</div>
+            <div className="cyber-card p-6 text-center border-2 border-cyan-400"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3><div className="text-3xl font-bold text-cyan-400 mb-4">$15,000</div>
               <ul className="text-gray-300 space-y-2">
                 <li>Up to 100 servers<li>Advanced migration</li>
                 <li>3-month support<li>Training included<li>24/7 monitoring</li>
               </ul>
             </div>
-            <div className="cyber-card p-6 text-center">
-              <h3 className="text-xl font-bold text-white mb-4">Custom<div className="text-3xl font-bold text-cyan-400 mb-4">Quote</div>
+            <div className="cyber-card p-6 text-center"></div>
+              <h3 className="text-xl font-bold text-white mb-4">Custom</h3><div className="text-3xl font-bold text-cyan-400 mb-4">Quote</div>
               <ul className="text-gray-300 space-y-2">
                 <li>Unlimited servers<li>Custom solution</li>
                 <li>6-month support<li>Dedicated team<li>SLA guarantee</li>
@@ -209,9 +225,15 @@ const CloudMigration: React.FC = () => {,
             </div>
           </div>
 
+<<<<<<< HEAD
           <div className="text-center">
             <a;
               href="tel: +13024640950"
+=======
+          <div className="text-center"></div>
+            <a
+              href="tel:+13024640950"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               className="cyber-button mr-4"
 <<<<<<< HEAD
             >📞 Call: (302) 464-0950<a

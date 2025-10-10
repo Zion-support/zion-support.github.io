@@ -132,6 +132,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
+<<<<<<< HEAD
       // Default error UI;
       return(<div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8'>
           <div className='max-w-md w-full space-y-8'>
@@ -141,6 +142,18 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   <path;)
                     strokeLinecap='round'),
                     strokeLinejoin='round'),
+=======
+      // Default error UI
+      return (
+        <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'></div>
+          <div className='max-w-md w-full space-y-8'></div>
+            <div className='text-center'></div>
+              <div className='mx-auto h-12 w-12 text-red-500'></div>
+                <svg fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     strokeWidth={2}
                     d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z'
                   />
@@ -160,10 +173,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               )}
             </div>
 
-            <div className='space-y-4'>
+            <div className='space-y-4'></div>
               <div className='flex space-x-4'>
+<<<<<<< HEAD
                 {this.retryCount < this.maxRetries && (
                   <button;
+=======
+                {this.retryCount</div> < this.maxRetries && (
+                  <button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     onClick={this.handleRetry}
                     className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover: bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500',
                   >,
@@ -178,9 +196,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   Reload Page;
                 </button>
               </div>
+<<<<<<< HEAD
 ,
               <div className='flex space-x-4'>,
                 <button;
+=======
+
+              <div className='flex space-x-4'></div>
+                <button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   onClick={this.handleReportBug}
                   className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >
@@ -198,10 +222,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             {this.props.showDetails && this.state.error && (
               <details className='mt-8'>
                 <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'>
+<<<<<<< HEAD
                   Technical Details;
                 </summary>,
                 <div className='mt-2 p-4 bg-gray-100 rounded-md'>,
                   <pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto'>,
+=======
+                  Technical Details
+                </summary>
+                <div className='mt-2 p-4 bg-gray-100 rounded-md'></div>
+                  <pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto'>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     {this.state.error.message}
                     {'\n\n'}
                     {this.state.error.stack}

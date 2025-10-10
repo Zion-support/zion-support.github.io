@@ -4642,7 +4642,11 @@ const HomePage: React.FC = memo(() => {
             Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.
           </p>
           
+<<<<<<< HEAD
 <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16">
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Get Started Today;
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -4669,11 +4673,19 @@ const HomePage: React.FC = memo(() => {
             <div className="text-center">
               <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
               <div className="text-gray-400">Uptime Guarantee</div>
+<<<<<<< HEAD
             </div>,
           </div>,
 </div>,
       </section>,
 ,
+=======
+            </div>
+          </div>
+        </div>
+      </section>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
       {/* Services Section */}
 <<<<<<< HEAD
       <section className="py-24 px-4 sm:px-6 lg:px-8">
@@ -4727,10 +4739,10 @@ const HomePage: React.FC = memo(() => {
                     
                     <div className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </div>
+                          <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                            <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                            {feature}
+                          </div>
                       ))}
 <<<<<<< HEAD
 =======
@@ -4787,9 +4799,14 @@ const HomePage: React.FC = memo(() => {
                       </span>
                     </div>
                   )}
+<<<<<<< HEAD
                   <div className="text-center mb-4">
 <<<<<<< HEAD
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-400/25">
+=======
+                  <div className="text-center mb-4"></div>
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-400/25"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">{service.name}</h3>
@@ -4807,15 +4824,19 @@ const HomePage: React.FC = memo(() => {
                     
                     <div className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
+<<<<<<< HEAD
                         <div key={featureIndex} className="flex items-center text-sm text-gray-300">
 <<<<<<< HEAD
+=======
+                        <div key={featureIndex} className="flex items-center text-sm text-gray-300"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                           <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                           {feature}
                         </div>
                       ))}
                     </div>
                     
-                    <div className="text-center">
+                    <div className="text-center"></div>
                       <div className="text-2xl font-bold text-purple-400 mb-2">{service.price}</div>
                       <button className="neon-button-enhanced text-sm">
 =======
@@ -4854,13 +4875,17 @@ const HomePage: React.FC = memo(() => {
 
           {/* IT Services */}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="mb-24">
+=======
+          <div className="mb-24"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <h3 className="text-3xl font-bold text-white mb-12 text-center">IT Infrastructure Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {itServices.map((service, index) => (
-                <div key={index} className="cyber-grid-advanced p-6 hover:scale-105 transition-all duration-300 group cursor-pointer" onClick={() => window.open(service.link, '_blank')}>
-                  <div className="text-center mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-400 via-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-400/25">
+                <div key={index} className="cyber-grid-advanced p-6 hover:scale-105 transition-all duration-300 group cursor-pointer" onClick={() => window.open(service.link, '_blank')}></div>
+                  <div className="text-center mb-4"></div>
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-400 via-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-400/25"></div>
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.name}</h3>
@@ -4883,7 +4908,7 @@ const HomePage: React.FC = memo(() => {
                     
                     <div className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <div key={featureIndex} className="flex items-center text-sm text-gray-300"></div>
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </div>
@@ -4898,7 +4923,7 @@ const HomePage: React.FC = memo(() => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     </div>
                     
-                    <div className="text-center">
+                    <div className="text-center"></div>
                       <div className="text-2xl font-bold text-green-400 mb-2">{service.price}</div>
 <<<<<<< HEAD
                       <button className="neon-button text-sm">
@@ -4917,12 +4942,18 @@ const HomePage: React.FC = memo(() => {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* AI Services Section */}
       <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
+=======
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
+          <div className="text-center mb-16"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Enterprise AI Solutions;
             </h2>
@@ -4940,31 +4971,38 @@ const HomePage: React.FC = memo(() => {
                 }`}
                 onClick={() => window.open(service.link, '_blank')}
               >
-                {service.enterprise && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                {service.enterprise && (</div>
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                       Enterprise;
                     </span>
                   </div>
                 )}
                 
+<<<<<<< HEAD
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover: scale-110 transition-transform duration-300">,
                     <service.icon className="w-8 h-8 text-white" />,
                   </div>,
+=======
+                <div className="text-center"></div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"></div>
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">{service.name}</h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                   
                   <div className="grid grid-cols-2 gap-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-300"></div>
                         <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                         {feature}
                       </div>
                     ))}
                   </div>
                   
-                  <div className="text-center">
+                  <div className="text-center"></div>
                     <div className="text-3xl font-bold text-white mb-4">{service.price}</div>
                     <div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold px-6 py-3 rounded-lg hover: from-purple-600 hover:to-pink-700 transition-all group-hover:shadow-lg group-hover:shadow-purple-500/25">
                       Get Started;
@@ -4975,12 +5013,18 @@ const HomePage: React.FC = memo(() => {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {/* IT Services Section */}
       <section className="py-16 bg-white/5">
+<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
+=======
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
+          <div className="text-center mb-16"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               IT Infrastructure Services;
             </h2>,
@@ -4995,24 +5039,32 @@ const HomePage: React.FC = memo(() => {
                 key={index} 
                 className="cyber-card p-6 hover: scale-105 transition-all duration-300 group cursor-pointer",
                 onClick={() => window.open(service.link, '_blank')}
+<<<<<<< HEAD
               >
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300">,
                     <service.icon className="w-6 h-6 text-white" />,
                   </div>,
+=======
+              ></div>
+                <div className="text-center"></div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <h3 className="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.name}</h3>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">{service.description}</p>
                   
                   <div className="space-y-2 mb-4">
                     {service.features.slice(0, 3).map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-xs text-gray-300">
+                      <div key={featureIndex} className="flex items-center text-xs text-gray-300"></div>
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </div>
                     ))}
                   </div>
                   
-                  <div className="text-center">
+                  <div className="text-center"></div>
                     <div className="text-lg font-bold text-white mb-2">{service.price}</div>
                     <div className="text-green-400 hover: text-green-300 font-semibold text-sm transition-colors group-hover:underline">
                       Learn More →,
@@ -5023,13 +5075,14 @@ const HomePage: React.FC = memo(() => {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {/* Testimonials Section */}
 <<<<<<< HEAD
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
+          <div className="text-center mb-20"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Client Success Stories
 =======
@@ -5047,8 +5100,8 @@ const HomePage: React.FC = memo(() => {
           ,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="holographic-card p-8 hover:scale-105 transition-all duration-300 group">
-                <div className="flex items-center mb-4">
+              <div key={index} className="holographic-card p-8 hover:scale-105 transition-all duration-300 group"></div>
+                <div className="flex items-center mb-4"></div>
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-current" />
@@ -5058,11 +5111,11 @@ const HomePage: React.FC = memo(() => {
                 <p className="text-gray-300 mb-6 italic leading-relaxed">
                   "{testimonial.content}"
                 </p>
-                <div className="flex items-center">
+                <div className="flex items-center"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4 group-hover:scale-110 transition-transform duration-300">
                     {testimonial.avatar}
                   </div>
-                  <div>
+                  <div></div>
                     <h4 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">{testimonial.name}</h4>
                     <p className="text-gray-400 text-sm">{testimonial.role}</p>
                     <p className="text-gray-500 text-xs">{testimonial.company}</p>
@@ -5072,12 +5125,13 @@ const HomePage: React.FC = memo(() => {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {/* Stats Section */}
 <<<<<<< HEAD
       <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
 =======
       <section className="py-16">
@@ -5085,10 +5139,16 @@ const HomePage: React.FC = memo(() => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
             {stats.map((stat, index) => (
+<<<<<<< HEAD
               <div key={index} className="text-center group cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="relative mb-4">
 <<<<<<< HEAD
                   <div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
+=======
+              <div key={index} className="text-center group cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
+                <div className="relative mb-4"></div>
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
@@ -5107,12 +5167,13 @@ const HomePage: React.FC = memo(() => {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {/* Contact CTA Section */}
 <<<<<<< HEAD
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
 =======
       <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
@@ -5125,8 +5186,8 @@ const HomePage: React.FC = memo(() => {
             Contact us today for a free consultation and discover how our AI and IT solutions can revolutionize your operations.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
+            <div className="text-center"></div>
               <div className="text-2xl mb-2">📞</div>
               <h3 className="text-lg font-bold text-white mb-2">Phone</h3>
               <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-medium">
@@ -5134,7 +5195,7 @@ const HomePage: React.FC = memo(() => {
               </a>
             </div>
             
-            <div className="text-center">
+            <div className="text-center"></div>
               <div className="text-2xl mb-2">✉️</div>
               <h3 className="text-lg font-bold text-white mb-2">Email</h3>
               <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-medium">
@@ -5142,11 +5203,19 @@ const HomePage: React.FC = memo(() => {
               </a>
             </div>
             
+<<<<<<< HEAD
             <div className="text-center">
               <div className="text-2xl mb-2">📍</div>,
               <h3 className="text-lg font-bold text-white mb-2">Location</h3>,
               <p className="text-cyan-400 font-medium">,
                 Middletown, DE;
+=======
+            <div className="text-center"></div>
+              <div className="text-2xl mb-2">📍</div>
+              <h3 className="text-lg font-bold text-white mb-2">Location</h3>
+              <p className="text-cyan-400 font-medium">
+                Middletown, DE
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </p>
 
             </div>
@@ -5160,6 +5229,7 @@ const HomePage: React.FC = memo(() => {
             Get Free Consultation;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </button>
+        </div>
         </div>
       </section>
 

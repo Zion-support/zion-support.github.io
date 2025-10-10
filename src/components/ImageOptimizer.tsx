@@ -84,8 +84,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
     return(<div;
         className={`bg-slate-800 flex items-center justify-center ${className}`}
         style={{ width, height }}
-      >
-        <div className="text-gray-400 text-center">
+      ></div>
+        <div className="text-gray-400 text-center"></div>
           <div className="text-4xl mb-2">⚠️</div>
           <div className="text-sm">Image failed to load</div>)
         </div>)
@@ -98,9 +98,15 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
     >
+<<<<<<< HEAD
       {/* Placeholder */})
       {!isLoaded && ()
         <img;)
+=======
+      {/* Placeholder */}
+      {!isLoaded && (</div>
+        <img
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
           src={generatePlaceholder()}
           alt=""
           className="absolute inset-0 w-full h-full object-cover animate-pulse"

@@ -56,17 +56,29 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   }
 
+<<<<<<< HEAD
       return(<div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
+=======
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <div className="text-6xl mb-4">⚠️</div>
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
               Oops! Something went wrong;
             </h1>
             <p className="text-gray-600 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
+<<<<<<< HEAD
             </p>)
             <div className="space-y-4">)
               <button;)
+=======
+            </p>
+            <div className="space-y-4"></div>
+              <button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 onClick={() => window.location.reload()}
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors"
               >

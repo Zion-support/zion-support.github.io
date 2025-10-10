@@ -686,13 +686,13 @@ name: 'AI-Powered Infrastructure Management',
 <<<<<<< HEAD
   return (
 
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg"></div>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced quantum-particles">{/* Hero Section */}</div>
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 animate-pulse"><div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 animate-pulse"></section><div className="container mx-auto px-4 relative z-10"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
 
-<h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">IT Services<p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently.</p>
+<h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">IT Services</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently.</p>
               From infrastructure to security, we've got you covered.</p>
 =======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg">
@@ -713,31 +713,37 @@ name: 'AI-Powered Infrastructure Management',
             </p>
 
             {/* Stats */}
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">150+<div className="text-gray-300">IT Services</div>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12"></div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20"></div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">150+</div><div className="text-gray-300">IT Services</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
-                <div className="text-3xl font-bold text-purple-400 mb-2">750+<div className="text-gray-300">Enterprise Clients</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20"></div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">750+</div><div className="text-gray-300">Enterprise Clients</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
-                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%<div className="text-gray-300">Uptime SLA</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20"></div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div><div className="text-gray-300">Uptime SLA</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20">
-                <div className="text-3xl font-bold text-green-400 mb-2">24/7<div className="text-gray-300">Support</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20"></div>
+                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div><div className="text-gray-300">Support</div>
               </div>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
+            <div className="flex flex-wrap justify-center gap-4"></div>
+              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
                 <Shield className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">Enterprise Security</span>
               </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
                 <Cloud className="w-5 h-5 text-purple-400" />
                 <span className="text-white font-medium">Cloud Solutions</span>
               </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
                 <Settings className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">24/7 Support</span>
               </div>
@@ -748,12 +754,20 @@ name: 'AI-Powered Infrastructure Management',
 ,
       {/* Benefits */}
       <section className="py-20">
+<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
 <<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Why Choose Our IT Services?<p className="text-lg text-gray-300 max-w-3xl mx-auto">Proven expertise and enterprise-grade solutions that deliver measurable business value<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
               <div key={index} className="text-center group">
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+=======
+        <div className="container mx-auto px-4"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Why Choose Our IT Services?</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Proven expertise and enterprise-grade solutions that deliver measurable business value</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
+              <div key={index} className="text-center group"></div>
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <benefit.icon className="w-10 h-10 text-white" />
 =======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
@@ -771,7 +785,7 @@ name: 'AI-Powered Infrastructure Management',
                 </div>,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div className="text-4xl font-bold text-white mb-2">{benefit.stat}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}<p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3><p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -780,15 +794,24 @@ name: 'AI-Powered Infrastructure Management',
 
       {/* IT Services */}
       <section className="py-20 bg-slate-800/50">
+<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
 <<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Services<p className="text-lg text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed to meet your business needs<div className="space-y-16">{itServices.map((category, categoryIndex) => (</div>
               <div key={categoryIndex}>
                 <div className="flex items-center space-x-3 mb-8">
+=======
+        <div className="container mx-auto px-4"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Services</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed to meet your business needs</p><div className="space-y-16">{itServices.map((category, categoryIndex) => (</div>
+              <div key={categoryIndex}></div>
+                <div className="flex items-center space-x-3 mb-8"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <category.icon className={`w-8 h-8 ${category.color}`} />
-                  <h3 className="text-2xl font-bold text-white">{category.category}<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">{category.services.map((service, serviceIndex) => (</div>
+                  <h3 className="text-2xl font-bold text-white">{category.category}</h3><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">{category.services.map((service, serviceIndex) => (</div>
 </div>
+<<<<<<< HEAD
 <div key={serviceIndex} className="futuristic-card hover-lift p-6 relative">
 <div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">{service.popular && (<div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Popular</div>
 =======
@@ -815,13 +838,17 @@ name: 'AI-Powered Infrastructure Management',
                         <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
                           Popular;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+<div key={serviceIndex} className="futuristic-card hover-lift p-6 relative"></div>
+<div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">{service.popular && (</div><div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Popular</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         </div>
                       )}
 
-                      <div className="relative z-10">
+                      <div className="relative z-10"></div>
                         <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">{service.name}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
 
-                        <div className="space-y-4 mb-6">
+                        <div className="space-y-4 mb-6"></div>
                           <h5 className="text-lg font-semibold text-white flex items-center">
 <<<<<<< HEAD
                             <Zap className="w-4 h-4 mr-2 text-cyan-400" >Key Features:<ul className="space-y-2">{service.features.slice(0, 4).map((feature, featureIndex) => (</ul>
@@ -848,14 +875,21 @@ name: 'AI-Powered Infrastructure Management',
                           </ul>
                         </div>
 
+<<<<<<< HEAD
                         <div className="space-y-3 mb-6">
                           <div className="flex justify-between items-center">
 <<<<<<< HEAD
                             <span className="text-sm text-gray-400">Pricing:<span className="text-lg font-bold text-cyan-400">{service.pricing}</span>
+=======
+                        <div className="space-y-3 mb-6"></div>
+                          <div className="flex justify-between items-center"></div>
+                            <span className="text-sm text-gray-400">Pricing:</span><span className="text-lg font-bold text-cyan-400">{service.pricing}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                           </div>
-                          <div className="flex justify-between items-center">
-                            <span className="text-sm text-gray-400">Trial:<span className="text-sm font-medium text-green-400">{service.trial}</span>
+                          <div className="flex justify-between items-center"></div>
+                            <span className="text-sm text-gray-400">Trial:</span><span className="text-sm font-medium text-green-400">{service.trial}</span>
                           </div>
+<<<<<<< HEAD
                           <div className="flex justify-between items-center">
                             <span className="text-sm text-gray-400">Timeline:<span className="text-sm font-medium text-purple-400">{service.timeline}</span>
 =======
@@ -875,6 +909,15 @@ name: 'AI-Powered Infrastructure Management',
 
                         <div className="space-y-3">
                           <a;
+=======
+                          <div className="flex justify-between items-center"></div>
+                            <span className="text-sm text-gray-400">Timeline:</span><span className="text-sm font-medium text-purple-400">{service.timeline}</span>
+                          </div>
+                        </div>
+
+                        <div className="space-y-3"></div>
+                          <a
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                             href={service.link}
 <<<<<<< HEAD
                             className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
@@ -898,9 +941,15 @@ name: 'AI-Powered Infrastructure Management',
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                           </a>
                         </div>
+<<<<<<< HEAD
                       </div>,
 <div className="space-y-2">,
                         <a;
+=======
+                      </div>
+<div className="space-y-2"></div>
+                        <a
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                           href={service.link}
                           className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
 <<<<<<< HEAD
@@ -932,6 +981,7 @@ name: 'AI-Powered Infrastructure Management',
 
       {/* Technologies */}
       <section className="py-20">
+<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
 <<<<<<< HEAD
@@ -949,9 +999,16 @@ name: 'AI-Powered Infrastructure Management',
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+=======
+        <div className="container mx-auto px-4"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Technologies We Work With</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">We work with the latest and most reliable technologies in the industry</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{technologies.map((tech, index) => (</div>
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <tech.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-4">{tech.category}</h3>
-                <div className="space-y-2">{tech.techs.map((technology, techIndex) => (<div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">{technology}</div>
+                <div className="space-y-2">{tech.techs.map((technology, techIndex) => (</div><div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">{technology}</div>
                     </div>
                   ))}
                 </div>
@@ -963,15 +1020,22 @@ name: 'AI-Powered Infrastructure Management',
 
       {/* Process */}
       <section className="py-20 bg-slate-800/50">
+<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
 <<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Implementation Process<p className="text-lg text-gray-300 max-w-3xl mx-auto">A proven methodology that ensures successful IT implementation</p>
+=======
+        <div className="container mx-auto px-4"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Implementation Process</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">A proven methodology that ensures successful IT implementation</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
           </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
+          <div className="max-w-4xl mx-auto"></div>
+            <div className="relative"></div>
               <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600">{process.map((step, index) => (</div>
+<<<<<<< HEAD
                 </div><div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
 =======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
@@ -991,9 +1055,16 @@ name: 'AI-Powered Infrastructure Management',
                     <div className="bg-slate-800/50 p-6 rounded-lg">
                       <div className="text-cyan-400 font-bold text-lg mb-2">Step {step.step}<h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
                       <p className="text-gray-300 mb-2">{step.description}<div className="text-sm text-cyan-400 font-medium">{step.duration}</div>
+=======
+                </div><div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}></div>
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}></div>
+                    <div className="bg-slate-800/50 p-6 rounded-lg"></div>
+                      <div className="text-cyan-400 font-bold text-lg mb-2">Step {step.step}</div><h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
+                      <p className="text-gray-300 mb-2">{step.description}</p><div className="text-sm text-cyan-400 font-medium">{step.duration}</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     </div>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"><div className="w-1/2">))}</div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"></div><div className="w-1/2">))}</div>
             </div>
           </div>
         </div>
@@ -1001,6 +1072,7 @@ name: 'AI-Powered Infrastructure Management',
 
       {/* Case Studies */}
       <section className="py-20">
+<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
 <<<<<<< HEAD
@@ -1010,12 +1082,22 @@ name: 'AI-Powered Infrastructure Management',
                   <span className="text-2xl font-bold text-white">{study.company.split(' ').map(word => word[0]).join('')}<h3 className="text-xl font-bold text-white mb-2">{study.company}<p className="text-cyan-400 text-sm mb-4">{study.industry}</p>
                 <div className="space-y-3">
                   <div>
+=======
+        <div className="container mx-auto px-4"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Success Stories</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Real results from real clients across various industries</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{caseStudies.map((study, index) => (</div>
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300"></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
+                  <span className="text-2xl font-bold text-white">{study.company.split(' ').map(word => word[0]).join('')}</span><h3 className="text-xl font-bold text-white mb-2">{study.company}</h3><p className="text-cyan-400 text-sm mb-4">{study.industry}</p>
+                <div className="space-y-3"></div>
+                  <div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <h4 className="text-sm font-semibold text-gray-300 mb-1">Challenge:<p className="text-sm text-gray-400">{study.challenge}</p>
                   </div>
-                  <div>
+                  <div></div>
                     <h4 className="text-sm font-semibold text-gray-300 mb-1">Solution:<p className="text-sm text-gray-400">{study.solution}</p>
                   </div>
-                  <div>
+                  <div></div>
                     <h4 className="text-sm font-semibold text-gray-300 mb-1">Results:<ul className="space-y-1">{study.results.map((result, resultIndex) => (</ul>
 =======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
@@ -1065,6 +1147,7 @@ name: 'AI-Powered Infrastructure Management',
 
       {/* CTA Section */}
       <section className="relative py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 overflow-hidden">{/* Animated Background */}</section>
+<<<<<<< HEAD
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -1080,6 +1163,16 @@ name: 'AI-Powered Infrastructure Management',
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a;
+=======
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" /></section>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+
+        <div className="container mx-auto px-4 text-center relative z-10"></div>
+          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text">Ready to Modernize Your IT Infrastructure?</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join 500+ enterprises that have already transformed their IT operations with our solutions. Get started today!</p>
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8"></div>
+            <a
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="https://ziontechgroup.com/contact"
 className="neon-button-enhanced px-8 py-3 rounded-lg font-bold transition-colors inline-flex items-center"
 
@@ -1105,6 +1198,7 @@ className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover
               <Phone className="w-5 h-5 mr-2" >Call: +1 (302) 464-0950</Phone>
             </Phone>
           </div>
+<<<<<<< HEAD
           <div className="text-gray-200 text-sm">
 =======
               <Phone className="w-5 h-5 mr-2" />
@@ -1113,6 +1207,9 @@ className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover
           </div>,
           <div className="text-gray-200 text-sm">,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+          <div className="text-gray-200 text-sm"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
 
           </div>

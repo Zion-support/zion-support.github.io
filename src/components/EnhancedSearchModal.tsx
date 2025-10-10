@@ -216,6 +216,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
 
   if (!isOpen) return null;
 
+<<<<<<< HEAD
   return(<div className="fixed inset-0 z-50 overflow-y-auto">
       <div className="flex min-h-screen items-start justify-center p-4 pt-16">
         {/* Backdrop */}
@@ -224,9 +225,21 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
           onClick={onClose}
         />
         {/* Modal */}
+=======
+  return (
+    <div className="fixed inset-0 z-50 overflow-y-auto"></div>
+      <div className="flex min-h-screen items-start justify-center p-4 pt-16">
+        {/* Backdrop */}</div>
+        <div 
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+          onClick={onClose}
+        />
+        
+        {/* Modal */}</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div className="relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md rounded-xl border border-cyan-400/20 shadow-2xl">
-          {/* Search Input */}
-          <div className="flex items-center p-4 border-b border-cyan-400/20">
+          {/* Search Input */}</div>
+          <div className="flex items-center p-4 border-b border-cyan-400/20"></div>
             <Search className="w-5 h-5 text-cyan-400 mr-3" />
             <input;
               ref={inputRef}
@@ -247,16 +260,21 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
           {/* Content */}
           <div className="max-h-96 overflow-y-auto">
             {query === '' && showSuggestions ? (
-              /* Suggestions */
-              <div className="p-4">
-                <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
+              /* Suggestions */</div>
+              <div className="p-4"></div>
+                <div className="mb-6"></div>
+                  <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center"></h3>
                     <Clock className="w-4 h-4 mr-2" />
                     Recent Searches;
                   </h3>
                   <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
                     {recentSearches.map((search, index) => (
                       <button;
+=======
+                    {recentSearches.map((search, index) => (</div>
+                      <button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         key={index}
                         onClick={() => handleSuggestionClick(search)}
                         className="px-3 py-1 bg-slate-800 text-gray-300 rounded-full text-sm hover: bg-cyan-400/20 hover:text-cyan-400 transition-colors",
@@ -267,14 +285,19 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                   </div>
                 </div>
 
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
+                <div></div>
+                  <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center"></h3>
                     <TrendingUp className="w-4 h-4 mr-2" />
                     Popular Searches;
                   </h3>
                   <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
                     {popularSearches.map((search, index) => (
                       <button;
+=======
+                    {popularSearches.map((search, index) => (</div>
+                      <button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         key={index}
                         onClick={() => handleSuggestionClick(search)}
                         className="px-3 py-1 bg-slate-800 text-gray-300 rounded-full text-sm hover: bg-cyan-400/20 hover:text-cyan-400 transition-colors",
@@ -287,15 +310,20 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
               </div>
             ) : isSearching ? (
               /* Loading */
-              <div className="p-8 text-center">
+              <div className="p-8 text-center"></div>
                 <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
                 <p className="text-gray-400">Searching...</p>
               </div>
             ) : results.length > 0 ? (
               /* Results */
               <div className="p-2">
+<<<<<<< HEAD
                 {results.map((result, index) => (
                   <button;
+=======
+                {results.map((result, index) => (</div>
+                  <button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     key={result.id}
                     onClick={() => handleResultClick(result)}
                     className={`w-full text-left p-3 rounded-lg transition-colors ${
@@ -304,10 +332,10 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                         : 'hover:bg-slate-800/50 text-gray-300'}
                     }`}
                   >
-                    <div className="flex items-start space-x-3">
+                    <div className="flex items-start space-x-3"></div>
                       <div className="text-2xl">{getCategoryIcon(result.category)}</div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center space-x-2 mb-1">
+                      <div className="flex-1 min-w-0"></div>
+                        <div className="flex items-center space-x-2 mb-1"></div>
                           <h4 className="font-medium text-white truncate">{result.title}</h4>
                           <span className={`text-xs px-2 py-1 rounded ${getTypeColor(result.type)} bg-slate-800`}>
                             {result.type}
@@ -317,7 +345,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
                           )}
                         </div>
                         <p className="text-sm text-gray-400 line-clamp-2">{result.description}</p>
-                        <div className="flex items-center space-x-4 mt-2 text-xs text-gray-500">
+                        <div className="flex items-center space-x-4 mt-2 text-xs text-gray-500"></div>
                           <span>{result.category}</span>
                           {result.lastModified && (
                             <span>Updated {new Date(result.lastModified).toLocaleDateString()}</span>
@@ -331,7 +359,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
               </div>
             ) : query && !isSearching ? (
               /* No Results */
-              <div className="p-8 text-center">
+              <div className="p-8 text-center"></div>
                 <div className="text-4xl mb-4">🔍</div>
                 <h3 className="text-lg font-medium text-white mb-2">No results found</h3>
                 <p className="text-gray-400 mb-4">
@@ -345,13 +373,13 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
           </div>
 
           {/* Footer */}
-          <div className="p-4 border-t border-cyan-400/20 bg-slate-800/50">
-            <div className="flex items-center justify-between text-xs text-gray-400">
-              <div className="flex items-center space-x-4">
-                <span>Press <kbd className="px-1 py-0.5 bg-slate-700 rounded">↑↓</kbd> to navigate</span>
-                <span>Press <kbd className="px-1 py-0.5 bg-slate-700 rounded">Enter</kbd> to select</span>
+          <div className="p-4 border-t border-cyan-400/20 bg-slate-800/50"></div>
+            <div className="flex items-center justify-between text-xs text-gray-400"></div>
+              <div className="flex items-center space-x-4"></div>
+                <span>Press</span> <kbd className="px-1 py-0.5 bg-slate-700 rounded">↑↓</kbd> to navigate</span>
+                <span>Press</span> <kbd className="px-1 py-0.5 bg-slate-700 rounded">Enter</kbd> to select</span>
               </div>
-              <span>Press <kbd className="px-1 py-0.5 bg-slate-700 rounded">Esc</kbd> to close</span>
+              <span>Press</span> <kbd className="px-1 py-0.5 bg-slate-700 rounded">Esc</kbd> to close</span>
             </div>
           </div>
         </div>

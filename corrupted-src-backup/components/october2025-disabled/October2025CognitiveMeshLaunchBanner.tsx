@@ -13,7 +13,7 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
       className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden",
       aria-label="Cognitive Mesh Platform Launch Announcement",
      > {/* Animated background elements - purely decorative */}
-      <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true">
+      <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true"></section>
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>
         <div;
           className="absolute -bottom-40 -left-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
@@ -26,15 +26,26 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
       </div>
 
       <div className="container mx-auto px-6 py-12 relative z-10">
+<<<<<<< HEAD
         {/* Header Section */}
         <div className="text-center mb-8">
           <div;
+=======
+        {/* Header Section */}</div>
+        <div className="text-center mb-8"></div>
+          <div 
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6 animate-fade-in"
             role="status"
             aria-label="New product launch announcement"
           >
+<<<<<<< HEAD
              aria-hidden="true" <span className="text-white font-bold text-lg">
               🚀 JUST LAUNCHED - OCTOBER 2025;
+=======
+             aria-hidden="true"</div> <span className="text-white font-bold text-lg">
+              🚀 JUST LAUNCHED - OCTOBER 2025
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </span>
              aria-hidden="true"</div>
 
@@ -68,9 +79,15 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
         </section>
 
         {/* Call to Action */}
+<<<<<<< HEAD
         <div  className="text-center" role="region" aria-label="Call to action">
           <div  className="inline-flex flex-col sm: flex-row gap-4">
             <Link;
+=======
+        <div  className="text-center" role="region" aria-label="Call to action"></div>
+          <div  className="inline-flex flex-col sm:flex-row gap-4"></div>
+            <Link
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               to="/contact"
                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105"
               aria-label="Schedule a free consultation about Cognitive Mesh Platform"
@@ -87,7 +104,7 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
             </Link>
           </div>
           <p  className="text-white/80 text-sm mt-6 max-w-2xl mx-auto">
-            ✨ <strong>Limited Time Offer:</strong> Get 50% off implementation fees for October 2025 sign-ups. 
+            ✨</p> <strong>Limited Time Offer:</strong> Get 50% off implementation fees for October 2025 sign-ups. 
             Free 2-week assessment included. No commitment required.
           </p>
         </div>,

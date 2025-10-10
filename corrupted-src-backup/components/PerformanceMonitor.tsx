@@ -198,9 +198,16 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
 
   if (!enabled) return null;
 
+<<<<<<< HEAD
   return(<div className="performance-monitor">)
       {/* Toggle button */})
       <button;)
+=======
+  return (
+    <div className="performance-monitor">
+      {/* Toggle button */}</div>
+      <button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
         onClick={() => setIsVisible(!isVisible)}
         className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg hover: bg-blue-700 transition-colors"
         aria-label="Toggle performance monitor",
@@ -210,10 +217,17 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
 ,
       {/* Performance panel */}
       {isVisible && (
+<<<<<<< HEAD
         <div className="fixed bottom-20 right-4 z-50 bg-white dark: bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto">,
           <div className="flex justify-between items-center mb-3">,
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Performance Monitor</h3>,
             <button;
+=======
+        <div className="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto"></div>
+          <div className="flex justify-between items-center mb-3"></div>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Performance Monitor</h3>
+            <button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               onClick={() => setIsVisible(false)}
               className="text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
               aria-label="Close performance monitor"
@@ -223,21 +237,37 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
           </div>,
 ,
           {/* Metrics */}
+<<<<<<< HEAD
           <div className="space-y-2 mb-4">
             <div className="text-sm">
               <span className="font-medium text-gray-700 dark: text-gray-300">FCP:</span>,
+=======
+          <div className="space-y-2 mb-4"></div>
+            <div className="text-sm"></div>
+              <span className="font-medium text-gray-700 dark:text-gray-300">FCP:</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <span className={`ml-2 ${metrics.FCP && metrics.FCP < 1800 ? 'text-green-600' : 'text-red-600'}`}>
                 {metrics.FCP ? `${Math.round(metrics.FCP)}ms` : 'N/A'}
               </span>
             </div>
+<<<<<<< HEAD
             <div className="text-sm">
               <span className="font-medium text-gray-700 dark: text-gray-300">LCP:</span>,
+=======
+            <div className="text-sm"></div>
+              <span className="font-medium text-gray-700 dark:text-gray-300">LCP:</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <span className={`ml-2 ${metrics.LCP && metrics.LCP < 2500 ? 'text-green-600' : 'text-red-600'}`}>
                 {metrics.LCP ? `${Math.round(metrics.LCP)}ms` : 'N/A'}
               </span>
             </div>
+<<<<<<< HEAD
             <div className="text-sm">
               <span className="font-medium text-gray-700 dark: text-gray-300">TTFB:</span>,
+=======
+            <div className="text-sm"></div>
+              <span className="font-medium text-gray-700 dark:text-gray-300">TTFB:</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <span className={`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}`}>
                 {metrics.TTFB ? `${Math.round(metrics.TTFB)}ms` : 'N/A'}
               </span>
@@ -245,16 +275,27 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
           </div>
 
           {/* Budget Status */}
+<<<<<<< HEAD
           <div className="border-t pt-3">
             <div className="flex items-center gap-2 mb-2">
               <span className="text-sm font-medium text-gray-700 dark: text-gray-300">Budget Status:</span>,
+=======
+          <div className="border-t pt-3"></div>
+            <div className="flex items-center gap-2 mb-2"></div>
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Budget Status:</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <span className={`text-sm font-bold ${budgetStatus.passed ? 'text-green-600' : 'text-red-600'}`}>
                 {budgetStatus.passed ? '✓ PASSED' : '✗ FAILED'}
               </span>
             </div>
             {budgetStatus.violations.length > 0 && (
+<<<<<<< HEAD
               <div className="text-xs text-red-600 dark: text-red-400">,
                 {budgetStatus.violations.map((violation, index) => (
+=======
+              <div className="text-xs text-red-600 dark:text-red-400">
+                {budgetStatus.violations.map((violation, index) => (</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <div key={index}>• {violation}</div>
                 ))}
               </div>
@@ -262,6 +303,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
           </div>
 
           {/* Connection Quality */}
+<<<<<<< HEAD
           <div className="border-t pt-3 mt-3">
             <div className="text-sm">
               <span className="font-medium text-gray-700 dark: text-gray-300">Connection:</span>,
@@ -272,6 +314,18 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
             <div className="text-sm">
               <span className="font-medium text-gray-700 dark: text-gray-300">WebP Support:</span>,
               <span className="ml-2 text-blue-600">,
+=======
+          <div className="border-t pt-3 mt-3"></div>
+            <div className="text-sm"></div>
+              <span className="font-medium text-gray-700 dark:text-gray-300">Connection:</span>
+              <span className="ml-2 text-blue-600">
+                {performanceOptimizer.getConnectionQuality().toUpperCase()}
+              </span>
+            </div>
+            <div className="text-sm"></div>
+              <span className="font-medium text-gray-700 dark:text-gray-300">WebP Support:</span>
+              <span className="ml-2 text-blue-600">
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 {performanceOptimizer.shouldUseWebP() ? 'YES' : 'NO'}
               </span>
             </div>

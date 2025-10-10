@@ -143,11 +143,19 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
       role="main"
       aria-label="Main content"
     >
+<<<<<<< HEAD
       {/* Skip to main content link */})
       <a;)
         href="#main-content")
         className="skip-link")
         onClick={e => {)
+=======
+      {/* Skip to main content link */}</div>
+      <a
+        href="#main-content"
+        className="skip-link"
+        onClick={e => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
           e.preventDefault();
           const _main = document.querySelector('main') || document.querySelector('#main-content');
           if (main) {}
@@ -160,8 +168,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
       </a>
 
       {/* Accessibility controls */}
+<<<<<<< HEAD
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">
         <button;
+=======
+      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls"></div>
+        <button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
           onClick={() => setIsHighContrast(!isHighContrast)}
           className="accessibility-toggle"
           aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}

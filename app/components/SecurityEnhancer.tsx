@@ -291,7 +291,7 @@ export const SecurityEnhancer: React.FC = () => {,
 
       {/* Security Warnings */}
       {securityWarnings.length > 0 && (
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md">
+        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md"></div>
           <h4 className="font-bold mb-2">Security Warnings<ul className="text-sm space-y-1">{securityWarnings.map((warning, index) => (<li key={index}>• {warning}</li>
             ))}
           </ul>
@@ -300,11 +300,11 @@ export const SecurityEnhancer: React.FC = () => {,
 
       {/* Security Metrics (Development Only) */}
       {process.env.NODE_ENV === 'development' && (
-        <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs">
+        <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs"></div>
           <h4 className="font-bold mb-2">Security Metrics</h4>
-          <div className="space-y-1">
-            <div>CSP Violations: {metrics.cspViolations}<div>XSS Attempts: {metrics.xssAttempts}</div>
-            <div>CSRF Attempts: {metrics.csrfAttempts}<div>Suspicious Activity: {metrics.suspiciousActivity}</div>
+          <div className="space-y-1"></div>
+            <div>CSP Violations: {metrics.cspViolations}</div><div>XSS Attempts: {metrics.xssAttempts}</div>
+            <div>CSRF Attempts: {metrics.csrfAttempts}</div><div>Suspicious Activity: {metrics.suspiciousActivity}</div>
           </div>
         </div>
       )}

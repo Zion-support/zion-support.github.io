@@ -346,6 +346,7 @@ export class ErrorHandler {
 <<<<<<< HEAD
     `;</string>
     notification.innerHTML = `</string>
+<<<<<<< HEAD
       <div style="display:flex;justify-content:space-between;align-items:center;">
         <div>
           <strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
@@ -359,6 +360,11 @@ export class ErrorHandler {
         </div>
         <button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+      <div style="display:flex;justify-content:space-between;align-items:center;"></div>
+        <div></div>
+          <strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
       </div>
     `;
     document.body.appendChild(notification);
@@ -545,10 +551,17 @@ export class ErrorBoundary extends React.Component<
   render() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
     if (this.state.hasError) {
+<<<<<<< HEAD
       return(this.props.fallback || (
           <div style={{ padding: '20px', textAlign: 'center' }}>
 <<<<<<< HEAD
             <h2>Something went wrong<p>We're sorry, but something unexpected happened.<button
+=======
+      return (
+        this.props.fallback || (
+          <div style={{ padding: '20px', textAlign: 'center' }}></div>
+            <h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               onClick={() =>this.setState({ hasError: false, error: undefined })}
 =======
             <h2>Something went wrong</h2>)

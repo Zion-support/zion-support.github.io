@@ -54,6 +54,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
 <<<<<<< HEAD
       // Default error UI</Props>
       return (</Props>
+<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
 =======
       // Default error UI;
@@ -61,6 +62,11 @@ class GlobalErrorBoundary extends Component<Props, State> {
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20">
             <div className="text-6xl mb-4">⚠️<h1 className="text-2xl font-bold text-white mb-4">Something went wrong<p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page.</p>
+=======
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20"></div>
+            <div className="text-6xl mb-4">⚠️</div><h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1><p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
 
 <<<<<<< HEAD
@@ -82,8 +88,12 @@ class GlobalErrorBoundary extends Component<Props, State> {
               </details>
             )}
 
+<<<<<<< HEAD
             <div className="space-y-3">
 <<<<<<< HEAD
+=======
+            <div className="space-y-3"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <button
                 onClick={() =>window.location.reload()}
                 className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"

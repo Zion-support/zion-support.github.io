@@ -99,12 +99,18 @@ const GDPRPage: React.FC = () => {,
     }
   ];
 
+<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
 <<<<<<< HEAD
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-16">
+<<<<<<< HEAD
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">GDPR Compliance<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We are committed to protecting your privacy and ensuring compliance with the General Data Protection Regulation (GDPR).<div className="text-sm text-gray-400">Last updated: {lastUpdated}</div>
 =======
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -119,19 +125,23 @@ const GDPRPage: React.FC = () => {,
           <div className="text-sm text-gray-400">,
             Last updated: {lastUpdated}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">GDPR Compliance</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We are committed to protecting your privacy and ensuring compliance with the General Data Protection Regulation (GDPR).</p><div className="text-sm text-gray-400">Last updated: {lastUpdated}</section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
           </div>
         </section>
 
         {/* Introduction */}
         <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Our GDPR Commitment<p className="text-gray-300 mb-4 leading-relaxed">Zion Tech Group is fully committed to compliance with the General Data Protection Regulation (GDPR) and other applicable data protection laws. We have implemented comprehensive measures to ensure the protection of your personal data and respect for your privacy rights.<p className="text-gray-300 leading-relaxed">This page outlines our GDPR compliance measures, your rights under GDPR, and how you can exercise those rights.</p>
+          <div className="cyber-card p-8"></section>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Our GDPR Commitment</h2><p className="text-gray-300 mb-4 leading-relaxed">Zion Tech Group is fully committed to compliance with the General Data Protection Regulation (GDPR) and other applicable data protection laws. We have implemented comprehensive measures to ensure the protection of your personal data and respect for your privacy rights.</p><p className="text-gray-300 leading-relaxed">This page outlines our GDPR compliance measures, your rights under GDPR, and how you can exercise those rights.</p>
             </p>
           </div>
         </section>
 
         {/* Your Rights */}
         <section className="mb-16">
+<<<<<<< HEAD
 <<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Your Rights Under GDPR<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{rights.map((right, index) => (</div>
 =======
@@ -145,6 +155,14 @@ const GDPRPage: React.FC = () => {,
                   <h3 className="text-xl font-bold text-white">{right.title}<p className="text-gray-300 mb-4">{right.description}</p>
                 <div>
 <<<<<<< HEAD
+=======
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Your Rights Under GDPR</h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{rights.map((right, index) => (</section>
+              <div key={index} className="cyber-card p-6"></div>
+                <div className="flex items-center mb-4"></div>
+                  <right.icon className="w-8 h-8 text-cyan-400 mr-3" />
+                  <h3 className="text-xl font-bold text-white">{right.title}</h3><p className="text-gray-300 mb-4">{right.description}</p>
+                <div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">What this means:<ul className="space-y-1">{right.details.map((detail, detailIndex) => (</ul>
 =======
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">What this means: </h4>,
@@ -164,6 +182,7 @@ const GDPRPage: React.FC = () => {,
 
         {/* Legal Bases */}
         <section className="mb-16">
+<<<<<<< HEAD
           <div className="cyber-card p-8">
 <<<<<<< HEAD
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Legal Bases for Processing<p className="text-gray-300 mb-6">We process your personal data based on one or more of the following legal bases under GDPR:<div className="grid grid-cols-1 md:grid-cols-2 gap-6">{legalBases.map((basis, index) => (</div>
@@ -178,6 +197,13 @@ const GDPRPage: React.FC = () => {,
                   <h3 className="text-lg font-semibold text-cyan-400 mb-3">{basis.title}<p className="text-gray-300 mb-4 text-sm">{basis.description}</p>
                   <div>
 <<<<<<< HEAD
+=======
+          <div className="cyber-card p-8"></section>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Legal Bases for Processing</h2><p className="text-gray-300 mb-6">We process your personal data based on one or more of the following legal bases under GDPR:</p><div className="grid grid-cols-1 md:grid-cols-2 gap-6">{legalBases.map((basis, index) => (</div>
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6"></div>
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-3">{basis.title}</h3><p className="text-gray-300 mb-4 text-sm">{basis.description}</p>
+                  <div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Examples:<ul className="space-y-1">{basis.examples.map((example, exampleIndex) => (</ul>
 =======
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Examples: </h4>,
@@ -198,10 +224,15 @@ const GDPRPage: React.FC = () => {,
 
         {/* Data Protection Measures */}
         <section className="mb-16">
-          <div className="cyber-card p-8">
+          <div className="cyber-card p-8"></section>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Data Protection Measures</h2>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
               <div>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+              <div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Technical Safeguards</h3>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start">
@@ -222,7 +253,7 @@ const GDPRPage: React.FC = () => {,
                   </li>
                 </ul>
               </div>
-              <div>
+              <div></div>
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Organizational Safeguards</h3>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start">
@@ -249,11 +280,16 @@ const GDPRPage: React.FC = () => {,
 ,
         {/* How to Exercise Your Rights */}
         <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">How to Exercise Your Rights<p className="text-gray-300 mb-6">To exercise any of your GDPR rights, please contact us using the information below. We will respond to your request within 30 days.</p>
+          <div className="cyber-card p-8"></section>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">How to Exercise Your Rights</h2><p className="text-gray-300 mb-6">To exercise any of your GDPR rights, please contact us using the information below. We will respond to your request within 30 days.</p>
             </p>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
               <div>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+              <div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3 className="text-lg font-semibold text-cyan-400 mb-4">Making a Request</h3>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start">
@@ -275,6 +311,7 @@ const GDPRPage: React.FC = () => {,
 <<<<<<< HEAD
                 </ul>
               </div>
+<<<<<<< HEAD
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-4">Identity Verification<p className="text-gray-300 mb-4">To protect your privacy, we may need to verify your identity before processing your request.</p>
 =======
@@ -285,6 +322,10 @@ const GDPRPage: React.FC = () => {,
                 <p className="text-gray-300 mb-4">,
                   To protect your privacy, we may need to verify your identity before processing your request.
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+              <div></div>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Identity Verification</h3><p className="text-gray-300 mb-4">To protect your privacy, we may need to verify your identity before processing your request.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </p>
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start">
@@ -307,9 +348,14 @@ const GDPRPage: React.FC = () => {,
 
         {/* Data Breach Notification */}
         <section className="mb-16">
+<<<<<<< HEAD
           <div className="cyber-card p-8">
 <<<<<<< HEAD
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Data Breach Notification<p className="text-gray-300 mb-4">In the unlikely event of a data breach that poses a risk to your rights and freedoms, we will:</p>
+=======
+          <div className="cyber-card p-8"></section>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Data Breach Notification</h2><p className="text-gray-300 mb-4">In the unlikely event of a data breach that poses a risk to your rights and freedoms, we will:</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
 =======
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Data Breach Notification</h2>
@@ -339,13 +385,19 @@ const GDPRPage: React.FC = () => {,
 ,
         {/* Contact Information */}
         <section className="mb-16">
+<<<<<<< HEAD
           <div className="cyber-card p-8">
 <<<<<<< HEAD
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Our Data Protection Officer<p className="text-gray-300 mb-6">For any questions about our GDPR compliance or to exercise your rights, please contact our Data Protection Officer:</p>
+=======
+          <div className="cyber-card p-8"></section>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Our Data Protection Officer</h2><p className="text-gray-300 mb-6">For any questions about our GDPR compliance or to exercise your rights, please contact our Data Protection Officer:</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+              <div></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Zion Tech Group</h3>
+<<<<<<< HEAD
                 <div className="space-y-2 text-gray-300">
                   <p>Data Protection Officer<p>364 E Main St STE 1008</p>
                   <p>Middletown, DE 19709<p>United States</p>
@@ -362,13 +414,18 @@ const GDPRPage: React.FC = () => {,
                   <p>Middletown, DE 19709</p>
                   <p>United States</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+                <div className="space-y-2 text-gray-300"></div>
+                  <p>Data Protection Officer</p><p>364 E Main St STE 1008</p>
+                  <p>Middletown, DE 19709</p><p>United States</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </div>
               </div>
-              <div>
+              <div></div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-3">Contact Information</h3>
-                <div className="space-y-2 text-gray-300">
-                  <p>Email: <a href="mailto:dpo@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">dpo@ziontechgroup.com</a>
-                  <p>Phone: <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950<p>Response Time: Within 30 days</p>
+                <div className="space-y-2 text-gray-300"></div>
+                  <p>Email:</p> <a href="mailto:dpo@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">dpo@ziontechgroup.com</a>
+                  <p>Phone:</p> <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950<p>Response Time: Within 30 days</p>
                 </div>
               </div>
             </div>

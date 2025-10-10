@@ -365,9 +365,9 @@ export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Success Stories<p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Real results from real clients. Discover how we've helped businesses across</p>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></section><div className="container mx-auto px-4 relative z-10"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Success Stories</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Real results from real clients. Discover how we've helped businesses across</p>
               industries achieve remarkable transformations with AI and technology.</p>
 =======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -384,16 +384,16 @@ export default function CaseStudiesPage() {
               industries achieve remarkable transformations with AI and technology.
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
+            <div className="flex flex-wrap justify-center gap-4"></div>
+              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
                 <Award className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">500+ Projects</span>
               </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
                 <TrendingUp className="w-5 h-5 text-purple-400" />
                 <span className="text-white font-medium">300% Average ROI</span>
               </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
                 <Star className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">99% Client Satisfaction</span>
               </div>)
@@ -404,16 +404,24 @@ export default function CaseStudiesPage() {
 ),
       {/* Filters */}
       <section className="py-8">
+<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col md: flex-row gap-4 mb-8">
               <div className="flex-1 relative">
+=======
+        <div className="container mx-auto px-4"></section>
+          <div className="max-w-6xl mx-auto"></div>
+            <div className="flex flex-col md:flex-row gap-4 mb-8"></div>
+              <div className="flex-1 relative"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input;
                   type="text"
                   placeholder="Search case studies..."
                   className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                 />
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="flex gap-2 overflow-x-auto">{industries.map((industry) => (<button
 =======
@@ -422,6 +430,9 @@ export default function CaseStudiesPage() {
                 {industries.map((industry) => (,
                   <button;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+              <div className="flex gap-2 overflow-x-auto">{industries.map((industry) => (</div><button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     key={industry.name}
                     onClick={() =>setSelectedIndustry(industry.name)}
                     className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
@@ -434,6 +445,7 @@ export default function CaseStudiesPage() {
                   </button>
                 ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className="flex gap-2 overflow-x-auto">{services.map((service) => (<button
 =======
               </div>
@@ -442,6 +454,9 @@ export default function CaseStudiesPage() {
               {services.map((service) => (
                 <button;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+              <div className="flex gap-2 overflow-x-auto">{services.map((service) => (</div><button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   key={service.name}
                   onClick={() =>setSelectedService(service.name)}
                   className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
@@ -460,18 +475,23 @@ export default function CaseStudiesPage() {
 
       {/* Case Studies Grid */}
       <section className="py-20">
+<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
 <<<<<<< HEAD
+=======
+        <div className="container mx-auto px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{filteredCaseStudies.map((study) => (</div>
-                <div key={study.id} className="bg-slate-800/50 rounded-lg overflow-hidden hover:bg-slate-700/50 transition-all duration-300 group">
-                  <div className="relative">
+                <div key={study.id} className="bg-slate-800/50 rounded-lg overflow-hidden hover:bg-slate-700/50 transition-all duration-300 group"></div>
+                  <div className="relative"></div>
                     <img
                       src={study.image}
                       alt={study.title}
                       className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute top-4 left-4">
+                    <div className="absolute top-4 left-4"></div>
                       <div className={`w-8 h-8 ${getIndustryColor(study.industry)}`}>{React.createElement(getIndustryIcon(study.industry), { className: 'w-8 h-8' })}</div>
 =======
             <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
@@ -489,14 +509,18 @@ export default function CaseStudiesPage() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                       </div>
                     </div>
-                    <div className="absolute top-4 right-4">
+                    <div className="absolute top-4 right-4"></div>
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">{study.industry.charAt(0).toUpperCase() + study.industry.slice(1)}</span>
                       </span>
                     </div>
                   </div>
 
+<<<<<<< HEAD
                   <div className="p-8">
 <<<<<<< HEAD
+=======
+                  <div className="p-8"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">{study.title}</h3>
 =======
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-cyan-400 transition-colors">,
@@ -504,23 +528,28 @@ export default function CaseStudiesPage() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     </h3>
 
-                    <div className="flex items-center space-x-4 mb-4">
-                      <div className="flex items-center space-x-2">
+                    <div className="flex items-center space-x-4 mb-4"></div>
+                      <div className="flex items-center space-x-2"></div>
                         <Building className="w-4 h-4 text-gray-400" />
                         <span className="text-gray-300 text-sm">{study.company}</span>
                       </div>
-                      <div className="flex items-center space-x-2">
+                      <div className="flex items-center space-x-2"></div>
                         <Clock className="w-4 h-4 text-gray-400" />
                         <span className="text-gray-300 text-sm">{study.duration}</span>
                       </div>
                     </div>
 
+<<<<<<< HEAD
                     <div className="space-y-4 mb-6">
                       <div>
 <<<<<<< HEAD
+=======
+                    <div className="space-y-4 mb-6"></div>
+                      <div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge:<p className="text-gray-300 text-sm">{study.challenge}</p>
                       </div>
-                      <div>
+                      <div></div>
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution:<p className="text-gray-300 text-sm">{study.solution}</p>
 =======
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge: </h4>,
@@ -533,6 +562,7 @@ export default function CaseStudiesPage() {
                       </div>
                     </div>
 
+<<<<<<< HEAD
                     <div className="mb-6">
 <<<<<<< HEAD
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Results:<div className="grid grid-cols-2 gap-2">{study.results.slice(0, 4).map((result, index) => (</div>
@@ -542,12 +572,18 @@ export default function CaseStudiesPage() {
                         {study.results.slice(0, 4).map((result, index) => (
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                           <div key={index} className="flex items-center text-sm text-gray-300">
+=======
+                    <div className="mb-6"></div>
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Results:<div className="grid grid-cols-2 gap-2">{study.results.slice(0, 4).map((result, index) => (</div>
+                          <div key={index} className="flex items-center text-sm text-gray-300"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{result}</CheckCircle>
                           </CheckCircle>
                         ))}
                       </div>
                     </div>
 
+<<<<<<< HEAD
                     <div className="mb-6">
 <<<<<<< HEAD
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3">Technologies Used:<div className="flex flex-wrap gap-2">{study.technologies.map((tech, index) => (<span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">{tech}</span>
@@ -558,17 +594,21 @@ export default function CaseStudiesPage() {
                           <span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">
                             {tech}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+                    <div className="mb-6"></div>
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-3">Technologies Used:<div className="flex flex-wrap gap-2">{study.technologies.map((tech, index) => (</div><span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">{tech}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                           </span>
                         ))}
                       </div>
                     </div>
 
-                    <div className="border-t border-gray-700 pt-4">
-                      <div className="flex items-center space-x-4">
+                    <div className="border-t border-gray-700 pt-4"></div>
+                      <div className="flex items-center space-x-4"></div>
                         <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">{study.testimonial.avatar}</div>
                         </div>
-                        <div className="flex-1">
-                          <p className="text-gray-300 text-sm italic mb-1">"{study.testimonial.quote}"<div className="text-cyan-400 text-xs font-medium">{study.testimonial.author}<div className="text-gray-400 text-xs">{study.testimonial.role}</div>
+                        <div className="flex-1"></div>
+                          <p className="text-gray-300 text-sm italic mb-1">"{study.testimonial.quote}"</p><div className="text-cyan-400 text-xs font-medium">{study.testimonial.author}</div><div className="text-gray-400 text-xs">{study.testimonial.role}</div>
                         </div>
                       </div>
                     </div>
@@ -582,6 +622,7 @@ export default function CaseStudiesPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
+<<<<<<< HEAD
         <div className="container mx-auto px-4 text-center">
 <<<<<<< HEAD
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Create Your Success Story?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join hundreds of businesses that have already transformed their operations with our AI and technology solutions.</p>
@@ -595,6 +636,13 @@ export default function CaseStudiesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link;
+=======
+        <div className="container mx-auto px-4 text-center"></section>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Create Your Success Story?</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join hundreds of businesses that have already transformed their operations with our AI and technology solutions.</p>
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <Link
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
             >

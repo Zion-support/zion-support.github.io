@@ -5,8 +5,13 @@ const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {
       <h1>Private, Experiments, Blueprin;
   t: Ze, r, o‑PII, Testing, at the, Edg, e</h1>
       <p>
+<<<<<<< HEAD
         Learn, how, to run, hig, h‑velocity, experiments, without centralizing, PII, using ed, g, e‑signed, config, s;
   scoped, anonymous, identifiers, and, o, n‑device, attributio, n. Achie, v, e <stro, n, g>&lt;100, m, s</stro, n, g> decisioni, n, g;
+=======
+        Learn, how, to run, hig, h‑velocity, experiments, without centralizing, PII, using ed, g, e‑signed, config, s
+  scoped, anonymous, identifiers, and, o, n‑device, attributio, n. Achie, v, e</p> <stro, n, g>&lt;100, m, s</stro, n, g> decisioni, n, g
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
   with, productio, n‑grade, guardrail, s.
       </p>
       <h2>What, you, will bui, l, d</h2>

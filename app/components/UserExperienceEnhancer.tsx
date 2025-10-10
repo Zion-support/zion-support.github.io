@@ -208,12 +208,17 @@ export const UserExperienceEnhancer: React.FC = () => {,
       </button>
 
       {/* User Preferences Panel */}
-      <div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-40 max-w-xs">
+      <div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-40 max-w-xs"></div>
         <h3 className="text-sm font-bold mb-3">Preferences</h3>
 
+<<<<<<< HEAD
         <div className="space-y-2 text-sm">
           <div>
 <<<<<<< HEAD
+=======
+        <div className="space-y-2 text-sm"></div>
+          <div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <label className="block text-xs text-gray-300 mb-1">Theme<select
 =======
             <label className="block text-xs text-gray-300 mb-1">Theme</label>
@@ -227,8 +232,12 @@ export const UserExperienceEnhancer: React.FC = () => {,
             </select>
           </div>
 
+<<<<<<< HEAD
           <div>
 <<<<<<< HEAD
+=======
+          <div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <label className="block text-xs text-gray-300 mb-1">Language<select
 =======
             <label className="block text-xs text-gray-300 mb-1">Language</label>
@@ -243,8 +252,13 @@ export const UserExperienceEnhancer: React.FC = () => {,
             </select>
           </div>
 
+<<<<<<< HEAD
           <div className="flex items-center space-x-2">
             <input;
+=======
+          <div className="flex items-center space-x-2"></div>
+            <input
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               type="checkbox"
               id="notifications"
               checked={preferences.notifications}
@@ -253,8 +267,13 @@ export const UserExperienceEnhancer: React.FC = () => {,
             /><label htmlFor="notifications" className="text-xs">Notifications</label>
           </div>
 
+<<<<<<< HEAD
           <div className="flex items-center space-x-2">
             <input;
+=======
+          <div className="flex items-center space-x-2"></div>
+            <input
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               type="checkbox"
               id="analytics"
               checked={preferences.analytics}
@@ -264,7 +283,7 @@ export const UserExperienceEnhancer: React.FC = () => {,
           </div>
         </div>
 
-        <div className="mt-3 pt-2 border-t border-gray-700">
+        <div className="mt-3 pt-2 border-t border-gray-700"></div>
           <p className="text-xs text-gray-400">Shortcuts: Ctrl+K (search), Ctrl+D (theme)</p>
           </p>
         </div>

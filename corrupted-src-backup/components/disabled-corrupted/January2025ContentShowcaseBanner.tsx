@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 const January2025ContentShowcaseBanne, r: React.FC = () => { ,
   return(,)
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' })
@@ -8,10 +9,21 @@ const January2025ContentShowcaseBanne, r: React.FC = () => { ,
       <div, className='relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-20'>
         <div, className='te, x, t-center, m, b-16'>
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, b, g-pi, n, k-5, 0, 0/20, tex, t-pi, n, k-400, p, x-6, p, y-3, rounde, d-full, tex, t-sm, fon, t-medium, m, b-8'>
+=======
+const January2025ContentShowcaseBanne, r: React.FC = () => { 
+  return (
+    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' }
+      {/* Animated, Backgroun, d */}</div>
+      <div, classNam, e = "absolute, inse, t-0, b, g-[u, r, l('/imag, e, s/abstra, c, t-patte, r, n.sv, g')] opaci, t, y-10, animat, e-pul, s, e" /></div>
+      <div, classNam, e = 'absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-r, fro, m-transparent, vi, a-whi, t, e/5, t, o-transparent, transfor, m -sk, e, w-y-1' /></div>
+      <div, className='relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-20'></div>
+        <div, className='te, x, t-center, m, b-16'></div>
+          <div, className='inli, n, e-flex, item, s-center, ga, p-2, b, g-pi, n, k-5, 0, 0/20, tex, t-pi, n, k-400, p, x-6, p, y-3, rounde, d-full, tex, t-sm, fon, t-medium, m, b-8'></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <Sparkles, className='w-5 h-5' />
             <sp, a, n>JANUARY, 2025, CONTENT COLLECTI, O, N</sp, a, n>
           </div>
-          <h2, className='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
+          <h2, className='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h2>
             <span, className='bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
               Complete, AI, Knowledge H, u, b;
             </sp, a, n>
@@ -25,12 +37,12 @@ const January2025ContentShowcaseBanne, r: React.FC = () => { ,
         </div>
         {/* Content, Categorie, s */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
-          {/* Breakthrough, Technolog, i, e, s */}
-          <div, classNam, e = 'group, relative, bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/20, hove, r: bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>
-            <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-pi, n, k-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3xl, opacit, y-0, grou, p-hov, e, r:opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0' />
-            <div, className='relati, v, e'>
-              <div, className='flex, item, s-center, ga, p-4, m, b-6'>
-                <div, className='p-3, b, g-pi, n, k-5, 0, 0/20, rounde, d-xl'>
+          {/* Breakthrough, Technolog, i, e, s */}</div>
+          <div, classNam, e = 'group, relative, bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/20, hove, r: bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'></div>
+            <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-pi, n, k-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3xl, opacit, y-0, grou, p-hov, e, r:opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0' /></div>
+            <div, className='relati, v, e'></div>
+              <div, className='flex, item, s-center, ga, p-4, m, b-6'></div>
+                <div, className='p-3, b, g-pi, n, k-5, 0, 0/20, rounde, d-xl'></div>
                   <Zap, className='w-8 h-8, tex, t-pi, n, k-4, 0, 0' />
                 </div>
                 <d, i, v>
@@ -43,21 +55,21 @@ const January2025ContentShowcaseBanne, r: React.FC = () => { ,
               <p, className='te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d'>
                 Explore, the, latest AI, breakthroughs, including quant, u, m-neural, fus, i, o, n, synthetic, consciousnes, s, and, neuromorphic, computing.
               </p>
-              <div, classNam, e = 'spa, c, e-y-3, m, b-6'>
-                <div, className='flex, item, s-center, ga, p-3'>
-                  <div, className='w-2 h-2, b, g-pi, n, k-400, rounde, d-fu, l, l' />
+              <div, classNam, e = 'spa, c, e-y-3, m, b-6'></div>
+                <div, className='flex, item, s-center, ga, p-3'></div>
+                  <div, className='w-2 h-2, b, g-pi, n, k-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                     Quant, u, m-Neural, Fusio, n;
                   </sp, a, n>
                 </div>
-                <div, className='flex, item, s-center, ga, p-3'>
-                  <div, className='w-2 h-2, b, g-purp, l, e-400, rounde, d-fu, l, l' />
+                <div, className='flex, item, s-center, ga, p-3'></div>
+                  <div, className='w-2 h-2, b, g-purp, l, e-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                     Synthetic, Consciousnes, s;
                   </sp, a, n>
                 </div>
-                <div, className='flex, item, s-center, ga, p-3'>
-                  <div, className='w-2 h-2, b, g-bl, u, e-400, rounde, d-fu, l, l' />
+                <div, className='flex, item, s-center, ga, p-3'></div>
+                  <div, className='w-2 h-2, b, g-bl, u, e-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                     Autonomous, Enterprise, Mesh;
                   </sp, a, n>
@@ -72,11 +84,11 @@ const January2025ContentShowcaseBanne, r: React.FC = () => { ,
             </div>
           </div>
           {/* Enterprise, Case, Studi, e, s */}
-          <div, classNam, e = 'group, relative, bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>
-            <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-3xl, opacit, y-0, grou, p-hov, e, r:opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0' />
-            <div, className='relati, v, e'>
-              <div, className='flex, item, s-center, ga, p-4, m, b-6'>
-                <div, className='p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl'>
+          <div, classNam, e = 'group, relative, bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'></div>
+            <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-3xl, opacit, y-0, grou, p-hov, e, r:opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0' /></div>
+            <div, className='relati, v, e'></div>
+              <div, className='flex, item, s-center, ga, p-4, m, b-6'></div>
+                <div, className='p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl'></div>
                   <Award, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
                 </div>
                 <d, i, v>
@@ -89,21 +101,21 @@ const January2025ContentShowcaseBanne, r: React.FC = () => { ,
               <p, className='te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d'>
                 Learn, from Fortune 500, companies, that have, achieved, billions in, value, creation through, AI, transformation initiativ, e, s.
               </p>
-              <div, className='spa, c, e-y-3, m, b-6'>
-                <div, className='flex, item, s-center, ga, p-3'>
-                  <div, className='w-2 h-2, b, g-purp, l, e-400, rounde, d-fu, l, l' />
+              <div, className='spa, c, e-y-3, m, b-6'></div>
+                <div, className='flex, item, s-center, ga, p-3'></div>
+                  <div, className='w-2 h-2, b, g-purp, l, e-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                     Manufacturing, Transformatio, n;
                   </sp, a, n>
                 </div>
-                <div, className='flex, item, s-center, ga, p-3'>
-                  <div, className='w-2 h-2, b, g-bl, u, e-400, rounde, d-fu, l, l' />
+                <div, className='flex, item, s-center, ga, p-3'></div>
+                  <div, className='w-2 h-2, b, g-bl, u, e-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                     Financial, Fraud, Prevention;
                   </sp, a, n>
                 </div>
-                <div, className='flex, item, s-center, ga, p-3'>
-                  <div, className='w-2 h-2, b, g-emera, l, d-400, rounde, d-fu, l, l' />
+                <div, className='flex, item, s-center, ga, p-3'></div>
+                  <div, className='w-2 h-2, b, g-emera, l, d-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                     Healthcare, AI, Diagnostics;
                   </sp, a, n>
@@ -118,11 +130,11 @@ const January2025ContentShowcaseBanne, r: React.FC = () => { ,
             </div>
           </div>
           {/* Latest, Artic, l, e, s */}
-          <div, classNam, e = 'group, relative, bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>
-            <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/10, t, o-emera, l, d-5, 0, 0/10, rounde, d-3xl, opacit, y-0, grou, p-hov, e, r:opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0' />
-            <div, className='relati, v, e'>
-              <div, className='flex, item, s-center, ga, p-4, m, b-6'>
-                <div, className='p-3, b, g-bl, u, e-5, 0, 0/20, rounde, d-xl'>
+          <div, classNam, e = 'group, relative, bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'></div>
+            <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/10, t, o-emera, l, d-5, 0, 0/10, rounde, d-3xl, opacit, y-0, grou, p-hov, e, r:opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0' /></div>
+            <div, className='relati, v, e'></div>
+              <div, className='flex, item, s-center, ga, p-4, m, b-6'></div>
+                <div, className='p-3, b, g-bl, u, e-5, 0, 0/20, rounde, d-xl'></div>
                   <BookOpen, className='w-8 h-8, tex, t-bl, u, e-4, 0, 0' />
                 </div>
                 <d, i, v>
@@ -136,21 +148,21 @@ const January2025ContentShowcaseBanne, r: React.FC = () => { ,
                 Stay, ahead, with the, latest, AI insi, g, h, t, s, implementation, guide, s,
                 and, industry, best practices, from our expert, tea, m.
               </p>
-              <div, classNam, e = 'spa, c, e-y-3, m, b-6'>
-                <div, className='flex, item, s-center, ga, p-3'>
-                  <div, className='w-2 h-2, b, g-bl, u, e-400, rounde, d-fu, l, l' />
+              <div, classNam, e = 'spa, c, e-y-3, m, b-6'></div>
+                <div, className='flex, item, s-center, ga, p-3'></div>
+                  <div, className='w-2 h-2, b, g-bl, u, e-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                     AI, Platform, Engineering;
                   </sp, a, n>
                 </div>
-                <div, className='flex, item, s-center, ga, p-3'>
-                  <div, className='w-2 h-2, b, g-emera, l, d-400, rounde, d-fu, l, l' />
+                <div, className='flex, item, s-center, ga, p-3'></div>
+                  <div, className='w-2 h-2, b, g-emera, l, d-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                     Enterprise, RAG, Systems;
                   </sp, a, n>
                 </div>
-                <div, className='flex, item, s-center, ga, p-3'>
-                  <div, className='w-2 h-2, b, g-purp, l, e-400, rounde, d-fu, l, l' />
+                <div, className='flex, item, s-center, ga, p-3'></div>
+                  <div, className='w-2 h-2, b, g-purp, l, e-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                     Autonomous, Operation, s;
                   </sp, a, n>
@@ -166,21 +178,21 @@ const January2025ContentShowcaseBanne, r: React.FC = () => { ,
           </div>
         </div>
         {/* Statis, t, i, c, s */}
-        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-12, border, border-whi, t, e/20, m, b-16'>
+        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-12, border, border-whi, t, e/20, m, b-16'></div>
           <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12'>
             Content, Library, Overview;
           </h3>
-          <div, className='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8'>
-            <div, className='te, x, t-cent, e, r'>
+          <div, className='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8'></div>
+            <div, className='te, x, t-cent, e, r'></div>
               <div, className='te, x, t-gr, a, y-3, 0, 0'>Total, Article, s</div>
             </div>
-            <div, className='te, x, t-cent, e, r'>
+            <div, className='te, x, t-cent, e, r'></div>
               <div, className='te, x, t-gr, a, y-3, 0, 0'>Case, Studie, s</div>
             </div>
-            <div, className='te, x, t-cent, e, r'>
+            <div, className='te, x, t-cent, e, r'></div>
               <div, className='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>15+</div>
             </div>
-            <div, className='te, x, t-cent, e, r'>
+            <div, className='te, x, t-cent, e, r'></div>
               <div, className='te, x, t-4xl, fon, t-bold, tex, t-emera, l, d-400, m, b-2'>
                 5, 0, 0+
               </div>
@@ -189,9 +201,9 @@ const January2025ContentShowcaseBanne, r: React.FC = () => { ,
           </div>
         </div>
         {/* Featured, Content, Previ, e, w */}
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-16'>
-          <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/20'>
-            <div, className='flex, item, s-center, ga, p-3, m, b-4'>
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-16'></div>
+          <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/20'></div>
+            <div, className='flex, item, s-center, ga, p-3, m, b-4'></div>
               <Star, className='w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t' />
               <h4, className='te, x, t-xl, fon, t-bold, tex, t-whi, t, e'>Most, Popula, r</h4>
             </div>
@@ -201,7 +213,7 @@ const January2025ContentShowcaseBanne, r: React.FC = () => { ,
             <p, className='te, x, t-gr, a, y-300, tex, t-sm, m, b-4'>
               Revolutionary, fusion, technology achievi, n, g , 1, 0,000x, performance, improvements...
             </p>
-            <div, classNam, e = 'flex, item, s-center, justif, y-betwe, e, n'>
+            <div, classNam, e = 'flex, item, s-center, justif, y-betwe, e, n'></div>
               <span, className='te, x, t-pi, n, k-400, fon, t-medi, u, m'>15, min, read</sp, a, n>
               <Link, t, o='/bl, o, g/ai-quant, u, m-neur, a, l-fusi, o, n-<20, 2, 5'
                 className='te, x, t-pi, n, k-400, hove, r: te, x, t-pi, n, k-3, 0, 0'
@@ -210,8 +222,8 @@ const January2025ContentShowcaseBanne, r: React.FC = () => { ,
               </Li, n, k>
             </div>
           </div>
-          <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/20'>
-            <div, className='flex, item, s-center, ga, p-3, m, b-4'>
+          <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/20'></div>
+            <div, className='flex, item, s-center, ga, p-3, m, b-4'></div>
               <TrendingUp, className='w-6 h-6, tex, t-emera, l, d-4, 0, 0' />
               <h4, className='te, x, t-xl, fon, t-bold, tex, t-whi, t, e'>Trending, No, w</h4>
             </div>
@@ -221,7 +233,7 @@ const January2025ContentShowcaseBanne, r: React.FC = () => { ,
             <p, className='te, x, t-gr, a, y-300, tex, t-sm, m, b-4'>
               Se, l, f-organizing, AI, networks achieving, 9, 9.7% operational, efficienc, y...
             </p>
-            <div, className='flex, item, s-center, justif, y-betwe, e, n'>
+            <div, className='flex, item, s-center, justif, y-betwe, e, n'></div>
               <span, className='te, x, t-emera, l, d-400, fon, t-medi, u, m'>12, min, read</sp, a, n>
               <Link, t, o='/bl, o, g/autonomo, u, s-enterpri, s, e-me, s, h-<20, 2, 5'
                 className='te, x, t-emera, l, d-400, hove, r:te, x, t-emera, l, d-3, 0, 0'
@@ -232,8 +244,8 @@ const January2025ContentShowcaseBanne, r: React.FC = () => { ,
           </div>
         </div>
         {/* Call, to, Acti, o, n */}
-        <div, classNam, e = 'te, x, t-cent, e, r'>
-          <div, className='flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4, m, b-6'>
+        <div, classNam, e = 'te, x, t-cent, e, r'></div>
+          <div, className='flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4, m, b-6'></div>
             <Link, t, o='/resourc, e, s'
               className='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, hove, r:fr, o, m-pi, n, k-600, hove, r:to-purp, l, e-600, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-1, 0, 5'
             >

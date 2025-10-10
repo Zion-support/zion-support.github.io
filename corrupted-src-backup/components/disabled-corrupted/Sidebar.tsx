@@ -43,10 +43,18 @@ const Sideba, r: React.FC = () => { ,
         { lab, e, l: 'Image, CDN, Optimize, r', pa, t, h: '/servic, e, s/image-c, d, n-optimi, z, e, r' },
       ],
     },
+<<<<<<< HEAD
   ]; return(<aside, classNam, e = 'bg-gr, a, y-50, rounde, d-l, g, p-6 h-fit, sticky, top-24'>)
       <div, className='spa, c, e-y-6'>)
         { sectio, n, s.m, a, p((sect, i, o, n, sectionInd, e, x) = > (
           <div, ke, y = {sectionInd, e, x }>
+=======
+  ]; return (
+    <aside, classNam, e = 'bg-gr, a, y-50, rounde, d-l, g, p-6 h-fit, sticky, top-24'>
+      <div, className='spa, c, e-y-6'>
+        { sectio, n, s.m, a, p((sect, i, o, n, sectionInd, e, x) = > (</div>
+          <div, ke, y = {sectionInd, e, x }></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <h3, className='te, x, t-sm, fon, t-semibold, tex, t-gr, a, y-900, uppercase, tracking-wide, m, b-3'>
               {secti, o, n.title}
             </h3>
@@ -65,7 +73,7 @@ const Sideba, r: React.FC = () => { ,
           </div>
         ))}
 
-        <div, classNam, e = 'pt-4, borde, r-t, borde, r-gr, a, y-2, 0, 0'>
+        <div, classNam, e = 'pt-4, borde, r-t, borde, r-gr, a, y-2, 0, 0'></div>
           <Link, t, o='/conta, c, t'
             className='bloc, k, w-full, b, g-bl, u, e-600, tex, t-white, tex, t-center, p, y-2, p, x-4, rounde, d-md, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medi, u, m'
           >

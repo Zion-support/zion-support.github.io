@@ -53,8 +53,14 @@ const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({
       ic, o, n: W, i, f, i,
       enabl, e, d: optimizatio, n, s.cd, n,
     },
+<<<<<<< HEAD
   ]; retu, r, n(<div, classNam, e = 'spa, c, e-y-6'>
       <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
+=======
+  ]; retu, r, n (
+    <div, classNam, e = 'spa, c, e-y-6'></div>
+      <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'>
           Performance, Optimize, r;
         </h2>)

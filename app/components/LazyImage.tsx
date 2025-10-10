@@ -57,6 +57,7 @@ const LazyImage: React.FC<LazyImageProps> = ({,
   };
 <<<<<<< HEAD
 </HTMLImageElement>
+<<<<<<< HEAD
   return (<div ref={setNode} className={`relative overflow-hidden ${className}`}>{isInView && (<img
 =======
 
@@ -64,6 +65,9 @@ const LazyImage: React.FC<LazyImageProps> = ({,
       {isInView && (
         <img;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+  return (<div ref={setNode} className={`relative overflow-hidden ${className}`}>{isInView && (</div><img
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
           ref={imgRef}
           src={src}
           alt={alt}
@@ -77,7 +81,7 @@ const LazyImage: React.FC<LazyImageProps> = ({,
         >)}
 </img>
       {!isLoaded && !hasError && (</img>
-        </img><div className="absolute inset-0 flex items-center justify-center bg-gray-200">
+        </img><div className="absolute inset-0 flex items-center justify-center bg-gray-200"></div>
           <img
 =======
           className={`transition-opacity duration-300 ${})
@@ -99,7 +103,7 @@ const LazyImage: React.FC<LazyImageProps> = ({,
       )}
 
       {hasError && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500">
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500"></div>
           <span>Failed to load image</span>
         </div>
       )}

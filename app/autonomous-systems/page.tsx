@@ -148,11 +148,17 @@ const AutonomousSystemsPage: React.FC = () => {,
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">{/* Hero Section */}</div>
         <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-700 text-white py-20">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="absolute inset-0 bg-black opacity-20"><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Autonomous Systems Services<p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">Self-managing, self-optimizing systems that operate independently and continuously improve</p>
+=======
+          <div className="absolute inset-0 bg-black opacity-20"></section><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+            <div className="text-center"></div>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Autonomous Systems Services</h1><p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">Self-managing, self-optimizing systems that operate independently and continuously improve</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">Explore Autonomous Solutions<button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">Schedule Demo</button>
 =======
           <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -180,15 +186,22 @@ const AutonomousSystemsPage: React.FC = () => {,
         {/* Key Benefits */}
         <section className="py-16 bg-white">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Autonomous Systems?<p className="text-xl text-gray-600">Cutting-edge autonomous technology that reduces costs, improves efficiency, and eliminates human errors</p>
+=======
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
+            <div className="text-center mb-12"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Autonomous Systems?</h2><p className="text-xl text-gray-600">Cutting-edge autonomous technology that reduces costs, improves efficiency, and eliminates human errors</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+              <div className="text-center"></div>
+                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <Bot className="w-8 h-8 text-green-600" />
+<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Managing<p className="text-gray-600">Systems that monitor, diagnose, and repair themselves automatically</p>
 =======
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -208,21 +221,24 @@ const AutonomousSystemsPage: React.FC = () => {,
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Managing</h3>,
                 <p className="text-gray-600">Systems that monitor, diagnose, and repair themselves automatically</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Managing</h3><p className="text-gray-600">Systems that monitor, diagnose, and repair themselves automatically</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
-              <div className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center"></div>
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <Zap className="w-8 h-8 text-blue-600" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Continuous Learning<p className="text-gray-600">AI systems that improve performance with every interaction</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Continuous Learning</h3><p className="text-gray-600">AI systems that improve performance with every interaction</p>
               </div>
-              <div className="text-center">
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center"></div>
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <Shield className="w-8 h-8 text-purple-600" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Zero Downtime<p className="text-gray-600">Self-healing systems that prevent and resolve issues automatically</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Zero Downtime</h3><p className="text-gray-600">Self-healing systems that prevent and resolve issues automatically</p>
               </div>
-              <div className="text-center">
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center"></div>
+                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <Target className="w-8 h-8 text-orange-600" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven ROI<p className="text-gray-600">Average 400% ROI within 12 months of implementation</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven ROI</h3><p className="text-gray-600">Average 400% ROI within 12 months of implementation</p>
               </div>
             </div>
           </div>
@@ -232,15 +248,16 @@ const AutonomousSystemsPage: React.FC = () => {,
         {categories.map(category => (
 <<<<<<< HEAD
           <section key={category} className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{category} Solutions<p className="text-xl text-gray-600">)</p>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
+              <div className="text-center mb-12"></div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{category} Solutions</h2><p className="text-xl text-gray-600">)</p>
     Autonomous {category.toLowerCase()} systems that adapt and optimize continuously<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{autonomousServices
                   .filter(service => service.category === category)</div>
                   .map((service, index) => (</div>
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                      <div className="text-4xl mb-4">{service.icon}<h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}<p className="text-gray-600 mb-4">{service.description}</p>
+                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
+                      <div className="text-4xl mb-4">{service.icon}</div><h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3><p className="text-gray-600 mb-4">{service.description}</p>
 
+<<<<<<< HEAD
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-2xl font-bold text-green-600">{service.price}<span className="text-sm text-gray-500">Market: {service.marketPrice}<div className="text-sm text-green-600 font-semibold">Save up to 45% vs market rates</div>
@@ -277,6 +294,15 @@ const AutonomousSystemsPage: React.FC = () => {,
 
                       <div className="mb-4">
 <<<<<<< HEAD
+=======
+                      <div className="mb-4"></div>
+                        <div className="flex items-center justify-between mb-2"></div>
+                          <span className="text-2xl font-bold text-green-600">{service.price}</span><span className="text-sm text-gray-500">Market: {service.marketPrice}</span><div className="text-sm text-green-600 font-semibold">Save up to 45% vs market rates</div>
+                        </div>
+                      </div>
+
+                      <div className="mb-4"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:<ul className="space-y-1">{service.features.map((feature, featureIndex) => (</ul>
 =======
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features: </h4>,
@@ -290,6 +316,7 @@ const AutonomousSystemsPage: React.FC = () => {,
                         </ul>
                       </div>
 
+<<<<<<< HEAD
                       <div className="mb-4">
 <<<<<<< HEAD
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:<div className="flex flex-wrap gap-2">{service.technologies.map((tech, techIndex) => (<span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">{tech}</span>
@@ -300,13 +327,21 @@ const AutonomousSystemsPage: React.FC = () => {,
                             <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
                               {tech}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+                      <div className="mb-4"></div>
+                        <h4 className="font-semibold text-gray-900 mb-2">Technologies:<div className="flex flex-wrap gap-2">{service.technologies.map((tech, techIndex) => (</div><span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">{tech}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                             </span>
                           ))}
                         </div>
                       </div>
 
+<<<<<<< HEAD
                       <div className="mb-6">
 <<<<<<< HEAD
+=======
+                      <div className="mb-6"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:<ul className="space-y-1">{service.benefits.map((benefit, benefitIndex) => (</ul>
 =======
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits: </h4>,
@@ -338,6 +373,7 @@ const AutonomousSystemsPage: React.FC = () => {,
 
         {/* Autonomous Capabilities Showcase */}
         <section className="py-16 bg-white">
+<<<<<<< HEAD
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-12">
 <<<<<<< HEAD
@@ -353,29 +389,42 @@ const AutonomousSystemsPage: React.FC = () => {,
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
+=======
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
+            <div className="text-center mb-12"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Autonomous Capabilities</h2><p className="text-xl text-gray-600">Advanced autonomous technologies that enable self-managing, self-optimizing systems</p>
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Bot className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Autonomous Operations<p className="text-gray-600">Self-managing systems that operate without human intervention</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Autonomous Operations</h3><p className="text-gray-600">Self-managing systems that operate without human intervention</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg">
+              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg"></div>
                 <Brain className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Machine Learning<p className="text-gray-600">Continuous learning and adaptation from system behavior</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Machine Learning</h3><p className="text-gray-600">Continuous learning and adaptation from system behavior</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg">
+              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg"></div>
                 <RefreshCw className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Process Automation<p className="text-gray-600">End-to-end automation of complex business processes</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Process Automation</h3><p className="text-gray-600">End-to-end automation of complex business processes</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
+              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg"></div>
                 <BarChart className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Predictive Analytics<p className="text-gray-600">Anticipate issues and optimize performance before problems occur</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Predictive Analytics</h3><p className="text-gray-600">Anticipate issues and optimize performance before problems occur</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
+              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg"></div>
                 <Settings className="w-12 h-12 text-pink-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Adaptive Configuration<p className="text-gray-600">Dynamic system configuration based on changing conditions</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Adaptive Configuration</h3><p className="text-gray-600">Dynamic system configuration based on changing conditions</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
+              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg"></div>
                 <Cpu className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Intelligent Monitoring<p className="text-gray-600">Advanced monitoring with anomaly detection and alerting</p>
+=======
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Intelligent Monitoring</h3><p className="text-gray-600">Advanced monitoring with anomaly detection and alerting</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             </div>
           </div>
@@ -383,6 +432,7 @@ const AutonomousSystemsPage: React.FC = () => {,
 
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white">
+<<<<<<< HEAD
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Automate Your Operations?<p className="text-xl mb-8 text-green-100">Contact our autonomous systems experts for a free consultation and custom automation strategy</p>
 =======
@@ -405,6 +455,13 @@ const AutonomousSystemsPage: React.FC = () => {,
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a;
+=======
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Automate Your Operations?</h2><p className="text-xl mb-8 text-green-100">Contact our autonomous systems experts for a free consultation and custom automation strategy</p>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <a
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="tel:+13024640950"
                 className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
 <<<<<<< HEAD
@@ -414,6 +471,7 @@ const AutonomousSystemsPage: React.FC = () => {,
               >✉️ kleber@ziontechgroup.com</a>
               </a>
             </div>
+<<<<<<< HEAD
             <div className="mt-8 text-sm text-green-200">
 =======
               >
@@ -428,6 +486,9 @@ const AutonomousSystemsPage: React.FC = () => {,
             </div>,
             <div className="mt-8 text-sm text-green-200">,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+            <div className="mt-8 text-sm text-green-200"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>

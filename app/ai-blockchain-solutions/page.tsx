@@ -157,9 +157,10 @@ const AIBlockchainSolutionsPage: React.FC = () => {
 
 <<<<<<< HEAD
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation >{/* Hero Section */}</Navigation>
       </Navigation><section className="pt-24 pb-16 px-4">
+<<<<<<< HEAD
 =======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -169,15 +170,20 @@ const AIBlockchainSolutionsPage: React.FC = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-cyan-400/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+=======
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <div className="inline-flex items-center space-x-2 bg-cyan-400/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <Lock className="w-4 h-4" />
               <span>AI-Enhanced Blockchain</span>
             </div>
 <<<<<<< HEAD
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Blockchain <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Combine the power of artificial intelligence with blockchain technology to create secure,</p>
+              AI Blockchain</h1> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Combine the power of artificial intelligence with blockchain technology to create secure,</p>
               intelligent, and decentralized solutions for the modern world.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a href="/contact" className="cyber-button px-8 py-4 text-lg">Build Blockchain Solutions</a>
                 <ArrowRight className="w-5 h-5 ml-2" />
               <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">View Demo</a>
@@ -204,14 +210,19 @@ const AIBlockchainSolutionsPage: React.FC = () => {
           {/* Benefits */}
 <<<<<<< HEAD
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">{benefits.map((benefit, index) => (</div>
+<<<<<<< HEAD
 =======
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-16">,
             {benefits.map((benefit, index) => (
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
+=======
+              <div key={index} className="text-center"></div>
+                <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <benefit.icon className="w-8 h-8 text-cyan-400" />
-                <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.metric}<div className="text-gray-300">{benefit.description}</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.metric}</div><div className="text-gray-300">{benefit.description}</div>
               </div>
             ))}
           </div>
@@ -220,13 +231,19 @@ const AIBlockchainSolutionsPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-16 px-4">
+<<<<<<< HEAD
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
 <<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-6">AI-Enhanced Blockchain Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our platform combines cutting-edge AI with blockchain technology to deliver</p>
+=======
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">AI-Enhanced Blockchain Features</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Our platform combines cutting-edge AI with blockchain technology to deliver</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               unprecedented security, efficiency, and intelligence.<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-colors">
-                <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4">
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-colors"></div>
+                <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4"></div>
                   <feature.icon className="w-6 h-6 text-cyan-400" />
 =======
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -246,7 +263,7 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                 </div>,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.benefits.map((benefit, idx) => (</ul>
+                <p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2">{feature.benefits.map((benefit, idx) => (</ul>
                     <li key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" >{benefit}</CheckCircle>
                     </CheckCircle>
@@ -260,12 +277,20 @@ const AIBlockchainSolutionsPage: React.FC = () => {
 
       {/* Applications Section */}
       <section className="py-16 px-4 bg-slate-800/30">
+<<<<<<< HEAD
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
 <<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-6">Blockchain AI Applications<p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover how AI-enhanced blockchain is transforming industries and creating new possibilities.<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{applications.map((app, index) => (</div>
               <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover:border-purple-400/40 transition-colors">
                 <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4">
+=======
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Blockchain AI Applications</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover how AI-enhanced blockchain is transforming industries and creating new possibilities.</p><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{applications.map((app, index) => (</div>
+              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover:border-purple-400/40 transition-colors"></div>
+                <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <app.icon className="w-6 h-6 text-purple-400" />
 =======
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -284,8 +309,8 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                 </div>,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <h3 className="text-xl font-semibold text-white mb-3">{app.title}</h3>
-                <p className="text-gray-300 mb-4">{app.description}<div className="space-y-2">{app.useCases.map((useCase, idx) => (</div>
-                    <div key={idx} className="flex items-center text-sm text-purple-300">
+                <p className="text-gray-300 mb-4">{app.description}</p><div className="space-y-2">{app.useCases.map((useCase, idx) => (</div>
+                    <div key={idx} className="flex items-center text-sm text-purple-300"></div>
                       <Target className="w-4 h-4 mr-2" >{useCase}</Target>
                     </Target>
                   ))}
@@ -298,15 +323,21 @@ const AIBlockchainSolutionsPage: React.FC = () => {
 
       {/* Pricing Section */}
       <section className="py-16 px-4">
+<<<<<<< HEAD
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
 <<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-6">Blockchain Solutions Plans<p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the right plan for your blockchain AI needs.<div className="grid md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
+=======
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Blockchain Solutions Plans</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the right plan for your blockchain AI needs.</p><div className="grid md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 plan.popular
                   ? 'border-cyan-400/40 ring-2 ring-cyan-400/20'
                   : 'border-gray-600/50'
               }`}>{plan.popular && (</div>
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
 =======
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -332,8 +363,8 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}<p className="text-gray-300">{plan.description}<ul className="space-y-3 mb-8">{plan.features.map((feature, idx) => (</ul>
+                <div className="text-center mb-6"></div>
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div><p className="text-gray-300">{plan.description}</p><ul className="space-y-3 mb-8">{plan.features.map((feature, idx) => (</ul>
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" >{feature}</CheckCircle>
                     </CheckCircle>
@@ -360,11 +391,15 @@ const AIBlockchainSolutionsPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-16 px-4 bg-slate-800/30">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build AI Blockchain Solutions?<p className="text-xl text-gray-300 mb-8">Start building secure, intelligent, and decentralized solutions today.</p>
+        <div className="container mx-auto max-w-4xl text-center"></section>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build AI Blockchain Solutions?</h2><p className="text-xl text-gray-300 mb-8">Start building secure, intelligent, and decentralized solutions today.</p>
           </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">Start Building</a>
               <ArrowRight className="w-5 h-5 ml-2" />
             <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">Schedule Demo</a>

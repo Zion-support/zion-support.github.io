@@ -146,9 +146,9 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Pricing Plans<p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Choose the perfect plan for your business. All plans include our core AI services</p>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></section><div className="container mx-auto px-4 relative z-10"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Pricing Plans</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Choose the perfect plan for your business. All plans include our core AI services</p>
               with flexible options to scale as you grow.</p>
 =======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -165,16 +165,16 @@ export default function PricingPage() {
               with flexible options to scale as you grow.
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
+            <div className="flex flex-wrap justify-center gap-4"></div>
+              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
                 <CheckCircle className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">14-Day Free Trial</span>
               </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
                 <Shield className="w-5 h-5 text-purple-400" />
                 <span className="text-white font-medium">No Setup Fees</span>
               </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
                 <ArrowRight className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">Cancel Anytime</span>
               </div>)
@@ -185,10 +185,16 @@ export default function PricingPage() {
 ),
       {/* Billing Toggle */}
       <section className="py-8">
+<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="flex justify-center">
             <div className="bg-slate-800/50 rounded-lg p-1 flex">
 <<<<<<< HEAD
+=======
+        <div className="container mx-auto px-4"></section>
+          <div className="flex justify-center"></div>
+            <div className="bg-slate-800/50 rounded-lg p-1 flex"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <button
                 onClick={() =>setBillingCycle('monthly')}
 =======
@@ -234,8 +240,12 @@ export default function PricingPage() {
 
       {/* Pricing Plans */}
       <section className="py-20">
+<<<<<<< HEAD
         <div className="container mx-auto px-4">
 <<<<<<< HEAD
+=======
+        <div className="container mx-auto px-4"></section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">{plans.map((plan, index) => {
               const savings = calculateSavings(plan.price.monthly, plan.price.yearly);</div>
               return (<div
@@ -251,7 +261,7 @@ export default function PricingPage() {
                   } hover:bg-slate-700/50 transition-all duration-300`}
 <<<<<<< HEAD
                 >{plan.popular && (</div>
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                       <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</div>
                       </div>
                     </div>
@@ -266,12 +276,12 @@ export default function PricingPage() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   )}
 
-                  <div className="text-center mb-8">
-                    <div className={`w-16 h-16 ${plan.bgColor} rounded-lg flex items-center justify-center mx-auto mb-4`}>
-                      <plan.icon className={`w-8 h-8 ${plan.color}`} />
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<p className="text-gray-300 mb-4">{plan.description}</p>
-                    <div className="mb-4">
-                      <span className="text-4xl font-bold text-white">${plan.price[billingCycle as keyof typeof plan.price].toLocaleString()}<span className="text-gray-400 ml-2">/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
+                  <div className="text-center mb-8"></div>
+                    <div className={`w-16 h-16 ${plan.bgColor} rounded-lg flex items-center justify-center mx-auto mb-4`}></div>
+                      <plan.icon className={`w-8 h-8 ${plan.color}`} /></p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><p className="text-gray-300 mb-4">{plan.description}</p>
+                    <div className="mb-4"></div>
+                      <span className="text-4xl font-bold text-white">${plan.price[billingCycle as keyof typeof plan.price].toLocaleString()}</span><span className="text-gray-400 ml-2">/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
                       </span>
                     </div>
                     {billingCycle === 'yearly' && (
@@ -280,16 +290,21 @@ export default function PricingPage() {
                     )}
                   </div>
 
+<<<<<<< HEAD
                   <div className="space-y-4 mb-8">
                     <h4 className="text-lg font-semibold text-white mb-3">What's included: </h4>,
+=======
+                  <div className="space-y-4 mb-8"></div>
+                    <h4 className="text-lg font-semibold text-white mb-3">What's included:</h4>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     {plan.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-start space-x-3">
+                      <div key={featureIndex} className="flex items-start space-x-3"></div>
                         <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-300 text-sm">{feature}</span>
                       </div>
                     ))}
                     {plan.limitations.map((limitation, limitationIndex) => (
-                      <div key={limitationIndex} className="flex items-start space-x-3">
+                      <div key={limitationIndex} className="flex items-start space-x-3"></div>
                         <X className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-400 text-sm">{limitation}</span>
                       </div>
@@ -320,15 +335,23 @@ export default function PricingPage() {
 
       {/* Add-ons */}
       <section className="py-20 bg-slate-800/50">
+<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
 <<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Add-on Services<p className="text-lg text-gray-300 max-w-3xl mx-auto">Enhance your plan with additional services and features<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{addOns.map((addon, index) => (</div>
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+=======
+        <div className="container mx-auto px-4"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Add-on Services</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Enhance your plan with additional services and features</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{addOns.map((addon, index) => (</div>
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300"></div>
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <addon.icon className="w-6 h-6 text-white" />
                 <h3 className="text-xl font-bold text-white mb-2">{addon.name}</h3>
-                <p className="text-gray-300 text-sm mb-4">{addon.description}<div className="text-2xl font-bold text-white mb-4">${addon.price[billingCycle as keyof typeof addon.price].toLocaleString()}<span className="text-gray-400 text-sm ml-1">/{billingCycle === 'monthly' ? 'month' : 'year'}<button className="w-full bg-slate-700 text-white py-2 px-4 rounded-lg font-medium hover:bg-slate-600 transition-colors">Add to Plan</button>
+                <p className="text-gray-300 text-sm mb-4">{addon.description}</p><div className="text-2xl font-bold text-white mb-4">${addon.price[billingCycle as keyof typeof addon.price].toLocaleString()}</div><span className="text-gray-400 text-sm ml-1">/{billingCycle === 'monthly' ? 'month' : 'year'}</span><button className="w-full bg-slate-700 text-white py-2 px-4 rounded-lg font-medium hover:bg-slate-600 transition-colors">Add to Plan</button>
                 </button>
               </div>
 =======
@@ -365,14 +388,21 @@ export default function PricingPage() {
 
       {/* FAQ */}
       <section className="py-20">
+<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
 <<<<<<< HEAD
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Frequently Asked Questions<p className="text-lg text-gray-300 max-w-3xl mx-auto">Common questions about our pricing and plans</p>
+=======
+        <div className="container mx-auto px-4"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Common questions about our pricing and plans</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
           </div>
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto"></div>
             <div className="space-y-6">{faqs.map((faq, index) => (</div>
+<<<<<<< HEAD
 =======
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Frequently Asked Questions;
@@ -387,6 +417,10 @@ export default function PricingPage() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{faq.question}<p className="text-gray-300">{faq.answer}</p>
+=======
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6"></div>
+                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3><p className="text-gray-300">{faq.answer}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </div>
               ))}
             </div>
@@ -396,6 +430,7 @@ export default function PricingPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
+<<<<<<< HEAD
         <div className="container mx-auto px-4 text-center">
 <<<<<<< HEAD
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Get Started?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Start your 14-day free trial today. No credit card required, cancel anytime.</p>
@@ -409,6 +444,13 @@ export default function PricingPage() {
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a;
+=======
+        <div className="container mx-auto px-4 text-center"></section>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Start your 14-day free trial today. No credit card required, cancel anytime.</p>
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <a
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
             >

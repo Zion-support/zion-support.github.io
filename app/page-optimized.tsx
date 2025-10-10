@@ -20,9 +20,14 @@ const preloadComponents = () => {
 
 // Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
+<<<<<<< HEAD
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
 <<<<<<< HEAD
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"><div className="h-4 bg-gray-200 rounded mb-2"><div className="h-4 bg-gray-200 rounded w-5/6">));
+=======
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>
+    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div><div className="h-4 bg-gray-200 rounded mb-2"></div><div className="h-4 bg-gray-200 rounded w-5/6">));
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';</div>
 </div>
 export default HomePage;</div>

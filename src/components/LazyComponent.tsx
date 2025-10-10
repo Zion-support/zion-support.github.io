@@ -12,7 +12,7 @@ export default function LazyComponent({
 }: LazyComponentProps) {
 =======
 const DefaultFallback = () => (
-  <div className="flex items-center justify-center p-8">
+  <div className="flex items-center justify-center p-8"></div>
     <div className="cyber-loader"></div>
     <span className="ml-3 text-cyan-400">Loading...</span>
   </div>

@@ -59,10 +59,10 @@ const EmailOptimizerPage: React.FC = () => {
 <<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center mb-16"></div>
           <h1 className="text-5xl font-bold text-white mb-6">
-            Email <span className="text-cyan-400">Optimizer<p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Transform your email marketing with AI-powered optimization. Increase open rates,</p>
+            Email</h1> <span className="text-cyan-400">Optimizer</span><p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Transform your email marketing with AI-powered optimization. Increase open rates,</p>
             boost engagement, and maximize ROI with our intelligent email optimization platform.</p>
 =======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -77,8 +77,13 @@ const EmailOptimizerPage: React.FC = () => {
             boost engagement, and maximize ROI with our intelligent email optimization platform.
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link;
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <Link
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
             >
@@ -95,15 +100,16 @@ const EmailOptimizerPage: React.FC = () => {
         </div>
 
         {/* Features Section */}
-        <div className="mb-16">
+        <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Powerful <span className="text-cyan-400">Features<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+            Powerful</h2> <span className="text-cyan-400">Features</span><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
-              >
-                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">
+              ></div>
+                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4"></div>
                   <feature.icon className="w-6 h-6 text-white" />
+<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<p className="text-gray-300">{feature.description}</p>
 =======
               <Mail className="w-5 h-5 mr-2" />
@@ -136,14 +142,18 @@ const EmailOptimizerPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3><p className="text-gray-300">{feature.description}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             ))}
           </div>
         </div>
 
         {/* Benefits Section */}
-        <div className="mb-16">
+        <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
+<<<<<<< HEAD
 <<<<<<< HEAD
             Proven <span className="text-cyan-400">Results<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
 =======
@@ -154,19 +164,29 @@ const EmailOptimizerPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="text-center">
                 <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
+=======
+            Proven</h2> <span className="text-cyan-400">Results</span><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
+              <div key={index} className="text-center"></div>
+                <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <TrendingUp className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}<p className="text-gray-300">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3><p className="text-gray-300">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your Email Marketing?<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of marketers using our AI-powered email optimization to boost their campaigns.</p>
+        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center"></div>
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your Email Marketing?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of marketers using our AI-powered email optimization to boost their campaigns.</p>
           </p>
+<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link;
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <Link
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
             >

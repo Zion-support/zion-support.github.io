@@ -48,6 +48,7 @@ const ContentPromotionBanner: React.FC = () => {,
 
   const currentBannerData = banners[currentBanner];
 
+<<<<<<< HEAD
   return(<div className={`relative bg-gradient-to-r ${currentBannerData.color} text-white py-3 px-4 transition-all duration-500`}>
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center space-x-3">
@@ -62,15 +63,32 @@ const ContentPromotionBanner: React.FC = () => {,
             <span className="hidden sm: inline ml-2 text-sm opacity-90">,
               {currentBannerData.description}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+  return (
+    <div className={`relative bg-gradient-to-r ${currentBannerData.color} text-white py-3 px-4 transition-all duration-500`}></div>
+      <div className="container mx-auto flex items-center justify-between"></div>
+        <div className="flex items-center space-x-3"></div>
+          <currentBannerData.icon className="w-5 h-5 animate-pulse" />
+          <div></div>
+            <span className="font-semibold text-sm sm:text-base">{currentBannerData.title}</span><span className="hidden sm:inline ml-2 text-sm opacity-90">{currentBannerData.description}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </span>
           </div>
         </div>
 
+<<<<<<< HEAD
         <div className="flex items-center space-x-2">
           <a;)
             href={currentBannerData.link})
             className="bg-white/20 hover: bg-white/30 text-white px-4 py-1 rounded-full text-sm font-medium transition-all duration-300 flex items-center space-x-1",)
           >),
+=======
+        <div className="flex items-center space-x-2"></div>
+          <a
+            href={currentBannerData.link}
+            className="bg-white/20 hover:bg-white/30 text-white px-4 py-1 rounded-full text-sm font-medium transition-all duration-300 flex items-center space-x-1"
+          >
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <span>{currentBannerData.cta}</span>
             <ArrowRight className="w-3 h-3" />
 <<<<<<< HEAD
@@ -85,7 +103,7 @@ const ContentPromotionBanner: React.FC = () => {,
       </div>
 
       {/* Banner indicators */}
-      <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 flex space-x-1">{banners.map((_, index) => (<button
+      <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 flex space-x-1">{banners.map((_, index) => (</div><button
             key={index}
             onClick={() =>setCurrentBanner(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
