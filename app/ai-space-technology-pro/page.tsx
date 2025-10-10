@@ -1,32 +1,25 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
-    {
+import {Helmet } from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+const PagePage: React.FC = () => {const features = []
+    {}
     },
-    {
-      icon: Zap,
+    {icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
-    {
-      icon: Shield,
+    {icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
     },
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-
   ];
-
-  return (
+  return ()
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
@@ -39,16 +32,13 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
     </div>
   );
 };
-
 export default PagePage;

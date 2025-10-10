@@ -1,12 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
+import {Helmet } from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
     }
   ];
-
-  const benefits = [
+  const benefits = []
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -16,18 +14,15 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
-
       {/* Hero Section */}
           </div>
         </div>
       </section>
-
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
             </h2>
@@ -39,7 +34,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
@@ -50,7 +44,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
           </div>
         </div>
@@ -58,5 +51,4 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     </div>
   );
 };
-
 export default PagePage;

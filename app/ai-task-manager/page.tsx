@@ -1,12 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
+import {Helmet } from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
     }
   ];
-
-  const benefits = [
+  const benefits = []
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -16,22 +14,19 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
-  return (
+  return ()
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
           </div>
         </div>
@@ -39,5 +34,4 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     </div>
   );
 };
-
 export default PagePage;

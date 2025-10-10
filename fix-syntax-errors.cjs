@@ -1,224 +1,214 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Common template for AI pages
-const createAIPageTemplate = (pageName, title, description, icon) => `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-
-const ${pageName}: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-      </Helmet>
-
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              ${title}
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              ${description}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI technology that drives results
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </>
-  );
-};
-
-export default ${pageName};`;
-
-// Function to fix a file
-function fixFile(filePath) {
+// Function to fix common syntax errors in TSX files
+function fixSyntaxErrors(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file is too broken to fix
-    if (content.length < 100 || content.includes('export default') && content.length < 200) {
-      const fileName = path.basename(filePath, '.tsx');
-      const pageName = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join('') + 'Page';
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    const originalContent = content;
+
+    // Fix common JSX syntax issues
+    content = content
+      // Fix missing closing tags - add closing tags for common elements
+      .replace(/<main([^>]*)>\s*$/gm, '<main$1></main>')
+      .replace(/<section([^>]*)>\s*$/gm, '<section$1></section>')
+      .replace(/<div([^>]*)>\s*$/gm, '<div$1></div>')
+      .replace(/<header([^>]*)>\s*$/gm, '<header$1></header>')
+      .replace(/<footer([^>]*)>\s*$/gm, '<footer$1></footer>')
+      .replace(/<article([^>]*)>\s*$/gm, '<article$1></article>')
+      .replace(/<aside([^>]*)>\s*$/gm, '<aside$1></aside>')
+      .replace(/<nav([^>]*)>\s*$/gm, '<nav$1></nav>')
       
-      const title = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join(' ');
+      // Fix object property syntax
+      .replace(/(\w+)\s*:\s*([^,}\n]+)(?=\s*[,}])/g, '$1: $2')
       
-      const description = `Advanced ${title.toLowerCase()} solutions powered by AI technology.`;
+      // Fix missing commas in arrays and objects
+      .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $2:')
+      .replace(/(\w+)\s*\n\s*(\w+)\s*:/g, '$1,\n    $2:')
       
-      const fixedContent = createAIPageTemplate(pageName, title, description, 'Brain');
-      fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed: ${filePath}`);
-      return true;
+      // Fix JSX expressions
+      .replace(/\{\s*([^}]+)\s*\}/g, '{$1}')
+      
+      // Fix missing semicolons
+      .replace(/(\w+)\s*\n\s*const/g, '$1;\nconst')
+      .replace(/(\w+)\s*\n\s*let/g, '$1;\nlet')
+      .replace(/(\w+)\s*\n\s*var/g, '$1;\nvar')
+      .replace(/(\w+)\s*\n\s*function/g, '$1;\nfunction')
+      
+      // Fix missing return statements
+      .replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*\{([^}]+)\}/g, 'const $1 = () => {\n  return $2;\n}')
+      
+      // Fix orphaned JSX fragments
+      .replace(/<>\s*$/gm, '<></>')
+      .replace(/<>\s*\n\s*$/gm, '<></>')
+      
+      // Fix missing closing parentheses
+      .replace(/\(\s*$/gm, '()')
+      .replace(/\(\s*\n\s*$/gm, '()')
+      
+      // Fix missing closing brackets
+      .replace(/\[\s*$/gm, '[]')
+      .replace(/\[\s*\n\s*$/gm, '[]')
+      
+      // Fix missing closing braces
+      .replace(/\{\s*$/gm, '{}')
+      .replace(/\{\s*\n\s*$/gm, '{}')
+      
+      // Remove extra whitespace
+      .replace(/\n\s*\n\s*\n/g, '\n\n')
+      .replace(/\s+$/gm, '')
+      .trim();
+
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      modified = true;
     }
-    
-    // Try to fix common syntax errors
-    let fixedContent = content;
-    
-    // Fix missing imports
-    if (!fixedContent.includes("import React from 'react'") && fixedContent.includes('React.FC')) {
-      fixedContent = "'use client';\nimport React from 'react';\n" + fixedContent;
-    }
-    
-    // Fix missing Helmet import
-    if (fixedContent.includes('<Helmet>') && !fixedContent.includes("import { Helmet }")) {
-      fixedContent = fixedContent.replace(
-        /'use client';\nimport React from 'react';/,
-        "'use client';\nimport React from 'react';\nimport { Helmet } from 'react-helmet-async';"
-      );
-    }
-    
-    // Fix missing Navigation/Footer imports
-    if (fixedContent.includes('<Navigation') && !fixedContent.includes("import Navigation")) {
-      fixedContent = fixedContent.replace(
-        /import { Helmet } from 'react-helmet-async';/,
-        "import { Helmet } from 'react-helmet-async';\nimport Navigation from '../components/Navigation';\nimport Footer from '../components/Footer';"
-      );
-    }
-    
-    // Fix malformed JSX structure
-    if (fixedContent.includes('return (') && !fixedContent.includes('return (')) {
-      fixedContent = fixedContent.replace(/return \(/g, 'return (\n    <>');
-    }
-    
-    // Fix missing closing tags
-    if (fixedContent.includes('<div className="min-h-screen') && !fixedContent.includes('</div>')) {
-      fixedContent = fixedContent.replace(
-        /<div className="min-h-screen[^>]*>/,
-        '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">'
-      );
-    }
-    
-    if (fixedContent !== content) {
-      fs.writeFileSync(filePath, fixedContent);
-      console.log(`Partially fixed: ${filePath}`);
-      return true;
-    }
-    
-    return false;
+
+    return modified;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Get all problematic files
-const files = glob.sync('app/**/*.tsx', { cwd: __dirname });
+// Function to fix specific problematic files
+function fixSpecificFiles() {
+  const problematicFiles = [
+    'app/ai-api-management/page.tsx',
+    'app/ai-api-manager/page.tsx',
+    'app/ai-automation/page.tsx',
+    'app/ai-autonomous-systems/page.tsx',
+    'app/ai-blockchain-analytics/page.tsx',
+    'app/ai-blockchain-solutions/page.tsx',
+    'app/ai-climate-solutions-pro/page.tsx',
+    'app/ai-cloud-infrastructure/page.tsx',
+    'app/ai-code-assistant/page.tsx',
+    'app/ai-computer-vision/page.tsx',
+    'app/ai-content-delivery-network/page.tsx',
+    'app/ai-content-generation/page.tsx',
+    'app/ai-content-studio/page.tsx',
+    'app/ai-content-writer/page.tsx',
+    'app/ai-crm-assistant/page.tsx',
+    'app/ai-customer-service/page.tsx',
+    'app/ai-customer-support-chatbot/page.tsx',
+    'app/ai-customer-support/page.tsx',
+    'app/ai-cybersecurity-monitor/page.tsx',
+    'app/ai-cybersecurity-suite/page.tsx',
+    'app/ai-cybersecurity/page.tsx',
+    'app/ai-data-analytics/page.tsx',
+    'app/ai-data-visualization/page.tsx',
+    'app/ai-document-processing/page.tsx',
+    'app/ai-document-scanner/page.tsx',
+    'app/ai-drug-discovery-pro/page.tsx',
+    'app/ai-ecommerce-optimizer/page.tsx',
+    'app/ai-ecommerce-solutions/page.tsx',
+    'app/ai-edge-computing/page.tsx',
+    'app/ai-education/page.tsx',
+    'app/ai-email-assistant/page.tsx',
+    'app/ai-email-marketing-automation/page.tsx',
+    'app/ai-energy-grid-management-pro/page.tsx',
+    'app/ai-energy/page.tsx',
+    'app/ai-expense-tracker/page.tsx',
+    'app/ai-financial-analyzer/page.tsx',
+    'app/ai-financial-crime-detection-pro/page.tsx',
+    'app/ai-fintech/page.tsx',
+    'app/ai-fraud-detection/page.tsx',
+    'app/ai-healthcare/page.tsx',
+    'app/ai-holographic-workspace/page.tsx',
+    'app/ai-hr/page.tsx',
+    'app/ai-infrastructure-monitoring/page.tsx',
+    'app/ai-insurance/page.tsx',
+    'app/ai-inventory-management/page.tsx',
+    'app/ai-inventory-manager/page.tsx',
+    'app/ai-investment-optimizer/page.tsx',
+    'app/ai-lead-generation/page.tsx',
+    'app/ai-legal-assistant/page.tsx',
+    'app/ai-legal-research-pro/page.tsx',
+    'app/ai-legal/page.tsx',
+    'app/ai-load-testing/page.tsx',
+    'app/ai-logo-designer/page.tsx',
+    'app/ai-manufacturing/page.tsx',
+    'app/ai-marketing/page.tsx',
+    'app/ai-mental-health-companion/page.tsx',
+    'app/ai-ml-platform/page.tsx',
+    'app/ai-ml/page.tsx',
+    'app/ai-mobile-app-development/page.tsx',
+    'app/ai-neural-memory-assistant/page.tsx',
+    'app/ai-nlp/page.tsx',
+    'app/ai-ops/page.tsx',
+    'app/ai-password-manager/page.tsx',
+    'app/ai-predictive-maintenance/page.tsx',
+    'app/ai-project-management/page.tsx',
+    'app/ai-project-manager/page.tsx',
+    'app/ai-quality-assurance/page.tsx',
+    'app/ai-quantum-computing/page.tsx',
+    'app/ai-quantum-financial-oracle/page.tsx',
+    'app/ai-quantum-optimization/page.tsx',
+    'app/ai-quantum-task-optimizer/page.tsx',
+    'app/ai-real-estate/page.tsx',
+    'app/ai-robotics/page.tsx',
+    'app/ai-sales-automation/page.tsx',
+    'app/ai-sentiment-analyzer/page.tsx',
+    'app/ai-smart-calendar/page.tsx',
+    'app/ai-smart-home-controller/page.tsx',
+    'app/ai-social-media-scheduler/page.tsx',
+    'app/ai-solutions/page.tsx',
+    'app/ai-space-technology-pro/page.tsx',
+    'app/ai-space-technology/page.tsx',
+    'app/ai-stock-portfolio-manager/page.tsx',
+    'app/ai-supply-chain-optimization-pro/page.tsx',
+    'app/ai-supply-chain/page.tsx',
+    'app/ai-task-manager/page.tsx',
+    'app/ai-telepathic-interface/page.tsx',
+    'app/ai-transportation/page.tsx',
+    'app/ai-video-editor/page.tsx',
+    'app/ai-video-generator/page.tsx',
+    'app/ai-vision/page.tsx',
+    'app/ai-voice-assistant/page.tsx',
+    'app/ai-voice-cloning-studio/page.tsx',
+    'app/ai-voice-cloning/page.tsx',
+    'app/ai-voice-synthesis/page.tsx',
+    'app/ai-website-builder/page.tsx',
+    'app/ai-workflow-automation/page.tsx',
+    'app/analytics-tools/page.tsx',
+    'app/api-docs/page.tsx',
+    'app/ar-vr-platform/page.tsx',
+    'app/backup-recovery/page.tsx',
+    'app/blockchain-integration-services/page.tsx',
+    'app/blockchain/page.tsx',
+    'app/business-apps/page.tsx',
+    'app/business-intelligence/page.tsx',
+    'app/cloud-infrastructure/page.tsx',
+    'app/cloud-migration-services/page.tsx',
+    'app/cloud-migration/page.tsx',
+    'app/cloud-security/page.tsx',
+    'app/cloud-services/page.tsx',
+    'app/community/page.tsx',
+    'app/compliance/page.tsx'
+  ];
 
-let fixedCount = 0;
-let totalCount = 0;
+  let fixedCount = 0;
 
-files.forEach(file => {
-  totalCount++;
-  if (fixFile(file)) {
-    fixedCount++;
+  for (const file of problematicFiles) {
+    const fullPath = path.join(__dirname, file);
+    if (fs.existsSync(fullPath)) {
+      if (fixSyntaxErrors(fullPath)) {
+        console.log(`Fixed syntax errors in: ${file}`);
+        fixedCount++;
+      }
+    }
   }
-});
 
-console.log(`\nFixed ${fixedCount} out of ${totalCount} files`);
+  return fixedCount;
+}
+
+// Main execution
+console.log('Starting syntax error fixes...');
+
+const fixedCount = fixSpecificFiles();
+
+console.log(`Fixed syntax errors in ${fixedCount} files`);
+console.log('Syntax error fixes completed!');
