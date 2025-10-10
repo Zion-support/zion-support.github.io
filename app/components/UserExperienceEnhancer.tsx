@@ -16,6 +16,7 @@ export const UserExperienceEnhancer: React.FC = () => {
     language: 'en',
     notifications: true,
     analytics: true,
+  });
 
   const [isLoading, setIsLoading] = useState(true);
   const [showWelcome, setShowWelcome] = useState(false);

@@ -16,6 +16,7 @@ export const SecurityEnhancer: React.FC = () => {
     xssAttempts: 0,
     csrfAttempts: 0,
     suspiciousActivity: 0,
+  });
 
   const [isSecure, setIsSecure] = useState(true);
   const [securityWarnings, setSecurityWarnings] = useState<string[]>([]);

@@ -2,271 +2,163 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/about</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/contact</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/pricing</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/ai-services</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/it-services</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/micro-saas</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/case-studies</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/blog</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/team</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/careers</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/privacy</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/terms</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/cookies</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/docs</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/api-docs</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/support</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/status</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/demo</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/consultation</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/services</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/ai-ops</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/healthcare-it</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/financial-it</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/edge-computing</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/5g-implementation</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/iot-platform</loc>
-<<<<<<< HEAD
-    <lastmod>2025-10-10T09:37:20.712Z</lastmod>
-=======
-    <lastmod>2025-10-10T09:38:48.907Z</lastmod>
->>>>>>> 99a6bac7ac27f53740095a2a364db8d3c3059c4f
+    <lastmod>2025-10-10T09:42:27.998Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
