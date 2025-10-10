@@ -18,8 +18,14 @@ const PerformanceMonitor: React.FC = () => {
     // Only show in development or if user has enabled debug mode
     const isDebugMode = localStorage.getItem('debug-mode') === 'true';
     const isDevelopment = process.env.NODE_ENV === 'development';
+    const isProduction = process.env.NODE_ENV === 'production';
     
-    if (!isDebugMode && !isDevelopment) return;
+    // Always measure performance, but only show UI in debug mode or development
+    if (!isDebugMode && !isDevelopment) {
+      // Still measure performance for analytics, but don't show UI
+      measurePerformanceSilently();
+      return;
+    }
 
     const measurePerformance = async () => {
       try {
@@ -58,6 +64,45 @@ const PerformanceMonitor: React.FC = () => {
 
     measurePerformance();
   }, []);
+
+  const measurePerformanceSilently = async () => {
+    try {
+      // Wait for page to be fully loaded
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
+      
+      // Estimate connection speed
+      const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
+      const connectionSpeed = connection ? 
+        `${Math.round(connection.downlink)} Mbps` : 
+        'Unknown';
+
+      const performanceMetrics: PerformanceMetrics = {
+        loadTime: Math.round(navigation.loadEventEnd - navigation.navigationStart),
+        firstContentfulPaint: fcp ? Math.round(fcp.startTime) : 0,
+        largestContentfulPaint: lcp ? Math.round(lcp.startTime) : 0,
+        firstInputDelay: 0,
+        cumulativeLayoutShift: 0,
+        connectionSpeed
+      };
+
+      // Send to analytics (you can implement this)
+      console.log('Performance metrics:', performanceMetrics);
+      
+      // Store in localStorage for later analysis
+      localStorage.setItem('performance-metrics', JSON.stringify({
+        ...performanceMetrics,
+        timestamp: Date.now()
+      }));
+    } catch (error) {
+      console.error('Error measuring performance silently:', error);
+    }
+  };
 
   if (!isVisible || !metrics) return null;
 

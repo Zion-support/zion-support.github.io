@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 
 export default function RootLayout({
   children,
@@ -87,6 +88,7 @@ export default function RootLayout({
       </head>
       <body className='antialiased'>
         <PerformanceMonitor />
+        <ServiceWorkerRegistration />
         {children}
       </body>
     </html>
