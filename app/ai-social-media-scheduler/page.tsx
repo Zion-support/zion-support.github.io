@@ -3,33 +3,33 @@ import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Calendar, Target, Clock, CheckCircle, Brain, Share2, TrendingUp, BarChart, MessageSquare } from 'lucide-react';
 
-const AISocialMediaScheduler: React.FC = memo(() => {
+const AISocialMediaScheduler: React.FC = memo(() => {}
   const [isLoaded, setIsLoaded] = useState(false);
 
-  React.useEffect(() => {
+  React.useEffect(() => {}
     setIsLoaded(true);
   }, []);
 
   const features = [
-    {
+    {}
       icon: Calendar,
       title: 'Smart Scheduling',
       description: 'AI-powered optimal posting times based on your audience engagement patterns',
       color: 'text-purple-400'
     },
-    {
+    {}
       icon: Brain,
       title: 'Content Generation',
       description: 'Generate engaging posts, captions, and hashtags using advanced AI technology',
       color: 'text-blue-400'
     },
-    {
+    {}
       icon: BarChart,
       title: 'Analytics Dashboard',
       description: 'Comprehensive analytics and insights to track performance across all platforms',
       color: 'text-green-400'
     },
-    {
+    {}
       icon: Share2,
       title: 'Multi-Platform Support',
       description: 'Schedule and manage content across Instagram, Facebook, Twitter, LinkedIn, and TikTok',
@@ -38,7 +38,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {
   ];
 
   const pricingPlans = [
-    {
+    {}
       name: 'Starter',
       price: '$19',
       period: '/month',
@@ -53,7 +53,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {
       ],
       popular: false
     },
-    {
+    {}
       name: 'Professional',
       price: '$49',
       period: '/month',
@@ -69,7 +69,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {
       ],
       popular: true
     },
-    {
+    {}
       name: 'Enterprise',
       price: '$149',
       period: '/month',
@@ -88,25 +88,25 @@ const AISocialMediaScheduler: React.FC = memo(() => {
   ];
 
   const useCases = [
-    {
+    {}
       title: 'Content Planning',
       description: 'Plan and schedule your content calendar weeks in advance',
       icon: Calendar,
       result: '3x efficiency'
     },
-    {
+    {}
       title: 'Engagement Boost',
       description: 'Increase engagement with AI-optimized posting times and content',
       icon: TrendingUp,
       result: '150% more'
     },
-    {
+    {}
       title: 'Brand Consistency',
       description: 'Maintain consistent brand voice across all platforms',
       icon: Target,
       result: '100% consistent'
     },
-    {
+    {}
       title: 'Time Saving',
       description: 'Save hours every week with automated scheduling and content generation',
       icon: Clock,
@@ -199,7 +199,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
                 <div className="flex items-start space-x-4">
                   <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}>
@@ -219,7 +219,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Supported Platforms</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {supportedPlatforms.map((platform, index) => (
+            {supportedPlatforms.map((platform, index) => (}
               <div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 text-center">
                 <div className="text-4xl mb-2">{platform.icon}</div>
                 <div className={`font-medium ${platform.color}`}>{platform.name}</div>
@@ -232,7 +232,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCase, index) => (}
               <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <useCase.icon className="w-8 h-8 text-purple-400" />
@@ -249,9 +249,9 @@ const AISocialMediaScheduler: React.FC = memo(() => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan, index) => (}
               <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>
-                {plan.popular && (
+                {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
@@ -267,7 +267,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {
                   <p className="text-gray-400 mt-2">{plan.description}</p>
                 </div>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -276,7 +276,7 @@ const AISocialMediaScheduler: React.FC = memo(() => {
                 </ul>
                 <a
                   href="/contact"
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
                       : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'

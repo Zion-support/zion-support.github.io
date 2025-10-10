@@ -1,6 +1,6 @@
 'use client';
 import { Link } from 'react-router-dom';
-import {
+import {}
   Briefcase,
   MapPin,
   Clock,
@@ -62,7 +62,7 @@ import {
   Navigation
 } from 'lucide-react';
 
-export default function CareersPage() {
+export default function CareersPage() {}
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const [selectedLocation, setSelectedLocation] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
@@ -90,7 +90,7 @@ export default function CareersPage() {
   ];
 
   const openPositions = [
-    {
+    {}
       id: 1,
       title: 'Senior AI Engineer',
       department: 'engineering',
@@ -115,7 +115,7 @@ export default function CareersPage() {
       experience: '5+ years',
       skills: ['Python', 'TensorFlow', 'PyTorch', 'AWS', 'Docker']
     },
-    {
+    {}
       id: 2,
       title: 'AI Research Scientist',
       department: 'ai-research',
@@ -140,7 +140,7 @@ export default function CareersPage() {
       experience: '3+ years',
       skills: ['Research', 'Deep Learning', 'Quantum Computing', 'Publications']
     },
-    {
+    {}
       id: 3,
       title: 'Data Scientist',
       department: 'data-science',
@@ -165,7 +165,7 @@ export default function CareersPage() {
       experience: '3+ years',
       skills: ['Python', 'R', 'SQL', 'Machine Learning', 'Statistics']
     },
-    {
+    {}
       id: 4,
       title: 'Product Manager',
       department: 'product',
@@ -190,7 +190,7 @@ export default function CareersPage() {
       experience: '5+ years',
       skills: ['Product Strategy', 'AI Products', 'Analytics', 'Leadership']
     },
-    {
+    {}
       id: 5,
       title: 'DevOps Engineer',
       department: 'engineering',
@@ -215,7 +215,7 @@ export default function CareersPage() {
       experience: '3+ years',
       skills: ['AWS', 'Kubernetes', 'Docker', 'Terraform', 'CI/CD']
     },
-    {
+    {}
       id: 6,
       title: 'UX Designer',
       department: 'product',
@@ -242,39 +242,39 @@ export default function CareersPage() {
     }
   ];
 
-  const filteredPositions = openPositions.filter(position => {
+  const filteredPositions = openPositions.filter(position => {)}
     const departmentMatch = selectedDepartment === 'all' || position.department === selectedDepartment;
     const locationMatch = selectedLocation === 'all' || position.location === selectedLocation;
     const typeMatch = selectedType === 'all' || position.type === selectedType;
     return departmentMatch && locationMatch && typeMatch;
 
   const benefits = [
-    {
+    {}
       icon: Award,
       title: 'Competitive Compensation',
       description: 'Above-market salaries with equity participation and performance bonuses'
     },
-    {
+    {}
       icon: Heart,
       title: 'Health & Wellness',
       description: 'Comprehensive health, dental, and vision insurance with mental health support'
     },
-    {
+    {}
       icon: Home,
       title: 'Flexible Work',
       description: 'Remote-first culture with flexible hours and unlimited PTO'
     },
-    {
+    {}
       icon: Brain,
       title: 'Learning & Growth',
       description: 'Annual learning budget, conference attendance, and mentorship programs'
     },
-    {
+    {}
       icon: Users,
       title: 'Team Culture',
       description: 'Collaborative environment with regular team events and company retreats'
     },
-    {
+    {}
       icon: Globe,
       title: 'Global Impact',
       description: 'Work on projects that make a real difference in the world'
@@ -282,30 +282,30 @@ export default function CareersPage() {
   ];
 
   const culture = [
-    {
+    {}
       title: 'Innovation First',
       description: 'We encourage experimentation and reward bold ideas that push boundaries',
       icon: Sparkles
     },
-    {
+    {}
       title: 'Collaboration',
       description: 'We believe the best solutions come from diverse teams working together',
       icon: Users
     },
-    {
+    {}
       title: 'Growth Mindset',
       description: 'We invest in our people\'s development and provide opportunities to learn',
       icon: TrendingUp
     },
-    {
+    {}
       title: 'Work-Life Balance',
       description: 'We understand that great work comes from well-rested, happy people',
       icon: Clock
     }
   ];
 
-  const getDepartmentIcon = (department: string) => {
-    const icons = {
+  const getDepartmentIcon = (department: string) => {}
+    const icons = {}
       engineering: Code,
       'ai-research': Brain,
       'data-science': BarChart,
@@ -314,8 +314,8 @@ export default function CareersPage() {
     return icons[department as keyof typeof icons] || Briefcase;
   };
 
-  const getDepartmentColor = (department: string) => {
-    const colors = {
+  const getDepartmentColor = (department: string) => {}
+    const colors = {}
       engineering: 'text-blue-400',
       'ai-research': 'text-purple-400',
       'data-science': 'text-green-400',
@@ -370,11 +370,11 @@ export default function CareersPage() {
                 />
               </div>
               <div className="flex gap-2 overflow-x-auto">
-                {departments.map((dept) => (
+                {departments.map((dept) => (}
                   <button
                     key={dept.name}
                     onClick={() => setSelectedDepartment(dept.name)}
-                    className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
+                    className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${}
                       selectedDepartment === dept.name
                         ? 'bg-cyan-500 text-white'
                         : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
@@ -386,11 +386,11 @@ export default function CareersPage() {
               </div>
             </div>
             <div className="flex gap-2 overflow-x-auto">
-              {locations.map((location) => (
+              {locations.map((location) => (}
                 <button
                   key={location.name}
                   onClick={() => setSelectedLocation(location.name)}
-                  className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
+                  className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${}
                     selectedLocation === location.name
                       ? 'bg-purple-500 text-white'
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
@@ -401,11 +401,11 @@ export default function CareersPage() {
               ))}
             </div>
             <div className="flex gap-2 overflow-x-auto mt-2">
-              {jobTypes.map((type) => (
+              {jobTypes.map((type) => (}
                 <button
                   key={type.name}
                   onClick={() => setSelectedType(type.name)}
-                  className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
+                  className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${}
                     selectedType === type.name
                       ? 'bg-green-500 text-white'
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
@@ -425,7 +425,7 @@ export default function CareersPage() {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8">Open Positions</h2>
             <div className="space-y-6">
-              {filteredPositions.map((position) => (
+              {filteredPositions.map((position) => (}
                 <div key={position.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                     <div className="flex-1">
@@ -461,7 +461,7 @@ export default function CareersPage() {
                     <div>
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Requirements:</h4>
                       <ul className="space-y-1">
-                        {position.requirements.slice(0, 3).map((req, index) => (
+                        {position.requirements.slice(0, 3).map((req, index) => (}
                           <li key={index} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {req}
@@ -472,7 +472,7 @@ export default function CareersPage() {
                     <div>
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Skills:</h4>
                       <div className="flex flex-wrap gap-2">
-                        {position.skills.map((skill, index) => (
+                        {position.skills.map((skill, index) => (}
                           <span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">
                             {skill}
                           </span>
@@ -512,7 +512,7 @@ export default function CareersPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <benefit.icon className="w-8 h-8 text-white" />
@@ -537,7 +537,7 @@ export default function CareersPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {culture.map((item, index) => (
+            {culture.map((item, index) => (}
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <item.icon className="w-8 h-8 text-white" />

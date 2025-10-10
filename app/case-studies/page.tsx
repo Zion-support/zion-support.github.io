@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {
+import {}
   ArrowRight,
   CheckCircle,
   Star,
@@ -65,7 +65,7 @@ import {
   Clock3
 } from 'lucide-react';
 
-export default function CaseStudiesPage() {
+export default function CaseStudiesPage() {}
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [selectedService, setSelectedService] = useState('all');
 
@@ -87,7 +87,7 @@ export default function CaseStudiesPage() {
   ];
 
   const caseStudies = [
-    {
+    {}
       id: 1,
       title: 'Healthcare AI Revolution: 90% Faster Diagnosis',
       company: 'MedTech Solutions',
@@ -105,20 +105,20 @@ export default function CaseStudiesPage() {
       duration: '6 months',
       teamSize: '12 experts',
       technologies: ['Machine Learning', 'Computer Vision', 'Cloud Computing', 'API Integration'],
-      testimonial: {
+      testimonial: {}
         quote: "The AI diagnostic system has transformed our hospital operations. We can now provide faster, more accurate diagnoses, ultimately saving more lives.",
         author: "Dr. Sarah Johnson",
         role: "Chief Medical Officer",
         avatar: "SJ"
       },
-      metrics: {
+      metrics: {}
         roi: '400%',
         timesSaved: '2.5 days',
         accuracy: '95%',
         costReduction: '60%'
       }
     },
-    {
+    {}
       id: 2,
       title: 'Financial Services: AI-Powered Fraud Detection',
       company: 'SecureBank International',
@@ -136,20 +136,20 @@ export default function CaseStudiesPage() {
       duration: '4 months',
       teamSize: '8 experts',
       technologies: ['Machine Learning', 'Real-time Analytics', 'Blockchain', 'API Integration'],
-      testimonial: {
+      testimonial: {}
         quote: "Our AI fraud detection system has saved us millions and given our customers peace of mind. The accuracy is remarkable.",
         author: "Michael Chen",
         role: "Chief Security Officer",
         avatar: "MC"
       },
-      metrics: {
+      metrics: {}
         roi: '500%',
         accuracy: '99.8%',
         falsePositives: '80%',
         lossesReduced: '50%'
       }
     },
-    {
+    {}
       id: 3,
       title: 'Manufacturing: Smart Factory Transformation',
       company: 'Global Manufacturing Corp',
@@ -167,20 +167,20 @@ export default function CaseStudiesPage() {
       duration: '8 months',
       teamSize: '15 experts',
       technologies: ['IoT', 'AI Analytics', 'Cloud Computing', 'Automation'],
-      testimonial: {
+      testimonial: {}
         quote: "The smart factory transformation has revolutionized our operations. We're producing more with less waste and higher quality.",
         author: "Emily Rodriguez",
         role: "Operations Director",
         avatar: "ER"
       },
-      metrics: {
+      metrics: {}
         roi: '350%',
         efficiency: '30%',
         costReduction: '25%',
         quality: '99.5%'
       }
     },
-    {
+    {}
       id: 4,
       title: 'Retail: AI-Powered Customer Experience',
       company: 'RetailMax Stores',
@@ -198,20 +198,20 @@ export default function CaseStudiesPage() {
       duration: '5 months',
       teamSize: '10 experts',
       technologies: ['Machine Learning', 'NLP', 'Recommendation Engine', 'Chatbot'],
-      testimonial: {
+      testimonial: {}
         quote: "Our AI-powered customer experience has transformed our business. Customers love the personalized recommendations and instant support.",
         author: "David Kim",
         role: "Chief Marketing Officer",
         avatar: "DK"
       },
-      metrics: {
+      metrics: {}
         roi: '280%',
         engagement: '45%',
         conversion: '35%',
         orderValue: '25%'
       }
     },
-    {
+    {}
       id: 5,
       title: 'Education: AI Learning Platform',
       company: 'EduTech University',
@@ -229,20 +229,20 @@ export default function CaseStudiesPage() {
       duration: '7 months',
       teamSize: '14 experts',
       technologies: ['Machine Learning', 'NLP', 'Adaptive Learning', 'Analytics'],
-      testimonial: {
+      testimonial: {}
         quote: "The AI learning platform has revolutionized education. Students are more engaged and achieving better results than ever before.",
         author: "Professor Lisa Wang",
         role: "Dean of Technology",
         avatar: "LW"
       },
-      metrics: {
+      metrics: {}
         roi: '320%',
         performance: '50%',
         completion: '40%',
         satisfaction: '85%'
       }
     },
-    {
+    {}
       id: 6,
       title: 'Cloud Migration: Seamless Digital Transformation',
       company: 'TechStart Solutions',
@@ -260,13 +260,13 @@ export default function CaseStudiesPage() {
       duration: '6 months',
       teamSize: '12 experts',
       technologies: ['AWS', 'Docker', 'Kubernetes', 'CI/CD'],
-      testimonial: {
+      testimonial: {}
         quote: "The cloud migration has transformed our business. We can now scale instantly and deploy new features in minutes instead of days.",
         author: "Robert Johnson",
         role: "CTO",
         avatar: "RJ"
       },
-      metrics: {
+      metrics: {}
         roi: '450%',
         costReduction: '70%',
         uptime: '99.9%',
@@ -275,13 +275,13 @@ export default function CaseStudiesPage() {
     }
   ];
 
-  const filteredCaseStudies = caseStudies.filter(study => {
+  const filteredCaseStudies = caseStudies.filter(study => {)}
     const industryMatch = selectedIndustry === 'all' || study.industry === selectedIndustry;
     const serviceMatch = selectedService === 'all' || study.service === selectedService;
     return industryMatch && serviceMatch;
 
-  const getIndustryIcon = (industry: string) => {
-    const icons = {
+  const getIndustryIcon = (industry: string) => {}
+    const icons = {}
       healthcare: Stethoscope,
       finance: CreditCard,
       manufacturing: Factory,
@@ -292,8 +292,8 @@ export default function CaseStudiesPage() {
     return icons[industry as keyof typeof icons] || Building;
   };
 
-  const getIndustryColor = (industry: string) => {
-    const colors = {
+  const getIndustryColor = (industry: string) => {}
+    const colors = {}
       healthcare: 'text-green-400',
       finance: 'text-blue-400',
       manufacturing: 'text-orange-400',
@@ -350,11 +350,11 @@ export default function CaseStudiesPage() {
                 />
               </div>
               <div className="flex gap-2 overflow-x-auto">
-                {industries.map((industry) => (
+                {industries.map((industry) => (}
                   <button
                     key={industry.name}
                     onClick={() => setSelectedIndustry(industry.name)}
-                    className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
+                    className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${}
                       selectedIndustry === industry.name
                         ? 'bg-cyan-500 text-white'
                         : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
@@ -366,11 +366,11 @@ export default function CaseStudiesPage() {
               </div>
             </div>
             <div className="flex gap-2 overflow-x-auto">
-              {services.map((service) => (
+              {services.map((service) => (}
                 <button
                   key={service.name}
                   onClick={() => setSelectedService(service.name)}
-                  className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
+                  className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${}
                     selectedService === service.name
                       ? 'bg-purple-500 text-white'
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
@@ -389,7 +389,7 @@ export default function CaseStudiesPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {filteredCaseStudies.map((study) => (
+              {filteredCaseStudies.map((study) => (}
                 <div key={study.id} className="bg-slate-800/50 rounded-lg overflow-hidden hover:bg-slate-700/50 transition-all duration-300 group">
                   <div className="relative">
                     <img
@@ -439,7 +439,7 @@ export default function CaseStudiesPage() {
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Results:</h4>
                       <div className="grid grid-cols-2 gap-2">
-                        {study.results.slice(0, 4).map((result, index) => (
+                        {study.results.slice(0, 4).map((result, index) => (}
                           <div key={index} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {result}
@@ -451,7 +451,7 @@ export default function CaseStudiesPage() {
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3">Technologies Used:</h4>
                       <div className="flex flex-wrap gap-2">
-                        {study.technologies.map((tech, index) => (
+                        {study.technologies.map((tech, index) => (}
                           <span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">
                             {tech}
                           </span>

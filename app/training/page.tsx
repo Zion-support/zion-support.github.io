@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {
+import {}
   BookOpen,
   Play,
   Award,
@@ -24,7 +24,7 @@ import {
   MapPin
 } from 'lucide-react';
 
-const TrainingPage: React.FC = () => {
+const TrainingPage: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
@@ -36,7 +36,7 @@ const TrainingPage: React.FC = () => {
   ];
 
   const courses = [
-    {
+    {}
       id: 1,
       title: 'AI Fundamentals for Business Leaders',
       description: 'Learn the basics of AI and how it can transform your business operations',
@@ -51,7 +51,7 @@ const TrainingPage: React.FC = () => {
       modules: 8,
       certificate: true
     },
-    {
+    {}
       id: 2,
       title: 'Implementing AI Workflow Automation',
       description: 'Step-by-step guide to implementing AI automation in your organization',
@@ -66,7 +66,7 @@ const TrainingPage: React.FC = () => {
       modules: 12,
       certificate: true
     },
-    {
+    {}
       id: 3,
       title: 'Advanced AI Analytics and Machine Learning',
       description: 'Deep dive into advanced analytics and ML techniques for enterprise',
@@ -81,7 +81,7 @@ const TrainingPage: React.FC = () => {
       modules: 15,
       certificate: true
     },
-    {
+    {}
       id: 4,
       title: 'AI Security and Compliance',
       description: 'Learn about AI security best practices and regulatory compliance',
@@ -96,7 +96,7 @@ const TrainingPage: React.FC = () => {
       modules: 10,
       certificate: true
     },
-    {
+    {}
       id: 5,
       title: 'AI Content Generation Masterclass',
       description: 'Master the art of AI-powered content creation and optimization',
@@ -111,7 +111,7 @@ const TrainingPage: React.FC = () => {
       modules: 14,
       certificate: true
     },
-    {
+    {}
       id: 6,
       title: 'Quantum Computing for AI Applications',
       description: 'Explore the intersection of quantum computing and artificial intelligence',
@@ -129,7 +129,7 @@ const TrainingPage: React.FC = () => {
   ];
 
   const upcomingEvents = [
-    {
+    {}
       title: 'AI Implementation Workshop',
       date: 'March 20, 2024',
       time: '9:00 AM - 5:00 PM EST',
@@ -138,7 +138,7 @@ const TrainingPage: React.FC = () => {
       spots: 25,
       price: '$299'
     },
-    {
+    {}
       title: 'AI Security Certification Bootcamp',
       date: 'April 5-7, 2024',
       time: '9:00 AM - 5:00 PM EST',
@@ -147,7 +147,7 @@ const TrainingPage: React.FC = () => {
       spots: 15,
       price: '$1,299'
     },
-    {
+    {}
       title: 'Advanced AI Analytics Masterclass',
       date: 'April 15, 2024',
       time: '10:00 AM - 4:00 PM EST',
@@ -201,7 +201,7 @@ const TrainingPage: React.FC = () => {
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-white" />
@@ -227,11 +227,11 @@ const TrainingPage: React.FC = () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
+            {categories.map((category) => (}
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all ${
+                className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all ${}
                   selectedCategory === category.id
                     ? 'bg-cyan-500 text-white'
                     : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-cyan-400'
@@ -245,7 +245,7 @@ const TrainingPage: React.FC = () => {
 
           {/* Courses Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredCourses.map((course) => (
+            {filteredCourses.map((course) => (}
               <div key={course.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-center mb-4">
                   <div className="text-6xl mb-4">{course.thumbnail}</div>
@@ -264,7 +264,7 @@ const TrainingPage: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-400">Level:</span>
-                    <span className={`px-2 py-1 rounded text-xs ${
+                    <span className={`px-2 py-1 rounded text-xs ${}
                       course.level === 'Beginner' ? 'bg-green-500/20 text-green-400' :
                       course.level === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
                       'bg-red-500/20 text-red-400'
@@ -291,7 +291,7 @@ const TrainingPage: React.FC = () => {
 
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-2xl font-bold text-cyan-400">{course.price}</div>
-                  {course.certificate && (
+                  {course.certificate && (}
                     <div className="flex items-center space-x-1 text-green-400">
                       <Certificate className="w-4 h-4" />
                       <span className="text-xs">Certificate</span>
@@ -321,7 +321,7 @@ const TrainingPage: React.FC = () => {
           </div>
 
           <div className="space-y-6">
-            {upcomingEvents.map((event, index) => (
+            {upcomingEvents.map((event, index) => (}
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">

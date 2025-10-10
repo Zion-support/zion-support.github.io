@@ -2,7 +2,7 @@ import React, { memo, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Play, Users, Shield, Brain, Cloud, Code, TrendingUp, Sparkles, Award } from 'lucide-react';
 
-const FuturisticHero: React.FC = memo(() => {
+const FuturisticHero: React.FC = memo(() => {}
   const [currentText, setCurrentText] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -13,9 +13,9 @@ const FuturisticHero: React.FC = memo(() => {
     "Digital Transformation Mastery"
   ];
 
-  useEffect(() => {
+  useEffect(() => {}
     setIsVisible(true);
-    const interval = setInterval(() => {
+    const interval = setInterval(() => {}
       setCurrentText((prev) => (prev + 1) % heroTexts.length);
     }, 3000);
     return () => clearInterval(interval);
@@ -86,7 +86,7 @@ const FuturisticHero: React.FC = memo(() => {
 
             {/* Stats */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
-              {stats.map((stat, index) => (
+              {stats.map((stat, index) => (}
                 <div key={index} className="text-center space-y-2">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto">
                     <stat.icon className="w-6 h-6 text-cyan-400" />
@@ -116,16 +116,16 @@ const FuturisticHero: React.FC = memo(() => {
               </div>
 
               {/* Floating Feature Cards */}
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div
                   key={index}
-                  className={`absolute w-24 h-24 bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-lg border border-cyan-400/20 flex flex-col items-center justify-center space-y-2 quantum-card ${
+                  className={`absolute w-24 h-24 bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-lg border border-cyan-400/20 flex flex-col items-center justify-center space-y-2 quantum-card ${}
                     index === 0 ? 'top-4 right-4' :
                     index === 1 ? 'bottom-4 left-4' :
                     index === 2 ? 'top-1/2 -left-8' :
                     'top-1/2 -right-8'
                   }`}
-                  style={{
+                  style={{}
                     animationDelay: `${index * 0.5}s`
                   }}
                 >

@@ -3,33 +3,33 @@ import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Video, Play, Target, Users, Globe, CheckCircle, Brain } from 'lucide-react';
 
-const AIVideoGenerator: React.FC = memo(() => {
+const AIVideoGenerator: React.FC = memo(() => {}
   const [isLoaded, setIsLoaded] = useState(false);
 
-  React.useEffect(() => {
+  React.useEffect(() => {}
     setIsLoaded(true);
   }, []);
 
   const features = [
-    {
+    {}
       icon: Video,
       title: 'AI-Powered Video Creation',
       description: 'Generate professional videos from text prompts in minutes with advanced AI technology',
       color: 'text-purple-400'
     },
-    {
+    {}
       icon: Play,
       title: 'Multiple Video Formats',
       description: 'Create videos in 4K, HD, social media formats, and custom dimensions for any platform',
       color: 'text-blue-400'
     },
-    {
+    {}
       icon: Brain,
       title: 'Smart Content Generation',
       description: 'AI automatically generates scripts, selects music, and creates engaging visual content',
       color: 'text-green-400'
     },
-    {
+    {}
       icon: Target,
       title: 'Brand Customization',
       description: 'Maintain consistent branding with custom templates, colors, fonts, and logos',
@@ -38,7 +38,7 @@ const AIVideoGenerator: React.FC = memo(() => {
   ];
 
   const pricingPlans = [
-    {
+    {}
       name: 'Creator',
       price: '$49',
       period: '/month',
@@ -53,7 +53,7 @@ const AIVideoGenerator: React.FC = memo(() => {
       ],
       popular: false
     },
-    {
+    {}
       name: 'Professional',
       price: '$149',
       period: '/month',
@@ -69,7 +69,7 @@ const AIVideoGenerator: React.FC = memo(() => {
       ],
       popular: true
     },
-    {
+    {}
       name: 'Enterprise',
       price: '$499',
       period: '/month',
@@ -88,25 +88,25 @@ const AIVideoGenerator: React.FC = memo(() => {
   ];
 
   const useCases = [
-    {
+    {}
       title: 'Marketing Videos',
       description: 'Create compelling product demos and promotional content',
       icon: Target,
       result: '10x faster'
     },
-    {
+    {}
       title: 'Social Media Content',
       description: 'Generate engaging videos for Instagram, TikTok, and YouTube',
       icon: Globe,
       result: '95% engagement'
     },
-    {
+    {}
       title: 'Training Materials',
       description: 'Produce educational and training videos for your team',
       icon: Users,
       result: '80% retention'
     },
-    {
+    {}
       title: 'Explainer Videos',
       description: 'Create clear, concise explainer videos for complex topics',
       icon: Brain,
@@ -190,7 +190,7 @@ const AIVideoGenerator: React.FC = memo(() => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
                 <div className="flex items-start space-x-4">
                   <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}>
@@ -210,7 +210,7 @@ const AIVideoGenerator: React.FC = memo(() => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCase, index) => (}
               <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <useCase.icon className="w-8 h-8 text-purple-400" />
@@ -227,9 +227,9 @@ const AIVideoGenerator: React.FC = memo(() => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan, index) => (}
               <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>
-                {plan.popular && (
+                {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
@@ -245,7 +245,7 @@ const AIVideoGenerator: React.FC = memo(() => {
                   <p className="text-gray-400 mt-2">{plan.description}</p>
                 </div>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -254,7 +254,7 @@ const AIVideoGenerator: React.FC = memo(() => {
                 </ul>
                 <a
                   href="/contact"
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
                       : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'

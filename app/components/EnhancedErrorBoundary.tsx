@@ -3,71 +3,71 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 
-interface Props {
+interface Props {}
   children: ReactNode;
   fallback?: ReactNode;
 }
 
-interface State {
+interface State {}
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
 }
 
-class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class EnhancedErrorBoundary extends Component<Props, State> {}
+  constructor(props: Props) {}
     super(props);
-    this.state = {
+    this.state = {}
       hasError: false,
       error: null,
       errorInfo: null
     };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return {
+  static getDerivedStateFromError(error: Error): State {}
+    return {}
       hasError: true,
       error,
       errorInfo: null
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
+    this.setState({)}
       error,
       errorInfo
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'development') {}
       console.error('Error caught by boundary:', error, errorInfo);
     }
 
     // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === 'production') {}
       // Here you would typically send the error to a service like Sentry
       console.error('Error caught by boundary:', error);
     }
   }
 
-  handleRetry = () => {
-    this.setState({
+  handleRetry = () => {}
+    this.setState({)}
       hasError: false,
       error: null,
       errorInfo: null
     });
   };
 
-  handleReload = () => {
+  handleReload = () => {}
     window.location.reload();
   };
 
-  handleGoHome = () => {
+  handleGoHome = () => {}
     window.location.href = '/';
   };
 
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
+  render() {}
+    if (this.state.hasError) {}
+      if (this.props.fallback) {}
         return this.props.fallback;
       }
 
@@ -86,7 +86,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
             </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === 'development' && this.state.error && (}
               <details className="mb-6 text-left">
                 <summary className="text-red-400 cursor-pointer font-medium mb-2">
                   Error Details (Development)
@@ -95,7 +95,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   <pre className="text-red-300 whitespace-pre-wrap">
                     {this.state.error.toString()}
                   </pre>
-                  {this.state.errorInfo && (
+                  {this.state.errorInfo && (}
                     <pre className="text-gray-400 whitespace-pre-wrap mt-2">
                       {this.state.errorInfo.componentStack}
                     </pre>
