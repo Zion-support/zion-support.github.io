@@ -1,11 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-const EnhancedSEOHead: React.FC = () => {
-  const structuredData = {
-=======
 import { useLocation } from 'react-router-dom';
 
 interface SEOHeadProps {
@@ -17,6 +12,7 @@ interface SEOHeadProps {
   type?: string;
   siteName?: string;
   structuredData?: object;
+  canonicalUrl?: string;
 }
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
@@ -27,24 +23,20 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   url,
   type = 'website',
   siteName = 'Zion Tech Group',
-  structuredData
+  structuredData,
+  canonicalUrl
 }) => {
   const location = useLocation();
-  const currentUrl = url || `https://ziontechgroup.com${location.pathname}`;
+  const currentUrl = url || canonicalUrl || `https://ziontechgroup.com${location.pathname}`;
   const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
 
   const defaultStructuredData = {
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "description": "Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.",
+    "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
-<<<<<<< HEAD
-=======
-    "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.",
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
     "foundingDate": "2020",
     "address": {
       "@type": "PostalAddress",
@@ -57,19 +49,11 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
-<<<<<<< HEAD
-      "contactType": "sales",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/ziontechgroup",
-=======
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
       "https://linkedin.com/company/zion-tech-group",
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
       "https://twitter.com/ziontechgroup",
       "https://github.com/zion-tech-group"
     ],
@@ -97,8 +81,6 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
     ]
   };
 
-<<<<<<< HEAD
-=======
   const websiteStructuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -111,53 +93,15 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
     }
   };
 
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
   return (
     <Helmet>
       {/* Primary Meta Tags */}
-      <title>Zion Tech Group - AI & IT Solutions | Digital Transformation Experts</title>
-      <meta name="title" content="Zion Tech Group - AI & IT Solutions | Digital Transformation Experts" />
-      <meta name="description" content="Leading provider of AI and IT solutions. Transform your business with our cutting-edge technology, cloud infrastructure, cybersecurity, and digital transformation services." />
-      <meta name="keywords" content="AI solutions, IT services, cloud computing, cybersecurity, digital transformation, business automation, machine learning, data analytics, software development" />
+      <title>{title}</title>
+      <meta name="title" content={title} />
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
-<<<<<<< HEAD
-      <meta name="language" content="English" />
-      <meta name="revisit-after" content="7 days" />
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://ziontechgroup.com/" />
-      <meta property="og:title" content="Zion Tech Group - AI & IT Solutions | Digital Transformation Experts" />
-      <meta property="og:description" content="Leading provider of AI and IT solutions. Transform your business with our cutting-edge technology, cloud infrastructure, cybersecurity, and digital transformation services." />
-      <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://ziontechgroup.com/" />
-      <meta property="twitter:title" content="Zion Tech Group - AI & IT Solutions | Digital Transformation Experts" />
-      <meta property="twitter:description" content="Leading provider of AI and IT solutions. Transform your business with our cutting-edge technology, cloud infrastructure, cybersecurity, and digital transformation services." />
-      <meta property="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="theme-color" content="#06b6d4" />
-      <meta name="msapplication-TileColor" content="#06b6d4" />
-      <meta name="msapplication-config" content="/browserconfig.xml" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href="https://ziontechgroup.com/" />
-      
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      
-=======
       <meta name="googlebot" content="index, follow" />
       <meta name="bingbot" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -207,18 +151,15 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
+      <script type="application/ld+json">
+        {JSON.stringify(websiteStructuredData)}
+      </script>
     </Helmet>
-<<<<<<< HEAD
-  )}
-export default EnhancedSEOHead
-=======
   );
 };
 
 export default EnhancedSEOHead;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765

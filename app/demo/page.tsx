@@ -1,156 +1,119 @@
-<<<<<<< HEAD
-'use client'import React from 'react'
-import { Helmet  } from 'react-helmet-async'import { Play, ArrowRight, CheckCircle  } from 'lucide-react'const DemoPage: React.FC  = () => {
-=======
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Play, 
-  Pause, 
-  RotateCcw, 
-  Settings, 
-  Download, 
-  Share2, 
-  Maximize2,
-  ChevronRight,
-  CheckCircle,
-  Star,
-  Users,
-  Zap
-} from 'lucide-react';
+import { Play, ArrowRight, CheckCircle, Download, Calendar, Phone, Mail } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
-  const [selectedDemo, setSelectedDemo] = useState('ai-chatbot');
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [selectedDemo, setSelectedDemo] = useState('ai-solutions');
 
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
   const demos = [
     {
-      id: 'ai-chatbot',
-      title: 'AI Chatbot Demo',
-      description: 'Experience our intelligent chatbot that can handle customer inquiries 24/7',
-      category: 'AI Solutions',
-      duration: '5 min',
+      id: 'ai-solutions',
+      title: 'AI Solutions Demo',
+      description: 'Experience our AI-powered solutions including machine learning, natural language processing, and predictive analytics.',
+      duration: '15 minutes',
       features: [
-        'Natural language processing',
-        'Multi-language support',
-        'Context awareness',
-        'Integration capabilities'
+        'Machine Learning Models',
+        'Natural Language Processing',
+        'Predictive Analytics',
+        'AI Chatbots',
+        'Computer Vision',
+        'Automated Decision Making'
       ],
-      thumbnail: '/demos/chatbot.jpg'
-    },
-    {
-      id: 'data-analytics',
-      title: 'Data Analytics Dashboard',
-      description: 'Explore our powerful analytics platform with real-time insights and visualizations',
-      category: 'Analytics',
-      duration: '8 min',
-      features: [
-        'Real-time data processing',
-        'Interactive visualizations',
-        'Custom reporting',
-        'Predictive analytics'
-      ],
-      thumbnail: '/demos/analytics.jpg'
+      videoUrl: '/demos/ai-solutions.mp4',
+      thumbnail: '/demos/ai-solutions-thumb.jpg'
     },
     {
       id: 'cloud-infrastructure',
-      title: 'Cloud Infrastructure',
-      description: 'See how we manage and scale cloud resources for optimal performance',
-      category: 'Cloud',
-      duration: '6 min',
+      title: 'Cloud Infrastructure Demo',
+      description: 'See how we can help you migrate to the cloud and optimize your infrastructure for scalability and performance.',
+      duration: '20 minutes',
       features: [
-        'Auto-scaling capabilities',
-        'Load balancing',
-        'Security monitoring',
-        'Cost optimization'
+        'Cloud Migration',
+        'Auto-scaling',
+        'Load Balancing',
+        'Security Implementation',
+        'Cost Optimization',
+        'Monitoring & Analytics'
       ],
-      thumbnail: '/demos/cloud.jpg'
+      videoUrl: '/demos/cloud-infrastructure.mp4',
+      thumbnail: '/demos/cloud-infrastructure-thumb.jpg'
     },
     {
       id: 'cybersecurity',
-      title: 'Cybersecurity Suite',
-      description: 'Witness our advanced security solutions in action with threat detection',
-      category: 'Security',
-      duration: '7 min',
+      title: 'Cybersecurity Demo',
+      description: 'Learn about our comprehensive security solutions and how we protect your digital assets.',
+      duration: '12 minutes',
       features: [
-        'Threat detection',
-        'Incident response',
-        'Compliance monitoring',
-        'Security analytics'
+        'Threat Detection',
+        'Vulnerability Assessment',
+        'Security Monitoring',
+        'Compliance Management',
+        'Incident Response',
+        'Security Training'
       ],
-      thumbnail: '/demos/security.jpg'
+      videoUrl: '/demos/cybersecurity.mp4',
+      thumbnail: '/demos/cybersecurity-thumb.jpg'
+    },
+    {
+      id: 'data-analytics',
+      title: 'Data Analytics Demo',
+      description: 'Discover how our data analytics solutions can transform your business insights and decision-making.',
+      duration: '18 minutes',
+      features: [
+        'Real-time Dashboards',
+        'Predictive Modeling',
+        'Data Visualization',
+        'Business Intelligence',
+        'Custom Reports',
+        'Data Integration'
+      ],
+      videoUrl: '/demos/data-analytics.mp4',
+      thumbnail: '/demos/data-analytics-thumb.jpg'
     }
-<<<<<<< HEAD
-  ]return (
-    <React.Fragment>
-=======
   ];
 
   const testimonials = [
     {
       name: 'Sarah Johnson',
-      company: 'TechCorp Solutions',
-      role: 'CTO',
-      content: 'The AI chatbot demo was incredible. It handled complex queries with ease and the integration was seamless.',
+      role: 'CTO, TechCorp',
+      quote: 'The AI solutions demo was incredibly impressive. It showed exactly how we could transform our business operations.',
       rating: 5
     },
     {
       name: 'Michael Chen',
-      company: 'DataFlow Inc.',
-      role: 'Data Director',
-      content: 'The analytics dashboard provided insights we never had before. The real-time capabilities are game-changing.',
+      role: 'VP Engineering, InnovateLabs',
+      quote: 'The cloud infrastructure demo helped us understand the migration process and potential benefits.',
       rating: 5
     },
     {
-      name: 'Lisa Wang',
-      company: 'SecureNet Corp',
-      role: 'Security Manager',
-      content: 'The cybersecurity demo showed us exactly how our threats would be detected and handled. Very impressive.',
+      name: 'Emily Rodriguez',
+      role: 'Security Director, DataFlow',
+      quote: 'The cybersecurity demo gave us confidence in their security capabilities and approach.',
       rating: 5
     }
   ];
 
-  const selectedDemoData = demos.find(demo => demo.id === selectedDemo);
+  const selectedDemoData = demos.find(demo => demo.id === selectedDemo) || demos[0];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
       <Helmet>
-        <title>Interactive Demos | Zion Tech Group</title>
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business operations." />
-        <meta name="keywords" content="demos, AI demos, interactive demos, technology showcase, solution demonstrations" />
+        <title>Demo - Zion Tech Group | See Our Solutions in Action</title>
+        <meta name="description" content="Watch demos of our AI and IT solutions. See how our technology can transform your business with interactive demonstrations." />
+        <meta name="keywords" content="demo, AI demo, IT solutions demo, technology demonstration, Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              See Our <span className="text-cyan-400">Solutions</span> in Action
-  </
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.
-            </p>
-          </div>
-        </section>
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {demos.map((demo, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-lg mb-4">
-                    <Play className="w-8 h-8 text-cyan-400" />
-=======
 
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            See Our <span className="text-cyan-400">Solutions</span> in Action
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            See Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Solutions</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Experience our AI and IT solutions through interactive demos. See how our technology can transform your business operations.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Experience our AI and IT solutions in action. Watch interactive demos and see how our technology can transform your business.
           </p>
         </div>
       </section>
@@ -158,168 +121,101 @@ const DemoPage: React.FC = () => {
       {/* Demo Selection */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Choose a Demo</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Choose a Demo</h2>
+            <p className="text-xl text-gray-300">Select the solution you'd like to explore</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {demos.map((demo) => (
-              <div
+              <button
                 key={demo.id}
                 onClick={() => setSelectedDemo(demo.id)}
-                className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border cursor-pointer transition-all duration-300 ${
+                className={`p-6 rounded-2xl transition-all duration-300 ${
                   selectedDemo === demo.id
-                    ? 'border-cyan-500 shadow-2xl shadow-cyan-500/20'
-                    : 'border-slate-700 hover:border-slate-600'
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
+                    : 'bg-white/5 backdrop-blur-sm text-gray-300 hover:bg-white/10'
                 }`}
               >
-                <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <Play className="w-8 h-8 text-slate-900" />
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Play className="w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{demo.title}</h3>
-                  <span className="bg-slate-700 text-cyan-400 text-sm font-medium px-3 py-1 rounded-full">
-                    {demo.category}
-                  </span>
+                  <h3 className="text-lg font-bold mb-2">{demo.title}</h3>
+                  <p className="text-sm opacity-80">{demo.duration}</p>
                 </div>
-                <p className="text-gray-300 mb-4 text-center text-sm">{demo.description}</p>
-                <div className="flex items-center justify-between text-sm text-gray-400">
-                  <span>{demo.duration}</span>
-                  <span className="flex items-center">
-                    <Star className="w-4 h-4 mr-1 text-yellow-400" />
-                    4.9
-                  </span>
+              </button>
+            ))}
+          </div>
+
+          {/* Selected Demo */}
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-3xl font-bold text-white mb-4">{selectedDemoData.title}</h3>
+                <p className="text-xl text-gray-300 mb-6">{selectedDemoData.description}</p>
+                <div className="space-y-4 mb-8">
+                  <h4 className="text-lg font-semibold text-white">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {selectedDemoData.features.map((feature, index) => (
+                      <li key={index} className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 inline-flex items-center space-x-2">
+                    <Play className="w-5 h-5" />
+                    <span>Watch Demo</span>
+                  </button>
+                  <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 inline-flex items-center space-x-2">
+                    <Download className="w-5 h-5" />
+                    <span>Download Brochure</span>
+                  </button>
                 </div>
               </div>
-            ))}
+              <div className="bg-white/10 rounded-xl h-64 flex items-center justify-center">
+                <div className="text-white text-center">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Play className="w-10 h-10" />
+                  </div>
+                  <p className="text-lg font-semibold mb-2">Demo Video</p>
+                  <p className="text-sm opacity-80">Click to play</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Demo Player */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          {selectedDemoData && (
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
-              <div className="flex items-center justify-between mb-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{selectedDemoData.title}</h3>
-                  <p className="text-gray-300">{selectedDemoData.description}</p>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <button className="bg-slate-700 hover:bg-slate-600 text-white p-2 rounded-lg transition-colors">
-                    <Share2 className="w-5 h-5" />
-                  </button>
-                  <button className="bg-slate-700 hover:bg-slate-600 text-white p-2 rounded-lg transition-colors">
-                    <Download className="w-5 h-5" />
-                  </button>
-                  <button className="bg-slate-700 hover:bg-slate-600 text-white p-2 rounded-lg transition-colors">
-                    <Maximize2 className="w-5 h-5" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Demo Video Placeholder */}
-              <div className="relative bg-slate-900 rounded-xl overflow-hidden mb-6">
-                <div className="aspect-video bg-gradient-to-br from-cyan-500 to-purple-500 flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      {isPlaying ? (
-                        <Pause className="w-8 h-8" />
-                      ) : (
-                        <Play className="w-8 h-8" />
-                      )}
-                    </div>
-                    <p className="text-lg font-semibold">Demo Video</p>
-                    <p className="text-sm opacity-80">Click to play</p>
-                  </div>
-                </div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <div className="bg-black/50 rounded-lg p-3">
-                    <div className="flex items-center justify-between text-white text-sm">
-                      <span>0:00 / {selectedDemoData.duration}</span>
-                      <div className="flex items-center space-x-2">
-                        <button className="hover:bg-white/20 p-1 rounded">
-                          <RotateCcw className="w-4 h-4" />
-                        </button>
-                        <button className="hover:bg-white/20 p-1 rounded">
-                          <Settings className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Demo Features */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="text-lg font-bold text-white mb-4">Key Features</h4>
-                  <ul className="space-y-2">
-                    {selectedDemoData.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-<<<<<<< HEAD
-                  <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
-                    <Play className="w-4 h-4 mr-2" />
-                    Watch Demo
-  </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
-                </div>
-                <div>
-                  <h4 className="text-lg font-bold text-white mb-4">Demo Controls</h4>
-                  <div className="space-y-3">
-                    <button
-                      onClick={() => setIsPlaying(!isPlaying)}
-                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
-                    >
-                      {isPlaying ? (
-                        <>
-                          <Pause className="w-5 h-5 mr-2" />
-                          Pause Demo
-                        </>
-                      ) : (
-                        <>
-                          <Play className="w-5 h-5 mr-2" />
-                          Play Demo
-                        </>
-                      )}
-                    </button>
-                    <button className="w-full bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
-                      <RotateCcw className="w-5 h-5 mr-2" />
-                      Restart Demo
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
-
       {/* Testimonials */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">What Our Clients Say</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
+            <p className="text-xl text-gray-300">See how our demos have helped businesses make informed decisions</p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6">
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
+                  <div className="flex text-yellow-400">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <CheckCircle key={i} className="w-5 h-5 fill-current" />
+                    ))}
+                  </div>
                 </div>
-                <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+                <blockquote className="text-gray-300 mb-4 italic">
+                  "{testimonial.quote}"
+                </blockquote>
                 <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mr-3">
-                    <Users className="w-5 h-5 text-slate-900" />
+                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                    {testimonial.name.charAt(0)}
                   </div>
                   <div>
-                    <div className="font-bold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-white font-semibold">{testimonial.name}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}</div>
                   </div>
                 </div>
               </div>
@@ -331,48 +227,27 @@ const DemoPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-12 border border-slate-700">
-            <h2 className="text-4xl font-bold text-white mb-6">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to See More?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Schedule a personalized demo with our experts and see how our solutions 
-              can specifically address your business needs.
+            <p className="text-xl text-blue-100 mb-8">
+              Schedule a personalized demo with our experts and see how our solutions can work for your specific needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Schedule a Demo
+              <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center space-x-2 group">
+                <Calendar className="w-5 h-5" />
+                <span>Schedule Demo</span>
               </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Contact Sales
-              </button>
-            </div>
-          </div>
-<<<<<<< HEAD
-        </section>
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
-              <h2 className="text-2xl font-semibold text-white mb-4">Ready to See More?</h2>
-              <p className="text-gray-300 mb-6">
-                Schedule a personalized demo with our experts to see how our solutions can address your specific business needs.
-              </p>
-              <a 
-                href="/contact" 
-                className="inline-flex items-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors">
-                Schedule Demo
-                <ArrowRight className="w-4 h-4 ml-2" />
+              <a
+                href="tel:+13024640950"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center space-x-2"
+              >
+                <Phone className="w-5 h-5" />
+                <span>(302) 464-0950</span>
               </a>
             </div>
           </div>
-        </section>
-      </div>
-    </React.Fragment>
-  )}
-export default DemoPage
-  </button>
-  </h1>
-=======
         </div>
       </section>
     </div>
@@ -380,4 +255,3 @@ export default DemoPage
 };
 
 export default DemoPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765

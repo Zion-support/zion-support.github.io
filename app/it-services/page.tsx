@@ -2,86 +2,115 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
-=======
-import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight, CheckCircle, Star, Users, Clock } from 'lucide-react';
+import { 
+  Cloud, 
+  Shield, 
+  Settings, 
+  Database, 
+  Smartphone, 
+  Globe, 
+  Zap, 
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Phone,
+  Mail,
+  Server,
+  Code,
+  BarChart,
+  Users
+} from 'lucide-react';
 
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
 const ItServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const itServices = [
     {
-      id: 1,
+      id: 'cloud-infrastructure',
       title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions with AWS, Azure, and GCP',
+      description: 'Scalable and secure cloud solutions for modern businesses',
       category: 'Cloud',
       icon: Cloud,
       features: [
-        'Cloud migration and setup',
-        'Auto-scaling capabilities',
-        'Load balancing',
-        'Disaster recovery',
+        'Cloud migration and optimization',
+        'Multi-cloud strategy',
+        'Auto-scaling and load balancing',
+        'Disaster recovery planning',
         'Cost optimization',
-        '24/7 monitoring'
+        '24/7 monitoring and support'
       ],
-      price: 'Starting at $999/month',
+      benefits: [
+        'Reduce infrastructure costs by 40%',
+        'Improve scalability by 300%',
+        'Increase uptime to 99.9%'
+      ],
       popular: true
     },
     {
-      id: 2,
+      id: 'cybersecurity',
       title: 'Cybersecurity Solutions',
       description: 'Comprehensive security solutions to protect your digital assets',
       category: 'Security',
       icon: Shield,
       features: [
+        'Security assessment and auditing',
         'Threat detection and prevention',
-        'Vulnerability assessments',
         'Compliance management',
-        'Incident response',
-        'Security training',
-        'Regular security audits'
+        'Incident response planning',
+        'Security training and awareness',
+        'Penetration testing'
       ],
-      price: 'Starting at $799/month',
-      popular: false
+      benefits: [
+        'Reduce security incidents by 90%',
+        'Improve compliance by 100%',
+        'Enhance threat detection by 85%'
+      ],
+      popular: true
     },
     {
-      id: 3,
+      id: 'database-management',
       title: 'Database Management',
-      description: 'Expert database design, optimization, and maintenance',
+      description: 'Expert database design, optimization, and management services',
       category: 'Database',
       icon: Database,
       features: [
         'Database design and architecture',
         'Performance optimization',
-        'Data migration',
-        'Backup and recovery',
-        'Security implementation',
+        'Backup and recovery solutions',
+        'Data migration services',
+        'Security hardening',
         'Monitoring and maintenance'
       ],
-      price: 'Starting at $599/month',
+      benefits: [
+        'Improve performance by 200%',
+        'Reduce downtime by 95%',
+        'Enhance data security by 100%'
+      ],
       popular: false
     },
     {
-      id: 4,
+      id: 'mobile-development',
       title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications',
+      description: 'Native and cross-platform mobile applications for iOS and Android',
       category: 'Development',
       icon: Smartphone,
       features: [
-        'iOS and Android development',
-        'Cross-platform solutions',
+        'Native iOS and Android apps',
+        'Cross-platform development',
         'UI/UX design',
         'App store optimization',
-        'Performance optimization',
-        'Ongoing support and updates'
+        'Push notifications',
+        'Analytics integration'
       ],
-      price: 'Starting at $2,000/month',
+      benefits: [
+        'Reach 2x more customers',
+        'Increase engagement by 150%',
+        'Improve user satisfaction by 80%'
+      ],
       popular: true
     },
     {
-      id: 5,
+      id: 'web-development',
       title: 'Web Development',
       description: 'Modern, responsive web applications and websites',
       category: 'Development',
@@ -94,337 +123,258 @@ const ItServicesPage: React.FC = () => {
         'Performance optimization',
         'SEO optimization'
       ],
-      price: 'Starting at $1,500/month',
+      benefits: [
+        'Increase conversion rates by 60%',
+        'Improve page load speed by 70%',
+        'Boost search rankings by 50%'
+      ],
       popular: false
     },
     {
-      id: 6,
+      id: 'it-consulting',
       title: 'IT Consulting',
-      description: 'Strategic IT guidance and technology roadmaps',
+      description: 'Strategic IT consulting to align technology with business goals',
       category: 'Consulting',
       icon: Settings,
       features: [
-        'Technology strategy',
+        'Technology strategy planning',
         'Digital transformation',
         'Process optimization',
-        'Vendor management',
+        'Vendor selection',
         'Project management',
-        'Training and support'
+        'Change management'
       ],
-<<<<<<< HEAD
-      price: 'Starting at $200/hour',
-      marketPrice: '$300-500/hour',
-      benefits: ['Strategic guidance', 'Technology expertise', 'Cost optimization', 'Digital transformation']
-    },
-    {
-      id: 12,
-      title: 'Process Automation',
-      description: 'Workflow automation solutions to streamline business processes and improve efficiency.',
-      icon: Zap,
-      category: 'Automation',
-      features: [
-        'Workflow automation',
-        'Process optimization',
-        'Integration solutions',
-        'Document management',
-        'Task automation',
-        'Performance monitoring'
+      benefits: [
+        'Align IT with business goals',
+        'Reduce technology costs by 30%',
+        'Improve operational efficiency by 50%'
       ],
-      price: 'Starting at $1,500/month',
-      marketPrice: '$2500-8000/month',
-      benefits: ['Improved efficiency', 'Reduced errors', 'Cost savings', 'Scalable automation']
-    { 
-      name: 'Cloud Infrastructure & Migration', 
-      href: '/cloud-services', 
-      icon: Cloud, 
-      description: 'Complete cloud solutions including AWS, Azure, and GCP migration and management',
-      price: 'Starting at $2,500/month',
-      features: ['Cloud architecture design', 'Migration planning & execution', 'Cost optimization', 'Security compliance', '24/7 monitoring', 'Disaster recovery']
-    },
-    { 
-      name: 'DevOps & CI/CD Pipeline', 
-      href: '/devops', 
-      icon: Settings, 
-      description: 'Automated development workflows and deployment pipelines for faster delivery',
-      price: 'Starting at $3,000/month',
-      features: ['CI/CD pipeline setup', 'Container orchestration', 'Infrastructure as Code', 'Automated testing', 'Deployment automation', 'Performance monitoring']
-    },
-    { 
-      name: 'Database Management & Optimization', 
-      href: '/database', 
-      icon: Database, 
-      description: 'Comprehensive database services including design, optimization, and maintenance',
-      price: 'Starting at $1,800/month',
-      features: ['Database design & architecture', 'Performance optimization', 'Backup & recovery', 'Security hardening', 'Migration services', '24/7 support']
-    },
-    { 
-      name: 'Cybersecurity Solutions', 
-      href: '/cybersecurity', 
-      icon: Shield, 
-      description: 'Advanced security solutions to protect your digital assets and ensure compliance',
-      price: 'Starting at $4,000/month',
-      features: ['Security assessment', 'Threat detection', 'Vulnerability management', 'Compliance auditing', 'Incident response', 'Security training']
-    },
-    { 
-      name: 'Managed IT Services', 
-      href: '/managed-it', 
-      icon: Settings, 
-      description: 'Complete IT management including helpdesk, monitoring, and maintenance',
-      price: 'Starting at $2,200/month',
-      features: ['24/7 helpdesk support', 'Proactive monitoring', 'Patch management', 'Asset management', 'User training', 'Vendor management']
-    },
-    { 
-      name: 'IT Strategy & Consulting', 
-      href: '/it-consulting', 
-      icon: Globe, 
-      description: 'Strategic IT consulting to align technology with business objectives',
-      price: 'Starting at $1,500/month',
-      features: ['Technology roadmap', 'Vendor evaluation', 'Cost analysis', 'Digital transformation', 'Change management', 'Training programs']
-    },
-    { 
-      name: 'Data Analytics & Business Intelligence', 
-      href: '/data-analytics', 
-      icon: Database, 
-      description: 'Transform your data into actionable insights with advanced analytics solutions',
-      price: 'Starting at $2,800/month',
-      features: ['Data warehouse design', 'ETL/ELT processes', 'Dashboard development', 'Predictive analytics', 'Data governance', 'Real-time reporting']
-    },
-    { 
-      name: 'Mobile Application Development', 
-      href: '/mobile-development', 
-      icon: Smartphone, 
-      description: 'Native and cross-platform mobile applications for iOS and Android',
-      price: 'Starting at $8,000/project',
-      features: ['Native iOS/Android apps', 'Cross-platform development', 'UI/UX design', 'API integration', 'App store deployment', 'Maintenance & updates']
-    },
-    { 
-      name: 'Web Application Development', 
-      href: '/web-development', 
-      icon: Globe, 
-      description: 'Custom web applications and e-commerce solutions built with modern technologies',
-      price: 'Starting at $6,000/project',
-      features: ['Custom web applications', 'E-commerce solutions', 'API development', 'Responsive design', 'Performance optimization', 'SEO optimization']
-    },
-    { 
-      name: 'Process Automation & RPA', 
-      href: '/process-automation', 
-      icon: Zap, 
-      description: 'Automate repetitive business processes to improve efficiency and reduce costs',
-      price: 'Starting at $3,500/month',
-      features: ['Process analysis', 'Automation design', 'RPA implementation', 'Workflow optimization', 'Integration services', 'Training & support']
-    },
-    { 
-      name: 'Network Infrastructure & Security', 
-      href: '/network-solutions', 
-      icon: Globe, 
-      description: 'Complete network design, implementation, and security solutions',
-      price: 'Starting at $2,000/month',
-      features: ['Network design & implementation', 'Firewall configuration', 'VPN setup', 'Wireless solutions', 'Network monitoring', 'Security hardening']
-    },
-    { 
-      name: 'IT Support & Helpdesk', 
-      href: '/it-support', 
-      icon: Settings, 
-      description: 'Comprehensive IT support services for all your technology needs',
-      price: 'Starting at $1,200/month',
-      features: ['24/7 technical support', 'Remote assistance', 'Hardware maintenance', 'Software installation', 'User training', 'Issue resolution']
-      description: 'Custom web applications, e-commerce platforms, and enterprise solutions',
-      price: '$5,000 - $100,000',
-      features: ['Custom web apps', 'E-commerce platforms', 'API development', 'Performance optimization']
-    },
-    { 
-      name: 'Process Automation', 
-      href: '/process-automation', 
-      icon: Zap, 
-      description: 'Workflow automation, RPA implementation, and business process optimization',
-      price: '$2,000 - $25,000',
-      features: ['RPA implementation', 'Workflow automation', 'API integrations', 'Process optimization']
-    },
-    { 
-      name: 'Network Infrastructure', 
-      href: '/network-infrastructure', 
-      icon: Globe, 
-      description: 'Network design, implementation, and optimization for enterprise environments',
-      price: '$3,000 - $35,000',
-      features: ['Network design', 'Wireless solutions', 'VPN setup', 'Network security']
-    },
-    { 
-      name: 'Disaster Recovery & Backup', 
-      href: '/disaster-recovery', 
-      icon: Shield, 
-      description: 'Comprehensive backup solutions and disaster recovery planning',
-      price: '$1,000 - $15,000',
-      features: ['Backup solutions', 'Disaster recovery planning', 'Business continuity', 'Testing & validation']
-    }
-  ];
-
-  const categories = ['all', 'Cloud', 'Security', 'DevOps', 'Database', 'Infrastructure', 'Support', 'Development', 'Analytics', 'Networking', 'Consulting', 'Automation'];
-
-  const filteredServices = itServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-    return matchesSearch && matchesCategory
-  })
-  const stats = [
-    { icon: <Server className="w-8 h-8 text-cyan-500" />, value: '500+', label: 'Servers Managed' },
-    { icon: <Shield className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Security Uptime' },
-    { icon: <Users className="w-8 h-8 text-purple-500" />, value: '200+', label: 'Clients Served' },
-    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
-=======
-      price: '$299/hour',
       popular: false
     }
   ];
 
-  const categories = [
-    { id: 'all', name: 'All Services' },
-    { id: 'Cloud', name: 'Cloud' },
-    { id: 'Security', name: 'Security' },
-    { id: 'Database', name: 'Database' },
-    { id: 'Development', name: 'Development' },
-    { id: 'Consulting', name: 'Consulting' }
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
+  const categories = ['all', 'Cloud', 'Security', 'Database', 'Development', 'Consulting'];
+
+  const filteredServices = itServices.filter(service => 
+    selectedCategory === 'all' || service.category === selectedCategory
+  );
+
+  const technologies = [
+    {
+      name: 'Amazon Web Services',
+      description: 'Cloud computing platform',
+      icon: Cloud
+    },
+    {
+      name: 'Microsoft Azure',
+      description: 'Cloud services and solutions',
+      icon: Cloud
+    },
+    {
+      name: 'Google Cloud Platform',
+      description: 'Cloud infrastructure and AI services',
+      icon: Cloud
+    },
+    {
+      name: 'Docker',
+      description: 'Containerization platform',
+      icon: Server
+    },
+    {
+      name: 'Kubernetes',
+      description: 'Container orchestration',
+      icon: Server
+    },
+    {
+      name: 'React',
+      description: 'Frontend development framework',
+      icon: Code
+    },
+    {
+      name: 'Node.js',
+      description: 'Backend runtime environment',
+      icon: Code
+    },
+    {
+      name: 'Python',
+      description: 'Programming language',
+      icon: Code
+    }
   ];
 
-  const benefits = [
-    'Expert team with 10+ years experience',
-    '24/7 technical support',
-    'Scalable solutions that grow with your business',
-    'Cutting-edge technology and best practices',
-    'Competitive pricing and flexible plans',
-    'Proven track record of successful implementations'
+  const testimonials = [
+    {
+      name: 'John Smith',
+      role: 'CTO, TechCorp',
+      service: 'Cloud Infrastructure',
+      quote: 'The cloud migration was seamless. We\'ve reduced our infrastructure costs by 40% while improving performance significantly.',
+      rating: 5
+    },
+    {
+      name: 'Maria Garcia',
+      role: 'Security Director, FinanceFlow',
+      service: 'Cybersecurity Solutions',
+      quote: 'Our security posture has improved dramatically. We haven\'t had a single security incident since implementing their solutions.',
+      rating: 5
+    },
+    {
+      name: 'David Chen',
+      role: 'VP Engineering, RetailMax',
+      service: 'Mobile App Development',
+      quote: 'The mobile app they developed has been a game-changer. Our customer engagement has increased by 150%.',
+      rating: 5
+    }
   ];
-
-  const filteredServices = selectedCategory === 'all' 
-    ? itServices 
-    : itServices.filter(service => service.category === selectedCategory);
 
   return (
-<<<<<<< HEAD
-    <React.Fragment>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
       <Helmet>
-        <title>IT Services | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, database management, and custom development solutions." />
-        <meta name="keywords" content="IT services, cloud computing, cybersecurity, database management, web development, mobile development" />
+        <title>IT Services - Zion Tech Group | Technology Solutions</title>
+        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, database management, and custom development. Transform your business with our technology expertise." />
+        <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, database management, web development, mobile development, IT consulting" />
       </Helmet>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              IT <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Services</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Complete IT solutions to modernize your infrastructure, enhance security, and drive business growth. 
-              From cloud migration to cybersecurity, we deliver enterprise-grade technology services.
-=======
 
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            IT <span className="text-cyan-400">Services</span>
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            IT <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Services</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive IT solutions designed to modernize your infrastructure, 
-            enhance security, and drive business growth.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Comprehensive IT solutions to support your business growth. 
+            From cloud infrastructure to cybersecurity, we provide the technology foundation you need.
           </p>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* Category Filter */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our IT Services?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <div key={index} className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-            <div className="space-y-4">
-              {benefits.slice(3).map((benefit, index) => (
-                <div key={index} className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map(category => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  selectedCategory === category
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                {category === 'all' ? 'All Services' : category}
+              </button>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our IT Services</h2>
-          
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-cyan-500 text-white'
-                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                }`}
-              >
-                {category.name}
-              </button>
-            ))}
-          </div>
-
-          {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => (
-              <div key={service.id} className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
-                service.popular
-                  ? 'border-cyan-500 shadow-2xl shadow-cyan-500/20'
-                  : 'border-slate-700 hover:border-slate-600'
+              <div key={service.id} className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${
+                service.popular ? 'ring-2 ring-cyan-400' : ''
               }`}>
                 {service.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-bold px-4 py-2 rounded-full flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
+                  <div className="text-center mb-4">
+                    <div className="inline-block px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium">
                       Most Popular
                     </div>
                   </div>
                 )}
-
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <service.icon className="w-8 h-8 text-slate-900" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <service.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="text-2xl font-bold text-cyan-400 mb-6">{service.price}</div>
+                  <div className="text-sm text-cyan-400 font-medium">{service.category}</div>
                 </div>
-
-                <ul className="space-y-3 mb-8">
-                  {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <button className={`w-full py-4 px-6 rounded-lg font-bold text-lg transition-all duration-300 ${
-                  service.popular
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white'
-                    : 'bg-slate-700 hover:bg-slate-600 text-white border border-slate-600'
-                }`}>
-                  Learn More
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.slice(0, 4).map((feature, index) => (
+                      <li key={index} className="flex items-center space-x-2 text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-3">Expected Benefits:</h4>
+                  <ul className="space-y-1">
+                    {service.benefits.map((benefit, index) => (
+                      <li key={index} className="text-sm text-gray-300">
+                        • {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 inline-flex items-center justify-center space-x-2 group">
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Technologies We Work With</h2>
+            <p className="text-xl text-gray-300">We use the latest and most reliable technologies to deliver exceptional results</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+            {technologies.map((tech, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                  <tech.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-sm font-semibold text-white mb-1">{tech.name}</h3>
+                <p className="text-xs text-gray-400">{tech.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
+            <p className="text-xl text-gray-300">See how our IT services are driving business success</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6">
+                <div className="flex items-center mb-4">
+                  <div className="flex text-yellow-400">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-current" />
+                    ))}
+                  </div>
+                </div>
+                <blockquote className="text-gray-300 mb-4 italic">
+                  "{testimonial.quote}"
+                </blockquote>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                    {testimonial.name.charAt(0)}
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">{testimonial.name}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}</div>
+                    <div className="text-sm text-cyan-400">{testimonial.service}</div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -434,101 +384,30 @@ const ItServicesPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-12 border border-slate-700">
-            <h2 className="text-4xl font-bold text-white mb-6">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your IT Infrastructure?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let our expert team help you modernize your IT infrastructure and 
-              secure your business for the future.
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
+            <p className="text-xl text-blue-100 mb-8">
+              Let's discuss how our IT services can help you build a robust, scalable, and secure technology foundation for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Get Started
+              <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center space-x-2 group">
+                <span>Get Started</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Schedule Consultation
-              </button>
+              <a
+                href="tel:+13024640950"
+                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center space-x-2"
+              >
+                <Phone className="w-5 h-5" />
+                <span>(302) 464-0950</span>
+              </a>
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (
-                <div
-                  key={index}
-                  to={service.href}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group">
-                  <service.icon className="w-12 h-12 text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors" />
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {service.name}
-                  </h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                    <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-
-        {/* Stats Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    {stat.icon}
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group hover:bg-slate-800/70"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors">
-                    {service.name}
-                  </h3>
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                  
-                  <div className="space-y-3 mb-6">
-                    <div className="text-cyan-400 font-semibold text-lg">{service.price}</div>
-                    <div className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-gray-400 text-sm">
-                          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-                    <span>Get Quote</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </div>
-    </React.Fragment>
-=======
         </div>
       </section>
     </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
   );
 };
 
