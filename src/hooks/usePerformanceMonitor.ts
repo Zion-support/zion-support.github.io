@@ -1,117 +1,85 @@
 import { useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  memoryUsage?: number;
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
 }
 
-interface PerformanceMonitorOptions {
-  enableLogging?: boolean;
-  enableReporting?: boolean;
-  reportEndpoint?: string;
-  sampleRate?: number;
-}
-
-export const usePerformanceMonitor = (options: PerformanceMonitorOptions = {}) => {
-  const {
-    enableLogging = process.env.NODE_ENV === 'development',
-    enableReporting = false,
-    reportEndpoint = '/api/performance',
-    sampleRate = 0.1
-  } = options;
-
-  const log = useCallback((message: string, data?: any) => {
-    if (enableLogging) {
-      console.log(`[Performance Monitor] ${message}`, data);
+export const usePerformanceMonitor = () => {
+  const reportMetric = useCallback((name: string, value: number, delta: number) => {
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`Performance Metric - ${name}:`, { value, delta });
     }
-  }, [enableLogging]);
 
-  const reportMetrics = useCallback(async (metrics: PerformanceMetrics) => {
-    if (!enableReporting || Math.random() > sampleRate) return;
+    // Send to analytics in production
+    if (process.env.NODE_ENV === 'production') {
+      // Google Analytics 4
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'performance_metric', {
+          metric_name: name,
+          metric_value: value,
+          metric_delta: delta
+        });
+      }
 
-    try {
-      await fetch(reportEndpoint, {
+      // Custom analytics endpoint
+      fetch('/api/analytics/performance', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ...metrics,
+          metric: name,
+          value,
+          delta,
           timestamp: Date.now(),
-          userAgent: navigator.userAgent,
           url: window.location.href,
-        }),
+          userAgent: navigator.userAgent
+        })
+      }).catch(err => {
+        console.error('Failed to send performance metric:', err);
       });
-      log('Performance metrics reported successfully');
-    } catch (error) {
-      log('Failed to report performance metrics', error);
     }
-  }, [enableReporting, reportEndpoint, sampleRate, log]);
+  }, []);
 
-  const measurePerformance = useCallback(() => {
-    const metrics: PerformanceMetrics = {
-      loadTime: 0,
-      firstContentfulPaint: 0,
-      largestContentfulPaint: 0,
-      firstInputDelay: 0,
-      cumulativeLayoutShift: 0,
-    };
-
-    // Measure page load time
-    if (performance.timing) {
-      metrics.loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-    }
-
-    // Measure Core Web Vitals
-    if ('PerformanceObserver' in window) {
-      // First Contentful Paint
-      try {
+  useEffect(() => {
+    // Web Vitals monitoring
+    const measureWebVitals = () => {
+      // First Contentful Paint (FCP)
+      if ('PerformanceObserver' in window) {
         const fcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
           if (fcpEntry) {
-            metrics.firstContentfulPaint = fcpEntry.startTime;
-            log('First Contentful Paint', fcpEntry.startTime);
+            reportMetric('FCP', fcpEntry.startTime, fcpEntry.startTime);
           }
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch (error) {
-        log('FCP observer error', error);
-      }
 
-      // Largest Contentful Paint
-      try {
+        // Largest Contentful Paint (LCP)
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          metrics.largestContentfulPaint = lastEntry.startTime;
-          log('Largest Contentful Paint', lastEntry.startTime);
+          if (lastEntry) {
+            reportMetric('LCP', lastEntry.startTime, lastEntry.startTime);
+          }
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch (error) {
-        log('LCP observer error', error);
-      }
 
-      // First Input Delay
-      try {
+        // First Input Delay (FID)
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: any) => {
-            metrics.firstInputDelay = entry.processingStart - entry.startTime;
-            log('First Input Delay', metrics.firstInputDelay);
+            reportMetric('FID', entry.processingStart - entry.startTime, entry.processingStart - entry.startTime);
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch (error) {
-        log('FID observer error', error);
-      }
 
-      // Cumulative Layout Shift
-      try {
+        // Cumulative Layout Shift (CLS)
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
@@ -120,117 +88,108 @@ export const usePerformanceMonitor = (options: PerformanceMonitorOptions = {}) =
               clsValue += entry.value;
             }
           });
-          metrics.cumulativeLayoutShift = clsValue;
-          log('Cumulative Layout Shift', clsValue);
+          reportMetric('CLS', clsValue, clsValue);
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (error) {
-        log('CLS observer error', error);
+
+        // Time to First Byte (TTFB)
+        const ttfbObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const ttfbEntry = entries.find(entry => entry.name === window.location.href);
+          if (ttfbEntry) {
+            reportMetric('TTFB', ttfbEntry.responseStart - ttfbEntry.requestStart, ttfbEntry.responseStart - ttfbEntry.requestStart);
+          }
+        });
+        ttfbObserver.observe({ entryTypes: ['navigation'] });
       }
-    }
-
-    // Memory usage (if available)
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
-      log('Memory usage', metrics.memoryUsage);
-    }
-
-    return metrics;
-  }, [log]);
-
-  const measureResourceTiming = useCallback(() => {
-    if (!('PerformanceObserver' in window)) return;
-
-    try {
-      const resourceObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          const resource = entry as PerformanceResourceTiming;
-          log('Resource loaded', {
-            name: resource.name,
-            duration: resource.duration,
-            size: resource.transferSize,
-            type: resource.initiatorType,
-          });
-        });
-      });
-      resourceObserver.observe({ entryTypes: ['resource'] });
-    } catch (error) {
-      log('Resource timing observer error', error);
-    }
-  }, [log]);
-
-  const measureLongTasks = useCallback(() => {
-    if (!('PerformanceObserver' in window)) return;
-
-    try {
-      const longTaskObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          log('Long task detected', {
-            duration: entry.duration,
-            startTime: entry.startTime,
-          });
-        });
-      });
-      longTaskObserver.observe({ entryTypes: ['longtask'] });
-    } catch (error) {
-      log('Long task observer error', error);
-    }
-  }, [log]);
-
-  const measureNavigationTiming = useCallback(() => {
-    if (!performance.timing) return;
-
-    const timing = performance.timing;
-    const navigationMetrics = {
-      dns: timing.domainLookupEnd - timing.domainLookupStart,
-      tcp: timing.connectEnd - timing.connectStart,
-      request: timing.responseStart - timing.requestStart,
-      response: timing.responseEnd - timing.responseStart,
-      dom: timing.domContentLoadedEventEnd - timing.navigationStart,
-      load: timing.loadEventEnd - timing.navigationStart,
     };
 
-    log('Navigation timing', navigationMetrics);
-    return navigationMetrics;
-  }, [log]);
+    // Resource timing monitoring
+    const measureResourceTiming = () => {
+      if ('PerformanceObserver' in window) {
+        const resourceObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            const loadTime = entry.responseEnd - entry.requestStart;
+            const size = entry.transferSize || 0;
+            
+            // Report slow resources
+            if (loadTime > 1000) {
+              reportMetric('SLOW_RESOURCE', loadTime, loadTime);
+            }
+            
+            // Report large resources
+            if (size > 100000) { // 100KB
+              reportMetric('LARGE_RESOURCE', size, size);
+            }
+          });
+        });
+        resourceObserver.observe({ entryTypes: ['resource'] });
+      }
+    };
 
-  useEffect(() => {
-    // Start monitoring immediately
+    // Memory usage monitoring
+    const measureMemoryUsage = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        const usedJSHeapSize = memory.usedJSHeapSize;
+        const totalJSHeapSize = memory.totalJSHeapSize;
+        
+        // Report high memory usage
+        if (usedJSHeapSize > totalJSHeapSize * 0.8) {
+          reportMetric('HIGH_MEMORY_USAGE', usedJSHeapSize, usedJSHeapSize);
+        }
+      }
+    };
+
+    // Long task monitoring
+    const measureLongTasks = () => {
+      if ('PerformanceObserver' in window) {
+        const longTaskObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            if (entry.duration > 50) { // Tasks longer than 50ms
+              reportMetric('LONG_TASK', entry.duration, entry.duration);
+            }
+          });
+        });
+        longTaskObserver.observe({ entryTypes: ['longtask'] });
+      }
+    };
+
+    // Initialize monitoring
+    measureWebVitals();
     measureResourceTiming();
+    measureMemoryUsage();
     measureLongTasks();
-    measureNavigationTiming();
 
-    // Measure performance after page load
-    const handleLoad = () => {
-      setTimeout(() => {
-        const metrics = measurePerformance();
-        reportMetrics(metrics);
-      }, 1000);
-    };
+    // Periodic memory check
+    const memoryInterval = setInterval(measureMemoryUsage, 30000); // Every 30 seconds
 
-    if (document.readyState === 'complete') {
-      handleLoad();
-    } else {
-      window.addEventListener('load', handleLoad);
-    }
-
-    // Cleanup
     return () => {
-      window.removeEventListener('load', handleLoad);
+      clearInterval(memoryInterval);
     };
-  }, [measurePerformance, measureResourceTiming, measureLongTasks, measureNavigationTiming, reportMetrics]);
+  }, [reportMetric]);
 
-  // Return utility functions for manual measurement
+  // Custom performance measurement function
+  const measurePerformance = useCallback((name: string, fn: () => void) => {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    const duration = end - start;
+    
+    reportMetric(`CUSTOM_${name}`, duration, duration);
+    return duration;
+  }, [reportMetric]);
+
+  // Measure component render time
+  const measureRender = useCallback((componentName: string, renderFn: () => void) => {
+    return measurePerformance(`RENDER_${componentName}`, renderFn);
+  }, [measurePerformance]);
+
   return {
     measurePerformance,
-    measureResourceTiming,
-    measureLongTasks,
-    measureNavigationTiming,
-    reportMetrics,
+    measureRender,
+    reportMetric
   };
 };
-
-export default usePerformanceMonitor;

@@ -7,7 +7,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-import Analytics from '../components/Analytics';
+import { AnalyticsProvider } from '../components/Analytics';
 
 const ComputerVisionPage: React.FC = () => {
   const services = [
