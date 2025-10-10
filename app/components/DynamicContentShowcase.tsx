@@ -199,7 +199,6 @@ const DynamicContentShowcase: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Testimonials Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
@@ -261,13 +260,13 @@ const DynamicContentShowcase: React.FC = () => {
             </div>
 
             {/* Dots Indicator */}
-            <div className="flex justify-center mt-6 space-x-2">
+            <div className="flex justify-center gap-2 mt-6">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    index === currentIndex ? 'bg-purple-400' : 'bg-white/30'
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentIndex ? 'bg-white' : 'bg-white/30'
                   }`}
                 />
               ))}
@@ -280,18 +279,18 @@ const DynamicContentShowcase: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Comprehensive Benefits</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">What You Get</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our solutions provide a complete package of benefits designed to accelerate your business growth.
+              Comprehensive benefits that come with choosing our AI and IT solutions.
             </p>
           </div>
 
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                  <span className="text-gray-300">{benefit}</span>
+                <div key={index} className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <span>{benefit}</span>
                 </div>
               ))}
             </div>
@@ -300,77 +299,23 @@ const DynamicContentShowcase: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Experience the Future?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses that have already transformed their operations with our cutting-edge solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
-                <Zap className="w-5 h-5" />
-                <span>Start Free Trial</span>
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                Schedule Demo
-              </button>
-=======
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the advantages that make our solutions the preferred choice for businesses worldwide.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-lg rounded-lg p-4 border border-white/10">
-                <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-gray-300">
-              Real feedback from real businesses that have transformed with our solutions.
-            </p>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-xl text-white mb-6 italic">
-                "{testimonials[currentIndex].content}"
-              </p>
-              <div className="text-cyan-400 font-semibold">
-                {testimonials[currentIndex].name}
-              </div>
-              <div className="text-gray-300">
-                {testimonials[currentIndex].role}, {testimonials[currentIndex].company}
-              </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-            </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join thousands of businesses that have already revolutionized their operations with our solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+              <Zap className="w-5 h-5" />
+              Get Started Today
+            </button>
+            <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <ArrowRight className="w-5 h-5" />
+              Schedule Demo
+            </button>
           </div>
         </div>
       </section>
