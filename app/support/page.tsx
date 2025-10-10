@@ -7,55 +7,55 @@ import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, Boo
 interface FAQ {
   question: string;
   answer: string;
-  category: string});;)
+  category: string;
 }
 
 const SupportPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedFAQ, setExpandedFAQ] = useState<number></number>(null);
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
   const faqs: FAQ[] = [
     {
       question: 'How do I get started with your AI solutions?',
       answer: 'Contact our team for a free consultation where we\'ll assess your needs and recommend the best AI solutions for your business. We\'ll guide you through the entire process from planning to implementation.',
-      category: 'general'});;)
-},
+      category: 'general'
+    },
     {
       question: 'What support do you provide after implementation?',
       answer: 'We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly. Our support includes monitoring, troubleshooting, and performance optimization.',
-      category: 'support'});;)
-},
+      category: 'support'
+    },
     {
       question: 'How long does implementation typically take?',
       answer: 'Implementation time varies based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise systems may take 3-6 months. We provide detailed timelines during the planning phase.',
-      category: 'implementation'});;)
-},
+      category: 'implementation'
+    },
     {
       question: 'Do you offer training for our team?',
       answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions. Training includes hands-on workshops, documentation, and ongoing support.',
-      category: 'training'});;)
-},
+      category: 'training'
+    },
     {
       question: 'What security measures do you have in place?',
       answer: 'We implement enterprise-grade security including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA.',
-      category: 'security'});;)
-},
+      category: 'security'
+    },
     {
       question: 'Can you integrate with our existing systems?',
       answer: 'Absolutely. We specialize in seamless integration with existing systems and can work with most platforms, databases, and APIs to ensure smooth data flow and functionality.',
-      category: 'integration'});;)
-},
+      category: 'integration'
+    },
     {
       question: 'What happens if we need to scale up?',
       answer: 'Our solutions are designed to scale with your business. We can easily add more capacity, features, or users as your needs grow, with minimal disruption to your operations.',
-      category: 'scaling'});;)
-},
+      category: 'scaling'
+    },
     {
       question: 'Do you provide custom development?',
       answer: 'Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.',
-      category: 'development'});;)
-}
+      category: 'development'
+    }
   ];
 
   const supportChannels = [
@@ -65,8 +65,8 @@ const SupportPage: React.FC = () => {
       icon: Phone,
       contact: '+1 (555) 123-4567',
       availability: '24/7 Available',
-      color: 'text-blue-400'});;)
-},
+      color: 'text-blue-400'
+    },
     {
       name: 'Email Support',
       description: 'Get detailed responses to your questions',

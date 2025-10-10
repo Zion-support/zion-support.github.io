@@ -14,7 +14,7 @@ interface MicroSaasProduct {
   price: string;
   users: string;
   popular: boolean;
-  category: string});;)
+  category: string;
 }
 
 const MicroSaasPage: React.FC = () => {
