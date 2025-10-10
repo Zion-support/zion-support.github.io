@@ -138,14 +138,18 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-6860
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
         { name: 'AI Quantum Financial Oracle', path: '/ai-quantum-financial-oracle', description: 'Quantum-powered financial analysis', icon: '⚛️', popular: true },
         { name: 'AI 3D Generation Studio', path: '/ai-3d-generation', description: 'AI-powered 3D model generation', icon: '🎨', popular: true },
         { name: 'AI Mobile App Builder', path: '/ai-mobile-app-builder', description: 'AI-powered mobile app development', icon: '📱', popular: true },
         { name: 'AI Logo Designer Pro', path: '/ai-logo-designer', description: 'AI-powered logo design', icon: '🎨', popular: true },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,10 +159,13 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-6860
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
         { name: 'AI Smart Calendar', path: '/ai-smart-calendar', description: 'Intelligent scheduling and time management', icon: '📅', popular: true },
         { name: 'AI Content Writer', path: '/ai-content-writer', description: 'Advanced content generation', icon: '✍️', popular: true },
         { name: 'AI Video Generator', path: '/ai-video-generator', description: 'AI-powered video creation', icon: '🎥', popular: true },
         { name: 'AI CRM Assistant', path: '/ai-crm-assistant', description: 'Intelligent customer relationship management', icon: '👥', popular: true }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -178,6 +185,8 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-6860
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
       ]
     },
     {
@@ -200,6 +209,7 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         { name: 'AI Computer Vision Platform', path: '/ai-computer-vision', description: 'Advanced image recognition', icon: '👁️', popular: true },
         { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform', icon: '🧠', popular: true },
 <<<<<<< HEAD
@@ -211,10 +221,15 @@ const Navigation: React.FC = () => {
         { name: 'AI Computer Vision Platform', path: '/ai-computer-vision', description: 'Advanced image recognition', icon: '👁️', popular: true },
         { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform', icon: '🧠', popular: true },
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+        { name: 'AI Computer Vision Platform', path: '/ai-computer-vision', description: 'Advanced image recognition', icon: '👁️', popular: true },
+        { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform', icon: '🧠', popular: true },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
         { name: 'AI Quantum Computing Platform', path: '/ai-quantum-computing', description: 'Revolutionary quantum solutions', icon: '⚛️', popular: true },
         { name: 'AI Neural Memory Assistant', path: '/ai-neural-memory-assistant', description: 'Advanced AI with persistent memory', icon: '🧠', popular: true },
         { name: 'AI Holographic Workspace', path: '/ai-holographic-workspace', description: 'Immersive 3D collaboration', icon: '🥽', popular: false },
         { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro', description: 'AI-powered climate monitoring', icon: '🌍', popular: true },
+<<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro', description: 'Pharmaceutical AI research', icon: '💊', popular: false },
 <<<<<<< HEAD
@@ -236,9 +251,12 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
 =======
         { name: 'AI Quantum Computing', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: true },
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
         { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro', description: 'Advanced pharmaceutical AI', icon: '💊', popular: true },
-        { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro', description: 'Environmental AI solutions', icon: '🌱', popular: true },
+        { name: 'AI Fashion Design Studio', path: '/ai-fashion-design', description: 'AI-powered fashion design', icon: '👗', popular: true },
         { name: 'AI Space Technology Pro', path: '/ai-space-technology-pro', description: 'Space exploration AI', icon: '🚀', popular: true }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
 =======
       color: 'text-purple-400',
@@ -265,6 +283,8 @@ const Navigation: React.FC = () => {
         { name: 'AI Fashion Design Studio', path: '/ai-fashion-design', description: 'AI-powered fashion design', icon: '👗', popular: true },
         { name: 'AI Space Technology Pro', path: '/ai-space-technology-pro', description: 'Space exploration AI', icon: '🚀', popular: true }
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
       ]
     },
     {
@@ -283,10 +303,13 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-6860
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
         { name: 'Custom Software Development', path: '/custom-development', description: 'Tailored software solutions', icon: '💻', popular: true },
         { name: 'AI IT Operations (AIOps)', path: '/ai-ops', description: 'AI-powered IT operations', icon: '🤖', popular: true },
         { name: 'Healthcare IT Solutions', path: '/healthcare-it', description: 'HIPAA-compliant healthcare IT', icon: '🏥', popular: true },
@@ -297,6 +320,7 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         { name: 'Custom Software Development', path: '/custom-development', description: 'Tailored software solutions', icon: '💻', popular: true },
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
@@ -304,6 +328,8 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-6860
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
         { name: 'DevOps & CI/CD Implementation', path: '/devops-cicd', description: 'Streamlined development processes', icon: '⚙️', popular: true },
         { name: 'Database Management & Optimization', path: '/database-management', description: 'Performance tuning & security', icon: '🗄️', popular: true },
         { name: 'Network Design & Implementation', path: '/network-design', description: 'Secure network infrastructure', icon: '🌐', popular: true },
@@ -311,6 +337,7 @@ const Navigation: React.FC = () => {
         { name: 'Blockchain Integration Services', path: '/blockchain-integration-services', description: 'Web3 and blockchain solutions', icon: '⛓️', popular: true },
         { name: 'AI API Management', path: '/ai-api-management', description: 'Intelligent API management', icon: '🔗', popular: true },
         { name: 'Smart Contract Security Audit', path: '/smart-contract-security-audit', description: 'Blockchain security auditing', icon: '🔒', popular: true }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -343,6 +370,8 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-6860
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
       ]
     },
     {
@@ -352,6 +381,7 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-pink-500/10',
       hoverColor: 'hover:bg-pink-500/20',
       services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -369,12 +399,15 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-6860
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
         { name: 'Quantum Computing Solutions', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: true },
         { name: 'AI Autonomous Systems', path: '/ai-autonomous-systems', description: 'AI-powered autonomous systems', icon: '🤖', popular: true },
         { name: 'AI Blockchain Solutions', path: '/ai-blockchain-solutions', description: 'AI-powered blockchain technology', icon: '⛓️', popular: true },
         { name: 'AI Holographic Workspace', path: '/ai-holographic-workspace', description: 'Immersive 3D collaboration', icon: '🥽', popular: false },
         { name: 'AI Energy Management', path: '/ai-energy', description: 'Smart energy optimization', icon: '⚡', popular: true },
         { name: 'AI Music Composition', path: '/ai-music-composition', description: 'AI-powered music creation', icon: '🎵', popular: true },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2202
@@ -387,16 +420,21 @@ const Navigation: React.FC = () => {
 =======
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
         { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems', icon: '🤖', popular: true },
         { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions', icon: '⛓️', popular: true },
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices', icon: '📡', popular: true },
         { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences', icon: '🥽', popular: true },
 <<<<<<< HEAD
         { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions', icon: '🏙️', popular: true },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-6860
 =======
         { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions', icon: '🏙️', popular: true }
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
         { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization', icon: '🔄', popular: true },
 <<<<<<< HEAD
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping', icon: '🧪', popular: true },
@@ -445,6 +483,7 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
 =======
@@ -453,12 +492,15 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-6860
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
     <>
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <MobileNavigation isOpen={isOpen} onClose={() => setIsOpen(false)} />
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20 neon-glow-cyan' : 'bg-transparent'
       }`}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -482,6 +524,8 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-6860
 =======
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-a369
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-9813
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
