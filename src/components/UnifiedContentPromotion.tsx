@@ -86,39 +86,63 @@ export default function UnifiedContentPromotion({
   const featuredServices = [
     {
       title: "AI Drug Discovery Pro",
-      description: "Accelerate pharmaceutical research with AI-powered molecular analysis",
+      description: "Accelerate pharmaceutical research with AI-powered molecular analysis and clinical trial optimization",
       price: "$4,500/mo",
-      features: ["Molecular Modeling", "Drug Interaction Analysis", "Clinical Trial Optimization"],
+      features: ["Molecular Modeling", "Drug Interaction Analysis", "Clinical Trial Optimization", "Side Effect Prediction"],
       icon: Brain,
       category: "Healthcare AI",
-      link: "/ai-drug-discovery-pro"
+      link: "/ai-drug-discovery-pro",
+      benefits: "10x faster drug discovery, 95% accuracy in predictions, reduced clinical trial costs"
     },
     {
       title: "AI Climate Solutions Pro",
-      description: "Combat climate change with intelligent environmental monitoring and prediction",
+      description: "Combat climate change with intelligent environmental monitoring, carbon tracking, and sustainability optimization",
       price: "$3,200/mo",
-      features: ["Carbon Footprint Analysis", "Weather Prediction", "Sustainability Planning"],
+      features: ["Carbon Footprint Analysis", "Weather Prediction", "Sustainability Planning", "Green Energy Management"],
       icon: Globe,
       category: "Environmental AI",
-      link: "/ai-climate-solutions-pro"
+      link: "/ai-climate-solutions-pro",
+      benefits: "50% carbon footprint reduction, real-time environmental monitoring, sustainability optimization"
     },
     {
       title: "AI Space Technology Pro",
-      description: "Advanced space exploration and satellite management solutions",
+      description: "Revolutionary space exploration and satellite management with AI-powered mission planning and orbital mechanics",
       price: "$5,500/mo",
-      features: ["Satellite Operations", "Space Mission Planning", "Astronomical Data Analysis"],
+      features: ["Satellite Operations", "Space Mission Planning", "Astronomical Data Analysis", "Space Weather Prediction"],
       icon: Rocket,
       category: "Space Technology",
-      link: "/ai-space-technology-pro"
+      link: "/ai-space-technology-pro",
+      benefits: "Advanced space mission planning, real-time satellite monitoring, orbital optimization algorithms"
     },
     {
       title: "AI Financial Crime Detection Pro",
-      description: "Real-time fraud detection and financial security monitoring",
+      description: "Advanced financial security with real-time fraud detection, money laundering prevention, and regulatory compliance",
       price: "$2,800/mo",
-      features: ["Fraud Detection", "Risk Assessment", "Compliance Monitoring"],
+      features: ["Real-time Fraud Detection", "Money Laundering Prevention", "Transaction Analysis", "Compliance Monitoring"],
       icon: Shield,
-      category: "Financial AI",
-      link: "/ai-financial-crime-detection-pro"
+      category: "Financial Security",
+      link: "/ai-financial-crime-detection-pro",
+      benefits: "99.7% fraud detection accuracy, real-time transaction monitoring, automated compliance reporting"
+    },
+    {
+      title: "AI Supply Chain Optimization Pro",
+      description: "Intelligent supply chain management with demand forecasting, logistics optimization, and risk mitigation",
+      price: "$3,200/mo",
+      features: ["Demand Forecasting", "Inventory Optimization", "Logistics Automation", "Risk Assessment"],
+      icon: Truck,
+      category: "Supply Chain AI",
+      link: "/ai-supply-chain-optimization-pro",
+      benefits: "30% cost reduction, 25% inventory optimization, real-time supply chain visibility"
+    },
+    {
+      title: "AI Energy Grid Management Pro",
+      description: "Smart energy grid optimization with renewable energy integration, demand response, and carbon footprint tracking",
+      price: "$4,200/mo",
+      features: ["Grid Optimization", "Renewable Energy Integration", "Demand Response", "Carbon Tracking"],
+      icon: Zap,
+      category: "Energy AI",
+      link: "/ai-energy-grid-management-pro",
+      benefits: "40% energy efficiency improvement, real-time grid optimization, renewable energy integration"
     }
   ];
 
@@ -210,7 +234,7 @@ export default function UnifiedContentPromotion({
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
               <div key={index} className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -233,13 +257,18 @@ export default function UnifiedContentPromotion({
                     {service.description}
                   </p>
                   
-                  <div className="space-y-2 mb-6">
+                  <div className="space-y-2 mb-4">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {feature}
                       </div>
                     ))}
+                  </div>
+                  
+                  <div className="mb-4">
+                    <div className="text-sm text-cyan-400 font-semibold mb-2">Key Benefits:</div>
+                    <div className="text-xs text-gray-400 leading-relaxed">{service.benefits}</div>
                   </div>
                   
                   <div className="flex items-center justify-between">
