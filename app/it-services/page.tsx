@@ -3,14 +3,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 ;
 const ItServicesPage: React.FC = () => {const itServices = [
-=======
-
-const ItServicesPage: React.FC = () => {
-  const itServices = [
-<<<<<<< HEAD
     {
       titl,
     e: 'Cloud Infrastructure Management',
@@ -339,8 +333,6 @@ const ItServicesPage: React.FC = () => {
       category: 'Streaming',
       technologies: ['Apache Kafka', 'Apache Flink', 'Apache Storm', 'AWS Kinesis', 'Azure Stream Analytics']
     }
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
@@ -355,14 +347,10 @@ const ItServicesPage: React.FC = () => {
     { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'Mobile Apps' },
     { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Web Applications' },
     { name: 'Process Automation', href: '/process-automation', icon: Zap, description: 'Workflow Automation' }
->>>>>>> main
   ];
 
   return (
-<<<<<<< HEAD
     <React.Fragment>
-=======
-<<<<<<< HEAD
     <div>
         <title>IT Services - Zion Tech Group<
         <meta name="description" content="Comprehensive IT services including cloud, security, DevOps, and infrastructure solutions for modern businesses." 
@@ -538,9 +526,6 @@ const ItServicesPage: React.FC = () => {
         <
       <
     <
-=======
-    <>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       <Helmet>
         <title>IT Services - Zion Tech Group | Information Technology Solutions</title>
         <meta name="description" content="Comprehensive IT services including cloud solutions, cybersecurity, infrastructure management, and more. Expert IT support and consulting." />
@@ -578,18 +563,13 @@ const ItServicesPage: React.FC = () => {
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>
-              ));
+              ))
             </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </React.Fragment>)
-=======
-    </>
->>>>>>> main
   );
 };
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default ItServicesPage;

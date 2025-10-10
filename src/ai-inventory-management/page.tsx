@@ -219,15 +219,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
           <
         <
         
-<<<<<<< HEAD
         <Footer /></Footer>
       </div>
     </div>
   )}"
-=======
-        <Footer /><
-      <
-    <
-  );
-}"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b

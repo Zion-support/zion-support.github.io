@@ -35,18 +35,10 @@ const IoTPage: React.FC = () => {const iotServices = [
       benefits: ['Reduce downtime by 40%', 'Improve product quality', 'Lower energy costs'],
       marketPrice: '$15,000-60,000
       category: 'Industrial IoT',
-<<<<<<< HEAD
       technologies: ['OPC UA', 'Modbus', 'Ethernet/IP', 'Edge Computing', 'Machine Learning']]
     },
-=======
-<<<<<<< HEAD
       technologies: ['OPC UA', 'Modbus', 'Ethernet
     },
-=======
-      technologies: ['OPC UA', 'Modbus', 'Ethernet/IP', 'Edge Computing', 'Machine Learning'];)
-},
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       title: 'Smart Agriculture Platform',
       description: 'IoT-powered agricultural monitoring and optimization for crop management and livestock tracking.',
@@ -133,18 +125,10 @@ const IoTPage: React.FC = () => {const iotServices = [
       benefits: ['Protect IoT devices', 'Ensure data privacy', 'Meet compliance requirements'],
       marketPrice: '$5,000-20,000
       category: 'IoT Security',
-<<<<<<< HEAD
       technologies: ['PKI', 'TLS/SSL', 'Zero Trust', 'SIEM', 'Threat Intelligence']]
     },
-=======
-<<<<<<< HEAD
       technologies: ['PKI', 'TLS
     },
-=======
-      technologies: ['PKI', 'TLS/SSL', 'Zero Trust', 'SIEM', 'Threat Intelligence'];)
-},
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       title: 'IoT Data Analytics Platform',
       description: 'Advanced analytics platform for IoT data processing, visualization, and insights generation.',
@@ -161,7 +145,6 @@ technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine L
 const categories = [...new Set(iotServices.map(service => service.category))];
 
   return (
-<<<<<<< HEAD
     <div>
         <title>IoT Services - Zion Tech Group<
         <meta name="description" content="Comprehensive IoT solutions including smart cities, industrial IoT, smart agriculture, and connected device management." 
@@ -187,33 +170,6 @@ const categories = [...new Set(iotServices.map(service => service.category))];
                   Explore IoT Solutions
                 <
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
-=======
-    <>
-      <Helmet></Helmet>
-        <title>IoT Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IoT solutions including smart cities, industrial IoT, smart agriculture, and connected device management." />
-        <meta name="keywords" content="IoT services, smart cities, industrial IoT, smart agriculture, connected devices, Internet of Things" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50"></div>
-        {/* Hero Section */}</div>
-        <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-800 text-white py-20"></section>
-          <div>
-          <div>
-          <div>
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-green-200 bg-clip-text text-transparent"></h1>
-                IoT Solutions</h1>
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto"></p>
-                Connect, monitor, and optimize your world with intelligent Internet of Things solutions
-              </p>
-              <div>
-                <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors shadow-lg"></button>
-                  Explore IoT Solutions
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"></button>
->>>>>>> main
                   Schedule IoT Consultation
                 <
               <
@@ -221,7 +177,6 @@ const categories = [...new Set(iotServices.map(service => service.category))];
           <
         <
 
-<<<<<<< HEAD
         {/* Key Benefits *
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><
@@ -267,55 +222,9 @@ const categories = [...new Set(iotServices.map(service => service.category))];
             <
           <
         <
-=======
-        {/* Key Benefits */}
-        <section className="py-16 bg-white"></section>
-          <div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
-                Why Choose Our IoT Services?
-              </h2>
-              <p className="text-xl text-gray-600"></p>
-                End-to-end IoT solutions with proven expertise in connectivity, security, and analytics
-              </p>
-            </div>
-            <div>
-              <div>
-                <div>
-                  <Wifi className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2"></h>Connectivity Experts</h3>
-                <p className="text-gray-600">Multi-protocol IoT connectivity solutions</p>
-              </div>
-              <div>
-                <div>
-                  <Shield className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2"></h>Security First</h3>
-                <p className="text-gray-600">Comprehensive IoT security and data protection</p>
-              </div>
-              <div>
-                <div>
-                  <Zap className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2"></h>Edge Computing</h3>
-                <p className="text-gray-600">Low-latency processing at the edge</p>
-              </div>
-              <div>
-                <div>
-                  <Target className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2"></h>Custom Solutions</h3>
-                <p className="text-gray-600">Tailored IoT solutions for your specific needs</p>
-              </div>
-            </div>
-          </div>
-        </section>
->>>>>>> main
 
         {/* Services by Category *
         {categories.map(category => (
-<<<<<<< HEAD
           <section key={category)} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><
               <div className="text-center mb-12"><
@@ -440,142 +349,7 @@ const categories = [...new Set(iotServices.map(service => service.category))];
               Contact our IoT experts for a free consultation and custom IoT strategy development
             <
             <div className="flex flex-col sm:flex-row gap-4 justify-center"><
-=======
-          <section key={category} className="py-16 bg-gray-50"></section>
             <div>
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
-                  {category} Solutions
-                </h2>
-                <p className="text-xl text-gray-600"></p>
-                  Specialized {category.toLowerCase(); solutions powered by IoT technology
-                </p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-                {iotServices
-                  .filter(service => service.category === category)
-                  .map((service, index) => (</div>
-                    <div>
-                      <div className="text-4xl mb-4"></di>{service.icon}</div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3"></h>{service.title}</h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
-                      
-                      <div>
-                        <div>
-                          <span className="text-2xl font-bold text-green-600"></spa>{service.price}</span>
-                          <span className="text-sm text-gray-500"></spa>Market: {service.marketPrice}</span>
-                        </div>
-                        <div className="text-sm text-green-600 font-semibold"></div>
-                          Save up to 40% vs market rates</div>
-                        </div>
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2"></h>Key Features:</h4>
-                        <ul className="space-y-1"></ul>
-                          {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                              {feature}
-                            </li>
-                          ));
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2"></h>Technologies:</h4>
-                        <div className="flex flex-wrap gap-2"></div>
-                          {service.technologies.map((tech, techIndex) => (</div>
-                            <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded"></span>
-                              {tech}
-                            </span>
-                          ));
-                        </div>
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-2"></h>Business Benefits:</h4>
-                        <ul className="space-y-1"></ul>
-                          {service.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600"></li>
-                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-                              {benefit}
-                            </li>
-                          ));
-                        </ul>
-                      </div>
-
-                      <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors"></button>
-                        Get IoT Quote
-                      </button>
-                    </div>
-                  ));
-              </div>
-            </div>
-          </section>
-        ));
-
-        {/* IoT Capabilities Showcase */}
-        <section className="py-16 bg-white"></section>
-          <div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
-                Our IoT Capabilities
-              </h2>
-              <p className="text-xl text-gray-600"></p>
-                Comprehensive IoT technologies and methodologies for connected solutions
-              </p>
-            </div>
-            <div>
-              <div>
-                <Wifi className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2"></h>Connectivity</h3>
-                <p className="text-gray-600">Multi-protocol connectivity including WiFi, LoRaWAN, NB-IoT, and 5G</p>
-              </div>
-              <div>
-                <Shield className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2"></h>Security</h3>
-                <p className="text-gray-600">End-to-end security with device authentication and data encryption</p>
-              </div>
-              <div>
-                <Cpu className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2"></h>Edge Computing</h3>
-                <p className="text-gray-600">Low-latency processing and real-time decision making at the edge</p>
-              </div>
-              <div>
-                <Target className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2"></h>Device Management</h3>
-                <p className="text-gray-600">Comprehensive device lifecycle management and monitoring</p>
-              </div>
-              <div>
-                <Sparkles className="w-12 h-12 text-pink-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2"></h>AI Analytics</h3>
-                <p className="text-gray-600">Machine learning and AI for predictive analytics and insights</p>
-              </div>
-              <div>
-                <BarChart className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2"></h>Data Visualization</h3>
-                <p className="text-gray-600">Real-time dashboards and analytics for IoT data insights</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white"></section>
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4"></h2>
-              Ready to Connect Your World?
-            </h2>
-            <p className="text-xl mb-8 text-green-100"></p>
-              Contact our IoT experts for a free consultation and custom IoT strategy development
-            </p>
-<<<<<<< HEAD
-            <div>
-=======
-            <div></div>
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
               <a 
                 href="tel:+13024640950"
                 className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
@@ -584,7 +358,6 @@ const categories = [...new Set(iotServices.map(service => service.category))];
               <
               <a 
                 href="mailto:kleber@ziontechgroup.com"
-<<<<<<< HEAD
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hove,
     r:text-green-600 transition-colors"
               >
@@ -599,26 +372,9 @@ const categories = [...new Set(iotServices.map(service => service.category))];
       <
     <
   );
-=======
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
-              ></a>
-                ✉️ kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div>
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-<<<<<<< HEAD
 )]
     };
-=======
-  );)
->>>>>>> main
 };
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default IoTPage;
+      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning'];);

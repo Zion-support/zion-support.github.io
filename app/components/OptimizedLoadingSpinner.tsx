@@ -18,15 +18,9 @@ variant = 'spinner',
     text = 'Loading...',
     className = '',
     color = 'blue',
-<<<<<<< HEAD
     fullScreen = false,;)
 }); => {;
 const sizeClasses = useMemo(
-=======
-    fullScreen = false,]
-    }); => {
-    const sizeClasses = useMemo(
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       () => ({
         xs: 'h-3 w-3',
         sm: 'h-4 w-4',
@@ -114,19 +108,10 @@ switch (variant) {
               role='status'
               aria-label='Loading'
             />
-<<<<<<< HEAD
           ););
     }, [size, variant, color, sizeClasses, colorClasses]);
 const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;)
 }, [fullScreen, className]);
-=======
-          )]
-    }
-    }, [size, variant, color, sizeClasses, colorClasses]);
-
-    const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`]
-    }, [fullScreen, className]);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
     return (</div>
       <div>
@@ -145,3 +130,4 @@ const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClass
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
 export default OptimizedLoadingSpinner;
 }
+  fullScreen?: boolean;);

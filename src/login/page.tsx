@@ -31,18 +31,10 @@ const handleSubmit = async (e: React.FormEvent) => {
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsLoading(false);
-<<<<<<< HEAD
     // Redirect to dashboard or home page
     window.location.href = '/'};
 ;
 const features = [
-=======
-    /
-    window.location.href = '
-  };
-
-  const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       icon: Shield,
       title: 'Secure Access',
@@ -61,15 +53,10 @@ $4},
 $4}
   ];
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
-=======
-  return (<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Login Form *
@@ -96,23 +83,9 @@ $4}
                       value = { formData.email };
                       onChange = { handleInputChange };
 
-<<<<<<< HEAD
   )};
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-                      className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
-    s:ring-cyan-400
-                      placeholder="Enter your email"
-                    
-                  <
-    <div>Coming Soon<)
-  );
-};
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   emai,
   l: '',
@@ -124,63 +97,32 @@ $4}
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const _handleInputChange = (e: React.ChangeEvent;)
-<<<<<<< HEAD
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-          <HTMLInputElement>) => {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
-}
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 }
 /
       [name]: type === 'checkbox' ? checked : value;)
-<<<<<<< HEAD
     }))};
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    }));
-  };
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 }
     e.preventDefault();
     setIsLoading(true);
     /
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsLoading(false);
-<<<<<<< HEAD
     // Redirect to dashboard or home page;
     window.location.href = '/'};
-=======
-    /
-    window.location.href = '
-  };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   const features = [
   /
   O: Add items;
 ];;
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Shield,
@@ -189,14 +131,8 @@ $4}
       descriptio,
   n: 'Bank-level security with multi-factor authentication'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: CheckCircle,
@@ -205,14 +141,8 @@ $4}
       descriptio,
   n: 'Round-the-clock support for all your needs'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Phone,
@@ -225,17 +155,10 @@ $4}
   return (<div>Coming Soon<)
   )
     
-<<<<<<< HEAD
           <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12"></div>"
         <div className="max-w-6xl mx-auto px-4"></div>"
-=======
-          <>
-      <Navigation /><
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12"><
-        <div className="max-w-6xl mx-auto px-4"><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <div className="grid grid-cols-1,"
   lg:grid-cols-2 gap-12 items-center"><
             {/* Left Side - Login Form *
@@ -534,20 +457,11 @@ type="submit" disabled = { isLoading };
         <
       <
 
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
 
     </div>
   )};
-=======
-      <Footer 
-    <
-
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default LoginPage;
 

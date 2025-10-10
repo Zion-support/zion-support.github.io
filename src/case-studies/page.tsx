@@ -73,19 +73,12 @@ const caseStudies = [
       description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
     }
   ];
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
       </Helmet>
-=======
-  return (<div>
-        <title>Case Studies - Zion Tech Group<
-        <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." 
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Header *
         <header className="bg-white shadow-sm border-b">
@@ -209,7 +202,6 @@ const caseStudies = [
                 Start Your Project
                 
                 View Our Services
-<<<<<<< HEAD
               </Link>
             </div>
           </div>
@@ -217,14 +209,4 @@ const caseStudies = [
       </div>
     </React.Fragment>
   )};
-=======
-              <
-            <
-          <
-        <
-      <
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default CaseStudiesPage;

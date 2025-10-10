@@ -3,11 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
 const Next.dPage: React.FC = () => {
   const features = [
     {
@@ -44,24 +39,11 @@ const Next.dPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <title>Next.d | Zion Tech Group</title>
         <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
       </Helmet>
-<<<<<<< HEAD
-=======
-=======
-    <>
-      <div></div>
-      <Helmet></Helmet>
-        <titl></titl>Next.d | Zion Tech Group</title>
-        <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
-      </Helmet>
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 // Type definitions for Next.js compatibility in Vite
 export interface Metadata {
   title?: string;
@@ -142,13 +124,6 @@ export interface NextPageProps {
   params: { [key: string]: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
->>>>>>> origin/main
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -178,11 +153,6 @@ export interface NextPageProps {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
       {/* Features Section */}
       <section></section>
         <div></div>
@@ -194,23 +164,10 @@ export interface NextPageProps {
               Our next.d solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 // API route types
 export interface ApiRouteHandler {
   (req: Request): Promise<Response>;
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
->>>>>>> origin/main
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -238,15 +195,8 @@ export interface ApiRouteHandler {
             </p>
           </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
           <div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
             {benefits.map((benefit, index) => (
               <div></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
@@ -286,12 +236,6 @@ export interface ApiRouteHandler {
 };
 
 export default Next.dPage;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 // Server components types
 export interface ServerComponentProps {
   params: { [key: string]: string };
@@ -353,11 +297,3 @@ declare module 'next' {
 }
 
 export {};
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
->>>>>>> origin/main

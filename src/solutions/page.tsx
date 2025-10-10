@@ -230,15 +230,10 @@ $4},
 $4}
   ];
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-  return (<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header *
           <div className="text-center mb-16">
@@ -279,14 +274,8 @@ $4}
   /
   O: Add items;
 ];;
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   i,
   d: 'ai',
@@ -301,14 +290,8 @@ $4}
       descriptio,
   n: 'Transform your business with cutting-edge artificial intelligence'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   i,
   d: 'it',
@@ -323,14 +306,8 @@ $4}
       descriptio,
   n: 'Robust and scalable IT infrastructure solutions'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   i,
   d: 'security',
@@ -345,14 +322,8 @@ $4}
       descriptio,
   n: 'Comprehensive security solutions for your digital assets'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   i,
   d: 'automation',
@@ -368,27 +339,15 @@ $4}
   n: 'Streamline operations with intelligent automation'
     }
   ];
-<<<<<<< HEAD
   const solutions = {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-  const solutions = { /* TODO: Fix JSX expression *
-  ,
-    O: Add content; };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   a,
   i: [
   /
   O: Add items]
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'AI-Powered Analytics',
@@ -403,14 +362,8 @@ $4}
         colo,
   r: 'text-blue-400'
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'AI Marketing Automation',
@@ -425,14 +378,8 @@ $4}
         colo,
   r: 'text-pink-400'
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'AI Customer Support',
@@ -447,14 +394,8 @@ $4}
         colo,
   r: 'text-green-400'
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'AI Process Automation',
@@ -474,14 +415,8 @@ $4}
   t: [
   /
   O: Add items]
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'Cloud Migration',
@@ -496,14 +431,8 @@ $4}
         colo,
   r: 'text-blue-400'
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'IT Infrastructure Management',
@@ -518,14 +447,8 @@ $4}
         colo,
   r: 'text-green-400'
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'DevOps & CI
@@ -540,14 +463,8 @@ $4}
         colo,
   r: 'text-purple-400'
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'Database Management',
@@ -567,14 +484,8 @@ $4}
   y: [
   /
   O: Add items]
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'Cybersecurity Suite',
@@ -589,14 +500,8 @@ $4}
         colo,
   r: 'text-red-400'
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'AI Security Monitoring',
@@ -611,14 +516,8 @@ $4}
         colo,
   r: 'text-purple-400'
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'Compliance Management',
@@ -633,14 +532,8 @@ $4}
         colo,
   r: 'text-green-400'
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'Security Training',
@@ -660,14 +553,8 @@ $4}
   n: [
   /
   O: Add items]
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'Business Process Automation',
@@ -682,14 +569,8 @@ $4}
         colo,
   r: 'text-yellow-400'
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'IT Automation',
@@ -704,14 +585,8 @@ $4}
         colo,
   r: 'text-blue-400'
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'Marketing Automation',
@@ -726,14 +601,8 @@ $4}
         colo,
   r: 'text-pink-400'
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-      {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   titl,
   e: 'Data Automation',
@@ -754,14 +623,8 @@ $4}
   /
   O: Add items;
 ];;
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Star,
@@ -770,14 +633,8 @@ $4}
       descriptio,
   n: '300% average ROI and 95% process automation for our clients'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Shield,
@@ -786,14 +643,8 @@ $4}
       descriptio,
   n: 'Bank-level security and compliance for all our solutions'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Globe,
@@ -802,14 +653,8 @@ $4}
       descriptio,
   n: '24
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Users,
@@ -822,21 +667,12 @@ $4}
   return (<div>Coming Soon<)
   )
     
-<<<<<<< HEAD
           <React.Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-16"></div>"
-=======
-          <>
-      <Navigation /><
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
-        <div className="container mx-auto px-4 py-16 pt-24"><
-          {/* Header *
-          <div className="text-center mb-16"><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"><
 /
@@ -851,22 +687,12 @@ $4}
           <div className="mb-12"><
             <div className="flex flex-wrap justify-center gap-4 mb-8"><
               {solutionCategories.map((category) => ()}
-<<<<<<< HEAD
           <button></button>
                   key={category.id}
                   onClick={() => setActiveTab(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
   O: Add content}
-=======
-          <button><
-                  key = { category.id };
-                  onClick = { () => setActiveTab(category.id) };
-                  className = { `flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${ };
-  /
-  O: Add content;
-}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     activeTab === category.id;`
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800
@@ -1062,20 +888,11 @@ $4}
         <
       <
 
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
 
     </div>
   )};
-=======
-      <Footer 
-    <
-
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default SolutionsPage;
 

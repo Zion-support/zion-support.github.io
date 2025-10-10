@@ -131,13 +131,8 @@ const,
     {/* TODO: Fix JSX expression *
     }
   ];
-<<<<<<< HEAD
   return (<React.Fragment>
       <SEOOptimizer></SEOOptimizer>
-=======
-  return (<>
-      <SEOOptimizer><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         title="AI Workflow Automation Platform - Zion Tech Group""
         description="Automate business processes with AI-powered workflows. 90% time savings, 500+ integrations, and intelligent decision making. No coding required."
         keywords={['workflow automation', 'business process automation', 'AI workflows', 'process optimization', 'workflow builder']}"
@@ -215,7 +210,6 @@ const,
             <
           <
 
-<<<<<<< HEAD
 
         </main>
       </div>
@@ -223,15 +217,6 @@ const,
     </React.Fragment>
   )};
 ;
-=======
-        <
-      <
-    <
-    <
-  );
-};
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 const AIWorkflowAutomationPage = () => {
 return (
 
@@ -240,13 +225,9 @@ return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"><
       
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
 );
 }
           {/* Hero Section */}</div>
-=======
-          {/* Hero Section */}<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <section className="text-center mb-16">
             <h1 className="text-4xl sm: text-5xl m,
     d:text-6xl font-bold text-white mb-6 neon-text">)
@@ -391,7 +372,6 @@ return (
     r:text-purple-600 transition-colors"
               >
                 Email Us;
-<<<<<<< HEAD
               </a>
             </div>
           </section>
@@ -399,14 +379,4 @@ return (
         <Footer />
       </div>,
     </div>)};
-=======
-              <
-            <
-          <
-        <
-        <Footer 
-      <
-    <
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 

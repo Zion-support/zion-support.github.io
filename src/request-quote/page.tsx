@@ -20,12 +20,8 @@ const [formData, setFormData] = useState({
     description: '',
     requirements:   ,)
 $4});
-<<<<<<< HEAD
 ;
 const [isSubmitting, setIsSubmitting] = useState(false);
-=======
-  const [isSubmitting, setIsSubmitting] = useState(false);
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   const [isSubmitted, setIsSubmitted] = useState(false);
 ;
 const _serviceTypes = [
@@ -130,15 +126,10 @@ $4}
   ];
 
   if (isSubmitted) {
-<<<<<<< HEAD
     return (
       <React.Fragment>
         <Navigation />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-    return (<>
-        
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <div className="container mx-auto px-4 py-16 pt-24">
             <div className="max-w-2xl mx-auto text-center">
               <div className="w-20 h-20 bg-green-500
@@ -171,7 +162,6 @@ $4}
                   href="
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 >
-<<<<<<< HEAD
                   <Phone className="w-5 h-5 mr-2" />
                   Contact Us
                 </a>
@@ -194,9 +184,6 @@ $4}
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header *
           <div className="text-center mb-16">
@@ -469,17 +456,9 @@ $4}
                 <
     <div>Coming Soon<
 
-<<<<<<< HEAD
   )};
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-  );
-};
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   nam,
   e: '',
@@ -550,37 +529,18 @@ $4}
 /
   ];
   const handleInputChange = (e: React.ChangeEvent;)
-<<<<<<< HEAD
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
     const { name, value } = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-          <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
-}
-    const { name, value } = e.target;
-    setFormData(prev => ({/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 }
 /
       [name]: value;)
-<<<<<<< HEAD
     }))};
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    }));
-  };
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 }
     e.preventDefault();
     setIsSubmitting(true);
@@ -592,14 +552,8 @@ $4}
   /
   O: Add items;
 ];;
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Calculator,
@@ -608,14 +562,8 @@ $4}
       descriptio,
   n: 'Get a detailed, no-obligation quote within 24 hours'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Clock,
@@ -624,14 +572,8 @@ $4}
       descriptio,
   n: 'We respond to all quote requests within 4 hours'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: CheckCircle,
@@ -640,14 +582,8 @@ $4}
       descriptio,
   n: 'Clear, detailed pricing with no hidden fees'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Star,
@@ -661,14 +597,8 @@ $4}
   /
   O: Add items;
 ];;
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Users,
@@ -677,14 +607,8 @@ $4}
       descriptio,
   n: 'Proven track record of delivering results'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Award,
@@ -693,14 +617,8 @@ $4}
       descriptio,
   n: 'Our clients see significant returns on investment'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Clock,
@@ -709,14 +627,8 @@ $4}
       descriptio,
   n: 'Round-the-clock support for all our clients'
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Star,
@@ -726,19 +638,12 @@ $4}
   n: 'Reliable, high-performance solutions'
     }
   ];
-<<<<<<< HEAD
   if (isSubmitted) {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-  if (isSubmitted) {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 }
     return (<div>Coming Soon<)
   )
       
-<<<<<<< HEAD
           <React.Fragment>
         <Navigation /></Navigation>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
@@ -788,18 +693,6 @@ $4}
                     <span className="text-gray-300">Schedule a call to discuss your project</span>
                   </div>
                 </div>
-=======
-          <>
-        <Navigation /><
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
-          <div className="container mx-auto px-4 py-16 pt-24"><
-            <div className="max-w-2xl mx-auto text-center"><
-              <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6"><
-                <CheckCircle className="w-10 h-10 text-green-400" /><
-              <
-              <h1 className="text-4xl font-bold text-white mb-6 neon-text"><
-/
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
           <
               <p className="text-xl text-gray-300 mb-8"><
@@ -842,7 +735,6 @@ $4}
 /
 
           "
-<<<<<<< HEAD
           <ArrowRight className="w-4 h-4 mr-2" /></ArrowRight>
 // Back to Home;
           </a>
@@ -865,31 +757,6 @@ $4}
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-16"></div>"
-=======
-          <ArrowRight className="w-4 h-4 mr-2" /><
-/
-          <
-              <
-            <
-          <
-        <
-      <
-      <Footer 
-    <
-        <Footer /><
-      <
-    );
-  }
-  return (<div>Coming Soon<)
-  )
-    
-          <>
-      <Navigation /><
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
-        <div className="container mx-auto px-4 py-16 pt-24"><
-          {/* Header *
-          <div className="text-center mb-16"><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             <h1 className="text-4xl,"
   md: text-5xl font-bold text-white mb-6 neon-text"><
 /
@@ -1162,16 +1029,8 @@ type="submit" disabled = { isSubmitting };
         <
       <
 
-<<<<<<< HEAD
     </div>
   )};
-=======
-      <Footer /><
-
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default RequestQuotePage;
 

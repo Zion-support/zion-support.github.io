@@ -17,7 +17,6 @@ const [formData, setFormData] = useState({
     service: '',
     message:   ,)
 $4});
-<<<<<<< HEAD
 ;
 const [isSubmitted, setIsSubmitted] = useState(false);
 ;
@@ -28,17 +27,6 @@ const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextArea
   });
 ;
 const [isSubmitting, setIsSubmitting] = useState(false);
-=======
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    messag,
-    e: '',
-    budget: '',
-    timeline: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   const [isSubmitted, setIsSubmitted] = useState(false);
 ;
 const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
@@ -50,19 +38,11 @@ const { name, value } = e.target;
 ;
 const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-<<<<<<< HEAD
     // Here you would typically send the form data to your backend
     // // console.log removed for production
 setIsSubmitted(true);
     // Reset form after 3 seconds
     setTimeout(() => {
-=======
-    /
-    /
-    setIsSubmitted(true);
-    /
-    setTimeout (() => {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       setIsSubmitted(false);
       setFormData({}, 3000);
   const handleSubmit = async (e: React.FormEvent) => {
@@ -223,7 +203,6 @@ const faqs = [
               href="
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center"
             >
-<<<<<<< HEAD
               <ArrowRight className="w-5 h-5 mr-2" />
               Back to Home
             </a>
@@ -235,10 +214,6 @@ const faqs = [
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-=======
-              
-      {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><
         <div className="container mx-auto px-4 relative z-10">
@@ -411,7 +386,6 @@ const faqs = [
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover: from-cyan-600 hover:to-purple-700 transition-all disabled:opacity-50 disable,
     d:cursor-not-allowed flex items-center justify-center"
                 >
-<<<<<<< HEAD
                   {isSubmitting ? (
                     <React.Fragment>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
@@ -429,14 +403,6 @@ const faqs = [
 
             {/* Contact Information */}
             <div className="space-y-8">
-=======
-                  {isSubmitting ? (<>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"><
-                      Sending...
-                    <)
-                  ) : (<>
-                      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
               <div>
                 <h2 className="text-2xl font-bold text-white mb-6">Contact Information<
                 <div className="space-y-6">
@@ -552,19 +518,9 @@ const faqs = [
                   <p className="text-gray-300">{faq.answer}<
                 <)
               ))}
-<<<<<<< HEAD
             </div>
           </div>
         </div>
       </section>
     </div>
   )}
-=======
-            <
-          <
-        <
-      <
-    <
-  );
-}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b

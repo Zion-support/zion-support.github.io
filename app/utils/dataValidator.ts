@@ -1,9 +1,3 @@
-'use client';
-/**
- * Data Validation Utility;
- * Provides comprehensive data validation with type safety;
- */
-<<<<<<< HEAD
 export interface ValidationRule<T></T> {/* TODO: Fix JSX expression */});;)
 export interface FieldRule {/* TODO: Fix JSX expression */});;)
 export type ValidationRules = Record<string></string>
@@ -15,23 +9,6 @@ constructor(message: string)
     super(message);
     this.name = 'ValidationError'
 export class ValidationError extends Error {/* TODO: Fix JSX expression */});;);
-=======
-export interface ValidationRule<T></T> {/* TODO: Fix JSX expression */});]
-    }
-export interface FieldRule {/* TODO: Fix JSX expression */});]
-    }
-export type ValidationRules = Record<string></string>;
-export interface ValidationResult {/* TODO: Fix JSX expression */});]
-    }
-export class ValidationError extends Error {
-  constructor(message: string)
-    public field: string),
-    public errors: string[]) {,
-    super(message);
-    this.name = 'ValidationError';
-export class ValidationError extends Error {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 /**
  * Validate email address;
@@ -50,20 +27,11 @@ export function validateEmail(emai)
   d: boolean; error?: string } {/* TODO: Fix JSX expression */}
   r: 'Email is required' };
   if (email.length > 254) return {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   r: 'Email is too long' }
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const isValid = emailRegex.test(email);
   return {/* TODO: Fix JSX expression */});;)
 }});
-=======
-  r: 'Email is too long' };
-  
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const isValid = emailRegex.test(email);
-  return {/* TODO: Fix JSX expression */});]
-    }});
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 /**
  * Validate URL;
@@ -117,17 +85,10 @@ const isValid = phoneRegex.test(phone);
     error: isValid ? undefined : 'Invalid phone number format',
   
   // More flexible phone regex that handles various formats;
-<<<<<<< HEAD
 const phoneRegex = /^[\+]?[1]?[\s\-\.]?[(]?[0-9]{3}[)]?[\s\-\.]?[0-9]{3}[\s\-\.]?[0-9]{4,6}$/;
 const isValid = phoneRegex.test(phone);
   return {/* TODO: Fix JSX expression */});;)
 }});
-=======
-  const phoneRegex = /^[\+]?[1]?[\s\-\.]?[(]?[0-9]{3}[)]?[\s\-\.]?[0-9]{3}[\s\-\.]?[0-9]{4,6}$/;
-  const isValid = phoneRegex.test(phone);
-  return {/* TODO: Fix JSX expression */});]
-    }});
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 /**
  * Validate string length;
@@ -177,15 +138,8 @@ export function validateDate(value: unknown): boolean {,
   if (value instanceof Date) {,
     return !isNaN(value.getTime())
 export function validateDate(valu)
-<<<<<<< HEAD
   e: unknown): boolean {/* TODO: Fix JSX expression */});;);
   if (typeof value === 'string') {/* TODO: Fix JSX expression */});;);
-=======
-  e: unknown): boolean {/* TODO: Fix JSX expression */});]
-    }
-  if (typeof value === 'string') {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return false});
 }
 /**
@@ -296,7 +250,6 @@ export function validateForm<T></T>>(dat,
   s: ValidationRules}
 ): ValidationResult {/* TODO: Fix JSX expression */}
   errors: Record<string></string> = {};
-<<<<<<< HEAD
   for (const field in rules) {/* TODO: Fix JSX expression */});;);
     }
     if (fieldErrors.length > 0) {/* TODO: Fix JSX expression */}`
@@ -304,18 +257,6 @@ export function validateForm<T></T>>(dat,
         {/* TODO: Fix JSX expression */});;);
         }
       ););
-=======
-  for (const field in rules) {/* TODO: Fix JSX expression */});]
-    }
-    }
-    if (fieldErrors.length > 0) {/* TODO: Fix JSX expression */}`
-        new ValidationError(`Validation failed for ${field}`, field, fieldErrors),
-        {/* TODO: Fix JSX expression */});]
-    }
-        }
-      )]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   return {
     isValid: Object.keys(errors).length === 0;
@@ -393,23 +334,12 @@ class DataValidator {
   m: <T></T>(validato,
   r: (valu),
   e: T) => boolean, messag,
-<<<<<<< HEAD
   e: string): ValidationRule<T></T> => ({/* TODO: Fix JSX expression */});;)
 });;);
 // Legacy class-based API for backward compatibility;
 class DataValidator {/* TODO: Fix JSX expression */}
   private constructor() {}
   static getInstance(): DataValidator {/* TODO: Fix JSX expression */});;);
-=======
-  e: string): ValidationRule<T></T> => ({/* TODO: Fix JSX expression */});]
-    });]
-    };
-// Legacy class-based API for backward compatibility;
-class DataValidator {/* TODO: Fix JSX expression */}
-  private constructor() {}
-  static getInstance(): DataValidator {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return DataValidator.instance});
 }
   isEmail = validateEmail;
@@ -422,7 +352,6 @@ class DataValidator {/* TODO: Fix JSX expression */}
   isDateInRange = validateDateRange;
   sanitizeHTML = sanitizeHTML;
   isRequired(valu)
-<<<<<<< HEAD
   e: unknown): boolean {/* TODO: Fix JSX expression */});;);
   isArray(value: unknown): value is unknown[] {,
     return Array.isArray(value);
@@ -430,18 +359,6 @@ class DataValidator {/* TODO: Fix JSX expression */}
   e: unknown): value is unknown[] {/* TODO: Fix JSX expression */});;);
   isObject(valu)
   e: unknown): value is Record<string></string> {/* TODO: Fix JSX expression */});;);
-=======
-  e: unknown): boolean {/* TODO: Fix JSX expression */});]
-    }
-  isArray(value: unknown): value is unknown[] {,
-    return Array.isArray(value);
-  isArray(valu)
-  e: unknown): value is unknown[] {/* TODO: Fix JSX expression */});]
-    }
-  isObject(valu)
-  e: unknown): value is Record<string></string> {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   matchesPattern(value: string, pattern: RegExp): boolean {,
     return pattern.test(value);
   matchesPattern(valu,
@@ -545,21 +462,10 @@ export function sanitizeInput(input: string, maxLength: number = 1000): string |
   if (clean.<<<lengt></lengt>maxLength</length>) {
     clean = clean.substring(0, maxLength)
 export function sanitizeHTML(htm)
-<<<<<<< HEAD
   l: string): string {/* TODO: Fix JSX expression */});;)
 export function sanitizeInput(inpu,
   t: string, maxLengt)
   h: number = 1000): string | null {/* TODO: Fix JSX expression */});;);
-=======
-  l: string): string {/* TODO: Fix JSX expression */});]
-    }
-
-export function sanitizeInput(inpu,
-  t: string, maxLengt)
-  h: number = 1000): string | null {/* TODO: Fix JSX expression */});]
-    }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return clean || null});
 }
 
@@ -630,12 +536,7 @@ const cleaned = cardNumber.replace(/\D/g, '');
   ;
 let sum = 0;
   let isEven = false;
-<<<<<<< HEAD
   for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */});;);
-=======
-  for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     sum += digit;
     isEven = !isEven});
 }

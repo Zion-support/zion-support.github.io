@@ -14,7 +14,7 @@ export default function handler(req, res) {
     // 3. Send alerts to your team
 
     // console.error removed for production
-    console.error('Error report received:', {
+    console.log('Error report received:', {
       error,
       stack,
       componentStack,

@@ -159,15 +159,9 @@ const quickLinks = [
 const filteredDocs = selectedCategory === 'all' 
     ? documentation 
     : documentation.filter(doc => doc.category === selectedCategory);
-<<<<<<< HEAD
 ;
 const searchResults = searchQuery 
     ? documentation.filter(doc => 
-=======
-
-  const searchResults = searchQuery 
-    ? documentation.filter(doc =>)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.content.toLowerCase().includes(searchQuery.toLowerCase())
@@ -176,7 +170,6 @@ const searchResults = searchQuery
 ;
 const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-<<<<<<< HEAD
       case 'Beginner': return 'text-green-400 bg-green-500/20';
       case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';
       case 'Advanced': return 'text-red-400 bg-red-500/20';
@@ -196,19 +189,6 @@ const getDifficultyColor = (difficulty: string) => {
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-=======
-      case 'Beginner': return 'text-green-400 bg-green-500
-      case 'Intermediate': return 'text-yellow-400 bg-yellow-500
-      case 'Advanced': return 'text-red-400 bg-red-500
-      defaul,
-    t: return 'text-gray-400 bg-gray-500
-    }
-  };
-
-  return (<>
-
-          {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
 
@@ -331,25 +311,9 @@ const getDifficultyColor = (difficulty: string) => {
               <
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
-<<<<<<< HEAD
         <Footer />
       </div>
     </React.Fragment>
   )};
-=======
-                  <Play className="w-5 h-5 mr-2" 
-                  Request Demo
-                <
-              <
-            <
-          <
-        <
-
-        <Footer 
-      <
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default DocsPage;

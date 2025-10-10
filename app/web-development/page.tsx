@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud, Phone } from 'lucide-react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -9,16 +8,6 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
 const $1: React.FC = () => {const webServices = [,
-=======
-import Navigation from '../components
-import Footer from '../components
-import SEOOptimizer from '../components
-import PerformanceOptimizer from '../components
-import AccessibilityEnhancer from '../components
-import SecurityEnhancer from '../components
-const $1: React.FC = () => {
-  const webServices = [,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {,
       title: 'Frontend Development',
       description: 'Modern, responsive web applications with cutting-edge technologies',
@@ -61,7 +50,6 @@ const $1: React.FC = () => {
       colo,
     r: 'text-gray-400'}
   ];
-<<<<<<< HEAD
 ;
 const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
@@ -70,17 +58,6 @@ const technologies = [
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-=======
-
-  const technologies = [
-    { name: 'React
-    { nam,
-    e: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
-    { name: 'Python
-    { name: 'MongoDB
-    { name: 'AWS
-    { name: 'Docker
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   ];
 ;
 const process = [
@@ -89,33 +66,29 @@ const process = [
     p: '01',
       title: 'Discovery & Planning',
       description: 'We analyze your requirements and create a detailed project plan',
-      icon: BarChart,});
+      icon: BarChart,})
 },
     {
       step: '02',
       title: 'Design & Prototyping',
       description: 'Create wireframes and prototypes to visualize your solution',
-      icon: Code,});
+      icon: Code,})
 },
     {
       step: '03',
       title: 'Development',
       description: 'Build your web application using modern technologies and best practices',
-      icon: Globe,});
+      icon: Globe,})
 },
     {
       step: '04',
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
-      icon: Shield,});
+      icon: Shield,})
 }
   ];
 
-<<<<<<< HEAD
   return(<React.Fragment>
-=======
-  return(<>
-<<<<<<< HEAD
       
 <
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
@@ -144,8 +117,6 @@ const process = [
                 href="
                 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
               >Start Your Project<a
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group"
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
@@ -194,29 +165,22 @@ const process = [
               <a;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></a></section>
               <a></a>Start Your Project<a
->>>>>>> main
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >Call +1 302 464 0950<
               >
                 Start Your Project;
-<<<<<<< HEAD
               <
               <a;
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,
     r:text-slate-900 transition-all duration-300"
               >
-=======
-              </a>
-              <a></a>
->>>>>>> main
                 Call +1 302 464 0950;
               <
             <
           <
 ,
-<<<<<<< HEAD
           {/* Services Grid *
           <section className="mb-20">)
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 l,
@@ -275,64 +239,6 @@ const process = [
                       <
                     <
                   )}
-=======
-          {/* Services Grid */}
-          <section></section>
-            <h2></h2>Our Web Development Services<di></di>{webServices.map((service, index) => (</div>
-                <div>
-                  <div>
-                    <div>
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3>{service.title}<div>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-            <h2></h2>
-              Our Web Development Services}
-            </h2>)
-)
-            <div>),
-              {webServices.map((service, index) => (</div>
-                <div>
-                  <di></di>,</div>
-                    <di></di>,</div>
-                      <service.icon className="w-8 h-8 text-white" />,
-                    </div>,
-                    <di></di>,</div>
-                      <h></h>{service.title}</h3>
-                      <di></di>{service.price}</div>
-                    </div>
-                  </div>
-
-                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-            <h></h>Our Web Development Services</h2><div>{webServices.map((service, index) => (</section>
-                <div>
-                  <div>
-                    <div>
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h></h>{service.title}</h3><di></di>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-
-                  <div>
-                    <h4></h4>Features<u></u>{service.features.map((feature, featureIndex) => (</ul>
-                        <li></li>
-                          <CheckCircl></CheckCircl>{feature}</CheckCircle>
-                        </CheckCircle>
-                      ));
-                    </ul>
-                  </div>
-
-                  {service.benefits && (
-                    <div>
-                      <h4></h4>Benefits<u></u>{service.benefits.map((benefit, benefitIndex) => (</ul>
-                          <li></li>
-                            <ArrowRigh></ArrowRigh>{benefit}</ArrowRight>
-                          </ArrowRight>
-                        ));
-                      </ul>
-                    </div>
-                  );
->>>>>>> main
 
                   <a;
                     href="
@@ -343,7 +249,6 @@ const process = [
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"
                   >
                     Get Started;
-<<<<<<< HEAD
                   <
                 <
             <
@@ -357,27 +262,10 @@ const process = [
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" 
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}<p className="text-sm text-gray-300">{tech.description}<
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-=======
-                  </a>,
-                </div>));
-            </div>
-          </section>
-
-          {/* Technologies */}
-          <section></section>
-            <h2></h2>Technologies We Use<di></di>{technologies.map((tech, index) => (</div>
-                <div>
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3>{tech.name}<p className="text-sm text-gray-300">{tech.description}</p>
-            <h2></h2>
->>>>>>> main
               Technologies We Use;
             <
 ,
-<<<<<<< HEAD
             <div>,
-=======
-<<<<<<< HEAD
             <div className="grid grid-cols-2 md: grid-cols-3 l,
     g:grid-cols-6 gap-6">,)
               {technologies.map((tech, index) => (<
@@ -403,9 +291,6 @@ const process = [
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"><
                     <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}<p className="text-gray-300">{step.description}<
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-=======
-            <div></div>,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
               {technologies.map((tech, index) => (</div>
                 <di></di>,</div>
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
@@ -416,7 +301,7 @@ const process = [
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h></h>{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
                 </div>
-              ));
+              ))
             </div>
           </section>
 
@@ -427,14 +312,10 @@ const process = [
                   <div>
                     <span></span>{step.step}<h3>{step.title}<p className="text-gray-300">{step.description}</p>
             <h2></h2>
->>>>>>> main
               Our Development Process;
             <
 ,
-<<<<<<< HEAD
             <div>,
-=======
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-4 gap-8">,)
               {process.map((step, index) => (<
@@ -474,9 +355,6 @@ const process = [
                   href="
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >Start Your Project<a
-=======
-            <div></div>,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
               {process.map((step, index) => (</div>
                 <di></di>,</div>
                   <di></di>,</div>
@@ -489,7 +367,7 @@ const process = [
                   <div>
                     <spa></spa>{step.step}</span><h></h>{step.title}</h3><p className="text-gray-300">{step.description}</p>
                 </div>
-              ));
+              ))
             </div>
           </section>
 
@@ -510,23 +388,17 @@ const process = [
               </p>
               <div>
                 <a></a>Start Your Project<a
->>>>>>> main
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >Call +1 302 464 0950<
                 >
                   Start Your Project;
-<<<<<<< HEAD
                 <
                 <a;
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,
     r:text-slate-900 transition-all duration-300"
                 >
-=======
-                </a>
-                <a></a>
->>>>>>> main
                   Call +1 302 464 0950;
                 <
               <
@@ -534,23 +406,15 @@ const process = [
           <
         <
 
-<<<<<<< HEAD
         <Footer 
       <
     <
-=======
-        <Footer />
       </div>,
-<<<<<<< HEAD
     </>);)
-<<<<<<< HEAD
-=======
-    </>)]
-    };
-=======
->>>>>>> main
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+      </div>
+    </>
+  );
+};
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default WebDevelopmentPage;

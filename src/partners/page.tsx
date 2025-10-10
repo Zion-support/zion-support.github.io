@@ -4,19 +4,11 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const PartnersPage: React.FC = () => {;
 const partnerTypes = [
-=======
-import Navigation from '../components
-import Footer from '../components
-
-const PartnersPage: React.FC = () => {
-  const partnerTypes = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       titl,
     e: 'Technology Partners',
@@ -74,17 +66,9 @@ icon$5: Star,
       description:       ,
 icon$5: CheckCircle,
       title: 'Quality Assurance',
-<<<<<<< HEAD
       description: 'Rigorous partner certification and quality standards';
 const partnershipTiers = [
       name: 'Strategic Partners',
-=======
-      description: 'Rigorous partner certification and quality standards'
-
-  const partnershipTiers = [
-      nam,
-    e: 'Strategic Partners',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       level: 'Platinum',
       description: 'Long-term strategic relationships with joint go-to-market initiatives',
       benefits: [
@@ -115,20 +99,12 @@ namename: 'Channel Partners',
         'Lead sharing and referrals',
         'Competitive margins'
       color: 'text-orange-400',
-<<<<<<< HEAD
       bgColor: 'bg-orange-500/10';
 const partnerTypes = [];
   return (
     {// TODO: Add content}
 
 };
-=======
-      bgColor: 'bg-orange-500
-
-  const partnerTypes = [];
-  return ({/)
-)};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   titl,
   e: 'Technology Partners',
       descriptio,
@@ -227,7 +203,6 @@ icon: Globe,
       title: 'Global Reach',
       description: 'Access to worldwide markets and customers through our partner network',;
 const PagePage: React.FC = () => {
-<<<<<<< HEAD
 return (
 
   return (
@@ -238,12 +213,6 @@ return (
 );
 }
           {/* Header */}
-=======
-  return (<>
-      
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <div className="text-center mb-16">
             <h1 className="text-4xl m,
     d:text-5xl font-bold text-white mb-6 neon-text">
@@ -324,13 +293,8 @@ return (
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" 
                 Email Us
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
-=======
-      <Footer 
-    <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
           {/* Header *
           <div className="text-center mb-16"><
@@ -423,14 +387,8 @@ return (
                 Email Us;
       <Footer 
 
-<<<<<<< HEAD
     </div>
   )};
-=======
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default PartnersPage;
 

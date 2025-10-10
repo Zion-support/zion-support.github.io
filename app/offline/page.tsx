@@ -29,22 +29,10 @@ import { Helmet } from 'react-helmet-async';
                 Get Started
                 
                 Learn More
-<<<<<<< HEAD
               </button>
             </div>
           </div>
         </div>
       </section>
     </div>)
-=======
-              <
-            <
-          <
-        <
-      <
-    <)
-  );
-};
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default PagePage;

@@ -1,21 +1,12 @@
 import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon} from 'lucide-react';
 'use client';
 import React, { memo } from 'react';
-<<<<<<< HEAD
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
 ;
 const AIInvoiceGeneratorPage: React.FC = memo(() => {;
 const features = [
-=======
-import Navigation from '../../components
-import Footer from '../../components
-import SEOOptimizer from '../../components
-
-const AIInvoiceGeneratorPage: React.FC = memo (() => {
-  const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       ico,
     n: Brain,
@@ -86,17 +77,9 @@ namename: 'Enterprise',
         'Custom workflows',
         'SLA guarantee',
         'On-premise deployment'
-<<<<<<< HEAD
       color: 'green';
 const testimonials = [
       name: 'Sarah Johnson',
-=======
-      color: 'green'
-
-  const testimonials = [
-      nam,
-    e: 'Sarah Johnson',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       role: 'Freelance Designer',
       company: 'Creative Studio',
       content: 'AI Invoice Generator has saved me 10+ hours per week. The AI understands my clients and creates perfect invoices every time.',
@@ -111,17 +94,9 @@ namename: 'Emily Rodriguez',
       role: 'Accountant',
       company: 'Finance Pro',
       content: 'Compliance features are outstanding. Never worry about tax calculations or regulatory requirements again.',
-<<<<<<< HEAD
       avatar: '👩‍💻';
 const useCases = [
       title: 'Freelancers & Consultants',
-=======
-      avatar: '👩‍💻'
-
-  const useCases = [
-      titl,
-    e: 'Freelancers & Consultants',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       description: 'Streamline invoicing for project-based work with AI that understands your service offerings.',
       icon: Briefcase,
       benefits: ['Project-based invoicing', 'Time tracking integration', 'Client management', 'Expense tracking']
@@ -138,7 +113,6 @@ const useCases = [
       icon: Building,
       benefits: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting']
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -153,11 +127,6 @@ const useCases = [
         
         <main className="pt-24">
           {/* Hero Section */}
-=======
-  return (<>
-
-          {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <section className="container mx-auto px-4 py-16">
             <div className="text-center max-w-4xl mx-auto">
               <div className="inline-flex items-center bg-purple-500/10 border border-purple-500
@@ -295,17 +264,10 @@ const useCases = [
                   (302) 464-0950
         <
         
-<<<<<<< HEAD
         <Footer />
     </React.Fragment>
   )});
 
-=======
-        <Footer 
-    <
-  );
-});
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage';
 'use client';
 import React from 'react';

@@ -1,19 +1,12 @@
 impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-<<<<<<< HEAD
 ;
 const GlobalFinTechAITransformatio, n = () => {
 return (
  
   return(<React.Fragment>
       <Helm, e, t>
-=======
-
-const GlobalFinTechAITransformatio, n = () => { 
-  return (<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <title>
           Global, FinTech, AI Transformati, o, n: $127M, Annual, Value Creati, o, n | Zion, Tech, Group;
         <
@@ -42,23 +35,16 @@ const GlobalFinTechAITransformatio, n = () => {
             <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
               How, a, Fortune 500, digital, banking platform, leveraged, AI to, transform, operatio, n, s, achievi, n, g $127M, in, annual val, u, e, 94% fraud, detection, accuracy, and, 10x, customer growth, through, intelligent;
               automation, and, predictive analyti, c, s.
-<<<<<<< HEAD
             </p>
 );
 } {/* Key, Metrics, Banner */ }
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'></div>
               <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r'></div>
-=======
-            </p> {/* Key, Metrics, Banner *
-            <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'><
-              <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r'><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
                   $12, 7, M;
                 <
                 <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                   Annual, Value, Created;
-<<<<<<< HEAD
                 </d, i, v>
                     <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'></h3>
                     <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>;
@@ -67,16 +53,6 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'></div>
               <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r'></div>
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'></div>
-=======
-                <
-                    <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'><
-                    <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>)
-const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression *
-            </p> {/* Key, Metrics, Banner *
-            <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'><
-              <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r'><
-                <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                   $12, 7, M;
                 <
                 <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'><

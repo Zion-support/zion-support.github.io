@@ -4,19 +4,11 @@ import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const SignupPage: React.FC = () => {;
 const [formData, setFormData] = useState({
-=======
-import Navigation from '../components
-import Footer from '../components
-
-const SignupPage: React.FC = () => {
-  const [formData, setFormData] = useState({
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     firstName: '',
     lastName: '',
     email: '',
@@ -54,17 +46,10 @@ const handleSubmit = async (e: React.FormEvent) => {
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsLoading(false);
-<<<<<<< HEAD
     // Redirect to dashboard or home page
     window.location.href = '/';
 ;
 const features = [
-=======
-    /
-    window.location.href = '
-
-  const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       icon: Shield,
       title: 'Enterprise Security',
@@ -86,7 +71,6 @@ const benefits = [
     'Scalable solutions',
     'Regular updates'
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
     <div>Coming Soon</div>
@@ -94,15 +78,6 @@ const benefits = [
   )};
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-  return (<>
-    <div>Coming Soon<)
-  );
-};
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   firstNam,
   e: '',
@@ -130,18 +105,11 @@ const handleInputChange = (e: React.ChangeEvent;)
           <HTMLInputElement>) => {/* TOD,
     O: Fix JSX expression *
     const { name, value, type, checked } = e.target;
-<<<<<<< HEAD
     setFormData(prev => ({/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    setFormData(prev => ({/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 }
 /
       [name]: type === 'checkbox' ? checked : value;)
-<<<<<<< HEAD
     }))};
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content}
@@ -154,25 +122,6 @@ const handleInputChange = (e: React.ChangeEvent;)
       return}
     if (!formData.agreeToTerms) {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    }));
-  };
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
-}
-    e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
-}
-      alert('Passwords do not match');
-      return;
-    }
-    if (!formData.agreeToTerms) {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 }
       alert('Please agree to the terms and conditions');
     setIsLoading(true);
@@ -185,14 +134,8 @@ const handleInputChange = (e: React.ChangeEvent;)
   /
   O: Add items;
 ];;
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
   ico,
   n: Shield,
@@ -206,7 +149,6 @@ icon: Award,
       title: 'Proven Results',
       description: '300% average ROI and 95% process automation for our clients',;
 const PagePage: React.FC = () => {
-<<<<<<< HEAD
 return (
 
   return (
@@ -219,15 +161,6 @@ return (
 }
             {/* Left Side - Signup Form */}
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
-=======
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 l,
-    g:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Signup Form *
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
               <div className="text-center mb-8">
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text">
                   Create Your Account
@@ -432,19 +365,11 @@ Confirm Password;
                 <p className="text-gray-400 text-sm mb-4">
                   Trusted by 1000+ companies worldwide
                 <div className="flex justify-center items-center space-x-6 opacity-60">
-<<<<<<< HEAD
                   <div className="text-2xl font-bold text-white">Microsoft</div>
                   <div className="text-2xl font-bold text-white">Google</div>
                   <div className="text-2xl font-bold text-white">Amazon</div>
       <Footer />
     </React.Fragment>
-=======
-                  <div className="text-2xl font-bold text-white">Microsoft<
-                  <div className="text-2xl font-bold text-white">Google<
-                  <div className="text-2xl font-bold text-white">Amazon<
-      <Footer 
-    <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 /
           <

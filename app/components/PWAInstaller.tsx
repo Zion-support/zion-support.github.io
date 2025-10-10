@@ -25,11 +25,5 @@ const benefits = [
         <
       <
 
-<<<<<<< HEAD
 }
 export default PWAInstallerPage;
-=======
-};
-
-export default PWAInstallerPage;)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b

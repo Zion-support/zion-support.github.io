@@ -33,19 +33,12 @@ const ServiceWorkerPage: React.FC = () => {const features = [
     }
   ];
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <Helmet>
         <title>ServiceWorker - Zion Tech Group</title>
         <meta name="description" content="Advanced serviceworker solutions powered by AI technology." />
       </Helmet>
-=======
-  return (<div>
-        <title>ServiceWorker - Zion Tech Group<
-        <meta name="description" content="Advanced serviceworker solutions powered by AI technology." 
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
         {/* Hero Section *
         <section className="relative py-20 px-4 overflow-hidden">)
@@ -93,26 +86,21 @@ const ServiceWorkerPage: React.FC = () => {const features = [
                   <p className="text-gray-300 mb-4">{feature.description}<
                   {feature.benefits && (
                     <ul className="space-y-2">
-<<<<<<< HEAD
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ));
-                    </ul>);
+                      ))
+                    </ul>
                 </div>
-              ));
+              ))
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-=======
-                      {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">
-                          
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -128,7 +116,6 @@ const ServiceWorkerPage: React.FC = () => {const features = [
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hove,
     r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
-<<<<<<< HEAD
                 </button>
               </div>
             </div>
@@ -137,17 +124,4 @@ const ServiceWorkerPage: React.FC = () => {const features = [
       </div>
       <Footer />
     </React.Fragment>)
-=======
-                <
-              <
-            <
-          <
-        <
-      <
-      <Footer 
-    <
-  );
-};
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default ServiceWorkerPage;

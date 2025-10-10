@@ -3,13 +3,8 @@ import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {/* TODO: Fix JSX expression *
 }
-<<<<<<< HEAD
 ;
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
-=======
-
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({),
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Discover cutting-edge technology solutions for modern businesses.',
   keywords = [
@@ -27,7 +22,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({),
   twitterCard = 'summary_large_image',
   structuredData,
   children}) => {
-<<<<<<< HEAD
 return (
 
   useEffect(() => {
@@ -35,13 +29,6 @@ return (
     if (structuredData) {;
 const _script = document.createElement('script');
       script.type = 'application/ld+json';
-=======
-  useEffect (() => {
-    /
-    if (structuredData) {
-      const _script = document.createElement('script');
-      script.type = 'application
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
 
@@ -51,19 +38,11 @@ const _script = document.createElement('script');
     </div>)
   );
 const,
-<<<<<<< HEAD
   SEOEnhancer: React.FC<SEOEnhancerProps>
 );
 } = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
       }}
-=======
-  SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TOD,
-    O: Fix JSX expression *)
-)}) => {/* TODO: Fix JSX expression *
-      };
-    }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   }, [structuredData]);
 
   /
@@ -82,16 +61,9 @@ const,
       '@type': 'ContactPoint',
       telephone: '+1-555-0123',
       contactType: 'customer service',
-<<<<<<< HEAD
       availableLanguage: 'English',;
 const defaultStructuredData = {/* TODO: Fix JSX expression */}
   o: `${window.location.origin}/logo.png`,
-=======
-      availableLanguage: 'English',
-  const defaultStructuredData = { /* TODO: Fix JSX expression *
-  ,
-    o: `${window.location.origin };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     sameA,
   s: ['http,
   s: //linkedin.com/company
@@ -152,7 +124,6 @@ const defaultStructuredData = {/* TODO: Fix JSX expression */}
         <link rel="preconnect" href="http,
     s://fonts.gstatic.com" crossOrigin="anonymous" 
 ,
-<<<<<<< HEAD
         {/* Favicon and Icons */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -173,26 +144,6 @@ const defaultStructuredData = {/* TODO: Fix JSX expression */}
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
         {/* Open Graph Meta Tags */}"
-=======
-        {/* Favicon and Icons *
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" 
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" 
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" 
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" 
-        <link rel="manifest" href="/site.webmanifest" 
-        {/* Structured Data *
-  return (<div><Helmet><
-        {/* Basic Meta Tags *
-        <title>{title}<
-        <meta name="description" content={description} /><)
-        <meta name="keywords" content={keywords.join(', ')} /><
-        <meta name="author" content="Zion Tech Group" /><
-        <meta name="robots" content="index, follow" /><
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" /><
-        {/* Canonical URL *
-        {canonicalUrl && <link rel="canonical" href = { canonicalUrl };
-        {/* Open Graph Meta Tags *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <meta property="o,"
   g:title" content={title} /><
         <meta property="o,"
@@ -236,7 +187,6 @@ const defaultStructuredData = {/* TODO: Fix JSX expression */}
         <link rel="preconnect" href="http,"
   s://fonts.googleapis.com" /><
         <link rel="preconnect" href="http,"
-<<<<<<< HEAD
   s://fonts.gstatic.com" crossOrigin="anonymous" /></link>
         {/* Favicon and Icons */}"
         <link rel="icon" type="image/x-icon" href="/favicon.ico" /></link>"
@@ -250,20 +200,6 @@ const defaultStructuredData = {/* TODO: Fix JSX expression */}
       {children}
     
   )};
-=======
-  s://fonts.gstatic.com" crossOrigin="anonymous" /><
-        {/* Favicon and Icons *
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" /><
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /><
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /><
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /><
-        <link rel="manifest" href="/site.webmanifest" /><
-        {/* Structured Data *
-        <script type="application/ld+json">{JSON.stringify(finalStructuredData)}<
-      <
-      {children});
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default SEOEnhancer;
 "`

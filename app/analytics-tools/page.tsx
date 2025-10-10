@@ -1,30 +1,11 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 ;
 const PagePage: React.FC = () => {const features = [
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-=======
-      ico,
-    n: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     },
     {
       icon: BarChart,
@@ -57,7 +38,6 @@ const PagePage: React.FC = () => {
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
-<<<<<<< HEAD
 ;
 const benefits = [
     'Advanced AI technology integration',
@@ -68,19 +48,8 @@ const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-=======
-
-  const benefits = [
-    'Transform your business with AI technology',
-    'Make data-driven decisions with confidence',
-    'Identify trends and opportunities early',
-    'Optimize business processes and workflows',
-    'Reduce costs through intelligent automation',
-    'Gain competitive advantage with advanced technology'
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 
-<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -89,7 +58,6 @@ const benefits = [
         <meta name="keywords" content="page" />
       </Helmet>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
@@ -118,9 +86,6 @@ const benefits = [
                   <span>Learn More</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
-=======
-      {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -131,36 +96,13 @@ const benefits = [
               <br />
               <span className="text-white">Solutions</span>
             </h1>
-=======
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
-        <title>Page | Zion Tech Group<
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." 
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" 
-      <
-
-            <
->>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced analytics tools. 
               Powered by cutting-edge AI technology and industry expertise.
-<<<<<<< HEAD
             </p>
           </div>
-=======
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Analytics Tools
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with our advanced analytics tools. 
-            Powered by cutting-edge AI technology and industry expertise.
-          </p>
->>>>>>> main
         </div>
       </section>
-=======
             <
             <
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -181,18 +123,15 @@ const benefits = [
           <
         <
       <
->>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
 
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-<<<<<<< HEAD
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Get Started?
             <
             <p className="text-xl text-purple-100 mb-8">
-<<<<<<< HEAD
               Contact our experts to discuss your analytics needs and get a customized solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -202,15 +141,6 @@ const benefits = [
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
-=======
-              Contact our experts to discuss your page needs and get a customized solution.
-            <
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hove,
-    r:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                
-                <Mail className="mr-2 h-5 w-5" 
->>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
                 Email Us
               <
             <
@@ -218,7 +148,6 @@ const benefits = [
         <
       <
     <)
-=======
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Analytics Tools?
             </h2>
@@ -233,13 +162,8 @@ const benefits = [
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
               </div>
-<<<<<<< HEAD
             ));
-=======
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </section>
 
@@ -292,34 +216,7 @@ const benefits = [
                   ))}
                 </ul>
               </div>
-<<<<<<< HEAD
             ));
-=======
-              <div className="relative">
-                <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
-                  <div className="text-center">
-                    <div className="bg-cyan-500/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                      <Brain className="w-10 h-10 text-cyan-400" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">AI-Powered</h3>
-                    <p className="text-gray-300 mb-6">
-                      Leverage the power of artificial intelligence to transform your business.
-                    </p>
-                    <div className="grid grid-cols-2 gap-4 text-center">
-                      <div>
-                        <div className="text-3xl font-bold text-cyan-400">99.9%</div>
-                        <div className="text-gray-300 text-sm">Uptime</div>
-                      </div>
-                      <div>
-                        <div className="text-3xl font-bold text-purple-400">50ms</div>
-                        <div className="text-gray-300 text-sm">Response Time</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </section>
 
@@ -349,23 +246,10 @@ const benefits = [
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
-<<<<<<< HEAD
     </div>)
-=======
-        </section>
-
-        <Footer />
-      </div>
-    </>
-=======
-    </div>
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   );
 };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default PagePage;

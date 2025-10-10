@@ -1,11 +1,6 @@
 'use client';
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
-=======
-
-import React, { useEffect } from 'react';
->>>>>>> origin/main
 
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
@@ -14,10 +9,7 @@ interface PerformanceOptimizerProps {
   enableCodeSplitting?: boolean;
 }
 
-<<<<<<< HEAD
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-=======
-<<<<<<< HEAD
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), className = '' }) => {
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizations, setOptimizations] = useState<string[]>([]);
@@ -130,9 +122,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children), 
       <
     <
   );
-=======
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps></PerformanceOptimizerProps> = ({
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
@@ -160,7 +149,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps></PerformanceOpti
         link.href = src;
         link.as = 'image';
         document.head.appendChild(link);
-      });
+      })
     }
 
     // Optimize images
@@ -176,7 +165,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps></PerformanceOpti
         if (!img.hasAttribute('decoding')) {
           img.decoding = 'async';
         }
-      });
+      })
     }
 
     // Intersection Observer for lazy loading
@@ -191,11 +180,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps></PerformanceOpti
               observer.unobserve(img);
             }
           }
-        });
-      });
+        })
+      })
 
       const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach(img => imageObserver.observe(img));
+      lazyImages.forEach(img => imageObserver.observe(img))
     }
 
     // Performance monitoring
@@ -208,23 +197,18 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps></PerformanceOpti
           if (entry.entryType === 'first-input') {
             console.log('FID:', entry.processingStart - entry.startTime);
           }
-        });
-      });
+        })
+      })
 
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] })
       } catch (e) {
         // Fallback for browsers that don't support these entry types
       }
     }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
-<<<<<<< HEAD
   return null;
-=======
-  return null});;)
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
 
 export default PerformanceOptimizer;

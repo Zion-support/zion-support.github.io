@@ -6,21 +6,12 @@ import fs from 'fs';
 const content = `'use client';
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic, DollarSign, Truck, Link, HardDrive, FileCheck } from 'lucide-react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 ;
 const AIServicesPage: React.FC = () => {;
 const aiServices = [,
-=======
-import Navigation from '../components
-import Footer from '../components
-import SEOOptimizer from '../components
-
-const AIServicesPage: React.FC = () => {
-  const aiServices = [,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {,
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics and decision-making',
@@ -213,7 +204,6 @@ const AIServicesPage: React.FC = () => {
           <
         <
 
-<<<<<<< HEAD
         <Footer />
       </div>,
     </React.Fragment>)};
@@ -222,14 +212,3 @@ export default AIServicesPage;`;
 
 fs.writeFileSync('./app/ai-services/page.tsx', content);
 // console.log removed for production
-=======
-        <Footer 
-      <
-    <
-};
-
-export default AIServicesPage;`;
-
-fs.writeFileSync('./app/ai-services)
-console.log('✅ Rewritten ai-services page successfully');
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b

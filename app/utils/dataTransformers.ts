@@ -65,21 +65,11 @@ export function unflattenObject(ob,
   for (const key in obj) {/* TODO: Fix JSX expression */});
 } else {/* TODO: Fix JSX expression */}
           current[k] = current[k] || {};
-<<<<<<< HEAD
           current = current[k] as Record<string, unknown></string>;);
       });
 }
   }
   return result;);
-=======
-          current = current[k] as Record<string, unknown></string>]
-    }
-      });
-}
-  }
-  return result]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Pick specific keys from an object;
  */
@@ -103,16 +93,9 @@ export function omit<T extends Record<string, unknown></T>, K extends keyof T>(o
   s: K[])
 ): Omit<T, K></T> {/* TODO: Fix JSX expression */}
   const result = { ...obj };
-<<<<<<< HEAD
   keys.forEach(key => {/* TODO: Fix JSX expression */});;)
 });;
   return result as Omit<T, K></T>;);
-=======
-  keys.forEach(key => {/* TODO: Fix JSX expression */});]
-    });;
-  return result as Omit<T, K></T>]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Group array items by a key;
  */
@@ -161,17 +144,9 @@ const bComp =
           ? bVal;
           : String(bVal);
       if (aComp < bComp) return order === 'asc' ? -1 : 1;
-<<<<<<< HEAD
       if (aComp > bComp) return order === 'asc' ? 1 : -1;);
     return 0;)
 });;);
-=======
-      if (aComp > bComp) return order === 'asc' ? 1 : -1]
-    }
-    return 0]
-    });]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Chunk array into smaller arrays;
  */
@@ -229,12 +204,7 @@ export function formatRelativeTime(dat)
   if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;`
   if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;`
   if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;`
-<<<<<<< HEAD
   return `${years} year${years > 1 ? 's' : ''} ago`;);
-=======
-  return `${years} year${years > 1 ? 's' : ''} ago`]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Truncate string;
  */
@@ -275,3 +245,5 @@ export function snakeCase(st)
 export default {/* TODO: Fix JSX expression */});
 };
 `
+    return clonedObj;);
+  return obj;);

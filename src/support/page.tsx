@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Navigation from '../components
-import Footer from '../components
-import SEOOptimizer from '../components
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
-;
-const SupportPage: React.FC = () => {;
-const [searchQuery, setSearchQuery] = useState('');
+
+const SupportPage: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-;
 const supportCategories = [
     { id: 'all', name: 'All Topics', icon: Search, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 12 },
@@ -138,21 +137,14 @@ const resources = [
 const filteredFaqs = selectedCategory === 'all' 
     ? faqs 
     : faqs.filter(faq => faq.category === selectedCategory);
-<<<<<<< HEAD
 ;
 const searchResults = searchQuery 
     ? faqs.filter(faq => 
-=======
-
-  const searchResults = searchQuery 
-    ? faqs.filter(faq =>)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
         faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : filteredFaqs;
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -166,11 +158,6 @@ const searchResults = searchQuery
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-=======
-  return (<>
-
-          {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
               Support Center
@@ -299,17 +286,9 @@ const searchResults = searchQuery
           <
         <
 
-<<<<<<< HEAD
         <Footer />
       </div>
     </React.Fragment>
   )};
-=======
-        <Footer 
-      <
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default SupportPage;

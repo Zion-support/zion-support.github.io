@@ -1,8 +1,4 @@
 'use client';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -36,7 +32,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
           openDropdowns.forEach(dropdown => {
             (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
-          });
+          })
         }
       };
 
@@ -77,7 +73,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
       // Apply focus trap to modals and dropdowns
       const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]');
-      modals.forEach(modal => trapFocus(modal as HTMLElement));
+      modals.forEach(modal => trapFocus(modal as HTMLElement))
     }
 
     // Screen reader support

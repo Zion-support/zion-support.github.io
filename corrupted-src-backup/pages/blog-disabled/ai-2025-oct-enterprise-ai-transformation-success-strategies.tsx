@@ -1,7 +1,6 @@
 impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-<<<<<<< HEAD
 ;
 const EnterpriseAITransformationSuccessStrategie, s = () => {
 return (
@@ -9,13 +8,6 @@ return (
   return(:src/pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies.tsx;
     <React.Fragment>
       <Helm, e, t>
-=======
-
-const EnterpriseAITransformationSuccessStrategie, s = () => { 
-  return (:src/pages/blog
-    <>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <title>
           Enterprise, AI, Transformation Success, Strategie, s: 2025, Playboo, k | Zion, Tech, Group;
         <
@@ -104,15 +96,9 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {
                 { val, u, e: '7, 3%', lab, e, l: 'Initiatives, That, Fai, l' },<
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'><
                   <p, className='mb-4'>
-<<<<<<< HEAD
                     Enterprise, AI, transformation is, no, longer option, a, l—it's a{' '}</p>
                     <strong, className='te, x, t-whi, t, e'>;
 const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX expression */}
-=======
-                    Enterprise, AI, transformation is, no, longer option, a, l—it's a{' '}<
-                    <strong, className='te, x, t-whi, t, e'>)
-const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX expression *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                 { val, u, e: '$2., 9, T', lab, e, l: 'AI, Business, Value 2, 0, 2, 5' },
                 { val, u, e: '10, x', lab, e, l: 'Average, R, O, I' },
                 { val, u, e: '4, 0%', lab, e, l: 'Cost, Reducti, o, n' },
@@ -694,22 +680,12 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
   hover:to-cyan-600 transition-all""
                   >""
                     Schedule AI Assessment""
-<<<<<<< HEAD
                     <Rocket className="w-5 h-5 "></Rocket>"
                     <Rocket className="w-5 h-5" /></Rocket>
                   </Link>"
                   <Link to="/services"></Link>"
   className= " />
   )};
-=======
-                    <Rocket className="w-5 h-5 "><
-                    <Rocket className="w-5 h-5" /><
-                  <
-                  <Link to="/services"><
-  className= " 
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default EnterpriseAITransformationSuccessStrategies;;
   <

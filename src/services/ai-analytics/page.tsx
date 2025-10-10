@@ -1,19 +1,11 @@
 import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award} from 'lucide-react';
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const AIAnalyticsPage: React.FC = () => {;
 const features = [
-=======
-import Navigation from '../components
-import Footer from '../components
-
-const AIAnalyticsPage: React.FC = () => {
-  const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       ico,
     n: Brain,
@@ -31,7 +23,6 @@ const AIAnalyticsPage: React.FC = () => {
       description: 'Interactive dashboards that provide instant insights into your business performance',
 
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
@@ -39,15 +30,6 @@ const AIAnalyticsPage: React.FC = () => {;
 const features = [];
   return (
     {// TODO: Add content}
-=======
-import Navigation from '../components
-import Footer from '../components
-
-const AIAnalyticsPage: React.FC = () => {
-  const features = [];
-  return (
-    {/
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 };
   ico,
@@ -120,17 +102,9 @@ titletitle: 'Financial Forecasting',
       color:       ,
 titletitle: 'Operational Efficiency',
       description: 'Optimize business processes and identify areas for improvement',
-<<<<<<< HEAD
       color: 'text-yellow-400';
 const pricingTiers = [
       name: 'Starter',
-=======
-      color: 'text-yellow-400'
-
-  const pricingTiers = [
-      nam,
-    e: 'Starter',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       price: '$1,500',
       period: '
       descriptio,
@@ -169,17 +143,9 @@ namename: 'Professional',
         'On-premise deployment',
         'SLA guarantees'
       color: 'text-cyan-400',
-<<<<<<< HEAD
       bgColor: 'bg-cyan-500/10';
 const benefits = [
       icon: Star,
-=======
-      bgColor: 'bg-cyan-500
-
-  const benefits = [
-      ico,
-    n: Star,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       title: '95% Accuracy',
       description:       ,
 title$5: 'Real-time Processing',
@@ -198,14 +164,9 @@ const useCases = [
       color: 'text-green-400',
 
   return (
-<<<<<<< HEAD
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-    <>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header *
           <div className="text-center mb-16">
@@ -353,16 +314,9 @@ const useCases = [
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" 
                 Email Us
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
   )};
-=======
-      <Footer 
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default AIAnalyticsPage;
 {/* Use Cases *
@@ -401,17 +355,9 @@ export default AIAnalyticsPage;
                         {feature}
 
                   <a
-<<<<<<< HEAD
                     href="/contact" className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${}
   // TODO: Add content}
 //                       tier.popular;
-=======
-                    href="
-  /
-
-}
-/
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                         ? 'bg-cyan-400 text-slate-900,
   hover:bg-cyan-300'
                         : 'bg-slate-700 text-white,
@@ -447,14 +393,8 @@ export default AIAnalyticsPage;
                 Email Us;
       <Footer 
 
-<<<<<<< HEAD
     </div>
   )};
-=======
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default AiAnalyticsPage;
 

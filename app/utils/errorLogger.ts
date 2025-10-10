@@ -1,18 +1,4 @@
-'use client'
-/**
- * Comprehensive Error Logging System;
- * Provides structured error logging with different severity levels;
- */
-export enum ErrorSeverity {}
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-<<<<<<< HEAD
   CRITICAL = 'critical'});;)
-=======
-  CRITICAL = 'critical'});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export interface ErrorLogEntry {
   timestamp: string,
   severity: ErrorSeverity,
@@ -54,7 +40,6 @@ const entry: ErrorLogEntry = {,
       context,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;
       url: typeof window !== 'undefined' ? window.location.href : undefined;
-<<<<<<< HEAD
       stackTrace: error?.stack});;);
     // Add to internal log;
     this.logs.push(entry)
@@ -63,24 +48,10 @@ const entry: ErrorLogEntry = {,
     // Console logging in development;
     if (process.env['NODE_ENV'] === 'development') {
       this.logToConsole(entry);});;);
-=======
-      stackTrace: error?.stack});]
-    }
-    // Add to internal log;
-    this.logs.push(entry)
-    if (this.logs.length > this.maxLogs) {}
-      this.logs.shift();});]
-    }
-    // Console logging in development;
-    if (process.env['NODE_ENV'] === 'development') {
-      this.logToConsole(entry);});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Send to external logging service in production;
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {
     // Console logging in development
     if (process.env['NODE_ENV'] === 'development') {}
-<<<<<<< HEAD
       this.logToConsole(entry);});;);
     // Send to external logging service in production
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {}
@@ -95,29 +66,6 @@ class ErrorLogger {/* TODO: Fix JSX expression */});;);
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */});;);
     // Send to external logging service in production;
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */});;);
-=======
-      this.logToConsole(entry);});]
-    }
-    // Send to external logging service in production
-    if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {}
-      this.sendToExternalService(entry);}
-export enum ErrorSeverity {/* TODO: Fix JSX expression */});]
-    }
-export interface ErrorLogEntry {/* TODO: Fix JSX expression */});]
-    }
-class ErrorLogger {/* TODO: Fix JSX expression */});]
-    };
-    // Add to internal log;
-    this.logs.push(entry);
-    if (this.logs.length > this.maxLogs) {/* TODO: Fix JSX expression */});]
-    }
-    // Console logging in development;
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */});]
-    }
-    // Send to external logging service in production;
-    if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Log to console with appropriate styling;
@@ -190,7 +138,6 @@ stack: entry.error.stack});]
     } catch (error) {}
       // Silently fail to avoid infinite loop}
   private async sendToExternalService(entr)
-<<<<<<< HEAD
   y: ErrorLogEntry): Promise<void></void> {/* TODO: Fix JSX expression */});;);
       await fetch(endpoint, {/* TODO: Fix JSX expression */});;)
 },
@@ -200,20 +147,6 @@ stack: entry.error.stack});]
 });;)
 });;)
 } catch (error) {/* TODO: Fix JSX expression */});;);
-=======
-  y: ErrorLogEntry): Promise<void></void> {/* TODO: Fix JSX expression */});]
-    }
-      await fetch(endpoint, {/* TODO: Fix JSX expression */});]
-    },
-        bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */});]
-    }
-            : undefined});]
-    });]
-    });]
-    } catch (error) {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Get recent logs;
@@ -222,12 +155,7 @@ stack: entry.error.stack});]
   getRecentLogs(count: number = 10): ErrorLogEntry[] {}
     return this.logs.slice(-count);
   getRecentLogs(coun)
-<<<<<<< HEAD
   t: number = 10): ErrorLogEntry[] {/* TODO: Fix JSX expression */});;);
-=======
-  t: number = 10): ErrorLogEntry[] {/* TODO: Fix JSX expression */});]
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get logs by severity;
    */

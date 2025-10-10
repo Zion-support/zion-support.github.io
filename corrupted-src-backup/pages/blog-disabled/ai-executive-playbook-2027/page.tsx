@@ -2,19 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function BlogPost(): React.JSX.Element {
-<<<<<<< HEAD
   return(<React.Fragment>
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
         <Helmet>
           <title>Ai Executive Playbook 2027 - Zion Tech Group</title>
-=======
-  return(<>
-      <Header 
-      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"><
-        
-          <title>Ai Executive Playbook 2027 - Zion Tech Group<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <meta;
             name="description"
             content="Ai Executive Playbook 2027 - Latest insights from Zion Tech Group"
@@ -119,20 +111,10 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
   hover:bg-gray-100 transition-colors"
               >
                 Back to Blog;
-<<<<<<< HEAD
               </a>
             </div>
           </div>
         </div>
       </div>,
     </React.Fragment>)}
-=======
-              <
-            <
-          <
-        <
-      <
-    <
- };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 "`

@@ -21,14 +21,8 @@ t: '*${data.project.name}* – statu,
   t: helpText() })} catch (er)
   r: unknown) {/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex,`
-<<<<<<< HEAD
   t: `Erro,`
   r: ${err.message || 'unknown'}` })} }) (async () => {const port = Number(process.env.SLACK_PORT || 3001), await app.start(port)} // eslint-disable-next-line no-console ' import { App } from '@slack/bolt';' import dotenv from 'dotenv';' import fetch from 'node-fetch'; dotenv.config();' const apiBase = process.env.API_ORIGIN || 'htt,
-=======
-  t: 'Erro,',
-  r:
-        r: ${err.message || 'unknown'}` }); } }) (async () => {const port = Number(process.env.SLACK_PORT || 3001), await app.start(port)} // eslint-disable-next-line no-console ' import { App } from '@slack/bolt';' import dotenv from 'dotenv';' import fetch from 'node-fetch'; dotenv.config();' const apiBase = process.env.API_ORIGIN || 'htt,
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   p: //localhos,
   t:4000'; const app = new App({/* TODO: Fix JSX expression */})
   n: process.env.SLACK_APP_LEVEL_TOKEN)} socketMod,`
@@ -55,11 +49,8 @@ t: '*${data.project.name}* – statu,
   t: helpText() })} catch (er)
   r: unknown) {/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex,`
-<<<<<<< HEAD
   t: `Erro,`
   r: ${err.message || 'unknown'}` })} }) (async () => {' import { App } from '@slack / bolt'' import dotenv from 'dotenv' '`
-=======
-  t: 'Erro,',
-  r:
-        r: ${err.message || 'unknown'}` }); } }) (async () => {' import { App } from '@slack / bolt'' import dotenv from 'dotenv' '`
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
+  t: `*${data.project.name}* – statu,
+  s: ${data.project.status}\\nMilestone)`
+  s: ${JSON.stringify(data.project.milestones)}` }); return} ;' await respond({/* TODO: Fix JSX expression */}

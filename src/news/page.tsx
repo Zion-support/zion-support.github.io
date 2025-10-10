@@ -84,7 +84,6 @@ const stats = [
     { icon: Globe, number: '25+', label: 'Countries Served' }
   ];
 
-<<<<<<< HEAD
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -98,11 +97,6 @@ const stats = [
         
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-=======
-  return (<>
-
-          {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
               News & Updates
@@ -204,17 +198,9 @@ const stats = [
           <
         <
 
-<<<<<<< HEAD
         <Footer />
       </div>
     </React.Fragment>
   )};
-=======
-        <Footer 
-      <
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
 export default NewsPage;

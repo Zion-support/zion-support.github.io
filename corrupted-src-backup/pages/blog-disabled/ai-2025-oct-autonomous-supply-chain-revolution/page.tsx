@@ -3,15 +3,9 @@ impo, r, t {/* TODO: Fix JSX expression *
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function AutonomousSupplyChainRevolution20, 2, 5() {  
-<<<<<<< HEAD
   return(:src/pages/blog/ai-2025-oct-autonomous-supply-chain-revolution/page.tsx;
     <React.Fragment>
       <Helm, e, t>
-=======
-  return(:src/pages/blog/ai-2025-oct-autonomous-supply-chain-revolution
-    <>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <title>
           Autonomous, AI, Supply Chain, Revolution, 2025 — 99.2% Forecast, Accurac, y,
           78% Cost, Reductio, n, $1.8B+ Savin, g, s | Zion, Tech, Group;
