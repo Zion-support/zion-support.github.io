@@ -83,8 +83,6 @@ import {
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -96,8 +94,6 @@ const Navigation: React.FC = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
         setServicesOpen(false);
-        setAiServicesOpen(false);
-        setItServicesOpen(false);
       }
     };
 
@@ -111,8 +107,6 @@ const Navigation: React.FC = () => {
 
   const closeAllMenus = () => {
     setServicesOpen(false);
-    setAiServicesOpen(false);
-    setItServicesOpen(false);
     setIsOpen(false);
   };
 
@@ -152,7 +146,6 @@ const Navigation: React.FC = () => {
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
       services: [
-        { name: 'IT Infrastructure', path: '/it-infrastructure' },
         { name: 'IT Services', path: '/it-services' },
         { name: 'Cybersecurity', path: '/cybersecurity' },
         { name: 'Cloud Services', path: '/ai-cloud-infrastructure' },
@@ -188,6 +181,7 @@ const Navigation: React.FC = () => {
       ]
     }
   ];
+<<<<<<< HEAD
 
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen);
@@ -240,6 +234,8 @@ const Navigation: React.FC = () => {
     { name: 'Robotics Solutions', href: '/robotics', icon: Settings, price: '$3,500/mo' }
   ];
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-5aa9
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 <<<<<<< HEAD
