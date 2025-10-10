@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOHeadProps {/* TODO: Fix JSX expression */}
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({,
@@ -58,15 +57,12 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       {/* Structured Data */}
       <script type="application/ld+json">
 const,
-  SEOHead: React.FC<SEOHeadProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
   const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;`
     : `http,`
   s://zion.app${canonicalUrl}`;
 
-  const defaultStructuredData = {/* TODO: Fix JSX expression */}
   };
 
   return (<Helmet></Helmet>

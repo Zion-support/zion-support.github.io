@@ -1,4 +1,3 @@
-impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 interface October2025AIRevolutionBannerProp, s {
   classNa, m, e ?  : string;
@@ -17,10 +16,7 @@ export default function October2025AIRevolutionBann, e, r({)
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4'></div>
             <Sparkles, className='w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e' />
             <span, className='te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r'>
-interface October2025AIRevolutionBannerProp, s {/* TODO: Fix JSX expression */}
  }
-export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expression */})
-}: October2025AIRevolutionBannerPro, p, s) {/* TODO: Fix JSX expression */}
     <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}
     ></div>
       <div, className='container, m, x-auto, p, x-6, p, y-12'></div>
@@ -33,7 +29,6 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
             </sp, a, n>
             <Sparkles, classNam, e = 'w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e' /></Sparkles>
           </div>
-          <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
             The, Complete, AI Revoluti, o, n: 3, Essential, Guides;)
           </h2>)
           <p, className='te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>)
@@ -42,7 +37,6 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
           </h2>
           <p, className='te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'></p>
             <strong, className='te, x, t-whi, t, e'>NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automat, i, o, n), AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). The, definitive, guides for, forwar, d-thinking, organizations, transforming
-          <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>
             The, Complete, AI Revoluti, o, n: 3, Essential, Guides;
           </h2>
           <p, className='te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'></p>
@@ -90,7 +84,6 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
                 <div, className='te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-4, 0, 0'>94%</div>
               </div>
               <div, className='bg-bla, c, k/30, rounde, d-l, g, p-3, tex, t-cent, e, r'></div>
-                <div, className='te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>78%</div>
                 <div, className='te, x, t-xs, tex, t-whi, t, e/60'>Cost, Cu, t</div>
               </div>
               <div, className='bg-bla, c, k/30, rounde, d-l, g, p-3, tex, t-cent, e, r' /></div>
@@ -134,7 +127,6 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
                 <div, className='te, x, t-xs, tex, t-whi, t, e/60'>Dev, Spee, d</div>
               </div>
               <div, className='bg-bla, c, k/30, rounde, d-l, g, p-3, tex, t-cent, e, r'></div>
-                <div, className='te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>80%</div>
                 <div, className='te, x, t-xs, tex, t-whi, t, e/60'>Fewer, Bug, s</div>
               </div>
               <div, className='bg-bla, c, k/30, rounde, d-l, g, p-3, tex, t-cent, e, r'></div>
@@ -183,7 +175,6 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
                 <div, className='te, x, t-2xl, fon, t-bold, tex, t-emera, l, d-4, 0, 0'>99.2%</div>
               </div>
               <div, className='bg-bla, c, k/30, rounde, d-l, g, p-3, tex, t-cent, e, r'></div>
-                <div, className='te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>87%</div>
                 <div, className='te, x, t-xs, tex, t-whi, t, e/60'>Less, Ris, k</div>
               </div>
               <div, className='bg-bla, c, k/30, rounde, d-l, g, p-3, tex, t-cent, e, r'></div>
@@ -202,7 +193,6 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
             className='inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-cy, a, n-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-cy, a, n-700, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,
   r:sca, l, e-105, hove, r:shad, o, w-xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/30'
           ></Link>
-            <sp, a, n>Explore, All, Latest AI, Insight, s</sp, a, n>
             <Link, className='w-5 h-5' /></Link>
           </Li, n, k>
         </div>

@@ -22,7 +22,6 @@ export interface BlockchainWeb3Service {;
     realImplementatio,
   n: true,
 export interface BlockchainWeb3Service;
-export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   s: [}
       'Yield farming optimization'
       'Liquidity provision strategies'
@@ -83,7 +82,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
       enterpris,
   e: 'Custom pricing'}
     },
-    feature,
   s: [,
       'AI - powered yield strategy optimization',
       'Multi - chain protocol support',
@@ -254,7 +252,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   e: 'Immediate',
       enterpris,
   e: 'Custom pricing'},
-    feature,
   s: [,
       'AI - powered NFT valuation models',
       'Real - time market analytics',
@@ -431,7 +428,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   e: '2 - 4 weeks',
       enterpris,
   e: 'Custom pricing'},
-    feature,
   s: [,
       'End - to - end supply chain tracking',
       'Real - time transparency monitoring',
@@ -642,7 +638,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   e: 'Immediate',
       enterpris,
   e: 'Custom pricing'},
-    feature,
   s: [,
       'Decentralized content ownership',
       'Token - based reward system',
@@ -790,7 +785,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   e: string,
     enterpris,
   e: string},
-    feature,
   s: string[], benefit,
   s: string[],
   targetAudienc,
@@ -848,7 +842,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   g: 4.6,
     review,
   s: 18000}
-export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   }
 ];
 ;
@@ -1106,12 +1099,10 @@ export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [;
 ];
     rating: 4.6;
     reviews: 18000}
-export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   e: string}
     enterpris,
   e: string}
   };
-  feature,
   s: string[];
   benefit,
   s: string[];
@@ -1156,7 +1147,6 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
 ;
 export const,
   blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
-  {/* TODO: Fix JSX expression */}
   y: 'Blockchain & Web3'}
     pric,
   e: {}
@@ -1173,7 +1163,6 @@ export const,
       enterpris,
   e: 'Custom pricing'
     };
-    feature,
   s: [,
       'Self-sovereign identity managementZero-knowledge proof verificationMulti-chain identity supportDecentralized identifiers (DIDs)Verifiable credentialsPrivacy-preserving authenticationCross-platform identity portabilityAdvanced encryption standards';
       'Compliance with W3C standardsAPI for enterprise integration'
@@ -1226,7 +1215,6 @@ export const,
   g: 4.8;
     review,
   s: 850};
-  {/* TODO: Fix JSX expression */}
   y: 'DeFi & Yield Optimization'}
     pric,
   e: {}
@@ -1243,7 +1231,6 @@ export const,
       enterpris,
   e: 'Custom pricing'
     };
-    feature,
   s: [,
       'AI-powered yield strategy optimizationMulti-chain protocol supportReal-time risk assessmentAutomated portfolio rebalancingGas fee optimizationImpermanent loss protectionAdvanced analytics dashboardMobile app for monitoring';
       'API for institutional clientsCustom strategy development'
@@ -1296,7 +1283,6 @@ export const,
   g: 4.9;
     review,
   s: 6200};
-  {/* TODO: Fix JSX expression */}
   y: 'NFT & Digital Assets'}
     pric,
   e: {}
@@ -1313,7 +1299,6 @@ export const,
       enterpris,
   e: 'Custom pricing'
     };
-    feature,
   s: [,
       'AI-powered NFT valuation modelsReal-time market analyticsTrend prediction algorithmsPortfolio tracking and managementRarity scoring and analysisMarket sentiment analysisTrading signal generationMulti-chain NFT support';
       'Advanced filtering and searchAPI for developers'
@@ -1366,7 +1351,6 @@ export const,
   g: 4.7;
     review,
   s: 2100};
-  {/* TODO: Fix JSX expression */}
   y: 'Supply Chain & Traceability'}
     pric,
   e: {}
@@ -1383,7 +1367,6 @@ export const,
       enterpris,
   e: 'Custom pricing'
     };
-    feature,
   s: [,
       'End-to-end supply chain trackingReal-time transparency monitoringSmart contract automationIoT sensor integrationCompliance verificationSustainability certificationMulti-stakeholder accessAdvanced analytics dashboard';
       'Mobile app for field workersAPI for system integration'
@@ -1436,7 +1419,6 @@ export const,
   g: 4.8;
     review,
   s: 680};
-  {/* TODO: Fix JSX expression */}
   y: 'Web3 & Social Media'}
     pric,
   e: {}
@@ -1453,7 +1435,6 @@ export const,
       enterpris,
   e: 'Custom pricing'
     };
-    feature,
   s: [,
       'Decentralized content ownershipToken-based reward systemPrivacy-first designContent monetizationDecentralized governanceCross-platform content portabilityAI-powered content discoveryNFT integration';
       'Mobile and web appsAPI for developers'
@@ -1513,7 +1494,6 @@ export const,
   s: 18000}
 ];
 'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis'], realImplementatio,
-  n: true, export interface BlockchainWeb3Service export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   s: number} setupTim,
   e: string, ' 'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis'], realImplementatio,
   n: true, implementationDetail,
@@ -1536,7 +1516,6 @@ export const,
   y: 'USD', trial_day,
   s: 14,' setup_tim,
   e: '1 - 3 days',' enterpris,
-  e: 'Custom pricing'} }, feature,
   s: [,' 'AI - powered yield strategy optimization',' 'Multi - chain protocol support',' 'Real - time risk assessment',' 'Automated portfolio rebalancing',' 'Gas fee optimization',' 'Impermanent loss protection',' 'Advanced analytics dashboard',' 'Mobile app for monitoring',' 'API for institutional clients',' 'Custom strategy development'], benefit,
   s: [,' 'Increase DeFi yields by 40 - 80%',' 'Reduce impermanent loss by 60%',' 'Optimize gas fees automatically',' 'Minimize risk through AI analysis',' 'Access institutional - grade DeFi strategies'], target_audienc,
   e: [,' 'DeFi investors and traders',' 'Institutional investors',' 'Crypto hedge funds',' 'Family offices',' 'Retail crypto investors',' 'DeFi protocol developers'], market_positio,
@@ -1583,7 +1562,6 @@ export const,
   y: 'USD', trial_day,
   s: 7,' setup_tim,
   e: 'Immediate',' enterpris,
-  e: 'Custom pricing'}, feature,
   s: [,' 'AI - powered NFT valuation models',' 'Real - time market analytics',' 'Trend prediction algorithms',' 'Portfolio tracking and management',' 'Rarity scoring and analysis',' 'Market sentiment analysis',' 'Trading signal generation',' 'Multi - chain NFT support',' 'Advanced filtering and search',' 'API for developers'], benefit,
   s: [,' 'Improve NFT investment returns by 200%',' 'Reduce investment risks through AI analysis',' 'Identify undervalued NFT opportunities',' 'Optimize portfolio allocation',' 'Access institutional - grade NFT analytics'], target_audienc,
   e: [,' 'NFT investors and collectors',' 'Digital art galleries',' 'Gaming companies',' 'Brands and marketers',' 'Investment firms',' 'Content creators'], market_positio,
@@ -1630,7 +1608,6 @@ export const,
   y: 'USD', trial_day,
   s: 30,' setup_tim,
   e: '2 - 4 weeks',' enterpris,
-  e: 'Custom pricing'}, feature,
   s: [,' 'End - to - end supply chain tracking',' 'Real - time transparency monitoring',' 'Smart contract automation',' 'IoT sensor integration',' 'Compliance verification',' 'Sustainability certification',' 'Multi - stakeholder access',' 'Advanced analytics dashboard',' 'Mobile app for field workers',' 'API for system integration'], benefit,
   s: [,' 'Improve supply chain transparency by 100%',' 'Reduce compliance costs by 40%',' 'Enhance brand trust and reputation',' 'Optimize inventory management',' 'Enable sustainable sourcing verification'], target_audienc,
   e: [,' 'Manufacturing companies',' 'Food and beverage industry',' 'Pharmaceutical companies',' 'Luxury goods manufacturers',' 'Retail chains',' 'Logistics companies'], market_positio,
@@ -1689,7 +1666,6 @@ export const,
   y: 'USD', trial_day,
   s: 0,' setup_tim,
   e: 'Immediate',' enterpris,
-  e: 'Custom pricing'}, feature,
   s: [,' 'Decentralized content ownership',' 'Token - based reward system',' 'Privacy - first design',' 'Content monetization',' 'Decentralized governance',' 'Cross - platform content portability',' 'AI - powered content discovery',' 'NFT integration',' 'Mobile and web apps',' 'API for developers'], benefit,
   s: [,' 'Users own and monetize their content',' 'Complete privacy and data control',' 'Earn rewards for quality content',' 'Censorship - resistant platform',' 'Transparent and fair algorithms'], target_audienc,
   e: [,' 'Content creators and influencers',' 'Social media users',' 'Brands and marketers',' 'Developers and entrepreneurs',' 'Privacy - conscious individuals',' 'Web3 enthusiasts'], market_positio,
@@ -1724,7 +1700,6 @@ export const,
   y: string, trialDay,
   s: number, setupTim,
   e: string, enterpris,
-  e: string }, feature,
   s: string[], benefit,
   s: string[], targetAudienc,
   e: string[], marketPositio,
@@ -1757,9 +1732,7 @@ export const,
   g: 4 && 4.6, review,
   s: 18000,
   rating: 4.6, review,
-  s: 18000} export interface BlockchainWeb3Service {; } ]; ; } ]; export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   e: string} enterpris,
-  e: string} }; feature,
   s: string[]; benefit,
   s: string[]; targetAudienc,
   e: string[]; marketPositio,
@@ -1781,10 +1754,8 @@ export const,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  blockchainWeb3Services2025: BlockchainWeb3Service[] = [; {/* TODO: Fix JSX expression */}
   s: 30}' setupTim,
   e: '1-2 days'};' enterpris,
-  e: 'Custom pricing' }; feature,
   s: [,' 'Self-sovereign identity managementZero-knowledge proof verificationMulti-chain identity supportDecentralized identifiers (DIDs)Verifiable credentialsPrivacy-preserving authenticationCross-platform identity portabilityAdvanced encryption standards';' 'Compliance with W3C standardsAPI for enterprise integration' ]; benefit,
   s: [,' 'Eliminate identity theft and fraudReduce compliance costs by 60%Improve user privacy and controlEnable seamless cross-platform authenticationReduce data breach risks' ]; targetAudienc,
   e: [,' 'Financial institutionsHealthcare providersGovernment agenciesEducational institutionsE-commerce platformsSocial media companies' ];' marketPositio,
@@ -1807,10 +1778,8 @@ export const,
   e: '2024-02-20'; customer,
   s: 1200; ratin,
   g: 4.8; review,
-  s: 850}; {/* TODO: Fix JSX expression */}
   s: 14}' setupTim,
   e: '1-3 days'};' enterpris,
-  e: 'Custom pricing' }; feature,
   s: [,' 'AI-powered yield strategy optimizationMulti-chain protocol supportReal-time risk assessmentAutomated portfolio rebalancingGas fee optimizationImpermanent loss protectionAdvanced analytics dashboardMobile app for monitoring';' 'API for institutional clientsCustom strategy development' ]; benefit,
   s: [,' 'Increase DeFi yields by 40-80%Reduce impermanent loss by 60%Optimize gas fees automaticallyMinimize risk through AI analysisAccess institutional-grade DeFi strategies' ]; targetAudienc,
   e: [,' 'DeFi investors and tradersInstitutional investorsCrypto hedge fundsFamily officesRetail crypto investorsDeFi protocol developers' ];' marketPositio,
@@ -1833,10 +1802,8 @@ export const,
   e: '2024-01-15'; customer,
   s: 8500; ratin,
   g: 4.9; review,
-  s: 6200}; {/* TODO: Fix JSX expression */}
   s: 7}' setupTim,
   e: 'Immediate'};' enterpris,
-  e: 'Custom pricing' }; feature,
   s: [,' 'AI-powered NFT valuation modelsReal-time market analyticsTrend prediction algorithmsPortfolio tracking and managementRarity scoring and analysisMarket sentiment analysisTrading signal generationMulti-chain NFT support';' 'Advanced filtering and searchAPI for developers' ]; benefit,
   s: [,' 'Improve NFT investment returns by 200%Reduce investment risks through AI analysisIdentify undervalued NFT opportunitiesOptimize portfolio allocationAccess institutional-grade NFT analytics' ]; targetAudienc,
   e: [,' 'NFT investors and collectorsDigital art galleriesGaming companiesBrands and marketersInvestment firmsContent creators' ];' marketPositio,
@@ -1859,10 +1826,8 @@ export const,
   e: '2024-03-01'; customer,
   s: 3200; ratin,
   g: 4.7; review,
-  s: 2100}; {/* TODO: Fix JSX expression */}
   s: 30}' setupTim,
   e: '2-4 weeks'};' enterpris,
-  e: 'Custom pricing' }; feature,
   s: [,' 'End-to-end supply chain trackingReal-time transparency monitoringSmart contract automationIoT sensor integrationCompliance verificationSustainability certificationMulti-stakeholder accessAdvanced analytics dashboard';' 'Mobile app for field workersAPI for system integration' ]; benefit,
   s: [,' 'Improve supply chain transparency by 100%Reduce compliance costs by 40%Enhance brand trust and reputationOptimize inventory managementEnable sustainable sourcing verification' ]; targetAudienc,
   e: [,' 'Manufacturing companiesFood and beverage industryPharmaceutical companiesLuxury goods manufacturersRetail chainsLogistics companies' ];' marketPositio,
@@ -1885,10 +1850,8 @@ export const,
   e: '2024-02-10'; customer,
   s: 950; ratin,
   g: 4.8; review,
-  s: 680}; {/* TODO: Fix JSX expression */}
   s: 0}' setupTim,
   e: 'Immediate'};' enterpris,
-  e: 'Custom pricing' }; feature,
   s: [,' 'Decentralized content ownershipToken-based reward systemPrivacy-first designContent monetizationDecentralized governanceCross-platform content portabilityAI-powered content discoveryNFT integration';' 'Mobile and web appsAPI for developers' ]; benefit,
   s: [,' 'Users own and monetize their contentComplete privacy and data controlEarn rewards for quality contentCensorship-resistant platformTransparent and fair algorithms' ]; targetAudienc,
   e: [,' 'Content creators and influencersSocial media usersBrands and marketersDevelopers and entrepreneursPrivacy-conscious individualsWeb3 enthusiasts' ];' marketPositio,

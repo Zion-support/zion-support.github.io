@@ -47,7 +47,6 @@ $4};
 
 
 'use client';
-interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -57,14 +56,12 @@ interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
 }
 const,
   ModernLoadingSpinner: React.FC;
-          <ModernLoadingSpinnerProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   size = 'md',
   color = 'primary',
   text = 'Loading...',
   fullScreen = false;)
-}) => {/* TODO: Fix JSX expression */}
   m: 'w-4 h-4'}
     m,
   d: 'w-8 h-8',
@@ -73,7 +70,6 @@ const,
     x,
   l: 'w-16 h-16'
   };
-  const colorClasses = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   primar,

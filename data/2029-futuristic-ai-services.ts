@@ -23,7 +23,6 @@ export interface FuturisticAiService2029 {;,
   e: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -37,7 +36,6 @@ export interface FuturisticAiService2029 {;,
   e: string;
     emai,
   l: string;
-export interface FuturisticAiService2029 {/* TODO: Fix JSX expression */}
   s: string}
 };
   i,
@@ -50,7 +48,6 @@ export interface FuturisticAiService2029 {/* TODO: Fix JSX expression */}
   e: string,,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -59,7 +56,6 @@ export interface FuturisticAiService2029 {/* TODO: Fix JSX expression */}
   realImplementatio,
   n: boolean;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
@@ -111,7 +107,6 @@ export const futuristicAIServices2029: FuturisticAiService2029[] = [,
   e: string, pric,
   e: string,
   descriptio,
-  n: string, feature,
   s: string[],
   lin,
   k: string, categor,
@@ -136,7 +131,6 @@ export const,
   e: "$499/month",
     descriptio,"
   n: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",
-    feature,
   s: [;"
       "Futuristic AI""
       "Advanced capabilities""
@@ -207,7 +201,6 @@ export const,
   e: "$499/month",
     descriptio,"
   n: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",
-    feature,
   s: [,"
       "Futuristic AI","
       "Advanced capabilities","
@@ -251,25 +244,21 @@ i,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: mobil,
   e: string; emai,
-  l: string; export interface FuturisticAiService2029 {/* TODO: Fix JSX expression */}
   s: string }; i,
   d: string; nam,
   e: string; taglin,
   e: string; pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
@@ -277,7 +266,6 @@ i,
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
@@ -291,7 +279,6 @@ i,
   e: "2029 Futuristic AI Platform", taglin,"
   e: "Futuristic AI for 2029", pric,"
   e: "$499/month", descriptio,"
-  n: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.", feature,"
   s: [ "Futuristic AI" "Advanced capabilities" "Breakthrough algorithms" "Innovation platform" "Future-ready AI" ], lin,"
   k: "/services/2029-futuristic-ai", categor,"
   y: "Futuristic AI 2029", realImplementatio,
@@ -308,7 +295,6 @@ i,
   e: "2029 Futuristic AI Platform", taglin,"
   e: "Futuristic AI for 2029", pric,"
   e: "$499/month", descriptio,"
-  n: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.", feature,"
   s: [ "Futuristic AI", "Advanced capabilities", "Breakthrough algorithms", "Innovation platform", "Future-ready AI" ], lin,"
   k: "/services/2029-futuristic-ai", categor,"
   y: "Futuristic AI 2029", realImplementatio,

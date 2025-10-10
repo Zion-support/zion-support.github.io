@@ -1,6 +1,5 @@
 import React from 'react';
 
-interface LoadingSpinnerProps {/* TODO: Fix JSX expression */}
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
@@ -13,11 +12,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
     md: 'h-8 w-8',
     lg: 'h-12 w-12',
 export const,
-  LoadingSpinner: React.FC<LoadingSpinnerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
   };
 
-  const colorClasses = {/* TODO: Fix JSX expression */}
   };
 
   return(<div className={`flex items-center justify-center ${className}`}>

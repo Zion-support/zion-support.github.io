@@ -10,7 +10,6 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <meta, nam, e='description'
           conte, n, t='Learn, about, cognitive financial, modeling, 2027 and, how, it can, benefit, your enterpri, s, e.'
         />)
-        <link, re, l='canonic, a, l')
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/cogniti v e-financi a l-modeli n g-20 2 7')
         />),
       </Helm, e, t>
@@ -21,5 +20,4 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
 }
           Cognitive, Financial, Modeling 20, 2, 7
 }</h1>
-export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }

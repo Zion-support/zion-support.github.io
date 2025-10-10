@@ -71,7 +71,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
   y: string,
     pricingMode,
   l: string};
-  feature,
   s: string[];
   benefit,
   s: string[];
@@ -125,7 +124,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
   s: string}}
 export const,
   EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [,
-  // Quantum Internet Infrastructure,
   id: "quantum-internet-infrastructure",
     titl,"
   e: "Quantum Internet Infrastructure",
@@ -512,7 +510,6 @@ export const,
   // Neuromorphic Computing Platform;
     id: "neuromorphic-computing-platform",
     title: "Neuromorphic Computing Platform",
-    description: "Advanced neuromorphic computing platform that mimics the human brain's neural architecture, enabling ultra-efficient AI processing, real-time learning, and cognitive computing capabilities for next-generation applications.",
     category: "Advanced AI"
     subcategory: "Neuromorphic Computing"
     pricing: unknown;
@@ -568,7 +565,6 @@ export const,
     titl,"
   e: "Neuromorphic Computing Platform",
     descriptio,"
-  n: "Advanced neuromorphic computing platform that mimics the human brain's neural architecture, enabling ultra-efficient AI processing, real-time learning, and cognitive computing capabilities for next-generation applications.",
     categor,"
   y: "Advanced AI",
     subcategor,"
@@ -658,7 +654,6 @@ export const,
   // Fusion Energy Computing Platform;
     id: "fusion-energy-computing-platform",
     title: "Fusion Energy Computing Platform",
-    description: "Revolutionary fusion energy computing platform that combines fusion power generation with advanced computing infrastructure, providing clean, unlimited energy for high-performance computing and data centers.",
     category: "Energy Technology"
     subcategory: "Fusion Computing"
     pricing: unknown;
@@ -714,7 +709,6 @@ export const,
     titl,"
   e: "Fusion Energy Computing Platform",
     descriptio,"
-  n: "Revolutionary fusion energy computing platform that combines fusion power generation with advanced computing infrastructure, providing clean, unlimited energy for high-performance computing and data centers.",
     categor,"
   y: "Energy Technology",
     subcategor,"
@@ -854,7 +848,6 @@ export type EmergingTechService2027 = i,
   y: number; custo,
   m: string; currenc,
   y: string, pricingMode,
-  l: string}; feature,
   s: string[]; benefit,
   s: string[]; useCase,
   s: string[]; targetAudienc,
@@ -881,7 +874,6 @@ export type EmergingTechService2027 = i,
   l: string; websit,
   e: string, addres,
   s: string}} export const,
-  EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [ // Quantum Internet Infrastructure,"
   id: "quantum-internet-infrastructure", titl,"
   e: "Quantum Internet Infrastructure", descriptio,"
   n: "Next-generation quantum internet infrastructure enabling ultra-secure communications, quantum entanglement distribution, and quantum network protocols for government, financial, and research institutions.", categor,"
@@ -977,7 +969,6 @@ export type EmergingTechService2027 = i,
   s: "364 E Main St STE 1008 Middletown DE 19709" } }, // Neuromorphic Computing Platform,"
   id: "neuromorphic-computing-platform", titl,"
   e: "Neuromorphic Computing Platform", descriptio,"
-  n: "Advanced neuromorphic computing platform that mimics the human brain's neural architecture, enabling ultra-efficient AI processing, real-time learning, and cognitive computing capabilities for next-generation applications.", categor,"
   y: "Advanced AI", subcategor,"
   y: "Neuromorphic Computing", pricin,
   g: monthl,
@@ -1008,7 +999,6 @@ export type EmergingTechService2027 = i,
   s: "364 E Main St STE 1008 Middletown DE 19709" } }, // Fusion Energy Computing Platform,"
   id: "fusion-energy-computing-platform", titl,"
   e: "Fusion Energy Computing Platform", descriptio,"
-  n: "Revolutionary fusion energy computing platform that combines fusion power generation with advanced computing infrastructure, providing clean, unlimited energy for high-performance computing and data centers.", categor,"
   y: "Energy Technology", subcategor,"
   y: "Fusion Computing", pricin,
   g: monthl,

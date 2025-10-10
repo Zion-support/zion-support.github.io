@@ -22,10 +22,8 @@ interface SEOData {
  modifiedTime?: string;
  section?: string;
  tags?: string[];
-interface SEOData {/* TODO: Fix JSX expression */}
 }
 
-interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
@@ -61,11 +59,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
  'https: //twitter.com/ziontechgroup',
  'https: //github.com/Zion-Holdings',
 const,
-  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
  },
  contactPoin,
-  t: {/* TODO: Fix JSX expression */}
  },
  sameA,
   s: [
@@ -97,9 +92,7 @@ const,
  position: 2;
  name: seoData.title;
  item: seoData.canonicalUrl;
- const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
  },
- {/* TODO: Fix JSX expression */}
  }]};
  }, [seoData, enableSchemaMarkup]);
 
@@ -128,11 +121,8 @@ const,
  acceptedAnswer: {,
  '@type': 'Answer',
  text: 'We specialize in cutting-edge AI micro SaaS services, cloud automation, and provide comprehensive digital transformation solutions with a focus on enterprise-grade security and performance.',
- const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
  }},
- {/* TODO: Fix JSX expression */}
  }},
- {/* TODO: Fix JSX expression */}
  }}]};
 
  return faqData;
@@ -152,13 +142,11 @@ const,
  metaDescription = document.createElement('meta');
  metaDescription.setAttribute('name', 'description');
  document.head.appendChild(metaDescription);
- useEffect(() => {/* TODO: Fix JSX expression */}
  }
  metaDescription.setAttribute('content', seoData.description);
 
  // Update canonical URL;
  let _canonicalLink = document.querySelector('link[rel="canonical"]');
- if (!canonicalLink) {/* TODO: Fix JSX expression */}
  }
  canonicalLink.setAttribute('href', seoData.canonicalUrl);
  }
@@ -191,17 +179,13 @@ const,
  // const _addMetaTag = (nam,
   e: string, conten,
   t: string, attribut)
-  e: string = 'name') => {/* TODO: Fix JSX expression */}
  // };
 
  // const _updateCanonicalUrl = (ur)
-  l: string) => {/* TODO: Fix JSX expression */}
- // } else {/* TODO: Fix JSX expression */}
  // }
  // };origin/
 
  // const _addStructuredData = (dat)
-  a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
  // // }
  // 
  // const script = document.createElement('script');
@@ -225,8 +209,6 @@ const,
  page_title: config.title),
  page_location: config.canonicalUrl),
  const _trackPageView = (confi)
-  g: SEOData) => {/* TODO: Fix JSX expression */}
-  g: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})
  });
  }
  };
@@ -240,8 +222,6 @@ const,
  event_category: 'Performance'),
  event_label: 'Page Load'),
  value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
- const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
-  s: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {/* TODO: Fix JSX expression */})
  });
  }
  });
@@ -293,7 +273,6 @@ const,
  <meta name="keywords" content={seoData.keywords.join(', ')} /></meta>"
  <link rel="canonical" href={seoData.canonicalUrl} /></link>
  {/* Open Graph Tags */}
- {/* TODO: Fix JSX expression */}"
   g:title" content={seoData.title} /></meta>"
  <meta property="o,
   g:imag,"
@@ -306,7 +285,6 @@ const,
  )}
 
  {/* Twitter Card Tags */}
- {/* TODO: Fix JSX expression */}"
   r:title" content={seoData.title} /></meta>"
  <meta name="twitte,"
   r:description" content={seoData.description} /></meta>"
@@ -335,17 +313,14 @@ const,
  <meta name="rating" content="general" /></meta>"
  <meta name="theme-color" content="#4F46E5" /></meta>
  {/* Structured Data */}
- {/* TODO: Fix JSX expression */}
  {JSON.stringify(structuredData)}
  </script>
  )}
 
- {/* TODO: Fix JSX expression */}
  {JSON.stringify(breadcrumbData)}
  </script>
  )}
 
- {/* TODO: Fix JSX expression */}
  {JSON.stringify(faqData)}
  </script>
  )}

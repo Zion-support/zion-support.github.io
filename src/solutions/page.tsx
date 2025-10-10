@@ -8,7 +8,6 @@ import Footer from '../components/Footer';
 
 
 'use client';
-import React, { useState } from 'react';
 const SolutionsPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
 
@@ -255,7 +254,6 @@ $4}
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   i,
@@ -271,7 +269,6 @@ $4}
       descriptio,
   n: 'Transform your business with cutting-edge artificial intelligence'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   i,
@@ -287,7 +284,6 @@ $4}
       descriptio,
   n: 'Robust and scalable IT infrastructure solutions'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   i,
@@ -303,7 +299,6 @@ $4}
       descriptio,
   n: 'Comprehensive security solutions for your digital assets'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   i,
@@ -320,21 +315,18 @@ $4}
   n: 'Streamline operations with intelligent automation'
     }
   ];
-  const solutions = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   a,
   i: [
   // TOD,
   O: Add items]
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
   e: 'AI-Powered Analytics',
         descriptio,
   n: 'Transform raw data into actionable insights with advanced AI analytics',
-        feature,
   s: ['Predictive Analytics', 'Real-time Insights', 'Automated Reporting', 'Custom Dashboards'],
         pricin,
   g: 'Starting at $1,500/month',
@@ -343,14 +335,12 @@ $4}
         colo,
   r: 'text-blue-400'
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
   e: 'AI Marketing Automation',
         descriptio,
   n: 'Revolutionize your marketing with AI-powered automation and personalization',
-        feature,
   s: ['Campaign Optimization', 'Customer Segmentation', 'Content Generation', 'Performance Tracking'],
         pricin,
   g: 'Starting at $199/month',
@@ -359,14 +349,12 @@ $4}
         colo,
   r: 'text-pink-400'
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
   e: 'AI Customer Support',
         descriptio,
   n: 'Enhance customer experience with intelligent AI-powered support systems',
-        feature,
   s: ['24/7 Chatbots', 'Sentiment Analysis', 'Automated Responses', 'Human Handoff'],
         pricin,
   g: 'Starting at $299/month',
@@ -375,14 +363,12 @@ $4}
         colo,
   r: 'text-green-400'
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
   e: 'AI Process Automation',
         descriptio,
   n: 'Automate complex business processes with intelligent decision-making capabilities',
-        feature,
   s: ['Workflow Automation', 'Exception Handling', 'Process Optimization', 'Compliance Monitoring'],
         pricin,
   g: 'Starting at $399/month',
@@ -396,14 +382,12 @@ $4}
   t: [
   // TOD,
   O: Add items]
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
   e: 'Cloud Migration',
         descriptio,
   n: 'Seamlessly migrate your infrastructure to the cloud with zero downtime',
-        feature,
   s: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', '24/7 Support'],
         pricin,
   g: 'Starting at $1,299/month',
@@ -412,14 +396,12 @@ $4}
         colo,
   r: 'text-blue-400'
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
   e: 'IT Infrastructure Management',
         descriptio,
   n: 'Comprehensive IT infrastructure management and optimization services',
-        feature,
   s: ['Server Management', 'Network Monitoring', 'Performance Optimization', 'Disaster Recovery'],
         pricin,
   g: 'Starting at $799/month',
@@ -428,14 +410,12 @@ $4}
         colo,
   r: 'text-green-400'
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
   e: 'DevOps & CI/CD',
         descriptio,
   n: 'Streamline development workflows with automated testing and deployment',
-        feature,
   s: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Monitoring & Alerting'],
         pricin,
   g: 'Starting at $599/month',
@@ -444,14 +424,12 @@ $4}
         colo,
   r: 'text-purple-400'
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
   e: 'Database Management',
         descriptio,
   n: 'Optimize and manage your databases with AI-powered performance tuning',
-        feature,
   s: ['Database Optimization', 'Performance Monitoring', 'Backup & Recovery', 'Security Hardening'],
         pricin,
   g: 'Starting at $399/month',
@@ -465,14 +443,12 @@ $4}
   y: [
   // TOD,
   O: Add items]
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
   e: 'Cybersecurity Suite',
         descriptio,
   n: 'Comprehensive security solutions with threat detection and response',
-        feature,
   s: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Management'],
         pricin,
   g: 'Starting at $799/month',
@@ -481,14 +457,12 @@ $4}
         colo,
   r: 'text-red-400'
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
   e: 'AI Security Monitoring',
         descriptio,
   n: 'Real-time security monitoring with AI-powered threat detection',
-        feature,
   s: ['Real-time Monitoring', 'AI Threat Detection', 'Automated Response', 'Security Analytics'],
         pricin,
   g: 'Starting at $299/month',
@@ -497,14 +471,12 @@ $4}
         colo,
   r: 'text-purple-400'
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
   e: 'Compliance Management',
         descriptio,
   n: 'Ensure regulatory compliance with automated compliance monitoring',
-        feature,
   s: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support'],
         pricin,
   g: 'Starting at $499/month',
@@ -513,14 +485,12 @@ $4}
         colo,
   r: 'text-green-400'
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
   e: 'Security Training',
         descriptio,
   n: 'Comprehensive security awareness training for your organization',
-        feature,
   s: ['Phishing Simulation', 'Security Awareness', 'Incident Response Training', 'Compliance Training'],
         pricin,
   g: 'Starting at $199/month',
@@ -534,14 +504,12 @@ $4}
   n: [
   // TOD,
   O: Add items]
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
   e: 'Business Process Automation',
         descriptio,
   n: 'Automate complex business processes with intelligent workflow management',
-        feature,
   s: ['Workflow Design', 'Process Optimization', 'Exception Handling', 'Performance Analytics'],
         pricin,
   g: 'Starting at $399/month',
@@ -550,14 +518,12 @@ $4}
         colo,
   r: 'text-yellow-400'
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
   e: 'IT Automation',
         descriptio,
   n: 'Automate IT operations and reduce manual tasks with intelligent automation',
-        feature,
   s: ['Server Automation', 'Network Automation', 'Backup Automation', 'Monitoring Automation'],
         pricin,
   g: 'Starting at $299/month',
@@ -566,14 +532,12 @@ $4}
         colo,
   r: 'text-blue-400'
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
   e: 'Marketing Automation',
         descriptio,
   n: 'Automate marketing campaigns and customer engagement processes',
-        feature,
   s: ['Email Automation', 'Social Media Automation', 'Lead Nurturing', 'Campaign Management'],
         pricin,
   g: 'Starting at $199/month',
@@ -582,14 +546,12 @@ $4}
         colo,
   r: 'text-pink-400'
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
   e: 'Data Automation',
         descriptio,
   n: 'Automate data processing, analysis, and reporting workflows',
-        feature,
   s: ['Data Collection', 'Data Processing', 'Report Generation', 'Data Quality Management'],
         pricin,
   g: 'Starting at $249/month',
@@ -604,7 +566,6 @@ $4}
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -614,7 +575,6 @@ $4}
       descriptio,
   n: '300% average ROI and 95% process automation for our clients'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -624,7 +584,6 @@ $4}
       descriptio,
   n: 'Bank-level security and compliance for all our solutions'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -634,7 +593,6 @@ $4}
       descriptio,
   n: '24/7 support and services across multiple time zones'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -728,7 +686,6 @@ $4}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
-                      {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
           {/* Solutions Grid */}"
@@ -751,7 +708,6 @@ $4}
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
   Features:</h4>"
                     <ul className="space-y-1"></ul>
-                      {solution.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>"
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                           {feature}

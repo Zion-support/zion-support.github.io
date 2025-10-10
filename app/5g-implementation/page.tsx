@@ -48,7 +48,6 @@ const FiveGImplementationPage: React.FC = () => {
       <Helmet>
         <title>5G Network Implementation - Zion Tech Group | Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
-        <meta name="keywords" content="5G implementation, network infrastructure, IoT connectivity, edge computing, Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -90,7 +89,6 @@ const FiveGImplementationPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />

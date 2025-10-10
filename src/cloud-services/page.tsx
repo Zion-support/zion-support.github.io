@@ -15,7 +15,6 @@ const CloudServicesPage: React.FC = () => {
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -24,10 +23,8 @@ const CloudServicesPage: React.FC = () => {
   e: 'Cloud Migration',
       descriptio,
   n: 'Seamless migration of your infrastructure to leading cloud platforms',
-      feature,
   s: ['AWS Migration', 'Azure Migration', 'Google Cloud Migration', 'Zero Downtime']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -36,10 +33,8 @@ const CloudServicesPage: React.FC = () => {
   e: 'Cloud Security',
       descriptio,
   n: 'Comprehensive security solutions for your cloud infrastructure',
-      feature,
   s: ['Identity Management', 'Data Encryption', 'Compliance', 'Threat Detection']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -48,10 +43,8 @@ const CloudServicesPage: React.FC = () => {
   e: 'Auto Scaling',
       descriptio,
   n: 'Dynamic resource allocation based on demand',
-      feature,
   s: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -60,7 +53,6 @@ const CloudServicesPage: React.FC = () => {
   e: 'Cloud Analytics',
       descriptio,
   n: 'Advanced analytics and monitoring for cloud resources',
-      feature,
   s: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights']
     }
   ];
@@ -115,7 +107,6 @@ const CloudServicesPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>"
                 <p className="text-gray-300 mb-4">{service.description}</p>"
                 <ul className="space-y-2"></ul>
-                  {service.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>"
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                       {feature}

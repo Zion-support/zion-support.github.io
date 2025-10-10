@@ -14,7 +14,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='cognitive, sear, c, h, enterprise, searc, h, AI, searc, h, semantic, searc, h, knowledge, managemen, t, information, retrieva, l, enterprise, A, I, vector, searc, h, RAG, system, s'
         /></meta>
-        <link, re, l = 'canonic, a, l'
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-cogniti v e-sear c h-enterpri s e',
         />,
       </Helm, e, t>
@@ -47,7 +46,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e;
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e</h1>
                 <li, classNam, e='flex, item, s-start, ga, p-3'>
-                  <TrendingUp, classNam, e='h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>
                     <stro, n, g>$12, 4, M+ Productivi, t, y:</stro, n, g> Employees, save, 8.5, hours, weekly finding, informatio, n;
                   </sp, a, n>
@@ -58,7 +56,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e;
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e</h1>
                 <li, className='flex, item, s-start, ga, p-3'>
-                  <TrendingUp, className='h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>
                     <stro, n, g>$12, 4, M+ Productivi, t, y:</stro, n, g> Employees, save, 8.5, hours, weekly finding, informatio, n;
                   </sp, a, n>
@@ -73,7 +70,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   1. Semantic, Understanding, Layer;
                 </h3>
                 <p, className='te, x, t-gr, a, y-300, m, b-4'>
-                  Advanced, embedding, models transform, documents, and queries, into, high-dimensional, vector, representations that, capture, semantic;
                   meani, n, g. This, enables, understanding of, synony, m, s, related, concept, s, and, contextual, nuances that, keyword, matching miss, e, s.
 
             <section, className='mb-12'>
@@ -81,7 +77,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 Enterprise, Deployment, Success;
           <div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                  Advanced, embedding, models transform, documents, and queries, into, high-dimensional, vector, representations that, capture, semantic
                   meani, n, g. This, enables, understanding of, synony, m, s, related, concept, s, and, contextual, nuances that, keyword, matching miss, e, s.</p>
 
             <section, className='mb-12'>
@@ -161,9 +156,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                     Enterprise, Securit, y & Complian, c, e;
                   </h3>
                   <p, className='te, x, t-gr, a, y-3, 0, 0'>
-                    R, o, w-level, security, ensures users, only, access information, the, y're, authorized, to s, e, e. Complete, audit, trails track, all, searches and, access, for complian, c, e. Sensitive, data, remains;
                     encrypted, and, on-premises, if, required.
-                    R, o, w-level, security, ensures users, only, access information, the, y're, authorized, to s, e, e. Complete, audit, trails track, all, searches and, access, for complian, c, e. Sensitive, data, remains
                     encrypted, and, on-premises, if, required.</p>
 
             <section, className='mb-12'>
@@ -406,7 +399,6 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 Start Your Knowledge Transformation",
                 <Brain className="ml-2 h-5 w-5 ">,
                 <Brain className="ml-2 h-5 w-5" />);
-export default function CognitiveSearchEnterprise20, 2, 5() {/* TODO: Fix JSX expression */}
 };
   </div>
   </div>

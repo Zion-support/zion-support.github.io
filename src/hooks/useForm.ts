@@ -18,7 +18,6 @@ import {// TODO: Add content;}
   // ValidationResult as _ValidationResult;
 } from '../utils/formValidation';
 export interface UseFormConfig;
-          <T extends Record<string, unknown>> {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   initialValue,
@@ -31,7 +30,6 @@ export interface UseFormConfig;
   validateOnChange?: boolean;
   validateOnBlur?: boolean;
 }
-export interface UseFormReturn<T extends Record<string, unknown>> {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   value,
@@ -58,7 +56,6 @@ export function useForm<T extends Record<string, unknown>>({// TODO: Add content
   initialValues, validationSchema = {}, onSubmi,
   t: _onSubmit, validateOnChange = true, validateOnBlur = true;
 }: UseFormConfig;)
-          <T>): UseFormReturn<T> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   const [values, setValues] = useState;
@@ -69,14 +66,12 @@ export function useForm<T extends Record<string, unknown>>({// TODO: Add content
   // Validate a single field;
 const validateSingleField = useCallback()
     (fiel)
-  d: keyof T): void => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       if (!validationSchema[field]) return;
       const fieldValue = values[field];
       const rules = validationSchema[field];
       const result = validateField(fieldValue, rules);
-      setErrors(prev => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //         ...prev,
@@ -86,7 +81,6 @@ const validateSingleField = useCallback()
 //     [values, validationSchema]
   );
   // Validate all fields;
-const validateAllFields = useCallback((): boolean => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if (Object.keys(validationSchema).length === 0) return true;
@@ -99,7 +93,6 @@ const validateAllFields = useCallback((): boolean => {/* TODO: Fix JSX expressio
   // Handle input change;
 const handleChange = useCallback()
     (e: ChangeEvent;)
-          <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       const { name, value, type } = e.target;
@@ -107,13 +100,11 @@ const handleChange = useCallback()
       // Handle checkbox inputs;
 let,
   fieldValue: unknown = value;
-      if (type === 'checkbox' && 'checked' in e.target) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         fieldValue = (e.target as HTMLInputElement).checked;
       setValues(prev => ({[fieldName]: fieldValue;}
       // Validate on change if enabled;)
-      if (validateOnChange && touched[fieldName]) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         setTimeout(() => validateSingleField(fieldName), 0);
@@ -125,7 +116,6 @@ let,
 
       setTouched(prev => ({[fieldName]: true;}
       // Validate on blur if enabled;)
-      if (validateOnBlur) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         validateSingleField(fieldName);
@@ -139,7 +129,6 @@ let,
 }
       e.preventDefault();
       // Mark all fields as touched;
-const allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         acc[key as keyof T] = true;
@@ -163,7 +152,6 @@ const allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX ex
   const setFieldValue = useCallback((fiel,
   d: keyof T, valu)
   e: T[keyof T]) => {[field]: value;}
-    if (validateOnChange && touched[field]) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       setTimeout(() => validateSingleField(field), 0);

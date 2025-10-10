@@ -1,20 +1,16 @@
 import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";"
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
 import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";';
-impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";';
-const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     { na, m, e: 'Ho, m, e', hr, e, f: '/' }
     { 
       na, m, e: 'Solutio, n, s'
       hr, e, f: '/solutio, n, s'
       dropdo, w, n: [,
-    {/* TODO: Fix JSX expression */}
         { na, m, e: 'Enterprise, Solution, s', hr, e, f: '/solutio, n, s/enterpri, s, e' }
         { na, m, e: 'SMB, Solution, s', hr, e, f: '/solutio, n, s/s, m, b' }
         { na, m, e: 'Startup, Solution, s', hr, e, f: '/solutio, n, s/start, u, p' }
         { na, m, e: 'Government, Solution, s', hr, e, f: '/solutio, n, s/governme, n, t' }
-        { na, m, e: 'Healthcare, Solution, s', hr, e, f: '/solutio, n, s/healthca, r, e' }
         { na, m, e: 'Financial, Solution, s', hr, e, f: '/solutio, n, s/financi, a, l' }
       ]
     }
@@ -22,7 +18,6 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       na, m, e: 'Servic, e, s'
       hr, e, f: '/servic, e, s'
       dropdo, w, n: [,
-    {/* TODO: Fix JSX expression */}
         { na, m, e: 'AI, Solution, s', hr, e, f: '/servic, e, s/ai-solutio, n, s' }
         { na, m, e: 'Clo, u, d & DevO, p, s', hr, e, f: '/servic, e, s/clo, u, d-devo, p, s' }
         { na, m, e: 'Cybersecuri, t, y', hr, e, f: '/servic, e, s/cybersecuri, t, y' }
@@ -35,7 +30,6 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       na, m, e: 'Resourc, e, s'
       hr, e, f: '/resourc, e, s'
       dropdo, w, n: [,
-    {/* TODO: Fix JSX expression */}
         { na, m, e: 'Case, Studie, s', hr, e, f: '/ca, s, e-studi, e, s' }
         { na, m, e: 'Documentati, o, n', hr, e, f: '/do, c, s' }
         { na, m, e: 'Developer, Tool, s', hr, e, f: '/develop, e, r-too, l, s' }
@@ -49,13 +43,11 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       na, m, e: 'Compa, n, y'
       hr, e, f: '/abo, u, t'
       dropdo, w, n: [,
-    {/* TODO: Fix JSX expression */}
         { na, m, e: 'About, U, s', hr, e, f: '/abo, u, t' }
         { na, m, e: 'Our, Tea, m', hr, e, f: '/te, a, m' }
         { na, m, e: 'Partne, r, s', hr, e, f: '/partne, r, s' }
         { na, m, e: 'Caree, r, s', hr, e, f: '/caree, r, s' }
         { na, m, e: 'Ne, w, s', hr, e, f: '/ne, w, s' }
-        { na, m, e: 'Pre, s, s', hr, e, f: '/pre, s, s' }
       ]
     }
     { na, m, e: 'Conta, c, t', hr, e, f: '/conta, c, t' }
@@ -79,12 +71,10 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   g:px-8">""
         <div, className="flex, justif, y-between, item, s-cente, r, h-16"></div>
     { na, m, e: 'Ho, m, e', hr, e, f: '/' },';
-    {/* TODO: Fix JSX expression */}
         { na, m, e: 'Enterprise, Solution, s', hr, e, f: '/solutio, n, s/enterpri, s, e' },';
         { na, m, e: 'SMB, Solution, s', hr, e, f: '/solutio, n, s/s, m, b' },';
         { na, m, e: 'Startup, Solution, s', hr, e, f: '/solutio, n, s/start, u, p' },';
         { na, m, e: 'Government, Solution, s', hr, e, f: '/solutio, n, s/governme, n, t' },';
-        { na, m, e: 'Healthcare, Solution, s', hr, e, f: '/solutio, n, s/healthca, r, e' },';
         { na, m, e: 'Financial, Solution, s', hr, e, f: '/solutio, n, s/financi, a, l' },';
       ]
     }
@@ -92,7 +82,6 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       na, m, e: 'Servic, e, s', ';
       hr, e, f: '/servic, e, s',';
       dropdo, w, n: [,
-    {/* TODO: Fix JSX expression */}
         { na, m, e: 'AI, Solution, s', hr, e, f: '/servic, e, s/ai-solutio, n, s' },';
         { na, m, e: 'Clo, u, d & DevO, p, s', hr, e, f: '/servic, e, s/clo, u, d-devo, p, s' },';
         { na, m, e: 'Cybersecuri, t, y', hr, e, f: '/servic, e, s/cybersecuri, t, y' },';
@@ -105,7 +94,6 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       na, m, e: 'Resourc, e, s', ';
       hr, e, f: '/resourc, e, s',';
       dropdo, w, n: [,
-    {/* TODO: Fix JSX expression */}
         { na, m, e: 'Case, Studie, s', hr, e, f: '/ca, s, e-studi, e, s' },';
         { na, m, e: 'Documentati, o, n', hr, e, f: '/do, c, s' },';
         { na, m, e: 'Developer, Tool, s', hr, e, f: '/develop, e, r-too, l, s' },';
@@ -119,13 +107,11 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       na, m, e: 'Compa, n, y', ';
       hr, e, f: '/abo, u, t',';
       dropdo, w, n: [,
-    {/* TODO: Fix JSX expression */}
         { na, m, e: 'About, U, s', hr, e, f: '/abo, u, t' },';
         { na, m, e: 'Our, Tea, m', hr, e, f: '/te, a, m' },';
         { na, m, e: 'Partne, r, s', hr, e, f: '/partne, r, s' },';
         { na, m, e: 'Caree, r, s', hr, e, f: '/caree, r, s' },';
         { na, m, e: 'Ne, w, s', hr, e, f: '/ne, w, s' },';
-        { na, m, e: 'Pre, s, s', hr, e, f: '/pre, s, s' },';
       ]
     }
     { na, m, e: 'Conta, c, t', hr, e, f: '/conta, c, t' },';
@@ -161,7 +147,6 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               <d, i, v;
   k, e, y={it, e, m.na, m, e}
                 classNa, m, e="relati, v, e"
-            {/* TODO: Fix JSX expression */}
   k, e, y={it, e, m.na, m, e}"
                 classNa, m, e="relati, v, e")
                 onMouseEnt, e, r={() => it, e, m.dropdo, w, n && setActiveDropdo, w, n(it, e, m.na, m, e)}
@@ -177,7 +162,6 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <svg, className="w-4 h-4, m, l-1" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">
                       <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M19, 9, l-7 7-7-7  /></p>
                     <svg, className="w-4 h-4, m, l-1" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">";
-                  {/* TODO: Fix JSX expression */}"
                       <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M19, 9, l-7 7-7-7  /></path>"
                     <svg, className="w-4 h-4, m, l-1" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">";"
                       <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M19, 9, l-7 7-7-7" />";
@@ -194,7 +178,6 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
                         to={dropdownIt, e, m.hr, e, f}
                         classNa, m, e="block, p, x-4, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hove, r: bg-gr, a, y-100, hov, e;
-                {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
                         to={dropdownIt, e, m.hr, e, f}"
                         classNa, m, e="block, p, x-4, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hove, r: bg-gr, a, y-100, hov, e,"
@@ -272,7 +255,6 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               stro, k, e="currentCol, o, r""
               viewB, o, x="0, 0, 24 24"
             ></s>
-              {/* TODO: Fix JSX expression */}
                   strokeWid, t, h={2}"
                   d="M6, 18L18, 6M6 6l12, 1, 2  /></pa>
               ) : (<pa, t, h;"
@@ -305,7 +287,6 @@ isMenuOp, e, n && (
                   <Li, n, k
   to={it, e, m.hr, e, f}
                     classNa, m, e="block, p, x-4, p, y-2, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, hov, e;
-        {/* TODO: Fix JSX expression */}
 }></div>
                   <Li, n, k;
   to={it, e, m.hr, e, f}"
@@ -324,7 +305,6 @@ isMenuOp, e, n && (
   k, e, y={ind, e, x}
                           to={dropdownIt, e, m.hr, e, f}
                           classNa, m, e="block, p, x-4, p, y-1, tex, t-sm, tex, t-gr, a, y-600, hove, r: te, x, t-bl, u, e-600, hov, e;
-                  {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
                           to={dropdownIt, e, m.hr, e, f}"
                           classNa, m, e="block, p, x-4, p, y-1, tex, t-sm, tex, t-gr, a, y-600, hove, r: te, x, t-bl, u, e-600, hov, e,"

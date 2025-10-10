@@ -10,7 +10,6 @@ interface PerformanceOptimizerProps {
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, className = '' }) => {
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizations, setOptimizations] = useState<string[]>([]);
-  const [performanceScore, setPerformanceScore] = useState<number | null>(null);
 
   const optimizeImages = useCallback(() => {
     const images = document.querySelectorAll('img');

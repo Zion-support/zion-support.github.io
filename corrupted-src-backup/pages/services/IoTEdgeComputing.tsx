@@ -2,14 +2,11 @@ import { Helmet } from "react-helmet-async";"
 impo, r, t { Netwo, r, k } fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r";
-impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
-impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
-  const, feature, s = [
     {
       i, c, o;
   n: C, p, u;
@@ -202,13 +199,8 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
     }
     {
       na, m, e: "Dr. Michael, Che, n","
-      ro, l, e: "Head, of, R&D, Healthcare, Io, T","
-      conte, n, t: "Patient, monitoring, with edge, computing, ensures re, a, l-time, alerts, reach medical, staff, instantly. We've, prevented, 15 critical, incidents, this year, alon, e.","
       na, m, e: "Dr. Michael, Che, n",";
-      ro, l, e: "Head, of, R&D, Healthcare, Io, T",";
-      conte, n, t: "Patient, monitoring, with edge, computing, ensures re, a, l-time, alerts, reach medical, staff, instantly. We've, prevented, 15 critical, incidents, this year, alon, e.",";
       rati, n, g: 5;
-      compa, n, y: "Healthcare, Io, T"
     }
   ];
   const, useCase, s = [
@@ -227,7 +219,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
       benefi, t, s: ["Traffic, optimizatio, n", "Environmental, monitorin, g", "Public, safety, alerts"]"
     }
     {
-      tit, l, e: "Healthcare, Io, T","
       ic, o, n: Monit, o, r;
       descripti, o, n: "Patient, monitorin, g, medical, device, integration, and, emergency, response syste, m, s.","
       metri, c, s: "50% faster, emergency, response","
@@ -253,7 +244,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
       benefi, t, s: ["Traffic, optimizatio, n", "Environmental, monitorin, g", "Public, safety, alerts"]";
     }
     {
-      tit, l, e: "Healthcare, Io, T",";
       ic, o, n: Monit, o, r;
       descripti, o, n: "Patient, monitorin, g, medical, device, integration, and, emergency, response syste, m, s.",";
       metri, c, s: "50% faster, emergency, response",";
@@ -265,53 +255,32 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {
       descripti, o, n: "Customer, behavior, analysis, inventory, managemen, t, and, personalized, experiences.",";
       metri, c, s: "60% inventory, efficiency, gain",";
       benefi, t, s: ["Customer, analytic, s", "Inventory, optimizatio, n", "Personalized, experience, s"]";
-const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   const, pricin, g = [
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   const, testimonial, s = [
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   const, useCase, s = [
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   const, industrie, s = ["
@@ -333,17 +302,13 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <title>I, o, T & Edge, Computin, g - Zion, Tech, Group | Smart, Connected, Solutions</title>
         <me, t, a;
   na, m, e="descripti, o, n"
-          content="Advanced, IoT, and edge, computing, solutions with, rea, l-time, AI, processing, 5G, integratio, n, and, global, connectivity. 95% latency, reductio, n, enterprise, securit, y." /><meta name="keywor, d, s" content="IoT, solution, s, edge, computin, g, smart, device, s, connected, system, s, re, a, l-time, analytic, s, 5G, Io, T, industrial, Io, T" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/i, o, t-ed, g, e-computi, n, g/>"
   return (<>
       <Helmet></Helmet>
         <title>I, o, T & Edge, Computin, g - Zion, Tech, Group | Smart, Connected, Solutions</title>
         <me, t, a;"
   na, m, e="descripti, o, n""
-          content="Advanced, IoT, and edge, computing, solutions with, rea, l-time, AI, processing, 5G, integratio, n, and, global, connectivity. 95% latency, reductio, n, enterprise, securit, y." /><meta name="keywor, d, s" content="IoT, solution, s, edge, computin, g, smart, device, s, connected, system, s, re, a, l-time, analytic, s, 5G, Io, T, industrial, Io, T" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/i, o, t-ed, g, e-computi, n, g/>""
           content="Advanced, IoT, and edge, computing, solutions with, rea, l-time, AI, processing, 5G, integratio, n, and, global, connectivity. 95% latency, reductio, n, enterprise, securit, y."
          />"
-        <meta name="keywor, d, s" content="IoT, solution, s, edge, computin, g, smart, device, s, connected, system, s, re, a, l-time, analytic, s, 5G, Io, T, industrial, Io, T" />";"
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/i, o, t-ed, g, e-computi, n, g" />";
       </Helmet>
       <Head, e, r   /></Head>"
       <main, className="m, i, n-h-screen, b, g-whi, t, e">";
@@ -356,7 +321,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   g:px-8">"</section>
             <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
-                I, o, T &</h1> <span, className="bg-gradie, n, t-to-r, fro, m-oran, g, e-400, t, o-r, e, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Edge, Computin, g</sp, a, n>
               </h1>
               <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-oran, g, e-100, ma, x-w-4xl, m, x-auto, m, b-8">
                 Advanced, IoT, and edge, computing, solutions with, rea, l-time, AI, processing;
@@ -369,7 +333,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
             <div, className="te, x, t-cent, e, r">";</div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
-                I, o, T &</h1> <span, className="bg-gradie, n, t-to-r, fro, m-oran, g, e-400, t, o-r, e, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Edge, Computin, g</sp, a, n>";
               </h1>
               <p, className="te, x, t-x, l, m;
   d: te, x, t-2xl, tex, t-oran, g, e-100, ma, x-w-4xl, m, x-auto, m, b-8">";
@@ -388,7 +351,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   g:px-8">""
             <div, className="te, x, t-cent, e, r"></div>"
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">""
-                I, o, T & <span, className="bg-gradie, n, t-to-r, fro, m-oran, g, e-400, t, o-r, e, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Edge, Computin, g</sp, a, n>
               </h1>"
               <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-oran, g, e-100, ma, x-w-4xl, m, x-auto, m, b-8"></p>
                 Advanced, IoT, and edge, computing, solutions with, rea, l-time, AI, processing;
@@ -399,7 +361,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-cent, e, r">";"
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";"
-                I, o, T & <span, className="bg-gradie, n, t-to-r, fro, m-oran, g, e-400, t, o-r, e, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Edge, Computin, g</sp, a, n>";
               </h1>"
               <p, className="te, x, t-x, l, m,"
   d: te, x, t-2xl, tex, t-oran, g, e-100, ma, x-w-4xl, m, x-auto, m, b-8">";
@@ -507,17 +468,10 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Ult, r, a-low, latency, connectivity</p>";
               </d, i, v>
               <div, className="te, x, t-cent, e, r"></div>
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4"></div>
-                  <Shield, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
               <div, className="te, x, t-cent, e, r">";</div>
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";</div>
               </d, i, v>"
               <div, className="te, x, t-cent, e, r"></div>"
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4"></div>"
-                  <Shield, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  /></Shield>"
               <div, className="te, x, t-cent, e, r">";"
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";"
-                  <Shield, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Ze, r, o-Trust, Securit, y</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Enterpri, s, e-grade, protectio, n</p>";
@@ -612,13 +566,11 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             </d, i, v>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-4, ga, p-8">"
-              {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-6"></div>"
                       <Icon, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0  /></Icon>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-4, ga, p-8">";
-              {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-6">";"
                       <Icon, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0" />";
@@ -627,7 +579,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{useCa, s, e.descripti, o, n}</p>";"
                     <div, className="te, x, t-oran, g, e-600, fon, t-semibold, m, b-4">{useCa, s, e.metri, c, s}</d, i, v>";"
                     <ul, className="spa, c, e-y-2">";
-                      {/* TODO: Fix JSX expression */}"
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm"></li>"
                           <CheckCircle, className="w-4 h-4, tex, t-oran, g, e-500, m, r-2, fle, x-shri, n, k-0  /></CheckCircle>"
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>"
@@ -672,7 +623,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 Advanced, Edge, Computing Capabiliti, e, s;
               </h2>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Powerful, features, that make, your, IoT infrastructure, truly, intelligent and, responsiv, e.
               </p>
             </d, i, v>
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
@@ -713,7 +663,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             </d, i, v>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">"
-              {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-oran, g, e-100, rounde, d-lg, m, b-4"></div>"
                       <Icon, className="w-6 h-6, tex, t-oran, g, e-6, 0, 0  /></Icon>
@@ -724,7 +673,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       <CheckCircle, className="w-4 h-4, m, r-1  /></CheckCircle>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">";
-              {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-oran, g, e-100, rounde, d-lg, m, b-4">";"
                       <Icon, className="w-6 h-6, tex, t-oran, g, e-6, 0, 0" />";
@@ -793,7 +741,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             </d, i, v>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">"
-              {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0"></div>"
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{indust, r, y.na, m, e}</h3>"
                   <div, className="te, x, t-gr, a, y-6, 0, 0"></div>"
@@ -801,7 +748,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <p, className="te, x, t-sm">{indust, r, y.devic, e, s}</p>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">";
-              {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";"
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{indust, r, y.na, m, e}</h3>";"
                   <div, className="te, x, t-gr, a, y-6, 0, 0">";"
@@ -867,9 +813,7 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="gri, d, m,"
   d: gr, i, d-co, l, s-3, ga, p-8">""
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
-              {/* TODO: Fix JSX expression */}
                 <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-oran, g, e-500, relativ, e' : ''}`}>`;`
-                  {/* TODO: Fix JSX expression */}
                   )}"
                   <div, className="te, x, t-center, m, b-8">";"
                     <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";"
@@ -880,7 +824,6 @@ const, IoTEdgeComputin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <p, className="te, x, t-gr, a, y-6, 0, 0">{pl, a, n.descripti, o, n}</p>";
                   </d, i, v>"
                   <ul, className="spa, c, e-y-4, m, b-8">";
-                    {/* TODO: Fix JSX expression */}"
                       <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r"></li>"
                         <CheckCircle, className="w-5 h-5, tex, t-oran, g, e-500, m, r-3, fle, x-shri, n, k-0  /></CheckCircle>"
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>"
@@ -901,7 +844,6 @@ pl, a, n.popul, a, r;
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
-                    classNa, m, e={/* TODO: Fix JSX expression */}`
 }`}`;`
                   >
                     Get, Starte, d;
@@ -968,17 +910,12 @@ pl, a, n.popul, a, r;
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, m, b-4">";
                     {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
             </d, i, v>"
             <div, className="gri, d, m,"
   d: gr, i, d-co, l, s-3, ga, p-8">""
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
-              {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";"
                   <div, className="flex, item, s-center, m, b-4">";
-                    {/* TODO: Fix JSX expression */}"
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>"
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
                     ))}
                   </d, i, v>"
                   <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";"

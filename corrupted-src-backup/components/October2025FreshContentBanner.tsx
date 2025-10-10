@@ -14,7 +14,6 @@ const, October2025FreshContentBanne, r = () => {
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";</div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
-const, October2025FreshContentBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
@@ -35,7 +34,6 @@ const, October2025FreshContentBanne, r = () => {/* TODO: Fix JSX expression */}
             <span, className="te, x, t-indi, g, o-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">Just, Publishe, d • Octobe, r, 1, 20, 2, 5</sp, a, n>
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
           </d, i, v>
-          <h2, className="te, x, t-5 xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, b, g-cl, i, p-text, tex, t-transpare, n, t"></h>
             🚀 4, New, Enterprise AI, Strategies, You C, a, n't, Mis, s;
           </h2>
           <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o">
@@ -49,7 +47,6 @@ const, October2025FreshContentBanne, r = () => {/* TODO: Fix JSX expression */}
             <span, className="te, x, t-indi, g, o-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">Just, Publishe, d • Octobe, r, 1, 20, 2, 5</sp, a, n>"
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  /></Sparkles>
           </d, i, v>"
-          <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
             🚀 4, New, Enterprise AI, Strategies, You C, a, n't, Mis, s;
           </h2>"
           <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o"></p>
@@ -60,7 +57,6 @@ const, October2025FreshContentBanne, r = () => {/* TODO: Fix JSX expression */}
             <span, className="te, x, t-indi, g, o-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">Just, Publishe, d • Octobe, r, 1, 20, 2, 5</sp, a, n>";"
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
           </d, i, v>"
-          <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, b, g-cl, i, p-text, tex, t-transpare, n, t">";
             🚀 4, New, Enterprise AI, Strategies, You C, a, n't, Mis, s';
           </h2>"
           <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o">";
@@ -215,7 +211,6 @@ const, October2025FreshContentBanne, r = () => {/* TODO: Fix JSX expression */}
               Autonomous, Network, Operations with, A, I-Driven, S, D-WAN, 202, 5;
             </h3>
             <p, className="te, x, t-bl, u, e-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">
-              Transform, network, management with, autonomous, SD-WAN, that, optimizes routi, n, g, predicts, failure, s;</p>
           <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-autonomo, u, s-netwo, r, k-operatio, n, s-sd-w, a, n""
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-8, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-cy, a, n-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,"
@@ -237,12 +232,10 @@ const, October2025FreshContentBanne, r = () => {/* TODO: Fix JSX expression */}
               Autonomous, Network, Operations with, A, I-Driven, S, D-WAN, 202, 5;
             </h3>"
             <p, className="te, x, t-bl, u, e-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3"></p>
-              Transform, network, management with, autonomous, SD-WAN, that, optimizes routi, n, g, predicts, failure, s;"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-cy, a, n-200, transitio, n-colo, r, s">";
               Autonomous, Network, Operations with, A, I-Driven, S, D-WAN, 202, 5;
             </h3>"
             <p, className="te, x, t-bl, u, e-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">";
-              Transform, network, management with, autonomous, SD-WAN, that, optimizes routi, n, g, predicts, failure, s;
               and, sel, f-hea, l, s—reducing, incidents, by 91% and, improving, performance b, y, 6.8x.
             </p>
             <div, className="flex, item, s-center, justif, y-betwe, e, n">";</div>

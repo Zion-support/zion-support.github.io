@@ -11,11 +11,8 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {,
       impa, c, t: '98% Automat, i, o, n',
       ty, p, e: 'b, l, o, g',
       readTime: '15, m, i, n',
-const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     }]; return(<section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, Backgroun, d */}
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></section>
@@ -39,8 +36,6 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
               January, 202, 6 • Revolutionary, Content, Launch;
             </sp, a, n>
           </div>
-          <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-            Revolutionary, AI, Breakthroughs: The, Future, is He, r, e;
       <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'></div>
         {/* Head, e, r */}
         <div, className='te, x, t-center, m, b-16'></div>
@@ -50,9 +45,7 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
               January, 202, 6 • Revolutionary, Content, Launch;
             </sp, a, n>
           </div>
-          <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>
             Revolutionary, AI, Breakthrough,
-  s: The, Future, is He, r, e;
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d'></p>
             Experience, the, cutting-edge, of, AI innovation, with, our latest, breakthrough, conten,
@@ -74,7 +67,6 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
                 <div, className='flex, fle, x-col, item, s-end, ga, p-2'></div>
                   <span, className='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-500, tex, t-white, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-fu, l, l'>
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'></div>
-          {/* TODO: Fix JSX expression */}
             <div, ke, y = { in, d, e, x  }, classNa, m, e = 'group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'
             ></div>
               {/* Content, Hea, d, e, r */}
@@ -104,11 +96,6 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
               </div>
               {/* Impact, Badg, e */}
               <div, className='mb-6'></div>
-                <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, rounde, d-fu, l, l'></div>
-                  <Target, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
-                  <span, className='te, x, t-gre, e, n-400, fon, t-bold, tex, t-sm'>
-                  <Target, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' /></Target>
-                  <span, className='te, x, t-gre, e, n-400, fon, t-bold, tex, t-sm'></span>
                     Impa, c, t: {conte, n, t.im, p, a, c, t}
                   </sp, a, n>
                 </div>
@@ -125,13 +112,9 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
         </div>
         {/* Stats, Sectio, n */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12'></div>
-          {/* TODO: Fix JSX expression */}
             },
-            {/* TODO: Fix JSX expression */}
             },
-            {/* TODO: Fix JSX expression */}
             },
-            {/* TODO: Fix JSX expression */}
             }].m, a, p((st, a, t, ind, e, x) => (</div>
             <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10, tex, t-cent, e, r'
             ></div>
@@ -170,7 +153,6 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
                 className='bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0'
               >
               ></Link>
-                Explore, Our, Services;
               </Li, n, k>
             </div>
           </div>

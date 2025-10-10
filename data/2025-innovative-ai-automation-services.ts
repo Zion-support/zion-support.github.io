@@ -61,5 +61,4 @@ customer,
 ratin,
   g: 4 && 4.8;
 review,
-  s: 167}];    feature,
   s: [,

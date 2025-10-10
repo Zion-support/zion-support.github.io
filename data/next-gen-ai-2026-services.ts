@@ -18,7 +18,6 @@
   e: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -38,7 +37,6 @@ export const,
   e: '$299/month'
     descriptio,
   n: 'Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.'
-    feature,
   s: [;
       'Next-gen AI capabilities'
       'Advanced algorithms'
@@ -110,7 +108,6 @@ export const,
   e: "$299/month",
     descriptio,"
   n: "Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.",
-    feature,
   s: [,"
       "Next-gen AI capabilities","
       "Advanced algorithms","
@@ -164,7 +161,6 @@ i,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; addres,
@@ -174,7 +170,6 @@ i,
   e: '2026 Next-Gen AI Platform'' taglin,
   e: 'Next-generation AI for 2026'' pric,
   e: '$299/month' descriptio,
-  n:' 'Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.' feature,
   s: [' 'Next-gen AI capabilities'' 'Advanced algorithms'' 'Future-ready features'' 'Innovation platform'' 'Expert support' ]' lin,
   k: '/services/2026-next-gen-ai'' categor,
   y: 'Next-Gen AI 2026' realImplementatio,
@@ -191,7 +186,6 @@ i,
   e: "2026 Next-Gen AI Platform", taglin,"
   e: "Next-generation AI for 2026", pric,"
   e: "$299/month", descriptio,"
-  n: "Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.", feature,"
   s: [ "Next-gen AI capabilities", "Advanced algorithms", "Future-ready features", "Innovation platform", "Expert support" ], lin,"
   k: "/services/2026-next-gen-ai", categor,"
   y: "Next-Gen AI 2026", realImplementatio,

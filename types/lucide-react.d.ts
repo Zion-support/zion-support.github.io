@@ -1,4 +1,3 @@
-declare module 'lucide-react' {/* TODO: Fix JSX expression */}
   }
 
   export type LucideIcon = ComponentType<LucideProps>;

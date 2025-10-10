@@ -81,7 +81,6 @@ $4];
 
   );
 };
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   firstNam,
@@ -107,26 +106,21 @@ $4];
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 const handleInputChange = (e: React.ChangeEvent;)
-          <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value;)
     }));
   };
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       alert('Passwords do not match');
       return;
     }
-    if (!formData.agreeToTerms) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       alert('Please agree to the terms and conditions');
@@ -140,7 +134,6 @@ const handleInputChange = (e: React.ChangeEvent;)
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -351,7 +344,6 @@ Confirm Password;
                   to achieve unprecedented growth and efficiency.
 
               <div className="space-y-6">
-                {features.map((feature, index) => (
                   <div key={index} className="flex items-start">
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <feature.icon className="w-6 h-6 text-cyan-400" />
@@ -426,7 +418,6 @@ Sign in here;
 Join thousands of businesses already using our AI and IT solutions;
                   to achieve unprecedented growth and efficiency."
               <div className="space-y-6"></div>
-                {features.map((feature, index) => ()}"
           <div key={index} className="flex items-start"></div>"
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"></div>"
                       <feature.icon className="w-6 h-6 text-cyan-400" /></feature>"

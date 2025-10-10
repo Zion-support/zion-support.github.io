@@ -23,7 +23,6 @@ export interface EnterpriseItService {;,
   e: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -37,7 +36,6 @@ export interface EnterpriseItService {;,
   e: string;
     emai,
   l: string;
-export interface EnterpriseItService {/* TODO: Fix JSX expression */}
   s: string}
 };
   i,
@@ -50,7 +48,6 @@ export interface EnterpriseItService {/* TODO: Fix JSX expression */}
   e: string,,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -59,7 +56,6 @@ export interface EnterpriseItService {/* TODO: Fix JSX expression */}
   realImplementatio,
   n: boolean;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
@@ -111,7 +107,6 @@ export const enterpriseITServices: EnterpriseItService[] = [,
   e: string, pric,
   e: string,
   descriptio,
-  n: string, feature,
   s: string[],
   lin,
   k: string, categor,
@@ -136,7 +131,6 @@ export const,
   e: "$150/hour",
     descriptio,"
   n: "Comprehensive enterprise architecture consulting services for digital transformation.",
-    feature,
   s: [;"
       "Architecture assessment""
       "Technology roadmap""
@@ -207,7 +201,6 @@ export const,
   e: "$150/hour",
     descriptio,"
   n: "Comprehensive enterprise architecture consulting services for digital transformation.",
-    feature,
   s: [,"
       "Architecture assessment","
       "Technology roadmap","
@@ -251,25 +244,21 @@ i,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: mobil,
   e: string; emai,
-  l: string; export interface EnterpriseItService {/* TODO: Fix JSX expression */}
   s: string }; i,
   d: string; nam,
   e: string; taglin,
   e: string; pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
@@ -277,7 +266,6 @@ i,
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
@@ -291,7 +279,6 @@ i,
   e: "Enterprise Architecture Consulting", taglin,"
   e: "Strategic IT architecture for large organizations", pric,"
   e: "$150/hour", descriptio,"
-  n: "Comprehensive enterprise architecture consulting services for digital transformation.", feature,"
   s: [ "Architecture assessment" "Technology roadmap" "Integration strategy" "Governance framework" "Implementation support" ], lin,"
   k: "/services/enterprise-architecture", categor,"
   y: "Enterprise IT", realImplementatio,
@@ -308,7 +295,6 @@ i,
   e: "Enterprise Architecture Consulting", taglin,"
   e: "Strategic IT architecture for large organizations", pric,"
   e: "$150/hour", descriptio,"
-  n: "Comprehensive enterprise architecture consulting services for digital transformation.", feature,"
   s: [ "Architecture assessment", "Technology roadmap", "Integration strategy", "Governance framework", "Implementation support" ], lin,"
   k: "/services/enterprise-architecture", categor,"
   y: "Enterprise IT", realImplementatio,

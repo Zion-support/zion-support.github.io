@@ -324,7 +324,6 @@ export interface ComprehensiveService {}
   e: string;
   perio,
   d: string;
-  feature,
   s: string[];
   categor,
   y: string;
@@ -381,7 +380,6 @@ export interface ComprehensiveService {}
   pric,
   e: string, perio,
   d: string,
-  feature,
   s: string[], categor,
   y: string,
   marketSiz,
@@ -441,7 +439,6 @@ export const,
     pric,
   e: '$49', perio,
   d: '/month',
-    feature,
   s: [;
       'GPT-4 powered content generation with 99.2% accuracyMulti-language support (25+ languages) with cultural adaptationAdvanced SEO optimization with real-time keyword researchBrand voice training and consistency maintenancePlagiarism detection with 99.8% accuracyContent calendar and automated schedulingTeam collaboration with version controlAnalytics dashboard with performance metrics'
       'API access for enterprise integrationsCustom AI model training for industry-specific content'
@@ -494,7 +491,6 @@ export const,
     pric,
   e: '$199', perio,
   d: '/month',
-    feature,
   s: [;
       'AI-powered churn prediction with 92% accuracyAutomated customer health scoringIntelligent engagement workflowsReal-time customer sentiment analysisPredictive analytics for upsell opportunitiesAutomated onboarding sequencesCustomer journey mapping and optimizationIntegration with major CRM platforms'
       'Advanced reporting and analyticsMobile app for customer success managers'
@@ -547,7 +543,6 @@ export const,
     pric,
   e: '$299', perio,
   d: '/month',
-    feature,
   s: [;
       'Real-time risk assessment and scoringAutomated compliance monitoringRegulatory reporting automationFraud detection with 95% accuracyCredit risk modeling and analysisMarket risk assessment and alertsOperational risk managementStress testing and scenario analysis'
       'Integration with core banking systemsAdvanced analytics and reporting'
@@ -600,7 +595,6 @@ export const,
     pric,
   e: '$399', perio,
   d: '/month',
-    feature,
   s: [;
       'Medical image analysis with 96% accuracyDiagnostic support and recommendationsPatient data analytics and insightsAutomated report generationIntegration with PACS and EHR systemsReal-time alerts and notificationsMulti-modality image supportClinical decision support tools'
       'Compliance with medical standardsAdvanced security and privacy controls'
@@ -653,7 +647,6 @@ export const,
     pric,
   e: '$149', perio,
   d: '/month',
-    feature,
   s: [;
       'AI-powered product recommendationsDynamic pricing optimizationCustomer behavior analysisPersonalized marketing campaignsInventory optimization and forecastingCustomer segmentation and targetingA/B testing automationRevenue optimization insights'
       'Integration with major e-commerce platformsReal-time analytics and reporting'
@@ -706,7 +699,6 @@ export const,
     pric,
   e: '$249', perio,
   d: '/month',
-    feature,
   s: [;
       'AI-powered threat detection with 98% accuracyAutomated incident response and remediationBehavioral analytics and anomaly detectionVulnerability assessment and managementCompliance monitoring and reportingSecurity orchestration and automationThreat intelligence and sharingEndpoint detection and response'
       'Cloud security monitoringAdvanced security analytics'
@@ -759,7 +751,6 @@ export const,
     pric,
   e: '$179', perio,
   d: '/month',
-    feature,
   s: [;
       'Automated data pipeline orchestrationAI-powered data quality monitoringReal-time data processing and streamingAdvanced analytics and visualizationMachine learning model deploymentData governance and complianceIntegration with major data sourcesScalable cloud infrastructure'
       'Advanced monitoring and alertingCollaborative data workspace'
@@ -812,7 +803,6 @@ export const,
     pric,
   e: '$129', perio,
   d: '/month',
-    feature,
   s: [;
       'AI-powered candidate matchingAutomated resume screeningInterview scheduling and coordinationCandidate assessment and scoringDiversity and inclusion analyticsTalent pipeline managementEmployee onboarding automationPerformance tracking and analytics'
       'Integration with major HR systemsAdvanced reporting and insights'
@@ -865,7 +855,6 @@ export const,
     pric,
   e: '$199', perio,
   d: '/month',
-    feature,
   s: [;
       'AI-powered contract analysis and reviewRisk identification and assessmentCompliance monitoring and reportingContract template managementAutomated clause extractionLegal document generationIntegration with legal systemsAdvanced search and retrieval'
       'Collaborative review workflowsAudit trail and version control'
@@ -918,7 +907,6 @@ export const,
     pric,
   e: '$299', perio,
   d: '/month',
-    feature,
   s: [;
       'Predictive maintenance with 94% accuracyProduction optimization and schedulingQuality control and defect detectionSupply chain optimizationEnergy consumption optimizationReal-time monitoring and alertsIoT device integration and managementAdvanced analytics and reporting'
       'Integration with ERP and MES systemsMobile app for field workers'
@@ -961,7 +949,6 @@ export const,
   g: 4.9,
     review,
   s: 520;
-export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
@@ -989,7 +976,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     review,
   s: 520}
 ];
-export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
@@ -1362,7 +1348,6 @@ export const,
       phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/ai-content-factory-pro'}
     contac,
   t: {}
@@ -1390,7 +1375,6 @@ export const,
     review,
   s: 1250};
   // Customer Success & Support;
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/ai-customer-success-platform'}
     contac,
   t: {}
@@ -1418,7 +1402,6 @@ export const,
     review,
   s: 950};
   // Financial Technology;
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/ai-financial-risk-manager'}
     contac,
   t: {}
@@ -1446,7 +1429,6 @@ export const,
     review,
   s: 680};
   // Healthcare & Biotech;
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/ai-healthcare-diagnostics'}
     contac,
   t: {}
@@ -1474,7 +1456,6 @@ export const,
     review,
   s: 420};
   // E-commerce & Retail;
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/ai-ecommerce-optimizer'}
     contac,
   t: {}
@@ -1502,7 +1483,6 @@ export const,
     review,
   s: 1680};
   // Cybersecurity & Compliance;
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/ai-cybersecurity-suite'}
     contac,
   t: {}
@@ -1530,7 +1510,6 @@ export const,
     review,
   s: 1100};
   // Data & Analytics;
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/ai-data-pipeline-platform'}
     contac,
   t: {}
@@ -1558,7 +1537,6 @@ export const,
     review,
   s: 1450};
   // Human Resources;
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/ai-hr-recruitment-platform'}
     contac,
   t: {}
@@ -1586,7 +1564,6 @@ export const,
     review,
   s: 890};
   // Legal & Compliance;
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/ai-legal-contract-analyzer'}
     contac,
   t: {}
@@ -1614,7 +1591,6 @@ export const,
     review,
   s: 580};
   // Manufacturing & IoT;
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/ai-manufacturing-optimizer'}
     contac,
   t: {}
@@ -1643,7 +1619,6 @@ export const,
   s: 520;
     review,
   s: 520;
-export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   }
 ];
     phone: string;
@@ -1866,7 +1841,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: '$199'
     perio,
   d: '/month'
-    feature,
   s: [,
       'Automated customer health scoring',
       'Intelligent engagement workflows',
@@ -1963,7 +1937,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: '$299'
     perio,
   d: '/month'
-    feature,
   s: [,
       'Automated compliance monitoring',
       'Regulatory reporting automation',
@@ -2057,7 +2030,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: '$399'
     perio,
   d: '/month'
-    feature,
   s: [,
       'Medical image analysis with 96% accuracy',
       'Diagnostic support and recommendations',
@@ -2159,7 +2131,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: '$149'
     perio,
   d: '/month'
-    feature,
   s: [,
       'Dynamic pricing optimization',
       'Customer behavior analysis',
@@ -2254,7 +2225,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: '$249'
     perio,
   d: '/month'
-    feature,
   s: [,
       'Automated incident response and remediation',
       'Behavioral analytics and anomaly detection',
@@ -2351,7 +2321,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: '$179'
     perio,
   d: '/month'
-    feature,
   s: [,
       'Automated data pipeline orchestration',
       'AI - powered data quality monitoring',
@@ -2449,7 +2418,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: '$129'
     perio,
   d: '/month'
-    feature,
   s: [,
       'Automated resume screening',
       'Interview scheduling and coordination',
@@ -2546,7 +2514,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: '$199'
     perio,
   d: '/month'
-    feature,
   s: [,
       'Risk identification and assessment',
       'Compliance monitoring and reporting',
@@ -2648,7 +2615,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: '$299'
     perio,
   d: '/month'
-    feature,
   s: [,
       'Predictive maintenance with 94% accuracy',
       'Production optimization and scheduling',
@@ -2728,7 +2694,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   s: 520;
     review,
   s: 520;
-export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   }
 ];
   id: string, name: string;
@@ -2982,7 +2947,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
   pric,
   e: string, perio,
   d: string,
-  feature,
   s: string[], categor,
   y: string,
   marketSiz,
@@ -3044,7 +3008,6 @@ export const,
     pric,
   e: '$199', perio,
   d: '/month',
-    feature,
   s: [;
       'AI-powered churn prediction with 92% accuracyAutomated customer health scoringIntelligent engagement workflowsReal-time customer sentiment analysisPredictive analytics for upsell opportunitiesAutomated onboarding sequencesCustomer journey mapping and optimizationIntegration with major CRM platforms'
       'Advanced reporting and analyticsMobile app for customer success managers'
@@ -3097,7 +3060,6 @@ export const,
     pric,
   e: '$299', perio,
   d: '/month',
-    feature,
   s: [;
       'Real-time risk assessment and scoringAutomated compliance monitoringRegulatory reporting automationFraud detection with 95% accuracyCredit risk modeling and analysisMarket risk assessment and alertsOperational risk managementStress testing and scenario analysis'
       'Integration with core banking systemsAdvanced analytics and reporting'
@@ -3150,7 +3112,6 @@ export const,
     pric,
   e: '$399', perio,
   d: '/month',
-    feature,
   s: [;
       'Medical image analysis with 96% accuracyDiagnostic support and recommendationsPatient data analytics and insightsAutomated report generationIntegration with PACS and EHR systemsReal-time alerts and notificationsMulti-modality image supportClinical decision support tools'
       'Compliance with medical standardsAdvanced security and privacy controls'
@@ -3203,7 +3164,6 @@ export const,
     pric,
   e: '$149', perio,
   d: '/month',
-    feature,
   s: [;
       'AI-powered product recommendationsDynamic pricing optimizationCustomer behavior analysisPersonalized marketing campaignsInventory optimization and forecastingCustomer segmentation and targetingA/B testing automationRevenue optimization insights'
       'Integration with major e-commerce platformsReal-time analytics and reporting'
@@ -3256,7 +3216,6 @@ export const,
     pric,
   e: '$249', perio,
   d: '/month',
-    feature,
   s: [;
       'AI-powered threat detection with 98% accuracyAutomated incident response and remediationBehavioral analytics and anomaly detectionVulnerability assessment and managementCompliance monitoring and reportingSecurity orchestration and automationThreat intelligence and sharingEndpoint detection and response'
       'Cloud security monitoringAdvanced security analytics'
@@ -3309,7 +3268,6 @@ export const,
     pric,
   e: '$179', perio,
   d: '/month',
-    feature,
   s: [;
       'Automated data pipeline orchestrationAI-powered data quality monitoringReal-time data processing and streamingAdvanced analytics and visualizationMachine learning model deploymentData governance and complianceIntegration with major data sourcesScalable cloud infrastructure'
       'Advanced monitoring and alertingCollaborative data workspace'
@@ -3362,7 +3320,6 @@ export const,
     pric,
   e: '$129', perio,
   d: '/month',
-    feature,
   s: [;
       'AI-powered candidate matchingAutomated resume screeningInterview scheduling and coordinationCandidate assessment and scoringDiversity and inclusion analyticsTalent pipeline managementEmployee onboarding automationPerformance tracking and analytics'
       'Integration with major HR systemsAdvanced reporting and insights'
@@ -3415,7 +3372,6 @@ export const,
     pric,
   e: '$199', perio,
   d: '/month',
-    feature,
   s: [;
       'AI-powered contract analysis and reviewRisk identification and assessmentCompliance monitoring and reportingContract template managementAutomated clause extractionLegal document generationIntegration with legal systemsAdvanced search and retrieval'
       'Collaborative review workflowsAudit trail and version control'
@@ -3468,7 +3424,6 @@ export const,
     pric,
   e: '$299', perio,
   d: '/month',
-    feature,
   s: [;
       'Predictive maintenance with 94% accuracyProduction optimization and schedulingQuality control and defect detectionSupply chain optimizationEnergy consumption optimizationReal-time monitoring and alertsIoT device integration and managementAdvanced analytics and reporting'
       'Integration with ERP and MES systemsMobile app for field workers'
@@ -3520,7 +3475,6 @@ export const,
   e: string, descriptio,
   n: string; pric,
   e: string; perio,
-  d: string; feature,
   s: string[]; categor,
   y: string; marketSiz,
   e: string; targetAudienc,
@@ -3549,7 +3503,6 @@ export const,
   e: string, descriptio,
   n: string, pric,
   e: string, perio,
-  d: string, feature,
   s: string[], categor,
   y: string, marketSiz,
   e: string, targetAudienc,
@@ -3584,7 +3537,6 @@ export const,
   e: 'Enterprise-grade AI content generation with brand voice consistency',' descriptio,
   n: 'Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.',' pric,
   e: '$49', perio,
-  d: '/month', feature,
   s: [' 'GPT-4 powered content generation with 99.2% accuracyMulti-language support (25+ languages) with cultural adaptationAdvanced SEO optimization with real-time keyword researchBrand voice training and consistency maintenancePlagiarism detection with 99.8% accuracyContent calendar and automated schedulingTeam collaboration with version controlAnalytics dashboard with performance metrics'' 'API access for enterprise integrationsCustom AI model training for industry-specific content' ],' categor,
   y: 'AI & Content Creation', marketSiz,
   e: '$15.2B',' targetAudienc,
@@ -3612,7 +3564,6 @@ export const,
   e: 'Predictive customer success with AI-powered insights',' descriptio,
   n: 'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.',' pric,
   e: '$199', perio,
-  d: '/month', feature,
   s: [' 'AI-powered churn prediction with 92% accuracyAutomated customer health scoringIntelligent engagement workflowsReal-time customer sentiment analysisPredictive analytics for upsell opportunitiesAutomated onboarding sequencesCustomer journey mapping and optimizationIntegration with major CRM platforms'' 'Advanced reporting and analyticsMobile app for customer success managers' ],' categor,
   y: 'Customer Success & Support', marketSiz,
   e: '$8.4B',' targetAudienc,
@@ -3640,7 +3591,6 @@ export const,
   e: 'Real-time financial risk assessment and compliance',' descriptio,
   n: 'AI-powered financial risk management platform that provides real-time risk assessment, compliance monitoring, and automated reporting for financial institutions. Helps banks and fintech companies manage regulatory requirements and reduce risk exposure.',' pric,
   e: '$299', perio,
-  d: '/month', feature,
   s: [' 'Real-time risk assessment and scoringAutomated compliance monitoringRegulatory reporting automationFraud detection with 95% accuracyCredit risk modeling and analysisMarket risk assessment and alertsOperational risk managementStress testing and scenario analysis'' 'Integration with core banking systemsAdvanced analytics and reporting' ],' categor,
   y: 'Financial Technology', marketSiz,
   e: '$12.8B',' targetAudienc,
@@ -3668,7 +3618,6 @@ export const,
   e: 'AI-powered medical imaging and diagnostic support',' descriptio,
   n: 'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.',' pric,
   e: '$399', perio,
-  d: '/month', feature,
   s: [' 'Medical image analysis with 96% accuracyDiagnostic support and recommendationsPatient data analytics and insightsAutomated report generationIntegration with PACS and EHR systemsReal-time alerts and notificationsMulti-modality image supportClinical decision support tools'' 'Compliance with medical standardsAdvanced security and privacy controls' ],' categor,
   y: 'Healthcare & Biotech', marketSiz,
   e: '$18.5B',' targetAudienc,
@@ -3696,7 +3645,6 @@ export const,
   e: 'Intelligent e-commerce optimization and personalization',' descriptio,
   n: 'AI-powered e-commerce optimization platform that personalizes customer experiences, optimizes pricing, and increases conversion rates. Uses machine learning to analyze customer behavior and provide actionable insights for business growth.',' pric,
   e: '$149', perio,
-  d: '/month', feature,
   s: [' 'AI-powered product recommendationsDynamic pricing optimizationCustomer behavior analysisPersonalized marketing campaignsInventory optimization and forecastingCustomer segmentation and targetingA/B testing automationRevenue optimization insights'' 'Integration with major e-commerce platformsReal-time analytics and reporting' ],' categor,
   y: 'E-commerce & Retail', marketSiz,
   e: '$22.1B',' targetAudienc,
@@ -3724,7 +3672,6 @@ export const,
   e: 'Intelligent threat detection and response',' descriptio,
   n: 'Comprehensive AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and compliance management. Helps organizations protect against evolving cyber threats while maintaining regulatory compliance.',' pric,
   e: '$249', perio,
-  d: '/month', feature,
   s: [' 'AI-powered threat detection with 98% accuracyAutomated incident response and remediationBehavioral analytics and anomaly detectionVulnerability assessment and managementCompliance monitoring and reportingSecurity orchestration and automationThreat intelligence and sharingEndpoint detection and response'' 'Cloud security monitoringAdvanced security analytics' ],' categor,
   y: 'Cybersecurity & Compliance', marketSiz,
   e: '$19.8B',' targetAudienc,
@@ -3752,7 +3699,6 @@ export const,
   e: 'Intelligent data processing and analytics automation',' descriptio,
   n: 'AI-powered data pipeline platform that automates data processing, quality management, and analytics workflows. Helps organizations build reliable, scalable data infrastructure for advanced analytics and machine learning.',' pric,
   e: '$179', perio,
-  d: '/month', feature,
   s: [' 'Automated data pipeline orchestrationAI-powered data quality monitoringReal-time data processing and streamingAdvanced analytics and visualizationMachine learning model deploymentData governance and complianceIntegration with major data sourcesScalable cloud infrastructure'' 'Advanced monitoring and alertingCollaborative data workspace' ],' categor,
   y: 'Data & Analytics', marketSiz,
   e: '$25.3B',' targetAudienc,
@@ -3780,7 +3726,6 @@ export const,
   e: 'Intelligent talent acquisition and HR automation',' descriptio,
   n: 'AI-powered HR recruitment platform that streamlines the hiring process, improves candidate matching, and automates HR workflows. Uses machine learning to identify top talent and optimize recruitment strategies.',' pric,
   e: '$129', perio,
-  d: '/month', feature,
   s: [' 'AI-powered candidate matchingAutomated resume screeningInterview scheduling and coordinationCandidate assessment and scoringDiversity and inclusion analyticsTalent pipeline managementEmployee onboarding automationPerformance tracking and analytics'' 'Integration with major HR systemsAdvanced reporting and insights' ],' categor,
   y: 'Human Resources', marketSiz,
   e: '$16.7B',' targetAudienc,
@@ -3808,7 +3753,6 @@ export const,
   e: 'Intelligent contract analysis and legal automation',' descriptio,
   n: 'AI-powered legal contract analysis platform that automates contract review, identifies risks, and ensures compliance. Helps legal teams process contracts faster while reducing errors and improving risk management.',' pric,
   e: '$199', perio,
-  d: '/month', feature,
   s: [' 'AI-powered contract analysis and reviewRisk identification and assessmentCompliance monitoring and reportingContract template managementAutomated clause extractionLegal document generationIntegration with legal systemsAdvanced search and retrieval'' 'Collaborative review workflowsAudit trail and version control' ],' categor,
   y: 'Legal & Compliance', marketSiz,
   e: '$14.2B',' targetAudienc,
@@ -3836,7 +3780,6 @@ export const,
   e: 'Intelligent manufacturing optimization and predictive maintenance',' descriptio,
   n: 'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.',' pric,
   e: '$299', perio,
-  d: '/month', feature,
   s: [' 'Predictive maintenance with 94% accuracyProduction optimization and schedulingQuality control and defect detectionSupply chain optimizationEnergy consumption optimizationReal-time monitoring and alertsIoT device integration and managementAdvanced analytics and reporting'' 'Integration with ERP and MES systemsMobile app for field workers' ],' categor,
   y: 'Manufacturing & IoT', marketSiz,
   e: '$28.9B',' targetAudienc,
@@ -3869,7 +3812,6 @@ export const,
   e: '2024-01-10' customer,
   s: 950, ratin,
   g: 4.9,
-  reviews: 520 } ]; export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} }; trialDay,
   s: number; setupTim,
@@ -3880,7 +3822,6 @@ export const,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  comprehensiveRealServices: ComprehensiveService[] = [; // AI & Machine Learning Services; {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3891,7 +3832,6 @@ export const,
   e: '2024-01-15'; customer,
   s: 2500; ratin,
   g: 4.8; review,
-  s: 1250}; // Customer Success & Support; {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3902,7 +3842,6 @@ export const,
   e: '2024-02-20'; customer,
   s: 1800; ratin,
   g: 4.9; review,
-  s: 950}; // Financial Technology; {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3913,7 +3852,6 @@ export const,
   e: '2024-03-10'; customer,
   s: 1200; ratin,
   g: 4.7; review,
-  s: 680}; // Healthcare & Biotech; {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3924,7 +3862,6 @@ export const,
   e: '2024-01-30'; customer,
   s: 850; ratin,
   g: 4.9; review,
-  s: 420}; // E-commerce & Retail; {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3935,7 +3872,6 @@ export const,
   e: '2024-02-15'; customer,
   s: 3200; ratin,
   g: 4.8; review,
-  s: 1680}; // Cybersecurity & Compliance; {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3946,7 +3882,6 @@ export const,
   e: '2024-03-01'; customer,
   s: 2100; ratin,
   g: 4.9; review,
-  s: 1100}; // Data & Analytics; {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3957,7 +3892,6 @@ export const,
   e: '2024-02-01'; customer,
   s: 2800; ratin,
   g: 4.8; review,
-  s: 1450}; // Human Resources; {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3968,7 +3902,6 @@ export const,
   e: '2024-01-20'; customer,
   s: 1900; ratin,
   g: 4.7; review,
-  s: 890}; // Legal & Compliance; {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3979,7 +3912,6 @@ export const,
   e: '2024-02-10'; customer,
   s: 1100; ratin,
   g: 4.8; review,
-  s: 580}; // Manufacturing & IoT; {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -4049,7 +3981,6 @@ export const,
   e: 'Predictive customer success with AI-powered insights' descriptio,
   n:' 'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.'' pric,
   e: '$199'' perio,
-  d: '/month' feature,
   s: [' 'Automated customer health scoring',' 'Intelligent engagement workflows',' 'Real - time customer sentiment analysis',' 'Predictive analytics for upsell opportunities',' 'Automated onboarding sequences',' 'Customer journey mapping and optimization',' 'Integration with major CRM platforms',' 'Advanced reporting and analytics',' 'Mobile app for customer success managers'],' categor,
   y: 'Customer Success & Support', targetAudienc,
   e: ' 'SaaS companies, subscription businesses, customer success teams, B2B companies' competitiveAdvantag,
@@ -4074,7 +4005,6 @@ export const,
   e: 'Real-time financial risk assessment and compliance' descriptio,
   n:' 'AI-powered financial risk management platform that provides real-time risk assessment, compliance monitoring, and automated reporting for financial institutions. Helps banks and fintech companies manage regulatory requirements and reduce risk exposure.'' pric,
   e: '$299'' perio,
-  d: '/month' feature,
   s: [' 'Automated compliance monitoring',' 'Regulatory reporting automation',' 'Fraud detection with 95% accuracy',' 'Credit risk modeling and analysis',' 'Market risk assessment and alerts',' 'Operational risk management',' 'Stress testing and scenario analysis',' 'Integration with core banking systems',' 'Advanced analytics and reporting'],' categor,
   y: 'Financial Technology', targetAudienc,
   e: ' 'Banks, credit unions, fintech companies, investment firms, insurance companies' competitiveAdvantag,
@@ -4098,7 +4028,6 @@ export const,
   e: 'AI-powered medical imaging and diagnostic support' descriptio,
   n:' 'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.'' pric,
   e: '$399'' perio,
-  d: '/month' feature,
   s: [' 'Medical image analysis with 96% accuracy',' 'Diagnostic support and recommendations',' 'Patient data analytics and insights',' 'Automated report generation',' 'Integration with PACS and EHR systems',' 'Real - time alerts and notifications',' 'Multi - modality image support',' 'Clinical decision support tools',' 'Compliance with medical standards',' 'Advanced security and privacy controls'],' categor,
   y: 'Healthcare & Biotech', targetAudienc,
   e: ' 'Hospitals, clinics, diagnostic centers, radiologists, healthcare providers' competitiveAdvantag,
@@ -4123,7 +4052,6 @@ export const,
   e: 'Intelligent e-commerce optimization and personalization' descriptio,
   n:' 'AI-powered e-commerce optimization platform that personalizes customer experiences, optimizes pricing, and increases conversion rates. Uses machine learning to analyze customer behavior and provide actionable insights for business growth.'' pric,
   e: '$149'' perio,
-  d: '/month' feature,
   s: [' 'Dynamic pricing optimization',' 'Customer behavior analysis',' 'Personalized marketing campaigns',' 'Inventory optimization and forecasting',' 'Customer segmentation and targeting',' 'A / B testing automation',' 'Revenue optimization insights',' 'Integration with major e - commerce platforms',' 'Real - time analytics and reporting'], targetAudienc,
   e: ' 'E-commerce businesses, online retailers, digital marketplaces, D2C brands' competitiveAdvantag,
   e: ' 'Advanced personalization algorithms, comprehensive e-commerce integration, and proven ROI improvement' useCase,
@@ -4147,7 +4075,6 @@ export const,
   e: 'Intelligent threat detection and response' descriptio,
   n:' 'Comprehensive AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and compliance management. Helps organizations protect against evolving cyber threats while maintaining regulatory compliance.'' pric,
   e: '$249'' perio,
-  d: '/month' feature,
   s: [' 'Automated incident response and remediation',' 'Behavioral analytics and anomaly detection',' 'Vulnerability assessment and management',' 'Compliance monitoring and reporting',' 'Security orchestration and automation',' 'Threat intelligence and sharing',' 'Endpoint detection and response',' 'Cloud security monitoring',' 'Advanced security analytics'],' categor,
   y: 'Cybersecurity & Compliance', targetAudienc,
   e: ' 'Enterprises, government agencies, healthcare organizations, financial institutions, educational institutions' competitiveAdvantag,
@@ -4172,7 +4099,6 @@ export const,
   e: 'Intelligent data processing and analytics automation' descriptio,
   n:' 'AI-powered data pipeline platform that automates data processing, quality management, and analytics workflows. Helps organizations build reliable, scalable data infrastructure for advanced analytics and machine learning.'' pric,
   e: '$179'' perio,
-  d: '/month' feature,
   s: [' 'Automated data pipeline orchestration',' 'AI - powered data quality monitoring',' 'Real - time data processing and streaming',' 'Advanced analytics and visualization',' 'Machine learning model deployment',' 'Data governance and compliance',' 'Integration with major data sources',' 'Scalable cloud infrastructure',' 'Advanced monitoring and alerting',' 'Collaborative data workspace'],' categor,
   y: 'Data & Analytics', targetAudienc,
   e: ' 'Data teams, analytics professionals, data scientists, enterprises, startups' competitiveAdvantag,
@@ -4197,7 +4123,6 @@ export const,
   e: 'Intelligent talent acquisition and HR automation' descriptio,
   n:' 'AI-powered HR recruitment platform that streamlines the hiring process, improves candidate matching, and automates HR workflows. Uses machine learning to identify top talent and optimize recruitment strategies.'' pric,
   e: '$129'' perio,
-  d: '/month' feature,
   s: [' 'Automated resume screening',' 'Interview scheduling and coordination',' 'Candidate assessment and scoring',' 'Diversity and inclusion analytics',' 'Talent pipeline management',' 'Employee onboarding automation',' 'Performance tracking and analytics',' 'Integration with major HR systems',' 'Advanced reporting and insights'],' categor,
   y: 'Human Resources', targetAudienc,
   e: ' 'HR departments, recruitment agencies, talent acquisition teams, growing companies' competitiveAdvantag,
@@ -4222,7 +4147,6 @@ export const,
   e: 'Intelligent contract analysis and legal automation' descriptio,
   n:' 'AI-powered legal contract analysis platform that automates contract review, identifies risks, and ensures compliance. Helps legal teams process contracts faster while reducing errors and improving risk management.'' pric,
   e: '$199'' perio,
-  d: '/month' feature,
   s: [' 'Risk identification and assessment',' 'Compliance monitoring and reporting',' 'Contract template management',' 'Automated clause extraction',' 'Legal document generation',' 'Integration with legal systems',' 'Advanced search and retrieval',' 'Collaborative review workflows',' 'Audit trail and version control'],' categor,
   y: 'Legal & Compliance', targetAudienc,
   e: ' 'Law firms, corporate legal departments, compliance teams, contract managers' competitiveAdvantag,
@@ -4247,7 +4171,6 @@ export const,
   e:' 'Intelligent manufacturing optimization and predictive maintenance' descriptio,
   n:' 'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.'' pric,
   e: '$299'' perio,
-  d: '/month' feature,
   s: [' 'Predictive maintenance with 94% accuracy',' 'Production optimization and scheduling',' 'Quality control and defect detection',' 'Supply chain optimization',' 'Energy consumption optimization',' 'Real - time monitoring and alerts',' 'IoT device integration and management',' 'Advanced analytics and reporting',' 'Integration with ERP and MES systems',' 'Mobile app for field workers'],' categor,
   y: 'Manufacturing & IoT', targetAudienc,
   e: ' 'Manufacturing companies, industrial facilities, supply chain managers, operations teams' competitiveAdvantag,
@@ -4279,7 +4202,6 @@ export const,
   e: string, descriptio,
   n: string, pric,
   e: string, perio,
-  d: string, feature,
   s: string[], categor,
   y: string, marketSiz,
   e: string, targetAudienc,
@@ -4316,7 +4238,6 @@ export const,
   e: 'Predictive customer success with AI-powered insights',' descriptio,
   n: 'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.',' pric,
   e: '$199', perio,
-  d: '/month', feature,
   s: [' 'AI-powered churn prediction with 92% accuracyAutomated customer health scoringIntelligent engagement workflowsReal-time customer sentiment analysisPredictive analytics for upsell opportunitiesAutomated onboarding sequencesCustomer journey mapping and optimizationIntegration with major CRM platforms'' 'Advanced reporting and analyticsMobile app for customer success managers' ],' categor,
   y: 'Customer Success & Support', marketSiz,
   e: '$8.4B',' targetAudienc,
@@ -4344,7 +4265,6 @@ export const,
   e: 'Real-time financial risk assessment and compliance',' descriptio,
   n: 'AI-powered financial risk management platform that provides real-time risk assessment, compliance monitoring, and automated reporting for financial institutions. Helps banks and fintech companies manage regulatory requirements and reduce risk exposure.',' pric,
   e: '$299', perio,
-  d: '/month', feature,
   s: [' 'Real-time risk assessment and scoringAutomated compliance monitoringRegulatory reporting automationFraud detection with 95% accuracyCredit risk modeling and analysisMarket risk assessment and alertsOperational risk managementStress testing and scenario analysis'' 'Integration with core banking systemsAdvanced analytics and reporting' ],' categor,
   y: 'Financial Technology', marketSiz,
   e: '$12.8B',' targetAudienc,
@@ -4372,7 +4292,6 @@ export const,
   e: 'AI-powered medical imaging and diagnostic support',' descriptio,
   n: 'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.',' pric,
   e: '$399', perio,
-  d: '/month', feature,
   s: [' 'Medical image analysis with 96% accuracyDiagnostic support and recommendationsPatient data analytics and insightsAutomated report generationIntegration with PACS and EHR systemsReal-time alerts and notificationsMulti-modality image supportClinical decision support tools'' 'Compliance with medical standardsAdvanced security and privacy controls' ],' categor,
   y: 'Healthcare & Biotech', marketSiz,
   e: '$18.5B',' targetAudienc,
@@ -4400,7 +4319,6 @@ export const,
   e: 'Intelligent e-commerce optimization and personalization',' descriptio,
   n: 'AI-powered e-commerce optimization platform that personalizes customer experiences, optimizes pricing, and increases conversion rates. Uses machine learning to analyze customer behavior and provide actionable insights for business growth.',' pric,
   e: '$149', perio,
-  d: '/month', feature,
   s: [' 'AI-powered product recommendationsDynamic pricing optimizationCustomer behavior analysisPersonalized marketing campaignsInventory optimization and forecastingCustomer segmentation and targetingA/B testing automationRevenue optimization insights'' 'Integration with major e-commerce platformsReal-time analytics and reporting' ],' categor,
   y: 'E-commerce & Retail', marketSiz,
   e: '$22.1B',' targetAudienc,
@@ -4428,7 +4346,6 @@ export const,
   e: 'Intelligent threat detection and response',' descriptio,
   n: 'Comprehensive AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and compliance management. Helps organizations protect against evolving cyber threats while maintaining regulatory compliance.',' pric,
   e: '$249', perio,
-  d: '/month', feature,
   s: [' 'AI-powered threat detection with 98% accuracyAutomated incident response and remediationBehavioral analytics and anomaly detectionVulnerability assessment and managementCompliance monitoring and reportingSecurity orchestration and automationThreat intelligence and sharingEndpoint detection and response'' 'Cloud security monitoringAdvanced security analytics' ],' categor,
   y: 'Cybersecurity & Compliance', marketSiz,
   e: '$19.8B',' targetAudienc,
@@ -4456,7 +4373,6 @@ export const,
   e: 'Intelligent data processing and analytics automation',' descriptio,
   n: 'AI-powered data pipeline platform that automates data processing, quality management, and analytics workflows. Helps organizations build reliable, scalable data infrastructure for advanced analytics and machine learning.',' pric,
   e: '$179', perio,
-  d: '/month', feature,
   s: [' 'Automated data pipeline orchestrationAI-powered data quality monitoringReal-time data processing and streamingAdvanced analytics and visualizationMachine learning model deploymentData governance and complianceIntegration with major data sourcesScalable cloud infrastructure'' 'Advanced monitoring and alertingCollaborative data workspace' ],' categor,
   y: 'Data & Analytics', marketSiz,
   e: '$25.3B',' targetAudienc,
@@ -4484,7 +4400,6 @@ export const,
   e: 'Intelligent talent acquisition and HR automation',' descriptio,
   n: 'AI-powered HR recruitment platform that streamlines the hiring process, improves candidate matching, and automates HR workflows. Uses machine learning to identify top talent and optimize recruitment strategies.',' pric,
   e: '$129', perio,
-  d: '/month', feature,
   s: [' 'AI-powered candidate matchingAutomated resume screeningInterview scheduling and coordinationCandidate assessment and scoringDiversity and inclusion analyticsTalent pipeline managementEmployee onboarding automationPerformance tracking and analytics'' 'Integration with major HR systemsAdvanced reporting and insights' ],' categor,
   y: 'Human Resources', marketSiz,
   e: '$16.7B',' targetAudienc,
@@ -4512,7 +4427,6 @@ export const,
   e: 'Intelligent contract analysis and legal automation',' descriptio,
   n: 'AI-powered legal contract analysis platform that automates contract review, identifies risks, and ensures compliance. Helps legal teams process contracts faster while reducing errors and improving risk management.',' pric,
   e: '$199', perio,
-  d: '/month', feature,
   s: [' 'AI-powered contract analysis and reviewRisk identification and assessmentCompliance monitoring and reportingContract template managementAutomated clause extractionLegal document generationIntegration with legal systemsAdvanced search and retrieval'' 'Collaborative review workflowsAudit trail and version control' ],' categor,
   y: 'Legal & Compliance', marketSiz,
   e: '$14.2B',' targetAudienc,
@@ -4540,7 +4454,6 @@ export const,
   e: 'Intelligent manufacturing optimization and predictive maintenance',' descriptio,
   n: 'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.',' pric,
   e: '$299', perio,
-  d: '/month', feature,
   s: [' 'Predictive maintenance with 94% accuracyProduction optimization and schedulingQuality control and defect detectionSupply chain optimizationEnergy consumption optimizationReal-time monitoring and alertsIoT device integration and managementAdvanced analytics and reporting'' 'Integration with ERP and MES systemsMobile app for field workers' ],' categor,
   y: 'Manufacturing & IoT', marketSiz,
   e: '$28.9B',' targetAudienc,

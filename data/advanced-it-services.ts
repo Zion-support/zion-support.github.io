@@ -49,7 +49,6 @@ export const advancedITServices: AdvancedITService[] = [
   d: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   popula,
   r: boolean;
@@ -111,7 +110,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical-quantum workflows for enterprise applications.',
-    feature,
   s: [,
       'Quantum computing resources',
       'Quantum algorithm library',
@@ -237,7 +235,6 @@ export const,
     descriptio,
   n: unknown,
       'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real - time applications.',
-    feature,
   s: [,
       'Intelligent resource allocation',
       'Real - time performance optimization',
@@ -290,7 +287,6 @@ export const,
     descriptio,
   n: unknown,
       'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical - quantum workflows for enterprise applications.',
-    feature,
   s: [,
       'Quantum computing resources',
       'Quantum algorithm library',
@@ -433,7 +429,6 @@ export const,
     descriptio,
   n: unknown,
       'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real - time applications.',
-    feature,
   s: [,
       'Intelligent resource allocation',
       'Real - time performance optimization',
@@ -574,7 +569,6 @@ export const,
     descriptio,
   n: unknown,
       'Enterprise - grade zero trust security platform implementing the latest security principles with continuous verification, micro - segmentation, and advanced threat detection.',
-    feature,
   s: [,
       'Continuous identity verification',
       'Micro - segmentation',
@@ -713,7 +707,6 @@ export const,
     descriptio,
   n:
       'Advanced AI-powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.'
-    feature,
   s: [;
       'AI migration planning'
       'Cost optimization'
@@ -856,7 +849,6 @@ export const,
     descriptio,
   n: unknown,
       'Revolutionary AI - powered DevOps platform that automates deployment, testing, and monitoring while providing intelligent insights and optimization recommendations.',
-    feature,
   s: [,
       'AI - powered automation',
       'Intelligent testing',
@@ -997,8 +989,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
-      'Complete enterprise blockchain platform providing secure, scalable, and compliant blockchain solutions for business applications, smart contracts, and decentralized systems.',
-    feature,
   s: [,
       'Enterprise blockchain networks',
       'Smart contract development',
@@ -1122,7 +1112,6 @@ export const,
     descriptio,
   n: unknown,
       'Revolutionary quantum - enhanced data center providing unprecedented performance, security, and efficiency through quantum computing integration and AI optimization.',
-    feature,
   s: [,
       'Quantum computing integration',
       'AI - powered optimization',
@@ -1140,7 +1129,6 @@ export const,
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / quantum - data - center',
     market_position: unknown;
-      'First quantum - enhanced data center, competing with AWS, Azure, and Google Cloud',
     target_audience: unknown;
       'Large enterprises, Research institutions, Government agencies, Financial institutions',
     trial_days: 30;
@@ -1161,7 +1149,6 @@ export const,
   s://ziontechgroup.com / quantum - data - center',
     market_positio,
   n: unknown,
-      'First quantum - enhanced data center, competing with AWS, Azure, and Google Cloud',
     target_audienc,
   e: unknown,
       'Large enterprises, Research institutions, Government agencies, Financial institutions',
@@ -1265,7 +1252,6 @@ export const,
     descriptio,
   n: unknown,
       'Advanced AI - powered network security platform providing real - time threat detection, automated response, and intelligent security analytics for enterprise networks.',
-    feature,
   s: [,
       'AI threat detection',
       'Real - time monitoring',
@@ -1407,8 +1393,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
-      'Revolutionary quantum - enhanced IoT platform providing secure, intelligent, and scalable IoT solutions with quantum encryption and AI - powered analytics.',
-    feature,
   s: [,
       'Quantum encryption',
       'AI - powered analytics',
@@ -1428,7 +1412,6 @@ export const,
     market_position: unknown;
       'Quantum - enhanced IoT platform competing with AWS IoT and Azure IoT',
     target_audience: unknown;
-      'IoT companies, Smart cities, Manufacturing, Healthcare, Transportation',
     trial_days: 30;
     setup_time: '2 weeks'
     category: 'Quantum IoT',
@@ -1450,7 +1433,6 @@ export const,
       'Quantum - enhanced IoT platform competing with AWS IoT and Azure IoT',
     target_audienc,
   e: unknown,
-      'IoT companies, Smart cities, Manufacturing, Healthcare, Transportation',
     trial_day,
   s: 30,
     setup_tim,
@@ -1551,7 +1533,6 @@ export const,
     descriptio,
   n: unknown,
       'Advanced AI - powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.',
-    feature,
   s: [,
       'AI migration planning',
       'Cost optimization',
@@ -1683,7 +1664,6 @@ export const,
   s: 45}
 ];
 ;
-export interface AdvancedITService {/* TODO: Fix JSX expression */}
   }
 ];
 ];
@@ -1691,7 +1671,6 @@ export interface AdvancedITService {/* TODO: Fix JSX expression */}
   }
 ];
 ];
-export interface AdvancedITService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -1879,7 +1858,6 @@ export const advancedITServices: AdvancedITService[] = [;
     tagline: 'Enterprise-grade blockchain solutions and infrastructure';
     price: '$4,999';
     period: '/month';
-    description: 'Complete enterprise blockchain platform providing secure, scalable, and compliant blockchain solutions for business applications, smart contracts, and decentralized systems.';
     features: [
       'Enterprise blockchain networksSmart contract developmentToken managementCompliance toolsSecurity featuresPerformance optimizationIntegration APIsAnalytics dashboard';
       'Mobile applications24/7 support'
@@ -1931,7 +1909,6 @@ export const advancedITServices: AdvancedITService[] = [;
     color: 'from-cyan-600 to-blue-700';
     textColor: 'text-cyan-400';
     link: 'https://ziontechgroup.com/quantum-data-center';
-    marketPosition: 'First quantum-enhanced data center, competing with AWS, Azure, and Google Cloud';
     targetAudience: 'Large enterprises, Research institutions, Government agencies, Financial institutions';
     trialDays: 30;
     setupTime: '2 months';
@@ -2005,7 +1982,6 @@ export const advancedITServices: AdvancedITService[] = [;
     tagline: 'Quantum-enhanced IoT with AI intelligence';
     price: '$3,499';
     period: '/month';
-    description: 'Revolutionary quantum-enhanced IoT platform providing secure, intelligent, and scalable IoT solutions with quantum encryption and AI-powered analytics.';
     features: [
       'Quantum encryptionAI-powered analyticsReal-time monitoringDevice managementSecurity featuresPerformance optimizationIntegration APIsAnalytics dashboard';
       'Mobile applications24/7 support'
@@ -2016,7 +1992,6 @@ export const advancedITServices: AdvancedITService[] = [;
     textColor: 'text-green-400';
     link: 'https://ziontechgroup.com/quantum-iot-platform';
     marketPosition: 'Quantum-enhanced IoT platform competing with AWS IoT and Azure IoT';
-    targetAudience: 'IoT companies, Smart cities, Manufacturing, Healthcare, Transportation';
     trialDays: 30;
     setupTime: '2 weeks';
     category: 'Quantum IoT';
@@ -2097,7 +2072,6 @@ export const advancedITServices: AdvancedITService[] = [;
 ;
 export const,
   advancedITServices: AdvancedITService[] = [;
-  {/* TODO: Fix JSX expression */}
   t: 'quantum-cloud'}
     contactInf,
   o: {}
@@ -2123,7 +2097,6 @@ export const,
   g: 4.9;
     review,
   s: 4};
-  {/* TODO: Fix JSX expression */}
   t: 'edge-futuristic'}
     contactInf,
   o: {}
@@ -2149,7 +2122,6 @@ export const,
   g: 4.7;
     review,
   s: 89};
-  {/* TODO: Fix JSX expression */}
   t: 'zero-trust-futuristic'}
     contactInf,
   o: {}
@@ -2175,7 +2147,6 @@ export const,
   g: 4.8;
     review,
   s: 45};
-  {/* TODO: Fix JSX expression */}
   t: 'ai-devops-futuristic'}
     contactInf,
   o: {}
@@ -2201,7 +2172,6 @@ export const,
   g: 4.6;
     review,
   s: 123};
-  {/* TODO: Fix JSX expression */}
   t: 'blockchain-futuristic'}
     contactInf,
   o: {}
@@ -2227,7 +2197,6 @@ export const,
   g: 4.7;
     review,
   s: 34};
-  {/* TODO: Fix JSX expression */}
   t: 'quantum-infrastructure'}
     contactInf,
   o: {}
@@ -2253,7 +2222,6 @@ export const,
   g: 4.9;
     review,
   s: 6};
-  {/* TODO: Fix JSX expression */}
   t: 'ai-network-futuristic'}
     contactInf,
   o: {}
@@ -2279,7 +2247,6 @@ export const,
   g: 4.7;
     review,
   s: 89};
-  {/* TODO: Fix JSX expression */}
   t: 'quantum-iot-futuristic'}
     contactInf,
   o: {}
@@ -2305,7 +2272,6 @@ export const,
   g: 4.6;
     review,
   s: 123};
-  {/* TODO: Fix JSX expression */}
   t: 'ai-migration-futuristic'}
     contactInf,
   o: {}
@@ -2331,7 +2297,6 @@ export const,
   g: 4.8;
     review,
   s: 45}
-export interface AdvancedITService {/* TODO: Fix JSX expression */}
   }
 ];
 i,
@@ -2340,7 +2305,6 @@ i,
   e: string; pric,
   e: string, perio,
   d: string, descriptio,
-  n: string; feature,
   s: string[]; popula,
   r: boolean; ico,
   n: string; colo,
@@ -2371,7 +2335,6 @@ i,
   e: 'Next-generation quantum computing in the cloud',' pric,
   e: '$9,999',' perio,
   d: '/month',' descriptio,
-  n: 'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical-quantum workflows for enterprise applications.', feature,
   s: [' 'Quantum computing resources',' 'Quantum algorithm library',' 'Hybrid classical-quantum workflows',' 'Quantum machine learning',' 'Quantum cryptography',' 'Performance optimization',' 'Real-time quantum monitoring',' 'Advanced analytics dashboard',' 'API for integration',' '24/7 quantum support' ], popula,
   r: true,' ico,
   n: '☁️',' colo,
@@ -2410,7 +2373,6 @@ i,
   e: 'Intelligent edge computing management and optimization',' pric,
   e: '$1, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real - time applications.', feature,
   s: [, ' 'Intelligent resource allocation',' 'Real - time performance optimization',' 'Edge device management',' 'Load balancing',' 'Security and compliance',' 'Monitoring and analytics',' 'Automated scaling',' 'API gateway',' 'Integration tools',' '24 / 7 support'], popula,
   r: true, websit,
   e: string} realImplementatio,
@@ -2426,7 +2388,6 @@ i,
   e: 'Next - generation quantum computing in the cloud',' pric,
   e: '$9, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical - quantum workflows for enterprise applications.', feature,
   s: [,' 'Quantum computing resources',' 'Quantum algorithm library',' 'Hybrid classical - quantum workflows',' 'Quantum machine learning',' 'Quantum cryptography',' 'Performance optimization',' 'Real - time quantum monitoring',' 'Advanced analytics dashboard',' 'API for integration',' '24 / 7 quantum support'], popula,
   r: true,' ico,
   n: '☁️',' colo,
@@ -2465,7 +2426,6 @@ i,
   e: 'Intelligent edge computing management and optimization',' pric,
   e: '$1, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced edge computing orchestration platform that intelligently manages distributed computing resources, optimizes performance, and reduces latency for IoT and real - time applications.', feature,
   s: [, ' 'Intelligent resource allocation',' 'Real - time performance optimization',' 'Edge device management',' 'Load balancing',' 'Security and compliance',' 'Monitoring and analytics',' 'Automated scaling',' 'API gateway',' 'Integration tools',' '24 / 7 support'], popula,
   r: true,' ico,
   n: '🌐', ' colo,
@@ -2504,7 +2464,6 @@ i,
   e: 'Comprehensive zero trust security implementation',' pric,
   e: '$3, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Enterprise - grade zero trust security platform implementing the latest security principles with continuous verification, micro - segmentation, and advanced threat detection.', feature,
   s: [, ' 'Continuous identity verification',' 'Micro - segmentation',' 'Advanced threat detection',' 'Behavioral analytics',' 'Compliance tools',' 'Real - time monitoring',' 'Automated response',' 'Integration APIs',' 'Security dashboard',' '24/7 security support' ], popula,
   r: true,' ico,
   n: '🛡️',' colo,
@@ -2543,7 +2502,6 @@ i,
   e: 'Intelligent cloud migration and optimization'' pric,
   e: '$5,999'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced AI-powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.' feature,
   s: [' 'AI migration planning'' 'Cost optimization'' 'Performance analysis'' 'Security assessment'' 'Compliance tools'' 'Automated migration'' 'Real-time monitoring'' 'Integration APIs'' 'Migration dashboard'' '24/7 support' ] popula,
   r: true' ico,
   n: '☁️'' colo,
@@ -2582,7 +2540,6 @@ i,
   e: 'Intelligent DevOps automation and optimization',' pric,
   e: '$2, 499',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary AI - powered DevOps platform that automates deployment, testing, and monitoring while providing intelligent insights and optimization recommendations.', feature,
   s: [,' 'AI - powered automation', ' 'Intelligent testing',' 'Predictive monitoring',' 'Performance optimization',' 'Security scanning',' 'Compliance automation',' 'Real - time analytics',' 'Integration APIs',' 'Mobile applications',' '24 / 7 support'], popula,
   r: true,' ico,
   n: '⚡', ' colo,
@@ -2621,7 +2578,6 @@ i,
   e: 'Enterprise - grade blockchain solutions and infrastructure',' pric,
   e: '$4, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Complete enterprise blockchain platform providing secure, scalable, and compliant blockchain solutions for business applications, smart contracts, and decentralized systems.', feature,
   s: [, ' 'Enterprise blockchain networks',' 'Smart contract development',' 'Token management',' 'Compliance tools',' 'Security features',' 'Performance optimization',' 'Integration APIs',' 'Analytics dashboard',' 'Mobile applications',' '24 / 7 support'], popula,
   r: true,' ico,
   n: '🔗',' colo,
@@ -2660,7 +2616,6 @@ i,
   e: 'Next - generation quantum - enhanced data center infrastructure',' pric,
   e: '$15, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary quantum - enhanced data center providing unprecedented performance, security, and efficiency through quantum computing integration and AI optimization.', feature,
   s: [, ' 'Quantum computing integration',' 'AI - powered optimization',' 'Advanced security',' 'Energy efficiency',' 'Performance monitoring',' 'Scalability',' 'Compliance tools',' 'Integration APIs',' '24 / 7 support',' 'Quantum support team'], popula,
   r: true,' ico,
   n: '🏢', ' colo,
@@ -2668,7 +2623,6 @@ i,
   r: 'text - cyan - 400',' lin,
   k: 'http,
   s://ziontechgroup.com / quantum - data - center', market_positio,
-  n:  ,' 'First quantum - enhanced data center, competing with AWS, Azure, and Google Cloud', target_audienc,
   e:  ,' 'Large enterprises, Research institutions, Government agencies, Financial institutions', trial_day,
   s: 30,' setup_tim,
   e: '2 months',' categor,
@@ -2699,7 +2653,6 @@ i,
   e: 'Intelligent network security with AI threat detection',' pric,
   e: '$2, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced AI - powered network security platform providing real - time threat detection, automated response, and intelligent security analytics for enterprise networks.', feature,
   s: [, ' 'AI threat detection',' 'Real - time monitoring',' 'Automated response',' 'Behavioral analytics',' 'Network segmentation',' 'Compliance tools',' 'Performance analytics',' 'Integration APIs',' 'Security dashboard',' '24 / 7 security support'], popula,
   r: true,' ico,
   n: '🔒', ' colo,
@@ -2738,7 +2691,6 @@ i,
   e: 'Quantum - enhanced IoT with AI intelligence',' pric,
   e: '$3, 499',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary quantum - enhanced IoT platform providing secure, intelligent, and scalable IoT solutions with quantum encryption and AI - powered analytics.', feature,
   s: [, ' 'Quantum encryption',' 'AI - powered analytics',' 'Real - time monitoring',' 'Device management',' 'Security features',' 'Performance optimization',' 'Integration APIs',' 'Analytics dashboard',' 'Mobile applications',' '24 / 7 support'], popula,
   r: true,' ico,
   n: '📱', ' colo,
@@ -2747,7 +2699,6 @@ i,
   k: 'http,
   s://ziontechgroup.com / quantum - iot - platform', market_positio,
   n:  ,' 'Quantum - enhanced IoT platform competing with AWS IoT and Azure IoT', target_audienc,
-  e:  ,' 'IoT companies, Smart cities, Manufacturing, Healthcare, Transportation', trial_day,
   s: 30,' setup_tim,
   e: '2 weeks',' categor,
   y: 'Quantum IoT', real_servic,
@@ -2777,7 +2728,6 @@ i,
   e: 'Intelligent cloud migration and optimization',' pric,
   e: '$5, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced AI - powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.', feature,
   s: [, ' 'AI migration planning',' 'Cost optimization',' 'Performance analysis',' 'Security assessment',' 'Compliance tools',' 'Automated migration',' 'Real - time monitoring',' 'Integration APIs',' 'Migration dashboard',' '24 / 7 support'], popula,
   r: true,' ico,
   n: '☁️',' colo,
@@ -2819,7 +2769,6 @@ i,
   e: '2024-10-01' customer,
   s: 89, ratin,
   g: 4 && 4.8, review,
-  s: 45 } ]; export interface AdvancedITService {; } ]; ]; } ]; ]; export interface AdvancedITService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -2828,7 +2777,6 @@ i,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  advancedITServices: AdvancedITService[] = [; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2838,7 +2786,6 @@ i,
   e: '2024-12-01'; customer,
   s: 8; ratin,
   g: 4.9; review,
-  s: 4}; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2848,7 +2795,6 @@ i,
   e: '2024-10-01'; customer,
   s: 156; ratin,
   g: 4.7; review,
-  s: 89}; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2858,7 +2804,6 @@ i,
   e: '2024-09-01'; customer,
   s: 89; ratin,
   g: 4.8; review,
-  s: 45}; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2868,7 +2813,6 @@ i,
   e: '2024-08-01'; customer,
   s: 234; ratin,
   g: 4.6; review,
-  s: 123}; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2878,7 +2822,6 @@ i,
   e: '2024-07-01'; customer,
   s: 67; ratin,
   g: 4.7; review,
-  s: 34}; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2888,7 +2831,6 @@ i,
   e: '2024-11-01'; customer,
   s: 12; ratin,
   g: 4.9; review,
-  s: 6}; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2898,7 +2840,6 @@ i,
   e: '2024-09-15'; customer,
   s: 178; ratin,
   g: 4.7; review,
-  s: 89}; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2908,7 +2849,6 @@ i,
   e: '2024-08-15'; customer,
   s: 234; ratin,
   g: 4.6; review,
-  s: 123}; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,

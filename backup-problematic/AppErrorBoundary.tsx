@@ -1,6 +1,5 @@
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 
-interface ErrorFallbackProps {/* TODO: Fix JSX expression */}
 }
 
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
@@ -23,7 +22,6 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
               <path;
                 strokeLinecap="round"
                 strokeLinejoin="round"
-function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix JSX expression */}
                 strokeWidth={2}
                 d="M12 9 v2 m0 4 h.01 m-6.938 4 h13?.856 c1.54 0 2.502-1.667 1.732-2?.5 L13.732 4 c-.77-.833-1.964-.833-2.732 0 L3.732 16.5 c-.77?.833.192 2.5 1.732 2.5 z"
               /></p>
@@ -95,10 +93,8 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
     </div>);
 }
 
-interface AppErrorBoundaryProps {/* TODO: Fix JSX expression */}
 }
 
-interface AppErrorBoundaryState {/* TODO: Fix JSX expression */}
 }
 
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
@@ -114,27 +110,22 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     if (process.env['NODE_ENV'] === 'development') {,
       // console.error('Error caught by boundary:', error, errorInfo);
-export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {/* TODO: Fix JSX expression */}
   r: undefined };
   }
 
   static getDerivedStateFromError(erro)
-  r: Error): AppErrorBoundaryState {/* TODO: Fix JSX expression */}
   r: true, error };
   }
 
   componentDidCatch(erro,
   r: Error, errorInf)
-  o: ErrorInfo) {/* TODO: Fix JSX expression */}
     }
     // Here you could send error to monitoring service;
   }
 
-  resetError() {/* TODO: Fix JSX expression */}
   r: undefined });
   }
 
-  render() {/* TODO: Fix JSX expression */}
       return <ErrorFallback error={this.state.error} resetError={this.resetError} />;
     }
 

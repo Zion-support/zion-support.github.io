@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
 
-import React from 'react';
 const AnalyticsToolsPage: React.FC = () => {
   const analyticsTools = [
     {
@@ -149,7 +148,6 @@ const PagePage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="font-semibold text-white mb-3">Features:</h4>
                   <ul className="space-y-2">
-                    {tool.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -215,10 +213,8 @@ const PagePage: React.FC = () => {
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4"></div>
                     {tool.category}"
                 <div className="mb-6"></div>"
-                  <h4 className="font-semibold text-white mb-3">Feature,
   s:</h4>"
                   <ul className="space-y-2"></ul>
-                    {tool.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>"
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                         {feature}
@@ -228,7 +224,6 @@ const PagePage: React.FC = () => {
                 <div className="text-center"></div>"
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
                   <a></a>
-                    href={/* TODO: Fix JSX expression */}
   o:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}"
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,
   hover:from-cyan-600,"

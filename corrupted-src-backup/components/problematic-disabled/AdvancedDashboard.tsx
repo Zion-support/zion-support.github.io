@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 // import { securityAuditor } from '../utils/securityAuditor';
 // import EnhancedUXManager from '../utils/enhancedUXManager';
 
-interface DashboardData {/* TODO: Fix JSX expression */}
   };
   performance: {,
     loadTime: number;
@@ -13,10 +12,8 @@ interface DashboardData {/* TODO: Fix JSX expression */}
     threatsBlocked: number;
     vulnerabilities: number;
   performanc,
-  e: {/* TODO: Fix JSX expression */}
   };
   securit,
-  y: {/* TODO: Fix JSX expression */}
   };
 }
 

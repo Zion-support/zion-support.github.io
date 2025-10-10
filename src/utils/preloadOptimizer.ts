@@ -60,7 +60,6 @@ export const preloadRoute = (route: string) => {// TODO: Add content;}
 }
   if (typeof window === 'undefined') return;
   // Preload route-specific resources;
-const routeResources = {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     '/blog': ['/api/blog/posts', '/images/blog-hero.jpg'],
@@ -89,26 +88,20 @@ export const optimizeImages = () => {// TODO: Add content;}
   if (typeof window === 'undefined') return;
   // Add loading="lazy" to images below the fold;
 const images = document.querySelectorAll('img[data-lazy]')
-  images.forEach(img => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
 //     img.setAttribute('loading', 'lazy')
   })
   // Add intersection observer for lazy loading;
-  if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const imageObserver = new IntersectionObserver((entries) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
-        if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
           const img = entry.target as HTMLImageElement;
-          if (img.dataset['src']) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
             img['src'] = img.dataset['src']
@@ -131,19 +124,16 @@ export const optimizeThirdPartyScripts = () => {// TODO: Add content;}
   if (typeof window === 'undefined') return;
   // Defer non-critical scripts;
 const scripts = document.querySelectorAll('script[data-defer]')
-  scripts.forEach(script => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
 //     script.setAttribute('defer', '')
   })
   // Load analytics after page load;
-  if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 
     document.addEventListener('DOMContentLoaded', () => {}
   )
-  } else {/* TODO: Fix JSX expression */}
   }
 }
 

@@ -222,7 +222,6 @@ export default function PrivacyPage() {
               We implement appropriate technical and organizational measures to protect your personal information.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {securityMeasures.map((measure, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{measure}</span>

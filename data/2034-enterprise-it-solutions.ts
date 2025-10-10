@@ -19,7 +19,6 @@ export type EnterpriseITSolution =
     | 'Cybersecurity',
   pricing: unknown}
     starter: string, // e.g. "$2} 999 / mo"
-export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
   g: unknown}
     starte,"
   r: string, // e.g. "$2} 999 / mo"
@@ -28,7 +27,6 @@ export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
   };
   categor,
   y: unknown;
-  feature,
   s: string[];
   integrations?: string[];
   use_cases?: string[];
@@ -61,10 +59,8 @@ export const,
     categor,
   y: 'Enterprise Security',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$4, 999 / mo'} enterpris,
   e: 'Custom' },
-    feature,
   s: [,
       'Policy - based access',
       'Micro - segmentation',
@@ -127,10 +123,8 @@ export const,
     categor,
   y: 'Enterprise Security'
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$4,999/mo'} enterpris,
   e: 'Custom' }
-    feature,
   s: [,
     i,
   d: 'platform-engineering-foundation'
@@ -142,9 +136,7 @@ export const,
     categor,
   y: 'DevOps & Automation'
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3}499/mo' }
-    feature,
   s: [,
     i,
   d: 'enterprise-data-mesh'
@@ -156,9 +148,7 @@ export const,
     categor,
   y: 'Data & Analytics'
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$5}999/mo' }
-    feature,
   s: [,
     i,
   d: 'cloud-migration-accelerator'
@@ -170,9 +160,7 @@ export const,
     categor,
   y: 'Cloud Services'
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$2}999/mo' }
-    feature,
   s: [,
     i,
   d: 'threat-detection-response'
@@ -184,9 +172,7 @@ export const,
     categor,
   y: 'Cybersecurity'
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3}999/mo' }
-    feature,
   s: [,
     i,
   d: 'observability-platform-starter'
@@ -198,9 +184,7 @@ export const,
     categor,
   y: 'DevOps & Automation'
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$1}999/mo' }
-    feature,
   s: [};
 export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [,
@@ -215,10 +199,8 @@ export const,
     categor,
   y: 'Enterprise Security',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$4,999/mo'} enterpris,
   e: 'Custom' },
-    feature,
   s: [,
       'Policy-based access',
       'Micro-segmentation',
@@ -255,9 +237,7 @@ export const,
     categor,
   y: 'DevOps & Automation',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3} 499 / mo' },
-    feature,
   s: [,
       'Self - service templates',
     useCases: ['Secure remote work', 'Lateral movement prevention'],
@@ -282,9 +262,7 @@ export const,
     categor,
   y: 'DevOps & Automation',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3}499/mo' },
-    feature,
   s: [,
       'Self-service templates',
       'Golden pipelines',
@@ -328,9 +306,7 @@ export const,
     categor,
   y: 'Data & Analytics',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$5} 999 / mo' },
-    feature,
   s: [,
     useCase,
   s: ['Developer productivity', 'Standardized delivery'],
@@ -350,9 +326,7 @@ export const,
     categor,
   y: 'Data & Analytics',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$5}999/mo' },
-    feature,
   s: [,
       'Domain data products',
       'Catalog & lineage',
@@ -392,9 +366,7 @@ export const,
     categor,
   y: 'Cloud Services',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$2} 999 / mo' },
-    feature,
   s: [,
     useCase,
   s: ['Faster analytics', 'Federated governance'],
@@ -412,9 +384,7 @@ export const,
     categor,
   y: 'Cloud Services',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$2}999/mo' },
-    feature,
   s: [,
       'Landing zones',
       'Infra as Code',
@@ -449,9 +419,7 @@ export const,
     categor,
   y: 'Cybersecurity',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3} 999 / mo' },
-    feature,
   s: [,
       'Detections - as - code',
     useCases: ['Datacenter exit', 'Hybrid cloud enablement'],
@@ -473,9 +441,7 @@ export const,
     categor,
   y: 'Cybersecurity',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3}999/mo' },
-    feature,
   s: [,
       'Detections-as-code',
       'SOAR playbooks',
@@ -515,9 +481,7 @@ export const,
     categor,
   y: 'DevOps & Automation',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$1} 999 / mo' },
-    feature,
   s: [,
     useCase,
   s: ['Compliance readiness', 'Breaches prevention'],
@@ -535,9 +499,7 @@ export const,
     categor,
   y: 'DevOps & Automation',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$1}999/mo' },
-    feature,
   s: [,
       'OpenTelemetry ingest',
       'SLO dashboards',
@@ -570,9 +532,7 @@ export const,
     categor,
   y: 'Cloud Services',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$2} 499 / mo' },
-    feature,
   s: [,
       'Budget guardrails',
       'Anomaly alerts',
@@ -614,9 +574,7 @@ export const,
     categor,
   y: 'Cloud Services',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$2}499/mo' },
-    feature,
   s: [,
       'Budget guardrails',
       'Anomaly alerts',
@@ -659,10 +617,8 @@ export const,
     categor,
   y: 'Enterprise Security',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$4,999/mo'} enterpris,
   e: 'Custom' },
-    feature,
   s: [,
       'Policy-based access',
       'Micro-segmentation',
@@ -727,9 +683,7 @@ export const,
     categor,
   y: 'Enterprise Security',
     pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3}499/mo' },
-    feature,
   s: [,
       'Lifecycle automation',
       'Access reviews',
@@ -800,11 +754,9 @@ export type EnterpriseITSolution =
 		professional?: string;
 		enterprise?: string;
 	}
-	feature,
   s: string[];
 	integrations?: string[],
 	useCases?: string[]},
-	feature,
   s: string[],
 	integrations?: string[],
 	useCases?: string[],
@@ -908,9 +860,7 @@ export type EnterpriseITSolution =
 		categor,
   y: 'DevOps & Automation'
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3}499/mo' }
-		feature,
   s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'];
 		integration,
   s: ['GitHubArgoCDBackstage'];
@@ -932,9 +882,7 @@ export type EnterpriseITSolution =
 		categor,
   y: 'Data & Analytics'
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$5}999/mo' }
-		feature,
   s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'];
 		integration,
   s: ['SnowflakeDatabricksBigQuery'];
@@ -954,9 +902,7 @@ export type EnterpriseITSolution =
 		categor,
   y: 'Cloud Services'
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$2}999/mo' }
-		feature,
   s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'];
 		integration,
   s: ['AWSAzureGCP'];
@@ -976,9 +922,7 @@ export type EnterpriseITSolution =
 		categor,
   y: 'Cybersecurity'
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3}999/mo' }
-		feature,
   s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'];
 		integration,
   s: ['CrowdStrikeWizSnykCloudflare'];
@@ -998,9 +942,7 @@ export type EnterpriseITSolution =
 		categor,
   y: 'DevOps & Automation'
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$1}999/mo' }
-		feature,
   s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'];
 		integration,
   s: ['GrafanaDatadogPagerDuty'];
@@ -1020,9 +962,7 @@ export type EnterpriseITSolution =
 		categor,
   y: 'Cloud Services'
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$2}499/mo' }
-		feature,
   s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'];
 		integration,
   s: ['AWS CURAzure CostGCP Billing'];
@@ -1042,9 +982,7 @@ export type EnterpriseITSolution =
 		categor,
   y: 'Enterprise Security'
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3}499/mo' }
-		feature,
   s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'];
 		integration,
   s: ['OktaAzure ADGoogle Workspace'];
@@ -1168,10 +1106,8 @@ pricing: unknown;
 		categor,
   y: 'Enterprise Security',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$4,999/mo'} enterpris,
   e: 'Custom' },
-		feature,
   s: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration'],
 		integration,
   s: ['OktaAzure ADCloudflare Zero Trust'],
@@ -1194,9 +1130,7 @@ pricing: unknown;
 		categor,
   y: 'DevOps & Automation',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3}499/mo' },
-		feature,
   s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'],
 		integration,
   s: ['GitHubArgoCDBackstage'],
@@ -1218,9 +1152,7 @@ pricing: unknown;
 		categor,
   y: 'Data & Analytics',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$5}999/mo' },
-		feature,
   s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],
 		integration,
   s: ['SnowflakeDatabricksBigQuery'],
@@ -1240,9 +1172,7 @@ pricing: unknown;
 		categor,
   y: 'Cloud Services',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$2}999/mo' },
-		feature,
   s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],
 		integration,
   s: ['AWSAzureGCP'],
@@ -1262,9 +1192,7 @@ pricing: unknown;
 		categor,
   y: 'Cybersecurity',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3}999/mo' },
-		feature,
   s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],
 		integration,
   s: ['CrowdStrikeWizSnykCloudflare'],
@@ -1284,9 +1212,7 @@ pricing: unknown;
 		categor,
   y: 'DevOps & Automation',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$1}999/mo' },
-		feature,
   s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],
 		integration,
   s: ['GrafanaDatadogPagerDuty'],
@@ -1306,9 +1232,7 @@ pricing: unknown;
 		categor,
   y: 'Cloud Services',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$2}499/mo' },
-		feature,
   s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],
 		integration,
   s: ['AWS CURAzure CostGCP Billing'],
@@ -1328,9 +1252,7 @@ pricing: unknown;
 		categor,
   y: 'Enterprise Security',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3}499/mo' },
-		feature,
   s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],
 		integration,
   s: ['OktaAzure ADGoogle Workspace'],
@@ -1381,7 +1303,6 @@ pricin,
   professional?: string;
   enterprise?: string;
 }
-feature,
   s: string[];
 integrations?: string[],
 use_cases?: string[],
@@ -1495,10 +1416,8 @@ export const,
   categor,
   y: 'Enterprise Security',
   pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$4, 999 / mo'} enterpris,
   e: 'Custom' }
-  feature,
   s: ['Policy - based access_micro - segmentation_device posture checksSSO & MFA integration'];
   integration,
   s: ['OktaAzure ADCloudflare Zero Trust'];
@@ -1521,9 +1440,7 @@ export const,
   categor,
   y: 'DevOps & Automation',
   pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3} 499 / mo' }
-  feature,
   s: ['Self - service templates_golden pipelinesRBAC and policy packs_cost guardrails'];
   integration,
   s: ['GitHubArgoCDBackstage'];
@@ -1545,9 +1462,7 @@ export const,
   categor,
   y: 'Data & Analytics',
   pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$5} 999 / mo' }
-  feature,
   s: ['Domain data products_catalog & lineage_access governance_quality SLAs'];
   integration,
   s: ['SnowflakeDatabricksBigQuery'];
@@ -1567,9 +1482,7 @@ export const,
   categor,
   y: 'Cloud Services',
   pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$2} 999 / mo' }
-  feature,
   s: ['Landing zones_infra as CodeAutomated cutoversFinOps baselines'];
   integration,
   s: ['AWSAzureGCP'];
@@ -1589,9 +1502,7 @@ export const,
   categor,
   y: 'Cybersecurity',
   pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3} 999 / mo' }
-  feature,
   s: ['Detections - as - codeSOAR playbooks_attack surface monitoring_threat intel'];
   integration,
   s: ['CrowdStrikeWizSnykCloudflare'];
@@ -1611,9 +1522,7 @@ export const,
   categor,
   y: 'DevOps & Automation',
   pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$1} 999 / mo' }
-  feature,
   s: ['OpenTelemetry ingestSLO dashboards_burn rate alerts_incident workflows'];
   integration,
   s: ['GrafanaDatadogPagerDuty'];
@@ -1633,9 +1542,7 @@ export const,
   categor,
   y: 'Cloud Services',
   pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$2} 499 / mo' }
-  feature,
   s: ['Budget guardrails_anomaly alertsForecastingShowback / chargeback'];
   integration,
   s: ['AWS CURAzure CostGCP Billing'];
@@ -1655,9 +1562,7 @@ export const,
   categor,
   y: 'Enterprise Security',
   pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3} 499 / mo' }
-  feature,
   s: ['Lifecycle automation_access reviewsRBAC & SoDProvisioning workflows'];
   integration,
   s: ['OktaAzure ADGoogle Workspace'];
@@ -1784,10 +1689,8 @@ export type EnterpriseITSolution = {
 	link: string, // canonical internal link under /services/*;
 export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [;
-	{/* TODO: Fix JSX expression */}
   r: '$4,999/mo'} enterpris,
   e: 'Custom' },
-		feature,
   s: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration'],
 		integration,
   s: ['OktaAzure ADCloudflare Zero Trust'],
@@ -1810,9 +1713,7 @@ export const,
 		categor,
   y: 'DevOps & Automation',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3}499/mo' },
-		feature,
   s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'],
 		integration,
   s: ['GitHubArgoCDBackstage'],
@@ -1834,9 +1735,7 @@ export const,
 		categor,
   y: 'Data & Analytics',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$5}999/mo' },
-		feature,
   s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],
 		integration,
   s: ['SnowflakeDatabricksBigQuery'],
@@ -1856,9 +1755,7 @@ export const,
 		categor,
   y: 'Cloud Services',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$2}999/mo' },
-		feature,
   s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],
 		integration,
   s: ['AWSAzureGCP'],
@@ -1878,9 +1775,7 @@ export const,
 		categor,
   y: 'Cybersecurity',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3}999/mo' },
-		feature,
   s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],
 		integration,
   s: ['CrowdStrikeWizSnykCloudflare'],
@@ -1900,9 +1795,7 @@ export const,
 		categor,
   y: 'DevOps & Automation',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$1}999/mo' },
-		feature,
   s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],
 		integration,
   s: ['GrafanaDatadogPagerDuty'],
@@ -1922,9 +1815,7 @@ export const,
 		categor,
   y: 'Cloud Services',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$2}499/mo' },
-		feature,
   s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],
 		integration,
   s: ['AWS CURAzure CostGCP Billing'],
@@ -1944,9 +1835,7 @@ export const,
 		categor,
   y: 'Enterprise Security',
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3}499/mo' },
-		feature,
   s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],
 		integration,
   s: ['OktaAzure ADGoogle Workspace'],
@@ -1957,15 +1846,12 @@ export const,
   s://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
 		realServic,
   e: true;
-export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'}
 	pricin,
-  g: {/* TODO: Fix JSX expression */}"
   r: string, // e.g. "$2}999/mo"
 		professional?: string;
 		enterprise?: string;
 	};
-	feature,
   s: string[];
 	integrations?: string[];
 	useCases?: string[];
@@ -2075,13 +1961,10 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		realService: true;
 export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [;
-	{/* TODO: Fix JSX expression */}
   y: 'Enterprise Security'}
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$4,999/mo'} enterpris,
   e: 'Custom' };
-		feature,
   s: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration'];
 		integration,
   s: ['OktaAzure ADCloudflare Zero Trust'];
@@ -2095,12 +1978,9 @@ export const,
 		launchDat,
   e: '2025-11-01'
 	};
-	{/* TODO: Fix JSX expression */}
   y: 'DevOps & Automation'}
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3}499/mo' };
-		feature,
   s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'];
 		integration,
   s: ['GitHubArgoCDBackstage'];
@@ -2113,12 +1993,9 @@ export const,
   e: true;
 		ratin,
   g: 4.8};
-	{/* TODO: Fix JSX expression */}
   y: 'Data & Analytics'}
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$5}999/mo' };
-		feature,
   s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'];
 		integration,
   s: ['SnowflakeDatabricksBigQuery'];
@@ -2129,12 +2006,9 @@ export const,
   s://ziontechgroup.com/services/enterprise-data-mesh';
 		realServic,
   e: true};
-	{/* TODO: Fix JSX expression */}
   y: 'Cloud Services'}
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$2}999/mo' };
-		feature,
   s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'];
 		integration,
   s: ['AWSAzureGCP'];
@@ -2145,12 +2019,9 @@ export const,
   s://ziontechgroup.com/services/cloud-landing-zone';
 		realServic,
   e: true};
-	{/* TODO: Fix JSX expression */}
   y: 'Cybersecurity'}
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3}999/mo' };
-		feature,
   s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'];
 		integration,
   s: ['CrowdStrikeWizSnykCloudflare'];
@@ -2161,12 +2032,9 @@ export const,
   s://ziontechgroup.com/services/quantum-cybersecurity-services';
 		realServic,
   e: true};
-	{/* TODO: Fix JSX expression */}
   y: 'DevOps & Automation'}
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$1}999/mo' };
-		feature,
   s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'];
 		integration,
   s: ['GrafanaDatadogPagerDuty'];
@@ -2177,12 +2045,9 @@ export const,
   s://ziontechgroup.com/services/api-observability-starter';
 		realServic,
   e: true};
-	{/* TODO: Fix JSX expression */}
   y: 'Cloud Services'}
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$2}499/mo' };
-		feature,
   s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'];
 		integration,
   s: ['AWS CURAzure CostGCP Billing'];
@@ -2193,12 +2058,9 @@ export const,
   s://ziontechgroup.com/cloud-cost-optimizer';
 		realServic,
   e: true};
-	{/* TODO: Fix JSX expression */}
   y: 'Enterprise Security'}
 		pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$3}499/mo' };
-		feature,
   s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'];
 		integration,
   s: ['OktaAzure ADGoogle Workspace'];
@@ -2212,11 +2074,9 @@ export const,
 ];
 export type EnterpriseITSolution = starte,"
   r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution = starte,"
-  r: string, // e.g. "$2, 999 / mo" export type EnterpriseITSolution = export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
   y:} | 'Enterprise Security'' | 'DevOps & Automation'' | 'Data & Analytics'' | 'Cloud Services'' | 'Cybersecurity' pricin,
   g: starte,"
   r: string, // e.g. "$2} 999 / mo" professional?: string; enterprise?: string; }; categor,
-  y: ; feature,
   s: string[]; integrations?: string[]; use_cases?: string[]; lin,
   k: string; // canonical internal link under /services/*; real_service?: boolean; rating?: number, ' 'Policy-based access',' 'Micro-segmentation'} ; export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [, ' i,
@@ -2225,9 +2085,7 @@ export type EnterpriseITSolution = starte,"
   e: 'Identity - first perimeterless security for modern enterprises', descriptio,
   n:  ,' 'Implement a Zero Trust security model with policy - based access, continuous verification, and micro - segmentation across users, devices, and workloads.',' categor,
   y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$4, 999 / mo'} enterpris,
-  e: 'Custom' }, feature,
   s: [,' 'Policy - based access',' 'Micro - segmentation', launchDate?: string; export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [ ' i,
   d: 'zero-trust-network-architecture'' nam,
@@ -2235,44 +2093,32 @@ export type EnterpriseITSolution = starte,"
   e: 'Identity-first perimeterless security for modern enterprises' descriptio,
   n:' 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.'' categor,
   y: 'Enterprise Security'' pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$4,999/mo'} enterpris,
-  e: 'Custom' } feature,
   s: [ ' i,
   d: 'platform-engineering-foundation'' nam,
   e: 'Platform Engineering Foundation' descriptio,
   n:' 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.'' categor,
   y: 'DevOps & Automation'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' } feature,
   s: [ ' i,
   d: 'enterprise-data-mesh'' nam,
   e: 'Enterprise Data Mesh' descriptio,
   n:' 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.'' categor,
   y: 'Data & Analytics'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' } feature,
   s: [ ' i,
   d: 'cloud-migration-accelerator'' nam,
   e: 'Cloud Migration Accelerator' descriptio,
   n:' 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.'' categor,
   y: 'Cloud Services'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' } feature,
   s: [ ' i,
   d: 'threat-detection-response'' nam,
   e: 'Threat Detection & Response' descriptio,
   n:' 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.'' categor,
   y: 'Cybersecurity'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' } feature,
   s: [ ' i,
   d: 'observability-platform-starter'' nam,
   e: 'Observability Platform Starter' descriptio,
   n:' 'Unified logs, metrics, traces with SLO governance and incident workflows.'' categor,
   y: 'DevOps & Automation'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' } feature,
   s: [ }; export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [ ' i,
   d: 'zero-trust-network-architecture',' nam,
@@ -2280,9 +2126,7 @@ export type EnterpriseITSolution = starte,"
   e: 'Identity-first perimeterless security for modern enterprises', descriptio,
   n: ' 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.',' categor,
   y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$4,999/mo'} enterpris,
-  e: 'Custom' }, feature,
   s: [' 'Policy-based access',' 'Micro-segmentation',' 'Device posture checks',' 'SSO & MFA integration'],' integration,
   s: ['Okta', 'Azure AD', 'Cloudflare Zero Trust'], ' use_case,
   s: ['Secure remote work', 'Lateral movement prevention'],' lin,
@@ -2294,8 +2138,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Platform Engineering Foundation', descriptio,
   n:  ,' 'Golden paths, paved roads, and self - service deployment for developers with strong guardrails and governance.',' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3} 499 / mo' }, feature,
   s: [,' 'Self - service templates', ' useCase,
   s: ['Secure remote work', 'Lateral movement prevention'],' lin,
   k: 'http,
@@ -2306,8 +2148,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Platform Engineering Foundation', descriptio,
   n: ' 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.',' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' }, feature,
   s: [' 'Self-service templates',' 'Golden pipelines',' 'RBAC and policy packs',' 'Cost guardrails'],' integration,
   s: ['GitHub', 'ArgoCD', 'Backstage'], ' use_case,
   s: ['Developer productivity', 'Standardized delivery'],' lin,
@@ -2319,8 +2159,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Enterprise Data Mesh', descriptio,
   n:  ,' 'Domain - oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',' categor,
   y: 'Data & Analytics',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5} 999 / mo' }, feature,
   s: [, ' useCase,
   s: ['Developer productivity', 'Standardized delivery'],' lin,
   k: 'http,
@@ -2331,8 +2169,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Enterprise Data Mesh', descriptio,
   n: ' 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',' categor,
   y: 'Data & Analytics',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' }, feature,
   s: [' 'Domain data products',' 'Catalog & lineage',' 'Access governance',' 'Quality SLAs'],' integration,
   s: ['Snowflake', 'Databricks', 'BigQuery'], ' use_case,
   s: ['Faster analytics', 'Federated governance'],' lin,
@@ -2343,8 +2179,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Cloud Migration Accelerator', descriptio,
   n:  ,' 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2} 999 / mo' }, feature,
   s: [, ' useCase,
   s: ['Faster analytics', 'Federated governance'],' lin,
   k: 'http,
@@ -2354,8 +2188,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Cloud Migration Accelerator', descriptio,
   n: ' 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' }, feature,
   s: [' 'Landing zones',' 'Infra as Code',' 'Automated cutovers',' 'FinOps baselines'],' integration,
   s: ['AWS', 'Azure', 'GCP'], ' use_case,
   s: ['Datacenter exit', 'Hybrid cloud enablement'],' lin,
@@ -2366,8 +2198,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Threat Detection & Response', descriptio,
   n:  ,' 'Modern SOC capabilities with detections - as - code, attack surface reduction, and automated response.',' categor,
   y: 'Cybersecurity',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3} 999 / mo' }, feature,
   s: [,' 'Detections - as - code', ' useCase,
   s: ['Datacenter exit', 'Hybrid cloud enablement'],' lin,
   k: 'http,
@@ -2377,8 +2207,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Threat Detection & Response', descriptio,
   n: ' 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.',' categor,
   y: 'Cybersecurity',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' }, feature,
   s: [' 'Detections-as-code',' 'SOAR playbooks',' 'Attack surface monitoring',' 'Threat intel'],' integration,
   s: ['CrowdStrike', 'Wiz', 'Snyk', 'Cloudflare'], ' use_case,
   s: ['Compliance readiness', 'Breaches prevention'],' lin,
@@ -2389,8 +2217,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Observability Platform Starter', descriptio,
   n:  ,' 'Unified logs, metrics, traces with SLO governance and incident workflows.',' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1} 999 / mo' }, feature,
   s: [, ' useCase,
   s: ['Compliance readiness', 'Breaches prevention'],' lin,
   k: 'http,
@@ -2400,8 +2226,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Observability Platform Starter', descriptio,
   n: ' 'Unified logs, metrics, traces with SLO governance and incident workflows.',' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' }, feature,
   s: [' 'OpenTelemetry ingest',' 'SLO dashboards',' 'Burn rate alerts',' 'Incident workflows'],' integration,
   s: ['Grafana', 'Datadog', 'PagerDuty'], ' use_case,
   s: ['MTTR reduction', 'Reliability governance'],' lin,
@@ -2412,8 +2236,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Cloud Cost Governance Suite', descriptio,
   n:  ,' 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2} 499 / mo' }, feature,
   s: [, ' 'Budget guardrails',' 'Anomaly alerts',' 'Forecasting',' 'Showback / chargeback'],' integration,
   s: ['AWS CUR', 'Azure Cost', 'GCP Billing'], ' use_case,
   s: ['Cost optimization', 'Budget adherence'],' lin,
@@ -2429,8 +2251,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Cloud Cost Governance Suite', descriptio,
   n: ' 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}499/mo' }, feature,
   s: [' 'Budget guardrails',' 'Anomaly alerts',' 'Forecasting',' 'Showback/chargeback'],' integration,
   s: ['AWS CUR', 'Azure Cost', 'GCP Billing'],' useCase,
   s: ['Cost optimization', 'Budget adherence'],' lin,
@@ -2446,9 +2266,7 @@ export type EnterpriseITSolution = starte,"
   e: 'Identity-first perimeterless security for modern enterprises', descriptio,
   n: ' 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.',' categor,
   y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$4,999/mo'} enterpris,
-  e: 'Custom' }, feature,
   s: [' 'Policy-based access',' 'Micro-segmentation',' 'Device posture checks',' 'SSO & MFA integration'],' integration,
   s: ['Okta', 'Azure AD', 'Cloudflare Zero Trust'], ' use_case,
   s: ['Secure remote work', 'Lateral movement prevention'],' lin,
@@ -2466,8 +2284,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Identity Governance & Administration', descriptio,
   n: ' 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.',' categor,
   y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' }, feature,
   s: [' 'Lifecycle automation',' 'Access reviews',' 'RBAC & SoD',' 'Provisioning workflows'],' integration,
   s: ['Okta', 'Azure AD', 'Google Workspace']}]; i,
   d: string; nam,
@@ -2488,8 +2304,6 @@ export type EnterpriseITSolution = starte,"
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',' categor,
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity', pricin,
   g: starte,"
-  r: string, // e && e.g. "$2,999/mo" professional?: string; enterprise?: string } feature,
-  s: string[]; integrations?: string[], useCases?: string[] }, feature,
   s: string[], integrations?: string[], useCases?: string[], lin,
   k: string, // canonical internal link under /services/* realService?: boolean; rating?: number; launchDate?: string ' lin,
   k: 'http,
@@ -2500,8 +2314,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Platform Engineering Foundation'' descriptio,
   n: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.'' categor,
   y: 'DevOps & Automation'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' }' feature,
   s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'];' integration,
   s: ['GitHubArgoCDBackstage'];' useCase,
   s: ['Developer productivityStandardized delivery'], ' lin,
@@ -2513,8 +2325,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Enterprise Data Mesh'' descriptio,
   n: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.'' categor,
   y: 'Data & Analytics'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' }' feature,
   s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'];' integration,
   s: ['SnowflakeDatabricksBigQuery'];' useCase,
   s: ['Faster analyticsFederated governance'], ' lin,
@@ -2525,8 +2335,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Cloud Migration Accelerator'' descriptio,
   n: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.'' categor,
   y: 'Cloud Services'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' }' feature,
   s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'];' integration,
   s: ['AWSAzureGCP'];' useCase,
   s: ['Datacenter exitHybrid cloud enablement'], ' lin,
@@ -2537,8 +2345,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Threat Detection & Response'' descriptio,
   n: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.'' categor,
   y: 'Cybersecurity'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' }' feature,
   s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'];' integration,
   s: ['CrowdStrikeWizSnykCloudflare'];' useCase,
   s: ['Compliance readinessBreaches prevention'], ' lin,
@@ -2549,8 +2355,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Observability Platform Starter'' descriptio,
   n: 'Unified logs, metrics, traces with SLO governance and incident workflows.'' categor,
   y: 'DevOps & Automation'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' }' feature,
   s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'];' integration,
   s: ['GrafanaDatadogPagerDuty'];' useCase,
   s: ['MTTR reductionReliability governance'], ' lin,
@@ -2561,8 +2365,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Cloud Cost Governance Suite'' descriptio,
   n: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.'' categor,
   y: 'Cloud Services'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}499/mo' }' feature,
   s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'];' integration,
   s: ['AWS CURAzure CostGCP Billing'];' useCase,
   s: ['Cost optimizationBudget adherence'], ' lin,
@@ -2573,8 +2375,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Identity Governance & Administration'' descriptio,
   n: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.'' categor,
   y: 'Enterprise Security'' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' }' feature,
   s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'];' integration,
   s: ['OktaAzure ADGoogle Workspace'];' useCase,
   s: ['Audit readinessInsider risk reduction']}, export const,
@@ -2582,9 +2382,7 @@ export type EnterpriseITSolution = starte,"
   e: 'Identity-first perimeterless security for modern enterprises',' descriptio,
   n: 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.',' categor,
   y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$4,999/mo'} enterpris,
-  e: 'Custom' },' feature,
   s: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration'],' integration,
   s: ['OktaAzure ADCloudflare Zero Trust'],' useCase,
   s: ['Secure remote workLateral movement prevention'],' lin,
@@ -2596,8 +2394,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Platform Engineering Foundation',' descriptio,
   n: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.',' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' },' feature,
   s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'],' integration,
   s: ['GitHubArgoCDBackstage'],' useCase,
   s: ['Developer productivityStandardized delivery'],' lin,
@@ -2609,8 +2405,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Enterprise Data Mesh',' descriptio,
   n: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',' categor,
   y: 'Data & Analytics',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' },' feature,
   s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],' integration,
   s: ['SnowflakeDatabricksBigQuery'],' useCase,
   s: ['Faster analyticsFederated governance'],' lin,
@@ -2621,8 +2415,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Cloud Migration Accelerator',' descriptio,
   n: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' },' feature,
   s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],' integration,
   s: ['AWSAzureGCP'],' useCase,
   s: ['Datacenter exitHybrid cloud enablement'],' lin,
@@ -2633,8 +2425,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Threat Detection & Response',' descriptio,
   n: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.',' categor,
   y: 'Cybersecurity',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' },' feature,
   s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],' integration,
   s: ['CrowdStrikeWizSnykCloudflare'],' useCase,
   s: ['Compliance readinessBreaches prevention'],' lin,
@@ -2645,8 +2435,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Observability Platform Starter',' descriptio,
   n: 'Unified logs, metrics, traces with SLO governance and incident workflows.',' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' },' feature,
   s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],' integration,
   s: ['GrafanaDatadogPagerDuty'],' useCase,
   s: ['MTTR reductionReliability governance'],' lin,
@@ -2657,8 +2445,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Cloud Cost Governance Suite',' descriptio,
   n: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}499/mo' },' feature,
   s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],' integration,
   s: ['AWS CURAzure CostGCP Billing'],' useCase,
   s: ['Cost optimizationBudget adherence'],' lin,
@@ -2669,8 +2455,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Identity Governance & Administration',' descriptio,
   n: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.',' categor,
   y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' },' feature,
   s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],' integration,
   s: ['OktaAzure ADGoogle Workspace'],' useCase,
   s: ['Audit readinessInsider risk reduction'],' lin,
@@ -2695,7 +2479,6 @@ export type EnterpriseITSolution = starte,"
   n: string,' categor,
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity', pricin,
   g: starte,"
-  r: string, // e.g. "$2, 999 / mo" professional?: string; enterprise?: string; } feature,
   s: string[]; integrations?: string[], use_cases?: string[], lin,
   k: string, // canonical internal link under /services/*; real_service?: boolean; rating?: number; launch_date?: string; } ; export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [, ' i,
@@ -2704,9 +2487,7 @@ export type EnterpriseITSolution = starte,"
   e: 'Identity - first perimeterless security for modern enterprises',' descriptio,
   n: 'Implement a Zero Trust security model with policy - based access, continuous verification, and micro - segmentation across users, devices, and workloads.'' categor,
   y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$4, 999 / mo'} enterpris,
-  e: 'Custom' }' feature,
   s: ['Policy - based access_micro - segmentation_device posture checksSSO & MFA integration'];' integration,
   s: ['OktaAzure ADCloudflare Zero Trust'];' use_case,
   s: ['Secure remote work_lateral movement prevention'],' lin,
@@ -2718,8 +2499,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Platform Engineering Foundation',' descriptio,
   n: 'Golden paths, paved roads, and self - service deployment for developers with strong guardrails and governance.'' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3} 499 / mo' }' feature,
   s: ['Self - service templates_golden pipelinesRBAC and policy packs_cost guardrails'];' integration,
   s: ['GitHubArgoCDBackstage'];' use_case,
   s: ['Developer productivity_standardized delivery'],' lin,
@@ -2731,8 +2510,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Enterprise Data Mesh',' descriptio,
   n: 'Domain - oriented data ownership with discoverability, governance, and product thinking for analytics at scale.'' categor,
   y: 'Data & Analytics',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5} 999 / mo' }' feature,
   s: ['Domain data products_catalog & lineage_access governance_quality SLAs'];' integration,
   s: ['SnowflakeDatabricksBigQuery'];' use_case,
   s: ['Faster analytics_federated governance'],' lin,
@@ -2743,8 +2520,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Cloud Migration Accelerator',' descriptio,
   n: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.'' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2} 999 / mo' }' feature,
   s: ['Landing zones_infra as CodeAutomated cutoversFinOps baselines'];' integration,
   s: ['AWSAzureGCP'];' use_case,
   s: ['Datacenter exit_hybrid cloud enablement'],' lin,
@@ -2755,8 +2530,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Threat Detection & Response',' descriptio,
   n: 'Modern SOC capabilities with detections - as - code, attack surface reduction, and automated response.'' categor,
   y: 'Cybersecurity',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3} 999 / mo' }' feature,
   s: ['Detections - as - codeSOAR playbooks_attack surface monitoring_threat intel'];' integration,
   s: ['CrowdStrikeWizSnykCloudflare'];' use_case,
   s: ['Compliance readiness_breaches prevention'],' lin,
@@ -2767,8 +2540,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Observability Platform Starter',' descriptio,
   n: 'Unified logs, metrics, traces with SLO governance and incident workflows.'' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1} 999 / mo' }' feature,
   s: ['OpenTelemetry ingestSLO dashboards_burn rate alerts_incident workflows'];' integration,
   s: ['GrafanaDatadogPagerDuty'];' use_case,
   s: ['MTTR reduction_reliability governance'],' lin,
@@ -2779,8 +2550,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Cloud Cost Governance Suite',' descriptio,
   n: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.'' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2} 499 / mo' }' feature,
   s: ['Budget guardrails_anomaly alertsForecastingShowback / chargeback'];' integration,
   s: ['AWS CURAzure CostGCP Billing'];' use_case,
   s: ['Cost optimization_budget adherence'],' lin,
@@ -2791,8 +2560,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Identity Governance & Administration',' descriptio,
   n: 'Automate joiner / mover / leaver flows, access reviews, and least - privilege enforcement across SaaS and cloud.'' categor,
   y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3} 499 / mo' }' feature,
   s: ['Lifecycle automation_access reviewsRBAC & SoDProvisioning workflows'];' integration,
   s: ['OktaAzure ADGoogle Workspace'];' use_case,
   s: ['Audit readiness_insider risk reduction'],' lin,
@@ -2800,9 +2567,7 @@ export type EnterpriseITSolution = starte,"
   s://ziontechgroup.com / services / sso - and - user - lifecycle - hub', real_servic,
   e: true} }, export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [ } ]; }, export const,
-  enterpriseITSolutions: EnterpriseITSolution[] = [ {/* TODO: Fix JSX expression */}
   r: '$4,999/mo'} enterpris,
-  e: 'Custom' },' feature,
   s: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration'],' integration,
   s: ['OktaAzure ADCloudflare Zero Trust'],' useCase,
   s: ['Secure remote workLateral movement prevention'],' lin,
@@ -2814,8 +2579,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Platform Engineering Foundation',' descriptio,
   n: 'Golden paths, paved roads, and self-service deployment for developers with strong guardrails and governance.',' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' },' feature,
   s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'],' integration,
   s: ['GitHubArgoCDBackstage'],' useCase,
   s: ['Developer productivityStandardized delivery'],' lin,
@@ -2827,8 +2590,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Enterprise Data Mesh',' descriptio,
   n: 'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',' categor,
   y: 'Data & Analytics',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' },' feature,
   s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'],' integration,
   s: ['SnowflakeDatabricksBigQuery'],' useCase,
   s: ['Faster analyticsFederated governance'],' lin,
@@ -2839,8 +2600,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Cloud Migration Accelerator',' descriptio,
   n: 'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' },' feature,
   s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'],' integration,
   s: ['AWSAzureGCP'],' useCase,
   s: ['Datacenter exitHybrid cloud enablement'],' lin,
@@ -2851,8 +2610,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Threat Detection & Response',' descriptio,
   n: 'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.',' categor,
   y: 'Cybersecurity',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' },' feature,
   s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'],' integration,
   s: ['CrowdStrikeWizSnykCloudflare'],' useCase,
   s: ['Compliance readinessBreaches prevention'],' lin,
@@ -2863,8 +2620,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Observability Platform Starter',' descriptio,
   n: 'Unified logs, metrics, traces with SLO governance and incident workflows.',' categor,
   y: 'DevOps & Automation',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' },' feature,
   s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'],' integration,
   s: ['GrafanaDatadogPagerDuty'],' useCase,
   s: ['MTTR reductionReliability governance'],' lin,
@@ -2875,8 +2630,6 @@ export type EnterpriseITSolution = starte,"
   e: 'Cloud Cost Governance Suite',' descriptio,
   n: 'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',' categor,
   y: 'Cloud Services',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}499/mo' },' feature,
   s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'],' integration,
   s: ['AWS CURAzure CostGCP Billing'],' useCase,
   s: ['Cost optimizationBudget adherence'],' lin,
@@ -2887,89 +2640,60 @@ export type EnterpriseITSolution = starte,"
   e: 'Identity Governance & Administration',' descriptio,
   n: 'Automate joiner/mover/leaver flows, access reviews, and least-privilege enforcement across SaaS and cloud.',' categor,
   y: 'Enterprise Security',' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' },' feature,
   s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'],' integration,
   s: ['OktaAzure ADGoogle Workspace'],' useCase,
   s: ['Audit readinessInsider risk reduction'],' lin,
   k: 'http,
   s://ziontechgroup.com/services/sso-and-user-lifecycle-hub', realServic,
-  e: true export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'} pricin,
-  g: {/* TODO: Fix JSX expression */}"
-  r: string, // e.g. "$2,999/mo" professional?: string}; enterprise?: string; }; feature,
   s: string[]; integrations?: string[]; useCases?: string[]; lin,
   k: string, // canonical internal link under /services/*; realService?: boolean; rating?: number; launchDate?: string; }; export const,
-  enterpriseITSolutions: EnterpriseITSolution[] = [; {/* TODO: Fix JSX expression */}
   y: 'Enterprise Security'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
   r: '$4,999/mo'} enterpris,
-  e: 'Custom' };' feature,
   s: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration'];' integration,
   s: ['OktaAzure ADCloudflare Zero Trust'];' useCase,
   s: ['Secure remote workLateral movement prevention'];' lin,
   k: 'http,
   s://ziontechgroup.com/services/zero-trust-network-architecture'; realServic,
   e: true;' launchDat,
-  e: '2025-11-01' }; {/* TODO: Fix JSX expression */}
   y: 'DevOps & Automation'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' };' feature,
   s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails'];' integration,
   s: ['GitHubArgoCDBackstage'];' useCase,
   s: ['Developer productivityStandardized delivery'];' lin,
   k: 'http,
   s://ziontechgroup.com/services/platform-engineering-foundation'; realServic,
   e: true; ratin,
-  g: 4.8}; {/* TODO: Fix JSX expression */}
   y: 'Data & Analytics'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$5}999/mo' };' feature,
   s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs'];' integration,
   s: ['SnowflakeDatabricksBigQuery'];' useCase,
   s: ['Faster analyticsFederated governance'];' lin,
   k: 'http,
   s://ziontechgroup.com/services/enterprise-data-mesh'; realServic,
-  e: true}; {/* TODO: Fix JSX expression */}
   y: 'Cloud Services'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}999/mo' };' feature,
   s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines'];' integration,
   s: ['AWSAzureGCP'];' useCase,
   s: ['Datacenter exitHybrid cloud enablement'];' lin,
   k: 'http,
   s://ziontechgroup.com/services/cloud-landing-zone'; realServic,
-  e: true}; {/* TODO: Fix JSX expression */}
   y: 'Cybersecurity'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}999/mo' };' feature,
   s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel'];' integration,
   s: ['CrowdStrikeWizSnykCloudflare'];' useCase,
   s: ['Compliance readinessBreaches prevention'];' lin,
   k: 'http,
   s://ziontechgroup.com/services/quantum-cybersecurity-services'; realServic,
-  e: true}; {/* TODO: Fix JSX expression */}
   y: 'DevOps & Automation'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$1}999/mo' };' feature,
   s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows'];' integration,
   s: ['GrafanaDatadogPagerDuty'];' useCase,
   s: ['MTTR reductionReliability governance'];' lin,
   k: 'http,
   s://ziontechgroup.com/services/api-observability-starter'; realServic,
-  e: true}; {/* TODO: Fix JSX expression */}
   y: 'Cloud Services'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$2}499/mo' };' feature,
   s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback'];' integration,
   s: ['AWS CURAzure CostGCP Billing'];' useCase,
   s: ['Cost optimizationBudget adherence'];' lin,
   k: 'http,
   s://ziontechgroup.com/cloud-cost-optimizer'; realServic,
-  e: true}; {/* TODO: Fix JSX expression */}
   y: 'Enterprise Security'}' pricin,
-  g: {/* TODO: Fix JSX expression */}
-  r: '$3}499/mo' };' feature,
   s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'];' integration,
   s: ['OktaAzure ADGoogle Workspace'];' useCase,
   s: ['Audit readinessInsider risk reduction'];' lin,

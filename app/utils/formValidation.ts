@@ -19,11 +19,8 @@ export interface ValidationResult {}
 }
 export interface FieldValidation {}
   [fieldName: string]: ValidationRule[];}
-export interface ValidationRule<T = unknown> {/* TODO: Fix JSX expression */}
 }
-export interface ValidationResult {/* TODO: Fix JSX expression */}
 }
-export interface FieldValidation {/* TODO: Fix JSX expression */}
 }
 /**
  * Common validation rules;
@@ -37,7 +34,6 @@ export const validationRules = {}
   required: (message = 'This field is required'): ValidationRule<string> => ({}
     validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
     message}
-export const validationRules = {/* TODO: Fix JSX expression */}
   }),
   /**
    * Validate email format;
@@ -52,7 +48,6 @@ export const validationRules = {/* TODO: Fix JSX expression */}
     },
     message;
   emai,
-  l: (message = 'Please enter a valid email address'): ValidationRule<string> => ({/* TODO: Fix JSX expression */}
     },
     message;)
   }),
@@ -64,7 +59,6 @@ export const validationRules = {/* TODO: Fix JSX expression */}
     message: message || `Must be at least ${min} characters;
   minLengt,
   h: (mi)
-  n: number, message?: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}
   e: message || `Must be at least ${min} characters`)
   }),
   /**
@@ -75,7 +69,6 @@ export const validationRules = {/* TODO: Fix JSX expression */}
     message: message || `Must be no more than ${max} characters;
   maxLengt,
   h: (ma)
-  x: number, message?: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}`
   e: message || `Must be no more than ${max} characters`)
   }),
   /**
@@ -87,7 +80,6 @@ export const validationRules = {/* TODO: Fix JSX expression */}
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
       return phoneRegex.test(value.replace(/\s/g, ''))
   phoneU,
-  S: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));
     },
@@ -111,8 +103,6 @@ export const validationRules = {/* TODO: Fix JSX expression */}
     },
     message;
   ur,
-  l: (message = 'Please enter a valid URL'): ValidationRule<string> => ({/* TODO: Fix JSX expression */}
-      } catch {/* TODO: Fix JSX expression */}
       }
     },
     message;)
@@ -126,7 +116,6 @@ export const validationRules = {/* TODO: Fix JSX expression */}
   numberRang,
   e: (mi,
   n: number, ma)
-  x: number, message?: string): ValidationRule<number> => ({/* TODO: Fix JSX expression */}`
   e: message || `Must be between ${min} and ${max}`)
   }),
   /**
@@ -137,7 +126,6 @@ export const validationRules = {/* TODO: Fix JSX expression */}
     message}
   patter,
   n: (rege)
-  x: RegExp, message = 'Invalid format'): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
   }),
   /**
    * Validate custom condition;
@@ -151,7 +139,6 @@ export const validationRules = {/* TODO: Fix JSX expression */}
   m: <T>(validato,
   r: (valu)
   e: T) => boolean, messag,
-  e: string): ValidationRule<T> => ({/* TODO: Fix JSX expression */})
   }),
   /**
    * Validate password strength;
@@ -169,7 +156,6 @@ export const validationRules = {/* TODO: Fix JSX expression */}
       const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value)
   strongPasswor,
   d: (message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character')
-  ): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
       const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value);
       const hasMinLength = value.length >= 8;
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;
@@ -186,7 +172,6 @@ export const validationRules = {/* TODO: Fix JSX expression */}
   matche,
   s: (otherFieldValu,
   e: string, fieldNam)
-  e: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}`
   e: `Must match ${fieldName}`)
   }),
   /**
@@ -203,7 +188,6 @@ export const validationRules = {/* TODO: Fix JSX expression */}
     message: message || `File size must not exceed ${maxSizeInMB}MB;
   fileSiz,
   e: (maxSizeInM)
-  B: number, message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */}
     },
     messag,`
   e: message || `File size must not exceed ${maxSizeInMB}MB`)
@@ -216,7 +200,6 @@ export const validationRules = {/* TODO: Fix JSX expression */}
     message: message || `File type must be one of: ${allowedTypes.join(', ')}
   fileTyp,
   e: (allowedType)
-  s: string[], message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */})`
   of: ${allowedTypes.join(', ')}`
   })
 }
@@ -245,10 +228,8 @@ export function validateField<T>(value: T, rules: ValidationRule<T>[]): Validati
   }
 export function validateField<T>(valu,
   e: T, rule)
-  s: ValidationRule<T>[]): ValidationResult {/* TODO: Fix JSX expression */}
     }
   }
-  return {/* TODO: Fix JSX expression */}
   };
 }
 /**
@@ -267,9 +248,7 @@ export function validateForm<T extends Record<string, unknown>>(formDat,
   a: T,
   validationSchem,
   a: Record<keyof T, ValidationRule[]></keyof>)
-): Record<keyof T, ValidationResult> {/* TODO: Fix JSX expression */}
   const results = {} as Record<keyof T, ValidationResult>;
-  for (const fieldName in validationSchema) {/* TODO: Fix JSX expression */}
   }
   return results;
 }
@@ -282,7 +261,6 @@ export function isFormValid<T extends Record<string, unknown>>(
   return Object.values(validationResults).every(result => result.valid);}
 export function isFormValid<T extends Record<string, unknown>>(validationResult,
   s: Record<keyof T, ValidationResult></keyof>)
-): boolean {/* TODO: Fix JSX expression */}
 }
 /**
  * Get all form errors;
@@ -297,9 +275,7 @@ export function getFormErrors<T extends Record<string, unknown>>(
       errors[fieldName] = result.errors;}
 export function getFormErrors<T extends Record<string, unknown>>(validationResult,
   s: Record<keyof T, ValidationResult></keyof>)
-): Record<keyof T, string[]> {/* TODO: Fix JSX expression */}
   const errors = {} as Record<keyof T, string[]>;
-  for (const fieldName in validationResults) {/* TODO: Fix JSX expression */}
     }
   }
   return errors;
@@ -317,7 +293,6 @@ export function sanitizeInput(input: string): string {}
     .replace(/[<>]/g, '') // Remove potential HTML tags
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -}
 export function sanitizeInput(inpu)
-  t: string): string {/* TODO: Fix JSX expression */}
 }
 /**
  * Debounce function for form validation;
@@ -351,9 +326,7 @@ export function debounce<T extends (...arg)
   wai,
   t: number;)
 ): (...arg)
-  s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
     };
-    if (timeout) {/* TODO: Fix JSX expression */}
     }
     timeout = setTimeout(later, wait);
   };

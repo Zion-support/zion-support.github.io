@@ -11,7 +11,6 @@ interface SkeletonProps {// TODO: Add content;}
 }
 const,
   Skeleton: React.FC;
-          <SkeletonProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   className = '',
@@ -47,7 +46,6 @@ export const,
   TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => ()
   "
           <div className="space-y-2"></div>
-    {/* TODO: Fix JSX expression */}
   h: lines }).map((_, index) => ()
       
           <Skeleton></Skeleton>
@@ -68,7 +66,6 @@ export const,
           </div>
 );
 export const,
-  ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   aspectRatio = '16/9')
@@ -83,34 +80,27 @@ export const,
   ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => ()
   "
           <div className="space-y-3"></div>
-    {/* TODO: Fix JSX expression */}
   h: items }).map((_, index) => ("
 <div key={index} className="flex items-center space-x-3"><Skeleton height="40px" width="40px" rounded /><div className="flex-1 space-y-2"><Skeleton height="16px" width="80%" /><Skeleton height="14px" width="60%" /></div></div>)
     ))}
   </div>
 );
 export const,
-  TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   rows = 5,
   columns = 4;)
 }) => ("
-          <div className="overflow-hidden"><div className="grid gap-4 mb-4" style={/* TODO: Fix JSX expression */})
   s: `repeat(${columns}, 1fr)` }}></div>
-      {/* TODO: Fix JSX expression */}
   h: columns }).map((_, index) => ()
         "
           <Skeleton key={index} height="20px" /></Skeleton>
       ))}
     </div>
-    {/* TODO: Fix JSX expression */}
   h: rows }).map((_, rowIndex) => (<div></div>"
         key={rowIndex} className="grid gap-4 mb-2"
-        style={/* TODO: Fix JSX expression */})`
   s: `repeat(${columns}, 1fr)` }}
 // >
-        {/* TODO: Fix JSX expression */}
   h: columns }).map((_, colIndex) => ()
           
           

@@ -13,12 +13,10 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='AI, agen, t, s, agent, orchestratio, n, enterprise, A, I, mul, t, i-agent, system, s, AI, governanc, e, production, A, I'
         /></meta>
-        <link, re, l = 'canonic, a, l'
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-age n t-orchestrati o n-enterpri s e-20 2 5',
         />,
       </Helm, e, t>
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }</div>
-const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression */}
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }
         <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, p, y-16'></div>
           <div, className='absolute, inse, t-0, b, g-bla, c, k/20' /></div>
@@ -202,10 +200,7 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
                   Measured, RO, I & Business, Impac, t;
                 </h2>
                 <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
-                  Schedule, Architecture, Review;
-                  Schedule, Architecture, Review</div>
                   <ArrowLeft, classNam, e='w-5 h-5, m, l-2, rotat, e-1, 8, 0' />
-                  Schedule, Architecture, Review;
                   <ArrowLeft, className='w-5 h-5, m, l-2, rotat, e-1, 8, 0' />
 :src/pages/blog/ai-agent-orchestration-enterprise-2025/index.tsx;
         <meta name="description;
@@ -226,9 +221,7 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
                   Measured, RO, I & Business, Impac, t;
                 </h2>
                 <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'></div>
-                  Schedule, Architecture, Review;
                   <ArrowLeft, classNam, e='w-5 h-5, m, l-2, rotat, e-1, 8, 0' /></ArrowLeft>
-                  Schedule, Architecture, Review;
                   <ArrowLeft, className='w-5 h-5, m, l-2, rotat, e-1, 8, 0' /></ArrowLeft>
 :src/pages/blog/ai-agent-orchestration-enterprise-2025/index.tsx;
         <meta name="description;"

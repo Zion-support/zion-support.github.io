@@ -83,7 +83,6 @@ export const seoUtils = {/* content */}
 
   // Generate breadcrumb structured data,
   generateBreadcrumbSchema: (item,
-  s: Array<{/* TODO: Fix JSX expression */})
   l: string}>) => ({/* content */}"
     "@context": "http,"
   s://schema.org","
@@ -98,7 +97,6 @@ export const seoUtils = {/* content */}
 
   // Generate FAQ structured data,
   generateFAQSchema: (faq,
-  s: Array<{/* TODO: Fix JSX expression */})
   r: string}>) => ({/* content */}"
     "@context": "http,"
   s://schema.org","
@@ -171,7 +169,6 @@ Sitemap: ${sitemapUrl}`;
       url,
       lastmo,
   d: lastmod || new Date().toISOString().split('T')[0],
-      changefre,
   q: changefreq || 'weekly',
       priorit,
   y: priority || '0.8'
@@ -282,11 +279,8 @@ export const performanceSEO = {/* content */}
   // Preload critical resources,
   preloadCriticalResources: () => {/* content */}
     const criticalResources = [
-      {/* TODO: Fix JSX expression */}
   e: 'font/woff2' },
-      {/* TODO: Fix JSX expression */}
   s: 'style' },
-      {/* TODO: Fix JSX expression */}
   s: 'image' }
     ];
 
@@ -343,7 +337,6 @@ export const analyticsUtils = {/* content */}
   l: string, titl)
   e: string) => {/* content */}
     if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
-      (window as typeof window & {/* TODO: Fix JSX expression */})
   g: Function }).gtag('config', 'GA_MEASUREMENT_ID', {/* content */}
         page_titl,
   e: title,
@@ -359,7 +352,6 @@ export const analyticsUtils = {/* content */}
   trackEvent: (eventNam)
   e: string, parameters?: Record<string, unknown>) => {/* content */}
     if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {/* content */}
-      (window as Window & {/* TODO: Fix JSX expression */})
   g: Function }).gtag('event', eventName, parameters);
     }
   },
@@ -374,7 +366,6 @@ export const analyticsUtils = {/* content */}
   trackConversion: (conversionI)
   d: string, value?: number) => {/* content */}
     if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
-      (window as typeof window & {/* TODO: Fix JSX expression */})
   g: Function }).gtag('event', 'conversion', {/* content */}
         send_t,
   o: conversionId,
@@ -402,7 +393,6 @@ export const coreWebVitals = {/* content */}
     if (typeof window === 'undefined') return;
 
     const trackMetric = (metri,
-  c: {/* TODO: Fix JSX expression */})
   a: number }) => {/* content */}
       analyticsUtils.trackEvent('core_web_vitals', {/* content */}
         metric_nam,
@@ -500,7 +490,6 @@ export const SEOComponent = ({/* content */}
       <meta name="twitte,"
   r:image" content={fullImage} /></meta>
       {/* Structured Data */}
-      {/* TODO: Fix JSX expression */})
           {JSON.stringify(structuredData)}
         </script>
       )}

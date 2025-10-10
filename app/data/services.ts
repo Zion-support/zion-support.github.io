@@ -1,6 +1,5 @@
 import {
   Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,
-  GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,
   Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,
   Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon;
 } from 'lucide-react';

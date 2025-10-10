@@ -14,7 +14,6 @@ const, October2025OperationalExcellenceBanne, r = () => {
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
-const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
@@ -199,15 +198,12 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
             </d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e;
   r: te, x, t-emera, l, d-200, transitio, n-colors, leadin, g-tig, h, t">"
-              AI-Powered, Predictive, Maintenance: 99.6% Failure, Predictio, n;
             </h3>
             <p, className="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4"></p>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-emera, l, d-200, transitio, n-colors, leadin, g-tig, h, t">";
               AI-Powered, Predictive, Maintenanc;
-  e: 99.6% Failure, Predictio, n;
             </h3>
             <p, className="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";
-              Revolutionary, AI, platform achievi, n, g</p> <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d">99.6% failure, prediction, accuracy</sp, a, n> wi, t, h ";
               <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d"> 94% downtime, reductio, n</sp, a, n> a, n, d <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d">$8.7B, annual, savings</sp, a, n>. ";
               Transform, reactive, maintenance into, proactive, optimization.
             </p>
@@ -243,15 +239,12 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e,"
   r: te, x, t-emera, l, d-200, transitio, n-colors, leadin, g-tig, h, t">"
               AI-Powered, Predictive, Maintenanc,
-  e: 99.6% Failure, Predictio, n;
             </h3>"
             <p, className="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4"></p>"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-emera, l, d-200, transitio, n-colors, leadin, g-tig, h, t">";
               AI-Powered, Predictive, Maintenanc,
-  e: 99.6% Failure, Predictio, n;
             </h3>"
             <p, className="te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4">";"
-              Revolutionary, AI, platform achievi, n, g <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d">99.6% failure, prediction, accuracy</sp, a, n> wi, t, h ";"
               <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d"> 94% downtime, reductio, n</sp, a, n> a, n, d <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d">$8.7B, annual, savings</sp, a, n>. ";
               Transform, reactive, maintenance into, proactive, optimization.
             </p>"
@@ -579,7 +572,6 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, hove, r: fr, o, m-emera, l, d-400, hove, r:to-te, a, l-400, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hov, e,"
   r:sca, l, e-1, 0, 5"
             ></Li>
-              <sp, a, n>Explore, All, Innovations</sp, a, n>"
               <Link, className="w-5 h-5  /></Link>"
               <Link, className="w-5 h-5" />";
             </Li, n, k>
@@ -609,7 +601,6 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
               <span, className="fo, n, t-semibo, l, d">99.2% Average, Accurac, y</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
               <span, className="fo, n, t-semibo, l, d">$24.4B, Value, Created</sp, a, n>
         <div, className="mt-10, tex, t-cent, e, r">";</div>
           <div, className="flex, fle, x-wrap, ga, p-6, justif, y-center, item, s-center, tex, t-te, a, l-300, tex, t-sm">";</div>
@@ -622,7 +613,6 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
               <span, className="fo, n, t-semibo, l, d">99.2% Average, Accurac, y</sp, a, n>";
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2">";</div>
-              <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" />";
         {/* Trust, Indicator, s */}"
         <div, className="mt-10, tex, t-cent, e, r"></div>"
           <div, className="flex, fle, x-wrap, ga, p-6, justif, y-center, item, s-center, tex, t-te, a, l-300, tex, t-sm"></div>"
@@ -635,7 +625,6 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
               <span, className="fo, n, t-semibo, l, d">99.2% Average, Accurac, y</sp, a, n>
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
-              <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  /></TrendingUp>"
               <span, className="fo, n, t-semibo, l, d">$24.4B, Value, Created</sp, a, n>"
         <div, className="mt-10, tex, t-cent, e, r">";"
           <div, className="flex, fle, x-wrap, ga, p-6, justif, y-center, item, s-center, tex, t-te, a, l-300, tex, t-sm">";"
@@ -648,7 +637,6 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
               <span, className="fo, n, t-semibo, l, d">99.2% Average, Accurac, y</sp, a, n>";
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2">";"
-              <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" />";"
               <span, className="fo, n, t-semibo, l, d">$24.4B, Value, Created</sp, a, n>";
             </d, i, v>
           </d, i, v>

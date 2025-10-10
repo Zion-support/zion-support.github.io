@@ -9,7 +9,6 @@ const October2025FeaturedContentBanne, r = () => {
       bgGradie, n, t: 'fr, o, m-indi, g, o-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/4, 0',
       borderCol, o, r: 'bord, e, r-indi, g, o-5, 0, 0/3, 0',
       sta, t, s: [,
-const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */}
         { val, u, e: '90, d', lab, e, l: 'To, Outcom, e, s' },
         { val, u, e: 'KP, I', lab, e, l: 'Linked, Gat, e, s' },
         { val, u, e: '$$', lab, e, l: 'Predictable, Co, s, t' }]},
@@ -22,7 +21,6 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
       bgGradie, n, t: 'fr, o, m-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/4, 0',
       borderCol, o, r: 'bord, e, r-bl, u, e-5, 0, 0/3, 0',
       sta, t, s: [,
-    {/* TODO: Fix JSX expression */}
         { val, u, e: '8, 9%', lab, e, l: 'Faster, Deployme, n, t' },
         { val, u, e: '9, 4%', lab, e, l: 'Cost, Reducti, o, n' },
         { val, u, e: '$12.4, M', lab, e, l: 'Annual, Savin, g, s' }]},
@@ -35,7 +33,6 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
       bgGradie, n, t: 'fr, o, m-emera, l, d-9, 0, 0/40, t, o-te, a, l-9, 0, 0/4, 0',
       borderCol, o, r: 'bord, e, r-emera, l, d-5, 0, 0/3, 0',
       sta, t, s: [,
-    {/* TODO: Fix JSX expression */}
         { val, u, e: '7, 6%', lab, e, l: 'Forecast, Accura, c, y' },
         { val, u, e: '6, 8%', lab, e, l: 'Cost, Reducti, o, n' },
         { val, u, e: '$18.7, M', lab, e, l: 'Annual, Val, u, e' }]},
@@ -48,7 +45,6 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
       bgGradie, n, t: 'fr, o, m-cy, a, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/4, 0',
       borderCol, o, r: 'bord, e, r-cy, a, n-5, 0, 0/3, 0',
       sta, t, s: [,
-    {/* TODO: Fix JSX expression */}
         { val, u, e: 'KP, I', lab, e, l: 'Linked, Eva, l, s' },
         { val, u, e: '1‑cl, i, c, k', lab, e, l: 'Rollb, a, c, k' },
         { val, u, e: '24/, 7', lab, e, l: 'Safe, O, p, s' }]},
@@ -61,9 +57,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
       bgGradie, n, t: 'fr, o, m-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/4, 0',
       borderCol, o, r: 'bord, e, r-purp, l, e-5, 0, 0/3, 0',
       sta, t, s: [,
-    {/* TODO: Fix JSX expression */}
         { val, u, e: '<10, 0, m, s', lab, e, l: 'P95, Laten, c, y' },
-        { val, u, e: 'SL, A', lab, e, l: 'Aware, Routi, n, g' },
         { val, u, e: '$', lab, e, l: 'Predictable, Spe, n, d' }]}]; return(<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4'>
   ]; return (
     <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4'></div>
@@ -108,7 +102,6 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
         </div>
         {/* Featured, Content, Car, d, s */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'></div>
-          {/* TODO: Fix JSX expression */}
               <Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hove,
   r: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
                 sty, l, e={{ borderCol, o, r: conte, n, t.borderC, o, l, o, r }}
@@ -146,12 +139,9 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
                   <div, className='grid, gri, d-co, l, s-3, ga, p-4, m, b-6'>
                     { conte, n, t.sta, t, s.m, a, p((s, t, a, t, i, d, x) = > (</div>
                       <div, ke, y = { id, x  }, classNa, m, e = 'te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10'
-                       ></div> <div, classNam, e = { `te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, bg-cl, i, p-text, tex, t-transpare, n, t`}
                         >
                   <div, className='grid, gri, d-co, l, s-3, ga, p-4, m, b-6'></div>
-                    {/* TODO: Fix JSX expression */}
                       <div, ke, y = { id, x  }, classNa, m, e = 'te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10'`
-                       > <div, classNam, e = { `te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, bg-cl, i, p-text, tex, t-transpare, n, t`}
                         ></div>
                           {st, a, t.val, u, e}
                         </div>
@@ -191,7 +181,6 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
             <Link, t, o='/bl, o, g'
               className='px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hover:sca, l, e-105, inlin, e-flex, item, s-cent, e, r'
             >
-              Explore, All, Articles;
               <TrendingUp, className='w-5 h-5, m, l-2' />
             </Li, n, k>
             <Link, t, o='/conta, c, t'
@@ -202,7 +191,6 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
               className='px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hove,
   r:sca, l, e-105, inlin, e-flex, item, s-cent, e, r'
             ></Link>
-              Explore, All, Articles;
               <TrendingUp, className='w-5 h-5, m, l-2' /></TrendingUp>
             </Li, n, k>
             <Link, t, o='/conta, c, t'

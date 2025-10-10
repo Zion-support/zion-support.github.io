@@ -1,8 +1,5 @@
-const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     }]; return(<div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
@@ -39,8 +36,6 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
             </sp, a, n>
             <Rocket, className='w-6 h-6, tex, t-indi, g, o-400, animat, e-pul, s, e' /></Rocket>
           </div>
-          <h2, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-          <h2, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>
             The, Innovation, Revolution;
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'></p>
@@ -48,11 +43,8 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
           </p>
           {/* Innovation, St, a, t, s */}
           <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12'></div>
-            {/* TODO: Fix JSX expression */}
               },
-              {/* TODO: Fix JSX expression */}
               },
-              {/* TODO: Fix JSX expression */}
               },
               {)
                 val, u, e: '50, 0%')
@@ -68,7 +60,6 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
                 ic, o, n: '📈',
                 col, o, r: 'te, x, t-emera, l, d-40, 0'}].m, a, p((st, a, t, ind, e, x) => (</div>
               <div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-cent, e, r'></div>
-              {/* TODO: Fix JSX expression */}
               })
             ].m, a, p((st, a, t, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-cent, e, r'></div>
                 <div, className='te, x, t-4xl, m, b-2'>{st, a, t.ic, o, n}</div>
@@ -94,7 +85,6 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
                 {/* Innovation, Ico, n */}</div>
                 <div, className='te, x, t-6xl, m, b-6, tex, t-center, grou, p-hov, e, r: anima, t, e-pul, s, e'>
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16'></div>
-          {/* TODO: Fix JSX expression */}
             <div, ke, y = { in, d, e, x  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
              > {/* Card, glow, effect */}`
@@ -122,11 +112,9 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
                     ", Impa, c, t: {innovati, o, n.imp, a, c, t}
                   </div>
                 </d, i, v > {/* CTA, Butto, n */}`
-                <a, hre, f = {`/innovatio, n, s/${innovati, o, n.title.toLowerC, a, s, e().repla, c, e(/\s+/g, '-')}`}`
                   classNa, m, e = { `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,`
   r:-transla, t, e-y-, 1`}
                 ></a>
-                  <sp, a, n>Explore, Innovatio, n</sp, a, n>
                   <Link, classNam, e = 'w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' /></Link>
                 </a>
               </div>
@@ -144,7 +132,6 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
               Revolutionary, Success, Stories;
             </h3>
             <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-2xl, m, x-au, t, o'></p>
-              See, how, our innovations, are, transforming industries, and, creating;
               unprecedented, valu, e.
             </p>
           </div>
@@ -156,11 +143,8 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
                 reven, u, e: '$2.1B, Revenue, Growt, h',
                 ic, o, n:</div> <Brain, classNam, e = 'w-8 , h-, 8' / > ,
           <div, className='grid, m, d:gr, i, d-co, l, s-3, ga, p-8'></div>
-            {/* TODO: Fix JSX expression */}
                },
-              {/* TODO: Fix JSX expression */}
                },
-              {/* TODO: Fix JSX expression */}
                }].m, a, p((sto, r, y, ind, e, x) => (
               <div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-cent, e, r'></div>
                 <div, className='te, x, t-purp, l, e-400, m, b-4, flex, justify-cent, e, r'>
@@ -188,16 +172,12 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
                 Join, the, Innovation Revoluti, o, n;
               </h3>
               <p, className='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'></p>
-                Be, part, of the, futur, e. Get, exclusive, access to, revolutionary, innovation, s, early, research, insights, and, transformative, technologies that, are, reshaping our, worl, d.
               </p>
               <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
-                <a, hre, f='/innovatio, n, s'
                   className='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-indi, g, o-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'
                 ></a>
                   <Rocket, className='w-5 h-5' /></Rocket>
-                  <sp, a, n>Explore, All, Innovations</sp, a, n>
                 </a>
-                <a, hre, f='/conta, c, t'
                   className='bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2'
                 ></a>
                   <sp, a, n>Partner, With, Us</sp, a, n>

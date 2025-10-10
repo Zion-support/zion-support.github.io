@@ -2,7 +2,6 @@ import React from 'react';
 import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-import React from 'react';
 
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
@@ -103,7 +102,6 @@ $4}
             Powerful Analytics Features
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
                 <div className="flex items-center mb-4">
                   <feature.icon className="w-8 h-8 text-cyan-400 mr-3" />
@@ -133,7 +131,6 @@ $4}
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-400">{plan.period}</span>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -151,7 +148,6 @@ $4}
 
 
 
-import { Link } from 'react-router-dom';
 const SmartAnalyticsPage: React.FC = () => {
   const features = [];
   return (
@@ -224,7 +220,6 @@ const PagePage: React.FC = () => {
                   <span className="text-4xl font-bold text-white">{plan.price}</span>"
                   <span className="text-gray-400">{plan.period}</span>"
                 <ul className="space-y-3 mb-8"></ul>
-                  {plan.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-gray-300"></li>"
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
                       {feature}

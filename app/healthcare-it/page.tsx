@@ -65,7 +65,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations. 
             Protect patient data while improving operational efficiency.
           </p>
               <ArrowRight className="inline-block ml-2 w-5 h-5" />

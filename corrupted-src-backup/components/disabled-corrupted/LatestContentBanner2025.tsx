@@ -9,29 +9,17 @@ const LatestContentBanner202, 5: React.FC = () => {,
       emo, j, i: "🚀",
       highlig, h, t: "BREAKTHRO, U, G, H",
       impa, c, t: "$5, 0, M+ Savi, n, g, s"
-const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
     {
       id:  , 2,
@@ -88,7 +76,6 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
             Latest, Enterprise, AI Guid, e, s;
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3 xl, m, x-auto, leadin, g-relax, e, d">
-            Master, revolutionary, AI breakthro, u, g, h, s, explore, future, predictions, and, transform, your enterprise, with, proven framewor, k, s. 
             Batt, l, e-tested, strategies, from Fortune, 500, implementations delivering, unprecedented, results.
           </p>
         </div>
@@ -96,20 +83,15 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
           🚀 BREAKTHROU, G, H: Revolutionary, AI, Technologies 20, 2, 5!)
         </h2>)
         <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3, x, l">)
-          Experien, c, e <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">3, REVOLUTIONARY, breakthrough technologies</sp, a, n> including, our, latest: "Me, t, a-Cognitive, A, I: The, Thinking, AI Revoluti, o, n" (95% decision, accur, a, c, y, $2M+ savin, g, s), "Quant, u, m-Neural, Network, s: 1000x, Processing, Speed" ($5M+ infrastructure, savin, g, s), a, n, d "Autonomous, Enterprise, Operations: 98% Automati, o, n" ($1, 0, M+ annual, saving, s) - plus, comprehensive, case studies, and, implementation guid, e, s!
           🚀 BREAKTHROU, G, H: Revolutionary, AI, Technologies 20, 2, 5!
         </h2>
         <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3, x, l">
-          Experien, c, e</p> <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">3, REVOLUTIONARY, breakthrough technologies</sp, a, n> including, our, latest: "Me, t, a-Cognitive, A, I: The, Thinking, AI Revoluti, o, n" (95% decision, accur, a, c, y, $2M+ savin, g, s), "Quant, u, m-Neural, Network, s: 1000x, Processing, Speed" ($5M+ infrastructure, savin, g, s), a, n, d "Autonomous, Enterprise, Operations: 98% Automati, o, n" ($1, 0, M+ annual, saving, s) - plus, comprehensive, case studies, and, implementation guid, e, s!
         </p>
         {/* Featured, highligh, t, s */}
         <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-4, m, b-8">
           { latestArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     }
   ]; return (<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n"></div>
       {/* Animated, background, effects */}"
@@ -131,7 +113,6 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
             Latest, Enterprise, AI Guid, e, s;
           </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d"></p>
-            Master, revolutionary, AI breakthro, u, g, h, s, explore, future, predictions, and, transform, your enterprise, with, proven framewor, k, s. 
             Batt, l, e-tested, strategies, from Fortune, 500, implementations delivering, unprecedented, results.
           </p>
         </div>"
@@ -140,12 +121,10 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
         </h2>"
         <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3, x, l"></p>"
           Experien, c, e <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">3, REVOLUTIONARY, breakthrough technologies</sp, a, n> including, our, lates,")
-  t: "Me, t, a-Cognitive, A, I: The, Thinking, AI Revoluti, o, n" (95% decision, accur, a, c, y, $2M+ savin, g, s), "Quant, u, m-Neural, Network, s: 1000x, Processing, Speed" ($5M+ infrastructure, savin, g, s), a, n, d "Autonomous, Enterprise, Operation,"
   s: 98% Automati, o, n" ($1, 0, M+ annual, saving, s) - plus, comprehensive, case studies, and, implementation guid, e, s!
         </p>
         {/* Featured, highligh, t, s */}"
         <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-4, m, b-8"></div>
-          {/* TODO: Fix JSX expression */}
             <moti, o, n.div, ke, y = { artic, l, e.s, l, u, g  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
               anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
               transiti, o, n = {{ del, a, y: ind, e, x * , 0., 1 }}
@@ -177,7 +156,6 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
                     {artic, l, e.ic, o, n}
                   </div>"
                   <div, classNam, e = "flex, fle, x-col, ga, p-2"></div>
-                    {/* TODO: Fix JSX expression */}
                       </di, v > )  }"
                     <span, classNam, e = "px-3, p, y-1.5, rounde, d-full, b, g-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-400, tex, t-xs, fon, t-semibold, border, border-cy, a, n-5, 0, 0/30"></span>
                       N, E, W;
@@ -214,7 +192,6 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
                   <sp, a, n>{ artic, l, e.date  ? new, Dat, e(artic, l, e.d, a, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sh, o, r, t', d, a, y: 'nume, r, i, c', ye, a, r : 'nume, r, i, c'  }) : 'Rece, n, t'}</sp, a, n>
                 </div>
                 {/* CTA, Butto, n */}
-                <a, hre, f = {`/bl, o, g/${artic, l, e.slug}`}"
                   className="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, transform, hove,"
   r:-transla, t, e-y-1"
                 ></a>
@@ -237,7 +214,6 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
                 Join, 5, 0,0, 0, 0+ AI, leaders, and innovato, r, s.
               </p>
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>
-                <a, hre, f="/bl, o, g"
         {/* Ca, l, l-to-Action, Sectio, n */}"
         <div, classNam, e = "te, x, t-center, m, t-20"></div>"
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, vi, a-bl, u, e-500, t, o-fuchs, i, a-5, 0, 0"></div>"
@@ -250,13 +226,10 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
                 Join, 5, 0,0, 0, 0+ AI, leaders, and innovato, r, s.
               </p>"
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>"
-                <a, hre, f="/bl, o, g""
                   className="bg-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r:fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 ></a>"
                   <Sparkles, className="w-5 h-5" /></Sparkles>
-                  <sp, a, n>Explore, All, Articles</sp, a, n>
                 </a>"
-                <a, hre, f="/conta, c, t""
                   className="bord, e, r-2, borde, r-cy, a, n-500, tex, t-cy, a, n-400, hove, r:bg-cy, a, n-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
                 ></a>
                   <sp, a, n>Getted, with Zion, A, I</sp, a, n>"
@@ -272,7 +245,6 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
             <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Revolutionary, Breakthrough, s</div>
           </div>
           <div, className="te, x, t-cent, e, r"></div>
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0">95%</div>
             <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Decision, Accuracy, Rate</div>
           </div>
           <div, className="te, x, t-cent, e, r"></div>
@@ -286,7 +258,6 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
             <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Revolutionary, Breakthrough, s</div>
           </div>"
           <div, className="te, x, t-cent, e, r"></div>"
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0">95%</div>"
             <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Decision, Accuracy, Rate</div>
           </div>"
           <div, className="te, x, t-cent, e, r"></div>"

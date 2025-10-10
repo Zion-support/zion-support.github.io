@@ -2,7 +2,6 @@
 
 'use client';
 // Enhanced Error Handler;
-export class AppError extends Error {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   statusCod,
@@ -12,7 +11,6 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
     timestam,
   p: string;
   constructor(messag)
-  e: string, statusCode = 500, isOperational = true) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //     super(message)
@@ -33,7 +31,6 @@ export const _errorHandler = (error: AppError | Error) => {// TODO: Add content;
     statusCode: appError.statusCode || 500;
 
   });
-  return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   messag,
@@ -43,20 +40,13 @@ export const _errorHandler = (error: AppError | Error) => {// TODO: Add content;
   };
 };
 export const asyncHandler = (f,
-  n: (re,
-  q: unknown, re,
   s: unknown, nex)
-  t: unknown) => unknown) => (re,
-  q: unknown, re,
   s: unknown, nex)
-  t: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   Promise.resolve(fn(req, res, next)).catch((erro)
-  r: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (next && typeof next === 'function') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       next(error);

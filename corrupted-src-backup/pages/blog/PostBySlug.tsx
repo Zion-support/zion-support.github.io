@@ -1,6 +1,5 @@
 import React from 'react';
 
-export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expression */}
   const { slug } = useParams();
 
   // Mock data - in a real app, this would come from an API or CMS;
@@ -16,7 +15,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       date: '2026-01-15',
       readTime: '8 min read',
       author: 'Zion Tech Group Team',
-    {/* TODO: Fix JSX expression */}
     }];
 
   const blogPosts = [
@@ -46,11 +44,8 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       date: '2026-01-05',
       readTime: '9 min read',
       author: 'Zion Tech Group Team',
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     }];
 
   const featuredPosts = [
@@ -58,7 +53,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       slug: 'autonomous-enterprise-operations-2026',
       title: 'Autonomous Enterprise Operations 2026',
       description:,
-        'Self-healing infrastructure, autonomous decision-making, and 99.9% uptime achievement',
       category: 'Enterprise Operations',
       date: '2026-01-12',
       readTime: '11 min read',
@@ -80,11 +74,8 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       date: '2026-01-03',
       readTime: '13 min read',
       author: 'Zion Tech Group Team',
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     }];
 
   // Find the current post;
@@ -127,7 +118,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
             <p className="text-xl text-gray-600 mb-6">{currentPost.description}</p>
             <div className="flex items-center text-sm text-gray-500"></div>
               <span>{currentPost.author}</span>
-  if (!currentPost) {/* TODO: Fix JSX expression */}
   }
 
   return (<div className="min-h-screen bg-gray-50"></div>
@@ -251,7 +241,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>"
             <div className="grid grid-cols-1,"
   md:grid-cols-3 gap-8"></div>
-              {/* TODO: Fix JSX expression */}
                   key={index}"
                   className="bg-gray-50 rounded-lg p-6,"
   hover:shadow-lg transition-shadow"

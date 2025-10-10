@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOProps {/* TODO: Fix JSX expression */}
 }
 
 const SEO: React.FC<SEOProps> = ({,
@@ -26,8 +25,6 @@ const SEO: React.FC<SEOProps> = ({,
       <meta name="twitter:image" content={image} />
       <link rel="canonical" href={url} />
 const,
-  SEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
       <title>{title}</title>
       <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords} /></meta>"

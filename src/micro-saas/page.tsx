@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap, Mail, Calendar, PieChart, Search, Filter, Download, Upload, Share, Edit, Trash2, Plus, Minus, Refresh, Play, Pause, Stop, Volume2, Camera, Image, File, Folder, Archive, Bookmark, Tag, Link as LinkIcon, ExternalLink, ArrowRight, ChevronRight, Award, Gift, Rocket, Lightbulb, Wrench, Hammer, Scissors, Paintbrush, Palette, Layers, Grid, List, Layout, Monitor, Laptop, Tablet, Smartphone as PhoneIcon, Headphones, Microphone, Speaker, Wifi, Bluetooth, Battery, Power, Zap as Lightning, Sun, Moon, CloudRain, Wind, Thermometer, Droplets, Snowflake, Cloud, CloudSnow, CloudLightning, CloudDrizzle, CloudFog, Eye as EyeIcon, EyeOff, Lock as LockIcon, Unlock, Key, Fingerprint, Shield as ShieldIcon, AlertTriangle, AlertCircle, Info, HelpCircle, X, Check, XCircle, CheckCircle2, PlusCircle, MinusCircle, XSquare, CheckSquare, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Heart as HeartIcon, ThumbsUp, ThumbsDown, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -151,7 +150,6 @@ export default function MicroSaasPage() {
       benefits: ['Organize files automatically', 'Find files instantly', 'Reduce clutter']
     },
     {
-      icon: Share,
       title: 'AI Social Media Manager',
       description: 'Comprehensive social media management and automation',
       features: ['Post Scheduling', 'Content Creation', 'Analytics', 'Engagement Tracking', 'Hashtag Research', 'Competitor Analysis'],
@@ -293,7 +291,6 @@ export default function MicroSaasPage() {
       <SEOOptimizer 
         title="Micro SAAS Solutions - Zion Tech Group"
         description="50+ AI-powered micro SAAS applications for modern businesses. Affordable tools starting from $14/month. Analytics, e-commerce, productivity, marketing, and more."
-        keywords="micro SAAS, AI tools, business applications, productivity software, marketing automation, analytics dashboard"
       />
       <Navigation />
       
@@ -382,7 +379,6 @@ export default function MicroSaasPage() {
                 </div>
                 <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
                 <ul className="space-y-1 mb-4">
-                  {service.features.slice(0, 3).map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="h-3 w-3 text-green-500 mr-2" />
                       {feature}

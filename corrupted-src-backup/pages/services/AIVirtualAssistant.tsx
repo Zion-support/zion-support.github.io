@@ -2,14 +2,11 @@ import { Helmet } from "react-helmet-async";"
 impo, r, t { Glo, b, e } fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r";
-impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
-impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
-  const, feature, s = [
     {
       i, c, o;
   n: Bra, i, n;
@@ -65,18 +62,11 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
         <title>AI, Virtual, Assistant - Zion, Tech, Group | 24/7, Intelligent, Customer Suppo, r, t</title>
         <me, t, a;
   na, m, e="descripti, o, n"
-          content="Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y. Mul, t, i-channel, suppor, t, 1, 2, 0+ languag, e, s, enterprise, securit, y." /><meta name="keywor, d, s" content="AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t/>"
-const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   return (<>
@@ -84,11 +74,9 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <title>AI, Virtual, Assistant - Zion, Tech, Group | 24/7, Intelligent, Customer Suppo, r, t</title>
         <me, t, a;"
   na, m, e="descripti, o, n""
-          content="Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y. Mul, t, i-channel, suppor, t, 1, 2, 0+ languag, e, s, enterprise, securit, y." /><meta name="keywor, d, s" content="AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t/>""
           content="Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y. Mul, t, i-channel, suppor, t, 1, 2, 0+ languag, e, s, enterprise, securit, y."
          />"
         <meta name="keywor, d, s" content="AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service" />";"
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t" />";
       </Helmet>
       <Head, e, r   /></Head>"
       <main, className="m, i, n-h-screen, b, g-whi, t, e">";
@@ -101,7 +89,6 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   g:px-8">"</section>
             <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
-                AI, Virtua, l</h1> <span, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Assista, n, t</sp, a, n>
               </h1>
               <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-purp, l, e-100, ma, x-w-4xl, m, x-auto, m, b-8">
                 Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y;
@@ -114,7 +101,6 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
             <div, className="te, x, t-cent, e, r">";</div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
-                AI, Virtua, l</h1> <span, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Assista, n, t</sp, a, n>";
               </h1>
               <p, className="te, x, t-x, l, m;
   d: te, x, t-2xl, tex, t-purp, l, e-100, ma, x-w-4xl, m, x-auto, m, b-8">";
@@ -133,7 +119,6 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   g:px-8">""
             <div, className="te, x, t-cent, e, r"></div>"
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">""
-                AI, Virtua, l <span, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Assista, n, t</sp, a, n>
               </h1>"
               <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-purp, l, e-100, ma, x-w-4xl, m, x-auto, m, b-8"></p>
                 Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y;
@@ -144,7 +129,6 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-cent, e, r">";"
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";"
-                AI, Virtua, l <span, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Assista, n, t</sp, a, n>";
               </h1>"
               <p, className="te, x, t-x, l, m,"
   d: te, x, t-2xl, tex, t-purp, l, e-100, ma, x-w-4xl, m, x-auto, m, b-8">";
@@ -252,20 +236,12 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                 <p, className="te, x, t-gr, a, y-6, 0, 0">S, u, b-second, response, times 24/7</p>";
               </d, i, v>
               <div, className="te, x, t-cent, e, r"></div>
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4"></div>
-                  <Globe, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
               <div, className="te, x, t-cent, e, r">";</div>
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";</div>
               </d, i, v>"
               <div, className="te, x, t-cent, e, r"></div>"
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4"></div>"
-                  <Globe, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  /></Globe>"
               <div, className="te, x, t-cent, e, r">";"
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";"
-                  <Globe, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">1, 2, 0+ Languag, e, s</h3>";"
-                <p, className="te, x, t-gr, a, y-6, 0, 0">Global, reach, with re, a, l-time, translatio, n</p>";
               </d, i, v>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4"></div>
@@ -331,7 +307,6 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
                       <CheckCircle, className="w-4 h-4, m, r-1  />)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
@@ -339,7 +314,6 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                 const, Ico, n = featu, r, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">";
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
@@ -352,32 +326,27 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";</div>
                       <CheckCircle, className="w-4 h-4, m, r-1" />";
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
             </d, i, v>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">"
-              {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4"></div>"
                       <Icon, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0  /></Icon>
                     </d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>"
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>"
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>"
                       <CheckCircle, className="w-4 h-4, m, r-1  /></CheckCircle>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">";
-              {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">";"
                       <Icon, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0" />";
                     </d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";"
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";"
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";"
                       <CheckCircle, className="w-4 h-4, m, r-1" />";
                       {featu, r, e.benef, i, t}
                     </d, i, v>

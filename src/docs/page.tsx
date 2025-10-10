@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from 'lucide-react';
 
 const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -96,7 +95,6 @@ const DocsPage: React.FC = () => {
       category: 'integration',
       difficulty: 'Advanced',
       readTime: '35 min',
-      icon: MessageSquare,
       content: 'Configure webhooks to receive real-time updates and synchronize data across your systems.'
     },
     {

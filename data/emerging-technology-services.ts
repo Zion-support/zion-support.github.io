@@ -23,7 +23,6 @@ export interface EmergingTechnologyService {;,
   e: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -37,7 +36,6 @@ export interface EmergingTechnologyService {;,
   e: string;
     emai,
   l: string;
-export interface EmergingTechnologyService {/* TODO: Fix JSX expression */}
   s: string}
 };
   i,
@@ -50,7 +48,6 @@ export interface EmergingTechnologyService {/* TODO: Fix JSX expression */}
   e: string,,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -59,7 +56,6 @@ export interface EmergingTechnologyService {/* TODO: Fix JSX expression */}
   realImplementatio,
   n: boolean;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
@@ -111,7 +107,6 @@ export const emergingTechnologyServices: EmergingTechnologyService[] = [,
   e: string, pric,
   e: string,
   descriptio,
-  n: string, feature,
   s: string[],
   lin,
   k: string, categor,
@@ -136,7 +131,6 @@ export const,
   e: "$179/month",
     descriptio,"
   n: "Comprehensive blockchain development platform for creating decentralized applications.",
-    feature,
   s: [;"
       "Smart contract development""
       "DApp deployment""
@@ -207,7 +201,6 @@ export const,
   e: "$179/month",
     descriptio,"
   n: "Comprehensive blockchain development platform for creating decentralized applications.",
-    feature,
   s: [,"
       "Smart contract development","
       "DApp deployment","
@@ -251,25 +244,21 @@ i,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: mobil,
   e: string; emai,
-  l: string; export interface EmergingTechnologyService {/* TODO: Fix JSX expression */}
   s: string }; i,
   d: string; nam,
   e: string; taglin,
   e: string; pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
@@ -277,7 +266,6 @@ i,
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
@@ -291,7 +279,6 @@ i,
   e: "Blockchain Development Platform", taglin,"
   e: "Build and deploy blockchain applications", pric,"
   e: "$179/month", descriptio,"
-  n: "Comprehensive blockchain development platform for creating decentralized applications.", feature,"
   s: [ "Smart contract development" "DApp deployment" "Blockchain integration" "Security auditing" "Performance monitoring" ], lin,"
   k: "/services/blockchain-platform", categor,"
   y: "Emerging Tech", realImplementatio,
@@ -308,7 +295,6 @@ i,
   e: "Blockchain Development Platform", taglin,"
   e: "Build and deploy blockchain applications", pric,"
   e: "$179/month", descriptio,"
-  n: "Comprehensive blockchain development platform for creating decentralized applications.", feature,"
   s: [ "Smart contract development", "DApp deployment", "Blockchain integration", "Security auditing", "Performance monitoring" ], lin,"
   k: "/services/blockchain-platform", categor,"
   y: "Emerging Tech", realImplementatio,

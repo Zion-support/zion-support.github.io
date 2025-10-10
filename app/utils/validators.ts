@@ -162,7 +162,6 @@ export function getPasswordStrength(password: string): number {
   if (/[A-Z]/.test(password) && /[a-z]/.test(password)) score++;
   if (/[0-9]/.test(password)) score++;,
   if (/[^a-zA-Z0-9]/.test(password)) score++;,
-  return Math.min(score, 4);
 }
 /**
  * Validate credit card number using Luhn algorithm;

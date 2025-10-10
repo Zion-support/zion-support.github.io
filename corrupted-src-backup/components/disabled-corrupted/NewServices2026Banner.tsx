@@ -1,5 +1,4 @@
 
-type NewServices2026BannerProp, s = {/* TODO: Fix JSX expression */}
  };
 
 export default function NewServices2026Bann, e, r({)
@@ -12,18 +11,11 @@ export default function NewServices2026Bann, e, r({)
       title: 'AI, Autonomous, Cloud O, p, s',
       li, n, k: '/servic, e, s/ai-autonomo, u, s-infrastructu, r, e-platf, o, r, m',
       t, a, g: 'Cl, o, u, d',
-export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression */})
-}: NewServices2026BannerPro, p, s) {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     }].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return(<section, classNam, e = { `w-fu, l, l ${
         varia, n, t === 'he, r, o'
           ? 'bg-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-6, 0, 0'
@@ -43,11 +35,9 @@ export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression *
           </d, i, v > <h2, className={ `te, x, t-3xl, fon, t-bold, m, b-2 ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }`}
           >
             Latest, AI, Services;
-  ].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return (<section, classNam, e = {/* TODO: Fix JSX expression */}
        } ${ varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' } py-12 ${classNa, m, e}`}
     ></section>
       <div, className='container, m, x-auto, p, x-6'></div>
-        <div, className='te, x, t-center, m, b-8' > <div, className={/* TODO: Fix JSX expression */}`
              }`}
           ></div>
             NEW, 2026, SERVICES;`
@@ -63,7 +53,6 @@ export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression *
         <div, classNam, e = 'grid, s, m: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, ma, x-w-6xl, m, x-au, t, o'>
           { servic, e, s.m, a, p(s =  > (</div>
         <div, classNam, e = 'grid, s, m: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, ma, x-w-6xl, m, x-au, t, o'></div>
-          {/* TODO: Fix JSX expression */}`
             <Link, ke, y = { s.li, n, k  }, to={ s.li, n, k } classNa, m, e = {  `round, e, d-xl, borde, r ${varia, n, t === 'in, f, o'  ? 'bg-white, borde, r-gr, a, y-1, 0, 0'  : 'bg-whi, t, e/10, borde, r-whi, t, e/2, 0'  }, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-30, 0`}
             ></Link>
               <div, classNam, e = 'te, x, t-xs, uppercase, tracking-wider, m, b-2, opacit, y-80'></div>

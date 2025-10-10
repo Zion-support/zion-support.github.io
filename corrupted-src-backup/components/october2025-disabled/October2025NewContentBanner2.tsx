@@ -1,12 +1,8 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
 impo, r, t { Le, a, f, DollarSi, g, n, M, i, c, B, o, t, ArrowRig, h, t } fr, o, m "luci, d, e-rea, c, t";
-const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     }
   ]; return(<section, classNam, e = "py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, elements */}
@@ -25,7 +21,6 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
             Latest, AI, Breakthroughs & Innovatio, n, s;
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
-            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation;
           </p>
         </div>)
         {/* Articles, G, r, i, d */})
@@ -64,12 +59,10 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
             Latest, AI, Breakthroughs & Innovatio, n, s;
           </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o"></p>
-            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation;
           </p>
         </div>
         {/* Articles, G, r, i, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12"></div>
-          {/* TODO: Fix JSX expression */}
               <Link, ke, y = { artic, l, e.slug  }, to = {`/bl, o, g/${artic, l, e.slug}`}"
                 className="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hove, r:-transla, t, e-y-1"
               ></Link>
@@ -88,14 +81,12 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
                 <p, classNam, e = "te, x, t-gr, a, y-400, m, b-4, leadin, g-relax, e, d"></p>
                   {artic, l, e.description}
                 </p>
-                {/* Read, More, Link */}
                 <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l"></div>
                   <sp, a, n>Read, Articl, e</sp, a, n>
                   <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
                 </div>
                 </d, i, v  > {/* Hover, Gradient, Effe, c, t */})
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} />)
-                {/* Read, More, Link */}"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l"></div>
                   <sp, a, n>Read, Articl, e</sp, a, n>"
                   <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>
@@ -114,7 +105,6 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
           <Link, t, o="/bl, o, g""
             className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-bl, u, e-700, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-semibold, transitio, n-all, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hove, r:sca, l, e-1, 0, 5"
           ></Link>
-            <sp, a, n>Explore, All, AI Insigh, t, s</sp, a, n>"
             <Link, className="w-5 h-5" /></Link>
           </Li, n, k>
         </div>

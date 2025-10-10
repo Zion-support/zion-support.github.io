@@ -1,5 +1,3 @@
-import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Server} ArrowRight; Rocket } from 'lucide-react'
-import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, TrendingUp, PieChart, Activity} Package; Wifi } from 'lucide-react'
   // Micro SAAS Services data;
   const microSaasServices = [
     {id: 1;
@@ -426,175 +424,150 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com"}
         website: "https://ziontechgroup.com",
-    {/* TODO: Fix JSX expression */}
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
   s://ziontechgroup.com"
       }
     },
-    {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"}
         websit,"
   e: "http,"
@@ -715,7 +688,6 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               onChange={(e) => setSelectedCategory(e.target.value)}"
               className="text-left"
             >
-              {/* TODO: Fix JSX expression */}"
                 <option key={category} value={category} className="text-left"></option>
                   {category === 'all' ? '🌐 All Categories' : `📁 ${category}`}"
               className="text-left"
@@ -751,12 +723,10 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                       <
                       <span className="text-left">
                         {service.category}</span>
-              {/* TODO: Fix JSX expression */}"
                 <option key={pricing} value={pricing} className="text-left"></option>`
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`}
         {/* Services Grid */}"
         <div className="text-left"></div>
-          {/* TODO: Fix JSX expression */}"
             <div key={service.id} className="text-left"></div>
               {/* Service Header */}"
               <div className="text-left"></div>"

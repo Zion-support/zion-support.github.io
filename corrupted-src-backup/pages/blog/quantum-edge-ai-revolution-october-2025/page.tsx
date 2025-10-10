@@ -74,7 +74,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-300, m, b-3">⚛️ Quantum, Acceleration, Layer</h3>";
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
-                  Leverage, quantum, annealing and, quantum, machine learning, algorithms, to process, complex, optimization problems, and, neural network, computations, 1000 x faster, than, classical GP, U, s. Our, hybrid, quantum-classical, architecture, seamlessly distributes, workloads, between quantum, processors, and traditional, computing, resources.
                 </p>
               </d, i, v>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
@@ -85,7 +84,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
               </d, i, v>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-indi, g, o-300, m, b-3">🛡️ Priva, c, y-Preserving, Computin, g</h3>";
-export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: Fix JSX expression */}
         {/* Head, e, r */}
         <header, className="mb-12">";"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, m, b-6">";"
@@ -149,7 +147,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-300, m, b-3">⚛️ Quantum, Acceleration, Layer</h3>";"
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
-                  Leverage, quantum, annealing and, quantum, machine learning, algorithms, to process, complex, optimization problems, and, neural network, computations, 1000x faster, than, classical GP, U, s. Our, hybrid, quantum-classical, architecture, seamlessly distributes, workloads, between quantum, processors, and traditional, computing, resources.
                 </p>
               </d, i, v>"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
@@ -240,8 +237,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
               Deploying, quantum, edge AI, in, your enterprise, involves, five key, phase, s: </p>
             <div, className="spa, c, e-y-4"></section>
               <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, borde, r-l-4, borde, r-cy, a, n-5, 0, 0"></div>
-                <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2">Phas, e, 1: Architecture, Assessmen, t (2-3, week, s)</h3>"
-                <p, className="te, x, t-gr, a, y-3, 0, 0">Evaluate, current, infrastructure, identify, edge, deployment poin, t, s, and, design, hybrid quant, u, m-classical, architectur, e.</p>
               </d, i, v>
               <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, borde, r-l-4, borde, r-bl, u, e-5, 0, 0"></div>
                 <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2">Phas, e, 2: Model, Optimizatio, n (3-4, week, s)</h3>"
@@ -267,8 +262,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
               Deploying, quantum, edge AI, in, your enterprise, involves, five key, phase, s: </p>
             <div, className="spa, c, e-y-4">";</section>
               <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, borde, r-l-4, borde, r-cy, a, n-5, 0, 0">";</div>
-                <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2">Phas, e, 1: Architecture, Assessmen, t (2-3, week, s)</h3>";
-                <p, className="te, x, t-gr, a, y-3, 0, 0">Evaluate, current, infrastructure, identify, edge, deployment poin, t, s, and, design, hybrid quant, u, m-classical, architectur, e.</p>";
               </d, i, v>
               <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, borde, r-l-4, borde, r-bl, u, e-5, 0, 0">";</div>
                 <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2">Phas, e, 2: Model, Optimizatio, n (3-4, week, s)</h3>";
@@ -306,8 +299,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
               Deploying, quantum, edge AI, in, your enterprise, involves, five key, phase, s: </p>"
             <div, className="spa, c, e-y-4"></div>"
               <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, borde, r-l-4, borde, r-cy, a, n-5, 0, 0"></div>"
-                <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2">Phas, e, 1: Architecture, Assessmen, t (2-3, week, s)</h3>""
-                <p, className="te, x, t-gr, a, y-3, 0, 0">Evaluate, current, infrastructure, identify, edge, deployment poin, t, s, and, design, hybrid quant, u, m-classical, architectur, e.</p>
               </d, i, v>"
               <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, borde, r-l-4, borde, r-bl, u, e-5, 0, 0"></div>"
                 <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2">Phas, e, 2: Model, Optimizatio, n (3-4, week, s)</h3>""
@@ -330,8 +321,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
               Deploying, quantum, edge AI, in, your enterprise, involves, five key, phase, s: </p>"
             <div, className="spa, c, e-y-4">";"
               <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, borde, r-l-4, borde, r-cy, a, n-5, 0, 0">";"
-                <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2">Phas, e, 1: Architecture, Assessmen, t (2-3, week, s)</h3>";"
-                <p, className="te, x, t-gr, a, y-3, 0, 0">Evaluate, current, infrastructure, identify, edge, deployment poin, t, s, and, design, hybrid quant, u, m-classical, architectur, e.</p>";
               </d, i, v>"
               <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, borde, r-l-4, borde, r-bl, u, e-5, 0, 0">";"
                 <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2">Phas, e, 2: Model, Optimizatio, n (3-4, week, s)</h3>";"

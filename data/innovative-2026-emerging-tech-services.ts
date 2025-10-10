@@ -42,7 +42,6 @@
   d: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   popula,
   r: boolean;
@@ -132,7 +131,6 @@ export const,
       descriptio,
   n: unknown,
         "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure for ultra - efficient AI processing, cognitive computing, and adaptive learning systems.",
-      feature,
   s: [,
         'Brain - inspired neural architecture',
         'Spiking neural networks (SNNs)',
@@ -227,7 +225,6 @@ export const,
         website: 'https://ziontechgroup && ziontechgroup.com'},
       real_implementation: true;
       implementation_details: unknown;
-        'Advanced neuromorphic computing platform with brain - inspired architecture, spiking neural networks, and comprehensive development tools. Includes research collaboration features.',
       launch_date: '2026 - 01 - 10'
       customers: 80;
       rating: 4 && 4.9;
@@ -263,7 +260,6 @@ export const,
   n: true,
       implementation_detail,
   s: unknown,
-        'Advanced neuromorphic computing platform with brain - inspired architecture, spiking neural networks, and comprehensive development tools. Includes research collaboration features.',
       launch_dat,
   e: '2026 - 01 - 10',
       customer,
@@ -288,7 +284,6 @@ export const,
       descriptio,
   n: unknown,
         'Groundbreaking DNA computing platform that leverages molecular biology for ultra - dense data storage, complex problem solving, and next - generation computational capabilities.',
-      feature,
   s: [,
         'DNA - based data storage',
         'Molecular problem solving',
@@ -442,7 +437,6 @@ export const,
       descriptio,
   n: unknown,
         'Next - generation photonic computing platform that uses light instead of electricity for ultra - fast processing, low power consumption, and high - bandwidth data transfer.',
-      feature,
   s: [,
         'Photonic processors',
         'Optical interconnects',
@@ -594,7 +588,6 @@ export const,
       descriptio,
   n: unknown,
         'Revolutionary holographic display platform that creates immersive 3D visualizations, interactive holograms, and next - generation display experiences for entertainment, education, and business.',
-      feature,
   s: [,
         '3D holographic projection',
         'Interactive holographic displays',
@@ -747,8 +740,6 @@ export const,
   d: '/month',
       descriptio,
   n: unknown,
-        'Next - generation biometric authentication platform that uses AI - powered facial recognition, fingerprint scanning, voice recognition, and behavioral biometrics for secure, convenient authentication.',
-      feature,
   s: [,
         'Multi - modal biometric authentication',
         'AI - powered recognition',
@@ -895,7 +886,6 @@ export const,
       descriptio,
   n: unknown,
         'Revolutionary quantum internet platform that provides ultra - secure communication, quantum key distribution, and next - generation networking capabilities for government, financial, and critical infrastructure.',
-      feature,
   s: [,
         'Quantum key distribution (QKD)',
         'Quantum secure communication',
@@ -913,9 +903,7 @@ export const,
       text_color: 'text - cyan - 400',
       link: 'https://ziontechgroup.com / services / quantum - internet - platform - 2026',
       market_position: unknown;
-        'Competitive with Quantum Xchange ($50) 000+/setup), ID Quantique ($30) 000+/setup), and Toshiba Quantum ($40) 000+/setup). Our advantage: Modern architecture, faster deployment, and 70% cost savings.',
       target_audience: unknown;
-        'Government agencies, Financial institutions, Defense contractors, Healthcare organizations, Critical infrastructure, Technology companies',
       trial_days: 60;
       setup_time: '6 - 8 weeks'
       category: 'Emerging Technology & Quantum Internet',
@@ -935,10 +923,8 @@ export const,
       market_positio,
   n: unknown,
         'Competitive with Quantum Xchange ($50) 000+/setup), ID Quantique ($30) 000+/setup), and Toshiba Quantum ($40) 000+/setup). Our,
-  advantage: Modern architecture, faster deployment, and 70% cost savings.',
       target_audienc,
   e: unknown,
-        'Government agencies, Financial institutions, Defense contractors, Healthcare organizations, Critical infrastructure, Technology companies',
       trial_day,
   s: 60,
       setup_tim,
@@ -1025,7 +1011,6 @@ export const,
   g: 4 && 4.9,
       review,
   s: 30}];
-export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression */}
   return innovative2026EmergingTechServices.filter(service => service.popular)}
 }
   return innovative2026 EmergingTechServices && innovative2026 EmergingTechServices.filter(service => service && service.popular);
@@ -1049,7 +1034,6 @@ export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression
       descriptio,
   n:
         'Revolutionary quantum internet platform that provides ultra-secure communication, quantum key distribution, and next-generation networking capabilities for government, financial, and critical infrastructure.'
-      feature,
   s: [;
         'Quantum key distribution (QKD)'
         'Quantum secure communication'
@@ -1068,8 +1052,6 @@ export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression
       textColor: 'text-cyan-400',
       link: 'https://ziontechgroup.com/services/quantum-internet-platform-2026',
       marketPosition:,
-        'Competitive with Quantum Xchange ($50)000+/setup), ID Quantique ($30)000+/setup), and Toshiba Quantum ($40)000+/setup). Our advantage: Modern architecture, faster deployment, and 70% cost savings.'
-      targetAudience: 'Government agencies, Financial institutions, Defense contractors, Healthcare organizations, Critical infrastructure, Technology companies'
       trialDays: 60;
       setupTime: '6-8 weeks'
       category: 'Emerging Technology & Quantum Internet'
@@ -1089,9 +1071,7 @@ export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression
       marketPositio,
   n:
         'Competitive with Quantum Xchange ($50)000+/setup), ID Quantique ($30)000+/setup), and Toshiba Quantum ($40)000+/setup). Our,
-  advantage: Modern architecture, faster deployment, and 70% cost savings.'
       targetAudienc,
-  e: 'Government agencies, Financial institutions, Defense contractors, Healthcare organizations, Critical infrastructure, Technology companies'
       trialDay,
   s: 60;
       setupTim,
@@ -1147,7 +1127,6 @@ export const getPopularEmergingTechServices = () =>,
       review,
   s: 30};
   ];
-export const getPopularEmergingTechServices = () => {/* TODO: Fix JSX expression */}
   return innovative2026EmergingTechServices.filter(service => service.popular)}
 }
 // DNA Computing Platform realImplementation: true;
@@ -1381,7 +1360,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true;
-    implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture, spiking neural networks, and comprehensive development tools. Includes research collaboration features.',
     launchDate: '2026-01-10', customers: 80;
     rating: 4.9;
     reviews: 40;
@@ -1479,7 +1457,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     id: 'biometric-authentication-platform-2026', name: 'Biometric Authentication Platform 2026',
     tagline: 'Advanced biometric security with AI-powered recognition and authentication', price: '$899',
     period: '/month',
-    description: 'Next-generation biometric authentication platform that uses AI-powered facial recognition, fingerprint scanning, voice recognition, and behavioral biometrics for secure, convenient authentication.',
     features: [;
       'Multi-modal biometric authenticationAI-powered recognitionFacial recognition technologyFingerprint and palm scanningVoice and speech recognitionBehavioral biometricsLiveness detectionMulti-factor authentication',
       'API and SDK accessEnterprise security features'],
@@ -1516,8 +1493,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     popular: false, icon: '',
     color: 'from-cyan-500 to-blue-600', textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/services/quantum-internet-platform-2026',
-    marketPosition: 'Competitive with Quantum Xchange ($50)000+/setup), ID Quantique ($30)000+/setup), and Toshiba Quantum ($40)000+/setup). Our advantage: Modern architecture, faster deployment, and 70% cost savings.',
-    targetAudience: 'Government agencies, Financial institutions, Defense contractors, Healthcare organizations, Critical infrastructure, Technology companies',
     trialDays: 60, setupTime: '6-8 weeks',
     category: 'Emerging Technology & Quantum Internet', realService: true;
     technology: ['Quantum Key DistributionQuantum NetworksQuantum CryptographyQuantum RepeatersPythonQuantum Algorithms'], integrations: ['Government networksFinancial systemsDefense networksHealthcare systemsCritical infrastructureCloud platforms'],
@@ -1533,7 +1508,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
     launchDate: '2026-01-25', customers: 60;
     rating: 4.9;
     reviews: 30;
-export interface Innovative2026EmergingTechService {/* TODO: Fix JSX expression */}
   e: string}
     },
     realImplementatio,
@@ -1559,7 +1533,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing, cognitive computing, and adaptive learning systems.'
-    feature,
   s: [;
       'Brain-inspired neural architectureSpiking neural networks (SNNs)Ultra-low power consumptionReal-time learning and adaptationCognitive computing capabilitiesAdvanced pattern recognitionNeuromorphic hardware integrationCustom neural model development'
       'Performance optimization toolsResearch collaboration platform'
@@ -1610,7 +1583,6 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Advanced neuromorphic computing platform with brain-inspired architecture, spiking neural networks, and comprehensive development tools. Includes research collaboration features.',
     launchDat,
   e: '2026-01-10', customer,
   s: 80,
@@ -1629,7 +1601,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Groundbreaking DNA computing platform that leverages molecular biology for ultra-dense data storage, complex problem solving, and next-generation computational capabilities.',
-    feature,
   s: [;
       'DNA-based data storageMolecular problem solvingUltra-dense information encodingBiomolecular algorithmsDNA synthesis and sequencingMolecular computing workflowsAdvanced bioinformatics toolsCustom DNA program development'
       'Laboratory integrationProfessional bioengineering support'
@@ -1699,7 +1670,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Next-generation photonic computing platform that uses light instead of electricity for ultra-fast processing, low power consumption, and high-bandwidth data transfer.',
-    feature,
   s: [;
       'Photonic processorsOptical interconnectsLight-based computingUltra-fast data processingLow power consumptionHigh-bandwidth communicationPhotonic neural networksOptical memory systems'
       'Custom photonic designProfessional engineering support'
@@ -1768,7 +1738,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Revolutionary holographic display platform that creates immersive 3D visualizations, interactive holograms, and next-generation display experiences for entertainment, education, and business.',
-    feature,
   s: [;
       '3D holographic projectionInteractive holographic displaysReal-time 3D renderingGesture and touch interactionMulti-user collaborationHolographic content creationAugmented reality integrationMobile holographic apps'
       'Custom content developmentProfessional installation services'
@@ -1836,8 +1805,6 @@ export const,
     perio,
   d: '/month',
     descriptio,
-  n: 'Next-generation biometric authentication platform that uses AI-powered facial recognition, fingerprint scanning, voice recognition, and behavioral biometrics for secure, convenient authentication.',
-    feature,
   s: [;
       'Multi-modal biometric authenticationAI-powered recognitionFacial recognition technologyFingerprint and palm scanningVoice and speech recognitionBehavioral biometricsLiveness detectionMulti-factor authentication'
       'API and SDK accessEnterprise security features'
@@ -1907,7 +1874,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Revolutionary quantum internet platform that provides ultra-secure communication, quantum key distribution, and next-generation networking capabilities for government, financial, and critical infrastructure.',
-    feature,
   s: [;
       'Quantum key distribution (QKD)Quantum secure communicationQuantum network infrastructureEntanglement-based protocolsQuantum repeaters and nodesAdvanced cryptographyReal-time quantum monitoringProfessional installation services'
       '24/7 network operationsGovernment compliance features'
@@ -1923,9 +1889,7 @@ export const,
   s://ziontechgroup.com/services/quantum-internet-platform-2026',
     marketPositio,
   n: 'Competitive with Quantum Xchange ($50)000+/setup), ID Quantique ($30)000+/setup), and Toshiba Quantum ($40)000+/setup). Our,
-  advantage: Modern architecture, faster deployment, and 70% cost savings.',
     targetAudienc,
-  e: 'Government agencies, Financial institutions, Defense contractors, Healthcare organizations, Critical infrastructure, Technology companies',
     trialDay,
   s: 60, setupTim,
   e: '6-8 weeks',
@@ -2030,12 +1994,10 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
 };
 }
 ;
-  return innovative2026EmergingTechServices.filter(service => {/* TODO: Fix JSX expression */})
     const _price = parseInt(service.price.replace('$') '').replace(} ''));
     return price >= minPrice && price <= maxPrice;
   })
 }
-export interface Innovative2026EmergingTechService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -2135,7 +2097,6 @@ i,
   e: string; pric,
   e: string, perio,
   d: string, descriptio,
-  n: string; feature,
   s: string[]; popula,
   r: boolean; ico,
   n: string; colo,
@@ -2173,7 +2134,6 @@ i,
   e:  ,' 'Brain - inspired computing for next - generation AI and cognitive systems',' pric,
   e: '$1, 499',' perio,
   d: '/month', descriptio,"
-  n:  ,' "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure for ultra - efficient AI processing, cognitive computing, and adaptive learning systems.", feature,
   s: [,' 'Brain - inspired neural architecture', ' 'Spiking neural networks (SNNs)',' 'Ultra - low power consumption',' 'Real - time learning and adaptation',' 'Cognitive computing capabilities',' 'Advanced pattern recognition',' 'Neuromorphic hardware integration',' 'Custom neural model development',' 'Performance optimization tools',' 'Research collaboration platform'], popula,
   r: true,' ico,
   n: '🧠', ' colo,
@@ -2203,7 +2163,6 @@ i,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Advanced neuromorphic computing platform with brain - inspired architecture, spiking neural networks, and comprehensive development tools. Includes research collaboration features.',' launch_dat,
   e: '2026 - 01 - 10', customer,
   s: 80, ratin,
   g: 4 && 4.9, review,
@@ -2213,7 +2172,6 @@ i,
   e:  ,' 'Molecular computing for complex problem solving and data storage',' pric,
   e: '$2, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Groundbreaking DNA computing platform that leverages molecular biology for ultra - dense data storage, complex problem solving, and next - generation computational capabilities.', feature,
   s: [,' 'DNA - based data storage', ' 'Molecular problem solving',' 'Ultra - dense information encoding',' 'Biomolecular algorithms',' 'DNA synthesis and sequencing',' 'Molecular computing workflows',' 'Advanced bioinformatics tools',' 'Custom DNA program development',' 'Laboratory integration',' 'Professional bioengineering support'], popula,
   r: false,' ico,
   n: '🧬', ' colo,
@@ -2253,7 +2211,6 @@ i,
   e:  ,' 'Light - speed computing with photonic processors and optical interconnects',' pric,
   e: '$1, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Next - generation photonic computing platform that uses light instead of electricity for ultra - fast processing, low power consumption, and high - bandwidth data transfer.', feature,
   s: [, ' 'Photonic processors',' 'Optical interconnects',' 'Light - based computing',' 'Ultra - fast data processing',' 'Low power consumption',' 'High - bandwidth communication',' 'Photonic neural networks',' 'Optical memory systems',' 'Custom photonic design',' 'Professional engineering support'], popula,
   r: true,' ico,
   n: '💡', ' colo,
@@ -2293,7 +2250,6 @@ i,
   e: 'Next - generation 3D holographic visualization and interaction',' pric,
   e: '$699',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary holographic display platform that creates immersive 3D visualizations, interactive holograms, and next - generation display experiences for entertainment, education, and business.', feature,
   s: [, ' '3D holographic projection',' 'Interactive holographic displays',' 'Real - time 3D rendering',' 'Gesture and touch interaction',' 'Multi - user collaboration',' 'Holographic content creation',' 'Augmented reality integration',' 'Mobile holographic apps',' 'Custom content development',' 'Professional installation services'], popula,
   r: false,' ico,
   n: '🌟', ' colo,
@@ -2333,7 +2289,6 @@ i,
   e:  ,' 'Advanced biometric security with AI - powered recognition and authentication',' pric,
   e: '$899',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Next - generation biometric authentication platform that uses AI - powered facial recognition, fingerprint scanning, voice recognition, and behavioral biometrics for secure, convenient authentication.', feature,
   s: [,' 'Multi - modal biometric authentication',' 'AI - powered recognition', ' 'Facial recognition technology',' 'Fingerprint and palm scanning',' 'Voice and speech recognition',' 'Behavioral biometrics',' 'Liveness detection',' 'Multi - factor authentication',' 'API and SDK access',' 'Enterprise security features'], popula,
   r: true,' ico,
   n: '🔐', ' colo,
@@ -2373,7 +2328,6 @@ i,
   e: 'Ultra - secure quantum communication network for the future',' pric,
   e: '$5, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary quantum internet platform that provides ultra - secure communication, quantum key distribution, and next - generation networking capabilities for government, financial, and critical infrastructure.', feature,
   s: [, ' 'Quantum key distribution (QKD)',' 'Quantum secure communication',' 'Quantum network infrastructure',' 'Entanglement - based protocols',' 'Quantum repeaters and nodes',' 'Advanced cryptography',' 'Real - time quantum monitoring',' 'Professional installation services',' '24 / 7 network operations',' 'Government compliance features'], popula,
   r: false,' ico,
   n: '🌐', ' colo,
@@ -2382,8 +2336,6 @@ i,
   k: 'http,
   s://ziontechgroup.com / services / quantum - internet - platform - 2026', market_positio,
   n:  ,' 'Competitive with Quantum Xchange ($50) 000+/setup), ID Quantique ($30) 000+/setup), and Toshiba Quantum ($40) 000+/setup). Our,
-  advantage: Modern architecture, faster deployment, and 70% cost savings.', target_audienc,
-  e:  ,' 'Government agencies, Financial institutions, Defense contractors, Healthcare organizations, Critical infrastructure, Technology companies', trial_day,
   s: 60,' setup_tim,
   e: '6 - 8 weeks',' categor,
   y: 'Emerging Technology & Quantum Internet', real_servic,
@@ -2413,7 +2365,6 @@ i,
   e: 'Ultra-secure quantum communication network for the future'' pric,
   e: '$5,999'' perio,
   d: '/month' descriptio,
-  n:' 'Revolutionary quantum internet platform that provides ultra-secure communication, quantum key distribution, and next-generation networking capabilities for government, financial, and critical infrastructure.' feature,
   s: [' 'Quantum key distribution (QKD)'' 'Quantum secure communication'' 'Quantum network infrastructure'' 'Entanglement-based protocols'' 'Quantum repeaters and nodes'' 'Advanced cryptography'' 'Real-time quantum monitoring'' 'Professional installation services'' '24/7 network operations'' 'Government compliance features' ] popula,
   r: false' ico,
   n: '🌐'' colo,
@@ -2422,8 +2373,6 @@ i,
   k: 'http,
   s://ziontechgroup.com/services/quantum-internet-platform-2026' marketPositio,
   n:' 'Competitive with Quantum Xchange ($50)000+/setup), ID Quantique ($30)000+/setup), and Toshiba Quantum ($40)000+/setup). Our,
-  advantage: Modern architecture, faster deployment, and 70% cost savings.' targetAudienc,
-  e: ' 'Government agencies, Financial institutions, Defense contractors, Healthcare organizations, Critical infrastructure, Technology companies' trialDay,
   s: 60' setupTim,
   e: '6-8 weeks'' categor,
   y: 'Emerging Technology & Quantum Internet' realServic,
@@ -2494,7 +2443,6 @@ i,
   e: string, pric,
   e: string, perio,
   d: string, descriptio,
-  n: string, feature,
   s: string[], popula,
   r: boolean, ico,
   n: string, colo,
@@ -2532,7 +2480,6 @@ i,
   e: 'Brain-inspired computing for next-generation AI and cognitive systems',' pric,
   e: '$1,499',' perio,
   d: '/month',' descriptio,
-  n: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing, cognitive computing, and adaptive learning systems.' feature,
   s: [' 'Brain-inspired neural architectureSpiking neural networks (SNNs)Ultra-low power consumptionReal-time learning and adaptationCognitive computing capabilitiesAdvanced pattern recognitionNeuromorphic hardware integrationCustom neural model development'' 'Performance optimization toolsResearch collaboration platform' ],' popula,
   r: true, ico,
   n: '🧠',' colo,
@@ -2562,7 +2509,6 @@ i,
   e: 'http,
   s://ziontechgroup.com' }, realImplementatio,
   n: true,' implementationDetail,
-  s: 'Advanced neuromorphic computing platform with brain-inspired architecture, spiking neural networks, and comprehensive development tools. Includes research collaboration features.',' launchDat,
   e: '2026-01-10', customer,
   s: 80, ratin,
   g: 4.9, review,
@@ -2572,7 +2518,6 @@ i,
   e: 'Molecular computing for complex problem solving and data storage',' pric,
   e: '$2,999',' perio,
   d: '/month',' descriptio,
-  n: 'Groundbreaking DNA computing platform that leverages molecular biology for ultra-dense data storage, complex problem solving, and next-generation computational capabilities.', feature,
   s: [' 'DNA-based data storageMolecular problem solvingUltra-dense information encodingBiomolecular algorithmsDNA synthesis and sequencingMolecular computing workflowsAdvanced bioinformatics toolsCustom DNA program development'' 'Laboratory integrationProfessional bioengineering support' ],' popula,
   r: false, ico,
   n: '🧬',' colo,
@@ -2612,7 +2557,6 @@ i,
   e: 'Light-speed computing with photonic processors and optical interconnects',' pric,
   e: '$1,999',' perio,
   d: '/month',' descriptio,
-  n: 'Next-generation photonic computing platform that uses light instead of electricity for ultra-fast processing, low power consumption, and high-bandwidth data transfer.', feature,
   s: [' 'Photonic processorsOptical interconnectsLight-based computingUltra-fast data processingLow power consumptionHigh-bandwidth communicationPhotonic neural networksOptical memory systems'' 'Custom photonic designProfessional engineering support' ],' popula,
   r: true, ico,
   n: '💡',' colo,
@@ -2652,7 +2596,6 @@ i,
   e: 'Next-generation 3D holographic visualization and interaction', pric,
   e: '$699',' perio,
   d: '/month',' descriptio,
-  n: 'Revolutionary holographic display platform that creates immersive 3D visualizations, interactive holograms, and next-generation display experiences for entertainment, education, and business.', feature,
   s: [' '3D holographic projectionInteractive holographic displaysReal-time 3D renderingGesture and touch interactionMulti-user collaborationHolographic content creationAugmented reality integrationMobile holographic apps'' 'Custom content developmentProfessional installation services' ],' popula,
   r: false, ico,
   n: '🌟',' colo,
@@ -2692,7 +2635,6 @@ i,
   e: 'Advanced biometric security with AI-powered recognition and authentication', pric,
   e: '$899',' perio,
   d: '/month',' descriptio,
-  n: 'Next-generation biometric authentication platform that uses AI-powered facial recognition, fingerprint scanning, voice recognition, and behavioral biometrics for secure, convenient authentication.', feature,
   s: [' 'Multi-modal biometric authenticationAI-powered recognitionFacial recognition technologyFingerprint and palm scanningVoice and speech recognitionBehavioral biometricsLiveness detectionMulti-factor authentication'' 'API and SDK accessEnterprise security features' ],' popula,
   r: true, ico,
   n: '🔐',' colo,
@@ -2732,7 +2674,6 @@ i,
   e: 'Ultra-secure quantum communication network for the future',' pric,
   e: '$5,999',' perio,
   d: '/month',' descriptio,
-  n: 'Revolutionary quantum internet platform that provides ultra-secure communication, quantum key distribution, and next-generation networking capabilities for government, financial, and critical infrastructure.', feature,
   s: [' 'Quantum key distribution (QKD)Quantum secure communicationQuantum network infrastructureEntanglement-based protocolsQuantum repeaters and nodesAdvanced cryptographyReal-time quantum monitoringProfessional installation services'' '24/7 network operationsGovernment compliance features' ],' popula,
   r: false, ico,
   n: '🌐',' colo,
@@ -2741,8 +2682,6 @@ i,
   k: 'http,
   s://ziontechgroup.com/services/quantum-internet-platform-2026',' marketPositio,
   n: 'Competitive with Quantum Xchange ($50)000+/setup), ID Quantique ($30)000+/setup), and Toshiba Quantum ($40)000+/setup). Our,
-  advantage: Modern architecture, faster deployment, and 70% cost savings.',' targetAudienc,
-  e: 'Government agencies, Financial institutions, Defense contractors, Healthcare organizations, Critical infrastructure, Technology companies',' trialDay,
   s: 60, setupTim,
   e: '6-8 weeks',' categor,
   y: 'Emerging Technology & Quantum Internet', realServic,
@@ -2775,7 +2714,6 @@ i,
   e: number) max_pric,
   e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (') '; '')); return price >= min_price && price <= max_price; });} ; export const getEmergingTechServicesByPriceRange = (min_pric)
   e: number) max_pric,
-  e: number) =>: unknown return innovative2026EmergingTechServices.filter (service => ' const price = parse_int (service.price.replace ('$') '').replace (; '')); return price >= min_price && price <= max_price; }); }; }; } ; return innovative2026EmergingTechServices.filter(service => {)' const price = parseInt(service.price.replace('$') '').replace(} '')); return price >= minPrice && price <= maxPrice }) } ' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026EmergingTechService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,

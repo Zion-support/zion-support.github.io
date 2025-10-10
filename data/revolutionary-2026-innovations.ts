@@ -23,7 +23,6 @@ export interface Revolutionary2026Innovation {;,
   e: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -37,7 +36,6 @@ export interface Revolutionary2026Innovation {;,
   e: string;
     emai,
   l: string;
-export interface Revolutionary2026Innovation {/* TODO: Fix JSX expression */}
   s: string}
 };
   i,
@@ -50,7 +48,6 @@ export interface Revolutionary2026Innovation {/* TODO: Fix JSX expression */}
   e: string,,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -59,7 +56,6 @@ export interface Revolutionary2026Innovation {/* TODO: Fix JSX expression */}
   realImplementatio,
   n: boolean;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
@@ -111,7 +107,6 @@ export const revolutionary2026 Innovations: Revolutionary2026 Innovation[] = [,
   e: string, pric,
   e: string,
   descriptio,
-  n: string, feature,
   s: string[],
   lin,
   k: string, categor,
@@ -136,7 +131,6 @@ export const,
   e: "$399/month",
     descriptio,"
   n: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.",
-    feature,
   s: [;"
       "Revolutionary innovations""
       "Breakthrough technologies""
@@ -207,7 +201,6 @@ export const,
   e: "$399/month",
     descriptio,"
   n: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.",
-    feature,
   s: [,"
       "Revolutionary innovations","
       "Breakthrough technologies","
@@ -251,25 +244,21 @@ i,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: mobil,
   e: string; emai,
-  l: string; export interface Revolutionary2026Innovation {/* TODO: Fix JSX expression */}
   s: string }; i,
   d: string; nam,
   e: string; taglin,
   e: string; pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
@@ -277,7 +266,6 @@ i,
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
@@ -291,7 +279,6 @@ i,
   e: "2026 Revolutionary Innovation Platform", taglin,"
   e: "Breakthrough innovations for 2026", pric,"
   e: "$399/month", descriptio,"
-  n: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.", feature,"
   s: [ "Revolutionary innovations" "Breakthrough technologies" "Future capabilities" "Innovation platform" "Expert insights" ], lin,"
   k: "/services/2026-revolutionary-innovation", categor,"
   y: "Revolutionary 2026 Innovations", realImplementatio,
@@ -308,7 +295,6 @@ i,
   e: "2026 Revolutionary Innovation Platform", taglin,"
   e: "Breakthrough innovations for 2026", pric,"
   e: "$399/month", descriptio,"
-  n: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.", feature,"
   s: [ "Revolutionary innovations", "Breakthrough technologies", "Future capabilities", "Innovation platform", "Expert insights" ], lin,"
   k: "/services/2026-revolutionary-innovation", categor,"
   y: "Revolutionary 2026 Innovations", realImplementatio,

@@ -35,7 +35,6 @@ const, October2025RevOpsBanne, r = () => {
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, justif, y-center, m, b-4">";</div>
           <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-boun, c, e">";</div>
-const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  /></div>"
@@ -76,7 +75,6 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             Transform, Your, Revenue Engine, with, AI-Powered, Intelligenc, e;
           </p>
           <p, className="te, x, t-lg, tex, t-emera, l, d-200, ma, x-w-4xl, m, x-au, t, o">
-            Discover, how, leading enterprises, are, achieving</p> <span, className="fo, n, t-bold, tex, t-whi, t, e">1, 2, 7% R, O, I</sp, a, n>
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 89% forecast, accurac, y</sp, a, n>, a, n, d;
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 3.2x, pipeline, velocity</sp, a, n> through, autonomous, revenue operatio, n, s;
         <div, className="te, x, t-center, m, b-6">";</div>
@@ -88,7 +86,6 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             Transform, Your, Revenue Engine, with, AI-Powered, Intelligenc, e;
           </p>
           <p, className="te, x, t-lg, tex, t-emera, l, d-200, ma, x-w-4xl, m, x-au, t, o">";
-            Discover, how, leading enterprises, are, achieving</p> <span, className="fo, n, t-bold, tex, t-whi, t, e">1, 2, 7% R, O, I</sp, a, n>, ";
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 89% forecast, accurac, y</sp, a, n>, a, n, d ";
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 3.2x, pipeline, velocity</sp, a, n> through, autonomous, revenue operatio, n, s";
           </p>
@@ -173,7 +170,6 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
               <div, className="te, x, t-emera, l, d-300, fon, t-bold, m, b-2, flex, items-cent, e, r">";</div>
           </p>"
           <p, className="te, x, t-lg, tex, t-emera, l, d-200, ma, x-w-4xl, m, x-au, t, o"></p>"
-            Discover, how, leading enterprises, are, achieving <span, className="fo, n, t-bold, tex, t-whi, t, e">1, 2, 7% R, O, I</sp, a, n>"
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 89% forecast, accurac, y</sp, a, n>, a, n, d;"
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 3.2x, pipeline, velocity</sp, a, n> through, autonomous, revenue operatio, n, s;"
         <div, className="te, x, t-center, m, b-6">";"
@@ -185,7 +181,6 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             Transform, Your, Revenue Engine, with, AI-Powered, Intelligenc, e;
           </p>"
           <p, className="te, x, t-lg, tex, t-emera, l, d-200, ma, x-w-4xl, m, x-au, t, o">";"
-            Discover, how, leading enterprises, are, achieving <span, className="fo, n, t-bold, tex, t-whi, t, e">1, 2, 7% R, O, I</sp, a, n>, ";"
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 89% forecast, accurac, y</sp, a, n>, a, n, d ";"
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 3.2x, pipeline, velocity</sp, a, n> through, autonomous, revenue operatio, n, s";
           </p>
@@ -473,7 +468,6 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
               </d, i, v>
               <d, i, v></d>"
                 <div, className="fo, n, t-bold, tex, t-whi, t, e">Cro, s, s-Functional, Alignmen, t</d, i, v>";"
-                <div, className="te, x, t-sm">67% improvement, in, team collaboration, score, s</d, i, v>";
               </d, i, v>
             </d, i, v>
             <div, className="flex, item, s-sta, r, t"></div>
@@ -538,7 +532,6 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
   to="/bl, o, g""
               classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-emera, l, d-800, tex, t-white, fon, t-bold, rounde, d-lg, hove, r: bg-emera, l, d-900, transitio, n-all, shado, w-xl"
             ></Li>
-              Explore, All, Content;"
               <Link, className="w-5 h-5, m, l-2  /></Link>"
               <Link, className="w-5 h-5, m, l-2" />";
             </Li, n, k>

@@ -10,7 +10,6 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <meta, nam, e='description'
           conte, n, t='Learn, about, ai 2025, oct, 01 privacy, first, observability v2, and, how it, can, benefit your, enterpris, e.'
         />)
-        <link, re, l='canonic, a, l')
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-01-priva c y-fir s t-observabili t y-v2')
         />),
       </Helm, e, t>
@@ -22,5 +21,4 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Learn, about, ai 2025, oct, 01 privacy, first, observability v2, and, how it, can, benefit your, enterpris, e.
 }</p>
-export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }

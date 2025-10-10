@@ -24,7 +24,6 @@ export const Link: React.FC;
 }) => {if (onClick) {}
     }
     // Handle internal navigation;
-    if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       e.preventDefault();

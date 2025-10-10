@@ -1,4 +1,3 @@
-impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
@@ -14,7 +13,6 @@ const AutonomousDevOpsServic, e = () => {
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='autonomous, devo, p, s, se, l, f-healing, c, i/cd, automated, pipeline, s, devops, automatio, n, zero, downtime, deployment, AI, devop, s, intelligent, automatio, n'
         />)
-        <link, re, l = 'canonic, a, l')
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/servic e s/autonomo u s-devo p s')
         />),
       </Helm, e, t>
@@ -49,7 +47,6 @@ const AutonomousDevOpsServic, e = () => {
         <section, classNam, e = 'py-20, p, x-4'>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'></section>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'>
-const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
         <Head, e, r / > {/* Hero, Sect, i, o, n */ }
         <section, classNam, e = 'relative, p, t-32, p, b-20, p, x-4'></section>
           <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20, blu, r-3, x, l' /></div>
@@ -90,11 +87,8 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                   Release, cycles, accelerated with, intelligent, automation and, predictive, optimization;
                 </p>
               </div>
-              <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
-                <Shield, className='w-1, 2, h-12, tex, t-gre, e, n-400, m, b-4' />
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>99.99% Upti, m, e</h3>
                 <p, className='te, x, t-gr, a, y-3, 0, 0'>
-                <Shield, className='w-1, 2, h-12, tex, t-gre, e, n-400, m, b-4' /></Shield>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>99.99% Upti, m, e</h3>
                 <p, className='te, x, t-gr, a, y-3, 0, 0'></p>
                   Se, l, f-healing, systems, that prevent, and, resolve issues, autonomousl, y;
@@ -124,7 +118,6 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
           </div>
         </secti, o, n>
 
-        {/* Core, Featu, r, e, s */}
         <section, classNam, e = 'py-20, p, x-4, b, g-bla, c, k/30'>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'></section>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'>
@@ -149,16 +142,12 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                     </sp, a, n>
               </div>
 
-              <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/30, t, o-te, a, l-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
-                <Shield, className='w-1, 0, h-10, tex, t-gre, e, n-400, m, b-4' />
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
-                <Shield, className='w-1, 0, h-10, tex, t-gre, e, n-400, m, b-4' /></Shield>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'></h3>
                   Intelligent, Sel, f-Heali, n, g;
                 </h3>
                 <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'></ul>
                   <li, className='flex, item, s-start, ga, p-3'></li>
-                    <span, className='te, x, t-gre, e, n-400, m, t-1'>•</sp, a, n>
                     <sp, a, n>
                     <sp, a, n></sp>
                       Automatic, rollback, on anomaly, detection, with &lt; 5, second, response;
@@ -240,8 +229,6 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                   </h3>
                   <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
               <div, classNam, e='relati, v, e'></div>
-                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
-                  <div, classNam, e='w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
                   <div, className='w-1, 2, h-12, b, g-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'></div>
                     2;
                   </div>
@@ -251,13 +238,9 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                   </h3>
                   <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'></ul>
               <div, classNam, e='relati, v, e'></div>
-                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
-                  <div, classNam, e='w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'></div>
                 </div>
               </div>
               <div, className='relati, v, e'></div>
-                <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
-                  <div, className='w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
                     3;
                   </div>
                   <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
@@ -265,7 +248,6 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                   </h3>
                   <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
                       <li, classNam, e='flex, item, s-start, ga, p-2'>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1' />
                       <li, classNam, e='flex, item, s-start, ga, p-2'>
                         <Zap, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1' />
                     Schedule, Consultatio, n;
@@ -278,7 +260,6 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                 Getted, Today</h2>
                 <Link, classNam, e='w-5 h-5' />
                       <li, className='flex, item, s-start, ga, p-2'>
-                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1' />
                       <li, className='flex, item, s-start, ga, p-2'>
                         <Zap, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1' />
                     Schedule, Consultatio, n;
@@ -290,7 +271,6 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                 Getted, Today;
                 Getted, Today</h2>
                 <Link, className='w-5 h-5' />
-                  <div, className='w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'></div>
                     3;
                   </div>
                   <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'></h3>
@@ -299,7 +279,6 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                   </h3>
                   <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'></ul>
                       <li, classNam, e='flex, item, s-start, ga, p-2'></li>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1' /></CheckCircle>
                       <li, classNam, e='flex, item, s-start, ga, p-2'></li>
                         <Zap, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1' /></Zap>
                     Schedule, Consultatio, n;
@@ -311,7 +290,6 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                 Getted, Today;
                 <Link, classNam, e='w-5 h-5' /></Link>
                       <li, className='flex, item, s-start, ga, p-2'></li>
-                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1' /></CheckCircle>
                       <li, className='flex, item, s-start, ga, p-2'></li>
                         <Zap, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1' /></Zap>
                     Schedule, Consultatio, n;

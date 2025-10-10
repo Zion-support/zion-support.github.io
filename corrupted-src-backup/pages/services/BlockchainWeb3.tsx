@@ -2,14 +2,11 @@ import { Helmet } from "react-helmet-async";"
 impo, r, t { Coi, n, s } fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r";
-impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
-impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, BlockchainWeb, 3: Rea, c, t.FC = () => {
-  const, feature, s = [
     {
       i, c, o;
   n: Shie, l, d;
@@ -22,9 +19,7 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {
     {
       ic, o, n: Netwo, r, k;
       tit, l, e: "Mul, t, i-Chain, Integratio, n","
-      descripti, o, n: "Seamless, integration, across Ethere, u, m, Polyg, o, n, B, S, C, Sola, n, a, and, other, major blockchain, network, s.","
       tit, l, e: "Mul, t, i-Chain, Integratio, n",";
-      descripti, o, n: "Seamless, integration, across Ethere, u, m, Polyg, o, n, B, S, C, Sola, n, a, and, other, major blockchain, network, s.",";
       benef, i, t: "Universal, compatibilit, y"
     }
     {
@@ -208,13 +203,10 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {
     }
     {
       na, m, e: "Dr. Sarah, Johnso, n","
-      ro, l, e: "Found, e, r, Healthcare, DA, O","
       conte, n, t: "The, DAO, governance system, and, tokenomics design, created, a thriving, community, of 50,000, member, s. The, transparency, and security, features, are exception, a, l.","
       na, m, e: "Dr. Sarah, Johnso, n",";
-      ro, l, e: "Found, e, r, Healthcare, DA, O",";
       conte, n, t: "The, DAO, governance system, and, tokenomics design, created, a thriving, community, of 50,000, member, s. The, transparency, and security, features, are exception, a, l.",";
       rati, n, g: 5;
-      compa, n, y: "Healthcare, DA, O"
     }
   ];
   const, service, s = [
@@ -271,57 +263,35 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {
       descripti, o, n: "Custom, token, creation with, advanced, tokenomics, vesting, schedule, s, and, utility, mechanisms.",";
       metri, c, s: "Zero, security, incidents",";
       benefi, t, s: ["Custom, tokenomic, s", "Vesting, schedule, s", "Utility, mechanism, s"]";
-const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   const, pricin, g = [
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   const, testimonial, s = [
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   const, service, s = [
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   const, technologie, s = ["
-    { na, m, e: "Ethere, u, m", ty, p, e: "Smart, Contract, s" }"
     { na, m, e: "Polyg, o, n", ty, p, e: "Layer, 2, Scaling" }"
     { na, m, e: "Binance, Smart, Chain", ty, p, e: "High, Performanc, e" }"
     { na, m, e: "Sola, n, a", ty, p, e: "Ultra, Fas, t" }"
@@ -331,9 +301,7 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     { na, m, e: "Optimi, s, m", ty, p, e: "Layer, 2, Solution" }"
     { na, m, e: "Cosm, o, s", ty, p, e: "Int, e, r-Blockcha, i, n" }"
     { na, m, e: "Near, Protoco, l", ty, p, e: "Developer, Friendl, y" }"
-    { na, m, e: "Algora, n, d", ty, p, e: "Pure, Proof, of Sta, k, e" }"
     { na, m, e: "Fant, o, m", ty, p, e: "Fast, Finalit, y" }"
-    { na, m, e: "Ethere, u, m", ty, p, e: "Smart, Contract, s" },";"
     { na, m, e: "Polyg, o, n", ty, p, e: "Layer, 2, Scaling" },";"
     { na, m, e: "Binance, Smart, Chain", ty, p, e: "High, Performanc, e" },";"
     { na, m, e: "Sola, n, a", ty, p, e: "Ultra, Fas, t" },";"
@@ -343,7 +311,6 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     { na, m, e: "Optimi, s, m", ty, p, e: "Layer, 2, Solution" },";"
     { na, m, e: "Cosm, o, s", ty, p, e: "Int, e, r-Blockcha, i, n" },";"
     { na, m, e: "Near, Protoco, l", ty, p, e: "Developer, Friendl, y" },";"
-    { na, m, e: "Algora, n, d", ty, p, e: "Pure, Proof, of Sta, k, e" },";"
     { na, m, e: "Fant, o, m", ty, p, e: "Fast, Finalit, y" }";
   ];
   return(<>
@@ -351,17 +318,14 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <title>Blockcha, i, n & Web3, Service, s - Zion, Tech, Group | De, F, i, N, F, T, DAO, Solution, s</title>
         <me, t, a;
   na, m, e="descripti, o, n"
-          content="Expert, blockchain, and Web3, services, including DeFi, protocol, s, NFT, marketplace, s, DAO, governanc, e, and, smart, contract developme, n, t. Enterpri, s, e-grade, security, and mul, t, i-chain, integratio, n." /><meta name="keywor, d, s" content="blockchain, developmen, t, Web3, service, s, DeFi, protocol, s, NFT, marketplac, e, DAO, governanc, e, smart, contract, s, cryptocurrency, developmen, t" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/blockcha, i, n-we, b, 3/>"
   return (<>
       <Helmet></Helmet>
         <title>Blockcha, i, n & Web3, Service, s - Zion, Tech, Group | De, F, i, N, F, T, DAO, Solution, s</title>
         <me, t, a;"
   na, m, e="descripti, o, n""
-          content="Expert, blockchain, and Web3, services, including DeFi, protocol, s, NFT, marketplace, s, DAO, governanc, e, and, smart, contract developme, n, t. Enterpri, s, e-grade, security, and mul, t, i-chain, integratio, n." /><meta name="keywor, d, s" content="blockchain, developmen, t, Web3, service, s, DeFi, protocol, s, NFT, marketplac, e, DAO, governanc, e, smart, contract, s, cryptocurrency, developmen, t" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/blockcha, i, n-we, b, 3/>""
           content="Expert, blockchain, and Web3, services, including DeFi, protocol, s, NFT, marketplace, s, DAO, governanc, e, and, smart, contract developme, n, t. Enterpri, s, e-grade, security, and mul, t, i-chain, integratio, n."
          />"
         <meta name="keywor, d, s" content="blockchain, developmen, t, Web3, service, s, DeFi, protocol, s, NFT, marketplac, e, DAO, governanc, e, smart, contract, s, cryptocurrency, developmen, t" />";"
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/blockcha, i, n-we, b, 3" />";
       </Helmet>
       <Head, e, r   /></Head>"
       <main, className="m, i, n-h-screen, b, g-whi, t, e">";
@@ -374,7 +338,6 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   g:px-8">"</section>
             <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
-                Blockcha, i, n &</h1> <span, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">We, b, 3</sp, a, n>
               </h1>
               <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-indi, g, o-100, ma, x-w-4xl, m, x-auto, m, b-8">
                 Expert, blockchain, and Web3, services, including DeFi, protocol, s, NFT, marketplace, s;
@@ -387,7 +350,6 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
             <div, className="te, x, t-cent, e, r">";</div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
-                Blockcha, i, n &</h1> <span, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">We, b, 3</sp, a, n>";
               </h1>
               <p, className="te, x, t-x, l, m;
   d: te, x, t-2xl, tex, t-indi, g, o-100, ma, x-w-4xl, m, x-auto, m, b-8">";
@@ -406,7 +368,6 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   g:px-8">""
             <div, className="te, x, t-cent, e, r"></div>"
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">""
-                Blockcha, i, n & <span, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">We, b, 3</sp, a, n>
               </h1>"
               <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-indi, g, o-100, ma, x-w-4xl, m, x-auto, m, b-8"></p>
                 Expert, blockchain, and Web3, services, including DeFi, protocol, s, NFT, marketplace, s;
@@ -417,7 +378,6 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-cent, e, r">";"
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";"
-                Blockcha, i, n & <span, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">We, b, 3</sp, a, n>";
               </h1>"
               <p, className="te, x, t-x, l, m,"
   d: te, x, t-2xl, tex, t-indi, g, o-100, ma, x-w-4xl, m, x-auto, m, b-8">";
@@ -525,17 +485,10 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Universal, blockchain, compatibility</p>";
               </d, i, v>
               <div, className="te, x, t-cent, e, r"></div>
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4"></div>
-                  <TrendingUp, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
               <div, className="te, x, t-cent, e, r">";</div>
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";</div>
               </d, i, v>"
               <div, className="te, x, t-cent, e, r"></div>"
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4"></div>"
-                  <TrendingUp, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  /></TrendingUp>"
               <div, className="te, x, t-cent, e, r">";"
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";"
-                  <TrendingUp, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">$50, 0, M+ T, V, L</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Proven, track, record</p>";
@@ -630,13 +583,11 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             </d, i, v>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-4, ga, p-8">"
-              {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-6"></div>"
                       <Icon, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0  /></Icon>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-4, ga, p-8">";
-              {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-indi, g, o-100, rounde, d-full, m, b-6">";"
                       <Icon, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0" />";
@@ -645,7 +596,6 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{servi, c, e.descripti, o, n}</p>";"
                     <div, className="te, x, t-indi, g, o-600, fon, t-semibold, m, b-4">{servi, c, e.metri, c, s}</d, i, v>";"
                     <ul, className="spa, c, e-y-2">";
-                      {/* TODO: Fix JSX expression */}"
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm"></li>"
                           <CheckCircle, className="w-4 h-4, tex, t-indi, g, o-500, m, r-2, fle, x-shri, n, k-0  /></CheckCircle>"
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>"
@@ -734,7 +684,6 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             </d, i, v>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">"
-              {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-indi, g, o-100, rounde, d-lg, m, b-4"></div>"
                       <Icon, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0  /></Icon>
@@ -745,7 +694,6 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       <CheckCircle, className="w-4 h-4, m, r-1  /></CheckCircle>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">";
-              {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-indi, g, o-100, rounde, d-lg, m, b-4">";"
                       <Icon, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0" />";
@@ -808,13 +756,11 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             </d, i, v>"
             <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-3 l,"
   g:gr, i, d-co, l, s-4, ga, p-6">"
-              {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-6, rounde, d-xl, shado, w-md, border, border-gr, a, y-200, tex, t-center, hove, r: shad, o, w-lg, transitio, n-shad, o, w">""
                   <div, className="w-1, 2, h-12, b, g-indi, g, o-100, rounde, d-lg, flex, items-center, justif, y-center, m, x-auto, m, b-3"></div>"
                     <Network, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0  /></Network>"
             <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-3 l,"
   g:gr, i, d-co, l, s-4, ga, p-6">";
-              {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-6, rounde, d-xl, shado, w-md, border, border-gr, a, y-200, tex, t-center, hove, r: shad, o, w-lg, transitio, n-shad, o, w">";"
                   <div, className="w-1, 2, h-12, b, g-indi, g, o-100, rounde, d-lg, flex, items-center, justif, y-center, m, x-auto, m, b-3">";"
                     <Network, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0" />";
@@ -880,9 +826,7 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="gri, d, m,"
   d: gr, i, d-co, l, s-3, ga, p-8">""
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
-              {/* TODO: Fix JSX expression */}
                 <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-indi, g, o-500, relativ, e' : ''}`}>`;`
-                  {/* TODO: Fix JSX expression */}
                   )}"
                   <div, className="te, x, t-center, m, b-8">";"
                     <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";"
@@ -893,7 +837,6 @@ const, BlockchainWeb, 3: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <p, className="te, x, t-gr, a, y-6, 0, 0">{pl, a, n.descripti, o, n}</p>";
                   </d, i, v>"
                   <ul, className="spa, c, e-y-4, m, b-8">";
-                    {/* TODO: Fix JSX expression */}"
                       <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r"></li>"
                         <CheckCircle, className="w-5 h-5, tex, t-indi, g, o-500, m, r-3, fle, x-shri, n, k-0  /></CheckCircle>"
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>"
@@ -914,7 +857,6 @@ pl, a, n.popul, a, r;
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
-                    classNa, m, e={/* TODO: Fix JSX expression */}`
 }`}`;`
                   >
                     Get, Starte, d;
@@ -981,17 +923,12 @@ pl, a, n.popul, a, r;
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, m, b-4">";
                     {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
             </d, i, v>"
             <div, className="gri, d, m,"
   d: gr, i, d-co, l, s-3, ga, p-8">""
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
-              {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";"
                   <div, className="flex, item, s-center, m, b-4">";
-                    {/* TODO: Fix JSX expression */}"
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>"
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
                     ))}
                   </d, i, v>"
                   <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";"

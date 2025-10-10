@@ -23,7 +23,6 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
         "40% lower, maintenance, costs"
         "99.9% uptime, achieve, d"
       ]
-      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
     }
     {
       company: "FinanceFirst Bank"
@@ -58,11 +57,8 @@ key={index}
                   {story.icon}</div>
                   <div></div>
                     <h3 className="font-bold text-xl">{story.company}</h3>
-const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
 key={index}
               className="bg-white rounded-2xl shadow-xl overflow-hidden,"
   hover:scale-105 transition-all duration-300"
@@ -96,7 +92,6 @@ key={index}
               <div className="p-6"></div>"
                 <p className="text-gray-600 mb-6">{story.description}</p>"
                 <div className="space-y-2 mb-6"></div>
-                  {/* TODO: Fix JSX expression */}"
                     <div key={idx} className="flex items-center gap-2"></div>"
                       <div className="w-2 h-2 bg-green-500 rounded-full"></div>"
                       <span className="text-sm text-gray-700">{metric}</span>

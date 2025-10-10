@@ -70,14 +70,9 @@ export const caseStudies2027 = [
     tags: ['singularity', 'quantum', 'consciousness', 'AI 2027', 'transcendence'],
     featured: true;
     readTime: '20 min read',
-  {/* TODO: Fix JSX expression */}
   },
-  {/* TODO: Fix JSX expression */}
   },
-  {/* TODO: Fix JSX expression */}
   }];
 export const caseStudies2027 = [
-  {/* TODO: Fix JSX expression */}
   },
-  {/* TODO: Fix JSX expression */}
   }];

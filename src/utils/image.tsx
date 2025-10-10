@@ -87,7 +87,6 @@ export default Image;
 
 
 'use client';
-import React, { useState, useCallback } from 'react';
 const,
   Image: React.FC = () => {interface ImageProps {}
   // TOD,
@@ -136,24 +135,20 @@ quality = 75,
 }
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const _handleLoad = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     setIsLoaded(true);
     if (onLoad) onLoad();
   }, [onLoad]);
-  const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     setHasError(true);
     if (onError) onError();
   }, [onError]);
   const,
-  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //     ...style,
-    ...(fill && {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
@@ -166,7 +161,6 @@ quality = 75,
 
     })
   };
-  if (hasError) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 

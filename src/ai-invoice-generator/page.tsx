@@ -183,7 +183,6 @@ namename: 'Emily Rodriguez',
                   to revolutionize your billing process.
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index) => (
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
                     <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
                       <feature.icon className="w-6 h-6 text-purple-400" />
@@ -241,7 +240,6 @@ namename: 'Emily Rodriguez',
                         <span className="text-gray-400 ml-1">{plan.period}</span>
                     
                     <ul className="space-y-4 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                           <span className="text-gray-300">{feature}</span>
@@ -294,6 +292,5 @@ AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage';
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FileText, DollarSign, Clock, CheckCircle, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Award, Lock, Database, Cloud, Code, Smartphone, Settings, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 export default AIInvoiceGeneratorPage;

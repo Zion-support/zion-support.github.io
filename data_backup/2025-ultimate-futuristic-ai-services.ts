@@ -49,42 +49,34 @@ realImplementatio,
   s:  ,3, ratin,
   g: 5.,0, review,
   s:  ,2}, // Autonomou,
-  s: AI Research Assistant{/* TODO: Fix JSX expression */}
   e: '2024-11-0,1'} customer,
   s: 1,2, ratin,
   g: 4.,9, review,
   s:  }7}, // A,
-  I: Emotional Intelligence Training{/* TODO: Fix JSX expression */}
   e: '2024-10-0,1'} customer,
   s: 2,8, ratin,
   g: 4.,8, review,
   s: 1}6}, // A,
-  I: Autonomous Business Operations{/* TODO: Fix JSX expression */}
   e: '2024-09-0,1'} customer,
   s: 1,5, ratin,
   g: 4.,9, review,
   s:  }9}, // A,
-  I: Predictive Healthcare Diagnostics{/* TODO: Fix JSX expression */}
   e: '2024-08-0,1'} customer,
   s: 4,2, ratin,
   g: 4.,8, review,
   s: 2}5}, // A,
-  I: Autonomous Code Generation{/* TODO: Fix JSX expression */}
   e: '2024-07-0,1'} customer,
   s: 6,7, ratin,
   g: 4.,7, review,
   s: 3}8}, // A,
-  I: Autonomous Marketing Platform{/* TODO: Fix JSX expression */}
   e: '2024-06-0,1'} customer,
   s: 8,9, ratin,
   g: 4.,6, review,
   s: 5}2}, // A,
-  I: Autonomous Sales Platform{/* TODO: Fix JSX expression */}
   e: '2024-05-0,1'} customer,
   s: 5,6, ratin,
   g: 4.,8, review,
   s: 3}1}, // A,
-  I: Autonomous Customer Service{/* TODO: Fix JSX expression */}
   e: '2024-04-0,1'} customer,
   s: 12,3, ratin,
   g: 4.,7} review,

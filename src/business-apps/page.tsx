@@ -66,7 +66,6 @@ const BusinessAppsPage: React.FC = () => {
                       <h5 className="font-semibold text-white mb-2 text-sm">Key,
   Features:</h5>"
                       <ul className="space-y-1"></ul>)
-                        {app.features.slice(0, 3).map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-xs text-gray-300"></li>"
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                             {feature}

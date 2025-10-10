@@ -1,7 +1,6 @@
 :src/components/PerformanceMonitor.tsx;
 import React, { useEffect, useState } from 'react';
 
-interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ ,
@@ -31,22 +30,15 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ ,
           link.crossOrigin = hint.crossOrigin;
         }
 const,
-  PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
   const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
   const [, setLongTasks] = useState<PerformanceEntry[]>([]);
 
-  useEffect(() => {/* TODO: Fix JSX expression */}
   s://fonts.googleapis.com' },
-        {/* TODO: Fix JSX expression */}
   s://fonts.gstatic.com' },
-        {/* TODO: Fix JSX expression */}
   s://fonts.googleapis.com' },
-        {/* TODO: Fix JSX expression */}
   n: 'anonymous' }
       ];
       
-      hints.forEach(hint => {/* TODO: Fix JSX expression */}
         })
         document.head.appendChild(link);
       });
@@ -54,7 +46,6 @@ const,
     
     // Measure page load performance;
 //     const pageLoadMetrics = performanceOptimizer.measurePageLoad();
-    if (pageLoadMetrics) {/* TODO: Fix JSX expression */}
       }
     }
 
@@ -62,10 +53,8 @@ const,
     if (enableLongTaskMonitoring) {
       const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {,
         setLongTasks(prev => [...prev, ...entries]);
-    if (enableLongTaskMonitoring) {/* TODO: Fix JSX expression */}
 //         });
       
-      return () => {/* TODO: Fix JSX expression */}
         }
       };
     }
@@ -83,35 +72,26 @@ const,
           setMetrics(prev => ({ ...prev, LCP: lcp }));
           if (enableReporting) {
             performanceOptimizer.reportWebVitals({ LCP: lcp });
-  useEffect(() => {/* TODO: Fix JSX expression */}
   P: lcp }));
-          if (enableReporting) {/* TODO: Fix JSX expression */}
   P: lcp });
           }
         }
         
-        if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
   D: fid }));
-          if (enableReporting) {/* TODO: Fix JSX expression */}
   D: fid });
           }
         }
         
-        if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
   S: cls }));
-          if (enableReporting) {/* TODO: Fix JSX expression */}
   S: cls });
           }
         }
       });
     });
 
-    try {/* TODO: Fix JSX expression */}
   s: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-    } catch (e) {/* TODO: Fix JSX expression */}
 //       }
 
-    return () => {/* TODO: Fix JSX expression */}
     };
   }, [enableReporting]);
 
@@ -120,14 +100,12 @@ const,
     if (process.env['NODE_ENV'] === 'development' && Object.keys(metrics).length > 0) {,
   // Development,
   mode: Log performance metrics;
-  useEffect(() => {/* TODO: Fix JSX expression */}
 //       }
   }, [metrics]);
 
   return <>{children};
 import React, { useEffect, useState, useCallback } from 'react';
 
-interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
@@ -142,18 +120,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
   onBudgetViolation;
 }) => {
 const,
-  PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({/* TODO: Fix JSX expression */}
   },
   onMetricsUpdate,
   onBudgetViolation;)
-}) => {/* TODO: Fix JSX expression */}
   const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
-  const [budgetStatus, setBudgetStatus] = useState<{/* TODO: Fix JSX expression */}
-  s: string[] }>({/* TODO: Fix JSX expression */})
   s: [] });
 
-  const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       setMetrics(prev => ({ ...prev, ...newMetrics }));
       onMetricsUpdate?.(newMetrics);
       
@@ -161,7 +134,6 @@ const,
       const _budgetCheck = performanceOptimizer.checkPerformanceBudget(budget);
       setBudgetStatus(budgetCheck);
       
-      if (!budgetCheck.passed) {/* TODO: Fix JSX expression */}
       }
     }
   }, [budget, onMetricsUpdate, onBudgetViolation]);
@@ -178,12 +150,10 @@ const,
 
     // Monitor Web Vitals;
     const reportVitals = (newMetrics: WebVitalsMetrics) => {,
-  useEffect(() => {/* TODO: Fix JSX expression */}
 //       });
 
     // Monitor Web Vitals;
     const reportVitals = (newMetric)
-  s: WebVitalsMetrics) => {/* TODO: Fix JSX expression */}
       setMetrics(prev => ({ ...prev, ...newMetrics }));
       performanceOptimizer.reportWebVitals(newMetrics);
     };
@@ -196,24 +166,19 @@ const,
             const _paintEntry = entry as PerformancePaintTiming;
             if (paintEntry.name === 'first-contentful-paint') {
               reportVitals({ FCP: paintEntry.startTime });
-    if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   P: paintEntry.startTime });
             }
           }
-          if (entry.entryType === 'largest-contentful-paint') {/* TODO: Fix JSX expression */}
   P: lcpEntry.startTime });
           }
         });
       });
 
-      observer.observe({/* TODO: Fix JSX expression */})
   s: ['paint', 'largest-contentful-paint'] });
 
-      return () => {/* TODO: Fix JSX expression */}
       };
     }
 
-    return () => {/* TODO: Fix JSX expression */}
     };
   }, [enabled, updateMetrics]);
 
@@ -287,7 +252,6 @@ const,
       </button>
 
       {/* Performance panel */}
-      {/* TODO: Fix JSX expression */}
               onClick={() => setIsVisible(false)}"
               className="text-gray-500,
   hover:text-gray-700,
@@ -354,7 +318,6 @@ const,
                 {budgetStatus.passed ? '✓ PASSED' : '✗ FAILED'}
               </span>
             </div>
-            {/* TODO: Fix JSX expression */}
                   <div key={index}>• {violation}</div>
                 ))}
               </div>

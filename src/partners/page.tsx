@@ -118,17 +118,11 @@ namename: 'Channel Partners',
   s: [
   // TOD,
   O: Add items];
-        {/* TODO: Fix JSX expression */}
   o: '' },
-        {/* TODO: Fix JSX expression */}
   o: '' },
-        {/* TODO: Fix JSX expression */}
   o: '' },
-        {/* TODO: Fix JSX expression */}
   o: '' },
-        {/* TODO: Fix JSX expression */}
   o: '' },
-        {/* TODO: Fix JSX expression */}
   o: '' }
 //       ]
     },
@@ -142,17 +136,11 @@ namename: 'Channel Partners',
   r: 'text-green-400',
       bgColo,
   r: 'bg-green-500/10',
-        {/* TODO: Fix JSX expression */}
   o: '☁️' },
-        {/* TODO: Fix JSX expression */}
   o: '⚙️' },
-        {/* TODO: Fix JSX expression */}
   o: '📊' },
-        {/* TODO: Fix JSX expression */}
   o: '📈' },
-        {/* TODO: Fix JSX expression */}
   o: '👥' },
-        {/* TODO: Fix JSX expression */}
   o: '🎧' };
   titl,
   e: 'Integration Partners',
@@ -164,17 +152,11 @@ namename: 'Channel Partners',
   r: 'text-purple-400',
       bgColo,
   r: 'bg-purple-500/10',
-{/* TODO: Fix JSX expression */}
   o: '💾' },
-        {/* TODO: Fix JSX expression */}
   o: '🌐' },
-        {/* TODO: Fix JSX expression */}
   o: '🖥️' },
-        {/* TODO: Fix JSX expression */}
   o: '🎩' },
-        {/* TODO: Fix JSX expression */}
   o: '🗄️' },
-        {/* TODO: Fix JSX expression */}
   o: '📋' }
     }
   ];

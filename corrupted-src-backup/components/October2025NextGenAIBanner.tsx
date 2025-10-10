@@ -14,7 +14,6 @@ const, October2025NextGenAIBanne, r = () => {
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
-const, October2025NextGenAIBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
@@ -287,7 +286,6 @@ const, October2025NextGenAIBanne, r = () => {/* TODO: Fix JSX expression */}
           </Li, n, k>
           {/* Articl, e, 2 - Re, a, l-Time, Adaptive, AI */}
           <Li, n, k;
-  to="/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-adapti, v, e-ai-enterpri, s, e-syste, m, s"
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/50, t, o-bl, u, e-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-bl, u, e-4, 0, 0/40, rounde, d-2x, l, p-8, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0"
           >
@@ -300,7 +298,6 @@ const, October2025NextGenAIBanne, r = () => {/* TODO: Fix JSX expression */}
               </d, i, v>
               <div, className="fl, e, x-1">";</div>
           <Li, n, k;"
-  to="/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-adapti, v, e-ai-enterpri, s, e-syste, m, s""
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/50, t, o-bl, u, e-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-bl, u, e-4, 0, 0/40, rounde, d-2x, l, p-8, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
   r:shad, o, w-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0"
           ></Li>"
@@ -569,7 +566,6 @@ const, October2025NextGenAIBanne, r = () => {/* TODO: Fix JSX expression */}
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-400, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hov, e,"
   r:sca, l, e-1, 0, 5"
             ></Li>
-              <sp, a, n>Explore, All, Articles</sp, a, n>"
               <Link, className="w-5 h-5  /></Link>"
               <Link, className="w-5 h-5" />";
             </Li, n, k>
@@ -599,7 +595,6 @@ const, October2025NextGenAIBanne, r = () => {/* TODO: Fix JSX expression */}
               <span, className="fo, n, t-semibo, l, d">98% Project, Success, Rate</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
               <span, className="fo, n, t-semibo, l, d">$18.7B, Client, Value Creat, e, d</sp, a, n>
         <div, className="mt-10, tex, t-cent, e, r">";</div>
           <div, className="flex, fle, x-wrap, ga, p-6, justif, y-center, item, s-center, tex, t-bl, u, e-300, tex, t-sm">";</div>
@@ -612,7 +607,6 @@ const, October2025NextGenAIBanne, r = () => {/* TODO: Fix JSX expression */}
               <span, className="fo, n, t-semibo, l, d">98% Project, Success, Rate</sp, a, n>";
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2">";</div>
-              <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" />";
         {/* Trust, Indicator, s */}"
         <div, className="mt-10, tex, t-cent, e, r"></div>"
           <div, className="flex, fle, x-wrap, ga, p-6, justif, y-center, item, s-center, tex, t-bl, u, e-300, tex, t-sm"></div>"
@@ -625,7 +619,6 @@ const, October2025NextGenAIBanne, r = () => {/* TODO: Fix JSX expression */}
               <span, className="fo, n, t-semibo, l, d">98% Project, Success, Rate</sp, a, n>
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
-              <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  /></TrendingUp>"
               <span, className="fo, n, t-semibo, l, d">$18.7B, Client, Value Creat, e, d</sp, a, n>"
         <div, className="mt-10, tex, t-cent, e, r">";"
           <div, className="flex, fle, x-wrap, ga, p-6, justif, y-center, item, s-center, tex, t-bl, u, e-300, tex, t-sm">";"
@@ -638,7 +631,6 @@ const, October2025NextGenAIBanne, r = () => {/* TODO: Fix JSX expression */}
               <span, className="fo, n, t-semibo, l, d">98% Project, Success, Rate</sp, a, n>";
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2">";"
-              <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" />";"
               <span, className="fo, n, t-semibo, l, d">$18.7B, Client, Value Creat, e, d</sp, a, n>";
             </d, i, v>
           </d, i, v>

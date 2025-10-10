@@ -6,7 +6,6 @@ const Sideba, r: React.FC = () => { ,
     {
       title: 'Exp, l, o, r, e',
       lin, k, s: [,
-const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
         { lab, e, l: 'H, o, m, e', pa, t, h: '/'  },
         { lab, e, l: 'Soluti, o, n, s', pa, t, h: '/solution, s' },
         { lab, e, l: 'Servi, c, e, s', pa, t, h: '/servi, c, e, s' },
@@ -17,7 +16,6 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
     {
       title: 'AI, Servic, e, s',
       lin, k, s: [,
-    {/* TODO: Fix JSX expression */}
         { lab, e, l: 'AI, Solutio, n, s', pa, t, h: '/servic, e, s/ai-servi, c, e, s' },
         { lab, e, l: 'Micro, Sa, a, S', pa, t, h: '/servic, e, s/mic, r, o-s, a, a, s' },
         { lab, e, l: 'Data, Analyti, c, s', pa, t, h: '/servic, e, s/analyt, i, c, s' },
@@ -25,16 +23,13 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
     {
       title: 'IT, Servic, e, s',
       lin, k, s: [,
-    {/* TODO: Fix JSX expression */}
         { lab, e, l: 'IT, Servic, e, s', pa, t, h: '/servic, e, s/it-servi, c, e, s' },
         { lab, e, l: 'Clo, u, d & Dev, O, p, s', pa, t, h: '/servic, e, s/cl, o, u, d' },
         { lab, e, l: 'Cybersecur, i, t, y', pa, t, h: '/servic, e, s/secur, i, t, y' },
-        {/* TODO: Fix JSX expression */}
         }]},
     {
       title: 'To, o, l, s',
       lin, k, s: [,
-    {/* TODO: Fix JSX expression */}
         { lab, e, l: 'SEO, Split, Testin, g', pa, t, h: '/servic, e, s/s, e, o-spl, i, t-test, i, n, g' },
         { lab, e, l: 'Image, CDN, Optimize, r', pa, t, h: '/servic, e, s/image-c, d, n-optimi, z, e, r' }]}]; return(<aside, classNam, e = 'bg-gr, a, y-50, rounde, d-l, g, p-6 h-fit, sticky, top-24'>)
       <div, className='spa, c, e-y-6'>)
@@ -56,14 +51,11 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
                       : 'te, x, t-gr, a, y-600, hove, r: te, x, t-gr, a, y-900, hove, r : bg-gr, a, y-10, 0'}
   ]; return (<aside, classNam, e = 'bg-gr, a, y-50, rounde, d-l, g, p-6 h-fit, sticky, top-24'></aside>
       <div, className='spa, c, e-y-6'></div>
-        {/* TODO: Fix JSX expression */}
           <div, ke, y = {sectionInd, e, x }></div>
             <h3, className='te, x, t-sm, fon, t-semibold, tex, t-gr, a, y-900, uppercase, tracking-wide, m, b-3'></h3>
               {secti, o, n.title}
             </h3>
             <nav, className='spa, c, e-y-1'></nav>
-              {/* TODO: Fix JSX expression */}
-                <Link, ke, y = { linkIn, d, e, x  }, to={ li, n, k.pa, t, h } className={/* TODO: Fix JSX expression */}
                    }`}
                 ></Link>
                   {li, n, k.lab, e, l}

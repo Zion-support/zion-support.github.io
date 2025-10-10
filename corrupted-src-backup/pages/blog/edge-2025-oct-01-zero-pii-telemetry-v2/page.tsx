@@ -10,7 +10,6 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <meta, nam, e='description'
           conte, n, t='Learn, about, edge 2025, oct, 01 zero, pii, telemetry v2, and, how it, can, benefit your, enterpris, e.'
         />)
-        <link, re, l='canonic, a, l')
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ed g e-20 2 5-o c t-01-ze r o-p i i-telemet r y-v2')
         />),
       </Helm, e, t>
@@ -24,5 +23,4 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         </p>
         <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
 }</div>
-export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }

@@ -88,7 +88,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
           Key Features
         </h4>
         <ul className="space-y-1">
-          {service.features.slice(0, 3).map((feature, idx) => (
             <li key={idx} className="text-xs text-gray-300 flex items-center">
               <div className="w-1 h-1 bg-cyan-400 rounded-full mr-2 flex-shrink-0" />
               {feature}

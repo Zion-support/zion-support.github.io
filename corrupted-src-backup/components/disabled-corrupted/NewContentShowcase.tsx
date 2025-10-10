@@ -17,7 +17,6 @@ const NewContentShowcas, e: React.FC = () => {
             New, Conten, t & Servic, e, s;
           </h2>
           <p, className="te, x, t-2xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
-            Explore, our, latest breakthrough, articles, and revolutionary, services;
           </p>
         </div>
         <div, className="grid, l, g: gr, i, d-co, l, s-2, ga, p-12, m, b-12"  > {/* Articles, Sect, i, o, n */ }</div>
@@ -41,7 +40,6 @@ const NewContentShowcas, e: React.FC = () => {
                     <span, className="te, x, t-gr, a, y-5, 0, 0">{artic, l, e.readTime}</sp, a, n>
                     <span, className="te, x, t-indi, g, o-600, fon, t-semibold, flex, items-center, ga, p-1">
                       Read, Mor, e</span> <Link, className="w-4 h-4" />
-const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
         <div, className="grid, l, g: gr, i, d-co, l, s-2, ga, p-12, m, b-12"  > {/* Articles, Sect, i, o, n */ }
           <d, i, v></d>"
             <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-6"></div>"
@@ -49,7 +47,6 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">Latest, Article, s</h3>
             </div>"
             <div, className="spa, c, e-y-4"></div>
-              {/* TODO: Fix JSX expression */}"
                 <Link, ke, y = { artic, l, e.i, d  }, to={ artic, l, e.li, n, k } className="block, b, g-white, rounde, d-x, l, p-6, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
                 ></Link>"
                   <div, className="te, x, t-sm, tex, t-indi, g, o-600, fon, t-semibold, m, b-2">{artic, l, e.cate, g, o, r, y}</div>"
@@ -106,7 +103,6 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">New, Service, s</h3>
             </div>"
             <div, className="spa, c, e-y-4"></div>
-              {/* TODO: Fix JSX expression */}"
                 <Link, ke, y = { servi, c, e.i, d  }, to={ servi, c, e.li, n, k } className="block, b, g-white, rounde, d-x, l, p-6, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
                 ></Link>"
                   <div, className="flex, item, s-center, ga, p-2, m, b-2"></div>"

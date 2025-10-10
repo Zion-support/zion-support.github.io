@@ -1,4 +1,3 @@
-impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
@@ -8,7 +7,6 @@ const AIMLOpsAutomatio, n = () => {
       <Helm, e, t>
         <title>AI, MLOps, Automation Servic, e, s | Zion, Tech, Group</title>
         <meta, nam, e = 'description'
-          conte, n, t='Enterprise, MLOps, automation with, 9, 9.9% reliabili, t, y. Dep, l, o, y, monit, o, r, and, scale, ML models, with, automated pipelin, e, s, re, a, l-time, monitorin, g, and, intelligent, optimization.'
         /></meta>
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='ML, O, p, s, AI, automatio, n, ML, deploymen, t, model, monitorin, g, CI/CD, for, ML, automated, ML, pipelines'
@@ -32,7 +30,6 @@ const AIMLOpsAutomatio, n = () => {
               <div, classNam, e='p-6'></div>
                 <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>72%</d, i, v>
                 <div, classNam, e='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-const AIMLOpsAutomatio, n = () => {/* TODO: Fix JSX expression */}
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-50, t, o-white, dar, k: fr, o, m-gr, a, y-900, dar, k:to-gr, a, y-8, 0, 0' > {/* Hero, Sect, i, o, n */ }
         <section, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20'></section>
           <div, className='absolute, inse, t-0, b, g-black, opacit, y-10' /></div>
@@ -61,35 +58,27 @@ const AIMLOpsAutomatio, n = () => {/* TODO: Fix JSX expression */}
                 Comprehensive, MLOps, Platform;
               </h2>
               <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
-                E, n, d-to-end, automation, for the, entire, ML lifecyc, l, e - from, development, to producti, o, n;
-                E, n, d-to-end, automation, for the, entire, ML lifecyc, l, e - from, development, to producti, o, n</p>
                   <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
                     <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
                       Instant, rollback, on failu, r, e;
                     </sp, a, n>
                   <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
                     <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
                       Automated, retraining, triggers;
                     </sp, a, n>
                   <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
                     <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
                       Compliance, audit, trails;
                     </sp, a, n>
                   <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
                     <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
                       Traini, n, g-serving, consistenc, y;
                     </sp, a, n>
                   <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
                     <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
                       Zero, downtime, scaling;
                     </sp, a, n>
                   <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
                     <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
                       Reproducibili, t, y;
                     </sp, a, n>
@@ -114,34 +103,27 @@ const AIMLOpsAutomatio, n = () => {/* TODO: Fix JSX expression */}
                 Comprehensive, MLOps, Platform;
               </h2>
               <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'></p>
-                E, n, d-to-end, automation, for the, entire, ML lifecyc, l, e - from, development, to producti, o, n;
                   <li, classNam, e='flex, item, s-sta, r, t'></li>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                     <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'></span>
                       Instant, rollback, on failu, r, e;
                     </sp, a, n>
                   <li, classNam, e='flex, item, s-sta, r, t'></li>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                     <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'></span>
                       Automated, retraining, triggers;
                     </sp, a, n>
                   <li, classNam, e='flex, item, s-sta, r, t'></li>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                     <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'></span>
                       Compliance, audit, trails;
                     </sp, a, n>
                   <li, classNam, e='flex, item, s-sta, r, t'></li>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                     <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'></span>
                       Traini, n, g-serving, consistenc, y;
                     </sp, a, n>
                   <li, classNam, e='flex, item, s-sta, r, t'></li>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                     <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'></span>
                       Zero, downtime, scaling;
                     </sp, a, n>
                   <li, classNam, e='flex, item, s-sta, r, t'></li>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                     <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'></span>
                       Reproducibili, t, y;
                     </sp, a, n>
@@ -199,35 +181,27 @@ const AIMLOpsAutomatio, n = () => {/* TODO: Fix JSX expression */}
                 Comprehensive, MLOps, Platform;
               </h2>
               <p, className='te, x, t-xl, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
-                E, n, d-to-end, automation, for the, entire, ML lifecyc, l, e - from development, to producti, o, n;
-                E, n, d-to-end, automation, for the, entire, ML lifecyc, l, e - from development, to producti, o, n</p>
                   <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
                     <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
                       Instant, rollback, on failu, r, e;
                     </sp, a, n>
                   <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
                     <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
                       Automated, retraining, triggers;
                     </sp, a, n>
                   <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
                     <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
                       Compliance, audit, trails;
                     </sp, a, n>
                   <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
                     <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
                       Traini, n, g-serving, consistenc, y;
                     </sp, a, n>
                   <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
                     <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
                       Zero, downtime, scaling;
                     </sp, a, n>
                   <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
                     <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
         <section, i, d = 'featur, e, s' className='py-20, b, g-gr, a, y-50, dar, k: bg-gr, a, y-9, 0, 0'></section>
           <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g:px-8'></div>
@@ -236,34 +210,27 @@ const AIMLOpsAutomatio, n = () => {/* TODO: Fix JSX expression */}
                 Comprehensive, MLOps, Platform;
               </h2>
               <p, className='te, x, t-xl, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'></p>
-                E, n, d-to-end, automation, for the, entire, ML lifecyc, l, e - from development, to producti, o, n;
                   <li, className='flex, item, s-sta, r, t'></li>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                     <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'></span>
                       Instant, rollback, on failu, r, e;
                     </sp, a, n>
                   <li, className='flex, item, s-sta, r, t'></li>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                     <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'></span>
                       Automated, retraining, triggers;
                     </sp, a, n>
                   <li, className='flex, item, s-sta, r, t'></li>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                     <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'></span>
                       Compliance, audit, trails;
                     </sp, a, n>
                   <li, className='flex, item, s-sta, r, t'></li>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                     <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'></span>
                       Traini, n, g-serving, consistenc, y;
                     </sp, a, n>
                   <li, className='flex, item, s-sta, r, t'></li>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                     <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'></span>
                       Zero, downtime, scaling;
                     </sp, a, n>
                   <li, className='flex, item, s-sta, r, t'></li>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                     <span, className='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'></span>
                       Reproducibili, t, y;
                     </sp, a, n>
@@ -281,9 +248,7 @@ const AIMLOpsAutomatio, n = () => {/* TODO: Fix JSX expression */}
               <p, className='te, x, t-xl, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
                 Re, a, l-world, results, from enterprise, deployment, s</p>
                   <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
                   <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
         {/* CTA, Sect, i, o, n */}
         <section, classNam, e = 'py-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-whi, t, e'>
           <div, classNam, e='m, a, x-w-4xl, m, x-auto, tex, t-center, p, x-4, s, m: px-6, l, g: px-8'>,
@@ -294,15 +259,12 @@ const AIMLOpsAutomatio, n = () => {/* TODO: Fix JSX expression */}
                 Schedule, Consultatio, n</h2>
                 <Link, classNam, e='ml-2 h-5 w-5' />
                   <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
                   <li, className='flex, item, s-sta, r, t'>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />)
         {/* CTA, Sect, i, o, n */})
         <section, classNam, e = 'py-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-whi, t, e'>)
           <div, className='m, a, x-w-4xl, m, x-auto, tex, t-center, p, x-4, s, m: px-6, l, g: px-8'>),
             <h2, className='te, x, t-4xl, fon, t-bold, m, b-6'>
                 Schedule, Consultatio, n;
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
 
         {/* CTA, Sect, i, o, n */}
         <section, classNam, e = 'py-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-whi, t, e'>
@@ -317,9 +279,7 @@ const AIMLOpsAutomatio, n = () => {/* TODO: Fix JSX expression */}
               <p, className='te, x, t-xl, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'></p>
                 Re, a, l-world, results, from enterprise, deployment, s;
                   <li, classNam, e='flex, item, s-sta, r, t'></li>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                   <li, classNam, e='flex, item, s-sta, r, t'></li>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
         {/* CTA, Sect, i, o, n */}
         <section, classNam, e = 'py-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-whi, t, e'></section>
           <div, classNam, e='m, a, x-w-4xl, m, x-auto, tex, t-center, p, x-4, s, m: px-6, l, g:px-8'></div>
@@ -327,9 +287,7 @@ const AIMLOpsAutomatio, n = () => {/* TODO: Fix JSX expression */}
                 Schedule, Consultatio, n;
                 <Link, classNam, e='ml-2 h-5 w-5' /></Link>
                   <li, className='flex, item, s-sta, r, t'></li>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                   <li, className='flex, item, s-sta, r, t'></li>
-                    <CheckCircle, className='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
         {/* CTA, Sect, i, o, n */}
         <section, classNam, e = 'py-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-whi, t, e'></section>
           <div, className='m, a, x-w-4xl, m, x-auto, tex, t-center, p, x-4, s, m: px-6, l, g:px-8'></div>

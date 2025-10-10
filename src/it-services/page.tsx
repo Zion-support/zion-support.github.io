@@ -21,7 +21,6 @@ const ITServicesPage: React.FC = () => {
     },
     {
       title: 'Cloud Infrastructure & Migration',
-      description: 'Complete cloud migration and infrastructure setup with AWS, Azure, and Google Cloud platforms.',
       icon: Cloud,
       features: ['Cloud migration', 'Infrastructure setup', 'Cost optimization', 'Security configuration', 'Monitoring', '24/7 support'],
       price: 'Starting at $1,500/month',
@@ -259,7 +258,6 @@ const ITServicesPage: React.FC = () => {
     {
       icon: Cloud,
       title: 'Cloud Migration & Management',
-      description: 'Seamless migration to AWS, Azure, or GCP with 99.9% uptime guarantee.',
       features: ['AWS/Azure/GCP Migration', 'Cloud Architecture Design', 'Cost Optimization', '24/7 Monitoring'],
       price: 'Starting at $1,299/month',
       color: 'text-blue-400'
@@ -414,7 +412,6 @@ const ITServicesPage: React.FC = () => {
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                   <ul className="text-sm text-gray-400 space-y-1">
-                    {service.features.slice(0, 4).map((feature, idx) => (
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -448,7 +445,6 @@ const ITServicesPage: React.FC = () => {
                 </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}

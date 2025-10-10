@@ -167,7 +167,6 @@ export interface IntegrationProviderMeta {,
 
 }
 
-export interface ManualOverride {/* TODO: Fix JSX expression */}
 }
 
 
@@ -182,7 +181,6 @@ export interface IntegrationOverride {
 
 }
 
-export interface IntegrationEvent {/* TODO: Fix JSX expression */}
 }
 
 

@@ -1,4 +1,3 @@
-impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
@@ -16,7 +15,6 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='AI, personalizati, o, n, customer, experienc, e, hyp, e, r-personalizati, o, n, customer, engagemen, t, AI, CX, platform, behavioral, A, I, customer, journe, y, experience, optimizatio, n'
         /></meta>
-        <link, re, l = 'canonic, a, l'
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-hyp e r-personaliz e d-custom e r-experien c e',
         />,
       </Helm, e, t>
@@ -51,7 +49,6 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
                 <li, classNam, e='flex, item, s-start, ga, p-3'>
                   <Users, classNam, e='h-6 w-6, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>
-                    <stro, n, g>89% Churn, Reductio, n:</stro, n, g> Predictive, intervention, retains customers, before, they lea, v, e;
                   </sp, a, n>
               <span, className='te, x, t-gr, a, y-4, 0, 0'></span>Octo</span>, b, e, r , 1, 20, 2, 5</sp, a, n>
             </div>
@@ -62,13 +59,11 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
                 <li, className='flex, item, s-start, ga, p-3'>
                   <Users, className='h-6 w-6, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>
-                    <stro, n, g>89% Churn, Reductio, n:</stro, n, g> Predictive, intervention, retains customers, before, they lea, v, e;
                   </sp, a, n>
               <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
                 The, cost, of poor, customer, experience is, staggerin, g: $1.6, trillion, lost annually, to, customer chu, r, n. Traditional, personalizatio, n—basic, segmentation, and rul, e, s—achieves, only, 31%
                 relevan, c, e. True, hype, r-personalization, powered, by AI, treats, every;
                 customer, as, a segment, of, o, n, e, understanding, contex, t,
-                preferenc, e, s, sentime, n, t, and, intent, in re, a, l-time, to, deliver;
                 experiences, that, delight.
               </p>
             </secti, o, n>
@@ -286,7 +281,6 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
                 Schedule Your CX Transformation Assessment"
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">,
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />);
-export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: Fix JSX expression */}
 };
   </div>
   </div>
@@ -348,13 +342,11 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: 
                 <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'></ul>
               <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'></p>
                 The, competitive, advantage is, overwhelmin, g: 12x, higher, engageme, n, t, 89% lower, chur, n, a, n, d $3.2B+ in, incremental, revenue.
-                With, average, ROI exceeding, 7x, within 18, month, s, the, business, case is, irrefutabl, e. The, question, is not, whether, to deploy, A, I-powered, personalizatio, n, but, how, quickly you, can, implement it, before, competitors capture, your, customers' hear, t, s.
                 Schedule, Your, CX Transformation, Assessmen, t;
                 Schedule, Your, CX Transformation, Assessmen, t</p>
                 <ArrowLeft, classNam, e='ml-2 h-5 w-5, rotat, e-1, 8, 0' />
               <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
                 The, competitive, advantage is, overwhelmin, g: 12x, higher, engageme, n, t, 89% lower, chur, n, a, n, d $3.2B+ in, incremental, revenue.
-                With, average, ROI exceeding, 7x, within 18, month, s, the, business, case is, irrefutabl, e. The, question, is not, whether, to deploy, A, I-powered, personalizatio, n, but, how, quickly you, can, implement it, before, competitors capture, your, customers' hear, t, s.
                 Schedule, Your, CX Transformation, Assessmen, t;
                 Schedule, Your, CX Transformation, Assessmen, t</p>
                 <ArrowLeft, className='ml-2 h-5 w-5, rotat, e-1, 8, 0' />
@@ -362,6 +354,5 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: 
                 <ArrowLeft, classNam, e='ml-2 h-5 w-5, rotat, e-1, 8, 0' /></ArrowLeft>
               <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'></p>
                 The, competitive, advantage is, overwhelmin, g: 12x, higher, engageme, n, t, 89% lower, chur, n, a, n, d $3.2B+ in, incremental, revenue.
-                With, average, ROI exceeding, 7x, within 18, month, s, the, business, case is, irrefutabl, e. The, question, is not, whether, to deploy, A, I-powered, personalizatio, n, but, how, quickly you, can, implement it, before, competitors capture, your, customers' hear, t, s.
                 Schedule, Your, CX Transformation, Assessmen, t;
                 <ArrowLeft, className='ml-2 h-5 w-5, rotat, e-1, 8, 0' /></ArrowLeft>

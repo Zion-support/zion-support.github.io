@@ -24,7 +24,6 @@ export const extra_services: ExtraService[] = [
     tagline: 'Seamless cloud migration and optimization',
     price: '$99 / hour',
     description: unknown;
-export interface ExtraService {/* TODO: Fix JSX expression */}
   e: string}
     emai,
   l: string}
@@ -49,7 +48,6 @@ export const,
     descriptio,
   n: unknown,
       'Professional cloud migration services for businesses looking to modernize their infrastructure.',
-    feature,
   s: [,
       'AWS / Azure / GCP migration',
       'Performance optimization',
@@ -109,7 +107,6 @@ export const,
   e: string, pric,
   e: string,
   descriptio,
-  n: string, feature,
   s: string[],
   lin,
   k: string, categor,
@@ -133,7 +130,6 @@ export const,
   e: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -165,7 +161,6 @@ export const,
   e: '$99/hour'
     descriptio,
   n: 'Professional cloud migration services for businesses looking to modernize their infrastructure.'
-    feature,
   s: [;
       'AWS/Azure/GCP migration'
       'Performance optimization'
@@ -204,7 +199,6 @@ export const,
   e: '$199/hour'
     descriptio,
   n: 'Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.'
-    feature,
   s: [;
       'Vulnerability assessment'
       'Penetration testing'
@@ -256,7 +250,6 @@ export const,
     descriptio,
   n: unknown,
       'Complete cybersecurity audit and vulnerability assessment for enterprise - level protection.',
-    feature,
   s: [,
       'Vulnerability assessment',
       'Penetration testing',
@@ -333,7 +326,6 @@ export const,
   e: "$99/hour",
     descriptio,"
   n: "Professional cloud migration services for businesses looking to modernize their infrastructure.",
-    feature,
   s: [,"
       "AWS/Azure/GCP migration","
       "Performance optimization","
@@ -367,7 +359,6 @@ export const,
   e: "$199/hour",
     descriptio,"
   n: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.",
-    feature,
   s: [,"
       "Vulnerability assessment","
       "Penetration testing","
@@ -449,7 +440,6 @@ export const,
   e: "$99/hour",
     descriptio,"
   n: "Professional cloud migration services for businesses looking to modernize their infrastructure.",
-    feature,
   s: [,"
       "AWS/Azure/GCP migration","
       "Performance optimization","
@@ -483,7 +473,6 @@ export const,
   e: "$199/hour",
     descriptio,"
   n: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.",
-    feature,
   s: [,"
       "Vulnerability assessment","
       "Penetration testing","
@@ -527,7 +516,6 @@ export interface ExtraService,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; real_implementatio,
@@ -543,7 +531,6 @@ export interface ExtraService,
   e: 'Cloud Migration Expert',' taglin,
   e: 'Seamless cloud migration and optimization',' pric,
   e: '$99 / hour', descriptio,
-  n:  ,' 'Professional cloud migration services for businesses looking to modernize their infrastructure.', feature,
   s: [,' 'AWS / Azure / GCP migration',' 'Performance optimization',' 'Cost analysis',' 'Security implementation',' '24 / 7 support'],' lin,
   k: '/services / cloud - migration - expert',' categor,
   y: 'Cloud Services', real_implementatio,
@@ -556,7 +543,6 @@ export interface ExtraService,
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
@@ -569,7 +555,6 @@ export interface ExtraService,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
@@ -584,7 +569,6 @@ export interface ExtraService,
   e: 'Cloud Migration Expert'' taglin,
   e: 'Seamless cloud migration and optimization'' pric,
   e: '$99/hour' descriptio,
-  n:' 'Professional cloud migration services for businesses looking to modernize their infrastructure.' feature,
   s: [' 'AWS/Azure/GCP migration'' 'Performance optimization'' 'Cost analysis'' 'Security implementation'' '24/7 support' ]' lin,
   k: '/services/cloud-migration-expert'' categor,
   y: 'Cloud Services' realImplementatio,
@@ -597,7 +581,6 @@ export interface ExtraService,
   e: 'Cybersecurity Audit Pro'' taglin,
   e: 'Comprehensive security assessment and protection'' pric,
   e: '$199/hour' descriptio,
-  n:' 'Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.' feature,
   s: [' 'Vulnerability assessment'' 'Penetration testing'' 'Security policy review'' 'Compliance audit'' 'Remediation guidance' ]' lin,
   k: '/services/cybersecurity-audit'' categor,
   y: 'Security' realImplementatio,
@@ -613,7 +596,6 @@ export interface ExtraService,
   e: 'Cybersecurity Audit Pro',' taglin,
   e: 'Comprehensive security assessment and protection',' pric,
   e: '$199 / hour', descriptio,
-  n:  ,' 'Complete cybersecurity audit and vulnerability assessment for enterprise - level protection.', feature,
   s: [,' 'Vulnerability assessment',' 'Penetration testing',' 'Security policy review',' 'Compliance audit',' 'Remediation guidance'],' lin,
   k: '/services / cybersecurity - audit',' categor,
   y: 'Security', real_implementatio,
@@ -628,7 +610,6 @@ export interface ExtraService,
   e: "Cloud Migration Expert", taglin,"
   e: "Seamless cloud migration and optimization", pric,"
   e: "$99/hour", descriptio,"
-  n: "Professional cloud migration services for businesses looking to modernize their infrastructure.", feature,"
   s: [ "AWS/Azure/GCP migration", "Performance optimization", "Cost analysis", "Security implementation", "24/7 support" ], lin,"
   k: "/services/cloud-migration-expert", categor,"
   y: "Cloud Services", realImplementatio,
@@ -641,7 +622,6 @@ export interface ExtraService,
   e: "Cybersecurity Audit Pro", taglin,"
   e: "Comprehensive security assessment and protection", pric,"
   e: "$199/hour", descriptio,"
-  n: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.", feature,"
   s: [ "Vulnerability assessment", "Penetration testing", "Security policy review", "Compliance audit", "Remediation guidance" ], lin,"
   k: "/services/cybersecurity-audit", categor,"
   y: "Security", realImplementatio,
@@ -655,7 +635,6 @@ export interface ExtraService,
   e: "Cloud Migration Expert", taglin,"
   e: "Seamless cloud migration and optimization", pric,"
   e: "$99/hour", descriptio,"
-  n: "Professional cloud migration services for businesses looking to modernize their infrastructure.", feature,"
   s: [ "AWS/Azure/GCP migration", "Performance optimization", "Cost analysis", "Security implementation", "24/7 support" ], lin,"
   k: "/services/cloud-migration-expert", categor,"
   y: "Cloud Services", realImplementatio,
@@ -668,7 +647,6 @@ export interface ExtraService,
   e: "Cybersecurity Audit Pro", taglin,"
   e: "Comprehensive security assessment and protection", pric,"
   e: "$199/hour", descriptio,"
-  n: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.", feature,"
   s: [ "Vulnerability assessment", "Penetration testing", "Security policy review", "Compliance audit", "Remediation guidance" ], lin,"
   k: "/services/cybersecurity-audit", categor,"
   y: "Security", realImplementatio,

@@ -18,12 +18,10 @@ const bannerComponents = {
   'cognitive-orchestration': lazy(
     () => import('./CognitiveOrchestrationMegaBanner')
   ),
-const bannerComponents = {/* TODO: Fix JSX expression */}
 };
 
 type BannerKey = keyof typeof bannerComponents;
 
-interface BannerRotationManagerProps {/* TODO: Fix JSX expression */}
 }
 
 /**
@@ -54,7 +52,6 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
 
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % visibleBanners.length);
- * Feature,
   s:
  * - Lazy loads banner components for better performance;
  * - Rotates banners at specified intervals;
@@ -62,18 +59,14 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
  * - Provides fallback loading states;
  */
 export const,
-  BannerRotationManager: React.FC<BannerRotationManagerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
   }, [banners, maxBanners]);
 
   // Rotate banners at specified interval;
-  useEffect(() => {/* TODO: Fix JSX expression */}
     }, rotationInterval);
 
     return () => clearInterval(interval);
   }, [visibleBanners.length, rotationInterval]);
 
-  if (visibleBanners.length === 0) {/* TODO: Fix JSX expression */}
   }
 
 //   const currentBanner = visibleBanners[currentIndex];
@@ -104,17 +97,14 @@ export const,
               }`}
   return (<div className={`banner-rotation-manager ${className}`}></div>
       <Suspense></Suspense>
-        fallback={/* TODO: Fix JSX expression */}
         }
       >
         <BannerComponent /></BannerComponent>
       </Suspense>
 
       {/* Banner indicators */}
-      {/* TODO: Fix JSX expression */}
               key={index})
               onClick={() => setCurrentIndex(index)}
-              className={/* TODO: Fix JSX expression */}`
               }`}`
               aria-label={`Go to banner ${index + 1}`}
             />

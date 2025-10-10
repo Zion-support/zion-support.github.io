@@ -1,4 +1,3 @@
-impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 const October2025OperationalExcellenceBanne, r = () => { 
   return(<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l' > {' ' }
@@ -20,7 +19,6 @@ const October2025OperationalExcellenceBanne, r = () => {
           <div, className='inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/30, vi, a-te, a, l-5, 0, 0/30, t, o-cy, a, n-5, 0, 0/30, borde, r-2, borde, r-emera, l, d-4, 0, 0/50, rounde, d-full, p, x-8, p, y-3, m, b-6, shado, w-lg, backdro, p-bl, u, r-sm'></div>
             <Sparkles, className='w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e' />
             <span, className='te, x, t-emera, l, d-200, fon, t-bold, tex, t-lg, uppercase, tracking-wid, e, r'>
-const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l' > {' ' }
       {/* Animated, background, elements */}
       <div, className='absolute, inse, t-0, overflo, w-hidd, e, n'></div>
@@ -148,23 +146,19 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
               </div>
             </div>
             <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r:te, x, t-emera, l, d-200, transitio, n-colors, leadin, g-tig, h, t'>
-              AI-Powered, Predictive, Maintenance: 99.6% Failure, Predictio, n;
             </h3>
             <p, className='te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4'>
               Revolutionary, AI, platform achie, v, i, n, g{' '}</p>
               <span, classNam, e = 'te, x, t-emera, l, d-300, fon, t-semibo, l, d'>
-                99.6% failure, prediction, accuracy;
               </sp, a, n>{' '}
               wi, t, h;
               <span, className='te, x, t-emera, l, d-300, fon, t-semibo, l, d'>
             <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r:te, x, t-emera, l, d-200, transitio, n-colors, leadin, g-tig, h, t'></h3>
               AI-Powered, Predictive, Maintenanc,
-  e: 99.6% Failure, Predictio, n;
             </h3>
             <p, className='te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4'></p>
               Revolutionary, AI, platform achie, v, i, n, g{' '}
               <span, classNam, e = 'te, x, t-emera, l, d-300, fon, t-semibo, l, d'></span>
-                99.6% failure, prediction, accuracy;
               </sp, a, n>{' '}
               wi, t, h;
               <span, className='te, x, t-emera, l, d-300, fon, t-semibo, l, d'></span>
@@ -405,7 +399,6 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
             <Link, t, o='/bl, o, g'
               className='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, hove, r: fr, o, m-emera, l, d-400, hove, r:to-te, a, l-400, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5'
             ></Link>
-              <sp, a, n>Explore, All, Innovations</sp, a, n>
               <Link, className='w-5 h-5' /></Link>
             </Li, n, k>
             <Link, t, o='/conta, c, t'
@@ -428,7 +421,6 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
               <span, className='fo, n, t-semibo, l, d'>99.2% Average, Accurac, y</sp, a, n>
             </div>
             <div, className='flex, item, s-center, ga, p-2'></div>
-              <TrendingUp, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
               <Award, className='w-5 h-5, tex, t-yell, o, w-4, 0, 0' /></Award>
               <span, className='fo, n, t-semibo, l, d'>, 1,2, 0, 0+ Global, Deployment, s</sp, a, n>
             </div>
@@ -437,7 +429,6 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
               <span, className='fo, n, t-semibo, l, d'>99.2% Average, Accurac, y</sp, a, n>
             </div>
             <div, className='flex, item, s-center, ga, p-2'></div>
-              <TrendingUp, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' /></TrendingUp>
               <span, className='fo, n, t-semibo, l, d'>$24.4B, Value, Created</sp, a, n>
             </div>
           </div>

@@ -4,7 +4,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet></Helmet>
         <title>AI Data Visualization Solutions - Zion Tech Group</title>

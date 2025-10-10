@@ -37,7 +37,6 @@ export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => 
     if (next && typeof next === 'function') {}
       next(error);
 // Enhanced Error Handler;
-export class AppError extends Error {/* TODO: Fix JSX expression */}
   }
 }
 
@@ -51,17 +50,11 @@ export const errorHandler = (error: AppError | Error) => {
     statusCode: appError.statusCode || 500
 
   });
-  return {/* TODO: Fix JSX expression */}
   };
 };
 export const asyncHandler = (f,
-  n: (re,
-  q: unknown, re,
   s: unknown, nex)
-  t: unknown) => unknown) => (re,
-  q: unknown, re,
   s: unknown, nex)
-  t: unknown) => {/* TODO: Fix JSX expression */}
     }
 
 };

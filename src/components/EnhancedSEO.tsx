@@ -52,7 +52,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     // Update meta description
 
     let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {/* TODO: Fix JSX expression */}
     }
     metaDescription.setAttribute('content', description);
     
@@ -68,11 +67,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#00ffff" /><meta name="msapplication-TileColor" content="#00ffff" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /><meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
 
       {/* Article Meta Tags */}
-      {/* TODO: Fix JSX expression */}"
   e:published_time" content={publishedTime} />}
-      {/* TODO: Fix JSX expression */}"
   e:modified_time" content={modifiedTime} />}
-      {/* TODO: Fix JSX expression */}"
   e:section" content={section} />}
       {tags.length > 0 && tags.map((tag, index) => ()}"
           <meta key={index} property="articl,"

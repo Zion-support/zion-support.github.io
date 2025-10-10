@@ -18,7 +18,6 @@ const CareersPage: React.FC = () => {
         'Master\'s degree in Computer Science, AI, or related field',
         '5+ years experience in machine learning and deep learning',
         'Proficiency in Python, TensorFlow, PyTorch',
-        'Experience with cloud platforms (AWS, Azure, GCP)',
         'Strong problem-solving and communication skills'
       ],
       benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Professional development budget']

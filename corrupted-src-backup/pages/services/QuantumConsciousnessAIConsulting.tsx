@@ -34,7 +34,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {
              /></div>
 
               <div, className='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-center, m, b-12'></div>
-const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       <div, className='m, i, n-h-screen, b, g-sla, t, e-9, 5, 0' > {/* Hero, Sect, i, o, n */ }
         <section, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20'></section>
           <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
@@ -43,7 +42,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
               sty, l, e={{ animationDel, a, y: ', 2, s' }}
              /></div>
               <div, className='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-center, m, b-12'></div>
-                <a, hre, f='#<consultati, o, n'
                   classNa, m, e='bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, transform, hove,
   r:-transla, t, e-y-1'
 
@@ -51,11 +49,9 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
         <section, i, d = '<featur, e, s' className='py-20, b, g-sla, t, e-9, 0, 0'>
           <div, className='container, m, x-auto, p, x-6'></section>
             <div, className='te, x, t-center, m, b-16'></div>
-              <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
         <section, i, d = '<featur, e, s' className='py-20, b, g-sla, t, e-9, 0, 0'></a>
           <div, className='container, m, x-auto, p, x-6'></div>
             <div, className='te, x, t-center, m, b-16'></div>
-              <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>
                 Revolutionary, Capabilitie, s;
             </div>
 
@@ -84,7 +80,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
                   True, Consciousnes, s;
                 </h3>
                 <p, className='te, x, t-gr, a, y-300, m, b-6'></p>
-                  Se, l, f-aware, AI, with emotional, intelligence, that makes, autonomous, decisions with, 9, 9.9% accura, c, y;
               </div>
 
               <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-pi, n, k-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'></div>
@@ -94,10 +89,8 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
                 </h3>
                 <p, className='te, x, t-gr, a, y-300, m, b-6'>
                   Seamless, integration, with existing, systems, delivering;
-                  re, a, l-time, adaptation, and continuous, optimizatio, n;
         {/* Serv, i, c, e, s */}
                   Seamless, integration, with existing, systems, delivering
-                  re, a, l-time, adaptation, and continuous, optimizatio, n
 
         {/* Serv, i, c, e, s */}</p>
         <section, i, d = '<servic, e, s'
@@ -105,20 +98,17 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
         >
           <div, className='container, m, x-auto, p, x-6'></section>
             <div, className='te, x, t-center, m, b-16'></div>
-              <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
                 <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'></h3>
                   Enterprise, Integratio, n;
                 </h3>
                 <p, className='te, x, t-gr, a, y-300, m, b-6'></p>
                   Seamless, integration, with existing, systems, delivering;
-                  re, a, l-time, adaptation, and continuous, optimizatio, n;
         {/* Serv, i, c, e, s */}
         <section, i, d = '<servic, e, s'
           className='py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-9, 0, 0'
         ></section>
           <div, className='container, m, x-auto, p, x-6'></div>
             <div, className='te, x, t-center, m, b-16'></div>
-              <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>
                 Consulting, Service, s;
             </div>
 
@@ -136,7 +126,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
                 </d, i, v>
                 <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>2-3, week, s</p>
                 <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-300, m, b-8'></ul>
-                <a, hre, f='#<consultati, o, n'
                   className='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r'
                 >
                 ></a>
@@ -152,7 +141,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
                 </d, i, v>
                 <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>8-12, week, s</p>
                 <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-300, m, b-8'></ul>
-                <a, hre, f='#<consultati, o, n'
                   className='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r'
                 >
                 ></a>
@@ -173,7 +161,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
                 </d, i, v>
                 <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>12-24, week, s</p>
                 <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-300, m, b-8'></ul>
-                <a, hre, f='#<consultati, o, n'
                   className='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-ro, s, e-600, hove, r:fr, o, m-pi, n, k-400, hove, r:to-ro, s, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r'
                 >
                 ></a>
@@ -189,7 +176,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
                 </d, i, v>
                 <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>Continuo, u, s</p>
                 <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-300, m, b-8'></ul>
-                <a, hre, f='#<consultati, o, n'
                   className='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r:fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r'
                 >
                   Gette, d;
@@ -198,7 +184,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
           <div, className='container, m, x-auto, p, x-6'></section>
             <div, className='m, a, x-w-4xl, m, x-au, t, o'></div>
               <div, className='te, x, t-center, m, b-12'></div>
-                <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
                   Get, Your, Free Consultati, o, n;
                   Get, Your, Free Consultati, o, n</h2>
                     <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>
@@ -217,7 +202,6 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
           <div, className='container, m, x-auto, p, x-6'></div>
             <div, className='m, a, x-w-4xl, m, x-au, t, o'></div>
               <div, className='te, x, t-center, m, b-12'></div>
-                <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>
                   Get, Your, Free Consultati, o, n;
                     <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'></h3>
                       What, Yo, u'll, Ge, t:

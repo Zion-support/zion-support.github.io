@@ -42,7 +42,6 @@
   d: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   popula,
   r: boolean;
@@ -129,7 +128,6 @@ export const,
       descriptio,
   n: unknown,
         'Advanced platform that uses AI to create, manage, and optimize content across all channels. Not just content generation - intelligent content strategy and optimization.',
-      feature,
   s: [,
         'AI content creation',
         'Content strategy optimization',
@@ -282,7 +280,6 @@ export const,
       descriptio,
   n: unknown,
         'Revolutionary CRM platform that uses AI to provide intelligent insights, automate processes, and optimize customer relationships for maximum revenue growth.',
-      feature,
   s: [,
         'AI - powered lead scoring',
         'Predictive analytics',
@@ -435,7 +432,6 @@ export const,
       descriptio,
   n: unknown,
         'Revolutionary platform that uses AI to analyze data, provide insights, and automate decision - making processes for businesses across all industries.',
-      feature,
   s: [,
         'AI - powered analytics',
         'Automated decision - making',
@@ -583,7 +579,6 @@ export const,
       descriptio,
   n: unknown,
         'Advanced platform that uses AI to optimize every aspect of e - commerce operations, from product recommendations to pricing strategies and customer experience.',
-      feature,
   s: [,
         'AI product recommendations',
         'Dynamic pricing optimization',
@@ -736,7 +731,6 @@ export const,
       descriptio,
   n: unknown,
         'Revolutionary HR platform that uses AI to automate recruitment, employee management, performance tracking, and HR analytics for improved organizational efficiency.',
-      feature,
   s: [,
         'AI recruitment automation',
         'Employee performance tracking',
@@ -888,7 +882,6 @@ export const,
       descriptio,
   n: unknown,
         'Advanced financial platform that uses AI to analyze financial data, provide insights, and automate financial processes for improved decision - making and efficiency.',
-      feature,
   s: [,
         'AI financial analysis',
         'Predictive modeling',
@@ -1038,7 +1031,6 @@ export const,
       descriptio,
   n: unknown,
         'Revolutionary platform that uses AI to optimize supply chain operations, predict demand, manage inventory, and improve efficiency across all supply chain processes.',
-      feature,
   s: [,
         'AI demand forecasting',
         'Inventory optimization',
@@ -1189,7 +1181,6 @@ export const,
       descriptio,
   n: unknown,
         'Advanced platform that uses AI to automate marketing campaigns, optimize performance, and provide intelligent insights for maximum marketing ROI.',
-      feature,
   s: [,
         'AI campaign optimization',
         'Automated marketing workflows',
@@ -1339,7 +1330,6 @@ export const,
       descriptio,
   n: unknown,
         'Revolutionary platform that uses AI to optimize project planning, resource allocation, risk management, and performance tracking for improved project success rates.',
-      feature,
   s: [,
         'AI project planning',
         'Resource optimization',
@@ -1504,9 +1494,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
   g: 4 && 4.8,
       review,
   s: 45};
-  ];    feature,
   s: [,
-export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
   e: string}
     },
     realImplementatio,
@@ -1532,7 +1520,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Advanced platform that uses AI to create, manage, and optimize content across all channels. Not just content generation - intelligent content strategy and optimization.',
-    feature,
   s: [,
       'AI content creationContent strategy optimizationMulti-channel managementPerformance analyticsSEO optimizationContent personalizationBrand voice consistencyContent calendar automation'
       'Collaboration toolsROI tracking'
@@ -1718,7 +1705,6 @@ export interface InnovativeMicroSaasService2025 {;
       ratin,
   g: 4.8;
       review,
-  s: 45}  ];    feature,
   s: [;
       'AI project planningResource optimizationRisk assessmentPerformance trackingAutomated reportingTeam collaborationTimeline optimizationBudget management'
       'Integration capabilitiesCustom dashboards'
@@ -1755,7 +1741,6 @@ export interface InnovativeMicroSaasService2025 {;
   t: 'saas-content',
     contactInf,
   o: unknown;
-  ];    feature,
   s: [;
       'AI project planning_resource optimization_risk assessment_performance tracking_automated reporting_team collaboration_timeline optimization_budget management'
       'Integration capabilities_custom dashboards'
@@ -1865,7 +1850,6 @@ export interface InnovativeMicroSaasService2025 {;
     review,
   s: 45;
 ],
-export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -2265,7 +2249,6 @@ export const,
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com',
-  {/* TODO: Fix JSX expression */}
   t: 'saas-content'}
     contactInf,
   o: {}
@@ -2292,7 +2275,6 @@ export const,
     review,
   s: 89};
   // CRM Intelligence Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'saas-crm'}
     contactInf,
   o: {}
@@ -2319,7 +2301,6 @@ export const,
     review,
   s: 125};
   // Decision Engine Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'saas-intelligence'}
     contactInf,
   o: {}
@@ -2346,7 +2327,6 @@ export const,
     review,
   s: 78};
   // E-commerce Optimization Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'saas-ecommerce'}
     contactInf,
   o: {}
@@ -2373,7 +2353,6 @@ export const,
     review,
   s: 95};
   // HR Automation Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'saas-hr'}
     contactInf,
   o: {}
@@ -2400,7 +2379,6 @@ export const,
     review,
   s: 58};
   // Financial Analytics Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'saas-financial'}
     contactInf,
   o: {}
@@ -2427,7 +2405,6 @@ export const,
     review,
   s: 52};
   // Supply Chain Intelligence Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'saas-supply-chain'}
     contactInf,
   o: {}
@@ -2454,7 +2431,6 @@ export const,
     review,
   s: 38};
   // Marketing Automation Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'saas-marketing'}
     contactInf,
   o: {}
@@ -2481,7 +2457,6 @@ export const,
     review,
   s: 82};
   // Project Management Intelligence Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'saas-project'}
     contactInf,
   o: {}
@@ -2516,7 +2491,6 @@ export const,
 ;
   }
 ];
-export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -2928,7 +2902,6 @@ export const,
     customers: 75;
     rating: 4.8;
     reviews: 45;
-  {/* TODO: Fix JSX expression */}
   t: 'saas-content'}
     contactInf,
   o: {}
@@ -2955,7 +2928,6 @@ export const,
     review,
   s: 89};
   // CRM Intelligence Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'saas-crm'}
     contactInf,
   o: {}
@@ -2982,7 +2954,6 @@ export const,
     review,
   s: 125};
   // Decision Engine Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'saas-intelligence'}
     contactInf,
   o: {}
@@ -3009,7 +2980,6 @@ export const,
     review,
   s: 78};
   // E-commerce Optimization Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'saas-ecommerce'}
     contactInf,
   o: {}
@@ -3036,7 +3006,6 @@ export const,
     review,
   s: 95};
   // HR Automation Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'saas-hr'}
     contactInf,
   o: {}
@@ -3063,7 +3032,6 @@ export const,
     review,
   s: 58};
   // Financial Analytics Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'saas-financial'}
     contactInf,
   o: {}
@@ -3090,7 +3058,6 @@ export const,
     review,
   s: 52};
   // Supply Chain Intelligence Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'saas-supply-chain'}
     contactInf,
   o: {}
@@ -3117,7 +3084,6 @@ export const,
     review,
   s: 38};
   // Marketing Automation Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'saas-marketing'}
     contactInf,
   o: {}
@@ -3144,7 +3110,6 @@ export const,
     review,
   s: 82};
   // Project Management Intelligence Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'saas-project'}
     contactInf,
   o: {}
@@ -3178,7 +3143,6 @@ i,
   e: string; pric,
   e: string, perio,
   d: string, descriptio,
-  n: string; feature,
   s: string[]; popula,
   r: boolean; ico,
   n: string; colo,
@@ -3216,7 +3180,6 @@ i,
   e: 'Revolutionary AI - powered content creation and management',' pric,
   e: '$15, 000',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced platform that uses AI to create, manage, and optimize content across all channels. Not just content generation - intelligent content strategy and optimization.', feature,
   s: [, ' 'AI content creation',' 'Content strategy optimization',' 'Multi - channel management',' 'Performance analytics',' 'SEO optimization',' 'Content personalization',' 'Brand voice consistency',' 'Content calendar automation',' 'Collaboration tools',' 'ROI tracking'], popula,
   r: true,' ico,
   n: '📝', ' 'AI/ML',' colo,
@@ -3255,7 +3218,6 @@ i,
   e: 'Intelligent CRM with AI - powered insights and automation',' pric,
   e: '$25, 000',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary CRM platform that uses AI to provide intelligent insights, automate processes, and optimize customer relationships for maximum revenue growth.', feature,
   s: [,' 'AI - powered lead scoring', ' 'Predictive analytics',' 'Automated follow - ups',' 'Customer behavior analysis',' 'Revenue optimization',' 'Sales forecasting',' 'Pipeline management',' 'Customer segmentation',' 'Performance tracking',' 'Integration capabilities'], popula,
   r: true,' ico,
   n: '📊', ' 'AI/ML',' colo,
@@ -3294,7 +3256,6 @@ i,
   e:  ,' 'Intelligent decision - making with AI - powered analytics and insights',' pric,
   e: '$30, 000',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary platform that uses AI to analyze data, provide insights, and automate decision - making processes for businesses across all industries.', feature,
   s: [,' 'AI - powered analytics',' 'Automated decision - making', ' 'Predictive modeling',' 'Risk assessment',' 'Performance optimization',' 'Real - time insights',' 'Custom algorithms',' 'Integration capabilities',' 'Reporting and dashboards',' 'Scalable architecture'], popula,
   r: true,' ico,
   n: '🧠', ' colo,
@@ -3333,7 +3294,6 @@ i,
   e: 'AI - powered e - commerce optimization and revenue maximization',' pric,
   e: '$20, 000',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced platform that uses AI to optimize every aspect of e - commerce operations, from product recommendations to pricing strategies and customer experience.', feature,
   s: [, ' 'AI product recommendations',' 'Dynamic pricing optimization',' 'Customer behavior analysis',' 'Inventory optimization',' 'Conversion rate optimization',' 'Personalized marketing',' 'A / B testing automation',' 'Revenue analytics',' 'Customer segmentation',' 'Performance tracking'], popula,
   r: true,' ico,
   n: '🛒', ' 'AI/ML',' colo,
@@ -3372,7 +3332,6 @@ i,
   e:  ,' 'Intelligent HR automation with AI - driven insights and optimization',' pric,
   e: '$18, 000',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary HR platform that uses AI to automate recruitment, employee management, performance tracking, and HR analytics for improved organizational efficiency.', feature,
   s: [, ' 'AI recruitment automation',' 'Employee performance tracking',' 'HR analytics and insights',' 'Automated onboarding',' 'Talent management',' 'Performance optimization',' 'Employee engagement',' 'Compliance management',' 'Integration capabilities',' 'Reporting and dashboards'], popula,
   r: false,' ico,
   n: '👥', ' 'AI/ML',' colo,
@@ -3411,7 +3370,6 @@ i,
   e:  ,' 'Intelligent financial analysis with AI - powered insights and automation',' pric,
   e: '$35, 000',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced financial platform that uses AI to analyze financial data, provide insights, and automate financial processes for improved decision - making and efficiency.', feature,
   s: [, ' 'AI financial analysis',' 'Predictive modeling',' 'Risk assessment',' 'Automated reporting',' 'Financial forecasting',' 'Performance optimization',' 'Compliance monitoring',' 'Real - time insights',' 'Integration capabilities',' 'Custom dashboards'], popula,
   r: true,' ico,
   n: '💰', ' colo,
@@ -3450,7 +3408,6 @@ i,
   e:  ,' 'Intelligent supply chain optimization with AI - powered insights and automation',' pric,
   e: '$40, 000',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary platform that uses AI to optimize supply chain operations, predict demand, manage inventory, and improve efficiency across all supply chain processes.', feature,
   s: [, ' 'AI demand forecasting',' 'Inventory optimization',' 'Supply chain analytics',' 'Risk management',' 'Performance monitoring',' 'Automated procurement',' 'Logistics optimization',' 'Supplier management',' 'Real - time tracking',' 'Integration capabilities'], popula,
   r: false,' ico,
   n: '🚚', ' colo,
@@ -3489,7 +3446,6 @@ i,
   e:  ,' 'Intelligent marketing automation with AI - powered optimization and insights',' pric,
   e: '$22, 000',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced platform that uses AI to automate marketing campaigns, optimize performance, and provide intelligent insights for maximum marketing ROI.', feature,
   s: [, ' 'AI campaign optimization',' 'Automated marketing workflows',' 'Customer segmentation',' 'Performance analytics',' 'A / B testing automation',' 'Personalization engine',' 'Multi - channel management',' 'Lead scoring',' 'ROI tracking',' 'Integration capabilities'], popula,
   r: true,' ico,
   n: '📢', ' 'AI/ML',' colo,
@@ -3528,7 +3484,6 @@ i,
   e:  ,' 'Intelligent project management with AI - powered optimization and insights',' pric,
   e: '$28, 000',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary platform that uses AI to optimize project planning, resource allocation, risk management, and performance tracking for improved project success rates.', feature,
   s: [, ' 'AI project planning',' 'Resource optimization',' 'Risk assessment',' 'Performance tracking',' 'Automated reporting',' 'Team collaboration',' 'Timeline optimization',' 'Budget management',' 'Integration capabilities',' 'Custom dashboards'], popula,
   r: false,' ico,
   n: '📋', ' 'AI/ML',' colo,
@@ -3561,14 +3516,12 @@ i,
   e: '2025 - 03 - 05', customer,
   s: 75, ratin,
   g: 4 && 4.8, review,
-  s: 45}; ]; feature,
   s: [ export interface InnovativeMicroSaasService2025,
   id: string, nam,
   e: string, taglin,
   e: string, pric,
   e: string, perio,
   d: string, descriptio,
-  n: string, feature,
   s: string[], popula,
   r: boolean, ico,
   n: string, colo,
@@ -3606,7 +3559,6 @@ i,
   e: 'Revolutionary AI-powered content creation and management',' pric,
   e: '$15,000',' perio,
   d: '/month',' descriptio,
-  n: 'Advanced platform that uses AI to create, manage, and optimize content across all channels. Not just content generation - intelligent content strategy and optimization.', feature,
   s: [' 'AI content creationContent strategy optimizationMulti-channel managementPerformance analyticsSEO optimizationContent personalizationBrand voice consistencyContent calendar automation'' 'Collaboration toolsROI tracking' marketPositio,
   n:' 'Leading AI project management platform. Competes with basic project tools but offers intelligent optimization.' targetAudienc,
   e:' 'Project managers, Construction companies, Software development teams, Consulting firms, Government agencies, Large enterprises' trialDay,
@@ -3633,7 +3585,6 @@ i,
   e: '2025-03-05' customer,
   s: 75,
   rating: 4.8,
-  reviews: 45 } ]; feature,
   s: [' 'AI project planningResource optimizationRisk assessmentPerformance trackingAutomated reportingTeam collaborationTimeline optimizationBudget management'' 'Integration capabilitiesCustom dashboards' ],' popula,
   r: true, ico,
   n: '📝',' colo,
@@ -3655,7 +3606,6 @@ i,
   e: '$50B+ market',' growthRat,
   e: '250%+ annual growth', varian,
   t: 'saas-content', contactInf,
-  o: ]; feature,
   s: [;' 'AI project planning_resource optimization_risk assessment_performance tracking_automated reporting_team collaboration_timeline optimization_budget management'' 'Integration capabilities_custom dashboards' ],' popula,
   r: false, ico,
   n: '📋',' colo,
@@ -3720,7 +3670,6 @@ i,
   e: '2025 - 03 - 05', customer,
   s: 75, ratin,
   g: 4.8, review,
-  s: 45; ], ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -3729,7 +3678,6 @@ i,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [; // AI Content Factory; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3739,7 +3687,6 @@ i,
   e: '2025-01-01'; customer,
   s: 150; ratin,
   g: 4.9; review,
-  s: 89}; // CRM Intelligence Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3749,7 +3696,6 @@ i,
   e: '2025-01-15'; customer,
   s: 200; ratin,
   g: 4.9; review,
-  s: 125}; // Decision Engine Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3759,7 +3705,6 @@ i,
   e: '2025-01-20'; customer,
   s: 120; ratin,
   g: 4.9; review,
-  s: 78}; // E-commerce Optimization Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3769,7 +3714,6 @@ i,
   e: '2025-02-01'; customer,
   s: 180; ratin,
   g: 4.8; review,
-  s: 95}; // HR Automation Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3779,7 +3723,6 @@ i,
   e: '2025-02-15'; customer,
   s: 95; ratin,
   g: 4.8; review,
-  s: 58}; // Financial Analytics Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3789,7 +3732,6 @@ i,
   e: '2025-02-10'; customer,
   s: 85; ratin,
   g: 4.9; review,
-  s: 52}; // Supply Chain Intelligence Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3799,7 +3741,6 @@ i,
   e: '2025-03-01'; customer,
   s: 65; ratin,
   g: 4.8; review,
-  s: 38}; // Marketing Automation Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3809,7 +3750,6 @@ i,
   e: '2025-02-20'; customer,
   s: 140; ratin,
   g: 4.9; review,
-  s: 82}; // Project Management Intelligence Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3819,7 +3759,6 @@ i,
   e: '2025-03-05'; customer,
   s: 75; ratin,
   g: 4.8; review,
-  s: 45; ]} ]; ; } ]; } ];' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -3828,7 +3767,6 @@ i,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [; // AI Content Factory; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3838,7 +3776,6 @@ i,
   e: '2025-01-01'; customer,
   s: 150; ratin,
   g: 4.9; review,
-  s: 89}; // CRM Intelligence Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3848,7 +3785,6 @@ i,
   e: '2025-01-15'; customer,
   s: 200; ratin,
   g: 4.9; review,
-  s: 125}; // Decision Engine Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3858,7 +3794,6 @@ i,
   e: '2025-01-20'; customer,
   s: 120; ratin,
   g: 4.9; review,
-  s: 78}; // E-commerce Optimization Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3868,7 +3803,6 @@ i,
   e: '2025-02-01'; customer,
   s: 180; ratin,
   g: 4.8; review,
-  s: 95}; // HR Automation Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3878,7 +3812,6 @@ i,
   e: '2025-02-15'; customer,
   s: 95; ratin,
   g: 4.8; review,
-  s: 58}; // Financial Analytics Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3888,7 +3821,6 @@ i,
   e: '2025-02-10'; customer,
   s: 85; ratin,
   g: 4.9; review,
-  s: 52}; // Supply Chain Intelligence Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3898,7 +3830,6 @@ i,
   e: '2025-03-01'; customer,
   s: 65; ratin,
   g: 4.8; review,
-  s: 38}; // Marketing Automation Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3908,7 +3839,6 @@ i,
   e: '2025-02-20'; customer,
   s: 140; ratin,
   g: 4.9; review,
-  s: 82}; // Project Management Intelligence Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,

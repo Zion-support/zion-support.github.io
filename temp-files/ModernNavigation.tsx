@@ -1,17 +1,12 @@
 import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
 
-interface ModernNavigationProps {/* TODO: Fix JSX expression */}
 }
 
 const,
-  ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) => {/* TODO: Fix JSX expression */}
   f: '/' },
-    {/* TODO: Fix JSX expression */}
   f: '/services' },
-    {/* TODO: Fix JSX expression */}
   f: '/about' },
-    {/* TODO: Fix JSX expression */}
   f: '/contact' }];
 
   return(<nav className={`bg-white shadow-md ${className}`}>
@@ -46,7 +41,6 @@ const,
           {/* Desktop Navigation */}"
           <div className="hidden,"
   md:flex space-x-8"></div>
-            {/* TODO: Fix JSX expression */}
                 key={item.name}
                 href={item.href}"
                 className="text-gray-700,"
@@ -80,7 +74,6 @@ const,
                 key={item.name}
                 href={item.href}
                 className="block text-gray-700 hover:text-blue-600 py-2"
-        {/* TODO: Fix JSX expression */}
                 key={item.name}
                 href={item.href}"
                 className="block text-gray-700,"

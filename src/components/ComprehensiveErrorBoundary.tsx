@@ -11,7 +11,6 @@
   showRetryButton?: boolean;
 }
 
-interface State {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   hasErro,
@@ -25,7 +24,6 @@ interface State {/* TODO: Fix JSX expression */}
   g: boolean;
 }
 class ComprehensiveErrorBoundary extends Component;
-          <Props, State> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 
@@ -52,10 +50,8 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   }
   static getDerivedStateFromError(erro)
   r: Error): Partial;
-          <State> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   hasErro,
@@ -71,21 +67,17 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   }
   componentDidCatch(erro,
   r: Error, errorInf)
-  o: ErrorInfo) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    this.setState({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //       error,
 //       errorInfo;)
     });
-    if (this.props.onError) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       this.props.onError(error, errorInfo);
     }
-    if (this.props.enableErrorReporting) {/* TODO: Fix JSX expression */}
   O: Add content;}
 
 }
@@ -114,10 +106,8 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   t: this.state.retryCount;
     };
     // Send to error reporting service;
-    if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      (window as any).gtag('event', 'exception', {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   descriptio,
@@ -125,7 +115,6 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
         fata,
   l: false,
         custom_ma,
-  p: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   error_i,
@@ -136,23 +125,18 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       });
     }
     // Log to console in development;
-    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       }
   };
-  private handleRetry = async () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if (this.state.retryCount;)
-          < this.maxRetries) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      this.setState({/* TODO: Fix JSX expression */})
   g: true });
       // Simulate retry delay;
       await new Promise(resolve => setTimeout(resolve, 1000));
-      this.setState(prevState => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   hasErro,
@@ -168,23 +152,18 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       }));
     }
   };
-  private handleReload = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     window.location.reload();
   };
-  render() {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (this.state.hasError) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      if (this.props.fallback) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         return this.props.fallback;
       }
-      if (this.state.isRetrying) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         return (<div>Coming Soon</div>)

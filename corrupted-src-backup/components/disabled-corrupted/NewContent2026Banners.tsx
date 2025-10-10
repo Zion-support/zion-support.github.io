@@ -33,7 +33,6 @@
           <Link, t, o='/<bl, o, g'
             className='bg-whi, t, e/20, hove, r:bg-whi, t, e/30, tex, t-white, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s'
           >
-            Explore, All, Content →
           </Li, n, k>)
         </div>)
       </div>)
@@ -59,13 +58,11 @@
             AI-Powered, Enterprise, Security 20, 2, 6;
           </h2>
           <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3 xl, m, x-au, t, o'>
-            Revolutionary, threat, detection with, 9, 9.7% accura, c, y. Autonomous, incident, response and, zer, o-trust, architecture, for enterpri, s, e-grade, securit, y.
           </p>
           <div, className='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
             <Link, t, o='/servic, e, s/ai-cybersecuri, t, y-<consulti, n, g'
               className='bg-white, tex, t-r, e, d-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
             >
-              Explore, Security, Solutions;
             </Li, n, k>
             <Link, t, o='/bl, o, g/ai-cybersecuri, t, y-<20, 2, 6'
               className='bord, e, r-2, borde, r-white, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-white, hove, r:te, x, t-r, e, d-600, transitio, n-colo, r, s'
@@ -119,7 +116,6 @@
           <Link, t, o='/servic, e, s/ai-multimod, a, l-<enterpri, s, e'
             className='bg-white, tex, t-indi, g, o-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
           >
-            Explore, Multimodal, AI →
           </Li, n, k>)
         </div>)
       </div>)
@@ -127,12 +123,10 @@
  }
 
 // AI Sustainability Transformation Banner export function AISustainabilityTransformationBann e r() { 
-  return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='te, x, t-cent, e, r'>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'>
   return (
-    <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, tex, t-white, p, y-6'></div>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'></div>
         <div, className='te, x, t-cent, e, r'></div>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'></div>
@@ -149,23 +143,18 @@
           </p>
           <div, className='grid, m, d:gr, i, d-co, l, s-3, ga, p-4, m, b-6'></div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
-              <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>80%</div>
               <div, className='fo, n, t-semibo, l, d'>Energy, Reductio, n</div>
               <div, className='te, x, t-sm, opacit, y-90'>Through, AI, optimization</div>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
-              <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>$2M+</div>
               <div, className='fo, n, t-semibo, l, d'>Annual, Saving, s</div>
               <div, className='te, x, t-sm, opacit, y-90'>From, green, tech</div>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
-              <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>1, 0, 0%</div>
               <div, className='fo, n, t-semibo, l, d'>Carbon, Neutra, l</div>
               <div, className='te, x, t-sm, opacit, y-90'>AI, operation, s</div>
             </div>
           </div>
-          <Link, t, o='/bl, o, g/ai-sustainabili, t, y-gre, e, n-te, c, h-<20, 2, 6'
-            className='bg-white, tex, t-gre, e, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
           >
             Read, Sustainability, Guide →
           </Li, n, k>)
@@ -193,7 +182,6 @@
             Revolutionary, AI, Content 20, 2, 6;
           </h2>
           <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3 xl, m, x-au, t, o'>
-            Discover, cuttin, g-edge, AI, insigh, t, s, case, studie, s, and, implementation, guides that, are, transforming industries, worldwid, e.
           </p>
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6'></div>
             <Link, t, o='/bl, o, g/ai-autonomo, u, s-clo, u, d-operatio, n, s-<20, 2, 6'
@@ -204,7 +192,6 @@
                   AI, Autonomous, Cloud Operatio, n, s;
                 </h3>
                 <p, className='te, x, t-sm, opacit, y-90'>
-                  Se, l, f-healing, infrastructure, with 99.9% upti, m, e;
                 </p>
               </div>
             </Li, n, k>
@@ -250,7 +237,6 @@
             AI, Autonomous, Cloud Operations, 202, 6;
           </h2>
           <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3 xl, m, x-au, t, o'>
-            Transform, your, cloud infrastructure, with, AI-powered, sel, f-healing, syst, e, m, s, predictive, maintenanc, e, and, zer, o-touch, operation, s.
           </p>
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6'></div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
@@ -281,12 +267,10 @@
  }
 
 // AI FinTech Transformation Banner export function AIFinTechTransformationBann e r() { 
-  return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-gre, e, n-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='te, x, t-cent, e, r'>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'>
   return (
-    <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-gre, e, n-600, tex, t-white, p, y-6'></div>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'></div>
         <div, className='te, x, t-cent, e, r'></div>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'></div>
@@ -304,23 +288,19 @@
           </p>
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6'></div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
-              <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>95%</div>
 
               <div, className='te, x, t-sm, opacit, y-90'>Process, efficienc, y</div>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
-              <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>$5M+</div>
               <div, className='fo, n, t-semibo, l, d'>Annual, Saving, s</div>
               <div, className='te, x, t-sm, opacit, y-90'>Cost, reductio, n</div>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
-              <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>99.9%</div>
 
               <div, className='te, x, t-sm, opacit, y-90'>Transaction, processin, g</div>
             </div>
           </div>
           <Link, t, o='/bl, o, g/ai-finte, c, h-transformati, o, n-<20, 2, 6'
-            className='bg-white, tex, t-gre, e, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
           ></Link>Read</Link>, FinTech, Guide →
           </Li, n, k>
         </div>
@@ -396,7 +376,6 @@
             Cutti, n, g-Edge, AI, Content 20, 2, 6;
           </h2>
           <p, className='te, x, t-lg, opacit, y-90, m, b-6, ma, x-w-3 xl, m, x-au, t, o'>
-            Explore, the, latest AI, innovati, o, n, s, case, studie, s, and, implementation, guides that, are, revolutionizing industri, e, s.
           </p>
           <div, classNam, e = 'flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-6'></div>
             <Link, t, o='/bl, o, g/ai-autonomo, u, s-clo, u, d-operatio, n, s-<20, 2, 6'
@@ -414,7 +393,6 @@
             >
               Retail, Automatio, n;
             </Li, n, k>
-            <Link, t, o='/bl, o, g/ai-sustainabili, t, y-gre, e, n-te, c, h-<20, 2, 6'
               className='bg-whi, t, e/10, hove, r:bg-whi, t, e/20, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s'
             >
               Sustainabili, t, y;
@@ -423,34 +401,24 @@
           <Link, t, o='/<bl, o, g'
             className='bg-white, tex, t-purp, l, e-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
           >
-            Explore, All, Content →
           </Li, n, k>)
         </div>)
       </div>)
     </d, i, v > );
-// Latest Content 2026 Banner export function LatestContent2026Bann e r() {/* TODO: Fix JSX expression */}
  }
 
-// AI Security Enterprise 2026 Banner export functio; n AISecurityEnterprise2026Banne r() {/* TODO: Fix JSX expression */}
  }
 
-// AI Multimodal Enterprise 2026 Banner export functio; n AIMultimodalEnterprise2026Banne r() {/* TODO: Fix JSX expression */}
  }
 
-// AI Sustainability Transformation Banner export function AISustainabilityTransformationBann e r() {/* TODO: Fix JSX expression */}
  }
 
-// New Latest 2026 Content Banner export functio; n NewLatest2026ContentBanne r() {/* TODO: Fix JSX expression */}
  }
 
-// AI Autonomous Cloud Ops Banner export functio; n AIAutonomousCloudOpsBanne r() {/* TODO: Fix JSX expression */}
  }
 
-// AI FinTech Transformation Banner export function AIFinTechTransformationBann e r() {/* TODO: Fix JSX expression */}
  }
 
-// AI Retail Automation Banner export function AIRetailAutomationBann e r() {/* TODO: Fix JSX expression */}
  }
 
-// Latest 2026 Content Banner export function Latest2026ContentBann e r() {/* TODO: Fix JSX expression */}
  }

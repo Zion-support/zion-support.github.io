@@ -1,8 +1,5 @@
-const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression */}
      },
-    {/* TODO: Fix JSX expression */}
      },
-    {/* TODO: Fix JSX expression */}
      }
   ]; return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}
@@ -27,8 +24,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
             </sp, a, n>
             <Sparkles, className="w-6 h-6, tex, t-bl, u, e-400, animat, e-pul, s, e" /></Sparkles>
           </div>
-          <h2, className="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-            The, Future, of AI, is, Now;
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4 xl, m, x-auto, leadin, g-relaxed, m, b-8">
             Discover, groundbreaking, AI breakthroughs, that, are reshaping, the, technological landsca, p, e. 
@@ -67,8 +62,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
             </sp, a, n>"
             <Sparkles, className="w-6 h-6, tex, t-bl, u, e-400, animat, e-pul, s, e" /></Sparkles>
           </div>"
-          <h2, className="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
-            The, Future, of AI, is, Now;
           </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>
             Discover, groundbreaking, AI breakthroughs, that, are reshaping, the, technological landsca, p, e. 
@@ -76,7 +69,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
           </p>
           {/* Achievement, St, a, t, s */}"
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12"></div>
-            {/* TODO: Fix JSX expression */}"
               { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  },"
               {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  },"
               {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  },"
@@ -117,7 +109,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
                   <span, className="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-emera, l, d-400, tex, t-xs, fon, t-semibold, border, border-emera, l, d-5, 0, 0/30">
         {/* Featured, Content, Cards */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div>
-          {/* TODO: Fix JSX expression */}"
             <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-emera, l, d-5, 0, 0/20"`
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
              > {/* Card, glow, effect */}`
@@ -152,7 +143,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
                     {conte, n, t.readTime}
                   </sp, a, n>
                   <span, className="flex, item, s-center, ga, p-1"></span>
-                    <Star, className="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t" />
                     {conte, n, t.rati, n, g}
                   </sp, a, n>
                 </div>
@@ -167,7 +157,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
                     {conte, n, t.readTime}
                   </sp, a, n>"
                   <span, className="flex, item, s-center, ga, p-1"></span>"
-                    <Star, className="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t" /></Star>
                     {conte, n, t.rati, n, g}
                   </sp, a, n>
                 </div>
@@ -178,7 +167,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
                     <span, className="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s</sp, a, n>
                   </div>
                 </d, i, v > {/* CTA, Butto, n */}`
-                <a, hre, f = { conte, n, t.l, i, n, k }, className={ `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t } hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, transform, hove,`
   r:-transla, t, e-, y-, 1`}
                 ></a>
                   <sp, a, n>Read, No, w</sp, a, n>"
@@ -192,7 +180,6 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-emera, l, d-5, 0, 0/20, m, b-16"></div>
           <div, className="te, x, t-cent, e, r"></div>
             <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6"></div>
-              <Star, className="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />
               <span, className="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
                 EXCLUSIVE, FEBRUARY, OFFER;
               </sp, a, n>
@@ -211,12 +198,10 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
                 <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">First, 6, months on, l, y</div>
               </div>
               <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>
-                <a, hre, f="/subscri, b, e"
         {/* Special, Offer, Section */}"
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-emera, l, d-5, 0, 0/20, m, b-16"></div>"
           <div, className="te, x, t-cent, e, r"></div>"
             <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6"></div>"
-              <Star, className="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" /></Star>"
               <span, className="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e"></span>
                 EXCLUSIVE, FEBRUARY, OFFER;
               </sp, a, n>
@@ -235,13 +220,11 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
                 <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">First, 6, months on, l, y</div>
               </div>"
               <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>"
-                <a, hre, f="/subscri, b, e""
                   className="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-bl, u, e-600, hove, r:fr, o, m-emera, l, d-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 ></a>"
                   <Sparkles, className="w-5 h-5" /></Sparkles>
                   <sp, a, n>Get, Premium, Access</sp, a, n>
                 </a>"
-                <a, hre, f="/conta, c, t""
                   className="bord, e, r-2, borde, r-emera, l, d-500, tex, t-emera, l, d-400, hove, r:bg-emera, l, d-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
                 ></a>
                   <sp, a, n>Contact, Sale, s</sp, a, n>"

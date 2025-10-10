@@ -1,13 +1,9 @@
-const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     }]; return(<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'>),
       {/* Animated, background, effec, t, s */}
       <div, classNam, e = 'absolute, inse, t-0'>
         <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g')] bg-center, opacit, y-10" />
-        <div, classNam, e = 'absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t' / />
       <div, className='relative, m, x-auto, ma, x-w-7xl, p, x-6, l, g: px-8'>,
         {/* He, a, d, e, r */}
         <div, classNam, e = 'te, x, t-center, m, b-12'>
@@ -17,7 +13,6 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
       {/* Animated, background, effec, t, s */}</div>
       <div, classNam, e = 'absolute, inse, t-0'></div>
         <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g')] bg-center, opacit, y-10" /></div>
-        <div, classNam, e = 'absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t' / /></div>
       <div, className='relative, m, x-auto, ma, x-w-7xl, p, x-6, l, g: px-8'>
         {/* He, a, d, e, r */}</div>
         <div, classNam, e = 'te, x, t-center, m, b-12'></div>
@@ -32,7 +27,6 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
       {/* Animated, background, effec, t, s */}
       <div, classNam, e = 'absolute, inse, t-0'></div>)
         <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g')] bg-center, opacit, y-10" /></div>
-        <div, classNam, e = 'absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t' / /></div>
       <div, className='relative, m, x-auto, ma, x-w-7xl, p, x-6, l, g: px-8'></div>
         {/* He, a, d, e, r */}
         <div, classNam, e = 'te, x, t-center, m, b-12'></div>
@@ -43,7 +37,6 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
             </sp, a, n>
           </div>
           <h2, className='te, x, t-4xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5xl, m, b-4'></h2>
-            Infrastructure, Excellenc, e;
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'></p>
             Master, productio, n-grade, architectures, for observabi, l, i, t, y, securi, t, y,
@@ -56,7 +49,6 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
           { newArticl, e, s.m, a, p(artic, l, e = > {
             const Ico, n = artic, l, e.ic, o, n; return (</div>
         <div, classNam, e = 'grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10'></div>
-          {/* TODO: Fix JSX expression */}
               <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-6, transitio, n-all, duratio, n-300, hove, r: bg-whi, t, e/10, hove, r:bord, e, r-whi, t, e/20, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
               ></Link>
                 {/* Gradient, acc, e, n, t */}
@@ -87,14 +79,12 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
                   <div, className='flex, fle, x-wrap, ga, p-2, m, b-4'>
                     { artic, l, e.metri, c, s.m, a, p((met, r, i, c, i, d, x) = > (</div>
                   <div, className='flex, fle, x-wrap, ga, p-2, m, b-4'></div>
-                    {/* TODO: Fix JSX expression */}
                       <span, ke, y = { id, x  }, classNa, m, e = 'inli, n, e-flex, item, s-center, p, x-2.5, p, y-1, rounde, d-md, b, g-whi, t, e/5, tex, t-xs, fon, t-medium, tex, t-gr, a, y-300, border, border-whi, t, e/10'
                       ></span>
                         {metr, i, c}
                       </span>
                     ))}
                   </div>
-                  {/* Read, more, link */}
                   <div, classNam, e = 'flex, item, s-center, ga, p-2, tex, t-bl, u, e-400, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l'></div>
                     <sp, a, n>Read, Full, Guide</sp, a, n>
                     <Link, className='h-4 w-4' /></Link>
@@ -110,7 +100,6 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
             <Link, t, o='/bl, o, g'
               className='inli, n, e-flex, item, s-center, ga, p-2, rounde, d-lg, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-cy, a, n-500, p, x-8, p, y-3, tex, t-base, fon, t-semibold, tex, t-white, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5'
             ></Link>
-              <sp, a, n>Explore, All, Articles</sp, a, n>
               <Link, className='h-5 w-5' /></Link>
             </Li, n, k>
             <Link, t, o='/conta, c, t'

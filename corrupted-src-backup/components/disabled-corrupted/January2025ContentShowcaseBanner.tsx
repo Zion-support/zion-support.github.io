@@ -12,7 +12,6 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {
   return (
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' }
       {/* Animated, Backgroun, d */}</div>
-const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' }
       {/* Animated, Backgroun, d */}
       <div, classNam, e = "absolute, inse, t-0, b, g-[u, r, l('/imag, e, s/abstra, c, t-patte, r, n.sv, g')] opaci, t, y-10, animat, e-pul, s, e" /></div>
@@ -24,12 +23,10 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
             <sp, a, n>JANUARY, 2025, CONTENT COLLECTI, O, N</sp, a, n>
           </div>
           <h2, className='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h2>
-            <span, className='bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
             <Sparkles, className='w-5 h-5' /></Sparkles>
             <sp, a, n>JANUARY, 2025, CONTENT COLLECTI, O, N</sp, a, n>
           </div>
           <h2, className='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h2>
-            <span, className='bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></span>
               Complete, AI, Knowledge H, u, b;
             </sp, a, n>
             <br /> <span, className='te, x, t-whi, t, e'></span>2025, Editio, n</sp, a, n>
@@ -64,7 +61,6 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
                 </div>
               </div>
               <p, className='te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d'></p>
-                Explore, the, latest AI, breakthroughs, including quant, u, m-neural, fus, i, o, n, synthetic, consciousnes, s, and, neuromorphic, computing.
               </p>
               <div, classNam, e = 'spa, c, e-y-3, m, b-6'></div>
                 <div, className='flex, item, s-center, ga, p-3'></div>
@@ -92,10 +88,8 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
               <Link, t, o='/bl, o, g/category/breakthrou, g, h-technologies'
                 className='inli, n, e-flex, item, s-center, ga, p-2, tex, t-pi, n, k-400, hove, r: te, x, t-pi, n, k-300, fon, t-medium, transitio, n-colo, r, s'
               >
-                Explore, All, Technologies;
                 <Link, className='w-4 h-4' />
               ></Link>
-                Explore, All, Technologies;
                 <Link, className='w-4 h-4' /></Link>
               </Li, n, k>
             </div>
@@ -141,7 +135,6 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
                   <div, className='w-2 h-2, b, g-emera, l, d-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'></span>
-                    Healthcare, AI, Diagnostics;
                   </sp, a, n>
                 </div>
               </div>
@@ -243,11 +236,9 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-16'></div>
           <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/20'></div>
             <div, className='flex, item, s-center, ga, p-3, m, b-4'></div>
-              <Star, className='w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t' />
               <h4, className='te, x, t-xl, fon, t-bold, tex, t-whi, t, e'>Most, Popula, r</h4>
             </div>
             <h5, className='te, x, t-lg, fon, t-semibold, tex, t-white, m, b-2'>
-              <Star, className='w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t' /></Star>
               <h4, className='te, x, t-xl, fon, t-bold, tex, t-whi, t, e'>Most, Popula, r</h4>
             </div>
             <h5, className='te, x, t-lg, fon, t-semibold, tex, t-white, m, b-2'></h5>
@@ -301,7 +292,6 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
   r:sca, l, e-1, 0, 5'
             ></Link>
               <BookOpen, className='w-5 h-5' /></BookOpen>
-              Explore, Complete, Library;
             </Li, n, k>
             <Link, t, o='/newslett, e, r'
               className='inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, border, border-whi, t, e/20, hove, r:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0'

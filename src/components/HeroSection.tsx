@@ -22,7 +22,6 @@ export default function HeroSection() {
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Transforming businesses through cutting-edge artificial intelligence, 
-            machine learning, and innovative IT solutions. We build the future, today.
           </p>
 
           {/* Key Features */}

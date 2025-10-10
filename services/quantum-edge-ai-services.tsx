@@ -30,10 +30,8 @@ export default function quantumedgeaiservices() {
         </div>)
       </div>)
 export const,
-  metadata: Metadata = {/* TODO: Fix JSX expression */}
   }};
 
-export default function quantumedgeaiservices() {/* TODO: Fix JSX expression */}
 }
   return (<div className="min-h-screen bg-gray-50"></div>"
       <div className="max-w-4xl mx-auto px-4 py-8"></div>"

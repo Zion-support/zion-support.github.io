@@ -128,7 +128,6 @@ export default errorTracker;
   metadata?: Record;
           <string, unknown>;
 }
-export interface TrackedError {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
@@ -153,27 +152,21 @@ class EnhancedErrorTracker {// TODO: Add content;}
   private maxErrors = 100;
   private,
   sessionId: string;
-  constructor() {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     this.sessionId = this.generateSessionId();
     this.setupGlobalErrorHandler();
   }
-  private generateSessionId(): string {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return `${Date.now()}-${Math.random().toString(36).substring(7)}`;
   }
-  private setupGlobalErrorHandler(): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      window.addEventListener('error', event => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        this.trackError(event.error, {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   componen,
@@ -182,10 +175,8 @@ class EnhancedErrorTracker {// TODO: Add content;}
   n: 'Uncaught Error')
         });
       });
-      window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
-        this.trackError(new Error(event.reason), {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
@@ -204,7 +195,6 @@ class EnhancedErrorTracker {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return;
     const,
-  trackedError: TrackedError = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   messag,
@@ -212,7 +202,6 @@ class EnhancedErrorTracker {// TODO: Add content;}
       stac,
   k: error.stack,
       contex,
-  t: {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //         ...context,
@@ -227,26 +216,22 @@ class EnhancedErrorTracker {// TODO: Add content;}
     };
     this.errors.push(trackedError);
     // Keep only the most recent errors;
-    if (this.errors.length > this.maxErrors) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       this.errors.shift();
     }
     // Log to console in development;
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
   Error:', trackedError);}
     }
     // Send to analytics if available;
     this.sendToAnalytics(trackedError);
   }
   private sendToAnalytics(erro)
-  r: TrackedError): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if ()
       typeof window !== 'undefined' &&
 //       ()
-        window as {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
           gtag?: (comman,
@@ -255,11 +240,9 @@ class EnhancedErrorTracker {// TODO: Add content;}
   s: Record;)
           <string, unknown>) => void;
         }
-// ).gtag) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //       ()
-        window as unknown as {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   gta,
@@ -269,7 +252,6 @@ class EnhancedErrorTracker {// TODO: Add content;}
   s: Record;)
           <string, unknown>) => void;
         }
-      ).gtag('event', 'exception', {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   descriptio,
@@ -281,17 +263,14 @@ class EnhancedErrorTracker {// TODO: Add content;}
       });
     }
   }
-  public getErrors(): TrackedError[] {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return [...this.errors];
   }
-  public clearErrors(): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     this.errors = [];
   }
-  public getErrorStats(): {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   tota,
@@ -301,7 +280,6 @@ class EnhancedErrorTracker {// TODO: Add content;}
           <string, number>;
     recen,
   t: TrackedError[];
-  } {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const,
@@ -309,7 +287,6 @@ class EnhancedErrorTracker {// TODO: Add content;}
           <string, number> = {};
     this.errors.forEach(error => {byComponent[component] = (byComponent[component] || 0) + 1;}
     });
-    return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 

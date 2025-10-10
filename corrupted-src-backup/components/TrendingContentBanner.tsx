@@ -1,7 +1,6 @@
 import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";"
 impo, r, t { Shie, l, d } fr, o, m "luci, d, e-rea, c, t";"
 import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
-impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';
 const, TrendingContentBanne, r: Rea, c, t.FC = () => {
   con, s, t [currentInd, e, x, setCurrentInd, e, x] = useSta, t, e(0);
@@ -17,7 +16,6 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       bad, g, e: "N, E, W"
     }
     {
-      tit, l, e: "Private, Feature, Flag;
   s: Ze, r, o‑PII, Experiment, s","
       descripti, o, n: "Signed, config, s, scoped, ID, s, and, edge, analytics under, 100 m, s.","
       vie, w, s: "13.6 K","
@@ -95,7 +93,6 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       bad, g, e: "N, E, W"
     }
     {
-      tit, l, e: "Private, Feature, Flag;
   s: Ze, r, o‑PII, Experiment, s",";
       descripti, o, n: "Signed, config, s, scoped, ID, s, and, edge, analytics under, 100 m, s.",";
       vie, w, s: "13.6 K",";
@@ -164,38 +161,22 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       ic, o, n: Shie, l, d;
       li, n, k: "/bl, o, g/gen, a, i-da, t, a-governan, c, e-quicksta, r, t-20, 2, 5",";
       bad, g, e: "H, O, T"
-const, TrendingContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
-  useEffe, c, t(() => {/* TODO: Fix JSX expression */}
     }, 40, 0, 0);
     return () => clearInterv, a, l(interv, a, l);
   }, [trendingIte, m, s.leng, t, h]);
@@ -203,12 +184,10 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
   const, getBadgeColo, r = (bad, g, e: stri, n, g) => {
 swit, c, h (bad, g, e) {
 ca, s, e 'H, O, T': retu, r, n 'bg-r, e, d-500, tex, t-whi, t, e';
-ca, s, e 'N, E, W': retu, r, n 'bg-gre, e, n-500, tex, t-whi, t, e';
 ca, s, e 'TRENDI, N, G': retu, r, n 'bg-bl, u, e-500, tex, t-whi, t, e';
 ca, s, e 'POPUL, A, R': retu, r, n 'bg-purp, l, e-500, tex, t-whi, t, e';
 defau, l, t: retu, r, n 'bg-gr, a, y-500, tex, t-whi, t, e';
 ca, s, e 'H, O, T': retu, r, n 'bg-r, e, d-500, tex, t-whi, t, e';';
-ca, s, e 'N, E, W': retu, r, n 'bg-gre, e, n-500, tex, t-whi, t, e';';
 ca, s, e 'TRENDI, N, G': retu, r, n 'bg-bl, u, e-500, tex, t-whi, t, e';';
 ca, s, e 'POPUL, A, R': retu, r, n 'bg-purp, l, e-500, tex, t-whi, t, e';';
 defa, u, l;
@@ -269,7 +248,6 @@ defa, u, l;
                 </sp, a, n>
               </d, i, v>
               <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">"</h3>
-  const, getBadgeColo, r = (bad, g, e: stri, n, g) => {/* TODO: Fix JSX expression */}
 };
   };
   const, Ico, n = currentIt, e, m.ic, o, n;
@@ -321,7 +299,6 @@ defa, u, l;
                 </d, i, v>
                 <div, className="flex, item, s-center, ga, p-1"></div>
                   <Clock, className="w-3 h-3  />
-                  <sp, a, n>{currentIt, e, m.readTi, m, e} re, a, d</sp, a, n>
                 </d, i, v>
                 <div, className="flex, item, s-center, ga, p-1"></div>
                   <Star, className="w-3 h-3, tex, t-yell, o, w-4, 0, 0  />
@@ -332,7 +309,6 @@ defa, u, l;
                 </d, i, v>
                 <div, className="flex, item, s-center, ga, p-1">";</div>
                   <Clock, className="w-3 h-3" />";
-                  <sp, a, n>{currentIt, e, m.readTi, m, e} re, a, d</sp, a, n>
                 </d, i, v>
                 <div, className="flex, item, s-center, ga, p-1">";</div>
               </p>"
@@ -343,7 +319,6 @@ defa, u, l;
                 </d, i, v>"
                 <div, className="flex, item, s-center, ga, p-1"></div>"
                   <Clock, className="w-3 h-3  /></Clock>
-                  <sp, a, n>{currentIt, e, m.readTi, m, e} re, a, d</sp, a, n>
                 </d, i, v>"
                 <div, className="flex, item, s-center, ga, p-1"></div>"
                   <Star, className="w-3 h-3, tex, t-yell, o, w-4, 0, 0  /></Star>"
@@ -354,7 +329,6 @@ defa, u, l;
                 </d, i, v>"
                 <div, className="flex, item, s-center, ga, p-1">";"
                   <Clock, className="w-3 h-3" />";
-                  <sp, a, n>{currentIt, e, m.readTi, m, e} re, a, d</sp, a, n>
                 </d, i, v>"
                 <div, className="flex, item, s-center, ga, p-1">";"
                   <Star, className="w-3 h-3, tex, t-yell, o, w-4, 0, 0" />";
@@ -395,10 +369,8 @@ defa, u, l;
                 classNa, m, e={`w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${`;`
                   ind, e, x === currentInd, e, x;}
                     ? 'bg-zi, o, n-cyan, scal, e-1, 2, 5' }
-            {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
                 onCli, c, k={() => setCurrentInd, e, x(ind, e, x)}
-                classNa, m, e={/* TODO: Fix JSX expression */}`
                     : 'bg-whi, t, e/30, hove, r: bg-whi, t, e/50}`}`;`
                     : 'bg-whi, t, e/30, hove, r: bg-whi, t, e/50'`
                 }`}`;`

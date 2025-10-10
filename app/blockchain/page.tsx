@@ -251,7 +251,6 @@ const BlockchainPage: React.FC = () => {
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}

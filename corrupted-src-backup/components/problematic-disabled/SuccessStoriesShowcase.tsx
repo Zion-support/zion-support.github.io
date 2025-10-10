@@ -25,7 +25,6 @@ const SuccessStoriesShowcas, e: React.FC = () => { ,
         "40% lower, maintenance, costs",
         "99.9% uptime, achieve, d"
       ],",
-      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0"
      },
     { ",
       company: "FinanceFirst, Ba, n, k",
@@ -51,12 +50,10 @@ const SuccessStoriesShowcas, e: React.FC = () => { ,
             Success, Storie, s;
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
-            See, how, leading companies, are, transforming their, operations, with our, AI, solutions;
           </p>)
         </div>)
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">)
           { stori, e, s.m, a, p((s, t, o, r, y, ind, e, x) = > (
-            See, how, leading companies, are, transforming their, operations, with our, AI, solutions
           </p>
         </div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">
@@ -68,11 +65,8 @@ const SuccessStoriesShowcas, e: React.FC = () => { ,
                   {sto, r, y.ic, o, n}</div>
                   <d, i, v>
                     <h3, className="fo, n, t-bold, tex, t-xl">{sto, r, y.company}</h3>
-const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
      },
-    {/* TODO: Fix JSX expression */}
      },
-    {/* TODO: Fix JSX expression */}
      }
   ]; return (<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50"></section>"
       <div, className="container, m, x-auto, p, x-6"></div>"
@@ -81,11 +75,9 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
             Success, Storie, s;
           </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o"></p>
-            See, how, leading companies, are, transforming their, operations, with our, AI, solutions;
           </p>
         </div>"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12"></div>
-          {/* TODO: Fix JSX expression */}"
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-white, rounde, d-2xl, shado, w-xl, overflo, w-hidden, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
             ></div>
               <div, classNam, e = { `bg-gradie, n, t-to-r ${sto, r, y.c, o, l, o, r }, te, x, t-whit, e, p-6`}></div>"
@@ -103,14 +95,11 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
                 <div, className="spa, c, e-y-2, m, b-6">
                   { sto, r, y.metri, c, s.m, a, p((met, r, i, c, i, d, x) = > (</div>
                     <div, ke, y = { id, x  }, classNa, m, e = "flex, item, s-center, ga, p-2"></div>
-                      <div, className="w-2 h-2, b, g-gre, e, n-500, rounde, d-fu, l, l" /></div>
               </div>"
               <div, className="p-6"></div>"
                 <p, className="te, x, t-gr, a, y-600, m, b-6">{sto, r, y.description}</p>"
                 <div, className="spa, c, e-y-2, m, b-6"></div>
-                  {/* TODO: Fix JSX expression */}"
                     <div, ke, y = { id, x  }, classNa, m, e = "flex, item, s-center, ga, p-2"></div>"
-                      <div, className="w-2 h-2, b, g-gre, e, n-500, rounde, d-fu, l, l" /></div>"
                       <span, className="te, x, t-sm, tex, t-gr, a, y-7, 0, 0">{metr, i, c}</sp, a, n>
                     </di, v>)
                   ))}

@@ -15,12 +15,10 @@ export interface EmergingTechService2028 {
     mobile: string;
     email: string}
     address: string}
-export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
   };
-export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
@@ -58,7 +56,6 @@ export const,
     descriptio,
   n: unknown,
       'Advanced platform showcasing emerging technology services and innovations for 2028.',
-    feature,
   s: [,
       'Emerging tech services',
       'Innovation platform',
@@ -149,7 +146,6 @@ export const emergingTech2028 Services: EmergingTechService2028[] = [,
   e: "$299/month",
     descriptio,"
   n: "Advanced platform showcasing emerging technology services and innovations for 2028.",
-    feature,
   s: [,"
       "Emerging tech services","
       "Innovation platform","
@@ -184,7 +180,6 @@ export const emergingTech2028 Services: EmergingTechService2028[] = [,
   e: string, pric,
   e: string,
   descriptio,
-  n: string, feature,
   s: string[],
   lin,
   k: string, categor,
@@ -209,7 +204,6 @@ export const,
   e: "$299/month",
     descriptio,"
   n: "Advanced platform showcasing emerging technology services and innovations for 2028.",
-    feature,
   s: [;"
       "Emerging tech services""
       "Innovation platform""
@@ -276,7 +270,6 @@ export const,
   e: "$299/month",
     descriptio,"
   n: "Advanced platform showcasing emerging technology services and innovations for 2028.",
-    feature,
   s: [,"
       "Emerging tech services","
       "Innovation platform","
@@ -316,9 +309,7 @@ export const,
   }
 ];
 export interface EmergingTechService2028 export interface EmergingTechService2028,
-  id: string; export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} }; export interface EmergingTechService2028 {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } } addres,
   s: string} export const,
@@ -329,7 +320,6 @@ export interface EmergingTechService2028 export interface EmergingTechService202
   e: '2028 Emerging Tech Service Platform',' taglin,
   e: 'Emerging tech services for 2028',' pric,
   e: '$299 / month', descriptio,
-  n:  ,' 'Advanced platform showcasing emerging technology services and innovations for 2028.', feature,
   s: [,' 'Emerging tech services',' 'Innovation platform',' 'Future capabilities',' 'Advanced features',' 'Expert insights'],' lin,
   k: '/services / 2028 - emerging - tech - service',' categor,
   y: 'Emerging Tech Services 2028', real_implementatio,
@@ -344,7 +334,6 @@ export interface EmergingTechService2028 export interface EmergingTechService202
   e: "2028 Emerging Tech Service Platform", taglin,"
   e: "Emerging tech services for 2028", pric,"
   e: "$299/month", descriptio,"
-  n: "Advanced platform showcasing emerging technology services and innovations for 2028.", feature,"
   s: [ "Emerging tech services", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights" ], lin,"
   k: "/services/2028-emerging-tech-service", categor,"
   y: "Emerging Tech Services 2028", realImplementatio,
@@ -358,7 +347,6 @@ export interface EmergingTechService2028 export interface EmergingTechService202
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
@@ -372,7 +360,6 @@ export interface EmergingTechService2028 export interface EmergingTechService202
   e: "2028 Emerging Tech Service Platform", taglin,"
   e: "Emerging tech services for 2028", pric,"
   e: "$299/month", descriptio,"
-  n: "Advanced platform showcasing emerging technology services and innovations for 2028.", feature,"
   s: [ "Emerging tech services" "Innovation platform" "Future capabilities" "Advanced features" "Expert insights" ], lin,"
   k: "/services/2028-emerging-tech-service", categor,"
   y: "Emerging Tech Services 2028", realImplementatio,
@@ -388,7 +375,6 @@ export interface EmergingTechService2028 export interface EmergingTechService202
   e: "2028 Emerging Tech Service Platform", taglin,"
   e: "Emerging tech services for 2028", pric,"
   e: "$299/month", descriptio,"
-  n: "Advanced platform showcasing emerging technology services and innovations for 2028.", feature,"
   s: [ "Emerging tech services", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights" ], lin,"
   k: "/services/2028-emerging-tech-service", categor,"
   y: "Emerging Tech Services 2028", realImplementatio,

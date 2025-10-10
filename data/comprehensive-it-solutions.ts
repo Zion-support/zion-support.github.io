@@ -23,7 +23,6 @@ export interface ComprehensiveItSolution {;,
   e: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -37,7 +36,6 @@ export interface ComprehensiveItSolution {;,
   e: string;
     emai,
   l: string;
-export interface ComprehensiveItSolution {/* TODO: Fix JSX expression */}
   s: string}
 };
   i,
@@ -50,7 +48,6 @@ export interface ComprehensiveItSolution {/* TODO: Fix JSX expression */}
   e: string,,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -59,7 +56,6 @@ export interface ComprehensiveItSolution {/* TODO: Fix JSX expression */}
   realImplementatio,
   n: boolean;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
@@ -111,7 +107,6 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [,
   e: string, pric,
   e: string,
   descriptio,
-  n: string, feature,
   s: string[],
   lin,
   k: string, categor,
@@ -136,7 +131,6 @@ export const,
   e: "$80/hour",
     descriptio,"
   n: "Complete full-stack development services from frontend to backend and database design.",
-    feature,
   s: [;"
       "Frontend development""
       "Backend APIs""
@@ -207,7 +201,6 @@ export const,
   e: "$80/hour",
     descriptio,"
   n: "Complete full-stack development services from frontend to backend and database design.",
-    feature,
   s: [,"
       "Frontend development","
       "Backend APIs","
@@ -251,25 +244,21 @@ i,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: mobil,
   e: string; emai,
-  l: string; export interface ComprehensiveItSolution {/* TODO: Fix JSX expression */}
   s: string }; i,
   d: string; nam,
   e: string; taglin,
   e: string; pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
@@ -277,7 +266,6 @@ i,
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
@@ -291,7 +279,6 @@ i,
   e: "Full-Stack Development Services", taglin,"
   e: "End-to-end web application development", pric,"
   e: "$80/hour", descriptio,"
-  n: "Complete full-stack development services from frontend to backend and database design.", feature,"
   s: [ "Frontend development" "Backend APIs" "Database design" "DevOps integration" "Testing & deployment" ], lin,"
   k: "/services/full-stack-development", categor,"
   y: "IT Solutions", realImplementatio,
@@ -308,7 +295,6 @@ i,
   e: "Full-Stack Development Services", taglin,"
   e: "End-to-end web application development", pric,"
   e: "$80/hour", descriptio,"
-  n: "Complete full-stack development services from frontend to backend and database design.", feature,"
   s: [ "Frontend development", "Backend APIs", "Database design", "DevOps integration", "Testing & deployment" ], lin,"
   k: "/services/full-stack-development", categor,"
   y: "IT Solutions", realImplementatio,

@@ -109,7 +109,6 @@ const contact =
   d: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   popula,
   r: boolean;
@@ -258,7 +257,6 @@ const contact =
   perio,
   d: string, descriptio,
   n: string,
-  feature,
   s: string[], popula,
   r: boolean,
   ico,
@@ -478,7 +476,6 @@ export const,
     descriptio,
   n: unknown,
       'Intelligent cybersecurity platform that uses AI to detect, analyze, and respond to security threats in real - time. Features include threat hunting, incident response automation, and security analytics.',
-    feature,
   s: [,
       'AI - powered threat detection and analysis',
       'Real - time security monitoring and alerting',
@@ -613,7 +610,6 @@ export const,
     descriptio,
   n: unknown,
       'Comprehensive data engineering platform that uses AI to automate data pipeline creation, optimize data processing, and provide intelligent analytics. Features include ETL automation, data quality monitoring, and real - time analytics.',
-    feature,
   s: [,
       'AI - powered ETL pipeline automation',
       'Data quality monitoring and validation',
@@ -749,7 +745,6 @@ export const,
     descriptio,
   n: unknown,
       'Advanced API management platform that uses AI to optimize API performance, monitor usage patterns, and provide intelligent insights. Features include API design automation, performance optimization, and developer experience enhancement.',
-    feature,
   s: [,
       'AI - powered API design and documentation',
       'Automated performance optimization',
@@ -880,7 +875,6 @@ export const,
     descriptio,
   n: unknown,
       'Advanced network monitoring platform that uses AI to detect network issues, optimize performance, and provide predictive maintenance. Features include real - time monitoring, automated troubleshooting, and network analytics.',
-    feature,
   s: [,
       'AI - powered network performance monitoring',
       'Automated issue detection and resolution',
@@ -1004,7 +998,6 @@ export const,
     descriptio,
   n: unknown,
       'Advanced database optimization platform that uses AI to improve database performance, automate tuning, and provide intelligent recommendations. Features include query optimization, performance monitoring, and automated maintenance.',
-    feature,
   s: [,
       'AI - powered query optimization',
       'Automated database tuning',
@@ -1140,7 +1133,6 @@ export const,
     descriptio,
   n: unknown,
       'Comprehensive IT service management platform that uses AI to automate service requests, optimize workflows, and improve user experience. Features include ticket automation, knowledge management, and service analytics.',
-    feature,
   s: [,
       'AI - powered ticket routing and prioritization',
       'Automated service request processing',
@@ -1274,7 +1266,6 @@ export const,
     descriptio,
   n:
       'Advanced backup and disaster recovery platform that uses AI to optimize backup strategies, automate recovery processes, and ensure business continuity. Features include intelligent backup scheduling, automated testing, and recovery orchestration.'
-    feature,
   s: [;
       'AI-powered backup optimization'
       'Automated disaster recovery testing'
@@ -1417,7 +1408,6 @@ export const getSpecializedITSolutions2026ByCategory = (categor)
   )}
 export const getPopularSpecializedITSolutions2026 = () =>
 };
-export const getPopularSpecializedITSolutions2026 = () => {/* TODO: Fix JSX expression */}
   return specializedITSolutions2026.filter(solution => solution.popular)}
 }
 ];
@@ -1650,7 +1640,6 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
   d: '/month',
     descriptio,
   n: 'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.';
-    feature,
   s: [;
       'Infrastructure as Code (IaC) automationMulti-cloud management and orchestrationAutomated resource scaling and optimizationCost monitoring and optimizationSecurity compliance automationDisaster recovery orchestrationPerformance monitoring and alertingIntegration with major cloud providers'
       'Custom automation workflowsAdvanced analytics and reporting'
@@ -1708,7 +1697,6 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
   d: '/month',
     descriptio,
   n: 'Intelligent cybersecurity platform that uses AI to detect, analyze, and respond to security threats in real-time. Features include threat hunting, incident response automation, and security analytics.',
-    feature,
   s: [;
       'AI-powered threat detection and analysisReal-time security monitoring and alertingAutomated incident response and remediationThreat intelligence and sharingVulnerability assessment and managementSecurity compliance monitoringIntegration with SIEM and security toolsCustom security policies and rules'
       'Advanced threat hunting capabilitiesComprehensive security reporting'
@@ -1766,7 +1754,6 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
   d: '/month',
     descriptio,
   n: 'Comprehensive data engineering platform that uses AI to automate data pipeline creation, optimize data processing, and provide intelligent analytics. Features include ETL automation, data quality monitoring, and real-time analytics.',
-    feature,
   s: [;
       'AI-powered ETL pipeline automationData quality monitoring and validationReal-time data processing and streamingAutomated data transformation and cleaningData lineage and governanceIntegration with major data sourcesCustom data pipeline workflowsPerformance optimization and scaling'
       'Advanced analytics and visualizationAPI for custom integrations'
@@ -1824,7 +1811,6 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
   d: '/month',
     descriptio,
   n: 'Advanced API management platform that uses AI to optimize API performance, monitor usage patterns, and provide intelligent insights. Features include API design automation, performance optimization, and developer experience enhancement.',
-    feature,
   s: [;
       'AI-powered API design and documentationAutomated performance optimizationIntelligent rate limiting and throttlingAPI usage analytics and insightsDeveloper portal and documentationSecurity and authentication managementIntegration with popular frameworksCustom API policies and rules'
       'Real-time monitoring and alertingAdvanced reporting and analytics'
@@ -1882,7 +1868,6 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
   d: '/month',
     descriptio,
   n: 'Advanced network monitoring platform that uses AI to detect network issues, optimize performance, and provide predictive maintenance. Features include real-time monitoring, automated troubleshooting, and network analytics.',
-    feature,
   s: [;
       'AI-powered network performance monitoringAutomated issue detection and resolutionPredictive maintenance and alertingNetwork traffic analysis and optimizationSecurity threat detectionIntegration with network devicesCustom monitoring dashboardsReal-time reporting and analytics'
       'Mobile app for network administratorsAPI for custom integrations'
@@ -1940,7 +1925,6 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
   d: '/month',
     descriptio,
   n: 'Advanced database optimization platform that uses AI to improve database performance, automate tuning, and provide intelligent recommendations. Features include query optimization, performance monitoring, and automated maintenance.',
-    feature,
   s: [;
       'AI-powered query optimizationAutomated database tuningPerformance monitoring and alertingIntelligent indexing recommendationsDatabase health monitoringIntegration with major databasesCustom optimization rulesReal-time performance analytics'
       'Automated maintenance schedulingAdvanced reporting and insights'
@@ -1998,7 +1982,6 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
   d: '/month',
     descriptio,
   n: 'Comprehensive IT service management platform that uses AI to automate service requests, optimize workflows, and improve user experience. Features include ticket automation, knowledge management, and service analytics.',
-    feature,
   s: [;
       'AI-powered ticket routing and prioritizationAutomated service request processingIntelligent knowledge base managementWorkflow automation and optimizationService level agreement monitoringIntegration with IT tools and systemsCustom service catalogsReal-time reporting and analytics'
       'Mobile app for users and agentsAPI for custom integrations'
@@ -2056,7 +2039,6 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
   d: '/month',
     descriptio,
   n: 'Advanced backup and disaster recovery platform that uses AI to optimize backup strategies, automate recovery processes, and ensure business continuity. Features include intelligent backup scheduling, automated testing, and recovery orchestration.',
-    feature,
   s: [;
       'AI-powered backup optimizationAutomated disaster recovery testingIntelligent backup schedulingRecovery time objective optimizationData deduplication and compressionIntegration with cloud storageCustom backup policiesReal-time monitoring and alerting'
       'Comprehensive recovery analyticsAPI for custom integrations'
@@ -2150,7 +2132,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   });
 }
 ;
-export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   e: string}
   }
   })
@@ -2163,7 +2144,6 @@ export const getSpecializedITSolutions2026ByCategory = (categor)
   return specializedITSolutions2026.filter ()
     solution => solution.category === category);
 }
-export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -2214,7 +2194,6 @@ i,
   e: string; pric,
   e: string, perio,
   d: string, descriptio,
-  n: string; feature,
   s: string[]; popula,
   r: boolean; ico,
   n: string; colo,
@@ -2291,7 +2270,6 @@ i,
   e: string, pric,
   e: string, perio,
   d: string, descriptio,
-  n: string, feature,
   s: string[], popula,
   r: boolean, ico,
   n: string, colo,
@@ -2366,7 +2344,6 @@ i,
   e:  ,' 'Advanced threat detection and response with AI - powered security intelligence',' pric,
   e: '$299',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Intelligent cybersecurity platform that uses AI to detect, analyze, and respond to security threats in real - time. Features include threat hunting, incident response automation, and security analytics.', feature,
   s: [,' 'AI - powered threat detection and analysis',' 'Real - time security monitoring and alerting',' 'Automated incident response and remediation',' 'Threat intelligence and sharing',' 'Vulnerability assessment and management',' 'Security compliance monitoring',' 'Integration with SIEM and security tools',' 'Custom security policies and rules',' 'Advanced threat hunting capabilities',' 'Comprehensive security reporting'], popula,
   r: true,' ico,
   n: '🛡️',' colo,
@@ -2400,7 +2377,6 @@ i,
   e:  ,' 'Streamline data pipelines and analytics with intelligent automation',' pric,
   e: '$249',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Comprehensive data engineering platform that uses AI to automate data pipeline creation, optimize data processing, and provide intelligent analytics. Features include ETL automation, data quality monitoring, and real - time analytics.', feature,
   s: [,' 'AI - powered ETL pipeline automation',' 'Data quality monitoring and validation',' 'Real - time data processing and streaming',' 'Automated data transformation and cleaning',' 'Data lineage and governance',' 'Integration with major data sources',' 'Custom data pipeline workflows',' 'Performance optimization and scaling',' 'Advanced analytics and visualization',' 'API for custom integrations'], popula,
   r: false,' ico,
   n: '📊',' colo,
@@ -2434,7 +2410,6 @@ i,
   e:  ,' 'Intelligent API lifecycle management with AI - powered optimization',' pric,
   e: '$199',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced API management platform that uses AI to optimize API performance, monitor usage patterns, and provide intelligent insights. Features include API design automation, performance optimization, and developer experience enhancement.', feature,
   s: [,' 'AI - powered API design and documentation',' 'Automated performance optimization',' 'Intelligent rate limiting and throttling',' 'API usage analytics and insights',' 'Developer portal and documentation',' 'Security and authentication management',' 'Integration with popular frameworks',' 'Custom API policies and rules',' 'Real - time monitoring and alerting',' 'Advanced reporting and analytics'], popula,
   r: false,' ico,
   n: '🔌',' colo,
@@ -2468,7 +2443,6 @@ i,
   e:  ,' 'Intelligent network monitoring and management with AI - powered insights',' pric,
   e: '$179',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced network monitoring platform that uses AI to detect network issues, optimize performance, and provide predictive maintenance. Features include real - time monitoring, automated troubleshooting, and network analytics.', feature,
   s: [,' 'AI - powered network performance monitoring',' 'Automated issue detection and resolution',' 'Predictive maintenance and alerting',' 'Network traffic analysis and optimization',' 'Security threat detection',' 'Integration with network devices',' 'Custom monitoring dashboards',' 'Real - time reporting and analytics',' 'Mobile app for network administrators',' 'API for custom integrations'], popula,
   r: false,' ico,
   n: '🌐',' colo,
@@ -2502,7 +2476,6 @@ i,
   e:  ,' 'Intelligent database performance optimization with AI - powered insights',' pric,
   e: '$159',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced database optimization platform that uses AI to improve database performance, automate tuning, and provide intelligent recommendations. Features include query optimization, performance monitoring, and automated maintenance.', feature,
   s: [,' 'AI - powered query optimization',' 'Automated database tuning',' 'Performance monitoring and alerting',' 'Intelligent indexing recommendations',' 'Database health monitoring',' 'Integration with major databases',' 'Custom optimization rules',' 'Real - time performance analytics',' 'Automated maintenance scheduling',' 'Advanced reporting and insights'], popula,
   r: false,' ico,
   n: '🗄️',' colo,
@@ -2536,7 +2509,6 @@ i,
   e: 'Intelligent IT service management with AI - powered automation',' pric,
   e: '$129',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Comprehensive IT service management platform that uses AI to automate service requests, optimize workflows, and improve user experience. Features include ticket automation, knowledge management, and service analytics.', feature,
   s: [,' 'AI - powered ticket routing and prioritization',' 'Automated service request processing',' 'Intelligent knowledge base management',' 'Workflow automation and optimization',' 'Service level agreement monitoring',' 'Integration with IT tools and systems',' 'Custom service catalogs',' 'Real - time reporting and analytics',' 'Mobile app for users and agents',' 'API for custom integrations'], popula,
   r: false,' ico,
   n: '🛠️',' colo,
@@ -2570,7 +2542,6 @@ i,
   e: 'Intelligent backup and recovery with AI-powered automation'' pric,
   e: '$199'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced backup and disaster recovery platform that uses AI to optimize backup strategies, automate recovery processes, and ensure business continuity. Features include intelligent backup scheduling, automated testing, and recovery orchestration.' feature,
   s: [' 'AI-powered backup optimization'' 'Automated disaster recovery testing'' 'Intelligent backup scheduling'' 'Recovery time objective optimization'' 'Data deduplication and compression'' 'Integration with cloud storage'' 'Custom backup policies'' 'Real-time monitoring and alerting'' 'Comprehensive recovery analytics'' 'API for custom integrations' ] popula,
   r: false' ico,
   n: '💾'' colo,
@@ -2612,7 +2583,6 @@ i,
   e: 'Automate cloud infrastructure deployment and management with intelligent orchestration', pric,
   e: '$399',' perio,
   d: '/month',' descriptio,
-  n: 'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.', feature,
   s: [' 'Infrastructure as Code (IaC) automationMulti-cloud management and orchestrationAutomated resource scaling and optimizationCost monitoring and optimizationSecurity compliance automationDisaster recovery orchestrationPerformance monitoring and alertingIntegration with major cloud providers'' 'Custom automation workflowsAdvanced analytics and reporting' ],' popula,
   r: true, ico,
   n: '☁️',' colo,
@@ -2646,7 +2616,6 @@ i,
   e: 'Advanced threat detection and response with AI-powered security intelligence', pric,
   e: '$299',' perio,
   d: '/month',' descriptio,
-  n: 'Intelligent cybersecurity platform that uses AI to detect, analyze, and respond to security threats in real-time. Features include threat hunting, incident response automation, and security analytics.', feature,
   s: [' 'AI-powered threat detection and analysisReal-time security monitoring and alertingAutomated incident response and remediationThreat intelligence and sharingVulnerability assessment and managementSecurity compliance monitoringIntegration with SIEM and security toolsCustom security policies and rules'' 'Advanced threat hunting capabilitiesComprehensive security reporting' ],' popula,
   r: true, ico,
   n: '🛡️',' colo,
@@ -2680,7 +2649,6 @@ i,
   e: 'Streamline data pipelines and analytics with intelligent automation', pric,
   e: '$249',' perio,
   d: '/month',' descriptio,
-  n: 'Comprehensive data engineering platform that uses AI to automate data pipeline creation, optimize data processing, and provide intelligent analytics. Features include ETL automation, data quality monitoring, and real-time analytics.', feature,
   s: [' 'AI-powered ETL pipeline automationData quality monitoring and validationReal-time data processing and streamingAutomated data transformation and cleaningData lineage and governanceIntegration with major data sourcesCustom data pipeline workflowsPerformance optimization and scaling'' 'Advanced analytics and visualizationAPI for custom integrations' ],' popula,
   r: false, ico,
   n: '📊',' colo,
@@ -2714,7 +2682,6 @@ i,
   e: 'Intelligent API lifecycle management with AI-powered optimization', pric,
   e: '$199',' perio,
   d: '/month',' descriptio,
-  n: 'Advanced API management platform that uses AI to optimize API performance, monitor usage patterns, and provide intelligent insights. Features include API design automation, performance optimization, and developer experience enhancement.', feature,
   s: [' 'AI-powered API design and documentationAutomated performance optimizationIntelligent rate limiting and throttlingAPI usage analytics and insightsDeveloper portal and documentationSecurity and authentication managementIntegration with popular frameworksCustom API policies and rules'' 'Real-time monitoring and alertingAdvanced reporting and analytics' ],' popula,
   r: false, ico,
   n: '🔌',' colo,
@@ -2748,7 +2715,6 @@ i,
   e: 'Intelligent network monitoring and management with AI-powered insights', pric,
   e: '$179',' perio,
   d: '/month',' descriptio,
-  n: 'Advanced network monitoring platform that uses AI to detect network issues, optimize performance, and provide predictive maintenance. Features include real-time monitoring, automated troubleshooting, and network analytics.', feature,
   s: [' 'AI-powered network performance monitoringAutomated issue detection and resolutionPredictive maintenance and alertingNetwork traffic analysis and optimizationSecurity threat detectionIntegration with network devicesCustom monitoring dashboardsReal-time reporting and analytics'' 'Mobile app for network administratorsAPI for custom integrations' ],' popula,
   r: false, ico,
   n: '🌐',' colo,
@@ -2782,7 +2748,6 @@ i,
   e: 'Intelligent database performance optimization with AI-powered insights', pric,
   e: '$159',' perio,
   d: '/month',' descriptio,
-  n: 'Advanced database optimization platform that uses AI to improve database performance, automate tuning, and provide intelligent recommendations. Features include query optimization, performance monitoring, and automated maintenance.', feature,
   s: [' 'AI-powered query optimizationAutomated database tuningPerformance monitoring and alertingIntelligent indexing recommendationsDatabase health monitoringIntegration with major databasesCustom optimization rulesReal-time performance analytics'' 'Automated maintenance schedulingAdvanced reporting and insights' ],' popula,
   r: false, ico,
   n: '🗄️',' colo,
@@ -2816,7 +2781,6 @@ i,
   e: 'Intelligent IT service management with AI-powered automation', pric,
   e: '$129',' perio,
   d: '/month',' descriptio,
-  n: 'Comprehensive IT service management platform that uses AI to automate service requests, optimize workflows, and improve user experience. Features include ticket automation, knowledge management, and service analytics.', feature,
   s: [' 'AI-powered ticket routing and prioritizationAutomated service request processingIntelligent knowledge base managementWorkflow automation and optimizationService level agreement monitoringIntegration with IT tools and systemsCustom service catalogsReal-time reporting and analytics'' 'Mobile app for users and agentsAPI for custom integrations' ],' popula,
   r: false, ico,
   n: '🛠️',' colo,
@@ -2850,7 +2814,6 @@ i,
   e: 'Intelligent backup and recovery with AI-powered automation', pric,
   e: '$199',' perio,
   d: '/month',' descriptio,
-  n: 'Advanced backup and disaster recovery platform that uses AI to optimize backup strategies, automate recovery processes, and ensure business continuity. Features include intelligent backup scheduling, automated testing, and recovery orchestration.', feature,
   s: [' 'AI-powered backup optimizationAutomated disaster recovery testingIntelligent backup schedulingRecovery time objective optimizationData deduplication and compressionIntegration with cloud storageCustom backup policiesReal-time monitoring and alerting'' 'Comprehensive recovery analyticsAPI for custom integrations' ],' popula,
   r: false, ico,
   n: '💾',' colo,
@@ -2884,9 +2847,7 @@ i,
   e: number) => return specializedITSolutions2026.filter(solution => ' const price = parseInt(solution.price.replace('$') '')); return price >= minPrice && price <= maxPrice }) }; export const getSpecializedITSolutions2026ByCategory = (categor)
   y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category); } ; export const getPopularSpecializedITSolutions2026 = () =>: unknown return specializedITSolutions2026.filter (solution => solution.popular); } ; export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   e: number) max_pric,
-  e: number) =>: unknown return specializedITSolutions2026.filter (solution => ' const price = parse_int (solution.price.replace ('$') '')); return price >= min_price && price <= max_price; }); } return price >= min_price && price <= max_price; }); } ; export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   e: string} } }) }; export const getSpecializedITSolutions2026ByCategory = (categor)
-  y: string) =>: unknown return specializedITSolutions2026.filter ( solution => solution.category === category); } export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,

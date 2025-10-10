@@ -1,13 +1,11 @@
 'use client';
 import React from 'react';
-import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 
 const TaskManagerProPage: React.FC = () => {
   const features = [
     {
-      icon: CheckSquare,
       title: 'AI Task Prioritization',
       description: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.',
       benefit:     ,
@@ -152,7 +150,6 @@ $4}
             Powerful Task Management Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
@@ -189,7 +186,6 @@ $4}
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-300">{plan.period}</span>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -220,11 +216,9 @@ $4}
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Supercharge Your Productivity?
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals using Task Manager Pro to achieve more, 
 
 
 
-import { Link } from 'react-router-dom';
 const TaskManagerProPage: React.FC = () => {
   const features = [];
   return (
@@ -232,7 +226,6 @@ const TaskManagerProPage: React.FC = () => {
 
 };
   ico,
-  n: CheckSquare,
       titl,
   e: 'AI Task Prioritization',
       descriptio,
@@ -334,7 +327,6 @@ Start Free Trial;
           <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
-            {features.map((feature, index) => ()}"
           <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20,"
   hover:border-cyan-400/40 transition-all duration-300"></div>"
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" /></feature>"
@@ -377,7 +369,6 @@ Most Popular;
                   <span className="text-4xl font-bold text-white">{plan.price}</span>"
                   <span className="text-gray-300">{plan.period}</span>"
                 <ul className="space-y-3 mb-8"></ul>
-                  {plan.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-gray-300"></li>"
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
                       {feature}
@@ -412,7 +403,6 @@ Most Popular;
   md:text-4xl font-bold text-white mb-6"></h2>
             Ready to Supercharge Your Productivity?"
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
-            Join thousands of professionals using Task Manager Pro to achieve more,
             work smarter, and reach their goals faster.
   );
 };

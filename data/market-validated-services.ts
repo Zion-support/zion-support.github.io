@@ -11,7 +11,6 @@
   d: string;
   descriptio,
   n: string;
-  feature,
   s: string[];
   categor,
   y: string;
@@ -71,8 +70,6 @@ export const,
   d: '/month',
     descriptio,
   n: unknown,
-      'Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.',
-    feature,
   s: [,
       'RAG over your docs with hybrid search',
       'Guardrail,
@@ -126,7 +123,6 @@ export const,
     descriptio,
   n: unknown,
       'Ship reliable LLM apps with dataset management, prompt diffing, red - teaming, and production KPIs for quality, latency, and costs.',
-    feature,
   s: [,
       'Eval datasets / versioning',
       'Policy and toxicity checks',
@@ -177,7 +173,6 @@ export const,
     descriptio,
   n: unknown,
       'Ingest and index your knowledge with hybrid search + reranking, enable tool - using agents, and validate responses with reference checks and citations.',
-    feature,
   s: [,
       'Hybrid vector + BM25 + reranker',
       'Chunking strategies + citations',
@@ -227,7 +222,6 @@ export const,
     descriptio,
   n: unknown,
       'Automatically scan APIs for OWASP issues, auth / z misconfigurations, and dependency CVEs with CI gating and fix guidance.',
-    feature,
   s: [,
       'Auth / Z misconfig checks',
       'OWASP Top 10 tests',
@@ -278,7 +272,6 @@ export const,
     descriptio,
   n: unknown,
       'Collect traces / metrics / logs via OpenTelemetry, define SLOs and error budgets, and alert on burn rates with dashboards.',
-    feature,
   s: [,
       'OTel traces / metrics / logs',
       'SLOs & error budgets',
@@ -329,7 +322,6 @@ export const,
     descriptio,
   n: unknown,
       'Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.',
-    feature,
   s: [,
       'Auto rightsizing',
       'Idle cleanup',
@@ -345,7 +337,6 @@ export const,
     contact_info},
     id: 'database - performance - monitor',
     name: 'Database Performance Monitor',
-    tagline: 'Slow query capture, AI index suggestions, capacity forecasting',
     price: '$79',
     period: '/month',
     description: unknown;
@@ -370,7 +361,6 @@ export const,
     nam,
   e: 'Database Performance Monitor',
     taglin,
-  e: 'Slow query capture, AI index suggestions, capacity forecasting',
     pric,
   e: '$79',
     perio,
@@ -378,7 +368,6 @@ export const,
     descriptio,
   n: unknown,
       'Postgres / MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.',
-    feature,
   s: [,
       'Slow query ranking',
       'AI index advice',
@@ -427,7 +416,6 @@ export const,
     descriptio,
   n: unknown,
       'Production - ready Postgres with managed backups, automated failover, performance tuning, and compliance guardrails.',
-    feature,
   s: [,
       'Automated backups',
       'Failover & replication',
@@ -478,7 +466,6 @@ export const,
     descriptio,
   n: unknown,
       'Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.',
-    feature,
   s: [,
       'Global synthetic checks',
       'Error budgets & burn rates',
@@ -527,7 +514,6 @@ export const,
     descriptio,
   n: unknown,
       'Monitor certificates across domains and environments, get renewal reminders and failure alerts.',
-    feature,
   s: [,
       'Expiry alerts',
       'Issuer checks',
@@ -576,7 +562,6 @@ export const,
     descriptio,
   n: unknown,
       'Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.',
-    feature,
   s: [,
       'Change detection',
       'Misconfig alerts',
@@ -627,7 +612,6 @@ export const,
     descriptio,
   n: unknown,
       'Generate pixel - perfect PDFs from HTML / Markdown with headers, footers, and watermarking using a simple API.',
-    feature,
   s: [,
       'HTML / Markdown to PDF',
       'Headers / footers',
@@ -676,7 +660,6 @@ export const,
     descriptio,
   n: unknown,
       'Collect real - user metrics, analyze CWV, and improve UX with actionable waterfalls and alerting.',
-    feature,
   s: [,
       'RUM collection',
       'CWV dashboards',
@@ -725,7 +708,6 @@ export const,
     descriptio,
   n: unknown,
       'Ship features safely with edge - evaluated flags, user targeting, and experimentation without latency.',
-    feature,
   s: [,
       'Edge evaluation',
       'Targeting & segments',
@@ -774,7 +756,6 @@ export const,
     descriptio,
   n: unknown,
       'Schedule and monitor serverless jobs with retries, DLQs, and alerting across multiple clouds.',
-    feature,
   s: [,
       'Cron & schedules',
       'Retries & DLQs',
@@ -825,7 +806,6 @@ export const,
     descriptio,
   n: unknown,
       'Automate evidence collection and control mapping with integrations to cloud, code, and ticketing systems.',
-    feature,
   s: [,
       'Control mapping',
       'Evidence collection',
@@ -874,7 +854,6 @@ export const,
     descriptio,
   n: unknown,
       'Streamline vendor onboarding, questionnaires, and continuous monitoring with automated risk scoring.',
-    feature,
   s: [,
       'DDQs and questionnaires',
       'Risk scoring',
@@ -891,7 +870,6 @@ export const,
   // Developer and Ops Utilities;
     id: 'webhook - relay - replay',
     name: 'Webhook Relay & Replay',
-    tagline: 'Capture, inspect, and replay webhooks reliably',
     price: '$19',
     period: '/month',
     description: unknown;
@@ -917,7 +895,6 @@ export const,
     nam,
   e: 'Webhook Relay & Replay',
     taglin,
-  e: 'Capture, inspect, and replay webhooks reliably',
     pric,
   e: '$19',
     perio,
@@ -925,7 +902,6 @@ export const,
     descriptio,
   n: unknown,
       'Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.',
-    feature,
   s: [,
       'Capture & inspect',
       'Replay with backoff',
@@ -974,7 +950,6 @@ export const,
     descriptio,
   n: unknown,
       'Centralize audit logs with WORM retention, export APIs, and fine - grained access for investigations.',
-    feature,
   s: [,
       'WORM retention',
       'Export APIs',
@@ -1034,7 +1009,6 @@ export const,
     descriptio,
   n: unknown,
       'Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.',
-    feature,
   s: ['Natural TTS / ASR', 'Routing & handoff', 'CRM sync', 'Analytics'],
     categor,
   y: 'AI & Assistants',
@@ -1101,7 +1075,6 @@ export const,
     descriptio,
   n:
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.'
-    feature,
   s: [;
       'Managed vector DB'
       'Ingestion pipelines'
@@ -1157,7 +1130,6 @@ export interface MarketValidatedService {id: 'vector - search - starter'
     contactInfo;
   }
 ];import { ServiceVariant } from '../types/service-variants';
-export interface MarketValidatedService {/* TODO: Fix JSX expression */}
     contact_info}
   },
     customer,
@@ -1228,7 +1200,6 @@ export interface MarketValidatedService {;
   e: '2 hours',
     contact_info},
 export interface MarketValidatedService;
-export interface MarketValidatedService {/* TODO: Fix JSX expression */}
 export interface MarketValidatedService {}
     trialDay,
   s: 14,
@@ -1237,7 +1208,6 @@ export interface MarketValidatedService {}
     contactInfo}
   };
 ];import { ServiceVariant } from '../types/service-variants';
-export interface MarketValidatedService {/* TODO: Fix JSX expression */}
   s: string}
 		website?: string}
 	};
@@ -1251,7 +1221,6 @@ export const,
 		tagline: "Branded copilot with RAG, guardrails, and analytics",
 		price: "$149",
 		period: "/month",
-		description: "Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.",
 		features[ "RAG over your docs with hybrid search",
 			"Guardrails: PII/PHI redaction, jailbreak detection",
 			"Human handoff + conversation analytics",
@@ -1361,7 +1330,6 @@ export const,
 	{;
 		id: "database-performance-monitor",
 		name: "Database Performance Monitor",
-		tagline: "Slow query capture, AI index suggestions, capacity forecasting",
 		price: "$79",
 		period: "/month",
 		description: "Postgres/MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.",
@@ -1552,7 +1520,6 @@ export const,
 	{;
 		id: "webhook-relay-replay",
 		name: "Webhook Relay & Replay",
-		tagline: "Capture, inspect, and replay webhooks reliably",
 		price: "$19",
 		period: "/month",
 		description: "Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.",
@@ -1603,70 +1570,50 @@ const contact_info =
   mobile: "+1 302 464 0950"
 email: "kleber@ziontechgroup.com",
 address: "364 E Main St STE 1008 Middletown DE 19709",
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
 	// Security and APIs;
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
 	// Cloud and Infra;
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
 	// Reliability & Monitoring;
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
 	// Dev & Productivity;
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
 	// Compliance & Risk;
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
 	// Developer and Ops Utilities;
-	{/* TODO: Fix JSX expression */}
 		contactInfo}}
 },
-	{/* TODO: Fix JSX expression */}
   s: 14}
 ];import { ServiceVariant } from '../types / service - variants';
-export interface MarketValidatedService {/* TODO: Fix JSX expression */}
   l: string}
   addres,
   s: string,
@@ -1689,7 +1636,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   tagline: "Branded copilot with RAG, guardrails, and analytics",
   price: "$149",
   period: "/month",
-  description: "Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.",
   features[ "RAG over your docs with hybrid search",
   "Guardrails: PII / PHI redaction, jailbreak detection",
   "Human handoff + conversation analytics",
@@ -1716,7 +1662,6 @@ export const,
   perio,"
   d: "/month",
   descriptio,"
-  n: "Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.","
   features[ "RAG over your docs with hybrid search","
   "Guardrail,"
   s: PII / PHI redaction, jailbreak detection","
@@ -1936,7 +1881,6 @@ export const,
   nam,"
   e: "Database Performance Monitor",
   taglin,"
-  e: "Slow query capture, AI index suggestions, capacity forecasting",
   pric,"
   e: "$79",
   perio,"
@@ -2347,7 +2291,6 @@ export const,
   nam,"
   e: "Webhook Relay & Replay",
   taglin,"
-  e: "Capture, inspect, and replay webhooks reliably",
   pric,"
   e: "$19",
   perio,"
@@ -2520,7 +2463,6 @@ export const,
   d: '/month'
   descriptio,
   n: 'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.'
-  feature,
   s: ['Managed vector DBIngestion pipelines_metadata filters_access controls'];
   categor,
   y: 'AI & Search'
@@ -2551,7 +2493,6 @@ i,
   e: string; pric,
   e: string; perio,
   d: string; descriptio,
-  n: string; feature,
   s: string[]; categor,
   y: string; lin,
   k: string; variant?: ServiceVariant; rating?: number; customers?: number; trial_days?: number; setup_time?: string; contact_inf,
@@ -2570,7 +2511,6 @@ i,
   e: 'Branded copilot with RAG, guardrails, and analytics',' pric,
   e: '$149',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.', feature,
   s: [, ' 'RAG over your docs with hybrid search',' 'Guardrail,
   s: PII / PHI redaction, jailbreak detection',' 'Human handoff + conversation analytics',' 'Slack / Teams / Widget channels'],' categor,
   y: 'AI & Assistants', ' lin,
@@ -2586,7 +2526,6 @@ i,
   e:  ,' 'Regression testing, safety checks, and live metrics for LLM features',' pric,
   e: '$99',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Ship reliable LLM apps with dataset management, prompt diffing, red - teaming, and production KPIs for quality, latency, and costs.', feature,
   s: [,' 'Eval datasets / versioning', ' 'Policy and toxicity checks',' 'Latency and cost KPIs',' 'Prompt / version diff and alerts'],' categor,
   y: 'AI & MLOps', ' lin,
   k: 'http,
@@ -2601,7 +2540,6 @@ i,
   e: 'Production RAG with hybrid search, chunking, tools, and evals',' pric,
   e: '$179',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Ingest and index your knowledge with hybrid search + reranking, enable tool - using agents, and validate responses with reference checks and citations.', feature,
   s: [,' 'Hybrid vector + BM25 + reranker', ' 'Chunking strategies + citations',' 'Toolformer - style agents',' 'Eval suite and drift monitoring'],' categor,
   y: 'AI & Search', ' lin,
   k: 'http,
@@ -2616,7 +2554,6 @@ i,
   e: 'OpenAPI / GraphQL scanning, auth / Z checks, dependency audit',' pric,
   e: '$59',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Automatically scan APIs for OWASP issues, auth / z misconfigurations, and dependency CVEs with CI gating and fix guidance.', feature,
   s: [,' 'Auth / Z misconfig checks', ' 'OWASP Top 10 tests',' 'CI gate',' 'Fix guidance'],' categor,
   y: 'Enterprise IT - Security', ' lin,
   k: 'http,
@@ -2631,7 +2568,6 @@ i,
   e: 'OTel tracing, SLOs, and error budgets for services',' pric,
   e: '$69',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Collect traces / metrics / logs via OpenTelemetry, define SLOs and error budgets, and alert on burn rates with dashboards.', feature,
   s: [,' 'OTel traces / metrics / logs', ' 'SLOs & error budgets',' 'Alerting',' 'Dashboards'],' categor,
   y: 'Enterprise IT - Observability', ' lin,
   k: 'http,
@@ -2646,7 +2582,6 @@ i,
   e: 'Rightsizing, lifecycle, anomaly detection, and k8s bin - packing',' pric,
   e: '$99',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.', feature,
   s: [, ' 'Auto rightsizing',' 'Idle cleanup',' 'Spot orchestration',' 'Anomaly detection'],' categor,
   y: 'Enterprise IT - FinOps', ' lin,
   k: 'http,
@@ -2658,10 +2593,8 @@ i,
   e: '1 hour', contact_info}, ' i,
   d: 'database - performance - monitor',' nam,
   e: 'Database Performance Monitor',' taglin,
-  e: 'Slow query capture, AI index suggestions, capacity forecasting',' pric,
   e: '$79',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Postgres / MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.', feature,
   s: [, ' 'Slow query ranking',' 'AI index advice',' 'Pool tuning',' 'SLA / SLO dashboards'],' categor,
   y: 'Enterprise IT - Data', ' lin,
   k: 'http,
@@ -2676,7 +2609,6 @@ i,
   e: 'Highly - available Postgres with backups, failover, and guardrails',' pric,
   e: '$499',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Production - ready Postgres with managed backups, automated failover, performance tuning, and compliance guardrails.', feature,
   s: [, ' 'Automated backups',' 'Failover & replication',' 'Performance tuning',' 'SLA & support'],' categor,
   y: 'Enterprise IT - Data', ' lin,
   k: 'http,
@@ -2691,7 +2623,6 @@ i,
   e: 'Synthetic checks, error budgets, and incident automation',' pric,
   e: '$39',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.', feature,
   s: [, ' 'Global synthetic checks',' 'Error budgets & burn rates',' 'On - call & escalations',' 'Incident runbooks'],' categor,
   y: 'Enterprise IT - SRE', ' lin,
   k: 'http,
@@ -2706,7 +2637,6 @@ i,
   e: 'Auto - renewal checks and expiry alerts across your fleet',' pric,
   e: '$19',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Monitor certificates across domains and environments, get renewal reminders and failure alerts.', feature,
   s: [, ' 'Expiry alerts',' 'Issuer checks',' 'Auto - renew validation',' 'Inventory export'],' categor,
   y: 'Enterprise IT - Security', ' lin,
   k: 'http,
@@ -2721,7 +2651,6 @@ i,
   e: 'Track DNS changes, TTLs, and misconfigurations',' pric,
   e: '$29',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.', feature,
   s: [, ' 'Change detection',' 'Misconfig alerts',' 'TTL insights',' 'Export & audit'],' categor,
   y: 'Enterprise IT - Networking', ' lin,
   k: 'http,
@@ -2736,7 +2665,6 @@ i,
   e: 'High - fidelity serverless PDF rendering and watermarking',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Generate pixel - perfect PDFs from HTML / Markdown with headers, footers, and watermarking using a simple API.', feature,
   s: [,' 'HTML / Markdown to PDF',' 'Headers / footers', ' 'Watermarks',' 'Async webhooks'],' categor,
   y: 'Micro SaaS', ' lin,
   k: 'http,
@@ -2751,7 +2679,6 @@ i,
   e: 'RUM metrics, Core Web Vitals, and UX waterfall analysis',' pric,
   e: '$39',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Collect real - user metrics, analyze CWV, and improve UX with actionable waterfalls and alerting.', feature,
   s: [, ' 'RUM collection',' 'CWV dashboards',' 'Waterfall analysis',' 'Alerts & webhooks'],' categor,
   y: 'Micro SaaS', ' lin,
   k: 'http,
@@ -2766,7 +2693,6 @@ i,
   e: 'Targeting, rollouts, and experiments at CDN edge',' pric,
   e: '$69',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Ship features safely with edge - evaluated flags, user targeting, and experimentation without latency.', feature,
   s: [, ' 'Edge evaluation',' 'Targeting & segments',' 'Experiments',' 'SDKs & audit'],' categor,
   y: 'Micro SaaS', ' lin,
   k: 'http,
@@ -2781,7 +2707,6 @@ i,
   e: 'Reliable scheduled jobs with retries and observability',' pric,
   e: '$29',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Schedule and monitor serverless jobs with retries, DLQs, and alerting across multiple clouds.', feature,
   s: [, ' 'Cron & schedules',' 'Retries & DLQs',' 'Logs & traces',' 'Alerts & webhooks'],' categor,
   y: 'Micro SaaS', ' lin,
   k: 'http,
@@ -2796,7 +2721,6 @@ i,
   e: 'Collect and map controls with change tracking',' pric,
   e: '$149',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Automate evidence collection and control mapping with integrations to cloud, code, and ticketing systems.', feature,
   s: [, ' 'Control mapping',' 'Evidence collection',' 'Change tracking',' 'Export & auditor access'],' categor,
   y: 'Enterprise IT - Compliance', ' lin,
   k: 'http,
@@ -2811,7 +2735,6 @@ i,
   e: 'Automate VRM workflows, DDQs, and risk scoring',' pric,
   e: '$99',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Streamline vendor onboarding, questionnaires, and continuous monitoring with automated risk scoring.', feature,
   s: [, ' 'DDQs and questionnaires',' 'Risk scoring',' 'Continuous monitoring',' 'Dashboards & export'],' categor,
   y: 'Enterprise IT - Compliance', ' lin,
   k: 'http,
@@ -2823,10 +2746,8 @@ i,
   e: '2 hours', contact_info}, // Developer and Ops Utilities; ' i,
   d: 'webhook - relay - replay',' nam,
   e: 'Webhook Relay & Replay',' taglin,
-  e: 'Capture, inspect, and replay webhooks reliably',' pric,
   e: '$19',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.', feature,
   s: [, ' 'Capture & inspect',' 'Replay with backoff',' 'Signature verification',' 'Forwarding rules'],' categor,
   y: 'Micro SaaS', ' lin,
   k: 'http,
@@ -2841,7 +2762,6 @@ i,
   e: 'Tamper - evident logs with retention and export',' pric,
   e: '$39',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Centralize audit logs with WORM retention, export APIs, and fine - grained access for investigations.', feature,
   s: [, ' 'WORM retention',' 'Export APIs',' 'Fine - grained access',' 'Tamper evidence'],' categor,
   y: 'Enterprise IT - Security', ' lin,
   k: 'http,
@@ -2856,7 +2776,6 @@ i,
   e: 'Voice IVR and call handling with CRM handoff',' pric,
   e: '$129',' perio,
   d: '/month', descriptio,
-  n:  , ' 'Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.',' feature,
   s: ['Natural TTS / ASR', 'Routing & handoff', 'CRM sync', 'Analytics'],' categor,
   y: 'AI & Assistants', ' lin,
   k: 'http,
@@ -2879,7 +2798,6 @@ i,
   e: 'Deploy a production-grade vector database and APIs'' pric,
   e: '$89'' perio,
   d: '/month' descriptio,
-  n:' 'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.' feature,
   s: [' 'Managed vector DB'' 'Ingestion pipelines'' 'Metadata filters'' 'Access controls' ]' categor,
   y: 'AI & Search'' lin,
   k: 'http,
@@ -2894,7 +2812,6 @@ i,
   e: 'Deploy a production - grade vector database and APIs',' pric,
   e: '$89',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.', feature,
   s: [, ' 'WORM retention',' 'Export APIs',' 'Fine - grained access',' 'Tamper evidence'],' categor,
   y: 'Enterprise IT - Security', customer,
   s: 420, trial_day,
@@ -2912,34 +2829,13 @@ i,
   s: 14,' setup_tim,
   e: '2 hours', contact_info}, export interface MarketValidatedService export interface MarketValidatedService {; export interface MarketValidatedService export interface MarketValidatedService {} trialDay,
   s: 14,' setupTim,"
-  e: '2 hours', contactInfo} }; ];import { ServiceVariant } from "../types/service-variants" export interface MarketValidatedService {/* TODO: Fix JSX expression */}
   s: string} website?: string} }; } export const,
-  marketValidatedServices: MarketValidatedService[] = [; // AI and Assistants; {/* TODO: Fix JSX expression */}"
-  e: "30 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}"
-  e: "1 hour", contactInfo}} }, {/* TODO: Fix JSX expression */}"
-  e: "2 hours", contactInfo}} }, // Security and APIs; {/* TODO: Fix JSX expression */}"
-  e: "20 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}"
-  e: "40 minutes", contactInfo}} }, // Cloud and Infra; {/* TODO: Fix JSX expression */}"
-  e: "1 hour", contactInfo}} }, {/* TODO: Fix JSX expression */}"
-  e: "45 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}"
-  e: "1 day", contactInfo}} }, // Reliability & Monitoring; {/* TODO: Fix JSX expression */}"
-  e: "25 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}"
-  e: "10 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}"
-  e: "15 minutes", contactInfo}} }, // Dev & Productivity; {/* TODO: Fix JSX expression */}"
-  e: "10 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}"
-  e: "20 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}"
-  e: "30 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}"
-  e: "15 minutes", contactInfo}} }, // Compliance & Risk; {/* TODO: Fix JSX expression */}"
-  e: "1 day", contactInfo}} }, {/* TODO: Fix JSX expression */}"
-  e: "2 hours", contactInfo}} }, // Developer and Ops Utilities; {/* TODO: Fix JSX expression */}"
-  e: "10 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}
   s: 14} ' ];import { ServiceVariant } from '../types / service - variants' export interface MarketValidatedService,
   id: string; nam,
   e: string; taglin,
   e: string; pric,
   e: string; perio,
   d: string; descriptio,
-  n: string; feature,
   s: string[]; categor,
   y: string; lin,
   k: string; variant?: ServiceVariant; rating?: number; customers?: number; trial_days?: number; setup_time?: string; contact_inf,
@@ -2959,7 +2855,6 @@ i,
   e: "Branded copilot with RAG, guardrails, and analytics", pric,"
   e: "$149", perio,"
   d: "/month", descriptio,"
-  n: "Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.", features[ "RAG over your docs with hybrid search", "Guardrail,"
   s: PII / PHI redaction, jailbreak detection", "Human handoff + conversation analytics", "Slack / Teams / Widget channels"], categor,"
   y: "AI & Assistants", lin,"
   k: "http,"
@@ -3041,7 +2936,6 @@ i,
   e: "1 hour", contact_info;}, i,"
   d: "database - performance - monitor", nam,"
   e: "Database Performance Monitor", taglin,"
-  e: "Slow query capture, AI index suggestions, capacity forecasting", pric,"
   e: "$79", perio,"
   d: "/month", descriptio,"
   n: "Postgres / MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.", features["Slow query ranking", "AI index advice", "Pool tuning", "SLA / SLO dashboards"], categor,"
@@ -3195,7 +3089,6 @@ i,
   e: "2 hours", contact_info;}, // Developer and Ops Utilities; i,"
   d: "webhook - relay - replay", nam,"
   e: "Webhook Relay & Replay", taglin,"
-  e: "Capture, inspect, and replay webhooks reliably", pric,"
   e: "$19", perio,"
   d: "/month", descriptio,"
   n: "Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.", features["Capture & inspect", "Replay with backoff", "Signature verification", "Forwarding rules"], categor,"
@@ -3254,7 +3147,6 @@ i,
   e: 'Deploy a production - grade vector database and APIs'' pric,
   e: '$89'' perio,
   d: '/month'' descriptio,
-  n: 'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.'' feature,
   s: ['Managed vector DBIngestion pipelines_metadata filters_access controls'];' categor,
   y: 'AI & Search'' lin,
   k: 'http,

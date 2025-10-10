@@ -30,31 +30,20 @@ const AIWorkflowAutomationPage: React.FC = () => {
       description: 'Collaborate with your team on workflow design and management with role-based access control.',
       benefits: ['Role-based Access', 'Team Collaboration', 'Version Control', 'Approval Workflows']
 const,
-  AIWorkflowAutomationPage: React.FC = () => {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     }
   ];
   const pricing = [
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     }
   ];
   const stats = [
-    {/* TODO: Fix JSX expression */}
   l: 'Time Savings' },
-    {/* TODO: Fix JSX expression */}
   l: 'Error Reduction' },
-    {/* TODO: Fix JSX expression */}
   l: 'Integrations' },
-    {/* TODO: Fix JSX expression */}
   l: 'Processing' }
   ];
   const useCases = [
@@ -117,13 +106,9 @@ const,
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
                 <a
                   href="tel:+13024640950"
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     }
   ];
   return (<>
@@ -180,7 +165,6 @@ const,
                   href="mailt,"
   o:kleber@ziontechgroup.com""
                   className="cyber-button flex items-center space-x-2"
-                  style={/* TODO: Fix JSX expression */}
   d: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >"
                   <Mail className="w-5 h-5" /></Mail>
@@ -190,7 +174,6 @@ const,
               {/* Stats */}"
               <div className="grid grid-cols-2,"
   md:grid-cols-4 gap-8 mb-16"></div>
-                {/* TODO: Fix JSX expression */}"
                   <div key={index} className="cyber-card p-6 text-center"></div>"
                     <div className="text-3xl,"
   md:text-4xl font-bold text-cyan-400 mb-2 neon-text"></div>
@@ -251,14 +234,12 @@ const AIWorkflowAutomationPage = () => {
               Key Features;
             </h2>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
-              {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Key Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (</section>
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
@@ -322,7 +303,6 @@ const AIWorkflowAutomationPage = () => {
                   <p className="text-gray-300 mb-4">{plan.description}</p>
                   <div className="text-4 xl font-bold text-cyan-400 mb-6">{plan.price}</di></div>
                   <ul className="space-y-3 mb-8"></u></ul>
-                    {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300"></l></li>
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" /></CheckCircl></CheckCircle>
                         {feature}

@@ -23,7 +23,6 @@ export interface NewOperationalService2025 {;,
   e: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -37,7 +36,6 @@ export interface NewOperationalService2025 {;,
   e: string;
     emai,
   l: string;
-export interface NewOperationalService2025 {/* TODO: Fix JSX expression */}
   s: string}
 };
   i,
@@ -50,7 +48,6 @@ export interface NewOperationalService2025 {/* TODO: Fix JSX expression */}
   e: string,,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -59,7 +56,6 @@ export interface NewOperationalService2025 {/* TODO: Fix JSX expression */}
   realImplementatio,
   n: boolean;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
@@ -111,7 +107,6 @@ export const newOperationalServices2025: NewOperationalService2025[] = [,
   e: string, pric,
   e: string,
   descriptio,
-  n: string, feature,
   s: string[],
   lin,
   k: string, categor,
@@ -136,7 +131,6 @@ export const,
   e: "$119/month",
     descriptio,"
   n: "Intelligent operations center that uses AI to optimize business processes and workflows.",
-    feature,
   s: [;"
       "AI process optimization""
       "Real-time monitoring""
@@ -207,7 +201,6 @@ export const,
   e: "$119/month",
     descriptio,"
   n: "Intelligent operations center that uses AI to optimize business processes and workflows.",
-    feature,
   s: [,"
       "AI process optimization","
       "Real-time monitoring","
@@ -251,25 +244,21 @@ i,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: mobil,
   e: string; emai,
-  l: string; export interface NewOperationalService2025 {/* TODO: Fix JSX expression */}
   s: string }; i,
   d: string; nam,
   e: string; taglin,
   e: string; pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
@@ -277,7 +266,6 @@ i,
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
@@ -291,7 +279,6 @@ i,
   e: "Smart Operations Center", taglin,"
   e: "AI-powered operations management", pric,"
   e: "$119/month", descriptio,"
-  n: "Intelligent operations center that uses AI to optimize business processes and workflows.", feature,"
   s: [ "AI process optimization" "Real-time monitoring" "Predictive analytics" "Automated workflows" "Performance insights" ], lin,"
   k: "/services/smart-operations-center", categor,"
   y: "New Operational Services 2025", realImplementatio,
@@ -308,7 +295,6 @@ i,
   e: "Smart Operations Center", taglin,"
   e: "AI-powered operations management", pric,"
   e: "$119/month", descriptio,"
-  n: "Intelligent operations center that uses AI to optimize business processes and workflows.", feature,"
   s: [ "AI process optimization", "Real-time monitoring", "Predictive analytics", "Automated workflows", "Performance insights" ], lin,"
   k: "/services/smart-operations-center", categor,"
   y: "New Operational Services 2025", realImplementatio,

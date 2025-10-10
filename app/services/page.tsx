@@ -218,7 +218,6 @@ const ServicesPage: React.FC = () => {
     {
       icon: Cloud,
       title: 'Cloud Migration',
-      description: 'Seamless migration to AWS, Azure, or Google Cloud with zero downtime and data integrity.',
       features: ['Zero Downtime', 'Data Integrity', 'Cost Optimization', 'Security Compliance', '24/7 Support'],
       price: 'Starting at $2,999/project',
       category: 'Cloud Services'
@@ -625,7 +624,6 @@ const ServicesPage: React.FC = () => {
       category: 'Micro SAAS'
     },
     {
-      icon: CheckSquare,
       title: 'Task Manager Pro',
       description: 'Advanced task management with AI prioritization, team collaboration, and progress tracking.',
       features: ['AI Prioritization', 'Team Collaboration', 'Progress Tracking', 'Time Tracking', 'Project Templates'],

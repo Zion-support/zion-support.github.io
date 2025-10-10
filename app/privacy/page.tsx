@@ -151,7 +151,6 @@ export default function PrivacyPage() {
                   <div></div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Security Measures</h3>
                     <p className="text-gray-700 mb-4">
-                      We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
                     </p>
                     <ul className="text-gray-700 space-y-2">
                       <li>• Encryption of data in transit and at rest</li>

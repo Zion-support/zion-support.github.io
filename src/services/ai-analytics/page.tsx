@@ -25,8 +25,6 @@ const AIAnalyticsPage: React.FC = () => {
 
 
 import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const AIAnalyticsPage: React.FC = () => {
   const features = [];
@@ -195,7 +193,6 @@ icon$5: Award,
               Key Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4">
@@ -231,7 +228,6 @@ icon$5: Award,
           </h2>"
             <div className="grid grid-cols-1,"
   md:grid-cols-2 gap-8"></div>)
-              {features.map((feature, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
   hover:border-cyan-400/50 transition-all duration-300"></div>"
                   <div className="flex items-start mb-4"></div>"
@@ -277,7 +273,6 @@ icon$5: Award,
                       <span className="text-gray-400 ml-1">{tier.period}</span>
                     <p className="text-gray-300 text-sm mt-2">{tier.description}</p>
                   <ul className="space-y-3 mb-6">
-                    {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
                         {feature}
                   <a
@@ -355,7 +350,6 @@ export default AIAnalyticsPage;
                       <span className="text-gray-400 ml-1">{tier.period}</span>"
                     <p className="text-gray-300 text-sm mt-2">{tier.description}</p>"
                   <ul className="space-y-3 mb-6"></ul>
-                    {tier.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="text-sm text-gray-300 flex items-start"></li>
                         {feature}
 

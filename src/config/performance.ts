@@ -96,7 +96,6 @@ export const _performanceConfig = {// TODO: Add content;}
 }
   // Core Web Vitals thresholds,
   metric,
-  s: {/* TODO: Fix JSX expression */}
   p: {}
 // goo,
   d: 2500,
@@ -128,7 +127,6 @@ export const _performanceConfig = {// TODO: Add content;}
   },
   // Cache strategies,
   cach,
-  e: {/* TODO: Fix JSX expression */}
   c: {}
 // maxAg,
   e: 31536000, // 1 year;
@@ -143,7 +141,6 @@ export const _performanceConfig = {// TODO: Add content;}
 
     },
     ap,
-  i: {/* TODO: Fix JSX expression */}
   e: 300, // 5 minutes;}
 // staleWhileRevalidat,
   e: 30, // 30 seconds;
@@ -154,7 +151,6 @@ export const _performanceConfig = {// TODO: Add content;}
   d: [
   // TOD,
   O: Add items]
-    {/* TODO: Fix JSX expression */}
   n: 'anonymous' },
 //   ],
   prefetc,
@@ -166,7 +162,6 @@ export const _performanceConfig = {// TODO: Add content;}
 //   ],
   // Image optimization,
   image,
-  s: {/* TODO: Fix JSX expression */}
   s: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]}
 // imageSize,
   s: [16, 32, 48, 64, 96, 128, 256, 384],
@@ -179,15 +174,12 @@ export const _performanceConfig = {// TODO: Add content;}
   },
   // Bundle optimization,
   bundl,
-  e: {/* TODO: Fix JSX expression */}
   e: 20000}
 // maxChunkSiz,
   e: 244000,
 // splitChunk,
-  s: {/* TODO: Fix JSX expression */}
   s: {}
 // vendo,
-  r: {/* TODO: Fix JSX expression */}
   t: /[\/]node_modules[\/]/}
 // priorit,
   y: -10,
@@ -207,7 +199,6 @@ export const _performanceConfig = {// TODO: Add content;}
   },
   // Performance monitoring,
   monitorin,
-  g: {/* TODO: Fix JSX expression */}
   d: true}
 // sampleRat,
   e: 1.0, // 100% in production;

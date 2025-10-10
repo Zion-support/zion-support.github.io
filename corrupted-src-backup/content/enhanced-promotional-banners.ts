@@ -1,4 +1,3 @@
-export interface EnhancedPromotionalBanner {/* TODO: Fix JSX expression */}
 }
 
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
@@ -30,7 +29,5 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
     tags: ['AI Governance', 'Enterprise', 'Safety', 'Compliance'],
 export const,
   enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
-  {/* TODO: Fix JSX expression */}
   },
-  {/* TODO: Fix JSX expression */}
   }];

@@ -15,7 +15,6 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
           </d, i, v>
           {/* Main, Conten, t */}
           <div, className="te, x, t-center, m, b-8"></div>
-            <h2, className="te, x, t-3xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
               Edge, A, I + 5G, Network, s & Quant, u, m-Safe, Cryptograph, y;
             </h2>
             <p, className="te, x, t-lg, m, d: te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-6">"</p>
@@ -28,12 +27,10 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
           </d, i, v>
           {/* Main, Conten, t */}
           <div, className="te, x, t-center, m, b-8">";</div>
-            <h2, className="te, x, t-3xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
               Edge, A, I + 5G, Network, s & Quant, u, m-Safe, Cryptograph, y;
             </h2>)
             <p, className="te, x, t-l, g, m;)
   d: te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-6">";)
-export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
           {/* Head, e, r */}
           <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>"
             <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e  /></Sparkles>"
@@ -44,7 +41,6 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
           </d, i, v>
           {/* Main, Conten, t */}"
           <div, className="te, x, t-center, m, b-8"></div>"
-            <h2, className="te, x, t-3xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
               Edge, A, I + 5G, Network, s & Quant, u, m-Safe, Cryptograph, y;
             </h2>"
             <p, className="te, x, t-lg, m, d: te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-6">""
@@ -57,17 +53,14 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
           </d, i, v>
           {/* Main, Conten, t */}"
           <div, className="te, x, t-center, m, b-8">";"
-            <h2, className="te, x, t-3xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
               Edge, A, I + 5G, Network, s & Quant, u, m-Safe, Cryptograph, y;
             </h2>"
             <p, className="te, x, t-l, g, m,"
   d: te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-6">";
               ⚡ Master, ultr, a-low, latency, AI at, the, edge with, 5G, networks (s, u, b-10ms, respons, e, 80% bandwidth, saving, s) 
               and, protect, your enterprise, from, quantum threats, with, NIST-approved, pos, t-quantum, cryptograph, y (P, Q, C). 
-              Build, the, future-proof, infrastructure, your organization, needs, today!
             </p>
           </d, i, v>
-          {/* Feature, Card, s */}"
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">"
             {/* Edge, A, I + 5G, Car, d */}
             <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e;
@@ -137,7 +130,6 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
               </d, i, v>"
               <ul, className="spa, c, e-y-2, tex, t-gr, a, y-300, tex, t-sm, m, b-6">";
                 <li>✓ Autonomous, vehicle, s & smart, manufacturin, g</li>
-                <li>✓ Healthcare, Io, T & remote, patient, monitoring</li>
                 <li>✓ Smart, citie, s & public, safety, analytics</li>
                 <li>✓ 80% bandwidth, cost, reduction</li>
               </ul>
@@ -184,7 +176,6 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
                 </d, i, v>
               </d, i, v>"
               <p, className="te, x, t-gr, a, y-300, m, b-4">";
-                Implement, NIS, T-approved, pos, t-quantum, cryptography, to secure, your, enterprise against, quantu, m;
   computing, threat, s. Complete, 1, 8-month, migration, roadmap to, achieve, 100% quantum, resistanc, e.
               </p>
               <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">";</div>
@@ -283,7 +274,6 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
             ></Li>"
               <Sparkles, className="w-5 h-5  /></Sparkles>"
               <Sparkles, className="w-5 h-5" />";
-              Explore, All, Guides;
             </Li, n, k>
             <Li, n, k;
   to="/conta, c, t"

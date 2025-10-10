@@ -2,15 +2,11 @@ import React, { ReactNode } from 'react';
 
 import { Helmet } from 'react-helmet-async';
 
-interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
 
 const,
-  SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
     },
     addres,
-  s: {/* TODO: Fix JSX expression */}
     }};
 
   const finalStructuredData = structuredData || defaultStructuredData;
@@ -42,7 +38,6 @@ const,
         <meta property="o,"
   g:image" content={ogImage} /></meta>"
         <meta property="o,"
-  g:url" content={/* TODO: Fix JSX expression */}
   s://ziontechgroup.com'} /></meta>"
         <meta property="o,"
   g:site_name" content="Zion Tech Group" /></meta>"

@@ -116,7 +116,6 @@ export default function AICostOptimizationBreakthrough2026() {
   e:</strong> 90% reduction through automation</li>"
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🛠️ Technology Stack</h2>"
               <pre className="text-sm text-gray-800 overflow-x-auto"></pre>
-{/* TODO: Fix JSX expression */}
   Stack:}
 // Model Optimization;
 //     TensorFlow Lite;

@@ -23,7 +23,6 @@ export interface Revolutionary2027Service {;,
   e: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -37,7 +36,6 @@ export interface Revolutionary2027Service {;,
   e: string;
     emai,
   l: string;
-export interface Revolutionary2027Service {/* TODO: Fix JSX expression */}
   s: string}
 };
   i,
@@ -50,7 +48,6 @@ export interface Revolutionary2027Service {/* TODO: Fix JSX expression */}
   e: string,,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -59,7 +56,6 @@ export interface Revolutionary2027Service {/* TODO: Fix JSX expression */}
   realImplementatio,
   n: boolean;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
@@ -111,7 +107,6 @@ export const revolutionary2027 Services: Revolutionary2027 Service[] = [,
   e: string, pric,
   e: string,
   descriptio,
-  n: string, feature,
   s: string[],
   lin,
   k: string, categor,
@@ -136,7 +131,6 @@ export const,
   e: "$299/month",
     descriptio,"
   n: "Revolutionary service platform that transforms how businesses operate in 2027.",
-    feature,
   s: [;"
       "Revolutionary services""
       "Transformative capabilities""
@@ -207,7 +201,6 @@ export const,
   e: "$299/month",
     descriptio,"
   n: "Revolutionary service platform that transforms how businesses operate in 2027.",
-    feature,
   s: [,"
       "Revolutionary services","
       "Transformative capabilities","
@@ -251,25 +244,21 @@ i,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: mobil,
   e: string; emai,
-  l: string; export interface Revolutionary2027Service {/* TODO: Fix JSX expression */}
   s: string }; i,
   d: string; nam,
   e: string; taglin,
   e: string; pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
@@ -277,7 +266,6 @@ i,
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
@@ -291,7 +279,6 @@ i,
   e: "2027 Revolutionary Service Platform", taglin,"
   e: "Revolutionary services for 2027", pric,"
   e: "$299/month", descriptio,"
-  n: "Revolutionary service platform that transforms how businesses operate in 2027.", feature,"
   s: [ "Revolutionary services" "Transformative capabilities" "Advanced technology" "Innovation platform" "Future-ready solutions" ], lin,"
   k: "/services/2027-revolutionary-service", categor,"
   y: "Revolutionary 2027 Services", realImplementatio,
@@ -308,7 +295,6 @@ i,
   e: "2027 Revolutionary Service Platform", taglin,"
   e: "Revolutionary services for 2027", pric,"
   e: "$299/month", descriptio,"
-  n: "Revolutionary service platform that transforms how businesses operate in 2027.", feature,"
   s: [ "Revolutionary services", "Transformative capabilities", "Advanced technology", "Innovation platform", "Future-ready solutions" ], lin,"
   k: "/services/2027-revolutionary-service", categor,"
   y: "Revolutionary 2027 Services", realImplementatio,

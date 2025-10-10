@@ -60,7 +60,6 @@ const October2025UltimateEnterpriseBanne, r = () => {
                   {multiCloudConte, n, t.ic, o, n} Adaptive, Mult, i-Cloud, Intelligenc, e;
                 </h3>
                 <p, classNam, e = "te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4">
-const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression */}"
     <div, classNam, e = "relative, p, y-16, p, x-4, s, m: px-6, l, g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Backgro, u, n, d */ }"
       <div, classNam, e = "absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" /></div>"
@@ -159,7 +158,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
             </div>
             {/* Key, Highlig, h, t, s */}"
             <div, classNam, e = "spa, c, e-y-2, m, b-6"></div>
-              {/* TODO: Fix JSX expression */}"
                 <div, ke, y = { in, d, e, x  }, classNa, m, e = "flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>"
                   <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" /></CheckCircle>"
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>
@@ -179,7 +177,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
             <div, className="flex, item, s-start, ga, p-4, m, b-6"></div>
               <div, className="fl, e, x-shri, n, k-0"></div>
                 <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-600, rounde, d-2xl, flex, items-center, justif, y-center, shado, w-lg, transform, group-hov, e, r:rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0"></div>
-                  <MessageSquare, className="w-9 h-9, tex, t-whi, t, e" />
                 </div>
               </div>
               <div, className="fl, e, x-1"></div>
@@ -200,7 +197,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
             <div, className="flex, item, s-start, ga, p-4, m, b-6"></div>"
               <div, className="fl, e, x-shri, n, k-0"></div>"
                 <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-600, rounde, d-2xl, flex, items-center, justif, y-center, shado, w-lg, transform, group-hov, e, r:rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0"></div>"
-                  <MessageSquare, className="w-9 h-9, tex, t-whi, t, e" /></MessageSquare>
                 </div>
               </div>"
               <div, className="fl, e, x-1"></div>"
@@ -265,7 +261,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
             </div>
             {/* Key, Highlig, h, t, s */}"
             <div, classNam, e = "spa, c, e-y-2, m, b-6"></div>
-              {/* TODO: Fix JSX expression */}"
                 <div, ke, y = { in, d, e, x  }, classNa, m, e = "flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>"
                   <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" /></CheckCircle>"
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>
@@ -293,7 +288,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
             </div>
             <div, className="group, hove, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0"></div>
               <div, className="flex, item, s-center, justif, y-center, m, b-3"></div>
-                <TrendingUp, className="w-1, 0, h-10, tex, t-gre, e, n-4, 0, 0" />
               </div>
               <div, className="te, x, t-3 xl, fon, t-extrabold, tex, t-white, m, b-2">$26, 2, M+</div>
               <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Total, Saving, s</div>
@@ -322,7 +316,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
             </div>"
             <div, className="group, hove, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0"></div>"
               <div, className="flex, item, s-center, justif, y-center, m, b-3"></div>"
-                <TrendingUp, className="w-1, 0, h-10, tex, t-gre, e, n-4, 0, 0" /></TrendingUp>
               </div>"
               <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">$26, 2, M+</div>"
               <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Total, Saving, s</div>
@@ -373,7 +366,6 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
               className="px-8, p, y-4, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,"
   r:sca, l, e-105, borde, r-2, borde, r-whi, t, e/30, hove, r:bord, e, r-whi, t, e/50, tex, t-lg"
             ></Link>
-              Explore, All, Insights;
             </Li, n, k>
           </div>
         </div>

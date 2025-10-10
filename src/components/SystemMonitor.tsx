@@ -75,17 +75,12 @@ interface SystemMonitorProps {
  * System Monitor Component;
  * Real-time monitoring dashboard for performance, errors, and system health;
  */
-import React, { useState, useEffect, useCallback } from 'react';
 // Collect basic performance metrics;
-const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
-import { performanceOptimizer } from '../utils/performanceOptimizer';
-const __collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   if (typeof window === 'undefined' || !window.performance) return null;
   const navigation = window.performance.timing;
   const paint = window.performance.getEntriesByType('paint');
-  return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   loadTim,
@@ -94,7 +89,6 @@ const __collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
   t: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
   };
 // Helper functions;
-const calculatePerformanceScore = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   const metrics = performanceOptimizer.getMetrics();
@@ -108,7 +102,6 @@ const calculatePerformanceScore = () => {/* TODO: Fix JSX expression */}
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
   return Math.max(0, score);
 // Network connection interface;
-interface NetworkConnection {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   effectiveType?: string;
@@ -116,17 +109,14 @@ interface NetworkConnection {/* TODO: Fix JSX expression */}
   rtt?: number;
   saveData?: boolean;
 }
-interface NavigatorWithConnection extends Navigator {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   connection?: NetworkConnection;
   mozConnection?: NetworkConnection;
   webkitConnection?: NetworkConnection;
-interface SystemMetrics {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   performanc,
-  e: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   scor,
@@ -142,7 +132,6 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
     cumulativeLayoutShif,
   t: number;,
     error,
-  s: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   tota,
@@ -155,7 +144,6 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
     bySeverit,
   y: Record<string, number>;
     recen,
-  t: Array<{/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   i,
@@ -170,7 +158,6 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
   p: string;
     }>;
   memor,
-  y: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   use,
@@ -180,7 +167,6 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
     percentag,
   e: number;,
     networ,
-  k: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   effectiveTyp,
@@ -191,7 +177,6 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
   t: number;,
     saveDat,
   a: boolean;
-interface SystemMonitorProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   refreshInterval?: number;
@@ -220,7 +205,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const newMetrics: SystemMetrics = {
       const _networkInfo = getNetworkInfo();
       const _newMetrics: SystemMetrics = {
-          score: performanceScore,
           loadTime: performanceMetrics?.loadTime || 0,
           firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics
@@ -439,14 +423,12 @@ $4});
 export default SystemMonitor;
 const,
   SystemMonitor: React.FC;
-          <SystemMonitorProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   refreshInterval = 5000,
   showDetails = true,
   enableExport = true,
   className = '')
-}) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   const [metrics, setMetrics] = useState;
@@ -454,10 +436,8 @@ const,
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
   // Update metrics;
-const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       const performanceMetrics = performanceOptimizer.getMetrics();
@@ -470,7 +450,6 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       const,
   newMetrics: SystemMetrics = {const _networkInfo = getNetworkInfo();}
       const,
-  _newMetrics: SystemMetrics = {/* TODO: Fix JSX expression */}
   e: performanceScore}
           loadTim,
   e: performanceMetrics?.loadTime || 0,
@@ -492,7 +471,6 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
           bySeverit,
   y: errorStats.errorsBySeverity,
           recen,
-  t: errorStats.recentErrors.map(error => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   i,
@@ -611,7 +589,6 @@ className={`h-2 rounded-full ${}
                     metrics.memory.percentage > 80 ? 'bg-red-500' :
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'`
                   }`}
-                  style={/* TODO: Fix JSX expression */}`
   h: `${Math.min(metrics.memory.percentage, 100)}%` }}
           
           

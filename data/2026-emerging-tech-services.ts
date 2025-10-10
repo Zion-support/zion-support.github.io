@@ -70,7 +70,6 @@ export const emergingTechServices2026: EmergingTechService2026[] = [;
   d: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   popula,
   r: boolean;
@@ -173,7 +172,6 @@ export const,
     descriptio,
   n:
       'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.'
-    feature,
   s: [;
       'AI-powered digital twin creation'
       'Real-time simulation and modeling'
@@ -414,7 +412,6 @@ export const,
     descriptio,
   n:
       'Advanced blockchain analytics platform that uses AI to analyze blockchain data, optimize DeFi strategies, and provide intelligent insights for cryptocurrency and blockchain applications.'
-    feature,
   s: [,
       'DeFi strategy optimization and automation',
       'Smart contract security auditing',
@@ -515,7 +512,6 @@ export const,
     descriptio,
   n:
       'Comprehensive IoT platform that uses AI to manage connected devices, analyze sensor data, and provide intelligent automation for smart homes, cities, and industrial applications.'
-    feature,
   s: [,
       'Predictive maintenance and monitoring',
       'Smart automation and control',
@@ -609,7 +605,6 @@ export const,
     descriptio,
   n:
       'Advanced edge computing platform that uses AI to optimize edge node performance, manage 5G network resources, and provide intelligent edge application deployment.'
-    feature,
   s: [,
       '5G network resource management',
       'Edge application deployment automation',
@@ -709,7 +704,6 @@ export const,
     descriptio,
   n:
       'Advanced AR/VR development platform that uses AI to create immersive content, optimize user experiences, and provide intelligent development tools for augmented and virtual reality applications.'
-    feature,
   s: [,
       'Intelligent user experience optimization',
       'AR / VR application development tools',
@@ -804,7 +798,6 @@ export const,
     descriptio,
   n:
       'Advanced robotics platform that uses AI to control robotic systems, optimize automation workflows, and provide intelligent robotics solutions for manufacturing, logistics, and service industries.'
-    feature,
   s: [,
       'Automated workflow optimization',
       'Predictive maintenance for robots',
@@ -903,7 +896,6 @@ export const,
     descriptio,
   n:
       'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.'
-    feature,
   s: [,
       'Predictive analytics and forecasting',
       'Integration with IoT and sensor data',
@@ -1025,7 +1017,6 @@ export const getEmergingTechServices2026ByCategory = (categor)
   )}
 export const getPopularEmergingTechServices2026 = () =>
 };
-export const getPopularEmergingTechServices2026 = () => {/* TODO: Fix JSX expression */}
   return emergingTechServices2026.filter(service => service.popular)}
 }
   }];
@@ -1231,7 +1222,6 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>,
   d: '/month',
     descriptio,
   n: 'Cloud-based quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum machine learning capabilities. Features include quantum circuit optimization, quantum error correction, and hybrid quantum-classical computing.',
-    feature,
   s: [,
       'Access to multiple quantum processors (IBM) Google; Rigetti)AI-optimized quantum algorithm libraryQuantum error correction and noise mitigationHybrid quantum-classical computing workflowsQuantum machine learning algorithmsReal-time quantum circuit visualizationIntegration with classical computing frameworksCustom quantum algorithm development'
       'Quantum performance analytics and benchmarkingAPI for quantum application development'
@@ -1289,7 +1279,6 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>,
   d: '/month',
     descriptio,
   n: 'Advanced blockchain analytics platform that uses AI to analyze blockchain data, optimize DeFi strategies, and provide intelligent insights for cryptocurrency and blockchain applications.',
-    feature,
   s: [;
       'AI-powered blockchain data analysisDeFi strategy optimization and automationSmart contract security auditingCryptocurrency portfolio managementBlockchain transaction monitoringNFT market analysis and insightsIntegration with major blockchainsCustom blockchain analytics dashboards'
       'Real-time alerts and notificationsAPI for blockchain applications'
@@ -1347,7 +1336,6 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>,
   d: '/month',
     descriptio,
   n: 'Comprehensive IoT platform that uses AI to manage connected devices, analyze sensor data, and provide intelligent automation for smart homes, cities, and industrial applications.',
-    feature,
   s: [;
       'AI-powered IoT device managementReal-time sensor data analyticsPredictive maintenance and monitoringSmart automation and controlEdge computing optimizationIntegration with major IoT platformsCustom IoT application developmentSecurity and privacy management'
       'Scalable device connectivityAdvanced analytics and reporting'
@@ -1405,7 +1393,6 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>,
   d: '/month',
     descriptio,
   n: 'Advanced edge computing platform that uses AI to optimize edge node performance, manage 5G network resources, and provide intelligent edge application deployment.',
-    feature,
   s: [;
       'AI-powered edge node optimization5G network resource managementEdge application deployment automationReal-time performance monitoringEdge security and complianceIntegration with major cloud providersCustom edge computing workflowsAdvanced analytics and reporting'
       'Mobile edge computing supportAPI for edge applications'
@@ -1464,7 +1451,6 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>,
   d: '/month',
     descriptio,
   n: 'Advanced AR/VR development platform that uses AI to create immersive content, optimize user experiences, and provide intelligent development tools for augmented and virtual reality applications.',
-    feature,
   s: [;
       'AI-powered 3D content generationIntelligent user experience optimizationAR/VR application development toolsContent personalization and adaptationPerformance optimization and testingIntegration with major AR/VR platformsCustom AR/VR workflowsReal-time content analytics'
       'Multi-platform deployment supportAPI for AR/VR applications'
@@ -1522,7 +1508,6 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>,
   d: '/month',
     descriptio,
   n: 'Advanced robotics platform that uses AI to control robotic systems, optimize automation workflows, and provide intelligent robotics solutions for manufacturing, logistics, and service industries.',
-    feature,
   s: [;
       'AI-powered robotic control systemsAutomated workflow optimizationPredictive maintenance for robotsIntegration with major robotics platformsCustom automation workflowsReal-time performance monitoringSafety and compliance managementAdvanced analytics and reporting'
       'Mobile app for robot controlAPI for robotics applications'
@@ -1580,7 +1565,6 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>,
   d: '/month',
     descriptio,
   n: 'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.',
-    feature,
   s: [;
       'AI-powered digital twin creationReal-time simulation and modelingPredictive analytics and forecastingIntegration with IoT and sensor dataCustom simulation scenariosPerformance optimization insights3D visualization and modelingAdvanced analytics and reporting'
       'API for custom integrationsMobile app for monitoring'
@@ -1674,7 +1658,6 @@ export const getEmergingTechServices2026ByPriceRange = (min_pric)
   });
 }
 ;
-export interface EmergingTechService2026 {/* TODO: Fix JSX expression */}
   })
 };
 ;
@@ -1685,7 +1668,6 @@ export const getEmergingTechServices2026ByCategory = (categor)
   return emergingTechServices2026.filter ()
     service => service.category === category);
 }
-export interface EmergingTechService2026 {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -1736,7 +1718,6 @@ i,
   e: string; pric,
   e: string, perio,
   d: string, descriptio,
-  n: string; feature,
   s: string[]; popula,
   r: boolean; ico,
   n: string; colo,
@@ -1785,7 +1766,6 @@ i,
   e:' 'Intelligent digital twin creation and simulation with AI-powered insights'' pric,
   e: '$349'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.' feature,
   s: [' 'AI-powered digital twin creation'' 'Real-time simulation and modeling'' 'Predictive analytics and forecasting'' 'Integration with IoT and sensor data'' 'Custom simulation scenarios'' 'Performance optimization insights'' '3D visualization and modeling'' 'Advanced analytics and reporting'' 'API for custom integrations'' 'Mobile app for monitoring' ] popula,
   r: false,
   marketPosition:' 'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our,
@@ -1840,7 +1820,6 @@ i,
   e:' 'Intelligent blockchain analytics and DeFi optimization with AI-powered insights'' pric,
   e: '$299'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced blockchain analytics platform that uses AI to analyze blockchain data, optimize DeFi strategies, and provide intelligent insights for cryptocurrency and blockchain applications.' feature,
   s: [' 'DeFi strategy optimization and automation',' 'Smart contract security auditing',' 'Cryptocurrency portfolio management',' 'Blockchain transaction monitoring',' 'NFT market analysis and insights',' 'Integration with major blockchains',' 'Custom blockchain analytics dashboards',' 'Real - time alerts and notifications',' 'API for blockchain applications'], popula,
   r: true,' ico,
   n: '⛓️', marketPositio,
@@ -1864,7 +1843,6 @@ i,
   e:' 'Intelligent IoT device management and data analytics with AI-powered automation'' pric,
   e: '$199'' perio,
   d: '/month' descriptio,
-  n:' 'Comprehensive IoT platform that uses AI to manage connected devices, analyze sensor data, and provide intelligent automation for smart homes, cities, and industrial applications.' feature,
   s: [' 'Predictive maintenance and monitoring',' 'Smart automation and control',' 'Edge computing optimization',' 'Integration with major IoT platforms',' 'Custom IoT application development',' 'Security and privacy management',' 'Scalable device connectivity',' 'Advanced analytics and reporting'], popula,
   r: false,' ico,
   n: '📡', targetAudienc,
@@ -1886,7 +1864,6 @@ i,
   e:' 'Optimize edge computing performance and 5G network efficiency with AI'' pric,
   e: '$399'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced edge computing platform that uses AI to optimize edge node performance, manage 5G network resources, and provide intelligent edge application deployment.' feature,
   s: [' '5G network resource management',' 'Edge application deployment automation',' 'Real - time performance monitoring',' 'Edge security and compliance',' 'Integration with major cloud providers',' 'Custom edge computing workflows',' 'Advanced analytics and reporting',' 'Mobile edge computing support',' 'API for edge applications'], popula,
   r: false,' ico,
   n: '📶', marketPositio,
@@ -1910,7 +1887,6 @@ i,
   e:' 'Intelligent AR/VR application development with AI-powered content creation'' pric,
   e: '$249'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced AR/VR development platform that uses AI to create immersive content, optimize user experiences, and provide intelligent development tools for augmented and virtual reality applications.' feature,
   s: [' 'Intelligent user experience optimization',' 'AR / VR application development tools',' 'Content personalization and adaptation',' 'Performance optimization and testing',' 'Integration with major AR / VR platforms',' 'Custom AR / VR workflows',' 'Real - time content analytics',' 'Multi - platform deployment support',' 'API for AR / VR applications'], popula,
   r: false,' ico,
   n: '🥽', marketPositio,
@@ -1934,7 +1910,6 @@ i,
   e:' 'Intelligent robotics control and automation with AI-powered optimization'' pric,
   e: '$599'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced robotics platform that uses AI to control robotic systems, optimize automation workflows, and provide intelligent robotics solutions for manufacturing, logistics, and service industries.' feature,
   s: [' 'Automated workflow optimization',' 'Predictive maintenance for robots',' 'Integration with major robotics platforms',' 'Custom automation workflows',' 'Real - time performance monitoring',' 'Safety and compliance management',' 'Advanced analytics and reporting',' 'Mobile app for robot control',' 'API for robotics applications'], popula,
   r: false,' ico,
   n: '🤖', marketPositio,
@@ -1958,7 +1933,6 @@ i,
   e:' 'Intelligent digital twin creation and simulation with AI-powered insights'' pric,
   e: '$349'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.' feature,
   s: [' 'Predictive analytics and forecasting',' 'Integration with IoT and sensor data',' 'Custom simulation scenarios',' 'Performance optimization insights',' '3D visualization and modeling',' 'Advanced analytics and reporting',' 'API for custom integrations',' 'Mobile app for monitoring'], popula,
   r: false,' ico,
   n: '🔄', marketPositio,
@@ -1995,7 +1969,6 @@ i,
   e: 'Access quantum computing power through the cloud with AI-optimized algorithms', pric,
   e: '$999',' perio,
   d: '/month',' descriptio,
-  n: 'Cloud-based quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum machine learning capabilities. Features include quantum circuit optimization, quantum error correction, and hybrid quantum-classical computing.', feature,
   s: [' 'Access to multiple quantum processors (IBM) Google; Rigetti)AI-optimized quantum algorithm libraryQuantum error correction and noise mitigationHybrid quantum-classical computing workflowsQuantum machine learning algorithmsReal-time quantum circuit visualizationIntegration with classical computing frameworksCustom quantum algorithm development'' 'Quantum performance analytics and benchmarkingAPI for quantum application development' ];' popula,
   r: true, ico,
   n: '🔮',' colo,
@@ -2029,7 +2002,6 @@ i,
   e: 'Intelligent blockchain analytics and DeFi optimization with AI-powered insights', pric,
   e: '$299',' perio,
   d: '/month',' descriptio,
-  n: 'Advanced blockchain analytics platform that uses AI to analyze blockchain data, optimize DeFi strategies, and provide intelligent insights for cryptocurrency and blockchain applications.', feature,
   s: [' 'AI-powered blockchain data analysisDeFi strategy optimization and automationSmart contract security auditingCryptocurrency portfolio managementBlockchain transaction monitoringNFT market analysis and insightsIntegration with major blockchainsCustom blockchain analytics dashboards'' 'Real-time alerts and notificationsAPI for blockchain applications' ],' popula,
   r: true, ico,
   n: '⛓️',' colo,
@@ -2063,7 +2035,6 @@ i,
   e: 'Intelligent IoT device management and data analytics with AI-powered automation', pric,
   e: '$199',' perio,
   d: '/month',' descriptio,
-  n: 'Comprehensive IoT platform that uses AI to manage connected devices, analyze sensor data, and provide intelligent automation for smart homes, cities, and industrial applications.', feature,
   s: [' 'AI-powered IoT device managementReal-time sensor data analyticsPredictive maintenance and monitoringSmart automation and controlEdge computing optimizationIntegration with major IoT platformsCustom IoT application developmentSecurity and privacy management'' 'Scalable device connectivityAdvanced analytics and reporting' ],' popula,
   r: false, ico,
   n: '📡',' colo,
@@ -2097,7 +2068,6 @@ i,
   e: 'Optimize edge computing performance and 5G network efficiency with AI', pric,
   e: '$399',' perio,
   d: '/month',' descriptio,
-  n: 'Advanced edge computing platform that uses AI to optimize edge node performance, manage 5G network resources, and provide intelligent edge application deployment.', feature,
   s: [' 'AI-powered edge node optimization5G network resource managementEdge application deployment automationReal-time performance monitoringEdge security and complianceIntegration with major cloud providersCustom edge computing workflowsAdvanced analytics and reporting'' 'Mobile edge computing supportAPI for edge applications' ],' popula,
   r: false, ico,
   n: '📶',' colo,
@@ -2131,7 +2101,6 @@ i,
   e: 'Intelligent AR/VR application development with AI-powered content creation', pric,
   e: '$249',' perio,
   d: '/month',' descriptio,
-  n: 'Advanced AR/VR development platform that uses AI to create immersive content, optimize user experiences, and provide intelligent development tools for augmented and virtual reality applications.', feature,
   s: [' 'AI-powered 3D content generationIntelligent user experience optimizationAR/VR application development toolsContent personalization and adaptationPerformance optimization and testingIntegration with major AR/VR platformsCustom AR/VR workflowsReal-time content analytics'' 'Multi-platform deployment supportAPI for AR/VR applications' ],' popula,
   r: false, ico,
   n: '🥽',' colo,
@@ -2165,7 +2134,6 @@ i,
   e: 'Intelligent robotics control and automation with AI-powered optimization', pric,
   e: '$599',' perio,
   d: '/month',' descriptio,
-  n: 'Advanced robotics platform that uses AI to control robotic systems, optimize automation workflows, and provide intelligent robotics solutions for manufacturing, logistics, and service industries.', feature,
   s: [' 'AI-powered robotic control systemsAutomated workflow optimizationPredictive maintenance for robotsIntegration with major robotics platformsCustom automation workflowsReal-time performance monitoringSafety and compliance managementAdvanced analytics and reporting'' 'Mobile app for robot controlAPI for robotics applications' ],' popula,
   r: false, ico,
   n: '🤖',' colo,
@@ -2199,7 +2167,6 @@ i,
   e: 'Intelligent digital twin creation and simulation with AI-powered insights', pric,
   e: '$349',' perio,
   d: '/month',' descriptio,
-  n: 'Advanced digital twin platform that uses AI to create virtual replicas of physical systems, simulate scenarios, and provide intelligent insights for optimization and decision-making.', feature,
   s: [' 'AI-powered digital twin creationReal-time simulation and modelingPredictive analytics and forecastingIntegration with IoT and sensor dataCustom simulation scenariosPerformance optimization insights3D visualization and modelingAdvanced analytics and reporting'' 'API for custom integrationsMobile app for monitoring' ],' popula,
   r: false, ico,
   n: '🔄',' colo,
@@ -2234,7 +2201,6 @@ i,
   y: string) =>: unknown return emergingTechServices2026.filter ( service => service.category === category); } ; export const getPopularEmergingTechServices2026 = () =>: unknown return emergingTechServices2026.filter (service => service.popular); } ; export const getEmergingTechServices2026ByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown return emergingTechServices2026.filter (service => ' const price = parse_int (service.price.replace ('$') '')); return price >= min_price && price <= max_price; }); } return price >= min_price && price <= max_price; }); } ; export interface EmergingTechService2026 {; }) }; export const getEmergingTechServices2026ByCategory = (categor)
-  y: string) =>: unknown return emergingTechServices2026.filter ( service => service.category === category); } export interface EmergingTechService2026 {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,

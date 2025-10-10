@@ -6,7 +6,6 @@
  * Comprehensive Monitoring Utility;
  * Real-time application monitoring, performance tracking, and error reporting;
  */
-export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   lcp?: number;
@@ -16,7 +15,6 @@ export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   ttfb?: number;
   inp?: number;
 }
-export interface ErrorReport {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   messag,
@@ -29,7 +27,6 @@ export interface ErrorReport {/* TODO: Fix JSX expression */}
   t: string;,
     ur,
   l: string;
-class MonitoringService {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 

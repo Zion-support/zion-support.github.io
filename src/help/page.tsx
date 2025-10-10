@@ -1,4 +1,3 @@
-import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 
@@ -33,7 +32,6 @@ idid: 'billing',
       bgColor:       ,
 idid: 'technical',
       name: 'Technical Support',
-      icon: MessageSquare,
       color: 'text-purple-400',
       bgColor:     ,
 $4}
@@ -294,7 +292,6 @@ questionquestion: 'Is there a free trial available?',
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
 const categories = [
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   i,
@@ -324,14 +321,12 @@ const categories = [
       nam,
   e: 'Technical Support',
       ico,
-  n: MessageSquare,
       colo,
   r: 'text-purple-400',
       bgColo,
   r: 'bg-purple-500/10'
     }
   ];
-  const helpArticles = {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     'getting-started': [;

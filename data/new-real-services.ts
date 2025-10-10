@@ -504,7 +504,6 @@
     marketPositio,
   n: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
     marketPositio,
-  n: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',    feature,
   s: [,
       'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
     ];
@@ -570,7 +569,6 @@
   s://ziontechgroup.com / llm - observability - suite',
     market_positio,
   n: unknown,
-      'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out - of - the - box.',    feature,
   s: [,
       'Prompt and response tracing_cost and token analytics_automatic PII redaction_offline and online evals_guardrail policy engine_drift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
     ];
@@ -684,7 +682,6 @@
   d: '/month',
     descriptio,
   n: 'Automate prospect research, write context - aware messages, and schedule follow - ups across email and LinkedIn. Built - in A / B testing and domain warmup best practices.'
-    feature,
   s: [;
       'Prospect enrichment via public sources_personalized email generation_sequence and follow - up scheduling_a / B testing and analyticsSPF / DKIM / DMARC checks_inbox rotation support'
     ];
@@ -764,7 +761,6 @@
   d: '/month',
     descriptio,
   n: 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps - friendly with automatic fix PRs and evidence collection for audits.'
-    feature,
   s: [;
       'Policy packs for CIS / NISTKubernetes and cloud posture_auto - remediation PRsEvidence collection and reportsSOC2 / ISO 27001 export'
     ];
@@ -849,7 +845,6 @@
     descriptio,
   n: 'Monitor data pipelines end - to - en,
   d: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.'
-    feature,
   s: [;
       'Freshness and volume checks_schema drift detectionSLA and SLO tracking_incident routing to Slack / Teams'
     ];
@@ -918,7 +913,6 @@
   d: '/month'
     descriptio,
   n: 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.'
-    feature,
   s: [;
       'Global CDN edge cachingDynamic rate limitingAnomaly and abuse detectionZero-downtime deploys with shadow traffic'
     ];
@@ -957,7 +951,6 @@
   d: '/month',
     descriptio,
   n: 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero - downtime via traffic shadowing.'
-    feature,
   s: [;
       'Global CDN edge caching_dynamic rate limiting_anomaly and abuse detection_zero - downtime deploys with shadow traffic'
     ];
@@ -1026,7 +1019,6 @@
   d: '/month'
     descriptio,
   n: 'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.'
-    feature,
   s: [;
       'Auto-segmentation and cohortsLLM query interfaceRetention and churn signalsAnomaly alerts to Slack/Teams'
     ];
@@ -1071,7 +1063,6 @@
   d: '/month',
     descriptio,
   n: 'Turn product usage into insights with automatic funnel detection, LLM - based querying, and anomaly alerts. Works alongside Amplitude / GA4.'
-    feature,
   s: [;
       'Auto - segmentation and cohortsLLM query interface_retention and churn signals_anomaly alerts to Slack / Teams'
     ];
@@ -1140,7 +1131,6 @@
   d: '/month'
     descriptio,
   n: 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.'
-    feature,
   s: [;
       'Multi-channel widgetsGrounded answers with citationsSecure human handoffAnalytics and CSAT tracking'
     ];
@@ -1185,7 +1175,6 @@
   d: '/month',
     descriptio,
   n: 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi - channel widgets with brand controls.'
-    feature,
   s: [;
       'Multi - channel widgets_grounded answers with citations_secure human handoff_analytics and CSAT tracking'
     ];
@@ -1255,7 +1244,6 @@
     descriptio,
   n: 'Proactive optimization for AWS/Azure/GC,
   P: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.'
-    feature,
   s: [;
       'Rightsizing recommendationsAnomaly detectionSavings plan/RIs planningTag hygiene and showback'
     ];
@@ -1295,7 +1283,6 @@
     descriptio,
   n: 'Proactive optimization for AWS / Azure / GC,
   P: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.'
-    feature,
   s: [;
       'Rightsizing recommendations_anomaly detection_savings plan / RIs planning_tag hygiene and showback'
     ];
@@ -1379,7 +1366,6 @@
   d: '/month',
     descriptio,
   n: 'Centralize PII with field - level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.'
-    feature,
   s: [;
       'Field - level encryption_tokenization APIsConsent enforcement_audit trail and reporting'
     ];
@@ -1452,7 +1438,6 @@
   d: '/month'
     descriptio,
   n: 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.'
-    feature,
   s: [;
       'Graph - based anomaly detection_explainability reports_risk scoring APIWorkflow actions and webhooks'
     ];
@@ -1658,7 +1643,6 @@
     tagline: 'Reliable webhooks with DLQ and replays',
     price: '$59',
     period: '/month',
-    description: 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.'
     features: [;
       'DLQ and retry policies_inspector and redaction_signature verification_fan - out and transformations'
     ];
@@ -1845,7 +1829,6 @@
     tagline: 'Agentless discovery with CMDB sync',
     price: '$129',
     period: '/month',
-    description: 'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.'
     features: [;
       'Network scans and SNMPSoftware inventory_change trackingCMDB integrations'
     ];
@@ -2013,7 +1996,6 @@
   d: '/month'
     descriptio,
   n: 'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.'
-    feature,
   s: [;
       'HA with automatic failoverContinuous backups and PITRSlow query insights and indexingEncryption and access controls'
     ];
@@ -2052,7 +2034,6 @@
   d: '/month',
     descriptio,
   n: 'Production - grade PostgreSQL with high availability, automated backups, point - in - time recovery, and performance tuning insights.'
-    feature,
   s: [;
       'HA with automatic failover_continuous backups and PITRSlow query insights and indexing_encryption and access controls'
     ];
@@ -2121,7 +2102,6 @@
   d: '/month'
     descriptio,
   n: 'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.'
-    feature,
   s: [;
       'Core Web Vitals dashboardsSession replay and heatmapsError tracking and sourcemapsA/B test impact analysis'
     ];
@@ -2160,7 +2140,6 @@
   d: '/month',
     descriptio,
   n: 'Real - user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.'
-    feature,
   s: [;
       'Core Web Vitals dashboards_session replay and heatmaps_error tracking and sourcemaps_a / B test impact analysis'
     ];
@@ -2237,7 +2216,6 @@
   d: '/month'
     descriptio,
   n: 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.'
-    feature,
   s: [;
       'Site audits and fixes_schema and sitemaps_programmatic pages_internal linking graph'
     ];
@@ -2326,8 +2304,6 @@
     perio,
   d: '/month'
     descriptio,
-  n: 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.'
-    feature,
   s: [;
       'DLQ and retry policies_inspector and redaction_signature verification_fan - out and transformations'
     ];
@@ -2428,7 +2404,6 @@
   d: '/month',
     descriptio,
   n: 'Serverless HTML - to - PDF rendering with page numbers, headers / footers, and safe fonts. Great for invoices and reports.'
-    feature,
   s: [;
       'Serverless scale_template gallery_brand - safe fonts_webhook on completion'
     ];
@@ -2481,7 +2456,6 @@
   d: '/month'
     descriptio,
   n: 'Easy OpenTelemetry-based tracing, RED metrics, and error analytics with exporters to your stack.'
-    feature,
   s: [;
       'Auto-instrumentationRED dashboardsError analyticsExporters to APMs'
     ];
@@ -2536,7 +2510,6 @@
   d: '/month',
     descriptio,
   n: 'Easy OpenTelemetry - based tracing, RED metrics, and error analytics with exporters to your stack.'
-    feature,
   s: [;
       'Auto - instrumentationRED dashboards_error analytics_exporters to APMs'
     ];
@@ -2613,7 +2586,6 @@
   d: '/month'
     descriptio,
   n: 'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.'
-    feature,
   s: [;
       'SAML and OIDCSCIM and JIT provisioning_branding and mapping_customer sandbox'
     ];
@@ -2685,8 +2657,6 @@
     perio,
   d: '/month'
     descriptio,
-  n: 'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.'
-    feature,
   s: [;
       'Network scans and SNMPSoftware inventory_change trackingCMDB integrations'
     ];
@@ -2763,7 +2733,6 @@
   d: '/month'
     descriptio,
   n: 'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.'
-    feature,
   s: [;
       'Questionnaire templates_evidence collection portal_continuous monitoring_risk scoring'
     ];
@@ -2926,7 +2895,6 @@
     descriptio,
   n: unknown,
       'Automate prospect research, write context - aware messages, and schedule follow - ups across email and LinkedIn. Built - in A / B testing and domain warmup best practices.',
-    feature,
   s: [,
       'Prospect enrichment via public sources',
       'Personalized email generation',
@@ -3039,7 +3007,6 @@
     descriptio,
   n: unknown,
       'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps - friendly with automatic fix PRs and evidence collection for audits.',
-    feature,
   s: [,
       'Policy packs for CIS / NIST',
       'Kubernetes and cloud posture',
@@ -3157,7 +3124,6 @@
   n: unknown,
       'Monitor data pipelines end - to - en,
   d: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.',
-    feature,
   s: [,
       'Freshness and volume checks',
       'Schema drift detection',
@@ -3266,7 +3232,6 @@
     descriptio,
   n: unknown,
       'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero - downtime via traffic shadowing.',
-    feature,
   s: [,
       'Global CDN edge caching',
       'Dynamic rate limiting',
@@ -3377,7 +3342,6 @@
     descriptio,
   n: unknown,
       'Turn product usage into insights with automatic funnel detection, LLM - based querying, and anomaly alerts. Works alongside Amplitude / GA4.',
-    feature,
   s: [,
       'Auto - segmentation and cohorts',
       'LLM query interface',
@@ -3486,7 +3450,6 @@
     descriptio,
   n: unknown,
       'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi - channel widgets with brand controls.',
-    feature,
   s: [,
       'Multi - channel widgets',
       'Grounded answers with citations',
@@ -3594,7 +3557,6 @@
   n: unknown,
       'Proactive optimization for AWS / Azure / GC,
   P: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.',
-    feature,
   s: [,
       'Rightsizing recommendations',
       'Anomaly detection',
@@ -3701,7 +3663,6 @@
     descriptio,
   n: unknown,
       'Centralize PII with field - level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.',
-    feature,
   s: [,
       'Field - level encryption',
       'Tokenization APIs',
@@ -3810,7 +3771,6 @@
     descriptio,
   n: unknown,
       'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.',
-    feature,
   s: [,
       'Graph - based anomaly detection',
       'Explainability reports',
@@ -3917,7 +3877,6 @@
     descriptio,
   n: unknown,
       'Production - grade PostgreSQL with high availability, automated backups, point - in - time recovery, and performance tuning insights.',
-    feature,
   s: [,
       'HA with automatic failover',
       'Continuous backups and PITR',
@@ -4024,7 +3983,6 @@
     descriptio,
   n: unknown,
       'Real - user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.',
-    feature,
   s: [,
       'Core Web Vitals dashboards',
       'Session replay and heatmaps',
@@ -4129,7 +4087,6 @@
     descriptio,
   n: unknown,
       'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.',
-    feature,
   s: [,
       'Site audits and fixes',
       'Schema and sitemaps',
@@ -4233,8 +4190,6 @@
   d: '/month',
     descriptio,
   n: unknown,
-      'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.',
-    feature,
   s: [,
       'DLQ and retry policies',
       'Inspector and redaction',
@@ -4339,7 +4294,6 @@
     descriptio,
   n: unknown,
       'Serverless HTML - to - PDF rendering with page numbers, headers / footers, and safe fonts. Great for invoices and reports.',
-    feature,
   s: [,
       'Serverless scale',
       'Template gallery',
@@ -4446,7 +4400,6 @@
     descriptio,
   n: unknown,
       'Easy OpenTelemetry - based tracing, RED metrics, and error analytics with exporters to your stack.',
-    feature,
   s: [,
       'Auto - instrumentation',
       'RED dashboards',
@@ -4551,7 +4504,6 @@
     descriptio,
   n: unknown,
       'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.',
-    feature,
   s: [,
       'SAML and OIDC',
       'SCIM and JIT provisioning',
@@ -4655,8 +4607,6 @@
   d: '/month',
     descriptio,
   n: unknown,
-      'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.',
-    feature,
   s: [,
       'Network scans and SNMP',
       'Software inventory',
@@ -4761,7 +4711,6 @@
     descriptio,
   n: unknown,
       'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.',
-    feature,
   s: [,
       'Questionnaire templates',
       'Evidence collection portal',
@@ -4857,7 +4806,6 @@
     descriptio,
   n: 'Production-grade observability for LLM,
   apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI-compatible and open-source models.',
-    feature,
   s: [,
       'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
     ];
@@ -5062,7 +5010,6 @@
     descriptio,
   n:
       'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.'
-    feature,
   s: [;
     review,
   s: 58}
@@ -5079,7 +5026,6 @@
     descriptio,
   n:
       'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.'
-    feature,
   s: [;
     review,
   s: 14}
@@ -5097,7 +5043,6 @@
   n:
       'Monitor data pipelines end-to-en,
   d: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.'
-    feature,
   s: [;
     review,
   s: 12}
@@ -5114,7 +5059,6 @@
     descriptio,
   n:
       'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.'
-    feature,
   s: [;
     review,
   s: 9}
@@ -5132,7 +5076,6 @@
     descriptio,
   n:
       'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.'
-    feature,
   s: [;
     review,
   s: 20}
@@ -5149,7 +5092,6 @@
     descriptio,
   n:
       'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.'
-    feature,
   s: [;
     review,
   s: 48}
@@ -5167,7 +5109,6 @@
   n:
       'Proactive optimization for AWS/Azure/GC,
   P: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.'
-    feature,
   s: [;
     review,
   s: 11}
@@ -5184,7 +5125,6 @@
     descriptio,
   n:
       'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.'
-    feature,
   s: [;
     review,
   s: 7}
@@ -5200,7 +5140,6 @@
   d: '/month'
     descriptio,
   n: 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.'
-    feature,
   s: [;
     review,
   s: 8}
@@ -5217,7 +5156,6 @@
     descriptio,
   n:
       'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.'
-    feature,
   s: [;
     review,
   s: 5}
@@ -5234,7 +5172,6 @@
     descriptio,
   n:
       'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.'
-    feature,
   s: [;
     review,
   s: 6}
@@ -5251,7 +5188,6 @@
     descriptio,
   n:
       'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.'
-    feature,
   s: [;
     review,
   s: 4}
@@ -5267,8 +5203,6 @@
   d: '/month'
     descriptio,
   n:
-      'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.'
-    feature,
   s: [;
 ];
 ]
@@ -5277,7 +5211,6 @@
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com'],
-// const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
@@ -5285,7 +5218,6 @@
 };
 export const,
   newRealServices: EnhancedRealMicroSaasService[] = [;
-  {/* TODO: Fix JSX expression */}
   g: 4.8}
     review,
   s: 22}
@@ -5740,7 +5672,6 @@ export const,
     tagline: 'Reliable webhooks with DLQ and replays';
     price: '$59';
     period: '/month',,
-  description: 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.';
     features: [
       'DLQ and retry policiesInspector and redactionSignature verificationFan-out and transformations'
     ];
@@ -5888,7 +5819,6 @@ export const,
     tagline: 'Agentless discovery with CMDB sync';
     price: '$129';
     period: '/month',,
-  description: 'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.';
     features: [
       'Network scans and SNMPSoftware inventoryChange trackingCMDB integrations'
     ];
@@ -5955,92 +5885,74 @@ export const,
     customers: 6;
     rating: 4.5}
     reviews: 3}
-  {/* TODO: Fix JSX expression */}
   g: 4.7}
     review,
   s: 58}
   };
-  {/* TODO: Fix JSX expression */}
   g: 4.6}
     review,
   s: 14}
   };
-  {/* TODO: Fix JSX expression */}
   g: 4.5}
     review,
   s: 12}
   };
-  {/* TODO: Fix JSX expression */}
   g: 4.7}
     review,
   s: 9}
   };
-  {/* TODO: Fix JSX expression */}
   g: 4.6}
     review,
   s: 20}
   };
-  {/* TODO: Fix JSX expression */}
   g: 4.7}
     review,
   s: 48}
   };
-  {/* TODO: Fix JSX expression */}
   g: 4.5}
     review,
   s: 11}
   };
-  {/* TODO: Fix JSX expression */}
   g: 4.6}
     review,
   s: 7}
   };
-  {/* TODO: Fix JSX expression */}
   g: 4.5}
     review,
   s: 8}
   };
-  {/* TODO: Fix JSX expression */}
   g: 4.6}
     review,
   s: 5}
   };
-  {/* TODO: Fix JSX expression */}
   g: 4.5}
     review,
   s: 6}
   };
-  {/* TODO: Fix JSX expression */}
   g: 4.4}
     review,
   s: 4}
   };
-  {/* TODO: Fix JSX expression */}
   g: 4.6}
     review,
   s: 3}
   };
-  {/* TODO: Fix JSX expression */}
   g: 4.6}
     review,
   s: 10}
   };
-  {/* TODO: Fix JSX expression */}
   g: 4.5}
     review,
   s: 4}
   };
-  {/* TODO: Fix JSX expression */}
   g: 4.7}
     review,
   s: 3}
   };
-  {/* TODO: Fix JSX expression */}
   g: 4.4}
     review,
   s: 2}
   };
-  {/* TODO: Fix JSX expression */}
   g: 4.5}
     review,
   s: 3}
@@ -6052,7 +5964,6 @@ export const,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/llm-observability-suite'' marketPositio,
   n: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.', marketPositio,
-  n: ' 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.', feature,
   s: [' 'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters' ]; popula,
   r: true,' ico,
   n: '📈'' colo,
@@ -6085,7 +5996,6 @@ export const,
   r: 'text - cyan - 400',' lin,
   k: 'http,
   s://ziontechgroup.com / llm - observability - suite', market_positio,
-  n:  ,' 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out - of - the - box.', feature,
   s: [,' 'Prompt and response tracing_cost and token analytics_automatic PII redaction_offline and online evals_guardrail policy engine_drift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters' ]; popula,
   r: true,' ico,
   n: '📈'' colo,
@@ -6142,7 +6052,6 @@ export const,
   g: 4 && 4.7, review,
   s: 58' perio,
   d: '/month',' descriptio,
-  n: 'Automate prospect research, write context - aware messages, and schedule follow - ups across email and LinkedIn. Built - in A / B testing and domain warmup best practices.' feature,
   s: [;' 'Prospect enrichment via public sources_personalized email generation_sequence and follow - up scheduling_a / B testing and analyticsSPF / DKIM / DMARC checks_inbox rotation support' ]; popula,
   r: false,' ico,
   n: '✉️'' colo,
@@ -6182,7 +6091,6 @@ export const,
   s: 21,' setupTim,
   e: '1–3 days'' perio,
   d: '/month',' descriptio,
-  n: 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps - friendly with automatic fix PRs and evidence collection for audits.' feature,
   s: [;' 'Policy packs for CIS / NISTKubernetes and cloud posture_auto - remediation PRsEvidence collection and reportsSOC2 / ISO 27001 export' ]; popula,
   r: true,' ico,
   n: '🛡️'' colo,
@@ -6225,7 +6133,6 @@ export const,
   e: '1 day'' perio,
   d: '/month',' descriptio,
   n: 'Monitor data pipelines end - to - en,
-  d: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.' feature,
   s: [;' 'Freshness and volume checks_schema drift detectionSLA and SLO tracking_incident routing to Slack / Teams' ]; popula,
   r: false,' ico,
   n: '🗄️'' colo,
@@ -6259,7 +6166,6 @@ export const,
   e: 'Global edge caching, rate limiting, and anomaly detection'' pric,
   e: '$149'' perio,
   d: '/month'' descriptio,
-  n: 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.' feature,
   s: [' 'Global CDN edge cachingDynamic rate limitingAnomaly and abuse detectionZero-downtime deploys with shadow traffic' ]; popula,
   r: true,' ico,
   n: '🛰️'' colo,
@@ -6278,7 +6184,6 @@ export const,
   e: 'Global edge caching, rate limiting, and anomaly detection'' pric,
   e: '$149'' perio,
   d: '/month',' descriptio,
-  n: 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero - downtime via traffic shadowing.' feature,
   s: [;' 'Global CDN edge caching_dynamic rate limiting_anomaly and abuse detection_zero - downtime deploys with shadow traffic' ]; popula,
   r: true,' ico,
   n: '🛰️'' colo,
@@ -6312,7 +6217,6 @@ export const,
   e: 'Session insights, funnel auto-segmentation, and LLM-based insights'' pric,
   e: '$129'' perio,
   d: '/month'' descriptio,
-  n: 'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.' feature,
   s: [' 'Auto-segmentation and cohortsLLM query interfaceRetention and churn signalsAnomaly alerts to Slack/Teams' ]; popula,
   r: false,' ico,
   n: '📊'' colo,
@@ -6334,7 +6238,6 @@ export const,
   e: 'Session insights, funnel auto - segmentation, and LLM - based insights'' pric,
   e: '$129'' perio,
   d: '/month',' descriptio,
-  n: 'Turn product usage into insights with automatic funnel detection, LLM - based querying, and anomaly alerts. Works alongside Amplitude / GA4.' feature,
   s: [;' 'Auto - segmentation and cohortsLLM query interface_retention and churn signals_anomaly alerts to Slack / Teams' ]; popula,
   r: false,' ico,
   n: '📊'' colo,
@@ -6368,7 +6271,6 @@ export const,
   e: 'Self-serve answers with RAG, forms, and secure handoff'' pric,
   e: '$99'' perio,
   d: '/month'' descriptio,
-  n: 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.' feature,
   s: [' 'Multi-channel widgetsGrounded answers with citationsSecure human handoffAnalytics and CSAT tracking' ]; popula,
   r: true,' ico,
   n: '💬'' colo,
@@ -6390,7 +6292,6 @@ export const,
   e: 'Self - serve answers with RAG, forms, and secure handoff'' pric,
   e: '$99'' perio,
   d: '/month',' descriptio,
-  n: 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi - channel widgets with brand controls.' feature,
   s: [;' 'Multi - channel widgets_grounded answers with citations_secure human handoff_analytics and CSAT tracking' ]; popula,
   r: true,' ico,
   n: '💬'' colo,
@@ -6425,7 +6326,6 @@ export const,
   e: '$249'' perio,
   d: '/month'' descriptio,
   n: 'Proactive optimization for AWS/Azure/GC,
-  P: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.' feature,
   s: [' 'Rightsizing recommendationsAnomaly detectionSavings plan/RIs planningTag hygiene and showback' ]; popula,
   r: true,' ico,
   n: '💸'' colo,
@@ -6445,7 +6345,6 @@ export const,
   e: '$249'' perio,
   d: '/month',' descriptio,
   n: 'Proactive optimization for AWS / Azure / GC,
-  P: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.' feature,
   s: [;' 'Rightsizing recommendations_anomaly detection_savings plan / RIs planning_tag hygiene and showback' ]; popula,
   r: true,' ico,
   n: '💸'' colo,
@@ -6487,7 +6386,6 @@ export const,
   s: 14,' setupTim,
   e: '1–3 days'' perio,
   d: '/month',' descriptio,
-  n: 'Centralize PII with field - level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.' feature,
   s: [;' 'Field - level encryption_tokenization APIsConsent enforcement_audit trail and reporting' ]; popula,
   r: false,' ico,
   n: '🔏'' colo,
@@ -6523,7 +6421,6 @@ export const,
   e: 'Graph - based anomalies with explainability for SMBs'' pric,
   e: '$159'' perio,
   d: '/month'' descriptio,
-  n: 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.' feature,
   s: [;' 'Graph - based anomaly detection_explainability reports_risk scoring APIWorkflow actions and webhooks' ]; popula,
   r: false,' ico,
   n: '🧠' ' lin,
@@ -6563,7 +6460,6 @@ export const,
   e: 'Turnkey HA, backups, PITR, and query tuning'' pric,
   e: '$199'' perio,
   d: '/month'' descriptio,
-  n: 'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.' feature,
   s: [' 'HA with automatic failoverContinuous backups and PITRSlow query insights and indexingEncryption and access controls' ]; popula,
   r: true,' ico,
   n: '🗃️'' colo,
@@ -6582,7 +6478,6 @@ export const,
   e: 'Turnkey HA, backups, PITR, and query tuning'' pric,
   e: '$199'' perio,
   d: '/month',' descriptio,
-  n: 'Production - grade PostgreSQL with high availability, automated backups, point - in - time recovery, and performance tuning insights.' feature,
   s: [;' 'HA with automatic failover_continuous backups and PITRSlow query insights and indexing_encryption and access controls' ]; popula,
   r: true,' ico,
   n: '🗃️'' colo,
@@ -6616,7 +6511,6 @@ export const,
   e: 'RUM, Core Web Vitals, and session replay'' pric,
   e: '$79'' perio,
   d: '/month'' descriptio,
-  n: 'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.' feature,
   s: [' 'Core Web Vitals dashboardsSession replay and heatmapsError tracking and sourcemapsA/B test impact analysis' ]; popula,
   r: true,' ico,
   n: '⚡'' colo,
@@ -6635,7 +6529,6 @@ export const,
   e: 'RUM, Core Web Vitals, and session replay'' pric,
   e: '$79'' perio,
   d: '/month',' descriptio,
-  n: 'Real - user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.' feature,
   s: [;' 'Core Web Vitals dashboards_session replay and heatmaps_error tracking and sourcemaps_a / B test impact analysis' ]; popula,
   r: true,' ico,
   n: '⚡'' colo,
@@ -6673,7 +6566,6 @@ export const,
   e: 'Programmatic SEO, audits, and internal linking automation'' pric,
   e: '$99'' perio,
   d: '/month'' descriptio,
-  n: 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.' feature,
   s: [;' 'Site audits and fixes_schema and sitemaps_programmatic pages_internal linking graph' ]; popula,
   r: false,' ico,
   n: '🔎' ' lin,
@@ -6718,7 +6610,6 @@ export const,
   e: 'Reliable webhooks with DLQ and replays'' pric,
   e: '$59'' perio,
   d: '/month'' descriptio,
-  n: 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.' feature,
   s: [;' 'DLQ and retry policies_inspector and redaction_signature verification_fan - out and transformations' ]; popula,
   r: true,' ico,
   n: '🔁' ' lin,
@@ -6769,7 +6660,6 @@ export const,
   s: 14,' setupTim,
   e: '30 minutes'' perio,
   d: '/month',' descriptio,
-  n: 'Serverless HTML - to - PDF rendering with page numbers, headers / footers, and safe fonts. Great for invoices and reports.' feature,
   s: [;' 'Serverless scale_template gallery_brand - safe fonts_webhook on completion' ]; popula,
   r: true,' ico,
   n: '📄'' colo,
@@ -6795,7 +6685,6 @@ export const,
   e: 'Traces, metrics, logs for APIs without the bloat'' pric,
   e: '$99'' perio,
   d: '/month'' descriptio,
-  n: 'Easy OpenTelemetry-based tracing, RED metrics, and error analytics with exporters to your stack.' feature,
   s: [' 'Auto-instrumentationRED dashboardsError analyticsExporters to APMs' ]; popula,
   r: false,' ico,
   n: '🛰️'' colo,
@@ -6822,7 +6711,6 @@ export const,
   e: 'Traces, metrics, logs for APIs without the bloat'' pric,
   e: '$99'' perio,
   d: '/month',' descriptio,
-  n: 'Easy OpenTelemetry - based tracing, RED metrics, and error analytics with exporters to your stack.' feature,
   s: [;' 'Auto - instrumentationRED dashboards_error analytics_exporters to APMs' ]; popula,
   r: false,' ico,
   n: '🛰️'' colo,
@@ -6860,7 +6748,6 @@ export const,
   e: 'SAML, OIDC, SCIM with turnkey onboarding'' pric,
   e: '$149'' perio,
   d: '/month'' descriptio,
-  n: 'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.' feature,
   s: [;' 'SAML and OIDCSCIM and JIT provisioning_branding and mapping_customer sandbox' ]; popula,
   r: true;' ico,
   n: '🔐' ' colo,
@@ -6896,7 +6783,6 @@ export const,
   e: 'Agentless discovery with CMDB sync'' pric,
   e: '$129'' perio,
   d: '/month'' descriptio,
-  n: 'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.' feature,
   s: [;' 'Network scans and SNMPSoftware inventory_change trackingCMDB integrations' ]; popula,
   r: false;' ico,
   n: '🛰️' ' colo,
@@ -6934,7 +6820,6 @@ export const,
   e: 'Questionnaires, evidence, and continuous monitoring'' pric,
   e: '$129'' perio,
   d: '/month'' descriptio,
-  n: 'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.' feature,
   s: [;' 'Questionnaire templates_evidence collection portal_continuous monitoring_risk scoring' ]; popula,
   r: true,' ico,
   n: '📋' ' lin,
@@ -7001,7 +6886,6 @@ export const,
   e: 'Personalized multi - touch outbound with real - time enrichment',' pric,
   e: '$129',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Automate prospect research, write context - aware messages, and schedule follow - ups across email and LinkedIn. Built - in A / B testing and domain warmup best practices.', feature,
   s: [, ' 'Prospect enrichment via public sources',' 'Personalized email generation',' 'Sequence and follow - up scheduling',' 'A / B testing and analytics',' 'SPF / DKIM / DMARC checks',' 'Inbox rotation support'], popula,
   r: false,' ico,
   n: '✉️', ' colo,
@@ -7035,7 +6919,6 @@ export const,
   e: 'CIS / NIST / Kyverno policy packs with drift remediation',' pric,
   e: '$399',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps - friendly with automatic fix PRs and evidence collection for audits.', feature,
   s: [,' 'Policy packs for CIS / NIST', ' 'Kubernetes and cloud posture',' 'Auto - remediation PRs',' 'Evidence collection and reports',' 'SOC2 / ISO 27001 export'], popula,
   r: true,' ico,
   n: '🛡️', ' 'Policy engine plus cloud/K8s scanners and fix generators.',' launchDat,
@@ -7071,7 +6954,6 @@ export const,
   e: '$99',' perio,
   d: '/month', descriptio,
   n:  ,' 'Monitor data pipelines end - to - en,
-  d: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.', feature,
   s: [, ' 'Freshness and volume checks',' 'Schema drift detection',' 'SLA and SLO tracking',' 'Incident routing to Slack / Teams'], popula,
   r: false,' ico,
   n: '🗄️', ' colo,
@@ -7105,7 +6987,6 @@ export const,
   e: 'Global edge caching, rate limiting, and anomaly detection',' pric,
   e: '$149',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero - downtime via traffic shadowing.', feature,
   s: [, ' 'Global CDN edge caching',' 'Dynamic rate limiting',' 'Anomaly and abuse detection',' 'Zero - downtime deploys with shadow traffic'], popula,
   r: true,' ico,
   n: '🛰️', ' colo,
@@ -7139,7 +7020,6 @@ export const,
   e:  ,' 'Session insights, funnel auto - segmentation, and LLM - based insights',' pric,
   e: '$129',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Turn product usage into insights with automatic funnel detection, LLM - based querying, and anomaly alerts. Works alongside Amplitude / GA4.', feature,
   s: [,' 'Auto - segmentation and cohorts', ' 'LLM query interface',' 'Retention and churn signals',' 'Anomaly alerts to Slack / Teams'], popula,
   r: false,' ico,
   n: '📊', ' colo,
@@ -7173,7 +7053,6 @@ export const,
   e: 'Self - serve answers with RAG, forms, and secure handoff',' pric,
   e: '$99',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi - channel widgets with brand controls.', feature,
   s: [,' 'Multi - channel widgets', ' 'Grounded answers with citations',' 'Secure human handoff',' 'Analytics and CSAT tracking'], popula,
   r: true,' ico,
   n: '💬', ' colo,
@@ -7208,7 +7087,6 @@ export const,
   e: '$249',' perio,
   d: '/month', descriptio,
   n:  ,' 'Proactive optimization for AWS / Azure / GC,
-  P: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.', feature,
   s: [, ' 'Rightsizing recommendations',' 'Anomaly detection',' 'Savings plan / RIs planning',' 'Tag hygiene and showback'], popula,
   r: true,' ico,
   n: '💸', ' colo,
@@ -7242,7 +7120,6 @@ export const,
   e: 'Tokenize PII and control access with audit trails',' pric,
   e: '$179',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Centralize PII with field - level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.', feature,
   s: [,' 'Field - level encryption', ' 'Tokenization APIs',' 'Consent enforcement',' 'Audit trail and reporting'], popula,
   r: false,' ico,
   n: '🔏', ' colo,
@@ -7276,7 +7153,6 @@ export const,
   e: 'Graph - based anomalies with explainability for SMBs',' pric,
   e: '$159',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.', feature,
   s: [,' 'Graph - based anomaly detection', ' 'Explainability reports',' 'Risk scoring API',' 'Workflow actions and webhooks'], popula,
   r: false,' ico,
   n: '🧠', ' colo,
@@ -7310,7 +7186,6 @@ export const,
   e: 'Turnkey HA, backups, PITR, and query tuning',' pric,
   e: '$199',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Production - grade PostgreSQL with high availability, automated backups, point - in - time recovery, and performance tuning insights.', feature,
   s: [, ' 'HA with automatic failover',' 'Continuous backups and PITR',' 'Slow query insights and indexing',' 'Encryption and access controls'], popula,
   r: true,' ico,
   n: '🗃️', ' colo,
@@ -7344,7 +7219,6 @@ export const,
   e: 'RUM, Core Web Vitals, and session replay',' pric,
   e: '$79',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Real - user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.', feature,
   s: [, ' 'Core Web Vitals dashboards',' 'Session replay and heatmaps',' 'Error tracking and sourcemaps',' 'A / B test impact analysis'], popula,
   r: true,' ico,
   n: '⚡', ' colo,
@@ -7378,7 +7252,6 @@ export const,
   e: 'Programmatic SEO, audits, and internal linking automation',' pric,
   e: '$99',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.', feature,
   s: [, ' 'Site audits and fixes',' 'Schema and sitemaps',' 'Programmatic pages',' 'Internal linking graph'], popula,
   r: false,' ico,
   n: '🔎', ' colo,
@@ -7412,7 +7285,6 @@ export const,
   e: 'Reliable webhooks with DLQ and replays',' pric,
   e: '$59',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.', feature,
   s: [, ' 'DLQ and retry policies',' 'Inspector and redaction',' 'Signature verification',' 'Fan - out and transformations'], popula,
   r: true,' ico,
   n: '🔁', ' colo,
@@ -7446,7 +7318,6 @@ export const,
   e: 'Fast HTML - to - PDF with brand - safe templates',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Serverless HTML - to - PDF rendering with page numbers, headers / footers, and safe fonts. Great for invoices and reports.', feature,
   s: [, ' 'Serverless scale',' 'Template gallery',' 'Brand - safe fonts',' 'Webhook on completion'], popula,
   r: true,' ico,
   n: '📄', ' colo,
@@ -7480,7 +7351,6 @@ export const,
   e: 'Traces, metrics, logs for APIs without the bloat',' pric,
   e: '$99',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Easy OpenTelemetry - based tracing, RED metrics, and error analytics with exporters to your stack.', feature,
   s: [,' 'Auto - instrumentation', ' 'RED dashboards',' 'Error analytics',' 'Exporters to APMs'], popula,
   r: false,' ico,
   n: '🛰️', ' colo,
@@ -7514,7 +7384,6 @@ export const,
   e: 'SAML, OIDC, SCIM with turnkey onboarding',' pric,
   e: '$149',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.', feature,
   s: [, ' 'SAML and OIDC',' 'SCIM and JIT provisioning',' 'Branding and mapping',' 'Customer sandbox'], popula,
   r: true,' ico,
   n: '🔐', ' colo,
@@ -7548,7 +7417,6 @@ export const,
   e: 'Agentless discovery with CMDB sync',' pric,
   e: '$129',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.', feature,
   s: [, ' 'Network scans and SNMP',' 'Software inventory',' 'Change tracking',' 'CMDB integrations'], popula,
   r: false,' ico,
   n: '🛰️', ' colo,
@@ -7582,7 +7450,6 @@ export const,
   e: 'Questionnaires, evidence, and continuous monitoring',' pric,
   e: '$129',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.', feature,
   s: [, ' 'Questionnaire templates',' 'Evidence collection portal',' 'Continuous monitoring',' 'Risk scoring'], popula,
   r: true,' ico,
   n: '📋', ' colo,
@@ -7617,7 +7484,6 @@ export const,
   e: '$199', perio,
   d: '/month',' descriptio,
   n: 'Production-grade observability for LLM,
-  apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI-compatible and open-source models.', feature,
   s: [' 'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters' ];' popula,
   r: true, ico,
   n: '📈',' colo,
@@ -7651,7 +7517,6 @@ export const,
   e: 'Personalized multi-touch outbound with real-time enrichment'' pric,
   e: '$129'' perio,
   d: '/month' descriptio,
-  n:' 'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.' feature,
   s: [ review,
   s: 58 } ' i,
   d: 'security-posture-as-code'' nam,
@@ -7659,7 +7524,6 @@ export const,
   e: 'CIS/NIST/Kyverno policy packs with drift remediation'' pric,
   e: '$399'' perio,
   d: '/month' descriptio,
-  n:' 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.' feature,
   s: [ review,
   s: 14 } ' i,
   d: 'etl-observability-starter'' nam,
@@ -7668,7 +7532,6 @@ export const,
   e: '$99'' perio,
   d: '/month' descriptio,
   n:' 'Monitor data pipelines end-to-en,
-  d: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.' feature,
   s: [ review,
   s: 12 } ' i,
   d: 'api-performance-shield'' nam,
@@ -7676,7 +7539,6 @@ export const,
   e: 'Global edge caching, rate limiting, and anomaly detection'' pric,
   e: '$149'' perio,
   d: '/month' descriptio,
-  n:' 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.' feature,
   s: [ review,
   s: 9 } ' i,
   d: 'ai-product-analytics'' nam,
@@ -7684,7 +7546,6 @@ export const,
   e:' 'Session insights, funnel auto-segmentation, and LLM-based insights'' pric,
   e: '$129'' perio,
   d: '/month' descriptio,
-  n:' 'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.' feature,
   s: [ review,
   s: 20 } ' i,
   d: 'ai-support-deflection'' nam,
@@ -7692,7 +7553,6 @@ export const,
   e: 'Self-serve answers with RAG, forms, and secure handoff'' pric,
   e: '$99'' perio,
   d: '/month' descriptio,
-  n:' 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.' feature,
   s: [ review,
   s: 48 } ' i,
   d: 'cloud-cost-autopilot'' nam,
@@ -7701,7 +7561,6 @@ export const,
   e: '$249'' perio,
   d: '/month' descriptio,
   n:' 'Proactive optimization for AWS/Azure/GC,
-  P: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.' feature,
   s: [ review,
   s: 11 } ' i,
   d: 'privacy-vault'' nam,
@@ -7709,7 +7568,6 @@ export const,
   e: 'Tokenize PII and control access with audit trails'' pric,
   e: '$179'' perio,
   d: '/month' descriptio,
-  n:' 'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.' feature,
   s: [ review,
   s: 7 } ' i,
   d: 'ai-fraud-detection-lite'' nam,
@@ -7717,7 +7575,6 @@ export const,
   e: 'Graph-based anomalies with explainability for SMBs'' pric,
   e: '$159'' perio,
   d: '/month' descriptio,
-  n:' 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.' feature,
   s: [ review,
   s: 8 } ' i,
   d: 'managed-postgres-ha-pro'' nam,
@@ -7725,7 +7582,6 @@ export const,
   e: 'Turnkey HA, backups, PITR, and query tuning'' pric,
   e: '$199'' perio,
   d: '/month' descriptio,
-  n:' 'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.' feature,
   s: [ review,
   s: 5 } ' i,
   d: 'browser-performance-monitor-pro'' nam,
@@ -7733,7 +7589,6 @@ export const,
   e: 'RUM, Core Web Vitals, and session replay'' pric,
   e: '$79'' perio,
   d: '/month' descriptio,
-  n:' 'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.' feature,
   s: [ review,
   s: 6 } ' i,
   d: 'seo-automation-studio'' nam,
@@ -7741,7 +7596,6 @@ export const,
   e: 'Programmatic SEO, audits, and internal linking automation'' pric,
   e: '$99'' perio,
   d: '/month' descriptio,
-  n:' 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.' feature,
   s: [ review,
   s: 4 } ' i,
   d: 'webhook-relay-replay-pro'' nam,
@@ -7749,48 +7603,27 @@ export const,
   e: 'Reliable webhooks with DLQ and replays'' pric,
   e: '$59'' perio,
   d: '/month' descriptio,
-  n:' 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.' feature,
-  s: []; ],' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  newRealServices: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
   g: 4.8} review,
-  s: 22} }; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 58} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 14} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 9} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 20} }; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 48} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 11} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 8} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 10} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
-  s: 2} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
   s: 3} } ]; '

@@ -585,7 +585,6 @@ const HomePage: React.FC = memo(() => {
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cloud Migration</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Seamless cloud migration with AWS, Azure, and GCP. 99.9% uptime guarantee and 24/7 expert support.
                 </p>
                 <div className="text-center"></div>
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">$1,299/month</div>
@@ -958,7 +957,6 @@ const HomePage: React.FC = memo(() => {
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Robotics</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Intelligent robotic solutions for manufacturing, healthcare, and service industries.
                 </p>
                 <div className="text-center"></div>
                   <div className="text-lg font-bold text-cyan-400 mb-2">Custom Pricing</div>

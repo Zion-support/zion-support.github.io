@@ -10,7 +10,6 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
         <meta, nam, e='description'
           conte, n, t='AI, 202, 5: Operational, Trust, Scorecards v3 - Advanced, monitoring, and reliability, strategie, s'
         />)
-        <link, re, l='canonic, a, l')
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-01-operation a l-tru s t-v3')
         />),
       </Helm, e, t>
@@ -35,5 +34,4 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
         </div>
       </div>
     </d, i, v > );
-export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
  }

@@ -23,7 +23,6 @@ $4}
   },
 
   twitte,
-  r: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   car,
@@ -38,7 +37,6 @@ $4}
   s://ziontechgroup.com/images/ai-cost-optimization-2026.jpg']
   },
   robot,
-  s: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   inde,
@@ -46,7 +44,6 @@ $4}
     follo,
   w: true,
     googleBo,
-  t: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   inde,
@@ -65,7 +62,6 @@ $4}
 };
 
   alternate,
-  s: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 

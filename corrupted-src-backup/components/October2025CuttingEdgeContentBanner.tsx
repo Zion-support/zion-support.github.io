@@ -1,15 +1,9 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";';
-const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/20">";
@@ -96,7 +90,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         {/* Featured, Articles, Grid */}"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">""
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
-          {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
               to={artic, l, e.li, n, k}"
               classNa, m, e="group, relative, overflow-hidden, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2xl, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
@@ -143,7 +136,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
                   {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (</div>
                     <sp, a, n
   k, e, y={i, d, x}
-                  {/* TODO: Fix JSX expression */}
   k, e, y={i, d, x}"
                       classNa, m, e="te, x, t-xs, p, x-2, p, y-1, rounde, d-md, b, g-sla, t, e-7, 0, 0/50, tex, t-gr, a, y-300, border, border-sla, t, e-6, 0, 0/50"
                     ></sp>
@@ -151,7 +143,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
                     </sp, a, n>)
                   ))}
                 </d, i, v>
-                {/* Read, More, Link */}"
                 <div, className="flex, item, s-center, tex, t-sm, fon, t-semibold, tex, t-purp, l, e-400, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">"
                   Read, Full, Article;</div>
                   <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
@@ -195,7 +186,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
   r:sca, l, e-1, 0, 5"
             ></Li>"
               <span, className="flex, item, s-center, ga, p-2">";
-                Explore, All, Latest Conte, n, t;</span>
                 <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
               </sp, a, n>
@@ -203,7 +193,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
             <Li, n, k;
   to="/conta, c, t"
               classNa, m, e="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/80, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-500, hov, e;
-                Explore, All, Latest Conte, n, t;"
                 <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
                 <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
               </sp, a, n>
@@ -232,7 +221,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
           </p>
         </d, i, v>
       </d, i, v>
-      <sty, l, e>{/* TODO: Fix JSX expression */}
           0%, 1, 0, 0% { transfo, r, m: transla, t, e(0, 0) sca, l, e(1); }
           33% { transfo, r, m: transla, t, e(30, p, x, -50, p, x) sca, l, e(1.1); }
           66% { transfo, r, m: transla, t, e(-20, p, x, 20, p, x) sca, l, e(0.9); }
@@ -246,15 +234,10 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         .animati, o, n-del, a, y-40, 0, 0 {
           animati, o, n-del, a, y: 4s;
           animati, o, n: blob, 7s, infinite;
-        .anima, t, e-bl, o, b {/* TODO: Fix JSX expression */}
         }
-        .animati, o, n-del, a, y-20, 0, 0 {/* TODO: Fix JSX expression */}
         }
-        .animati, o, n-del, a, y-40, 0, 0 {/* TODO: Fix JSX expression */}
         }
-        .animati, o, n-del, a, y-20, 0, 0 {/* TODO: Fix JSX expression */}
         }
-        .animati, o, n-del, a, y-40, 0, 0 {/* TODO: Fix JSX expression */}
         }`
       `}</sty, l, e>`;`
     </d, i, v>

@@ -134,7 +134,6 @@ export default function About() {
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Integrity</h3>
                   <p className="text-gray-600">
-export default function About() {/* TODO: Fix JSX expression */}
 }
   return (<>
       <Head></Head>

@@ -14,7 +14,6 @@ export interface EnvConfig {// TODO: Add content;}
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SITE_URL?: string;
 }
-class EnvValidator {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 
@@ -60,7 +59,6 @@ ${validation.errors.join('
     }
     if (validation.warnings.length > 0) {const nodeEnv = process.env['NODE_ENV'];}
     const validEnvs = ['development', 'production', 'test'];
-    if (!nodeEnv) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //       this.errors.push('NODE_ENV is not set')
@@ -79,10 +77,8 @@ ${validation.errors.join('
 }
     const nodeEnv = this.getNodeEnv()
     // In production, these should be set;
-    if (nodeEnv === 'production') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      if (!process.env['NEXT_PUBLIC_SITE_URL']) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //         this.warnings.push()
@@ -110,7 +106,6 @@ ${validation.errors.join('
 // Export singleton instance;
 export const envValidator = new EnvValidator()
 // Export convenience function;
-export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   return envValidator.getConfig()

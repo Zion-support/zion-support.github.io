@@ -15,7 +15,6 @@ import Footer from '../components/Footer';
   n: '',
       pric,
   e: 'Starting at $3,500/month',
-      feature,
   s: ['Device provisioning', 'Remote monitoring', 'Firmware updates', 'Device analytics', 'Security management'],
       benefit,
   s: ['Reduce management overhead by 70%', 'Improve device reliability', 'Enable remote operations'],
@@ -34,7 +33,6 @@ import Footer from '../components/Footer';
   n: '',
       pric,
   e: 'Starting at $4,500/month',
-      feature,
   s: ['Edge analytics', 'Real-time processing', 'Local data storage', 'Offline capabilities', 'Edge AI'],
       benefit,
   s: ['Reduce latency by 90%', 'Lower bandwidth costs', 'Enable offline operations'],
@@ -52,7 +50,6 @@ import Footer from '../components/Footer';
   n: '',
       pric,
   e: 'Starting at $12,000/month',
-      feature,
   s: ['Traffic management', 'Energy monitoring', 'Environmental sensors', 'Public safety', 'Citizen services'],
       benefit,
   s: ['Improve city efficiency', 'Reduce energy consumption', 'Enhance citizen experience'],
@@ -70,7 +67,6 @@ import Footer from '../components/Footer';
   n: '',
       pric,
   e: 'Starting at $3,200/month',
-      feature,
   s: ['Stream processing', 'Real-time dashboards', 'Anomaly detection', 'Predictive analytics', 'Alert systems'],
       benefit,
   s: ['Make faster decisions', 'Identify issues early', 'Optimize operations'],
@@ -86,7 +82,6 @@ import Footer from '../components/Footer';
   n: '',
       pric,
   e: 'Starting at $5,500/month',
-      feature,
   s: ['Vibration analysis', 'Temperature monitoring', 'Performance tracking', 'Failure prediction', 'Maintenance scheduling'],
       benefit,
   s: ['Prevent unplanned downtime', 'Reduce maintenance costs', 'Extend equipment life'],
@@ -104,7 +99,6 @@ import Footer from '../components/Footer';
   n: '',
       pric,
   e: 'Starting at $4,000/month',
-      feature,
   s: ['Soil monitoring', 'Crop health analysis', 'Weather tracking', 'Irrigation control', 'Yield optimization'],
       benefit,
   s: ['Increase crop yields by 25%', 'Reduce water usage by 30%', 'Optimize fertilizer use'],
@@ -122,7 +116,6 @@ import Footer from '../components/Footer';
   n: '',
       pric,
   e: 'Starting at $15,000/project',
-      feature,
   s: ['Hardware design', 'Firmware development', 'Prototyping', 'Testing & validation', 'Manufacturing support'],
       benefit,
   s: ['Custom solutions', 'Competitive advantage', 'Optimized performance'],
@@ -138,7 +131,6 @@ titl,
   n: 'Comprehensive data management for IoT with storage, processing, and analytics.',
       ico,
   n: '🗄️',
-      feature,
   s: ['Data ingestion', 'Storage optimization', 'Data processing', 'Quality management', 'Analytics'],
       benefit,
   s: ['Handle massive data volumes', 'Ensure data quality', 'Enable advanced analytics'],
@@ -200,7 +192,6 @@ Schedule Demo;
           
           </h2>"
               <p className="text-xl text-gray-600"></p>
-Expert IoT engineers delivering scalable, secure, and intelligent connected solutions;"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>"
@@ -247,7 +238,6 @@ Save up to 40% vs market rates;"
                         <h4 className="font-semibold text-gray-900 mb-2">Key,
   Features:</h4>"
                         <ul className="space-y-1"></ul>
-                          {service.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                               {feature}

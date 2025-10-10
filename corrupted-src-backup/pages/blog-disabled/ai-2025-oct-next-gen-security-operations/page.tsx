@@ -1,4 +1,3 @@
-impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
@@ -10,12 +9,10 @@ export default function NextGenSecurityOperations20, 2, 5() {
           S, u, b-Second, Respons, e, $2.3B+ Protecti, o, n | Zion, Tech, Group;
         </title>
         <meta, nam, e = 'description'
-          conte, n, t='Deploy, autonomous, AI security, operations, that detect, threats, in milliseco, n, d, s, respond, automaticall, y, and, prevent, breaches before, they, happen. Achieve, 9, 9.97% detection, accurac, y, reduce, incident, response time, by, 95%, and, protec, t $2.3 B+ in, enterprise, assets.'
         /></meta>
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='AI, securi, t, y, autonomous, SecOp, s, threat, detectio, n, incident, respons, e, cybersecurity, A, I, ze, r, o-day, protectio, n, security, automatio, n, AI-powered, defens, e'
         /></meta>
-        <link, re, l = 'canonic, a, l'
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-ne x t-g e n-securi t y-operatio n s',
         />,
       </Helm, e, t>
@@ -89,7 +86,6 @@ export default function NextGenSecurityOperations20, 2, 5() {
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600 hover:to-pink-600 transition-all shadow-lg">
                 Schedule Your Security Assessment;
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />);
-export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX expression */}
 }
   </div>  </div>
 </article>
@@ -177,21 +173,15 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
   d: threat, hunt, i, n, g, predictive, analytic, s;
                   </li>
               <p, classNam, e='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'></p>
-                Leading, enterprises, have achieved, security, postures that, were, unimaginable just, two, years a, g, o: ne, a, r-perfect, threat, detecti, o, n,
-                s, u, b-second, response, times, and, dramatically, reduced cos, t, s. The, question, is not, whether, to adopt, autonomous, SecOps, but, how, quickly you, can, deploy it, before, the next, breac, h.
                 Schedule, Your, Security Assessme, n, t;
                 Schedule, Your, Security Assessme, n, t</p>
                 <ArrowLeft, classNam, e='ml-2 h-5 w-5, rotat, e-1, 8, 0' />
               <p, className='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
-                Leading, enterprises, have achieved, security, postures that, were, unimaginable just, two, years a, g, o: ne, a, r-perfect, threat, detecti, o, n,
-                s, u, b-second, response, times, and, dramatically, reduced cos, t, s. The, question, is not, whether, to adopt, autonomous, SecOps, but, how, quickly you, can, deploy it, before, the next, breac, h.
                 Schedule, Your, Security Assessme, n, t;
                 Schedule, Your, Security Assessme, n, t</p>
                 <ArrowLeft, className='ml-2 h-5 w-5, rotat, e-1, 8, 0' />
                 Schedule, Your, Security Assessme, n, t;
                 <ArrowLeft, classNam, e='ml-2 h-5 w-5, rotat, e-1, 8, 0' /></ArrowLeft>
               <p, className='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'></p>
-                Leading, enterprises, have achieved, security, postures that, were, unimaginable just, two, years a, g, o: ne, a, r-perfect, threat, detecti, o, n,
-                s, u, b-second, response, times, and, dramatically, reduced cos, t, s. The, question, is not, whether, to adopt, autonomous, SecOps, but, how, quickly you, can, deploy it, before, the next, breac, h.
                 Schedule, Your, Security Assessme, n, t;
                 <ArrowLeft, className='ml-2 h-5 w-5, rotat, e-1, 8, 0' /></ArrowLeft>

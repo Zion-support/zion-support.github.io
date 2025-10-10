@@ -18,7 +18,6 @@
     descriptio,
   n: unknown,
       'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.',
-    feature,
   s: [,
       'Idle detection',
       'Schedule generator',
@@ -125,7 +124,6 @@
     descriptio,
   n: unknown,
       'Collects slow queries and proposes safe index changes with before / after impact analysis.',
-    feature,
   s: [,
       'Slow query capture',
       'Index suggestions',
@@ -592,7 +590,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'
-		feature,
   s: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'];
 		popula,
   r: true;
@@ -606,7 +603,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
 		descriptio,
   n: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',
-    feature,
   s: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popula,
   r: true,
 		ico,
@@ -670,7 +666,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Smart schedules and rightsizing recommendations for EC2/GKE/AKS/EKS with Terraform exports.'
-		feature,
   s: ['Idle detectionSchedule generatorIaC exportAlerting'];
 		popula,
   r: true;
@@ -737,7 +732,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Collects slow queries and proposes safe index changes with before/after impact analysis.'
-		feature,
   s: ['Slow query captureIndex suggestionsImpact simulationCapacity forecast'];
 		popula,
   r: false;
@@ -805,7 +799,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'
-  feature,
   s: ['Policy suites_jailbreak corpora_regression gates_dashboard & alerts'];
   popula,
   r: true;
@@ -872,7 +865,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.'
-  feature,
   s: ['Idle detection_schedule generatorIaC export_alerting'];
   popula,
   r: true;
@@ -939,7 +931,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Collects slow queries and proposes safe index changes with before / after impact analysis.'
-  feature,
   s: ['Slow query capture_index suggestions_impact simulation_capacity forecast'];
   popula,
   r: false;
@@ -998,7 +989,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   g: 4.5;
 		review,
   s: 9,
-// const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
@@ -1006,17 +996,14 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 };
 export const,
   real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
-	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 18}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 12}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 9}
@@ -1063,7 +1050,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 40;
 		rating: 4.7}
 		reviews: 18}
-// const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
@@ -1071,17 +1057,14 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 };
 export const,
   real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
-	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 18}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 12}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 9}
@@ -1093,7 +1076,6 @@ i,
   e: 'Rightsizing & schedules with IaC exports',' pric,
   e: '$99',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.', feature,
   s: [, ' 'Idle detection',' 'Schedule generator',' 'IaC export',' 'Alerting'], popula,
   r: true,' ico,
   n: '💸', ' colo,
@@ -1127,7 +1109,6 @@ i,
   e: 'AI index recommendations for Postgres / MySQL',' pric,
   e: '$79',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Collects slow queries and proposes safe index changes with before / after impact analysis.', feature,
   s: [, ' 'Slow query capture',' 'Index suggestions',' 'Impact simulation',' 'Capacity forecast'], popula,
   r: false,' ico,
   n: '🗄️', ' colo,
@@ -1197,14 +1178,12 @@ i,
   g: 4.5, review,
   s: 9}; ]; ' perio,
   d: '/month'' descriptio,
-  n: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'' feature,
   s: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts']; popula,
   r: true,' ico,
   n: '🛡️'' colo,
   r: 'from-rose-600 to-red-700'' textColo,
   r: 'text-rose-300' ' perio,
   d: '/month',' descriptio,
-  n: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',' feature,
   s: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popula,
   r: true,' ico,
   n: '🛡️', colo,
@@ -1238,7 +1217,6 @@ i,
   e: 'Rightsizing & schedules with IaC exports'' pric,
   e: '$99'' perio,
   d: '/month'' descriptio,
-  n: 'Smart schedules and rightsizing recommendations for EC2/GKE/AKS/EKS with Terraform exports.'' feature,
   s: ['Idle detectionSchedule generatorIaC exportAlerting']; popula,
   r: true,' ico,
   n: '💸'' colo,
@@ -1272,7 +1250,6 @@ i,
   e: 'AI index recommendations for Postgres/MySQL'' pric,
   e: '$79'' perio,
   d: '/month'' descriptio,
-  n: 'Collects slow queries and proposes safe index changes with before/after impact analysis.'' feature,
   s: ['Slow query captureIndex suggestionsImpact simulationCapacity forecast']; popula,
   r: false,' ico,
   n: '🗄️'' colo,
@@ -1306,7 +1283,6 @@ i,
   e: 'Continuous LLM red‑teaming and safety scoring'' pric,
   e: '$149'' perio,
   d: '/month',' descriptio,
-  n: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'' feature,
   s: ['Policy suites_jailbreak corpora_regression gates_dashboard & alerts']; popula,
   r: true,' ico,
   n: '🛡️'' colo,
@@ -1340,7 +1316,6 @@ i,
   e: 'Rightsizing & schedules with IaC exports'' pric,
   e: '$99'' perio,
   d: '/month',' descriptio,
-  n: 'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.'' feature,
   s: ['Idle detection_schedule generatorIaC export_alerting']; popula,
   r: true,' ico,
   n: '💸'' colo,
@@ -1374,7 +1349,6 @@ i,
   e: 'AI index recommendations for Postgres / MySQL'' pric,
   e: '$79'' perio,
   d: '/month',' descriptio,
-  n: 'Collects slow queries and proposes safe index changes with before / after impact analysis.'' feature,
   s: ['Slow query capture_index suggestions_impact simulation_capacity forecast']; popula,
   r: false,' ico,
   n: '🗄️'' colo,
@@ -1404,26 +1378,18 @@ i,
   g: 4.5, review,
   s: 9} ratin,
   g: 4.5,
-  reviews: 9 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  real2029Q1Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 18} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 9} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  real2029Q1Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 18} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
   s: 9} } ]; '

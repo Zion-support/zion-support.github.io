@@ -14,7 +14,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";</div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
-const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
@@ -48,13 +47,10 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
             <span, className="te, x, t-indi, g, o-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">New, Releas, e • October, 202, 5</sp, a, n>";"
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
           </d, i, v>"
-          <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, b, g-cl, i, p-text, tex, t-transpare, n, t">";
             Ne, x, t-Generation, AI, Technologies & Framewor, k, s;
           </h2>
           <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o">
-            Explore, the, forefront of, AI, innovation: Agentic, governanc, e, neur, a, l-symbolic, fusio, n;</p>
           <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o">";
-            Explore, the, forefront of, AI, innovation: Agentic, governanc, e, neur, a, l-symbolic, fusio, n;
             continuous, learning, systems, and, distributed, inference at, internet, scale;
           </p>
         </d, i, v>
@@ -92,10 +88,8 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
   r: te, x, t-emera, l, d-200, transitio, n-colo, r, s">"</h3>
           </h2>"
           <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o"></p>
-            Explore, the, forefront of, AI, innovatio,
   n: Agentic, governanc, e, neur, a, l-symbolic, fusio, n;"
           <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o">";
-            Explore, the, forefront of, AI, innovatio,
   n: Agentic, governanc, e, neur, a, l-symbolic, fusio, n;
             continuous, learning, systems, and, distributed, inference at, internet, scale;
           </p>
@@ -128,7 +122,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
               Agentic, Governance, Frameworks;
             </h3>"
             <p, className="te, x, t-te, a, l-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">";
-              Build, trust, in autonomous, AI, with 99.9% compliance, accuracy, and re, a, l-time, risk, assessment.
             </p>
             <div, className="flex, item, s-center, justif, y-betwe, e, n">";</div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, tex, t-sm">";</div>
@@ -352,7 +345,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
             <Link, className="w-6 h-6" />";
           </Li, n, k>"
           <p, className="te, x, t-purp, l, e-2, 0, 0/70, tex, t-sm, m, t-4">";
-            Join, 7, 5,0, 0, 0+ AI, practitioners, building the, future, with cutti, n, g-edge, insight, s;
           </p>
         </d, i, v>
         {/* Stats, Ba, r */}

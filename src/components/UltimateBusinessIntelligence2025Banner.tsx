@@ -159,10 +159,6 @@ export default UltimateBusinessIntelligence2025Banner;
 
 
 'use client';
-import React, { useState, useEffect } from 'react';
-const UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
-import { Link } from 'react-router-dom';
-const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -171,7 +167,6 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   i,
@@ -186,7 +181,6 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
       typ,
   e: 'Blog Post',
       metric,
-  s: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   efficienc,
@@ -247,13 +241,9 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
           {[}
   // TOD,
   O: Add items]
-            {/* TODO: Fix JSX expression */}
   l: 'Enterprise Clients' },
-            {/* TODO: Fix JSX expression */}
   l: 'Average ROI' },
-            {/* TODO: Fix JSX expression */}
   l: 'Success Rate' },
-            {/* TODO: Fix JSX expression */}
   l: 'Data Points Processed' }].map((stat, index) => ()
             
           

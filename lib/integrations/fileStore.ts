@@ -7,7 +7,6 @@ const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
 
 
-function ensureDataDir(): void {/* TODO: Fix JSX expression */}
   e: true });
   }
 
@@ -92,7 +91,6 @@ export function writeState(
 
 }
 
-export interface FileStoreOptions {/* TODO: Fix JSX expression */}
 }
 
 export class FileStore {
@@ -112,7 +110,6 @@ export class FileStore {
   async writeFile(filePath: string, content: string): Promise<void> {,
 //     const fullPath = path.join(this.basePath, filePath);
     const _dir = path.dirname(fullPath);
-export class FileStore {/* TODO: Fix JSX expression */}
   }
 
 

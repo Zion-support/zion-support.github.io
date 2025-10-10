@@ -1,11 +1,9 @@
 
 
 'use client';
-interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   servic,
-  e: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -16,7 +14,6 @@ interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
   n: string;
     pric,
   e: string;,
-    feature,
   s: string[];,
     benefit,
   s: string[];
@@ -77,7 +74,6 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
           <h4 className="text-sm font-semibold text-white mb-2">Key,
   Features:</h4>"
           <ul className="space-y-1"></ul>
-            {service.features.slice(0, 4).map((feature, index) => ()}"
           <li key={index} className="flex items-center text-xs text-gray-300"></li>"
                 <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                 {feature}
@@ -110,7 +106,6 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
         </div>"
         <div className="pt-4"></div>
           <a></a>
-            href={/* TODO: Fix JSX expression */}
   o:kleber@ziontechgroup.com'}"
             className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg,
   hover:from-cyan-600,"

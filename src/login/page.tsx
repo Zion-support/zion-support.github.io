@@ -8,7 +8,6 @@ import Footer from '../components/Footer';
 
 
 'use client';
-import React, { useState } from 'react';
 const LoginPage: React.FC = () => {
   const [formData, setFormData] = useState({
     email: '',
@@ -94,7 +93,6 @@ $4}
 
   );
 };
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   emai,
@@ -107,18 +105,15 @@ $4}
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const _handleInputChange = (e: React.ChangeEvent;)
-          <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value;)
     }));
   };
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     e.preventDefault();
@@ -133,7 +128,6 @@ $4}
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -143,7 +137,6 @@ $4}
       descriptio,
   n: 'Bank-level security with multi-factor authentication'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -153,7 +146,6 @@ $4}
       descriptio,
   n: 'Round-the-clock support for all your needs'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -320,7 +312,6 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
               </div>
 
               <div className="space-y-6">
-                {features.map((feature, index) => (
                   <div key={index} className="flex items-start">
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <feature.icon className="w-6 h-6 text-cyan-400" />
@@ -492,7 +483,6 @@ type="submit" disabled={isLoading}
           </p>
               </div>"
               <div className="space-y-6"></div>
-                {features.map((feature, index) => ()}"
           <div key={index} className="flex items-start"></div>"
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"></div>"
                       <feature.icon className="w-6 h-6 text-cyan-400" /></feature>

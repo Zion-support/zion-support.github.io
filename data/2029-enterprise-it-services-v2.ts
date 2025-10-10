@@ -43,7 +43,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [,
     id: 'autonomous-devops-platform',
     name: 'Autonomous DevOps Platform',
     description:,
-export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   e: string}
     addres,
   s: string}
@@ -56,12 +55,10 @@ export const,
   e: 'Autonomous DevOps Platform'
     descriptio,
   n:
-      'Fully autonomous DevOps platform that automatically manages infrastructure, deployments, monitoring, and optimization without human intervention, reducing operational overhead by 90%.'
     categor,
   y: ['DevOps', 'Automation', 'Infrastructure', 'CI/CD', 'Monitoring']
     pric,
   e: '$6,999/month'
-    feature,
   s: [;
       'Autonomous infrastructure management'
       'Self-healing systems'
@@ -212,7 +209,6 @@ export const,
     ]
     pric,
   e: '$18,999/month'
-    feature,
   s: [;
       'Quantum computing resources'
       'Quantum-safe encryption'
@@ -364,7 +360,6 @@ export const,
     ]
     pric,
   e: '$9,999/month'
-    feature,
   s: [;
       'AI-powered threat detection'
       'Real-time security monitoring'
@@ -427,7 +422,6 @@ export const,
     id: 'autonomous-it-operations-center',
     name: 'Autonomous IT Operations Center',
     description:,
-      'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.'
     category: [
       'IT Operations'
       'Automation',
@@ -509,7 +503,6 @@ export const,
   e: 'Autonomous IT Operations Center'
     descriptio,
   n:
-      'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.'
     categor,
   y: [,
       'IT Operations'
@@ -520,7 +513,6 @@ export const,
     ]
     pric,
   e: '$14,999/month'
-    feature,
   s: [;
       'Autonomous infrastructure management'
       'Self-healing systems'
@@ -741,7 +733,6 @@ export const,
   y: ['CybersecurityAIEnterprise SecurityThreat DetectionAutomation'],
     pric,
   e: '$9,999/month',
-    feature,
   s: [;
       'AI-powered threat detectionReal-time security monitoringAutomated incident responsePredictive threat analyticsBehavioral analysisZero-day threat protectionSecurity automationCompliance management'
     ];
@@ -840,12 +831,10 @@ export const,
   d: 'autonomous-it-operations-center', nam,
   e: 'Autonomous IT Operations Center',
     descriptio,
-  n: 'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.',
     categor,
   y: ['IT OperationsAutomationInfrastructureMonitoringManagement'],
     pric,
   e: '$14,999/month',
-    feature,
   s: [;
       'Autonomous infrastructure managementSelf-healing systemsPredictive maintenancePerformance optimizationCapacity planningAutomated troubleshootingIntelligent resource allocationContinuous optimization'
     ];
@@ -1048,15 +1037,12 @@ export const,
   }
 ];
 ;
-export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   e: string} addres,
   s: string} } export const,
   enterpriseITServices2029V2: EnterpriseITService2029V2[] = [ i,
   d: 'autonomous-devops-platform'' nam,
   e: 'Autonomous DevOps Platform' descriptio,
-  n:' 'Fully autonomous DevOps platform that automatically manages infrastructure, deployments, monitoring, and optimization without human intervention, reducing operational overhead by 90%.'' categor,
   y: ['DevOps', 'Automation', 'Infrastructure', 'CI/CD', 'Monitoring']' pric,
-  e: '$6,999/month' feature,
   s: [' 'Autonomous infrastructure management'' 'Self-healing systems'' 'Automated deployment pipelines'' 'Intelligent monitoring and alerting'' 'Performance optimization'' 'Security automation'' 'Cost optimization'' 'Predictive maintenance' ] benefit,
   s: [' 'Reduce operational costs by 90%'' 'Improve system reliability by 99.9%'' 'Accelerate deployment cycles by 10x'' 'Eliminate manual interventions'' 'Enhance security posture'' 'Optimize resource utilization' ] useCase,
   s: [' 'Enterprise DevOps transformation'' 'Cloud infrastructure management'' 'Microservices deployment'' 'Continuous integration/deployment'' 'Infrastructure automation'' 'Performance optimization' ]' marketSiz,
@@ -1095,7 +1081,6 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   e: 'Quantum Cloud Infrastructure' descriptio,
   n:' 'Next-generation quantum-enhanced cloud infrastructure that provides quantum computing capabilities, quantum-safe security, and unprecedented performance for enterprise applications.' categor,
   y: [' 'Cloud Computing'' 'Quantum Computing'' 'Infrastructure'' 'Security'' 'Performance' ]' pric,
-  e: '$18,999/month' feature,
   s: [' 'Quantum computing resources'' 'Quantum-safe encryption'' 'Hybrid quantum-classical computing'' 'Quantum networking capabilities'' 'Quantum storage solutions'' 'Quantum security protocols'' 'Performance optimization'' 'Scalable quantum resources' ] benefit,
   s: [' 'Quantum computing capabilities'' 'Unbreakable security'' 'Exponential performance gains'' 'Future-proof infrastructure'' 'Competitive advantage'' 'Long-term investment value' ] useCase,
   s: [' 'Scientific computing'' 'Financial modeling'' 'Cryptography research'' 'Machine learning acceleration'' 'Optimization problems'' 'Research and development' ]' marketSiz,
@@ -1134,7 +1119,6 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   e: 'AI-Powered Enterprise Security' descriptio,
   n:' 'Advanced AI-driven enterprise security platform that provides real-time threat detection, automated response, and predictive security analytics to protect against evolving cyber threats.' categor,
   y: [' 'Cybersecurity'' 'AI'' 'Enterprise Security'' 'Threat Detection'' 'Automation' ]' pric,
-  e: '$9,999/month' feature,
   s: [' 'AI-powered threat detection'' 'Real-time security monitoring'' 'Automated incident response'' 'Predictive threat analytics'' 'Behavioral analysis'' 'Zero-day threat protection'' 'Security automation'' 'Compliance management' ] benefit,
   s: [' 'Detect threats 10x faster'' 'Reduce false positives by 80%'' 'Automate security responses'' 'Improve threat prevention'' 'Enhance compliance posture'' 'Reduce security team workload' ] useCase,
   s: [' 'Enterprise security operations'' 'Threat intelligence'' 'Incident response'' 'Compliance management'' 'Security automation'' 'Risk assessment' ]' marketSiz,
@@ -1171,9 +1155,7 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709' } }' i,
   d: 'autonomous-it-operations-center'' nam,
   e: 'Autonomous IT Operations Center' descriptio,
-  n:' 'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.' categor,
   y: [' 'IT Operations'' 'Automation'' 'Infrastructure'' 'Monitoring'' 'Management' ]' pric,
-  e: '$14,999/month' feature,
   s: [' 'Autonomous infrastructure management'' 'Self-healing systems'' 'Predictive maintenance'' 'Performance optimization'' 'Capacity planning'' 'Automated troubleshooting'' 'Intelligent resource allocation'' 'Continuous optimization' ] benefit,
   s: [' 'Achieve 99.99% uptime'' 'Reduce operational costs by 85%'' 'Eliminate manual interventions'' 'Improve system performance'' 'Enhance user experience'' 'Optimize resource utilization' ] useCase,
   s: [' 'Enterprise IT operations'' 'Data center management'' 'Application performance management'' 'Infrastructure automation'' 'Service desk automation'' 'IT service management' ]' marketSiz,
@@ -1250,7 +1232,6 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   e: 'AI-Powered Enterprise Security',' descriptio,
   n: 'Advanced AI-driven enterprise security platform that provides real-time threat detection, automated response, and predictive security analytics to protect against evolving cyber threats.',' categor,
   y: ['CybersecurityAIEnterprise SecurityThreat DetectionAutomation'],' pric,
-  e: '$9,999/month', feature,
   s: [' 'AI-powered threat detectionReal-time security monitoringAutomated incident responsePredictive threat analyticsBehavioral analysisZero-day threat protectionSecurity automationCompliance management' ]; benefit,
   s: [' 'Detect threats 10x fasterReduce false positives by 80%Automate security responsesImprove threat preventionEnhance compliance postureReduce security team workload' ]; useCase,
   s: [' 'Enterprise security operationsThreat intelligenceIncident responseCompliance managementSecurity automationRisk assessment' ],' marketSiz,
@@ -1287,9 +1268,7 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709' } }; ' i,
   d: 'autonomous-it-operations-center', nam,
   e: 'Autonomous IT Operations Center',' descriptio,
-  n: 'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.',' categor,
   y: ['IT OperationsAutomationInfrastructureMonitoringManagement'],' pric,
-  e: '$14,999/month', feature,
   s: [' 'Autonomous infrastructure managementSelf-healing systemsPredictive maintenancePerformance optimizationCapacity planningAutomated troubleshootingIntelligent resource allocationContinuous optimization' ]; benefit,
   s: [' 'Achieve 99.99% uptimeReduce operational costs by 85%Eliminate manual interventionsImprove system performanceEnhance user experienceOptimize resource utilization' ]; useCase,
   s: [' 'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management' ],' marketSiz,

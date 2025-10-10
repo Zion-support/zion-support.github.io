@@ -101,7 +101,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (</div>
                 <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"></div>
                     <feature.icon className="w-6 h-6 text-white" />

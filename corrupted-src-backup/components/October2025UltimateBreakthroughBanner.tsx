@@ -17,7 +17,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {
         <div, className="flex, justif, y-center, m, b-6"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-4, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-4, 0, 0/50, rounde, d-fu, l, l"></div>
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, Backgroun, d */};
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(45d, e, g,transparent_, 2, 5%,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,.05)_, 5, 0%,transparent_, 7, 5%,transparent_1, 0, 0%)] bg-[leng, t, h: 250px_250, p, x] anima, t, e-shimm, e, r"></d, i, v>"
@@ -90,7 +89,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
           💎 Deploy, 5, game-changing, AI, technologies transforming, enterprises, worldwid;
   e: Agentic, Mesh, Networks, Quant, u, m-AI, Optimizatio, n, Cognitive, Digital, Twins, Neuromorphic, Edge, AI, and, Autonomous, Security Orchestrati, o, n — delivering, unprecedented, performance, efficien, c, y, and, competitive, advantage!
         </p>
-        {/* Feature, Gri, d */}
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-4, m, b-10">"
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l;
@@ -132,7 +130,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
           💎 Deploy, 5, game-changing, AI, technologies transforming, enterprises, worldwid,
   e: Agentic, Mesh, Networks, Quant, u, m-AI, Optimizatio, n, Cognitive, Digital, Twins, Neuromorphic, Edge, AI, and, Autonomous, Security Orchestrati, o, n — delivering, unprecedented, performance, efficien, c, y, and, competitive, advantage!
         </p>
-        {/* Feature, Gri, d */}"
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-4, m, b-10">""
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l,"
@@ -164,16 +161,11 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
             </d, i, v>
             <div, className="flex, item, s-center, tex, t-purp, l, e-300, tex, t-sm, fon, t-semibold, grou, p-ho, v, e;
   r: g, a, p-2, transitio, n-a, l, l">"
-              Explore, Technolog, y</div> <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-purp, l, e-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";
-              Explore, Technolog, y <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e;
-              Explore, Technolog, y</div> <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
             </d, i, v>"
             <div, className="flex, item, s-center, tex, t-purp, l, e-300, tex, t-sm, fon, t-semibold, grou, p-ho, v, e,"
   r: g, a, p-2, transitio, n-a, l, l">""
-              Explore, Technolog, y <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
             <div, className="flex, item, s-center, tex, t-purp, l, e-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";"
-              Explore, Technolog, y <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e,"
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
@@ -444,7 +436,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
               </d, i, v>"
               <div, className="fl, e, x-1">";"
                 <h3, className="fo, n, t-bold, tex, t-white, tex, t-lg, m, b-1">";
-                  Explore, All, Breakthroughs;
                 </h3>"
                 <p, className="te, x, t-bl, u, e-200, tex, t-sm">";
                   View, complete, guides, case, studie, s, implementation, roadmap, s, and, ROI, calculators for, all, 5 revolutionary, technologie, s;

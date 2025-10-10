@@ -10,7 +10,6 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <meta, nam, e='description'
           conte, n, t='Learn, about, real time, decision, engines 2026, and, how it, can, benefit your, enterpris, e.'
         />)
-        <link, re, l='canonic, a, l')
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/re a l-ti m e-decisi o n-engin e s-20 2 6')
         />),
       </Helm, e, t>
@@ -21,5 +20,4 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
             This, comprehensive, guide covers, real, time decision, engines, 2026 and, provides, practical insights, for, enterprise implementati, o, n.
             This, comprehensive, guide covers, real, time decision, engines, 2026 and, provides, practical insights, for, enterprise implementati, o, n.
 }</h1>
-export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }

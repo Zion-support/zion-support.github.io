@@ -10,7 +10,6 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <meta, nam, e='description'
           conte, n, t='Learn, about, ai incident, response, playbooks 2025, and, how it, can, benefit your, enterpris, e.'
         />)
-        <link, re, l='canonic, a, l')
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-incide n t-respon s e-playboo k s-20 2 5')
         />),
       </Helm, e, t>
@@ -29,5 +28,4 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           <Link, t, o='/bl, o, g' className='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
             ← Back, to, Blog;
           </Li, n, k>
-export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }

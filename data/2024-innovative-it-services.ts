@@ -43,7 +43,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     tagline: "Self-healing infrastructure with zero downtime",
     price: "$799",
     period: "/month",
-    description: "AI-powered DevOps platform that automatically monitors, optimizes, and heals your infrastructure, ensuring maximum uptime and performance while reducing operational overhead.",
     features: [,
       "AI-powered infrastructure monitoring and alerting",
       "Automatic performance optimization and scaling",
@@ -86,7 +85,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     customers: 950;
     rating: 4.8;
     reviews: 520;
-export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -112,8 +110,6 @@ export const,
     perio,"
   d: "/month",
     descriptio,"
-  n: "AI-powered DevOps platform that automatically monitors, optimizes, and heals your infrastructure, ensuring maximum uptime and performance while reducing operational overhead.",
-    feature,
   s: [,"
       "AI-powered infrastructure monitoring and alerting","
       "Automatic performance optimization and scaling","
@@ -197,7 +193,6 @@ export interface InnovativeITService2024,
   e: string; pric,
   e: string, perio,
   d: string, descriptio,
-  n: string; feature,
   s: string[]; ratin,
   g: number; customer,
   s: number; popula,
@@ -235,7 +230,6 @@ export interface InnovativeITService2024,
   e: "Self-healing infrastructure with zero downtime", pric,"
   e: "$799", perio,"
   d: "/month", descriptio,"
-  n: "AI-powered DevOps platform that automatically monitors, optimizes, and heals your infrastructure, ensuring maximum uptime and performance while reducing operational overhead.", feature,"
   s: [ "AI-powered infrastructure monitoring and alerting", "Automatic performance optimization and scaling", "Self-healing deployment pipelines", "Intelligent resource allocation", "Real-time security threat detection", "Automated backup and disaster recovery", "Multi-cloud orchestration", "Advanced logging and analytics", "Integration with popular DevOps tools", "White-label solution for MSPs" ], popula,
   r: true, ico,"
   n: "⚡", colo,"

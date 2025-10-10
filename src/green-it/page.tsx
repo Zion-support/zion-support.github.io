@@ -237,7 +237,6 @@ valuevalue: '100%',
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
-                        {solution.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                             {feature}
@@ -331,8 +330,6 @@ export default GreenITPage;
 
 import { Link } from 'react-router-dom';
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const GreenITPage: React.FC = () => {
   return (
@@ -342,7 +339,6 @@ const GreenITPage: React.FC = () => {
 };
   const [activeTab, setActiveTab] = useState('solutions');
 const tabs = [
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   i,
@@ -373,7 +369,6 @@ const tabs = [
   n: 'Design and implement energy-efficient data centers with renewable energy integration',
       ico,
   n: Zap,
-      feature,
   s: [
   // TOD,
   O: Add items];
@@ -681,7 +676,6 @@ const tabs = [
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
   Features:</h4>"
                       <ul className="space-y-1"></ul>
-                        {solution.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="text-sm text-gray-300 flex items-start"></li>"
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" /></CheckCircle>
                             {feature}

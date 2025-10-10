@@ -28,12 +28,9 @@ const, October2025BreakthroughBanne, r = () => {
             </sp, a, n>
           </d, i, v>
           <h2, className="te, x, t-4x, l, m;
-  d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-indi, g, o-300, t, o-emera, l, d-300, b, g-cl, i, p-text, tex, t-transpare, n, t">"
             Revolutionary, AI, Technologies Transforming, Enterprise, Operations;
           </h2>
           <p, className="te, x, t-xl, tex, t-whi, t, e/80, m, b-8, ma, x-w-4xl, leadin, g-relax, e, d">
-            Explore, three, groundbreaking AI, innovations, delivering unprecedented, result, s: Sovereign, Agents, with 94% decision, accurac, y;</p>
-const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Background, Effect, s */};
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20  /></div>"
       <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] opaci, t, y-10  /></div>"
@@ -57,17 +54,12 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
             </sp, a, n>
           </d, i, v>"
           <h2, className="te, x, t-4x, l, m,"
-  d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-indi, g, o-300, t, o-emera, l, d-300, b, g-cl, i, p-text, tex, t-transpare, n, t">"
             Revolutionary, AI, Technologies Transforming, Enterprise, Operations;
           </h2>"
           <p, className="te, x, t-xl, tex, t-whi, t, e/80, m, b-8, ma, x-w-4xl, leadin, g-relax, e, d"></p>
-            Explore, three, groundbreaking AI, innovations, delivering unprecedented, result, s: Sovereign, Agents, with 94% decision, accurac, y;"
-          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-indi, g, o-300, t, o-emera, l, d-300, b, g-cl, i, p-text, tex, t-transpare, n, t">";
             Revolutionary, AI, Technologies Transforming, Enterprise, Operations;
           </h2>"
           <p, className="te, x, t-xl, tex, t-whi, t, e/80, m, b-8, ma, x-w-4xl, leadin, g-relax, e, d">";
-            Explore, three, groundbreaking AI, innovations, delivering unprecedented, resul, t;
-            Explore, three, groundbreaking AI, innovations, delivering unprecedented, resul, t,
   s: Sovereign, Agents, with 94% decision, accurac, y;
             Quantum, ML, achieving 1000x, speedu, p, and, Neuromorphic, Edge Computing, at, 10,000x, energy, efficiency.
           </p>
@@ -104,7 +96,6 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
               </d, i, v>"
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">""
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
-            {/* TODO: Fix JSX expression */}
   1: Sovereign, Agent, s */}"
             <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-105, grou, p">";"
               <div, className="flex, item, s-center, ga, p-2, m, b-3">";"
@@ -238,8 +229,6 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
               classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-indi, g, o-700, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, shado, w-lg, hov, e,"
   r:shad, o, w-purp, l, e-5, 0, 0/50, inlin, e-flex, item, s-center, ga, p-2"
             ></Li>"
-              Explore, All, Articles <Link, className="w-5 h-5  /></Link>"
-              Explore, All, Articles <Link, className="w-5 h-5" />";
             </Li, n, k>
             <Li, n, k;
   to="/conta, c, t"

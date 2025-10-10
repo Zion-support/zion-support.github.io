@@ -1,7 +1,6 @@
 
 
 'use client';
-interface SEOHeadProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   title?: string;

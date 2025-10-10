@@ -1,6 +1,5 @@
 export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d {
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n">";
-export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-20">";"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
@@ -184,23 +183,18 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                 </p>
                 <div, className="spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, ga, p-2">";</div>
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
                     <sp, a, n>47, Fortune, 500 deployments, across, 42 countri, e, s</sp, a, n>
                   </d, i, v>
                   <div, className="flex, item, s-center, ga, p-2">";</div>
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
                     <sp, a, n>47M, patients, served without, data, centralization</sp, a, n>
                   </d, i, v>
                   <div, className="flex, item, s-center, ga, p-2">";</div>
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
                     <sp, a, n>94.7% model, accuracy, matching centralized, trainin, g</sp, a, n>
                   </d, i, v>
                 </d, i, v>
                 <div, className="mt-6, flex, items-center, tex, t-purp, l, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">"</div>
-                  <sp, a, n>Explore, Privac, y-First, A, I</sp, a, n>
                   <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 <div, className="mt-6, flex, items-center, tex, t-purp, l, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">";</div>
-                  <sp, a, n>Explore, Privac, y-First, A, I</sp, a, n>
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e;
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
@@ -216,23 +210,18 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                 </p>"
                 <div, className="spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0">";"
                   <div, className="flex, item, s-center, ga, p-2">";"
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
                     <sp, a, n>47, Fortune, 500 deployments, across, 42 countri, e, s</sp, a, n>
                   </d, i, v>"
                   <div, className="flex, item, s-center, ga, p-2">";"
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
                     <sp, a, n>47M, patients, served without, data, centralization</sp, a, n>
                   </d, i, v>"
                   <div, className="flex, item, s-center, ga, p-2">";"
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
                     <sp, a, n>94.7% model, accuracy, matching centralized, trainin, g</sp, a, n>
                   </d, i, v>
                 </d, i, v>"
                 <div, className="mt-6, flex, items-center, tex, t-purp, l, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">"
-                  <sp, a, n>Explore, Privac, y-First, A, I</sp, a, n>"
                   <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
                 <div, className="mt-6, flex, items-center, tex, t-purp, l, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">";
-                  <sp, a, n>Explore, Privac, y-First, A, I</sp, a, n>"
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e,"
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
                 </d, i, v>
@@ -293,15 +282,12 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                 </p>
                 <div, className="spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, ga, p-2">";</div>
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
                     <sp, a, n>470M, synthetic, transactions for, to, p-3, ban, k</sp, a, n>
                   </d, i, v>
                   <div, className="flex, item, s-center, ga, p-2">";</div>
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
                     <sp, a, n>1000x, fraud, examples — 94.7% detection, accurac, y</sp, a, n>
                   </d, i, v>
                   <div, className="flex, item, s-center, ga, p-2">";</div>
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
                     <sp, a, n>1, 0, 0% privacy, compliance, across 67, countrie, s</sp, a, n>
                   </d, i, v>
                 </d, i, v>
@@ -325,15 +311,12 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                 </p>"
                 <div, className="spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0">";"
                   <div, className="flex, item, s-center, ga, p-2">";"
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
                     <sp, a, n>470M, synthetic, transactions for, to, p-3, ban, k</sp, a, n>
                   </d, i, v>"
                   <div, className="flex, item, s-center, ga, p-2">";"
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
                     <sp, a, n>1000x, fraud, examples — 94.7% detection, accurac, y</sp, a, n>
                   </d, i, v>"
                   <div, className="flex, item, s-center, ga, p-2">";"
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
                     <sp, a, n>1, 0, 0% privacy, compliance, across 67, countrie, s</sp, a, n>
                   </d, i, v>
                 </d, i, v>"
@@ -358,43 +341,27 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
   to="/bl, o, g/ai-20, 2, 5-o, c, t-ai-mod, e, l-governan, c, e-complian, c, e-breakthrou, g, h"
               classNa, m, e="block, grou, p"
             >
-              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e;
-  r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">"
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">
-                  <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg">
-              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e
-  r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">"</div>
                 <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
-                  <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg"></div>
                     <Shield, className="w-6 h-6, tex, t-whi, t, e  />
-              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">";</div>
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
-                  <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg">";</div>
           ></moti>
             <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-o, c, t-ai-mod, e, l-governan, c, e-complian, c, e-breakthrou, g, h""
               classNa, m, e="block, grou, p"
             ></Li>"
-              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,"
-  r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">""
                 <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>"
-                  <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg"></div>"
                     <Shield, className="w-6 h-6, tex, t-whi, t, e  /></Shield>"
-              <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l">";"
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">";"
-                  <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg">";"
                     <Shield, className="w-6 h-6, tex, t-whi, t, e" />";
                   </d, i, v>"
-                  <span, className="te, x, t-xs, fon, t-bold, tex, t-gre, e, n-300, uppercase, tracking-wid, e, r">";
                     AI, Governanc, e;
                   </sp, a, n>
                 </d, i, v>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e;
-  r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">"
                   AI, Model, Governance & Compliance, Breakthroug, h;
                 </h3>
                 <p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d"></p>
-                <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">";
                   AI, Model, Governance & Compliance, Breakthroug, h;
                 </h3>
                 <p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d">";
@@ -402,31 +369,21 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                 </p>
                 <div, className="spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, ga, p-2">";</div>
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
-                    <sp, a, n>340, models, governed for, to, p-10, insure, r</sp, a, n>
                   </d, i, v>
                   <div, className="flex, item, s-center, ga, p-2">";</div>
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
                     <sp, a, n>$87M, penalties, avoided — 1, 0, 0% audit, pass, rate</sp, a, n>
                   </d, i, v>
                   <div, className="flex, item, s-center, ga, p-2">";</div>
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
                     <sp, a, n>92% risk, reduction, with automated, governanc, e</sp, a, n>
                   </d, i, v>
                 </d, i, v>
-                <div, className="mt-6, flex, items-center, tex, t-gre, e, n-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">"</div>
-                  <sp, a, n>Ensure, AI, Compliance</sp, a, n>
                   <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-                <div, className="mt-6, flex, items-center, tex, t-gre, e, n-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">";</div>
-                  <sp, a, n>Ensure, AI, Compliance</sp, a, n>
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e;
                 </d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
-  r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">"
                   AI, Model, Governance & Compliance, Breakthroug, h;
                 </h3>"
                 <p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d"></p>"
-                <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">";
                   AI, Model, Governance & Compliance, Breakthroug, h;
                 </h3>"
                 <p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d">";"
@@ -434,23 +391,15 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
                 </p>"
                 <div, className="spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0">";"
                   <div, className="flex, item, s-center, ga, p-2">";"
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
-                    <sp, a, n>340, models, governed for, to, p-10, insure, r</sp, a, n>
                   </d, i, v>"
                   <div, className="flex, item, s-center, ga, p-2">";"
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
                     <sp, a, n>$87M, penalties, avoided — 1, 0, 0% audit, pass, rate</sp, a, n>
                   </d, i, v>"
                   <div, className="flex, item, s-center, ga, p-2">";"
-                    <div, className="w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l"></d, i, v>";
                     <sp, a, n>92% risk, reduction, with automated, governanc, e</sp, a, n>
                   </d, i, v>
                 </d, i, v>"
-                <div, className="mt-6, flex, items-center, tex, t-gre, e, n-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">"
-                  <sp, a, n>Ensure, AI, Compliance</sp, a, n>"
                   <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
-                <div, className="mt-6, flex, items-center, tex, t-gre, e, n-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s">";
-                  <sp, a, n>Ensure, AI, Compliance</sp, a, n>"
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e,"
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
                 </d, i, v>
@@ -474,7 +423,6 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-bold, tex, t-lg, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, transform, hove,"
   r:sca, l, e-1, 0, 5"
           ></Li>
-            <sp, a, n>Explore, All, October 2025, Breakthrough, s</sp, a, n>"
             <Link, className="w-5 h-5  /></Link>"
             <Link, className="w-5 h-5" />";
           </Li, n, k>"

@@ -181,7 +181,6 @@ icon$5: Award,
               Zion Tech Marketplace
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover, compare, and purchase AI and IT solutions from verified vendors. 
               Find the perfect tools, talent, and equipment for your business needs.
             </p>
           </div>
@@ -254,7 +253,6 @@ icon$5: Award,
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
-                          {item.features.map((feature, index) => (
                             <li key={index} className="text-sm text-gray-300 flex items-start">
                               <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                               {feature}
@@ -335,7 +333,6 @@ icon$5: Award,
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
 const categories = [
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   i,
@@ -380,7 +377,6 @@ const categories = [
   s: 127,
       imag,
   e: '',
-      feature,
   s: ['AI Planning', 'Resource Optimization', 'Risk Assessment', 'Automated Reporting'],
       vendo,
   r: 'Zion Tech Group',
@@ -403,7 +399,6 @@ const categories = [
   s: 203,
       imag,
   e: '',
-      feature,
   s: ['24/7 Support', 'Multi-language', 'Sentiment Analysis', 'Human Handoff'],
       vendo,
   r: 'SupportAI Inc',
@@ -431,7 +426,6 @@ const categories = [
   s: 15,
       imag,
   e: '',
-      feature,
   s: ['100 qubits', '24/7 access', 'API integration', 'Expert support'],
       vendo,
   r: 'QuantumCloud',

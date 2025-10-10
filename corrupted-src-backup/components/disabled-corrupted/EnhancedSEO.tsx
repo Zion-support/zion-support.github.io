@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOProps {/* TODO: Fix JSX expression */}
 }
 
 const EnhancedSEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.',
-  keywords = 'AI solutions, IT services, enterprise software, digital transformation, machine learning, artificial intelligence, technology consulting',
   image = '/images/zion-tech-group-og-image.jpg',
   url,
   type = 'website',
@@ -21,8 +19,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   canonical}) => {
   const _location = useLocation();
 const,
-  EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
   //   const currentUrl = url || `${window.location.origin}${location.pathname}`;
   //   const canonicalUrl = canonical || currentUrl;
   //   const currentTime = new Date().toISOString();
@@ -39,7 +35,6 @@ const,
       'https://linkedin.com/company/zion-tech-group',
       'https: //twitter.com/ziontechgroup',
       'https: //github.com/zion-tech-group',
-  const structuredData = {/* TODO: Fix JSX expression */}`
   o: `${window.location.origin}/images/logo.png`,
     sameA,
   s: [
@@ -50,7 +45,6 @@ const,
       'http,
   s://github.com/zion-tech-group'],
     contactPoin,
-  t: {/* TODO: Fix JSX expression */}
     },
     address: {
       '@type': 'PostalAddress'
@@ -60,7 +54,6 @@ const,
       postalCode: '94105',
       addressCountry: 'US',
     addres,
-  s: {/* TODO: Fix JSX expression */}
     }};
 
   // Add article structured data if type is article;
@@ -86,23 +79,18 @@ const,
       mainEntityOfPage: {,
         '@type': 'WebPage',
         '@id': currentUrl,
-  if (type === 'article') {/* TODO: Fix JSX expression */}
       },
       publishe,
-  r: {/* TODO: Fix JSX expression */}`
   l: `${window.location.origin}/images/logo.png`}},
       datePublishe,
   d: publishedTime || currentTime,
       dateModifie,
   d: modifiedTime || currentTime,
       mainEntityOfPag,
-  e: {/* TODO: Fix JSX expression */}
       }};
 
-    if (section) {/* TODO: Fix JSX expression */}
     }
 
-    if (tags.length > 0) {/* TODO: Fix JSX expression */}
     }
 
     (structuredData as any)['@graph'] = [structuredData, articleData];
@@ -115,7 +103,6 @@ const,
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: title),
         page_location: currentUrl),
-  useEffect(() => {/* TODO: Fix JSX expression */}
       });
     }
 
@@ -125,7 +112,6 @@ const,
         title)
         url: currentUrl),
         type),
-    if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */}
       });
     }
   }, [title, currentUrl, type]);
@@ -290,9 +276,7 @@ const,
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
 
       {/* Additional structured data for breadcrumbs */}
-      {/* TODO: Fix JSX expression */}
               },
-              {/* TODO: Fix JSX expression */}
               }]})}
         </script>
       )}

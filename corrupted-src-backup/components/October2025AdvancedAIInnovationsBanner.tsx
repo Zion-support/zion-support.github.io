@@ -23,13 +23,11 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";</div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
-const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>"
         <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-5, 0, 0"></d, i, v>
-const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, elements */};"
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";"
@@ -44,11 +42,8 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expres
             <span, className="te, x, t-indi, g, o-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">Breaking, Innovatio, n • October, 202, 5</sp, a, n>
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
           </d, i, v>
-          <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, b, g-cl, i, p-text, tex, t-transpare, n, t">
-            Ne, x, t-Generation, AI, Technologies: The, Future, is N, o, w;
           </h2>
           <p, className="te, x, t-xl, tex, t-indi, g, o-200, ma, x-w-3xl, m, x-au, t, o">
-            Explore, revolutionary, advances in, neuromorphic, computing, synthetic, data, generation;</p>
         <div, className="text-center mb-12">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6">";</div>
         {/* Header, Sectio, n */}"
@@ -58,26 +53,19 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expres
             <span, className="te, x, t-indi, g, o-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">Breaking, Innovatio, n • October, 202, 5</sp, a, n>"
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  /></Sparkles>
           </d, i, v>"
-          <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
             Ne, x, t-Generation, AI, Technologie,
-  s: The, Future, is N, o, w;
           </h2>"
           <p, className="te, x, t-xl, tex, t-indi, g, o-200, ma, x-w-3xl, m, x-au, t, o"></p>
-            Explore, revolutionary, advances in, neuromorphic, computing, synthetic, data, generation;"
         <div, className="text-center mb-12">";"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6">";"
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";"
             <span, className="te, x, t-indi, g, o-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">Breaking, Innovatio, n • October, 202, 5</sp, a, n>";"
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
           </d, i, v>"
-          <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, b, g-cl, i, p-text, tex, t-transpare, n, t">";
-            Ne, x, t-Generation, AI, Technologies: The, Future, is N, o, w;
           </h2>
             Ne, x, t-Generation, AI, Technologie,
-  s: The, Future, is N, o, w;
           </h2>"
           <p, className="te, x, t-xl, tex, t-indi, g, o-200, ma, x-w-3xl, m, x-au, t, o">";
-            Explore, revolutionary, advances in, neuromorphic, computing, synthetic, data, generation;
             and, quantum, machine learning, that, are reshaping, enterprise, AI in, 202, 5;
           </p>
         </d, i, v>
@@ -208,7 +196,6 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expres
             </h3>"
             <p, className="te, x, t-purp, l, e-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">";
               Learn, how, leading organizations, generate, 60-80% of, training, data synthetical, l, y;
-              enabling, faster, iteration, privacy, complianc, e, and, more, robust AI, system, s.
             </p>
             <div, className="flex, item, s-center, justif, y-betwe, e, n">";</div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-300, tex, t-sm">";</div>
@@ -245,13 +232,11 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expres
               Quantum, Machine, Learning: Enterprise, Breakthrough, in 20, 2, 5;
             </h3>
             <p, className="te, x, t-pi, n, k-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">
-              Explore, how, quantum ML, is, delivering exponential, speedups, for optimizati, o, n, drug, discover, y;</p>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-pi, n, k-200, transitio, n-colo, r, s">";
               Quantum, Machine, Learnin;
   g: Enterprise, Breakthrough, in 20, 2, 5;
             </h3>
             <p, className="te, x, t-pi, n, k-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">";
-              Explore, how, quantum ML, is, delivering exponential, speedups, for optimizati, o, n, drug, discover, y;
               financial, modelin, g, and, cryptography, with 1,0, 0, 0+ qubit, system, s.
             </p>
             <div, className="flex, item, s-center, justif, y-betwe, e, n">";</div>
@@ -278,13 +263,11 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expres
   g: Enterprise, Breakthrough, in 20, 2, 5;
             </h3>"
             <p, className="te, x, t-pi, n, k-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3"></p>
-              Explore, how, quantum ML, is, delivering exponential, speedups, for optimizati, o, n, drug, discover, y;"
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-pi, n, k-200, transitio, n-colo, r, s">";
               Quantum, Machine, Learnin,
   g: Enterprise, Breakthrough, in 20, 2, 5;
             </h3>"
             <p, className="te, x, t-pi, n, k-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">";
-              Explore, how, quantum ML, is, delivering exponential, speedups, for optimizati, o, n, drug, discover, y;
               financial, modelin, g, and, cryptography, with 1,0, 0, 0+ qubit, system, s.
             </p>"
             <div, className="flex, item, s-center, justif, y-betwe, e, n">";"
@@ -313,7 +296,6 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expres
   r:sca, l, e-105, shado, w-lg, hov, e,"
   r:shad, o, w-2, x, l"
           ></Li>
-            <sp, a, n>Discover, More, Innovations</sp, a, n>"
             <Link, className="w-6 h-6  /></Link>"
             <Link, className="w-6 h-6" />";
           </Li, n, k>"
@@ -357,10 +339,8 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expres
           <div, className="te, x, t-cent, e, r">";</div>
           </d, i, v>"
           <div, className="te, x, t-cent, e, r">";"
-            <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, m, b-1">";
               10, 0, x;
             </d, i, v>"
-            <div, className="te, x, t-gre, e, n-2, 0, 0/70, tex, t-sm">Faster, Simulation, s</d, i, v>";
           </d, i, v>
         </d, i, v>)
       </d, i, v>)

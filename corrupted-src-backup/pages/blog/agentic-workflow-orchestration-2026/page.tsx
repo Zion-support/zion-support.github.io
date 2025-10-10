@@ -12,7 +12,6 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <meta, nam, e = 'description'
           conte, n, t='Design, agentic, workflows with, budgeted, action, s, K, P, I-linked, canarie, s, and, instant, rollback for, safe, velocity.'
         />)
-        <link, re, l = 'canonic, a, l')
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/agent i c-workfl o w-orchestrati o n-20 2 6')
         />),
       </Helm, e, t>
@@ -23,5 +22,4 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
 }
           Agentic, Workflow, Orchestration 20, 2, 6
 }</h1>
-export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }

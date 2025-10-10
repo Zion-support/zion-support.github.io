@@ -25,9 +25,7 @@ function App() {
     <ErrorBoundary>
       <div></div>
         <Router>
-function App() {/* TODO: Fix JSX expression */}
 }
-  useEffect(() => {/* TODO: Fix JSX expression */}
       //       };
   }, []);
 
@@ -58,16 +56,11 @@ function App() {/* TODO: Fix JSX expression */}
 
 // Simple Error Boundary;
 class ErrorBoundary extends React.Component<
-  {/* TODO: Fix JSX expression */}
   n: React.ReactNode; fallback?: React.ReactNode },
-  {/* TODO: Fix JSX expression */}
   r: boolean }
-> {/* TODO: Fix JSX expression */}
-  n: React.ReactNode; fallback?: React.ReactNode }) {/* TODO: Fix JSX expression */}
   r: false };
   }
 
-  static getDerivedStateFromError() {/* TODO: Fix JSX expression */}
   r: true };
   }
 
@@ -91,10 +84,8 @@ class ErrorBoundary extends React.Component<
                 className="bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700"
   componentDidCatch(erro,
   r: Error, errorInf)
-  o: React.ErrorInfo) {/* TODO: Fix JSX expression */}
     //     }
 
-  render() {/* TODO: Fix JSX expression */}
   r: false })}"
                 className="bg-blue-600 text-white px-4 py-2 rounded,"
   hover:bg-blue-700"

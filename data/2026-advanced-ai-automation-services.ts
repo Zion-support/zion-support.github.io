@@ -108,7 +108,6 @@ export interface AdvancedAIAutomationService {id: string;
     launchDate: '2026-02-15', customers: 145;
     rating: 4.8;
     reviews: 189;
-export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -123,7 +122,6 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: 'Enterprise-grade predictive analytics platform that forecasts business outcomes, market trends, and operational risks with unprecedented accuracy using advanced machine learning.',
-    feature,
   s: [;
       '99.7% prediction accuracyReal-time data processingMulti-dimensional forecastingRisk assessment algorithmsMarket trend analysisCustom model trainingAPI integration capabilitiesAutomated reporting'
       'Scenario planning toolsExecutive dashboard'
@@ -183,7 +181,6 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: 'AI-powered customer success platform that automatically identifies at-risk customers, predicts churn, and implements retention strategies without human intervention.',
-    feature,
   s: [;
       'Automatic churn predictionPersonalized retention strategiesCustomer health scoringProactive issue resolutionSuccess metric trackingAutomated outreach campaignsCustomer journey optimizationSentiment analysis'
       'ROI measurementIntegration with CRM systems'
@@ -244,7 +241,6 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: 'End-to-end marketing automation platform that autonomously manages campaigns across all channels, optimizes budgets, and maximizes ROI using advanced AI algorithms.',
-    feature,
   s: [;
       'Cross-channel campaign coordinationAutonomous budget optimizationReal-time performance trackingA/B testing automationAudience segmentation AIContent personalizationROI maximization algorithmsPredictive analytics'
       'Multi-platform integrationAutomated reporting'
@@ -304,7 +300,6 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: 'Intelligent sales platform that autonomously identifies high-value prospects, qualifies leads, and nurtures them through the sales funnel using advanced AI and behavioral analysis.',
-    feature,
   s: [;
       'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection'
       'ROI trackingCRM integration'
@@ -460,7 +455,6 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
     icon: 'Workflow',
     category: 'AI & Automation',
     features: [,
-export const advancedAIAutomationServices2026 = [{/* TODO: Fix JSX expression */}
   l: '$1199/month'}
       enterpris,
   e: 'Custom'
@@ -476,7 +470,6 @@ export const advancedAIAutomationServices2026 = [{/* TODO: Fix JSX expression */
   n: 'Workflow',
     categor,
   y: 'AI & Automation',
-    feature,
   s: [,
       'Smart workflow design',
       'AI optimization',
@@ -524,7 +517,6 @@ export interface AdvancedAIAutomationService,
   e: string; pric,
   e: string, perio,
   d: string, descriptio,
-  n: string; feature,
   s: string[]; popula,
   r: boolean; ico,
   n: string; colo,
@@ -555,7 +547,6 @@ export interface AdvancedAIAutomationService,
   e: 'Predict business outcomes with 99.7% accuracy using advanced AI algorithms', pric,
   e: '$899',' perio,
   d: '/month',' descriptio,
-  n: 'Enterprise-grade predictive analytics platform that forecasts business outcomes, market trends, and operational risks with unprecedented accuracy using advanced machine learning.', feature,
   s: [' '99.7% prediction accuracyReal-time data processingMulti-dimensional forecastingRisk assessment algorithmsMarket trend analysisCustom model trainingAPI integration capabilitiesAutomated reporting'' 'Scenario planning toolsExecutive dashboard' ],' popula,
   r: true, ico,
   n: '🔮',' colo,
@@ -589,7 +580,6 @@ export interface AdvancedAIAutomationService,
   e: 'Automatically increase customer retention and satisfaction with AI-driven insights', pric,
   e: '$699',' perio,
   d: '/month',' descriptio,
-  n: 'AI-powered customer success platform that automatically identifies at-risk customers, predicts churn, and implements retention strategies without human intervention.', feature,
   s: [' 'Automatic churn predictionPersonalized retention strategiesCustomer health scoringProactive issue resolutionSuccess metric trackingAutomated outreach campaignsCustomer journey optimizationSentiment analysis'' 'ROI measurementIntegration with CRM systems' ],' popula,
   r: true, ico,
   n: '🎯',' colo,
@@ -623,7 +613,6 @@ export interface AdvancedAIAutomationService,
   e: 'Coordinate all marketing channels autonomously for maximum ROI and engagement',' pric,
   e: '$1,199',' perio,
   d: '/month',' descriptio,
-  n: 'End-to-end marketing automation platform that autonomously manages campaigns across all channels, optimizes budgets, and maximizes ROI using advanced AI algorithms.', feature,
   s: [' 'Cross-channel campaign coordinationAutonomous budget optimizationReal-time performance trackingA/B testing automationAudience segmentation AIContent personalizationROI maximization algorithmsPredictive analytics'' 'Multi-platform integrationAutomated reporting' ],' popula,
   r: true, ico,
   n: '📢',' colo,
@@ -657,7 +646,6 @@ export interface AdvancedAIAutomationService,
   e: 'Automatically identify, qualify, and nurture leads with AI-driven insights',' pric,
   e: '$799', perio,
   d: '/month',' descriptio,
-  n: 'Intelligent sales platform that autonomously identifies high-value prospects, qualifies leads, and nurtures them through the sales funnel using advanced AI and behavioral analysis.', feature,
   s: [' 'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection' ' 'ROI trackingCRM integration' ]; popula,
   r: true,' ico,
   n: '💰'' colo,
@@ -695,7 +683,6 @@ export interface AdvancedAIAutomationService,
   h: '/services/advanced-ai-automation-platform-2026',' descriptio,
   n: 'Next-generation AI automation platform for enterprise',' ico,
   n: 'Brain',' categor,
-  y: 'AI & Automation', feature,
   s: [' 'Advanced AI algorithms',' 'Process automation',' 'Intelligent decision making',' 'Performance optimization' ], pricin,
   g: ' starte,
   r: '$599/month',' professiona,
@@ -705,7 +692,6 @@ export interface AdvancedAIAutomationService,
   h: '/services/advanced-ai-workflow-engine-2026',' descriptio,
   n: 'Intelligent workflow automation with AI',' ico,
   n: 'Workflow',' categor,
-  y: 'AI & Automation', feature,
   s: [' 'Smart workflow design',' 'AI optimization',' 'Real-time monitoring',' 'Advanced analytics' ], pricin,
   g: ' starte,
   r: '$399/month',' professiona,

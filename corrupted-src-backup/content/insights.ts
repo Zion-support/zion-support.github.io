@@ -34,14 +34,10 @@ export const insights: Insight[] = [,
     category: 'RAG Engineering',
     date: '2025-10-03',
     readMinutes: 10;
-export interface Insight {/* TODO: Fix JSX expression */}
 }
 
 export const,
   insights: Insight[] = [
-  {/* TODO: Fix JSX expression */}
   },
-  {/* TODO: Fix JSX expression */}
   },
-  {/* TODO: Fix JSX expression */}
   }];

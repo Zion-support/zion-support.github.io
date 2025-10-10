@@ -273,7 +273,6 @@
     descriptio,
   n: unknown,
       'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.',
-    feature,
   s: [,
       'Branching logic + A / B prompts',
       'SMS / WhatsApp / web delivery',
@@ -383,7 +382,6 @@
     descriptio,
   n: unknown,
       'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.',
-    feature,
   s: [,
       'Industry templates',
       'Calendar + task sync',
@@ -493,7 +491,6 @@
     descriptio,
   n: unknown,
       'Run webinars or in - person events with landing pages, reminders, QR tickets, and feedback analytics.',
-    feature,
   s: [,
       'QR tickets + check - in',
       'Email / SMS reminders',
@@ -599,7 +596,6 @@
     descriptio,
   n: unknown,
       'Create affiliate programs with branded links, flexible commission rules, and payout exports.',
-    feature,
   s: [,
       'Custom referral links',
       'UTM attribution',
@@ -705,7 +701,6 @@
     descriptio,
   n: unknown,
       'Privacy - friendly analytics for small businesses with funnel insights and weekly summaries.',
-    feature,
   s: [,
       'Page + event analytics',
       'Funnels + cohorts',
@@ -813,7 +808,6 @@
     descriptio,
   n: unknown,
       'Managed ticketing for MSPs and internal IT with automation rules, approval flows, and client - visible status.',
-    feature,
   s: [,
       'Email - to - ticket',
       'KB + article templates',
@@ -921,7 +915,6 @@
     descriptio,
   n: unknown,
       'Automate RMAs, label generation, and status notifications. Analytics to reduce avoidable returns.',
-    feature,
   s: [,
       'Self - serve returns portal',
       'Label generation',
@@ -1027,7 +1020,6 @@
     descriptio,
   n: unknown,
       'Simple sequencer to follow up on stale leads and open tickets with natural language and auto - scheduling.',
-    feature,
   s: [,
       'Sequences + delays',
       'Inbox integration',
@@ -1126,7 +1118,6 @@
     descriptio,
   n: unknown;
       'Upload or link to podcast episodes, get transcripts, summaries, chapters, and Wordpress - ready blog exports.',
-    feature,
   s: [,
       'Fast transcripts',
       'Timestamps + chapters',
@@ -1234,7 +1225,6 @@
     descriptio,
   n: unknown,
       'In - editor SEO suggestions, competitive gap analysis, and AI rewrites targeting featured snippets.',
-    feature,
   s: [,
       'On - page audits',
       'Topic clustering',
@@ -1340,7 +1330,6 @@
     descriptio,
   n: unknown,
       'Turn links, videos, or blog posts into tailored social snippets and schedule them with best - time predictions.',
-    feature,
   s: [,
       'Content repurposing',
       'Calendar + auto - times',
@@ -1446,7 +1435,6 @@
     descriptio,
   n: unknown,
       'REST API to enrich leads with verified firmographics and social signals for scoring and routing.',
-    feature,
   s: [,
       'Firmographics',
       'Role detection',
@@ -1552,7 +1540,6 @@
     descriptio,
   n: unknown,
       'Deploy branded consent banners, a preferences center, and downloadable audit logs. Geo - aware rules.',
-    feature,
   s: [,
       'Geo rules',
       'IAB TCF',
@@ -1658,7 +1645,6 @@
     descriptio,
   n: unknown,
       'Scan your site for cookies / trackers, classify them, and generate policy updates with change diffs.',
-    feature,
   s: [,
       'Site scan',
       'Tracker classification',
@@ -1764,7 +1750,6 @@
     descriptio,
   n: unknown,
       'Connect monitors, log incidents, and share public SLA / uptime reports with customers.',
-    feature,
   s: [,
       'Incident log',
       'Public status page',
@@ -1870,7 +1855,6 @@
     descriptio,
   n: unknown,
       'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.',
-    feature,
   s: [,
       'Qualifying flows',
       'Calendar booking',
@@ -1948,7 +1932,6 @@
     descriptio,
   n: unknown,
       'Hosted portal for DSARs with identity verification, workflow, and export helpers.',
-    feature,
   s: [,
       'Request intake',
       'Identity check',
@@ -2008,7 +1991,6 @@
     descriptio,
   n: unknown,
       'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.',
-    feature,
   s: [,
       'Qualifying flows',
       'Calendar booking',
@@ -2114,7 +2096,6 @@
     descriptio,
   n: unknown,
       'Hosted portal for DSARs with identity verification, workflow, and export helpers.',
-    feature,
   s: [,
       'Request intake',
       'Identity check',
@@ -2220,7 +2201,6 @@
     descriptio,
   n:
       'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.'
-    feature,
   s: [;
       'Repo scanner'
       'Flag inventory'
@@ -2411,7 +2391,6 @@
     descriptio,
   n: unknown,
       'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.',
-    feature,
   s: [,
       'Slow query capture',
       'Index suggestions',
@@ -2637,7 +2616,6 @@
     descriptio,
   n: unknown;
       'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.',
-    feature,
   s: [,
     i,
   d: 'api - breaking - change - watcher',
@@ -2688,7 +2666,6 @@
     descriptio,
   n:
       'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'
-    feature,
   s: [;
       'Slow query capture'
       'Index suggestions'
@@ -2787,7 +2764,6 @@
   d: '/month'
     descriptio,
   n: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'
-    feature,
   s: [;
       'Usage analysis'
       'Rule suggestions'
@@ -2894,7 +2870,6 @@
     descriptio,
   n:
       'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.'
-    feature,
   s: [;
       'Connectors'
       'Sensitive entity detection'
@@ -3085,7 +3060,6 @@
     descriptio,
   n: unknown,
       'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.',
-    feature,
   s: [,
       'Slow query capture',
       'Index suggestions',
@@ -3191,7 +3165,6 @@
     descriptio,
   n: unknown,
       'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.',
-    feature,
   s: [,
       'Usage analysis',
       'Rule suggestions',
@@ -3297,7 +3270,6 @@
     descriptio,
   n: unknown,
       'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.',
-    feature,
   s: [,
       'Connectors',
       'Sensitive entity detection',
@@ -3423,7 +3395,6 @@
     descriptio,
   n: unknown;
       'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.',
-    feature,
   s: [,
       'Schema registry',
       'Diff rules',
@@ -3510,7 +3481,6 @@
     review,
   s: 3},
       'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
-    feature,
   s: [;
       'Schema registry'
       'Diff rules'
@@ -3617,7 +3587,6 @@
     descriptio,
   n: unknown,
       'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto - open PRs.',
-    feature,
   s: [,
       'Repo scanner',
       'Flag inventory',
@@ -3723,7 +3692,6 @@
     descriptio,
   n: unknown,
       'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.',
-    feature,
   s: [,
       'Slow query capture',
       'Index suggestions',
@@ -3829,7 +3797,6 @@
     descriptio,
   n: unknown,
       'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.',
-    feature,
   s: [,
       'Usage analysis',
       'Rule suggestions',
@@ -3935,7 +3902,6 @@
     descriptio,
   n: unknown,
       'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.',
-    feature,
   s: [,
       'Connectors',
       'Sensitive entity detection',
@@ -4049,7 +4015,6 @@
     descriptio,
   n: unknown;
       'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.',
-    feature,
   s: [,
     i,
   d: 'api - breaking - change - watcher',
@@ -4064,7 +4029,6 @@
     descriptio,
   n: unknown;
       'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.',
-    feature,
   s: [,
       'Schema registry',
       'Diff rules',
@@ -4170,7 +4134,6 @@
     descriptio,
   n: unknown;
       'Browser - based recorder creates resilient journeys, run on a schedule and alert on SLO errors or latency.',
-    feature,
   s: [,
       'Recorder',
       'Selector healing',
@@ -4278,7 +4241,6 @@
     descriptio,
   n: unknown,
       'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.',
-    feature,
   s: [,
       'Policy inventory',
       'Usage analysis',
@@ -4384,7 +4346,6 @@
     descriptio,
   n: unknown,
       'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.',
-    feature,
   s: [,
       'Query profiling',
       'Size / schedule proposals',
@@ -4490,7 +4451,6 @@
     descriptio,
   n: unknown,
       'Run warmup campaigns and monitor deliverability metrics to stay out of spam.',
-    feature,
   s: [,
       'Warmup campaigns',
       'Seed inbox tests',
@@ -4596,7 +4556,6 @@
     descriptio,
   n: unknown,
       'Transcribe meetings, extract action items, and open tickets with owners and due dates.',
-    feature,
   s: [,
       'Transcription',
       'Action extraction',
@@ -4709,7 +4668,6 @@ export const,
   d: '/month',
 		descriptio,
   n: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.',
-    feature,
   s: [;
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
 		];
@@ -6845,7 +6803,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.'
-		feature,
   s: [;
 			'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'
 		];
@@ -6914,7 +6871,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
-		feature,
   s: [;
 			'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'
 		];
@@ -6983,7 +6939,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.'
-		feature,
   s: [;
 			'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'
 		];
@@ -7052,7 +7007,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Create affiliate programs with branded links, flexible commission rules, and payout exports.'
-		feature,
   s: ['Custom referral linksUTM attributionRule-based commissionsPayout exportsFraud checks'];
 		popula,
   r: false;
@@ -7119,7 +7073,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Privacy-friendly analytics for small businesses with funnel insights and weekly summaries.'
-		feature,
   s: ['Page + event analyticsFunnels + cohortsWeekly email summariesCSV exportNo cookies mode'];
 		popula,
   r: false;
@@ -7186,7 +7139,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Managed ticketing for MSPs and internal IT with automation rules, approval flows, and client-visible status.'
-		feature,
   s: ['Email-to-ticketKB + article templatesSLAs + escalationsClient portalReports'];
 		popula,
   r: true;
@@ -7253,7 +7205,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Automate RMAs, label generation, and status notifications. Analytics to reduce avoidable returns.'
-		feature,
   s: ['Self-serve returns portalLabel generationReturn reasons analyticsInventory syncNotifications'];
 		popula,
   r: true;
@@ -7320,7 +7271,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto-scheduling.'
-		feature,
   s: ['Sequences + delaysInbox integrationSmart stop on replyTemplatesAnalytics'];
 		popula,
   r: false;
@@ -7387,7 +7337,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Upload or link to podcast episodes, get transcripts, summaries, chapters, and Wordpress-ready blog exports.'
-		feature,
   s: ['Fast transcriptsTimestamps + chaptersSummaries + highlightsBlog exportGlossary'];
 		popula,
   r: false;
@@ -7454,7 +7403,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'In-editor SEO suggestions, competitive gap analysis, and AI rewrites targeting featured snippets.'
-		feature,
   s: ['On-page auditsTopic clusteringSERP intent matchInternal link hintsRewrite suggestions'];
 		popula,
   r: true;
@@ -7521,7 +7469,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Turn links, videos, or blog posts into tailored social snippets and schedule them with best-time predictions.'
-		feature,
   s: ['Content repurposingCalendar + auto-timesHashtag + emoji assistantLink trackingClient approvals'];
 		popula,
   r: false;
@@ -7588,7 +7535,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'REST API to enrich leads with verified firmographics and social signals for scoring and routing.'
-		feature,
   s: ['FirmographicsRole detectionValidated email signalsConfidence scoringUsage dashboards'];
 		popula,
   r: false;
@@ -7655,7 +7601,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Deploy branded consent banners, a preferences center, and downloadable audit logs. Geo-aware rules.'
-		feature,
   s: ['Geo rulesIAB TCFPreference centerAudit logsMulti-brand themes'];
 		popula,
   r: true;
@@ -7722,7 +7667,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Scan your site for cookies/trackers, classify them, and generate policy updates with change diffs.'
-		feature,
   s: ['Site scanTracker classificationPolicy generatorDiffs + historyCI hook'];
 		popula,
   r: false;
@@ -7789,7 +7733,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Connect monitors, log incidents, and share public SLA/uptime reports with customers.'
-		feature,
   s: ['Incident logPublic status pageSLA calculatorRSS + webhooksExports'];
 		popula,
   r: false;
@@ -7856,7 +7799,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.'
-		feature,
   s: ['Qualifying flowsCalendar bookingCRM routingVisitor insightsHand-off to human'];
 		popula,
   r: true;
@@ -7923,7 +7865,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Hosted portal for DSARs with identity verification, workflow, and export helpers.'
-		feature,
   s: ['Request intakeIdentity checkTriage + workflowExportsAudit logs'];
 		popula,
   r: true;
@@ -7990,7 +7931,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.'
-		feature,
   s: ['Repo scannerFlag inventoryRisk detectionPR suggestionsCI integration'];
 		popula,
   r: false;
@@ -8057,7 +7997,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'
-		feature,
   s: ['Slow query captureIndex suggestionsRisk scoringPR generationRollback assist'];
 		popula,
   r: true;
@@ -8124,7 +8063,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'
-		feature,
   s: ['Usage analysisRule suggestionsCost simulatorChange setsAlerting'];
 		popula,
   r: false;
@@ -8191,7 +8129,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.'
-		feature,
   s: ['ConnectorsSensitive entity detectionSampling with redactionFindings exportAlerting'];
 		popula,
   r: true;
@@ -8258,7 +8195,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.'
-		feature,
   s: ['Schema registryDiff rulesOwner mappingCI checksChangelog hints'];
 		popula,
   r: false;
@@ -8325,7 +8261,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month'
 		descriptio,
   n: 'Browser-based recorder creates resilient journeys, run on a schedule and alert on SLO errors or latency.'
-		feature,
   s: ['RecorderSelector healingSchedulesSLO alertsReports'];
 		popula,
   r: false;
@@ -8392,7 +8327,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Continuously analyze IAM policies/usage to propose safe permission reductions and open PRs.'
-		feature,
   s: ['Policy inventoryUsage analysisRecommendationsPR generationAlerting'];
 		popula,
   r: true;
@@ -8459,7 +8393,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake/BigQuery costs.'
-		feature,
   s: ['Query profilingSize/schedule proposalsCost simulatorPR templatesAlerts'];
 		popula,
   r: true;
@@ -8526,7 +8459,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.'
-		feature,
   s: ['Warmup campaignsSeed inbox testsDomain/auth checksAlertsReports'];
 		popula,
   r: false;
@@ -8593,7 +8525,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/user/mo'
 		descriptio,
   n: 'Transcribe meetings, extract action items, and open tickets with owners and due dates.'
-		feature,
   s: ['TranscriptionAction extractionTicket creationOwner mappingSummaries'];
 		popula,
   r: true;
@@ -8661,7 +8592,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Reads inbound emails, classifies intent, drafts high - quality replies, and schedules polite follow - ups. Escalates edge cases to humans with context summaries.'
-  feature,
   s: [;
   'Intent classification + prioritization_on - brand response drafting_automatic polite follow - ups_lead / contact enrichment_analytics and response SLAs'
   ];
@@ -8730,7 +8660,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.'
-  feature,
   s: [;
   'Branching logic + A / B promptsSMS / WhatsApp / web delivery_real - time analyticsCSV / Sheets export_webhooks + API'
   ];
@@ -8799,7 +8728,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
-  feature,
   s: [;
   'Industry templates_calendar + task sync_benchmark KPIsExport to PDFRole - based views'
   ];
@@ -8868,7 +8796,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Run webinars or in - person events with landing pages, reminders, QR tickets, and feedback analytics.'
-  feature,
   s: [;
   'QR tickets + check - in_email / SMS reminders_agenda builder_feedback forms_post - event reports'
   ];
@@ -8937,7 +8864,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Create affiliate programs with branded links, flexible commission rules, and payout exports.'
-  feature,
   s: ['Custom referral linksUTM attribution_rule - based commissions_payout exports_fraud checks'];
   popula,
   r: false;
@@ -9004,7 +8930,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Privacy - friendly analytics for small businesses with funnel insights and weekly summaries.'
-  feature,
   s: ['Page + event analytics_funnels + cohorts_weekly email summariesCSV export_no cookies mode'];
   popula,
   r: false;
@@ -9071,7 +8996,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Managed ticketing for MSPs and internal IT with automation rules, approval flows, and client - visible status.'
-  feature,
   s: ['Email - to - ticketKB + article templatesSLAs + escalations_client portal_reports'];
   popula,
   r: true;
@@ -9138,7 +9062,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Automate RMAs, label generation, and status notifications. Analytics to reduce avoidable returns.'
-  feature,
   s: ['Self - serve returns portal_label generation_return reasons analytics_inventory sync_notifications'];
   popula,
   r: true;
@@ -9205,7 +9128,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto - scheduling.'
-  feature,
   s: ['Sequences + delays_inbox integration_smart stop on replyTemplatesAnalytics'];
   popula,
   r: false;
@@ -9272,7 +9194,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Upload or link to podcast episodes, get transcripts, summaries, chapters, and Wordpress - ready blog exports.'
-  feature,
   s: ['Fast transcripts_timestamps + chapters_summaries + highlights_blog export_glossary'];
   popula,
   r: false;
@@ -9339,7 +9260,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'In - editor SEO suggestions, competitive gap analysis, and AI rewrites targeting featured snippets.'
-  feature,
   s: ['On - page audits_topic clusteringSERP intent match_internal link hints_rewrite suggestions'];
   popula,
   r: true;
@@ -9406,7 +9326,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Turn links, videos, or blog posts into tailored social snippets and schedule them with best - time predictions.'
-  feature,
   s: ['Content repurposing_calendar + auto - times_hashtag + emoji assistant_link tracking_client approvals'];
   popula,
   r: false;
@@ -9473,7 +9392,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'REST API to enrich leads with verified firmographics and social signals for scoring and routing.'
-  feature,
   s: ['FirmographicsRole detection_validated email signals_confidence scoring_usage dashboards'];
   popula,
   r: false;
@@ -9540,7 +9458,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Deploy branded consent banners, a preferences center, and downloadable audit logs. Geo - aware rules.'
-  feature,
   s: ['Geo rulesIAB TCFPreference center_audit logs_multi - brand themes'];
   popula,
   r: true;
@@ -9607,7 +9524,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Scan your site for cookies / trackers, classify them, and generate policy updates with change diffs.'
-  feature,
   s: ['Site scan_tracker classification_policy generator_diffs + historyCI hook'];
   popula,
   r: false;
@@ -9674,7 +9590,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Connect monitors, log incidents, and share public SLA / uptime reports with customers.'
-  feature,
   s: ['Incident log_public status pageSLA calculatorRSS + webhooks_exports'];
   popula,
   r: false;
@@ -9741,7 +9656,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.'
-  feature,
   s: ['Qualifying flows_calendar bookingCRM routing_visitor insights_hand - off to human'];
   popula,
   r: true;
@@ -9808,7 +9722,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Hosted portal for DSARs with identity verification, workflow, and export helpers.'
-  feature,
   s: ['Request intake_identity check_triage + workflowExportsAudit logs'];
   popula,
   r: true;
@@ -9875,7 +9788,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto - open PRs.'
-  feature,
   s: ['Repo scanner_flag inventory_risk detectionPR suggestionsCI integration'];
   popula,
   r: false;
@@ -9942,7 +9854,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'
-  feature,
   s: ['Slow query capture_index suggestions_risk scoringPR generation_rollback assist'];
   popula,
   r: true;
@@ -10009,7 +9920,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'
-  feature,
   s: ['Usage analysis_rule suggestions_cost simulator_change sets_alerting'];
   popula,
   r: false;
@@ -10076,7 +9986,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.'
-  feature,
   s: ['ConnectorsSensitive entity detection_sampling with redaction_findings export_alerting'];
   popula,
   r: true;
@@ -10143,7 +10052,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.'
-  feature,
   s: ['Schema registry_diff rules_owner mappingCI checks_changelog hints'];
   popula,
   r: false;
@@ -10210,7 +10118,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Browser - based recorder creates resilient journeys, run on a schedule and alert on SLO errors or latency.'
-  feature,
   s: ['RecorderSelector healingSchedulesSLO alerts_reports'];
   popula,
   r: false;
@@ -10277,7 +10184,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.'
-  feature,
   s: ['Policy inventory_usage analysisRecommendationsPR generation_alerting'];
   popula,
   r: true;
@@ -10344,7 +10250,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.'
-  feature,
   s: ['Query profiling_size / schedule proposals_cost simulatorPR templates_alerts'];
   popula,
   r: true;
@@ -10411,7 +10316,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/month',
   descriptio,
   n: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.'
-  feature,
   s: ['Warmup campaigns_seed inbox tests_domain / auth checksAlertsReports'];
   popula,
   r: false;
@@ -10478,7 +10382,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   d: '/user / mo',
   descriptio,
   n: 'Transcribe meetings, extract action items, and open tickets with owners and due dates.'
-  feature,
   s: ['TranscriptionAction extraction_ticket creation_owner mapping_summaries'];
   popula,
   r: true;
@@ -10537,7 +10440,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   g: 4.6;
 		review,
   s: 6,
-// const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
@@ -10545,142 +10447,114 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 };
 export const,
   real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
-	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 12}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 9}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 7}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 11}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 5}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 8}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 6}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 5}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 8}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 6}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 10}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 7}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 4}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 10}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 5}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 3}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 7}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 4}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 3}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 5}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 4}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 5}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 3}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 6}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 3}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 3}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 4}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 6}
@@ -10840,7 +10714,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 31;
 		rating: 4.7}
 		reviews: 11}
-// const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
@@ -10848,142 +10721,114 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 };
 export const,
   real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
-	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 12}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 9}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 7}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 11}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 5}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 8}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 6}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 5}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 8}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 6}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 10}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 7}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 4}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 10}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 5}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 3}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 7}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 4}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 3}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 5}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 4}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 5}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 3}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 6}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 3}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 3}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 4}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 6}
@@ -11074,7 +10919,6 @@ export const,
   e:  ,' 'Adaptive, mobile - first surveys with branching logic and analytics',' pric,
   e: '$19',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.', feature,
   s: [,' 'Branching logic + A / B prompts',' 'SMS / WhatsApp / web delivery',' 'Real - time analytics',' 'CSV / Sheets export', ' 'Webhooks + API'], popula,
   r: false,' ico,
   n: '📱', ' colo,
@@ -11108,7 +10952,6 @@ export const,
   e:  ,' 'Industry - specific planners with templates, rituals, and benchmarks',' pric,
   e: '$12',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.', feature,
   s: [, ' 'Industry templates',' 'Calendar + task sync',' 'Benchmark KPIs',' 'Export to PDF',' 'Role - based views'], popula,
   r: false,' ico,
   n: '🗂️', ' colo,
@@ -11142,7 +10985,6 @@ export const,
   e: 'Tickets, scheduling, comms, and post - event analytics',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Run webinars or in - person events with landing pages, reminders, QR tickets, and feedback analytics.', feature,
   s: [,' 'QR tickets + check - in',' 'Email / SMS reminders', ' 'Agenda builder',' 'Feedback forms',' 'Post - event reports'], popula,
   r: true,' ico,
   n: '🎟️', ' colo,
@@ -11176,7 +11018,6 @@ export const,
   e: 'Links, attribution, commission rules, and payouts',' pric,
   e: '$29',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Create affiliate programs with branded links, flexible commission rules, and payout exports.', feature,
   s: [, ' 'Custom referral links',' 'UTM attribution',' 'Rule - based commissions',' 'Payout exports',' 'Fraud checks'], popula,
   r: false,' ico,
   n: '🔗', ' colo,
@@ -11210,7 +11051,6 @@ export const,
   e: 'Traffic, funnels, and conversions without complexity',' pric,
   e: '$15',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Privacy - friendly analytics for small businesses with funnel insights and weekly summaries.', feature,
   s: [, ' 'Page + event analytics',' 'Funnels + cohorts',' 'Weekly email summaries',' 'CSV export',' 'No cookies mode'], popula,
   r: false,' ico,
   n: '📊', ' colo,
@@ -11244,7 +11084,6 @@ export const,
   e: 'Tickets, knowledge base, SLAs, and client portal',' pric,
   e: '$59',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Managed ticketing for MSPs and internal IT with automation rules, approval flows, and client - visible status.', feature,
   s: [,' 'Email - to - ticket', ' 'KB + article templates',' 'SLAs + escalations',' 'Client portal',' 'Reports'], popula,
   r: true,' ico,
   n: '🆘', ' colo,
@@ -11278,7 +11117,6 @@ export const,
   e: 'Customer - friendly returns with labels and status tracking',' pric,
   e: '$39',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Automate RMAs, label generation, and status notifications. Analytics to reduce avoidable returns.', feature,
   s: [,' 'Self - serve returns portal', ' 'Label generation',' 'Return reasons analytics',' 'Inventory sync',' 'Notifications'], popula,
   r: true,' ico,
   n: '📦', ' colo,
@@ -11312,7 +11150,6 @@ export const,
   e: 'No - lead - left - behind sequences across inboxes',' pric,
   e: '$15',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto - scheduling.', feature,
   s: [, ' 'Sequences + delays',' 'Inbox integration',' 'Smart stop on reply',' 'Templates',' 'Analytics'], popula,
   r: false,' ico,
   n: '📨', ' colo,
@@ -11346,7 +11183,6 @@ export const,
   e: 'Accurate transcripts, chapters, and SEO blog exports',' pric,
   e: '$12',' perio,
   d: '/month', descriptio,
-  n: ;' 'Upload or link to podcast episodes, get transcripts, summaries, chapters, and Wordpress - ready blog exports.', feature,
   s: [, ' 'Fast transcripts',' 'Timestamps + chapters',' 'Summaries + highlights',' 'Blog export',' 'Glossary'], popula,
   r: false,' ico,
   n: '🎙️', ' colo,
@@ -11380,7 +11216,6 @@ export const,
   e: 'Live on - page audits and SEO - aware rewrites',' pric,
   e: '$29',' perio,
   d: '/month', descriptio,
-  n:  ,' 'In - editor SEO suggestions, competitive gap analysis, and AI rewrites targeting featured snippets.', feature,
   s: [,' 'On - page audits', ' 'Topic clustering',' 'SERP intent match',' 'Internal link hints',' 'Rewrite suggestions'], popula,
   r: true,' ico,
   n: '🔎', ' colo,
@@ -11414,7 +11249,6 @@ export const,
   e: 'Auto - generate, schedule, and repurpose posts cross - platform',' pric,
   e: '$15',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Turn links, videos, or blog posts into tailored social snippets and schedule them with best - time predictions.', feature,
   s: [, ' 'Content repurposing',' 'Calendar + auto - times',' 'Hashtag + emoji assistant',' 'Link tracking',' 'Client approvals'], popula,
   r: false,' ico,
   n: '📆', ' colo,
@@ -11448,7 +11282,6 @@ export const,
   e: 'Company, role, and social signals from an email / domain',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
-  n:  ,' 'REST API to enrich leads with verified firmographics and social signals for scoring and routing.', feature,
   s: [, ' 'Firmographics',' 'Role detection',' 'Validated email signals',' 'Confidence scoring',' 'Usage dashboards'], popula,
   r: false,' ico,
   n: '🧩', ' colo,
@@ -11482,7 +11315,6 @@ export const,
   e: 'GDPR / CCPA consent banners, preferences, and audit logs',' pric,
   e: '$25',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Deploy branded consent banners, a preferences center, and downloadable audit logs. Geo - aware rules.', feature,
   s: [, ' 'Geo rules',' 'IAB TCF',' 'Preference center',' 'Audit logs',' 'Multi - brand themes'], popula,
   r: true,' ico,
   n: '✅', ' colo,
@@ -11516,7 +11348,6 @@ export const,
   e: 'Auto - detects cookies + trackers and updates your policy',' pric,
   e: '$9',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Scan your site for cookies / trackers, classify them, and generate policy updates with change diffs.', feature,
   s: [, ' 'Site scan',' 'Tracker classification',' 'Policy generator',' 'Diffs + history',' 'CI hook'], popula,
   r: false,' ico,
   n: '🍪', ' colo,
@@ -11550,7 +11381,6 @@ export const,
   e: 'Track uptime / incidents and publish SLA reports',' pric,
   e: '$19',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Connect monitors, log incidents, and share public SLA / uptime reports with customers.', feature,
   s: [, ' 'Incident log',' 'Public status page',' 'SLA calculator',' 'RSS + webhooks',' 'Exports'], popula,
   r: false,' ico,
   n: '📈', ' colo,
@@ -11584,7 +11414,6 @@ export const,
   e: 'Website chat agent that pre - qualifies and routes leads',' pric,
   e: '$29',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.', feature,
   s: [, ' 'Qualifying flows',' 'Calendar booking',' 'CRM routing',' 'Visitor insights',' 'Hand - off to human'], popula,
   r: true,' categor,
   y: 'AI & Data', real_servic,
@@ -11608,7 +11437,6 @@ export const,
   e: 'Accept, verify, export, and fulfill data subject requests',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Hosted portal for DSARs with identity verification, workflow, and export helpers.', feature,
   s: [, ' 'Request intake',' 'Identity check',' 'Triage + workflow',' 'Exports',' 'Audit logs'], popula,
   r: true,' integration,
   s: ['Zendesk', 'Google Drive'],' use_case,
@@ -11626,7 +11454,6 @@ export const,
   g: 4 && 4.5, review,
   s: 4}, ' perio,
   d: '/month', descriptio,
-  n:  ,' 'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.', feature,
   s: [, ' 'Qualifying flows',' 'Calendar booking',' 'CRM routing',' 'Visitor insights',' 'Hand - off to human'], popula,
   r: true,' ico,
   n: '🤖',' colo,
@@ -11660,7 +11487,6 @@ export const,
   e: 'Accept, verify, export, and fulfill data subject requests',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Hosted portal for DSARs with identity verification, workflow, and export helpers.', feature,
   s: [,' 'Request intake',' 'Identity check',' 'Triage + workflow',' 'Exports',' 'Audit logs'], popula,
   r: true,' ico,
   n: '🛡️',' colo,
@@ -11694,7 +11520,6 @@ export const,
   e: 'Flag hygiene checks and end-of-life automation'' pric,
   e: '$19'' perio,
   d: '/month' descriptio,
-  n:' 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.' feature,
   s: [' 'Repo scanner'' 'Flag inventory'' 'Risk detection'' 'PR suggestions'' 'CI integration' ] popula,
   r: false' ico,
   n: '🚩'' colo,
@@ -11755,7 +11580,6 @@ export const,
   e: 'Index recommendations and controlled PR rollouts',' pric,
   e: '$79',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.', feature,
   s: [,' 'Slow query capture',' 'Index suggestions',' 'Risk scoring',' 'PR generation',' 'Rollback assist'], popula,
   r: true,' categor,
   y: 'Developer Tools', real_servic,
@@ -11816,7 +11640,6 @@ export const,
   e: 'Schema diffs with CI gates and notifications',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
-  n: ;' 'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
   s: [ ' i,
   d: 'api - breaking - change - watcher',' categor,
   y: 'Developer Tools', real_servic,
@@ -11841,7 +11664,6 @@ export const,
   e: 'Index recommendations and controlled PR rollouts'' pric,
   e: '$79'' perio,
   d: '/month' descriptio,
-  n:' 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.' feature,
   s: [' 'Slow query capture'' 'Index suggestions'' 'Risk scoring'' 'PR generation'' 'Rollback assist' ] popula,
   r: true' ico,
   n: '🗄️'' colo,
@@ -11875,7 +11697,6 @@ export const,
   e: 'Move objects between storage classes to cut costs'' pric,
   e: '$59'' perio,
   d: '/month' descriptio,
-  n:' 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.' feature,
   s: [' 'Usage analysis'' 'Rule suggestions'' 'Cost simulator'' 'Change sets'' 'Alerting' ] popula,
   r: false' ico,
   n: '🗂️'' colo,
@@ -11909,7 +11730,6 @@ export const,
   e: 'Scan buckets and DBs for PII/PHI with evidence exports'' pric,
   e: '$89'' perio,
   d: '/month' descriptio,
-  n:' 'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.' feature,
   s: [' 'Connectors'' 'Sensitive entity detection'' 'Sampling with redaction'' 'Findings export'' 'Alerting' ] popula,
   r: true' ico,
   n: '🕵️'' colo,
@@ -11970,7 +11790,6 @@ export const,
   e: 'Index recommendations and controlled PR rollouts',' pric,
   e: '$79',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.', feature,
   s: [,' 'Slow query capture',' 'Index suggestions',' 'Risk scoring',' 'PR generation',' 'Rollback assist'], popula,
   r: true,' ico,
   n: '🗄️',' colo,
@@ -12004,7 +11823,6 @@ export const,
   e: 'Move objects between storage classes to cut costs',' pric,
   e: '$59',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.', feature,
   s: [,' 'Usage analysis',' 'Rule suggestions',' 'Cost simulator',' 'Change sets',' 'Alerting'], popula,
   r: false,' ico,
   n: '🗂️',' colo,
@@ -12038,7 +11856,6 @@ export const,
   e: 'Scan buckets and DBs for PII / PHI with evidence exports',' pric,
   e: '$89',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.', feature,
   s: [,' 'Connectors',' 'Sensitive entity detection',' 'Sampling with redaction',' 'Findings export',' 'Alerting'], popula,
   r: true,' ico,
   n: '🕵️',' colo,
@@ -12078,7 +11895,6 @@ export const,
   e: 'Schema diffs with CI gates and notifications',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
-  n: ;' 'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
   s: [, ' 'Schema registry',' 'Diff rules',' 'Owner mapping',' 'CI checks',' 'Changelog hints'], popula,
   r: false,' ico,
   n: '🧭', ' colo,
@@ -12106,7 +11922,6 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 12, ratin,
   g: 4 && 4.5, review,
-  s: 3}, ' 'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.', feature,
   s: [' 'Schema registry'' 'Diff rules'' 'Owner mapping'' 'CI checks'' 'Changelog hints' ] popula,
   r: false' ico,
   n: '🧭'' colo,
@@ -12140,7 +11955,6 @@ export const,
   e: 'Flag hygiene checks and end - of - life automation',' pric,
   e: '$19',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto - open PRs.', feature,
   s: [, ' 'Repo scanner',' 'Flag inventory',' 'Risk detection',' 'PR suggestions',' 'CI integration'], popula,
   r: false,' ico,
   n: '🚩', ' colo,
@@ -12174,7 +11988,6 @@ export const,
   e: 'Index recommendations and controlled PR rollouts',' pric,
   e: '$79',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.', feature,
   s: [, ' 'Slow query capture',' 'Index suggestions',' 'Risk scoring',' 'PR generation',' 'Rollback assist'], popula,
   r: true,' ico,
   n: '🗄️', ' colo,
@@ -12208,7 +12021,6 @@ export const,
   e: 'Move objects between storage classes to cut costs',' pric,
   e: '$59',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.', feature,
   s: [, ' 'Usage analysis',' 'Rule suggestions',' 'Cost simulator',' 'Change sets',' 'Alerting'], popula,
   r: false,' ico,
   n: '🗂️', ' colo,
@@ -12242,7 +12054,6 @@ export const,
   e: 'Scan buckets and DBs for PII / PHI with evidence exports',' pric,
   e: '$89',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.', feature,
   s: [, ' 'Connectors',' 'Sensitive entity detection',' 'Sampling with redaction',' 'Findings export',' 'Alerting'], popula,
   r: true,' ico,
   n: '🕵️', ' colo,
@@ -12276,14 +12087,12 @@ export const,
   e: 'Schema diffs with CI gates and notifications',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
-  n: ;' 'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
   s: [ ' i,
   d: 'api - breaking - change - watcher',' nam,
   e: 'API Breaking Change Watcher',' taglin,
   e: 'Schema diffs with CI gates and notifications',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
-  n: ;' 'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
   s: [, ' 'Schema registry',' 'Diff rules',' 'Owner mapping',' 'CI checks',' 'Changelog hints'], popula,
   r: false,' ico,
   n: '🧭', ' colo,
@@ -12317,7 +12126,6 @@ export const,
   e: 'Record and replay user flows with SLO alerts',' pric,
   e: '$39',' perio,
   d: '/month', descriptio,
-  n: ;' 'Browser - based recorder creates resilient journeys, run on a schedule and alert on SLO errors or latency.', feature,
   s: [, ' 'Recorder',' 'Selector healing',' 'Schedules',' 'SLO alerts',' 'Reports'], popula,
   r: false,' ico,
   n: '🧪', ' colo,
@@ -12351,7 +12159,6 @@ export const,
   e:  ,' 'Detect over - privileged access and propose least - privilege policies',' pric,
   e: '$79',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.', feature,
   s: [, ' 'Policy inventory',' 'Usage analysis',' 'Recommendations',' 'PR generation',' 'Alerting'], popula,
   r: true,' ico,
   n: '🔐', ' colo,
@@ -12385,7 +12192,6 @@ export const,
   e: 'Right - size warehouses and schedule off - peak workloads',' pric,
   e: '$99',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.', feature,
   s: [, ' 'Query profiling',' 'Size / schedule proposals',' 'Cost simulator',' 'PR templates',' 'Alerts'], popula,
   r: true,' ico,
   n: '🧱', ' colo,
@@ -12419,7 +12225,6 @@ export const,
   e: 'Track sender reputation and run inbox placement tests',' pric,
   e: '$39',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.', feature,
   s: [, ' 'Warmup campaigns',' 'Seed inbox tests',' 'Domain / auth checks',' 'Alerts',' 'Reports'], popula,
   r: false,' ico,
   n: '🔥', ' colo,
@@ -12453,7 +12258,6 @@ export const,
   e: 'Turn meeting action items into Jira / GitHub tickets',' pric,
   e: '$25',' perio,
   d: '/user / mo', descriptio,
-  n:  ,' 'Transcribe meetings, extract action items, and open tickets with owners and due dates.', feature,
   s: [, ' 'Transcription',' 'Action extraction',' 'Ticket creation',' 'Owner mapping',' 'Summaries'], popula,
   r: true,' ico,
   n: '📝', ' colo,
@@ -12493,7 +12297,6 @@ export const,
   e: 'Autonomous email triage, drafting, and follow-ups for sales and support',' pric,
   e: '$39', perio,
   d: '/month',' descriptio,
-  n: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.', feature,
   s: [ ' 'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs' ]; popula,
   r: true,' ico,
   n: '📧'' colo,
@@ -12527,7 +12330,6 @@ export const,
   e: 'Adaptive, mobile-first surveys with branching logic and analytics'' pric,
   e: '$19'' perio,
   d: '/month',' descriptio,
-  n: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.' feature,
   s: [' 'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API' ]; popula,
   r: false,' ico,
   n: '📱'' colo,
@@ -12561,7 +12363,6 @@ export const,
   e: 'Industry-specific planners with templates, rituals, and benchmarks'' pric,
   e: '$12'' perio,
   d: '/month'' descriptio,
-  n: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.' feature,
   s: [' 'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views' ]; popula,
   r: false;' ico,
   n: '🗂️'' colo,
@@ -12595,7 +12396,6 @@ export const,
   e: 'Tickets, scheduling, comms, and post-event analytics'' pric,
   e: '$49'' perio,
   d: '/month'' descriptio,
-  n: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.' feature,
   s: [' 'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports' ]; popula,
   r: true,' ico,
   n: '🎟️'' colo,
@@ -12629,7 +12429,6 @@ export const,
   e: 'Links, attribution, commission rules, and payouts'' pric,
   e: '$29'' perio,
   d: '/month'' descriptio,
-  n: 'Create affiliate programs with branded links, flexible commission rules, and payout exports.'' feature,
   s: ['Custom referral linksUTM attributionRule-based commissionsPayout exportsFraud checks']; popula,
   r: false,' ico,
   n: '🔗'' colo,
@@ -12663,7 +12462,6 @@ export const,
   e: 'Traffic, funnels, and conversions without complexity'' pric,
   e: '$15'' perio,
   d: '/month',' descriptio,
-  n: 'Privacy-friendly analytics for small businesses with funnel insights and weekly summaries.'' feature,
   s: ['Page + event analyticsFunnels + cohortsWeekly email summariesCSV exportNo cookies mode']; popula,
   r: false,' ico,
   n: '📊'' colo,
@@ -12697,7 +12495,6 @@ export const,
   e: 'Tickets, knowledge base, SLAs, and client portal'' pric,
   e: '$59'' perio,
   d: '/month'' descriptio,
-  n: 'Managed ticketing for MSPs and internal IT with automation rules, approval flows, and client-visible status.'' feature,
   s: ['Email-to-ticketKB + article templatesSLAs + escalationsClient portalReports']; popula,
   r: true,' ico,
   n: '🆘'' colo,
@@ -12731,7 +12528,6 @@ export const,
   e: 'Customer-friendly returns with labels and status tracking'' pric,
   e: '$39'' perio,
   d: '/month'' descriptio,
-  n: 'Automate RMAs, label generation, and status notifications. Analytics to reduce avoidable returns.'' feature,
   s: ['Self-serve returns portalLabel generationReturn reasons analyticsInventory syncNotifications']; popula,
   r: true,' ico,
   n: '📦'' colo,
@@ -12765,7 +12561,6 @@ export const,
   e: 'No-lead-left-behind sequences across inboxes'' pric,
   e: '$15'' perio,
   d: '/month',' descriptio,
-  n: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto-scheduling.'' feature,
   s: ['Sequences + delaysInbox integrationSmart stop on replyTemplatesAnalytics']; popula,
   r: false,' ico,
   n: '📨'' colo,
@@ -12799,7 +12594,6 @@ export const,
   e: 'Accurate transcripts, chapters, and SEO blog exports'' pric,
   e: '$12'' perio,
   d: '/month'' descriptio,
-  n: 'Upload or link to podcast episodes, get transcripts, summaries, chapters, and Wordpress-ready blog exports.'' feature,
   s: ['Fast transcriptsTimestamps + chaptersSummaries + highlightsBlog exportGlossary']; popula,
   r: false,' ico,
   n: '🎙️'' colo,
@@ -12833,7 +12627,6 @@ export const,
   e: 'Live on-page audits and SEO-aware rewrites'' pric,
   e: '$29'' perio,
   d: '/month'' descriptio,
-  n: 'In-editor SEO suggestions, competitive gap analysis, and AI rewrites targeting featured snippets.'' feature,
   s: ['On-page auditsTopic clusteringSERP intent matchInternal link hintsRewrite suggestions']; popula,
   r: true,' ico,
   n: '🔎'' colo,
@@ -12867,7 +12660,6 @@ export const,
   e: 'Auto-generate, schedule, and repurpose posts cross-platform'' pric,
   e: '$15'' perio,
   d: '/month'' descriptio,
-  n: 'Turn links, videos, or blog posts into tailored social snippets and schedule them with best-time predictions.'' feature,
   s: ['Content repurposingCalendar + auto-timesHashtag + emoji assistantLink trackingClient approvals']; popula,
   r: false,' ico,
   n: '📆'' colo,
@@ -12901,7 +12693,6 @@ export const,
   e: 'Company, role, and social signals from an email/domain'' pric,
   e: '$49'' perio,
   d: '/month',' descriptio,
-  n: 'REST API to enrich leads with verified firmographics and social signals for scoring and routing.'' feature,
   s: ['FirmographicsRole detectionValidated email signalsConfidence scoringUsage dashboards']; popula,
   r: false,' ico,
   n: '🧩'' colo,
@@ -12935,7 +12726,6 @@ export const,
   e: 'GDPR/CCPA consent banners, preferences, and audit logs'' pric,
   e: '$25'' perio,
   d: '/month'' descriptio,
-  n: 'Deploy branded consent banners, a preferences center, and downloadable audit logs. Geo-aware rules.'' feature,
   s: ['Geo rulesIAB TCFPreference centerAudit logsMulti-brand themes']; popula,
   r: true,' ico,
   n: '✅'' colo,
@@ -12969,7 +12759,6 @@ export const,
   e: 'Auto-detects cookies + trackers and updates your policy'' pric,
   e: '$9'' perio,
   d: '/month'' descriptio,
-  n: 'Scan your site for cookies/trackers, classify them, and generate policy updates with change diffs.'' feature,
   s: ['Site scanTracker classificationPolicy generatorDiffs + historyCI hook']; popula,
   r: false,' ico,
   n: '🍪'' colo,
@@ -13003,7 +12792,6 @@ export const,
   e: 'Track uptime/incidents and publish SLA reports'' pric,
   e: '$19'' perio,
   d: '/month'' descriptio,
-  n: 'Connect monitors, log incidents, and share public SLA/uptime reports with customers.'' feature,
   s: ['Incident logPublic status pageSLA calculatorRSS + webhooksExports']; popula,
   r: false;' ico,
   n: '📈'' colo,
@@ -13037,7 +12825,6 @@ export const,
   e: 'Website chat agent that pre-qualifies and routes leads'' pric,
   e: '$29'' perio,
   d: '/month'' descriptio,
-  n: 'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.'' feature,
   s: ['Qualifying flowsCalendar bookingCRM routingVisitor insightsHand-off to human']; popula,
   r: true,' ico,
   n: '🤖'' colo,
@@ -13071,7 +12858,6 @@ export const,
   e: 'Accept, verify, export, and fulfill data subject requests'' pric,
   e: '$49'' perio,
   d: '/month'' descriptio,
-  n: 'Hosted portal for DSARs with identity verification, workflow, and export helpers.'' feature,
   s: ['Request intakeIdentity checkTriage + workflowExportsAudit logs']; popula,
   r: true;' ico,
   n: '🛡️'' colo,
@@ -13105,7 +12891,6 @@ export const,
   e: 'Flag hygiene checks and end-of-life automation'' pric,
   e: '$19'' perio,
   d: '/month'' descriptio,
-  n: 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.'' feature,
   s: ['Repo scannerFlag inventoryRisk detectionPR suggestionsCI integration']; popula,
   r: false;' ico,
   n: '🚩'' colo,
@@ -13139,7 +12924,6 @@ export const,
   e: 'Index recommendations and controlled PR rollouts'' pric,
   e: '$79'' perio,
   d: '/month'' descriptio,
-  n: 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'' feature,
   s: ['Slow query captureIndex suggestionsRisk scoringPR generationRollback assist']; popula,
   r: true;' ico,
   n: '🗄️'' colo,
@@ -13173,7 +12957,6 @@ export const,
   e: 'Move objects between storage classes to cut costs'' pric,
   e: '$59'' perio,
   d: '/month',' descriptio,
-  n: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'' feature,
   s: ['Usage analysisRule suggestionsCost simulatorChange setsAlerting']; popula,
   r: false;' ico,
   n: '🗂️'' colo,
@@ -13207,7 +12990,6 @@ export const,
   e: 'Scan buckets and DBs for PII/PHI with evidence exports'' pric,
   e: '$89'' perio,
   d: '/month'' descriptio,
-  n: 'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.'' feature,
   s: ['ConnectorsSensitive entity detectionSampling with redactionFindings exportAlerting']; popula,
   r: true,' ico,
   n: '🕵️'' colo,
@@ -13241,7 +13023,6 @@ export const,
   e: 'Schema diffs with CI gates and notifications'' pric,
   e: '$49'' perio,
   d: '/month'' descriptio,
-  n: 'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.'' feature,
   s: ['Schema registryDiff rulesOwner mappingCI checksChangelog hints']; popula,
   r: false;' ico,
   n: '🧭'' colo,
@@ -13275,7 +13056,6 @@ export const,
   e: 'Record and replay user flows with SLO alerts'' pric,
   e: '$39'' perio,
   d: '/month'' descriptio,
-  n: 'Browser-based recorder creates resilient journeys, run on a schedule and alert on SLO errors or latency.'' feature,
   s: ['RecorderSelector healingSchedulesSLO alertsReports']; popula,
   r: false,' ico,
   n: '🧪'' colo,
@@ -13309,7 +13089,6 @@ export const,
   e: 'Detect over-privileged access and propose least-privilege policies'' pric,
   e: '$79'' perio,
   d: '/month',' descriptio,
-  n: 'Continuously analyze IAM policies/usage to propose safe permission reductions and open PRs.'' feature,
   s: ['Policy inventoryUsage analysisRecommendationsPR generationAlerting']; popula,
   r: true;' ico,
   n: '🔐'' colo,
@@ -13343,7 +13122,6 @@ export const,
   e: 'Right-size warehouses and schedule off-peak workloads'' pric,
   e: '$99'' perio,
   d: '/month',' descriptio,
-  n: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake/BigQuery costs.'' feature,
   s: ['Query profilingSize/schedule proposalsCost simulatorPR templatesAlerts']; popula,
   r: true;' ico,
   n: '🧱'' colo,
@@ -13377,7 +13155,6 @@ export const,
   e: 'Track sender reputation and run inbox placement tests'' pric,
   e: '$39'' perio,
   d: '/month',' descriptio,
-  n: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.'' feature,
   s: ['Warmup campaignsSeed inbox testsDomain/auth checksAlertsReports']; popula,
   r: false;' ico,
   n: '🔥'' colo,
@@ -13411,7 +13188,6 @@ export const,
   e: 'Turn meeting action items into Jira/GitHub tickets'' pric,
   e: '$25'' perio,
   d: '/user/mo'' descriptio,
-  n: 'Transcribe meetings, extract action items, and open tickets with owners and due dates.'' feature,
   s: ['TranscriptionAction extractionTicket creationOwner mappingSummaries']; popula,
   r: true,' ico,
   n: '📝'' colo,
@@ -13445,7 +13221,6 @@ export const,
   e: 'Autonomous email triage, drafting, and follow - ups for sales and support'' pric,
   e: '$39'' perio,
   d: '/month',' descriptio,
-  n: 'Reads inbound emails, classifies intent, drafts high - quality replies, and schedules polite follow - ups. Escalates edge cases to humans with context summaries.' feature,
   s: [;' 'Intent classification + prioritization_on - brand response drafting_automatic polite follow - ups_lead / contact enrichment_analytics and response SLAs' ]; popula,
   r: true,' ico,
   n: '📧'' colo,
@@ -13479,7 +13254,6 @@ export const,
   e: 'Adaptive, mobile - first surveys with branching logic and analytics'' pric,
   e: '$19'' perio,
   d: '/month',' descriptio,
-  n: 'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.' feature,
   s: [;' 'Branching logic + A / B promptsSMS / WhatsApp / web delivery_real - time analyticsCSV / Sheets export_webhooks + API' ]; popula,
   r: false,' ico,
   n: '📱'' colo,
@@ -13513,7 +13287,6 @@ export const,
   e: 'Industry - specific planners with templates, rituals, and benchmarks'' pric,
   e: '$12'' perio,
   d: '/month',' descriptio,
-  n: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.' feature,
   s: [;' 'Industry templates_calendar + task sync_benchmark KPIsExport to PDFRole - based views' ]; popula,
   r: false;' ico,
   n: '🗂️'' colo,
@@ -13547,7 +13320,6 @@ export const,
   e: 'Tickets, scheduling, comms, and post - event analytics'' pric,
   e: '$49'' perio,
   d: '/month',' descriptio,
-  n: 'Run webinars or in - person events with landing pages, reminders, QR tickets, and feedback analytics.' feature,
   s: [;' 'QR tickets + check - in_email / SMS reminders_agenda builder_feedback forms_post - event reports' ]; popula,
   r: true,' ico,
   n: '🎟️'' colo,
@@ -13581,7 +13353,6 @@ export const,
   e: 'Links, attribution, commission rules, and payouts'' pric,
   e: '$29'' perio,
   d: '/month',' descriptio,
-  n: 'Create affiliate programs with branded links, flexible commission rules, and payout exports.'' feature,
   s: ['Custom referral linksUTM attribution_rule - based commissions_payout exports_fraud checks']; popula,
   r: false,' ico,
   n: '🔗'' colo,
@@ -13615,7 +13386,6 @@ export const,
   e: 'Traffic, funnels, and conversions without complexity'' pric,
   e: '$15'' perio,
   d: '/month',' descriptio,
-  n: 'Privacy - friendly analytics for small businesses with funnel insights and weekly summaries.'' feature,
   s: ['Page + event analytics_funnels + cohorts_weekly email summariesCSV export_no cookies mode']; popula,
   r: false,' ico,
   n: '📊'' colo,
@@ -13649,7 +13419,6 @@ export const,
   e: 'Tickets, knowledge base, SLAs, and client portal'' pric,
   e: '$59'' perio,
   d: '/month',' descriptio,
-  n: 'Managed ticketing for MSPs and internal IT with automation rules, approval flows, and client - visible status.'' feature,
   s: ['Email - to - ticketKB + article templatesSLAs + escalations_client portal_reports']; popula,
   r: true,' ico,
   n: '🆘'' colo,
@@ -13683,7 +13452,6 @@ export const,
   e: 'Customer - friendly returns with labels and status tracking'' pric,
   e: '$39'' perio,
   d: '/month',' descriptio,
-  n: 'Automate RMAs, label generation, and status notifications. Analytics to reduce avoidable returns.'' feature,
   s: ['Self - serve returns portal_label generation_return reasons analytics_inventory sync_notifications']; popula,
   r: true,' ico,
   n: '📦'' colo,
@@ -13717,7 +13485,6 @@ export const,
   e: 'No - lead - left - behind sequences across inboxes'' pric,
   e: '$15'' perio,
   d: '/month',' descriptio,
-  n: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto - scheduling.'' feature,
   s: ['Sequences + delays_inbox integration_smart stop on replyTemplatesAnalytics']; popula,
   r: false,' ico,
   n: '📨'' colo,
@@ -13751,7 +13518,6 @@ export const,
   e: 'Accurate transcripts, chapters, and SEO blog exports'' pric,
   e: '$12'' perio,
   d: '/month',' descriptio,
-  n: 'Upload or link to podcast episodes, get transcripts, summaries, chapters, and Wordpress - ready blog exports.'' feature,
   s: ['Fast transcripts_timestamps + chapters_summaries + highlights_blog export_glossary']; popula,
   r: false,' ico,
   n: '🎙️'' colo,
@@ -13785,7 +13551,6 @@ export const,
   e: 'Live on - page audits and SEO - aware rewrites'' pric,
   e: '$29'' perio,
   d: '/month',' descriptio,
-  n: 'In - editor SEO suggestions, competitive gap analysis, and AI rewrites targeting featured snippets.'' feature,
   s: ['On - page audits_topic clusteringSERP intent match_internal link hints_rewrite suggestions']; popula,
   r: true,' ico,
   n: '🔎'' colo,
@@ -13819,7 +13584,6 @@ export const,
   e: 'Auto - generate, schedule, and repurpose posts cross - platform'' pric,
   e: '$15'' perio,
   d: '/month',' descriptio,
-  n: 'Turn links, videos, or blog posts into tailored social snippets and schedule them with best - time predictions.'' feature,
   s: ['Content repurposing_calendar + auto - times_hashtag + emoji assistant_link tracking_client approvals']; popula,
   r: false,' ico,
   n: '📆'' colo,
@@ -13853,7 +13617,6 @@ export const,
   e: 'Company, role, and social signals from an email / domain'' pric,
   e: '$49'' perio,
   d: '/month',' descriptio,
-  n: 'REST API to enrich leads with verified firmographics and social signals for scoring and routing.'' feature,
   s: ['FirmographicsRole detection_validated email signals_confidence scoring_usage dashboards']; popula,
   r: false,' ico,
   n: '🧩'' colo,
@@ -13887,7 +13650,6 @@ export const,
   e: 'GDPR / CCPA consent banners, preferences, and audit logs'' pric,
   e: '$25'' perio,
   d: '/month',' descriptio,
-  n: 'Deploy branded consent banners, a preferences center, and downloadable audit logs. Geo - aware rules.'' feature,
   s: ['Geo rulesIAB TCFPreference center_audit logs_multi - brand themes']; popula,
   r: true,' ico,
   n: '✅'' colo,
@@ -13921,7 +13683,6 @@ export const,
   e: 'Auto - detects cookies + trackers and updates your policy'' pric,
   e: '$9'' perio,
   d: '/month',' descriptio,
-  n: 'Scan your site for cookies / trackers, classify them, and generate policy updates with change diffs.'' feature,
   s: ['Site scan_tracker classification_policy generator_diffs + historyCI hook']; popula,
   r: false,' ico,
   n: '🍪'' colo,
@@ -13955,7 +13716,6 @@ export const,
   e: 'Track uptime / incidents and publish SLA reports'' pric,
   e: '$19'' perio,
   d: '/month',' descriptio,
-  n: 'Connect monitors, log incidents, and share public SLA / uptime reports with customers.'' feature,
   s: ['Incident log_public status pageSLA calculatorRSS + webhooks_exports']; popula,
   r: false;' ico,
   n: '📈'' colo,
@@ -13989,7 +13749,6 @@ export const,
   e: 'Website chat agent that pre - qualifies and routes leads'' pric,
   e: '$29'' perio,
   d: '/month',' descriptio,
-  n: 'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.'' feature,
   s: ['Qualifying flows_calendar bookingCRM routing_visitor insights_hand - off to human']; popula,
   r: true,' ico,
   n: '🤖'' colo,
@@ -14023,7 +13782,6 @@ export const,
   e: 'Accept, verify, export, and fulfill data subject requests'' pric,
   e: '$49'' perio,
   d: '/month',' descriptio,
-  n: 'Hosted portal for DSARs with identity verification, workflow, and export helpers.'' feature,
   s: ['Request intake_identity check_triage + workflowExportsAudit logs']; popula,
   r: true;' ico,
   n: '🛡️'' colo,
@@ -14057,7 +13815,6 @@ export const,
   e: 'Flag hygiene checks and end - of - life automation'' pric,
   e: '$19'' perio,
   d: '/month',' descriptio,
-  n: 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto - open PRs.'' feature,
   s: ['Repo scanner_flag inventory_risk detectionPR suggestionsCI integration']; popula,
   r: false;' ico,
   n: '🚩'' colo,
@@ -14091,7 +13848,6 @@ export const,
   e: 'Index recommendations and controlled PR rollouts'' pric,
   e: '$79'' perio,
   d: '/month',' descriptio,
-  n: 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'' feature,
   s: ['Slow query capture_index suggestions_risk scoringPR generation_rollback assist']; popula,
   r: true;' ico,
   n: '🗄️'' colo,
@@ -14125,7 +13881,6 @@ export const,
   e: 'Move objects between storage classes to cut costs'' pric,
   e: '$59'' perio,
   d: '/month',' descriptio,
-  n: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'' feature,
   s: ['Usage analysis_rule suggestions_cost simulator_change sets_alerting']; popula,
   r: false;' ico,
   n: '🗂️'' colo,
@@ -14159,7 +13914,6 @@ export const,
   e: 'Scan buckets and DBs for PII / PHI with evidence exports'' pric,
   e: '$89'' perio,
   d: '/month',' descriptio,
-  n: 'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.'' feature,
   s: ['ConnectorsSensitive entity detection_sampling with redaction_findings export_alerting']; popula,
   r: true,' ico,
   n: '🕵️'' colo,
@@ -14193,7 +13947,6 @@ export const,
   e: 'Schema diffs with CI gates and notifications'' pric,
   e: '$49'' perio,
   d: '/month',' descriptio,
-  n: 'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.'' feature,
   s: ['Schema registry_diff rules_owner mappingCI checks_changelog hints']; popula,
   r: false;' ico,
   n: '🧭'' colo,
@@ -14227,7 +13980,6 @@ export const,
   e: 'Record and replay user flows with SLO alerts'' pric,
   e: '$39'' perio,
   d: '/month',' descriptio,
-  n: 'Browser - based recorder creates resilient journeys, run on a schedule and alert on SLO errors or latency.'' feature,
   s: ['RecorderSelector healingSchedulesSLO alerts_reports']; popula,
   r: false,' ico,
   n: '🧪'' colo,
@@ -14261,7 +14013,6 @@ export const,
   e: 'Detect over - privileged access and propose least - privilege policies'' pric,
   e: '$79'' perio,
   d: '/month',' descriptio,
-  n: 'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.'' feature,
   s: ['Policy inventory_usage analysisRecommendationsPR generation_alerting']; popula,
   r: true;' ico,
   n: '🔐'' colo,
@@ -14295,7 +14046,6 @@ export const,
   e: 'Right - size warehouses and schedule off - peak workloads'' pric,
   e: '$99'' perio,
   d: '/month',' descriptio,
-  n: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.'' feature,
   s: ['Query profiling_size / schedule proposals_cost simulatorPR templates_alerts']; popula,
   r: true;' ico,
   n: '🧱'' colo,
@@ -14329,7 +14079,6 @@ export const,
   e: 'Track sender reputation and run inbox placement tests'' pric,
   e: '$39'' perio,
   d: '/month',' descriptio,
-  n: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.'' feature,
   s: ['Warmup campaigns_seed inbox tests_domain / auth checksAlertsReports']; popula,
   r: false;' ico,
   n: '🔥'' colo,
@@ -14363,7 +14112,6 @@ export const,
   e: 'Turn meeting action items into Jira / GitHub tickets'' pric,
   e: '$25'' perio,
   d: '/user / mo',' descriptio,
-  n: 'Transcribe meetings, extract action items, and open tickets with owners and due dates.'' feature,
   s: ['TranscriptionAction extraction_ticket creation_owner mapping_summaries']; popula,
   r: true,' ico,
   n: '📝'' colo,
@@ -14393,126 +14141,68 @@ export const,
   g: 4.6, review,
   s: 6} ratin,
   g: 4.6,
-  reviews: 6 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 9} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 11} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 8} }; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 8} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 10} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 10} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 6} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 9} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 11} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 8} }; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 8} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 10} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 10} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
   s: 6} } ]; '

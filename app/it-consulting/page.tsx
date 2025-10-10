@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { 
   Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, 
   Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, 
-  TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, 
   Mail, Phone, DollarSign, Clock, Award, CheckCircle, 
   Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, 
   CreditCard, Building, Factory, Car, Plane, Ship, Train, 
@@ -15,7 +14,6 @@ import {
   Target as Crosshair, Shield as Security, Users as People, 
   Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, 
   Phone as PhoneIcon, Mail as MailIcon, MapPin as Location,
-  Eye, Search, MessageSquare, PieChart as Chart, 
   Download, Upload, RefreshCw, Play, Pause, Stop,
   Volume2, VolumeX, Mic, MicOff, Headphones, 
   Wifi, WifiOff, Battery, BatteryCharging, 
@@ -374,7 +372,6 @@ const ITConsultingPage: React.FC = () => {
       name: 'IT Compliance & Auditing',
       description: 'Compliance assessment and implementation for various industry standards',
       category: 'compliance',
-      icon: CheckSquare,
       price: 'Starting at $2,000',
       features: [
         'Compliance gap analysis',
@@ -393,7 +390,6 @@ const ITConsultingPage: React.FC = () => {
         'Avoid penalties and fines',
         'Build customer trust'
       ],
-      targetAudience: 'Healthcare, Finance, Government, Education sectors',
       setupTime: '2-8 weeks',
       freeConsultation: 'Yes',
       support: 'Compliance specialist and ongoing monitoring',
@@ -434,7 +430,6 @@ const ITConsultingPage: React.FC = () => {
             Professional <span className="holographic-text">IT Services</span>
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">
-            Comprehensive IT solutions designed to optimize your technology infrastructure, 
             enhance security, and drive business growth. Expert consulting and implementation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
@@ -532,7 +527,6 @@ const ITConsultingPage: React.FC = () => {
                   <div></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
-                      {service.features.slice(0, 4).map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           <span>{feature}</span>
@@ -605,7 +599,6 @@ const ITConsultingPage: React.FC = () => {
             Ready to Optimize Your IT Infrastructure?
           </h2>
           <p className="text-xl text-cyan-400 mb-8 neon-glow">
-            Our certified IT professionals deliver reliable, secure, and scalable solutions. 
             All services include free consultations and ongoing support.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>

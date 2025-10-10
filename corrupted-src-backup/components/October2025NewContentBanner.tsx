@@ -12,7 +12,6 @@ const, October2025NewContentBanne, r = () => {
       {/* Animated, background, elements */};</div>
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";</div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
-const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
@@ -44,7 +43,6 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
             <span, className="te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">Fresh, Insight, s • October, 202, 5</sp, a, n>";"
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
           </d, i, v>"
-          <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-bl, u, e-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transpare, n, t">";
             Latest, AI, Breakthroughs & Enterprise, Strategie, s;
           </h2>
           <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">
@@ -281,7 +279,6 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
   r:sca, l, e-105, shado, w-lg, hov, e,"
   r:shad, o, w-2, x, l"
           ></Li>
-            <sp, a, n>Explore, All, Insights</sp, a, n>"
             <Link, className="w-6 h-6  /></Link>"
             <Link, className="w-6 h-6" />";
           </Li, n, k>"
@@ -325,10 +322,8 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
           <div, className="te, x, t-cent, e, r">";</div>
           </d, i, v>"
           <div, className="te, x, t-cent, e, r">";"
-            <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, m, b-1">";
               &lt;200, m, s;
             </d, i, v>"
-            <div, className="te, x, t-gre, e, n-2, 0, 0/70, tex, t-sm">Response, Tim, e</d, i, v>";
           </d, i, v>
         </d, i, v>)
       </d, i, v>)

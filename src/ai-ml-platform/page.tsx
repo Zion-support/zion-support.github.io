@@ -8,7 +8,6 @@ import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 'use client';
-import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

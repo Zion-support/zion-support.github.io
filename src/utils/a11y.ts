@@ -34,13 +34,11 @@ export function announceToScreenReader()
   announcement.style.overflow = 'hidden';
   document.body.appendChild(announcement);
   // Set message after a slight delay to ensure screen readers pick it up;
-  setTimeout(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     announcement.textContent = message;
   }, 100);
   // Remove announcement after it's been read;
-  setTimeout(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     document.body.removeChild(announcement);
@@ -56,32 +54,26 @@ export function trapFocus(element: HTMLElement): () => void {// TODO: Add conten
   const focusableElements = element.querySelectorAll;
           <HTMLElement>()
     'a[href], butto,
-  n:not([disabled]), textare,
   a:not([disabled]), inpu,
   t:not([disabled]), selec,
   t:not([disabled]), [tabindex]:not([tabindex="-1"])'
   );
   const firstFocusable = focusableElements[0];
   const lastFocusable = focusableElements[focusableElements.length - 1];
-  const handleKeyDown = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if (e.key !== 'Tab') return;
-    if (e.shiftKey) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       // Shift + Tab;
-      if (document.activeElement === firstFocusable) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         e.preventDefault();
         lastFocusable?.focus();
       }
-    } else {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       // Tab;
-      if (document.activeElement === lastFocusable) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         e.preventDefault();
@@ -93,7 +85,6 @@ export function trapFocus(element: HTMLElement): () => void {// TODO: Add conten
   // Focus first element;
   firstFocusable?.focus();
   // Return cleanup function;
-  return () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     element.removeEventListener('keydown', handleKeyDown);
@@ -131,16 +122,13 @@ export function makeKeyboardAccessible()
     role?: string;
     tabindex?: number;
   } = {}
-): () => void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   const { role = 'button', tabindex = 0 } = options;
   element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
-  const handleKeyDown = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (e.key === 'Enter' || e.key === ' ') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       e.preventDefault();
@@ -149,7 +137,6 @@ export function makeKeyboardAccessible()
   };
   element.addEventListener('click', onClick);
   element.addEventListener('keydown', handleKeyDown);
-  return () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     element.removeEventListener('click', onClick);
@@ -164,12 +151,10 @@ export function getContrastRatio(color1: string, color2: string): number {// TOD
 
 }
   const getLuminance = (colo)
-  r: string): number => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     // Simple RGB to luminance conversion;
 const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
-    const [r, g, b] = rgb.map(val => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       const normalized = val / 255;
@@ -199,13 +184,11 @@ export function meetsContrastRequirements()
 
 }
   const ratio = getContrastRatio(color1, color2);
-  if (level === 'AAA') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return fontSize === 'large' ? ratio >= 4.5 : ratio >= 7;
   }
   const ratio = getContrastRatio(color1, color2)
-  if (level === 'AAA') {/* TODO: Fix JSX expression */}
   }
     return fontSize === 'large' ? ratio >= 4.5 : ratio >= 7;
   }
@@ -230,12 +213,10 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
   skipLink.style.padding = '8px';
   skipLink.style.textDecoration = 'none';
   skipLink.style.zIndex = '100';
-  skipLink.addEventListener('focus', () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     skipLink.style.top = '0';
   });
-  skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     skipLink.style.top = '-40px';
@@ -271,10 +252,8 @@ export function getAriaInvalid(hasError: boolean): {// TODO: Add content;}
 }
   'aria-invalid': boolean;
   'aria-describedby'?: string;
-} {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  return {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     'aria-invalid': hasError,
@@ -308,12 +287,10 @@ export function createAccessibleTooltip()
   tooltip.style.display = 'none';
   document.body.appendChild(tooltip);
   trigger.setAttribute('aria-describedby', tooltipId);
-  const showTooltip = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     tooltip.style.display = 'block';
     const triggerRect = trigger.getBoundingClientRect();
-    switch (placement) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 
@@ -336,7 +313,6 @@ export function createAccessibleTooltip()
         break;
     }
   };
-  const hideTooltip = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     tooltip.style.display = 'none';
@@ -345,7 +321,6 @@ export function createAccessibleTooltip()
   trigger.addEventListener('mouseleave', hideTooltip);
   trigger.addEventListener('focus', showTooltip);
   trigger.addEventListener('blur', hideTooltip);
-  return () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     trigger.removeEventListener('mouseenter', showTooltip);
@@ -364,15 +339,12 @@ export class FocusManager {// TODO: Add content;}
 }
   private,
   previousFocus: HTMLElement | null = null;
-  saveFocus(): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     this.previousFocus = document.activeElement as HTMLElement;
   }
-  restoreFocus(): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (this.previousFocus) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       this.previousFocus.focus();
@@ -380,7 +352,6 @@ export class FocusManager {// TODO: Add content;}
     }
   }
   moveFocusInside(containe)
-  r: HTMLElement): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const focusable = container.querySelector;

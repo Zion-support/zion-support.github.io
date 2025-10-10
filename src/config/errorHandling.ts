@@ -113,10 +113,8 @@ export class AppError extends Error {
   r: 'Server error occurred. Our team has been notified.'
   },
   validatio,
-  n: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  require,
   d: 'This field is required.',
     invali,
   d: 'Please enter a valid value.',
@@ -124,18 +122,15 @@ export class AppError extends Error {
   t: 'Invalid format. Please check your input.'
   },
   authenticatio,
-  n: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   faile,
   d: 'Authentication failed. Please try logging in again.',
-    expire,
   d: 'Your session has expired. Please log in again.',
     unauthorize,
   d: 'You are not authorized to access this resource.'
   },
   generi,
-  c: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   unknow,
@@ -144,7 +139,6 @@ export class AppError extends Error {
   y: 'Please try again in a few moments.'
   }
 };
-export class AppError extends Error {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 
 const October2025CognitiveRevolutionBanne, r: React.FC = () => { ,
@@ -24,7 +23,6 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {
               <div, className='relati, v, e'></div>
                 <Brain, className='w-1, 2, h-12, tex, t-purp, l, e-400, animat, e-pul, s, e' />
                 <Sparkles, className='w-5 h-5, tex, t-yell, o, w-400, absolut, e -t, o, p-1 -rig, h, t-1, animat, e-boun, c, e' />
-const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n' > {/* Animated, background, effec, t, s */ }
       <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.15),transparent, 5, 0%)]' /></div>
       <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 70% 5, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.15),transparent, 5, 0%)]' /></div>
@@ -49,7 +47,6 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
                   <Award, className='w-3 h-3, m, r-1' />
                   BREAKTHROUGH, CONTEN, T;
                 </sp, a, n>
-                <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gre, e, n-500, tex, t-white, shado, w-lg'></span>
                   <TrendingUp, className='w-3 h-3, m, r-1' />
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, shado, w-lg, animat, e-pul, s, e'></span>
                   🚀 BRAND, NEW, OCTOBER 20, 2, 5;
@@ -58,7 +55,6 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
                   <Award, className='w-3 h-3, m, r-1' /></Award>
                   BREAKTHROUGH, CONTEN, T;
                 </sp, a, n>
-                <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gre, e, n-500, tex, t-white, shado, w-lg'></span>
                   <TrendingUp, className='w-3 h-3, m, r-1' /></TrendingUp>
                   $4.7B, VALUE, DELIVERED;
                 </sp, a, n>
@@ -84,22 +80,15 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
                 Discover, how, Fortune 500, companies, are deploying, cognitive, AI;
                 systems, that, understand, reas, o, n, and, learn, like huma, n, s —
                 achievi, n, g{' '}
-                <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>
                   98.7% decision, accurac, y;
                 </span>
                 ,{' '}
-                <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>
-                <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>
                   98.7% decision, accurac, y;
                 </span>
                 ,{' '}
-                <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>
                   $4.7B+ in, value, creation;
                 </span>
                 , a, n, d{' '}
-                <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>, 3,6, 0, 0% R, O, I</sp, a, n>.
-                Explore, mult, i-agent, orchestratio, n(97.8% automati, o, n, $84, 7, M+)
-                Explore, mult, i-agent, orchestratio, n (97.8% automati, o, n, $84, 7, M+)
                 val, u, e), cognitive, enterprise, transformation, and, rea, l-world, telecom, success story, with, transformational results!
               </p>
 
@@ -132,7 +121,6 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
                 <Link, t, o='/ca, s, e-studi, e, s/glob, a, l-telec, o, m-cogniti, v, e-transformati, o, n-4-7-billi, o, n'
                   className='inli, n, e-flex, item, s-center, tex, t-purp, l, e-200, hove, r:te, x, t-white, transitio, n-colors, grou, p'
                 ></Link>
-                  <Award, className='w-4 h-4, m, r-1, tex, t-gre, e, n-400, grou, p-hov, e, r:anima, t, e-pul, s, e' /></Award>
                   <span, className='fo, n, t-semibo, l, d'></span>
                     Fortune, 20, Telecom Case, Stud, y ($4.7B, Succ, e, s, s, 3,6, 0, 2% R, O, I)
                   </sp, a, n>
@@ -147,7 +135,6 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
             <Link, t, o='/bl, o, g'
               className='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-xl, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p'
             ></Link>
-              <sp, a, n>Explore, Cognitive, AI Revoluti, o, n</sp, a, n>
               <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
             </Li, n, k>
           </div>
@@ -158,12 +145,10 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
           <div, className='grid, gri, d-co, l, s-2, s, m: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r'></div>
             <d, i, v>
             <d, i, v></d>
-              <div, className='te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>98.7%</div>
               <div, className='te, x, t-xs, tex, t-purp, l, e-2, 0, 0'>Decision, Accurac, y</div>
             </div>
             <d, i, v></d>
               <div, className='te, x, t-2xl, fon, t-bold, tex, t-yell, o, w-4, 0, 0'>$4.7B+</div>
-              <div, className='te, x, t-xs, tex, t-purp, l, e-2, 0, 0'>Value, Delivere, d</div>
             </div>
             <d, i, v></d>
               <div, className='te, x, t-2xl, fon, t-bold, tex, t-pi, n, k-40, 0'>, 3,6, 0, 0%</div>

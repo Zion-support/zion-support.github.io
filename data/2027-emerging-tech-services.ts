@@ -28,7 +28,6 @@
   y: string;
   pric,
   e: string;
-  feature,
   s: string[];
   benefit,
   s: string[];
@@ -56,7 +55,6 @@
   y: 'AI & Computing'
     pric,
   e: '$8,999/month'
-    feature,
   s: [;
       'Brain-inspired architecture'
       'Spiking neural networks'
@@ -129,7 +127,6 @@
   y: 'Biotechnology'
     pric,
   e: '$15,999/month'
-    feature,
   s: [;
       'DNA design automation'
       'Genetic circuit engineering'
@@ -214,7 +211,6 @@
   y: 'Biotechnology',
     pric,
   e: '$15, 999 / month',
-    feature,
   s: [,
       'DNA design automation',
       'Genetic circuit engineering',
@@ -278,7 +274,6 @@
   y: 'Quantum Technology',
     pric,
   e: '$9, 999 / month',
-    feature,
   s: [,
       'Quantum entanglement sensors',
       'Ultra - precise measurements',
@@ -335,7 +330,6 @@
   y: 'Quantum Technology'
     pric,
   e: '$9,999/month'
-    feature,
   s: [;
       'Quantum entanglement sensors'
       'Ultra-precise measurements'
@@ -404,7 +398,6 @@
   y: 'Neural Technology',
     pric,
   e: '$19, 999 / month',
-    feature,
   s: [,
       'Neural signal processing',
       'Thought - to - text conversion',
@@ -455,7 +448,6 @@
   y: 'Neural Technology'
     pric,
   e: '$19,999/month'
-    feature,
   s: [;
       'Neural signal processing'
       'Thought-to-text conversion'
@@ -527,7 +519,6 @@
   y: 'Cybersecurity',
     pric,
   e: '$7, 999 / month',
-    feature,
   s: [,
       'Quantum key distribution',
       'Quantum encryption',
@@ -591,7 +582,6 @@
   y: 'Robotics & AI',
     pric,
   e: '$6, 999 / month',
-    feature,
   s: [,
       'AI - powered navigation',
       'Autonomous decision making',
@@ -661,7 +651,6 @@
   y: 'Materials Science',
     pric,
   e: '$13, 999 / month',
-    feature,
   s: [,
       'Quantum material simulation',
       'AI - powered discovery',
@@ -725,7 +714,6 @@
   y: 'Financial Technology',
     pric,
   e: '$11, 999 / month',
-    feature,
   s: [,
       'Quantum risk modeling',
       'Portfolio optimization',
@@ -789,7 +777,6 @@
   y: 'Environmental Technology',
     pric,
   e: '$10, 999 / month',
-    feature,
   s: [,
       'Quantum climate simulation',
       'Weather prediction',
@@ -840,7 +827,6 @@
   n: string, categor,
   y: string,
   pric,
-  e: string, feature,
   s: string[],
   benefit,
   s: string[], useCase,
@@ -867,7 +853,6 @@
   y: 'Environmental Technology'
     pric,
   e: '$10,999/month'
-    feature,
   s: [;
       'Quantum climate simulation'
       'Weather prediction'
@@ -976,7 +961,6 @@
   s://ziontechgroup && ziontechgroup.com/services/quantum-climate-modeling',
     tag,
   s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];
-export interface Service {/* TODO: Fix JSX expression */}
   }
 ];
 ;
@@ -986,7 +970,6 @@ export interface Service {/* TODO: Fix JSX expression */}
 ;
   }
 ];
-export interface Service {/* TODO: Fix JSX expression */}
   k: string}
   tag,
   s: string[]}
@@ -1244,52 +1227,42 @@ export const emergingTech2027Services: Service[] = [;
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']}
 export const,
   emergingTech2027Services: Service[] = [;
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/quantum-machine-learning'}
     tag,
   s: ['Quantum ComputingMachine LearningAIResearchOptimization']}
   };
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/neuromorphic-computing'}
     tag,
   s: ['Neuromorphic ComputingAIEdge ComputingIoTRobotics']}
   };
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/synthetic-biology-platform'}
     tag,
   s: ['Synthetic BiologyBiotechnologyAIGenetic EngineeringResearch']}
   };
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/quantum-sensors-network'}
     tag,
   s: ['Quantum TechnologySensorsMedical ImagingEnvironmentalNavigation']}
   };
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/brain-computer-interface'}
     tag,
   s: ['Brain-Computer InterfaceNeural TechnologyMedicalAssistive TechnologyResearch']}
   };
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/quantum-internet-security'}
     tag,
   s: ['Quantum SecurityCybersecurityEncryptionGovernmentFinancial']}
   };
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/autonomous-robotics-platform'}
     tag,
   s: ['RoboticsAIAutomationManufacturingLogistics']}
   };
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/quantum-materials-discovery'}
     tag,
   s: ['Materials ScienceQuantum ComputingAIDiscoveryInnovation']}
   };
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/quantum-financial-modeling'}
     tag,
   s: ['Financial TechnologyQuantum ComputingRisk ManagementPortfolioModeling']}
   };
-  {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/quantum-climate-modeling'}
     tag,
   s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']}
@@ -1301,7 +1274,6 @@ i,
   e: string, descriptio,
   n: string; categor,
   y: string; pric,
-  e: string; feature,
   s: string[]; benefit,
   s: string[]; useCase,
   s: string[]; targetAudienc,
@@ -1315,7 +1287,6 @@ i,
   e: 'Neuromorphic Computing Platform' descriptio,"
   n:' "Advanced computing platform that mimics the human brain's neural structure for ultra-efficient AI processing and learning."' categor,
   y: 'AI & Computing'' pric,
-  e: '$8,999/month' feature,
   s: [' 'Brain-inspired architecture'' 'Spiking neural networks'' 'Event-driven processing'' 'Low-power consumption'' 'Real-time learning'' 'Adaptive algorithms' ] benefit,
   s: [' '100x more energy efficient'' 'Real-time continuous learning'' 'Adaptive behavior'' 'Scalable architecture'' 'Biological accuracy' ] useCase,
   s: [' 'Edge computing'' 'IoT devices'' 'Autonomous systems'' 'Robotics'' 'Sensor networks' ] targetAudienc,
@@ -1331,7 +1302,6 @@ i,
   e: 'Synthetic Biology Platform' descriptio,
   n:' 'Revolutionary platform for designing, building, and testing synthetic biological systems using AI and advanced genetic engineering.'' categor,
   y: 'Biotechnology'' pric,
-  e: '$15,999/month' feature,
   s: [' 'DNA design automation'' 'Genetic circuit engineering'' 'Protein design'' 'Metabolic pathway optimization'' 'Biological simulation'' 'Lab automation integration' ] benefit,
   s: [' 'Faster biological design'' 'Reduced development costs'' 'Improved accuracy'' 'Scalable production'' 'Custom biological solutions' ] useCase,
   s: [' 'Pharmaceutical development'' 'Agricultural biotechnology'' 'Industrial biotechnology'' 'Environmental remediation'' 'Biofuel production' ] targetAudienc,
@@ -1354,7 +1324,6 @@ i,
   e: 'Synthetic Biology Platform', descriptio,
   n:  ,' 'Revolutionary platform for designing, building, and testing synthetic biological systems using AI and advanced genetic engineering.',' categor,
   y: 'Biotechnology',' pric,
-  e: '$15, 999 / month', feature,
   s: [,' 'DNA design automation',' 'Genetic circuit engineering',' 'Protein design',' 'Metabolic pathway optimization',' 'Biological simulation',' 'Lab automation integration'], benefit,
   s: [,' 'Faster biological design',' 'Reduced development costs',' 'Improved accuracy',' 'Scalable production',' 'Custom biological solutions'], use_case,
   s: [,' 'Pharmaceutical development',' 'Agricultural biotechnology',' 'Industrial biotechnology',' 'Environmental remediation',' 'Biofuel production'], target_audienc,
@@ -1370,7 +1339,6 @@ i,
   e: 'Quantum Sensors Network', descriptio,
   n:  ,' 'Advanced network of quantum sensors for ultra - precise measurements in various fields including navigation, medical imaging, and environmental monitoring.',' categor,
   y: 'Quantum Technology',' pric,
-  e: '$9, 999 / month', feature,
   s: [,' 'Quantum entanglement sensors',' 'Ultra - precise measurements',' 'Real - time data processing',' 'Network synchronization',' 'Environmental monitoring',' 'Medical imaging capabilities'], benefit,
   s: [,' '1000x more precise measurements',' 'Real - time monitoring',' 'Unprecedented sensitivity',' 'Multi - application support',' 'Future - proof technology'], use_case,
   s: [,' 'Medical imaging',' 'Environmental monitoring',' 'Navigation systems',' 'Scientific research',' 'Industrial inspection'], target_audienc,
@@ -1382,7 +1350,6 @@ i,
   e: 'Quantum Sensors Network' descriptio,
   n:' 'Advanced network of quantum sensors for ultra-precise measurements in various fields including navigation, medical imaging, and environmental monitoring.'' categor,
   y: 'Quantum Technology'' pric,
-  e: '$9,999/month' feature,
   s: [' 'Quantum entanglement sensors'' 'Ultra-precise measurements'' 'Real-time data processing'' 'Network synchronization'' 'Environmental monitoring'' 'Medical imaging capabilities' ] benefit,
   s: [' '1000x more precise measurements'' 'Real-time monitoring'' 'Unprecedented sensitivity'' 'Multi-application support'' 'Future-proof technology' ] useCase,
   s: [' 'Medical imaging'' 'Environmental monitoring'' 'Navigation systems'' 'Scientific research'' 'Industrial inspection' ] targetAudienc,
@@ -1398,7 +1365,6 @@ i,
   e: 'Brain - Computer Interface Platform', descriptio,
   n:  ,' 'Advanced platform for direct communication between the human brain and computers, enabling new forms of human - computer interaction.',' categor,
   y: 'Neural Technology',' pric,
-  e: '$19, 999 / month', feature,
   s: [,' 'Neural signal processing',' 'Thought - to - text conversion',' 'Brain - controlled devices',' 'Neural feedback systems',' 'Safety protocols',' 'Real - time processing'], benefit,
   s: [,' 'Direct brain communication',' 'Assistive technology',' 'Enhanced human capabilities',' 'Medical applications',' 'Research breakthroughs'], use_case,
   s: [,' 'Assistive technology',' 'Medical rehabilitation',' 'Research applications',' 'Gaming and entertainment',' 'Communication aids'], target_audienc,
@@ -1408,7 +1374,6 @@ i,
   e: 'Brain-Computer Interface Platform' descriptio,
   n:' 'Advanced platform for direct communication between the human brain and computers, enabling new forms of human-computer interaction.'' categor,
   y: 'Neural Technology'' pric,
-  e: '$19,999/month' feature,
   s: [' 'Neural signal processing'' 'Thought-to-text conversion'' 'Brain-controlled devices'' 'Neural feedback systems'' 'Safety protocols'' 'Real-time processing' ] benefit,
   s: [' 'Direct brain communication'' 'Assistive technology'' 'Enhanced human capabilities'' 'Medical applications'' 'Research breakthroughs' ] useCase,
   s: [' 'Assistive technology'' 'Medical rehabilitation'' 'Research applications'' 'Gaming and entertainment'' 'Communication aids' ] targetAudienc,
@@ -1424,7 +1389,6 @@ i,
   e: 'Quantum Internet Security Platform', descriptio,
   n:  ,' 'Next - generation security platform that uses quantum cryptography to create unhackable communications and data protection systems.',' categor,
   y: 'Cybersecurity',' pric,
-  e: '$7, 999 / month', feature,
   s: [,' 'Quantum key distribution',' 'Quantum encryption',' 'Quantum - resistant algorithms',' 'Real - time threat detection',' 'Quantum authentication',' 'Global security network'], benefit,
   s: [,' 'Unhackable communications',' 'Future - proof security',' 'Quantum - resistant protection',' 'Global coverage',' 'Real - time security'], use_case,
   s: [,' 'Government communications',' 'Financial transactions',' 'Healthcare data protection',' 'Military communications',' 'Critical infrastructure'], target_audienc,
@@ -1440,7 +1404,6 @@ i,
   e: 'Autonomous Robotics Platform', descriptio,
   n:  ,' 'Advanced platform for developing, deploying, and managing autonomous robots with AI - powered decision making and learning capabilities.',' categor,
   y: 'Robotics & AI',' pric,
-  e: '$6, 999 / month', feature,
   s: [,' 'AI - powered navigation',' 'Autonomous decision making',' 'Learning algorithms',' 'Multi - robot coordination',' 'Safety systems',' 'Performance analytics'], benefit,
   s: [,' 'Fully autonomous operation',' 'Continuous learning',' 'Scalable deployment',' 'Cost reduction',' 'Improved efficiency'], use_case,
   s: [,' 'Manufacturing automation',' 'Warehouse operations',' 'Agricultural automation',' 'Service robots',' 'Exploration robots'], target_audienc,
@@ -1457,7 +1420,6 @@ i,
   e: 'Quantum Materials Discovery Platform', descriptio,
   n:  ,' 'Revolutionary platform that uses quantum computing and AI to discover new materials with unprecedented properties for various applications.',' categor,
   y: 'Materials Science',' pric,
-  e: '$13, 999 / month', feature,
   s: [,' 'Quantum material simulation',' 'AI - powered discovery',' 'Property prediction',' 'Synthesis optimization',' 'Performance testing',' 'Database management'], benefit,
   s: [,' 'Faster material discovery',' 'Unprecedented properties',' 'Cost reduction',' 'Custom solutions',' 'Breakthrough innovations'], use_case,
   s: [,' 'Semiconductor development',' 'Battery technology',' 'Aerospace materials',' 'Medical devices',' 'Energy storage'], target_audienc,
@@ -1473,7 +1435,6 @@ i,
   e: 'Quantum Financial Modeling Platform', descriptio,
   n:  ,' 'Advanced financial modeling platform that uses quantum computing for ultra - accurate predictions, risk assessment, and portfolio optimization.',' categor,
   y: 'Financial Technology',' pric,
-  e: '$11, 999 / month', feature,
   s: [,' 'Quantum risk modeling',' 'Portfolio optimization',' 'Market prediction',' 'Stress testing',' 'Real - time analysis',' 'Regulatory compliance'], benefit,
   s: [,' '1000x faster calculations',' 'Improved accuracy',' 'Better risk assessment',' 'Optimized portfolios',' 'Real - time insights'], use_case,
   s: [,' 'Risk management',' 'Portfolio optimization',' 'Market analysis',' 'Stress testing',' 'Regulatory reporting'], target_audienc,
@@ -1489,7 +1450,6 @@ i,
   e: 'Quantum Climate Modeling Platform', descriptio,
   n:  ,' 'Revolutionary platform that uses quantum computing for ultra - accurate climate modeling, weather prediction, and environmental analysis.',' categor,
   y: 'Environmental Technology',' pric,
-  e: '$10, 999 / month', feature,
   s: [,' 'Quantum climate simulation',' 'Weather prediction',' 'Environmental modeling',' 'Real - time monitoring',' 'Predictive analytics',' 'Data visualization'], benefit,
   s: [,' '1000x faster modeling',' 'Improved accuracy',' 'Real - time predictions',' 'Better understanding',' 'Policy support'], use_case,
   s: [,' 'Climate research',' 'Weather forecasting',' 'Environmental planning',' 'Policy development',' 'Disaster preparedness'], target_audienc,
@@ -1498,7 +1458,6 @@ i,
   e: string, descriptio,
   n: string, categor,
   y: string, pric,
-  e: string, feature,
   s: string[], benefit,
   s: string[], useCase,
   s: string[], targetAudienc,
@@ -1513,7 +1472,6 @@ i,
   e: 'Quantum Climate Modeling Platform' descriptio,
   n:' 'Revolutionary platform that uses quantum computing for ultra-accurate climate modeling, weather prediction, and environmental analysis.'' categor,
   y: 'Environmental Technology'' pric,
-  e: '$10,999/month' feature,
   s: [' 'Quantum climate simulation'' 'Weather prediction'' 'Environmental modeling'' 'Real-time monitoring'' 'Predictive analytics'' 'Data visualization' ] benefit,
   s: [' '1000x faster modeling'' 'Improved accuracy'' 'Real-time predictions'' 'Better understanding'' 'Policy support' ] useCase,
   s: [' 'Climate research'' 'Weather forecasting'' 'Environmental planning'' 'Policy development'' 'Disaster preparedness' ] targetAudienc,
@@ -1541,27 +1499,16 @@ i,
   s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']} ' lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/services/quantum-climate-modeling',' tag,
-  s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'] export interface Service {} ]; ; } ]; } ]; export interface Service {/* TODO: Fix JSX expression */}
   k: string} tag,
   s: string[]} } ; export const,
-  emergingTech2027Services: Service[] = [; {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/quantum-machine-learning'}' tag,
-  s: ['Quantum ComputingMachine LearningAIResearchOptimization']} }; {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/neuromorphic-computing'}' tag,
-  s: ['Neuromorphic ComputingAIEdge ComputingIoTRobotics']} }; {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/synthetic-biology-platform'}' tag,
-  s: ['Synthetic BiologyBiotechnologyAIGenetic EngineeringResearch']} }; {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/quantum-sensors-network'}' tag,
-  s: ['Quantum TechnologySensorsMedical ImagingEnvironmentalNavigation']} }; {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/brain-computer-interface'}' tag,
-  s: ['Brain-Computer InterfaceNeural TechnologyMedicalAssistive TechnologyResearch']} }; {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/quantum-internet-security'}' tag,
-  s: ['Quantum SecurityCybersecurityEncryptionGovernmentFinancial']} }; {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/autonomous-robotics-platform'}' tag,
-  s: ['RoboticsAIAutomationManufacturingLogistics']} }; {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/quantum-materials-discovery'}' tag,
-  s: ['Materials ScienceQuantum ComputingAIDiscoveryInnovation']} }; {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/quantum-financial-modeling'}' tag,
-  s: ['Financial TechnologyQuantum ComputingRisk ManagementPortfolioModeling']} }; {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com/services/quantum-climate-modeling'}' tag,
   s: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']} } ]; '"

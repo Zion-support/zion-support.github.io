@@ -1,7 +1,6 @@
 'use client';
 import { Helmet } from 'react-helmet-async';
 
-export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet></Helmet>
         <title>AI Customer Service Solutions - Zion Tech Group</title>

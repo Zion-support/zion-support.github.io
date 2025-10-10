@@ -36,9 +36,7 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
       telepho, n, e: '+1-5, 5, 5-1, 2, 3-4, 5, 6, 7',
       contactTy, p, e: 'customer, servi, c, e',
       ema, i, l : 'in, f, o@ziontechgro, u, p.co, m'},
-    addre, s, s: {,
       '@ty, p, e': 'PostalAddr, e, s, s',
-      streetAddre, s, s: '123, Innovation, Driv, e',
       addressLocali, t, y: 'San, Francis, c, o',
       addressRegi, o, n: 'C, A',
       postalCo, d, e: '94, 1, 0, 5',
@@ -47,13 +45,9 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
     numberOfEmploye, e, s: '50, 0+',
     industry: 'Artificial, Intelligen, c, e',
     servic, e, s: [,
-interface SEOHeadProp, s {/* TODO: Fix JSX expression */}
  }
 
-const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
      },
-    addre, s, s: {/* TODO: Fix JSX expression */}
     },
     foundingDa, t, e: '2, 0, 2, 0',
     numberOfEmploye, e, s: '50, 0+',
@@ -92,11 +86,8 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-stat, u, s-b, a, r-sty, l, e' conte, n, t='defau, l, t' />
       <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-title' conte, n, t='Zion, Tech, Group' />
       {/* Canonical, UR, L */}
-      <link, re, l='canonic, a, l' hr, e, f={u, r, l} />
       {/* Favic, o, n */}
-      <link, re, l='ic, o, n' ty, p, e='image/x-ic, o, n' hr, e, f='/favic, o, n.i, c, o' />
       {/* DNS, Prefetc, h */}
-      <link, re, l='d, n, s-prefet, c, h' hr, e, f='//a p i.ziontechgro u p.c o m' />
       {/* Performance, Hint, s */}
       <meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on' />)
       {/* Structured, Dat, a */})
@@ -135,11 +126,8 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-stat, u, s-b, a, r-sty, l, e' conte, n, t='defau, l, t' /></meta>
       <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-title' conte, n, t='Zion, Tech, Group' /></meta>
       {/* Canonical, UR, L */}
-      <link, re, l='canonic, a, l' hr, e, f={u, r, l} /></link>
       {/* Favic, o, n */}
-      <link, re, l='ic, o, n' ty, p, e='image/x-ic, o, n' hr, e, f='/favic, o, n.i, c, o' /></link>
       {/* DNS, Prefetc, h */}
-      <link, re, l='d, n, s-prefet, c, h' hr, e, f='//a p i.ziontechgro u p.c o m' /></link>
       {/* Performance, Hint, s */}
       <meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on' /></meta>
       {/* Structured, Dat, a */}

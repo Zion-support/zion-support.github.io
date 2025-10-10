@@ -172,23 +172,14 @@ const, September30NewContentMegaBanne, r = () => {
           <Link;
             <div></div>
               <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>
-const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   return (<div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8,"
@@ -211,7 +202,6 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
         <div className="grid,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-6 mb-10"></div>
-          {/* TODO: Fix JSX expression */}
               key={index}
               to={article.link}"
               className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20,

@@ -23,7 +23,6 @@ const CompliancePage: React.FC = () => {
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -32,7 +31,6 @@ const CompliancePage: React.FC = () => {
   e: 'Data Protection',
       descriptio,
   n: 'Comprehensive data protection measures including encryption, access controls, and privacy by design.',
-      feature,
   s: ['Data Encryption', 'Access Controls', 'Privacy by Design', 'Data Minimization', 'Right to Erasure', 'Data Portability']
     },
       ico,
@@ -41,7 +39,6 @@ const CompliancePage: React.FC = () => {
   e: 'Regulatory Compliance',
       descriptio,
   n: 'Full compliance with major regulations including GDPR, CCPA, HIPAA, and industry-specific requirements.',
-      feature,
   s: ['GDPR Compliance', 'CCPA Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Industry Standards', 'Regular Audits']
       ico,
   n: Users,
@@ -49,7 +46,6 @@ const CompliancePage: React.FC = () => {
   e: 'Privacy Rights',
       descriptio,
   n: 'Respect for individual privacy rights with transparent data practices and user control mechanisms.',
-      feature,
   s: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
     }
   return (<div>Coming Soon</div>)
@@ -129,7 +125,6 @@ Compliance Areas;"
                     <h3 className="text-xl font-semibold text-gray-900">{area.title}</h3>"
                   <p className="text-gray-600 mb-4">{area.description}</p>"
                   <ul className="space-y-2"></ul>
-                    {area.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                         {feature}

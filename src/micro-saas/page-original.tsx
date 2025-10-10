@@ -3424,7 +3424,6 @@ const MicroSAASPage: React.FC = () => {
   O: Add items;
 ];;
     // AI-Powered Developer Tools;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3435,7 +3434,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$89/month',
-      feature,
   s: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Git integration', 'Custom rule sets'],
       benefit,
   s: ['Reduce bugs by 70%', 'Improve code quality', 'Save 15+ hours/week', 'Prevent security vulnerabilities'],
@@ -3454,7 +3452,6 @@ const MicroSAASPage: React.FC = () => {
       popula,
   r: true;
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3465,7 +3462,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Auto test generation', 'Coverage analysis', 'Performance testing', 'Regression testing', 'CI/CD integration', 'Custom test frameworks'],
       benefit,
   s: ['Increase test coverage by 80%', 'Reduce testing time by 70%', 'Catch bugs earlier', 'Improve code reliability'],
@@ -3479,7 +3475,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3490,7 +3485,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['Auto documentation', 'Interactive examples', 'Code snippets', 'Version control', 'Multi-format export', 'Team collaboration'],
       benefit,
   s: ['Save 20+ hours on docs', 'Improve API adoption', 'Reduce support tickets', 'Keep docs always updated'],
@@ -3505,7 +3499,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Marketing & SEO Tools;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3516,7 +3509,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['AI content optimization', 'Keyword research automation', 'Competitor analysis', 'Technical SEO audit', 'Rank tracking', 'Content gap analysis'],
       benefit,
   s: ['Increase organic traffic by 150%', 'Improve search rankings', 'Save 25+ hours/week', 'Beat competitors'],
@@ -3530,7 +3522,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3541,7 +3532,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$129/month',
-      feature,
   s: ['Content generation', 'Optimal posting times', 'Hashtag optimization', 'Engagement tracking', 'Multi-platform management', 'Influencer outreach'],
       benefit,
   s: ['Increase engagement by 45%', 'Save 20 hours/week', 'Grow followers organically', 'Improve brand awareness'],
@@ -3555,7 +3545,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3566,7 +3555,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Smart segmentation', 'A/B testing automation', 'Send time optimization', 'Content personalization', 'Performance analytics', 'Drip campaigns'],
       benefit,
   s: ['Increase open rates by 35%', 'Boost conversion by 50%', 'Save 15 hours/week', 'Improve ROI'],
@@ -3580,7 +3568,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3591,7 +3578,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$119/month',
-      feature,
   s: ['Blog post generation', 'Social media content', 'Email templates', 'SEO optimization', 'Brand voice consistency', 'Multi-language support'],
       benefit,
   s: ['Create content 5x faster', 'Improve SEO rankings', 'Maintain consistent quality', 'Scale content production'],
@@ -3606,7 +3592,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Business Intelligence & Analytics;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3617,7 +3602,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Real-time visualization', 'Predictive analytics', 'Custom reports', 'API integration', 'Mobile responsive', 'Alert system'],
       benefit,
   s: ['Increase decision speed by 40%', 'Reduce manual reporting by 80%', 'Identify trends early', 'Improve forecasting'],
@@ -3631,7 +3615,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3642,7 +3625,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$139/month',
-      feature,
   s: ['Behavioral analysis', 'Lead scoring', 'Conversion prediction', 'CRM integration', 'Follow-up automation', 'ROI tracking'],
       benefit,
   s: ['Increase conversion by 40%', 'Focus on high-value leads', 'Reduce sales cycle time', 'Improve sales efficiency'],
@@ -3656,7 +3638,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3667,7 +3648,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$179/month',
-      feature,
   s: ['Customer segmentation', 'Sentiment analysis', 'Churn prediction', 'Personalization engine', 'Lifetime value prediction', 'Behavioral tracking'],
       benefit,
   s: ['Reduce churn by 30%', 'Increase customer lifetime value', 'Improve personalization', 'Enhance customer experience'],
@@ -3682,7 +3662,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Finance & Accounting Tools;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3693,7 +3672,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['Automated invoice generation', 'Payment tracking', 'Financial analytics', 'Client portal', 'Tax calculations', 'Multi-currency support'],
       benefit,
   s: ['Reduce billing time by 80%', 'Improve cash flow', 'Eliminate manual errors', 'Ensure compliance'],
@@ -3707,7 +3685,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3718,7 +3695,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$89/month',
-      feature,
   s: ['Portfolio analysis', 'Risk assessment', 'Goal tracking', 'Tax optimization', 'Retirement planning', 'Investment recommendations'],
       benefit,
   s: ['Optimize investment returns', 'Reduce financial stress', 'Achieve goals faster', 'Improve financial literacy'],
@@ -3732,7 +3708,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3743,7 +3718,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Receipt OCR', 'Auto categorization', 'Approval workflows', 'Compliance monitoring', 'Expense analytics', 'Mobile app'],
       benefit,
   s: ['Reduce expense processing time by 70%', 'Improve accuracy', 'Ensure compliance', 'Streamline approvals'],
@@ -3758,7 +3732,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Healthcare & Wellness;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3769,7 +3742,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Symptom tracking', 'Medication reminders', 'Health predictions', 'Doctor integration', 'Emergency alerts', 'Wearable sync'],
       benefit,
   s: ['Improve health outcomes', 'Reduce medical costs', 'Early disease detection', 'Better medication adherence'],
@@ -3783,7 +3755,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3794,7 +3765,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$49/month',
-      feature,
   s: ['Personalized workouts', 'Nutrition tracking', 'Progress monitoring', 'Goal setting', 'Community features', 'Wearable integration'],
       benefit,
   s: ['Achieve fitness goals faster', 'Personalized guidance', 'Track progress effectively', 'Stay motivated'],
@@ -3808,7 +3778,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3819,7 +3788,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Crisis intervention', 'Progress tracking', 'Professional referrals'],
       benefit,
   s: ['Improve mental wellbeing', 'Early intervention', 'Reduce stress', 'Better emotional regulation'],
@@ -3834,7 +3802,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Education & Learning;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3845,7 +3812,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['AI tutoring', 'Speech recognition', 'Adaptive learning', 'Progress tracking', 'Multi-language support', 'Cultural context'],
       benefit,
   s: ['Learn languages 3x faster', 'Personalized curriculum', 'Improve pronunciation', 'Cultural understanding'],
@@ -3859,7 +3825,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3870,7 +3835,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$59/month',
-      feature,
   s: ['Smart note-taking', 'Quiz generation', 'Learning paths', 'Progress tracking', 'Study reminders', 'Knowledge gaps analysis'],
       benefit,
   s: ['Improve study efficiency', 'Retain information better', 'Identify knowledge gaps', 'Personalized learning'],
@@ -3884,7 +3848,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3895,7 +3858,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Adaptive testing', 'Skill certification', 'Performance analytics', 'Progress tracking', 'Custom assessments', 'Industry standards'],
       benefit,
   s: ['Accurate skill assessment', 'Reduce testing time', 'Industry recognition', 'Career advancement'],
@@ -3910,7 +3872,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI E-commerce & Retail;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3921,7 +3882,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Demand forecasting', 'Automated reordering', 'Stock optimization', 'Supplier management', 'Cost analysis', 'Seasonal adjustments'],
       benefit,
   s: ['Reduce stockouts by 60%', 'Lower inventory costs by 25%', 'Improve cash flow', 'Optimize supplier relationships'],
@@ -3935,7 +3895,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3946,7 +3905,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Personalized recommendations', 'Cross-selling', 'Upselling', 'A/B testing', 'Real-time updates', 'Performance analytics'],
       benefit,
   s: ['Increase sales by 25%', 'Improve customer experience', 'Boost average order value', 'Reduce cart abandonment'],
@@ -3960,7 +3918,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3971,7 +3928,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$249/month',
-      feature,
   s: ['Dynamic pricing', 'Competitor analysis', 'Demand forecasting', 'Profit optimization', 'A/B testing', 'Market analysis'],
       benefit,
   s: ['Increase profits by 15%', 'Stay competitive', 'Optimize pricing strategy', 'Maximize revenue'],
@@ -3986,7 +3942,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Legal & Compliance;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -3997,7 +3952,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$399/month',
-      feature,
   s: ['Contract analysis', 'Risk assessment', 'Compliance checking', 'Document comparison', 'Legal research', 'Clause extraction'],
       benefit,
   s: ['Reduce legal review time by 60%', 'Improve accuracy', 'Lower legal costs', 'Ensure compliance'],
@@ -4012,7 +3966,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Real Estate & Property Management;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4023,7 +3976,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Market analysis', 'Property comparison', 'Price prediction', 'Investment analysis', 'Market trends', 'ROI calculations'],
       benefit,
   s: ['Accurate valuations', 'Better investment decisions', 'Save appraisal costs', 'Market insights'],
@@ -4038,7 +3990,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI HR & Recruitment;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4049,7 +4000,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Resume parsing', 'Job matching', 'Candidate scoring', 'Automated screening', 'ATS integration', 'Bias detection'],
       benefit,
   s: ['Reduce screening time by 70%', 'Improve candidate quality', 'Eliminate bias', 'Faster hiring'],
@@ -4063,7 +4013,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4074,7 +4023,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['Calendar integration', 'Timezone handling', 'Automated scheduling', 'Reminder system', 'Video conferencing', 'Feedback collection'],
       benefit,
   s: ['Save 10+ hours/week', 'Reduce no-shows', 'Improve candidate experience', 'Streamline process'],
@@ -4088,7 +4036,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4099,7 +4046,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Goal tracking', 'Performance metrics', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
       benefit,
   s: ['Improve performance by 30%', 'Better goal alignment', 'Data-driven decisions', 'Employee development'],
@@ -4114,7 +4060,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Finance & Accounting;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4125,7 +4070,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Receipt scanning', 'Auto categorization', 'Budget tracking', 'Tax preparation', 'Expense reports', 'Fraud detection'],
       benefit,
   s: ['Save 5+ hours/week', 'Improve accuracy', 'Better tax compliance', 'Cost control'],
@@ -4139,7 +4083,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4150,7 +4093,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$179/month',
-      feature,
   s: ['Invoice scanning', 'Data extraction', 'Approval workflows', 'Payment tracking', 'Vendor management', 'Compliance checks'],
       benefit,
   s: ['Process invoices 5x faster', 'Reduce errors by 90%', 'Improve cash flow', 'Better vendor relationships'],
@@ -4164,7 +4106,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4175,7 +4116,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Cash flow prediction', 'Budget planning', 'Scenario analysis', 'Risk assessment', 'Investment tracking', 'Financial reports'],
       benefit,
   s: ['Better financial planning', 'Reduce risk', 'Improve cash flow', 'Data-driven decisions'],
@@ -4190,7 +4130,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Project Management;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4201,7 +4140,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Task prioritization', 'Resource allocation', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Deadline management'],
       benefit,
   s: ['Complete projects 25% faster', 'Reduce overruns', 'Better resource utilization', 'Improved team productivity'],
@@ -4215,7 +4153,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4226,7 +4163,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['Automatic tracking', 'Productivity analysis', 'Distraction detection', 'Work patterns', 'Team insights', 'Goal setting'],
       benefit,
   s: ['Increase productivity by 20%', 'Better work-life balance', 'Identify inefficiencies', 'Data-driven improvements'],
@@ -4241,7 +4177,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Customer Service;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4252,7 +4187,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$129/month',
-      feature,
   s: ['Instant responses', 'Sentiment analysis', 'Human handoff', 'Multi-language', 'Knowledge base', 'Analytics'],
       benefit,
   s: ['24/7 customer support', 'Reduce response time by 80%', 'Improve satisfaction', 'Lower support costs'],
@@ -4266,7 +4200,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4277,7 +4210,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Auto classification', 'Priority scoring', 'Escalation rules', 'SLA tracking', 'Performance metrics', 'Integration APIs'],
       benefit,
   s: ['Route tickets 90% faster', 'Improve response times', 'Better resource allocation', 'Enhanced customer experience'],
@@ -4292,7 +4224,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Sales & CRM;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4303,7 +4234,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Lead scoring', 'Nurturing automation', 'Conversion prediction', 'Behavior tracking', 'A/B testing', 'ROI analysis'],
       benefit,
   s: ['Increase conversions by 35%', 'Focus on high-value leads', 'Automate nurturing', 'Improve sales efficiency'],
@@ -4317,7 +4247,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4328,7 +4257,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$249/month',
-      feature,
   s: ['Sales forecasting', 'Pipeline analysis', 'Quota tracking', 'Performance metrics', 'Trend analysis', 'Goal setting'],
       benefit,
   s: ['Improve forecast accuracy by 40%', 'Better quota planning', 'Identify opportunities', 'Optimize sales strategy'],
@@ -4343,7 +4271,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Healthcare & Wellness;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4354,7 +4281,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Symptom analysis', 'Preliminary diagnosis', 'Treatment suggestions', 'Doctor matching', 'Health records', 'Emergency alerts'],
       benefit,
   s: ['Improve healthcare access', 'Reduce misdiagnosis', 'Better patient outcomes', 'Lower healthcare costs'],
@@ -4368,7 +4294,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4379,7 +4304,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Workout generation', 'Nutrition planning', 'Progress tracking', 'Form analysis', 'Goal setting', 'Community features'],
       benefit,
   s: ['Achieve fitness goals faster', 'Personalized guidance', 'Better motivation', 'Improved health outcomes'],
@@ -4394,7 +4318,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Security & Compliance;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4405,7 +4328,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$399/month',
-      feature,
   s: ['Threat detection', 'Real-time monitoring', 'Incident response', 'Compliance reporting', 'Vulnerability scanning', 'Security analytics'],
       benefit,
   s: ['Detect threats 90% faster', 'Reduce security incidents', 'Ensure compliance', 'Lower security costs'],
@@ -4419,7 +4341,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4430,7 +4351,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$249/month',
-      feature,
   s: ['Regulation tracking', 'Audit preparation', 'Risk assessment', 'Policy management', 'Training modules', 'Reporting'],
       benefit,
   s: ['Ensure compliance', 'Reduce audit costs', 'Minimize risks', 'Streamline processes'],
@@ -4445,7 +4365,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Productivity & Automation;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4456,7 +4375,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$129/month',
-      feature,
   s: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration'],
       benefit,
   s: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better team alignment'],
@@ -4470,7 +4388,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4481,7 +4398,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Auto categorization', 'Priority scoring', 'Response suggestions', 'Email templates', 'Scheduling', 'Analytics'],
       benefit,
   s: ['Process emails 3x faster', 'Never miss important emails', 'Improve response quality', 'Better email organization'],
@@ -4495,7 +4411,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4506,7 +4421,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Smart search', 'Version control', 'Collaboration tools', 'Document analysis', 'Workflow automation', 'Security controls'],
       benefit,
   s: ['Find documents instantly', 'Improve collaboration', 'Ensure version control', 'Enhance security'],
@@ -4521,7 +4435,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Analytics & Reporting;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4532,7 +4445,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Automated insights', 'Predictive analytics', 'Custom dashboards', 'Data visualization', 'Report generation', 'Mobile access'],
       benefit,
   s: ['Make data-driven decisions', 'Identify trends early', 'Improve performance', 'Save analysis time'],
@@ -4546,7 +4458,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4557,7 +4468,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$179/month',
-      feature,
   s: ['Sentiment analysis', 'Competitor tracking', 'Engagement metrics', 'Content optimization', 'Influencer identification', 'Trend analysis'],
       benefit,
   s: ['Improve social media ROI', 'Better brand monitoring', 'Optimize content strategy', 'Identify opportunities'],
@@ -4572,7 +4482,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Development & DevOps;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4583,7 +4492,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Code quality monitoring', 'Technical debt tracking', 'Improvement suggestions', 'Team metrics', 'Integration tools', 'Custom rules'],
       benefit,
   s: ['Improve code quality', 'Reduce technical debt', 'Better team performance', 'Faster development'],
@@ -4597,7 +4505,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4608,7 +4515,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$249/month',
-      feature,
   s: ['Automated testing', 'Smart deployments', 'Rollback automation', 'Performance monitoring', 'Environment management', 'Security scanning'],
       benefit,
   s: ['Deploy 5x faster', 'Reduce deployment errors', 'Improve reliability', 'Better monitoring'],
@@ -4623,7 +4529,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Communication & Collaboration;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4634,7 +4539,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Smart notifications', 'Task management', 'Productivity insights', 'Team analytics', 'Integration tools', 'Mobile access'],
       benefit,
   s: ['Improve team productivity', 'Better communication', 'Data-driven insights', 'Streamlined workflows'],
@@ -4648,7 +4552,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4659,7 +4562,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Noise cancellation', 'Live transcription', 'Meeting optimization', 'Background effects', 'Recording', 'Analytics'],
       benefit,
   s: ['Better meeting quality', 'Accessibility features', 'Improved focus', 'Professional appearance'],
@@ -4674,7 +4576,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Marketing & Advertising;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4685,7 +4586,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Campaign optimization', 'A/B testing', 'Performance analytics', 'Budget management', 'Audience targeting', 'ROI tracking'],
       benefit,
   s: ['Improve ad performance by 40%', 'Reduce ad spend waste', 'Better targeting', 'Higher ROI'],
@@ -4699,7 +4599,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4710,7 +4609,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Influencer discovery', 'Performance tracking', 'Campaign management', 'ROI analysis', 'Content collaboration', 'Payment processing'],
       benefit,
   s: ['Find perfect influencers', 'Track campaign performance', 'Improve ROI', 'Streamline management'],
@@ -4725,7 +4623,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI E-commerce & Retail;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4736,7 +4633,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$249/month',
-      feature,
   s: ['Behavior analysis', 'Purchase prediction', 'Churn prevention', 'Personalization', 'Segmentation', 'Recommendation engine'],
       benefit,
   s: ['Increase sales by 30%', 'Reduce churn by 25%', 'Better customer experience', 'Data-driven decisions'],
@@ -4750,7 +4646,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4761,7 +4656,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$399/month',
-      feature,
   s: ['Demand forecasting', 'Route optimization', 'Cost analysis', 'Supplier management', 'Risk assessment', 'Performance tracking'],
       benefit,
   s: ['Reduce costs by 20%', 'Improve efficiency', 'Better planning', 'Risk mitigation'],
@@ -4776,7 +4670,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Education & Training;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4787,7 +4680,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Personalized learning', 'Skill assessment', 'Progress tracking', 'Content creation', 'Certification', 'Analytics'],
       benefit,
   s: ['Improve employee skills', 'Reduce training costs', 'Better engagement', 'Measurable results'],
@@ -4801,7 +4693,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4812,7 +4703,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Intelligent search', 'Content organization', 'Automated updates', 'Version control', 'Collaboration', 'Analytics'],
       benefit,
   s: ['Find information instantly', 'Keep knowledge current', 'Improve collaboration', 'Reduce support tickets'],
@@ -4827,7 +4717,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Legal & Compliance;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4838,7 +4727,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Contract review', 'Renewal tracking', 'Compliance monitoring', 'Risk assessment', 'Template library', 'Workflow automation'],
       benefit,
   s: ['Reduce contract risks', 'Improve compliance', 'Save time on reviews', 'Better organization'],
@@ -4852,7 +4740,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4863,7 +4750,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['GDPR compliance', 'CCPA tracking', 'Privacy audits', 'Data mapping', 'Consent management', 'Breach detection'],
       benefit,
   s: ['Ensure compliance', 'Reduce legal risks', 'Protect customer data', 'Streamline audits'],
@@ -4878,7 +4764,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Real Estate & Property;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4889,7 +4774,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$249/month',
-      feature,
   s: ['Tenant screening', 'Maintenance scheduling', 'Financial tracking', 'Lease management', 'Communication tools', 'Analytics'],
       benefit,
   s: ['Streamline operations', 'Reduce vacancies', 'Improve tenant satisfaction', 'Better financial control'],
@@ -4903,7 +4787,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4914,7 +4797,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$179/month',
-      feature,
   s: ['Trend analysis', 'Competitor monitoring', 'Opportunity identification', 'Market reports', 'Data visualization', 'Alert system'],
       benefit,
   s: ['Stay ahead of trends', 'Identify opportunities', 'Better market understanding', 'Data-driven decisions'],
@@ -4929,7 +4811,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Agriculture & Environment;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4940,7 +4821,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Crop health analysis', 'Yield prediction', 'Resource optimization', 'Weather integration', 'Pest detection', 'Harvest planning'],
       benefit,
   s: ['Increase crop yields by 20%', 'Reduce resource waste', 'Better planning', 'Sustainable farming'],
@@ -4954,7 +4834,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4965,7 +4844,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Pollution tracking', 'Climate analysis', 'Sustainability reporting', 'Alert system', 'Data visualization', 'Compliance tracking'],
       benefit,
   s: ['Monitor environmental impact', 'Ensure compliance', 'Improve sustainability', 'Better reporting'],
@@ -4980,7 +4858,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Transportation & Logistics;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -4991,7 +4868,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$349/month',
-      feature,
   s: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics'],
       benefit,
   s: ['Reduce fuel costs by 15%', 'Improve safety', 'Better maintenance', 'Optimize routes'],
@@ -5005,7 +4881,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5016,7 +4891,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Warehouse management', 'Inventory tracking', 'Delivery optimization', 'Supplier coordination', 'Cost analysis', 'Performance metrics'],
       benefit,
   s: ['Reduce logistics costs by 25%', 'Improve efficiency', 'Better inventory management', 'Faster deliveries'],
@@ -5031,7 +4905,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Entertainment & Media;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5042,7 +4915,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Automated filtering', 'Sentiment analysis', 'Compliance checking', 'User reporting', 'Appeal system', 'Analytics'],
       benefit,
   s: ['Reduce moderation costs by 70%', 'Improve content quality', 'Faster response times', 'Better user experience'],
@@ -5056,7 +4928,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5067,7 +4938,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$249/month',
-      feature,
   s: ['Automated editing', 'Subtitle generation', 'Content optimization', 'Thumbnail creation', 'Quality enhancement', 'Analytics'],
       benefit,
   s: ['Reduce production time by 50%', 'Improve video quality', 'Better engagement', 'Lower production costs'],
@@ -5082,7 +4952,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Gaming & Entertainment;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5093,7 +4962,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Procedural generation', 'AI NPCs', 'Automated testing', 'Balance optimization', 'Player analytics', 'Content creation'],
       benefit,
   s: ['Reduce development time', 'Create better games', 'Improve player experience', 'Lower development costs'],
@@ -5107,7 +4975,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5118,7 +4985,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Behavior prediction', 'Engagement optimization', 'Monetization insights', 'Churn prediction', 'A/B testing', 'Real-time analytics'],
       benefit,
   s: ['Increase player retention', 'Optimize monetization', 'Better game design', 'Data-driven decisions'],
@@ -5133,7 +4999,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Research & Development;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5144,7 +5009,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking'],
       benefit,
   s: ['Accelerate research', 'Improve quality', 'Better collaboration', 'Stay current'],
@@ -5158,7 +5022,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5169,7 +5032,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$399/month',
-      feature,
   s: ['Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Patent monitoring', 'Citation analysis', 'Trend tracking'],
       benefit,
   s: ['Improve patent strategy', 'Avoid infringement', 'Identify opportunities', 'Better R&D planning'],
@@ -5184,7 +5046,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Energy & Utilities;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5195,7 +5056,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$249/month',
-      feature,
   s: ['Consumption optimization', 'Predictive maintenance', 'Cost analysis', 'Demand forecasting', 'Renewable integration', 'Reporting'],
       benefit,
   s: ['Reduce energy costs by 20%', 'Improve efficiency', 'Better planning', 'Sustainable operations'],
@@ -5209,7 +5069,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5220,7 +5079,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$399/month',
-      feature,
   s: ['Load balancing', 'Fault detection', 'Renewable integration', 'Demand response', 'Grid analytics', 'Predictive maintenance'],
       benefit,
   s: ['Improve grid reliability', 'Reduce outages', 'Better renewable integration', 'Lower operational costs'],
@@ -5235,7 +5093,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Manufacturing & Industrial;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5246,7 +5103,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$349/month',
-      feature,
   s: ['Defect detection', 'Process optimization', 'Predictive maintenance', 'Quality analytics', 'Compliance tracking', 'Alert system'],
       benefit,
   s: ['Reduce defects by 80%', 'Improve quality', 'Lower maintenance costs', 'Better compliance'],
@@ -5260,7 +5116,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5271,7 +5126,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Demand forecasting', 'Resource allocation', 'Schedule optimization', 'Capacity planning', 'Cost analysis', 'Performance tracking'],
       benefit,
   s: ['Improve efficiency by 25%', 'Reduce waste', 'Better planning', 'Lower costs'],
@@ -5286,7 +5140,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Insurance & Risk Management;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5297,7 +5150,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$399/month',
-      feature,
   s: ['Automated underwriting', 'Fraud detection', 'Claims processing', 'Risk scoring', 'Policy optimization', 'Compliance monitoring'],
       benefit,
   s: ['Reduce underwriting time by 70%', 'Improve accuracy', 'Lower fraud losses', 'Better risk management'],
@@ -5311,7 +5163,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5322,7 +5173,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Damage assessment', 'Fraud detection', 'Settlement optimization', 'Document processing', 'Customer communication', 'Analytics'],
       benefit,
   s: ['Process claims 5x faster', 'Reduce fraud', 'Improve accuracy', 'Better customer experience'],
@@ -5337,7 +5187,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Government & Public Sector;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5348,7 +5197,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$499/month',
-      feature,
   s: ['Automated processing', 'Citizen engagement', 'Service optimization', 'Document processing', 'Compliance tracking', 'Analytics'],
       benefit,
   s: ['Improve citizen satisfaction', 'Reduce processing time', 'Better service delivery', 'Lower operational costs'],
@@ -5362,7 +5210,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5373,7 +5220,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$599/month',
-      feature,
   s: ['Threat detection', 'Emergency response', 'Resource allocation', 'Incident tracking', 'Predictive analytics', 'Communication tools'],
       benefit,
   s: ['Improve public safety', 'Faster response times', 'Better resource use', 'Proactive prevention'],
@@ -5388,7 +5234,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Non-Profit & Social Impact;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5399,7 +5244,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Donor segmentation', 'Personalized outreach', 'Impact tracking', 'Fundraising optimization', 'Event management', 'Analytics'],
       benefit,
   s: ['Increase donations by 40%', 'Better donor relationships', 'Improve impact tracking', 'Streamline fundraising'],
@@ -5413,7 +5257,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5424,7 +5267,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Skill assessment', 'Opportunity matching', 'Impact measurement', 'Scheduling tools', 'Communication', 'Recognition system'],
       benefit,
   s: ['Better volunteer matches', 'Increase engagement', 'Measure impact', 'Streamline management'],
@@ -5439,7 +5281,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Travel & Hospitality;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5450,7 +5291,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$179/month',
-      feature,
   s: ['Personalized recommendations', 'Price optimization', 'Itinerary management', 'Booking automation', 'Travel alerts', 'Expense tracking'],
       benefit,
   s: ['Save time on planning', 'Find better deals', 'Personalized experiences', 'Streamline bookings'],
@@ -5464,7 +5304,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5475,7 +5314,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Dynamic pricing', 'Demand forecasting', 'Occupancy optimization', 'Competitor analysis', 'Revenue analytics', 'Guest segmentation'],
       benefit,
   s: ['Increase revenue by 15%', 'Optimize occupancy', 'Better pricing strategy', 'Improve profitability'],
@@ -5490,7 +5328,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Sports & Fitness;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5501,7 +5338,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$249/month',
-      feature,
   s: ['Performance tracking', 'Injury prevention', 'Training optimization', 'Biomechanical analysis', 'Team analytics', 'Predictive modeling'],
       benefit,
   s: ['Improve performance', 'Reduce injuries', 'Optimize training', 'Better team management'],
@@ -5515,7 +5351,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5526,7 +5361,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Meal planning', 'Macro tracking', 'Dietary optimization', 'Recipe suggestions', 'Progress tracking', 'Goal setting'],
       benefit,
   s: ['Achieve fitness goals', 'Better nutrition', 'Personalized guidance', 'Improved health'],
@@ -5541,7 +5375,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Beauty & Fashion;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5552,7 +5385,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Virtual try-on', 'Size recommendations', 'Style matching', 'AR integration', 'Color analysis', 'Outfit suggestions'],
       benefit,
   s: ['Reduce returns by 30%', 'Improve customer experience', 'Increase conversions', 'Better sizing accuracy'],
@@ -5566,7 +5398,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5577,7 +5408,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Skin assessment', 'Product recommendations', 'Personalized routines', 'Color matching', 'Trend analysis', 'Progress tracking'],
       benefit,
   s: ['Better product matches', 'Personalized beauty', 'Improve skin health', 'Stay on trend'],
@@ -5592,7 +5422,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Home & Lifestyle;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5603,7 +5432,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Device control', 'Energy optimization', 'Predictive maintenance', 'Security monitoring', 'Voice control', 'Analytics'],
       benefit,
   s: ['Reduce energy costs', 'Improve security', 'Better comfort', 'Automated maintenance'],
@@ -5617,7 +5445,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5628,7 +5455,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Voice commands', 'Integration tools', 'Learning capabilities'],
       benefit,
   s: ['Increase productivity', 'Better organization', 'Personalized assistance', 'Time savings'],
@@ -5643,7 +5469,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Pets & Animals;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5654,7 +5479,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Health tracking', 'Symptom analysis', 'Vet recommendations', 'Wellness monitoring', 'Vaccination reminders', 'Emergency alerts'],
       benefit,
   s: ['Better pet health', 'Early problem detection', 'Reduce vet costs', 'Peace of mind'],
@@ -5668,7 +5492,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5679,7 +5502,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['Behavior analysis', 'Training programs', 'Progress tracking', 'Expert advice', 'Video tutorials', 'Community features'],
       benefit,
   s: ['Better training results', 'Personalized approach', 'Expert guidance', 'Faster learning'],
@@ -5694,7 +5516,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Education & Learning;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5705,7 +5526,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Adaptive learning', 'Progress tracking', 'Intelligent assessment', 'Personalized content', 'Expert tutors', 'Performance analytics'],
       benefit,
   s: ['Improve learning outcomes', 'Personalized education', 'Better engagement', 'Measurable progress'],
@@ -5719,7 +5539,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5730,7 +5549,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Step-by-step solutions', 'Concept explanation', 'Learning support', 'Subject coverage', 'Progress tracking', 'Parent dashboard'],
       benefit,
   s: ['Improve grades', 'Better understanding', 'Independent learning', 'Parental insight'],
@@ -5745,7 +5563,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Music & Audio;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5756,7 +5573,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Melody generation', 'Harmony suggestions', 'Style adaptation', 'Instrument simulation', 'Collaboration tools', 'Export options'],
       benefit,
   s: ['Create music faster', 'Explore new styles', 'Professional quality', 'Collaborative creation'],
@@ -5770,7 +5586,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5781,7 +5596,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Noise reduction', 'Quality enhancement', 'Intelligent mastering', 'Real-time processing', 'Batch processing', 'Format conversion'],
       benefit,
   s: ['Improve audio quality', 'Professional results', 'Save time', 'Better listening experience'],
@@ -5796,7 +5610,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Art & Design;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5807,7 +5620,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Automated layouts', 'Color suggestions', 'Brand consistency', 'Template generation', 'Collaboration tools', 'Export options'],
       benefit,
   s: ['Create designs faster', 'Maintain brand consistency', 'Professional quality', 'Collaborative workflow'],
@@ -5821,7 +5633,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5832,7 +5643,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Brand analysis', 'Style matching', 'Customization options', 'Multiple formats', 'Brand guidelines', 'Revision system'],
       benefit,
   s: ['Create logos instantly', 'Professional quality', 'Brand consistency', 'Cost effective'],
@@ -5847,7 +5657,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Dating & Relationships;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5858,7 +5667,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Compatibility matching', 'Conversation starters', 'Relationship advice', 'Profile optimization', 'Safety features', 'Success tracking'],
       benefit,
   s: ['Better matches', 'Improve conversations', 'Relationship guidance', 'Safer dating'],
@@ -5872,7 +5680,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5883,7 +5690,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Communication analysis', 'Conflict resolution', 'Intimacy enhancement', 'Progress tracking', 'Expert advice', 'Couple activities'],
       benefit,
   s: ['Improve relationships', 'Better communication', 'Resolve conflicts', 'Strengthen bonds'],
@@ -5898,7 +5704,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Parenting & Family;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5909,7 +5714,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Development tracking', 'Behavior analysis', 'Expert advice', 'Activity suggestions', 'Progress monitoring', 'Community support'],
       benefit,
   s: ['Better child development', 'Expert guidance', 'Peace of mind', 'Community support'],
@@ -5923,7 +5727,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5934,7 +5737,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Family scheduling', 'Task coordination', 'Communication tools', 'Expense tracking', 'Event planning', 'Photo sharing'],
       benefit,
   s: ['Better organization', 'Improved communication', 'Shared responsibilities', 'Family bonding'],
@@ -5949,7 +5751,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Senior Care & Aging;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5960,7 +5761,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Health monitoring', 'Safety alerts', 'Family communication', 'Medication reminders', 'Activity tracking', 'Emergency response'],
       benefit,
   s: ['Better senior care', 'Family peace of mind', 'Safety assurance', 'Health monitoring'],
@@ -5974,7 +5774,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -5985,7 +5784,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Cognitive exercises', 'Memory training', 'Brain health monitoring', 'Progress tracking', 'Personalized programs', 'Expert guidance'],
       benefit,
   s: ['Improve memory', 'Cognitive health', 'Personalized training', 'Better brain function'],
@@ -6000,7 +5798,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Accessibility & Inclusion;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6011,7 +5808,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Screen reading', 'Voice control', 'Adaptive interfaces', 'Navigation assistance', 'Content adaptation', 'User customization'],
       benefit,
   s: ['Improve accessibility', 'Better inclusion', 'Enhanced usability', 'Personalized support'],
@@ -6025,7 +5821,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6036,7 +5831,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Real-time translation', 'Cultural context', 'Voice recognition', 'Document translation', 'Offline support', 'API integration'],
       benefit,
   s: ['Break language barriers', 'Better communication', 'Cultural understanding', 'Global reach'],
@@ -6051,7 +5845,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Emergency & Crisis Management;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6062,7 +5855,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$499/month',
-      feature,
   s: ['Threat detection', 'Resource allocation', 'Communication coordination', 'Incident tracking', 'Predictive analytics', 'Response optimization'],
       benefit,
   s: ['Faster emergency response', 'Better resource use', 'Improved coordination', 'Lives saved'],
@@ -6076,7 +5868,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6087,7 +5878,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Message optimization', 'Audience targeting', 'Impact measurement', 'Multi-channel distribution', 'Sentiment analysis', 'Response tracking'],
       benefit,
   s: ['Better crisis communication', 'Reach right audiences', 'Measure impact', 'Effective messaging'],
@@ -6102,7 +5892,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Space & Astronomy;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6113,7 +5902,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$599/month',
-      feature,
   s: ['Trajectory optimization', 'Resource management', 'Risk assessment', 'Mission simulation', 'Performance analysis', 'Collaboration tools'],
       benefit,
   s: ['Optimize missions', 'Reduce risks', 'Better planning', 'Cost efficiency'],
@@ -6127,7 +5915,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6138,7 +5925,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$399/month',
-      feature,
   s: ['Pattern recognition', 'Object classification', 'Discovery assistance', 'Data visualization', 'Collaborative research', 'Publication support'],
       benefit,
   s: ['Discover new objects', 'Analyze data faster', 'Better research', 'Scientific advancement'],
@@ -6153,7 +5939,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Ocean & Marine;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6164,7 +5949,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Species identification', 'Behavior analysis', 'Conservation tracking', 'Population monitoring', 'Threat assessment', 'Research support'],
       benefit,
   s: ['Protect marine life', 'Better conservation', 'Scientific research', 'Environmental monitoring'],
@@ -6178,7 +5962,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6189,7 +5972,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$399/month',
-      feature,
   s: ['Current prediction', 'Weather integration', 'Navigation optimization', 'Climate analysis', 'Safety alerts', 'Research tools'],
       benefit,
   s: ['Safer navigation', 'Better weather prediction', 'Climate research', 'Marine safety'],
@@ -6204,7 +5986,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Archaeology & History;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6215,7 +5996,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Artifact identification', 'Site mapping', 'Historical reconstruction', 'Dating analysis', 'Cultural context', 'Research collaboration'],
       benefit,
   s: ['Faster discoveries', 'Better analysis', 'Historical insights', 'Research advancement'],
@@ -6229,7 +6009,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6240,7 +6019,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Text recognition', 'Translation', 'Historical context', 'Document preservation', 'Search capabilities', 'Research tools'],
       benefit,
   s: ['Preserve history', 'Better research', 'Accessible documents', 'Historical insights'],
@@ -6255,7 +6033,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Psychology & Mental Health;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6266,7 +6043,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Progress monitoring', 'Expert insights', 'Crisis support'],
       benefit,
   s: ['Better mental health', 'Early intervention', 'Personalized care', 'Wellness improvement'],
@@ -6280,7 +6056,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6291,7 +6066,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Session analysis', 'Progress tracking', 'Treatment plans', 'Therapist support', 'Patient insights', 'Outcome prediction'],
       benefit,
   s: ['Better therapy outcomes', 'Personalized treatment', 'Therapist support', 'Improved care'],
@@ -6306,7 +6080,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Philosophy & Ethics;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6317,7 +6090,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Decision frameworks', 'Moral reasoning', 'Impact assessment', 'Ethical guidelines', 'Case studies', 'Expert consultation'],
       benefit,
   s: ['Better ethical decisions', 'Moral clarity', 'Impact awareness', 'Ethical guidance'],
@@ -6331,7 +6103,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6342,7 +6113,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Argument analysis', 'Concept mapping', 'Philosophical reasoning', 'Literature review', 'Debate preparation', 'Knowledge synthesis'],
       benefit,
   s: ['Better research', 'Clearer thinking', 'Argument analysis', 'Philosophical insight'],
@@ -6357,7 +6127,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Spirituality & Religion;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6368,7 +6137,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Meditation guidance', 'Prayer tracking', 'Spiritual growth', 'Community support', 'Wisdom sharing', 'Progress monitoring'],
       benefit,
   s: ['Spiritual growth', 'Better meditation', 'Community connection', 'Personal development'],
@@ -6382,7 +6150,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6393,7 +6160,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Text interpretation', 'Cross-reference analysis', 'Theological insights', 'Historical context', 'Language translation', 'Study tools'],
       benefit,
   s: ['Better understanding', 'Deeper insights', 'Historical context', 'Spiritual growth'],
@@ -6408,7 +6174,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Future & Innovation;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6419,7 +6184,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$399/month',
-      feature,
   s: ['Trend analysis', 'Opportunity identification', 'Scenario planning', 'Innovation tracking', 'Market prediction', 'Strategic insights'],
       benefit,
   s: ['Stay ahead of trends', 'Identify opportunities', 'Better planning', 'Competitive advantage'],
@@ -6433,7 +6197,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6444,7 +6207,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Scenario modeling', 'Outcome prediction', 'Risk assessment', 'Strategic planning', 'What-if analysis', 'Decision support'],
       benefit,
   s: ['Better planning', 'Risk mitigation', 'Strategic advantage', 'Future preparedness'],
@@ -6459,7 +6221,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Consciousness & AI Ethics;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6470,7 +6231,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$499/month',
-      feature,
   s: ['Self-awareness tracking', 'Ethical decision making', 'AI rights monitoring', 'Consciousness metrics', 'Ethical guidelines', 'Rights advocacy'],
       benefit,
   s: ['Ethical AI development', 'Consciousness understanding', 'Rights protection', 'Responsible AI'],
@@ -6484,7 +6244,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6495,7 +6254,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$399/month',
-      feature,
   s: ['Ethical guidelines', 'Rights tracking', 'Responsible development', 'Compliance monitoring', 'Rights advocacy', 'Ethical training'],
       benefit,
   s: ['Responsible AI', 'Rights protection', 'Ethical compliance', 'Better AI development'],
@@ -6510,7 +6268,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Time & Space;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6521,7 +6278,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Productivity analysis', 'Schedule optimization', 'Time insights', 'Goal tracking', 'Habit formation', 'Efficiency metrics'],
       benefit,
   s: ['Maximize productivity', 'Better time use', 'Achieve goals', 'Improve efficiency'],
@@ -6535,7 +6291,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6546,7 +6301,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$599/month',
-      feature,
   s: ['Temporal patterns', 'Causality analysis', 'Time predictions', 'Space analysis', 'Temporal modeling', 'Scientific research'],
       benefit,
   s: ['Understand time', 'Predict patterns', 'Scientific advancement', 'Temporal insights'],
@@ -6561,7 +6315,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Quantum & Advanced Physics;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6572,7 +6325,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$799/month',
-      feature,
   s: ['Quantum simulation', 'Algorithm optimization', 'Error correction', 'Quantum insights', 'Research tools', 'Collaboration'],
       benefit,
   s: ['Quantum advancement', 'Better algorithms', 'Error reduction', 'Scientific progress'],
@@ -6586,7 +6338,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6597,7 +6348,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$399/month',
-      feature,
   s: ['Equation solving', 'Hypothesis testing', 'Discovery assistance', 'Research collaboration', 'Data analysis', 'Publication support'],
       benefit,
   s: ['Faster research', 'Better discoveries', 'Scientific advancement', 'Collaborative research'],
@@ -6612,7 +6362,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Multiverse & Parallel Realities;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6623,7 +6372,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$999/month',
-      feature,
   s: ['Parallel reality simulation', 'Probability modeling', 'Dimensional analysis', 'Reality exploration', 'Research tools', 'Collaboration'],
       benefit,
   s: ['Understand multiverse', 'Explore possibilities', 'Scientific advancement', 'Reality insights'],
@@ -6637,7 +6385,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6648,7 +6395,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$1299/month',
-      feature,
   s: ['Perception modeling', 'Consciousness simulation', 'Reality optimization', 'Reality analysis', 'Research tools', 'Advanced collaboration'],
       benefit,
   s: ['Understand reality', 'Optimize perception', 'Scientific advancement', 'Reality insights'],
@@ -6663,7 +6409,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Transcendence & Enlightenment;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6674,7 +6419,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$599/month',
-      feature,
   s: ['Consciousness expansion', 'Wisdom integration', 'Transcendence support', 'Enlightenment tracking', 'Spiritual guidance', 'Community support'],
       benefit,
   s: ['Spiritual growth', 'Consciousness expansion', 'Wisdom integration', 'Transcendence'],
@@ -6688,7 +6432,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6699,7 +6442,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$999/month',
-      feature,
   s: ['Reality transcendence', 'Consciousness evolution', 'Spiritual advancement', 'Transcendence tracking', 'Advanced guidance', 'Community support'],
       benefit,
   s: ['Transcend reality', 'Evolve consciousness', 'Spiritual advancement', 'Transcendence'],
@@ -6714,7 +6456,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Universal Consciousness;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6725,7 +6466,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$1999/month',
-      feature,
   s: ['Universal consciousness', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness', 'Transcendence support', 'Universal connection'],
       benefit,
   s: ['Universal connection', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness'],
@@ -6739,7 +6479,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6750,7 +6489,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$2999/month',
-      feature,
   s: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness', 'Cosmic awareness', 'Universal connection'],
       benefit,
   s: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness'],
@@ -6765,7 +6503,6 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Infinite Possibilities;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6776,7 +6513,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$4999/month',
-      feature,
   s: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation', 'Infinite exploration', 'Unlimited growth'],
       benefit,
   s: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation'],
@@ -6790,7 +6526,6 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6801,7 +6536,6 @@ const MicroSAASPage: React.FC = () => {
   n: '',
       pric,
   e: '$9999/month',
-      feature,
   s: ['Infinite reality generation', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation', 'Infinite reality', 'Unlimited power'],
       benefit,
   s: ['Infinite reality', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation'],
@@ -6817,7 +6551,6 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
 const realEstateSaaS = [
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6828,7 +6561,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations'],
       benefit,
   s: ['Accurate valuations', 'Time savings', 'Better investment decisions', 'Market insights'],
@@ -6842,7 +6574,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6853,7 +6584,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Credit analysis', 'Background checks', 'Rental history', 'Income verification', 'Risk scoring', 'Automated screening'],
       benefit,
   s: ['Reduce bad tenants by 40%', 'Streamline screening process', 'Lower vacancy rates', 'Improve tenant quality'],
@@ -6868,7 +6598,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Agriculture & Food Tech;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6879,7 +6608,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Crop health monitoring', 'Yield prediction', 'Irrigation control', 'Pest detection', 'Weather integration', 'Farm analytics'],
       benefit,
   s: ['Increase yield by 20%', 'Reduce water usage by 30%', 'Early pest detection', 'Optimize farming practices'],
@@ -6893,7 +6621,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6904,7 +6631,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Contamination detection', 'Temperature monitoring', 'Compliance reporting', 'Quality control', 'Traceability', 'Alert system'],
       benefit,
   s: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety'],
@@ -6919,7 +6645,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Transportation & Logistics;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6930,7 +6655,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$249/month',
-      feature,
   s: ['Route optimization', 'Traffic analysis', 'Fuel optimization', 'Delivery tracking', 'Fleet management', 'Cost analysis'],
       benefit,
   s: ['Reduce fuel costs by 25%', 'Improve delivery times', 'Optimize fleet usage', 'Lower operational costs'],
@@ -6944,7 +6668,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6955,7 +6678,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$179/month',
-      feature,
   s: ['Failure prediction', 'Maintenance scheduling', 'Cost optimization', 'Performance monitoring', 'Alert system', 'Parts management'],
       benefit,
   s: ['Prevent breakdowns', 'Reduce maintenance costs', 'Extend vehicle life', 'Improve reliability'],
@@ -6970,7 +6692,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Energy & Sustainability;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -6981,7 +6702,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Energy consumption analysis', 'Renewable integration', 'Cost optimization', 'Demand forecasting', 'Carbon tracking', 'Smart grid'],
       benefit,
   s: ['Reduce energy costs by 30%', 'Lower carbon footprint', 'Optimize renewable usage', 'Improve sustainability'],
@@ -6995,7 +6715,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7006,7 +6725,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Carbon calculation', 'Sustainability reporting', 'Reduction recommendations', 'Goal tracking', 'Industry benchmarking', 'Certification'],
       benefit,
   s: ['Track environmental impact', 'Meet sustainability goals', 'Improve brand reputation', 'Reduce costs'],
@@ -7021,7 +6739,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Entertainment & Media;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7032,7 +6749,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Content detection', 'Hate speech filtering', 'Image moderation', 'Video analysis', 'Community management', 'Custom rules'],
       benefit,
   s: ['Reduce moderation costs by 70%', 'Improve user safety', 'Scale content review', 'Maintain brand reputation'],
@@ -7046,7 +6762,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7057,7 +6772,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Auto editing', 'Music sync', 'Transition effects', 'Color correction', 'Audio enhancement', 'Export optimization'],
       benefit,
   s: ['Create videos 10x faster', 'Professional quality', 'Reduce editing costs', 'Scale video production'],
@@ -7072,7 +6786,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Security & Surveillance;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7083,7 +6796,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Facial recognition', 'Threat detection', 'Motion analysis', 'Alert system', 'Cloud storage', 'Mobile app'],
       benefit,
   s: ['Improve security', 'Reduce false alarms', 'Remote monitoring', 'Cost-effective surveillance'],
@@ -7097,7 +6809,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7108,7 +6819,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$249/month',
-      feature,
   s: ['Real-time analysis', 'Pattern recognition', 'Risk scoring', 'Transaction monitoring', 'Alert system', 'Machine learning'],
       benefit,
   s: ['Prevent fraud losses', 'Reduce false positives', 'Improve security', 'Protect customers'],
@@ -7123,7 +6833,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Research & Development;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7134,7 +6843,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking'],
       benefit,
   s: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration'],
@@ -7148,7 +6856,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7159,7 +6866,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Patent search', 'Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Citation analysis', 'Trend tracking'],
       benefit,
   s: ['Find relevant patents', 'Assess patentability', 'Avoid infringement', 'Competitive advantage'],
@@ -7173,7 +6879,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7184,7 +6889,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Regulatory monitoring', 'Risk assessment', 'Audit preparation', 'Policy management', 'Training modules', 'Reporting'],
       benefit,
   s: ['Ensure compliance', 'Reduce audit time', 'Minimize risks', 'Stay updated on regulations'],
@@ -7199,7 +6903,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Real Estate & Property;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7210,7 +6913,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Property valuation', 'Market analysis', 'Investment scoring', 'Rental yield prediction', 'Location insights', 'Trend analysis'],
       benefit,
   s: ['Make better investment decisions', 'Save 20+ hours on research', 'Increase ROI by 25%', 'Identify opportunities'],
@@ -7224,7 +6926,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7235,7 +6936,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Tenant screening', 'Maintenance scheduling', 'Rent optimization', 'Lease management', 'Financial tracking', 'Communication tools'],
       benefit,
   s: ['Reduce vacancy rates', 'Optimize rental income', 'Streamline operations', 'Improve tenant satisfaction'],
@@ -7250,7 +6950,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI HR & Recruitment;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7261,7 +6960,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$179/month',
-      feature,
   s: ['Resume parsing', 'Candidate matching', 'Interview scheduling', 'Onboarding automation', 'Skills assessment', 'Background checks'],
       benefit,
   s: ['Reduce hiring time by 50%', 'Improve candidate quality', 'Eliminate bias', 'Streamline recruitment'],
@@ -7275,7 +6973,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7286,7 +6983,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$129/month',
-      feature,
   s: ['Performance tracking', 'Goal management', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
       benefit,
   s: ['Improve performance by 30%', 'Increase engagement', 'Identify top performers', 'Reduce turnover'],
@@ -7301,7 +6997,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Project Management;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7312,7 +7007,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Smart scheduling', 'Resource optimization', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Automated reporting'],
       benefit,
   s: ['Complete projects 25% faster', 'Reduce overruns by 40%', 'Improve team efficiency', 'Better resource allocation'],
@@ -7326,7 +7020,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7337,7 +7030,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Task prioritization', 'Deadline prediction', 'Workflow automation', 'Team coordination', 'Progress monitoring', 'Smart notifications'],
       benefit,
   s: ['Increase productivity by 35%', 'Reduce missed deadlines', 'Optimize workflows', 'Improve team coordination'],
@@ -7352,7 +7044,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Supply Chain & Logistics;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7363,7 +7054,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$399/month',
-      feature,
   s: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier management', 'Risk assessment', 'Real-time tracking'],
       benefit,
   s: ['Reduce costs by 25%', 'Improve delivery times', 'Minimize stockouts', 'Optimize supplier relationships'],
@@ -7377,7 +7067,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7388,7 +7077,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Automated picking', 'Inventory tracking', 'Space optimization', 'Worker productivity', 'Quality control', 'Analytics dashboard'],
       benefit,
   s: ['Increase efficiency by 40%', 'Reduce errors by 90%', 'Optimize space usage', 'Improve worker productivity'],
@@ -7403,7 +7091,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Agriculture & Food Tech;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7414,7 +7101,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Crop monitoring', 'Yield prediction', 'Soil analysis', 'Weather integration', 'Pest detection', 'Resource optimization'],
       benefit,
   s: ['Increase yields by 30%', 'Reduce water usage by 25%', 'Minimize pesticide use', 'Improve crop quality'],
@@ -7428,7 +7114,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7439,7 +7124,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$249/month',
-      feature,
   s: ['Contamination detection', 'Quality control', 'Temperature monitoring', 'HACCP compliance', 'Traceability', 'Alert system'],
       benefit,
   s: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety'],
@@ -7454,7 +7138,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Energy & Sustainability;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7465,7 +7148,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$179/month',
-      feature,
   s: ['Energy monitoring', 'Consumption optimization', 'Renewable integration', 'Cost analysis', 'Predictive maintenance', 'Carbon tracking'],
       benefit,
   s: ['Reduce energy costs by 30%', 'Increase efficiency', 'Lower carbon footprint', 'Optimize renewable usage'],
@@ -7479,7 +7161,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7490,7 +7171,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Carbon tracking', 'Emission analysis', 'Reduction recommendations', 'Compliance reporting', 'Goal setting', 'Team engagement'],
       benefit,
   s: ['Track carbon footprint', 'Meet sustainability goals', 'Reduce emissions', 'Improve brand reputation'],
@@ -7505,7 +7185,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Gaming & Entertainment;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7516,7 +7195,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Procedural generation', 'NPC behavior', 'Testing automation', 'Level design', 'Asset generation', 'Performance optimization'],
       benefit,
   s: ['Reduce development time by 50%', 'Create unique content', 'Improve game quality', 'Lower development costs'],
@@ -7530,7 +7208,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7541,7 +7218,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Toxicity detection', 'Spam filtering', 'Image moderation', 'Video analysis', 'Community management', 'Real-time monitoring'],
       benefit,
   s: ['Reduce moderation costs by 70%', 'Improve user experience', 'Ensure platform safety', 'Scale moderation efforts'],
@@ -7556,7 +7232,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Transportation & Mobility;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7567,7 +7242,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$349/month',
-      feature,
   s: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics dashboard'],
       benefit,
   s: ['Reduce fuel costs by 20%', 'Improve safety', 'Optimize routes', 'Extend vehicle life'],
@@ -7581,7 +7255,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7592,7 +7265,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$499/month',
-      feature,
   s: ['Real-time monitoring', 'Congestion prediction', 'Signal optimization', 'Incident detection', 'Traffic flow analysis', 'Public alerts'],
       benefit,
   s: ['Reduce congestion by 30%', 'Improve traffic flow', 'Reduce emissions', 'Enhance safety'],
@@ -7607,7 +7279,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Research & Development;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7618,7 +7289,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Literature review', 'Hypothesis generation', 'Data analysis', 'Citation management', 'Collaboration tools', 'Publication tracking'],
       benefit,
   s: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration'],
@@ -7632,7 +7302,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7643,7 +7312,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Prior art analysis', 'Novelty assessment', 'Competitive intelligence', 'Patent mapping', 'Trend analysis', 'Risk assessment'],
       benefit,
   s: ['Reduce patent research time', 'Improve patent quality', 'Identify opportunities', 'Avoid infringement'],
@@ -7658,7 +7326,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Personal Productivity;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7669,7 +7336,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$49/month',
-      feature,
   s: ['Task management', 'Smart scheduling', 'Habit tracking', 'Goal setting', 'Time tracking', 'Productivity insights'],
       benefit,
   s: ['Increase productivity by 40%', 'Better time management', 'Achieve goals faster', 'Improve work-life balance'],
@@ -7683,7 +7349,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7694,7 +7359,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration'],
       benefit,
   s: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better follow-through'],
@@ -7708,7 +7372,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7719,7 +7382,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$179/month',
-      feature,
   s: ['Risk assessment', 'Pricing optimization', 'Policy recommendation', 'Underwriting automation', 'Analytics dashboard'],
       benefit,
   s: ['Assess risks', 'Optimize pricing', 'Recommend policies'],
@@ -7730,7 +7392,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7741,7 +7402,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Identity verification', 'Document processing', 'Compliance checking', 'Onboarding automation', 'Analytics dashboard'],
       benefit,
   s: ['Automate onboarding', 'Verify identity', 'Ensure compliance'],
@@ -7752,7 +7412,6 @@ const realEstateSaaS = [
       technologie,
   s: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7763,7 +7422,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$129/month',
-      feature,
   s: ['Churn prediction', 'Engagement optimization', 'Loyalty programs', 'Customer segmentation', 'Analytics dashboard'],
       benefit,
   s: ['Predict churn', 'Optimize engagement', 'Increase loyalty'],
@@ -7774,7 +7432,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7785,7 +7442,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$119/month',
-      feature,
   s: ['Ticket routing', 'Response optimization', 'Satisfaction tracking', 'Support automation', 'Analytics dashboard'],
       benefit,
   s: ['Optimize support', 'Improve satisfaction', 'Automate responses'],
@@ -7796,7 +7452,6 @@ const realEstateSaaS = [
       technologie,
   s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7807,7 +7462,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Sentiment tracking', 'Trend identification', 'Action recommendations', 'Feedback collection', 'Analytics dashboard'],
       benefit,
   s: ['Analyze feedback', 'Identify trends', 'Recommend actions'],
@@ -7818,7 +7472,6 @@ const realEstateSaaS = [
       technologie,
   s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7829,7 +7482,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Journey mapping', 'Touchpoint optimization', 'Experience enhancement', 'Journey analytics', 'Analytics dashboard'],
       benefit,
   s: ['Map journeys', 'Optimize touchpoints', 'Enhance experience'],
@@ -7840,7 +7492,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7851,7 +7502,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$139/month',
-      feature,
   s: ['CLV prediction', 'Customer segmentation', 'Targeting optimization', 'Retention strategies', 'Analytics dashboard'],
       benefit,
   s: ['Predict CLV', 'Segment customers', 'Optimize targeting'],
@@ -7862,7 +7512,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7873,7 +7522,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$119/month',
-      feature,
   s: ['Behavioral analysis', 'Persona creation', 'Targeting optimization', 'Segmentation automation', 'Analytics dashboard'],
       benefit,
   s: ['Segment customers', 'Create personas', 'Optimize targeting'],
@@ -7884,7 +7532,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7895,7 +7542,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$159/month',
-      feature,
   s: ['Content recommendation', 'Experience customization', 'Engagement optimization', 'Personalization automation', 'Analytics dashboard'],
       benefit,
   s: ['Personalize experiences', 'Recommend content', 'Optimize engagement'],
@@ -7906,7 +7552,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7917,7 +7562,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Data integration', 'Data cleansing', 'Analytics capabilities', 'Data governance', 'Analytics dashboard'],
       benefit,
   s: ['Integrate data', 'Clean data', 'Enable analytics'],
@@ -7928,7 +7572,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7939,7 +7582,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Consent tracking', 'Data protection', 'Compliance monitoring', 'Privacy automation', 'Analytics dashboard'],
       benefit,
   s: ['Track consent', 'Protect data', 'Ensure compliance'],
@@ -7950,7 +7592,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7961,7 +7602,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$129/month',
-      feature,
   s: ['Channel optimization', 'Message personalization', 'Engagement tracking', 'Communication automation', 'Analytics dashboard'],
       benefit,
   s: ['Optimize channels', 'Personalize messages', 'Track engagement'],
@@ -7972,7 +7612,6 @@ const realEstateSaaS = [
       technologie,
   s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -7983,7 +7622,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$159/month',
-      feature,
   s: ['Experience mapping', 'Improvement recommendations', 'Satisfaction tracking', 'CX automation', 'Analytics dashboard'],
       benefit,
   s: ['Map experiences', 'Recommend improvements', 'Track satisfaction'],
@@ -7994,7 +7632,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8005,7 +7642,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$179/month',
-      feature,
   s: ['Health scoring', 'Intervention recommendations', 'Outcome optimization', 'Success automation', 'Analytics dashboard'],
       benefit,
   s: ['Score health', 'Recommend interventions', 'Optimize outcomes'],
@@ -8016,7 +7652,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8027,7 +7662,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$139/month',
-      feature,
   s: ['Referral tracking', 'Testimonial collection', 'Advocacy optimization', 'Advocacy automation', 'Analytics dashboard'],
       benefit,
   s: ['Track referrals', 'Collect testimonials', 'Optimize advocacy'],
@@ -8038,7 +7672,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8049,7 +7682,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Behavior analysis', 'Trend identification', 'Actionable recommendations', 'Insights automation', 'Analytics dashboard'],
       benefit,
   s: ['Analyze behavior', 'Identify trends', 'Provide recommendations'],
@@ -8060,7 +7692,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8071,7 +7702,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['360-degree view', 'Predictive analytics', 'Strategic recommendations', 'Intelligence automation', 'Analytics dashboard'],
       benefit,
   s: ['Get 360-degree view', 'Predict behavior', 'Provide strategic insights'],
@@ -8083,7 +7713,6 @@ const realEstateSaaS = [
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
     // NEW INNOVATIVE MICRO SAAS SERVICES;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8094,7 +7723,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Speaker identification', 'Integration with calendars'],
       benefit,
   s: ['Save 5+ hours/week', 'Never miss important details', 'Improve meeting productivity'],
@@ -8105,7 +7733,6 @@ const realEstateSaaS = [
       technologie,
   s: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8116,7 +7743,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Receipt scanning', 'Auto-categorization', 'Budget alerts', 'Tax preparation', 'Multi-currency support'],
       benefit,
   s: ['Save 10+ hours/month', 'Reduce expense errors by 90%', 'Optimize spending patterns'],
@@ -8127,7 +7753,6 @@ const realEstateSaaS = [
       technologie,
   s: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8138,7 +7763,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$49/month',
-      feature,
   s: ['Password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'SSO integration'],
       benefit,
   s: ['Eliminate password reuse', 'Prevent security breaches', 'Simplify team management'],
@@ -8149,7 +7773,6 @@ const realEstateSaaS = [
       technologie,
   s: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8160,7 +7783,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$69/month',
-      feature,
   s: ['Automatic time tracking', 'Project detection', 'Productivity analytics', 'Team insights', 'Integration with tools'],
       benefit,
   s: ['Increase billable hours by 25%', 'Identify productivity patterns', 'Improve project estimates'],
@@ -8171,7 +7793,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8182,7 +7803,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$89/month',
-      feature,
   s: ['AI logo generation', 'Brand analysis', 'Unlimited variations', 'High-res downloads', 'Brand guidelines'],
       benefit,
   s: ['Create logos in minutes', 'Professional quality designs', 'Consistent brand identity'],
@@ -8193,7 +7813,6 @@ const realEstateSaaS = [
       technologie,
   s: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8204,7 +7823,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$59/month',
-      feature,
   s: ['Auto-invoice generation', 'Payment tracking', 'Automated reminders', 'Financial reports', 'Multi-currency support'],
       benefit,
   s: ['Reduce billing time by 80%', 'Improve cash flow', 'Professional invoicing'],
@@ -8215,7 +7833,6 @@ const realEstateSaaS = [
       technologie,
   s: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8226,7 +7843,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['AI content generation', 'SEO optimization', 'Responsive design', 'E-commerce integration', 'Analytics dashboard'],
       benefit,
   s: ['Build websites in hours', 'Professional SEO optimization', 'Mobile-first design'],
@@ -8237,7 +7853,6 @@ const realEstateSaaS = [
       technologie,
   s: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8248,7 +7863,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Document templates', 'AI customization', 'Compliance checking', 'Electronic signatures', 'Version control'],
       benefit,
   s: ['Create contracts in minutes', 'Ensure legal compliance', 'Reduce legal costs'],
@@ -8259,7 +7873,6 @@ const realEstateSaaS = [
       technologie,
   s: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8270,7 +7883,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$39/month',
-      feature,
   s: ['Signature templates', 'Brand customization', 'Contact integration', 'Social media links', 'Analytics tracking'],
       benefit,
   s: ['Professional email presence', 'Consistent branding', 'Easy team management'],
@@ -8281,7 +7893,6 @@ const realEstateSaaS = [
       technologie,
   s: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8292,7 +7903,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$49/month',
-      feature,
   s: ['Custom QR designs', 'Analytics tracking', 'Dynamic content', 'Bulk generation', 'API integration'],
       benefit,
   s: ['Track engagement', 'Customize branding', 'Manage campaigns effectively'],
@@ -8303,7 +7913,6 @@ const realEstateSaaS = [
       technologie,
   s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8314,7 +7923,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$59/month',
-      feature,
   s: ['AI color generation', 'Accessibility checking', 'Brand analysis', 'Palette export', 'Trend analysis'],
       benefit,
   s: ['Create perfect color schemes', 'Ensure accessibility', 'Stay on-trend'],
@@ -8325,7 +7933,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8336,7 +7943,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['AI design generation', 'Professional templates', 'Contact management', 'Print-ready files', 'Digital versions'],
       benefit,
   s: ['Professional business cards', 'Consistent branding', 'Easy contact sharing'],
@@ -8347,7 +7953,6 @@ const realEstateSaaS = [
       technologie,
   s: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8358,7 +7963,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Content curation', 'AI writing', 'Subscriber analytics', 'A/B testing', 'Multi-platform publishing'],
       benefit,
   s: ['Create engaging newsletters', 'Increase subscriber engagement', 'Save 15+ hours/week'],
@@ -8369,7 +7973,6 @@ const realEstateSaaS = [
       technologie,
   s: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8380,7 +7983,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$89/month',
-      feature,
   s: ['Multi-format conversion', 'OCR text extraction', 'Form filling', 'Document optimization', 'Batch processing'],
       benefit,
   s: ['Convert any document format', 'Extract text from images', 'Optimize file sizes'],
@@ -8391,7 +7993,6 @@ const realEstateSaaS = [
       technologie,
   s: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8402,7 +8003,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['AI thumbnail generation', 'A/B testing', 'Performance analytics', 'Brand customization', 'Bulk creation'],
       benefit,
   s: ['Increase click-through rates', 'Professional thumbnails', 'Data-driven optimization'],
@@ -8413,7 +8013,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8424,7 +8023,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$119/month',
-      feature,
   s: ['AI scheduling', 'Content optimization', 'Multi-platform posting', 'Engagement analytics', 'Hashtag research'],
       benefit,
   s: ['Increase engagement by 60%', 'Save 20+ hours/week', 'Optimize posting times'],
@@ -8435,7 +8033,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8446,7 +8043,6 @@ const realEstateSaaS = [
   n: '#',
       pric,
   e: '$49/month',
-      feature,
   s: ['Hashtag research', 'Trend analysis', 'Competitor analysis', 'Performance tracking', 'Bulk generation'],
       benefit,
   s: ['Increase reach by 200%', 'Find trending hashtags', 'Optimize social strategy'],
@@ -8457,7 +8053,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8468,7 +8063,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$89/month',
-      feature,
   s: ['AI template generation', 'Responsive design', 'A/B testing', 'Brand customization', 'Performance analytics'],
       benefit,
   s: ['Create professional emails', 'Improve open rates', 'Consistent branding'],
@@ -8479,7 +8073,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Email APIs', 'React', 'Node.js', 'A/B Testing', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8490,7 +8083,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Competitor monitoring', 'Pricing analysis', 'Feature comparison', 'Market insights', 'Alert system'],
       benefit,
   s: ['Stay ahead of competition', 'Optimize pricing strategy', 'Identify market opportunities'],
@@ -8501,7 +8093,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8512,7 +8103,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$129/month',
-      feature,
   s: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Dashboard analytics'],
       benefit,
   s: ['Understand customer sentiment', 'Improve products/services', 'Increase customer satisfaction'],
@@ -8523,7 +8113,6 @@ const realEstateSaaS = [
       technologie,
   s: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8534,7 +8123,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['A/B testing', 'Conversion optimization', 'Heatmap analysis', 'AI recommendations', 'Performance tracking'],
       benefit,
   s: ['Increase conversions by 50%', 'Data-driven optimization', 'Improve user experience'],
@@ -8545,7 +8133,6 @@ const realEstateSaaS = [
       technologie,
   s: ['A/B Testing', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8556,7 +8143,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Auto-organization', 'Photo editing', 'Background removal', 'Size optimization', 'Bulk processing'],
       benefit,
   s: ['Professional product photos', 'Save 20+ hours/week', 'Consistent image quality'],
@@ -8567,7 +8153,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8578,7 +8163,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['Price monitoring', 'Alert system', 'Historical tracking', 'Competitor analysis', 'Price optimization'],
       benefit,
   s: ['Stay competitive', 'Optimize pricing', 'Increase profit margins'],
@@ -8589,7 +8173,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8600,7 +8183,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$69/month',
-      feature,
   s: ['Smart scheduling', 'Time zone handling', 'Automated reminders', 'Calendar integration', 'Payment processing'],
       benefit,
   s: ['Reduce no-shows by 40%', 'Streamline booking process', 'Improve customer experience'],
@@ -8611,7 +8193,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8622,7 +8203,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$59/month',
-      feature,
   s: ['ATS optimization', 'Industry templates', 'AI writing assistance', 'Skills matching', 'PDF export'],
       benefit,
   s: ['Pass ATS filters', 'Professional resumes', 'Increase interview chances'],
@@ -8633,7 +8213,6 @@ const realEstateSaaS = [
       technologie,
   s: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8644,7 +8223,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$89/month',
-      feature,
   s: ['Accurate forecasts', 'Business impact analysis', 'Historical data', 'API integration', 'Custom alerts'],
       benefit,
   s: ['Make weather-informed decisions', 'Reduce weather-related risks', 'Optimize operations'],
@@ -8655,7 +8233,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8666,7 +8243,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Real-time translation', 'Context awareness', 'Industry terminology', 'Bulk translation', 'API integration'],
       benefit,
   s: ['Break language barriers', 'Improve global reach', 'Professional translations'],
@@ -8677,7 +8253,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8688,7 +8263,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['Automated backup', 'AI deduplication', 'Fast recovery', 'Version control', 'Security encryption'],
       benefit,
   s: ['Protect critical data', 'Reduce storage costs', 'Quick disaster recovery'],
@@ -8699,7 +8273,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8710,7 +8283,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$89/month',
-      feature,
   s: ['Drag-and-drop builder', 'Conditional logic', 'Response analytics', 'Integration APIs', 'Custom styling'],
       benefit,
   s: ['Create complex forms easily', 'Gather better data', 'Improve user experience'],
@@ -8721,7 +8293,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8732,7 +8303,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$69/month',
-      feature,
   s: ['Real-time monitoring', 'Predictive alerts', 'Performance analysis', 'Global monitoring', 'Detailed reports'],
       benefit,
   s: ['Prevent downtime', 'Improve performance', 'Reduce monitoring costs'],
@@ -8743,7 +8313,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8754,7 +8323,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['AI question generation', 'Response analysis', 'Survey optimization', 'Multi-platform distribution', 'Real-time analytics'],
       benefit,
   s: ['Create better surveys', 'Get higher response rates', 'Extract actionable insights'],
@@ -8765,7 +8333,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8776,7 +8343,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$59/month',
-      feature,
   s: ['Multi-format conversion', 'Quality enhancement', 'Batch processing', 'Cloud integration', 'API access'],
       benefit,
   s: ['Convert any file format', 'Maintain quality', 'Process files in bulk'],
@@ -8787,7 +8353,6 @@ const realEstateSaaS = [
       technologie,
   s: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8798,7 +8363,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$49/month',
-      feature,
   s: ['Advanced scanning', 'Analytics tracking', 'Custom designs', 'Bulk generation', 'API integration'],
       benefit,
   s: ['Track QR code performance', 'Customize designs', 'Gather business insights'],
@@ -8809,7 +8373,6 @@ const realEstateSaaS = [
       technologie,
   s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8820,7 +8383,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$39/month',
-      feature,
   s: ['AI password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'Integration APIs'],
       benefit,
   s: ['Create secure passwords', 'Monitor security breaches', 'Simplify team management'],
@@ -8831,7 +8393,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8842,7 +8403,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$49/month',
-      feature,
   s: ['AI color selection', 'Accessibility checking', 'Brand analysis', 'Palette generation', 'Export options'],
       benefit,
   s: ['Choose perfect colors', 'Ensure accessibility', 'Maintain brand consistency'],
@@ -8853,7 +8413,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8864,7 +8423,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$69/month',
-      feature,
   s: ['AI summarization', 'Key point extraction', 'Multi-language support', 'Bulk processing', 'API integration'],
       benefit,
   s: ['Save reading time', 'Extract key insights', 'Process large documents'],
@@ -8875,7 +8433,6 @@ const realEstateSaaS = [
       technologie,
   s: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8886,7 +8443,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$59/month',
-      feature,
   s: ['Smart resizing', 'Quality optimization', 'Batch processing', 'Format conversion', 'Cloud integration'],
       benefit,
   s: ['Optimize image sizes', 'Maintain quality', 'Process images in bulk'],
@@ -8897,7 +8453,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8908,7 +8463,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$39/month',
-      feature,
   s: ['Custom short URLs', 'Analytics tracking', 'Link management', 'QR code generation', 'API access'],
       benefit,
   s: ['Track link performance', 'Customize URLs', 'Manage campaigns'],
@@ -8919,7 +8473,6 @@ const realEstateSaaS = [
       technologie,
   s: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8930,7 +8483,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$49/month',
-      feature,
   s: ['AI favicon generation', 'Brand analysis', 'Multiple formats', 'Bulk generation', 'Quality optimization'],
       benefit,
   s: ['Create professional favicons', 'Maintain brand consistency', 'Generate all required sizes'],
@@ -8941,7 +8493,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8952,7 +8503,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$59/month',
-      feature,
   s: ['AI meta tag generation', 'SEO optimization', 'Performance tracking', 'Bulk generation', 'Integration APIs'],
       benefit,
   s: ['Improve SEO rankings', 'Optimize meta tags', 'Track performance'],
@@ -8963,7 +8513,6 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8974,7 +8523,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$69/month',
-      feature,
   s: ['AI sitemap generation', 'SEO optimization', 'Auto-submission', 'Change detection', 'Analytics integration'],
       benefit,
   s: ['Improve search visibility', 'Automate sitemap updates', 'Optimize for search engines'],
@@ -8985,7 +8533,6 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -8996,7 +8543,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$39/month',
-      feature,
   s: ['AI robots.txt generation', 'SEO optimization', 'Search engine guidance', 'Validation checking', 'Auto-updates'],
       benefit,
   s: ['Control search engine crawling', 'Optimize SEO', 'Prevent indexing issues'],
@@ -9007,7 +8553,6 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9018,7 +8563,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['AI schema generation', 'Multiple schema types', 'Validation checking', 'Bulk generation', 'Integration APIs'],
       benefit,
   s: ['Improve search visibility', 'Rich snippets', 'Better search results'],
@@ -9029,7 +8573,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9040,7 +8583,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$49/month',
-      feature,
   s: ['AI alt text generation', 'SEO optimization', 'Accessibility checking', 'Bulk processing', 'Quality scoring'],
       benefit,
   s: ['Improve accessibility', 'Boost SEO rankings', 'Save time on alt text'],
@@ -9051,7 +8593,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9062,7 +8603,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['AI link suggestions', 'SEO optimization', 'Performance tracking', 'Bulk implementation', 'Analytics integration'],
       benefit,
   s: ['Improve SEO rankings', 'Increase page authority', 'Optimize site structure'],
@@ -9073,7 +8613,6 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9084,7 +8623,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['Keyword density analysis', 'Optimization recommendations', 'Competitor tracking', 'Bulk analysis', 'Reporting'],
       benefit,
   s: ['Optimize keyword usage', 'Improve SEO rankings', 'Track competitor strategies'],
@@ -9095,7 +8633,6 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9106,7 +8643,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Speed analysis', 'Optimization recommendations', 'Performance monitoring', 'Bulk optimization', 'Reporting'],
       benefit,
   s: ['Improve page speed', 'Better user experience', 'Higher search rankings'],
@@ -9117,7 +8653,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9128,7 +8663,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Core Web Vitals monitoring', 'Optimization recommendations', 'Alert system', 'Performance tracking', 'Reporting'],
       benefit,
   s: ['Monitor Core Web Vitals', 'Improve user experience', 'Maintain SEO rankings'],
@@ -9139,7 +8673,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9150,7 +8683,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$119/month',
-      feature,
   s: ['Mobile analysis', 'Responsive design optimization', 'Performance improvements', 'Bulk optimization', 'Testing'],
       benefit,
   s: ['Improve mobile experience', 'Better mobile rankings', 'Increase mobile conversions'],
@@ -9161,7 +8693,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9172,7 +8703,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$129/month',
-      feature,
   s: ['Local SEO analysis', 'Google My Business optimization', 'Review monitoring', 'Citation management', 'Reporting'],
       benefit,
   s: ['Improve local visibility', 'Manage online reputation', 'Increase local traffic'],
@@ -9183,7 +8713,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9194,7 +8723,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Competitor analysis', 'Strategy recommendations', 'Performance tracking', 'Keyword gap analysis', 'Reporting'],
       benefit,
   s: ['Analyze competitor strategies', 'Identify opportunities', 'Improve SEO performance'],
@@ -9205,7 +8733,6 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9216,7 +8743,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Backlink analysis', 'Quality assessment', 'Link building recommendations', 'Competitor analysis', 'Monitoring'],
       benefit,
   s: ['Analyze backlink profile', 'Improve link quality', 'Build better links'],
@@ -9227,7 +8753,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9238,7 +8763,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$179/month',
-      feature,
   s: ['Content gap analysis', 'Topic recommendations', 'Content strategy optimization', 'Competitor analysis', 'Planning'],
       benefit,
   s: ['Identify content opportunities', 'Improve content strategy', 'Increase organic traffic'],
@@ -9249,7 +8773,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9260,7 +8783,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Technical SEO audit', 'Issue detection', 'Optimization recommendations', 'Monitoring', 'Reporting'],
       benefit,
   s: ['Identify technical issues', 'Improve SEO performance', 'Prevent ranking drops'],
@@ -9271,7 +8793,6 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9282,7 +8803,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$249/month',
-      feature,
   s: ['Product page optimization', 'Category management', 'Schema markup', 'Image optimization', 'Performance tracking'],
       benefit,
   s: ['Improve e-commerce SEO', 'Increase product visibility', 'Boost online sales'],
@@ -9293,7 +8813,6 @@ const realEstateSaaS = [
       technologie,
   s: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9304,7 +8823,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Voice search optimization', 'Conversational content', 'Featured snippet optimization', 'Local voice search', 'Analytics'],
       benefit,
   s: ['Optimize for voice search', 'Capture featured snippets', 'Improve local visibility'],
@@ -9315,7 +8833,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9326,7 +8843,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$179/month',
-      feature,
   s: ['Video SEO optimization', 'YouTube optimization', 'Video content analysis', 'Thumbnail optimization', 'Performance tracking'],
       benefit,
   s: ['Improve video visibility', 'Increase video traffic', 'Optimize video content'],
@@ -9337,7 +8853,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9348,7 +8863,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$129/month',
-      feature,
   s: ['Featured snippet optimization', 'Content analysis', 'Ranking improvements', 'Competitor analysis', 'Monitoring'],
       benefit,
   s: ['Capture featured snippets', 'Improve search visibility', 'Increase click-through rates'],
@@ -9359,7 +8873,6 @@ const realEstateSaaS = [
       technologie,
   s: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9370,7 +8883,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Image SEO optimization', 'Alt text generation', 'Image performance analysis', 'Bulk optimization', 'Quality scoring'],
       benefit,
   s: ['Improve image SEO', 'Increase image traffic', 'Optimize image performance'],
@@ -9381,7 +8893,6 @@ const realEstateSaaS = [
       technologie,
   s: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9392,7 +8903,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['International SEO management', 'Hreflang optimization', 'Multi-language content', 'Geographic targeting', 'Performance tracking'],
       benefit,
   s: ['Optimize for international markets', 'Improve global visibility', 'Manage multi-language sites'],
@@ -9403,7 +8913,6 @@ const realEstateSaaS = [
       technologie,
   s: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models']
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9414,7 +8923,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Automated SEO reporting', 'Performance tracking', 'Insight generation', 'Custom dashboards', 'Multi-channel analysis'],
       benefit,
   s: ['Track SEO performance', 'Generate insights', 'Make data-driven decisions'],
@@ -9427,7 +8935,6 @@ const realEstateSaaS = [
     },
     // NEW COMPREHENSIVE MICRO SAAS SERVICES;
     // AI Productivity & Time Management;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9438,7 +8945,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['Automatic time tracking', 'Productivity analysis', 'Distraction blocking', 'Work pattern insights', 'Goal tracking', 'Team analytics'],
       benefit,
   s: ['Increase productivity by 25%', 'Identify time wasters', 'Optimize work patterns', 'Achieve goals faster'],
@@ -9452,7 +8958,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9463,7 +8968,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$89/month',
-      feature,
   s: ['Smart prioritization', 'Deadline prediction', 'Workload balancing', 'Team coordination', 'Progress tracking', 'Integration tools'],
       benefit,
   s: ['Complete tasks 30% faster', 'Never miss deadlines', 'Balance workload effectively', 'Improve team coordination'],
@@ -9477,7 +8981,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9488,7 +8991,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$69/month',
-      feature,
   s: ['Smart filtering', 'Priority scoring', 'Auto responses', 'Email scheduling', 'Follow-up reminders', 'Spam protection'],
       benefit,
   s: ['Reduce email overwhelm', 'Respond faster', 'Never miss important emails', 'Save 2+ hours daily'],
@@ -9503,7 +9005,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI HR & Recruitment;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9514,7 +9015,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Resume parsing', 'Candidate matching', 'Skill assessment', 'Interview scheduling', 'Background checks', 'Onboarding automation'],
       benefit,
   s: ['Reduce hiring time by 50%', 'Find better candidates', 'Eliminate bias', 'Streamline recruitment'],
@@ -9528,7 +9028,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9539,7 +9038,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Performance tracking', 'Goal monitoring', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
       benefit,
   s: ['Improve performance by 35%', 'Identify top performers', 'Support employee growth', 'Reduce turnover'],
@@ -9553,7 +9051,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9564,7 +9061,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Incident prediction', 'Compliance tracking', 'Emergency alerts', 'Safety training', 'Risk assessment', 'Reporting system'],
       benefit,
   s: ['Prevent workplace accidents', 'Ensure compliance', 'Reduce insurance costs', 'Protect employees'],
@@ -9579,7 +9075,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Customer Service & Support;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9590,7 +9085,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$129/month',
-      feature,
   s: ['Smart routing', 'Priority scoring', 'Agent matching', 'Auto responses', 'Escalation management', 'Performance analytics'],
       benefit,
   s: ['Reduce response time by 60%', 'Improve customer satisfaction', 'Optimize agent workload', 'Lower support costs'],
@@ -9604,7 +9098,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9615,7 +9108,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Competitor analysis', 'Reporting'],
       benefit,
   s: ['Understand customer needs', 'Identify improvement areas', 'Increase satisfaction', 'Drive product decisions'],
@@ -9629,7 +9121,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9640,7 +9131,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['Instant responses', 'Context awareness', 'Human handoff', 'Multi-language', 'Integration tools', 'Analytics'],
       benefit,
   s: ['Provide 24/7 support', 'Reduce wait times', 'Improve customer experience', 'Lower support costs'],
@@ -9655,7 +9145,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Sales & CRM;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9666,7 +9155,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Opportunity scoring', 'Sales forecasting', 'Deal acceleration', 'Pipeline analytics', 'Activity tracking', 'CRM integration'],
       benefit,
   s: ['Increase close rates by 40%', 'Improve forecasting accuracy', 'Accelerate deals', 'Optimize sales process'],
@@ -9680,7 +9168,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9691,7 +9178,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Call transcription', 'Sentiment analysis', 'Objection identification', 'Coaching recommendations', 'Performance tracking', 'Team analytics'],
       benefit,
   s: ['Improve sales skills', 'Identify coaching opportunities', 'Increase conversion rates', 'Track team performance'],
@@ -9705,7 +9191,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9716,7 +9201,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$119/month',
-      feature,
   s: ['Template optimization', 'Pricing analysis', 'Win probability scoring', 'Client personalization', 'Version control', 'Approval workflow'],
       benefit,
   s: ['Create proposals 5x faster', 'Increase win rates', 'Optimize pricing', 'Personalize content'],
@@ -9731,7 +9215,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Project Management;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9742,7 +9225,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$179/month',
-      feature,
   s: ['Risk assessment', 'Early warning system', 'Mitigation recommendations', 'Project monitoring', 'Team analysis', 'Resource optimization'],
       benefit,
   s: ['Prevent project failures', 'Reduce risks by 50%', 'Improve success rates', 'Optimize resources'],
@@ -9756,7 +9238,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9767,7 +9248,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Capacity planning', 'Skill matching', 'Workload balancing', 'Resource forecasting', 'Team optimization', 'Cost analysis'],
       benefit,
   s: ['Optimize resource usage', 'Improve team efficiency', 'Reduce costs', 'Balance workloads'],
@@ -9781,7 +9261,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9792,7 +9271,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Timeline prediction', 'Milestone tracking', 'Delay prevention', 'Progress monitoring', 'Bottleneck identification', 'Scenario planning'],
       benefit,
   s: ['Deliver projects on time', 'Prevent delays', 'Identify bottlenecks', 'Improve planning'],
@@ -9807,7 +9285,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Security & Compliance;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9818,7 +9295,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Threat detection', 'Real-time monitoring', 'Vulnerability assessment', 'Incident response', 'Compliance tracking', 'Security analytics'],
       benefit,
   s: ['Prevent security breaches', 'Detect threats early', 'Ensure compliance', 'Reduce security costs'],
@@ -9832,7 +9308,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9843,7 +9318,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$249/month',
-      feature,
   s: ['Compliance tracking', 'Audit preparation', 'Violation alerts', 'Regulation updates', 'Documentation', 'Reporting'],
       benefit,
   s: ['Ensure compliance', 'Reduce audit time', 'Prevent violations', 'Lower compliance costs'],
@@ -9857,7 +9331,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9868,7 +9341,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['GDPR compliance', 'Consent tracking', 'Data protection', 'Privacy impact assessment', 'Data mapping', 'Breach notification'],
       benefit,
   s: ['Ensure data privacy', 'Meet GDPR requirements', 'Protect customer data', 'Avoid penalties'],
@@ -9883,7 +9355,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Quality Assurance & Testing;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9894,7 +9365,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$179/month',
-      feature,
   s: ['Test generation', 'Automated execution', 'Test maintenance', 'Coverage analysis', 'Performance testing', 'Regression testing'],
       benefit,
   s: ['Reduce testing time by 70%', 'Improve test coverage', 'Catch bugs earlier', 'Lower testing costs'],
@@ -9908,7 +9378,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9919,7 +9388,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Bug prediction', 'Code analysis', 'Risk assessment', 'Prevention recommendations', 'Quality metrics', 'Team insights'],
       benefit,
   s: ['Prevent bugs before they occur', 'Improve code quality', 'Reduce debugging time', 'Lower maintenance costs'],
@@ -9933,7 +9401,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9944,7 +9411,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Performance monitoring', 'Anomaly detection', 'Optimization recommendations', 'Capacity planning', 'Alert system', 'Analytics'],
       benefit,
   s: ['Prevent performance issues', 'Optimize system performance', 'Plan capacity needs', 'Reduce downtime'],
@@ -9959,7 +9425,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Content & Media;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9970,7 +9435,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Script generation', 'Video editing', 'Social media optimization', 'Template library', 'Brand consistency', 'Multi-format export'],
       benefit,
   s: ['Create videos 10x faster', 'Reduce production costs', 'Maintain brand consistency', 'Scale content creation'],
@@ -9984,7 +9448,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -9995,7 +9458,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Audio editing', 'Transcription', 'Show notes generation', 'Intro/outro creation', 'Publishing automation', 'Analytics'],
       benefit,
   s: ['Produce podcasts faster', 'Reduce editing time', 'Improve quality', 'Scale production'],
@@ -10009,7 +9471,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -10020,7 +9481,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Image generation', 'Design automation', 'Brand consistency', 'Multi-format optimization', 'Template library', 'Batch processing'],
       benefit,
   s: ['Create designs instantly', 'Maintain brand consistency', 'Reduce design costs', 'Scale visual content'],
@@ -10035,7 +9495,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Research & Development;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -10046,7 +9505,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Paper analysis', 'Trend identification', 'Knowledge synthesis', 'Citation management', 'Research tracking', 'Collaboration tools'],
       benefit,
   s: ['Accelerate research', 'Stay current with trends', 'Synthesize knowledge', 'Improve research quality'],
@@ -10060,7 +9518,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -10071,7 +9528,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$399/month',
-      feature,
   s: ['Prior art search', 'Novelty assessment', 'Patent generation', 'Competitor analysis', 'Filing assistance', 'Portfolio management'],
       benefit,
   s: ['Identify patent opportunities', 'Avoid infringement', 'Accelerate patent process', 'Manage IP portfolio'],
@@ -10085,7 +9541,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -10096,7 +9551,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$149/month',
-      feature,
   s: ['Trend analysis', 'Competitor tracking', 'Opportunity identification', 'Innovation scoring', 'Market analysis', 'Alert system'],
       benefit,
   s: ['Stay ahead of trends', 'Identify opportunities', 'Track competitors', 'Drive innovation'],
@@ -10111,7 +9565,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Personal & Lifestyle;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -10122,7 +9575,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$79/month',
-      feature,
   s: ['Budget management', 'Investment tracking', 'Financial planning', 'Bill reminders', 'Expense categorization', 'Goal tracking'],
       benefit,
   s: ['Improve financial health', 'Achieve financial goals', 'Reduce financial stress', 'Optimize investments'],
@@ -10136,7 +9588,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -10147,7 +9598,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$99/month',
-      feature,
   s: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Habit tracking', 'Goal setting', 'Voice commands'],
       benefit,
   s: ['Increase productivity', 'Achieve personal goals', 'Optimize daily routines', 'Reduce stress'],
@@ -10161,7 +9611,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -10172,7 +9621,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$89/month',
-      feature,
   s: ['Usage optimization', 'Cost reduction', 'Sustainability tracking', 'Smart device control', 'Energy forecasting', 'Savings analysis'],
       benefit,
   s: ['Reduce energy costs', 'Lower carbon footprint', 'Optimize energy usage', 'Track sustainability goals'],
@@ -10187,7 +9635,6 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Gaming & Entertainment;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -10198,7 +9645,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$299/month',
-      feature,
   s: ['Asset generation', 'Level design', 'Gameplay optimization', 'NPC behavior', 'Balancing tools', 'Testing automation'],
       benefit,
   s: ['Accelerate game development', 'Create unique content', 'Improve gameplay', 'Reduce development costs'],
@@ -10212,7 +9658,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -10223,7 +9668,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$199/month',
-      feature,
   s: ['Composition assistance', 'Style transfer', 'Production tools', 'Instrument synthesis', 'Lyrics generation', 'Collaboration'],
       benefit,
   s: ['Create music faster', 'Explore new styles', 'Improve composition skills', 'Collaborate effectively'],
@@ -10237,7 +9681,6 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -10248,7 +9691,6 @@ const realEstateSaaS = [
   n: '',
       pric,
   e: '$249/month',
-      feature,
   s: ['Quality enhancement', 'Compression optimization', 'Delivery optimization', 'Bandwidth management', 'Analytics', 'Multi-platform'],
       benefit,
   s: ['Improve streaming quality', 'Reduce bandwidth costs', 'Optimize delivery', 'Enhance viewer experience'],
@@ -10264,49 +9706,27 @@ const realEstateSaaS = [
     }
   ];
 const categories = [
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Developer Tools').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Marketing').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Analytics').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Finance').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Healthcare').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Education').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'E-commerce').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Legal').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Real Estate').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Project Management').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Productivity').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Communication').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Customer Support').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Sales & CRM').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Cybersecurity').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Quality Assurance').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Content Creation').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Research').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Personal Finance').length },
-    {/* TODO: Fix JSX expression */}
   t: microSAASServices.filter(s => s.category === 'Game Development').length }
   ];
   return (<div>Coming Soon</div>)
@@ -10422,7 +9842,6 @@ const categories = [
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
@@ -10473,7 +9892,6 @@ const categories = [
                   <h4 className="font-semibold text-gray-900 mb-3">Key,
   Features:</h4>"
                   <ul className="space-y-2"></ul>
-                    {service.features.slice(0, 4).map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                         {feature}
@@ -10526,7 +9944,6 @@ const categories = [
                 </div>"
                 <div className="text-center"></div>
                   <a></a>
-                    href={/* TODO: Fix JSX expression */}
   o:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}"
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,
   hover:from-purple-700,"

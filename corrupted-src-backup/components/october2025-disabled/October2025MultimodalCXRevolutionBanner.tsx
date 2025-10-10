@@ -8,7 +8,6 @@ const October2025MultimodalCXRevolutionBanne, r = () => {
       {/* Animated, background, effects */}</div>
       <div, className='absolute, inse, t-0, opacit, y-10'></div>
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
-const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
       {/* Animated, background, effects */}
       <div, className='absolute, inse, t-0, opacit, y-10'></div>
@@ -92,11 +91,7 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
             <div, className='te, x, t-sm, tex, t-purp, l, e-2, 0, 0'>ROI, First, Year</div>
             <div, className='te, x, t-xs, tex, t-gr, a, y-400, m, t-1'>$340 M, valu, e</div>
           </div>
-          <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0'></div>
-            <Zap, className='w-8 h-8, tex, t-gre, e, n-400, m, x-auto, m, b-2' />
-            <Zap, className='w-8 h-8, tex, t-gre, e, n-400, m, x-auto, m, b-2' /></Zap>
             <div, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1'>85%</div>
-            <div, className='te, x, t-sm, tex, t-gre, e, n-2, 0, 0'>Automation, Rat, e</div>
             <div, className='te, x, t-xs, tex, t-gr, a, y-400, m, t-1'>$243 M, cost, saved</div>
           </div>
         </div>
@@ -146,7 +141,6 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
                   Voi, c, e + Emotion, A, I;
                 </div>
                 <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'></div>
-                  Natural, conversations, in 47, languages, with re, a, l-time, emotion, detection and, adaptive, responses — 94% satisfaction, rat, e;
                 </div>
               </div>
             </div>
@@ -217,32 +211,25 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
               </ul>
             </div>
             <d, i, v>
-              <div, classNam, e = 'te, x, t-gre, e, n-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2'></div>
                 <CheckCircle, className='w-5 h-5' />
             <d, i, v></d>
-              <div, classNam, e = 'te, x, t-gre, e, n-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2'></div>
                 <CheckCircle, className='w-5 h-5' /></CheckCircle>
                 Aft, e, r: Multimodal, AI, Excellence;
               </div>
               <ul, className='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'></ul>
                 <li, className='flex, item, s-start, ga, p-2'></li>
-                  <span, className='te, x, t-gre, e, n-400, m, t-1'>✓</sp, a, n>
                   <sp, a, n>94% CS, A, T (+1, 4, 7%, industry-leadi, n, g)</sp, a, n>
                 </li>
                 <li, classNam, e = 'flex, item, s-start, ga, p-2'></li>
-                  <span, className='te, x, t-gre, e, n-400, m, t-1'>✓</sp, a, n>
                   <sp, a, n>$184M, support, costs ($243M, sav, e, d)</sp, a, n>
                 </li>
                 <li, classNam, e = 'flex, item, s-start, ga, p-2'></li>
-                  <span, className='te, x, t-gre, e, n-400, m, t-1'>✓</sp, a, n>
                   <sp, a, n>87% fir, s, t-contact, resolutio, n (+27, 8%)</sp, a, n>
                 </li>
                 <li, classNam, e = 'flex, item, s-start, ga, p-2'></li>
-                  <span, className='te, x, t-gre, e, n-400, m, t-1'>✓</sp, a, n>
                   <sp, a, n>2.3, minute, resolution ti, m, e (-8, 7%)</sp, a, n>
                 </li>
                 <li, classNam, e = 'flex, item, s-start, ga, p-2'></li>
-                  <span, className='te, x, t-gre, e, n-400, m, t-1'>✓</sp, a, n>
                   <sp, a, n>14% agent, turnov, e, r, 89% satisfacti, o, n</sp, a, n>
                 </li>
               </ul>
@@ -250,11 +237,9 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
           </div>
           <div, classNam, e = 'te, x, t-cent, e, r'></div>
             <div, className='inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-lg'></div>
-              <TrendingUp, className='w-6 h-6, tex, t-gre, e, n-4, 0, 0' />
               <d, i, v>
                 <div, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>2, 8, 7% R, O, I</div>
                 <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>
-              <TrendingUp, className='w-6 h-6, tex, t-gre, e, n-4, 0, 0' /></TrendingUp>
               <d, i, v></d>
                 <div, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>2, 8, 7% R, O, I</div>
                 <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'></div>
@@ -336,7 +321,6 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
               Complete, guide, to multimodal, AI, customer experience, with, architectu, r, e, implementation, roadma, p, and, ROI, calculator;
             </div>
             <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l'></div>
-              <sp, a, n>Explore, Technolog, y</sp, a, n>
               <Link, className='w-5 h-5' /></Link>
             </div>
           </Li, n, k>
@@ -411,40 +395,30 @@ const October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expres
         <div, classNam, e = 'mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10'></div>
           <div, className='flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-sm, tex, t-gr, a, y-4, 0, 0'></div>
             <div, className='flex, item, s-center, ga, p-2'></div>
-              <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
               <sp, a, n>Fortune, 100, Proven</sp, a, n>
             </div>
             <div, className='flex, item, s-center, ga, p-2'></div>
-              <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
               <sp, a, n>127M, Customers, Served</sp, a, n>
             </div>
             <div, className='flex, item, s-center, ga, p-2'></div>
-              <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
               <sp, a, n>47, Languages, Supported</sp, a, n>
             </div>
             <div, className='flex, item, s-center, ga, p-2'></div>
-              <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
               <sp, a, n>99.99% Uptime, SL, A</sp, a, n>
             </div>
             <div, className='flex, item, s-center, ga, p-2'></div>
-              <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
-              <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
               <sp, a, n>Fortune, 100, Proven</sp, a, n>
             </div>
             <div, className='flex, item, s-center, ga, p-2'></div>
-              <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
               <sp, a, n>127M, Customers, Served</sp, a, n>
             </div>
             <div, className='flex, item, s-center, ga, p-2'></div>
-              <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
               <sp, a, n>47, Languages, Supported</sp, a, n>
             </div>
             <div, className='flex, item, s-center, ga, p-2'></div>
-              <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
               <sp, a, n>99.99% Uptime, SL, A</sp, a, n>
             </div>
             <div, className='flex, item, s-center, ga, p-2'></div>
-              <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
               <sp, a, n>12-24, Week, Implementation</sp, a, n>
             </div>
           </div>

@@ -111,7 +111,6 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {}
       writable: true,
     })
 export const wait = (m)
-  s: number): Promise<void> => {/* TODO: Fix JSX expression */}
 };
 /**
  * Wait for a condition to be true;
@@ -120,7 +119,6 @@ export const waitFor = async (conditio)
   n: () => boolean,
   timeout = 5000,
   interval = 100;
-): Promise<void> => {/* TODO: Fix JSX expression */}
       throw new Error(`Timeout waiting for condition after ${timeout}ms`);
     }
     await wait(interval);
@@ -134,9 +132,7 @@ export const mockFetch = (respons,
   status = 200,
   header,
   s: Record<string, string> = {})
-): void => {/* TODO: Fix JSX expression */}
   h: typeof fetch }).fetch = jest.fn(() =>
-      Promise.resolve({/* TODO: Fix JSX expression */})
       } as Response)
     ) as typeof fetch;
   }
@@ -144,34 +140,26 @@ export const mockFetch = (respons,
 /**
  * Mock local storage;
  */
-export class MockStorage implements Storage {/* TODO: Fix JSX expression */}
   }
-  clear(): void {/* TODO: Fix JSX expression */}
   }
   getItem(ke)
-  y: string): string | null {/* TODO: Fix JSX expression */}
   }
   key(inde)
-  x: number): string | null {/* TODO: Fix JSX expression */}
   }
   removeItem(ke)
-  y: string): void {/* TODO: Fix JSX expression */}
   }
   setItem(ke,
   y: string, valu)
-  e: string): void {/* TODO: Fix JSX expression */}
   }
 }
 /**
  * Create a mock localStorage for testing;
  */
-export const createMockStorage = (): MockStorage => {/* TODO: Fix JSX expression */}
 };
 /**
  * Mock window object;
  */
 export const mockWindow = (override)
-  s: Partial<Window> = {}): void => {/* TODO: Fix JSX expression */}
       },
       writabl,
   e: true,
@@ -235,13 +223,11 @@ export const createMockPerformance = (): Performance => {}
     dispatchEvent: () => true;
     onresourcetimingbufferfull: null,
     timeOrigin: Date.now(),
-export const createMockPerformance = (): Performance => {/* TODO: Fix JSX expression */}
   N: () => ({})
       } as PerformanceEntry);
     },
     measur,
   e: (nam)
-  e: string, startMark?: string, endMark?: string) => {/* TODO: Fix JSX expression */}
   N: () => ({})
       } as PerformanceEntry);
     },
@@ -254,10 +240,7 @@ export const createMockPerformance = (): Performance => {/* TODO: Fix JSX expres
     getEntrie,
   s: () => entries,
     clearMark,
-  s: () => {/* TODO: Fix JSX expression */}
     },
-    clearMeasure,
-  s: () => {/* TODO: Fix JSX expression */}
     },
     clearResourceTiming,
   s: () => {},
@@ -309,28 +292,21 @@ export const generateTestData = {}
   },
   array: <T>(generator: () => T, length = 5): T[] => {}
     return Array.from({ length }, generator)
-export const generateTestData = {/* TODO: Fix JSX expression */}
   },
   numbe,
-  r: (min = 0, max = 100): number => {/* TODO: Fix JSX expression */}
   },
   boolea,
-  n: (): boolean => {/* TODO: Fix JSX expression */}
   },
   emai,
-  l: (): string => {/* TODO: Fix JSX expression */}`
     return `test${generateTestData.string(5)}@example.com`;
   },
   ur,
-  l: (): string => {/* TODO: Fix JSX expression */}`
   s://example.com/${generateTestData.string(10)}`;
   },
   dat,
-  e: (): Date => {/* TODO: Fix JSX expression */}
   },
   arra,
   y: <T>(generato)
-  r: () => T, length = 5): T[] => {/* TODO: Fix JSX expression */}
     return Array.from({ length }, generator);
   }
 }
@@ -395,38 +371,27 @@ export class ConsoleSpy {}
     this.errors = []
     this.warnings = [];}
 export const deepClone = <T>(ob)
-  j: T): T => {/* TODO: Fix JSX expression */}
 };
 /**
  * Compare objects for equality;
  */
 export const deepEqual = (obj,
   1: unknown, obj)
-  2: unknown): boolean => {/* TODO: Fix JSX expression */}
 };
 /**
  * Spy on console methods;
  */
-export class ConsoleSpy {/* TODO: Fix JSX expression */}
     this.originalConsole = { ...console };
     this.mock();
   }
-  private mock(): void {/* TODO: Fix JSX expression */}
     };
-  s: unknown[]) => {/* TODO: Fix JSX expression */}
     };
-  s: unknown[]) => {/* TODO: Fix JSX expression */}
     };
   }
-  getLogs(): string[] {/* TODO: Fix JSX expression */}
   }
-  getErrors(): string[] {/* TODO: Fix JSX expression */}
   }
-  getWarnings(): string[] {/* TODO: Fix JSX expression */}
   }
-  restore(): void {/* TODO: Fix JSX expression */}
   }
-  clear(): void {/* TODO: Fix JSX expression */}
   }
 }
 /**
@@ -456,9 +421,7 @@ export const createDeferred = <T>(): Deferred<T> => {}
   })
   return { promise, resolve, reject }
 }
-export interface Deferred<T> {/* TODO: Fix JSX expression */}
 }
-export const createDeferred = <T>(): Deferred<T> => {/* TODO: Fix JSX expression */}
   });
   return { promise, resolve, reject };
 };
@@ -488,8 +451,6 @@ export const retryWithBackoff = async <T>(f)
       if (i < maxRetries - 1) {}
         await wait(initialDelay * Math.pow(2, i));}
   initialDelay = 1000;
-): Promise<T> => {/* TODO: Fix JSX expression */}
-    } catch (error) {/* TODO: Fix JSX expression */}
       }
     }
   }
@@ -524,10 +485,7 @@ export default {}
 }
 export const measureExecutionTime = async <T>(f)
   n: () => T | Promise<T></T>
-): Promise<{/* TODO: Fix JSX expression */}
-  n: number }> => {/* TODO: Fix JSX expression */}
   return { result, duration };
 };
-export default {/* TODO: Fix JSX expression */}
 };
 `

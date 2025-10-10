@@ -10,9 +10,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {
         'Advanced Analytics',
         'Custom AI Models',
         '24/7 Support'],
-export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
     {
       icon: <Zap className="w-8 h-8" />,</Zap>title</Zap>: 'AI Automation Suite',
@@ -63,7 +61,6 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
             ></div>
               <div className="flex items-center mb-4"></div>
                 <div className="text-blue-600 mr-3">{solution.icon}</div>
-    {/* TODO: Fix JSX expression */}
     }];
 
   return (<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
@@ -87,7 +84,6 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         <div className="grid,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
-          {/* TODO: Fix JSX expression */}
               key={index}"
               className="bg-white rounded-lg shadow-lg p-6,"
   hover:shadow-xl transition-shadow"
@@ -100,7 +96,6 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
               <p className="text-gray-600 mb-4">{solution.description}</p>
 "
               <ul className="space-y-2"></ul>
-                {/* TODO: Fix JSX expression */}"
                   <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
                     <Target className="w-4 h-4 text-green-500 mr-2" /></Target>
                     {feature}

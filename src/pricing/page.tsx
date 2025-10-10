@@ -218,7 +218,6 @@ const PricingPage: React.FC = () => {
                     <div className="mb-8">
                       <h4 className="font-semibold text-gray-900 mb-4">What's included:</h4>
                       <ul className="space-y-3">
-                        {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start">
                             <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                             <span className="text-gray-600">{feature}</span>

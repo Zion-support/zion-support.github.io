@@ -189,7 +189,6 @@
     descriptio,
   n: unknown,
       'Launch high - conversion mobile surveys with skip logic, NPS / CSAT templates, and shareable dashboards. Embed on sites or share links; export to CSV and data warehouses.',
-    feature,
   s: [,
       'Branching logic and progress - save',
       'Branching logic and progress-save'
@@ -412,7 +411,6 @@
     descriptio,
   n: unknown,
       'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.',
-    feature,
   s: [,
       'QR tickets and check - in app',
       'Speaker / sponsor asset management',
@@ -492,7 +490,6 @@
     descriptio,
   n: unknown,
       'Create and manage on - call schedules with handoff workflows, time - zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.',
-    feature,
   s: [,
       'Flexible rotations and override rules',
       'Escalation policies and schedules',
@@ -581,7 +578,6 @@
     descriptio,
   n: unknown,
       'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.',
-    feature,
   s: [,
       'Keyword clustering and topical maps',
       'Competitor gap analysis',
@@ -656,7 +652,6 @@
     descriptio,
   n: unknown,
       'Add feature flags to your app with SDKs for React / Node, rule targeting, and environments. Includes audit logs and safe defaulting.',
-    feature,
   s: [,
       'Boolean, multivariate, and JSON flags',
       'User and cohort targeting',
@@ -833,7 +828,6 @@
   n: unknown,
       'Create robotic process automations for web,
   workflows: login, scrape, form - fill, download, and upload. Includes scheduling, proxy support, and error screenshots.',
-    feature,
   s: [,
       'Workflow editor and step recorder',
       'Retry logic and backoff policies',
@@ -901,7 +895,6 @@
     descriptio,
   n: unknown,
       'Detect and redact sensitive data (PII / PHI / PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.',
-    feature,
   s: [,
       'Configurable detectors (SSN, phone, email) credit card)',
       'Context - aware redaction and masking',
@@ -1008,7 +1001,6 @@
     descriptio,
   n:
       'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.'
-    feature,
   s: [;
       'Goal trees and KPI ownership'
       'Weekly executive summaries'
@@ -1116,7 +1108,6 @@
     descriptio,
   n: unknown,
       'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.',
-    feature,
   s: [,
       'Goal trees and KPI ownership',
       'Weekly executive summaries',
@@ -1232,7 +1223,6 @@ export const,
   d: '/month',
 		descriptio,
   n: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.',
-    feature,
   s: [;
 ],
 			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and,
@@ -2094,7 +2084,6 @@ export const,
   d: '/month'
 		descriptio,
   n: 'Launch high-conversion mobile surveys with skip logic, NPS/CSAT templates, and shareable dashboards. Embed on sites or share links, export to CSV and data warehouses.'
-		feature,
   s: [,
 			'Branching logic and progress-saveQuestion,
   bank: CSAT, NPS, PMF, churnAnonymous or identified responsesWebhooks and Zapier integrationReal-time charts and cohort filtersGDPR/CCPA consent and deletion tools'
@@ -2164,7 +2153,6 @@ export const,
   d: '/month'
 		descriptio,
   n: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.'
-		feature,
   s: [;
 			'QR tickets and check-in appSpeaker/sponsor asset managementAutomated reminders and WhatsApp/SMS alertsFeedback/NPS post-event formsBudget tracker and P&L exportsEmbeddable agendas and live updates'
 		];
@@ -2233,7 +2221,6 @@ export const,
   d: '/month'
 		descriptio,
   n: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.'
-		feature,
   s: [;
 			'Flexible rotations and override rulesEscalation policies and schedulesSlack/Teams integration and on-call handoffsVacation/holiday calendarsIncident reports and postmortem templatesSLO and error budget reminders'
 		];
@@ -2302,7 +2289,6 @@ export const,
   d: '/month'
 		descriptio,
   n: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.'
-		feature,
   s: [;
 			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)'
 		];
@@ -2371,7 +2357,6 @@ export const,
   d: '/month'
 		descriptio,
   n: 'Add feature flags to your app with SDKs for React/Node, rule targeting, and environments. Includes audit logs and safe defaulting.'
-		feature,
   s: [,
 			'Boolean, multivariate, and JSON flagsUser and cohort targetingGradual rollouts and percentage splitsAudit logs and environment scopingServer and client SDKsWebhook notifications'
 		];
@@ -2440,7 +2425,6 @@ export const,
   d: '/month'
 		descriptio,
   n: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.'
-		feature,
   s: [;
 			'Company/person enrich via email or domainTech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflowsConfidence scores and data provenanceUsage-based pricing tiers'
 		];
@@ -2509,7 +2493,6 @@ export const,
   d: '/month'
 		descriptio,
   n: 'Upload PDFs/images and get structured outputs (vendor, dates, taxes) line items). Human-in-the-loop validation and retraining for edge cases.'
-		feature,
   s: [,
 			'High-accuracy OCR and field mappingLine item extraction and taxesValidation UI and review queuesExport to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies'
 		];
@@ -2579,7 +2562,6 @@ export const,
 		descriptio,
   n: 'Create robotic process automations for web,
   workflows: login, scrape, form-fill, download, and upload. Includes scheduling, proxy support, and error screenshots.'
-		feature,
   s: [,
 			'Workflow editor and step recorderRetry logic and backoff policiesCaptcha solving hooks and proxiesFile storage and PII redactionJob queue, metrics, and alertsHuman approval steps'
 		];
@@ -2648,7 +2630,6 @@ export const,
   d: '/month',
   descriptio,
   n: 'Detect and redact sensitive data (PII/PHI/PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.'
-		feature,
   s: [,
 			'Configurable detectors (SSN, phone, email) credit card)Context-aware redaction and maskingAudit logs and retention policiesBatch processing and streamingWebhook retries and DLQsExport to S3/R2 and BigQuery'
 		];
@@ -2717,7 +2698,6 @@ export const,
   d: '/month'
 		descriptio,
   n: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.'
-		feature,
   s: [;
 			'Goal trees and KPI ownershipWeekly executive summariesAlerting on thresholds and trendsWarehouse connectorsShareable links with permissionsAnnotations and change logs'
 		];
@@ -2787,7 +2767,6 @@ export const,
   d: '/month',
   descriptio,
   n: 'An AI - driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.'
-  feature,
   s: [,
   'Intent classification and priority scoring_one - click reply drafts with tone controls_auto - tagging and routing to teamsPII redaction and allowlist domainsSLA - aware escalations and,
   summaries_analytics: response time, CSAT impact, volume by topic'
@@ -2857,7 +2836,6 @@ export const,
   d: '/month',
   descriptio,
   n: 'Launch high - conversion mobile surveys with skip logic, NPS / CSAT templates, and shareable dashboards. Embed on sites or share links, export to CSV and data warehouses.'
-  feature,
   s: [,
   'Branching logic and progress - save_question,
   bank: CSAT, NPS, PMF, churn_anonymous or identified responses_webhooks and Zapier integration_real - time charts and cohort filtersGDPR / CCPA consent and deletion tools'
@@ -2927,7 +2905,6 @@ export const,
   d: '/month',
   descriptio,
   n: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.'
-  feature,
   s: [;
   'QR tickets and check - in app_speaker / sponsor asset management_automated reminders and WhatsApp / SMS alerts_feedback / NPS post - event forms_budget tracker and P & L exports_embeddable agendas and live updates'
   ];
@@ -2996,7 +2973,6 @@ export const,
   d: '/month',
   descriptio,
   n: 'Create and manage on - call schedules with handoff workflows, time - zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.'
-  feature,
   s: [;
   'Flexible rotations and override rules_escalation policies and schedules_slack / Teams integration and on - call handoffs_vacation / holiday calendars_incident reports and postmortem templatesSLO and error budget reminders'
   ];
@@ -3065,7 +3041,6 @@ export const,
   d: '/month',
   descriptio,
   n: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.'
-  feature,
   s: [;
   'Keyword clustering and topical maps_competitor gap analysis_outline and brief generation_on - page audit and schema suggestions_rank tracking and change logsCMS export (Markdown / Headless)'
   ];
@@ -3134,7 +3109,6 @@ export const,
   d: '/month',
   descriptio,
   n: 'Add feature flags to your app with SDKs for React / Node, rule targeting, and environments. Includes audit logs and safe defaulting.'
-  feature,
   s: [,
   'Boolean, multivariate, and JSON flags_user and cohort targeting_gradual rollouts and percentage splits_audit logs and environment scoping_server and client SDKsWebhook notifications'
   ];
@@ -3203,7 +3177,6 @@ export const,
   d: '/month',
   descriptio,
   n: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.'
-  feature,
   s: [;
   'Company / person enrich via email or domain_tech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflows_confidence scores and data provenance_usage - based pricing tiers'
   ];
@@ -3272,7 +3245,6 @@ export const,
   d: '/month',
   descriptio,
   n: 'Upload PDFs / images and get structured outputs (vendor, dates, taxes) line items). Human - in - the - loop validation and retraining for edge cases.'
-  feature,
   s: [,
   'High - accuracy OCR and field mapping_line item extraction and taxes_validation UI and review queues_export to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies'
   ];
@@ -3342,7 +3314,6 @@ export const,
   descriptio,
   n: 'Create robotic process automations for web,
   workflows: login, scrape, form - fill, download, and upload. Includes scheduling, proxy support, and error screenshots.'
-  feature,
   s: [,
   'Workflow editor and step recorder_retry logic and backoff policies_captcha solving hooks and proxies_file storage and PII redaction_job queue, metrics, and alerts_human approval steps'
   ];
@@ -3411,7 +3382,6 @@ export const,
   d: '/month',
   descriptio,
   n: 'Detect and redact sensitive data (PII / PHI / PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.',
-  feature,
   s: [,
   'Configurable detectors (SSN, phone, email) credit card)Context - aware redaction and masking_audit logs and retention policies_batch processing and streaming_webhook retries and DLQsExport to S3 / R2 and BigQuery'
   ];
@@ -3480,7 +3450,6 @@ export const,
   d: '/month',
   descriptio,
   n: 'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.'
-  feature,
   s: [;
   'Goal trees and KPI ownership_weekly executive summaries_alerting on thresholds and trends_warehouse connectors_shareable links with permissions_annotations and change logs'
   ];
@@ -3541,7 +3510,6 @@ export const,
   g: 4.4;
 		review,
   s: 16,
-// const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
@@ -3549,12 +3517,10 @@ export const,
 };
 export const,
   real2029Q4Additions: RealMarketService[] = [;
-	{/* TODO: Fix JSX expression */}
   g: 4.8}
 		review,
   s: 74}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 33}
@@ -3669,22 +3635,18 @@ export const,
 		customers: 95;
 		rating: 4.6}
 		reviews: 54}
-	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 29}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 19}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 54}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 21}
@@ -3725,22 +3687,18 @@ export const,
 		customers: 40;
 		rating: 4.4}
 		reviews: 17}
-	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 17}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 14}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 18}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.3}
 		review,
   s: 12}
@@ -3789,14 +3747,12 @@ export const,
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com',
-	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 16}
 	}
 ];
 ;
-// const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
   e: 'http,
@@ -3804,12 +3760,10 @@ export const,
 };
 export const,
   real2029Q4Additions: RealMarketService[] = [;
-	{/* TODO: Fix JSX expression */}
   g: 4.8}
 		review,
   s: 74}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 33}
@@ -3924,22 +3878,18 @@ export const,
 		customers: 95;
 		rating: 4.6}
 		reviews: 54}
-	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 29}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 19}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 54}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 21}
@@ -3980,22 +3930,18 @@ export const,
 		customers: 40;
 		rating: 4.4}
 		reviews: 17}
-	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 17}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 14}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 18}
 	};
-	{/* TODO: Fix JSX expression */}
   g: 4.3}
 		review,
   s: 12}
@@ -4036,7 +3982,6 @@ export const,
 		customers: 36;
 		rating: 4.4}
 		reviews: 16}
-	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 16}
@@ -4099,7 +4044,6 @@ export const,
   e:  ,' 'Conversational, mobile - first surveys with branching logic and realtime dashboards',' pric,
   e: '$59',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Launch high - conversion mobile surveys with skip logic, NPS / CSAT templates, and shareable dashboards. Embed on sites or share links; export to CSV and data warehouses.', feature,
   s: [,' 'Branching logic and progress - save', ' 'Branching logic and progress-save'' 'Question,
   bank: CSAT, NPS, PMF, churn'' 'Anonymous or identified responses'' 'Webhooks and Zapier integration'' 'Real-time charts and cohort filters'' 'GDPR/CCPA consent and deletion tools' ] popula,
   r: false' ico,
@@ -4162,7 +4106,6 @@ export const,
   e:  ,' 'Ticketing, invitations, run - of - show, and post - event analytics in one place',' pric,
   e: '$149',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.', feature,
   s: [,' 'QR tickets and check - in app',' 'Speaker / sponsor asset management',' 'Automated reminders and WhatsApp / SMS alerts',' 'Feedback / NPS post - event forms',' 'Budget tracker and P & L exports', ' 'Embeddable agendas and live updates'], popula,
   r: true,' ico,
   n: '🎟️',' integration,
@@ -4185,7 +4128,6 @@ export const,
   e:  ,' 'Policy - based shift planning, rotations, and escalations with Slack / Teams',' pric,
   e: '$129',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Create and manage on - call schedules with handoff workflows, time - zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.', feature,
   s: [, ' 'Flexible rotations and override rules',' 'Escalation policies and schedules',' 'Slack / Teams integration and on - call handoffs',' 'Vacation / holiday calendars',' 'Incident reports and postmortem templates',' 'SLO and error budget reminders'], popula,
   r: false,' 'Lean alternative for SMBs; complements enterprise incident suites.',' target_audienc,
   e: 'SRE teams, startups, agencies', trial_day,
@@ -4211,7 +4153,6 @@ export const,
   e:  ,' 'AI - assisted briefs, outlines, and on - page optimization with live SERP data',' pric,
   e: '$89',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.', feature,
   s: [, ' 'Keyword clustering and topical maps',' 'Competitor gap analysis',' 'Outline and brief generation',' 'On - page audit and schema suggestions',' 'Rank tracking and change logs',' 'CMS export (Markdown / Headless)'], popula,
   r: true,' 'Google Search Console',' 'Ahrefs (export)',' 'Semrush (export)'],' use_case,
   s: ['Page optimization', 'Content planning', 'Brief creation'],' ro,
@@ -4232,7 +4173,6 @@ export const,
   e:  ,' 'Simple kill switches, gradual rollouts, and A / B targeting for web apps',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Add feature flags to your app with SDKs for React / Node, rule targeting, and environments. Includes audit logs and safe defaulting.', feature,
   s: [, ' 'Boolean, multivariate, and JSON flags',' 'User and cohort targeting',' 'Gradual rollouts and percentage splits',' 'Audit logs and environment scoping',' 'Server and client SDKs',' 'Webhook notifications'], popula,
   r: false,' 'Minimal alternative to enterprise flag platforms for SMBs.',' target_audienc,
   e: 'Startups, agencies, indie devs', trial_day,
@@ -4282,7 +4222,6 @@ export const,
   e: '$139',' perio,
   d: '/month', descriptio,
   n:  ,' 'Create robotic process automations for web,
-  workflows: login, scrape, form - fill, download, and upload. Includes scheduling, proxy support, and error screenshots.', feature,
   s: [, ' 'Workflow editor and step recorder',' 'Retry logic and backoff policies',' 'Captcha solving hooks and proxies',' 'File storage and PII redaction',' 'Job queue, metrics, and alerts',' 'Human approval steps'], popula,
   r: true,' competitor,
   s: ['UiPath (SMB)', 'Robocorp'],' market_siz,
@@ -4301,7 +4240,6 @@ export const,
   e:  ,' 'PII detection and redaction for text and documents with audit logs',' pric,
   e: '$79',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Detect and redact sensitive data (PII / PHI / PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.', feature,
   s: [, ' 'Configurable detectors (SSN, phone, email) credit card)',' 'Context - aware redaction and masking',' 'Audit logs and retention policies',' 'Batch processing and streaming',' 'Webhook retries and DLQs',' 'Export to S3 / R2 and BigQuery'], popula,
   r: false,' ico,
   n: '🧼', ' colo,
@@ -4335,7 +4273,6 @@ export const,
   e: 'OKR/KPI dashboards with goals, alerts, and executive summaries'' pric,
   e: '$69'' perio,
   d: '/month' descriptio,
-  n:' 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.' feature,
   s: [' 'Goal trees and KPI ownership'' 'Weekly executive summaries'' 'Alerting on thresholds and trends'' 'Warehouse connectors'' 'Shareable links with permissions'' 'Annotations and change logs' ] popula,
   r: false' ico,
   n: '📊'' colo,
@@ -4369,7 +4306,6 @@ export const,
   e: 'OKR / KPI dashboards with goals, alerts, and executive summaries',' pric,
   e: '$69',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.', feature,
   s: [, ' 'Goal trees and KPI ownership',' 'Weekly executive summaries',' 'Alerting on thresholds and trends',' 'Warehouse connectors',' 'Shareable links with permissions',' 'Annotations and change logs'], popula,
   r: false,' ico,
   n: '📊', ' colo,
@@ -4409,7 +4345,6 @@ export const,
   e: 'Auto-categorize, summarize, and draft replies for inbound email',' pric,
   e: '$99', perio,
   d: '/month',' descriptio,
-  n: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.', feature,
   s: [], ' 'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and,
   summariesAnalytics: response time, CSAT impact, volume by topic' ]; popula,
   r: true,' ico,
@@ -4444,7 +4379,6 @@ export const,
   e: 'Conversational, mobile-first surveys with branching logic and realtime dashboards'' pric,
   e: '$59'' perio,
   d: '/month'' descriptio,
-  n: 'Launch high-conversion mobile surveys with skip logic, NPS/CSAT templates, and shareable dashboards. Embed on sites or share links, export to CSV and data warehouses.' feature,
   s: [' 'Branching logic and progress-saveQuestion,
   bank: CSAT, NPS, PMF, churnAnonymous or identified responsesWebhooks and Zapier integrationReal-time charts and cohort filtersGDPR/CCPA consent and deletion tools' ]; popula,
   r: false,' ico,
@@ -4479,7 +4413,6 @@ export const,
   e: 'Ticketing, invitations, run-of-show, and post-event analytics in one place'' pric,
   e: '$149'' perio,
   d: '/month'' descriptio,
-  n: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.' feature,
   s: [' 'QR tickets and check-in appSpeaker/sponsor asset managementAutomated reminders and WhatsApp/SMS alertsFeedback/NPS post-event formsBudget tracker and P&L exportsEmbeddable agendas and live updates' ]; popula,
   r: true,' ico,
   n: '🎟️'' colo,
@@ -4513,7 +4446,6 @@ export const,
   e: 'Policy-based shift planning, rotations, and escalations with Slack/Teams'' pric,
   e: '$129'' perio,
   d: '/month'' descriptio,
-  n: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.' feature,
   s: [' 'Flexible rotations and override rulesEscalation policies and schedulesSlack/Teams integration and on-call handoffsVacation/holiday calendarsIncident reports and postmortem templatesSLO and error budget reminders' ]; popula,
   r: false,' ico,
   n: '📆'' colo,
@@ -4547,7 +4479,6 @@ export const,
   e: 'AI-assisted briefs, outlines, and on-page optimization with live SERP data'' pric,
   e: '$89'' perio,
   d: '/month'' descriptio,
-  n: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.' feature,
   s: [' 'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)' ]; popula,
   r: true,' ico,
   n: '🔎'' colo,
@@ -4581,7 +4512,6 @@ export const,
   e: 'Simple kill switches, gradual rollouts, and A/B targeting for web apps'' pric,
   e: '$49'' perio,
   d: '/month'' descriptio,
-  n: 'Add feature flags to your app with SDKs for React/Node, rule targeting, and environments. Includes audit logs and safe defaulting.' feature,
   s: [' 'Boolean, multivariate, and JSON flagsUser and cohort targetingGradual rollouts and percentage splitsAudit logs and environment scopingServer and client SDKsWebhook notifications' ]; popula,
   r: false,' ico,
   n: '🚩'' colo,
@@ -4615,7 +4545,6 @@ export const,
   e: 'Firmographics and signals to qualify leads instantly via API and CSV'' pric,
   e: '$129'' perio,
   d: '/month'' descriptio,
-  n: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.' feature,
   s: [' 'Company/person enrich via email or domainTech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflowsConfidence scores and data provenanceUsage-based pricing tiers' ]; popula,
   r: true,' ico,
   n: '🧭'' colo,
@@ -4649,7 +4578,6 @@ export const,
   e: 'Extract line items and totals from invoices and receipts to your ERP'' pric,
   e: '$79'' perio,
   d: '/month'' descriptio,
-  n: 'Upload PDFs/images and get structured outputs (vendor, dates, taxes) line items). Human-in-the-loop validation and retraining for edge cases.' feature,
   s: [' 'High-accuracy OCR and field mappingLine item extraction and taxesValidation UI and review queuesExport to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies' ]; popula,
   r: false,' ico,
   n: '🧾'' colo,
@@ -4684,7 +4612,6 @@ export const,
   e: '$139'' perio,
   d: '/month'' descriptio,
   n: 'Create robotic process automations for web,
-  workflows: login, scrape, form-fill, download, and upload. Includes scheduling, proxy support, and error screenshots.' feature,
   s: [' 'Workflow editor and step recorderRetry logic and backoff policiesCaptcha solving hooks and proxiesFile storage and PII redactionJob queue, metrics, and alertsHuman approval steps' ]; popula,
   r: true,' ico,
   n: '🤖'' colo,
@@ -4718,7 +4645,6 @@ export const,
   e: 'PII detection and redaction for text and documents with audit logs'' pric,
   e: '$79'' perio,
   d: '/month',' descriptio,
-  n: 'Detect and redact sensitive data (PII/PHI/PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.' feature,
   s: [' 'Configurable detectors (SSN, phone, email) credit card)Context-aware redaction and maskingAudit logs and retention policiesBatch processing and streamingWebhook retries and DLQsExport to S3/R2 and BigQuery' ]; popula,
   r: false,' ico,
   n: '🧼'' colo,
@@ -4752,7 +4678,6 @@ export const,
   e: 'OKR/KPI dashboards with goals, alerts, and executive summaries'' pric,
   e: '$69'' perio,
   d: '/month'' descriptio,
-  n: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.' feature,
   s: [' 'Goal trees and KPI ownershipWeekly executive summariesAlerting on thresholds and trendsWarehouse connectorsShareable links with permissionsAnnotations and change logs' ]; popula,
   r: false,' ico,
   n: '📊'' colo,
@@ -4786,7 +4711,6 @@ export const,
   e: 'Auto - categorize, summarize, and draft replies for inbound email'' pric,
   e: '$99'' perio,
   d: '/month',' descriptio,
-  n: 'An AI - driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.' feature,
   s: [,' 'Intent classification and priority scoring_one - click reply drafts with tone controls_auto - tagging and routing to teamsPII redaction and allowlist domainsSLA - aware escalations and,
   summaries_analytics: response time, CSAT impact, volume by topic' ]; popula,
   r: true,' ico,
@@ -4821,7 +4745,6 @@ export const,
   e: 'Conversational, mobile - first surveys with branching logic and realtime dashboards'' pric,
   e: '$59'' perio,
   d: '/month',' descriptio,
-  n: 'Launch high - conversion mobile surveys with skip logic, NPS / CSAT templates, and shareable dashboards. Embed on sites or share links, export to CSV and data warehouses.' feature,
   s: [,' 'Branching logic and progress - save_question,
   bank: CSAT, NPS, PMF, churn_anonymous or identified responses_webhooks and Zapier integration_real - time charts and cohort filtersGDPR / CCPA consent and deletion tools' ]; popula,
   r: false,' ico,
@@ -4856,7 +4779,6 @@ export const,
   e: 'Ticketing, invitations, run - of - show, and post - event analytics in one place'' pric,
   e: '$149'' perio,
   d: '/month',' descriptio,
-  n: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.' feature,
   s: [;' 'QR tickets and check - in app_speaker / sponsor asset management_automated reminders and WhatsApp / SMS alerts_feedback / NPS post - event forms_budget tracker and P & L exports_embeddable agendas and live updates' ]; popula,
   r: true,' ico,
   n: '🎟️'' colo,
@@ -4890,7 +4812,6 @@ export const,
   e: 'Policy - based shift planning, rotations, and escalations with Slack / Teams'' pric,
   e: '$129'' perio,
   d: '/month',' descriptio,
-  n: 'Create and manage on - call schedules with handoff workflows, time - zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.' feature,
   s: [;' 'Flexible rotations and override rules_escalation policies and schedules_slack / Teams integration and on - call handoffs_vacation / holiday calendars_incident reports and postmortem templatesSLO and error budget reminders' ]; popula,
   r: false,' ico,
   n: '📆'' colo,
@@ -4924,7 +4845,6 @@ export const,
   e: 'AI - assisted briefs, outlines, and on - page optimization with live SERP data'' pric,
   e: '$89'' perio,
   d: '/month',' descriptio,
-  n: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.' feature,
   s: [;' 'Keyword clustering and topical maps_competitor gap analysis_outline and brief generation_on - page audit and schema suggestions_rank tracking and change logsCMS export (Markdown / Headless)' ]; popula,
   r: true,' ico,
   n: '🔎'' colo,
@@ -4958,7 +4878,6 @@ export const,
   e: 'Simple kill switches, gradual rollouts, and A / B targeting for web apps'' pric,
   e: '$49'' perio,
   d: '/month',' descriptio,
-  n: 'Add feature flags to your app with SDKs for React / Node, rule targeting, and environments. Includes audit logs and safe defaulting.' feature,
   s: [,' 'Boolean, multivariate, and JSON flags_user and cohort targeting_gradual rollouts and percentage splits_audit logs and environment scoping_server and client SDKsWebhook notifications' ]; popula,
   r: false,' ico,
   n: '🚩'' colo,
@@ -4992,7 +4911,6 @@ export const,
   e: 'Firmographics and signals to qualify leads instantly via API and CSV'' pric,
   e: '$129'' perio,
   d: '/month',' descriptio,
-  n: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.' feature,
   s: [;' 'Company / person enrich via email or domain_tech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflows_confidence scores and data provenance_usage - based pricing tiers' ]; popula,
   r: true,' ico,
   n: '🧭'' colo,
@@ -5026,7 +4944,6 @@ export const,
   e: 'Extract line items and totals from invoices and receipts to your ERP'' pric,
   e: '$79'' perio,
   d: '/month',' descriptio,
-  n: 'Upload PDFs / images and get structured outputs (vendor, dates, taxes) line items). Human - in - the - loop validation and retraining for edge cases.' feature,
   s: [,' 'High - accuracy OCR and field mapping_line item extraction and taxes_validation UI and review queues_export to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies' ]; popula,
   r: false,' ico,
   n: '🧾'' colo,
@@ -5061,7 +4978,6 @@ export const,
   e: '$139'' perio,
   d: '/month',' descriptio,
   n: 'Create robotic process automations for web,
-  workflows: login, scrape, form - fill, download, and upload. Includes scheduling, proxy support, and error screenshots.' feature,
   s: [,' 'Workflow editor and step recorder_retry logic and backoff policies_captcha solving hooks and proxies_file storage and PII redaction_job queue, metrics, and alerts_human approval steps' ]; popula,
   r: true,' ico,
   n: '🤖'' colo,
@@ -5095,7 +5011,6 @@ export const,
   e: 'PII detection and redaction for text and documents with audit logs'' pric,
   e: '$79'' perio,
   d: '/month',' descriptio,
-  n: 'Detect and redact sensitive data (PII / PHI / PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.', feature,
   s: [,' 'Configurable detectors (SSN, phone, email) credit card)Context - aware redaction and masking_audit logs and retention policies_batch processing and streaming_webhook retries and DLQsExport to S3 / R2 and BigQuery' ]; popula,
   r: false,' ico,
   n: '🧼'' colo,
@@ -5129,7 +5044,6 @@ export const,
   e: 'OKR / KPI dashboards with goals, alerts, and executive summaries'' pric,
   e: '$69'' perio,
   d: '/month',' descriptio,
-  n: 'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.' feature,
   s: [;' 'Goal trees and KPI ownership_weekly executive summaries_alerting on thresholds and trends_warehouse connectors_shareable links with permissions_annotations and change logs' ]; popula,
   r: false,' ico,
   n: '📊'' colo,
@@ -5159,58 +5073,34 @@ export const,
   g: 4.4, review,
   s: 16} ratin,
   g: 4.4,
-  reviews: 16 ' import { RealMarketService } from './real-market-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  real2029Q4Additions: RealMarketService[] = [; {/* TODO: Fix JSX expression */}
   g: 4.8} review,
-  s: 74} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 33} }; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 29} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 19} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 54} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 21} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
-  s: 17} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 14} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
-  s: 18} }; {/* TODO: Fix JSX expression */}
   g: 4.3} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
-  s: 16} } ]; ' import { RealMarketService } from './real-market-services'; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  real2029Q4Additions: RealMarketService[] = [; {/* TODO: Fix JSX expression */}
   g: 4.8} review,
-  s: 74} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 33} }; {/* TODO: Fix JSX expression */}
   g: 4.7} review,
-  s: 29} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 19} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 54} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 21} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
-  s: 17} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
-  s: 14} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
-  s: 18} }; {/* TODO: Fix JSX expression */}
   g: 4.3} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
   s: 16} } ]; '

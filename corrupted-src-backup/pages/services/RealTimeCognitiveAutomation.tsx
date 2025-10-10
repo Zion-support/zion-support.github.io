@@ -63,12 +63,9 @@
                   Process, Accurac, y;
                 </div>
               </div>
-              <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'></div>
-                <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
                   85%
                 </div>
                 <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
-                <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'></div>
                   85%
                 </div>
                 <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
@@ -94,11 +91,9 @@
                   Average, ROI, Time;
                 </d, i, v>
                       <li, classNam, e='flex, item, s-start, ga, p-2'></li>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                       <li, classNam, e='flex, item, s-start, ga, p-2'></li>
                         <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                       <li, className='flex, item, s-start, ga, p-2'></li>
-                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                       <li, className='flex, item, s-start, ga, p-2'></li>
                         <CheckCircle, className='w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                   <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
@@ -126,13 +121,11 @@
                         {solution.industry}
                       </h3>
                       <div, className='flex, ga, p-4'></div>
-                        <div, className='px-4, p, y-2, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
                           {solution.savin, g, s} annual, saving, s;
                           {solution.savin, g, s} annual, saving, s</div>
                     <ul, classNam, e='spa, c, e-y-2'>
                       { solution.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (
                         <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
-                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                 ].m, a, p((solution, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
                   ></div>
                     <div, className='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'></div>
@@ -140,12 +133,9 @@
                         {solution.industry}
                       </h3>
                       <div, className='flex, ga, p-4'></div>
-                        <div, className='px-4, p, y-2, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'></div>
                           {solution.savin, g, s} annual, saving, s;
                     <ul, classNam, e='spa, c, e-y-2'></ul>
-                      {/* TODO: Fix JSX expression */}
                         <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
-                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                     na, m, e: 'Enterpr, i, s, e',
                     pri, c, e: '$4, 9,9, 9, 9',
                     featur, e, s: [,
@@ -162,12 +152,10 @@
                   })
                 ].m, a, p((p, k, g, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}
                   ></div>
-                    {/* TODO: Fix JSX expression */})
                       </di, v > )  }
                     <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'></h3>
                       {p, k, g.na, m, e}
                     </h3>
-                    <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-6'>
                       {p, k, g.pri, c, e}</div>
                       <span, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                         /mon, t, h;
@@ -176,17 +164,13 @@
                     <ul, className='spa, c, e-y-3'></ul>
                       { p, k, g.featur, e, s.m, a, p((feat, u, r, e, fInd, e, x) = > (
                         <li, ke, y = { fIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
-                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-                    <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-6'></div>
                       {p, k, g.pri, c, e}
                       <span, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-lig, h, t'></span>
                         /mon, t, h;
                       </sp, a, n>
                     </div>
                     <ul, className='spa, c, e-y-3'></ul>
-                      {/* TODO: Fix JSX expression */}
                         <li, ke, y = { fIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'></li>
-                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
               <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-pi, n, k-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-8, borde, r-2, borde, r-purp, l, e-5, 0, 0/50'></div>
                 <div, className='flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-6'></div>
                   <div, className='fl, e, x-1'></div>
@@ -196,13 +180,11 @@
                         🚀 October, 2025, Launch Speci, a, l;
                       </h3>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                       Getted, Today;
                       <Zap, classNam, e='w-5 h-5' />
                   Schedule, Free, Assessment;
                   <Zap, classNam, e='w-5 h-5' />
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                       Getted, Today;
                       <Zap, className='w-5 h-5' />
                   Schedule, Free, Assessment;
@@ -212,13 +194,11 @@
                         🚀 October, 2025, Launch Speci, a, l;
                       </h3>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'></li>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                       Getted, Today;
                       <Zap, classNam, e='w-5 h-5' /></Zap>
                   Schedule, Free, Assessment;
                   <Zap, classNam, e='w-5 h-5' /></Zap>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'></li>
-                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' /></CheckCircle>
                       Getted, Today;
                       <Zap, className='w-5 h-5' /></Zap>
                   Schedule, Free, Assessment;

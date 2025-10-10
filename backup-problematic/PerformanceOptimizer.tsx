@@ -31,8 +31,6 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({,
  cumulativeLayoutShift: 0, // Would need to be measured with observer;
  firstInputDelay: 0 // Would need to be measured with observer;
 const,
-  PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
  };
  
  setMetrics(metrics);
@@ -67,12 +65,9 @@ const,
  link.as = 'image';
  link.href = src;
  document.head.appendChild(link);origin/
- if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
- } else {/* TODO: Fix JSX expression */}
  }
 
  // Preload critical resources;
- const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
  });
  };
 
@@ -88,11 +83,9 @@ const,
  // Add decoding="async" for better performance;
  if (!img.hasAttribute('decoding')) {
  img.setAttribute('decoding', 'async');
- const optimizeImages = () => {/* TODO: Fix JSX expression */}
  }
  
  // Add decoding="async" for better performance;
- if (!img.hasAttribute('decoding')) {/* TODO: Fix JSX expression */}
  }
  });
  };
@@ -104,11 +97,9 @@ const,
  entries.forEach(entry => {)
  if (entry.isIntersecting) {
  entry.target.classList.add('animate-fade-in');
- const setupIntersectionObserver = () => {/* TODO: Fix JSX expression */}
  }
  });
  },
- {/* TODO: Fix JSX expression */}
   d: 0.1 }
  );
 
@@ -125,7 +116,6 @@ const,
  // Cleanup;
  return () => {
  // Cleanup if needed;
- return () => {/* TODO: Fix JSX expression */}
  };
  }, []);
 

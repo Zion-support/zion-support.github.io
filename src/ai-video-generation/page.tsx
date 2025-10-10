@@ -1,5 +1,4 @@
 import React from 'react';
-import { Video, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -102,7 +101,6 @@ const AIVideoGenerationPage: React.FC = () => {
               Powerful AI Video Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -153,7 +151,6 @@ const AIVideoGenerationPage: React.FC = () => {
                     </div>
                   </div>
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}

@@ -263,13 +263,11 @@ export default function TermsPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Governing Law</h2>
             <p className="text-xl text-gray-300 mb-8">
-              These terms are governed by the laws of the State of Delaware, United States. 
               Any disputes will be resolved in the courts of Delaware.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="flex items-center justify-center space-x-3">
                 <Globe className="w-5 h-5 text-cyan-400" />
-                <span className="text-white">Delaware, USA</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
                 <Scale className="w-5 h-5 text-cyan-400" />

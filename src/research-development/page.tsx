@@ -8,7 +8,6 @@ import Footer from '../components/Footer';
 
 
 'use client';
-import React, { useState } from 'react';
 const ResearchDevelopmentPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
 
@@ -297,7 +296,6 @@ $4}
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   i,
@@ -313,7 +311,6 @@ $4}
       descriptio,
   n: 'Advancing the frontiers of AI and machine learning'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   i,
@@ -329,7 +326,6 @@ $4}
       descriptio,
   n: 'Exploring quantum algorithms and quantum advantage'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   i,
@@ -345,7 +341,6 @@ $4}
       descriptio,
   n: 'Developing self-managing and intelligent systems'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   i,
@@ -362,14 +357,12 @@ $4}
   n: 'Researching next-generation technologies'
     }
   ];
-  const researchProjects = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   a,
   i: [
   // TOD,
   O: Add items]
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -397,7 +390,6 @@ $4}
         colo,
   r: 'text-purple-400'
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -425,7 +417,6 @@ $4}
         colo,
   r: 'text-green-400'
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -458,7 +449,6 @@ $4}
   m: [
   // TOD,
   O: Add items]
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -486,7 +476,6 @@ $4}
         colo,
   r: 'text-blue-400'
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -519,7 +508,6 @@ $4}
   s: [
   // TOD,
   O: Add items]
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -547,7 +535,6 @@ $4}
         colo,
   r: 'text-green-400'
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -580,7 +567,6 @@ $4}
   g: [
   // TOD,
   O: Add items]
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -608,7 +594,6 @@ $4}
         colo,
   r: 'text-yellow-400'
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -642,7 +627,6 @@ $4}
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -659,7 +643,6 @@ $4}
       lin,
   k: '#'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -675,7 +658,6 @@ $4}
       lin,
   k: '#'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -691,7 +673,6 @@ $4}
       lin,
   k: '#'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -712,7 +693,6 @@ $4}
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -722,7 +702,6 @@ $4}
       descriptio,
   n: 'Published in top-tier conferences and journals'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -732,7 +711,6 @@ $4}
       descriptio,
   n: 'World-class research team across multiple disciplines'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -742,7 +720,6 @@ $4}
       descriptio,
   n: 'Innovative technologies and methodologies'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,

@@ -6,16 +6,13 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
       <div, className="flex, item, s-center, ga, p-3, m, b-6">";</div>
         <span, className="te, x, t-5, x, l">🚀</sp, a, n>";
         <d, i, v>
-          <h2, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             NE;
   W: Revolutionary, AI, Breakthroughs October, 202, 5;
           </h2>
           <p, className="te, x, t-purp, l, e-300, tex, t-lg, m, t-2"></p>
-          <h2, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
             N, E, W: Revolutionary, AI, Breakthroughs October, 202, 5;
           </h2>
           <p, className="te, x, t-purp, l, e-300, tex, t-lg, m, t-2">";
-            Just, Publishe, d: $13.3B, in, Proven Enterprise, Valu, e — Neural, Architecture, Distributed, R, L & Priva, c, y-Preserving, A, I;
           </p>
         </d, i, v>
       </d, i, v>
@@ -55,20 +52,12 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
             </p>
             <ul, className="spa, c, e-y-2, tex, t-sm, tex, t-gr, a, y-3, 0, 0">";</ul>
               <li, className="flex, item, s-start, ga, p-2">";</li>
-                <span, className="te, x, t-gre, e, n-400, fon, t-bold, m, t-1"></span>✓</sp, a, n>";
-                <sp, a, n><strong, className="te, x, t-gre, e, n-4, 0, 0">$3.4 B, cost, savings</stro, n, g>through</g>, automated, architecture optimizati, o, n</sp, a, n>";
               </li>
               <li, className="flex, item, s-start, ga, p-2">";</li>
-                <span, className="te, x, t-gre, e, n-400, fon, t-bold, m, t-1"></span>✓</sp, a, n>";
-                <sp, a, n><strong, className="te, x, t-gre, e, n-4, 0, 0">10 x, faster, innovation</stro, n, g> — models, designed, in days, v, s. mont, h, s</sp, a, n>";
               </li>
               <li, className="flex, item, s-start, ga, p-2">";</li>
-                <span, className="te, x, t-gre, e, n-400, fon, t-bold, m, t-1"></span>✓</sp, a, n>";
-                <sp, a, n><strong, className="te, x, t-gre, e, n-4, 0, 0">Hardwa, r, e-aware, optimizatio, n</stro, n, g>for</g>, edg, e, G, P, U, and, TPU, deployment</sp, a, n>";
               </li>
               <li, className="flex, item, s-start, ga, p-2">";</li>
-                <span, className="te, x, t-gre, e, n-400, fon, t-bold, m, t-1"></span>✓</sp, a, n>";
-                <sp, a, n><strong, className="te, x, t-gre, e, n-4, 0, 0">Ze, r, o-shot, performance, prediction</stro, n, g>eliminates</g>, expensive, trials</sp, a, n>";
               </li>
             </ul>
           </d, i, v>
@@ -111,20 +100,12 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
             </p>
             <ul, className="spa, c, e-y-2, tex, t-sm, tex, t-gr, a, y-3, 0, 0">";</ul>
               <li, className="flex, item, s-start, ga, p-2">";</li>
-                <span, className="te, x, t-gre, e, n-400, fon, t-bold, m, t-1"></span>✓</sp, a, n>";
-                <sp, a, n><strong, className="te, x, t-gre, e, n-4, 0, 0">$5.2 B, operational, value</stro, n, g>from</g>, autonomous, decision-maki, n, g</sp, a, n>";
               </li>
               <li, className="flex, item, s-start, ga, p-2">";</li>
-                <span, className="te, x, t-gre, e, n-400, fon, t-bold, m, t-1"></span>✓</sp, a, n>";
-                <sp, a, n><strong, className="te, x, t-gre, e, n-4, 0, 0">1000 x, faster, training</stro, n, g>with</g>, distributed, actor-learner, architectur, e</sp, a, n>";
               </li>
               <li, className="flex, item, s-start, ga, p-2">";</li>
-                <span, className="te, x, t-gre, e, n-400, fon, t-bold, m, t-1"></span>✓</sp, a, n>";
-                <sp, a, n><strong, className="te, x, t-gre, e, n-4, 0, 0">Mul, t, i-agent, coordinatio, n</stro, n, g>for</g>, supply, chain, manufacturi, n, g, logisti, c, s</sp, a, n>";
               </li>
               <li, className="flex, item, s-start, ga, p-2">";</li>
-                <span, className="te, x, t-gre, e, n-400, fon, t-bold, m, t-1"></span>✓</sp, a, n>";
-                <sp, a, n><strong, className="te, x, t-gre, e, n-4, 0, 0">Continuous, learnin, g</stro, n, g> — agents, improve, without human, interventio, n</sp, a, n>";
               </li>
             </ul>
           </d, i, v>
@@ -167,20 +148,12 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
             </p>
             <ul, className="spa, c, e-y-2, tex, t-sm, tex, t-gr, a, y-3, 0, 0">";</ul>
               <li, className="flex, item, s-start, ga, p-2">";</li>
-                <span, className="te, x, t-gre, e, n-400, fon, t-bold, m, t-1"></span>✓</sp, a, n>";
-                <sp, a, n><strong, className="te, x, t-gre, e, n-4, 0, 0">$4.7 B, unlocked, value</stro, n, g>from</g>, previously, inaccessible da, t, a</sp, a, n>";
               </li>
               <li, className="flex, item, s-start, ga, p-2">";</li>
-                <span, className="te, x, t-gre, e, n-400, fon, t-bold, m, t-1"></span>✓</sp, a, n>";
-                <sp, a, n><strong, className="te, x, t-gre, e, n-4, 0, 0">1, 0, 0% regulatory, complianc, e</stro, n, g> — GD, P, R, HIP, A, A, CCPA, read, y</sp, a, n>";
               </li>
               <li, className="flex, item, s-start, ga, p-2">";</li>
-                <span, className="te, x, t-gre, e, n-400, fon, t-bold, m, t-1"></span>✓</sp, a, n>";
-                <sp, a, n><strong, className="te, x, t-gre, e, n-4, 0, 0">99.9% model, accurac, y</stro, n, g>maintained</g>, with, privacy guarante, e, s</sp, a, n>";
               </li>
               <li, className="flex, item, s-start, ga, p-2">";</li>
-                <span, className="te, x, t-gre, e, n-400, fon, t-bold, m, t-1"></span>✓</sp, a, n>";
-                <sp, a, n><strong, className="te, x, t-gre, e, n-4, 0, 0">Federated, learnin, g</stro, n, g>across</g>, healthcar, e, finan, c, e, telec, o, m</sp, a, n>";
               </li>
             </ul>
           </d, i, v>
@@ -221,7 +194,6 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
               These, three, breakthrough technologies, work, together to, create, a comprehensive, AI, innovation platfo, r, m:</p> <strong, className="te, x, t-purp, l, e-4, 0, 0"> NAS, designs, optimal architectur, e, s</stro, n, g>, ";
               <strong, className="te, x, t-emera, l, d-4, 0, 0"> distributed, RL, trains them, at, scale</stro, n, g>, a, n, d ";
               <strong, className="te, x, t-indi, g, o-4, 0, 0"> priva, c, y-preserving, technique, s</stro, n, g>enable</g>, deployment, on sensitive, dat, a. ";
-              Fortune, 500, companies are, already, achieving 8, 4, 7% ROI, with, integrated implementatio, n, s.
             </p>
           </d, i, v>
           <div, className="flex, fle, x-col, ga, p-3">";
@@ -238,7 +210,6 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
   to="/bl, o, g"
               classNa, m, e="bg-gr, a, y-8, 0, 0/60, hove, r: bg-gr, a, y-7, 0, 0/60, border, border-purp, l, e-5, 0, 0/40, tex, t-purp, l, e-300, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-center, whitespac, e-nowr, a, p"
             ></Li>
-              📚 Explore, All, Insights;
             </Li, n, k>
           </d, i, v>
         </d, i, v>
@@ -253,7 +224,6 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
       </d, i, v>
     </d, i, v>
   );
-const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 };
 export default October2025 NewAIBreakthroughContentBanner;
 ;

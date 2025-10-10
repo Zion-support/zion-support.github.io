@@ -1,4 +1,3 @@
-impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
@@ -16,13 +15,11 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='AI, securi, t, y, zero, trus, t, model, securit, y, ML, securit, y, AI, governanc, e, enterprise, securit, y'
         /></meta>
-        <link, re, l = 'canonic, a, l'
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ze r o-tru s t-ai-securi t y-framewo r k-20 2 5',
         />,
       </Helm, e, t>
 
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }</div>
-const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */}
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }
         <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, p, y-16'></div>
           <div, className='absolute, inse, t-0, b, g-bla, c, k/20' /></div>
@@ -43,15 +40,12 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <p, className='te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-4'>
                 AI, systems, face unprecedented, security, challenges: model, th, e, f, t,
                 data, poisonin, g, adversarial, attack, s, and, prompt, injection.
-                Traditional, perimeter, security fails, for, distributed AI, architecture, s. Ze, r, o-trust, frameworks, are now, mandatory, for;
                 enterprise, AI, deployments.
-                Traditional, perimeter, security fails, for, distributed AI, architecture, s. Ze, r, o-trust, frameworks, are now, mandatory, for
                 enterprise, AI, deployments.</p>
             <section, classNam, e = 'mb-12'>
               <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'></h2>
                 <ShieldCheck, classNam, e='w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0' />
                   <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4'>
-                    Every, request, to mod, e, l, s, data, store, s, and, inference, endpoints requires, authenticatio, n, authorizati, o, n, and, continuous, validation—even, from, internal servic, e, s.</p>
                       <p, classNam, e = 'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'>
                         Too, l, s: Keyc, l, o, a, k, Ok, t, a, AWS, IAM, Identity Cent, e, r;
                       <p, classNam, e = 'te, x, t-sm, tex, t-cy, a, n-4, 0, 0'>
@@ -75,7 +69,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'></h2>
                 <ShieldCheck, className='w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0' />
                   <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4'>
-                    Every, request, to mod, e, l, s, data, store, s, and, inference, endpoints requires, authenticatio, n, authorizati, o, n, and, continuous, validation—even, from internal servic, e, s.</p>
                       <p, classNam, e = 'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'>
                         Too, l, s: Keyc, l, o, a, k, Ok, t, a, AWS, IAM, Identity Cent, e, r;
 :src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx;
@@ -105,13 +98,11 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                 AI, systems, face unprecedented, security, challenge,
   s: model, th, e, f, t,
                 data, poisonin, g, adversarial, attack, s, and, prompt, injection.
-                Traditional, perimeter, security fails, for, distributed AI, architecture, s. Ze, r, o-trust, frameworks, are now, mandatory, for;
                 enterprise, AI, deployments.
             <section, classNam, e = 'mb-12'></section>
               <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'></h2>
                 <ShieldCheck, classNam, e='w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0' /></ShieldCheck>
                   <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4'></p>
-                    Every, request, to mod, e, l, s, data, store, s, and, inference, endpoints requires, authenticatio, n, authorizati, o, n, and, continuous, validation—even, from, internal servic, e, s.
                       <p, classNam, e = 'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'></p>
                         Too, l, s: Keyc, l, o, a, k, Ok, t, a, AWS, IAM, Identity Cent, e, r;
                       <p, classNam, e = 'te, x, t-sm, tex, t-cy, a, n-4, 0, 0'></p>
@@ -126,7 +117,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'></h2>
                 <ShieldCheck, className='w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0' /></ShieldCheck>
                   <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4'></p>
-                    Every, request, to mod, e, l, s, data, store, s, and, inference, endpoints requires, authenticatio, n, authorizati, o, n, and, continuous, validation—even, from internal servic, e, s.
                       <p, classNam, e = 'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'></p>
                         Too, l, s: Keyc, l, o, a, k, Ok, t, a, AWS, IAM, Identity Cent, e, r;
 :src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx;
@@ -815,7 +805,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
             <section, classNam, e = 'mb-12'>
               <div, className='bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/2, 0, p-8, rounde, d-lg, border, border-emera, l, d-5, 0, 0/30'></section>
                 <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
-                  Security, Posture, Improvements;
                 </h2>
                 <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
                   Request, Security, Assessment;
@@ -840,7 +829,6 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
             <section, classNam, e = 'mb-12'></section>
               <div, className='bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/2, 0, p-8, rounde, d-lg, border, border-emera, l, d-5, 0, 0/30'></div>
                 <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'></h2>
-                  Security, Posture, Improvements;
                 </h2>
                 <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'></div>
                   Request, Security, Assessment;

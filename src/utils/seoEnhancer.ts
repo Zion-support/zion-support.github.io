@@ -18,7 +18,6 @@ interface SEOConfig {title: string;}
   lastModified?: string;
 }
 
-class SEOEnhancer {/* TODO: Fix JSX expression */}
   config: SEOConfig;}
   constructor(confi)
   g: SEOConfig) {this.config = config;}
@@ -44,7 +43,6 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
   }
 
   public updateConfig(newConfi)
-  g: Partial<SEOConfig>): void {/* TODO: Fix JSX expression */}
     this.config = { ...this.config, ...newConfig }
     this.updateMetaTags()
   }

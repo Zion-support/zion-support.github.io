@@ -34,9 +34,7 @@ const October2025AutonomousInfrastructureBanner = () => {
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Revolutionary self-healing AI agents achieving</p> <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. 
-const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expression */}
   y: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={/* TODO: Fix JSX expression */}
   y: '2s' }}></div>
       </div>"
       <div className="relative max-w-7xl mx-auto px-4,
@@ -257,7 +255,6 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             </div>,
             <div className="font-bold text-lg mb-2">Read Technical Deep Dive</div>,
             <div className="text-sm text-cyan-100">,
-              18-min read: Complete architecture, ML models, Python code examples, implementation roadmap;
             </div>
           </Link>
           <Link;
@@ -511,7 +508,6 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             <div className="font-bold text-lg mb-2">Read Technical Deep Dive</div>"
             <div className="text-sm text-cyan-100"></div>
               18-min,
-  read: Complete architecture, ML models, Python code examples, implementation roadmap;
             </div>
           </Link>
           <Link></Link>"

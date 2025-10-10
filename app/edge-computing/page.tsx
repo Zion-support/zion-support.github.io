@@ -115,7 +115,6 @@ const EdgeComputingPage: React.FC = () => {
       <Helmet>
         <title>Edge Computing Solutions | Zion Tech Group</title>
         <meta name="description" content="Professional edge computing solutions by Zion Tech Group. Ultra-low latency, real-time processing, and global edge infrastructure." />
-        <meta name="keywords" content="edge computing, low latency, IoT, real-time processing, edge infrastructure, Zion Tech Group" />
       </Helmet>
       
       <Navigation />
@@ -158,7 +157,6 @@ const EdgeComputingPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />

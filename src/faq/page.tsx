@@ -172,8 +172,6 @@ export default FAQPage;
 
 import { Link } from 'react-router-dom';
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 const FAQPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
@@ -193,7 +191,6 @@ const toggleItem = (inde)
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   categor,
@@ -252,7 +249,6 @@ const toggleItem = (inde)
           questio,
   n: 'Can you help with cloud migration?',
           answe,
-  r: 'Absolutely! We specialize in cloud migration services for AWS, Azure, and GCP. We ensure seamless migration with 99.9% uptime guarantee and minimal business disruption.'
           questio,
   n: 'What cybersecurity services do you provide?',
           answe,
@@ -313,7 +309,6 @@ const toggleItem = (inde)
           answe,
   r: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
   ];
-  const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //     ...category,

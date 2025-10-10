@@ -15,7 +15,6 @@ export const,
     descriptio,
   n: unknown,
       'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.',
-    feature,
   s: [,
       'Quantum neural signal processing',
       'Real - time brain activity monitoring',
@@ -42,7 +41,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.',
-    feature,
   s: [,
       'Quantum neural signal processing_real - time brain activity monitoringAI - powered cognitive enhancement_neural pattern recognition_secure quantum encryption_multi - modal interface support_advanced analytics dashboardAPI for research integration',
       'Compliance with medical standards24 / 7 quantum AI support'
@@ -240,7 +238,6 @@ export interface NextGenInnovativeService {;
     review,
   s: 8},
 export interface NextGenInnovativeService;
-export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -249,7 +246,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: number;
   ratin,
   g: number;
-export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   e: string}
   },
   realImplementatio,
@@ -276,7 +272,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   d: string,,
   descriptio,
   n: string;
-  feature,
   s: string[];
   popula,
   r: boolean;
@@ -317,7 +312,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   varian,
   t: string;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -397,7 +391,6 @@ export const,
   d: '/month'
     descriptio,
   n: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.'
-    feature,
   s: [,
       'Quantum neural signal processing'
       'Real-time brain activity monitoring'
@@ -443,7 +436,6 @@ export const,
   d: '/month'
     descriptio,
   n: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.'
-    feature,
   s: [;
       'Quantum neural signal processingReal-time brain activity monitoringAI-powered cognitive enhancementNeural pattern recognitionSecure quantum encryptionMulti-modal interface supportAdvanced analytics dashboardAPI for research integration'
       'Compliance with medical standards24/7 quantum AI support'
@@ -672,7 +664,6 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   s: 15;
     ratin,
   g: 4.9;
-export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com'}
       websit,
   e: 'http,
@@ -734,7 +725,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     perio,
   d: '/month',
       'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.',
-    feature,
   s: [,
       'Satellite mission planning',
       'Orbital mechanics calculations',
@@ -747,7 +737,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Regulatory compliance tools',
     descriptio,
   n: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.',
-    feature,
   s: [,
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',
       'Regulatory compliance toolsMulti-satellite operations'
@@ -931,7 +920,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     descriptio,
   n:
       'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.'
-    feature,
   s: [,
       'Satellite mission planning'
       'Orbital mechanics calculations'
@@ -970,7 +958,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Regulatory compliance tools'
       'Multi-satellite operations'],    descriptio,
   n: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.'
-    feature,
   s: [;
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard'
       'Regulatory compliance toolsMulti-satellite operations'
@@ -1129,7 +1116,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.',
-    feature,
   s: [,
       'Satellite mission planning',
       'Orbital mechanics calculations',
@@ -1142,7 +1128,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Regulatory compliance tools',
       'Multi-satellite operations'],    descriptio,
   n: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.',
-    feature,
   s: [,
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',
       'Regulatory compliance toolsMulti-satellite operations'
@@ -1355,7 +1340,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     perio,
   d: '/month',
       'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.',
-    feature,
   s: [,
       'AI drug discovery algorithms',
       'Genetic sequence analysis',
@@ -1368,7 +1352,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'API for research integration',
     descriptio,
   n: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.',
-    feature,
   s: [,
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',
       'API for research integrationMulti-omics data analysis'
@@ -1548,7 +1531,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.'
-    feature,
   s: [,
       'AI drug discovery algorithms'
       'Genetic sequence analysis'
@@ -1587,7 +1569,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'API for research integration'
       'Multi-omics data analysis'],    descriptio,
   n: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.'
-    feature,
   s: [;
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard'
       'API for research integrationMulti-omics data analysis'
@@ -1745,7 +1726,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.',
-    feature,
   s: [,
       'AI drug discovery algorithms',
       'Genetic sequence analysis',
@@ -1758,7 +1738,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'API for research integration',
       'Multi-omics data analysis'],    descriptio,
   n: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.',
-    feature,
   s: [,
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',
       'API for research integrationMulti-omics data analysis'
@@ -1980,7 +1959,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Performance analytics',
     descriptio,
   n: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.',
-    feature,
   s: [,
       'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance',
       'Performance analyticsAPI for integration'
@@ -2162,7 +2140,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.'
-    feature,
   s: [,
       'Quantum AI trading algorithms'
       'Nanosecond execution speed'
@@ -2201,7 +2178,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Performance analytics'
       'API for integration'],    descriptio,
   n: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.'
-    feature,
   s: [;
       'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance'
       'Performance analyticsAPI for integration'
@@ -2362,7 +2338,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.',
-    feature,
   s: [,
       'Quantum AI trading algorithms',
       'Nanosecond execution speed',
@@ -2375,7 +2350,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Performance analytics',
       'API for integration'],    descriptio,
   n: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.',
-    feature,
   s: [,
       'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance',
       'Performance analyticsAPI for integration'
@@ -2598,7 +2572,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Performance analytics',
     descriptio,
   n: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.',
-    feature,
   s: [,
       'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management',
       'Performance analyticsAPI for integration'
@@ -2781,7 +2754,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     descriptio,
   n:
       'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.'
-    feature,
   s: [,
       'Advanced computer vision'
       'Real-time decision making'
@@ -2820,7 +2792,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Performance analytics'
       'API for integration'],    descriptio,
   n: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.'
-    feature,
   s: [;
       'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management'
       'Performance analyticsAPI for integration'
@@ -2978,7 +2949,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.',
-    feature,
   s: [,
       'Advanced computer vision',
       'Real-time decision making',
@@ -2991,7 +2961,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Performance analytics',
       'API for integration'],    descriptio,
   n: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.',
-    feature,
   s: [,
       'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management',
       'Performance analyticsAPI for integration'
@@ -3212,7 +3181,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Security automation',
     descriptio,
   n: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.',
-    feature,
   s: [,
       'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment',
       'Security automationAPI for integration'
@@ -3366,7 +3334,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.'
-    feature,
   s: [,
       'Quantum-resistant encryption'
       'AI threat detection'
@@ -3405,7 +3372,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Security automation'
       'API for integration'],    descriptio,
   n: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.'
-    feature,
   s: [;
       'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment'
       'Security automationAPI for integration'
@@ -3566,7 +3532,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.',
-    feature,
   s: [,
       'Quantum-resistant encryption',
       'AI threat detection',
@@ -3579,7 +3544,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Security automation',
       'API for integration'],    descriptio,
   n: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.',
-    feature,
   s: [,
       'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment',
       'Security automationAPI for integration'
@@ -3802,7 +3766,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'API for integration',
     descriptio,
   n: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.',
-    feature,
   s: [,
       'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support',
       'API for integrationDeveloper tools'
@@ -3983,7 +3946,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     descriptio,
   n:
       'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.'
-    feature,
   s: [,
       'AI content generation'
       'Virtual world building'
@@ -4022,7 +3984,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'API for integration'
       'Developer tools'],    descriptio,
   n: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.'
-    feature,
   s: [;
       'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support'
       'API for integrationDeveloper tools'
@@ -4180,7 +4141,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.',
-    feature,
   s: [,
       'AI content generation',
       'Virtual world building',
@@ -4193,7 +4153,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'API for integration',
       'Developer tools'],    descriptio,
   n: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.',
-    feature,
   s: [,
       'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support',
       'API for integrationDeveloper tools'
@@ -4415,7 +4374,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'API for integration',
     descriptio,
   n: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.',
-    feature,
   s: [,
       'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics',
       'API for integration24/7 monitoring'
@@ -4596,7 +4554,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.'
-    feature,
   s: [,
       'Quantum key distribution'
       'AI threat monitoring'
@@ -4635,7 +4592,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'API for integration'
       '24/7 monitoring'],    descriptio,
   n: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.'
-    feature,
   s: [;
       'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics'
       'API for integration24/7 monitoring'
@@ -4793,7 +4749,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.',
-    feature,
   s: [,
       'Quantum key distribution',
       'AI threat monitoring',
@@ -4806,7 +4761,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'API for integration',
       '24/7 monitoring'],    descriptio,
   n: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.',
-    feature,
   s: [,
       'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics',
       'API for integration24/7 monitoring'
@@ -5018,7 +4972,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     perio,
   d: '/month',
       'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.',
-    feature,
   s: [,
       'AI contract analysis',
       'Risk assessment',
@@ -5033,7 +4986,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   n: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.',
     descriptio,
   n: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.',
-    feature,
   s: [,
       'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration',
       'API for integrationMobile app support'
@@ -5215,7 +5167,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     descriptio,
   n:
       'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.'
-    feature,
   s: [,
       'AI contract analysis'
       'Risk assessment'
@@ -5254,7 +5205,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'API for integration'
       'Mobile app support'],    descriptio,
   n: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.'
-    feature,
   s: [;
       'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration'
       'API for integrationMobile app support'
@@ -5412,7 +5362,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.',
-    feature,
   s: [,
       'AI contract analysis',
       'Risk assessment',
@@ -5425,7 +5374,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'API for integration',
       'Mobile app support'],    descriptio,
   n: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.',
-    feature,
   s: [,
       'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration',
       'API for integrationMobile app support'
@@ -5632,7 +5580,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
     descriptio,
   n: unknown,
       'Revolutionary IoT platform that combines quantum security with AI edge computing. Secure billions of devices with real - time AI processing and quantum encryption.',
-    feature,
   s: [,
       'Quantum device security',
       'AI edge computing',
@@ -6869,7 +6816,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: 'Revolutionary IoT platform that combines quantum security with AI edge computing. Secure billions of devices with real-time AI processing and quantum encryption.',
-    feature,
   s: [,
       'Quantum device securityAI edge computingReal-time processingDevice managementData analyticsSecurity monitoringScalability toolsAPI for integration',
       'Mobile app supportCloud dashboard'
@@ -6885,7 +6831,6 @@ export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
       'Mobile app support',
       'Cloud dashboard'],    descriptio,
   n: 'Revolutionary IoT platform that combines quantum security with AI edge computing. Secure billions of devices with real-time AI processing and quantum encryption.',
-    feature,
   s: [,
       'Quantum device securityAI edge computingReal-time processingDevice managementData analyticsSecurity monitoringScalability toolsAPI for integration',
       'Mobile app supportCloud dashboard'
@@ -7609,7 +7554,6 @@ export const,
   }
 ];
     reviews: 26;
-  {/* TODO: Fix JSX expression */}
   t: 'quantum-ai-futuristic'}
     contactInf,
   o: {}
@@ -7636,7 +7580,6 @@ export const,
     review,
   s: 8};
   // Space Technology Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'space-futuristic'}
     contactInf,
   o: {}
@@ -7663,7 +7606,6 @@ export const,
     review,
   s: 12};
   // Biotech AI Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'biotech-futuristic'}
     contactInf,
   o: {}
@@ -7690,7 +7632,6 @@ export const,
     review,
   s: 18};
   // Quantum Financial Trading Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'quantum-finance-futuristic'}
     contactInf,
   o: {}
@@ -7717,7 +7658,6 @@ export const,
     review,
   s: 15};
   // Autonomous Vehicle AI Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'autonomous-futuristic'}
     contactInf,
   o: {}
@@ -7744,7 +7684,6 @@ export const,
     review,
   s: 22};
   // Quantum Cybersecurity Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'quantum-security-futuristic'}
     contactInf,
   o: {}
@@ -7771,7 +7710,6 @@ export const,
     review,
   s: 28};
   // Metaverse AI Development Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'metaverse-futuristic'}
     contactInf,
   o: {}
@@ -7798,7 +7736,6 @@ export const,
     review,
   s: 32};
   // Quantum Internet Security Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'quantum-internet-futuristic'}
     contactInf,
   o: {}
@@ -7825,7 +7762,6 @@ export const,
     review,
   s: 19};
   // AI-Powered Legal Contract Analyzer;
-  {/* TODO: Fix JSX expression */}
   t: 'ai-legal-futuristic'}
     contactInf,
   o: {}
@@ -7852,7 +7788,6 @@ export const,
     review,
   s: 45};
   // Quantum IoT Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'quantum-iot-futuristic'}
     contactInf,
   o: {}
@@ -8386,7 +8321,6 @@ export const,
     customers: 38;
     rating: 4.7;
     reviews: 26;
-  {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
 },
     realImplementatio,
@@ -8402,7 +8336,6 @@ export const,
     review,
   s: 8,},
   // Space Technology Platform;
-  {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
 },
     realImplementatio,
@@ -8418,7 +8351,6 @@ export const,
     review,
   s: 12,},
   // Biotech AI Platform;
-  {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
 },
     realImplementatio,
@@ -8434,7 +8366,6 @@ export const,
     review,
   s: 18,},
   // Quantum Financial Trading Platform;
-  {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
 },
     realImplementatio,
@@ -8450,7 +8381,6 @@ export const,
     review,
   s: 15,},
   // Autonomous Vehicle AI Platform;
-  {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
 },
     realImplementatio,
@@ -8466,7 +8396,6 @@ export const,
     review,
   s: 22,},
   // Quantum Cybersecurity Platform;
-  {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
 },
     realImplementatio,
@@ -8482,7 +8411,6 @@ export const,
     review,
   s: 28,},
   // Metaverse AI Development Platform;
-  {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
 },
     realImplementatio,
@@ -8498,7 +8426,6 @@ export const,
     review,
   s: 32,},
   // Quantum Internet Security Platform;
-  {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
 },
     realImplementatio,
@@ -8514,7 +8441,6 @@ export const,
     review,
   s: 19,},
   // AI-Powered Legal Contract Analyzer;
-  {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
 },
     realImplementatio,
@@ -8530,7 +8456,6 @@ export const,
     review,
   s: 45,},
   // Quantum IoT Platform;
-  {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"}
 },
     realImplementatio,
@@ -8565,7 +8490,6 @@ export const,
   id: 'quantum-ai-brain-computer-interface',' nam,
   e: 'Quantum AI Brain-Computer Interface', ' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.', feature,
   s: [,' 'Quantum neural signal processing',' 'Real - time brain activity monitoring',' 'AI - powered cognitive enhancement',' 'Neural pattern recognition',' 'Secure quantum encryption',' 'Multi - modal interface support',' 'Advanced analytics dashboard',' 'API for research integration',' 'Compliance with medical standards', ' taglin,
   e: 'World\'s first quantum-enhanced AI with human-like reasoning',' pric,
   e: '$2,999', ' '24 / 7 quantum AI support'], pric,
@@ -8574,7 +8498,6 @@ export const,
   e: '$2,999',' '24 / 7 quantum AI support'], pric,
   e: '$2, 999',' perio,
   d: '/month',' descriptio,
-  n: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.', feature,
   s: [,' 'Quantum neural signal processing_real - time brain activity monitoringAI - powered cognitive enhancement_neural pattern recognition_secure quantum encryption_multi - modal interface support_advanced analytics dashboardAPI for research integration',' 'Compliance with medical standards24 / 7 quantum AI support' ], popula,
   r: true,' ico,
   n: '🧠', ' 'Leading edge technology with no direct competitors. 10x more advanced than existing BCI solutions.', target_audienc,
@@ -8627,11 +8550,9 @@ export const,
   e: '2024-12-01', customer,
   s: 15, ratin,
   g: 4 && 4.9, review,
-  s: 8 }, export interface NextGenInnovativeService export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} } customer,
   s: number; ratin,
-  g: number; export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string }, realImplementatio,
   n: boolean, implementationDetail,
@@ -8645,7 +8566,6 @@ export const,
   e: string; pric,
   e: string; perio,
   d: string, descriptio,
-  n: string; feature,
   s: string[]; popula,
   r: boolean; ico,
   n: string; colo,
@@ -8666,7 +8586,6 @@ export const,
   e: string; growthRat,
   e: string; varian,
   t: string; contactInf,
-  o: {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -8692,11 +8611,9 @@ export const,
   e: "World's first quantum-enhanced AI with human-like reasoning"' pric,
   e: '$2,999'' perio,
   d: '/month' descriptio,
-  n:' 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.' feature,
   s: [' 'Quantum neural signal processing'' 'Real-time brain activity monitoring'' 'AI-powered cognitive enhancement'' 'Neural pattern recognition'' 'Secure quantum encryption'' 'Multi-modal interface support'' 'Advanced analytics dashboard'' 'API for research integration'' 'Compliance with medical standards'' '24/7 quantum AI support'], pric,
   e: '$2,999'' perio,
   d: '/month'' descriptio,
-  n: 'Revolutionary quantum AI platform that combines quantum computing with advanced neural interfaces. Achieve breakthrough discoveries with 1000% ROI within 6 months through unprecedented cognitive enhancement capabilities.' feature,
   s: [' 'Quantum neural signal processingReal-time brain activity monitoringAI-powered cognitive enhancementNeural pattern recognitionSecure quantum encryptionMulti-modal interface supportAdvanced analytics dashboardAPI for research integration'' 'Compliance with medical standards24/7 quantum AI support' ] popula,
   r: true' ico,
   n: '🧠'' colo,
@@ -8745,7 +8662,6 @@ export const,
   s: 'Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.'' launchDat,
   e: '2024-12-01' customer,
   s: 15,
-  rating: 4.9 export interface NextGenInnovativeService {/* TODO: Fix JSX expression */}
   s://ziontechgroup.com'}' websit,
   e: 'http,
   s://ziontechgroup.com' }, realImplementatio,
@@ -8775,9 +8691,7 @@ export const,
   e: 'Space Technology Platform',' taglin,
   e: 'Complete space mission management and satellite operations',' pric,
   e: '$5, 999',' perio,
-  d: '/month', ' 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.', feature,
   s: [,' 'Satellite mission planning',' 'Orbital mechanics calculations',' 'Real - time satellite tracking',' 'Space weather monitoring',' 'Launch vehicle integration',' 'Ground station management',' 'Space debris tracking',' 'Mission analytics dashboard',' 'Regulatory compliance tools', ' descriptio,
-  n: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.', feature,
   s: [' 'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',' 'Regulatory compliance toolsMulti-satellite operations' ], popula,
   r: true,' ico,
   n: '🚀',' colo,
@@ -8834,9 +8748,7 @@ export const,
   e: 'Complete space mission management and satellite operations'' pric,
   e: '$5,999'' perio,
   d: '/month' descriptio,
-  n:' 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.' feature,
   s: [' 'Satellite mission planning'' 'Orbital mechanics calculations'' 'Real-time satellite tracking'' 'Space weather monitoring'' 'Launch vehicle integration'' 'Ground station management'' 'Space debris tracking'' 'Mission analytics dashboard'' 'Regulatory compliance tools'' 'Multi-satellite operations'], descriptio,
-  n: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.' feature,
   s: [' 'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard'' 'Regulatory compliance toolsMulti-satellite operations' popula,
   r: true' ico,
   n: '🚀'' colo,
@@ -8891,9 +8803,7 @@ export const,
   e: 'Complete space mission management and satellite operations',' pric,
   e: '$5,999',' perio,
   d: '/month',' descriptio,
-  n: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.', feature,
   s: [ ' 'Satellite mission planning',' 'Orbital mechanics calculations',' 'Real-time satellite tracking',' 'Space weather monitoring',' 'Launch vehicle integration',' 'Ground station management',' 'Space debris tracking',' 'Mission analytics dashboard',' 'Regulatory compliance tools',' 'Multi-satellite operations'], descriptio,
-  n: 'Comprehensive space mission management platform enabling commercial space companies to operate like NASA. Includes satellite operations, mission planning, and space infrastructure management.', feature,
   s: [' 'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',' 'Regulatory compliance toolsMulti-satellite operations'' 'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',' 'Regulatory compliance toolsMulti-satellite operations' ], popula,
   r: true,' ico,
   n: '🚀',' colo,
@@ -8962,9 +8872,7 @@ export const,
   e: 'Biotech AI Platform',' taglin,
   e: 'AI - powered drug discovery and genetic engineering',' pric,
   e: '$3, 999',' perio,
-  d: '/month', ' 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.', feature,
   s: [,' 'AI drug discovery algorithms',' 'Genetic sequence analysis',' 'Protein folding prediction',' 'Drug interaction modeling',' 'Clinical trial optimization',' 'Regulatory compliance tools',' 'Research collaboration platform',' 'Advanced analytics dashboard',' 'API for research integration', ' descriptio,
-  n: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.', feature,
   s: [' 'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',' 'API for research integrationMulti-omics data analysis' ], popula,
   r: true,' ico,
   n: '🧬',' colo,
@@ -9021,9 +8929,7 @@ export const,
   e: 'AI-powered drug discovery and genetic engineering'' pric,
   e: '$3,999'' perio,
   d: '/month' descriptio,
-  n:' 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.' feature,
   s: [' 'AI drug discovery algorithms'' 'Genetic sequence analysis'' 'Protein folding prediction'' 'Drug interaction modeling'' 'Clinical trial optimization'' 'Regulatory compliance tools'' 'Research collaboration platform'' 'Advanced analytics dashboard'' 'API for research integration'' 'Multi-omics data analysis'], descriptio,
-  n: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.' feature,
   s: [' 'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard'' 'API for research integrationMulti-omics data analysis' popula,
   r: true' ico,
   n: '🧬'' colo,
@@ -9078,9 +8984,7 @@ export const,
   e: 'AI-powered drug discovery and genetic engineering',' pric,
   e: '$3,999',' perio,
   d: '/month',' descriptio,
-  n: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.', feature,
   s: [ ' 'AI drug discovery algorithms',' 'Genetic sequence analysis',' 'Protein folding prediction',' 'Drug interaction modeling',' 'Clinical trial optimization',' 'Regulatory compliance tools',' 'Research collaboration platform',' 'Advanced analytics dashboard',' 'API for research integration',' 'Multi-omics data analysis'], descriptio,
-  n: 'Revolutionary AI platform for drug discovery and genetic engineering. Accelerate drug development by 10x while reducing costs by 90% through advanced AI algorithms and quantum computing.', feature,
   s: [' 'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',' 'API for research integrationMulti-omics data analysis'' 'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard',' 'API for research integrationMulti-omics data analysis' ], popula,
   r: true,' ico,
   n: '🧬',' colo,
@@ -9150,7 +9054,6 @@ export const,
   e: 'Quantum AI - powered algorithmic trading with nanosecond precision',' pric,
   e: '$7, 999',' perio,
   d: '/month', ' 'Quantum AI trading algorithms',' 'Nanosecond execution speed',' 'Real - time market analysis',' 'Risk management tools',' 'Portfolio optimization',' 'Multi - asset trading',' 'Advanced backtesting',' 'Regulatory compliance',' 'Performance analytics', ' descriptio,
-  n: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.', feature,
   s: [' 'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance',' 'Performance analyticsAPI for integration' ], popula,
   r: true,' ico,
   n: '💰',' colo,
@@ -9207,9 +9110,7 @@ export const,
   e: 'Quantum AI-powered algorithmic trading with nanosecond precision'' pric,
   e: '$7,999'' perio,
   d: '/month' descriptio,
-  n:' 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.' feature,
   s: [' 'Quantum AI trading algorithms'' 'Nanosecond execution speed'' 'Real-time market analysis'' 'Risk management tools'' 'Portfolio optimization'' 'Multi-asset trading'' 'Advanced backtesting'' 'Regulatory compliance'' 'Performance analytics'' 'API for integration'], descriptio,
-  n: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.' feature,
   s: [' 'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance'' 'Performance analyticsAPI for integration' popula,
   r: true' ico,
   n: '💰'' colo,
@@ -9264,9 +9165,7 @@ export const,
   e: 'Quantum AI-powered algorithmic trading with nanosecond precision',' pric,
   e: '$7,999',' perio,
   d: '/month',' descriptio,
-  n: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.', feature,
   s: [ ' 'Quantum AI trading algorithms',' 'Nanosecond execution speed',' 'Real-time market analysis',' 'Risk management tools',' 'Portfolio optimization',' 'Multi-asset trading',' 'Advanced backtesting',' 'Regulatory compliance',' 'Performance analytics',' 'API for integration'], descriptio,
-  n: 'Revolutionary quantum AI trading platform that processes market data at quantum speeds for unprecedented accuracy. Achieve 1000%+ ROI through advanced quantum algorithms and real-time market analysis.', feature,
   s: [' 'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance',' 'Performance analyticsAPI for integration'' 'Quantum AI trading algorithmsNanosecond execution speedReal-time market analysisRisk management toolsPortfolio optimizationMulti-asset tradingAdvanced backtestingRegulatory compliance',' 'Performance analyticsAPI for integration' ], popula,
   r: true,' ico,
   n: '💰',' colo,
@@ -9336,7 +9235,6 @@ export const,
   e: 'Complete AI platform for autonomous vehicles and robotics',' pric,
   e: '$4, 999',' perio,
   d: '/month', ' 'Advanced computer vision',' 'Real - time decision making',' 'Sensor fusion algorithms',' 'Path planning & navigation',' 'Obstacle detection & avoidance',' 'Traffic prediction',' 'Safety systems',' 'Fleet management',' 'Performance analytics', ' descriptio,
-  n: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.', feature,
   s: [' 'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management',' 'Performance analyticsAPI for integration' ], popula,
   r: true,' ico,
   n: '🚗',' colo,
@@ -9393,9 +9291,7 @@ export const,
   e: 'Complete AI platform for autonomous vehicles and robotics'' pric,
   e: '$4,999'' perio,
   d: '/month' descriptio,
-  n:' 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.' feature,
   s: [' 'Advanced computer vision'' 'Real-time decision making'' 'Sensor fusion algorithms'' 'Path planning & navigation'' 'Obstacle detection & avoidance'' 'Traffic prediction'' 'Safety systems'' 'Fleet management'' 'Performance analytics'' 'API for integration'], descriptio,
-  n: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.' feature,
   s: [' 'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management'' 'Performance analyticsAPI for integration' popula,
   r: true' ico,
   n: '🚗'' colo,
@@ -9450,9 +9346,7 @@ export const,
   e: 'Complete AI platform for autonomous vehicles and robotics',' pric,
   e: '$4,999',' perio,
   d: '/month',' descriptio,
-  n: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.', feature,
   s: [ ' 'Advanced computer vision',' 'Real-time decision making',' 'Sensor fusion algorithms',' 'Path planning & navigation',' 'Obstacle detection & avoidance',' 'Traffic prediction',' 'Safety systems',' 'Fleet management',' 'Performance analytics',' 'API for integration'], descriptio,
-  n: 'Comprehensive AI platform for autonomous vehicles, drones, and robotics. Includes perception, decision-making, and control systems with 99.99% accuracy and real-time learning capabilities.', feature,
   s: [' 'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management',' 'Performance analyticsAPI for integration'' 'Advanced computer visionReal-time decision makingSensor fusion algorithmsPath planning & navigationObstacle detection & avoidanceTraffic predictionSafety systemsFleet management',' 'Performance analyticsAPI for integration' ], popula,
   r: true,' ico,
   n: '🚗',' colo,
@@ -9522,7 +9416,6 @@ export const,
   e: 'Quantum - resistant cybersecurity with AI threat detection',' pric,
   e: '$3, 999',' perio,
   d: '/month', ' 'AI threat detection',' 'Real - time monitoring',' 'Advanced analytics',' 'Incident response',' 'Compliance tools',' 'Threat intelligence',' 'Vulnerability assessment',' 'Security automation', ' descriptio,
-  n: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.', feature,
   s: [' 'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment',' 'Security automationAPI for integration' ], popula,
   r: true,' ico,
   n: '🔒',' colo,
@@ -9569,9 +9462,7 @@ export const,
   e: 'Quantum-resistant cybersecurity with AI threat detection'' pric,
   e: '$3,999'' perio,
   d: '/month' descriptio,
-  n:' 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.' feature,
   s: [' 'Quantum-resistant encryption'' 'AI threat detection'' 'Real-time monitoring'' 'Advanced analytics'' 'Incident response'' 'Compliance tools'' 'Threat intelligence'' 'Vulnerability assessment'' 'Security automation'' 'API for integration'], descriptio,
-  n: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.' feature,
   s: [' 'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment'' 'Security automationAPI for integration' popula,
   r: true' ico,
   n: '🔒'' colo,
@@ -9626,9 +9517,7 @@ export const,
   e: 'Quantum-resistant cybersecurity with AI threat detection',' pric,
   e: '$3,999',' perio,
   d: '/month',' descriptio,
-  n: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.', feature,
   s: [ ' 'Quantum-resistant encryption',' 'AI threat detection',' 'Real-time monitoring',' 'Advanced analytics',' 'Incident response',' 'Compliance tools',' 'Threat intelligence',' 'Vulnerability assessment',' 'Security automation',' 'API for integration'], descriptio,
-  n: 'Next-generation cybersecurity platform that combines quantum-resistant encryption with AI-powered threat detection. Protect against quantum attacks and advanced persistent threats with 99.99% accuracy.', feature,
   s: [' 'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment',' 'Security automationAPI for integration'' 'Quantum-resistant encryptionAI threat detectionReal-time monitoringAdvanced analyticsIncident responseCompliance toolsThreat intelligenceVulnerability assessment',' 'Security automationAPI for integration' ], popula,
   r: true,' ico,
   n: '🔒',' colo,
@@ -9698,7 +9587,6 @@ export const,
   e: 'Complete AI platform for metaverse and virtual world creation',' pric,
   e: '$2, 999',' perio,
   d: '/month', ' 'AI content generation',' 'Virtual world building',' 'Real - time interactions',' 'Avatar customization',' 'Social features',' 'Monetization tools',' 'Analytics dashboard',' 'Multi - platform support',' 'API for integration', ' descriptio,
-  n: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.', feature,
   s: [' 'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support',' 'API for integrationDeveloper tools' ], popula,
   r: true,' ico,
   n: '🌐',' colo,
@@ -9755,9 +9643,7 @@ export const,
   e: 'Complete AI platform for metaverse and virtual world creation'' pric,
   e: '$2,999'' perio,
   d: '/month' descriptio,
-  n:' 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.' feature,
   s: [' 'AI content generation'' 'Virtual world building'' 'Real-time interactions'' 'Avatar customization'' 'Social features'' 'Monetization tools'' 'Analytics dashboard'' 'Multi-platform support'' 'API for integration'' 'Developer tools'], descriptio,
-  n: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.' feature,
   s: [' 'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support'' 'API for integrationDeveloper tools' popula,
   r: true' ico,
   n: '🌐'' colo,
@@ -9812,9 +9698,7 @@ export const,
   e: 'Complete AI platform for metaverse and virtual world creation',' pric,
   e: '$2,999',' perio,
   d: '/month',' descriptio,
-  n: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.', feature,
   s: [ ' 'AI content generation',' 'Virtual world building',' 'Real-time interactions',' 'Avatar customization',' 'Social features',' 'Monetization tools',' 'Analytics dashboard',' 'Multi-platform support',' 'API for integration',' 'Developer tools'], descriptio,
-  n: 'Revolutionary AI platform for creating immersive metaverse experiences. Includes AI-powered content generation, virtual world building, and real-time interaction systems.', feature,
   s: [' 'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support',' 'API for integrationDeveloper tools'' 'AI content generationVirtual world buildingReal-time interactionsAvatar customizationSocial featuresMonetization toolsAnalytics dashboardMulti-platform support',' 'API for integrationDeveloper tools' ], popula,
   r: true,' ico,
   n: '🌐',' colo,
@@ -9884,7 +9768,6 @@ export const,
   e: 'Quantum - secured internet infrastructure with AI monitoring',' pric,
   e: '$4, 999',' perio,
   d: '/month', ' 'Quantum key distribution',' 'AI threat monitoring',' 'Real - time protection',' 'Network security',' 'Data encryption',' 'Threat intelligence',' 'Compliance tools',' 'Performance analytics',' 'API for integration', ' descriptio,
-  n: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.', feature,
   s: [' 'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics',' 'API for integration24/7 monitoring' ], popula,
   r: true,' ico,
   n: '🌍',' colo,
@@ -9941,9 +9824,7 @@ export const,
   e: 'Quantum-secured internet infrastructure with AI monitoring'' pric,
   e: '$4,999'' perio,
   d: '/month' descriptio,
-  n:' 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.' feature,
   s: [' 'Quantum key distribution'' 'AI threat monitoring'' 'Real-time protection'' 'Network security'' 'Data encryption'' 'Threat intelligence'' 'Compliance tools'' 'Performance analytics'' 'API for integration'' '24/7 monitoring'], descriptio,
-  n: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.' feature,
   s: [' 'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics'' 'API for integration24/7 monitoring' popula,
   r: true' ico,
   n: '🌍'' colo,
@@ -9998,9 +9879,7 @@ export const,
   e: 'Quantum-secured internet infrastructure with AI monitoring',' pric,
   e: '$4,999',' perio,
   d: '/month',' descriptio,
-  n: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.', feature,
   s: [ ' 'Quantum key distribution',' 'AI threat monitoring',' 'Real-time protection',' 'Network security',' 'Data encryption',' 'Threat intelligence',' 'Compliance tools',' 'Performance analytics',' 'API for integration',' '24/7 monitoring'], descriptio,
-  n: 'Next-generation internet security platform that uses quantum encryption and AI monitoring to protect against cyber threats. Includes quantum key distribution and real-time threat detection.', feature,
   s: [' 'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics',' 'API for integration24/7 monitoring'' 'Quantum key distributionAI threat monitoringReal-time protectionNetwork securityData encryptionThreat intelligenceCompliance toolsPerformance analytics',' 'API for integration24/7 monitoring' ], popula,
   r: true,' ico,
   n: '🌍',' colo,
@@ -10069,10 +9948,8 @@ export const,
   e: 'AI Legal Contract Analyzer',' taglin,
   e: 'AI - powered legal document analysis and risk assessment',' pric,
   e: '$1, 999',' perio,
-  d: '/month', ' 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.', feature,
   s: [,' 'AI contract analysis',' 'Risk assessment',' 'Compliance checking',' 'Legal research',' 'Document comparison',' 'Clause extraction',' 'Legal analytics',' 'Team collaboration',' 'API for integration',' 'Mobile app support'], descriptio,
   n: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.', ' descriptio,
-  n: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.', feature,
   s: [' 'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration',' 'API for integrationMobile app support' ], popula,
   r: true,' ico,
   n: '⚖️',' colo,
@@ -10129,9 +10006,7 @@ export const,
   e: 'AI-powered legal document analysis and risk assessment'' pric,
   e: '$1,999'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.' feature,
   s: [' 'AI contract analysis'' 'Risk assessment'' 'Compliance checking'' 'Legal research'' 'Document comparison'' 'Clause extraction'' 'Legal analytics'' 'Team collaboration'' 'API for integration'' 'Mobile app support'], descriptio,
-  n: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.' feature,
   s: [' 'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration'' 'API for integrationMobile app support' popula,
   r: true' ico,
   n: '⚖️'' colo,
@@ -10186,9 +10061,7 @@ export const,
   e: 'AI-powered legal document analysis and risk assessment',' pric,
   e: '$1,999',' perio,
   d: '/month',' descriptio,
-  n: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.', feature,
   s: [ ' 'AI contract analysis',' 'Risk assessment',' 'Compliance checking',' 'Legal research',' 'Document comparison',' 'Clause extraction',' 'Legal analytics',' 'Team collaboration',' 'API for integration',' 'Mobile app support'], descriptio,
-  n: 'Advanced AI platform for legal document analysis, contract review, and risk assessment. Reduce legal review time by 90% while improving accuracy and compliance.', feature,
   s: [' 'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration',' 'API for integrationMobile app support'' 'AI contract analysisRisk assessmentCompliance checkingLegal researchDocument comparisonClause extractionLegal analyticsTeam collaboration',' 'API for integrationMobile app support' ], popula,
   r: true,' ico,
   n: '⚖️',' colo,
@@ -10254,7 +10127,6 @@ export const,
   n: '📱',' colo,
   r: 'from-blue-600 to-cyan-700',' textColo,
   r: 'text-blue-400', descriptio,
-  n:  ,' 'Revolutionary IoT platform that combines quantum security with AI edge computing. Secure billions of devices with real - time AI processing and quantum encryption.', feature,
   s: [,' 'Quantum device security',' 'AI edge computing',' 'Real - time processing',' 'Device management',' 'Data analytics',' 'Security monitoring',' 'Scalability tools',' 'API for integration',' 'Mobile app support', ' 'Smart cities',' 'Industrial IoT',' 'Healthcare monitoring',' 'Consumer devices',' 'Security systems'],' ro,
   i: '600% ROI through security improvements and operational efficiency', ' lin,
   k: 'http,
@@ -10646,9 +10518,7 @@ export const,
   e: 'Quantum-secured IoT platform with AI edge computing',' pric,
   e: '$2,999',' perio,
   d: '/month',' descriptio,
-  n: 'Revolutionary IoT platform that combines quantum security with AI edge computing. Secure billions of devices with real-time AI processing and quantum encryption.', feature,
   s: [' 'Quantum device securityAI edge computingReal-time processingDevice managementData analyticsSecurity monitoringScalability toolsAPI for integration',' 'Mobile app supportCloud dashboard' ],' 'Quantum device security',' 'AI edge computing',' 'Real-time processing',' 'Device management',' 'Data analytics',' 'Security monitoring',' 'Scalability tools',' 'API for integration',' 'Mobile app support',' 'Cloud dashboard'], descriptio,
-  n: 'Revolutionary IoT platform that combines quantum security with AI edge computing. Secure billions of devices with real-time AI processing and quantum encryption.', feature,
   s: [' 'Quantum device securityAI edge computingReal-time processingDevice managementData analyticsSecurity monitoringScalability toolsAPI for integration',' 'Mobile app supportCloud dashboard'' 'Quantum device securityAI edge computingReal-time processingDevice managementData analyticsSecurity monitoringScalability toolsAPI for integration',' 'Mobile app supportCloud dashboard' ], popula,
   r: true,' ico,
   n: '📱',' colo,
@@ -10741,7 +10611,6 @@ export const,
   s: 38, ratin,
   g: 4.7, review,
   s: 26 ; export const,
-  nextGenInnovativeServices: NextGenInnovativeService[] = [; // Quantum AI & Advanced Computing; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -10751,7 +10620,6 @@ export const,
   e: '2024-12-01'; customer,
   s: 15; ratin,
   g: 4.9; review,
-  s: 8}; // Space Technology Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -10761,7 +10629,6 @@ export const,
   e: '2024-11-15'; customer,
   s: 8; ratin,
   g: 4.8; review,
-  s: 12}; // Biotech AI Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -10771,7 +10638,6 @@ export const,
   e: '2024-10-01'; customer,
   s: 25; ratin,
   g: 4.7; review,
-  s: 18}; // Quantum Financial Trading Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -10781,7 +10647,6 @@ export const,
   e: '2024-09-01'; customer,
   s: 12; ratin,
   g: 4.9; review,
-  s: 15}; // Autonomous Vehicle AI Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -10791,7 +10656,6 @@ export const,
   e: '2024-08-01'; customer,
   s: 18; ratin,
   g: 4.8; review,
-  s: 22}; // Quantum Cybersecurity Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -10801,7 +10665,6 @@ export const,
   e: '2024-07-01'; customer,
   s: 35; ratin,
   g: 4.9; review,
-  s: 28}; // Metaverse AI Development Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -10811,7 +10674,6 @@ export const,
   e: '2024-06-01'; customer,
   s: 45; ratin,
   g: 4.7; review,
-  s: 32}; // Quantum Internet Security Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -10821,7 +10683,6 @@ export const,
   e: '2024-05-01'; customer,
   s: 22; ratin,
   g: 4.8; review,
-  s: 19}; // AI-Powered Legal Contract Analyzer; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -10831,7 +10692,6 @@ export const,
   e: '2024-04-01'; customer,
   s: 65; ratin,
   g: 4.6; review,
-  s: 45}; // Quantum IoT Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -10845,70 +10705,60 @@ export const,
   s: 26}; ];export const,
   nextGenInnovativeServices: NextGenInnovativeService[] = [; review,
   s: 26 ; export const,
-  nextGenInnovativeServices: NextGenInnovativeService[] = [; // Quantum AI & Advanced Computing; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Fully functional quantum AI platform with neural interface capabilities, real-time processing, and advanced security features.", launchDat,"
   e: "2024-12-01", customer,
   s: 15, ratin,
   g: 4.9, review,
-  s: 8,}, // Space Technology Platform; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete space operations platform with real-time tracking, mission planning tools, and regulatory compliance features.", launchDat,"
   e: "2024-11-15", customer,
   s: 8, ratin,
   g: 4.8, review,
-  s: 12,}, // Biotech AI Platform; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete biotech AI platform with drug discovery algorithms, genetic analysis tools, and research collaboration features.", launchDat,"
   e: "2024-10-01", customer,
   s: 25, ratin,
   g: 4.7, review,
-  s: 18,}, // Quantum Financial Trading Platform; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete quantum trading platform with real-time execution, advanced risk management, and comprehensive analytics.", launchDat,"
   e: "2024-09-01", customer,
   s: 12, ratin,
   g: 4.9, review,
-  s: 15,}, // Autonomous Vehicle AI Platform; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete autonomous AI platform with computer vision, decision-making algorithms, and safety systems.", launchDat,"
   e: "2024-08-01", customer,
   s: 18, ratin,
   g: 4.8, review,
-  s: 22,}, // Quantum Cybersecurity Platform; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete quantum cybersecurity platform with encryption, threat detection, and compliance features.", launchDat,"
   e: "2024-07-01", customer,
   s: 35, ratin,
   g: 4.9, review,
-  s: 28,}, // Metaverse AI Development Platform; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete metaverse AI platform with content generation, world building, and social interaction features.", launchDat,"
   e: "2024-06-01", customer,
   s: 45, ratin,
   g: 4.7, review,
-  s: 32,}, // Quantum Internet Security Platform; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete quantum internet security platform with encryption, monitoring, and protection features.", launchDat,"
   e: "2024-05-01", customer,
   s: 22, ratin,
   g: 4.8, review,
-  s: 19,}, // AI-Powered Legal Contract Analyzer; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete AI legal platform with document analysis, risk assessment, and compliance features.", launchDat,"
   e: "2024-04-01", customer,
   s: 65, ratin,
   g: 4.6, review,
-  s: 45,}, // Quantum IoT Platform; {/* TODO: Fix JSX expression */}"
   s://ziontechgroup.com"} }, realImplementatio,
   n: true, implementationDetail,"
   s: "Complete quantum IoT platform with security, edge computing, and device management features.",' launchDat,"

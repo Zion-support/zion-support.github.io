@@ -7,7 +7,6 @@ import { CheckCircle, Star, Phone } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
-interface ServicePageProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -18,7 +17,6 @@ interface ServicePageProps {/* TODO: Fix JSX expression */}
   n: React.ComponentType;
           <{ className?: string }>;
   service,
-  s: Array<{/* TODO: Fix JSX expression */}
   s: string[];}
     pric,
   e: string;
@@ -29,7 +27,6 @@ interface ServicePageProps {/* TODO: Fix JSX expression */}
 }
 
 const,
-  ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 
@@ -84,7 +81,6 @@ const,
                   <h3 className="text-2xl font-bold text-white">{service.title}</h3>"
                 <p className="text-gray-300 mb-6">{service.description}</p>"
                 <ul className="space-y-2 mb-6"></ul>
-                  {service.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-gray-300"></li>"
                       <CheckCircle className="w-5 h-5 text-green-400 mr-2" /></CheckCircle>
                       {feature}

@@ -72,7 +72,6 @@ const ITSupportPage: React.FC = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />

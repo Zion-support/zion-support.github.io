@@ -101,7 +101,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
   d: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   popula,
   r: boolean;
@@ -151,7 +150,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
   s: string;
     websit,
   e: string}
-export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   e: string}
     },
     realImplementatio,
@@ -177,7 +175,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business performance.',
-    feature,
   s: [;
       'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems'
       'Advanced analytics and reportingCustom business intelligence workflows'
@@ -290,7 +287,6 @@ export const,
     descriptio,
   n:
       'Advanced AI-powered sales platform that provides intelligent lead scoring, sales forecasting, and performance optimization to help sales teams increase conversion rates and accelerate revenue growth.'
-    feature,
   s: [;
       'AI-powered lead scoring and qualification'
       'Sales forecasting and prediction'
@@ -438,7 +434,6 @@ export const,
     descriptio,
   n:
       'Advanced AI-powered customer service platform that automates customer support, provides intelligent responses, and optimizes customer experience to improve satisfaction and reduce support costs.'
-    feature,
   s: [;
       'AI-powered customer support automation'
       'Intelligent chatbot and virtual assistants'
@@ -586,7 +581,6 @@ export const,
     descriptio,
   n:
       'Advanced AI-powered HR platform that automates recruitment, optimizes workforce management, and provides intelligent insights to improve employee engagement and organizational performance.'
-    feature,
   s: [;
       'AI-powered recruitment and candidate screening'
       'Workforce planning and optimization'
@@ -734,7 +728,6 @@ export const,
     descriptio,
   n:
       'Advanced AI-powered financial platform that provides intelligent financial analysis, risk assessment, and optimization to help organizations make better financial decisions and improve profitability.'
-    feature,
   s: [;
       'AI-powered financial analysis'
       'Risk assessment and management'
@@ -882,7 +875,6 @@ export const,
     descriptio,
   n:
       'Advanced AI-powered project management platform that provides intelligent planning, resource optimization, and performance monitoring to help teams deliver projects on time and within budget.'
-    feature,
   s: [;
       'AI-powered project planning and scheduling'
       'Resource optimization and allocation'
@@ -1041,7 +1033,6 @@ export const,
     review,
   s: 26}
 ];
-export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -1111,7 +1102,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     descriptio,
   n:
       'Advanced AI-powered sales platform that provides intelligent lead scoring, sales forecasting, and performance optimization to help sales teams increase conversion rates and accelerate revenue growth.'
-    feature,
   s: [,
     marketPositio,
   n:
@@ -1176,7 +1166,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     descriptio,
   n:
       'Advanced AI-powered customer service platform that automates customer support, provides intelligent responses, and optimizes customer experience to improve satisfaction and reduce support costs.'
-    feature,
   s: [,
     marketPositio,
   n:
@@ -1241,7 +1230,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     descriptio,
   n:
       'Advanced AI-powered HR platform that automates recruitment, optimizes workforce management, and provides intelligent insights to improve employee engagement and organizational performance.'
-    feature,
   s: [,
     marketPositio,
   n:
@@ -1306,7 +1294,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     descriptio,
   n:
       'Advanced AI-powered financial platform that provides intelligent financial analysis, risk assessment, and optimization to help organizations make better financial decisions and improve profitability.'
-    feature,
   s: [,
     marketPositio,
   n:
@@ -1371,7 +1358,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     descriptio,
   n:
       'Advanced AI-powered project management platform that provides intelligent planning, resource optimization, and performance monitoring to help teams deliver projects on time and within budget.'
-    feature,
   s: [,
     marketPositio,
   n:
@@ -1463,7 +1449,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
     customers: 38;
     rating: 4.7;
     reviews: 26;
-  {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
@@ -1495,7 +1480,6 @@ i,
   e: string; pric,
   e: string, perio,
   d: string, descriptio,
-  n: string; feature,
   s: string[]; popula,
   r: boolean; ico,
   n: string; colo,
@@ -1526,7 +1510,6 @@ i,
   e: string, pric,
   e: string, perio,
   d: string, descriptio,
-  n: string, feature,
   s: string[], popula,
   r: boolean, ico,
   n: string, colo,
@@ -1564,7 +1547,6 @@ i,
   e: 'Intelligent business insights and analytics',' pric,
   e: '$3,200',' perio,
   d: '/month',' descriptio,
-  n: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business performance.', feature,
   s: [' 'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems'' 'Advanced analytics and reportingCustom business intelligence workflows' ],' popula,
   r: true, ico,
   n: '📈',' colo,
@@ -1612,7 +1594,6 @@ i,
   e: 'Intelligent sales optimization and revenue acceleration'' pric,
   e: '$3,500'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced AI-powered sales platform that provides intelligent lead scoring, sales forecasting, and performance optimization to help sales teams increase conversion rates and accelerate revenue growth.' feature,
   s: [' 'AI-powered lead scoring and qualification'' 'Sales forecasting and prediction'' 'Performance optimization and coaching'' 'Pipeline management and optimization'' 'Customer behavior analysis'' 'Sales analytics and insights'' 'Integration with CRM systems'' 'Custom sales workflows'' 'Advanced sales reporting'' 'Real-time sales monitoring' ] popula,
   r: true' ico,
   n: '💰'' colo,
@@ -1651,7 +1632,6 @@ i,
   e: 'Intelligent customer service and support automation'' pric,
   e: '$2,500'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced AI-powered customer service platform that automates customer support, provides intelligent responses, and optimizes customer experience to improve satisfaction and reduce support costs.' feature,
   s: [' 'AI-powered customer support automation'' 'Intelligent chatbot and virtual assistants'' 'Automated ticket routing and resolution'' 'Customer sentiment analysis'' 'Self-service knowledge base'' 'Multi-channel support integration'' 'Performance analytics and insights'' 'Custom support workflows'' 'Integration with support tools'' 'Advanced customer service analytics' ] popula,
   r: false' ico,
   n: '🎧'' colo,
@@ -1690,7 +1670,6 @@ i,
   e: 'Intelligent HR management and workforce optimization'' pric,
   e: '$3,200'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced AI-powered HR platform that automates recruitment, optimizes workforce management, and provides intelligent insights to improve employee engagement and organizational performance.' feature,
   s: [' 'AI-powered recruitment and candidate screening'' 'Workforce planning and optimization'' 'Employee performance analytics'' 'Automated HR workflows'' 'Talent management and development'' 'HR analytics and insights'' 'Integration with HR systems'' 'Custom HR workflows'' 'Advanced HR reporting'' 'Comprehensive workforce analytics' ] popula,
   r: false' ico,
   n: '👥'' colo,
@@ -1729,7 +1708,6 @@ i,
   e: 'Intelligent financial analysis and optimization'' pric,
   e: '$4,500'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced AI-powered financial platform that provides intelligent financial analysis, risk assessment, and optimization to help organizations make better financial decisions and improve profitability.' feature,
   s: [' 'AI-powered financial analysis'' 'Risk assessment and management'' 'Financial forecasting and modeling'' 'Cost optimization and analysis'' 'Performance monitoring and analytics'' 'Compliance and audit support'' 'Integration with financial systems'' 'Custom financial workflows'' 'Advanced financial reporting'' 'Comprehensive financial insights' ] popula,
   r: true' ico,
   n: '💼'' colo,
@@ -1768,7 +1746,6 @@ i,
   e: 'Intelligent project management and optimization'' pric,
   e: '$2,800'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced AI-powered project management platform that provides intelligent planning, resource optimization, and performance monitoring to help teams deliver projects on time and within budget.' feature,
   s: [' 'AI-powered project planning and scheduling'' 'Resource optimization and allocation'' 'Risk assessment and management'' 'Performance monitoring and analytics'' 'Automated project workflows'' 'Team collaboration and communication'' 'Integration with project tools'' 'Custom project workflows'' 'Advanced project reporting'' 'Comprehensive project insights' ] popula,
   r: false' ico,
   n: '📋'' colo,
@@ -1812,7 +1789,6 @@ i,
   e: '2025-05-01' customer,
   s: 38, ratin,
   g: 4.7,
-  reviews: 26 } ];' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -1832,7 +1808,6 @@ i,
   e: 'Intelligent sales optimization and revenue acceleration'' pric,
   e: '$3,500'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced AI-powered sales platform that provides intelligent lead scoring, sales forecasting, and performance optimization to help sales teams increase conversion rates and accelerate revenue growth.' feature,
   s: [ marketPositio,
   n:' 'Leading AI-powered sales intelligence platform with intelligent optimization, forecasting, and comprehensive sales analytics.' targetAudienc,
   e: [' 'Sales teams'' 'Sales managers'' 'Revenue operations'' 'Business development'' 'Technology companies' ] trialDay,
@@ -1848,7 +1823,6 @@ i,
   e: 'Intelligent customer service and support automation'' pric,
   e: '$2,500'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced AI-powered customer service platform that automates customer support, provides intelligent responses, and optimizes customer experience to improve satisfaction and reduce support costs.' feature,
   s: [ marketPositio,
   n:' 'Advanced AI-powered customer service platform with intelligent automation, support optimization, and comprehensive customer experience management.' targetAudienc,
   e: [' 'Customer service teams'' 'Support managers'' 'E-commerce companies'' 'Technology companies'' 'Service providers' ] trialDay,
@@ -1864,7 +1838,6 @@ i,
   e: 'Intelligent HR management and workforce optimization'' pric,
   e: '$3,200'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced AI-powered HR platform that automates recruitment, optimizes workforce management, and provides intelligent insights to improve employee engagement and organizational performance.' feature,
   s: [ marketPositio,
   n:' 'Advanced AI-powered HR management platform with intelligent automation, workforce optimization, and comprehensive HR analytics.' targetAudienc,
   e: [' 'HR teams'' 'HR managers'' 'Recruitment teams'' 'People operations'' 'Technology companies' ] trialDay,
@@ -1880,7 +1853,6 @@ i,
   e: 'Intelligent financial analysis and optimization'' pric,
   e: '$4,500'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced AI-powered financial platform that provides intelligent financial analysis, risk assessment, and optimization to help organizations make better financial decisions and improve profitability.' feature,
   s: [ marketPositio,
   n:' 'Leading AI-powered financial analytics platform with intelligent analysis, risk management, and comprehensive financial optimization.' targetAudienc,
   e: [' 'Finance teams'' 'CFOs'' 'Financial analysts'' 'Accounting teams'' 'Technology companies' ] trialDay,
@@ -1896,7 +1868,6 @@ i,
   e: 'Intelligent project management and optimization'' pric,
   e: '$2,800'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced AI-powered project management platform that provides intelligent planning, resource optimization, and performance monitoring to help teams deliver projects on time and within budget.' feature,
   s: [ marketPositio,
   n:' 'Advanced AI-powered project management platform with intelligent planning, optimization, and comprehensive project analytics.' targetAudienc,
   e: [' 'Project managers'' 'Project teams'' 'Program managers'' 'Technology companies'' 'Consulting firms' ] trialDay,
@@ -1907,7 +1878,6 @@ i,
   technology: [' 'Artificial Intelligence'' 'Machine Learning'' 'Project Management'' 'Resource Optimization'' 'Python'' 'TensorFlow'' 'React' ] integration,
   s: [' 'Project management tools'' 'Collaboration platforms'' 'Time tracking tools'' 'Resource management systems'' 'Communication tools' ] useCase,
   s: [ } ; export const,
-  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [; // AI Business Intelligence Suite; {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'} export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [ // AI Business Intelligence Suite ' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'} review,

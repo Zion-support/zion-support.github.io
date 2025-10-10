@@ -25,7 +25,6 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     tagline: 'Automated testing and quality control',
     price: '$79 / month',
     description: unknown;
-export interface VerifiedRealService2025Batch2 {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
@@ -50,7 +49,6 @@ export const,
     descriptio,
   n: unknown,
       'AI - powered quality assurance platform that automates testing and ensures software quality.',
-    feature,
   s: [,
       'Automated testing',
       'AI defect detection',
@@ -141,7 +139,6 @@ export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] =
   e: "$79/month",
     descriptio,"
   n: "AI-powered quality assurance platform that automates testing and ensures software quality.",
-    feature,
   s: [,"
       "Automated testing","
       "AI defect detection","
@@ -176,7 +173,6 @@ export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] =
   e: string, pric,
   e: string,
   descriptio,
-  n: string, feature,
   s: string[],
   lin,
   k: string, categor,
@@ -201,7 +197,6 @@ export const,
   e: "$79/month",
     descriptio,"
   n: "AI-powered quality assurance platform that automates testing and ensures software quality.",
-    feature,
   s: [;"
       "Automated testing""
       "AI defect detection""
@@ -268,7 +263,6 @@ export const,
   e: "$79/month",
     descriptio,"
   n: "AI-powered quality assurance platform that automates testing and ensures software quality.",
-    feature,
   s: [,"
       "Automated testing","
       "AI defect detection","
@@ -312,7 +306,6 @@ export interface VerifiedRealService2025Batch2,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; real_implementatio,
@@ -329,7 +322,6 @@ export interface VerifiedRealService2025Batch2,
   e: 'AI Quality Assurance Platform',' taglin,
   e: 'Automated testing and quality control',' pric,
   e: '$79 / month', descriptio,
-  n:  ,' 'AI - powered quality assurance platform that automates testing and ensures software quality.', feature,
   s: [,' 'Automated testing',' 'AI defect detection',' 'Performance monitoring',' 'Quality metrics',' 'Continuous integration'],' lin,
   k: '/services / ai - quality - assurance',' categor,
   y: 'Verified Services 2025', real_implementatio,
@@ -344,7 +336,6 @@ export interface VerifiedRealService2025Batch2,
   e: "AI Quality Assurance Platform", taglin,"
   e: "Automated testing and quality control", pric,"
   e: "$79/month", descriptio,"
-  n: "AI-powered quality assurance platform that automates testing and ensures software quality.", feature,"
   s: [ "Automated testing", "AI defect detection", "Performance monitoring", "Quality metrics", "Continuous integration" ], lin,"
   k: "/services/ai-quality-assurance", categor,"
   y: "Verified Services 2025", realImplementatio,
@@ -358,7 +349,6 @@ export interface VerifiedRealService2025Batch2,
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
@@ -372,7 +362,6 @@ export interface VerifiedRealService2025Batch2,
   e: "AI Quality Assurance Platform", taglin,"
   e: "Automated testing and quality control", pric,"
   e: "$79/month", descriptio,"
-  n: "AI-powered quality assurance platform that automates testing and ensures software quality.", feature,"
   s: [ "Automated testing" "AI defect detection" "Performance monitoring" "Quality metrics" "Continuous integration" ], lin,"
   k: "/services/ai-quality-assurance", categor,"
   y: "Verified Services 2025", realImplementatio,
@@ -388,7 +377,6 @@ export interface VerifiedRealService2025Batch2,
   e: "AI Quality Assurance Platform", taglin,"
   e: "Automated testing and quality control", pric,"
   e: "$79/month", descriptio,"
-  n: "AI-powered quality assurance platform that automates testing and ensures software quality.", feature,"
   s: [ "Automated testing", "AI defect detection", "Performance monitoring", "Quality metrics", "Continuous integration" ], lin,"
   k: "/services/ai-quality-assurance", categor,"
   y: "Verified Services 2025", realImplementatio,

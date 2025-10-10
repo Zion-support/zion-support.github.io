@@ -1,7 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -116,7 +115,6 @@ const Navigation: React.FC = () => {
     { name: 'Smart Analytics', href: '/smart-analytics', icon: BarChart, description: 'Analytics Platform' },
     { name: 'AI Scheduler', href: '/ai-scheduler', icon: Calendar, description: 'Scheduling Tools' },
     { name: 'Expense Tracker', href: '/expense-tracker', icon: BarChart, description: 'Expense Management' },
-    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckSquare, description: 'Task Management' },
     { name: 'CRM Lite', href: '/crm-lite', icon: Users, description: 'Lightweight CRM' },
     { name: 'Email Optimizer', href: '/email-optimizer', icon: Mail, description: 'Email Optimization' },
     { name: 'Social Media Manager', href: '/social-media-manager', icon: Globe, description: 'Social Media Tools' },

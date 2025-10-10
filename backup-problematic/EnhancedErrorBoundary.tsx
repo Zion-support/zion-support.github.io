@@ -2,10 +2,8 @@
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-interface Props {/* TODO: Fix JSX expression */}
 }
 
-interface State {/* TODO: Fix JSX expression */}
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
@@ -75,34 +73,27 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               <button;
                 onClick={() => window.history.back()}
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover: bg-gray-300 transition-colors"
-class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
   r: false };
   }
 
   static getDerivedStateFromError(erro)
-  r: Error): State {/* TODO: Fix JSX expression */}
   r: true, error };
   }
 
   componentDidCatch(erro,
   r: Error, errorInf)
-  o: ErrorInfo) {/* TODO: Fix JSX expression */}
     });
 
     // Log error to console in development;
-    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
     }
 
     // Call custom error handler if provided;
-    if (this.props.onError) {/* TODO: Fix JSX expression */}
     }
 
     // Enhanced error reporting;
-    if (this.props.enableErrorReporting) {/* TODO: Fix JSX expression */}
     }
 
     // Log to console in development;
-    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
   a: errorInfo });
     }
   }
@@ -138,7 +129,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                   Error Details (Development),
                 </summary>,
                 <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">,
-            {/* TODO: Fix JSX expression */}
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>

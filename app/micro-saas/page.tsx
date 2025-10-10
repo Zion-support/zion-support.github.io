@@ -226,7 +226,7 @@ const MicroSaasPage: React.FC = () => {
                   </div>
 
                   <ul className="space-y-3 mb-8">
-                    {product.features.map((feature, index) => (
+                    {saas.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}

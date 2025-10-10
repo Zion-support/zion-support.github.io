@@ -62,7 +62,6 @@ const EnhancedServicesShowcase: React.FC = () => {
               <p className="text-gray-300 mb-4">{service.description}</p>
               
               <ul className="space-y-2 mb-6">
-                {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     {feature}

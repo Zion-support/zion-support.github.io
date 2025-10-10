@@ -13,7 +13,6 @@ interface GtagEvent {// TODO: Add content;}
   y: string]: unknown;
 }
 type GtagCommand = 'config' | 'set' | 'event' | 'js';
-interface Window {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   gtag?: ();

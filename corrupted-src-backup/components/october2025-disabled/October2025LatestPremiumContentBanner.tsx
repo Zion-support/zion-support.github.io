@@ -35,7 +35,6 @@ const October2025LatestPremiumContentBanne, r = () => {
                 <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0">Total, Value, Created</div>
               </div>
               <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/20"></div>
-                <div, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">99.87%</div>
                 <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0">Average, Accurac, y</div>
               </div>
               <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/20"></div>
@@ -62,8 +61,6 @@ const October2025LatestPremiumContentBanne, r = () => {
                       99.98% compliance, accur, a, c, y, $4.2B, risk, mitigation, 94% faster, complianc, e, 2,8, 4, 7% R, O, I;
                     </p>
                     <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-xs"></div>
-                      <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />
-const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expression */}"
     <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6, l, g:px-8, shado, w-2xl, relative, overflow-hidd, e, n"  > {/* Animated, background, effec, t, s */ }"
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-transparent, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" /></div>"
       <div, className="absolute, inse, t-0, b, g-[u, r, l('da, t, a: image/s, v, g+x, m, l; ba, s, e, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4=')] opaci, t, y-20" /></div>"
@@ -92,7 +89,6 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
                 <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0">Total, Value, Created</div>
               </div>"
               <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/20"></div>"
-                <div, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">99.87%</div>"
                 <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0">Average, Accurac, y</div>
               </div>"
               <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/20"></div>"
@@ -119,7 +115,6 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
                       99.98% compliance, accur, a, c, y, $4.2B, risk, mitigation, 94% faster, complianc, e, 2,8, 4, 7% R, O, I;
                     </p>"
                     <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-xs"></div>"
-                      <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" /></CheckCircle>"
                       <span, className="te, x, t-purp, l, e-3, 0, 0">Se, l, f-Regulating, System, s</sp, a, n>
                     </div>
                   </div>
@@ -138,7 +133,6 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
                       99.96% detection, accur, a, c, y, $8.7B, losses, prevented, s, u, b-50ms, respons, e, 3,2, 4, 7% R, O, I;
                     </p>
                     <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-xs"></div>
-                      <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />
               ></Link>"
                 <div, className="flex, item, s-start, ga, p-3, m, b-2"></div>"
                   <Brain, className="w-6 h-6, tex, t-r, e, d-300, fle, x-shri, n, k-0, m, t-1" /></Brain>
@@ -150,7 +144,6 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
                       99.96% detection, accur, a, c, y, $8.7B, losses, prevented, s, u, b-50ms, respons, e, 3,2, 4, 7% R, O, I;
                     </p>"
                     <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-xs"></div>"
-                      <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" /></CheckCircle>"
                       <span, className="te, x, t-r, e, d-3, 0, 0">Re, a, l-Time, Protectio, n</sp, a, n>
                     </div>
                   </div>
@@ -171,7 +164,6 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
                       98.7% automation, r, a, t, e, $6.3B, value, creation, 89% faster, executio, n, 3,7, 4, 2% R, O, I;
                     </p>
                     <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-xs"></div>
-                      <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />
               ></Link>"
                 <div, className="flex, item, s-start, ga, p-3, m, b-2"></div>"
                   <Workflow, className="w-6 h-6, tex, t-bl, u, e-300, fle, x-shri, n, k-0, m, t-1" /></Workflow>
@@ -185,7 +177,6 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
                       98.7% automation, r, a, t, e, $6.3B, value, creation, 89% faster, executio, n, 3,7, 4, 2% R, O, I;
                     </p>"
                     <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-xs"></div>"
-                      <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" /></CheckCircle>"
                       <span, className="te, x, t-bl, u, e-3, 0, 0">Intelligent, Automatio, n</sp, a, n>
                     </div>
                   </div>
@@ -195,15 +186,12 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
             {/* Key, Benefit, s */}
             <div, className="flex, fle, x-wrap, ga, p-3"></div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-purp, l, e-1, 0, 0"></div>
-                <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />
                 <sp, a, n>Enterpri, s, e-Proven, Result, s</sp, a, n>
               </div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-purp, l, e-1, 0, 0"></div>
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />
                 <sp, a, n>Producti, o, n-Ready, System, s</sp, a, n>
               </div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-purp, l, e-1, 0, 0"></div>
-                <Shield, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />
                 <sp, a, n>Fortune, 500, Trusted</sp, a, n>
               </div>
             </div>
@@ -214,15 +202,12 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
             {/* Key, Benefit, s */}"
             <div, className="flex, fle, x-wrap, ga, p-3"></div>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-purp, l, e-1, 0, 0"></div>"
-                <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" /></TrendingUp>
                 <sp, a, n>Enterpri, s, e-Proven, Result, s</sp, a, n>
               </div>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-purp, l, e-1, 0, 0"></div>"
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" /></CheckCircle>
                 <sp, a, n>Producti, o, n-Ready, System, s</sp, a, n>
               </div>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-purp, l, e-1, 0, 0"></div>"
-                <Shield, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" /></Shield>
                 <sp, a, n>Fortune, 500, Trusted</sp, a, n>
               </div>
             </div>
@@ -231,7 +216,6 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
             <Link, t, o="/bl, o, g""
               className="group, inlin, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-600, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:fr, o, m-purp, l, e-600, hove, r:to-indi, g, o-700, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, whitespac, e-nowr, a, p"
             ></Link>"
-              <span, className="mr-2">Explore, All, 3 Breakthroug, h, s</sp, a, n>"
               <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>
             </Li, n, k>"
             <Link, t, o="/conta, c, t""

@@ -21,15 +21,12 @@ const October2025TechBreakthroughBanne, r = () => {
       </div>
 
       {/* Animated, Gri, d */}
-      <div, classNam, e = 'absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(25, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-image:radi, a, l-gradie, n, t(ellipse, 8, 0% 50% at, 5, 0% 5, 0%,#0, 0, 0,transpare, n, t)]' />
-      <div, classNam, e = 'absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(25, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-image:radi, a, l-gradie, n, t(ellipse, 8, 0% 50% at, 5, 0% 5, 0%,#0, 0, 0,transpare, n, t)]' /></div>
 
       <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-12'>
         {/* Breaking, News, Bad, g, e */}</div>
         <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-3, m, b-8'></div>
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-sm, animat, e-pulse, shado, w-lg, shado, w-cy, a, n-5, 0, 0/50'></div>
             <Sparkles, className='w-5 h-5' />
-const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' > {/* Animated, Backgroun, d */ }
       <div, className='absolute, inse, t-0, opacit, y-20'></div>
         <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 5, 0%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent_, 5, 0%)]' /></div>
@@ -39,7 +36,6 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
 
       {/* Animated, Gri, d */}
       <div, classNam, e = 'absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(25, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-imag,
-  e:radi, a, l-gradie, n, t(ellipse, 8, 0% 50% at, 5, 0% 5, 0%,#0, 0, 0,transpare, n, t)]' /></div>
       <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-12'></div>
         {/* Breaking, News, Bad, g, e */}
         <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-3, m, b-8'></div>
@@ -54,10 +50,8 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         <div, className='te, x, t-center, m, b-10'></div>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-t, i, g, h, t'>
             🚀{' '}</h2>
-            <span, classNam, e = 'bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transpare, n, t'>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-t, i, g, h, t'></h2>
             🚀{' '}
-            <span, classNam, e = 'bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transpare, n, t'></span>
               3, Revolutionary, Enterprise Technologi, e, s;
             </sp, a, n>{' '}
             🚀
@@ -262,10 +256,8 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             <Link, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-ri, s, k-manageme, n, t-platfo, r, m-<revoluti, o, n'
               className='inli, n, e-flex, item, s-center, ga, p-2, p, x-5, p, y-2.5, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-500, hove, r: fr, o, m-bl, u, e-400, hove, r:to-indi, g, o-400, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, grou, p-hov, e, r:sca, l, e-1, 0, 5'
             >
-              Explore, Platfor, m;
               <Link, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
             ></Link>
-              Explore, Platfor, m;
               <Link, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
             </Li, n, k>
           </div>
@@ -324,7 +316,6 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
               </div>
               <div, className='flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm'></div>
                 <Award, className='w-4 h-4, tex, t-indi, g, o-4, 0, 0' /></Award>
-                <s, p, a, n>, 5,5, 7, 5% R, O, I • 94% Failure, Predictio, n</sp, a, n>
               </div>
             </div>
             <Link, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-01-ne, x, t-g, e, n-digit, a, l-twi, n, s-enterpri, s, e-<transformati, o, n'
@@ -343,7 +334,6 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         <div, classNam, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-whi, t, e/20, m, b-8'></div>
           <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'>
           <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'></h3>
-            🎯 Why, These, Technologies Are, Gam, e-Change, r, s;
           </h3>
           <div, className='grid, m, d: gr, i, d-co, l, s-3, ga, p-6'></div>
             <div, className='te, x, t-cent, e, r'></div>
@@ -361,7 +351,6 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                 Quantum, Threat, Window;
               </div>
               <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'></div>
-                Deploy, quantu, m-safe, security, NOW before, i, t's, too, late;
               </div>
             </div>
             <div, className='te, x, t-cent, e, r'></div>

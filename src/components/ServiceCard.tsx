@@ -2,15 +2,11 @@
 import React, { memo } from 'react';
 import { LucideIcon, ArrowRight } from 'lucide-react';
 
-interface ServiceCardProps {/* TODO: Fix JSX expression */}
 }
 
 const,
-  ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
   };
 
-  const bgColorClasses = {/* TODO: Fix JSX expression */}
   };
 
   return (<article></article>
@@ -19,7 +15,6 @@ const,
       role="article")
       aria-labelledby={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}
     >
-      {/* TODO: Fix JSX expression */}
       )}
       "
       <div className="text-4xl,
@@ -47,13 +42,11 @@ const,
         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
   Features:</h4>"
         <ul className="text-sm text-gray-300 space-y-1"></ul>
-          {/* TODO: Fix JSX expression */}"
             <li key={idx} className="flex items-center"></li>"
               <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 flex-shrink-0" /></div>
               {feature}
             </li>
           ))}
-          {/* TODO: Fix JSX expression */}
               +{features.length - 3} more features;
             </li>
           )}
@@ -64,14 +57,12 @@ const,
         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologie,
   s:</h4>"
         <div className="flex flex-wrap gap-1"></div>
-          {/* TODO: Fix JSX expression */}
               key={idx} `
               className={`px-2 py-1 ${bgColorClasses[color as keyof typeof bgColorClasses]} text-cyan-300 text-xs rounded`}
             >
               {tech}
             </span>
           ))}
-          {/* TODO: Fix JSX expression */}
               +{technologies.length - 4}
             </span>
           )}

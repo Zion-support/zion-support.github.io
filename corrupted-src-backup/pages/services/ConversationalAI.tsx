@@ -2,14 +2,11 @@ import { Helmet } from "react-helmet-async";"
 impo, r, t { Vid, e, o } fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r";
-impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
-impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, ConversationalA, I: Rea, c, t.FC = () => {
-  const, feature, s = [
     {
       i, c, o;
   n: Bra, i, n;
@@ -221,11 +218,8 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
     {
       tit, l, e: "Sal, e, s & Lead, Generatio, n","
       ic, o, n: Z, a, p;
-      descripti, o, n: "Intelligent, sales, conversations that, qualify, leads and, nurture, prospects automatical, l, y.","
-      benefi, t, s: ["35% increase, in, conversions", "50% more, qualified, leads", "40% sales, team, efficiency"]"
     }
     {
-      tit, l, e: "Healthcare, Suppor, t","
       ic, o, n: MessageCirc, l, e;
       descripti, o, n: "Patient, engagemen, t, appointment, schedulin, g, and, health, information delive, r, y.","
       benefi, t, s: ["70% patient, engagemen, t", "30% appointment, complianc, e", "25% readmission, reductio, n"]"
@@ -243,11 +237,8 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
     {
       tit, l, e: "Sal, e, s & Lead, Generatio, n",";
       ic, o, n: Z, a, p;
-      descripti, o, n: "Intelligent, sales, conversations that, qualify, leads and, nurture, prospects automatical, l, y.",";
-      benefi, t, s: ["35% increase, in, conversions", "50% more, qualified, leads", "40% sales, team, efficiency"]";
     }
     {
-      tit, l, e: "Healthcare, Suppor, t",";
       ic, o, n: MessageCirc, l, e;
       descripti, o, n: "Patient, engagemen, t, appointment, schedulin, g, and, health, information delive, r, y.",";
       benefi, t, s: ["70% patient, engagemen, t", "30% appointment, complianc, e", "25% readmission, reductio, n"]";
@@ -288,7 +279,6 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
       na, m, e: "AI/ML, Service, s","
       na, m, e: "AI/ML, Service, s",";
       ic, o, n: Bra, i, n;
-      descripti, o, n: "Integration, with, OpenAI, Azure, A, I, AWS, AI, services, and, custom, ML mode, l, s."
     }
     {
       na, m, e: "Enterprise, System, s","
@@ -302,68 +292,40 @@ const, ConversationalA, I: Rea, c, t.FC = () => {
         <title>Conversational, A, I - Zion, Tech, Group | Advanced, Mult, i-Modal, AI, Conversations</title>
         <me, t, a;
   na, m, e="descripti, o, n"
-          content="Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t, and, mult, i-modal, conversation, s. Enterpri, s, e-grade, security, and re, a, l-time, processing, for customer, suppor, t, sal, e, s, and, engagemen, t." /><meta name="keywor, d, s" content="conversational, A, I, chatb, o, t, voice, A, I, mul, t, i-modal, A, I, customer, support, AI, sales, automatio, n, natural, language, processing, AI, conversation, s" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/conversation, a, l-ai/>"
-const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   const, pricin, g = [
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   const, testimonial, s = [
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   const, useCase, s = [
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   const, integration, s = [
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   return (<>
@@ -371,11 +333,8 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <title>Conversational, A, I - Zion, Tech, Group | Advanced, Mult, i-Modal, AI, Conversations</title>
         <me, t, a;"
   na, m, e="descripti, o, n""
-          content="Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t, and, mult, i-modal, conversation, s. Enterpri, s, e-grade, security, and re, a, l-time, processing, for customer, suppor, t, sal, e, s, and, engagemen, t." /><meta name="keywor, d, s" content="conversational, A, I, chatb, o, t, voice, A, I, mul, t, i-modal, A, I, customer, support, AI, sales, automatio, n, natural, language, processing, AI, conversation, s" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/conversation, a, l-ai/>""
-          content="Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t, and, mult, i-modal, conversation, s. Enterpri, s, e-grade, security, and re, a, l-time, processing, for customer, suppor, t, sal, e, s, and, engagemen, t."
          />"
         <meta name="keywor, d, s" content="conversational, A, I, chatb, o, t, voice, A, I, mul, t, i-modal, A, I, customer, support, AI, sales, automatio, n, natural, language, processing, AI, conversation, s" />";"
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/conversation, a, l-ai" />";
       </Helmet>
       <Head, e, r   /></Head>"
       <main, className="m, i, n-h-screen, b, g-whi, t, e">";
@@ -388,7 +347,6 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   g:px-8">"</section>
             <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
-                Conversation, a, l</h1> <span, className="bg-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">AI</sp, a, n>
               </h1>
               <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-viol, e, t-100, ma, x-w-4xl, m, x-auto, m, b-8">
                 Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t;
@@ -401,7 +359,6 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
             <div, className="te, x, t-cent, e, r">";</div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
-                Conversation, a, l</h1> <span, className="bg-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">AI</sp, a, n>";
               </h1>
               <p, className="te, x, t-x, l, m;
   d: te, x, t-2xl, tex, t-viol, e, t-100, ma, x-w-4xl, m, x-auto, m, b-8">";
@@ -420,7 +377,6 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   g:px-8">""
             <div, className="te, x, t-cent, e, r"></div>"
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">""
-                Conversation, a, l <span, className="bg-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">AI</sp, a, n>
               </h1>"
               <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-viol, e, t-100, ma, x-w-4xl, m, x-auto, m, b-8"></p>
                 Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t;
@@ -431,7 +387,6 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-cent, e, r">";"
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";"
-                Conversation, a, l <span, className="bg-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">AI</sp, a, n>";
               </h1>"
               <p, className="te, x, t-x, l, m,"
   d: te, x, t-2xl, tex, t-viol, e, t-100, ma, x-w-4xl, m, x-auto, m, b-8">";
@@ -633,20 +588,16 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <ul, className="spa, c, e-y-2">";)
                       {useCa, s, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
-                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  />
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";
-                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />";
             </d, i, v>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-4, ga, p-8">"
-              {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6"></div>"
                       <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0  /></Icon>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-4, ga, p-8">";
-              {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";"
                       <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />";
@@ -654,12 +605,9 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{useCa, s, e.tit, l, e}</h3>";"
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{useCa, s, e.descripti, o, n}</p>";"
                     <ul, className="spa, c, e-y-2">";
-                      {/* TODO: Fix JSX expression */}"
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm"></li>"
-                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  /></CheckCircle>"
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>"
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";"
-                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />";"
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>";
                         </li>)
                       ))}
@@ -734,13 +682,11 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             </d, i, v>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">"
-              {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0"></div>"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6"></div>"
                       <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0  /></Icon>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">";
-              {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";"
                       <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />";
@@ -801,7 +747,6 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
                       <CheckCircle, className="w-4 h-4, m, r-1  />)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
@@ -809,7 +754,6 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 const, Ico, n = featu, r, e.ic, o, n;
                 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-viol, e, t-100, rounde, d-lg, m, b-4">";
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8"></div>";
@@ -822,29 +766,24 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";</div>
             </d, i, v>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">"
-              {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-viol, e, t-100, rounde, d-lg, m, b-4"></div>"
                       <Icon, className="w-6 h-6, tex, t-viol, e, t-6, 0, 0  /></Icon>
                     </d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>"
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>"
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>"
                       <CheckCircle, className="w-4 h-4, m, r-1  /></CheckCircle>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">";
-              {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-viol, e, t-100, rounde, d-lg, m, b-4">";"
                       <Icon, className="w-6 h-6, tex, t-viol, e, t-6, 0, 0" />";
                     </d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";"
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";"
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";"
                       <CheckCircle, className="w-4 h-4, m, r-1" />";
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
@@ -908,9 +847,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="gri, d, m,"
   d: gr, i, d-co, l, s-3, ga, p-8">""
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
-              {/* TODO: Fix JSX expression */}
                 <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-viol, e, t-500, relativ, e' : ''}`}>`;`
-                  {/* TODO: Fix JSX expression */}
                   )}"
                   <div, className="te, x, t-center, m, b-8">";"
                     <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";"
@@ -921,12 +858,9 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <p, className="te, x, t-gr, a, y-6, 0, 0">{pl, a, n.descripti, o, n}</p>";
                   </d, i, v>"
                   <ul, className="spa, c, e-y-4, m, b-8">";
-                    {/* TODO: Fix JSX expression */}"
                       <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r"></li>"
-                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0  /></CheckCircle>"
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>"
                       <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";"
-                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0" />";"
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>";
                       </li>
                     ))}
@@ -942,7 +876,6 @@ pl, a, n.popul, a, r;
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
-                    classNa, m, e={/* TODO: Fix JSX expression */}`
 }`}`;`
                   >
                     Get, Starte, d;
@@ -1009,17 +942,12 @@ pl, a, n.popul, a, r;
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <div, className="flex, item, s-center, m, b-4">";
                     {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
             </d, i, v>"
             <div, className="gri, d, m,"
   d: gr, i, d-co, l, s-3, ga, p-8">""
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
-              {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";"
                   <div, className="flex, item, s-center, m, b-4">";
-                    {/* TODO: Fix JSX expression */}"
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>"
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
                     ))}
                   </d, i, v>"
                   <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";"

@@ -1,8 +1,5 @@
-const, March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression */}
       col, o, r: 'fr, o, m-purp, l, e-500, t, o-indi, g, o-5, 0, 0}
-    {/* TODO: Fix JSX expression */}
       col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0}
-    {/* TODO: Fix JSX expression */}
       col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0}
       tit, l, e: 'Neur, a, l-Synaptic, Fusion, AI',';
       descripti, o, n: 'Revolutionary, brai, n-computer, interface, achieving 99.98% neural, accurac, y',';
@@ -10,9 +7,7 @@ const, March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression
       ic, o, n: '🧠',';
       col, o, r: 'fr, o, m-purp, l, e-500, t, o-indi, g, o-5, 0, 0'
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">";
@@ -34,20 +29,15 @@ const, March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression
         <div, classNam, e = 'absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
           sty, l, e={{ animationDel, a, y: ', 4, s' }}
          /></div>
-          <h2, classNam, e='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
             The, Innovation, Revolution;
               {
                 val, u, e: '99., 9, 8%',
                 lab, e, l: 'Neural, Accura, c, y',
                 ic, o, n: '🧠',
                 col, o, r: 'te, x, t-purp, l, e-40, 0',
-          <h2, classNam, e='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>
             The, Innovation, Revolution;
-              {/* TODO: Fix JSX expression */}
               },
-              {/* TODO: Fix JSX expression */}
               },
-              {/* TODO: Fix JSX expression */}
               },
               {)
                 val, u, e: '50, 0%')
@@ -79,10 +69,8 @@ const, March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression
             <h3, classNam, e='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4'>
               Revolutionary, Success, Stories;
                 company: 'NeuroTech, Glo, b, a, l',
-              {/* TODO: Fix JSX expression */}
               },
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16'></div>
-          {/* TODO: Fix JSX expression */}
             <div, ke, y = { in, d, e, x  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
              > {/* Card, glow, effect */}`
@@ -103,12 +91,9 @@ const, March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression
                 achieveme, n, t: '5, 0, 0% Cognitive, Enhanceme, n, t',
                 reven, u, e: '$2.1B, Revenue, Growt, h',
                 ic, o, n:</h3> <Brain, classNam, e = 'w-8 , h-, 8' / > },
-              {/* TODO: Fix JSX expression */}
                },
-              {/* TODO: Fix JSX expression */}
                },
               <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
-                <a, hre, f='/innovatio, n, s'
                   classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-indi, g, o-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'
                 ></a>
                   <Rocket, classNam, e='w-5 h-5' /></Rocket>

@@ -3,7 +3,6 @@ import { Brain, Zap, Shield, BarChart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -71,7 +70,6 @@ $4}
 export default $1;
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { 
   Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
   Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart,
@@ -146,7 +144,6 @@ export default function AIServicesPage() {
         professional: { price: '$4,500', period: '/month', features: ['Up to 10,000 conversations', 'Advanced AI', 'Multi-channel support', 'Analytics dashboard'] },
         enterprise: { price: '$12,000', period: '/month', features: ['Unlimited conversations', 'Custom AI training', 'Dedicated support', 'SLA guarantee'] }
       },
-      icon: MessageSquare,
       color: 'from-green-500 to-emerald-600',
       popular: true
     },
@@ -315,7 +312,6 @@ export default function AIServicesPage() {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                           {feature}

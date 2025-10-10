@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-interface AdvancedAnalyticsProps {/* TODO: Fix JSX expression */}
 }
 
 const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
@@ -65,8 +64,6 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
         <div className="metric-card"></div>
           <h3>Conversion Rate</h3>
 const,
-  AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
     },
     conversion,
   s: 0,
@@ -75,13 +72,10 @@ const,
     error,
   s: 0});
 
-  useEffect(() => {/* TODO: Fix JSX expression */}
       //       }
 
-    if (enablePerformanceTracking) {/* TODO: Fix JSX expression */}
       //       }
 
-    if (enableErrorTracking) {/* TODO: Fix JSX expression */}
       //       }
   }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
 

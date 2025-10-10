@@ -35,7 +35,6 @@
   y: string;
   pric,
   e: string;
-  feature,
   s: string[];
   benefit,
   s: string[];
@@ -84,7 +83,6 @@
   y: 'DevOps & AI',
     pric,
   e: '$24, 999 / month',
-    feature,
   s: [,
       'Autonomous code deployment',
       'AI - powered testing automation',
@@ -206,7 +204,6 @@
   y: 'Edge Computing & Quantum',
     pric,
   e: '$19, 999 / month',
-    feature,
   s: [,
       'Quantum resource optimization',
       'Edge node orchestration',
@@ -304,7 +301,6 @@
   y: 'IT Operations & AI',
     pric,
   e: '$29, 999 / month',
-    feature,
   s: [,
       'AI - powered monitoring',
       'Predictive maintenance',
@@ -403,7 +399,6 @@
   y: 'Blockchain & Quantum',
     pric,
   e: '$39, 999 / month',
-    feature,
   s: [,
       'Quantum - enhanced security',
       'Scalable blockchain architecture',
@@ -534,7 +529,6 @@
   y: 'Data Center & AI',
     pric,
   e: '$44, 999 / month',
-    feature,
   s: [,
       'Autonomous infrastructure management',
       'AI - powered cooling optimization',
@@ -693,7 +687,6 @@
   n: string, categor,
   y: string,
   pric,
-  e: string, feature,
   s: string[],
   benefit,
   s: string[], useCase,
@@ -811,7 +804,6 @@
   s://ziontechgroup.com/ai-autonomous-data-center'
   }
 ];
-export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
   t: string}
   websit,
   e: string}
@@ -834,7 +826,6 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
       'Financial institutionsHealthcare organizationsGovernment agenciesDefense contractorsTechnology companiesCritical infrastructure',
 export const,
   enterprise2034Services: EnterpriseService2034[] = [;
-  {/* TODO: Fix JSX expression */}
     ]}
     technolog,
   y: [}
@@ -904,7 +895,6 @@ export const,
   e: 'http,
   s://ziontechgroup.com/quantum-zero-trust-architecture'
   };
-  {/* TODO: Fix JSX expression */}
     ]}
     technolog,
   y: [}
@@ -974,7 +964,6 @@ export const,
   e: 'http,
   s://ziontechgroup.com/ai-autonomous-devops-platform'
   };
-  {/* TODO: Fix JSX expression */}
     ]}
     technolog,
   y: [}
@@ -1044,7 +1033,6 @@ export const,
   e: 'http,
   s://ziontechgroup.com/quantum-edge-computing-orchestrator'
   };
-  {/* TODO: Fix JSX expression */}
     ]}
     technolog,
   y: [}
@@ -1114,7 +1102,6 @@ export const,
   e: 'http,
   s://ziontechgroup.com/ai-powered-it-operations-center'
   };
-  {/* TODO: Fix JSX expression */}
     ]}
     technolog,
   y: [}
@@ -1206,7 +1193,6 @@ export const,
   e: 'http,
   s://ziontechgroup.com/quantum-blockchain-infrastructure'
   };
-  {/* TODO: Fix JSX expression */}
   t: '+1 302 464 0950'}
     websit,
   e: 'http,
@@ -1217,13 +1203,11 @@ export const,
   e: 'http,
   s://ziontechgroup.com / ai - autonomous - data - center'
   }
-export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
   t: string}
   websit,
   e: string}
 }
 ;
-export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
   }
 ];
 export const enterprise2034Services: EnterpriseService2034[] = [;
@@ -1243,7 +1227,6 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
       'Financial institutionsHealthcare organizationsGovernment agenciesDefense contractorsTechnology companiesCritical infrastructure',
 export const,
   enterprise2034Services: EnterpriseService2034[] = [;
-  {/* TODO: Fix JSX expression */}
     ]}
     technolog,
   y: [}
@@ -1313,7 +1296,6 @@ export const,
   e: 'http,
   s://ziontechgroup.com/quantum-zero-trust-architecture'
   };
-  {/* TODO: Fix JSX expression */}
     ]}
     technolog,
   y: [}
@@ -1383,7 +1365,6 @@ export const,
   e: 'http,
   s://ziontechgroup.com/ai-autonomous-devops-platform'
   };
-  {/* TODO: Fix JSX expression */}
     ]}
     technolog,
   y: [}
@@ -1453,7 +1434,6 @@ export const,
   e: 'http,
   s://ziontechgroup.com/quantum-edge-computing-orchestrator'
   };
-  {/* TODO: Fix JSX expression */}
     ]}
     technolog,
   y: [}
@@ -1523,7 +1503,6 @@ export const,
   e: 'http,
   s://ziontechgroup.com/ai-powered-it-operations-center'
   };
-  {/* TODO: Fix JSX expression */}
     ]}
     technolog,
   y: [}
@@ -1593,7 +1572,6 @@ export const,
   e: 'http,
   s://ziontechgroup.com/quantum-blockchain-infrastructure'
   };
-  {/* TODO: Fix JSX expression */}
     ]}
     technolog,
   y: [}
@@ -1668,7 +1646,6 @@ i,
   e: string, descriptio,
   n: string; categor,
   y: string; pric,
-  e: string; feature,
   s: string[]; benefit,
   s: string[]; useCase,
   s: string[]; technolog,
@@ -1692,7 +1669,6 @@ i,
   e: 'AI Autonomous DevOps Platform', descriptio,
   n:  ,' 'Next - generation DevOps platform that uses AI to autonomously manage, optimize, and operate enterprise development and operations.',' categor,
   y: 'DevOps & AI',' pric,
-  e: '$24, 999 / month', feature,
   s: [,' 'Autonomous code deployment',' 'AI - powered testing automation',' 'Intelligent monitoring systems',' 'Predictive incident prevention',' 'Automated scaling',' 'Self - healing infrastructure',' 'AI code review',' 'Autonomous optimization'], benefit,
   s: [,' 'Zero - downtime deployments',' 'Automated quality assurance',' 'Predictive maintenance',' 'Reduced human error',' 'Faster time to market',' 'Cost optimization'], use_case,
   s: [,' 'Software development companies',' 'IT departments',' 'DevOps teams',' 'Cloud providers',' 'Enterprise organizations',' 'Startups and scale - ups'], technolog,
@@ -1721,7 +1697,6 @@ i,
   e: 'Quantum Edge Computing Orchestrator', descriptio,
   n:  ,' 'Advanced platform that orchestrates edge computing resources using quantum algorithms for optimal performance and resource allocation.',' categor,
   y: 'Edge Computing & Quantum',' pric,
-  e: '$19, 999 / month', feature,
   s: [,' 'Quantum resource optimization',' 'Edge node orchestration',' 'Real - time load balancing',' 'Predictive scaling',' 'Edge AI deployment',' 'Quantum routing algorithms',' 'Edge security management',' 'Cross - platform synchronization'], benefit,
   s: [,' 'Optimal resource utilization',' 'Reduced latency',' 'Improved performance',' 'Cost optimization',' 'Scalable edge infrastructure',' 'Future - ready architecture'], use_case,
   s: [,' 'IoT deployments',' '5G networks',' 'Smart cities',' 'Industrial automation',' 'Autonomous vehicles',' 'Edge data centers'], technolog,
@@ -1747,7 +1722,6 @@ i,
   e: 'AI - Powered IT Operations Center', descriptio,
   n:  ,' 'Intelligent IT operations platform that uses AI to autonomously monitor, manage, and optimize enterprise IT infrastructure.',' categor,
   y: 'IT Operations & AI',' pric,
-  e: '$29, 999 / month', feature,
   s: [,' 'AI - powered monitoring',' 'Predictive maintenance',' 'Autonomous incident response',' 'Intelligent capacity planning',' 'Automated troubleshooting',' 'Performance optimization',' 'Real - time analytics',' 'Proactive alerting'], benefit,
   s: [,' 'Reduced downtime',' 'Predictive problem resolution',' 'Automated operations',' 'Cost optimization',' 'Improved performance',' '24 / 7 autonomous operation'], use_case,
   s: [,' 'Enterprise IT departments',' 'Data centers',' 'Cloud providers',' 'Managed service providers',' 'Large organizations',' 'Critical infrastructure'], technolog,
@@ -1773,7 +1747,6 @@ i,
   e: 'Quantum Blockchain Infrastructure Platform', descriptio,
   n:  ,' 'Revolutionary blockchain platform that integrates quantum computing for enhanced security, scalability, and performance.',' categor,
   y: 'Blockchain & Quantum',' pric,
-  e: '$39, 999 / month', feature,
   s: [,' 'Quantum - enhanced security',' 'Scalable blockchain architecture',' 'Smart contract automation',' 'Quantum consensus algorithms',' 'Cross - chain interoperability',' 'Real - time transaction processing',' 'Quantum encryption',' 'Advanced analytics'], benefit,
   s: [,' 'Unprecedented blockchain security',' 'Massive scalability improvements',' 'Quantum - level encryption',' 'Faster transaction processing',' 'Reduced energy consumption',' 'Future - proof blockchain'], use_case,
   s: [,' 'Financial institutions',' 'Supply chain companies',' 'Healthcare organizations',' 'Government agencies',' 'Cryptocurrency platforms',' 'Enterprise blockchain'], technolog,
@@ -1805,7 +1778,6 @@ i,
   e: 'AI Autonomous Data Center Platform', descriptio,
   n:  ,' 'Next - generation data center management platform that uses AI to autonomously operate and optimize enterprise data centers.',' categor,
   y: 'Data Center & AI',' pric,
-  e: '$44, 999 / month', feature,
   s: [,' 'Autonomous infrastructure management',' 'AI - powered cooling optimization',' 'Predictive maintenance',' 'Energy efficiency optimization',' 'Autonomous security monitoring',' 'Capacity planning AI',' 'Real - time performance optimization',' 'Automated disaster recovery'], benefit,
   s: [,' 'Reduced operational costs',' 'Improved energy efficiency',' 'Predictive maintenance',' 'Automated operations',' 'Enhanced security',' '24 / 7 autonomous operation'], use_case,
   s: [,' 'Enterprise data centers',' 'Cloud providers',' 'Colocation facilities',' 'Edge data centers',' 'Government facilities',' 'Financial institutions'], technolog,
@@ -1844,7 +1816,6 @@ i,
   e: string, descriptio,
   n: string, categor,
   y: string, pric,
-  e: string, feature,
   s: string[], benefit,
   s: string[], useCase,
   s: string[], technolog,
@@ -1894,59 +1865,45 @@ i,
   e: '99.999% data center platform availability' ' contac,
   t: '+1 302 464 0950' ' websit,
   e: 'http,
-  s://ziontechgroup.com/ai-autonomous-data-center' } ]; export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
   t: string} websit,
   e: string} } ; export const,
-  enterprise2034Services: EnterpriseService2034[] = [; {/* TODO: Fix JSX expression */}
   e: '99.999% security platform availability'}' contac,
   t: '+1 302 464 0950'};' websit,
   e: 'http,
-  s://ziontechgroup.com/quantum-zero-trust-architecture' }; {/* TODO: Fix JSX expression */}
   e: '99.99% DevOps platform availability'}' contac,
   t: '+1 302 464 0950'};' websit,
   e: 'http,
-  s://ziontechgroup.com/ai-autonomous-devops-platform' }; {/* TODO: Fix JSX expression */}
   e: '99.99% edge platform availability'}' contac,
   t: '+1 302 464 0950'};' websit,
   e: 'http,
-  s://ziontechgroup.com/quantum-edge-computing-orchestrator' }; {/* TODO: Fix JSX expression */}
   e: '99.99% operations platform availability'}' contac,
   t: '+1 302 464 0950'};' websit,
   e: 'http,
-  s://ziontechgroup.com/ai-powered-it-operations-center' }; {/* TODO: Fix JSX expression */}
   e: '99.99% blockchain platform availability'}' contac,
   t: '+1 302 464 0950'};' websit,
   e: 'http,
-  s://ziontechgroup.com/quantum-blockchain-infrastructure' }; {/* TODO: Fix JSX expression */}
   t: '+1 302 464 0950'}' websit,
   e: 'http,
   s://ziontechgroup.com/ai-autonomous-data-center'' contac,
   t: '+1 302 464 0950'}' websit,
   e: 'http,
-  s://ziontechgroup.com / ai - autonomous - data - center' } export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
   t: string} websit,
   e: string} } ; export interface EnterpriseService2034 {; } ]; export const,
-  enterprise2034Services: EnterpriseService2034[] = [; {/* TODO: Fix JSX expression */}
   e: '99.999% security platform availability'}' contac,
   t: '+1 302 464 0950'};' websit,
   e: 'http,
-  s://ziontechgroup.com/quantum-zero-trust-architecture' }; {/* TODO: Fix JSX expression */}
   e: '99.99% DevOps platform availability'}' contac,
   t: '+1 302 464 0950'};' websit,
   e: 'http,
-  s://ziontechgroup.com/ai-autonomous-devops-platform' }; {/* TODO: Fix JSX expression */}
   e: '99.99% edge platform availability'}' contac,
   t: '+1 302 464 0950'};' websit,
   e: 'http,
-  s://ziontechgroup.com/quantum-edge-computing-orchestrator' }; {/* TODO: Fix JSX expression */}
   e: '99.99% operations platform availability'}' contac,
   t: '+1 302 464 0950'};' websit,
   e: 'http,
-  s://ziontechgroup.com/ai-powered-it-operations-center' }; {/* TODO: Fix JSX expression */}
   e: '99.99% blockchain platform availability'}' contac,
   t: '+1 302 464 0950'};' websit,
   e: 'http,
-  s://ziontechgroup.com/quantum-blockchain-infrastructure' }; {/* TODO: Fix JSX expression */}
   e: '99.999% data center platform availability'}' contac,
   t: '+1 302 464 0950'};' websit,
   e: 'http,

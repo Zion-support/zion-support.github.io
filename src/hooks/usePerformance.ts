@@ -48,7 +48,6 @@ export const usePerformance = () => {
 
 
 'use client';
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
@@ -65,11 +64,9 @@ export const _usePerformance = () => {// TODO: Add content;}
   const [metrics, setMetrics] = useState;
           <PerformanceMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
-  useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if (typeof window === 'undefined' || !('performance' in window)) return;
-    const measurePerformance = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       const navigation = performance.getEntriesByType()
@@ -85,16 +82,12 @@ export const _usePerformance = () => {// TODO: Add content;}
       if ('PerformanceObserver' in window) {// TODO: Add content;}
 
 }
-        const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
-          for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
             if ()
               entry.entryType === 'layout-shift' &&
-              !(entry as unknown as {/* TODO: Fix JSX expression */})
-  t: boolean }).hadRecentInput) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 
@@ -104,7 +97,6 @@ export const _usePerformance = () => {// TODO: Add content;}
           }
         }
   )
-        observer.observe({/* TODO: Fix JSX expression */}
   s: ['layout-shift'] })
   )
       }
@@ -113,13 +105,10 @@ export const _usePerformance = () => {// TODO: Add content;}
       if ('PerformanceObserver' in window) {// TODO: Add content;}
 
 }
-        const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
-          for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-            if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 
@@ -127,13 +116,11 @@ export const _usePerformance = () => {// TODO: Add content;}
 }
 
               firstInputDelay =
-                (entry as unknown as {/* TODO: Fix JSX expression */})
   t: number }).processingStart - entry.startTime;
             }
           }
         }
   )
-        observer.observe({/* TODO: Fix JSX expression */}
   s: ['first-input'] })
   )
       }
@@ -169,13 +156,10 @@ export const _usePerformance = () => {// TODO: Add content;}
     // Start monitoring;
     setIsMonitoring(true);
     // Measure performance after page load;
-    if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       window.addEventListener('load', measurePerformance);
     }
-    return () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       window.removeEventListener('load', measurePerformance);

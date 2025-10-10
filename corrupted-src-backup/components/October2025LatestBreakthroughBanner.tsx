@@ -12,7 +12,6 @@ const, October2025LatestBreakthroughBanne, r = () => {
       {/* Animated, background, effects */};</div>
       <div, className="absolute, inse, t-0, opacit, y-20">";</div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
-const, October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
@@ -92,7 +91,6 @@ return (</div>
                     <div, className="te, x, t-xs, tex, t-bl, u, e-300, m, b-2">{conte, n, t.catego, r, y}</d, i, v>";
         {/* Content, Card, s */}"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-          {/* TODO: Fix JSX expression */}
 }
                 to={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`"
                 classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hov, e,"
@@ -132,7 +130,6 @@ return (</div>
                       <div, className="te, x, t-xs, tex, t-bl, u, e-300, capitaliz, e">{k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()}</d, i, v>;
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, rounde, d-l, g, p-2">";</div>
                       <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">{val, u, e}</d, i, v>";
-                  {/* TODO: Fix JSX expression */}"
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, rounde, d-l, g, p-2"></div>"
                       <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">{val, u, e}</d, i, v>"
                       <div, className="te, x, t-xs, tex, t-bl, u, e-300, capitaliz, e">{k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()}</d, i, v>;"
@@ -144,11 +141,8 @@ return (</div>
                 </d, i, v>
                 {/* Highligh, t, s */}"
                 <ul, className="spa, c, e-y-2, m, b-4">";
-                  {/* TODO: Fix JSX expression */}"
                     <li, ke, y={i, d, x} classNa, m, e="flex, item, s-start, ga, p-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0"></li>"
-                      <TrendingUp, className="w-3 h-3, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  /></TrendingUp>"
                     <li, ke, y={i, d, x} classNa, m, e="flex, item, s-start, ga, p-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0">";"
-                      <TrendingUp, className="w-3 h-3, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />";
                       <sp, a, n>{highlig, h, t}</sp, a, n>
                     </li>
                   ))}
@@ -200,7 +194,6 @@ return (</div>
   to="/bl, o, g""
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s"
             ></Li>
-              Explore, All, Articles;
             </Li, n, k>
           </d, i, v>
         </d, i, v>

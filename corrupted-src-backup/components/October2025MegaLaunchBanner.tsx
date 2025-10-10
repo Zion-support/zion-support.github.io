@@ -1,51 +1,33 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";
 const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
   const, megaArticle, s = [
     {
       ti, t, l;
   e: "🚀 Autonomous, DevOps, Platforms","
-      descripti, o, n: "Se, l, f-healing, infrastructure, achieving 99.9% upti, m, e","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-04-autonomo, u, s-devo, p, s-platfor, m, s","
       catego, r, y: "DevO, p, s & Infrastructu, r, e"
-const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";';
-impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';
 const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
   const, megaArticle, s = [
     {
       ti, t, l;
   e: "🚀 Autonomous, DevOps, Platforms",";
-      descripti, o, n: "Se, l, f-healing, infrastructure, achieving 99.9% upti, m, e",";
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-04-autonomo, u, s-devo, p, s-platfor, m, s",";
       catego, r, y: "DevO, p, s & Infrastructu, r, e"
-const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   return(<div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">
@@ -102,7 +84,6 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">""
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
-        {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
             to={artic, l, e.li, n, k}"
             classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e,"

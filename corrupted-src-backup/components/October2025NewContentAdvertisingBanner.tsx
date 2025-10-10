@@ -33,7 +33,6 @@ export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d
           <div, className="mb-8, animat, e-boun, c, e">";</div>
             <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-yell, o, w-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, borde, r-2, borde, r-yell, o, w-5, 0, 0/50, shado, w-lg, shado, w-yell, o, w-5, 0, 0/30">";</div>
               <Zap, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
-export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
       {/* Animated, Background, Elements */}
       <div, className="absolute, inse, t-0"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-[u, r, l('da, t, a: ima, g, e/s, v, g+x, m, l;base, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4=')] opaci, t, y-40/>""
@@ -92,8 +91,6 @@ export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d
               <div, className="te, x, t-5xl, fon, t-black, tex, t-pi, n, k-300, m, b-2">1, 0, 0,00, 0, x</d, i, v>";
               <div, className="te, x, t-xl, tex, t-white, fon, t-semibo, l, d">Performance, Improvemen, t</d, i, v>";
             </d, i, v>
-            <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, backdro, p-bl, u, r-s, m, p-6, rounde, d-2xl, border, border-gre, e, n-5, 0, 0/30">";</div>
-              <div, className="te, x, t-5xl, fon, t-black, tex, t-gre, e, n-300, m, b-2">99.9, 9, 7%</d, i, v>";
               <div, className="te, x, t-xl, tex, t-white, fon, t-semibo, l, d">System, Uptim, e</d, i, v>";
             </d, i, v>
           </d, i, v>
@@ -136,8 +133,6 @@ export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d
               <div, className="te, x, t-5xl, fon, t-black, tex, t-pi, n, k-300, m, b-2">1, 0, 0,00, 0, x</d, i, v>";"
               <div, className="te, x, t-xl, tex, t-white, fon, t-semibo, l, d">Performance, Improvemen, t</d, i, v>";
             </d, i, v>"
-            <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, backdro, p-bl, u, r-s, m, p-6, rounde, d-2xl, border, border-gre, e, n-5, 0, 0/30">";"
-              <div, className="te, x, t-5xl, fon, t-black, tex, t-gre, e, n-300, m, b-2">99.9, 9, 7%</d, i, v>";"
               <div, className="te, x, t-xl, tex, t-white, fon, t-semibo, l, d">System, Uptim, e</d, i, v>";
             </d, i, v>
           </d, i, v>
@@ -175,17 +170,10 @@ export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d
               </d, i, v>
               <d, i, v>
                 <div, className="flex, item, s-center, ga, p-2, m, b-3"></div>
-                  <div, className="w-2 h-2, b, g-gre, e, n-400, rounde, d-full, animat, e-pul, s, e  /></div>
-                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0">Neur, a, l-Symbolic, Reasonin, g</h3>
                 <div, className="flex, item, s-center, ga, p-2, m, b-3">";</div>
-                  <div, className="w-2 h-2, b, g-gre, e, n-400, rounde, d-full, animat, e-pul, s, e" />";</div>
               <d, i, v></d>"
                 <div, className="flex, item, s-center, ga, p-2, m, b-3"></div>"
-                  <div, className="w-2 h-2, b, g-gre, e, n-400, rounde, d-full, animat, e-pul, s, e  /></div>"
-                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0">Neur, a, l-Symbolic, Reasonin, g</h3>"
                 <div, className="flex, item, s-center, ga, p-2, m, b-3">";"
-                  <div, className="w-2 h-2, b, g-gre, e, n-400, rounde, d-full, animat, e-pul, s, e" />";"
-                  <h3, className="te, x, t-xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0">Neur, a, l-Symbolic, Reasonin, g</h3>";
                 </d, i, v>"
                 <p, className="te, x, t-gr, a, y-3, 0, 0">Explainable, AI, with hum, a, n-like, logical, reasoning capabiliti, e, s</p>";
               </d, i, v>
@@ -234,13 +222,9 @@ export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d
                 <sp, a, n>READ, ALL, 3 GUID, E, S</sp, a, n>
               </Li, n, k>
             </d, i, v>
-            <div, className="flex, item, s-center, ga, p-2, tex, t-gre, e, n-400, tex, t-lg, fon, t-semibo, l, d"></div>
               <TrendingUp, className="w-5 h-5  />
-            <div, className="flex, item, s-center, ga, p-2, tex, t-gre, e, n-400, tex, t-lg, fon, t-semibo, l, d">";</div>
             </d, i, v>"
-            <div, className="flex, item, s-center, ga, p-2, tex, t-gre, e, n-400, tex, t-lg, fon, t-semibo, l, d"></div>"
               <TrendingUp, className="w-5 h-5  /></TrendingUp>"
-            <div, className="flex, item, s-center, ga, p-2, tex, t-gre, e, n-400, tex, t-lg, fon, t-semibo, l, d">";"
               <TrendingUp, className="w-5 h-5" />";
               <sp, a, n>Trusted, by, 500+ Fortune, 500, Companies</sp, a, n>
             </d, i, v>

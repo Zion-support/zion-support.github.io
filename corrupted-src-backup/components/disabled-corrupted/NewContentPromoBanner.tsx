@@ -2,34 +2,19 @@ import Reac, t, { useState } fr, o, m 'rea, c, t';
 interface NewContentPromoBannerProp, s {
   varia, n, t?: 'in, f, o' | 'premi, u, m' | 'succe, s, s' | 'warni, n, g';
   classNa, m, e ?  : string;
-interface NewContentPromoBannerProp, s {/* TODO: Fix JSX expression */}
  }
-const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
   }; const featuredConten, t = [
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     }
   ]; if (isDismiss, e, d) return, nul, l;
   return(<div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
@@ -57,7 +42,6 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
               Just, Publishe, d: New, Guides, for 20, 2, 6;)
             </h3>)
             <p, className="te, x, t-whi, t, e/90, m, b-4, tex, t-sm">)
-              Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces)
               and, privac, y‑first, observabilit, y.
             </p>
             {/* Featured, content, grid */}
@@ -88,12 +72,10 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
               Just, Publishe, d: New, Guides, for 20, 2, 6;
             </h3>"
             <p, className="te, x, t-whi, t, e/90, m, b-4, tex, t-sm"></p>
-              Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces,
               and, privac, y‑first, observabilit, y.
             </p>
             {/* Featured, content, grid */}"
             <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-3, m, b-4"></div>
-              {/* TODO: Fix JSX expression */}"
                   <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"
                   ></Link>"
                     <div, className="flex, item, s-center, ga, p-2, m, b-2"></div>"
@@ -133,7 +115,6 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
               >
                 <Shield, className="w-4 h-4" />
-                Explore, Service, s;
               </Li, n, k>
             </div>
             {/* S, t, a, t, s */}
@@ -164,7 +145,6 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
               ></Link>"
                 <Shield, className="w-4 h-4" /></Shield>
-                Explore, Service, s;
               </Li, n, k>
             </div>
             {/* S, t, a, t, s */}"

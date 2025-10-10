@@ -48,7 +48,6 @@ export const _validationRules = {// TODO: Add content;}
 };
   validat,
   e: (valu)
-  e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -89,7 +88,6 @@ export const _validationRules = {// TODO: Add content;}
 };
   validat,
   e: (valu)
-  e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
@@ -107,15 +105,12 @@ export const _validationRules = {// TODO: Add content;}
 };
   validat,
   e: (valu)
-  e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         new URL(value);
         return true;
-      } catch {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         return false;
@@ -173,12 +168,10 @@ export const _validationRules = {// TODO: Add content;}
   d: ()
     message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character'
   ): ValidationRule;
-          <string> => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   validat,
   e: (valu)
-  e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       const hasUpperCase = /[A-Z]/.test(value);
@@ -220,7 +213,6 @@ export const _validationRules = {// TODO: Add content;}
 };
   validat,
   e: (fil)
-  e: File) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
@@ -248,21 +240,17 @@ export const _validationRules = {// TODO: Add content;}
 export function validateField;
           <T>(valu,
   e: T, rule)
-  s: ValidationRule<T>[]): ValidationResult {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   const,
   errors: string[] = [];
-  for (const rule of rules) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (!rule.validate(value)) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       errors.push(rule.message);
     }
   }
-  return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   vali,
@@ -284,7 +272,6 @@ export function validateForm;
 }
   const results = {} as Record;
           <keyof T, ValidationResult>;
-  for (const fieldName in validationSchema) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const value = formData[fieldName];
@@ -323,11 +310,9 @@ export function getFormErrors;
 }
   const errors = {} as Record;
           <keyof T, string[]>;
-  for (const fieldName in validationResults) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const result = validationResults[fieldName];
-    if (!result.valid) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       errors[fieldName] = result.errors;
@@ -371,21 +356,17 @@ export function debounce;
   timeout: NodeJS.Timeout | null = null;
   return function executedFunction(...arg,
   s: Parameters;)
-          <T>) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const later = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       timeout = null;
       func(...args);
     };
-    if (timeout) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       clearTimeout(timeout);
     }
-    if (timeout) {/* TODO: Fix JSX expression */}
   }
       clearTimeout(timeout)
     }

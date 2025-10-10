@@ -23,7 +23,6 @@ export interface QuantumAiService2025 {;,
   e: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -37,7 +36,6 @@ export interface QuantumAiService2025 {;,
   e: string;
     emai,
   l: string;
-export interface QuantumAiService2025 {/* TODO: Fix JSX expression */}
   s: string}
 };
   i,
@@ -50,7 +48,6 @@ export interface QuantumAiService2025 {/* TODO: Fix JSX expression */}
   e: string,,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -59,7 +56,6 @@ export interface QuantumAiService2025 {/* TODO: Fix JSX expression */}
   realImplementatio,
   n: boolean;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
@@ -111,7 +107,6 @@ export const quantumAIServices2025: QuantumAiService2025[] = [,
   e: string, pric,
   e: string,
   descriptio,
-  n: string, feature,
   s: string[],
   lin,
   k: string, categor,
@@ -136,7 +131,6 @@ export const,
   e: "$299/month",
     descriptio,"
   n: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.",
-    feature,
   s: [;"
       "Quantum AI algorithms""
       "Hybrid processing""
@@ -207,7 +201,6 @@ export const,
   e: "$299/month",
     descriptio,"
   n: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.",
-    feature,
   s: [,"
       "Quantum AI algorithms","
       "Hybrid processing","
@@ -251,25 +244,21 @@ i,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: mobil,
   e: string; emai,
-  l: string; export interface QuantumAiService2025 {/* TODO: Fix JSX expression */}
   s: string }; i,
   d: string; nam,
   e: string; taglin,
   e: string; pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
@@ -277,7 +266,6 @@ i,
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
@@ -291,7 +279,6 @@ i,
   e: "Quantum AI Hybrid Platform", taglin,"
   e: "Combining quantum computing with artificial intelligence", pric,"
   e: "$299/month", descriptio,"
-  n: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.", feature,"
   s: [ "Quantum AI algorithms" "Hybrid processing" "Advanced simulations" "Real-time optimization" "Enterprise support" ], lin,"
   k: "/services/quantum-ai-hybrid", categor,"
   y: "Quantum AI", realImplementatio,
@@ -308,7 +295,6 @@ i,
   e: "Quantum AI Hybrid Platform", taglin,"
   e: "Combining quantum computing with artificial intelligence", pric,"
   e: "$299/month", descriptio,"
-  n: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.", feature,"
   s: [ "Quantum AI algorithms", "Hybrid processing", "Advanced simulations", "Real-time optimization", "Enterprise support" ], lin,"
   k: "/services/quantum-ai-hybrid", categor,"
   y: "Quantum AI", realImplementatio,

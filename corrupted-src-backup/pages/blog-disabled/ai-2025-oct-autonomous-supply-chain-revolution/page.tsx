@@ -1,4 +1,3 @@
-impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
@@ -16,7 +15,6 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
         <meta, nam, e = 'keywor, d, s'
           conte, n, t='AI, supply, chai, n, autonomous, logistic, s, demand, forecastin, g, inventory, optimizatio, n, supply, chain, AI, predictive, analytic, s, logistics, automatio, n, supply, chain, management'
         /></meta>
-        <link, re, l = 'canonic, a, l'
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-autonomo u s-supp l y-cha i n-revoluti o n',
         />,
       </Helm, e, t>
@@ -59,7 +57,6 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
                 <li, className='flex, item, s-start, ga, p-3'>
                   <Globe, className='h-6 w-6, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>
-                    <stro, n, g>$45, 0, M+ Disruption, Preventio, n:</stro, n, g> Predictive, risk, management prevents, costly, supply chain, failure, s;
                   </sp, a, n>
           <div></div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3"></h2>
@@ -418,7 +415,6 @@ export default function AutonomousSupplyChainRevolution20, 2, 5() {
                 Schedule Your Supply Chain AI Assessment",
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">,
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />);
-export default function AutonomousSupplyChainRevolution20, 2, 5() {/* TODO: Fix JSX expression */}
 };
   </div>
   </div>

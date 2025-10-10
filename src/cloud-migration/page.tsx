@@ -6,7 +6,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const,
-  CloudMigrationPage: React.FC = () => {/* TODO: Fix JSX expression */}
     },
 
       ico,
@@ -67,7 +66,6 @@ const,
   n: 'Comprehensive analysis of current infrastructure and migration strategy',
       ico,
   n: CheckCircle,
-      feature,
   s: ['Infrastructure audit', 'Cost analysis', 'Migration timeline']
       ste,
   p: '2',
@@ -79,7 +77,6 @@ const,
   e: 'Optimization & Support',
       descriptio,
   n: 'Post-migration optimization and ongoing support',
-      feature,
   s: ['Performance tuning', 'Cost optimization', '24/7 support']
       ste,
   p: '01',
@@ -119,7 +116,6 @@ const,
   d: 'one-time',
       descriptio,
   n: 'Perfect for small businesses with basic cloud needs',
-      feature,
   s: [
         'Up to 10 servers',
         'Basic migration planning',
@@ -230,7 +226,6 @@ const,
           "
           <div className="grid grid-cols-1,"
   md:grid-cols-3 gap-8"></div>
-            {/* TODO: Fix JSX expression */}"
               <div key={index} className="cyber-card p-8 text-center group,"
   hover:scale-105 transition-transform duration-300"></div>"
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>"
@@ -238,7 +233,6 @@ const,
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>"
                 <p className="text-gray-300 mb-6">{feature.description}</p>"
                 <ul className="space-y-2"></ul>
-                  {/* TODO: Fix JSX expression */}"
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400"></li>"
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
       <Navigation /></Navigation>"
@@ -276,7 +270,6 @@ const,
                     <feature.icon className="w-8 h-8 text-blue-400 mr-3" /></feature>"
                     <h3 className="text-xl font-semibold text-white">{feature.title}</h3>"
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                    {/* TODO: Fix JSX expression */}"
                       <li key={idx} className="flex items-center text-gray-300"></li>
 
                         {benefit}
@@ -292,7 +285,6 @@ const,
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>
-              {/* TODO: Fix JSX expression */}"
                 <div key={index} className="text-center"></div>"
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4"></div>
                     {step.step}"
@@ -310,7 +302,6 @@ const,
                   <step.icon className="w-8 h-8 text-blue-400 mr-3" /></step>"
                   <h3 className="text-xl font-bold text-white">{step.title}</h3>"
                 <p className="text-gray-300 mb-6">{step.description}</p>
-                  {/* TODO: Fix JSX expression */}"
                     <li key={featureIndex} className="flex items-center text-sm text-gray-400"></li>
                       {feature}
 
@@ -370,7 +361,6 @@ const,
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Cloud Migration?</h2>"
             <p className="text-xl text-gray-300">Proven benefits that drive business value</p>
 
-            {/* TODO: Fix JSX expression */}"
               <div key={index} className="cyber-card p-6 text-center"></div>"
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
                   <benefit.icon className="w-8 h-8 text-white" /></benefit>"
@@ -382,9 +372,7 @@ const,
             <h2 className="text-4xl font-bold text-white mb-4">Transparent Migration Pricing</h2>"
             <p className="text-xl text-gray-300">Choose the migration package that fits your needs</p>
 
-            {/* TODO: Fix JSX expression */}
               <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}></div>
-                {/* TODO: Fix JSX expression */}
                 )}"
                 <div className="text-center mb-6"></div>"
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
@@ -393,7 +381,6 @@ const,
                     <span className="text-lg text-gray-400"> {plan.period}</span>"
                   <p className="text-gray-300">{plan.description}</p>"
                 <ul className="space-y-3 mb-8"></ul>
-                  {/* TODO: Fix JSX expression */}`
                 }`}></button>
                 </button>
 "

@@ -275,15 +275,6 @@ export function createDefaultMiddlewareChain(): MiddlewareExecutor {
 //     .use(timeoutMiddleware(30000))
     .use(retryMiddleware(2, 1000));
 export default {MiddlewareExecutor}
-  loggingMiddleware,
-  authMiddleware,
-  errorHandlingMiddleware,
-  rateLimitMiddleware,
-  cachingMiddleware,
-  retryMiddleware,
-  timeoutMiddleware,
-  transformRequestMiddleware,
-  transformResponseMiddleware,
 
   createDefaultMiddlewareChain
 };

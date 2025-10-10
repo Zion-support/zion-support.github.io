@@ -21,7 +21,6 @@ const October2025DocumentAutomationBanne, r = () => {
             <FileText, className='w-4 h-4, m, r-2' />
             NEW, RELEAS, E - OCTOB, E, R , 1, 20, 2, 5;
             <FileText, classNam, e = 'w-4 h-4, m, l-2' />
-const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
       {/* Animated, background, elements */}
       <div, className='absolute, inse, t-0, opacit, y-10'></div>
@@ -400,7 +399,6 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
             <Link, t, o='/bl, o, g'
               className='inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-indi, g, o-800, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:bg-indi, g, o-900, transitio, n-all, shado, w-xl'
             >
-              Explore, All, Solutions;
               <Link, className='w-5 h-5, m, l-2' />
             ></Link>
               Schedule, Assessmen, t;
@@ -409,7 +407,6 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
             <Link, t, o='/bl, o, g'
               className='inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-indi, g, o-800, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:bg-indi, g, o-900, transitio, n-all, shado, w-xl'
             ></Link>
-              Explore, All, Solutions;
               <Link, className='w-5 h-5, m, l-2' /></Link>
             </Li, n, k>
           </div>

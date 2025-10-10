@@ -23,7 +23,6 @@ export interface PracticalBusinessSolution2028 {;,
   e: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -37,7 +36,6 @@ export interface PracticalBusinessSolution2028 {;,
   e: string;
     emai,
   l: string;
-export interface PracticalBusinessSolution2028 {/* TODO: Fix JSX expression */}
   s: string}
 };
   i,
@@ -50,7 +48,6 @@ export interface PracticalBusinessSolution2028 {/* TODO: Fix JSX expression */}
   e: string,,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -59,7 +56,6 @@ export interface PracticalBusinessSolution2028 {/* TODO: Fix JSX expression */}
   realImplementatio,
   n: boolean;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
@@ -111,7 +107,6 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
   e: string, pric,
   e: string,
   descriptio,
-  n: string, feature,
   s: string[],
   lin,
   k: string, categor,
@@ -136,7 +131,6 @@ export const,
   e: "$249/month",
     descriptio,"
   n: "Practical business solution platform that provides real-world solutions for 2028.",
-    feature,
   s: [;"
       "Practical solutions""
       "Business applications""
@@ -207,7 +201,6 @@ export const,
   e: "$249/month",
     descriptio,"
   n: "Practical business solution platform that provides real-world solutions for 2028.",
-    feature,
   s: [,"
       "Practical solutions","
       "Business applications","
@@ -251,25 +244,21 @@ i,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: mobil,
   e: string; emai,
-  l: string; export interface PracticalBusinessSolution2028 {/* TODO: Fix JSX expression */}
   s: string }; i,
   d: string; nam,
   e: string; taglin,
   e: string; pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
@@ -277,7 +266,6 @@ i,
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
@@ -291,7 +279,6 @@ i,
   e: "2028 Practical Business Solution Platform", taglin,"
   e: "Practical business solutions for 2028", pric,"
   e: "$249/month", descriptio,"
-  n: "Practical business solution platform that provides real-world solutions for 2028.", feature,"
   s: [ "Practical solutions" "Business applications" "Real-world use cases" "Easy integration" "Affordable pricing" ], lin,"
   k: "/services/2028-practical-business-solution", categor,"
   y: "Practical Business Solutions 2028", realImplementatio,
@@ -308,7 +295,6 @@ i,
   e: "2028 Practical Business Solution Platform", taglin,"
   e: "Practical business solutions for 2028", pric,"
   e: "$249/month", descriptio,"
-  n: "Practical business solution platform that provides real-world solutions for 2028.", feature,"
   s: [ "Practical solutions", "Business applications", "Real-world use cases", "Easy integration", "Affordable pricing" ], lin,"
   k: "/services/2028-practical-business-solution", categor,"
   y: "Practical Business Solutions 2028", realImplementatio,

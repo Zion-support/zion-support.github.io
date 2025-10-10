@@ -3,7 +3,6 @@ import React from 'react';
 import Navigation from '../app/components/Navigation';
 import Footer from '../app/components/Footer';
 import SEOOptimizer from '../app/components/SEOOptimizer';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react';
 
 const PageTemplate: React.FC<{
   title: string;
@@ -76,13 +75,11 @@ const PageTemplate: React.FC<{
           </div>,
           ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
-            {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover: border-cyan-400/60 transition-all duration-300">,
                 <CheckCircle className="w-8 h-8 text-green-400 mb-4" />,
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
                 <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature}</h3>

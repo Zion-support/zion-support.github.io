@@ -13,5 +13,4 @@
 export interface BannerMetadata {,
   id: string;
 ,
-export interface BannerMetadata {/* TODO: Fix JSX expression */}
 }

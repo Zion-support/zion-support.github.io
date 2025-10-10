@@ -1,7 +1,6 @@
 import React from 'react';
 import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react';
 
-import React from 'react';
 
 const AISocialMediaManagerPage: React.FC = () => {
   const features = [
@@ -22,7 +21,6 @@ icon$5: Calendar,
 icon$5: BarChart,
       title: 'Performance Analytics',
       description:       ,
-icon$5: MessageSquare,
       title: 'Auto-Responses',
       description:     ,
 $4}
@@ -125,7 +123,6 @@ $4}
               Leverage cutting-edge AI technology to streamline your social media management
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-pink-400/20 hover:border-pink-400/40 transition-all duration-300">
                 <div className="w-12 h-12 bg-pink-500/10 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-pink-400" />
@@ -173,7 +170,6 @@ $4}
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-400">{plan.period}</span>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -197,6 +193,5 @@ $4}
 
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 export default AISocialMediaManagerPage;

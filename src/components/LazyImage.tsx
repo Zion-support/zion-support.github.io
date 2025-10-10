@@ -1,7 +1,6 @@
 
 
 'use client';
-interface LazyImageProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   sr,
@@ -15,7 +14,6 @@ interface LazyImageProps {/* TODO: Fix JSX expression */}
 
 const,
   LazyImage: React.FC;
-          <LazyImageProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //   src,
@@ -28,28 +26,23 @@ const,
   priority = false,
 //   onLoad,
 //   onError)
-}) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if (priority) return;
     const observer = new IntersectionObserver()
-      ([entry]) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
           setIsInView(true);
           observer.disconnect();
         }
       },
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   threshol,
@@ -57,20 +50,17 @@ const,
         rootMargi,
   n: '50px'}
     );
-    if (imgRef.current) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       observer.observe(imgRef.current);
     }
     return () => observer.disconnect();
   }, [priority]);
-  const handleLoad = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     setIsLoaded(true);
     onLoad?.();
   };
-  const handleError = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     setHasError(true);

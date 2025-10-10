@@ -65,7 +65,6 @@ const CognitiveAutomationEnterpriseRevolution: () => {
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
         <Head, e, r /></Head>
 const,
-  CognitiveAutomationEnterpriseRevolution: () => {/* TODO: Fix JSX expression */}
           {/* Back Link */};
           <Link to="/blog"></Link>"
   className="inline-flex items-center text-zion-cyan,"
@@ -102,9 +101,7 @@ const,
               <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
                 —intelligent, systems, that d, o, n't, just, execute ta, s, k, s, but, understand, context, make, decision, s, and, continuously, learn from, outcome, s.</h2>
                 <p, classNam, e='te, x, t-lg'>
-                  Companies, implementing, cognitive automation, are, seeing average, productivity, gains of, 10x, while reducing, operational, costs by, 6, 8%. The, technology, has matured, from, experimental to, missio, n-critic, a, l.</p>
                 <p, className='te, x, t-lg'>
-                  Companies, implementing, cognitive automation, are, seeing average, productivity, gains of, 10x, while reducing, operational, costs by, 6, 8%. The, technology, has matured, from experimental to, missio, n-critic, a, l.</p>
               <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
                 🧠 What, Makes, Automation "Cogniti, v, e"?
           {/* Header */}</h2>
@@ -166,9 +163,7 @@ const,
               <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'></h2>
                 —intelligent, systems, that d, o, n't, just, execute ta, s, k, s, but, understand, context, make, decision, s, and, continuously, learn from, outcome, s.
                 <p, classNam, e='te, x, t-lg'></p>
-                  Companies, implementing, cognitive automation, are, seeing average, productivity, gains of, 10x, while reducing, operational, costs by, 6, 8%. The, technology, has matured, from, experimental to, missio, n-critic, a, l.
                 <p, className='te, x, t-lg'></p>
-                  Companies, implementing, cognitive automation, are, seeing average, productivity, gains of, 10x, while reducing, operational, costs by, 6, 8%. The, technology, has matured, from experimental to, missio, n-critic, a, l.
               <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'></h2>"
                 🧠 What, Makes, Automation "Cogniti, v, e"?
           {/* Header */}
@@ -1281,7 +1276,6 @@ Real-world implementations across industries are delivering transformational,
                   <p, classNam, e='te, x, t-sm, tex, t-bl, u, e-3, 0, 0'>
                     Examp, l, e: "Generate, a, quarterly sales, report, for the, Northeast, region focusing, on, accounts that, grew, more than, 2, 0%" executed, instantly, with contextual, intelligenc, e.</p>
                     <li, classNam, e='flex, item, s-start, ga, p-2'>
-                      <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
                       <sp, a, n>
                         <stro, n, g>98.7% accura, c, y</stro, n, g> in, fraud, detection with, 7, 5% fewer, false, positives;
                       </sp, a, n>
@@ -1293,7 +1287,6 @@ Real-world implementations across industries are delivering transformational,
                   <p, classNam, e='te, x, t-sm, tex, t-bl, u, e-3, 0, 0'></p>"
                     Examp, l, e: "Generate, a, quarterly sales, report, for the, Northeast, region focusing, on, accounts that, grew, more than, 2, 0%" executed, instantly, with contextual, intelligenc, e.
                     <li, classNam, e='flex, item, s-start, ga, p-2'></li>
-                      <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
                       <sp, a, n></sp>
                         <stro, n, g>98.7% accura, c, y</stro, n, g> in, fraud, detection with, 7, 5% fewer, false, positives;
                       </sp, a, n>
@@ -1310,7 +1303,6 @@ Real-world implementations across industries are delivering transformational,
                 </div>
               </div>
                     <li, className='flex, item, s-start, ga, p-2'>
-                      <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
                       <sp, a, n>
                         <stro, n, g>98.7% accura, c, y</stro, n, g> in, fraud, detection with, 7, 5% fewer, false, positives;
                       </sp, a, n>
@@ -1334,7 +1326,6 @@ Real-world implementations across industries are delivering transformational,
                       </sp, a, n>
               <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
                     <li, className='flex, item, s-start, ga, p-2'></li>
-                      <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>
                       <sp, a, n></sp>
                         <stro, n, g>98.7% accura, c, y</stro, n, g> in, fraud, detection with, 7, 5% fewer, false, positives;
                       </sp, a, n>
@@ -1397,9 +1388,7 @@ Real-world implementations across industries are delivering transformational,
                   <Rocket, className='w-5 h-5' />
                   Schedule, Consultatio, n;
                   <TrendingUp, classNam, e='w-5 h-5' />
-                  Explore, AI, Services;
                   <TrendingUp, className='w-5 h-5' />
-                  Explore, AI, Services;
 }
                       <p, classNam, e = 'mb-4'></p>
                         Identify, hig, h-value, automation, opportunities through, process, mini, n, g, stakeholder, interview, s, and, ROI, modeling. Prioritize, use, cases based, on, business impact, and, technical feasibili, t, y.
@@ -1416,7 +1405,5 @@ Real-world implementations across industries are delivering transformational,
                   <Rocket, className='w-5 h-5' /></Rocket>
                   Schedule, Consultatio, n;
                   <TrendingUp, classNam, e='w-5 h-5' /></TrendingUp>
-                  Explore, AI, Services;
                   <TrendingUp, className='w-5 h-5' /></TrendingUp>
-                  Explore, AI, Services;
 }"

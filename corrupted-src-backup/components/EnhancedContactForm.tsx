@@ -12,7 +12,6 @@ export default function EnhancedContactForm(): React.JSX.Element {
     >
       <input;
         aria-label="Name"
-export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix JSX expression */}
       onSubmit={e => e.preventDefault()}
       className="grid gap-4 max-w-xl mx-auto"
     >

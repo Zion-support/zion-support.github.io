@@ -13,7 +13,6 @@ export default function ServicesSection() {
     },
     {
       title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure, migration services, and cloud-native application development.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
@@ -100,7 +99,6 @@ export default function ServicesSection() {
 
               {/* Features */}
               <ul className="space-y-2">
-                {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                     <svg className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />

@@ -32,7 +32,6 @@ const, October2025FraudDetectionBanne, r = () => {
         {/* Header, Sectio, n */}</div>
         <div, className="te, x, t-center, m, b-10">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-full, m, b-4, animat, e-pul, s, e">";</div>
-const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
@@ -97,10 +96,7 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
             <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Fraud, Reductio, n</d, i, v>
             <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">$410M, saved, avg</d, i, v>
           </d, i, v>
-          <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">"</div>
-            <Shield, className="w-8 h-8, tex, t-gre, e, n-400, m, x-auto, m, b-2  />
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$84, 7, B</d, i, v>
-            <div, className="te, x, t-sm, tex, t-gre, e, n-2, 0, 0">Assets, Protecte, d</d, i, v>
             <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">Globally, deploye, d</d, i, v>
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10">";
           <div, className="bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-r, e, d-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e;
@@ -125,13 +121,9 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
             <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Fraud, Reductio, n</d, i, v>";
             <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">$410M, saved, avg</d, i, v>";
           </d, i, v>
-          <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e;
   r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">";
-          <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e
   r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">";</div>
-            <Shield, className="w-8 h-8, tex, t-gre, e, n-400, m, x-auto, m, b-2" />";
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$84, 7, B</d, i, v>";
-            <div, className="te, x, t-sm, tex, t-gre, e, n-2, 0, 0">Assets, Protecte, d</d, i, v>";
             <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">Globally, deploye, d</d, i, v>";
           </d, i, v>
         </d, i, v>
@@ -178,10 +170,7 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
             <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Fraud, Reductio, n</d, i, v>"
             <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">$410M, saved, avg</d, i, v>
           </d, i, v>"
-          <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">""
-            <Shield, className="w-8 h-8, tex, t-gre, e, n-400, m, x-auto, m, b-2  /></Shield>"
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$84, 7, B</d, i, v>"
-            <div, className="te, x, t-sm, tex, t-gre, e, n-2, 0, 0">Assets, Protecte, d</d, i, v>"
             <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">Globally, deploye, d</d, i, v>"
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10">";"
           <div, className="bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-r, e, d-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e,"
@@ -203,11 +192,8 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
             <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Fraud, Reductio, n</d, i, v>";"
             <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">$410M, saved, avg</d, i, v>";
           </d, i, v>"
-          <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e,"
   r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">";"
-            <Shield, className="w-8 h-8, tex, t-gre, e, n-400, m, x-auto, m, b-2" />";"
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$84, 7, B</d, i, v>";"
-            <div, className="te, x, t-sm, tex, t-gre, e, n-2, 0, 0">Assets, Protecte, d</d, i, v>";"
             <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">Globally, deploye, d</d, i, v>";
           </d, i, v>
         </d, i, v>
@@ -350,42 +336,32 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
               </ul>
             </d, i, v>
             <d, i, v>
-              <div, className="te, x, t-gre, e, n-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2"></div>
                 <CheckCircle, className="w-5 h-5"  />
-              <div, className="te, x, t-gre, e, n-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2">";</div>
                 <CheckCircle, className="w-5 h-5" />";
                 Aft, e, r: AI-Powered, Excellenc, e;
               </d, i, v>
               <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">";
                 <li, className="flex, item, s-start, ga, p-2">";
             <d, i, v></d>"
-              <div, className="te, x, t-gre, e, n-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2"></div>"
                 <CheckCircle, className="w-5 h-5"  /></CheckCircle>"
-              <div, className="te, x, t-gre, e, n-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2">";"
                 <CheckCircle, className="w-5 h-5" />";
                 Aft, e, r: AI-Powered, Excellenc, e;
               </d, i, v>"
               <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">";"
                 <li, className="flex, item, s-start, ga, p-2">";"
-                  <span, className="te, x, t-gre, e, n-400, m, t-1">✓</sp, a, n>";
                   <sp, a, n>$17M, fraud, losses (96% reducti, o, n, $410M, save, d)</sp, a, n>
                 </li>"
                 <li, className="flex, item, s-start, ga, p-2">";"
-                  <span, className="te, x, t-gre, e, n-400, m, t-1">✓</sp, a, n>";
                   <sp, a, n>0.0, 0, 3% false, positive, s (27,000x, improvemen, t)</sp, a, n>
                 </li>"
                 <li, className="flex, item, s-start, ga, p-2">";"
-                  <span, className="te, x, t-gre, e, n-400, m, t-1">✓</sp, a, n>";
                   <sp, a, n>S, u, b-50ms, detectio, n (1,300x, faste, r)</sp, a, n>
                 </li>"
                 <li, className="flex, item, s-start, ga, p-2">";"
-                  <span, className="te, x, t-gre, e, n-400, m, t-1">✓</sp, a, n>";
                   <sp, a, n>1.2% chu, r, n ($120M, revenue, protected)</sp, a, n>
                 </li>"
                 <li, className="flex, item, s-start, ga, p-2"></li>"
-                  <span, className="te, x, t-gre, e, n-400, m, t-1">✓</sp, a, n>"
                 <li, className="flex, item, s-start, ga, p-2">";"
-                  <span, className="te, x, t-gre, e, n-400, m, t-1">✓</sp, a, n>";
                   <sp, a, n>NPS, Scor, e: 74 (indust, r, y-leadi, n, g, +60, point, s)</sp, a, n>
                 </li>
               </ul>
@@ -393,16 +369,13 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
           </d, i, v>
           <div, className="te, x, t-cent, e, r"></div>
             <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-lg"></div>
-              <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0  />
           <div, className="te, x, t-cent, e, r">";</div>
             <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-lg">";</div>
           </d, i, v>"
           <div, className="te, x, t-cent, e, r"></div>"
             <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-lg"></div>"
-              <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0  /></TrendingUp>"
           <div, className="te, x, t-cent, e, r">";"
             <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-lg">";"
-              <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0" />";
               <d, i, v></d>"
                 <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">43x, RO, I</d, i, v>";"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">6.2-week, payback, period</d, i, v>";
@@ -538,7 +511,6 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">";</div>
           <Li, n, k
-  to="/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-fra, u, d-detecti, o, n-revoluti, o, n"
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-600, t, o-r, e, d-700, hove, r: fr, o, m-r, e, d-500, hove, r:to-r, e, d-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-r, e, d-5, 0, 0/50"
           >
@@ -549,7 +521,6 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">""
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">";
           <Li, n, k;"
-  to="/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-fra, u, d-detecti, o, n-revoluti, o, n""
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-600, t, o-r, e, d-700, hove, r: fr, o, m-r, e, d-500, hove, r:to-r, e, d-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
   r:shad, o, w-r, e, d-5, 0, 0/50"
           ></Li>"
@@ -563,10 +534,8 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
               Complete, guide, to AI-powered, fraud, detection with, code, examples, architectu, r, e, and, implementation, roadmap;
             </d, i, v>
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"</div>
-              <sp, a, n>Explore, Technolog, y</sp, a, n>
               <Link, className="w-5 h-5  />
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";</div>
-              <sp, a, n>Explore, Technolog, y</sp, a, n>
               <Link, className="w-5 h-5" />";
             </d, i, v>
           </Li, n, k>
@@ -575,10 +544,8 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-purp, l, e-700, hove, r: fr, o, m-purp, l, e-500, hove, r:to-purp, l, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
             </d, i, v>"
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
-              <sp, a, n>Explore, Technolog, y</sp, a, n>"
               <Link, className="w-5 h-5  /></Link>"
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
-              <sp, a, n>Explore, Technolog, y</sp, a, n>"
               <Link, className="w-5 h-5" />";
             </d, i, v>
           </Li, n, k>
@@ -693,39 +660,30 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
         <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10"></div>
           <div, className="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-sm, tex, t-gr, a, y-4, 0, 0"></div>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
               <sp, a, n>Fortune, 100, Proven</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
               <sp, a, n>127, Countries, Deployed</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
               <sp, a, n>99.99% Uptime, SL, A</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
               <sp, a, n>1, 0, 0% Regulatory, Complianc, e</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2"></div>
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
         <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10">";</div>
           <div, className="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-sm, tex, t-gr, a, y-4, 0, 0">";</div>
             <div, className="flex, item, s-center, ga, p-2">";</div>
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
               <sp, a, n>Fortune, 100, Proven</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2">";</div>
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
               <sp, a, n>127, Countries, Deployed</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2">";</div>
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
               <sp, a, n>99.99% Uptime, SL, A</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2">";</div>
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
               <sp, a, n>1, 0, 0% Regulatory, Complianc, e</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2">";</div>
@@ -733,43 +691,33 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
         <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10"></div>"
           <div, className="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-sm, tex, t-gr, a, y-4, 0, 0"></div>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  /></CheckCircle>
               <sp, a, n>Fortune, 100, Proven</sp, a, n>
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  /></CheckCircle>
               <sp, a, n>127, Countries, Deployed</sp, a, n>
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  /></CheckCircle>
               <sp, a, n>99.99% Uptime, SL, A</sp, a, n>
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  /></CheckCircle>
               <sp, a, n>1, 0, 0% Regulatory, Complianc, e</sp, a, n>
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  /></CheckCircle>"
         <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10">";"
           <div, className="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-sm, tex, t-gr, a, y-4, 0, 0">";"
             <div, className="flex, item, s-center, ga, p-2">";"
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
               <sp, a, n>Fortune, 100, Proven</sp, a, n>
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2">";"
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
               <sp, a, n>127, Countries, Deployed</sp, a, n>
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2">";"
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
               <sp, a, n>99.99% Uptime, SL, A</sp, a, n>
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2">";"
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
               <sp, a, n>1, 0, 0% Regulatory, Complianc, e</sp, a, n>
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2">";"
-              <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
               <sp, a, n>90-Day, Rapid, Deployment</sp, a, n>
             </d, i, v>
           </d, i, v>

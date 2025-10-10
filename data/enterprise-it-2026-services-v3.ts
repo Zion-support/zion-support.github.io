@@ -23,7 +23,6 @@ export interface EnterpriseIt2026ServiceV3 {;,
   e: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -37,7 +36,6 @@ export interface EnterpriseIt2026ServiceV3 {;,
   e: string;
     emai,
   l: string;
-export interface EnterpriseIt2026ServiceV3 {/* TODO: Fix JSX expression */}
   s: string}
 };
   i,
@@ -50,7 +48,6 @@ export interface EnterpriseIt2026ServiceV3 {/* TODO: Fix JSX expression */}
   e: string,,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -59,7 +56,6 @@ export interface EnterpriseIt2026ServiceV3 {/* TODO: Fix JSX expression */}
   realImplementatio,
   n: boolean;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
@@ -111,7 +107,6 @@ export const enterpriseIT2026 ServicesV3: EnterpriseIt2026 ServiceV3[] = [,
   e: string, pric,
   e: string,
   descriptio,
-  n: string, feature,
   s: string[],
   lin,
   k: string, categor,
@@ -136,7 +131,6 @@ export const,
   e: "$499/month",
     descriptio,"
   n: "Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.",
-    feature,
   s: [;"
       "Third generation IT""
       "Enhanced solutions""
@@ -207,7 +201,6 @@ export const,
   e: "$499/month",
     descriptio,"
   n: "Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.",
-    feature,
   s: [,"
       "Third generation IT","
       "Enhanced solutions","
@@ -251,25 +244,21 @@ i,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: mobil,
   e: string; emai,
-  l: string; export interface EnterpriseIt2026ServiceV3 {/* TODO: Fix JSX expression */}
   s: string }; i,
   d: string; nam,
   e: string; taglin,
   e: string; pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
@@ -277,7 +266,6 @@ i,
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
@@ -291,7 +279,6 @@ i,
   e: "2026 Enterprise IT Solutions V3", taglin,"
   e: "Third generation enterprise IT", pric,"
   e: "$499/month", descriptio,"
-  n: "Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.", feature,"
   s: [ "Third generation IT" "Enhanced solutions" "Advanced infrastructure" "Improved security" "Better performance" ], lin,"
   k: "/services/2026-enterprise-it-v3", categor,"
   y: "Enterprise IT 2026 V3", realImplementatio,
@@ -308,7 +295,6 @@ i,
   e: "2026 Enterprise IT Solutions V3", taglin,"
   e: "Third generation enterprise IT", pric,"
   e: "$499/month", descriptio,"
-  n: "Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.", feature,"
   s: [ "Third generation IT", "Enhanced solutions", "Advanced infrastructure", "Improved security", "Better performance" ], lin,"
   k: "/services/2026-enterprise-it-v3", categor,"
   y: "Enterprise IT 2026 V3", realImplementatio,

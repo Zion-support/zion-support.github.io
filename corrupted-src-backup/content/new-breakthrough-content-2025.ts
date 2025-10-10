@@ -1,4 +1,3 @@
-export interface BreakthroughContent {/* TODO: Fix JSX expression */}
   };
 }
 
@@ -59,7 +58,5 @@ Protect your AI systems with next-generation quantum security frameworks.
       roi: '500%',
 export const,
   newBreakthroughContent2025: BreakthroughContent[] = [
-  {/* TODO: Fix JSX expression */}
     }},
-  {/* TODO: Fix JSX expression */}
     }}];

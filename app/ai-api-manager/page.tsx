@@ -3,35 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const AiApiManagerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -50,68 +21,28 @@ const PagePage: React.FC = () => {
       title: 'Feature 3',
       description: 'Description of feature 3',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-=======
     'Benefit 1',
     'Benefit 2',
     'Benefit 3',
     'Benefit 4',
     'Benefit 5',
     'Benefit 6'
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
-        <title>Ai Api Manager - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai api manager solution for modern businesses." />
-        <meta name="keywords" content="AI ai api manager, artificial intelligence, ai api manager, AI solutions, intelligent automation" />
-=======
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
       </Helmet>
       
       <Navigation />
 
-<<<<<<< HEAD
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Api Manager
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai api manager solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              </button>
-            </div>
-          </div>
-        </section>
-=======
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -149,7 +80,6 @@ const PagePage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <CheckCircle className="w-6 h-6 text-white" />
@@ -210,7 +140,6 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
 
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -225,7 +154,6 @@ const PagePage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
@@ -300,8 +228,4 @@ const PagePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default AiApiManagerPage;
-=======
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4

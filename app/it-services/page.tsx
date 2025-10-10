@@ -27,7 +27,6 @@ const ItServicesPage: React.FC = () => {
       <Helmet>
         <title>IT Services - Zion Tech Group | Information Technology Solutions</title>
         <meta name="description" content="Comprehensive IT services including cloud solutions, cybersecurity, infrastructure management, and more. Expert IT support and consulting." />
-        <meta name="keywords" content="IT services, cloud solutions, cybersecurity, IT infrastructure, managed IT, IT consulting, DevOps" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -37,7 +36,6 @@ const ItServicesPage: React.FC = () => {
               IT <span className="text-cyan-400">Services</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Complete IT solutions to modernize your infrastructure, enhance security, and drive business growth.
             </p>
           </div>
         </section>

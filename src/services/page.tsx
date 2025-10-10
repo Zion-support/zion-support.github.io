@@ -2,9 +2,7 @@ import React from 'react';
 
 
 
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -39,7 +37,6 @@ const ServicesPage: React.FC = () => {
       link: '/ai-data-analytics'
     },
     {
-      icon: MessageSquare,
       title: 'AI Customer Support',
       description: '24/7 AI-powered customer service solutions',
       features: ['Chatbots', 'Voice Assistants', 'Ticket Management', 'Sentiment Analysis'],
@@ -294,7 +291,6 @@ const ServicesPage: React.FC = () => {
                 </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                       {feature}
@@ -343,7 +339,6 @@ const ServicesPage: React.FC = () => {
                 </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                       {feature}
@@ -392,7 +387,6 @@ const ServicesPage: React.FC = () => {
                 </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                       {feature}

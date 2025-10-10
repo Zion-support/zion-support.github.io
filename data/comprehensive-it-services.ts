@@ -39,7 +39,6 @@ export interface ComprehensiveITService {id: string;
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - cloud - infrastructure',
     market_position: unknown;
-export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string,
@@ -236,7 +235,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     descriptio,
   n: unknown,
       'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.',
-    feature,
   s: [,
     colo,
   r: 'from - green - 600 to - emerald - 700',
@@ -442,7 +440,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     descriptio,
   n: unknown,
       'Revolutionary quantum - secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.',
-    feature,
   s: [,
       'Quantum encryption algorithms',
       'AI - powered threat detection',
@@ -576,7 +573,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     descriptio,
   n: unknown,
       'Advanced cybersecurity operations center providing 24 / 7 threat monitoring, incident response, and security management. Features AI - powered threat detection and automated response capabilities.',
-    feature,
   s: [,
       '24 / 7 threat monitoring',
       'AI - powered threat detection',
@@ -596,7 +592,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     market_position: unknown;
       'Competes with CrowdStrike Falcon Complete ($8.99 / user / month), Palo Alto Networks Cortex ($50K+), and SentinelOne Vigilance ($6 / user / month). Our advantage: Comprehensive SOC services and AI threat detection.',
     target_audience: unknown;
-      'Enterprises requiring 24 / 7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High - security organizations',
     trial_days: 0;
     setup_time: '4 - 6 weeks'
     category: 'Cybersecurity Operations',
@@ -619,7 +614,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   advantage: Comprehensive SOC services and AI threat detection.',
     target_audienc,
   e: unknown,
-      'Enterprises requiring 24 / 7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High - security organizations',
     trial_day,
   s: 0,
     setup_tim,
@@ -764,7 +758,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   perio,
   d: string, descriptio,
   n: string,
-  feature,
   s: string[], popula,
   r: boolean,
   ico,
@@ -826,7 +819,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.',
-    feature,
   s: [;
       'Network infrastructure managementServer and storage managementSecurity monitoring and management24/7 infrastructure monitoringPerformance optimizationDisaster recovery planningCompliance managementIT asset management'
       'Help desk supportStrategic IT consulting'
@@ -895,7 +887,6 @@ export const,
     descriptio,
   n: unknown,
       'Comprehensive data center management service providing complete infrastructure management, optimization, and monitoring. Achieves 99.999% uptime with advanced automation and AI - powered optimization.',
-    feature,
   s: [,
       'Data center infrastructure management',
       'Power and cooling optimization',
@@ -1027,7 +1018,6 @@ export const,
     review,
   s: 11},
       'Comprehensive network security and SD-WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99 && 99.9% network availability.',
-    feature,
   s: [,
       'SD-WAN implementation',
   // Network Security & SD - WAN Services;
@@ -1052,7 +1042,6 @@ export const,
     descriptio,
   n: unknown,
       'Comprehensive network security and SD - WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99.9% network availability.',
-    feature,
   s: [,
       'SD - WAN implementation',
       'Network security management',
@@ -1205,7 +1194,6 @@ export const,
     descriptio,
   n: unknown,
       'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on - time delivery.',
-    feature,
   s: [,
       'Project planning and management',
       'Resource allocation',
@@ -1355,7 +1343,6 @@ export const,
     descriptio,
   n: unknown,
       'Comprehensive IT training and certification service providing expert instruction, hands - on labs, and industry - recognized certifications. Covers all major IT domains and technologies.',
-    feature,
   s: [,
       'Comprehensive IT training',
       'Industry certifications',
@@ -1506,10 +1493,8 @@ export const,
     descriptio,
   n: unknown,
       'Revolutionary quantum - powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum - grade computing capabilities.',
-    feature,
   s: [,
       'Revolutionary quantum - powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum - grade computing capabilities.',
-    feature,
   s: [,
       'Quantum computing resources',
       'Quantum - secured networking',
@@ -1660,7 +1645,6 @@ export const,
     descriptio,
   n: unknown,
       'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.',
-    feature,
   s: [,
       'AI - powered deployment optimization',
       'Intelligent infrastructure scaling',
@@ -1812,7 +1796,6 @@ export const,
     descriptio,
   n: unknown,
       'Revolutionary quantum - secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.',
-    feature,
   s: [,
       'Quantum encryption algorithms',
       'AI - powered threat detection',
@@ -2011,7 +1994,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   perio,
   d: string, descriptio,
   n: string,
-  feature,
   s: string[], popula,
   r: boolean,
   ico,
@@ -2053,7 +2035,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   d: string;
   descriptio,
   n: string;
-  feature,
   s: string[];
   popula,
   r: boolean;
@@ -2269,7 +2250,6 @@ export const,
   d: string,,
   descriptio,
   n: string;
-  feature,
   s: string[];
   popula,
   r: boolean;
@@ -2310,7 +2290,6 @@ export const,
   varian,
   t: string;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -2372,7 +2351,6 @@ export const,
     customers: 180;
     rating: 4.9;
     reviews: 156;
-  {/* TODO: Fix JSX expression */}
   t: 'enterprise-futuristic'}
     contactInf,
   o: {}
@@ -2398,7 +2376,6 @@ export const,
   g: 4.9,
     review,
   s: 156}
-export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
@@ -2447,7 +2424,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     descriptio,
   n:
       'Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.'
-    feature,
   s: [;
       '24/7 threat monitoring'
       'AI-powered threat detection'
@@ -2485,7 +2461,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   advantage: Comprehensive SOC services and AI threat detection.'
     targetAudienc,
   e:
-      'Enterprises requiring 24/7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High-security organizations'
     trialDay,
   s: 0;
     setupTim,
@@ -2604,7 +2579,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     descriptio,
   n:
       'Comprehensive data center management service providing complete infrastructure management, optimization, and monitoring. Achieves 99.999% uptime with advanced automation and AI-powered optimization.'
-    feature,
   s: [;
       'Data center infrastructure management'
       'Power and cooling optimization'
@@ -2762,7 +2736,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     descriptio,
   n:
       'Comprehensive network security and SD-WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99.9% network availability.'
-    feature,
   s: [;
       'SD-WAN implementation'
       'Network security management'
@@ -2917,7 +2890,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     descriptio,
   n:
       'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.'
-    feature,
   s: [;
       'Project planning and management'
       'Resource allocation'
@@ -3063,7 +3035,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     descriptio,
   n:
       'Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.'
-    feature,
   s: [;
       'Comprehensive IT training'
       'Industry certifications'
@@ -3217,7 +3188,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     descriptio,
   n:
       'Revolutionary quantum-powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum-grade computing capabilities.'
-    feature,
   s: [;
       'Quantum computing resources'
       'Quantum-secured networking'
@@ -3367,7 +3337,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     descriptio,
   n:
       'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.'
-    feature,
   s: [;
       'AI-powered deployment optimization'
       'Intelligent infrastructure scaling'
@@ -3516,7 +3485,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   d: '/month'
     descriptio,
   n: 'Revolutionary quantum-secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.'
-    feature,
   s: [;
       'Quantum encryption algorithms'
       'AI-powered threat detection'
@@ -3704,7 +3672,6 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     review,
   s: 156}
 ];
-export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -3834,7 +3801,6 @@ export const,
     textColor: 'text-red-400';
     link: 'https://ziontechgroup.com/cybersecurity-operations-center';
     marketPosition: 'Competes with CrowdStrike Falcon Complete ($8.99/user/month), Palo Alto Networks Cortex ($50 K+), and SentinelOne Vigilance ($6/user/month). Our advantage: Comprehensive SOC services and AI threat detection.';
-    targetAudience: 'Enterprises requiring 24/7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High-security organizations';
     trialDays: 0;
     setupTime: '4-6 weeks';
     category: 'Cybersecurity Operations';
@@ -4156,7 +4122,6 @@ export const,
     customers: 180;
     rating: 4.9;
     reviews: 156;
-  {/* TODO: Fix JSX expression */}
   t: 'enterprise-futuristic'}
     contactInf,
   o: {}
@@ -4183,7 +4148,6 @@ export const,
     review,
   s: 18};
   // Cloud Migration & Optimization Services;
-  {/* TODO: Fix JSX expression */}
   t: 'cloud-futuristic'}
     contactInf,
   o: {}
@@ -4210,7 +4174,6 @@ export const,
     review,
   s: 12};
   // Cybersecurity Operations Center;
-  {/* TODO: Fix JSX expression */}
   t: 'cybersecurity-futuristic'}
     contactInf,
   o: {}
@@ -4237,7 +4200,6 @@ export const,
     review,
   s: 24};
   // Data Center Management Services;
-  {/* TODO: Fix JSX expression */}
   t: 'datacenter-futuristic'}
     contactInf,
   o: {}
@@ -4264,7 +4226,6 @@ export const,
     review,
   s: 11};
   // Network Security & SD-WAN Services;
-  {/* TODO: Fix JSX expression */}
   t: 'network-futuristic'}
     contactInf,
   o: {}
@@ -4291,7 +4252,6 @@ export const,
     review,
   s: 19};
   // IT Project Management Services;
-  {/* TODO: Fix JSX expression */}
   t: 'consulting-futuristic'}
     contactInf,
   o: {}
@@ -4318,7 +4278,6 @@ export const,
     review,
   s: 32};
   // IT Training & Certification Services;
-  {/* TODO: Fix JSX expression */}
   t: 'training-futuristic'}
     contactInf,
   o: {}
@@ -4344,7 +4303,6 @@ export const,
   g: 4.8;
     review,
   s: 89};
-  {/* TODO: Fix JSX expression */}
   t: 'quantum-advanced'}
     contactInf,
   o: {}
@@ -4370,7 +4328,6 @@ export const,
   g: 4.9;
     review,
   s: 32};
-  {/* TODO: Fix JSX expression */}
   t: 'ai-futuristic'}
     contactInf,
   o: {}
@@ -4396,7 +4353,6 @@ export const,
   g: 4.8;
     review,
   s: 245};
-  {/* TODO: Fix JSX expression */}
   t: 'quantum-cyberpunk'}
     contactInf,
   o: {}
@@ -4690,7 +4646,6 @@ export const,
   d: '/month'
     descriptio,
   n: 'Comprehensive cloud migration service that seamlessly moves enterprise workloads to the cloud while optimizing costs and performance. Guarantees 50% cost reduction and improved scalability.'
-    feature,
   s: [,
       'Cloud migration planning',
       'Workload assessment',
@@ -4836,7 +4791,6 @@ export const,
     descriptio,
   n:
       'Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.'
-    feature,
   s: [,
       'Incident response automation',
       'Security analytics dashboard',
@@ -4848,7 +4802,6 @@ export const,
       'Security consulting'],
     popular: true;
     icon: '',
-    targetAudience: 'Enterprises requiring 24/7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High-security organizations'
     trialDays: 0;
     setupTime: '4-6 weeks'
     category: 'Cybersecurity Operations'
@@ -4859,7 +4812,6 @@ export const,
     ico,
   n: '',
     targetAudienc,
-  e: 'Enterprises requiring 24/7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High-security organizations'
     trialDay,
   s: 0;
     setupTim,
@@ -5250,7 +5202,6 @@ export const,
     descriptio,
   n:
       'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.'
-    feature,
   s: [,
       'Project planning and management',
       'Resource allocation',
@@ -5386,7 +5337,6 @@ export const,
     descriptio,
   n:
       'Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.'
-    feature,
   s: [,
       'Comprehensive IT training',
       'Industry certifications',
@@ -5924,7 +5874,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   perio,
   d: string, descriptio,
   n: string,
-  feature,
   s: string[], popula,
   r: boolean,
   ico,
@@ -6002,7 +5951,6 @@ export interface ComprehensiveITService,
   e: string; pric,
   e: string, perio,
   d: string, descriptio,
-  n: string; feature,
   s: string[]; popula,
   r: boolean; ico,
   n: string; colo,
@@ -6080,7 +6028,6 @@ export interface ComprehensiveITService,
   e: 'Seamless cloud migration with 50% cost reduction guarantee',' pric,
   e: '$15, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.', feature,
   s: [,' colo,
   r: 'from - green - 600 to - emerald - 700',' text_colo,
   r: 'text - green - 400',' lin,
@@ -6135,7 +6082,6 @@ export interface ComprehensiveITService,
   e: 'Unhackable quantum - secured cybersecurity platform',' pric,
   e: '$18, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary quantum - secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.', feature,
   s: [, ' 'Quantum encryption algorithms',' 'AI - powered threat detection',' 'Quantum key distribution',' 'Post - quantum cryptography',' 'Real - time threat intelligence',' 'Automated incident response',' 'Quantum - secured communication',' 'Advanced security analytics',' 'Compliance automation',' '24 / 7 quantum security operations'], popula,
   r: true,' ico,
   n: '🔒', ' colo,
@@ -6167,7 +6113,6 @@ export interface ComprehensiveITService,
   e: '24 / 7 cybersecurity monitoring with AI - powered threat detection',' pric,
   e: '$18, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced cybersecurity operations center providing 24 / 7 threat monitoring, incident response, and security management. Features AI - powered threat detection and automated response capabilities.', feature,
   s: [,' '24 / 7 threat monitoring',' 'AI - powered threat detection',' 'Incident response automation',' 'Security analytics dashboard',' 'Threat intelligence',' 'Vulnerability management',' 'Security compliance',' 'Security awareness training',' 'Penetration testing',' 'Security consulting'], popula,
   r: true,' ico,
   n: '🛡️',' colo,
@@ -6177,7 +6122,6 @@ export interface ComprehensiveITService,
   s://ziontechgroup.com / cybersecurity - operations - center', market_positio,
   n:  ,' 'Competes with CrowdStrike Falcon Complete ($8.99 / user / month), Palo Alto Networks Cortex ($50K+), and SentinelOne Vigilance ($6 / user / month). Our,
   advantage: Comprehensive SOC services and AI threat detection.', target_audienc,
-  e:  ,' 'Enterprises requiring 24 / 7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High - security organizations', trial_day,
   s: 0,' setup_tim,
   e: '4 - 6 weeks',' categor,
   y: 'Cybersecurity Operations', real_servic,
@@ -6203,7 +6147,6 @@ export interface ComprehensiveITService,
   e: string, pric,
   e: string, perio,
   d: string, descriptio,
-  n: string, feature,
   s: string[], popula,
   r: boolean, ico,
   n: string, colo,
@@ -6241,7 +6184,6 @@ export interface ComprehensiveITService,
   e: 'Complete enterprise IT infrastructure with 99.99% uptime guarantee',' pric,
   e: '$25,999',' perio,
   d: '/month',' descriptio,
-  n: 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.', feature,
   s: [' 'Network infrastructure managementServer and storage managementSecurity monitoring and management24/7 infrastructure monitoringPerformance optimizationDisaster recovery planningCompliance managementIT asset management'' 'Help desk supportStrategic IT consulting' ],' popula,
   r: true, ico,
   n: '🏢',' colo,
@@ -6277,7 +6219,6 @@ export interface ComprehensiveITService,
   e: 'Complete data center management with 99.999% uptime guarantee',' pric,
   e: '$22, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Comprehensive data center management service providing complete infrastructure management, optimization, and monitoring. Achieves 99.999% uptime with advanced automation and AI - powered optimization.', feature,
   s: [,' 'Data center infrastructure management',' 'Power and cooling optimization',' 'Network performance optimization',' 'Storage management',' 'Backup and disaster recovery',' 'Security management',' 'Performance monitoring',' 'Capacity planning',' 'Energy efficiency optimization',' '24 / 7 operations center'], popula,
   r: true,' ico,
   n: '🏗️',' colo,
@@ -6311,14 +6252,12 @@ export interface ComprehensiveITService,
   e: '2024 - 01 - 20', customer,
   s: 15, ratin,
   g: 4 && 4.7, review,
-  s: 11},' 'Comprehensive network security and SD-WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99 && 99.9% network availability.', feature,
   s: [' 'SD-WAN implementation', // Network Security & SD - WAN Services; ' i,
   d: 'network - security - sdwan',' nam,
   e: 'Network Security & SD - WAN Management', taglin,
   e:  ,' 'Advanced network security with software - defined wide area networking',' pric,
   e: '$12, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Comprehensive network security and SD - WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99.9% network availability.', feature,
   s: [,' 'SD - WAN implementation',' 'Network security management',' 'Threat protection',' 'Traffic optimization',' 'Centralized management',' 'Performance monitoring',' 'Bandwidth optimization',' 'Security compliance',' 'Network automation',' '24 / 7 network support'], popula,
   r: true,' ico,
   n: '🌐',' colo,
@@ -6358,7 +6297,6 @@ export interface ComprehensiveITService,
   e: 'Expert IT project management with guaranteed delivery',' pric,
   e: '$8, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on - time delivery.', feature,
   s: [,' 'Project planning and management',' 'Resource allocation',' 'Risk management',' 'Quality assurance',' 'Stakeholder communication',' 'Project reporting',' 'Change management',' 'Strategic consulting',' 'Technology advisory',' 'Project recovery'], popula,
   r: true,' ico,
   n: '📋',' colo,
@@ -6398,7 +6336,6 @@ export interface ComprehensiveITService,
   e: 'Comprehensive IT training with industry certifications',' pric,
   e: '$2, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Comprehensive IT training and certification service providing expert instruction, hands - on labs, and industry - recognized certifications. Covers all major IT domains and technologies.', feature,
   s: [,' 'Comprehensive IT training',' 'Industry certifications',' 'Hands - on labs',' 'Expert instructors',' 'Flexible learning options',' 'Certification preparation',' 'Career guidance',' 'Learning management system',' 'Progress tracking',' '24 / 7 learning support'], popula,
   r: true,' ico,
   n: '🎓',' colo,
@@ -6438,8 +6375,6 @@ export interface ComprehensiveITService,
   e: 'Next - generation quantum - powered cloud infrastructure',' pric,
   e: '$45, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary quantum - powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum - grade computing capabilities.', feature,
-  s: [, ' 'Revolutionary quantum - powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum - grade computing capabilities.', feature,
   s: [, ' 'Quantum computing resources',' 'Quantum - secured networking',' 'Quantum encryption at rest and in transit',' 'Quantum load balancing',' 'Quantum database optimization',' 'Quantum machine learning acceleration',' 'Quantum blockchain integration',' 'Quantum IoT platform',' 'Quantum analytics engine',' '24 / 7 quantum operations center'], popula,
   r: true,' ico,
   n: '☁️', ' colo,
@@ -6478,7 +6413,6 @@ export interface ComprehensiveITService,
   e: 'Intelligent DevOps automation with AI - driven optimization',' pric,
   e: '$8, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.', feature,
   s: [,' 'AI - powered deployment optimization', ' 'Intelligent infrastructure scaling',' 'Predictive failure detection',' 'Automated performance tuning',' 'Smart resource allocation',' 'AI - driven security scanning',' 'Automated compliance checks',' 'Real - time performance monitoring',' 'Predictive analytics dashboard',' '24 / 7 AI operations center'], popula,
   r: true,' ico,
   n: '🤖', ' colo,
@@ -6517,7 +6451,6 @@ export interface ComprehensiveITService,
   e: 'Unhackable quantum - secured cybersecurity platform',' pric,
   e: '$18, 999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary quantum - secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.', feature,
   s: [, ' 'Quantum encryption algorithms',' 'AI - powered threat detection',' 'Quantum key distribution',' 'Post - quantum cryptography',' 'Real - time threat intelligence',' 'Automated incident response',' 'Quantum - secured communication',' 'Advanced security analytics',' 'Compliance automation',' '24 / 7 quantum security operations'], popula,
   r: true,' ico,
   n: '🔒', ' colo,
@@ -6558,7 +6491,6 @@ export interface ComprehensiveITService,
   e: string, pric,
   e: string, perio,
   d: string, descriptio,
-  n: string, feature,
   s: string[], popula,
   r: boolean, ico,
   n: string, colo,
@@ -6584,7 +6516,6 @@ export interface ComprehensiveITService,
   e: string; pric,
   e: string; perio,
   d: string; descriptio,
-  n: string; feature,
   s: string[]; popula,
   r: boolean; ico,
   n: string; colo,
@@ -6651,7 +6582,6 @@ export interface ComprehensiveITService,
   e: string; pric,
   e: string; perio,
   d: string, descriptio,
-  n: string; feature,
   s: string[]; popula,
   r: boolean; ico,
   n: string; colo,
@@ -6672,7 +6602,6 @@ export interface ComprehensiveITService,
   e: string; growthRat,
   e: string; varian,
   t: string; contactInf,
-  o: {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -6681,7 +6610,6 @@ export interface ComprehensiveITService,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  comprehensiveITServices: ComprehensiveITService[] = [; // Enterprise IT Infrastructure Services; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -6703,7 +6631,6 @@ export interface ComprehensiveITService,
   e: '24/7 cybersecurity monitoring with AI-powered threat detection'' pric,
   e: '$18,999'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.' feature,
   s: [' '24/7 threat monitoring'' 'AI-powered threat detection'' 'Incident response automation'' 'Security analytics dashboard'' 'Threat intelligence'' 'Vulnerability management'' 'Security compliance'' 'Security awareness training'' 'Penetration testing'' 'Security consulting' ] popula,
   r: true' ico,
   n: '🛡️'' colo,
@@ -6713,7 +6640,6 @@ export interface ComprehensiveITService,
   s://ziontechgroup.com/cybersecurity-operations-center' marketPositio,
   n:' 'Competes with CrowdStrike Falcon Complete ($8.99/user/month), Palo Alto Networks Cortex ($50K+), and SentinelOne Vigilance ($6/user/month). Our,
   advantage: Comprehensive SOC services and AI threat detection.' targetAudienc,
-  e:' 'Enterprises requiring 24/7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High-security organizations' trialDay,
   s: 0' setupTim,
   e: '4-6 weeks'' categor,
   y: 'Cybersecurity Operations' realServic,
@@ -6743,7 +6669,6 @@ export interface ComprehensiveITService,
   e: 'Complete data center management with 99.999% uptime guarantee'' pric,
   e: '$22,999'' perio,
   d: '/month' descriptio,
-  n:' 'Comprehensive data center management service providing complete infrastructure management, optimization, and monitoring. Achieves 99.999% uptime with advanced automation and AI-powered optimization.' feature,
   s: [' 'Data center infrastructure management'' 'Power and cooling optimization'' 'Network performance optimization'' 'Storage management'' 'Backup and disaster recovery'' 'Security management'' 'Performance monitoring'' 'Capacity planning'' 'Energy efficiency optimization'' '24/7 operations center' ] popula,
   r: true' ico,
   n: '🏗️'' colo,
@@ -6783,7 +6708,6 @@ export interface ComprehensiveITService,
   e:' 'Advanced network security with software-defined wide area networking'' pric,
   e: '$12,999'' perio,
   d: '/month' descriptio,
-  n:' 'Comprehensive network security and SD-WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99.9% network availability.' feature,
   s: [' 'SD-WAN implementation'' 'Network security management'' 'Threat protection'' 'Traffic optimization'' 'Centralized management'' 'Performance monitoring'' 'Bandwidth optimization'' 'Security compliance'' 'Network automation'' '24/7 network support' ] popula,
   r: true' ico,
   n: '🌐'' colo,
@@ -6823,7 +6747,6 @@ export interface ComprehensiveITService,
   e: 'Expert IT project management with guaranteed delivery'' pric,
   e: '$8,999'' perio,
   d: '/month' descriptio,
-  n:' 'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.' feature,
   s: [' 'Project planning and management'' 'Resource allocation'' 'Risk management'' 'Quality assurance'' 'Stakeholder communication'' 'Project reporting'' 'Change management'' 'Strategic consulting'' 'Technology advisory'' 'Project recovery' ] popula,
   r: true' ico,
   n: '📋'' colo,
@@ -6863,7 +6786,6 @@ export interface ComprehensiveITService,
   e: 'Comprehensive IT training with industry certifications'' pric,
   e: '$2,999'' perio,
   d: '/month' descriptio,
-  n:' 'Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.' feature,
   s: [' 'Comprehensive IT training'' 'Industry certifications'' 'Hands-on labs'' 'Expert instructors'' 'Flexible learning options'' 'Certification preparation'' 'Career guidance'' 'Learning management system'' 'Progress tracking'' '24/7 learning support' ] popula,
   r: true' ico,
   n: '🎓'' colo,
@@ -6903,7 +6825,6 @@ export interface ComprehensiveITService,
   e: 'Next-generation quantum-powered cloud infrastructure'' pric,
   e: '$45,999'' perio,
   d: '/month' descriptio,
-  n:' 'Revolutionary quantum-powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum-grade computing capabilities.' feature,
   s: [' 'Quantum computing resources'' 'Quantum-secured networking'' 'Quantum encryption at rest and in transit'' 'Quantum load balancing'' 'Quantum database optimization'' 'Quantum machine learning acceleration'' 'Quantum blockchain integration'' 'Quantum IoT platform'' 'Quantum analytics engine'' '24/7 quantum operations center' ] popula,
   r: true' ico,
   n: '☁️'' colo,
@@ -6942,7 +6863,6 @@ export interface ComprehensiveITService,
   e: 'Intelligent DevOps automation with AI-driven optimization'' pric,
   e: '$8,999'' perio,
   d: '/month' descriptio,
-  n:' 'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.' feature,
   s: [' 'AI-powered deployment optimization'' 'Intelligent infrastructure scaling'' 'Predictive failure detection'' 'Automated performance tuning'' 'Smart resource allocation'' 'AI-driven security scanning'' 'Automated compliance checks'' 'Real-time performance monitoring'' 'Predictive analytics dashboard'' '24/7 AI operations center' ] popula,
   r: true' ico,
   n: '🤖'' colo,
@@ -6981,7 +6901,6 @@ export interface ComprehensiveITService,
   e: 'Unhackable quantum-secured cybersecurity platform'' pric,
   e: '$18,999'' perio,
   d: '/month' descriptio,
-  n:' 'Revolutionary quantum-secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.' feature,
   s: [' 'Quantum encryption algorithms'' 'AI-powered threat detection'' 'Quantum key distribution'' 'Post-quantum cryptography'' 'Real-time threat intelligence'' 'Automated incident response'' 'Quantum-secured communication'' 'Advanced security analytics'' 'Compliance automation'' '24/7 quantum security operations' ] popula,
   r: true' ico,
   n: '🔒'' colo,
@@ -7029,7 +6948,6 @@ export interface ComprehensiveITService,
   e: '2024-09-15' customer,
   s: 180, ratin,
   g: 4.9,
-  reviews: 156 } ]; export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -7038,7 +6956,6 @@ export interface ComprehensiveITService,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  comprehensiveITServices: ComprehensiveITService[] = [; // Enterprise IT Infrastructure Services; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7048,7 +6965,6 @@ export interface ComprehensiveITService,
   e: '2024-01-01'; customer,
   s: 25; ratin,
   g: 4.8; review,
-  s: 18}; // Cloud Migration & Optimization Services; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7058,7 +6974,6 @@ export interface ComprehensiveITService,
   e: '2024-02-01'; customer,
   s: 18; ratin,
   g: 4.7; review,
-  s: 12}; // Cybersecurity Operations Center; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7068,7 +6983,6 @@ export interface ComprehensiveITService,
   e: '2024-01-15'; customer,
   s: 32; ratin,
   g: 4.8; review,
-  s: 24}; // Data Center Management Services; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7078,7 +6992,6 @@ export interface ComprehensiveITService,
   e: '2024-01-20'; customer,
   s: 15; ratin,
   g: 4.7; review,
-  s: 11}; // Network Security & SD-WAN Services; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7088,7 +7001,6 @@ export interface ComprehensiveITService,
   e: '2024-02-15'; customer,
   s: 28; ratin,
   g: 4.6; review,
-  s: 19}; // IT Project Management Services; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7098,7 +7010,6 @@ export interface ComprehensiveITService,
   e: '2024-01-10'; customer,
   s: 45; ratin,
   g: 4.7; review,
-  s: 32}; // IT Training & Certification Services; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7108,7 +7019,6 @@ export interface ComprehensiveITService,
   e: '2024-01-05'; customer,
   s: 120; ratin,
   g: 4.8; review,
-  s: 89}; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7118,7 +7028,6 @@ export interface ComprehensiveITService,
   e: '2024-11-15'; customer,
   s: 45; ratin,
   g: 4.9; review,
-  s: 32}; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7128,7 +7037,6 @@ export interface ComprehensiveITService,
   e: '2024-10-01'; customer,
   s: 320; ratin,
   g: 4.8; review,
-  s: 245}; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7208,7 +7116,6 @@ export interface ComprehensiveITService,
   e: 'Seamless cloud migration with 50% cost reduction guarantee'' pric,
   e: '$15,999'' perio,
   d: '/month' descriptio,
-  n:' 'Comprehensive cloud migration service that seamlessly moves enterprise workloads to the cloud while optimizing costs and performance. Guarantees 50% cost reduction and improved scalability.' feature,
   s: [' 'Cloud migration planning',' 'Workload assessment',' 'Cost optimization',' 'Performance optimization',' 'Security migration',' 'Data migration',' 'Application modernization',' 'Cloud governance',' 'Training and support',' 'Post - migration optimization'], popula,
   r: true,' ico,
   n: '☁️', marketPositio,
@@ -7244,11 +7151,9 @@ export interface ComprehensiveITService,
   e: '24/7 cybersecurity monitoring with AI-powered threat detection'' pric,
   e: '$18,999'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.' feature,
   s: [' 'Incident response automation',' 'Security analytics dashboard',' 'Threat intelligence',' 'Vulnerability management',' 'Security compliance',' 'Security awareness training',' 'Penetration testing',' 'Security consulting'], popula,
   r: true,' ico,
   n: '🛡️', targetAudienc,
-  e: ' 'Enterprises requiring 24/7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High-security organizations' trialDay,
   s: 0' setupTim,
   e: '4-6 weeks'' categor,
   y: 'Cybersecurity Operations' realServic,
@@ -7344,7 +7249,6 @@ export interface ComprehensiveITService,
   e: 'Expert IT project management with guaranteed delivery'' pric,
   e: '$8,999'' perio,
   d: '/month' descriptio,
-  n:' 'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.' feature,
   s: [' 'Project planning and management',' 'Resource allocation',' 'Risk management',' 'Quality assurance',' 'Stakeholder communication',' 'Project reporting',' 'Change management',' 'Strategic consulting',' 'Technology advisory',' 'Project recovery'], popula,
   r: true,' ico,
   n: '📋', marketPositio,
@@ -7380,7 +7284,6 @@ export interface ComprehensiveITService,
   e: 'Comprehensive IT training with industry certifications'' pric,
   e: '$2,999'' perio,
   d: '/month' descriptio,
-  n:' 'Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.' feature,
   s: [' 'Comprehensive IT training',' 'Industry certifications',' 'Hands - on labs',' 'Expert instructors',' 'Flexible learning options',' 'Certification preparation',' 'Career guidance',' 'Learning management system',' 'Progress tracking',' '24 / 7 learning support'], popula,
   r: true,' ico,
   n: '🎓', marketPositio,
@@ -7502,7 +7405,6 @@ export interface ComprehensiveITService,
   e: string, pric,
   e: string, perio,
   d: string, descriptio,
-  n: string, feature,
   s: string[], popula,
   r: boolean, ico,
   n: string, colo,

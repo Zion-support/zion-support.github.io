@@ -19,7 +19,6 @@ const,
   OfflinePage: React.FC = () => {const handleRetry = () => {}
     window.location.reload();
   };
-  const handleGoHome = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     window.location.href = '/';

@@ -2,7 +2,6 @@ import React from 'react';
 
 
 import { Link } from 'react-router-dom';
-import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -121,7 +120,6 @@ $4}
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -130,14 +128,12 @@ $4}
   n: 'Generate high-quality code using advanced AI models',
       ico,
   n: Code,
-      feature,
   s: ['Multi-language Support', 'Code Completion', 'Bug Detection', 'Documentation Generation'],
       benefit,
   s: ['Increase Productivity by 60%', 'Reduce Coding Time by 50%', 'Improve Code Quality', 'Learn Best Practices'],
       pric,
   e: 'Starting at $99/month'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -146,14 +142,12 @@ $4}
   n: 'Comprehensive API testing and monitoring tools',
       ico,
   n: Zap,
-      feature,
   s: ['Automated Testing', 'Performance Monitoring', 'Load Testing', 'API Documentation'],
       benefit,
   s: ['Ensure API Reliability', 'Reduce Testing Time by 70%', 'Improve Performance', 'Prevent Downtime'],
       pric,
   e: 'Starting at $149/month'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -162,14 +156,12 @@ $4}
   n: 'Advanced database administration and optimization',
       ico,
   n: BarChart,
-      feature,
   s: ['Query Optimization', 'Performance Monitoring', 'Backup Management', 'Schema Design'],
       benefit,
   s: ['Improve Database Performance', 'Reduce Query Time by 80%', 'Automate Backups', 'Prevent Data Loss'],
       pric,
   e: 'Starting at $199/month'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -178,14 +170,12 @@ $4}
   n: 'Streamline development and deployment processes',
       ico,
   n: Target,
-      feature,
   s: ['CI/CD Pipelines', 'Container Management', 'Monitoring', 'Deployment Automation'],
       benefit,
   s: ['Faster Deployments', 'Reduce Errors by 90%', 'Improve Collaboration', 'Scale Efficiently'],
       pric,
   e: 'Starting at $299/month'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -194,14 +184,12 @@ $4}
   n: 'AI-powered code review and quality assurance',
       ico,
   n: Users,
-      feature,
   s: ['Automated Reviews', 'Security Scanning', 'Code Standards', 'Team Collaboration'],
       benefit,
   s: ['Improve Code Quality', 'Catch Bugs Early', 'Enforce Standards', 'Reduce Review Time'],
       pric,
   e: 'Starting at $79/month'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -210,7 +198,6 @@ $4}
   n: 'Advanced application performance monitoring and optimization',
       ico,
   n: TrendingUp,
-      feature,
   s: ['Real-time Monitoring', 'Performance Analysis', 'Bottleneck Detection', 'Optimization Suggestions'],
       benefit,
   s: ['Improve App Performance', 'Reduce Load Times', 'Optimize Resources', 'Enhance User Experience'],
@@ -307,7 +294,6 @@ $4}
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {tool.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
         {/* Tools Grid */}"
@@ -337,7 +323,6 @@ $4}
                     <h4 className="font-semibold text-gray-900 mb-3">Key,
   Features:</h4>"
                     <ul className="space-y-2"></ul>
-                      {tool.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                           {feature}
@@ -376,7 +361,6 @@ $4}
                   </div>"
                   <div className="text-center"></div>
                     <a></a>
-                      href={/* TODO: Fix JSX expression */}
   o:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}"
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,
   hover:from-purple-700,"

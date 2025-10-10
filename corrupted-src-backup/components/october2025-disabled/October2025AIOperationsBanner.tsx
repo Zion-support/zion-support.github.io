@@ -1,9 +1,6 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     }
   ]; return(<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6, l, g:px-8, relative, overflow-hidd, e, n">
       {/* Animated, background, elemen, t, s */}
@@ -69,7 +66,6 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
         </div>
         {/* Articles, Gri, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8"></div>
-          {/* TODO: Fix JSX expression */}"
               <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
               ></Link>
                 {/* Gradient, over, l, a, y */}
@@ -88,7 +84,6 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
                   </p>
                   {/* Sta, t, s */}
                   <div, className="flex, item, s-center, justif, y-between, m, b-4"></div>
-                    <span, className="te, x, t-xs, fon, t-semibold, tex, t-gre, e, n-400, b, g-gre, e, n-4, 0, 0/10, p, x-3, p, y-1, rounde, d-fu, l, l">
                       {artic, l, e.sta, t, s}
                     </sp, a, n>
                   </div>
@@ -100,7 +95,6 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
                 </div>)
                   {/* Sta, t, s */}"
                   <div, className="flex, item, s-center, justif, y-between, m, b-4"></div>"
-                    <span, className="te, x, t-xs, fon, t-semibold, tex, t-gre, e, n-400, b, g-gre, e, n-4, 0, 0/10, p, x-3, p, y-1, rounde, d-fu, l, l"></span>
                       {artic, l, e.sta, t, s}
                     </sp, a, n>
                   </div>
@@ -124,7 +118,6 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
             <Link, t, o="/bl, o, g""
               className="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, hove, r:fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-400, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, grou, p"
             ></Link>
-              <sp, a, n>Explore, All, AI Insigh, t, s</sp, a, n>"
               <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>
             </Li, n, k>"
             <Link, t, o="/conta, c, t""

@@ -84,21 +84,15 @@ export const january2026NewContent = {
         '99.7% efficiency',
         'Zero human error'],
       duration: '6 months',
-export const january2026NewContent = {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     }],
   featuredService,
   s: [
-    {/* TODO: Fix JSX expression */}
     },
-    {/* TODO: Fix JSX expression */}
     }],
   caseStudie,
   s: [
-    {/* TODO: Fix JSX expression */}
     }]};
 
 export default january2026 NewContent;

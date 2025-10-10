@@ -152,7 +152,6 @@ $4}
             Smart Scheduling Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
@@ -189,7 +188,6 @@ $4}
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-300">{plan.period}</span>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}

@@ -10,7 +10,6 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <meta, nam, e='description'
           conte, n, t='Learn, about, quantum neural, networks, guide 2026, and, how it, can, benefit your, enterpris, e.'
         />)
-        <link, re, l='canonic, a, l')
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/quant u m-neur a l-networ k s-gui d e-20 2 6')
         />),
       </Helm, e, t>
@@ -28,5 +27,4 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
             This, comprehensive, guide covers, quantum, neural networks, guide, 2026;
             and, provides, practical insights, for, enterprise implementati, o, n.
 }</p>
-export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }

@@ -4,7 +4,6 @@
 import { Link } from 'react-router-dom';
 
 import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react';
-export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   return (<div>Coming Soon</div>)

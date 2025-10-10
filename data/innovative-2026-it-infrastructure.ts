@@ -42,7 +42,6 @@
   d: string;
   descriptio,
   n: string;
-  feature,
   s: string[];
   popula,
   r: boolean;
@@ -118,7 +117,6 @@ export const,
       price: '$599',
       period: '/month',
       description: unknown;
-    // Quantum - Enhanced Cloud Infrastructure,
       i,
   d: 'quantum - enhanced - cloud - platform',
       nam,
@@ -133,7 +131,6 @@ export const,
       descriptio,
   n: unknown,
         'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.',
-      feature,
   s: [,
         'Hybrid quantum - classical computing',
         'Quantum - resistant encryption',
@@ -294,7 +291,6 @@ export const,
       descriptio,
   n: unknown,
         'Advanced edge computing platform that intelligently orchestrates distributed computing resources, optimizing performance and reducing latency for IoT and real - time applications.',
-      feature,
   s: [,
         'AI - powered edge orchestration',
         'Global edge network management',
@@ -453,7 +449,6 @@ export const,
       descriptio,
   n: unknown,
         'Comprehensive zero - trust network security platform that continuously verifies every user, device, and connection, providing enterprise - grade security for modern distributed networks.',
-      feature,
   s: [,
         'Continuous identity verification',
         'Micro - segmentation',
@@ -612,7 +607,6 @@ export const,
       descriptio,
   n: unknown,
         'Intelligent DevOps platform that uses AI to automate deployment, optimize performance, and predict potential issues before they impact your applications.',
-      feature,
   s: [,
         'AI - powered CI / CD automation',
         'Intelligent testing and QA',
@@ -770,7 +764,6 @@ export const,
       descriptio,
   n: unknown,
         'Advanced data storage platform that uses quantum - resistant encryption algorithms to protect your data against future quantum computing threats.',
-      feature,
   s: [,
         'Quantum - resistant encryption',
         'Multi - layer security',
@@ -939,9 +932,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
   g: 4 && 4.8,
       review,
   s: 550};
-  ];    feature,
   s: [,
-export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
   e: string}
     },
     realImplementatio,
@@ -956,7 +947,6 @@ export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX express
   s: number}
 export const,
   innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [,
-  // Quantum-Enhanced Cloud Infrastructure,
   id: 'quantum-enhanced-cloud-platform', nam,
   e: 'Quantum-Enhanced Cloud Platform',
     taglin,
@@ -966,7 +956,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.',
-    feature,
   s: [;
       'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring'
       'Global edge computing networkQuantum-safe data storage'
@@ -1110,7 +1099,6 @@ export interface Innovative2026ITInfrastructureService {;
   g: 4.8,
       review,
   s: 550};
-  ];    feature,
   s: [;
       'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication'
       'API accessMobile applications'
@@ -1150,7 +1138,6 @@ export interface Innovative2026ITInfrastructureService {;
   t: 'quantum-futuristic',
     contactInf,
   o: unknown;
-  ];    feature,
   s: [;
       'Quantum - resistant encryption_multi - layer security_automated backup and recovery_global data distribution_compliance certifications_real - time monitoring_disaster recovery_data deduplication'
       'API access_mobile applications'
@@ -1264,7 +1251,6 @@ export interface Innovative2026ITInfrastructureService {;
     review,
   s: 550;
 ],
-export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -1492,7 +1478,6 @@ export const,
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com',
-  {/* TODO: Fix JSX expression */}
   t: 'quantum-futuristic'}
     contactInf,
   o: {}
@@ -1519,7 +1504,6 @@ export const,
     review,
   s: 400};
   // Edge Computing Orchestration Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'edge-futuristic'}
     contactInf,
   o: {}
@@ -1546,7 +1530,6 @@ export const,
     review,
   s: 600};
   // Zero-Trust Network Architecture;
-  {/* TODO: Fix JSX expression */}
   t: 'security-futuristic'}
     contactInf,
   o: {}
@@ -1573,7 +1556,6 @@ export const,
     review,
   s: 450};
   // AI-Powered DevOps Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'devops-futuristic'}
     contactInf,
   o: {}
@@ -1600,7 +1582,6 @@ export const,
     review,
   s: 1250};
   // Quantum-Safe Data Storage;
-  {/* TODO: Fix JSX expression */}
   t: 'quantum-futuristic'}
     contactInf,
   o: {}
@@ -1635,7 +1616,6 @@ export const,
 ;
   }
 ];
-export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -1875,7 +1855,6 @@ export const,
     customers: 1100;
     rating: 4.8;
     reviews: 550;
-  {/* TODO: Fix JSX expression */}
   t: 'quantum-futuristic'}
     contactInf,
   o: {}
@@ -1902,7 +1881,6 @@ export const,
     review,
   s: 400};
   // Edge Computing Orchestration Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'edge-futuristic'}
     contactInf,
   o: {}
@@ -1929,7 +1907,6 @@ export const,
     review,
   s: 600};
   // Zero-Trust Network Architecture;
-  {/* TODO: Fix JSX expression */}
   t: 'security-futuristic'}
     contactInf,
   o: {}
@@ -1956,7 +1933,6 @@ export const,
     review,
   s: 450};
   // AI-Powered DevOps Platform;
-  {/* TODO: Fix JSX expression */}
   t: 'devops-futuristic'}
     contactInf,
   o: {}
@@ -1983,7 +1959,6 @@ export const,
     review,
   s: 1250};
   // Quantum-Safe Data Storage;
-  {/* TODO: Fix JSX expression */}
   t: 'quantum-futuristic'}
     contactInf,
   o: {}
@@ -2017,7 +1992,6 @@ i,
   e: string; pric,
   e: string; perio,
   d: string; descriptio,
-  n: string; feature,
   s: string[]; popula,
   r: boolean; ico,
   n: string; colo,
@@ -2049,13 +2023,11 @@ i,
   s: number; ratin,
   g: number; review,
   s: number; export const,
-  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] =; [; // Quantum - Enhanced Cloud Infrastructure, ' i,
   d: 'quantum - enhanced - cloud - platform',' nam,
   e: 'Quantum - Enhanced Cloud Platform', taglin,
   e:  ,' 'Next - generation cloud infrastructure with quantum computing capabilities',' pric,
   e: '$599',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.', feature,
   s: [,' 'Hybrid quantum - classical computing',' 'Quantum - resistant encryption', ' 'Quantum machine learning acceleration',' 'Multi - cloud orchestration',' 'Auto - scaling infrastructure',' 'Quantum key distribution',' 'Advanced security protocols',' 'Real - time performance monitoring',' 'Global edge computing network',' 'Quantum - safe data storage'], popula,
   r: true,' ico,
   n: '⚛️', ' colo,
@@ -2095,7 +2067,6 @@ i,
   e:  ,' 'Manage distributed computing at the edge with AI - powered orchestration',' pric,
   e: '$299',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced edge computing platform that intelligently orchestrates distributed computing resources, optimizing performance and reducing latency for IoT and real - time applications.', feature,
   s: [,' 'AI - powered edge orchestration', ' 'Global edge network management',' 'Real - time load balancing',' 'Edge AI model deployment',' 'IoT device management',' '5G network optimization',' 'Edge security and compliance',' 'Performance analytics',' 'Automated scaling',' 'Multi - cloud edge integration'], popula,
   r: true,' ico,
   n: '🌐', ' colo,
@@ -2135,7 +2106,6 @@ i,
   e:  ,' 'Secure your network with zero - trust principles and AI - powered monitoring',' pric,
   e: '$449',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Comprehensive zero - trust network security platform that continuously verifies every user, device, and connection, providing enterprise - grade security for modern distributed networks.', feature,
   s: [, ' 'Continuous identity verification',' 'Micro - segmentation',' 'AI - powered threat detection',' 'Just - in - time access',' 'Multi - factor authentication',' 'Device trust scoring',' 'Network traffic analysis',' 'Compliance reporting',' 'Real - time monitoring',' 'Automated response'], popula,
   r: true,' ico,
   n: '🔒', ' colo,
@@ -2175,7 +2145,6 @@ i,
   e: 'Automate and optimize your development pipeline with AI',' pric,
   e: '$199',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Intelligent DevOps platform that uses AI to automate deployment, optimize performance, and predict potential issues before they impact your applications.', feature,
   s: [,' 'AI - powered CI / CD automation', ' 'Intelligent testing and QA',' 'Performance optimization',' 'Predictive issue detection',' 'Automated rollback',' 'Infrastructure as code',' 'Monitoring and alerting',' 'Security scanning',' 'Cost optimization',' 'Team collaboration tools'], popula,
   r: true,' ico,
   n: '🚀', ' colo,
@@ -2215,7 +2184,6 @@ i,
   e: 'Future - proof your data with quantum - resistant encryption',' pric,
   e: '$349',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced data storage platform that uses quantum - resistant encryption algorithms to protect your data against future quantum computing threats.', feature,
   s: [,' 'Quantum - resistant encryption',' 'Multi - layer security', ' 'Automated backup and recovery',' 'Global data distribution',' 'Compliance certifications',' 'Real - time monitoring',' 'Disaster recovery',' 'Data deduplication',' 'API access',' 'Mobile applications'], popula,
   r: true,' ico,
   n: '💾', ' 'Post-Quantum Cryptography',' colo,
@@ -2250,14 +2218,12 @@ i,
   e: '2025-11-20', customer,
   s: 1100, ratin,
   g: 4 && 4.8, review,
-  s: 550}; ]; feature,
   s: [ export interface Innovative2026ITInfrastructureService,
   id: string, nam,
   e: string, taglin,
   e: string, pric,
   e: string, perio,
   d: string, descriptio,
-  n: string, feature,
   s: string[], popula,
   r: boolean, ico,
   n: string, colo,
@@ -2295,7 +2261,6 @@ i,
   e: 'Next-generation cloud infrastructure with quantum computing capabilities', pric,
   e: '$599',' perio,
   d: '/month',' descriptio,
-  n: 'Revolutionary cloud platform that combines traditional cloud computing with quantum computing capabilities, enabling unprecedented processing power and security for enterprise applications.', feature,
   s: [' 'Hybrid quantum-classical computingQuantum-resistant encryptionQuantum machine learning accelerationMulti-cloud orchestrationAuto-scaling infrastructureQuantum key distributionAdvanced security protocolsReal-time performance monitoring'' 'Global edge computing networkQuantum-safe data storage' integration,
   s: [' 'AWS S3'' 'Azure Blob'' 'Google Cloud Storage'' 'Dropbox'' 'OneDrive'' 'Box'' 'API Access' ] useCase,
   s: [' 'Secure document storage'' 'Compliance data management'' 'Backup and recovery'' 'Data archiving'' 'Collaborative storage'' 'API-driven applications' ]' ro,
@@ -2304,7 +2269,6 @@ i,
   e: '2025-11-20', customer,
   s: 1100, ratin,
   g: 4.8, review,
-  s: 550}; ]; feature,
   s: [' 'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication'' 'API accessMobile applications' ],' popula,
   r: true, ico,
   n: '⚛️',' colo,
@@ -2327,7 +2291,6 @@ i,
   e: '$397.4B market', growthRat,
   e: '280% annual growth',' varian,
   t: 'quantum-futuristic', contactInf,
-  o: ]; feature,
   s: [;' 'Quantum - resistant encryption_multi - layer security_automated backup and recovery_global data distribution_compliance certifications_real - time monitoring_disaster recovery_data deduplication'' 'API access_mobile applications' ],' popula,
   r: true, ico,
   n: '💾',' colo,
@@ -2394,7 +2357,6 @@ i,
   e: '2025 - 11 - 20', customer,
   s: 1100, ratin,
   g: 4.8, review,
-  s: 550; ], ' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -2403,7 +2365,6 @@ i,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [; // Quantum-Enhanced Cloud Infrastructure; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2413,7 +2374,6 @@ i,
   e: '2025-08-15'; customer,
   s: 800; ratin,
   g: 4.9; review,
-  s: 400}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2423,7 +2383,6 @@ i,
   e: '2025-07-20'; customer,
   s: 1200; ratin,
   g: 4.8; review,
-  s: 600}; // Zero-Trust Network Architecture; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2433,7 +2392,6 @@ i,
   e: '2025-09-10'; customer,
   s: 900; ratin,
   g: 4.9; review,
-  s: 450}; // AI-Powered DevOps Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2443,7 +2401,6 @@ i,
   e: '2025-10-15'; customer,
   s: 2500; ratin,
   g: 4.7; review,
-  s: 1250}; // Quantum-Safe Data Storage; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2453,7 +2410,6 @@ i,
   e: '2025-11-20'; customer,
   s: 1100; ratin,
   g: 4.8; review,
-  s: 550; ]} ]; ; } ]; } ];' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -2462,7 +2418,6 @@ i,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [; // Quantum-Enhanced Cloud Infrastructure; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2472,7 +2427,6 @@ i,
   e: '2025-08-15'; customer,
   s: 800; ratin,
   g: 4.9; review,
-  s: 400}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2482,7 +2436,6 @@ i,
   e: '2025-07-20'; customer,
   s: 1200; ratin,
   g: 4.8; review,
-  s: 600}; // Zero-Trust Network Architecture; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2492,7 +2445,6 @@ i,
   e: '2025-09-10'; customer,
   s: 900; ratin,
   g: 4.9; review,
-  s: 450}; // AI-Powered DevOps Platform; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2502,7 +2454,6 @@ i,
   e: '2025-10-15'; customer,
   s: 2500; ratin,
   g: 4.7; review,
-  s: 1250}; // Quantum-Safe Data Storage; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,

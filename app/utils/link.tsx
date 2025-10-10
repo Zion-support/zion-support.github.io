@@ -48,14 +48,10 @@ export const Link: React.FC<LinkProps> = ({,
   }
   return(<a;
 import React from 'react';
-interface LinkProps {/* TODO: Fix JSX expression */}
 }
 export const,
-  Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
     }
     // Handle internal navigation;
-    if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
     }
   };
   return (<a></a>

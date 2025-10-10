@@ -114,33 +114,24 @@ export default APIInterceptor;
  * Centralized API request handling with error handling, retry logic, and caching;
  */
 // ErrorHandler class definition;
-class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     return ErrorHandler.instance;
   }
   handleNetworkError(erro,
   r: Error, ur)
-  l: string, config?: unknown): void {/* TODO: Fix JSX expression */}
     }
 }
-export interface APIConfig {/* TODO: Fix JSX expression */}
   };
 }
-export interface RequestConfig {/* TODO: Fix JSX expression */}
 }
-export interface APIResponse<T = unknown> {/* TODO: Fix JSX expression */}
 }
-export interface CacheEntry {/* TODO: Fix JSX expression */}
 }
-export class APIInterceptor {/* TODO: Fix JSX expression */}
-  g: Partial<APIConfig> = {}) {/* TODO: Fix JSX expression */}
   headers: config.headers || {},
       interceptor,
   s: config.interceptors || {}
     };
     this.errorHandler = ErrorHandler.getInstance();
   }
-  static getInstance(config?: Partial<APIConfig>): APIInterceptor {/* TODO: Fix JSX expression */}
     }
     return APIInterceptor.instance;
   }
@@ -148,51 +139,40 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
    * Make API request;
    */
   async request<T = unknown>(confi)
-  g: RequestConfig): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
       }
     }
     // Check for pending identical requests;
-    if (this.pendingRequests.has(cacheKey)) {/* TODO: Fix JSX expression */}
     }
     // Create the request promise;
     const requestPromise = this.executeRequest<T>(fullConfig);
     this.pendingRequests.set(cacheKey, requestPromise as Promise<APIResponse>);
-    try {/* TODO: Fix JSX expression */}
       }
       return response;
-    } finally {/* TODO: Fix JSX expression */}
     }
   }
   /**
    * Execute the actual request;
    */
   private async executeRequest<T>(confi)
-  g: RequestConfig, attempt = 1): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
       }
       const url = this.buildURL(finalConfig);
       const,
-  fetchOptions: RequestInit = {/* TODO: Fix JSX expression */}
       };
       const response = await fetch(url, fetchOptions);
       const duration = performance.now() - startTime;
       // Record performance metric;
       performanceMetrics.recordNetworkRequest(url, duration, response.status);
       // Handle non-2xx responses;
-      if (!response.ok) {/* TODO: Fix JSX expression */}
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
       // Apply response interceptor;
       let finalResponse = response;
-      if (this.config.interceptors?.response) {/* TODO: Fix JSX expression */}
       }
       // Parse response data;
       const data = await this.parseResponse<T>(finalResponse);
-      return {/* TODO: Fix JSX expression */}
       };
-    } catch (error) {/* TODO: Fix JSX expression */}
       }
       // Apply error interceptor;
-      if (this.config.interceptors?.error) {/* TODO: Fix JSX expression */}
       }
       throw err;
     }
@@ -204,7 +184,6 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   l: string,
     confi,
   g: Partial<RequestConfig> = {})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'GET' });
   }
   /**
@@ -215,7 +194,6 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
     body?: unknown,
     confi,
   g: Partial<RequestConfig> = {})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'POST', body });
   }
   /**
@@ -226,7 +204,6 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
     body?: unknown,
     confi,
   g: Partial<RequestConfig> = {})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'PUT', body });
   }
   /**
@@ -236,7 +213,6 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   l: string,
     confi,
   g: Partial<RequestConfig> = {})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'DELETE' });
   }
   /**
@@ -247,14 +223,12 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
     body?: unknown,
     confi,
   g: Partial<RequestConfig> = {})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'PATCH', body });
   }
   /**
    * Prepare request configuration;
    */
   private prepareRequest(confi)
-  g: RequestConfig): RequestConfig {/* TODO: Fix JSX expression */}
       },
       timeou,
   t: config.timeout || this.config.timeout,
@@ -268,9 +242,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
    * Build full URL with query parameters;
    */
   private buildURL(confi)
-  g: RequestConfig): string {/* TODO: Fix JSX expression */}`
     let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
-    if (config.params) {/* TODO: Fix JSX expression */}
       });`
       url += `?${params.toString()}`;
     }
@@ -280,8 +252,6 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
    * Build request headers;
    */
   private buildHeaders(confi)
-  g: RequestConfig): Headers {/* TODO: Fix JSX expression */}
-    Object.entries(config.headers || {}).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
     });
     return headers;
   }
@@ -289,15 +259,12 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
    * Create abort signal for timeout;
    */
   private createAbortSignal(timeou)
-  t: number): AbortSignal {/* TODO: Fix JSX expression */}
   }
   /**
    * Parse response based on content type;
    */
   private async parseResponse<T>(respons)
-  e: Response): Promise<T> {/* TODO: Fix JSX expression */}
     }
-    if (contentType?.includes('text/')) {/* TODO: Fix JSX expression */}
     }
     return (await response.blob()) as T;
   }
@@ -305,14 +272,12 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
    * Get cache key for request;
    */
   private getCacheKey(confi)
-  g: RequestConfig): string {/* TODO: Fix JSX expression */}`
     return `${config.method}:${url}`;
   }
   /**
    * Get response from cache;
    */
   private getFromCache(ke)
-  y: string): APIResponse | null {/* TODO: Fix JSX expression */}
     }
     return entry.data as APIResponse;
   }
@@ -321,44 +286,37 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
    */
   private setInCache(ke,
   y: string, respons)
-  e: APIResponse): void {/* TODO: Fix JSX expression */}
     });
   }
   /**
    * Clear cache;
    */
-  clearCache(): void {/* TODO: Fix JSX expression */}
   }
   /**
    * Clear expired cache entries;
    */
-  clearExpiredCache(): void {/* TODO: Fix JSX expression */}
       }
     }
   }
   /**
    * Get cache statistics;
    */
-  getCacheStats() {/* TODO: Fix JSX expression */}
     };
   }
   /**
    * Delay helper for retry logic;
    */
   private delay(m)
-  s: number): Promise<void> {/* TODO: Fix JSX expression */}
   }
   /**
    * Update configuration;
    */
   updateConfig(confi)
-  g: Partial<APIConfig>): void {/* TODO: Fix JSX expression */}
     this.config = { ...this.config, ...config };
   }
   /**
    * Get current configuration;
    */
-  getConfig(): APIConfig {/* TODO: Fix JSX expression */}
     return { ...this.config };
   }
 }

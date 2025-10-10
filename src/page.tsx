@@ -13,7 +13,6 @@ import {
   Cpu, 
   Target, 
   BarChart, 
-  MessageSquare, 
   Eye, 
   Sparkles, 
   ArrowRight, 
@@ -395,7 +394,6 @@ const HomePage: React.FC = () => {
     {
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions for text analysis and language understanding with 95%+ accuracy',
-      icon: MessageSquare,
       price: '$1,800/month',
       features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development', 'Document Processing', 'Voice Recognition', 'Entity Extraction', 'Topic Modeling'],
       color: 'text-blue-400',
@@ -482,7 +480,6 @@ const HomePage: React.FC = () => {
   const itServices = [
     {
       title: 'Cloud Migration & Management',
-      description: 'Complete cloud transformation with AWS, Azure, and GCP expertise',
       icon: Cloud,
       price: '$1,500/month',
       features: ['Cloud Strategy', 'Migration Planning', 'Infrastructure Setup', 'Security Configuration', 'Cost Optimization', '24/7 Monitoring', 'Disaster Recovery', 'Compliance'],
@@ -788,7 +785,6 @@ const HomePage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -867,7 +863,6 @@ const HomePage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-purple-400 mb-3">Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -946,7 +941,6 @@ const HomePage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-green-400 mb-3">Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -1025,7 +1019,6 @@ const HomePage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-orange-400 mb-3">Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}

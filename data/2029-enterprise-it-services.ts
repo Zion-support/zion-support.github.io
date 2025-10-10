@@ -39,7 +39,6 @@ export interface EnterpriseItService2029 {;,
   e: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   popula,
   r: boolean;
@@ -85,7 +84,6 @@ export interface EnterpriseItService2029 {;,
   e: string;
     emai,
   l: string;
-export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
   s: string}
 };
   i,
@@ -98,7 +96,6 @@ export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
   e: string,,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -107,7 +104,6 @@ export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
   realImplementatio,
   n: boolean;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
@@ -159,7 +155,6 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [,
   e: string, pric,
   e: string,
   descriptio,
-  n: string, feature,
   s: string[],
   lin,
   k: string, categor,
@@ -184,7 +179,6 @@ export const,
   e: "$599/month",
     descriptio,"
   n: "Advanced enterprise IT service platform designed for large organizations in 2029.",
-    feature,
   s: [;"
       "Enterprise IT services""
       "Scalable solutions""
@@ -255,7 +249,6 @@ export const,
   e: "$599/month",
     descriptio,"
   n: "Advanced enterprise IT service platform designed for large organizations in 2029.",
-    feature,
   s: [,"
       "Enterprise IT services","
       "Scalable solutions","
@@ -299,7 +292,6 @@ i,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; popula,
   r: boolean; ico,
   n: string; colo,
@@ -322,18 +314,15 @@ i,
   t: string; contactInf,
   o: mobil,
   e: string; emai,
-  l: string; export interface EnterpriseItService2029 {/* TODO: Fix JSX expression */}
   s: string }; i,
   d: string; nam,
   e: string; taglin,
   e: string; pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
@@ -341,7 +330,6 @@ i,
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
@@ -355,7 +343,6 @@ i,
   e: "2029 Enterprise IT Service Platform", taglin,"
   e: "Enterprise IT services for 2029", pric,"
   e: "$599/month", descriptio,"
-  n: "Advanced enterprise IT service platform designed for large organizations in 2029.", feature,"
   s: [ "Enterprise IT services" "Scalable solutions" "Advanced security" "24/7 support" "Custom integration" ], lin,"
   k: "/services/2029-enterprise-it", categor,"
   y: "Enterprise IT Services 2029", realImplementatio,
@@ -372,7 +359,6 @@ i,
   e: "2029 Enterprise IT Service Platform", taglin,"
   e: "Enterprise IT services for 2029", pric,"
   e: "$599/month", descriptio,"
-  n: "Advanced enterprise IT service platform designed for large organizations in 2029.", feature,"
   s: [ "Enterprise IT services", "Scalable solutions", "Advanced security", "24/7 support", "Custom integration" ], lin,"
   k: "/services/2029-enterprise-it", categor,"
   y: "Enterprise IT Services 2029", realImplementatio,

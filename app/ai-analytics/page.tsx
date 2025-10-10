@@ -15,23 +15,6 @@ const AiAnalyticsPage: React.FC = () => {
     },
     {
       icon: BarChart,
-<<<<<<< HEAD
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
       title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
@@ -59,7 +42,6 @@ const AiAnalyticsPage: React.FC = () => {
       title: 'Data Security',
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
     }
   ];
 
@@ -71,14 +53,6 @@ const AiAnalyticsPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ];
 
-<<<<<<< HEAD
-  return (
-    <>
-      <Helmet>
-        <title>Ai Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai analytics solution for modern businesses." />
-        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />
-=======
   const useCases = [
     {
       title: 'Business Intelligence',
@@ -117,7 +91,6 @@ const AiAnalyticsPage: React.FC = () => {
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
       </Helmet>
 
       <Navigation />
@@ -157,7 +130,6 @@ const AiAnalyticsPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />

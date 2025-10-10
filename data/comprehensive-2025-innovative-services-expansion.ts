@@ -185,7 +185,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     category: 'DevOps & Infrastructure',
     realService: true;
     technology: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI'];
-    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];
     useCases: ['CI/CD automation, Testing automation, Infrastructure management, Performance optimization'];
     roi: 'Reduce deployment time by 70% and increase team productivity by 50%',
     period: '/month',
@@ -206,7 +205,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     category: 'DevOps & Infrastructure',
     real_service: true;
     technology: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI'];
-    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];
     use_cases: ['CI / CD automation, Testing automation, Infrastructure management, Performance optimization'];
     roi: 'Reduce deployment time by 70% and increase team productivity by 50%',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'];
@@ -605,7 +603,6 @@ export interface ComprehensiveInnovativeService {;
   d: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   popula,
   r: boolean;
@@ -704,7 +701,6 @@ export const,
 export const,
   comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
   // AI & Machine Learning Services;
-  {/* TODO: Fix JSX expression */}
   s: 30}
     setupTim,
   e: '2-3 weeks'
@@ -731,7 +727,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Comprehensive zero - trust security platform that implements continuous verification and least - privilege access across all users, devices, and applications.'
-    feature,
   s: [;
       'Identity verification and management_device trust scoring_application access control_network segmentation_continuous monitoring_threat detection and response_compliance reportingAPI security'
       'Data encryption_security analytics dashboard'
@@ -832,7 +827,6 @@ export const,
     technolog,
   y: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI'];
     integration,
-  s: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];
     useCase,
   s: ['CI/CD automation, Testing automation, Infrastructure management, Performance optimization'];
     ro,
@@ -841,7 +835,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'AI - driven DevOps platform that automates deployment, testing, monitoring, and optimization using machine learning and predictive analytics.'
-    feature,
   s: [;
       'Intelligent CI / CD pipelines_automated testing and QAPredictive deployment optimization_performance monitoring and alerting_infrastructure as code automation_security scanning integration_cost optimization recommendations_team collaboration tools'
       'Compliance automation_analytics and reporting'
@@ -872,7 +865,6 @@ export const,
     technolog,
   y: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI'];
     integration,
-  s: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];
     use_case,
   s: ['CI / CD automation, Testing automation, Infrastructure management, Performance optimization'];
     ro,
@@ -947,7 +939,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Advanced IoT edge computing platform that processes data locally, provides real - time analytics, and enables intelligent decision - making at the edge.'
-    feature,
   s: [;
       'Edge data processing_real - time analytics_machine learning at the edge_device management and monitoring_data synchronization_security and encryption_scalable edge deployment_custom edge applications'
       'Performance optimization_integration APIs'
@@ -1030,7 +1021,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Revolutionary AI platform for medical imaging analysis that provides accurate diagnosis, early detection, and treatment recommendations for various medical conditions.'
-    feature,
   s: [;
       'Multi - modality image analysisAI - powered diagnosis_early detection algorithms_treatment recommendations_radiologist assistance tools_clinical decision support_patient outcome prediction_research and analytics'
       'HIPAA compliance_integration with PACS systems'
@@ -1149,7 +1139,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Advanced AI - powered financial risk management platform that provides real - time risk assessment, fraud detection, and compliance monitoring for financial institutions.'
-    feature,
   s: [;
       'Real - time risk assessmentAI - powered fraud detection_compliance monitoring_portfolio risk analysis_market risk modeling_credit risk evaluation_regulatory reporting_stress testing scenarios'
       'Risk analytics dashboardAPI integration'
@@ -1236,7 +1225,6 @@ export const,
   d: '/month'
     descriptio,
   n: 'Intelligent learning platform that personalizes education content, tracks student progress, and provides adaptive learning paths using AI and machine learning.'
-    feature,
   s: [;
       'Personalized learning paths_adaptive content delivery_progress tracking and analytics_intelligent tutoring system_assessment and feedback_collaborative learning tools_content creation tools_learning analytics dashboard'
       'Mobile learning support_integration with LMS systems'
@@ -1349,7 +1337,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'AI - powered supply chain platform that optimizes inventory, predicts demand, manages logistics, and provides real - time visibility across the entire supply chain.'
-    feature,
   s: [;
       'Demand forecasting_inventory optimization_logistics route optimization_supplier management_real - time tracking_risk assessment_cost optimization_sustainability metrics'
       'Performance analytics_integration with ERP systems'
@@ -1459,7 +1446,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'AI - powered energy optimization platform that manages renewable energy systems, optimizes consumption, and provides sustainability insights for businesses and utilities.'
-    feature,
   s: [;
       'Renewable energy management_energy consumption optimization_grid integration and management_sustainability reporting_carbon footprint tracking_energy trading optimization_predictive maintenance_real - time monitoring'
       'Performance analytics_integration with smart meters'
@@ -1521,7 +1507,6 @@ export const,
   s: [;
       '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking'
     ],
-export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -1545,7 +1530,6 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   marketAdvantag,
   e: string}
 ;
-// const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
@@ -1596,7 +1580,6 @@ export const,
     capabilities: [,
       'Renewable energy management_energy optimization_grid integration_sustainability reporting_predictive maintenance']}
     market_advantage: 'Advanced AI energy platform with comprehensive sustainability features',
-  {/* TODO: Fix JSX expression */}
     ]}
     capabilitie,
   s: [,
@@ -1608,7 +1591,6 @@ export const,
 ];
 export default comprehensiveInnovativeServices;
 ;
-export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -1649,7 +1631,6 @@ i,
   e: string; pric,
   e: string, perio,
   d: string, descriptio,
-  n: string; feature,
   s: string[]; popula,
   r: boolean; ico,
   n: string; colo,
@@ -1698,7 +1679,6 @@ i,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/ai-content-generation'' marketPositio,
   n: 'Leading AI content generation platform with enterprise features', export const,
-  comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [ // AI & Machine Learning Services {/* TODO: Fix JSX expression */}
   s: 30}' setupTim,
   e: '2-3 weeks'' categor,
   y: 'Cybersecurity' capabilitie,
@@ -1709,7 +1689,6 @@ i,
   e: 'Never trust, always verify security architecture'' pric,
   e: '$1, 299'' perio,
   d: '/month',' descriptio,
-  n: 'Comprehensive zero - trust security platform that implements continuous verification and least - privilege access across all users, devices, and applications.' feature,
   s: [;' 'Identity verification and management_device trust scoring_application access control_network segmentation_continuous monitoring_threat detection and response_compliance reportingAPI security'' 'Data encryption_security analytics dashboard' ]; popula,
   r: true,' ico,
   n: '🔐'' colo,
@@ -1756,11 +1735,9 @@ i,
   y: 'DevOps & Infrastructure' realServic,
   e: true' technolog,
   y: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI'];' integration,
-  s: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];' useCase,
   s: ['CI/CD automation, Testing automation, Infrastructure management, Performance optimization'];' ro,
   i: 'Reduce deployment time by 70% and increase team productivity by 50%'' perio,
   d: '/month',' descriptio,
-  n: 'AI - driven DevOps platform that automates deployment, testing, monitoring, and optimization using machine learning and predictive analytics.' feature,
   s: [;' 'Intelligent CI / CD pipelines_automated testing and QAPredictive deployment optimization_performance monitoring and alerting_infrastructure as code automation_security scanning integration_cost optimization recommendations_team collaboration tools'' 'Compliance automation_analytics and reporting' ]; popula,
   r: true,' ico,
   n: '⚙️'' colo,
@@ -1775,7 +1752,6 @@ i,
   y: 'DevOps & Infrastructure' real_servic,
   e: true,' technolog,
   y: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI'];' integration,
-  s: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];' use_case,
   s: ['CI / CD automation, Testing automation, Infrastructure management, Performance optimization'];' ro,
   i: 'Reduce deployment time by 70% and increase team productivity by 50%',' competitor,
   s: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'];' market_siz,
@@ -1809,7 +1785,6 @@ i,
   s: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation'];' ro,
   i: 'Reduce latency by 80% and improve operational efficiency by 45%'' perio,
   d: '/month',' descriptio,
-  n: 'Advanced IoT edge computing platform that processes data locally, provides real - time analytics, and enables intelligent decision - making at the edge.' feature,
   s: [;' 'Edge data processing_real - time analytics_machine learning at the edge_device management and monitoring_data synchronization_security and encryption_scalable edge deployment_custom edge applications'' 'Performance optimization_integration APIs' ]; popula,
   r: false,' ico,
   n: '🌐'' colo,
@@ -1846,7 +1821,6 @@ i,
   e: 'Advanced AI - powered medical image diagnosis',' pric,
   e: '$3, 999'' perio,
   d: '/month', ' descriptio,
-  n: 'Revolutionary AI platform for medical imaging analysis that provides accurate diagnosis, early detection, and treatment recommendations for various medical conditions.' feature,
   s: [;' 'Multi - modality image analysisAI - powered diagnosis_early detection algorithms_treatment recommendations_radiologist assistance tools_clinical decision support_patient outcome prediction_research and analytics'' 'HIPAA compliance_integration with PACS systems' ]; popula,
   r: true,' ico,
   n: '🏥' ' lin,
@@ -1902,7 +1876,6 @@ i,
   e: 'Intelligent financial risk assessment and mitigation',' pric,
   e: '$2, 499'' perio,
   d: '/month',' descriptio,
-  n: 'Advanced AI - powered financial risk management platform that provides real - time risk assessment, fraud detection, and compliance monitoring for financial institutions.' feature,
   s: [;' 'Real - time risk assessmentAI - powered fraud detection_compliance monitoring_portfolio risk analysis_market risk modeling_credit risk evaluation_regulatory reporting_stress testing scenarios'' 'Risk analytics dashboardAPI integration' ]; popula,
   r: true,' ico,
   n: '💰'' colo,
@@ -1941,7 +1914,6 @@ i,
   e: 'Adaptive learning powered by artificial intelligence'' pric,
   e: '$799'' perio,
   d: '/month'' descriptio,
-  n: 'Intelligent learning platform that personalizes education content, tracks student progress, and provides adaptive learning paths using AI and machine learning.' feature,
   s: [;' 'Personalized learning paths_adaptive content delivery_progress tracking and analytics_intelligent tutoring system_assessment and feedback_collaborative learning tools_content creation tools_learning analytics dashboard'' 'Mobile learning support_integration with LMS systems' ]; popula,
   r: false,' ico,
   n: '🎓' ' lin,
@@ -1994,7 +1966,6 @@ i,
   e: 'Intelligent supply chain management and optimization',' pric,
   e: '$1, 899'' perio,
   d: '/month',' descriptio,
-  n: 'AI - powered supply chain platform that optimizes inventory, predicts demand, manages logistics, and provides real - time visibility across the entire supply chain.' feature,
   s: [;' 'Demand forecasting_inventory optimization_logistics route optimization_supplier management_real - time tracking_risk assessment_cost optimization_sustainability metrics'' 'Performance analytics_integration with ERP systems' ]; popula,
   r: true,' ico,
   n: '📦'' colo,
@@ -2045,7 +2016,6 @@ i,
   e: 'Intelligent energy management and sustainability',' pric,
   e: '$1, 299'' perio,
   d: '/month',' descriptio,
-  n: 'AI - powered energy optimization platform that manages renewable energy systems, optimizes consumption, and provides sustainability insights for businesses and utilities.' feature,
   s: [;' 'Renewable energy management_energy consumption optimization_grid integration and management_sustainability reporting_carbon footprint tracking_energy trading optimization_predictive maintenance_real - time monitoring'' 'Performance analytics_integration with smart meters' ]; popula,
   r: false,' ico,
   n: '⚡'' colo,
@@ -2074,7 +2044,6 @@ i,
   s: 78; ratin,
   g: 4 && 4.6; review,
   s: 56; benefit,
-  s: [;' '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking' ], ' import { ServiceVariant } from '../types/service-variants'; export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -2085,15 +2054,12 @@ i,
   s: number; benefit,
   s: string[]; capabilitie,
   s: string[]; marketAdvantag,
-  e: string} ; const contact = {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [; // AI & Machine Learning Services; {/* TODO: Fix JSX expression */}
   s: [,' '80% faster content creation40% increase in engagementSEO optimization built-inMulti-language supportBrand voice consistency' ]} capabilitie,
   s: [,' 'Renewable energy management_energy optimization_grid integration_sustainability reporting_predictive maintenance' ]}' market_advantag,
-  e: 'Advanced AI energy platform with comprehensive sustainability features' } ]; export default comprehensiveInnovativeServices; ' import { ServiceVariant } from '../types/service-variants'; export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,

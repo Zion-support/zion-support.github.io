@@ -18,7 +18,6 @@
   e: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -38,7 +37,6 @@ export const,
   e: '$179/month'
     descriptio,
   n: 'Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.'
-    feature,
   s: [;
       'Next-gen AI models'
       'Advanced capabilities'
@@ -110,7 +108,6 @@ export const,
   e: "$179/month",
     descriptio,"
   n: "Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.",
-    feature,
   s: [,"
       "Next-gen AI models","
       "Advanced capabilities","
@@ -164,7 +161,6 @@ i,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; addres,
@@ -174,7 +170,6 @@ i,
   e: 'Next-Gen AI Suite'' taglin,
   e: 'Future-ready AI solutions'' pric,
   e: '$179/month' descriptio,
-  n:' 'Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.' feature,
   s: [' 'Next-gen AI models'' 'Advanced capabilities'' 'Future-ready features'' 'Innovation platform'' 'Expert support' ]' lin,
   k: '/services/next-gen-ai-suite'' categor,
   y: 'Next-Gen Innovations 2025' realImplementatio,
@@ -191,7 +186,6 @@ i,
   e: "Next-Gen AI Suite", taglin,"
   e: "Future-ready AI solutions", pric,"
   e: "$179/month", descriptio,"
-  n: "Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.", feature,"
   s: [ "Next-gen AI models", "Advanced capabilities", "Future-ready features", "Innovation platform", "Expert support" ], lin,"
   k: "/services/next-gen-ai-suite", categor,"
   y: "Next-Gen Innovations 2025", realImplementatio,

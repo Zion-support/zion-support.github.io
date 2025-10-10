@@ -1,5 +1,4 @@
 impo, r, t { Trending, U, p, Z, a, p } fr, o, m "luci, d, e-rea, c, t";
-impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";
 const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {
   const, revolutionaryConten, t = [
@@ -87,7 +86,6 @@ featur, e, d: fal, s, e;
     {
       id: 5;
       tit, l, e: "Edge, AI, Deployment at, Scal, e"
-      descripti, o, n: "Distributed, AI, processing across, 1, 0,0, 0, 0+ edge, nodes, with re, a, l-time, decision, making and, local, autonomy"
       sl, u, g: "ed, g, e-ai-deployme, n, t-sca, l, e-20, 2, 6"
       catego, r, y: "Edge, Computin, g"
       da, t, e: "20, 2, 6-01-15"
@@ -119,13 +117,9 @@ da, t, e: "20, 2, 6-01-15"
 readTi, m, e: "43, mi, n"
 trendi, n, g: tr, u, e;
 ic, o, n: "🎭",
-const, Revolutionary2026ContentMegaBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
 i,
   d: 3;"
@@ -140,11 +134,8 @@ ic, o, n: "⚛️""
 impa, c, t: "Quantum, Breakthroug, h"
 featur, e, d: tr, u, e;
 }
-    {/* TODO: Fix JSX expression */}
 }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
 i,
   d: 6;"
@@ -202,11 +193,9 @@ featur, e, d: fal, s, e;
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">6, BREAKTHROUGH, TECHNOLOGIES</sp, a, n>
             </d, i, v>
           </d, i, v>"
-          <h2, className="te, x, t-6xl, m, d:te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
             Revolutionary, 2026, Content;
           </h2>"
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>
-            Experience, the, future of, AI, with breakthrough, technologies, that are, reshaping, enterprise operatio, n, s. 
             Me, t, a-cognitive, A, I, quant, u, m-neural, convergenc, e, and, autonomous, systems achieving, unprecedented, performance.
           </p>
           <div, className="flex, item, s-center, justif, y-center, ga, p-8, tex, t-cent, e, r"></div>
@@ -250,7 +239,6 @@ featur, e, d: fal, s, e;
         {/* Featured, Content, Grid */}"
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div>
-          {/* TODO: Fix JSX expression */}
   k, e, y={conte, n, t.id}"
               classNa, m, e="group, relativ, e"
             ></d>
@@ -280,7 +268,6 @@ featur, e, d: fal, s, e;
                       </d, i, v>
                     )}
                     <span, className="px-3, p, y-1.5, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30">
-              {/* TODO: Fix JSX expression */})
               )}
               {/* Card, glow, effect */}"
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>"
@@ -292,7 +279,6 @@ featur, e, d: fal, s, e;
                     {conte, n, t.ic, o, n}
                   </d, i, v>"
                   <div, className="flex, fle, x-col, ga, p-2"></div>
-                    {/* TODO: Fix JSX expression */}
                     )}"
                     <span, className="px-3, p, y-1.5, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30"></span>
                       REVOLUTIONA, R, Y;
@@ -346,7 +332,6 @@ featur, e, d: fal, s, e;
                   classNa, m, e="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1"
                 >
                   <Link, className="w-4 h-4"  />
-                  <sp, a, n>Explore, Breakthroug, h</sp, a, n>
                   <span, className="w-4 h-4, grou, p-hov, e, r/bt;
                 <a></a>
   hr, e, f={`/bl, o, g/${conte, n, t.sl, u, g}`}`"
@@ -354,7 +339,6 @@ featur, e, d: fal, s, e;
   r:-transla, t, e-y-1"
                 >"
                   <Link, className="w-4 h-4"  /></Link>
-                  <sp, a, n>Explore, Breakthroug, h</sp, a, n>"
                   <span, className="w-4 h-4, grou, p-hov, e, r/bt,"
   n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0">›</sp, a, n>
                 </a>
@@ -439,7 +423,6 @@ featur, e, d: fal, s, e;
                   classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hov, e,"
   r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
                 ></a>
-                  <sp, a, n>Explore, All, Breakthroughs</sp, a, n>"
                   <Link, className="w-5 h-5"  /></Link>
                 </a>
               </d, i, v>
@@ -459,7 +442,6 @@ featur, e, d: fal, s, e;
               <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Revolutionary, Breakthrough, s</d, i, v>
             </d, i, v>
             <d, i, v></d>"
-              <div, className="te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0">5, 0, 0+</d, i, v>"
               <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Enterprise, Client, s</d, i, v>
             </d, i, v>
             <d, i, v></d>"

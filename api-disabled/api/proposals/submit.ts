@@ -41,32 +41,24 @@ async function submitByEmail(t,
   t: string,
   attachment,
   s: unknown[] = [])
-) {/* TODO: Fix JSX expression */}
   }
 
-  const transporter = nodemailer.createTransporter({/* TODO: Fix JSX expression */}
   h: { user, pass })
   });
 
-  await transporter.sendMail({/* TODO: Fix JSX expression */})
   });
 }
 
-export default async function handler(re,
   q: NextApiRequest, re)
-  s: NextApiResponse) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' });
   }
 
-  try {/* TODO: Fix JSX expression */}
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
 
-    if (!id) {/* TODO: Fix JSX expression */}
   r: 'Proposal ID required' });
     }
 
     const _meta = getProposal(id);
-    if (!meta) {/* TODO: Fix JSX expression */}
   r: 'Proposal not found' });
     }
 
@@ -74,7 +66,6 @@ export default async function handler(re,
     if (channels.includes('email')) {
       //       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
       //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
-    if (channels.includes('email')) {/* TODO: Fix JSX expression */}
       //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;`
       const text = `Please find the proposal attached.
 
@@ -122,19 +113,14 @@ Delegate,`
   t: compute and store hash only)
     let,
   ensRecordHash: string | undefined;
-    try {/* TODO: Fix JSX expression */}`
       ensRecordHash = `0x${hash}`;
       updateArtifacts(id, { ensRecordHash });
-    } catch {/* TODO: Fix JSX expression */}
     }
 
-    const updated = updateProposalMeta(id, m => ({/* TODO: Fix JSX expression */})
     }));
 
-    return res.status(200).json({/* TODO: Fix JSX expression */})
   a: updated });
   } catch (erro)
-  r: unknown) {/* TODO: Fix JSX expression */}
   r: error?.message || 'Submission failed' });
   }
 }

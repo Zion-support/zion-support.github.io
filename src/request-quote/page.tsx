@@ -8,7 +8,6 @@ import Footer from '../components/Footer';
 
 
 'use client';
-import React, { useState } from 'react';
 const RequestQuotePage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -458,7 +457,6 @@ $4}
 
   );
 };
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   nam,
@@ -530,18 +528,15 @@ $4}
 //     'To be discussed'
   ];
   const handleInputChange = (e: React.ChangeEvent;)
-          <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const { name, value } = e.target;
-    setFormData(prev => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //       ...prev,
       [name]: value;)
     }));
   };
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     e.preventDefault();
@@ -555,7 +550,6 @@ $4}
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -565,7 +559,6 @@ $4}
       descriptio,
   n: 'Get a detailed, no-obligation quote within 24 hours'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -575,7 +568,6 @@ $4}
       descriptio,
   n: 'We respond to all quote requests within 4 hours'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -585,7 +577,6 @@ $4}
       descriptio,
   n: 'Clear, detailed pricing with no hidden fees'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -600,7 +591,6 @@ $4}
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -610,7 +600,6 @@ $4}
       descriptio,
   n: 'Proven track record of delivering results'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -620,7 +609,6 @@ $4}
       descriptio,
   n: 'Our clients see significant returns on investment'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -630,7 +618,6 @@ $4}
       descriptio,
   n: 'Round-the-clock support for all our clients'
     },
-    {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   ico,
@@ -641,7 +628,6 @@ $4}
   n: 'Reliable, high-performance solutions'
     }
   ];
-  if (isSubmitted) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return (<div>Coming Soon</div>)

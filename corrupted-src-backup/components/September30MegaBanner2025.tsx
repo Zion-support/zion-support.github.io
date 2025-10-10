@@ -1,32 +1,17 @@
-const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   return(<moti, o, n.d, i, v;
@@ -150,7 +135,6 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
   g:gr, i, d-co, l, s-4, ga, p-6, m, b-12">""
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-4, ga, p-6, m, b-12">";
-          {/* TODO: Fix JSX expression */}
   k, e, y={artic, l, e.sl, u, g}
               initi, a, l={{ opaci, t, y: 0, y: 30 }}
               anima, t, e={{ opaci, t, y: 1, y: 0 }}
@@ -206,19 +190,13 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
                       {artic, l, e.metr, i, c}
                     </sp, a, n>
                   </d, i, v>
-                  {/* Read, More, Arrow */}
                   <div, className="flex, item, s-center, ga, p-2, tex, t-white, fon, t-bold, tex, t-sm, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"</div>
-                    <sp, a, n>Explore, No, w</sp, a, n>
                     <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                   <div, className="flex, item, s-center, ga, p-2, tex, t-white, fon, t-bold, tex, t-sm, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";</div>
-                    <sp, a, n>Explore, No, w</sp, a, n>
                     <ArrowRight, className="w-5 h-5, grou, p-ho, v, e;
-                  {/* Read, More, Arrow */}"
                   <div, className="flex, item, s-center, ga, p-2, tex, t-white, fon, t-bold, tex, t-sm, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
-                    <sp, a, n>Explore, No, w</sp, a, n>"
                     <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
                   <div, className="flex, item, s-center, ga, p-2, tex, t-white, fon, t-bold, tex, t-sm, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
-                    <sp, a, n>Explore, No, w</sp, a, n>"
                     <ArrowRight, className="w-5 h-5, grou, p-ho, v, e,"
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
                   </d, i, v>
@@ -240,7 +218,6 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
               <div, className="te, x, t-sm, tex, t-bl, u, e-200, fon, t-semibold, uppercase, tracking-wi, d, e">NEW, Breakthrough, s</d, i, v>
             </d, i, v>
             <d, i, v></d>"
-              <div, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-gre, e, n-300, m, b-2, animat, e-pul, s, e">10,00, 0, x</d, i, v>""
               <div, className="te, x, t-sm, tex, t-bl, u, e-200, fon, t-semibold, uppercase, tracking-wi, d, e">Performance, Gain, s</d, i, v>
             </d, i, v>
             <d, i, v></d>"
@@ -258,7 +235,6 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <d, i, v>
               <div, className="te, x, t-4x, l, m;
-  d: te, x, t-5xl, fon, t-black, tex, t-gre, e, n-300, m, b-2, animat, e-pul, s, e">10,00, 0, x</d, i, v>";
             <d, i, v></d>"
               <div, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-pi, n, k-300, m, b-2, animat, e-pul, s, e">4-10</d, i, v>""
               <div, className="te, x, t-sm, tex, t-bl, u, e-200, fon, t-semibold, uppercase, tracking-wi, d, e">Weeks, to, Deploy</d, i, v>"
@@ -270,7 +246,6 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <d, i, v></d>"
               <div, className="te, x, t-4x, l, m,"
-  d: te, x, t-5xl, fon, t-black, tex, t-gre, e, n-300, m, b-2, animat, e-pul, s, e">10,00, 0, x</d, i, v>";"
               <div, className="te, x, t-sm, tex, t-bl, u, e-200, fon, t-semibold, uppercase, tracking-wi, d, e">Performance, Gain, s</d, i, v>";
             </d, i, v>
             <d, i, v></d>"
@@ -307,7 +282,6 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
             <d, i, v></d>"
               <h4, className="fo, n, t-black, tex, t-white, m, b-2, tex, t-lg">Producti, o, n-Ready, Toda, y</h4>";"
-              <p, className="te, x, t-sm, tex, t-bl, u, e-200, fon, t-medi, u, m">Deploy, enterpris, e-grade, AI, in 4-10, weeks, with proven, architecture, s</p>";
             </d, i, v>
           </d, i, v>
           <div, className="flex, item, s-start, ga, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-whi, t, e/20, hov, e;
@@ -334,17 +308,10 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
           </d, i, v>
           <div, className="flex, item, s-start, ga, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/15, transitio, n-a, l, l">"</div>
-            <div, className="w-1, 2, h-12, rounde, d-full, b, g-gre, e, n-5, 0, 0/30, flex, items-center, justif, y-center, fle, x-shri, n, k-0"></div>
-              <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-2, 0, 0  />
           <div, className="flex, item, s-start, ga, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/15, transitio, n-a, l, l">";</div>
-            <div, className="w-1, 2, h-12, rounde, d-full, b, g-gre, e, n-5, 0, 0/30, flex, items-center, justif, y-center, fle, x-shri, n, k-0">";</div>
           </d, i, v>"
           <div, className="flex, item, s-start, ga, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/15, transitio, n-a, l, l">""
-            <div, className="w-1, 2, h-12, rounde, d-full, b, g-gre, e, n-5, 0, 0/30, flex, items-center, justif, y-center, fle, x-shri, n, k-0"></div>"
-              <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-2, 0, 0  /></TrendingUp>"
           <div, className="flex, item, s-start, ga, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/15, transitio, n-a, l, l">";"
-            <div, className="w-1, 2, h-12, rounde, d-full, b, g-gre, e, n-5, 0, 0/30, flex, items-center, justif, y-center, fle, x-shri, n, k-0">";"
-              <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-2, 0, 0" />";
             </d, i, v>
             <d, i, v></d>"
               <h4, className="fo, n, t-black, tex, t-white, m, b-2, tex, t-lg">Measurable, RO, I</h4>";"
@@ -370,10 +337,8 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
   r:sca, l, e-110, flex, items-center, justif, y-center, ga, p-4"
           ></Li>"
             <Rocket, className="w-7 h-7, grou, p-hov, e, r: rota, t, e-12, transitio, n-transfo, r, m/>"
-            <sp, a, n>Explore, All, 8 Breakthroug, h, s</sp, a, n>"
             <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>""
             <Rocket, className="w-7 h-7, grou, p-hov, e, r: rota, t, e-12, transitio, n-transfo, r, m" />";
-            <sp, a, n>Explore, All, 8 Breakthroug, h, s</sp, a, n>"
             <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
           </Li, n, k>
           <Li, n, k;
@@ -436,13 +401,11 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
         <div, className="mt-10, p, t-8, borde, r-t-2, borde, r-whi, t, e/30"></div>"
           <p, className="te, x, t-center, tex, t-cy, a, n-200, tex, t-sm, m, b-4, fon, t-bold, uppercase, tracking-wid, e, r">BREAKTHROUGH, TOPIC, S: </p>""
           <div, className="flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r"></div>
-            {/* TODO: Fix JSX expression */}"
               <span, ke, y={top, i, c} classNa, m, e="px-5, p, y-2.5, b, g-whi, t, e/15, backdro, p-bl, u, r-md, rounde, d-full, tex, t-sm, fon, t-bold, tex, t-white, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-whi, t, e/25, hov, e,"
   r:sca, l, e-105, transitio, n-all, curso, r-pointer, shado, w-lg">""
         <div, className="mt-10, p, t-8, borde, r-t-2, borde, r-whi, t, e/30">";"
           <p, className="te, x, t-center, tex, t-cy, a, n-200, tex, t-sm, m, b-4, fon, t-bold, uppercase, tracking-wid, e, r">BREAKTHROUGH, TOPIC, S: </p>";"
           <div, className="flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r">";
-            {/* TODO: Fix JSX expression */}"
               <span, ke, y={top, i, c} classNa, m, e="px-5, p, y-2.5, b, g-whi, t, e/15, backdro, p-bl, u, r-md, rounde, d-full, tex, t-sm, fon, t-bold, tex, t-white, borde, r-2, borde, r-whi, t, e/30, hove, r: bg-whi, t, e/25, hov, e,"
   r:sca, l, e-105, transitio, n-all, curso, r-pointer, shado, w-lg">";
                 {top, i, c}

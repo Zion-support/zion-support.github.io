@@ -37,7 +37,6 @@ export interface InnovativeITService {id: string;
     price: '$599',
     period: '/month',
     description: unknown;
-export interface InnovativeITService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -55,7 +54,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     descriptio,
   n: unknown,
       'Comprehensive zero trust security platform that provides continuous verification, micro - segmentation, and advanced threat detection for modern enterprises.',
-    feature,
   s: [,
       'Continuous identity verification',
       'Micro - segmentation',
@@ -73,7 +71,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / zero - trust - security - platform',
     market_position: unknown;
-      'Competitive with Palo Alto Networks ($50) 000+), CrowdStrike ($8.99 - 15.99), and Zscaler ($5 - 25). Our advantage: Modern architecture, better pricing, and comprehensive coverage.',
     target_audience: unknown;
       'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure',
     trial_days: 30;
@@ -95,7 +92,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     market_positio,
   n: unknown,
       'Competitive with Palo Alto Networks ($50) 000+), CrowdStrike ($8.99 - 15.99), and Zscaler ($5 - 25). Our,
-  advantage: Modern architecture, better pricing, and comprehensive coverage.',
     target_audienc,
   e: unknown,
       'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure',
@@ -209,7 +205,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     descriptio,
   n: unknown,
       'Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.',
-    feature,
   s: [,
       'Distributed edge nodes',
       'Real - time data processing',
@@ -229,7 +224,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     market_position: unknown;
       'Competitive with AWS Greengrass ($0.16 - 0.50), Azure IoT Edge ($0.40 - 0.50), and Google Cloud IoT Edge ($0.40 - 0.50). Our advantage: Better performance, lower costs, and comprehensive features.',
     target_audience: unknown;
-      'IoT companies, Manufacturing, Healthcare, Transportation, Retail, Smart cities, Telecommunications',
     trial_days: 14;
     setup_time: '1 hour'
     category: 'IT & Edge Computing',
@@ -252,7 +246,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   advantage: Better performance, lower costs, and comprehensive features.',
     target_audienc,
   e: unknown,
-      'IoT companies, Manufacturing, Healthcare, Transportation, Retail, Smart cities, Telecommunications',
     trial_day,
   s: 14,
     setup_tim,
@@ -364,7 +357,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     descriptio,
   n: unknown,
       'Cloud - based quantum computing service that provides access to quantum processors for research, optimization, and machine learning applications.',
-    feature,
   s: [,
       'Quantum processor access',
       'Quantum algorithm library',
@@ -519,8 +511,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
-      'Comprehensive blockchain platform for enterprises, providing secure, scalable, and compliant blockchain solutions for various business applications.',
-    feature,
   s: [,
       'Multi - consensus algorithms',
       'Smart contract development',
@@ -678,7 +668,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     descriptio,
   n: unknown,
       'Comprehensive DevOps platform that automates the entire software development lifecycle, from code commit to production deployment.',
-    feature,
   s: [,
       'CI / CD pipelines',
       'Infrastructure as Code',
@@ -822,7 +811,6 @@ export const innovativeITServices: InnovativeITService[] = [,
     popular: true, icon: '',
     color: 'from-red-500 to-pink-600', textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/zero-trust-security-platform',
-    marketPosition: 'Competitive with Palo Alto Networks ($50)000+), CrowdStrike ($8.99-15.99), and Zscaler ($5-25). Our advantage: Modern architecture, better pricing, and comprehensive coverage.',
     targetAudience: 'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure',
     trialDays: 30, setupTime: '2 hours',
     category: 'IT & Cybersecurity', realService: true;
@@ -882,7 +870,6 @@ export const innovativeITServices: InnovativeITService[] = [,
   perio,
   d: string, descriptio,
   n: string,
-  feature,
   s: string[], popula,
   r: boolean,
   ico,
@@ -943,7 +930,6 @@ export const,
   d: '/month',
     descriptio,
   n: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.',
-    feature,
   s: [;
       'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management'
       'Compliance reportingReal-time monitoring'
@@ -959,7 +945,6 @@ export const,
   s://ziontechgroup.com/zero-trust-security-platform',
     marketPositio,
   n: 'Competitive with Palo Alto Networks ($50)000+), CrowdStrike ($8.99-15.99), and Zscaler ($5-25). Our,
-  advantage: Modern architecture, better pricing, and comprehensive coverage.',
     targetAudienc,
   e: 'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure',
     trialDay,
@@ -1003,7 +988,6 @@ export const,
   g: 4.7,
     review,
   s: 1250}
-export interface InnovativeITService {/* TODO: Fix JSX expression */}
   }
 ];
 ;
@@ -1051,7 +1035,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     descriptio,
   n:
       'Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.'
-    feature,
   s: [;
       'Distributed edge nodes'
       'Real-time data processing'
@@ -1071,7 +1054,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     link: 'https://ziontechgroup.com/edge-computing-platform',
     marketPosition:,
       'Competitive with AWS Greengrass ($0.16-0.50), Azure IoT Edge ($0.40-0.50), and Google Cloud IoT Edge ($0.40-0.50). Our advantage: Better performance, lower costs, and comprehensive features.'
-    targetAudience: 'IoT companies, Manufacturing, Healthcare, Transportation, Retail, Smart cities, Telecommunications'
     trialDays: 14;
     setupTime: '1 hour'
     category: 'IT & Edge Computing'
@@ -1093,7 +1075,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Competitive with AWS Greengrass ($0.16-0.50), Azure IoT Edge ($0.40-0.50), and Google Cloud IoT Edge ($0.40-0.50). Our,
   advantage: Better performance, lower costs, and comprehensive features.'
     targetAudienc,
-  e: 'IoT companies, Manufacturing, Healthcare, Transportation, Retail, Smart cities, Telecommunications'
     trialDay,
   s: 14;
     setupTim,
@@ -1408,7 +1389,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     review,
   s: 1250}
 ];
-export interface InnovativeITService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
@@ -1438,7 +1418,6 @@ export const innovativeITServices: InnovativeITService[] = [;
     color: 'from-red-500 to-pink-600';
     textColor: 'text-red-400';
     link: 'https://ziontechgroup.com/zero-trust-security-platform';
-    marketPosition: 'Competitive with Palo Alto Networks ($50)000+), CrowdStrike ($8.99-15.99), and Zscaler ($5-25). Our advantage: Modern architecture, better pricing, and comprehensive coverage.';
     targetAudience: 'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure';
     trialDays: 30;
     setupTime: '2 hours';
@@ -1478,7 +1457,6 @@ export const innovativeITServices: InnovativeITService[] = [;
 ;
 export const,
   innovativeITServices: InnovativeITService[] = [;
-  {/* TODO: Fix JSX expression */}
   t: 'cyberpunk'}
     contactInf,
   o: {}
@@ -1513,7 +1491,6 @@ export interface InnovativeITService,
   e: string; pric,
   e: string, perio,
   d: string, descriptio,
-  n: string; feature,
   s: string[]; popula,
   r: boolean; ico,
   n: string; colo,
@@ -1544,7 +1521,6 @@ export interface InnovativeITService,
   e: 'Next - generation cybersecurity with zero trust architecture',' pric,
   e: '$599',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Comprehensive zero trust security platform that provides continuous verification, micro - segmentation, and advanced threat detection for modern enterprises.', feature,
   s: [,' 'Continuous identity verification',' 'Micro - segmentation',' 'Advanced threat detection',' 'Behavioral analytics',' 'API security',' 'Cloud workload protection',' 'Network segmentation',' 'Privileged access management',' 'Compliance reporting',' 'Real - time monitoring'], popula,
   r: true,' ico,
   n: '🔒',' colo,
@@ -1553,7 +1529,6 @@ export interface InnovativeITService,
   k: 'http,
   s://ziontechgroup.com / zero - trust - security - platform', market_positio,
   n:  ,' 'Competitive with Palo Alto Networks ($50) 000+), CrowdStrike ($8.99 - 15.99), and Zscaler ($5 - 25). Our,
-  advantage: Modern architecture, better pricing, and comprehensive coverage.', target_audienc,
   e:  ,' 'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure', trial_day,
   s: 30,' setup_tim,
   e: '2 hours',' categor,
@@ -1584,7 +1559,6 @@ export interface InnovativeITService,
   e: 'Distributed computing at the network edge',' pric,
   e: '$299',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.', feature,
   s: [, ' 'Distributed edge nodes',' 'Real - time data processing',' 'Low - latency computing',' 'Edge AI capabilities',' 'Automatic scaling',' 'Geographic distribution',' 'Load balancing',' 'Edge analytics',' 'IoT integration',' '5G optimization'], popula,
   r: true,' ico,
   n: '🌐', ' colo,
@@ -1594,7 +1568,6 @@ export interface InnovativeITService,
   s://ziontechgroup.com / edge - computing - platform', market_positio,
   n:  ,' 'Competitive with AWS Greengrass ($0.16 - 0.50), Azure IoT Edge ($0.40 - 0.50), and Google Cloud IoT Edge ($0.40 - 0.50). Our,
   advantage: Better performance, lower costs, and comprehensive features.', target_audienc,
-  e:  ,' 'IoT companies, Manufacturing, Healthcare, Transportation, Retail, Smart cities, Telecommunications', trial_day,
   s: 14,' setup_tim,
   e: '1 hour',' categor,
   y: 'IT & Edge Computing', real_servic,
@@ -1624,7 +1597,6 @@ export interface InnovativeITService,
   e: 'Access to quantum computing power',' pric,
   e: '$999',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Cloud - based quantum computing service that provides access to quantum processors for research, optimization, and machine learning applications.', feature,
   s: [, ' 'Quantum processor access',' 'Quantum algorithm library',' 'Hybrid quantum - classical computing',' 'Quantum machine learning',' 'Optimization algorithms',' 'Quantum simulation',' 'API access',' 'Developer tools',' 'Documentation and tutorials',' 'Expert support'], popula,
   r: true,' ico,
   n: '⚛️', ' colo,
@@ -1664,7 +1636,6 @@ export interface InnovativeITService,
   e: 'Enterprise - grade blockchain solutions',' pric,
   e: '$399',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Comprehensive blockchain platform for enterprises, providing secure, scalable, and compliant blockchain solutions for various business applications.', feature,
   s: [,' 'Multi - consensus algorithms', ' 'Smart contract development',' 'Enterprise security',' 'Scalability solutions',' 'Interoperability',' 'Compliance tools',' 'API management',' 'Analytics dashboard',' 'Integration services',' '24 / 7 support'], popula,
   r: true,' ico,
   n: '🔗', ' colo,
@@ -1704,7 +1675,6 @@ export interface InnovativeITService,
   e: 'Complete DevOps automation and orchestration',' pric,
   e: '$199',' perio,
   d: '/month', descriptio,
-  n:  ,' 'Comprehensive DevOps platform that automates the entire software development lifecycle, from code commit to production deployment.', feature,
   s: [,' 'CI / CD pipelines', ' 'Infrastructure as Code',' 'Container orchestration',' 'Monitoring and alerting',' 'Security scanning',' 'Performance testing',' 'Deployment automation',' 'Environment management',' 'Team collaboration',' 'Analytics and reporting'], popula,
   r: true,' ico,
   n: '🚀', ' 'CI/CD',' colo,
@@ -1746,7 +1716,6 @@ export interface InnovativeITService,
   e: string, pric,
   e: string, perio,
   d: string, descriptio,
-  n: string, feature,
   s: string[], popula,
   r: boolean, ico,
   n: string, colo,
@@ -1784,7 +1753,6 @@ export interface InnovativeITService,
   e: 'Next-generation cybersecurity with zero trust architecture', pric,
   e: '$599',' perio,
   d: '/month',' descriptio,
-  n: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.', feature,
   s: [' 'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management'' 'Compliance reportingReal-time monitoring' ],' popula,
   r: true, ico,
   n: '🔒',' colo,
@@ -1793,7 +1761,6 @@ export interface InnovativeITService,
   k: 'http,
   s://ziontechgroup.com/zero-trust-security-platform',' marketPositio,
   n: 'Competitive with Palo Alto Networks ($50)000+), CrowdStrike ($8.99-15.99), and Zscaler ($5-25). Our,
-  advantage: Modern architecture, better pricing, and comprehensive coverage.',' targetAudienc,
   e: 'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure',' trialDay,
   s: 30, setupTim,
   e: '2 hours',' categor,
@@ -1830,7 +1797,6 @@ export interface InnovativeITService,
   e: 'Distributed computing at the network edge'' pric,
   e: '$299'' perio,
   d: '/month' descriptio,
-  n:' 'Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.' feature,
   s: [' 'Distributed edge nodes'' 'Real-time data processing'' 'Low-latency computing'' 'Edge AI capabilities'' 'Automatic scaling'' 'Geographic distribution'' 'Load balancing'' 'Edge analytics'' 'IoT integration'' '5G optimization' ] popula,
   r: true' ico,
   n: '🌐'' colo,
@@ -1840,7 +1806,6 @@ export interface InnovativeITService,
   s://ziontechgroup.com/edge-computing-platform' marketPositio,
   n:' 'Competitive with AWS Greengrass ($0.16-0.50), Azure IoT Edge ($0.40-0.50), and Google Cloud IoT Edge ($0.40-0.50). Our,
   advantage: Better performance, lower costs, and comprehensive features.' targetAudienc,
-  e: ' 'IoT companies, Manufacturing, Healthcare, Transportation, Retail, Smart cities, Telecommunications' trialDay,
   s: 14' setupTim,
   e: '1 hour'' categor,
   y: 'IT & Edge Computing' realServic,
@@ -1921,7 +1886,6 @@ export interface InnovativeITService,
   e: '2024-01-20' customer,
   s: 2500, ratin,
   g: 4.7,
-  reviews: 1250 } ]; export interface InnovativeITService {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -1930,7 +1894,6 @@ export interface InnovativeITService,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  innovativeITServices: InnovativeITService[] = [; {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,

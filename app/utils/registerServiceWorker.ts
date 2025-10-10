@@ -8,7 +8,6 @@ export interface ServiceWorkerConfig {}
   onSuccess?: (registration: ServiceWorkerRegistration) => void
   onUpdate?: (registration: ServiceWorkerRegistration) => void
   onError?: (error: Error) => void;}
-export interface ServiceWorkerConfig {/* TODO: Fix JSX expression */}
 }
 /**
  * Register service worker with lifecycle callbacks;
@@ -88,7 +87,6 @@ export async function registerServiceWorker()
               config.onSuccess(registration);}
 export async function registerServiceWorker(confi,
   g: ServiceWorkerConfig = {})
-): Promise<ServiceWorkerRegistration | undefined> {/* TODO: Fix JSX expression */}
   }
   // Only register in production or if explicitly enabled;
   const isLocalhost = Boolean(window.location.hostname === 'localhost' ||
@@ -96,18 +94,12 @@ export async function registerServiceWorker(confi,
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
   );
   // Use isLocalhost for conditional logic if needed;
-  if (isLocalhost) {/* TODO: Fix JSX expression */}
     }
-  try {/* TODO: Fix JSX expression */}
-      } else {/* TODO: Fix JSX expression */}
       }
     });
-    const registration = await navigator.serviceWorker.register('/service-worker.js', {/* TODO: Fix JSX expression */})
     });
     // Handle updates;
-    registration.addEventListener('updatefound', () => {/* TODO: Fix JSX expression */}
             }
-          } else {/* TODO: Fix JSX expression */}
             }
           }
         }
@@ -120,7 +112,6 @@ export async function registerServiceWorker(confi,
   } catch (error) {}
     if (config.onError && error instanceof Error) {}
       config.onError(error);}
-  } catch (error) {/* TODO: Fix JSX expression */}
     }
   }
 }
@@ -139,10 +130,7 @@ export async function unregisterServiceWorker(): Promise<boolean> {}
     return result;}
   } catch (error) {}
     return false;}
-export async function unregisterServiceWorker(): Promise<boolean> {/* TODO: Fix JSX expression */}
   }
-  try {/* TODO: Fix JSX expression */}
-  } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 /**
@@ -158,10 +146,7 @@ export async function checkForUpdates(): Promise<void> {}
     const registration = await navigator.serviceWorker.ready
     await registration.update();}
     } catch (error) {}
-export async function checkForUpdates(): Promise<void> {/* TODO: Fix JSX expression */}
   }
-  try {/* TODO: Fix JSX expression */}
-    } catch (error) {/* TODO: Fix JSX expression */}
     }
 }
 /**
@@ -172,9 +157,7 @@ export function skipWaiting(): void {}
     return;}
   }
   navigator.serviceWorker.controller.postMessage({ action: 'skipWaiting' })
-export function skipWaiting(): void {/* TODO: Fix JSX expression */}
   }
-  navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */})
   n: 'skipWaiting' });
 }
 /**
@@ -185,9 +168,7 @@ export function clearCaches(): void {}
     return;}
   }
   navigator.serviceWorker.controller.postMessage({ action: 'clearCache' })
-export function clearCaches(): void {/* TODO: Fix JSX expression */}
   }
-  navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */})
   n: 'clearCache' });
   }
 /**
@@ -236,13 +217,9 @@ export async function getServiceWorkerStatus(): Promise<{}
       registered: false,
       active: false}
     }
-export async function getServiceWorkerStatus(): Promise<{/* TODO: Fix JSX expression */}
-}> {/* TODO: Fix JSX expression */}
     };
   }
-  try {/* TODO: Fix JSX expression */}
     };
-  } catch {/* TODO: Fix JSX expression */}
     };
   }
 }

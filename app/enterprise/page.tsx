@@ -95,7 +95,6 @@ const EnterprisePage: React.FC = () => {
       <SEOOptimizer
         title="Enterprise Solutions - Zion Tech Group"
         description="Comprehensive enterprise-grade solutions for large-scale business operations."
-        keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
       />
       <Navigation />
       

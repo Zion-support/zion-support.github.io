@@ -94,7 +94,6 @@ export interface PerformanceWithMemory extends Performance {// TODO: Add content
 
 }
   memor,
-  y: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 

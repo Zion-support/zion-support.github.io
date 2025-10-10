@@ -33,7 +33,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
           <section, className="mb-12, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Executive, Summar, y</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-4">";
-              The, future, of DevOps, is, autonomous. AI-powered, DevOps, automation eliminates, manual, intervention, predicts, and, prevents failures, before, they occ, u, r, and, continuously, optimizes your, entire, software delivery, lifecycl, e. Organizations, implementing, AI DevOps, achieve, 10 x faster, deployment, frequency, 98% reduction, in, incidents, and, 8, 5% cost, savings, on infrastructure, operation, s.
             </p>
             <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-4, m, t-6">"</section>
               <div, className="bg-purp, l, e-5, 0, 0/10, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/20"></div>
@@ -83,21 +82,17 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                 </p>
               </d, i, v>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
-                <h3, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, b-3">🔮 Predictive, Failure, Prevention</h3>";
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
-                  Advanced, machine, learning models, analyze, 200+ infrastructure, and, application metrics, in, real-time, to, predict failures, 3, 0-60, minutes, before they, occu, r. The, system, automatically takes, corrective, action—scaling, resource, s, rerouting, traffi, c, or, pr, e-emptively, replacing, degraded componen, t, s. Achieve, 9, 9.99% uptime, with, zero emergency, escalation, s.
                 </p>
               </d, i, v>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-bl, u, e-300, m, b-3">🏥 Se, l, f-Healing, Infrastructur, e</h3>";
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
-                  Infrastructure, that, repairs itself, automaticall, y. AI, agents, continuously monitor, system, health, detect, anomalie, s, and, execute, healing procedures, without, human interventi, o, n. From, container, restarts to, full, service failove, r, s, the, system, maintains optimal, performance, 24/7. Reduce, mean, time to, recover, y (MT, T, R) from, hours, to secon, d, s.
                 </p>
               </d, i, v>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-indi, g, o-300, m, b-3">💰 Intelligent, Cost, Optimization</h3>";
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
-                  AI, continuously, optimizes cloud, resource, allocation based, on, actual usage, pattern, s, traffic, prediction, s, and, cost, constraints. Automatically, righ, t-sizes, instance, s, negotiates, spot, pricing, and, implements, multi-cloud, arbitrag, e. Reduce, infrastructure, costs by, 8, 5% while, maintaining, peak performan, c, e.
                 </p>
               </d, i, v>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10"></div>
@@ -106,7 +101,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-300, m, b-3">📊 Re, a, l-Time, Intelligence, Dashboard</h3>";
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
-export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {/* TODO: Fix JSX expression */}
         {/* Head, e, r */}
         <header, className="mb-12">";"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-6">";"
@@ -135,7 +129,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
           <section, className="mb-12, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10">";"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Executive, Summar, y</h2>";"
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-4">";
-              The, future, of DevOps, is, autonomous. AI-powered, DevOps, automation eliminates, manual, intervention, predicts, and, prevents failures, before, they occ, u, r, and, continuously, optimizes your, entire, software delivery, lifecycl, e. Organizations, implementing, AI DevOps, achieve, 10x faster, deployment, frequency, 98% reduction, in, incidents, and, 8, 5% cost, savings, on infrastructure, operation, s.
             </p>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-4, m, t-6">""
               <div, className="bg-purp, l, e-5, 0, 0/10, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/20"></div>"
@@ -173,21 +166,17 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                 </p>
               </d, i, v>"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
-                <h3, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, b-3">🔮 Predictive, Failure, Prevention</h3>";"
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
-                  Advanced, machine, learning models, analyze, 200+ infrastructure, and, application metrics, in, real-time, to, predict failures, 3, 0-60, minutes, before they, occu, r. The, system, automatically takes, corrective, action—scaling, resource, s, rerouting, traffi, c, or, pr, e-emptively, replacing, degraded componen, t, s. Achieve, 9, 9.99% uptime, with, zero emergency, escalation, s.
                 </p>
               </d, i, v>"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-bl, u, e-300, m, b-3">🏥 Se, l, f-Healing, Infrastructur, e</h3>";"
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
-                  Infrastructure, that, repairs itself, automaticall, y. AI, agents, continuously monitor, system, health, detect, anomalie, s, and, execute, healing procedures, without, human interventi, o, n. From, container, restarts to, full, service failove, r, s, the, system, maintains optimal, performance, 24/7. Reduce, mean, time to, recover, y (MT, T, R) from, hours, to secon, d, s.
                 </p>
               </d, i, v>"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-indi, g, o-300, m, b-3">💰 Intelligent, Cost, Optimization</h3>";"
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
-                  AI, continuously, optimizes cloud, resource, allocation based, on, actual usage, pattern, s, traffic, prediction, s, and, cost, constraints. Automatically, righ, t-sizes, instance, s, negotiates, spot, pricing, and, implements, multi-cloud, arbitrag, e. Reduce, infrastructure, costs by, 8, 5% while, maintaining, peak performan, c, e.
                 </p>
               </d, i, v>"
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10"></div>"
@@ -392,7 +381,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                 <d, i, v>
                   <h4, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-300, m, b-3">Cost, Saving, s (Annu, a, l)</h4>
                   <ul, className="te, x, t-gr, a, y-300, spac, e-y-2">
-                    <li>• Infrastructure, optimizatio, n: $1.6M</li>,
                     <li>• Reduced, incident, response: $80, 0, K</li>
                     <li>• Eliminated, manual, processes: $60, 0, K</li>
                     <li, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, t-2">Tot, a, l: $3M+ annual, l, y</li>"
@@ -407,7 +395,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                 <d, i, v>
                   <h4, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-300, m, b-3">Cost, Saving, s (Annu, a, l)</h4>";
                   <ul, className="te, x, t-gr, a, y-300, spac, e-y-2">";
-                    <li>• Infrastructure, optimizati, o;
   n: $1.6M</li>,
                     <li>• Reduced, incident, response: $80, 0, K</li>
                     <li>• Eliminated, manual, processes: $60, 0, K</li>
@@ -421,7 +408,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                 <d, i, v></d>"
                   <h4, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-300, m, b-3">Cost, Saving, s (Annu, a, l)</h4>"
                   <ul, className="te, x, t-gr, a, y-300, spac, e-y-2"></ul>
-                    <li>• Infrastructure, optimizatio, n: $1.6M</li>
                     <li>• Reduced, incident, respons,
   e: $80, 0, K</li>
                     <li>• Eliminated, manual, processe,
@@ -436,7 +422,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                 <d, i, v></d>"
                   <h4, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-300, m, b-3">Cost, Saving, s (Annu, a, l)</h4>";"
                   <ul, className="te, x, t-gr, a, y-300, spac, e-y-2">";
-                    <li>• Infrastructure, optimizati, o,
   n: $1.6M</li>
                     <li>• Reduced, incident, respons,
   e: $80, 0, K</li>
@@ -450,10 +435,8 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                   <ul, className="te, x, t-gr, a, y-300, spac, e-y-2">";
                     <li>• 80% time, saved, on deploymen, t, s</li>
                     <li>• 95% reduction, in, toil and, manual, work</li>
-                    <li>• Zero, o, n-call, burden, from infrastructure, issue, s</li>
                     <li, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, t-2">RO;
   I: 8, 5, 0% in, Year, 1</li>"
-                    <li>• Zero, o, n-call, burden, from infrastructure, issue, s</li>"
                     <li, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, t-2">RO,"
   I: 8, 5, 0% in, Year, 1</li>""
                     <li, className="te, x, t-xl, fon, t-bold, tex, t-pi, n, k-300, m, t-2">R, O, I: 8, 5, 0% in, Year, 1</li>";
@@ -465,7 +448,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
           <section, className="mb-12, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10">";"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Getted, Today</h2>";"
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
-              Transform, your, DevOps operations, with, AI-powered, automatio, n. Our, team, of experts, will, help you, design, and implement, a, custom solution, tailored, to your, infrastructure, and business, need, s.
             </p>
             <div, className="flex, fle, x-co, l, s;
   m: fl, e, x-row, ga, p-4">"

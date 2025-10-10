@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 import React from 'react';
 
 const ContactPage: React.FC = () => {
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, User, Building, Globe, Shield, Brain, Zap, Cloud, Database, Code, BarChart, Users, Award, Target, Star, TrendingUp, ArrowRight } from 'lucide-react';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -160,7 +159,6 @@ export default ContactPage;
     },
     {
       question: 'What industries do you serve?',
-      answer: 'We serve clients across healthcare, finance, manufacturing, retail, education, and government sectors.'
     },
     {
       question: 'Do you work with small businesses?',

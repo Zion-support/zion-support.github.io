@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -66,7 +65,6 @@ const ITConsultingPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-gray-600">
                           <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
 

@@ -19,7 +19,6 @@ interface ContentPreviewCardProps {// TODO: Add content;}
     imag,
   e: string;
   featured?: boolean;
-  stats?: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   view,
@@ -31,7 +30,6 @@ interface ContentPreviewCardProps {// TODO: Add content;}
 }
 const,
   ContentPreviewCard: React.FC;
-          <ContentPreviewCardProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   // id,
@@ -54,12 +52,9 @@ const,
     return num.toString();
   };
   const getCategoryColor = (categor)
-  y: string): string => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const,
-  colors: {/* TODO: Fix JSX expression */}
-  y: string]: string } = {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       'Success Story': 'from-green-500 to-emerald-600',
@@ -76,7 +71,6 @@ const,
   return (<div>Coming Soon</div>)
   )
     
-          <article className={/* TODO: Fix JSX expression */}
   hover:-translate-y-1 ${}
   // TOD,
   O: Add content;

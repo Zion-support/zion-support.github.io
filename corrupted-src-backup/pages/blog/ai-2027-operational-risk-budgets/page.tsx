@@ -10,7 +10,6 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <meta, nam, e='description'
           conte, n, t='Learn, about, ai 2027, operational, risk budgets, and, how it, can, benefit your, enterpris, e.'
         />)
-        <link, re, l='canonic, a, l')
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 7-operation a l-ri s k-budge t s')
         />),
       </Helm, e, t>
@@ -21,5 +20,4 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
 }
           Ai, 2027, Operational Risk, Budget, s
 }</h1>
-export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }

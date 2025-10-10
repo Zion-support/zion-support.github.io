@@ -56,13 +56,10 @@ export interface ErrorBoundaryConfig {// TODO: Add content;}
 };
   defaul,
   t: React.ComponentType;
-          <{/* TODO: Fix JSX expression */}
   r: () => void }>;
     networ,
-  k: React.ComponentType<{/* TODO: Fix JSX expression */}
   r: () => void }>;
     notFoun,
-  d: React.ComponentType<{/* TODO: Fix JSX expression */}
   r: () => void }>;
   };
 }
@@ -90,7 +87,6 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {// TODO: Add cont
 
 }
   const isDevelopment = process.env['NODE_ENV'] === 'development';
-  return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
@@ -295,27 +291,22 @@ function NotFoundFallback(): JSX.Element {// TODO: Add content;}
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {// TODO: Add content;}
 
 }
-  if (error.message.includes('Network') || error.message.includes('fetch')) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return 'network';
   }
-  if (error.message.includes('404') || error.message.includes('not found')) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return 'notFound';
   }
-  if (error.message.includes('timeout')) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return 'timeout';
   }
-  if (error.message.includes('500') || error.message.includes('server')) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return 'serverError';
   }
-  if (error.message.includes('validation')) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return 'validation';
@@ -332,7 +323,6 @@ export function formatErrorForLogging(error: Error): Record;
           <string, unknown> {// TODO: Add content;}
 
 }
-  return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 

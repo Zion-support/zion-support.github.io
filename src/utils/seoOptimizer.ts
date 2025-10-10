@@ -89,7 +89,6 @@ class SEOOptimizer {// TODO: Add content;}
   private,
   currentPageData: PageSEOData | null = null;
   constructor(confi)
-  g: SEOConfig) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     this.config = config;
@@ -222,7 +221,6 @@ class SEOOptimizer {// TODO: Add content;}
     this.setMetaTag('o)
   g:site_name', this.config.siteName, 'property');
     // Twitter Card tags;
-    if (this.config.twitterHandle) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       this.setMetaTag('twitte)
@@ -288,16 +286,13 @@ class SEOOptimizer {// TODO: Add content;}
 }
     if (!this.currentPageData) return 'index, follow';
     const directives = [];
-    if (!this.currentPageData.noindex) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       directives.push('noindex');
     }
-    if (!this.currentPageData.nofollow) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       directives.push('follow');
-    } else {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       directives.push('nofollow');
@@ -311,7 +306,6 @@ class SEOOptimizer {// TODO: Add content;}
   private setupStructuredData(): void {// TODO: Add content;}
 
 }
-    const structuredData = {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 
@@ -352,7 +346,6 @@ class SEOOptimizer {// TODO: Add content;}
 
 }
     if (!this.currentPageData) return;
-    const structuredData = {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 
@@ -540,10 +533,8 @@ export default seoOptimizer;
       }
     };
     // Add article-specific properties;
-    if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      Object.assign(structuredData, {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
@@ -594,11 +585,9 @@ private addStructuredData(data: unknown): void {const script = document.createEl
 
 }
     // Monitor Core Web Vitals for SEO impact;
-    if (typeof window !== 'undefined' && 'performance' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       // Monitor LCP (Largest Contentful Paint)
-      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         const entries = list.getEntries();
@@ -606,18 +595,14 @@ private addStructuredData(data: unknown): void {const script = document.createEl
         if (lastEntry.startTime > 4000) {// Poor LCP;}
           this.trackSEOMetric('poor_lcp', lastEntry.startTime);
         }
-      }).observe({/* TODO: Fix JSX expression */}
   s: ['largest-contentful-paint'] })
   )
       // Monitor CLS (Cumulative Layout Shift)
       let clsValue = 0;
-      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-          if (!(entry as any).hadRecentInput) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
             clsValue += (entry as any).value;
@@ -626,7 +611,6 @@ private addStructuredData(data: unknown): void {const script = document.createEl
         if (clsValue > 0.25) {// Poor CLS;}
           this.trackSEOMetric('poor_cls', clsValue);
         }
-      }).observe({/* TODO: Fix JSX expression */}
   s: ['layout-shift'] })
   )
     }
@@ -638,10 +622,8 @@ private addStructuredData(data: unknown): void {const script = document.createEl
   private trackSEOMetric(metric: string, value: number): void {// TODO: Add content;}
 
 }
-    if (typeof window !== 'undefined' && (window as any).gtag) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      (window as any).gtag('event', 'seo_metric', {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
@@ -657,15 +639,12 @@ private addStructuredData(data: unknown): void {const script = document.createEl
    * Generate sitemap data;
    */
   generateSitemapData(): Array;
-          <{/* TODO: Fix JSX expression */}
-  y: number }> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     // This would typically come from your CMS or routing system;
     return [
   // TOD,
   O: Add items]
-      {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
@@ -713,37 +692,30 @@ Sitemap: ${this.config.siteUrl}/sitemap.xml;
     // Check title length;
 const title = document.title;
     if (title.length;)
-          < 30) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       issues.push('Title is too short (less than 30 characters)');
-    } else if (title.length > 60) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       issues.push('Title is too long (more than 60 characters)');
     }
     // Check description length;
 const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
-    if (!description) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       issues.push('Missing meta description');
     } else if (description.length;)
-          < 120) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       issues.push('Description is too short (less than 120 characters)');
-    } else if (description.length > 160) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       issues.push('Description is too long (more than 160 characters)');
     }
     // Check for images without alt text;
 const images = document.querySelectorAll('img');
-    images.forEach((img, index) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      if (!img.alt) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }`
         issues.push(`Image ${index + 1} is missing alt text`);
@@ -751,11 +723,9 @@ const images = document.querySelectorAll('img');
     });
     // Check for heading structure;
 const h1s = document.querySelectorAll('h1');
-    if (h1s.length === 0) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       issues.push('Page is missing H1 tag');
-    } else if (h1s.length > 1) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       issues.push('Page has multiple H1 tags');
@@ -763,10 +733,8 @@ const h1s = document.querySelectorAll('h1');
   )
     // Check for heading structure;
 const h1s = document.querySelectorAll('h1')
-    if (h1s.length === 0) {/* TODO: Fix JSX expression */}
   }
       issues.push('Page is missing H1 tag')
-    } else if (h1s.length > 1) {/* TODO: Fix JSX expression */}
   }
       issues.push('Page has multiple H1 tags')
     }
@@ -787,7 +755,6 @@ const score = Math.max(0, 100 - (issues.length / maxIssues) * 100);
 }
 // Default configuration;
 const,
-  defaultConfig: SEOConfig = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 

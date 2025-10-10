@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-interface AccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
@@ -23,8 +22,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange);
 const,
-  AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
     }
     return undefined;
   }, [enableHighContrast]);
@@ -38,7 +35,6 @@ const,
       const _handleChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange);
-  useEffect(() => {/* TODO: Fix JSX expression */}
     }
     return undefined;
   }, [enableReducedMotion]);
@@ -53,7 +49,6 @@ const,
           if (skipLink) {,
             skipLink.focus();
             e.preventDefault();
-  useEffect(() => {/* TODO: Fix JSX expression */}
           }
         }
 
@@ -62,7 +57,6 @@ const,
           const _activeElement = document.activeElement as HTMLElement;
           if (activeElement && activeElement.blur) {
             activeElement.blur();
-        if (e.key === 'Escape') {/* TODO: Fix JSX expression */}
           }
         }
       };
@@ -77,19 +71,16 @@ const,
           const _announcement = target.getAttribute('aria-label');
           if (announcement) {,
             announceToScreenReader(announcement);
-      const handleFocusIn = (e: FocusEvent) => {/* TODO: Fix JSX expression */}
           }
         }
       };
 
-      const handleFocusOut = () => {/* TODO: Fix JSX expression */}
       };
 
       document.addEventListener('keydown', handleKeyDown);
       document.addEventListener('focusin', handleFocusIn);
       document.addEventListener('focusout', handleFocusOut);
 
-      return () => {/* TODO: Fix JSX expression */}
       };
     }
     return undefined;
@@ -103,16 +94,10 @@ const,
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
-  useEffect(() => {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
     }
 
-    if (isReducedMotion) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
     }
 
-    if (focusVisible) {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
     }
   }, [isHighContrast, isReducedMotion, focusVisible]);
 
@@ -130,7 +115,6 @@ const,
       setTimeout(() => {
         document.body.removeChild(announcement);
   const announceToScreenReader = (messag)
-  e: string) => {/* TODO: Fix JSX expression */}
       }, 1000);
     }
   };
@@ -160,7 +144,6 @@ const,
       <a></a>"
         href="#main-content""
         className="skip-link"
-        onClick={/* TODO: Fix JSX expression */})
   r: 'smooth' });
           }
         }}

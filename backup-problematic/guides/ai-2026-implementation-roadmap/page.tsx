@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
 
-export const metadata = {/* TODO: Fix JSX expression */}
 };
 
 export default function AI2026ImplementationRoadmap() {
@@ -56,7 +55,6 @@ export default function AI2026ImplementationRoadmap() {
             {['AI Implementation', 'Enterprise AI', 'Digital Transformation', 'AI Strategy', '2026 Roadmap'].map((tag) => (</div>
               <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800"></span>
                 <Tag className="w-3 h-3 mr-1" />
-export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expression */}
 }
   return (<div className="min-h-screen bg-white"></div>
       {/* Header */}"
@@ -102,7 +100,6 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           </p>
           "
           <div className="flex flex-wrap gap-2"></div>
-            {/* TODO: Fix JSX expression */}"
               <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800"></span>"
                 <Tag className="w-3 h-3 mr-1" /></Tag>
                 {tag}

@@ -18,12 +18,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         talentMobility: scopedEvents.filter(e => e.type === 'talent_mobility').length;
         daoEndorsements: scopedEvents.filter(e => e.type === 'dao_endorsement').length;
         leaderboard: scopedEvents.filter(e => e.type === 'leaderboard_entry').length;
-export default function handler(re,
   q: NextApiRequest, re)
-  s: NextApiResponse) {/* TODO: Fix JSX expression */}
       }});
   }
 
-  return res.status(405).json({/* TODO: Fix JSX expression */})
   r: 'Method not allowed' });
 }

@@ -36,35 +36,22 @@ const, Suppor, t: Rea, c, t.FC = () => {
       availabili, t, y: 'Business, Hour, s'
       responseTi, m, e: '< 4, hour, s'
       conta, c, t: 'Schedule, Cal, l'
-const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   const, faqCategorie, s = [
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
   ];
   const, faq, s = [
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
-    {/* TODO: Fix JSX expression */}
     }
     {
       catego, r, y: 'gener, a, l'
@@ -74,7 +61,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
   ];
   const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q => )
-    {/* TODO: Fix JSX expression */}
     }
   ];
   const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q => 
@@ -88,7 +74,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <title>Suppo, r, t - Zion, Tech, Group</title>
         <meta name="descripti, o, n" content="Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  />
         <meta name="keywor, d, s" content="suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  />
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  />
       </Helmet>
       <div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
         {/* Hero, Sectio, n */})
@@ -108,7 +93,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <title>Suppo, r, t - Zion, Tech, Group</title>"
         <meta name="descripti, o, n" content="Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  /></meta>"
         <meta name="keywor, d, s" content="suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  /></meta>"
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  /></link>
       </Helmet>"
       <div, className="m, i, n-h-screen, b, g-gr, a, y-50"></div>
         {/* Hero, Sectio, n */}"
@@ -180,7 +164,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             </d, i, v>"
             <div, className="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-4, ga, p-8"></div>
-              {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-lg, shado, w-l, g, p-6, hove, r:shad, o, w-xl, transitio, n-shad, o, w"></div>"
                   <div, className="te, x, t-cent, e, r"></div>"
                     <div, className="w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4"></div>"
@@ -236,10 +219,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               </p>
             </d, i, v>
       quest, i, o;
-  n: 'Is, there, a community, where, I can, get, help from, other, users?'
       quest, i, o,
-  n: 'Is, there, a community, where, I can, get, help from, other, users?'"
-      answ, e, r: "Y, e, s! We, have, an active, community, forum where, users, can ask, question, s, share, best, practices, and, get, help from, both, our team, and, other experienced, user, s. It's, a, great place, to, learn and, networ, k."
     }
   ];
   const, quickAction, s = [
@@ -270,7 +250,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="te, x, t-cent, e, r"></div>"
             <h1, className="te, x, t-4x, l, m,"
   d:te, x, t-6xl, fon, t-bold, m, b-6"></h1>
-              We're, Here, to He, l, p;
             </h1>"
             <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3xl, m, x-au, t, o"></p>
               Get, the, support you, need, to succeed, with, our AI, solution, s. 
@@ -317,7 +296,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-12"></div>
               <butt, o, n;
   onCli, c, k={() => setSelectedCatego, r, y('a, l, l')}
-                classNa, m, e={/* TODO: Fix JSX expression */}
                 }`}`
               >
                 All, Categorie, s;
@@ -329,10 +307,8 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     selectedCatego, r, y === catego, r, y.id;
                       ? 'bg-bl, u, e-600, tex, t-whi, t, e'}
                       : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'}
-              {/* TODO: Fix JSX expression */}
   k, e, y={catego, r, y.id}
                   onCli, c, k={() => setSelectedCatego, r, y(catego, r, y.id)}
-                  classNa, m, e={/* TODO: Fix JSX expression */}`
                   }`}`
                 >"
                   <catego, r, y .icon, className="h-4 w-4, m, r-2"  /></catego>
@@ -347,7 +323,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                   <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-3">
             {/* FAQ, Item, s */}"
             <div, className="spa, c, e-y-6"></div>
-              {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-gr, a, y-50, rounde, d-l, g, p-6"></div>"
                   <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-3"></h3>
                     {f, a, q.questi, o, n}
@@ -371,7 +346,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-bl, u, e-6, 0, 0">
           <div, className="m, a, x-w-7xl, m, x-auto, tex, t-cent, e, r"></section>
             <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">
-            {/* TODO: Fix JSX expression */}
             )}
           </d, i, v>
         </secti, o, n>
@@ -382,7 +356,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               Still, Need, Help?
             </h2>"
             <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3xl, m, x-au, t, o"></p>
-              C, a, n't, find, what y, o, u're, looking, for? Our, support, team is, ready, to help, you, with any, questions, or issu, e, s.
             </p>
             <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r">
               <Li, n, k;

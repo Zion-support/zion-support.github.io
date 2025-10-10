@@ -23,7 +23,6 @@ export interface Revolutionary2025Service {;,
   e: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -37,7 +36,6 @@ export interface Revolutionary2025Service {;,
   e: string;
     emai,
   l: string;
-export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
   s: string}
 };
   i,
@@ -50,7 +48,6 @@ export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
   e: string,,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -59,7 +56,6 @@ export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
   realImplementatio,
   n: boolean;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
@@ -111,7 +107,6 @@ export const revolutionary2025 Services: Revolutionary2025 Service[] = [,
   e: string, pric,
   e: string,
   descriptio,
-  n: string, feature,
   s: string[],
   lin,
   k: string, categor,
@@ -136,7 +131,6 @@ export const,
   e: "$199/month",
     descriptio,"
   n: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.",
-    feature,
   s: [;"
       "Advanced AI models""
       "Revolutionary algorithms""
@@ -207,7 +201,6 @@ export const,
   e: "$199/month",
     descriptio,"
   n: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.",
-    feature,
   s: [,"
       "Advanced AI models","
       "Revolutionary algorithms","
@@ -251,25 +244,21 @@ i,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: mobil,
   e: string; emai,
-  l: string; export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
   s: string }; i,
   d: string; nam,
   e: string; taglin,
   e: string; pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
@@ -277,7 +266,6 @@ i,
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
@@ -291,7 +279,6 @@ i,
   e: "Revolutionary AI Platform", taglin,"
   e: "Next-generation AI capabilities", pric,"
   e: "$199/month", descriptio,"
-  n: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.", feature,"
   s: [ "Advanced AI models" "Revolutionary algorithms" "Breakthrough capabilities" "Future-ready architecture" "Cutting-edge features" ], lin,"
   k: "/services/revolutionary-ai-platform", categor,"
   y: "Revolutionary 2025 Services", realImplementatio,
@@ -308,7 +295,6 @@ i,
   e: "Revolutionary AI Platform", taglin,"
   e: "Next-generation AI capabilities", pric,"
   e: "$199/month",' descriptio,"
-  n: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.", feature,"
   s: [ "Advanced AI models", "Revolutionary algorithms", "Breakthrough capabilities", "Future-ready architecture", "Cutting-edge features" ], lin,"
   k: "/services/revolutionary-ai-platform", categor,"
   y: "Revolutionary 2025 Services", realImplementatio,

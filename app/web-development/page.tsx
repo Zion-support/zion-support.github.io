@@ -191,7 +191,6 @@ const $1: React.FC = () => {
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3><div className={`font-semibold ${service.color}`}>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
 
                   <div className="mb-6"></div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Features<ul className="space-y-2">{service.features.map((feature, featureIndex) => (</ul>
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
                         </CheckCircle>

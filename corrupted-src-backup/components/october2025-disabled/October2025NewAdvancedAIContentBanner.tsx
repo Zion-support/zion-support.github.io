@@ -12,7 +12,6 @@ export default function October2025NewAdvancedAIContentBann, e, r() {
       </div>
       <div, className='relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-8'>
         {/* Header, Sect, i, o, n */}</div>
-export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n' > {' ' }
       {/* Animated, background, elements */}
       <div, className='absolute, inse, t-0, opacit, y-20'></div>
@@ -23,7 +22,6 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
         {/* Header, Sect, i, o, n */}
         <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
           anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-          transiti, o, n = {/* TODO: Fix JSX expression */}
   n: , 0., 6 }}
           classNa, m, e = 'te, x, t-center, m, b-8'
         >
@@ -79,7 +77,6 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
           {/* Federat, e, d , A, I */}
           <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {/* TODO: Fix JSX expression */}
   n: , 0., 6, del, a, y: 0., 1 }}
           ></moti>
             <Link, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-advanc, e, d-federat, e, d-ai-enterpri, s, e-revoluti, o, n'
@@ -119,15 +116,12 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                 </p>
                 <div, classNam, e = 'spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0'></div>
                   <div, className='flex, item, s-center, ga, p-2'></div>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' /></div>
                     <sp, a, n>47, Fortune, 500 deployments, across, 42 countri, e, s</sp, a, n>
                   </div>
                   <div, className='flex, item, s-center, ga, p-2'></div>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' /></div>
                     <sp, a, n>47M, patients, served without, data, centralization</sp, a, n>
                   </div>
                   <div, className='flex, item, s-center, ga, p-2'></div>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' /></div>
                     <sp, a, n>
                     <sp, a, n></sp>
                       94.7% model, accuracy, matching centralized, trainin, g;
@@ -135,7 +129,6 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                   </div>
                 </div>
                 <div, className='mt-6, flex, items-center, tex, t-purp, l, e-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s'></div>
-                  <sp, a, n>Explore, Privac, y-First, A, I</sp, a, n>
                   <Link, className='w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
                 </div>
               </div>
@@ -144,7 +137,6 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
           {/* Synthetic, D, a, t, a */}
           <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {/* TODO: Fix JSX expression */}
   n: , 0., 6, del, a, y: 0., 2 }}
           ></moti>
             <Link, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-synthet, i, c-da, t, a-generati, o, n-enterpri, s, e-breakthrou, g, h'
@@ -184,15 +176,12 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                 </p>
                 <div, classNam, e = 'spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0'></div>
                   <div, className='flex, item, s-center, ga, p-2'></div>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' /></div>
                     <sp, a, n>470M, synthetic, transactions for, to, p-3, ban, k</sp, a, n>
                   </div>
                   <div, className='flex, item, s-center, ga, p-2'></div>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' /></div>
                     <sp, a, n>1000x, fraud, examples — 94.7% detection, accurac, y</sp, a, n>
                   </div>
                   <div, className='flex, item, s-center, ga, p-2'></div>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' /></div>
                     <sp, a, n>1, 0, 0% privacy, compliance, across 67, countrie, s</sp, a, n>
                   </div>
                 </div>
@@ -206,37 +195,28 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
           {/* AI, Governa, n, c, e */}
           <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {/* TODO: Fix JSX expression */}
   n: , 0., 6, del, a, y: 0., 3 }}
           ></moti>
             <Link, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-ai-mod, e, l-governan, c, e-complian, c, e-breakthrou, g, h'
               className='block, grou, p'
             >
-              <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l'></div>
                 <div, className='flex, item, s-center, ga, p-3, m, b-4'></div>
-                  <div, className='p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg'></div>
                     <Shield, className='w-6 h-6, tex, t-whi, t, e' />
                   </div>
-                  <span, className='te, x, t-xs, fon, t-bold, tex, t-gre, e, n-300, uppercase, tracking-wid, e, r'>
                     AI, Governanc, e;
                   </sp, a, n>
                 </div>
-                <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-gre, e, n-300, transitio, n-colo, r, s'>
                   AI, Model, Governance & Compliance, Breakthroug, h;
                 </h3>
                 <p, className='te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'>
                   Enterpri, s, e-scale, AI, risk manage, m, e, n, t.{' '}</p>
             ></Link>
-              <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-gre, e, n-5, 0, 0/5, 0, h-fu, l, l'></div>
                 <div, className='flex, item, s-center, ga, p-3, m, b-4'></div>
-                  <div, className='p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg'></div>
                     <Shield, className='w-6 h-6, tex, t-whi, t, e' /></Shield>
                   </div>
-                  <span, className='te, x, t-xs, fon, t-bold, tex, t-gre, e, n-300, uppercase, tracking-wid, e, r'></span>
                     AI, Governanc, e;
                   </sp, a, n>
                 </div>
-                <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-gre, e, n-300, transitio, n-colo, r, s'></h3>
                   AI, Model, Governance & Compliance, Breakthroug, h;
                 </h3>
                 <p, className='te, x, t-bl, u, e-100, tex, t-sm, m, b-4, leadin, g-relax, e, d'></p>
@@ -246,20 +226,14 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
                 </p>
                 <div, classNam, e = 'spa, c, e-y-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0'></div>
                   <div, className='flex, item, s-center, ga, p-2'></div>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' /></div>
-                    <sp, a, n>340, models, governed for, to, p-10, insure, r</sp, a, n>
                   </div>
                   <div, className='flex, item, s-center, ga, p-2'></div>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' /></div>
                     <sp, a, n>$87M, penalties, avoided — 1, 0, 0% audit, pass, rate</sp, a, n>
                   </div>
                   <div, className='flex, item, s-center, ga, p-2'></div>
-                    <div, className='w-1.5 h-1.5, b, g-gre, e, n-400, rounde, d-fu, l, l' /></div>
                     <sp, a, n>92% risk, reduction, with automated, governanc, e</sp, a, n>
                   </div>
                 </div>
-                <div, className='mt-6, flex, items-center, tex, t-gre, e, n-300, fon, t-semibold, grou, p-hov, e, r: te, x, t-white, transitio, n-colo, r, s'></div>
-                  <sp, a, n>Ensure, AI, Compliance</sp, a, n>
                   <Link, className='w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
                 </div>
               </div>
@@ -269,7 +243,6 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
         {/* Call, to, Acti, o, n */}
         <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
           anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-          transiti, o, n = {/* TODO: Fix JSX expression */}
   n: , 0., 6, del, a, y: 0., 4 }}
           classNa, m, e = 'te, x, t-cent, e, r'
         ></moti>
@@ -277,7 +250,6 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
             className='inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-bold, tex, t-lg, shado, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, transform, hove,
   r:sca, l, e-1, 0, 5'
           ></Link>
-            <sp, a, n>Explore, All, October 2025, Breakthrough, s</sp, a, n>
             <Link, className='w-5 h-5' />)
           </Li, n, k>)
           <p, className='mt-4, tex, t-bl, u, e-200, tex, t-sm'>)

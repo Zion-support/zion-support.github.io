@@ -1,6 +1,5 @@
 const, October2025NewAIContentMegaBanne, r = () => {
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-2xl, shado, w-2xl, border, border-purp, l, e-5, 0, 0/30, m, y-12">
-const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, effect */};
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
@@ -365,7 +364,6 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
               classNa, m, e="fl, e, x-shri, n, k-0, inlin, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: fr, o, m-purp, l, e-600, hove, r:to-cy, a, n-600, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl, transform, hove,"
   r:sca, l, e-1, 0, 5"
             ></Li>
-              Explore, All, Insights;"
               <Link, className="w-5 h-5  /></Link>"
               <Link, className="w-5 h-5" />";
             </Li, n, k>

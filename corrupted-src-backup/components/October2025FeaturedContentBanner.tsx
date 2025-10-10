@@ -67,7 +67,6 @@ const, October2025FeaturedContentBanne, r = () => {
       borderCol, o, r: "bord, e, r-purp, l, e-5, 0, 0/30"
       sta, t, s: [,
         { val, u, e: "<100, m, s", lab, e, l: "P95, Latenc, y" }
-        { val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g" }
         { val, u, e: "$", lab, e, l: "Predictable, Spen, d" }
       tit, l, e: "Enterprise, AI, Value Realizati, o, n",";
       descripti, o, n: "90, days, to shipped, outcom, e;
@@ -135,34 +134,27 @@ const, October2025FeaturedContentBanne, r = () => {
       borderCol, o, r: "bord, e, r-purp, l, e-5, 0, 0/30",";
       sta, t, s: [,
         { val, u, e: "<100, m, s", lab, e, l: "P95, Latenc, y" },";
-        { val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g" },";
-const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */}
         { val, u, e: "9, 0, d", lab, e, l: "To, Outcome, s" }"
         { val, u, e: "K, P, I", lab, e, l: "Linked, Gate, s" }"
         { val, u, e: "$$", lab, e, l: "Predictable, Cos, t" }
       ]
     }
-    {/* TODO: Fix JSX expression */}"
         { val, u, e: "89%", lab, e, l: "Faster, Deploymen, t" }"
         { val, u, e: "94%", lab, e, l: "Cost, Reductio, n" }"
         { val, u, e: "$12.4M", lab, e, l: "Annual, Saving, s" }
       ]
     }
-    {/* TODO: Fix JSX expression */}"
         { val, u, e: "76%", lab, e, l: "Forecast, Accurac, y" }"
         { val, u, e: "68%", lab, e, l: "Cost, Reductio, n" }"
         { val, u, e: "$18.7M", lab, e, l: "Annual, Valu, e" }
       ]
     }
-    {/* TODO: Fix JSX expression */}"
         { val, u, e: "K, P, I", lab, e, l: "Linked, Eval, s" }"
         { val, u, e: "1‑cli, c, k", lab, e, l: "Rollba, c, k" }"
         { val, u, e: "24/7", lab, e, l: "Safe, Op, s" }
       ]
     }
-    {/* TODO: Fix JSX expression */}"
         { val, u, e: "<100, m, s", lab, e, l: "P95, Latenc, y" }"
-        { val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g" }"
         { val, u, e: "$", lab, e, l: "Predictable, Spen, d" }"
       tit, l, e: "Enterprise, AI, Value Realizati, o, n",";"
       descripti, o, n: "90, days, to shipped, outcom, e,"
@@ -178,27 +170,22 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         { val, u, e: "$$", lab, e, l: "Predictable, Cos, t" }";
       ]
     }
-    {/* TODO: Fix JSX expression */}"
         { val, u, e: "89%", lab, e, l: "Faster, Deploymen, t" },";"
         { val, u, e: "94%", lab, e, l: "Cost, Reductio, n" },";"
         { val, u, e: "$12.4M", lab, e, l: "Annual, Saving, s" }";
       ]
     }
-    {/* TODO: Fix JSX expression */}"
         { val, u, e: "76%", lab, e, l: "Forecast, Accurac, y" },";"
         { val, u, e: "68%", lab, e, l: "Cost, Reductio, n" },";"
         { val, u, e: "$18.7M", lab, e, l: "Annual, Valu, e" }";
       ]
     }
-    {/* TODO: Fix JSX expression */}"
         { val, u, e: "K, P, I", lab, e, l: "Linked, Eval, s" },";"
         { val, u, e: "1‑cli, c, k", lab, e, l: "Rollba, c, k" },";"
         { val, u, e: "24/7", lab, e, l: "Safe, Op, s" }";
       ]
     }
-    {/* TODO: Fix JSX expression */}"
         { val, u, e: "<100, m, s", lab, e, l: "P95, Latenc, y" },";"
-        { val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g" },";"
         { val, u, e: "$", lab, e, l: "Predictable, Spen, d" }";
       ]
     }
@@ -279,7 +266,6 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         {/* Featured, Content, Cards */}"
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">""
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";
-          {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
                 to={conte, n, t.li, n, k}"
                 classNa, m, e="group, relative, overflow-hidden, rounde, d-2xl, border, hove,
@@ -325,10 +311,8 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
                   </d, i, v>
                   {/* Sta, t, s */}"
                   <div, className="grid, gri, d-co, l, s-3, ga, p-4, m, b-6">";
-                    {/* TODO: Fix JSX expression */}"
                       <div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10"></div>"
                       <div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10">";`
-                        <div, className={`te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} bg-cl, i, p-text, tex, t-transpare, n, t`}>`;`
                           {st, a, t.val, u, e}
                         </d, i, v>"
                         <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">{st, a, t.lab, e, l}</d, i, v>";
@@ -382,7 +366,6 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
               classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hove,"
   r:sca, l, e-105, inlin, e-flex, item, s-cent, e, r"
             ></Li>
-              Explore, All, Articles;"
               <TrendingUp, className="w-5 h-5, m, l-2  /></TrendingUp>"
               <TrendingUp, className="w-5 h-5, m, l-2" />";
             </Li, n, k>

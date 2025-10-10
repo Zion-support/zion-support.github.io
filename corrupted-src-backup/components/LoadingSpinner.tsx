@@ -1,10 +1,8 @@
 import React from 'react';
 
-interface LoadingSpinnerProps {/* TODO: Fix JSX expression */}
 }
 
 const,
-  LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className = '' }) => {/* TODO: Fix JSX expression */}
   };
 
   return(<div className={`flex items-center justify-center ${className}`}>)

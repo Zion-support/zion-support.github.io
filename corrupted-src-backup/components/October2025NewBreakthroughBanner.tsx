@@ -21,7 +21,6 @@ const, October2025NewBreakthroughBanne, r = () => {
       <div, className="absolute, inse, t-0, opacit, y-30">";</div>
         <div, className="absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
-const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
   };
   return (<div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}"
@@ -76,7 +75,6 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             </sp, a, n>
           </h2>"
           <p, className="te, x, t-2xl, tex, t-purp, l, e-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";
-            Master, contex, t-aware, agent, s, intelligent, cost, governance, and, multimodal, intelligence;
   with, our, latest enterprise, implementation, guides. Achieve, 7, 9% cost, reductions, and 2, 6, x;
   performance, improvement, s.
           </p>
@@ -114,7 +112,6 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         {/* Content, Card, s */}"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">""
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
-          {/* TODO: Fix JSX expression */}
   k, e, y={conte, n, t.id}
                 to={`/bl, o, g/${conte, n, t.sl, u, g}`}`;`"
                 classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
@@ -154,7 +151,6 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                         {k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()};</div>
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10">";</div>
                       <div, className="te, x, t-2xl, fon, t-extrabold, tex, t-white, m, b-1">{val, u, e}</d, i, v>";
-                  {/* TODO: Fix JSX expression */}"
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10"></div>"
                       <div, className="te, x, t-2xl, fon, t-extrabold, tex, t-white, m, b-1">{val, u, e}</d, i, v>"
                       <div, className="te, x, t-xs, tex, t-purp, l, e-300, capitalize, font-medi, u, m"></div>)
@@ -169,12 +165,9 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                 </d, i, v>
                 {/* Highligh, t, s */}"
                 <ul, className="spa, c, e-y-3, m, b-6">";
-                  {/* TODO: Fix JSX expression */}"
                     <li, ke, y={i, d, x} classNa, m, e="flex, item, s-start, ga, p-2, tex, t-xs, tex, t-purp, l, e-2, 0, 0"></li>"
-                      <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  /></TrendingUp>"
                       <span, className="leadi, n, g-relax, e, d">{highlig, h, t}</sp, a, n>"
                     <li, ke, y={i, d, x} classNa, m, e="flex, item, s-start, ga, p-2, tex, t-xs, tex, t-purp, l, e-2, 0, 0">";"
-                      <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />";"
                       <span, className="leadi, n, g-relax, e, d">{highlig, h, t}</sp, a, n>";
                     </li>
                   ))}
@@ -245,7 +238,6 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
   to="/bl, o, g""
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/30, tex, t-white, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"
             ></Li>
-              Explore, All, Articles;"
               <Link, className="w-6 h-6  /></Link>"
               <Link, className="w-6 h-6" />";
             </Li, n, k>
@@ -262,7 +254,6 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Market, Opportunit, y</d, i, v>";
           </d, i, v>
           <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
-            <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-400, m, b-2">{sta, t, s.avgCostReducti, o, n}</d, i, v>";
             <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Avg, Cost, Reduction</d, i, v>";
           </d, i, v>
           <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
@@ -306,7 +297,6 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Market, Opportunit, y</d, i, v>";
           </d, i, v>"
           <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
-            <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-400, m, b-2">{sta, t, s.avgCostReducti, o, n}</d, i, v>";"
             <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Avg, Cost, Reduction</d, i, v>";
           </d, i, v>"
           <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
@@ -329,7 +319,6 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         {/* Technology, s */}"
         <div, className="mt-12, tex, t-cent, e, r"></div>"
           <div, className="inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r"></div>
-            {/* TODO: Fix JSX expression */}
   k, e, y={t, a, g}"
                 classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s"
               ></sp>

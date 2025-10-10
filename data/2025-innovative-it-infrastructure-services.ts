@@ -12,7 +12,6 @@ export const innovativeITInfrastructureServices2025 = [{pricing: starter: unknow
         price: 799;
         period: 'month',
         features: [,
-export const innovativeITInfrastructureServices2025 = [{/* TODO: Fix JSX expression */}
         ]}
       },
       professiona,
@@ -21,7 +20,6 @@ export const innovativeITInfrastructureServices2025 = [{/* TODO: Fix JSX express
   e: 799,
         perio,
   d: 'month',
-        feature,
   s: [,
           'Quantum security',
           'Advanced AI detection',
@@ -37,7 +35,6 @@ export const innovativeITInfrastructureServices2025 = [{/* TODO: Fix JSX express
   e: 1999,
         perio,
   d: 'month',
-        feature,
   s: [,
           'Complete security suite',
           'Custom deployment',
@@ -51,7 +48,6 @@ export const innovativeITInfrastructureServices2025 = [,
     tag,
   s: [,
 export const innovativeITInfrastructureServices2025 = [
-      'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.'
       'Quantum-enhanced edge processing with 1000 x speed improvement'
       'Intelligent workload distribution and optimization'
       'Real-time data processing and analytics'
@@ -125,7 +121,6 @@ export const innovativeITInfrastructureServices2025 = [
     descriptio,
   n:
       'Intelligent DevOps platform that autonomously manages software development, deployment, and operations using AI, machine learning, and advanced automation.'
-    feature,
   s: [;
       'Autonomous code review and quality assurance'
       'AI-powered testing and bug detection'
@@ -149,7 +144,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 149;
         perio,
   d: 'month'
-        feature,
   s: [,
           'Basic DevOps automation'
           'Standard CI/CD'
@@ -163,7 +157,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 449;
         perio,
   d: 'month'
-        feature,
   s: [,
           'AI-powered automation'
           'Advanced monitoring'
@@ -179,7 +172,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 1199,
         perio,
   d: 'month',
-        feature,
   s: [,
           'Full autonomous suite',
           'Custom deployment',
@@ -243,7 +235,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 'Quantum Cloud Infrastructure Platform'
     descriptio,
   n: 'Revolutionary cloud computing platform that integrates quantum computing capabilities with traditional cloud infrastructure for unprecedented performance and scalability.'
-    feature,
   s: [;
       'Quantum-enhanced cloud processing'
       'Hybrid quantum-classical computing'
@@ -267,7 +258,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 299;
         perio,
   d: 'month'
-        feature,
   s: [,
           'Basic quantum cloud'
           'Standard security'
@@ -281,7 +271,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 899;
         perio,
   d: 'month'
-        feature,
   s: [,
           'Advanced quantum processing'
           'Enhanced security'
@@ -297,7 +286,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 2299,
         perio,
   d: 'month',
-        feature,
   s: [,
           'Full quantum suite',
           'Custom deployment',
@@ -336,7 +324,6 @@ export const innovativeITInfrastructureServices2025 = [
       'Enterprise businesses, technology companies, research institutions, government agencies',
     competitive_advantag,
   e: unknown,
-      'Quantum computing integration, hybrid quantum - classical architecture, and industry - leading performance',
     use_case,
   s: [,
       'High - performance computing',
@@ -368,7 +355,6 @@ export const innovativeITInfrastructureServices2025 = [
     descriptio,
   n:
       'Intelligent data center management platform that uses AI and machine learning to autonomously optimize operations, reduce costs, and improve efficiency.'
-    feature,
   s: [;
       'Autonomous data center operations'
       'AI-powered energy optimization'
@@ -392,7 +378,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 399;
         perio,
   d: 'month'
-        feature,
   s: [,
           'Basic automation'
           'Standard monitoring'
@@ -406,7 +391,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 1199;
         perio,
   d: 'month'
-        feature,
   s: [,
           'Advanced AI automation'
           'Full monitoring'
@@ -422,7 +406,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 2999,
         perio,
   d: 'month',
-        feature,
   s: [,
           'Complete automation suite',
           'Custom deployment',
@@ -486,8 +469,6 @@ export const innovativeITInfrastructureServices2025 = [
   d: 'quantum-edge-computing-orchestrator', nam,
   e: 'Quantum Edge Computing Orchestrator',
     descriptio,
-  n: 'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.',
-    feature,
   s: [;
       'Quantum-enhanced edge processing with 1000x speed improvementIntelligent workload distribution and optimizationReal-time data processing and analyticsAdvanced security with quantum encryptionAutonomous edge node managementMulti-cloud edge orchestrationAI-powered predictive maintenanceZero-latency communication protocols'
       'Scalable edge infrastructureEnergy-efficient quantum processing'
@@ -517,7 +498,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 199,
         perio,
   d: 'month',
-        feature,
   s: ['Basic edge computingStandard securityEmail supportLimited nodes']},
     professiona,
   l: unknown,
@@ -525,7 +505,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 599,
         perio,
   d: 'month',
-        feature,
   s: ['Quantum processingAdvanced securityPriority supportExtended nodes']};
       enterpris,
   e: unknown,
@@ -533,7 +512,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 1499,
         perio,
   d: 'month',
-        feature,
   s: ['Full quantum suiteCustom deploymentDedicated supportUnlimited nodes']}
     };
     categor,
@@ -568,7 +546,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 'Zero Trust Quantum Security Platform',
     descriptio,
   n: 'Next-generation cybersecurity platform that implements zero-trust architecture with quantum-resistant encryption, AI-powered threat detection, and autonomous security response.',
-    feature,
   s: [;
       'Quantum-resistant encryption algorithmsAI-powered threat detection with 99.9% accuracyZero-trust network architectureAutonomous security response and remediationReal-time threat intelligenceAdvanced behavioral analyticsMulti-factor quantum authenticationSecure quantum key distribution'
       'Compliance automation and reporting24/7 autonomous security monitoring'
@@ -598,7 +575,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 299,
         perio,
   d: 'month',
-        feature,
   s: ['Basic securityStandard encryptionEmail supportBasic monitoring']},
     professiona,
   l: unknown,
@@ -606,7 +582,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 799,
         perio,
   d: 'month',
-        feature,
   s: ['Quantum securityAdvanced AI detectionPriority supportFull monitoring']};
       enterpris,
   e: unknown,
@@ -614,7 +589,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 1999,
         perio,
   d: 'month',
-        feature,
   s: ['Complete security suiteCustom deploymentDedicated supportWhite-label solution']}
     };
     categor,
@@ -649,7 +623,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 'Autonomous DevOps Intelligence Platform',
     descriptio,
   n: 'Intelligent DevOps platform that autonomously manages software development, deployment, and operations using AI, machine learning, and advanced automation.',
-    feature,
   s: [;
       'Autonomous code review and quality assuranceAI-powered testing and bug detectionIntelligent deployment orchestrationReal-time performance monitoring and optimizationAutomated incident response and resolutionPredictive maintenance and scalingMulti-environment managementAdvanced CI/CD pipeline optimization'
       'Security vulnerability scanningCompliance automation and reporting'
@@ -679,7 +652,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 149,
         perio,
   d: 'month',
-        feature,
   s: ['Basic DevOps automationStandard CI/CDEmail supportLimited environments']},
     professiona,
   l: unknown,
@@ -687,7 +659,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 449,
         perio,
   d: 'month',
-        feature,
   s: ['AI-powered automationAdvanced monitoringPriority supportExtended environments']};
       enterpris,
   e: unknown,
@@ -695,7 +666,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 1199,
         perio,
   d: 'month',
-        feature,
   s: ['Full autonomous suiteCustom deploymentDedicated supportUnlimited environments']}
     };
     categor,
@@ -754,7 +724,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 'Quantum Cloud Infrastructure Platform',
     descriptio,
   n: 'Revolutionary cloud computing platform that integrates quantum computing capabilities with traditional cloud infrastructure for unprecedented performance and scalability.',
-    feature,
   s: [;
       'Quantum-enhanced cloud processingHybrid quantum-classical computingIntelligent resource allocationQuantum-secure data transmissionAdvanced load balancing and scalingMulti-cloud quantum orchestrationAI-powered infrastructure optimizationReal-time performance analytics'
       'Quantum-resistant encryptionAutonomous infrastructure management'
@@ -766,7 +735,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 299,
         perio,
   d: 'month',
-        feature,
   s: ['Basic quantum cloudStandard securityEmail supportLimited resources']},
     professiona,
   l: unknown,
@@ -774,7 +742,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 899,
         perio,
   d: 'month',
-        feature,
   s: ['Advanced quantum processingEnhanced securityPriority supportExtended resources']};
       enterpris,
   e: unknown,
@@ -782,7 +749,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 2299,
         perio,
   d: 'month',
-        feature,
   s: ['Full quantum suiteCustom deploymentDedicated supportUnlimited resources']}
     };
     categor,
@@ -803,7 +769,6 @@ export const innovativeITInfrastructureServices2025 = [
     targetAudienc,
   e: 'Enterprise businesses, technology companies, research institutions, government agencies',
     competitiveAdvantag,
-  e: 'Quantum computing integration, hybrid quantum-classical architecture, and industry-leading performance',
     useCase,
   s: [;
       'High-performance computingScientific research and simulationFinancial modeling and analysisAI and machine learning trainingBig data processing and analytics'
@@ -817,7 +782,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 'AI-Powered Data Center Automation',
     descriptio,
   n: 'Intelligent data center management platform that uses AI and machine learning to autonomously optimize operations, reduce costs, and improve efficiency.',
-    feature,
   s: [;
       'Autonomous data center operationsAI-powered energy optimizationPredictive maintenance and failure preventionIntelligent workload distributionReal-time performance monitoringAutomated capacity planningAdvanced cooling and power managementSecurity automation and threat response'
       'Compliance monitoring and reportingCost optimization and resource management'
@@ -847,7 +811,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 399,
         perio,
   d: 'month',
-        feature,
   s: ['Basic automationStandard monitoringEmail supportLimited data centers']},
     professiona,
   l: unknown,
@@ -855,7 +818,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 1199,
         perio,
   d: 'month',
-        feature,
   s: ['Advanced AI automationFull monitoringPriority supportExtended data centers']};
       enterpris,
   e: unknown,
@@ -863,7 +825,6 @@ export const innovativeITInfrastructureServices2025 = [
   e: 2999,
         perio,
   d: 'month',
-        feature,
   s: ['Complete automation suiteCustom deploymentDedicated supportUnlimited data centers']}
     };
     categor,
@@ -920,18 +881,14 @@ export const innovativeITInfrastructureServices2025 = [ pricin,
   g: starte,
   r: pric,
   e: 299, perio,
-  d: 'month', feature,
   s: [,' 'Basic security',' 'Standard encryption',' 'Email support',' 'Basic monitoring']}, professiona,
   l: pric,
   e: 799,' perio,
-  d: 'month', feature,
   s: [,' 'Quantum security',' 'Advanced AI detection',' 'Priority support',' 'Full monitoring']}, enterpris,
   e: pric,
   e: 1999,' perio,
-  d: 'month', feature,
   s: [,' 'Complete security suite',' 'Custom deployment',' 'Dedicated support',' 'White - label solution']}},' categor,
   y: 'Cybersecurity', tag,
-  s: [, export const innovativeITInfrastructureServices2025 = [ ' 'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.'' 'Quantum-enhanced edge processing with 1000x speed improvement'' 'Intelligent workload distribution and optimization'' 'Real-time data processing and analytics'' 'Advanced security with quantum encryption'' 'Autonomous edge node management'' 'Multi-cloud edge orchestration'' 'AI-powered predictive maintenance'' 'Zero-latency communication protocols'' 'Scalable edge infrastructure'' 'Energy-efficient quantum processing' pricin,
   g: starte,
   r: ' 'Zero Trust',' 'Quantum Security',' 'AI Security',' 'Threat Detection',' 'Network Security'], ' websit,
   e: 'http,
@@ -948,20 +905,16 @@ export const innovativeITInfrastructureServices2025 = [ pricin,
   e: ['SOC2', 'ISO 27001', 'NIST', 'FedRAMP', 'HIPAA', 'PCI DSS']}, ' i,
   d: 'autonomous-devops-intelligence-platform'' nam,
   e: 'Autonomous DevOps Intelligence Platform' descriptio,
-  n:' 'Intelligent DevOps platform that autonomously manages software development, deployment, and operations using AI, machine learning, and advanced automation.' feature,
   s: [' 'Autonomous code review and quality assurance'' 'AI-powered testing and bug detection'' 'Intelligent deployment orchestration'' 'Real-time performance monitoring and optimization'' 'Automated incident response and resolution'' 'Predictive maintenance and scaling'' 'Multi-environment management'' 'Advanced CI/CD pipeline optimization'' 'Security vulnerability scanning'' 'Compliance automation and reporting' ] pricin,
   g: starte,
   r: pric,
   e: 149' perio,
-  d: 'month' feature,
   s: [' 'Basic DevOps automation'' 'Standard CI/CD'' 'Email support'' 'Limited environments' ] } professiona,
   l: pric,
   e: 449' perio,
-  d: 'month' feature,
   s: [' 'AI-powered automation'' 'Advanced monitoring'' 'Priority support'' 'Extended environments' ] } enterpris,
   e: pric,
   e: 1199,' perio,
-  d: 'month', feature,
   s: [,' 'Full autonomous suite',' 'Custom deployment',' 'Dedicated support',' 'Unlimited environments']}},' categor,
   y: 'DevOps & Automation', tag,
   s: [,' 'DevOps',' 'AI Automation',' 'CI / CD',' 'Performance Monitoring',' 'Incident Response'], websit,
@@ -978,20 +931,16 @@ export const innovativeITInfrastructureServices2025 = [ pricin,
   e: ['SOC2', 'ISO 27001', 'GDPR', 'Industry - specific regulations']}, ' i,
   d: 'quantum-cloud-infrastructure-platform'' nam,
   e: 'Quantum Cloud Infrastructure Platform' descriptio,
-  n:' 'Revolutionary cloud computing platform that integrates quantum computing capabilities with traditional cloud infrastructure for unprecedented performance and scalability.' feature,
   s: [' 'Quantum-enhanced cloud processing'' 'Hybrid quantum-classical computing'' 'Intelligent resource allocation'' 'Quantum-secure data transmission'' 'Advanced load balancing and scaling'' 'Multi-cloud quantum orchestration'' 'AI-powered infrastructure optimization'' 'Real-time performance analytics'' 'Quantum-resistant encryption'' 'Autonomous infrastructure management' ] pricin,
   g: starte,
   r: pric,
   e: 299' perio,
-  d: 'month' feature,
   s: [' 'Basic quantum cloud'' 'Standard security'' 'Email support'' 'Limited resources' ] } professiona,
   l: pric,
   e: 899' perio,
-  d: 'month' feature,
   s: [' 'Advanced quantum processing'' 'Enhanced security'' 'Priority support'' 'Extended resources' ] } enterpris,
   e: pric,
   e: 2299,' perio,
-  d: 'month', feature,
   s: [,' 'Full quantum suite',' 'Custom deployment',' 'Dedicated support',' 'Unlimited resources']}},' categor,
   y: 'Cloud Computing', tag,
   s: [, ' 'Quantum Computing',' 'Cloud Infrastructure',' 'Hybrid Computing',' 'Infrastructure Optimization',' 'Quantum Security'], ' websit,
@@ -1002,26 +951,21 @@ export const innovativeITInfrastructureServices2025 = [ pricin,
   l: 'kleber@ziontechgroup && ziontechgroup.com'}, ' market_siz,
   e: '$65.4B', target_audienc,
   e:  ,' 'Enterprise businesses, technology companies, research institutions, government agencies', competitive_advantag,
-  e:  ,' 'Quantum computing integration, hybrid quantum - classical architecture, and industry - leading performance', use_case,
   s: [,' 'High - performance computing',' 'Scientific research and simulation',' 'Financial modeling and analysis',' 'AI and machine learning training',' 'Big data processing and analytics'], integration,
   s: [,' 'Major cloud providers',' 'Quantum computers',' 'AI platforms',' 'Data analytics tools',' 'Security platforms'], complianc,
   e: [,' 'SOC2',' 'ISO 27001',' 'FedRAMP',' 'GDPR',' 'Industry - specific regulations']}, ' i,
   d: 'ai-powered-data-center-automation'' nam,
   e: 'AI-Powered Data Center Automation' descriptio,
-  n:' 'Intelligent data center management platform that uses AI and machine learning to autonomously optimize operations, reduce costs, and improve efficiency.' feature,
   s: [' 'Autonomous data center operations'' 'AI-powered energy optimization'' 'Predictive maintenance and failure prevention'' 'Intelligent workload distribution'' 'Real-time performance monitoring'' 'Automated capacity planning'' 'Advanced cooling and power management'' 'Security automation and threat response'' 'Compliance monitoring and reporting'' 'Cost optimization and resource management' ] pricin,
   g: starte,
   r: pric,
   e: 399' perio,
-  d: 'month' feature,
   s: [' 'Basic automation'' 'Standard monitoring'' 'Email support'' 'Limited data centers' ] } professiona,
   l: pric,
   e: 1199' perio,
-  d: 'month' feature,
   s: [' 'Advanced AI automation'' 'Full monitoring'' 'Priority support'' 'Extended data centers' ] } enterpris,
   e: pric,
   e: 2999,' perio,
-  d: 'month', feature,
   s: [,' 'Complete automation suite',' 'Custom deployment',' 'Dedicated support',' 'Unlimited data centers']}},' categor,
   y: 'Data Center Management', tag,
   s: [, ' 'AI Automation',' 'Data Center',' 'Energy Optimization',' 'Predictive Maintenance',' 'Infrastructure Management'], ' websit,
@@ -1038,20 +982,16 @@ export const innovativeITInfrastructureServices2025 = [ pricin,
   e: [ ' 'SOC2',' 'ISO 27001',' 'Uptime Institute',' 'Energy Star',' 'Industry-specific regulations']; }];' i,
   d: 'quantum-edge-computing-orchestrator', nam,
   e: 'Quantum Edge Computing Orchestrator',' descriptio,
-  n: 'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.', feature,
   s: [' 'Quantum-enhanced edge processing with 1000x speed improvementIntelligent workload distribution and optimizationReal-time data processing and analyticsAdvanced security with quantum encryptionAutonomous edge node managementMulti-cloud edge orchestrationAI-powered predictive maintenanceZero-latency communication protocols'' 'Scalable edge infrastructureEnergy-efficient quantum processing' ], pricin,
   g: starte,
   r: pric,
   e: 199, ' perio,
-  d: 'month', ' feature,
   s: ['Basic edge computingStandard securityEmail supportLimited nodes'] }, professiona,
   l: pric,
   e: 599, ' perio,
-  d: 'month', ' feature,
   s: ['Quantum processingAdvanced securityPriority supportExtended nodes'] }; enterpris,
   e: pric,
   e: 1499, ' perio,
-  d: 'month', ' feature,
   s: ['Full quantum suiteCustom deploymentDedicated supportUnlimited nodes'] } };' categor,
   y: 'IT Infrastructure', tag,
   s: ['Quantum ComputingEdge ComputingIoTReal-time ProcessingInfrastructure Orchestration'],' websit,
@@ -1068,20 +1008,16 @@ export const innovativeITInfrastructureServices2025 = [ pricin,
   e: ['SOC2ISO 27001NISTGDPRIndustry-specific regulations'] }; ' i,
   d: 'zero-trust-quantum-security-platform', nam,
   e: 'Zero Trust Quantum Security Platform',' descriptio,
-  n: 'Next-generation cybersecurity platform that implements zero-trust architecture with quantum-resistant encryption, AI-powered threat detection, and autonomous security response.', feature,
   s: [' 'Quantum-resistant encryption algorithmsAI-powered threat detection with 99.9% accuracyZero-trust network architectureAutonomous security response and remediationReal-time threat intelligenceAdvanced behavioral analyticsMulti-factor quantum authenticationSecure quantum key distribution'' 'Compliance automation and reporting24/7 autonomous security monitoring' ], pricin,
   g: starte,
   r: pric,
   e: 299, ' perio,
-  d: 'month', ' feature,
   s: ['Basic securityStandard encryptionEmail supportBasic monitoring'] }, professiona,
   l: pric,
   e: 799, ' perio,
-  d: 'month', ' feature,
   s: ['Quantum securityAdvanced AI detectionPriority supportFull monitoring'] }; enterpris,
   e: pric,
   e: 1999, ' perio,
-  d: 'month', ' feature,
   s: ['Complete security suiteCustom deploymentDedicated supportWhite-label solution'] } };' categor,
   y: 'Cybersecurity', tag,
   s: ['Zero TrustQuantum SecurityAI SecurityThreat DetectionNetwork Security'],' websit,
@@ -1098,20 +1034,16 @@ export const innovativeITInfrastructureServices2025 = [ pricin,
   e: ['SOC2ISO 27001NISTFedRAMPHIPAAPCI DSS'] }; ' i,
   d: 'autonomous-devops-intelligence-platform', nam,
   e: 'Autonomous DevOps Intelligence Platform',' descriptio,
-  n: 'Intelligent DevOps platform that autonomously manages software development, deployment, and operations using AI, machine learning, and advanced automation.', feature,
   s: [' 'Autonomous code review and quality assuranceAI-powered testing and bug detectionIntelligent deployment orchestrationReal-time performance monitoring and optimizationAutomated incident response and resolutionPredictive maintenance and scalingMulti-environment managementAdvanced CI/CD pipeline optimization'' 'Security vulnerability scanningCompliance automation and reporting' ], pricin,
   g: starte,
   r: pric,
   e: 149, ' perio,
-  d: 'month', ' feature,
   s: ['Basic DevOps automationStandard CI/CDEmail supportLimited environments'] }, professiona,
   l: pric,
   e: 449, ' perio,
-  d: 'month', ' feature,
   s: ['AI-powered automationAdvanced monitoringPriority supportExtended environments'] }; enterpris,
   e: pric,
   e: 1199, ' perio,
-  d: 'month', ' feature,
   s: ['Full autonomous suiteCustom deploymentDedicated supportUnlimited environments'] } };' categor,
   y: 'DevOps & Automation', tag,
   s: ['DevOpsAI AutomationCI/CDPerformance MonitoringIncident Response'],' websit,
@@ -1128,20 +1060,16 @@ export const innovativeITInfrastructureServices2025 = [ pricin,
   e: ['SOC2ISO 27001GDPRIndustry-specific regulations'] }; ' i,
   d: 'quantum-cloud-infrastructure-platform', nam,
   e: 'Quantum Cloud Infrastructure Platform',' descriptio,
-  n: 'Revolutionary cloud computing platform that integrates quantum computing capabilities with traditional cloud infrastructure for unprecedented performance and scalability.', feature,
   s: [' 'Quantum-enhanced cloud processingHybrid quantum-classical computingIntelligent resource allocationQuantum-secure data transmissionAdvanced load balancing and scalingMulti-cloud quantum orchestrationAI-powered infrastructure optimizationReal-time performance analytics'' 'Quantum-resistant encryptionAutonomous infrastructure management' ], pricin,
   g: starte,
   r: pric,
   e: 299, ' perio,
-  d: 'month', ' feature,
   s: ['Basic quantum cloudStandard securityEmail supportLimited resources'] }, professiona,
   l: pric,
   e: 899, ' perio,
-  d: 'month', ' feature,
   s: ['Advanced quantum processingEnhanced securityPriority supportExtended resources'] }; enterpris,
   e: pric,
   e: 2299, ' perio,
-  d: 'month', ' feature,
   s: ['Full quantum suiteCustom deploymentDedicated supportUnlimited resources'] } };' categor,
   y: 'Cloud Computing', tag,
   s: ['Quantum ComputingCloud InfrastructureHybrid ComputingInfrastructure OptimizationQuantum Security'],' websit,
@@ -1152,26 +1080,21 @@ export const innovativeITInfrastructureServices2025 = [ pricin,
   l: 'kleber@ziontechgroup.com' },' marketSiz,
   e: '$65.4B',' targetAudienc,
   e: 'Enterprise businesses, technology companies, research institutions, government agencies',' competitiveAdvantag,
-  e: 'Quantum computing integration, hybrid quantum-classical architecture, and industry-leading performance', useCase,
   s: [' 'High-performance computingScientific research and simulationFinancial modeling and analysisAI and machine learning trainingBig data processing and analytics' ],' integration,
   s: ['Major cloud providersQuantum computersAI platformsData analytics toolsSecurity platforms'],' complianc,
   e: ['SOC2ISO 27001FedRAMPGDPRIndustry-specific regulations'] }; ' i,
   d: 'ai-powered-data-center-automation', nam,
   e: 'AI-Powered Data Center Automation',' descriptio,
-  n: 'Intelligent data center management platform that uses AI and machine learning to autonomously optimize operations, reduce costs, and improve efficiency.', feature,
   s: [' 'Autonomous data center operationsAI-powered energy optimizationPredictive maintenance and failure preventionIntelligent workload distributionReal-time performance monitoringAutomated capacity planningAdvanced cooling and power managementSecurity automation and threat response'' 'Compliance monitoring and reportingCost optimization and resource management' ], pricin,
   g: starte,
   r: pric,
   e: 399, ' perio,
-  d: 'month', ' feature,
   s: ['Basic automationStandard monitoringEmail supportLimited data centers'] }, professiona,
   l: pric,
   e: 1199, ' perio,
-  d: 'month', ' feature,
   s: ['Advanced AI automationFull monitoringPriority supportExtended data centers'] }; enterpris,
   e: pric,
   e: 2999, ' perio,
-  d: 'month', ' feature,
   s: ['Complete automation suiteCustom deploymentDedicated supportUnlimited data centers'] } };' categor,
   y: 'Data Center Management', tag,
   s: ['AI AutomationData CenterEnergy OptimizationPredictive MaintenanceInfrastructure Management'],' websit,

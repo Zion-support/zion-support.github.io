@@ -2,7 +2,6 @@
 
 
 import { Link } from 'react-router-dom';
-export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   return (<div></div>
@@ -64,7 +63,6 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
               <li>• <strong>90% faster</strong> decision making and response times</li>
               <li>• <strong>Zero human errors</strong> in automated processes</li>"
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🛠️ Technology Stack</h2>"
-              <pre className="text-sm text-gray-800 overflow-x-auto">{/* TODO: Fix JSX expression */}
   Stack:}
 ├── AI/ML Platform;
 │   ├── TensorFlow & PyTorch;

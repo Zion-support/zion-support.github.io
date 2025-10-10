@@ -77,7 +77,6 @@ export default function BlogPost(): React.JSX.Element {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
-export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expression */}
   s://twitter.com/intent/tweet?text=${encodeURIComponent('Ai 2025 Sept 30 Customer Agent Blueprints')}&url=${encodeURIComponent(window.location.href)}`}
                     target="_blank""
                     rel="noopener noreferrer""
@@ -87,7 +86,6 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
                     Twitter;
                   </a>
                   <a></a>
-                    href={/* TODO: Fix JSX expression */}`
   s://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}"
                     target="_blank""
                     rel="noopener noreferrer""

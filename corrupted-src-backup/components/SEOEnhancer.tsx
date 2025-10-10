@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
@@ -33,8 +32,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
       return () => {
         document.head.removeChild(script);
 const,
-  SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
       };
     }
   }, [structuredData]);
@@ -53,14 +50,12 @@ const,
       telephone: '+1-555-0123',
       contactType: 'customer service',
       availableLanguage: 'English',
-  const defaultStructuredData = {/* TODO: Fix JSX expression */}
   o: `${window.location.origin}/logo.png`,
     sameA,
   s: ['http,
   s://linkedin.com/company/zion-tech-group', 'http,
   s://twitter.com/ziontechgroup'],
     contactPoin,
-  t: {/* TODO: Fix JSX expression */}
     }};
 
   //   const finalStructuredData = structuredData || defaultStructuredData;

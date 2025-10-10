@@ -2,46 +2,34 @@
 import React, { useState } from 'react';
 import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';
 
-interface FuturisticServiceCardProps {/* TODO: Fix JSX expression */}
 }
 
 const,
-  FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
     },
     cya,
-  n: {/* TODO: Fix JSX expression */}
     },
     pin,
-  k: {/* TODO: Fix JSX expression */}
     },
     blu,
-  e: {/* TODO: Fix JSX expression */}
     },
     gree,
-  n: {/* TODO: Fix JSX expression */}
     },
     orang,
-  e: {/* TODO: Fix JSX expression */}
     }
   };
 
   const currentColor = colorClasses[color];
 
   return (<div></div>
-      className={/* TODO: Fix JSX expression */}
       }`})
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Popular Badge */}
-      {/* TODO: Fix JSX expression */}
       )}
 
       {/* Card */}
       <div></div>
-        className={/* TODO: Fix JSX expression */}
-        } ${currentColor.hover} ${/* TODO: Fix JSX expression */}`
           isHovered ? `shadow-2xl ${currentColor.shadow}` : 'shadow-lg'`
         }`}
       >
@@ -49,7 +37,6 @@ const,
         <div className="relative mb-6"></div>
           <div></div>`
             className={`w-16 h-16 bg-gradient-to-r ${currentColor.gradient} rounded-xl flex items-center justify-center mb-4 group-hove,
-  r:scale-110 transition-transform duration-300 ${/* TODO: Fix JSX expression */}`
             }`}
           >"
             <Icon className="w-8 h-8 text-white" /></Icon>
@@ -81,13 +68,11 @@ const,
 
         {/* Features */}"
         <ul className="space-y-3 mb-8"></ul>
-          {/* TODO: Fix JSX expression */}"
             <li key={index} className="flex items-center text-sm text-gray-300"></li>"
               <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" /></CheckCircle>
               {feature}
             </li>
           ))}
-          {/* TODO: Fix JSX expression */}
               +{features.length - 4} more features;
             </li>
           )}
@@ -95,7 +80,6 @@ const,
 
         {/* CTA Button */}
         <button></button>
-          className={/* TODO: Fix JSX expression */}`
               : `border border-${color}-500 text-${color}-300,`
   hover:bg-${color}-500/20``
           } flex items-center justify-center group`}

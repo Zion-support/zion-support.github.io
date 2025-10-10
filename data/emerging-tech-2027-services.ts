@@ -23,7 +23,6 @@ export interface EmergingTech2027Service {;,
   e: string,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -37,7 +36,6 @@ export interface EmergingTech2027Service {;,
   e: string;
     emai,
   l: string;
-export interface EmergingTech2027Service {/* TODO: Fix JSX expression */}
   s: string}
 };
   i,
@@ -50,7 +48,6 @@ export interface EmergingTech2027Service {/* TODO: Fix JSX expression */}
   e: string,,
   descriptio,
   n: string;
-  feature,
   s: string[];
   lin,
   k: string;
@@ -59,7 +56,6 @@ export interface EmergingTech2027Service {/* TODO: Fix JSX expression */}
   realImplementatio,
   n: boolean;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
@@ -111,7 +107,6 @@ export const emergingTech2027 Services: EmergingTech2027 Service[] = [,
   e: string, pric,
   e: string,
   descriptio,
-  n: string, feature,
   s: string[],
   lin,
   k: string, categor,
@@ -136,7 +131,6 @@ export const,
   e: "$349/month",
     descriptio,"
   n: "Advanced platform showcasing emerging technologies and innovations for 2027.",
-    feature,
   s: [;"
       "Emerging technologies""
       "Innovation platform""
@@ -207,7 +201,6 @@ export const,
   e: "$349/month",
     descriptio,"
   n: "Advanced platform showcasing emerging technologies and innovations for 2027.",
-    feature,
   s: [,"
       "Emerging technologies","
       "Innovation platform","
@@ -251,25 +244,21 @@ i,
   e: string; taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
   o: mobil,
   e: string; emai,
-  l: string; export interface EmergingTech2027Service {/* TODO: Fix JSX expression */}
   s: string }; i,
   d: string; nam,
   e: string; taglin,
   e: string; pric,
   e: string, descriptio,
-  n: string; feature,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
@@ -277,7 +266,6 @@ i,
   e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string, feature,
   s: string[], lin,
   k: string, categor,
   y: string, realImplementatio,
@@ -291,7 +279,6 @@ i,
   e: "2027 Emerging Tech Platform", taglin,"
   e: "Emerging tech for 2027", pric,"
   e: "$349/month", descriptio,"
-  n: "Advanced platform showcasing emerging technologies and innovations for 2027.", feature,"
   s: [ "Emerging technologies" "Innovation platform" "Future capabilities" "Advanced features" "Expert insights" ], lin,"
   k: "/services/2027-emerging-tech", categor,"
   y: "Emerging Tech 2027", realImplementatio,
@@ -308,7 +295,6 @@ i,
   e: "2027 Emerging Tech Platform", taglin,"
   e: "Emerging tech for 2027", pric,"
   e: "$349/month", descriptio,"
-  n: "Advanced platform showcasing emerging technologies and innovations for 2027.", feature,"
   s: [ "Emerging technologies", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights" ], lin,"
   k: "/services/2027-emerging-tech", categor,"
   y: "Emerging Tech 2027", realImplementatio,

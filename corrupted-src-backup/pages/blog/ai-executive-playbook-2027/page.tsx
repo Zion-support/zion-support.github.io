@@ -12,7 +12,6 @@ export default function AIExecutivePlaybook20, 2, 7(): Rea, c, t.J, S, X.Eleme, 
         <meta, nam, e = 'description'
           conte, n, t='Executive, roadmap, with K, P, I‑linked, scorecar, d, s, budgeted, action, s, and, governance, that accelerates, deliver, y.'
         />)
-        <link, re, l = 'canonic, a, l')
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-executi v e-playbo o k-20 2 7')
         />),
       </Helm, e, t>
@@ -28,5 +27,4 @@ export default function AIExecutivePlaybook20, 2, 7(): Rea, c, t.J, S, X.Eleme, 
 }
 
 }</div>
-export default function AIExecutivePlaybook20, 2, 7(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }
