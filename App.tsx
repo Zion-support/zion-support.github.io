@@ -4,20 +4,20 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import HomePage from './app/page';
-import { PageLoader } from './app/components/LoadingStates';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import SEOHead from './app/components/EnhancedSEOHead';
-import SkipLink from './app/components/SkipLink';
-import Breadcrumb from './app/components/Breadcrumb';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
+import Navigation from './app/navigation/page';
+import Footer from './app/footer/page';
+import HomePage from './app/page/page';
+import { PageLoader } from './app/pageloader/page';
+import ErrorBoundary from './app/enhancederrorboundary/page';
+import SEOHead from './app/enhancedseohead/page';
+import SkipLink from './app/skiplink/page';
+import Breadcrumb from './app/breadcrumb/page';
+import PerformanceOptimizer from './app/performanceoptimizer/page';
+import AccessibilityEnhancer from './app/accessibilityenhancer/page';
+import EnhancedAccessibility from './app/enhancedaccessibility/page';
 import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
-import { AnalyticsProvider } from './app/components/AnalyticsProvider';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
+import { AnalyticsProvider } from './app/analyticsprovider/page';
+import PerformanceMonitor from './app/performancemonitor/page';
 
 // Structured data for SEO - moved to SEOHead component
 
@@ -27,14 +27,14 @@ const ContactPage = React.lazy(() => import('./app/contact/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
 const PricingPage = React.lazy(() => import('./app/pricing/page'));
 const BlogPage = React.lazy(() => import('./app/blog/page'));
-const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
+const CaseStudiesPage = React.lazy(() => import('./app/casestudies/page'));
 const CareersPage = React.lazy(() => import('./app/careers/page'));
 const PartnersPage = React.lazy(() => import('./app/partners/page'));
 const SupportPage = React.lazy(() => import('./app/support/page'));
 const FAQPage = React.lazy(() => import('./app/faq/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
-const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
+const MicroSaasPage = React.lazy(() => import('./app/microsaas/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
