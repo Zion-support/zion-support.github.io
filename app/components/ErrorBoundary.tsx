@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
 interface ErrorBoundaryState {
@@ -7,17 +8,34 @@ interface ErrorBoundaryState {
   errorInfo: any;
 }
 interface ErrorBoundaryProps {
+=======
+
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+
+interface Props {
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   children: ReactNode;
+  fallback?: ReactNode;
 }
+<<<<<<< HEAD
 class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
+=======
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+}
+
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
+    this.state = { hasError: false };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return {
       hasError: true,
@@ -37,6 +55,19 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     // Example: logErrorToService(error, errorInfo);
   }
   handleRefresh = () => {
+=======
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    this.setState({ error, errorInfo });
+  }
+
+  handleReload = () => {
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     window.location.reload();
   };
   handleGoHome = () => {
@@ -44,31 +75,46 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   };
   render() {
     if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 text-center">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+          <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
+<<<<<<< HEAD
             <h1 className="text-3xl font-bold text-white mb-4">
               Oops! Something went wrong;
   </
+=======
+            
+            <h1 className="text-2xl font-bold text-white mb-4">
+              Oops! Something went wrong
+            </h1>
+            
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+              We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.
             </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mb-6 p-4 bg-red-900/20 rounded-lg text-left">
-                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
-                <pre className="text-xs text-red-300 whitespace-pre-wrap">
+              <details className="mb-6 text-left">
+                <summary className="text-sm text-gray-400 cursor-pointer mb-2">
+                  Error Details (Development)
+                </summary>
+                <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">
                   {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
                 </pre>
-                {this.state.errorInfo && (
-                  <pre className="text-xs text-red-300 whitespace-pre-wrap mt-2">
-                    {this.state.errorInfo.componentStack}
-                  </pre>
-                )}
-              </div>
+              </details>
             )}
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
                 onClick={this.handleRefresh}
@@ -94,6 +140,26 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                 support@ziontechgroup.com;
   </
             </div>
+=======
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={this.handleReload}
+                className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+              >
+                <RefreshCw className="w-4 h-4" />
+                <span>Reload Page</span>
+              </button>
+              
+              <button
+                onClick={this.handleGoHome}
+                className="flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+              >
+                <Home className="w-4 h-4" />
+                <span>Go Home</span>
+              </button>
+            </div>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           </div>
         </div>
       );
