@@ -52,11 +52,15 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-cyan-500/10',
       hoverColor: 'hover:bg-cyan-500/20',
       services: [
+        { name: 'AI Meeting Assistant Pro', path: '/ai-meeting-assistant', description: 'Intelligent meeting transcription', icon: '🎤', popular: true },
         { name: 'AI Project Manager', path: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
         { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management', icon: '📱', popular: true },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'AI-powered business intelligence', icon: '📈', popular: true },
         { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
         { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
+        { name: 'AI Expense Tracker', path: '/ai-expense-tracker', description: 'Smart expense management', icon: '💰', popular: true },
+        { name: 'AI Logo Generator Pro', path: '/ai-logo-generator', description: 'Professional logo creation', icon: '🎨', popular: true },
+        { name: 'AI Review Analyzer', path: '/ai-review-analyzer', description: 'Comprehensive review analysis', icon: '⭐', popular: true },
         { name: 'AI Code Review Assistant', path: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
         { name: 'AI Content Generator', path: '/ai-content-generation', description: 'AI-powered content creation', icon: '✍️', popular: false },
         { name: 'AI SEO Optimizer', path: '/ai-marketing', description: 'AI-driven SEO optimization', icon: '🎯', popular: false }
@@ -90,7 +94,17 @@ const Navigation: React.FC = () => {
         { name: 'AI Natural Language Processing', path: '/ai-nlp', description: 'Advanced NLP solutions' },
         { name: 'AI Robotics Platform', path: '/ai-robotics', description: 'Intelligent robotics' },
         { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D' },
-        { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge' }
+        { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge' },
+        { name: 'Autonomous AI Platform', path: '/autonomous-ai-platform', description: 'Self-managing AI platform' },
+        { name: 'AI Healthcare Diagnostics', path: '/ai-healthcare-diagnostics', description: 'Advanced medical AI' },
+        { name: 'Multimodal AI Platform', path: '/multimodal-ai-platform', description: 'Text, image, audio, video AI' },
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence', description: 'Advanced BI with AI' },
+        { name: 'AI Customer Analytics', path: '/ai-customer-analytics', description: 'Deep customer insights' },
+        { name: 'AI Content Creation Suite', path: '/ai-content-creation-suite', description: 'Complete content creation' },
+        { name: 'Intelligent Process Automation', path: '/intelligent-process-automation', description: 'AI-powered automation' },
+        { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite', description: 'Advanced AI security' },
+        { name: 'AI Fraud Detection', path: '/ai-fraud-detection', description: 'Real-time fraud detection' },
+        { name: 'AI Sustainability Optimizer', path: '/ai-sustainability-optimizer', description: 'AI sustainability solutions' }
       ]
     },
     {
@@ -115,7 +129,17 @@ const Navigation: React.FC = () => {
         { name: 'IT Performance Monitoring', path: '/it-performance-monitoring', description: 'Real-time monitoring' },
         { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery' },
         { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
-        { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
+        { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' },
+        { name: 'Cloud Migration Expert', path: '/cloud-migration-expert', description: 'Zero-downtime migration' },
+        { name: 'Zero Trust Security', path: '/zero-trust-security', description: 'Complete zero trust architecture' },
+        { name: 'DevOps Transformation', path: '/devops-transformation', description: 'Complete DevOps implementation' },
+        { name: 'Data Lake Solutions', path: '/data-lake-solutions', description: 'Enterprise data lake' },
+        { name: 'SD-WAN Solutions', path: '/sd-wan-solutions', description: 'Software-defined networking' },
+        { name: 'AI Infrastructure Setup', path: '/ai-infrastructure-setup', description: 'Complete AI/ML infrastructure' },
+        { name: 'IoT Platform Solutions', path: '/iot-platform-solutions', description: 'Complete IoT platform' },
+        { name: 'Blockchain Infrastructure', path: '/blockchain-infrastructure', description: 'Enterprise blockchain setup' },
+        { name: 'Disaster Recovery Suite', path: '/disaster-recovery-suite', description: 'Comprehensive disaster recovery' },
+        { name: 'Business Continuity Planning', path: '/business-continuity-planning', description: 'Complete continuity planning' }
       ]
     },
     {

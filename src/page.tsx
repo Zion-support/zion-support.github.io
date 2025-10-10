@@ -169,6 +169,19 @@ const HomePage: React.FC = () => {
   // Enhanced Micro SAAS Services with real functionality and pricing
   const microSAASServices = [
     {
+      title: 'AI Meeting Assistant Pro',
+      description: 'Intelligent meeting transcription, action item extraction, and follow-up automation',
+      icon: '🎤',
+      price: '$89/month',
+      features: ['Real-time transcription', 'AI action item extraction', 'Meeting summaries', 'Calendar integration', 'Voice recognition', 'Team collaboration'],
+      benefits: ['Save 3+ hours per week', 'Never miss action items', '60% efficiency improvement', 'Better accountability'],
+      link: '/ai-meeting-assistant',
+      popular: true,
+      category: 'Productivity',
+      marketPrice: '$149',
+      savings: '40%'
+    },
+    {
       title: 'AI Project Manager Pro',
       description: 'Intelligent project planning with AI-powered resource optimization and timeline prediction',
       icon: '📊',
@@ -375,6 +388,45 @@ const HomePage: React.FC = () => {
       category: 'Sales',
       marketPrice: '$499',
       savings: '40%'
+    },
+    {
+      title: 'AI Expense Tracker',
+      description: 'Smart expense management with receipt scanning and automatic categorization',
+      icon: '💰',
+      price: '$49/month',
+      features: ['Receipt scanning', 'Auto categorization', 'Tax preparation', 'Multi-currency', 'Expense reporting', 'Budget tracking'],
+      benefits: ['Save 5+ hours monthly', '90% error reduction', 'Better tax compliance', 'Real-time monitoring'],
+      link: '/ai-expense-tracker',
+      popular: true,
+      category: 'Finance',
+      marketPrice: '$89',
+      savings: '45%'
+    },
+    {
+      title: 'AI Logo Generator Pro',
+      description: 'Professional logo creation with brand analysis and multiple design variations',
+      icon: '🎨',
+      price: '$59/month',
+      features: ['AI logo generation', 'Brand analysis', 'Multiple variations', 'Vector export', 'Brand guidelines', 'Color suggestions'],
+      benefits: ['Professional logos in minutes', 'Cost-effective branding', 'Multiple options', 'Brand consistency'],
+      link: '/ai-logo-generator',
+      popular: true,
+      category: 'Design',
+      marketPrice: '$99',
+      savings: '40%'
+    },
+    {
+      title: 'AI Review Analyzer',
+      description: 'Comprehensive review analysis with sentiment tracking and response automation',
+      icon: '⭐',
+      price: '$49/month',
+      features: ['Multi-platform monitoring', 'Sentiment analysis', 'Response suggestions', 'Competitor analysis', 'Trend identification', 'Custom alerts'],
+      benefits: ['Better customer satisfaction', 'Faster responses', 'Reputation management', 'Competitive insights'],
+      link: '/ai-review-analyzer',
+      popular: true,
+      category: 'Customer Experience',
+      marketPrice: '$89',
+      savings: '45%'
     }
   ];
 
@@ -475,6 +527,42 @@ const HomePage: React.FC = () => {
       marketPrice: '$3,800',
       savings: '42%',
       contact: 'kleber@ziontechgroup.com'
+    },
+    {
+      title: 'Autonomous AI Platform',
+      description: 'Self-managing AI platform with autonomous decision-making and continuous learning',
+      icon: Brain,
+      price: '$8,500/month',
+      features: ['Autonomous Decision Making', 'Continuous Learning', 'Self-optimization', 'Multi-modal AI', 'Real-time Adaptation', 'Predictive Maintenance', 'Anomaly Detection', '24/7 Operation'],
+      color: 'text-purple-400',
+      benefits: ['Reduced human intervention', 'Continuous improvement', 'Better performance', 'Cost efficiency'],
+      marketPrice: '$15,200',
+      savings: '44%',
+      contact: 'kleber@ziontechgroup.com'
+    },
+    {
+      title: 'AI Healthcare Diagnostics',
+      description: 'Advanced medical AI with diagnostic accuracy exceeding human specialists',
+      icon: Stethoscope,
+      price: '$6,800/month',
+      features: ['Medical Image Analysis', 'Diagnostic Assistance', 'Treatment Recommendations', 'Drug Discovery Support', 'Patient Monitoring', 'FDA Compliance', 'HIPAA Security', 'Clinical Validation'],
+      color: 'text-pink-400',
+      benefits: ['Improved diagnostic accuracy', 'Faster diagnosis', 'Better patient outcomes', 'Reduced costs'],
+      marketPrice: '$12,400',
+      savings: '45%',
+      contact: 'kleber@ziontechgroup.com'
+    },
+    {
+      title: 'Multimodal AI Platform',
+      description: 'AI that processes text, images, audio, and video simultaneously',
+      icon: Eye,
+      price: '$4,800/month',
+      features: ['Text Processing', 'Image Recognition', 'Audio Analysis', 'Video Understanding', 'Cross-modal Learning', 'Real-time Processing', 'Custom Models', 'API Integration'],
+      color: 'text-cyan-400',
+      benefits: ['Comprehensive understanding', 'Better accuracy', 'Rich insights', 'Unified processing'],
+      marketPrice: '$8,700',
+      savings: '45%',
+      contact: 'kleber@ziontechgroup.com'
     }
   ];
 
@@ -574,6 +662,42 @@ const HomePage: React.FC = () => {
       benefits: ['Minimal downtime', 'Proactive maintenance', 'Expert support', 'Cost predictability', 'Peace of mind'],
       marketPrice: '$1,400',
       savings: '43%',
+      contact: '+1 302 464 0950'
+    },
+    {
+      title: 'Zero Trust Security Implementation',
+      description: 'Complete zero trust architecture with advanced threat detection and response',
+      icon: Shield,
+      price: '$4,500/month',
+      features: ['Zero Trust Architecture', 'Identity Management', 'Network Segmentation', 'Threat Detection', 'Incident Response', 'Compliance Monitoring', 'Security Training', '24/7 SOC Support'],
+      color: 'text-red-400',
+      benefits: ['Enhanced security posture', 'Reduced attack surface', 'Compliance ready', 'Proactive protection'],
+      marketPrice: '$8,200',
+      savings: '45%',
+      contact: '+1 302 464 0950'
+    },
+    {
+      title: 'DevOps Transformation',
+      description: 'Complete DevOps implementation with CI/CD pipelines and infrastructure automation',
+      icon: Settings,
+      price: '$3,500/month',
+      features: ['CI/CD Pipeline Setup', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Logging', 'Security Scanning', 'Performance Optimization', 'Team Training', 'Process Documentation'],
+      color: 'text-cyan-400',
+      benefits: ['Faster deployments', 'Reduced errors', 'Better collaboration', 'Scalable processes'],
+      marketPrice: '$6,200',
+      savings: '44%',
+      contact: '+1 302 464 0950'
+    },
+    {
+      title: 'Data Lake Solutions',
+      description: 'Enterprise data lake implementation with analytics and machine learning capabilities',
+      icon: Database,
+      price: '$4,200/month',
+      features: ['Data Lake Architecture', 'ETL/ELT Pipelines', 'Data Governance', 'Analytics Platform', 'ML Model Deployment', 'Real-time Processing', 'Data Security', 'Compliance Support'],
+      color: 'text-blue-400',
+      benefits: ['Unified data platform', 'Advanced analytics', 'Scalable storage', 'Better insights'],
+      marketPrice: '$7,500',
+      savings: '44%',
       contact: '+1 302 464 0950'
     }
   ];
