@@ -8,4 +8,9 @@ export const performanceOptimizations = {
   }
 };
 
+export const initializePerformanceOptimizations = () => {
+  console.log('Performance optimizations initialized');
+  // Add performance optimization logic here
+};
+
 export default performanceOptimizations;

@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
-const Navigation = lazy(() => import('../components/Navigation'))
-const Footer = lazy(() => import('../components/Footer'))
+const Navigation = lazy(() => import('../components/Navigation'));
+const Footer = lazy(() => import('../components/Footer'));
 const CloudMigrationPage: React.FC = React.memo((props) => {
   const features = [
     {
@@ -24,18 +22,14 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
       title: 'Infrastructure Setup',
       description: 'Complete cloud infrastructure setup and configuration',
       benefits: ['Auto-scaling', 'Load balancing', 'Security configuration']
-<<<<<<< HEAD
     }
   ];
 
   const heroFeatures = [
-=======
-    },
->>>>>>> cursor/fix-errors-and-merge-to-main-0e35
     {
       title: 'Seamless Cloud Migration',
       description: 'Migrate your applications and data to the cloud with zero downtime and minimal disruption.',
-      benefits: ['Zero-downtime migration', 'Data integrity assurance', 'Automated migration tools', 'Rollback capabilities']}
+      benefits: ['Zero-downtime migration', 'Data integrity assurance', 'Automated migration tools', 'Rollback capabilities']
     },
     {
       icon: Shield,
@@ -53,9 +47,10 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
       icon: Target,
       title: 'Multi-Cloud Strategy',
       description: 'Design and implement multi-cloud architectures for maximum flexibility and redundancy.',
-      benefits: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']}
+      benefits: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']
     }
-  ]
+  ];
+
   const migrationSteps = [
     {
       title: 'Assessment & Planning',
@@ -66,7 +61,6 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
     {
       step: '2',
       title: 'Planning',
-<<<<<<< HEAD
       description: 'Create detailed migration plan with timelines and rollback strategies',
       icon: CheckCircle,
       features: ['Migration strategy', 'Timeline planning', 'Risk assessment']
@@ -81,15 +75,6 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
   ];
 
   const processSteps = [
-=======
-      description: 'Create detailed migration plan with timelines and rollback strategies'
-    },
-    {
-      title: 'Optimization & Support',
-      description: 'Post-migration optimization and ongoing support',
-      features: ['Performance tuning', 'Cost optimization', '24/7 support']
-    },
->>>>>>> cursor/fix-errors-and-merge-to-main-0e35
     {
       step: '01',
       title: 'Assessment',
@@ -99,12 +84,8 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
     {
       step: '02',
       title: 'Architecture Design',
-<<<<<<< HEAD
       description: 'Design optimal cloud architecture tailored to your business needs.',
       duration: '1-2 weeks'
-=======
-      description: 'Design optimal cloud architecture tailored to your business needs.'
->>>>>>> cursor/fix-errors-and-merge-to-main-0e35
     },
     {
       step: '03',
@@ -117,9 +98,9 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
       title: 'Optimization',
       description: 'Optimize performance and provide ongoing support and monitoring.',
       icon: TrendingUp,
-      duration: 'Ongoing'}
+      duration: 'Ongoing'
     }
-  ]
+  ];
   const pricingPlans = [
     {
       name: 'Small Business',
@@ -134,7 +115,7 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
         '30-day post-migration support',
         'Basic monitoring'
       ],
-      popular: false}
+      popular: false
     },
     {
       name: 'Professional',
@@ -150,7 +131,7 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
         'Performance optimization',
         'Cost optimization'
       ],
-      popular: true}
+      popular: true
     },
     {
       name: 'Enterprise',
@@ -168,9 +149,9 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
         'Dedicated account manager',
         'Custom integrations'
       ],
-      popular: false}
+      popular: false
     }
-  ]
+  ];
   const benefits = [
     {
       title: 'Cost Reduction',
