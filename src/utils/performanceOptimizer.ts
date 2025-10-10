@@ -6,11 +6,15 @@
 // Simple logger for performance optimizer
 const logger = {
   info: (message: string, context?: string) => {
-    // },
+    if (process.env.NODE_ENV === 'development') {
+      }
+  },
   performance: (message: string, data: Record<string, unknown>, context?: string) => {
-    // },
+    if (process.env.NODE_ENV === 'development') {
+      }
+  },
   error: (message: string, error: Error) => {
-    // }
+    }
 };
 interface PerformanceMetrics {
   loadTime: number;
