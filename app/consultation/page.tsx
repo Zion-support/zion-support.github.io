@@ -40,7 +40,6 @@
         'Success metrics definition'
       ],
       popular: false
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
     }
   ];
   const process = [
@@ -245,7 +244,6 @@
                 <button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
                   Book Now
                 </button>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
               </div>
             </div>
           </div>
@@ -347,4 +345,3 @@
 };
 
 export default ConsultationPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
