@@ -561,11 +561,6 @@ export class AccessibilityChecker {
     }
     
     return this.issues.map(issue => 
-<<<<<<< HEAD
-      `- ${issue.type}: ${issue.message} (${issue.severity})`
-=======
-      `${issue.type}: ${issue.message} (${issue.severity})`
->>>>>>> cursor/website-audit-and-update-with-deployment-cee5
     ).join('\n');
   }
 }
