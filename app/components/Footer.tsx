@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, ExternalLink, Brain, Facebook, Twitter, Linkedin, Instagram, Github, Youtube } from 'lucide-react';
+import { Phone, Mail, MapPin, Brain, Zap, ArrowRight, Linkedin, Twitter, Facebook, Instagram, Github, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -18,169 +18,30 @@ const Footer: React.FC = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
-  const microSaasServices = {
-    'Productivity': [
-      { name: 'AI Project Manager Pro', url: '/ai-project-manager', description: 'Intelligent project planning' },
-      { name: 'AI Task Manager Pro', url: '/task-manager-pro', description: 'Smart task management' },
-      { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
-      { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
-    ],
-    'Content & Marketing': [
-      { name: 'AI Content Writer Pro', url: '/ai-content-writer', description: 'AI content generation' },
-      { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
-      { name: 'AI Email Marketing Suite', url: '/ai-email-marketing', description: 'Smart email campaigns' },
-      { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' },
-      { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Automated lead generation' }
-    ],
-    'Business & Finance': [
-      { name: 'AI CRM Intelligence', url: '/ai-crm', description: 'Smart CRM solutions' },
-      { name: 'AI Fintech Analyzer', url: '/ai-fintech', description: 'Financial analysis' },
-      { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Advanced financial insights' },
-      { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' }
-    ],
-    'Customer Service': [
-      { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
-      { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'Custom chatbot creation' },
-      { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' }
-    ],
-    'Development': [
-      { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
-      { name: 'AI Mobile App Builder', url: '/ai-mobile-app-development', description: 'Mobile app development' },
-      { name: 'AI Document Processor', url: '/ai-document-processing', description: 'Document automation' }
-    ],
-    'Analytics': [
-      { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Data insights & analytics' },
-      { name: 'AI Data Visualization Pro', url: '/ai-data-visualization', description: 'Interactive dashboards' },
-      { name: 'AI Data Analytics Pro', url: '/ai-data-analytics', description: 'Advanced data analysis' }
-    ],
-    'Creative': [
-      { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation' },
-      { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
-      { name: 'AI Music Composition Suite', url: '/ai-music-composition', description: 'AI-generated music' },
-      { name: 'AI Fashion Design Studio', url: '/ai-fashion-design', description: 'AI fashion design' },
-      { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
-    ],
-    'Health & Wellness': [
-      { name: 'AI Healthcare Assistant', url: '/ai-healthcare', description: 'Medical AI support' },
-      { name: 'AI Fitness Coach Pro', url: '/ai-fitness-coach', description: 'Personalized fitness plans' }
-    ],
-    'Sales': [
-      { name: 'AI Sales Automation Hub', url: '/ai-sales-automation', description: 'Sales optimization' }
-    ]
-  };
+  const microSaasServices = [
+    { name: 'AI Project Manager Pro', url: '/ai-project-manager' },
+    { name: 'AI Task Manager Pro', url: '/ai-task-manager' },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation' },
+    { name: 'AI Scheduler Pro', url: '/ai-scheduler' },
+    { name: 'AI Content Writer Pro', url: '/ai-content-writer' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager' },
+    { name: 'AI Email Marketing Suite', url: '/ai-email-marketing' },
+    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer' },
+    { name: 'AI Lead Generation', url: '/ai-lead-generation' },
+    { name: 'AI CRM Intelligence', url: '/ai-crm' },
+    { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer' },
+    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot' },
+  ];
 
   const aiServices = [
-<<<<<<< HEAD
-    { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
-    { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
-    { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
-    { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI solutions' },
-    { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI applications' },
-    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
-    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
-    { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Intelligent sales processes' },
-    { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Advanced data visualization' },
-    { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
-    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
-    { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' },
-    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'AI project management' },
-    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'AI social media automation' },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing-automation', description: 'AI email marketing automation' },
-    { name: 'AI Customer Support', url: '/ai-customer-support-chatbot', description: 'AI customer support chatbot' }
-  ];
-
-  const itServices = [
-    { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
-    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
-    { name: 'DevOps & CI/CD', url: '/devops', description: 'Development operations' },
-    { name: 'Database Services', url: '/database', description: 'Database management' },
-    { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
-    { name: 'Networking', url: '/networking', description: 'Network infrastructure' },
-    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
-    { name: 'Managed IT Services', url: '/managed-it', description: '24/7 IT management' },
-    { name: 'Cloud Migration Services', url: '/cloud-migration-services', description: 'Professional cloud migration' }
-  ];
-  const microSaasServices = [
-    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
-    { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'AI writing tool' },
-    { name: 'Smart Analytics', url: '/smart-analytics', description: 'Business analytics' },
-    { name: 'AI Scheduler', url: '/ai-scheduler', description: 'Smart scheduling' },
-    { name: 'Expense Tracker', url: '/expense-tracker', description: 'Expense management' },
-    { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'Task management' },
-    { name: 'CRM Lite', url: '/crm-lite', description: 'Customer management' },
-    { name: 'Email Optimizer', url: '/email-optimizer', description: 'Email marketing' },
-    { name: 'Social Media Manager', url: '/social-media-manager', description: 'Social media tools' },
-    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'Design tools' },
-    { name: 'Landing Page Builder', url: '/landing-page-builder', description: 'Page builder' },
-    { name: 'SEO Optimizer', url: '/seo-optimizer', description: 'SEO tools' },
-    { name: 'Ad Campaign Manager', url: '/ad-campaign-manager', description: 'Ad management' },
-    { name: 'Code Assistant', url: '/code-assistant', description: 'Development AI' },
-    { name: 'API Builder', url: '/api-builder', description: 'API development' },
-    { name: 'Bug Tracker Pro', url: '/bug-tracker-pro', description: 'Bug management' },
-    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'AI project management' },
-    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'AI social media automation' },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing-automation', description: 'AI email marketing automation' },
-    { name: 'AI Customer Support', url: '/ai-customer-support-chatbot', description: 'AI customer support chatbot' }
-  ];
-  const emergingTech = [
-    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
-    { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
-    { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
-    { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
-    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
-    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' }
-  ];
-
-  const microSaasServices = [
-    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI Tools' },
-    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'AI project management' },
-    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'AI social media automation' },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing-automation', description: 'AI email marketing automation' },
-    { name: 'AI Customer Support Chatbot', url: '/ai-customer-support-chatbot', description: 'AI support chatbot' },
-    { name: 'Business Apps', url: '/business-apps', description: 'Business Applications' },
-    { name: 'Productivity Tools', url: '/productivity', description: 'Productivity Suite' },
-    { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing Suite' },
-    { name: 'Developer Tools', url: '/developer-tools', description: 'Development Tools' }
-  ];
-
-  const emergingTech = [
-    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum Solutions' },
-    { name: 'Robotics', url: '/robotics', description: 'Intelligent Robotics' },
-    { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected Devices' },
-    { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized Solutions' },
-    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data Insights' }
-  ];
-
-  const companyLinks = [
-    { name: 'About Us', url: '/about' },
-    { name: 'Our Team', url: '/team' },
-    { name: 'Case Studies', url: '/case-studies' },
-    { name: 'Careers', url: '/careers' },
-    { name: 'News', url: '/news' },
-    { name: 'Contact', url: '/contact' }
-  ];
-
-  const supportLinks = [
-    { name: 'Documentation', url: '/docs' },
-    { name: 'API Reference', url: '/api-docs' },
-    { name: 'Support Center', url: '/support' },
-    { name: 'System Status', url: '/status' },
-    { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Terms of Service', url: '/terms' }
-=======
     { name: 'Machine Learning', href: '/machine-learning' },
-    { name: 'Natural Language Processing', href: '/nlp' },
-    { name: 'Computer Vision', href: '/computer-vision' },
+    { name: 'Natural Language Processing', href: '/ai-nlp' },
+    { name: 'Computer Vision', href: '/ai-vision' },
     { name: 'AI Automation', href: '/ai-automation' },
     { name: 'AI Data Visualization', href: '/ai-data-visualization' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation' },
     { name: 'AI Voice Cloning', href: '/ai-voice-cloning' },
-    { name: 'AI Fraud Detection', href: '/ai-cybersecurity' },
+    { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
     { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
@@ -192,30 +53,14 @@ const Footer: React.FC = () => {
     { name: 'IT Consulting', href: '/it-consulting' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'DevOps & CI/CD', href: '/devops' },
-    { name: 'Database Services', href: '/database' },
-    { name: 'Mobile App Development', href: '/ai-mobile-app-development' },
+    { name: 'Database Services', href: '/database-services' },
     { name: 'Web Development', href: '/web-development' },
     { name: 'Network Infrastructure', href: '/network-infrastructure' },
     { name: 'IT Support', href: '/it-support' },
     { name: 'Business Intelligence', href: '/business-intelligence' },
     { name: 'Enterprise Solutions', href: '/enterprise' },
     { name: 'Blockchain Solutions', href: '/blockchain' },
-    { name: 'Quantum Computing Infrastructure', href: '/quantum-computing-infrastructure' },
-    { name: 'Autonomous Systems Development', href: '/autonomous-systems-development' },
-    { name: 'Metaverse Development', href: '/metaverse-development' },
-    { name: 'Edge Computing Solutions', href: '/edge-computing-solutions' },
-    { name: 'Climate Technology Solutions', href: '/climate-technology-solutions' },
-    { name: 'Space Technology Services', href: '/space-technology-services' },
-    { name: 'Biotechnology IT Solutions', href: '/biotechnology-it-solutions' },
-    { name: 'Advanced Robotics Systems', href: '/advanced-robotics-systems' },
-    { name: 'Digital Twin Development', href: '/digital-twin-development' },
-    { name: 'Advanced Cybersecurity', href: '/advanced-cybersecurity' },
-    { name: 'Smart City Solutions', href: '/smart-city-solutions' },
-    { name: 'FinTech Solutions', href: '/fintech-solutions' },
-    { name: 'HealthTech Infrastructure', href: '/healthtech-infrastructure' },
-    { name: 'EdTech Solutions', href: '/edtech-solutions' },
-    { name: 'RetailTech Solutions', href: '/retailtech-solutions' },
->>>>>>> origin/main
+    { name: 'Quantum Computing', href: '/quantum-computing' },
   ];
 
   const socialLinks = [
@@ -232,7 +77,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-8 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
@@ -273,81 +118,77 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Micro SAAS Services - Categorized */}
-          <div className="lg:col-span-3">
+          {/* Micro SAAS Services */}
+          <div className="lg:col-span-2">
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
               <Zap className="w-4 h-4 mr-2" />
               Micro SAAS Solutions
             </h3>
-            <div className="grid grid-cols-2 gap-4">
-              {Object.entries(microSaasServices).map(([category, services]) => (
-                <div key={category}>
-                  <h4 className="text-white font-medium mb-2 text-sm">{category}</h4>
-                  <ul className="space-y-1">
-                    {services.slice(0, 3).map((service) => (
-                      <li key={service.name}>
-                        <a href={service.url}
-                          className="group flex items-center text-xs text-gray-300 hover:text-cyan-400 transition-colors"
-                        >
-                          <span>{service.name}</span>
-                          <ArrowRight className="w-2 h-2 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            <div className="grid grid-cols-1 gap-2">
+              {microSaasServices.slice(0, 8).map((service) => (
+                <Link
+                  key={service.name}
+                  to={service.url}
+                  className="text-gray-300 hover:text-cyan-400 transition-colors text-sm flex items-center group"
+                >
+                  <span>{service.name}</span>
+                  <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
               ))}
             </div>
-            <a href="/services"
+            <Link to="/services"
               className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
             >
               View All Micro SAAS →
-            </a>
+            </Link>
           </div>
 
-          {/* AI & IT Services */}
+          {/* AI Services */}
           <div className="lg:col-span-2">
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
               <Brain className="w-4 h-4 mr-2" />
-              AI & IT Services
+              AI Services
             </h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-sm font-medium text-purple-300 mb-2">AI Services</h4>
-                <ul className="space-y-1">
-                  {aiServices.slice(0, 6).map((service) => (
-                    <li key={service.name}>
-                      <a
-                        href={service.href}
-                        className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
-                      >
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-sm font-medium text-green-300 mb-2">IT Services</h4>
-                <ul className="space-y-1">
-                  {itServices.slice(0, 6).map((service) => (
-                    <li key={service.name}>
-                      <a
-                        href={service.href}
-                        className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm"
-                      >
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div className="grid grid-cols-1 gap-2">
+              {aiServices.slice(0, 8).map((service) => (
+                <Link
+                  key={service.name}
+                  to={service.href}
+                  className="text-gray-300 hover:text-purple-400 transition-colors text-sm"
+                >
+                  {service.name}
+                </Link>
+              ))}
             </div>
-            <a href="/services"
+            <Link to="/ai-services"
               className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
             >
-              View All Services →
-            </a>
+              View All AI Services →
+            </Link>
+          </div>
+
+          {/* IT Services */}
+          <div className="lg:col-span-2">
+            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
+              <Brain className="w-4 h-4 mr-2" />
+              IT Services
+            </h3>
+            <div className="grid grid-cols-1 gap-2">
+              {itServices.slice(0, 8).map((service) => (
+                <Link
+                  key={service.name}
+                  to={service.href}
+                  className="text-gray-300 hover:text-green-400 transition-colors text-sm"
+                >
+                  {service.name}
+                </Link>
+              ))}
+            </div>
+            <Link to="/it-services"
+              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
+            >
+              View All IT Services →
+            </Link>
           </div>
         </div>
 
@@ -379,15 +220,15 @@ const Footer: React.FC = () => {
                 &copy; {currentYear} Zion Tech Group. All rights reserved.
               </p>
               <div className="flex space-x-6">
-                <a href="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
+                <Link to="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
                   Privacy Policy
-                </a>
-                <a href="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
+                </Link>
+                <Link to="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
                   Terms of Service
-                </a>
-                <a href="/sitemap" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
+                </Link>
+                <Link to="/sitemap" className="text-gray-300 hover:text-cyan-400 transition-colors text-sm">
                   Sitemap
-                </a>
+                </Link>
               </div>
             </div>
             
@@ -399,6 +240,8 @@ const Footer: React.FC = () => {
                   href={social.href}
                   className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                   aria-label={social.name}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <social.icon className="w-5 h-5" />
                 </a>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -33,157 +34,10 @@ const Navigation: React.FC = () => {
     }
   };
 
-<<<<<<< HEAD
-  const serviceCategories = [
-    {
-      title: 'AI Services',
-      icon: Brain,
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50',
-      hoverColor: 'hover:bg-purple-100',
-      services: [
-        { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
-        { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
-        { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
-        { name: 'AI Healthcare', path: '/ai-healthcare', description: 'Medical AI solutions' },
-        { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications' },
-        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
-        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service' },
-        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
-        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
-        { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
-        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
-        { name: 'AI Project Manager', path: '/ai-project-manager', description: 'AI-powered project management' },
-        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'AI social media automation' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing-automation', description: 'AI email marketing automation' },
-        { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot', description: 'AI-powered support chatbot' },
-        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Advanced predictive modeling' },
-        { name: 'AI Image Recognition', path: '/ai-image-recognition', description: 'Computer vision solutions' },
-        { name: 'AI Voice Processing', path: '/ai-voice-processing', description: 'Speech recognition & synthesis' },
-        { name: 'AI Recommendation Engine', path: '/ai-recommendation-engine', description: 'Personalized recommendations' },
-        { name: 'AI Sentiment Analysis', path: '/ai-sentiment-analysis', description: 'Real-time sentiment analysis' },
-        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' },
-        { name: 'AI Project Manager', path: '/ai-project-manager', description: 'AI-powered project management' },
-        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'AI social media automation' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing-automation', description: 'AI email marketing automation' },
-        { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', description: 'AI customer support chatbot' }
-      ]
-    },
-    {
-      title: 'IT Services',
-      icon: Cloud,
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50',
-      hoverColor: 'hover:bg-blue-100',
-      services: [
-        { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
-        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
-        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
-        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration & setup' },
-        { name: 'Cloud Migration', path: '/cloud-migration-services', description: 'Professional cloud migration' },
-        { name: 'DevOps', path: '/devops', description: 'DevOps automation' },
-        { name: 'Database Services', path: '/database', description: 'Database management' },
-        { name: 'Network Services', path: '/networking', description: 'Network infrastructure' },
-        { name: 'System Administration', path: '/system-admin', description: 'System management' },
-        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
-        { name: 'Managed IT Services', path: '/managed-it', description: '24/7 IT management' },
-        { name: 'IT Training', path: '/it-training', description: 'Staff development' },
-        { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' },
-        { name: 'Performance Optimization', path: '/performance-optimization', description: 'System performance tuning' },
-        { name: 'Backup & Recovery', path: '/backup-recovery', description: 'Data protection services' },
-        { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale IT solutions' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' },
-        { name: 'Cloud Migration Services', path: '/cloud-migration-services', description: 'Professional cloud migration' }
-      ]
-    },
-    {
-      title: 'Micro SAAS',
-      icon: Code,
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
-      hoverColor: 'hover:bg-green-100',
-      services: [
-        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '100+ ready-to-use apps' },
-        { name: 'AI Project Manager', path: '/ai-project-manager', description: 'AI-powered project management' },
-        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'AI social media automation' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing-automation', description: 'AI email marketing automation' },
-        { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot', description: 'AI-powered support chatbot' },
-        { name: 'Developer Tools', path: '/developer-tools', description: 'AI-powered dev tools' },
-        { name: 'Business Apps', path: '/business-apps', description: 'Productivity applications' },
-        { name: 'Marketing Tools', path: '/marketing-tools', description: 'Marketing automation' },
-        { name: 'Analytics Tools', path: '/analytics-tools', description: 'Business intelligence' },
-        { name: 'Communication Tools', path: '/communication-tools', description: 'Team collaboration' },
-        { name: 'Productivity Tools', path: '/productivity', description: 'Time management & efficiency' },
-        { name: 'HR & Recruitment', path: '/hr-recruitment-tools', description: 'Human resources solutions' },
-        { name: 'Customer Support', path: '/customer-support-tools', description: 'Support & service tools' },
-        { name: 'Sales & CRM', path: '/sales-crm-tools', description: 'Sales management tools' },
-        { name: 'Project Management', path: '/project-management-tools', description: 'Project planning & tracking' },
-        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' },
-        { name: 'AI Project Manager', path: '/ai-project-manager', description: 'AI project management' },
-        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'AI social media automation' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing-automation', description: 'AI email marketing automation' },
-        { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', description: 'AI customer support chatbot' }
-      ]
-    },
-    {
-      title: 'Specialized',
-      icon: Zap,
-      color: 'text-orange-600',
-      bgColor: 'bg-orange-50',
-      hoverColor: 'hover:bg-orange-100',
-      services: [
-        { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-gen computing' },
-        { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
-        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
-        { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
-        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
-        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' },
-        { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences' },
-        { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions' },
-        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' },
-        { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping' },
-        { name: 'Sustainability Tech', path: '/sustainability-tech', description: 'Green technology solutions' },
-        { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
-      ]
-=======
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen);
-    if (isServicesOpen) {
-      setIsAIOpen(false);
-      setIsITOpen(false);
-      setIsSpecializedOpen(false);
->>>>>>> origin/main
-    }
   };
 
-  const toggleAI = () => {
-    setIsAIOpen(!isAIOpen);
-    if (isAIOpen) {
-      setIsITOpen(false);
-      setIsSpecializedOpen(false);
-    }
-  };
-
-  const toggleIT = () => {
-    setIsITOpen(!isITOpen);
-    if (isITOpen) {
-      setIsAIOpen(false);
-      setIsSpecializedOpen(false);
-    }
-  };
-
-  const toggleSpecialized = () => {
-    setIsSpecializedOpen(!isSpecializedOpen);
-    if (isSpecializedOpen) {
-      setIsAIOpen(false);
-      setIsITOpen(false);
-    }
-  };
 
   const microSAASServices = [
     // Productivity & Management
@@ -347,12 +201,12 @@ const Navigation: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
+          <Link to="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
             <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
               <Brain className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
-          </a>
+          </Link>
 
 <<<<<<< HEAD
           {/* Desktop Menu */}
