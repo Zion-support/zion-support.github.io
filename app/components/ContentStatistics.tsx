@@ -1,121 +1,47 @@
 'use client';
 import React from 'react';
-'use client';
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
+import { TrendingUp, Users, Zap, Shield } from 'lucide-react';
 
 const ContentStatistics: React.FC = () => {
-  const [counters, setCounters] = useState({
-    clients: 0,
-    projects: 0,
-    satisfaction: 0,
-    years: 0
-  });
-
-  const targetCounters = {
-    clients: 500,
-    projects: 1000,
-    satisfaction: 99,
-    years: 10
-  };
-
-  const statistics = [
-    {
-      icon: Users,
-      value: counters.clients,
-      label: 'Happy Clients',
-      suffix: '+',
-      color: 'text-cyan-400'
-    },
-    {
-      icon: Award,
-      value: counters.projects,
-      label: 'Projects Completed',
-      suffix: '+',
-      color: 'text-purple-400'
-    },
+  const stats = [
     {
       icon: TrendingUp,
-      value: counters.satisfaction,
-      label: 'Client Satisfaction',
-      suffix: '%',
-      color: 'text-green-400'
+      value: '300%',
+      label: 'Average ROI',
+      description: 'Our clients see significant returns'
     },
     {
-      icon: Clock,
-      value: counters.years,
-      label: 'Years Experience',
-      suffix: '+',
-      color: 'text-yellow-400'
-    }
-  ];
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      icon: Users,
+      value: '500+',
+      label: 'Happy Clients',
+      description: 'Businesses transformed worldwide'
     },
     {
       icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      value: '99.9%',
+      label: 'Uptime',
+      description: 'Reliable and consistent performance'
     },
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      value: '100%',
+      label: 'Secure',
+      description: 'Enterprise-grade security'
     }
   ];
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  useEffect(() => {
-    const duration = 2000; // 2 seconds
-    const steps = 60;
-    const stepDuration = duration / steps;
-
-    const timers = Object.keys(targetCounters).map((key) => {
-      const target = targetCounters[key as keyof typeof targetCounters];
-      const increment = target / steps;
-      let current = 0;
-
-      return setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          current = target;
-          clearInterval(timers[0]);
-        }
-        setCounters(prev => ({
-          ...prev,
-          [key]: Math.floor(current)
-        }));
-      }, stepDuration);
-    });
-
-    return () => {
-      timers.forEach(timer => clearInterval(timer));
-    };
-  }, []);
-
   return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {stats.map((stat, index) => (
+        <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center">
+          <div className="flex items-center justify-center w-12 h-12 bg-cyan-500/20 rounded-lg mx-auto mb-4">
+            <stat.icon className="w-6 h-6 text-cyan-400" />
           </div>
+          <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+          <div className="text-lg font-semibold text-cyan-400 mb-2">{stat.label}</div>
+          <div className="text-sm text-gray-300">{stat.description}</div>
         </div>
-      </div>
+      ))}
     </div>
   );
 };

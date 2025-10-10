@@ -1,43 +1,24 @@
 'use client';
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment with local support and compliance'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
   return (
+    <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/30">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center space-x-4">
+          <div className="flex items-center justify-center w-12 h-12 bg-cyan-500/20 rounded-lg">
+            <Sparkles className="w-6 h-6 text-cyan-400" />
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-white">Transform Your Business Today</h3>
+            <p className="text-gray-300 text-sm">Get started with our AI solutions and see results in 30 days</p>
+          </div>
+        </div>
+        <button className="flex items-center space-x-2 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg transition-colors">
+          <span>Get Started</span>
+          <ArrowRight className="w-4 h-4" />
+        </button>
       </div>
     </div>
   );
