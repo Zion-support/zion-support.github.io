@@ -8,47 +8,175 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AICybersecuritySuitePage: React.FC = () => {
+  const features = [
+    {
+      icon: Shield,
+      title: 'Real-time Threat Detection',
+      description: 'AI-powered monitoring that detects and responds to threats in real-time with 99.9% accuracy',
+      benefits: ['99.9% accuracy', 'Real-time detection', 'Automated response', 'Threat intelligence']
+    },
+    {
+      icon: Brain,
+      title: 'Machine Learning Analysis',
+      description: 'Advanced ML algorithms learn from your environment to identify unusual patterns and behaviors',
+      benefits: ['Behavioral analysis', 'Pattern recognition', 'Anomaly detection', 'Predictive security']
+    },
+    {
+      icon: Lock,
+      title: 'Zero Trust Architecture',
+      description: 'Implement zero trust security model with continuous verification and least privilege access',
+      benefits: ['Continuous verification', 'Least privilege access', 'Identity management', 'Access controls']
+    },
+    {
+      icon: Eye,
+      title: 'Security Monitoring',
+      description: 'Comprehensive 24/7 security monitoring with advanced analytics and reporting',
+      benefits: ['24/7 monitoring', 'Advanced analytics', 'Compliance reporting', 'Incident tracking']
+    },
+    {
+      icon: AlertTriangle,
+      title: 'Automated Response',
+      description: 'Automatically block threats, isolate compromised systems, and alert security teams',
+      benefits: ['Automated blocking', 'System isolation', 'Alert management', 'Incident response']
+    },
+    {
+      icon: Globe,
+      title: 'Global Threat Intelligence',
+      description: 'Access to global threat intelligence feeds and security research for proactive defense',
+      benefits: ['Threat intelligence', 'Global monitoring', 'Research integration', 'Proactive defense']
+    }
+  ];
+
+  const benefits = [
+    'Reduce security incidents by 95%',
+    'Improve threat detection accuracy',
+    'Automate security responses',
+    'Ensure compliance standards',
+    'Scale security operations',
+    'Protect against advanced threats'
+  ];
+
+  const pricing = [
+    {
+      name: 'Essential',
+      price: '$1,999',
+      period: '/month',
+      description: 'Perfect for small to medium businesses',
+      features: [
+        'Basic threat detection',
+        'Email support',
+        'Standard monitoring',
+        'Basic reporting',
+        '1 user account',
+        'Basic analytics'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$4,999',
+      period: '/month',
+      description: 'Ideal for growing organizations',
+      features: [
+        'Advanced threat detection',
+        'Priority support',
+        'Advanced monitoring',
+        'Advanced reporting',
+        'Up to 10 users',
+        'Advanced analytics',
+        'Custom rules',
+        'API access'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$12,999',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Full AI suite',
+        'Custom solutions',
+        'White-label options',
+        'Unlimited users',
+        'Custom integrations',
+        'Dedicated support',
+        'SLA guarantee',
+        'Training & consulting'
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'David Kim',
+      company: 'SecureTech Solutions',
+      role: 'CISO',
+      quote: 'AI cybersecurity suite reduced our security incidents by 98% and improved our threat response time by 90%.',
+      rating: 5,
+      image: '👨‍💼'
+    },
+    {
+      name: 'Sarah Johnson',
+      company: 'Financial Services Inc',
+      role: 'Security Director',
+      quote: 'The machine learning analysis helped us identify sophisticated attacks that traditional tools missed.',
+      rating: 5,
+      image: '👩‍💼'
+    },
+    {
+      name: 'Michael Chen',
+      company: 'Healthcare Corp',
+      role: 'IT Security Manager',
+      quote: 'Automated response capabilities saved us from potential data breaches. Invaluable protection.',
+      rating: 5,
+      image: '👨‍💻'
+    }
+  ];
+
   return (
-    <ErrorBoundary></ErrorBoundar>
+    <ErrorBoundary>
       <SEOHead 
         title="AI Cybersecurity Suite - Advanced Threat Protection | Zion Tech Group"
         description="Comprehensive AI-powered cybersecurity solutions with real-time threat detection, automated response, and advanced analytics. Starting at $1,999/month."
         keywords="AI cybersecurity, threat detection, security automation, cyber defense, AI security, threat intelligence, security analytics"
         canonical="https://ziontechgroup.com/ai-cybersecurity-suite"
-      /></SEOHea>
-      <Navigation /></Navigatio>
+      />
+      <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></mai>
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto"></section>
-            <div className="text-center"></div>
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-100 text-red-800 text-sm font-medium mb-6"></div>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-100 text-red-800 text-sm font-medium mb-6">
                 <Shield className="w-4 h-4 mr-2" />
                 AI Security Technology
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Cybersecurity Suite</h1>
+                AI Cybersecurity Suite
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
                   Advanced Threat Protection
                 </span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Protect your organization with AI-powered cybersecurity solutions. Real-time threat detection, 
                 automated response, and advanced analytics for comprehensive security.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
                   href="#pricing" 
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
-                ></a></<<<a>Get</a></<<a>Security</a> Assessment
-                  <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
+                >
+                  Get Security Assessment
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
                 <a 
                   href="#demo" 
                   className="inline-flex items-center px-8 py-4 border border-red-400 text-red-400 font-semibold rounded-lg hover:bg-red-400 hover:text-white transition-all duration-300"
-                ></a>
-                  <Eye className="mr-2 w-5 h-5" /></Eye></<<<Eye>View</Eye></<<Eye>Demo</Eye>
+                >
+                  View Demo
                 </a>
               </div>
             </div>
@@ -56,391 +184,172 @@ const AICybersecuritySuitePage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto"></section>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Comprehensive AI Security Solutions
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Advanced Security Features
               </h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
-                Advanced AI-powered cybersecurity tools to protect against modern threats
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive AI-powered cybersecurity capabilities
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              <div className="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-xl border border-red-100"></div>
-                <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mb-6"></div>
-                  <Brain className="w-6 h-6 text-white" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
+                  <div className="text-4xl mb-4">
+                    <feature.icon className="text-red-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-6">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <CheckCircle className="text-green-400 mr-2 w-4 h-4" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Threat Detection</h>
-                <p className="text-gray-600 mb-4">
-                  Machine learning algorithms detect and analyze threats in real-time with 99.9% accuracy.
-                </p>
-                <ul className="space-y-2"></u>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Real</CheckCircle></CheckCircle>-time analysis
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Behavioral</CheckCircle></<<CheckCircle>analysis</CheckCircle>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border border-blue-100"></div>
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6"></div>
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Automated Response</h>
-                <p className="text-gray-600 mb-4">
-                  Instant automated response to security incidents with AI-powered decision making.
-                </p>
-                <ul className="space-y-2"></u>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Instant</CheckCircle></<<CheckCircle>response</CheckCircle>
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Smart</CheckCircle></<<CheckCircle>quarantine</CheckCircle>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-100"></div>
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6"></div>
-                  <Eye className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Network Monitoring</h>
-                <p className="text-gray-600 mb-4">
-                  24/7 network monitoring with AI-powered anomaly detection and traffic analysis.
-                </p>
-                <ul className="space-y-2"></u>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircl>
-                    24/7 monitoring
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Traffic</CheckCircle></<<CheckCircle>analysis</CheckCircle>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl border border-purple-100"></div>
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6"></div>
-                  <Target className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Vulnerability Assessment</h>
-                <p className="text-gray-600 mb-4">
-                  Automated vulnerability scanning and penetration testing with AI-enhanced analysis.
-                </p>
-                <ul className="space-y-2"></u>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Automated</CheckCircle></<<CheckCircle>scanning</CheckCircle>
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Risk</CheckCircle></<<CheckCircle>prioritization</CheckCircle>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-8 rounded-xl border border-orange-100"></div>
-                <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-6"></div>
-                  <AlertTriangle className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Threat Intelligence</h>
-                <p className="text-gray-600 mb-4">
-                  Global threat intelligence feeds with AI-powered correlation and analysis.
-                </p>
-                <ul className="space-y-2"></u>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Global</CheckCircle></<<CheckCircle>threat</CheckCircle></<CheckCircle>feeds</CheckCircle>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Predictive</CheckCircle></<<CheckCircle>analysis</CheckCircle>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-xl border border-indigo-100"></div>
-                <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6"></div>
-                  <Users className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Security Operations</h>
-                <p className="text-gray-600 mb-4">
-                  Centralized security operations center with AI-powered incident management.
-                </p>
-                <ul className="space-y-2"></u>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Centralized</CheckCircle></<<CheckCircle>SOC</CheckCircle>
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600"></l>
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" /></CheckCircle></<<<CheckCircle>Incident</CheckCircle></<<CheckCircle>management</CheckCircle>
-                  </li>
-                </ul>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Security Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-7xl mx-auto"></section>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Advanced Security Capabilities
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Why Choose AI Cybersecurity Suite?
               </h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
-                Comprehensive protection against all types of cyber threats
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Protect your organization with intelligent security automation
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12"></div>
-              <div className="space-y-8"></div>
-                <div className="flex items-start space-x-4"></div>
-                  <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0"></div>
-                    <Shield className="w-6 h-6 text-white" />
-                  </div>
-                  <div></div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Endpoint Protection</h3>
-                    <p className="text-gray-600">Advanced endpoint detection and response with AI-powered malware analysis and prevention.</p>
-                  </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
+                  <div className="text-4xl mb-4">🛡️</div>
+                  <h3 className="text-lg font-bold text-white mb-2">{benefit}</h3>
                 </div>
-
-                <div className="flex items-start space-x-4"></div>
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0"></div>
-                    <Globe className="w-6 h-6 text-white" />
-                  </div>
-                  <div></div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Network Security</h3>
-                    <p className="text-gray-600">Comprehensive network security with AI-powered firewall, intrusion detection, and traffic analysis.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4"></div>
-                  <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0"></div>
-                    <Lock className="w-6 h-6 text-white" />
-                  </div>
-                  <div></div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Data Protection</h3>
-                    <p className="text-gray-600">Advanced data encryption, access control, and data loss prevention with AI monitoring.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-8"></div>
-                <div className="flex items-start space-x-4"></div>
-                  <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0"></div>
-                    <Activity className="w-6 h-6 text-white" />
-                  </div>
-                  <div></div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Security Analytics</h3>
-                    <p className="text-gray-600">AI-powered security analytics and reporting with predictive threat modeling and risk assessment.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4"></div>
-                  <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0"></div>
-                    <Settings className="w-6 h-6 text-white" />
-                  </div>
-                  <div></div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Compliance Management</h3>
-                    <p className="text-gray-600">Automated compliance monitoring and reporting for GDPR, HIPAA, SOX, and other regulations.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4"></div>
-                  <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0"></div>
-                    <FileText className="w-6 h-6 text-white" />
-                  </div>
-                  <div></div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Incident Response</h3>
-                    <p className="text-gray-600">Automated incident response with AI-powered forensics, evidence collection, and recovery procedures.</p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto"></section>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Cybersecurity Pricing
+        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Cybersecurity Suite Plans
               </h2>
-              <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
-                Comprehensive security solutions for organizations of all sizes
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the right security solution for your organization
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8"></div>
-              <div className="bg-white p-8 rounded-xl border border-gray-200"></div>
-                <div className="text-center"></div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Small Business</h3>
-                  <div className="mb-6"></div>
-                    <span className="text-4xl font-bold text-gray-900">$1,999</span>
-                    <span className="text-gray-600">/month</span>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricing.map((plan, index) => (
+                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-2xl p-8 relative ${
+                  plan.popular ? 'ring-2 ring-red-400 scale-105' : ''
+                }`}>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-bold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <div className="text-4xl font-bold text-red-400 mb-2">
+                      {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
+                    </div>
+                    <p className="text-gray-300">{plan.description}</p>
                   </div>
-                  <p className="text-gray-600 mb-8">For small businesses and startups</p>
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <CheckCircle className="text-green-400 mr-3 w-5 h-5" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <button className={`w-full py-4 px-6 rounded-lg font-bold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-white'
+                      : 'border-2 border-red-400 text-red-400 hover:bg-red-400 hover:text-white'
+                  }`}>
+                    Get Started
+                  </button>
                 </div>
-                <ul className="space-y-4 mb-8"></u>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Up to 50 endpoints</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Basic threat detection</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Email support</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Monthly reports</spa>
-                  </li>
-                </ul>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com?subject=AI Cybersecurity Small Business Plan"
-                  className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-                >
-                  Get Started
-                </a>
-              </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-              <div className="bg-white p-8 rounded-xl border-2 border-red-500 relative"></div>
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                  <span className="bg-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                    Most Popular
-                  </span>
-                </div>
-                <div className="text-center"></div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-                  <div className="mb-6"></div>
-                    <span className="text-4xl font-bold text-gray-900">$4,999</span>
-                    <span className="text-gray-600">/month</span>
-                  </div>
-                  <p className="text-gray-600 mb-8">For mid to large enterprises</p>
-                </div>
-                <ul className="space-y-4 mb-8"></u>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Up to 500 endpoints</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Advanced AI detection</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">24/7 phone support</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Real-time monitoring</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Compliance reporting</spa>
-                  </li>
-                </ul>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com?subject=AI Cybersecurity Enterprise Plan"
-                  className="w-full bg-red-600 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-red-700 transition-colors"
-                >
-                  Get Started
-                </a>
-              </div>
+        {/* Testimonials Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Success Stories
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                See how organizations enhanced their security posture
+              </p>
+            </div>
 
-              <div className="bg-white p-8 rounded-xl border border-gray-200"></div>
-                <div className="text-center"></div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Custom</h3>
-                  <div className="mb-6"></div>
-                    <span className="text-4xl font-bold text-gray-900">Custom</span>
-                    <span className="text-gray-600">pricing</span>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                  <div className="flex items-center mb-4">
+                    <div className="text-4xl mr-4">{testimonial.image}</div>
+                    <div>
+                      <h4 className="text-lg font-bold text-white">{testimonial.name}</h4>
+                      <p className="text-red-400">{testimonial.role}, {testimonial.company}</p>
+                    </div>
                   </div>
-                  <p className="text-gray-600 mb-8">For large organizations and government</p>
+                  <p className="text-gray-300 mb-4 italic">"{testimonial.quote}"</p>
+                  <div className="flex">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="text-yellow-400 w-5 h-5" />
+                    ))}
+                  </div>
                 </div>
-                <ul className="space-y-4 mb-8"></u>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Unlimited endpoints</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Custom AI models</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Dedicated SOC team</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">On-premise deployment</spa>
-                  </li>
-                  <li className="flex items-center"></l>
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" /></CheckCircl>
-                    <span className="text-gray-700">Custom integrations</spa>
-                  </li>
-                </ul>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com?subject=AI Cybersecurity Custom Plan"
-                  className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
-                >
-                  Contact Sales
-                </a>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-600 to-orange-600">
-          <div className="max-w-4xl mx-auto text-center"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Secure Your Organization Today
-            </h2>
-            <p className="text-xl text-red-100 mb-8">
-              Don't wait for a breach. Get comprehensive AI-powered cybersecurity protection now.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <a 
-                href="mailto:kleber@ziontechgroup.com?subject=AI Cybersecurity Suite Inquiry"
-                className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-              ></a></<<<a>Get</a></<<a>Security</a> Assessment
-                <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
-              </a>
-              <a 
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300"
-              ></a>
-                <Phone className="mr-2 w-5 h-5" /></Phone></<<<Phone>Call</Phone></Phone> +1 302 464 0950
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Info */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
-          <div className="max-w-4xl mx-auto text-center"></section>
-            <div className="grid md:grid-cols-3 gap-8 text-white"></div>
-              <div className="flex items-center justify-center"></div>
-                <Phone className="w-5 h-5 mr-2" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center justify-center"></div>
-                <Mail className="w-5 h-5 mr-2" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center justify-center"></div>
-                <MapPin className="w-5 h-5 mr-2" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-gradient-to-r from-red-500/20 to-orange-600/20 backdrop-blur-sm rounded-2xl p-12 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Secure Your Organization?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Start your AI-powered cybersecurity transformation today
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Start Free Trial
+                </button>
+                <button className="border-2 border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Schedule Demo
+                </button>
               </div>
             </div>
           </div>
         </section>
       </main>
 
-      <Footer /></Foote>
+      <Footer />
     </ErrorBoundary>
   );
 };
