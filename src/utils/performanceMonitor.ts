@@ -26,7 +26,7 @@ export const performanceMonitor = {
             console.log('LCP:', entry.startTime + 'ms');
           }
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime + 'ms');
+            console.log('FID:', (entry as any).processingStart - entry.startTime + 'ms');
           }
         });
       });

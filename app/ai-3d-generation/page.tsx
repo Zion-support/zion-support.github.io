@@ -37,7 +37,7 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
       title: 'Architecture & Real Estate',
       description: 'Create 3D visualizations and virtual tours',
       icon: '🏗️',
-      examples: ['Building models', 'Interior designs', 'Furniture layouts', 'Landscape designs']}
+      examples: ['Building models', 'Interior designs', 'Furniture layouts', 'Landscape designs']
     },
     {
       title: 'E-commerce',

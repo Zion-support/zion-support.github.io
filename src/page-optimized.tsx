@@ -20,9 +20,7 @@ function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">
       <SEOOptimizer />
-      <AccessibilityEnhancer enableKeyboardNavigation enableScreenReaderSupport enableHighContrast enableFocusManagement enableSkipLinks>
-        <div />
-      </AccessibilityEnhancer>
+      <AccessibilityEnhancer />
       <PerformanceMonitor />
       {/* Main Content */}
       <main className="relative">
