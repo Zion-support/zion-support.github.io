@@ -7,14 +7,10 @@ interface LoadingProps {
   fullScreen?: boolean;
 }
 
-<<<<<<< HEAD
-const Loading: React.FC<LoadingProps>= ({
-=======
-const Loading: React.FC<LoadingProps> = ({,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
+const Loading: React.FC<LoadingProps> = ({
   size = 'md',
   text = 'Loading...',
-  fullScreen = false;
+  fullScreen = false
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -27,34 +23,24 @@ const Loading: React.FC<LoadingProps> = ({,
     md: 'text-base',
     lg: 'text-lg',
   };
-</LoadingProps>
-  const content = (</LoadingProps>
-    <div className="flex flex-col items-center justify-center space-y-4"></div>
-      <div className="relative"></div>
-        <div className={`${sizeClasses[size]} animate-spin`}></div>
-          <Loader2 className="w-full h-full text-cyan-400" />
-        </div>
-        <div className="absolute inset-0 flex items-center justify-center"></div>
-          <Zap className={`${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-4 h-4' : 'w-6 h-6'} text-purple-500 animate-pulse`} />
-        </div>
+
+  const content = (
+    <div className="flex flex-col items-center justify-center space-y-4">
+      <div className="relative">
+        <Loader2 className={`${sizeClasses[size]} animate-spin text-purple-500`} />
+        <Zap className={`${sizeClasses[size]} absolute top-0 left-0 animate-pulse text-blue-500`} />
       </div>
-      {text && (
-        <p className={`${textSizeClasses[size]} text-gray-300 font-medium animate-pulse`}>{text}</p>
-        </p>
-      )}
+      <p className={`${textSizeClasses[size]} text-gray-300 font-medium`}>
+        {text}
+      </p>
     </div>
   );
 
   if (fullScreen) {
-<<<<<<< HEAD
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">{content}</div>
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center z-50">
+        {content}
       </div>
-=======
-    return(<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">)
-        {content})
-      </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
     );
   }
 

@@ -6,28 +6,6 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
-<<<<<<< HEAD
-  // Ignore disabled directories
-  {
-<<<<<<< HEAD
-    ignores: [,
-      'node_modules/**',
-      '.next/**',
-      'out/**',
-      'build/**',
-      'dist/**',
-      'next-env.d.ts',
-      '**/zion-website_disabled/**',
-      '_app_disabled/**',
-      'app_disabled/**',
-      '_conflicted_disabled/**',
-      '_pages_api_disabled/**',
-      '_pages_disabled/**',
-=======
-    ignores: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-      'admin-api-disabled/**',
-=======
   // Global ignores
   {
     ignores: [
@@ -36,33 +14,11 @@ export default [
       'ai-data-visualization-disabled/**',
       'ai-sales-automation-disabled/**',
       'ai-workflow-automation-disabled/**',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
       'api-disabled/**',
       'api.disabled/**',
       'api-backup/**',
       'components-disabled/**',
       'components.disabled/**',
-<<<<<<< HEAD
-      'automation_backup/**',
-      'backup*/**',
-      '*-disabled/**',
-      '*.disabled/**',
-      '*.broken',
-      '*.backup',
-      'temp-files/**',
-      'cache/**',
-      'dist/**',
-      'node_modules/**',
-      'analyze-*.js',
-      'check-*.js',
-      'clean-*.js',
-      'fix-*.js',
-      '*.cjs',
-      '*.js.broken'
-    ],
-  },
-  // Base JavaScript configuration;
-=======
       'components.disabled_full/**',
       'backup/**',
       'backup-merge-conflicts/**',
@@ -80,68 +36,64 @@ export default [
       'out/**',
       '*.min.js',
       '*.min.css',
-      'chunk-*.js'
+      'chunk-*.js',
+      '*-disabled/**',
+      '*.disabled/**',
+      '*.broken',
+      '*.backup',
+      'temp-files/**',
+      'analyze-*.js',
+      'check-*.js',
+      'clean-*.js',
+      'fix-*.js',
+      '*.cjs'
     ]
   },
   // Base JavaScript configuration
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
   {
     files: ['**/*.{js,jsx}'],
-    languageOptions: {,
+    languageOptions: {
       globals: { ...globals.browser, ...globals.node },
-      parserOptions: {,
+      parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
-<<<<<<< HEAD
-        ecmaFeatures: {,
-          jsx: true;
-        },
-      },
-    },
-    rules: {,
-      ...js.configs.recommended.rules;
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-=======
-      },
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
     },
     rules: {
       ...js.configs.recommended.rules,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+      'no-unused-vars': 'warn',
+      'no-console': 'warn'
+    }
   },
-  // TypeScript configuration;
+  // TypeScript configuration
   {
     files: ['**/*.{ts,tsx}'],
-    languageOptions: {,
+    languageOptions: {
       globals: { ...globals.browser, ...globals.node },
-      parser: tsParser;
+      parser: tsParser,
       parserOptions: {
-        ecmaVersion: 'latest'
+        ecmaVersion: 'latest',
         sourceType: 'module',
-        ecmaFeatures: {,
-          jsx: true;
-        },
-      },
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
     },
-    plugins: {,
-      '@typescript-eslint': tseslint;
+    plugins: {
+      '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
+      'react-refresh': reactRefresh
     },
-<<<<<<< HEAD
-    rules: {,
-      ...tseslint.configs.recommended.rules;
-      ...reactHooks.configs.recommended.rules,
-=======
     rules: {
       ...tseslint.configs.recommended.rules,
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
+        { allowConstantExport: true }
       ],
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
@@ -149,8 +101,7 @@ export default [
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-non-null-assertion': 'off',
       'no-console': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
-      'no-unused-vars': 'off',
-    },
-  },
+      'no-unused-vars': 'off'
+    }
+  }
 ];
