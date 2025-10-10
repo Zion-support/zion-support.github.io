@@ -3,12 +3,15 @@ import React, { useEffect } from 'react';
 
 const ServiceWorker: React.FC = () => {
   useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker;
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      navigator.serviceWorker
         .register('/sw.js')
         .then((registration) => {
-          console.log('Service Worker registered successfully:', registration);})
-        .catch((error) => {console.log('Service Worker registration failed:', error);})
+          console.log('Service Worker registered successfully:', registration);
+        })
+        .catch((error) => {
+          console.log('Service Worker registration failed:', error);
+        });
     }
   }, []);
 

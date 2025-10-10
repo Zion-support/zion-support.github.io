@@ -17,7 +17,7 @@ import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer'
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './hooks/usePerformanceMonitor';
-import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
+import AnalyticsProvider from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import ServiceWorker from './app/components/ServiceWorker';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';

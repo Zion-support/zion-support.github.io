@@ -1,138 +1,131 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useAnalytics } from './EnhancedAnalytics';
 
-interface AccessibilitySettings {highContrast: boolean;,}
-  reducedMotion: boolean;,
-  fontSize: 'small' | 'medium' | 'large',
-  screenReader: boolean,
-  keyboardNavigation: boolean;,}interface EnhancedAccessibilityProps {children: React.ReactNode;,}
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean,
-  enableFocusManagement?: boolean;}const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({,
-  children,
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = true,
-  enableFocusManagement = true;}) => {const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    reducedMotion: false,
-    fontSize: 'medium',
-    screenReader: false,
-    keyboardNavigation: false;,})
+interface AccessibilitySettings {
+  highContrast: boolean;
+  reducedMotion: boolean;
+  fontSize: 'small' | 'medium' | 'large';
+  screenReader: boolean;
+  keyboardNavigation: boolean;
+}
 
-  const analytics = useAnalytics();
+interface AccessibilityContextType {
+  settings: AccessibilitySettings;
+  updateSettings: (settings: Partial<AccessibilitySettings>) => void;
+  resetSettings: () => void;
+}
 
-  useEffect(() => {// Detect user preferences;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;,
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;,
-    
-    setSettings(prev => ({)
-      ...prev,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast;,}));
+const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
-    // Apply initial accessibility settings;
-    applyAccessibilitySettings({)
-      ...settings,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast;,})
+const defaultSettings: AccessibilitySettings = {
+  highContrast: false,
+  reducedMotion: false,
+  fontSize: 'medium',
+  screenReader: false,
+  keyboardNavigation: true,
+};
 
-    // Track accessibility usage;
-    analytics?.track('accessibility_initialized', {)
-      reduced_motion: prefersReducedMotion,
-      high_contrast: prefersHighContrast;,})
-  }, []);
-
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {,
-    const root = document.documentElement;
-    
-    // High contrast mode;
-    if (newSettings.highContrast) {
-      root.classList.add('high-contrast');}else {root.classList.remove('high-contrast');}}// Reduced motion;
-    if (newSettings.reducedMotion) {root.classList.add('reduced-motion');}else {root.classList.remove('reduced-motion');}}// Font size;
-    root.classList.remove('font-small', 'font-medium', 'font-large');
-    root.classList.add(`font-${newSettings.fontSize)}`);
-
-    // Screen reader optimizations;
-    if (newSettings.screenReader) {root.classList.add('screen-reader-optimized')}else {root.classList.remove('screen-reader-optimized')}}}
-
-  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {,
-    const updatedSettings = { ...settings, ...newSettings}setSettings(updatedSettings);
-    applyAccessibilitySettings(updatedSettings);
-    
-    analytics?.track('accessibility_settings_changed', newSettings);
+export const useAccessibility = () => {
+  const context = useContext(AccessibilityContext);
+  if (!context) {
+    throw new Error('useAccessibility must be used within an AccessibilityProvider');
   }
+  return context;
+};
 
-  // Keyboard navigation support;
-  useEffect(() => {if (!enableKeyboardNavigation) return;
+interface EnhancedAccessibilityProps {
+  children: React.ReactNode;
+}
 
-    const handleKeyDown = (event: KeyboardEvent) => {,
-      // Skip to main content;
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-        if (skipLink) {
-          skipLink.focus(),
-          event.preventDefault()}}
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children }) => {
+  const [settings, setSettings] = useState<AccessibilitySettings>(defaultSettings);
+  const { trackEvent } = useAnalytics();
 
-      // Escape key to close modals/dropdowns;
-      if (event.key === 'Escape') {const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur()}}
+  useEffect(() => {
+    // Load settings from localStorage
+    const savedSettings = localStorage.getItem('accessibility-settings');
+    if (savedSettings) {
+      try {
+        const parsed = JSON.parse(savedSettings);
+        setSettings({ ...defaultSettings, ...parsed });
+      } catch (error) {
+        console.error('Error loading accessibility settings:', error);
+      }
     }
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [enableKeyboardNavigation]);
+    // Apply settings to document
+    applySettings(settings);
+  }, [settings]);
 
-  // Focus management;
-  useEffect(() => {if (!enableFocusManagement) return;
-
-    const handleFocusIn = (event: FocusEvent) => {,
-      const target = event.target as HTMLElement;
-      
-      // Ensure focus is visible;
-      if (target && target.classList) {
-        target.classList.add('focus-visible');}}
-
-    const handleFocusOut = (event: FocusEvent) => {,
-      const target = event.target as HTMLElement;
-      
-      // Remove focus styling;
-      if (target && target.classList) {
-        target.classList.remove('focus-visible');}}
-
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
+  const applySettings = (newSettings: AccessibilitySettings) => {
+    const body = document.body;
     
-    return () => {document.removeEventListener('focusin', handleFocusIn);
-      document.removeEventListener('focusout', handleFocusOut)}}, [enableFocusManagement]);
+    // High contrast
+    if (newSettings.highContrast) {
+      body.classList.add('high-contrast');
+    } else {
+      body.classList.remove('high-contrast');
+    }
 
-  // Screen reader announcements;
-  const announceToScreenReader = (message: string) => {,
-    if (!enableScreenReaderSupport) return;
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
+    // Reduced motion
+    if (newSettings.reducedMotion) {
+      body.classList.add('reduced-motion');
+    } else {
+      body.classList.remove('reduced-motion');
+    }
+
+    // Font size
+    body.classList.remove('font-small', 'font-medium', 'font-large');
+    body.classList.add(`font-${newSettings.fontSize}`);
+
+    // Screen reader
+    if (newSettings.screenReader) {
+      body.setAttribute('aria-live', 'polite');
+    } else {
+      body.removeAttribute('aria-live');
+    }
+
+    // Keyboard navigation
+    if (newSettings.keyboardNavigation) {
+      body.classList.add('keyboard-navigation');
+    } else {
+      body.classList.remove('keyboard-navigation');
+    }
+  };
+
+  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
+    const updatedSettings = { ...settings, ...newSettings };
+    setSettings(updatedSettings);
     
-    document.body.appendChild(announcement);
+    // Save to localStorage
+    localStorage.setItem('accessibility-settings', JSON.stringify(updatedSettings));
     
-    setTimeout(() => {
-      document.body.removeChild(announcement);}, 1000);
-  }
+    // Track accessibility changes
+    trackEvent('accessibility_settings_changed', {
+      settings: updatedSettings,
+    });
+  };
 
-  // Expose accessibility functions to window for global access;
-  useEffect(() => {(window as any).accessibility = {
-      updateSettings,
-      announceToScreenReader,
-      settings;}}, [settings]);
+  const resetSettings = () => {
+    setSettings(defaultSettings);
+    localStorage.removeItem('accessibility-settings');
+    
+    trackEvent('accessibility_settings_reset', {
+      settings: defaultSettings,
+    });
+  };
 
-  return(<div;)
-      className={`accessibility-wrapper ${settings.highContrast ? 'high-contrast' : ''}${settings.reducedMotion ? 'reduced-motion' : ''}`}
-      data-font-size={settings.fontSize}data-screen-reader={settings.screenReader}>{children</div>} </div>
+  const contextValue: AccessibilityContextType = {
+    settings,
+    updateSettings,
+    resetSettings,
+  };
+
+  return (
+    <AccessibilityContext.Provider value={contextValue}>
+      {children}
+    </AccessibilityContext.Provider>
   );
 };
 
