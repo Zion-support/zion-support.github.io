@@ -2,6 +2,7 @@
 import React, { Suspense, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+import { ErrorBoundary } from 'react-error-boundary';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import LoadingSpinner from './src/components/LoadingSpinner';
@@ -9,6 +10,13 @@ import UnifiedContentPromotion from './src/components/UnifiedContentPromotion';
 import InteractiveAIROICalculator from './src/components/InteractiveAIROICalculator';
 import ContentShowcase from './src/components/ContentShowcase';
 import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
+
+// Lazy load pages
+const HomePage = React.lazy(() => import('./app/page'));
+const AboutPage = React.lazy(() => import('./app/about/page'));
+const ServicesPage = React.lazy(() => import('./app/services/page'));
+const ContactPage = React.lazy(() => import('./app/contact/page'));
+const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 
 // Structured data for SEO
 const structuredData = {
@@ -198,4 +206,6 @@ const App: React.FC = memo(() => {
       </HelmetProvider>
     </ErrorBoundary>
   );
-}
+};
+
+export default App;

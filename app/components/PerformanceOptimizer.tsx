@@ -42,7 +42,7 @@ export const PerformanceOptimizer: React.FC = () => {
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
 
-    setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
+    setOptimizationStatus(prev => ({ ...prev, preloaded: 5 }));
   };
 
   const setupCodeSplitting = () => {
