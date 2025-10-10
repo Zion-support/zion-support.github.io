@@ -30,6 +30,158 @@ const ServicesPage: React.FC = () => {
     },
     {
       icon: Brain,
+      title: 'AI Quantum Computing',
+      description: 'Next-generation quantum computing solutions for complex problem solving and optimization.',
+      features: ['Quantum Algorithms', 'Quantum Machine Learning', 'Optimization Problems', 'Cryptography', 'Quantum Simulation'],
+      price: 'Starting at $5,000/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Autonomous Systems',
+      description: 'Intelligent autonomous systems for robotics, drones, and self-operating machinery.',
+      features: ['Autonomous Navigation', 'Object Recognition', 'Decision Making', 'Path Planning', 'Safety Systems'],
+      price: 'Starting at $3,500/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Blockchain Solutions',
+      description: 'AI-powered blockchain solutions for smart contracts, DeFi, and decentralized applications.',
+      features: ['Smart Contract AI', 'DeFi Optimization', 'NFT Intelligence', 'Blockchain Analytics', 'Decentralized AI'],
+      price: 'Starting at $2,500/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI 3D Generation',
+      description: 'Advanced 3D content generation using AI for gaming, architecture, and virtual reality.',
+      features: ['3D Model Generation', 'Texture Synthesis', 'Animation AI', 'Virtual Worlds', 'AR/VR Content'],
+      price: 'Starting at $1,800/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Agricultural Intelligence',
+      description: 'Smart farming solutions with AI-powered crop monitoring, yield prediction, and automation.',
+      features: ['Crop Monitoring', 'Yield Prediction', 'Pest Detection', 'Irrigation Control', 'Soil Analysis'],
+      price: 'Starting at $1,200/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Climate Solutions',
+      description: 'AI-driven climate change solutions for carbon tracking, renewable energy, and sustainability.',
+      features: ['Carbon Footprint Tracking', 'Renewable Energy Optimization', 'Climate Modeling', 'Sustainability Analytics', 'Green AI'],
+      price: 'Starting at $2,200/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Drug Discovery',
+      description: 'Accelerated drug discovery using AI for molecular design, target identification, and clinical trials.',
+      features: ['Molecular Design', 'Target Identification', 'Clinical Trial Optimization', 'Drug Repurposing', 'Biomarker Discovery'],
+      price: 'Starting at $4,500/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Energy Grid Management',
+      description: 'Smart grid solutions with AI for energy distribution, load balancing, and renewable integration.',
+      features: ['Load Balancing', 'Renewable Integration', 'Grid Optimization', 'Demand Response', 'Energy Storage'],
+      price: 'Starting at $3,200/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Financial Crime Detection',
+      description: 'Advanced fraud detection and financial crime prevention using machine learning algorithms.',
+      features: ['Fraud Detection', 'Money Laundering Detection', 'Risk Assessment', 'Transaction Monitoring', 'Compliance Reporting'],
+      price: 'Starting at $2,800/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Holographic Workspace',
+      description: 'Immersive holographic workspace solutions for remote collaboration and 3D visualization.',
+      features: ['Holographic Displays', '3D Collaboration', 'Virtual Meetings', 'Spatial Computing', 'Mixed Reality'],
+      price: 'Starting at $4,200/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Fashion Design',
+      description: 'AI-powered fashion design and trend prediction for the fashion industry.',
+      features: ['Trend Prediction', 'Design Generation', 'Color Matching', 'Size Optimization', 'Supply Chain AI'],
+      price: 'Starting at $1,600/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Investment Optimizer',
+      description: 'Intelligent investment portfolio optimization and risk management using AI algorithms.',
+      features: ['Portfolio Optimization', 'Risk Management', 'Market Analysis', 'Algorithmic Trading', 'Performance Prediction'],
+      price: 'Starting at $2,100/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Invoice Generator',
+      description: 'Automated invoice generation and financial document processing with AI intelligence.',
+      features: ['Automated Invoicing', 'Document Processing', 'Payment Tracking', 'Tax Calculations', 'Financial Reports'],
+      price: 'Starting at $299/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Lead Generation',
+      description: 'Intelligent lead generation and prospect identification using AI-powered data analysis.',
+      features: ['Prospect Identification', 'Lead Scoring', 'Email Sequences', 'CRM Integration', 'Conversion Optimization'],
+      price: 'Starting at $799/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Inventory Management',
+      description: 'Smart inventory optimization with AI for demand forecasting and supply chain management.',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Management', 'Cost Reduction', 'Automated Reordering'],
+      price: 'Starting at $1,400/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Investment Optimizer',
+      description: 'Advanced investment optimization using AI for portfolio management and risk assessment.',
+      features: ['Portfolio Optimization', 'Risk Assessment', 'Market Analysis', 'Algorithmic Trading', 'Performance Tracking'],
+      price: 'Starting at $2,100/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Invoice Generator',
+      description: 'Automated invoice generation and financial document processing with AI intelligence.',
+      features: ['Automated Invoicing', 'Document Processing', 'Payment Tracking', 'Tax Calculations', 'Financial Reports'],
+      price: 'Starting at $299/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Lead Generation',
+      description: 'Intelligent lead generation and prospect identification using AI-powered data analysis.',
+      features: ['Prospect Identification', 'Lead Scoring', 'Email Sequences', 'CRM Integration', 'Conversion Optimization'],
+      price: 'Starting at $799/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Inventory Management',
+      description: 'Smart inventory optimization with AI for demand forecasting and supply chain management.',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Management', 'Cost Reduction', 'Automated Reordering'],
+      price: 'Starting at $1,400/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
       title: 'AI Voice Assistant Platform',
       description: 'Build custom voice assistants with natural language understanding, multi-language support, and enterprise integration.',
       features: ['Voice Recognition', 'Natural Language Processing', 'Multi-language Support', 'Enterprise Integration', 'Custom Wake Words'],
