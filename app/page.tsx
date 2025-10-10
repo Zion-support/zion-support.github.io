@@ -1,11 +1,8 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, CheckCircle, BarChart, Target, Users, Zap, Brain, Globe, Rocket, Shield, Settings, Clock } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home, Video, Palette, Code, FileText, Calculator, Scale, Package, ShoppingCart, Music, Eye, Factory, GraduationCap } from 'lucide-react';
 import Header from './components/Header';
-
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home, Video, Palette, Code } from 'lucide-react';
-
 import Footer from './components/Footer';
 
 // Service data
@@ -503,6 +500,55 @@ const itServices = [
     category: "Blockchain Security",
     icon: Shield,
     link: "https://ziontechgroup.com/smart-contract-security-audit"
+  }
+];
+
+// Testimonials data
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CEO",
+    company: "TechCorp Solutions",
+    avatar: "SJ",
+    content: "Zion Tech Group transformed our business operations with their AI solutions. We've seen a 300% increase in efficiency and 70% cost reduction in just 6 months."
+  },
+  {
+    name: "Michael Chen",
+    role: "CTO",
+    company: "InnovateLabs",
+    avatar: "MC",
+    content: "The AI-powered analytics dashboard provided insights we never had before. Our decision-making process is now data-driven and incredibly accurate."
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "Operations Director",
+    company: "Global Enterprises",
+    avatar: "ER",
+    content: "Their customer support AI has revolutionized our client experience. 24/7 availability with human-level understanding - absolutely game-changing."
+  }
+];
+
+// Stats data
+const stats = [
+  {
+    number: "500+",
+    label: "Projects Completed",
+    icon: CheckCircle
+  },
+  {
+    number: "99.9%",
+    label: "Uptime Guarantee",
+    icon: Shield
+  },
+  {
+    number: "50+",
+    label: "Enterprise Clients",
+    icon: Building
+  },
+  {
+    number: "24/7",
+    label: "Support Available",
+    icon: Clock
   }
 ];
 

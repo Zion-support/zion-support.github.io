@@ -1,70 +1,126 @@
-const fs = require('fs');
+import fs from 'fs';
 
-// Read the Footer component
-const footerContent = fs.readFileSync('app/components/Footer.tsx', 'utf8');
+// Read existing pages
+const existingPages = fs.readFileSync('/workspace/existing_pages.txt', 'utf8')
+  .split('\n')
+  .filter(page => page.trim())
+  .map(page => page.trim());
 
-// Extract all href values from the Footer
-const footerLinks = [];
-const hrefMatches = footerContent.match(/href:\s*'([^']+)'/g);
-if (hrefMatches) {
-  hrefMatches.forEach(match => {
-    const href = match.match(/href:\s*'([^']+)'/)[1];
-    if (href.startsWith('/')) {
-      footerLinks.push(href.substring(1)); // Remove leading slash
-    }
-  });
-}
+// Footer links from the Footer component
+const footerLinks = [
+  // AI Services
+  '/ai-workflow-automation',
+  '/ai-customer-support',
+  '/ai-data-analytics',
+  '/ai-content-generation',
+  '/ai-healthcare',
+  '/ai-fintech',
+  '/ai-computer-vision',
+  '/ai-ml-platform',
+  '/ai-quantum-computing',
+  '/ai-drug-discovery-pro',
+  '/ai-climate-solutions-pro',
+  '/ai-space-technology-pro',
+  
+  // IT Services
+  '/cloud-migration',
+  '/cybersecurity',
+  '/it-infrastructure',
+  '/it-support',
+  '/custom-development',
+  '/devops-cicd',
+  '/database-management',
+  '/network-design',
+  '/ai-infrastructure-monitoring',
+  '/blockchain-integration-services',
+  '/ai-api-management',
+  '/smart-contract-security-audit',
+  
+  // Micro SAAS
+  '/ai-project-manager',
+  '/ai-social-media-manager',
+  '/ai-analytics-dashboard',
+  '/ai-email-marketing',
+  '/ai-customer-support-bot',
+  '/ai-content-studio',
+  '/ai-financial-advisor',
+  '/ai-workflow-automation',
+  '/ai-smart-calendar',
+  '/ai-content-writer',
+  '/ai-video-generator',
+  '/ai-crm-assistant',
+  
+  // Emerging Technologies
+  '/ai-quantum-computing',
+  '/autonomous-systems',
+  '/blockchain-web3',
+  '/iot-edge-computing',
+  '/ar-vr-solutions',
+  '/smart-cities',
+  '/digital-transformation',
+  '/innovation-labs',
+  '/business-intelligence',
+  '/robotics',
+  
+  // Company Links
+  '/about',
+  '/team',
+  '/careers',
+  '/case-studies',
+  '/blog',
+  '/pricing',
+  '/micro-saas',
+  '/ai-services',
+  '/it-services',
+  '/demo',
+  '/consultation',
+  
+  // Support Links
+  '/contact',
+  '/support',
+  '/docs',
+  '/api-docs',
+  '/status',
+  '/health',
+  '/demo',
+  '/consultation',
+  
+  // Legal Links
+  '/privacy',
+  '/terms',
+  '/cookies',
+  '/gdpr',
+  '/security',
+  '/compliance'
+];
 
-// Read the Navigation component
-const navContent = fs.readFileSync('app/components/Navigation.tsx', 'utf8');
-
-// Extract all path values from the Navigation
-const navLinks = [];
-const pathMatches = navContent.match(/path:\s*'([^']+)'/g);
-if (pathMatches) {
-  pathMatches.forEach(match => {
-    const path = match.match(/path:\s*'([^']+)'/)[1];
-    if (path.startsWith('/')) {
-      navLinks.push(path.substring(1)); // Remove leading slash
-    }
-  });
-}
-
-// Get all existing pages
-const existingPages = [];
-const { execSync } = require('child_process');
-try {
-  const result = execSync('find app -name "page.tsx" | sed "s|app/||" | sed "s|/page.tsx||"', { encoding: 'utf8' });
-  existingPages.push(...result.trim().split('\n').filter(Boolean));
-} catch (error) {
-  console.error('Error getting existing pages:', error.message);
-}
-
-// Combine all links
-const allLinks = [...new Set([...footerLinks, ...navLinks])].sort();
+// Check which pages are missing
+const missingPages = [];
 const existingPagesSet = new Set(existingPages);
 
-// Find missing pages
-const missingPages = allLinks.filter(link => !existingPagesSet.has(link));
-
-console.log('=== MISSING PAGES ANALYSIS ===');
-console.log(`Total links found: ${allLinks.length}`);
-console.log(`Existing pages: ${existingPages.length}`);
-console.log(`Missing pages: ${missingPages.length}`);
-
-if (missingPages.length > 0) {
-  console.log('\n=== MISSING PAGES ===');
-  missingPages.forEach(page => console.log(`- ${page}`));
-} else {
-  console.log('\n✅ All navigation and footer links have corresponding pages!');
-}
-
-// Check for pages that exist but aren't linked
-const unlinkedPages = existingPages.filter(page => !allLinks.includes(page));
-console.log(`\n=== UNLINKED PAGES (${unlinkedPages.length}) ===`);
-if (unlinkedPages.length > 0) {
-  unlinkedPages.slice(0, 20).forEach(page => console.log(`- ${page}`));
-  if (unlinkedPages.length > 20) {
-    console.log(`... and ${unlinkedPages.length - 20} more`);
+footerLinks.forEach(link => {
+  const pagePath = link.replace('/', '');
+  if (!existingPagesSet.has(pagePath)) {
+    missingPages.push(link);
   }
-}
+});
+
+console.log('Missing Pages:');
+missingPages.forEach(page => console.log(`  ${page}`));
+console.log(`\nTotal missing pages: ${missingPages.length}`);
+
+// Also check for pages that exist but might have broken links
+console.log('\nChecking for potential issues...');
+
+// Check if main navigation pages exist
+const mainNavPages = ['/', '/about', '/services', '/pricing', '/case-studies', '/blog', '/contact'];
+mainNavPages.forEach(page => {
+  const pagePath = page === '/' ? 'page' : page.replace('/', '');
+  if (!existingPagesSet.has(pagePath)) {
+    console.log(`  Missing main nav page: ${page}`);
+  }
+});
+
+// Write missing pages to file
+fs.writeFileSync('/workspace/missing_pages.txt', missingPages.join('\n'));
+console.log('\nMissing pages list saved to missing_pages.txt');

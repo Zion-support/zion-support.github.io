@@ -15,6 +15,7 @@ ai-climate-solutions-pro
 ai-cloud-infrastructure
 ai-code-assistant
 ai-code-generation
+ai-code-security-auditor
 ai-computer-vision
 ai-content-delivery-network
 ai-content-generation
@@ -61,6 +62,7 @@ ai-infrastructure-monitoring
 ai-insurance
 ai-inventory-management
 ai-inventory-manager
+ai-investment-optimizer
 ai-invoice-generator
 ai-lead-generation
 ai-legal
@@ -70,6 +72,7 @@ ai-load-testing
 ai-logo-designer
 ai-manufacturing
 ai-marketing
+ai-mental-health-companion
 ai-ml
 ai-ml-platform
 ai-mobile-app-builder
@@ -96,6 +99,7 @@ ai-sentiment-analyzer
 ai-seo-optimizer
 ai-services
 ai-smart-calendar
+ai-smart-home-controller
 ai-social-media-manager
 ai-social-media-scheduler
 ai-solutions
