@@ -3,29 +3,20 @@ import { useEffect } from 'react';
 
 export const usePerformanceMonitor = () => {
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    // Monitor Core Web Vitals
-    const monitorWebVitals = () => {
-      // This is a simplified version - in production you'd use the web-vitals library
-      if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          console.log('Page load time:', loadTime);
+    // Performance monitoring hook
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            console.log('Navigation timing:', entry);
+          }
+          if (entry.entryType === 'paint') {
+            console.log('Paint timing:', entry);
+          }
         }
-      }
-    };
+      });
 
-    // Run monitoring after page load
-    if (document.readyState === 'complete') {
-      monitorWebVitals();
-    } else {
-      window.addEventListener('load', monitorWebVitals);
+      observer.observe({ entryTypes: ['navigation', 'paint'] });
     }
-
-    return () => {
-      window.removeEventListener('load', monitorWebVitals);
-    };
   }, []);
 };

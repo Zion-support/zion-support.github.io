@@ -1,51 +1,85 @@
 'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect } from 'react';
 
 interface SEOOptimizerProps {
   title: string;
   description: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  structuredData?: object;
+  keywords?: string;
+  enablePreloading?: boolean;
+  enableCodeSplitting?: boolean;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title,
   description,
-  keywords = [],
-  canonicalUrl,
-  structuredData
+  keywords = 'AI solutions, IT services, cloud computing, software development, machine learning, cybersecurity',
+  enablePreloading = true,
+  enableCodeSplitting = true
 }) => {
-  const keywordsString = keywords.join(', ');
+  useEffect(() => {
+    // Update document title
+    document.title = title;
 
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywordsString} />
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={canonicalUrl} />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonicalUrl} />
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
-    </Helmet>
-  );
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', description);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = description;
+      document.head.appendChild(meta);
+    }
+
+    // Update meta keywords
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', keywords);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'keywords';
+      meta.content = keywords;
+      document.head.appendChild(meta);
+    }
+
+    // Preload critical resources
+    if (enablePreloading) {
+      const preloadCriticalResources = () => {
+        const criticalImages = [
+          '/images/hero-bg.jpg',
+          '/images/logo.png'
+        ];
+
+        criticalImages.forEach(src => {
+          const link = document.createElement('link');
+          link.rel = 'preload';
+          link.as = 'image';
+          link.href = src;
+          document.head.appendChild(link);
+        });
+      };
+
+      preloadCriticalResources();
+    }
+
+    // Code splitting optimizations
+    if (enableCodeSplitting) {
+      const optimizeCodeSplitting = () => {
+        const criticalChunks = ['main', 'vendor'];
+        criticalChunks.forEach(chunk => {
+          const link = document.createElement('link');
+          link.rel = 'modulepreload';
+          link.href = `/js/${chunk}.js`;
+          document.head.appendChild(link);
+        });
+      };
+
+      optimizeCodeSplitting();
+    }
+
+  }, [title, description, keywords, enablePreloading, enableCodeSplitting]);
+
+  return null;
 };
 
 export default SEOOptimizer;
