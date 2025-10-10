@@ -11,6 +11,7 @@ const ContentStatistics: React.FC = () => {
     satisfaction: 0,
     countries: 0,
     years: 0
+  });
 
   const stats = [
     {

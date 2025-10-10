@@ -85,6 +85,7 @@ const AccessibilityEnhancer: React.FC = () => {
     } else {
       root.classList.remove('focus-visible');
     }
+
     // Screen reader optimizations
     if (settings.screenReader) {
       root.classList.add('screen-reader-optimized');
