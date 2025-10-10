@@ -1,10 +1,13 @@
-import fs from 'fs'import path from 'path'
-import { fileURLToPath  } from 'url'
-const __filename = fileURLToPath(import.meta.url)
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+
 // Read the current App.tsx
-const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8')
-const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'))
-const missingPages = analysisData.missingPagesList
+const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8');
+const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'));
+const missingPages = analysisData.missingPagesList;
 const generateImportStatement = (route) => {
   const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page'
   return `const ${componentName} = lazy(() => import('.${route}/page'));`

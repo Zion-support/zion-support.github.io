@@ -23,8 +23,8 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-  ]
-  const benefits = [
+  ];
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -33,16 +33,17 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]return (
+  ];
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>
+      </meta>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          </div>
+          </section>
         </div>
       </section>
       {/* Features Section */}

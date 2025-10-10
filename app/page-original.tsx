@@ -1,11 +1,23 @@
-'use client'import React from 'react'
-'use client'import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react'
+'use client';
+import React from 'react'
+'use client';
+;
+;
+;
+;
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'import Navigation from './components/Navigation'
 import Footer from './components/Footer'import PerformanceOptimizer from './components/PerformanceOptimizer'
 import SEOOptimizer from './components/SEOOptimizer'import AccessibilityEnhancer from './components/AccessibilityEnhancer'
-import Analytics from './components/Analytics'import SecurityEnhancer from './components/SecurityEnhancer'
+import Analytics from './components/Analytics'import SecurityEnhancer from './components/SecurityEnhancer';
+
+const
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
+;
+
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
+;
+
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
@@ -13,7 +25,9 @@ const preloadComponents = (
   if (typeof window !== 'undefined') {
     setTimeout(() => {
       import('./components/ContentPromotionBanner')) => {
-  return (
+  ;
+
+return (
     $3
   )}
       import('./components/ContentCarousel')}
@@ -90,12 +104,12 @@ const HomePage: React.FC = memo(() => {;
             addressCountry: 'US';}
           }
         }}
-      /><PerformanceOptimizer
+      /></SEOOptimizer><PerformanceOptimizer
         enableImageOptimization={true}
         enableLazyLoading={true}
         enablePreloading={true}
         enableCodeSplitting={true}
-       />
+       /></PerformanceOptimizer>
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
         enableScreenReaderSupport={true}
@@ -103,31 +117,31 @@ const HomePage: React.FC = memo(() => {;
         enableFocusManagement={true}
         enableSkipLinks={true}
         enableARIALabels={true}
-      /><Analytics
+      /></AccessibilityEnhancer><Analytics
         enableGoogleAnalytics={true}
         enablePerformanceMonitoring={true}
         enableErrorTracking={true}
         enableUserBehaviorTracking={true}
-       />
+       /></Analytics>
       <SecurityEnhancer
         enableCSP={true}
         enableHTTPSRedirect={true}
         enableXSSProtection={true}
         enableClickjackingProtection={true}
         enableContentTypeSniffingProtection={true}
-      />
+      /></SecurityEnhancer>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain"></div>
         {/* Navigation */}</div><Navigation  />
-        {/* Skip to main content for accessibility */}
+        {/* Skip to main content for accessibility */}</Navigation>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
           Skip to main content;
   </
       {/* Content Promotion Banner */}
-      <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>;
+      <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></Suspense>}>;
         <ContentPromotionBanner />;
-      </Suspense>;
+      </ContentPromotionBanner>;
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main"></main>;
         {/* Hero Section */}
         <section
@@ -137,7 +151,7 @@ const HomePage: React.FC = memo(() => {;
               : 'opacity-0 translate-y-8'}
           }`}
           aria-labelledby="hero-heading"
-        >
+        ></section>
           <div className="max-w-6xl mx-auto"></div>
             <h1 
               id="hero-heading" 
@@ -195,7 +209,7 @@ const HomePage: React.FC = memo(() => {;
         </div>
         </section>
         {/* Services Section */}
-        <section className="mb-16" aria-labelledby="services-heading">
+        <section className="mb-16" aria-labelledby="services-heading"></section>
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Our Services
   </
@@ -204,7 +218,7 @@ const HomePage: React.FC = memo(() => {;
   </
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"></div>;
-            <Suspense fallback={<ServiceCardSkeleton />}>;
+            <Suspense fallback={<ServiceCardSkeleton />}>;</Suspense>
               <article className="quantum-card p-4 sm:p-6 energy-pulse"></article>;
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</div>;
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Services</h3>;
@@ -219,7 +233,7 @@ const HomePage: React.FC = memo(() => {;
                 </div>;
               </article>;
             </Suspense>;
-            <Suspense fallback={<ServiceCardSkeleton />}>;
+            <Suspense fallback={<ServiceCardSkeleton />}>;</Suspense>
               <article className="quantum-card p-4 sm:p-6 energy-pulse"></article>;
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📢</div>;
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Marketing</h3>;
@@ -234,7 +248,7 @@ const HomePage: React.FC = memo(() => {;
                 </div>;
               </article>;
             </Suspense>;
-            <Suspense fallback={<ServiceCardSkeleton />}>;
+            <Suspense fallback={<ServiceCardSkeleton />}>;</Suspense>
               <article className="quantum-card p-4 sm:p-6 energy-pulse"></article>;
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚙️</div>;
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Automation</h3>;
@@ -252,7 +266,7 @@ const HomePage: React.FC = memo(() => {;
           </div>;
           {/* Secondary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"></div>
-            <Suspense fallback={<ServiceCardSkeleton />}>
+            <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Healthcare</h3>
@@ -267,7 +281,7 @@ const HomePage: React.FC = memo(() => {;
                 </div>
               </article>
             </Suspense>
-            <Suspense fallback={<ServiceCardSkeleton />}>
+            <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Fintech</h3>
@@ -282,7 +296,7 @@ const HomePage: React.FC = memo(() => {;
                 </div>
               </article>
             </Suspense>
-            <Suspense fallback={<ServiceCardSkeleton />}>
+            <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚛️</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Quantum Computing</h3>
@@ -304,8 +318,8 @@ const HomePage: React.FC = memo(() => {;
               Micro SAAS Solutions
   </
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💻</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI-Powered CRM</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -319,8 +333,8 @@ const HomePage: React.FC = memo(() => {;
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Analytics Dashboard</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -334,8 +348,8 @@ const HomePage: React.FC = memo(() => {;
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">✍️</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Content Studio</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -349,8 +363,8 @@ const HomePage: React.FC = memo(() => {;
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Chatbot Builder</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -364,8 +378,8 @@ const HomePage: React.FC = memo(() => {;
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📧</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Email Marketing</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -379,8 +393,8 @@ const HomePage: React.FC = memo(() => {;
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📱</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Mobile App Builder</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -394,8 +408,8 @@ const HomePage: React.FC = memo(() => {;
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔍</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI SEO Optimizer</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -409,8 +423,8 @@ const HomePage: React.FC = memo(() => {;
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Invoice Generator</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -424,8 +438,8 @@ const HomePage: React.FC = memo(() => {;
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎯</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Lead Scoring</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -439,8 +453,8 @@ const HomePage: React.FC = memo(() => {;
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📈</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Social Media Manager</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -454,8 +468,8 @@ const HomePage: React.FC = memo(() => {;
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🛒</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI E-commerce Assistant</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -469,8 +483,8 @@ const HomePage: React.FC = memo(() => {;
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📝</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Document Processor</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -484,8 +498,8 @@ const HomePage: React.FC = memo(() => {;
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎨</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Design Studio</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -499,8 +513,8 @@ const HomePage: React.FC = memo(() => {;
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔐</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Security Monitor</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -514,8 +528,8 @@ const HomePage: React.FC = memo(() => {;
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Financial Planner</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -529,8 +543,8 @@ const HomePage: React.FC = memo(() => {;
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Health Tracker</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -544,8 +558,8 @@ const HomePage: React.FC = memo(() => {;
                   </div>
                 </article>
               </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <Suspense fallback={<ServiceCardSkeleton />}></Suspense>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎓</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Learning Platform</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -567,7 +581,7 @@ const HomePage: React.FC = memo(() => {;
               IT Services & Infrastructure
   </
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cloud Migration</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -580,7 +594,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔒</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cybersecurity Suite</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -593,7 +607,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚙️</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">DevOps & CI/CD</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -606,7 +620,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗄️</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Database Management</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -619,7 +633,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌐</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Network Solutions</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -632,7 +646,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Mobile App Development</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -645,7 +659,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Consulting</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -658,7 +672,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Support & Maintenance</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -671,7 +685,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🖥️</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">System Administration</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -684,7 +698,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔧</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Infrastructure Design</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -697,7 +711,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Performance Optimization</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -710,7 +724,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔄</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Backup & Recovery</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -723,7 +737,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Project Management</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -736,7 +750,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🏢</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Enterprise Solutions</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -749,7 +763,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎓</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Training & Certification</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -770,7 +784,7 @@ const HomePage: React.FC = memo(() => {;
               Advanced AI Services
   </
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💬</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Customer Support</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -783,7 +797,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Sales Automation</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -796,7 +810,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚡</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Workflow Automation</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -809,7 +823,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Data Visualization</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -822,7 +836,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Lead Generation</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -835,7 +849,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Document Processing</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -848,7 +862,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🧠</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Predictive Analytics</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -861,7 +875,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Image Recognition</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -874,7 +888,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗣️</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Voice Processing</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -887,7 +901,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔮</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Recommendation Engine</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -900,7 +914,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎭</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Sentiment Analysis</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -913,7 +927,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔬</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Research Assistant</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -934,7 +948,7 @@ const HomePage: React.FC = memo(() => {;
               Emerging Technologies
   </
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Robotics</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -947,7 +961,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌐</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">IoT & Edge</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -960,7 +974,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔗</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Blockchain & Web3</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -973,7 +987,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🧠</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Business Intelligence</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -994,7 +1008,7 @@ const HomePage: React.FC = memo(() => {;
               IT Services & Infrastructure
   </
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">DevOps & CI/CD</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1007,7 +1021,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Mobile Development</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1020,7 +1034,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗄️</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Database Services</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1037,7 +1051,7 @@ const HomePage: React.FC = memo(() => {;
           </div>
         </section>
         {/* Micro SAAS Solutions Section */}
-        <section className="mb-16" aria-labelledby="micro-saas-heading">
+        <section className="mb-16" aria-labelledby="micro-saas-heading"></section>
           <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Micro SAAS Solutions
   </
@@ -1050,7 +1064,7 @@ const HomePage: React.FC = memo(() => {;
               Productivity & Business Tools
   </
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📝</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Writing Assistant</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1063,7 +1077,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Smart Analytics</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1076,7 +1090,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📅</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Scheduler</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1089,7 +1103,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💰</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Expense Tracker</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1102,7 +1116,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Task Manager Pro</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1115,7 +1129,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">CRM Lite</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1128,7 +1142,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📧</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Email Optimizer</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1141,7 +1155,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Social Media Manager</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1162,7 +1176,7 @@ const HomePage: React.FC = memo(() => {;
               Marketing & Sales Tools
   </
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Design Studio</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1175,7 +1189,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Landing Page Builder</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1188,7 +1202,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">SEO Optimizer</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1201,7 +1215,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Ad Campaign Manager</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1222,7 +1236,7 @@ const HomePage: React.FC = memo(() => {;
               Developer Tools
   </
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💻</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Code Assistant</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1235,7 +1249,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔧</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">API Builder</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1248,7 +1262,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🐛</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Bug Tracker Pro</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1261,7 +1275,7 @@ const HomePage: React.FC = memo(() => {;
                   </a>
                 </div>
               </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📚</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Doc Generator</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1278,21 +1292,21 @@ const HomePage: React.FC = memo(() => {;
           </div>
         </section>
         {/* Statistics Section */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>;
+        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></Suspense>}>;
           <ContentStatistics />;
-        </Suspense>;
+        </ContentStatistics>;
         {/* Content Carousel */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}><ContentCarousel  />
-        </Suspense>
+        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></Suspense>}><ContentCarousel  />
+        </ContentCarousel>
         {/* Dynamic Content Showcase */}
-        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}><DynamicContentShowcase  />
-        </Suspense>
+        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></Suspense>}><DynamicContentShowcase  />
+        </DynamicContentShowcase>
         {/* Newsletter Signup */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
+        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></Suspense>}>
           <ContentNewsletterSignup />
-        </Suspense>
+        </ContentNewsletterSignup>
         {/* Contact Section */}
-        <section className="mb-16" aria-labelledby="contact-heading">
+        <section className="mb-16" aria-labelledby="contact-heading"></section>
           <div className="max-w-6xl mx-auto"></div>
             <h2 id="contact-heading" className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center neon-text">
               Ready to Transform Your Business?
@@ -1308,7 +1322,7 @@ const HomePage: React.FC = memo(() => {;
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center"></div>
                       <Phone className="w-6 h-6 text-white" />
-                    </div>
+                    </Phone>
                     <div></div>
                       <p className="text-gray-300 text-sm">Phone</p>
                       <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
@@ -1319,7 +1333,7 @@ const HomePage: React.FC = memo(() => {;
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center"></div>
                       <Mail className="w-6 h-6 text-white" />
-                    </div>
+                    </Mail>
                     <div></div>
                       <p className="text-gray-300 text-sm">Email</p>
                       <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
@@ -1330,11 +1344,11 @@ const HomePage: React.FC = memo(() => {;
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center"></div>
                       <MapPin className="w-6 h-6 text-white" />
-                    </div>
+                    </MapPin>
                     <div></div>
                       <p className="text-gray-300 text-sm">Address</p>
                       <p className="text-white font-semibold">
-                        364 E Main St STE 1008<br />
+                        364 E Main St STE 1008</p><br />
                         Middletown, DE 19709
   </
                     </div>
@@ -1342,11 +1356,11 @@ const HomePage: React.FC = memo(() => {;
                   <div className="flex items-center space-x-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center"></div>
                       <Clock className="w-6 h-6 text-white" />
-                    </div>
+                    </Clock>
                     <div></div>
                       <p className="text-gray-300 text-sm">Business Hours</p>
                       <p className="text-white font-semibold">
-                        Monday - Friday: 9:00 AM - 6:00 PM EST<br />
+                        Monday - Friday: 9:00 AM - 6:00 PM EST</p><br />
                         24/7 Emergency Support Available
   </
                     </div>
@@ -1356,7 +1370,7 @@ const HomePage: React.FC = memo(() => {;
               {/* Quick Contact Form */}
               <div className="cyber-card hologram-card p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3>
-                <form className="space-y-6">
+                <form className="space-y-6"></form>
                   <div></div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name
@@ -1369,7 +1383,7 @@ const HomePage: React.FC = memo(() => {;
                       placeholder="Enter your full name"
                       required
                     />
-                  </div>
+                  </input>
                   <div></div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address
@@ -1382,7 +1396,7 @@ const HomePage: React.FC = memo(() => {;
                       placeholder="Enter your email"
                       required
                     />
-                  </div>
+                  </input>
                   <div></div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number
@@ -1394,7 +1408,7 @@ const HomePage: React.FC = memo(() => {;
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
                       placeholder="Enter your phone number"
                     />
-                  </div>
+                  </input>
                   <div></div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                       Service Interest
@@ -1402,7 +1416,7 @@ const HomePage: React.FC = memo(() => {;
                     <select
                       id="service"
                       name="service"
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors">
+                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"></select>
                       <option value="">Select a service</option>
                       <option value="ai-services">AI Services</option>
                       <option value="it-services">IT Services</option>
@@ -1436,7 +1450,7 @@ const HomePage: React.FC = memo(() => {;
       </main>
       {/* Footer */}
       <Footer />
-    </div>
+    </Footer>
     </React.Fragment>
   );
 });

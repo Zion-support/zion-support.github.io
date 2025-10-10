@@ -42,44 +42,8 @@ export const Link: React.FC<LinkProps> = ({,
   'aria-label': ariaLabel,}
   ...props}
 }) => {}
-  const handleClick = useCallback((...args) => {}
-    if (onClick) {}
-      onClick()}
-    }
-    // Handle internal navigation
-    if (href.startsWith('/') && !href.startsWith('//')) {
-    if (href.startsWith('/') && !href.startsWith('//')) {}
-      e.preventDefault()
-      window.location.href = href}
-    }
-  }</LinkProps>return (<a
-  }
-  return(<aimport React from 'react'
-interface LinkProps {/* TODO: Fix JSX expression */}
-}
-export const,
-  Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-    }
-    // Handle internal navigation
-    if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
-    }
-  }return (<a></a>
-      href={href}
-      className={className}
-      target={target}
-      rel={rel}
-      onClick={handleClick}
-      aria-label={ariaLabel}
-      {...props}
-    >{children}</a>
-    </a>
-      aria-label={ariaLabel})
-      {...props})
-    >)
-      {children})
-    </a>))
-}
+  const handleClick;
+
 export default Link
     >
       {children}

@@ -10,7 +10,9 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
     // Security enhancement logic
     const enhanceSecurity = () => {
       // Add security headers
-      const securityHeaders = {
+      ;
+
+const securityHeaders = {
         'X-Content-Type-Options': 'nosniff',
         'X-Frame-Options': 'DENY',
         'X-XSS-Protection': '1; mode=block',

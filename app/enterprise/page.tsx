@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
 const EnterprisePage: React.FC = () => {
-  const features = [
+const features = [
     {
       icon: Shield,
       title: 'Enterprise Security',
@@ -43,7 +43,9 @@ const EnterprisePage: React.FC = () => {
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
     }
   ]
-  const solutions = [
+  ;
+
+const solutions = [
     {
       title: 'Enterprise Resource Planning',
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
@@ -84,16 +86,17 @@ const EnterprisePage: React.FC = () => {
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '24/7', label: 'Support Available', icon: Clock }
-  ]return (
+  ];
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer
         title="Enterprise Solutions - Zion Tech Group"
         description="Comprehensive enterprise-grade solutions for large-scale business operations."
         keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
-      />
+      /></SEOOptimizer>
       <Navigation />
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      {/* Hero Section */}</Navigation>
+      <section className="relative py-20 px-4 overflow-hidden"></section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
@@ -109,9 +112,9 @@ const EnterprisePage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-              Get Enterprise Consultation
+              Get Enterprise Consultation</button>
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
+            </ArrowRight>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               View Case Studies
   </
@@ -126,7 +129,7 @@ const EnterprisePage: React.FC = () => {
               <div key={index} className="text-center"></div>;
                 <div className="flex justify-center mb-4"></div>;
                   <stat.icon className="w-12 h-12 text-purple-400" />;
-                </div>;
+                </stat>;
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>;
                 <div className="text-gray-300 text-sm">{stat.label}</div>;
               </div>;
@@ -135,7 +138,7 @@ const EnterprisePage: React.FC = () => {
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -145,17 +148,17 @@ const EnterprisePage: React.FC = () => {
               Built for scale, security, and performance to meet the demands of large organizations.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                  <feature.icon className="w-8 h-8 text-purple-400 mr-3" /></feature>
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                  {feature.benefits.map((benefit, idx) => (</ul>
+                    <li key={idx} className="flex items-center text-sm text-gray-400"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {benefit}
-                    </li>;
+                    </CheckCircle>;
                   ))}
                 </ul>
               </div>
@@ -179,39 +182,11 @@ const EnterprisePage: React.FC = () => {
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Enterprise?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Contact Enterprise Sales
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Learn More
-  </
-          </div>
-        </div>
-      </section>
-      <Footer />
-    </div>
-  )}
+      <section className;
+
 export default EnterprisePage
   </button>
-  </h2>
+  </section>
   </h2>
   </span>
   </SEOOptimizer>

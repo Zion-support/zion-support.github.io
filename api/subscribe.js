@@ -1,7 +1,9 @@
 const fs = require('fs')
 const path = require('path')
 const dir = path.join(process.cwd(), 'data')
-const file = path.join(dir, 'subscribers.json')export default function handler(req, res) {
+const file = path.join(dir, 'subscribers.json')
+
+export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405
     res.setHeader('Content-Type', 'application/json')
