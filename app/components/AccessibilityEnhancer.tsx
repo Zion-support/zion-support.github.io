@@ -1,10 +1,10 @@
 'use client';
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, ReactNode } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children: ReactNode;
   enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;
+  enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
 }
@@ -12,7 +12,7 @@ interface AccessibilityEnhancerProps {
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
   enableKeyboardNavigation = true,
-  enableScreenReader = true,
+  enableScreenReaderSupport = true,
   enableHighContrast = true,
   enableFocusManagement = true
 }) => {
@@ -22,19 +22,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const mainContent = document.getElementById('main-content');
-          if (mainContent) {
-            mainContent.focus();
+          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
+          if (skipLink) {
+            skipLink.focus();
             event.preventDefault();
-          }
-        }
-        
-        // Escape key handling
-        if (event.key === 'Escape') {
-          // Close any open modals or dropdowns
-          const activeElement = document.activeElement as HTMLElement;
-          if (activeElement && activeElement.blur) {
-            activeElement.blur();
           }
         }
       };
@@ -44,15 +35,19 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableKeyboardNavigation]);
 
-  // Screen reader enhancements
+  // Screen reader support
   useEffect(() => {
-    if (enableScreenReader) {
-      // Add ARIA live region for announcements
+    if (enableScreenReaderSupport) {
+      // Create live region for announcements
       const liveRegion = document.createElement('div');
       liveRegion.id = 'aria-live-region';
       liveRegion.setAttribute('aria-live', 'polite');
       liveRegion.setAttribute('aria-atomic', 'true');
-      liveRegion.className = 'sr-only';
+      liveRegion.style.position = 'absolute';
+      liveRegion.style.left = '-10000px';
+      liveRegion.style.width = '1px';
+      liveRegion.style.height = '1px';
+      liveRegion.style.overflow = 'hidden';
       document.body.appendChild(liveRegion);
 
       return () => {
@@ -62,38 +57,26 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       };
     }
-  }, [enableScreenReader]);
+  }, [enableScreenReaderSupport]);
 
-  // High contrast mode detection
+  // High contrast mode
   useEffect(() => {
     if (enableHighContrast) {
       const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-      
       const handleContrastChange = (e: MediaQueryListEvent) => {
         if (e.matches) {
-          document.documentElement.classList.add('high-contrast');
+          document.body.classList.add('high-contrast');
         } else {
-          document.documentElement.classList.remove('high-contrast');
+          document.body.classList.remove('high-contrast');
         }
       };
 
-      // Set initial state
-      if (mediaQuery.matches) {
-        document.documentElement.classList.add('high-contrast');
-      }
-
+      handleContrastChange(mediaQuery);
       mediaQuery.addEventListener('change', handleContrastChange);
       return () => mediaQuery.removeEventListener('change', handleContrastChange);
     }
   }, [enableHighContrast]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return <React.Fragment>{children}</React.Fragment>;
-=======
-  return null;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-=======
   // Focus management
   useEffect(() => {
     if (enableFocusManagement) {
@@ -140,7 +123,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, [announcePageChange]);
 
   return <>{children}</>;
->>>>>>> cursor/analyze-improve-and-deploy-application-6516
 };
 
 export default AccessibilityEnhancer;
