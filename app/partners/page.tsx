@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -9,19 +10,19 @@ const PartnersPage: React.FC = () => {
   const partners = [
     {
       name: 'Microsoft',
-      logo: '/images/partners/microsoft.png',
-      description: 'Strategic cloud and AI partnership',
+      logo: '/api/placeholder/200/100',
+      description: 'Cloud and AI solutions partner',
       category: 'Technology'
     },
     {
       name: 'Amazon Web Services',
-      logo: '/images/partners/aws.png',
-      description: 'Cloud infrastructure and AI services',
+      logo: '/api/placeholder/200/100',
+      description: 'Cloud infrastructure partner',
       category: 'Cloud'
     },
     {
       name: 'Google Cloud',
-      logo: '/images/partners/google-cloud.png',
+logo: '/images/partners/google-cloud.png',
       description: 'Advanced AI and machine learning platforms',
       category: 'AI/ML'
     },
@@ -49,11 +50,12 @@ const PartnersPage: React.FC = () => {
         <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
         <meta name="description" content="Discover our strategic partnerships with leading technology companies. Learn how we collaborate to deliver cutting-edge AI and IT solutions." />
         <meta name="keywords" content="partners, technology partnerships, strategic alliances, Microsoft, AWS, Google Cloud, IBM, NVIDIA" />
+
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="py-20">
+<section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
@@ -66,11 +68,12 @@ const PartnersPage: React.FC = () => {
                 We work with industry leaders to deliver cutting-edge technology solutions. 
                 Our strategic partnerships enable us to provide the best tools and services to our clients.
               </p>
+
             </div>
           </div>
         </section>
 
-        {/* Partners Grid */}
+{/* Partners Grid */}
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">

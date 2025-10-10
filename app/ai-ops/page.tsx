@@ -109,8 +109,7 @@ const AIOpsPage: React.FC = () => {
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Learn More
             </button>
-
-          </div>
+</div>
         </div>
       </section>
 
@@ -143,8 +142,7 @@ const AIOpsPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-
-              </div>
+</div>
             ))}
           </div>
         </div>
@@ -221,8 +219,7 @@ const AIOpsPage: React.FC = () => {
       </section>
 
       <Footer />
-
-    </div>
+</div>
   );
 };
 

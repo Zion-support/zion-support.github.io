@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
@@ -88,12 +87,12 @@ const FinancialITPage: React.FC = () => {
               Schedule Demo;
             </button>
 </div>
+
         </div>
       </section>
 
       {/* Features Section */}
-
-      <section className="py-20 px-4">
+<section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions<p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed specifically for financial services industry<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
@@ -125,6 +124,7 @@ const FinancialITPage: React.FC = () => {
                   ))}
                 </ul>
 </div>
+
             ))}
           </div>
         </div>

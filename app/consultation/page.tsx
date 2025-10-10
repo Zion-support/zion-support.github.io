@@ -13,7 +13,7 @@ export default function ConsultationPage() {
     company: '',
     phone: '',
     service: '',
-    budget: '',
+budget: '',
     timeline: '',
     message: ''
   });
@@ -145,17 +145,18 @@ const consultationTypes = [
     'Expert insights and advice',
     'Detailed project roadmap',
     'Transparent pricing'
+
   ];
 
   return (
     <>
       <Helmet>
-        <title>Free Consultation - Zion Tech Group | Get Expert Advice</title>
-        <meta name="description" content="Schedule a free consultation with our AI and IT experts. Get personalized recommendations and a custom roadmap for your business transformation." />
-        <meta name="keywords" content="free consultation, AI strategy, technology audit, security assessment, expert advice, business transformation" />
+        <title>Free Consultation - Zion Tech Group | Expert AI & IT Advice</title>
+        <meta name="description" content="Schedule a free consultation with our AI and IT experts. Get personalized advice on how to transform your business with technology." />
+        <meta name="keywords" content="free consultation, AI consultation, IT consultation, business transformation, Zion Tech Group" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <div className="container mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-16">
@@ -213,9 +214,12 @@ const consultationTypes = [
                 </div>
 
               </div>
-            </div>
 
-            {/* Consultation Form */}
+            </div>
+          </div>
+        </section>
+
+{/* Consultation Form */}
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6">Schedule Your Consultation</h2>
               
@@ -231,6 +235,7 @@ const consultationTypes = [
                     Schedule Free Consultation
                     <ArrowRight className="inline-block ml-2 w-4 h-4" />
                   </button>
+
                 </div>
               </div>
             </div>

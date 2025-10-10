@@ -11,7 +11,7 @@ import { ArrowRight, ExternalLink, Star, TrendingUp, Users, DollarSign } from 'l
 
   const caseStudies = [
     {
-      id: 1,
+id: 1,
       title: 'AI-Powered Supply Chain Optimization',
       client: 'Global Manufacturing Corp',
       industry: 'Manufacturing',
@@ -71,13 +71,14 @@ import { ArrowRight, ExternalLink, Star, TrendingUp, Users, DollarSign } from 'l
 
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
       <Helmet>
         <title>Case Studies - Zion Tech Group | Success Stories</title>
-        <meta name="description" content="Discover how our clients achieved remarkable results with our AI and IT solutions. Real case studies with measurable ROI and business impact." />
-        <meta name="keywords" content="case studies, success stories, AI ROI, client results, business transformation, technology solutions" />
+        <meta name="description" content="Explore our success stories and case studies showcasing how we've helped businesses transform with AI and technology solutions." />
+        <meta name="keywords" content="case studies, success stories, AI solutions, business transformation, Zion Tech Group" />
       </Helmet>
 
-      {/* Stats Section */}
+{/* Stats Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -243,3 +244,4 @@ return (
     </div>
   );
 };
+

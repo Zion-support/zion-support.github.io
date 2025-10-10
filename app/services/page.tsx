@@ -19,7 +19,7 @@ export default function ServicesPage() {
     {
       icon: Brain,
       title: 'AI Solutions',
-      description: 'Cutting-edge artificial intelligence solutions to transform your business',
+description: 'Cutting-edge artificial intelligence solutions to transform your business',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       pricing: 'Starting at $5,000/month',
       path: '/ai-solutions'
@@ -47,6 +47,7 @@ export default function ServicesPage() {
       features: ['Web Applications', 'Mobile Apps', 'API Development', 'Database Design'],
       pricing: 'Starting at $8,000/project',
       path: '/custom-development'
+
     },
     {
       icon: Database,
@@ -54,108 +55,76 @@ export default function ServicesPage() {
 description: 'Turn your data into actionable insights with advanced analytics platforms.',
       features: ['Real-time Dashboards', 'Data Visualization', 'Business Intelligence', 'Custom Reports'],
       price: 'From $3,000/month'
+
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Comprehensive AI and IT services including machine learning, cloud infrastructure, cybersecurity, and data analytics. Custom solutions for your business." />
-        <meta name="keywords" content="AI services, IT consulting, cloud solutions, cybersecurity, data analytics, machine learning, custom development" />
+        <title>Services - Zion Tech Group | AI and IT Solutions</title>
+        <meta name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business. From AI solutions to cloud services and data analytics." />
+        <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="container mx-auto px-4">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-              Our
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                {' '}Services
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to transform your business 
-              and drive measurable results.
-            </p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Our Services
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Comprehensive AI and IT solutions designed to transform your business and drive growth.
+              </p>
+            </div>
           </div>
+        </section>
 
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+        {/* Services Grid */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="cyber-card p-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4">
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
+                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
                   <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-cyan-400" />
-                        <span className="text-gray-300">{feature}</span>
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                        {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="text-2xl font-bold text-cyan-400">
-                    {service.price}
-                  </div>
-                  <Link
-                    to="/consultation"
-                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center space-x-2"
-                  >
-                    <span>Get Started</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and create a custom solution that meets your specific needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/consultation"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-              >
-                Schedule Free Consultation
-              </Link>
-              <Link
-                to="/contact"
-                className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-              >
-                Contact Us
-              </Link>
+              ))}
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 bg-gradient-to-r from-cyan-600 to-purple-600">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-100 mb-8">
+              Let's discuss how our services can help transform your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Get Started
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
+                Contact Us
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </>
-
-  );
+);
 }
