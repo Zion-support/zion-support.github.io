@@ -70,44 +70,48 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-slate-900 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900"></div>
+      <div className="absolute inset-0 cyber-grid-enhanced opacity-30"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+            <div className="flex items-center space-x-2 group">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 rounded-lg flex items-center justify-center cyber-glow group-hover:scale-110 transition-all duration-300">
                 <Brain className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
+              <span className="text-xl font-bold holographic-text group-hover:neon-text-enhanced transition-all duration-300">
+                Zion Tech Group
+              </span>
             </div>
             <p className="text-gray-300 text-sm">
               Leading provider of AI and IT solutions for modern businesses. 
               We help companies transform their operations with cutting-edge technology.
             </p>
             <div className="space-y-3">
-              <div className="flex items-center text-sm text-gray-300">
-                <Phone className="w-4 h-4 mr-2 text-cyan-400" />
-                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">+1 302 464 0950</a>
+              <div className="flex items-center text-sm text-gray-300 group">
+                <Phone className="w-4 h-4 mr-2 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                <a href="tel:+13024640950" className="hover:text-cyan-400 hover:neon-text-enhanced transition-all duration-300">+1 302 464 0950</a>
               </div>
-              <div className="flex items-center text-sm text-gray-300">
-                <Mail className="w-4 h-4 mr-2 text-cyan-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a>
+              <div className="flex items-center text-sm text-gray-300 group">
+                <Mail className="w-4 h-4 mr-2 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 hover:neon-text-enhanced transition-all duration-300">kleber@ziontechgroup.com</a>
               </div>
-              <div className="flex items-start text-sm text-gray-300">
-                <MapPin className="w-4 h-4 mr-2 text-cyan-400 mt-0.5" />
-                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              <div className="flex items-start text-sm text-gray-300 group">
+                <MapPin className="w-4 h-4 mr-2 text-cyan-400 mt-0.5 group-hover:text-cyan-300 transition-colors" />
+                <span className="group-hover:text-cyan-400 transition-colors">364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
-              <div className="flex items-center text-sm text-gray-300">
-                <Clock className="w-4 h-4 mr-2 text-cyan-400" />
-                <span>Mon-Fri: 9AM-6PM EST</span>
+              <div className="flex items-center text-sm text-gray-300 group">
+                <Clock className="w-4 h-4 mr-2 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                <span className="group-hover:text-cyan-400 transition-colors">Mon-Fri: 9AM-6PM EST</span>
               </div>
             </div>
           </div>
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text-enhanced">
               <Brain className="w-5 h-5 mr-2" />
               AI Services
             </h3>
@@ -116,7 +120,7 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link 
                     to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                    className="text-gray-300 hover:text-cyan-400 hover:neon-text-enhanced transition-all duration-300 text-sm">
                     {service.name}
                   </Link>
                 </li>
@@ -133,7 +137,7 @@ const Footer: React.FC = memo(() => {
 
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text-enhanced">
               <Cloud className="w-5 h-5 mr-2" />
               IT Services
             </h3>
@@ -159,7 +163,7 @@ const Footer: React.FC = memo(() => {
           
           {/* Micro SAAS */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text-enhanced">
               <Code className="w-5 h-5 mr-2" />
               Micro SAAS
             </h3>
