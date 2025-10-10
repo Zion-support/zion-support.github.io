@@ -86,6 +86,10 @@ const FinancialITPage = React.lazy(() => import('./app/financial-it/page'));
 const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
 const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
+const AIPasswordGeneratorPage = React.lazy(() => import('./app/ai-password-generator/page'));
+const AIEmailSignatureManagerPage = React.lazy(() => import('./app/ai-email-signature-manager/page'));
+const AIQuantumMLPlatformPage = React.lazy(() => import('./app/ai-quantum-ml-platform/page'));
+const MetaverseDevelopmentPage = React.lazy(() => import('./app/metaverse-development/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -137,6 +141,10 @@ const App: React.FC = memo(() => {
                       <Route path="/edge-computing" element={<EdgeComputingPage />} />
                       <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                       <Route path="/iot-platform" element={<IoTPlatformPage />} />
+                      <Route path="/ai-password-generator" element={<AIPasswordGeneratorPage />} />
+                      <Route path="/ai-email-signature-manager" element={<AIEmailSignatureManagerPage />} />
+                      <Route path="/ai-quantum-ml-platform" element={<AIQuantumMLPlatformPage />} />
+                      <Route path="/metaverse-development" element={<MetaverseDevelopmentPage />} />
                     </Routes>
                   </Suspense>
                   </main>
