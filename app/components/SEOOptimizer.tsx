@@ -1,6 +1,7 @@
 'use client';
+
 import React, { useEffect } from 'react';
-import Head from 'next/head';
+
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
@@ -9,6 +10,7 @@ interface SEOOptimizerProps {
   ogImage?: string;
   structuredData?: Record<string, unknown>;
 }
+
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
@@ -20,29 +22,40 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   useEffect(() => {
     // Update page title
     document.title = title;
+    
     // Update meta description
     updateMetaTag('description', description);
     updateMetaTag('keywords', keywords.join(', '));
+    
     // Update Open Graph tags
     updateMetaTag('og:title', title, 'property');
     updateMetaTag('og:description', description, 'property');
     updateMetaTag('og:image', ogImage, 'property');
     updateMetaTag('og:url', canonicalUrl, 'property');
+    updateMetaTag('og:type', 'website', 'property');
+    updateMetaTag('og:site_name', 'Zion Tech Group', 'property');
+    
     // Update Twitter tags
+    updateMetaTag('twitter:card', 'summary_large_image', 'name');
     updateMetaTag('twitter:title', title, 'name');
     updateMetaTag('twitter:description', description, 'name');
     updateMetaTag('twitter:image', ogImage, 'name');
+    
     // Update canonical URL
     updateCanonicalUrl(canonicalUrl);
+    
     // Add structured data
     if (structuredData) {
       addStructuredData(structuredData);
     }
+    
     // Add breadcrumb structured data
     addBreadcrumbStructuredData();
+    
     // Add organization structured data
     addOrganizationStructuredData();
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
+
   const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {
@@ -52,6 +65,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
     meta.setAttribute('content', content);
   };
+
   const updateCanonicalUrl = (url: string) => {
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
@@ -61,18 +75,22 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
     canonical.setAttribute('href', url);
   };
+
   const addStructuredData = (data: Record<string, unknown>) => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     script.id = 'structured-data';
+    
     // Remove existing structured data
     const existing = document.getElementById('structured-data');
     if (existing) {
       existing.remove();
     }
+    
     document.head.appendChild(script);
   };
+
   const addBreadcrumbStructuredData = () => {
     const breadcrumbData = {
       '@context': 'https://schema.org',
@@ -86,15 +104,18 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         }
       ]
     };
+    
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbData);
     script.id = 'breadcrumb-structured-data';
+    
     // Remove existing breadcrumb data
     const existing = document.getElementById('breadcrumb-structured-data');
     if (existing) {
       existing.remove();
     }
+    
     document.head.appendChild(script);
   };
 
@@ -106,54 +127,42 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       'url': 'https://ziontechgroup.com',
       'logo': 'https://ziontechgroup.com/logo.png',
       'description': 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-      'foundingDate': '2020',
-      'numberOfEmployees': '50-100',
-      'industry': 'Technology',
-      'contactPoint': {
-        '@type': 'ContactPoint',
-        'telephone': '+1-302-464-0950',
-        'contactType': 'Customer Service',
-        'areaServed': 'US',
-        'availableLanguage': 'en'
-      },
       'address': {
         '@type': 'PostalAddress',
-        'streetAddress': '364 E Main St STE 1008',
-        'addressLocality': 'Middletown',
-        'addressRegion': 'DE',
-        'postalCode': '19709',
+        'streetAddress': '123 Tech Street',
+        'addressLocality': 'New York',
+        'addressRegion': 'NY',
+        'postalCode': '10001',
         'addressCountry': 'US'
       },
+      'contactPoint': {
+        '@type': 'ContactPoint',
+        'telephone': '+1-555-123-4567',
+        'contactType': 'customer service',
+        'email': 'info@ziontechgroup.com'
+      },
       'sameAs': [
+        'https://linkedin.com/company/ziontechgroup',
         'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/ziontechgroup'
+        'https://facebook.com/ziontechgroup'
       ]
     };
+    
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(organizationData);
     script.id = 'organization-structured-data';
+    
     // Remove existing organization data
     const existing = document.getElementById('organization-structured-data');
     if (existing) {
       existing.remove();
     }
+    
     document.head.appendChild(script);
   };
-  return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <link rel="canonical" href={canonicalUrl} />
-    </Head>
-  );
+
+  return null;
 };
+
 export default SEOOptimizer;

@@ -120,11 +120,14 @@ export class AccessibilityEnhancer {
       this.focusableElements[nextIndex]?.focus();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     focusableElements[nextIndex]?.focus();
 =======
     
 >>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     event.preventDefault();
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-581e
   }
 
   /**

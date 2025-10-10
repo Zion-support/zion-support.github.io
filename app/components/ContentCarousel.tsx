@@ -171,8 +171,8 @@ const ContentCarousel: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
               <div className="space-y-8">
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-xl flex items-center justify-center">
                     <currentSlideData.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
@@ -190,7 +190,7 @@ const ContentCarousel: React.FC = () => {
                   <h4 className="text-lg font-semibold text-white mb-4">Key Features:</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {currentSlideData.features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-3">
+                      <div key={index} className="flex items-center gap-3">
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
                       </div>
@@ -204,38 +204,31 @@ const ContentCarousel: React.FC = () => {
                     {currentSlideData.stats.map((stat, index) => (
                       <div key={index} className="text-center">
                         <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-                        <div className="text-gray-400 text-sm">{stat.label}</div>
+                        <div className="text-sm text-gray-400">{stat.label}</div>
                       </div>
                     ))}
                   </div>
                 )}
 
-                {/* CTA */}
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                    <Zap className="w-5 h-5" />
-                    Get Started
-                  </button>
-                  <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-                    <ArrowRight className="w-5 h-5" />
-                    Learn More
-                  </button>
-                </div>
+                <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
+                  Learn More
+                  <ArrowRight className="w-4 h-4" />
+                </button>
               </div>
 
               {/* Visual Element */}
               <div className="relative">
-                <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
+                <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl p-8 h-80 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <currentSlideData.icon className="w-16 h-16 text-white" />
                     </div>
-                    <div className="text-4xl font-bold text-white mb-2">
+                    <h3 className="text-xl font-semibold text-white mb-2">
                       {currentSlideData.title}
-                    </div>
-                    <div className="text-gray-300">
-                      Slide {currentSlide + 1} of {slides.length}
-                    </div>
+                    </h3>
+                    <p className="text-gray-300">
+                      {currentSlideData.description}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -243,6 +236,7 @@ const ContentCarousel: React.FC = () => {
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
@@ -311,6 +305,36 @@ const ContentCarousel: React.FC = () => {
                 <div className="text-gray-400 text-sm">Uptime</div>
               </div>
             </div>
+=======
+          {/* Navigation Controls */}
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <button
+              onClick={prevSlide}
+              className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            
+            {/* Slide Indicators */}
+            <div className="flex gap-2">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                    index === currentSlide ? 'bg-white' : 'bg-white/30'
+                  }`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={nextSlide}
+              className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-581e
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -97,6 +98,8 @@ const Next.dPage: React.FC = () => {
 
 export default Next.dPage;
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-581e
 // Type definitions for Next.js compatibility in Vite
 export interface Metadata {
   title?: string;
@@ -243,5 +246,9 @@ declare module 'next' {
   }
 }
 
+<<<<<<< HEAD
 export {};
 >>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+=======
+export {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-581e
