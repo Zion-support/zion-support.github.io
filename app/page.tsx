@@ -334,6 +334,36 @@ const microSAASServices = [
     popular: true,
     icon: Palette,
     link: "https://ziontechgroup.com/ai-design-studio"
+  },
+  {
+    name: "AI Voice Cloning Pro",
+    description: "Create realistic voice clones with advanced AI technology for content creators and businesses",
+    price: "$199/mo",
+    features: ["High-Quality Synthesis", "Multi-Language", "Real-time Processing", "Privacy & Security"],
+    category: "AI Technology",
+    popular: true,
+    icon: Mic,
+    link: "https://ziontechgroup.com/ai-voice-cloning"
+  },
+  {
+    name: "AI Video Editor Pro",
+    description: "Professional video editing with AI-powered automation and intelligent features",
+    price: "$149/mo",
+    features: ["Smart Auto-Cutting", "Auto Scene Detection", "AI Music & Sound", "Color Grading AI"],
+    category: "Video Production",
+    popular: true,
+    icon: Video,
+    link: "https://ziontechgroup.com/ai-video-editor"
+  },
+  {
+    name: "AI Blockchain Analytics",
+    description: "Comprehensive blockchain intelligence with DeFi, NFT, and crypto market analytics",
+    price: "$299/mo",
+    features: ["DeFi Analytics", "NFT Intelligence", "Security Monitoring", "Market Intelligence"],
+    category: "Blockchain",
+    popular: true,
+    icon: TrendingUp,
+    link: "https://ziontechgroup.com/ai-blockchain-analytics"
   }
 ];
 
@@ -417,6 +447,26 @@ const aiServices: AIService[] = [
     enterprise: true,
     icon: Settings,
     link: "https://ziontechgroup.com/ai-supply-chain-optimization-pro"
+  },
+  {
+    name: "AI Quantum Optimization Platform",
+    description: "Revolutionary quantum optimization platform powered by AI for complex problem solving",
+    price: "$2,999/mo",
+    features: ["Quantum Machine Learning", "Complex Problem Solving", "Quantum Speedup", "Financial Modeling"],
+    category: "Quantum AI",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-quantum-optimization"
+  },
+  {
+    name: "AI Space Technology Pro",
+    description: "Advanced AI-powered space technology solutions for satellite management and space operations",
+    price: "$4,999/mo",
+    features: ["Satellite Management", "Orbital Mechanics", "Earth Observation", "Space Communication"],
+    category: "Space Technology",
+    enterprise: true,
+    icon: Rocket,
+    link: "https://ziontechgroup.com/ai-space-technology"
   }
 ];
 
@@ -519,6 +569,15 @@ const itServices: ITService[] = [
     category: "API Management",
     icon: Code,
     link: "https://ziontechgroup.com/ai-api-management"
+  },
+  {
+    name: "AI Cybersecurity Suite",
+    description: "Comprehensive AI-powered cybersecurity solutions with real-time threat detection and automated response",
+    price: "$1,999/mo",
+    features: ["AI Threat Detection", "Automated Response", "Network Monitoring", "Vulnerability Assessment"],
+    category: "Cybersecurity",
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-cybersecurity-suite"
   },
   {
     name: "Smart Contract Security Audit",

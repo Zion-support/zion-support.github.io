@@ -172,7 +172,12 @@ const Navigation: React.FC = () => {
         { name: 'AI Holographic Workspace', path: '/ai-holographic-workspace', description: 'Immersive 3D collaboration', icon: '🥽', popular: false },
         { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro', description: 'AI-powered climate monitoring', icon: '🌍', popular: true },
         { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro', description: 'Pharmaceutical AI research', icon: '💊', popular: false },
-        { name: 'AI Fashion Design Studio', path: '/ai-fashion-design', description: 'AI-powered fashion design', icon: '👗', popular: true }
+        { name: 'AI Fashion Design Studio', path: '/ai-fashion-design', description: 'AI-powered fashion design', icon: '👗', popular: true },
+        { name: 'AI Voice Cloning Pro', path: '/ai-voice-cloning', description: 'Professional voice synthesis', icon: '🎤', popular: true },
+        { name: 'AI Video Editor Pro', path: '/ai-video-editor', description: 'AI-powered video editing', icon: '🎬', popular: true },
+        { name: 'AI Quantum Optimization', path: '/ai-quantum-optimization', description: 'Quantum computing solutions', icon: '⚛️', popular: true },
+        { name: 'AI Blockchain Analytics', path: '/ai-blockchain-analytics', description: 'Crypto intelligence platform', icon: '📈', popular: true },
+        { name: 'AI Space Technology', path: '/ai-space-technology', description: 'Space operations AI', icon: '🚀', popular: true }
 
 
       ]
@@ -199,6 +204,7 @@ const Navigation: React.FC = () => {
         { name: 'Blockchain Integration Services', path: '/blockchain-integration-services', description: 'Web3 and blockchain solutions', icon: '⛓️', popular: true },
         { name: 'AI API Management', path: '/ai-api-management', description: 'Intelligent API management', icon: '🔗', popular: true },
         { name: 'Smart Contract Security Audit', path: '/smart-contract-security-audit', description: 'Blockchain security auditing', icon: '🔒', popular: true },
+        { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite', description: 'AI-powered security solutions', icon: '🛡️', popular: true },
         { name: 'AI IT Operations (AIOps)', path: '/ai-ops', description: 'AI-powered IT operations', icon: '🤖', popular: true },
         { name: 'Healthcare IT Solutions', path: '/healthcare-it', description: 'HIPAA-compliant healthcare IT', icon: '🏥', popular: true },
         { name: 'Financial Services IT', path: '/financial-it', description: 'SOX-compliant financial IT', icon: '💳', popular: true },
