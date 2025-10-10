@@ -1,8 +1,5 @@
 #!/usr/bin/env node
-
-import fs from 'fs';
-
-// Critical files that are preventing build
+import fs from 'fs'
 const criticalFiles = [
   './app/careers/page.tsx',
   './app/analytics-tools/page.tsx',
@@ -95,17 +92,10 @@ const criticalFiles = [
   './app/terms/page.tsx',
   './app/training/page.tsx',
   './app/web-development/page.tsx'
-];
-
-// Template for a basic page
-const createBasicPageTemplate = (pageName, title, description) => `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
-const ${pageName}Page: React.FC = () => {
+]
+const createBasicPageTemplate = (pageName, title, description) => `'use client'import React from 'react'
+import { Helmet  } from 'react-helmet-async'import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings  } from 'lucide-react'const ${pageName}Page: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -131,18 +121,14 @@ const ${pageName}Page: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
-
-  return (
+  ]return (
     <>
       <Helmet>
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${description}" />
         <meta name="keywords" content="${title.toLowerCase()}, AI solutions, IT services, business transformation" />
       </Helmet>
-      
       <Navigation />
-      
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -165,7 +151,6 @@ const ${pageName}Page: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -177,7 +162,6 @@ const ${pageName}Page: React.FC = () => {
                 Discover how our solutions can help transform your business.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -199,7 +183,6 @@ const ${pageName}Page: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -215,15 +198,10 @@ const ${pageName}Page: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </>
-  );
-};
-
-export default ${pageName}Page;`;
-
-// Page configurations
+  )}
+export default ${pageName}Page;`
 const pageConfigs = {
   'careers': { name: 'Careers', title: 'Careers', description: 'Join our team and help shape the future of AI and IT solutions.' },
   'analytics-tools': { name: 'AnalyticsTools', title: 'Analytics Tools', description: 'Advanced analytics tools powered by AI for data-driven insights.' },
@@ -316,27 +294,22 @@ const pageConfigs = {
   'terms': { name: 'Terms', title: 'Terms of Service', description: 'Terms of service and legal information.' },
   'training': { name: 'Training', title: 'Training', description: 'Professional training and certification programs.' },
   'web-development': { name: 'WebDevelopment', title: 'Web Development', description: 'Custom web development services.' }
-};
-
-// Process all critical files
-console.log('🔧 Fixing critical JSX errors...\n');
-
+}
+console.log('🔧 Fixing critical JSX errors...\n')
 criticalFiles.forEach(filePath => {
   try {
-    const pathParts = filePath.split('/');
-    const fileName = pathParts[pathParts.length - 1].replace('.tsx', '');
-    const config = pageConfigs[fileName];
-    
+    const pathParts = filePath.split('/')
+    const fileName = pathParts[pathParts.length - 1].replace('.tsx', '')
+    const config = pageConfigs[fileName]
     if (config) {
-      const content = createBasicPageTemplate(config.name, config.title, config.description);
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed ${filePath}`);
+      const content = createBasicPageTemplate(config.name, config.title, config.description)
+      fs.writeFileSync(filePath, content, 'utf8')
+      console.log(`✅ Fixed ${filePath}`)
     } else {
-      console.log(`⚠️  No config found for ${fileName}`);
+      console.log(`⚠️  No config found for ${fileName}`)
     }
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+    console.error(`❌ Error processing ${filePath}:`, error.message)
   }
-});
-
-console.log('\n✨ Critical JSX error fixes complete!');
+})
+console.log('\n✨ Critical JSX error fixes complete!')

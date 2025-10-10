@@ -1,9 +1,5 @@
 #!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-
-// Function to fix specific critical files
+import fs from 'fs'import path from 'path'
 function fixCriticalFiles() {
   const criticalFiles = [
     {
@@ -20,31 +16,25 @@ function fixCriticalFiles() {
     {
       path: '/workspace/src/vite-env.d.ts',
       content: `/// <reference types="vite/client" />
-
 interface ImportMetaEnv {
-  readonly VITE_APP_TITLE: string;
-  readonly VITE_APP_DESCRIPTION: string;
-  readonly VITE_APP_URL: string;
-  readonly VITE_APP_API_URL: string;
-  readonly DEV: boolean;
-  readonly PROD: boolean;
-  readonly MODE: string;
+  readonly VITE_APP_TITLE: string
+  readonly VITE_APP_DESCRIPTION: string
+  readonly VITE_APP_URL: string
+  readonly VITE_APP_API_URL: string
+  readonly DEV: boolean
+  readonly PROD: boolean
+  readonly MODE: string
 }
-
 interface ImportMeta {
-  readonly env: ImportMetaEnv;
+  readonly env: ImportMetaEnv
 }`
     },
     {
       path: '/workspace/src/layout.tsx',
-      content: `import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import Analytics from './components/Analytics';
-
-export default function RootLayout({
+      content: `import React from 'react'import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'import Analytics from './components/Analytics'export default function RootLayout({
   children}: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
@@ -57,21 +47,19 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
-  );
+  )
 }`
     }
-  ];
-
+  ]
   for (const file of criticalFiles) {
     try {
-      fs.writeFileSync(file.path, file.content, 'utf8');
-      console.log(`✓ Fixed: ${file.path}`);
+      fs.writeFileSync(file.path, file.content, 'utf8')
+      console.log(`✓ Fixed: ${file.path}`)
     } catch (error) {
-      console.error(`Error fixing ${file.path}:`, error.message);
+      console.error(`Error fixing ${file.path}:`, error.message)
     }
   }
 }
-
 // Function to clean up other problematic files
 function cleanProblematicFiles() {
   const problematicFiles = [
@@ -85,33 +73,30 @@ function cleanProblematicFiles() {
     '/workspace/src/services/BaseService.ts',
     '/workspace/src/middleware/rateLimiter.ts',
     '/workspace/src/middleware/requestMiddleware.ts'
-  ];
-
+  ]
   for (const filePath of problematicFiles) {
     try {
       if (fs.existsSync(filePath)) {
         // Create minimal valid content for each file type
-        let content = '';
+        let content = ''
         if (filePath.endsWith('.tsx')) {
-          content = `import React from 'react';\n\nexport default function Component() {\n  return <div>Component placeholder</div>;\n}`;
+          content = `import React from 'react';\n\nexport default function Component() {\n  return <div>Component placeholder</div>;\n}`
         } else if (filePath.endsWith('.ts')) {
-          content = `// TypeScript file placeholder\nexport {};`;
+          content = `// TypeScript file placeholder\nexport {};`
         } else if (filePath.endsWith('.js')) {
-          content = `// JavaScript file placeholder\nexport {};`;
+          content = `// JavaScript file placeholder\nexport {};`
         }
-        
-        fs.writeFileSync(filePath, content, 'utf8');
-        console.log(`✓ Cleaned: ${filePath}`);
+        fs.writeFileSync(filePath, content, 'utf8')
+        console.log(`✓ Cleaned: ${filePath}`)
       }
     } catch (error) {
-      console.error(`Error cleaning ${filePath}:`, error.message);
+      console.error(`Error cleaning ${filePath}:`, error.message)
     }
   }
 }
-
 // Main execution
-console.log('🔧 Fixing critical files...');
-fixCriticalFiles();
-console.log('🧹 Cleaning problematic files...');
-cleanProblematicFiles();
-console.log('✅ Critical files fixed!');
+console.log('🔧 Fixing critical files...')
+fixCriticalFiles()
+console.log('🧹 Cleaning problematic files...')
+cleanProblematicFiles()
+console.log('✅ Critical files fixed!')

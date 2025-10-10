@@ -1,8 +1,5 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { FileText, Search, Shield, Zap, BarChart, CheckCircle } from 'lucide-react';
-const LegalDocumentManagerPage: React.FC = () => {
+'use client'import React from 'react'
+import { Helmet  } from 'react-helmet-async'import { FileText, Search, Shield, Zap, BarChart, CheckCircle  } from 'lucide-react'const LegalDocumentManagerPage: React.FC  = () => {
   const features = [
     { icon: FileText, title: 'Document Management', description: 'Organized storage and management of legal documents with smart categorization.' },
     { icon: Search, title: 'AI Document Search', description: 'Powerful AI-powered search across all legal documents and contracts.' },
@@ -10,8 +7,7 @@ const LegalDocumentManagerPage: React.FC = () => {
     { icon: Zap, title: 'Contract Analysis', description: 'AI-powered contract analysis and risk assessment.' },
     { icon: BarChart, title: 'Legal Analytics', description: 'Comprehensive analytics on legal matters and case outcomes.' },
     { icon: CheckCircle, title: 'Version Control', description: 'Complete version control and audit trail for all legal documents.' }
-  ];
-  return (
+  ]return (
     <React.Fragment>
       <Helmet>
         <title>Legal Document Manager | Zion Tech Group - Intelligent Legal Document Management</title>
@@ -40,6 +36,5 @@ const LegalDocumentManagerPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default LegalDocumentManagerPage;
+  )}
+export default LegalDocumentManagerPage

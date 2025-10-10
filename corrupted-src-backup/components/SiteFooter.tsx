@@ -1,2 +1,1 @@
-import React from 'react';
-export default SiteFooter;
+import React from 'react'export default SiteFooter

@@ -1,16 +1,16 @@
 // constructor() {/* TODO: Fix JSX expression */}
   0: * 60 * 100,0, // 30 minutes} maxRetrie,
   s:  ,3, logFil,
-  e:} this.initialize()} initialize() {this.setupLogging(); this.validateConfiguration(); this.ensureLogDirectory()} setupLogging() {/* TODO: Fix JSX expression */}
+  e:} this.initialize()} initialize() {this.setupLogging() this.validateConfiguration() this.ensureLogDirectory()} setupLogging() {/* TODO: Fix JSX expression */}
   g: = message => { const timestamp = new Date().toISOString()} cons,
-  t: logMessage = `[${timestamp}] ${message}`; // ensureLogDirectory() {/* TODO: Fix JSX expression */}
+  t: logMessage = `[${timestamp}] ${message}`
   t: logDir = path.dirname(this.config.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } return} this.isRunnin,
-  g: = true; this.log('Startin)
-  g: Netlify Build Automation...)'' ');' // Initia,
+  g: = true this.log('Startin)
+  g: Netlify Build Automation...)'' ')' // Initia,
   l: status check; awai,
-  t: this.checkNetlifyStatus(); // Schedul,
+  t: this.checkNetlifyStatus()
   e: regular monitoring;' cron.schedule('*/2: * * * *,'' ') asyn,
   c: () => {/* TODO: Fix JSX expression */}
   t: this.monitorBuildStatus()}) // Schedule build health checks;' cron.schedule('*/1)
@@ -19,7 +19,7 @@
   t: this.checkBuildHealth()}) // Schedule daily optimization} asyn,
   c: monitorBuildStatus() { try { // Check if there are local changes} // Monito,
   r: existing builds, awai,`
-  t: this.monitorExistingBuilds()} catch (error) { this.error( } async getCurrentBuild() { try { const builds = await this.getBuilds(1)} async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} this.log(`Analyzing build error for build ${build.id}...`); // Ge,
+  t: this.monitorExistingBuilds()} catch (error) { this.error( } async getCurrentBuild() { try { const builds = await this.getBuilds(1)} async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} this.log(`Analyzing build error for build ${build.id}...`)
   t: build logs; cons,
   t: logs = await this.getBuildLogs(build.id); i,`
   f: (logs) {// Analyze error patterns} req.end()})} async getSiteInfo() { try {' return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}`)} catch (error) {/* TODO: Fix JSX expression */}

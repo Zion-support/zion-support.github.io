@@ -1,16 +1,11 @@
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ChevronDown, ChevronUp } from 'lucide-react';
-const FAQPage: React.FC = () => {
-  const [openItems, setOpenItems] = useState<number[]>([]);
-  const toggleItem = (index: number) => {
+'use client'import React, { useState } from 'react'
+import { Helmet  } from 'react-helmet-async'import { ChevronDown, ChevronUp  } from 'lucide-react'const FAQPage: React.FC  = () => {
+  const [openItems, setOpenItems] = useState<number[]>([])const toggleItem  = () => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(item => item !== index)
         : [...prev, index]
-    );
-  };
+    )}
   const faqs = [
     {
       question: "What AI services do you offer?",
@@ -44,8 +39,7 @@ const FAQPage: React.FC = () => {
       question: "What industries do you serve?",
       answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
     }
-  ];
-  return (
+  ]return (
     <React.Fragment>
       <Helmet>
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
@@ -90,6 +84,5 @@ const FAQPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default FAQPage;
+  )}
+export default FAQPage

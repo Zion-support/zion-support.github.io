@@ -1,79 +1,33 @@
-'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-<<<<<<< HEAD
-import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
-=======
-import StructuredData from './components/StructuredData';
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
-import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-
-<<<<<<< HEAD
-// Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-
-// Preload critical components
+'use client'import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react'
+import Navigation from './components/Navigation'import Footer from './components/Footer'
+import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer'import SEOOptimizer from './components/SEOOptimizer'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates'import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react'
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
     setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
+      import('./components/ContentPromotionBanner')
+      import('./components/ContentCarousel')
+    }, 100)
   }
-};
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
-// Loading skeleton component
-const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>
-));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
-  useEffect(() => {
-    setIsLoaded(true);
-    // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
-  // Analytics tracking for phone clicks - optimized
+} useEffect(() => {
+    setIsLoaded(true)
+    const timer = setTimeout(() => setIsVisible(true), 100)return () => clearTimeout(timer)
+  }, [])
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag
       gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-      });
+      })
     }
-  }, []);
-
-<<<<<<< HEAD
-=======
+  }, [])
   const features = [
     {
       icon: Brain,
@@ -111,8 +65,7 @@ const HomePage: React.FC = () => {
       description: 'Expert guidance to help you navigate digital transformation and technology adoption.',
       benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training']
     }
-  ];
-
+  ]
   const services = [
     {
       icon: Brain,
@@ -135,10 +88,7 @@ const HomePage: React.FC = () => {
       href: '/micro-saas',
       features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance']
     }
-  ];
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
-  return (
+  ]return (
     <React.Fragment>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -185,7 +135,6 @@ const HomePage: React.FC = () => {
         enableLazyLoading={true}
         enablePreloading={true}
         enableCodeSplitting={true}
-<<<<<<< HEAD
       />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
@@ -202,12 +151,10 @@ const HomePage: React.FC = () => {
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
           Skip to main content
         </a>
-        
         {/* Content Promotion Banner */}
         <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
           <ContentPromotionBanner />
         </Suspense>
-        
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
           <section
@@ -292,10 +239,10 @@ const HomePage: React.FC = () => {
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Our Services;
+            Our Services
   </
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-            Comprehensive AI and IT solutions designed to transform your business operations;
+            Comprehensive AI and IT solutions designed to transform your business operations
   </
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
@@ -305,31 +252,7 @@ const HomePage: React.FC = () => {
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Services</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
-                </p>
-=======
-      >
-        <AccessibilityEnhancer
-          enableKeyboardNavigation={true}
-          enableScreenReaderSupport={true}
-          enableHighContrast={true}
-          enableFocusManagement={true}
-        >
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
-            {/* Navigation */}
-            <Navigation />
-            
-            {/* Skip to main content for accessibility */}
-            <a
-              href="#main-content"
-              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
-              Skip to main content
-            </a>
-
-            {/* Hero Section */}
-            <section id="main-content" className="relative pt-20 pb-16 overflow-hidden">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
-                <div className="text-center">
+                </p>                <div className="text-center">
                   <div className="mb-8">
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
                       <Sparkles className="w-4 h-4 mr-2" />
@@ -366,7 +289,6 @@ const HomePage: React.FC = () => {
                       <span>(302) 464-0950</span>
                     </a>
                   </div>
-                  
                   {/* Stats Section */}
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                     <div className="text-center">
@@ -388,14 +310,13 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
               {/* Quick Contact Form */}
               <div className="cyber-card hologram-card p-8">
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3>
                 <form className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                      Full Name;
+                      Full Name
   </
                     <input
                       type="text"
@@ -408,7 +329,7 @@ const HomePage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email Address;
+                      Email Address
   </
                     <input
                       type="email"
@@ -421,7 +342,7 @@ const HomePage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number;
+                      Phone Number
   </
                     <input
                       type="tel"
@@ -433,7 +354,7 @@ const HomePage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                      Service Interest;
+                      Service Interest
   </
                     <select
                       id="service"
@@ -449,7 +370,7 @@ const HomePage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Message;
+                      Message
   </
                     <textarea
                       id="message"
@@ -462,120 +383,12 @@ const HomePage: React.FC = () => {
                   <button
                     type="submit"
                     className="w-full cyber-button text-center py-4">
-                    Send Message;
+                    Send Message
   </
                 </form>
-<<<<<<< HEAD
-=======
-
-const HomePage: React.FC = memo(() => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    preloadComponents();
-    setIsLoaded(true);
-  }, []);
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions that grow with your business needs.',
-      benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery']
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and data.',
-      benefits: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']
-    },
-    {
-      icon: Code,
-      title: 'Custom Development',
-      description: 'Tailored software solutions designed specifically for your business requirements.',
-      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
-    },
-    {
-      icon: BarChart,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics tools.',
-      benefits: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting']
-    },
-    {
-      icon: Users,
-      title: 'IT Consulting',
-      description: 'Expert guidance to help you make the right technology decisions.',
-      benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']
-    }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' },
-    { number: '50+', label: 'Expert Team Members' }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <StructuredData type="Organization" />
-      <StructuredData type="WebSite" />
-      <StructuredData type="WebPage" />
-      <StructuredData type="Service" />
-      <PerformanceOptimizer />
-      <SEOOptimizer />
-      <AccessibilityEnhancer />
-      
-      <Navigation />
-      
-      <main>
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden" aria-labelledby="hero-heading">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" aria-hidden="true" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} aria-hidden="true" />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 id="hero-heading" className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Transform Your Business with
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> AI & IT Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              We help businesses leverage cutting-edge technology to drive growth, 
-              improve efficiency, and stay ahead of the competition.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <button 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-                aria-label="Get started with our AI and IT solutions"
-              >
-                Get Started
-                <ArrowRight className="inline-block ml-2 w-5 h-5" aria-hidden="true" />
-              </button>
-              <button 
-                className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
-                aria-label="View our portfolio and case studies"
-              >
-                View Our Work
-              </button>
-=======
-              <a href="tel:+13024640950" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center">
-                Call +1 302 464 0950
-                <ArrowRight className="inline-block ml-2 w-5 h-5" />
-              </a>
-              <a href="mailto:kleber@ziontechgroup.com" className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center">
-                Email Us
-              </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -589,7 +402,6 @@ const HomePage: React.FC = memo(() => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="services-heading">
           <div className="max-w-7xl mx-auto">
@@ -601,7 +413,6 @@ const HomePage: React.FC = memo(() => {
                 Comprehensive solutions designed to meet your business needs
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
               {features.map((feature, index) => (
                 <article key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group" role="listitem">
@@ -623,7 +434,6 @@ const HomePage: React.FC = memo(() => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="cta-heading">
           <div className="max-w-4xl mx-auto text-center">
@@ -635,7 +445,6 @@ const HomePage: React.FC = memo(() => {
                 Let's discuss how our AI and IT solutions can help you achieve your goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
                 <button 
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
                   aria-label="Contact us to discuss your business transformation needs"
@@ -648,20 +457,6 @@ const HomePage: React.FC = memo(() => {
                 >
                   Learn More
                 </button>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-4e58
-=======
-                <a href="tel:+13024640950" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center">
-                  Call +1 302 464 0950
-                </a>
-                <a href="mailto:kleber@ziontechgroup.com" className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center">
-                  Email kleber@ziontechgroup.com
-                </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
-=======
-            </section>
-
             {/* Services Section */}
             <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -705,10 +500,8 @@ const HomePage: React.FC = memo(() => {
                     </div>
                   ))}
                 </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
               </div>
             </section>
-
             {/* Features Section */}
             <section className="py-20">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -747,7 +540,6 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </div>
             </section>
-
             {/* Testimonials Section */}
             <section className="py-20 bg-slate-900/50">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -826,7 +618,6 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </div>
             </section>
-
             {/* CTA Section */}
             <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -855,28 +646,12 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </div>
             </section>
-
             {/* Footer */}
             <Footer />
           </div>
-<<<<<<< HEAD
         </section>
       </main>
-      
       <Footer />
-    </div>
-=======
-        </AccessibilityEnhancer>
-      </PerformanceOptimizer>
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
-    </React.Fragment>
-  );
-};
-
-HomePage.displayName = 'HomePage';
-<<<<<<< HEAD
-
-export default HomePage;
-=======
-export default HomePage;
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
+    </div>    </React.Fragment>
+  )}
+HomePage.displayName = 'HomePage'export default HomePage

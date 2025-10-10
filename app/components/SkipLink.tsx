@@ -1,7 +1,4 @@
-'use client';
-import React from 'react';
-
-const SkipLink: React.FC = () => {
+'use client'import React from 'react'const SkipLink: React.FC  = () => {
   return (
     <a
       href="#main-content"
@@ -9,7 +6,5 @@ const SkipLink: React.FC = () => {
     >
       Skip to main content
     </a>
-  );
-};
-
-export default SkipLink;
+  )}
+export default SkipLink

@@ -1,5 +1,4 @@
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
   return(<div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
@@ -15,23 +14,23 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
       </Helm, e, t>
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-          Observability, 2025, Sept 30, E2e, Ai Tracing, V, 2;
+          Observability, 2025, Sept 30, E2e, Ai Tracing, V, 2
         </h1>
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Learn, about, observability 2025, sept, 30 e2 e, ai, tracing v2, and, how it, can, benefit your, enterpris, e.
         </p>
         <div, className='prose, pros, e-invert, ma, x-w-3, x, l'></div>
           <p>
-            This, comprehensive, guide covers, observability, 2025 sept, 30, e2e ai, tracing, v2 and, provides, practical insights, for, enterprise;
+            This, comprehensive, guide covers, observability, 2025 sept, 30, e2e ai, tracing, v2 and, provides, practical insights, for, enterprise
             implementati, o, n.
           </p>
         </div>
         <div, className='mt-8'></div>
           <Link, t, o='/bl, o, g' className='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
-            ← Back, to, Blog;
+            ← Back, to, Blog
           </Li, n, k>
         </div>
       </div>
-    </d, i, v > );
+    </d, i, v > )
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
  }

@@ -1,37 +1,36 @@
-import React from 'react';
-'use client';
+import React from 'react'
+'use client'
 interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   servic,
   e: {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   titl,
-  e: string;
+  e: string
     descriptio,
-  n: string;
+  n: string
     ico,
-  n: string;
+  n: string
     pric,
   e: string;,
     feature,
   s: string[];,
     benefit,
-  s: string[];
+  s: string[]
     marketPrice?: string;,
     categor,
   y: string;,
     technologie,
   s: string[];,
     contactInf,
-  o: string;
-    link?: string;
-    popular?: boolean;
-  };
+  o: string
+    link?: string
+    popular?: boolean}
 }
-const MicroSAASCard: React.FC;
-          <MicroSAASCardProps> = ({ service }) => {// TODO: Add content;}
+const MicroSAASCard: React.FC
+          <MicroSAASCardProps> = ({ service }) => {// TODO: Add content}
 }
 const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   return (
@@ -109,8 +108,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )}
 export default MicroSAASCard;"`
   </MicroSAASCardProps>
   </MicroSAASCardProps>

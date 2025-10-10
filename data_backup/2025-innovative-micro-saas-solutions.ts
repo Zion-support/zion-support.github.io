@@ -2,35 +2,35 @@ expor,
   t: interface InnovativeMicroSaasSolution {/* TODO: Fix JSX expression */}
   d: Scheduling']'}' marketDisruptio,
   n: 'Revolutionize,
-  s: social media management with AI automatio}n}'; // INTELLIGEN,
+  s: social media management with AI automatio}n}'
   T: EMAIL MARKETING{/* TODO: Fix JSX expression */}
   l: Targeting']'}' marketDisruptio,
   n: 'Revolutionize,
-  s: email marketing with AI personalizatio}n}'; // SMAR,
+  s: email marketing with AI personalizatio}n}'
   T: INVENTORY MANAGEMENT{/* TODO: Fix JSX expression */}
   t: Optimization']'}' marketDisruptio,
   n: 'Revolutionize,
-  s: inventory management with AI predictio}n}'; // INTELLIGEN,
+  s: inventory management with AI predictio}n}'
   T: CUSTOMER SUPPORT{/* TODO: Fix JSX expression */}
   e: Analytics']'}' marketDisruptio,
   n: 'Revolutionize,
-  s: customer support with AI automatio}n}'; // SMAR,
+  s: customer support with AI automatio}n}'
   T: FINANCIAL MANAGEMENT{/* TODO: Fix JSX expression */}
   e: Tracking']'}' marketDisruptio,
   n: 'Revolutionize,
-  s: financial management with AI automatio}n}'; // INTELLIGEN,
+  s: financial management with AI automatio}n}'
   T: PROJECT MANAGEMENT{/* TODO: Fix JSX expression */}
   k: Assessment']'}' marketDisruptio,
   n: 'Revolutionize,
-  s: project management with AI automatio}n}'; // SMAR,
+  s: project management with AI automatio}n}'
   T: HR MANAGEMENT{/* TODO: Fix JSX expression */}
   e: Analytics']'}' marketDisruptio,
   n: 'Revolutionize,
-  s: HR management with AI automatio}n}'; // INTELLIGEN,
+  s: HR management with AI automatio}n}'
   T: SALES AUTOMATION{/* TODO: Fix JSX expression */}
   e: Optimization']'}' marketDisruptio,
   n: 'Revolutionize,
-  s: sales with AI automatio}n}'; // SMAR,
+  s: sales with AI automatio}n}'
   T: MARKETING AUTOMATION{/* TODO: Fix JSX expression */}
   s: marketing with AI automation}'], expor,
   t: default innovativeMicroSaasSolutions202}5}} '

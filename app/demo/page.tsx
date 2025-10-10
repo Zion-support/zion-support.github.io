@@ -1,8 +1,5 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Play, ArrowRight, CheckCircle } from 'lucide-react';
-const DemoPage: React.FC = () => {
+'use client'import React from 'react'
+import { Helmet  } from 'react-helmet-async'import { Play, ArrowRight, CheckCircle  } from 'lucide-react'const DemoPage: React.FC  = () => {
   const demos = [
     {
       title: 'AI Analytics Dashboard',
@@ -22,8 +19,7 @@ const DemoPage: React.FC = () => {
       duration: '4 min',
       features: ['Blog posts', 'Social media content', 'Product descriptions']
     }
-  ];
-  return (
+  ]return (
     <React.Fragment>
       <Helmet>
         <title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
@@ -34,7 +30,7 @@ const DemoPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              See Our <span className="text-cyan-400">Solutions</span> in Action;
+              See Our <span className="text-cyan-400">Solutions</span> in Action
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.
@@ -62,7 +58,7 @@ const DemoPage: React.FC = () => {
                   </ul>
                   <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
                     <Play className="w-4 h-4 mr-2" />
-                    Watch Demo;
+                    Watch Demo
   </
                 </div>
               ))}
@@ -87,8 +83,7 @@ const DemoPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default DemoPage;
+  )}
+export default DemoPage
   </button>
   </h1>

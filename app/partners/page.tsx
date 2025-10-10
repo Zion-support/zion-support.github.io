@@ -1,35 +1,19 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
-<<<<<<< HEAD
-import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
-=======
-import { Link } from 'react-router-dom';
-import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+'use client'import React from 'react'
+import { Helmet } from 'react-helmet-async'import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'import { CheckCircle, ArrowRight, ExternalLink } from 'lucide-react'
+import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react'
 interface Partner {
-  name: string;
-  logo: string;
-  description: string;
-  category: string;
-  website?: string;
-  tier: 'strategic' | 'preferred' | 'certified';
+  name: string
+  logo: string
+  description: string
+  category: string
+  website?: string
+  tier: 'strategic' | 'preferred' | 'certified'
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 const PartnersPage: React.FC = () => {
   const partners: Partner[] = [
     {
       name: 'Microsoft',
-<<<<<<< HEAD
       logo: '/images/partners/microsoft.png',
       description: 'Strategic cloud and AI partnership for enterprise solutions',
       category: 'Technology',
@@ -46,26 +30,9 @@ const PartnersPage: React.FC = () => {
     },
     {
       name: 'Google Cloud',
-<<<<<<< HEAD
 logo: '/api/placeholder/200/100',
       description: 'Advanced cloud computing and AI platform solutions',
-      category: 'Cloud & AI'
-=======
-      logo: '/images/partners/google-cloud.png',
-      description: 'Certified partner for machine learning and data analytics',
-      category: 'Cloud',
-      website: 'https://cloud.google.com',
-      tier: 'preferred'
-    },
-    {
-      name: 'Salesforce',
-      logo: '/images/partners/salesforce.png',
-      description: 'Strategic CRM and business automation solutions',
-      category: 'CRM',
-      website: 'https://salesforce.com',
-      tier: 'strategic'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-    },
+      category: 'Cloud & AI'    },
     {
       name: 'IBM',
       logo: '/images/partners/ibm.png',
@@ -81,7 +48,6 @@ logo: '/api/placeholder/200/100',
       category: 'Database',
       website: 'https://oracle.com',
       tier: 'certified'
-=======
       description: 'Cloud infrastructure and AI solutions',
       category: 'Cloud Partner'
     },
@@ -99,14 +65,11 @@ logo: '/api/placeholder/200/100',
       name: 'IBM',
       description: 'Enterprise AI and data analytics',
       category: 'Enterprise Partner'
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
     }
-  ];
+  ]
   const benefits = [
-<<<<<<< HEAD
     'Access to cutting-edge technology',
     'Joint go-to-market opportunities',
-<<<<<<< HEAD
     'Technical support and training',
     'Co-innovation projects',
     'Global reach and scalability',
@@ -157,25 +120,11 @@ logo: '/api/placeholder/200/100',
       website: 'https://splunk.com',
       tier: 'certified'
     }
-  ];
+  ]
   const benefits = [
     'Access to cutting-edge technology platforms',
     'Joint go-to-market strategies',
-    'Co-marketing opportunities',
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-    'Technical training and certification',
-    'Co-marketing and co-selling programs',
-    'Dedicated partner success manager',
-    'Priority support and resources'
-  ];
-<<<<<<< HEAD
-  const partnershipTiers = [
-=======
-
-  const tiers = [
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-    {
+    'Co-marketing opportunities',    {
       name: 'Strategic Partners',
       description: 'Our most important technology and business partners',
       icon: <Award className="w-8 h-8 text-gold-500" />,
@@ -193,23 +142,10 @@ logo: '/api/placeholder/200/100',
       icon: <CheckCircle className="w-8 h-8 text-green-500" />,
       color: 'from-green-400 to-teal-500'
     }
-  ];
-<<<<<<< HEAD
-  const getTierInfo = (tier: string) => {
-    return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2];
-  };
-  return (
-    <React.Fragment>
-=======
-    'Co-innovation projects',
-    'Global reach and scalability',
-    'Certified expertise and solutions'
-  ];
-
-  return (
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-      <Helmet>
+  ]const getTierInfo  = () => {
+    return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2]
+  }return (
+    <React.Fragment>      <Helmet>
         <title>Partners | Zion Tech Group</title>
         <meta name="description" content="Our strategic partners and ecosystem that help us deliver world-class AI and IT solutions." />
         <meta name="keywords" content="partners, strategic partnerships, technology partners, AI solutions, IT services" />
@@ -220,7 +156,7 @@ logo: '/api/placeholder/200/100',
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our Partners;
+              Our Partners
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               We work with industry leaders to deliver cutting-edge AI and IT solutions.
@@ -288,23 +224,18 @@ logo: '/api/placeholder/200/100',
                   </div>
                   <h3 className={`text-2xl font-bold ${tier.color} mb-4`}>{tier.name}</h3>
                   <p className="text-gray-300">{tier.description}</p>
-=======
-
   const stats = [
     { icon: <Building2 className="w-8 h-8 text-blue-500" />, value: '50+', label: 'Partners' },
     { icon: <Users className="w-8 h-8 text-green-500" />, value: '1000+', label: 'Joint Customers' },
     { icon: <Zap className="w-8 h-8 text-purple-500" />, value: '95%', label: 'Success Rate' },
     { icon: <Award className="w-8 h-8 text-orange-500" />, value: '25+', label: 'Awards Won' }
-  ];
-
-  return (
+  ]return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Partners - Zion Tech Group | Partner Program</title>
         <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Strategic, preferred, and certified partner programs available." />
         <meta name="keywords" content="partners, partner program, technology partners, business partners, Zion Tech Group" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -332,7 +263,6 @@ logo: '/api/placeholder/200/100',
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -345,23 +275,13 @@ logo: '/api/placeholder/200/100',
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
                   <div className="text-gray-600">{stat.label}</div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         </section>
 {/* Partners Grid */}
-        <section className="py-16 px-4">
-=======
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-          <div className="max-w-7xl mx-auto">
+        <section className="py-16 px-4">          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Technology Partners</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -370,8 +290,7 @@ logo: '/api/placeholder/200/100',
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partners.map((partner, index) => {
-                const tierInfo = getTierInfo(partner.tier);
-                return (
+                const tierInfo = getTierInfo(partner.tier)return (
                   <div key={index} className={`${tierInfo.bgColor} backdrop-blur-lg rounded-2xl p-6 border ${tierInfo.borderColor} hover:border-purple-400 transition-all duration-300 group`}>
                     <div className="text-center">
                       <div className="w-20 h-20 bg-white/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
@@ -396,7 +315,7 @@ logo: '/api/placeholder/200/100',
                       )}
                     </div>
                   </div>
-                );
+                )
               })}
             </div>
           </div>
@@ -416,31 +335,13 @@ logo: '/api/placeholder/200/100',
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                     <span className="text-gray-300">{benefit}</span>
-<<<<<<< HEAD
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
               <h2 className="text-2xl font-bold text-white mb-6 text-center">Partnership Benefits</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                    {benefit}
-=======
-        </div>
-      </section>
-
-      {/* Partner Tiers */}
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Partner Tiers</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {tiers.map((tier, index) => (
-                <div key={index} className="bg-white rounded-xl p-8 shadow-lg">
-                  <div className="flex justify-center mb-4">
-                    {tier.icon}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-                  </div>
+                    {benefit}                  </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{tier.name}</h3>
                   <p className="text-gray-600 mb-6">{tier.description}</p>
                   <div className={`w-full h-2 bg-gradient-to-r ${tier.color} rounded-full`}></div>
@@ -448,10 +349,8 @@ logo: '/api/placeholder/200/100',
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
-
       {/* Partners Grid */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -488,40 +387,30 @@ logo: '/api/placeholder/200/100',
                         Visit <ExternalLink className="w-4 h-4 ml-1" />
                       </a>
                     )}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </div>
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </section>
 {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Become Our Partner;
+              Become Our Partner
   </
             <p className="text-xl text-gray-300 mb-8">
               Join our ecosystem and help shape the future of AI and IT solutions.
             </p>
             <button className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
-              Partner With Us;
+              Partner With Us
   </
           </div>
         </section>
-      </main>
-=======
-        </section>
-      </main>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
-      <Footer />
+      </main>      <Footer />
     </React.Fragment>
-=======
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
@@ -538,7 +427,6 @@ logo: '/api/placeholder/200/100',
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-blue-900 text-white">
         <div className="container mx-auto px-4">
@@ -565,11 +453,8 @@ logo: '/api/placeholder/200/100',
         </div>
       </section>
     </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  );
-};
-<<<<<<< HEAD
-export default PartnersPage;
+  )}
+export default PartnersPage
   </button>
   </h2>
   </div>
@@ -581,7 +466,3 @@ export default PartnersPage;
   </div>
   </section>
   </h1>
-=======
-
-export default PartnersPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-d277

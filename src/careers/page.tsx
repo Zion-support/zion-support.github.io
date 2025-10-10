@@ -1,9 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const CareersPage: React.FC = () => {
+import React from 'react'import { Link  } from 'react-router-dom'
+import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield  } from 'lucide-react'import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'const CareersPage: React.FC  = () => {
   const openPositions = [
     {
       id: 'senior-ai-engineer',
@@ -107,7 +104,7 @@ const CareersPage: React.FC = () => {
       ],
       benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses']
     }
-  ];
+  ]
   const benefits = [
     {
       icon: Heart,
@@ -129,7 +126,7 @@ const CareersPage: React.FC = () => {
       title: 'Recognition',
       description: 'Performance bonuses, stock options, and recognition programs'
     }
-  ];
+  ]
   const culture = [
     'Innovation-driven environment where creativity is encouraged',
     'Collaborative team culture with diverse perspectives',
@@ -137,8 +134,7 @@ const CareersPage: React.FC = () => {
     'Mentorship programs and career development support',
     'Regular team events and company retreats',
     'Open communication and transparent leadership'
-  ];
-  return (
+  ]return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       {/* Hero Section */}
@@ -154,12 +150,12 @@ const CareersPage: React.FC = () => {
             <Link
               to="#open-positions"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              View Open Positions;
+              View Open Positions
   </
             <Link
               to="/contact"
               className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Contact Us;
+              Contact Us
   </
           </div>
         </div>
@@ -172,7 +168,7 @@ const CareersPage: React.FC = () => {
               Why Work With Us?
             </h2>
             <p className="text-xl text-gray-600">
-              We offer more than just a job - we offer a career and a community;
+              We offer more than just a job - we offer a career and a community
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -194,7 +190,7 @@ const CareersPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Culture;
+                Our Culture
   </
               <p className="text-lg text-gray-600 mb-8">
                 At Zion Tech Group, we believe that great technology comes from great people. 
@@ -239,10 +235,10 @@ const CareersPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Open Positions;
+              Open Positions
   </
             <p className="text-xl text-gray-600">
-              Find your next career opportunity with us;
+              Find your next career opportunity with us
   </
           </div>
           <div className="space-y-8">
@@ -321,21 +317,20 @@ const CareersPage: React.FC = () => {
             <Link
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              Send Us Your Resume;
+              Send Us Your Resume
   </
             <Link
               to="/team"
               className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
-              Meet Our Team;
+              Meet Our Team
   </
           </div>
         </div>
       </section>
       <Footer />
     </div>
-  );
-};
-export default CareersPage;
+  )}
+export default CareersPage
   </Link>
   </Link>
   </p>

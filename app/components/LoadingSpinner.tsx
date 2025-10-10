@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  color?: 'primary' | 'secondary' | 'white';
-  text?: string;
+  size?: 'sm' | 'md' | 'lg'
+  color?: 'primary' | 'secondary' | 'white'
+  text?: string
 }
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
@@ -13,13 +13,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
-  };
+  }
   const colorClasses = {
     primary: 'text-indigo-600',
     secondary: 'text-gray-600',
     white: 'text-white'
-  };
-  return (
+  }return (
     <div className="flex flex-col items-center justify-center space-y-2" role="status" aria-label="Loading">
       <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}></div>
       {text && (
@@ -28,7 +27,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         </p>
       )}
     </div>
-  );
-};
-export default LoadingSpinner;
+  )}
+export default LoadingSpinner
   </LoadingSpinnerProps>

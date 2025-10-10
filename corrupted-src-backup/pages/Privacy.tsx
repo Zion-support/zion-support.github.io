@@ -1,3 +1,2 @@
-import React from 'react';
-// import Footer from '../components/Footer';
-export default Privacy;
+import React from 'react'
+export default Privacy

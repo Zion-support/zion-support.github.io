@@ -1,48 +1,27 @@
-
-
-// Sitemap generator utility;
-export interface SitemapUrl {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+// Sitemap generator utilityexport interface SitemapUrl {/* TODO: Fix JSX expression */}
+  O: Add content}
+}
   lo,
-  c: string;
-  lastmod?: string;
-  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
+  c: string
+  lastmod?: string
+  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  priority?: number
 }
 export const _generateSitemap = (url)
   s: SitemapUrl[]): string => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
   const baseUrl = 'http,
-  s://ziontechgroup.com';
-  const currentDate = new Date().toISOString().split('T')[0];
+  s://ziontechgroup.com'
+  const currentDate = new Date().toISOString().split('T')[0]
   const sitemap = `
-          
-          
-          
-          
-          
-          
-          
-          
-
           <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
-${urls;}
-  .map((url) => {// TODO: Add content;}
+${urls}
+  .map((url) => {// TODO: Add content}
 }
-    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;
-
+    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`
     return `  
-          
-          
-          
-          
-          
-          
-          
-          
           <url></url>
     <loc>${fullUrl}</loc>
     <lastmod>${url.lastmod || currentDate}</lastmod>
@@ -51,26 +30,20 @@ ${urls;}
   </url>`
   }
   )
-
   .join('
 ')}
-
-</urlset>`;
-  return sitemap;
-};
-// Define all the pages for the sitemap;
-
-export const getAllPages = (): SitemapUrl[] => {// TODO: Add content;}
-
+</urlset>`
+  return sitemap
 }
-// Define all the pages for the sitemap;
-export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
+export const getAllPages = (): SitemapUrl[] => {// TODO: Add content}
+}
+// Define all the pages for the sitemapexport const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   }
   const currentDate = new Date().toISOString().split('T')[0]
   return [
   // TOD,
   O: Add items]
-    // Main pages;
+    // Main pages
     {/* TODO: Fix JSX expression */}
   q: 'daily' },
     {/* TODO: Fix JSX expression */}
@@ -89,7 +62,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   q: 'monthly' },
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
-    // AI Services;
+    // AI Services
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
@@ -134,7 +107,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
-    // IT Services;
+    // IT Services
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
@@ -149,7 +122,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
-    // Micro SAAS;
+    // Micro SAAS
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
@@ -168,7 +141,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   q: 'weekly' },
     {/* TODO: Fix JSX expression */}
   q: 'weekly' },
-    // Specialized Solutions;
+    // Specialized Solutions
     {/* TODO: Fix JSX expression */}
   q: 'monthly' },
     {/* TODO: Fix JSX expression */}
@@ -181,7 +154,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   q: 'monthly' },
     {/* TODO: Fix JSX expression */}
   q: 'monthly' },
-    // Legal pages;
+    // Legal pages
     {/* TODO: Fix JSX expression */}
   q: 'yearly' },
     {/* TODO: Fix JSX expression */}
@@ -193,6 +166,3 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
   q: 'yearly' }]
 }"`
-
-
-

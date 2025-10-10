@@ -1,2 +1,1 @@
-import React from 'react';
-export default AdvancedPerformanceDashboard;
+import React from 'react'export default AdvancedPerformanceDashboard

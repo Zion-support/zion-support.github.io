@@ -1,10 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const Pagetsx: React.FC = () => {
-  const _features = [];
-  return (
+import React from 'react'import { Link  } from 'react-router-dom'
+import Navigation from '../components/Navigation'import Footer from '../components/Footer'const Pagetsx: React.FC  = () => {
+  const _features = []return (
     {icon: Users,
     title: 'Advanced Features',
       description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
@@ -84,4 +80,4 @@ const Pagetsx: React.FC = () => {
   )
 }
 export default Pagetsx;"
-export default GdprPage;
+export default GdprPage

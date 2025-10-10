@@ -1,5 +1,4 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-const October2025LatestPremiumContentBanne, r = () => { 
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"const October2025LatestPremiumContentBanne, r  = () => { 
   return(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6, l, g:px-8, shado, w-2xl, relative, overflow-hidd, e, n"  > {/* Animated, background, effec, t, s */ })
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-transparent, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" />)
       <div, className="absolute, inse, t-0, b, g-[u, r, l('da, t, a: image/s, v, g+x, m, l; ba, s, e, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4=')] opaci, t, y-20" />
@@ -16,10 +15,10 @@ const October2025LatestPremiumContentBanne, r = () => {
           <div, className="fl, e, x-1"></div>
             <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>
               <span, className="inli, n, e-flex, item, s-center, p, x-4, p, y-1.5, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, shado, w-lg, animat, e-pul, s, e">
-                🔥 JUST, PUBLISHE, D - OCTO, B, E, R , 1, 20, 2, 5;
+                🔥 JUST, PUBLISHE, D - OCTO, B, E, R , 1, 20, 2, 5
               </sp, a, n>
               <span, classNam, e = "inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-semibold, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-200, border, border-purp, l, e-4, 0, 0/30">
-                PREMIUM, CONTEN, T;
+                PREMIUM, CONTEN, T
               </sp, a, n>
             </div>
             <h2, className="te, x, t-3 xl, s, m: te, x, t-4 xl, fon, t-bold, tex, t-white, m, b-3, leadin, g-tig, h, t"></h>
@@ -55,10 +54,10 @@ const October2025LatestPremiumContentBanne, r = () => {
                   <Shield, className="w-6 h-6, tex, t-purp, l, e-300, fle, x-shri, n, k-0, m, t-1" />
                   <d, i, v>
                     <h3, className="fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r:te, x, t-purp, l, e-200, transitio, n-colo, r, s">
-                      🛡️ Autonomous, Data, Governance Revoluti, o, n;
+                      🛡️ Autonomous, Data, Governance Revoluti, o, n
                     </h3>
                     <p, className="te, x, t-xs, tex, t-purp, l, e-200, m, b-2">
-                      99.98% compliance, accur, a, c, y, $4.2B, risk, mitigation, 94% faster, complianc, e, 2,8, 4, 7% R, O, I;
+                      99.98% compliance, accur, a, c, y, $4.2B, risk, mitigation, 94% faster, complianc, e, 2,8, 4, 7% R, O, I
                     </p>
                     <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-xs"></div>
                       <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />
@@ -71,10 +70,10 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
           <div, className="fl, e, x-1"></div>"
             <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>"
               <span, className="inli, n, e-flex, item, s-center, p, x-4, p, y-1.5, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, shado, w-lg, animat, e-pul, s, e"></span>
-                🔥 JUST, PUBLISHE, D - OCTO, B, E, R , 1, 20, 2, 5;
+                🔥 JUST, PUBLISHE, D - OCTO, B, E, R , 1, 20, 2, 5
               </sp, a, n>"
               <span, classNam, e = "inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-semibold, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-200, border, border-purp, l, e-4, 0, 0/30"></span>
-                PREMIUM, CONTEN, T;
+                PREMIUM, CONTEN, T
               </sp, a, n>
             </div>"
             <h2, className="te, x, t-3xl, s, m: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-3, leadin, g-tig, h, t"></h2>
@@ -111,10 +110,10 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
                   <Shield, className="w-6 h-6, tex, t-purp, l, e-300, fle, x-shri, n, k-0, m, t-1" /></Shield>
                   <d, i, v></d>"
                     <h3, className="fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r:te, x, t-purp, l, e-200, transitio, n-colo, r, s"></h3>
-                      🛡️ Autonomous, Data, Governance Revoluti, o, n;
+                      🛡️ Autonomous, Data, Governance Revoluti, o, n
                     </h3>"
                     <p, className="te, x, t-xs, tex, t-purp, l, e-200, m, b-2"></p>
-                      99.98% compliance, accur, a, c, y, $4.2B, risk, mitigation, 94% faster, complianc, e, 2,8, 4, 7% R, O, I;
+                      99.98% compliance, accur, a, c, y, $4.2B, risk, mitigation, 94% faster, complianc, e, 2,8, 4, 7% R, O, I
                     </p>"
                     <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-xs"></div>"
                       <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" /></CheckCircle>"
@@ -129,10 +128,10 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
                   <Brain, className="w-6 h-6, tex, t-r, e, d-300, fle, x-shri, n, k-0, m, t-1" />
                   <d, i, v>
                     <h3, className="fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r:te, x, t-r, e, d-200, transitio, n-colo, r, s">
-                      🧠 Neural, Fraud, Detection Revoluti, o, n;
+                      🧠 Neural, Fraud, Detection Revoluti, o, n
                     </h3>
                     <p, className="te, x, t-xs, tex, t-r, e, d-200, m, b-2">
-                      99.96% detection, accur, a, c, y, $8.7B, losses, prevented, s, u, b-50ms, respons, e, 3,2, 4, 7% R, O, I;
+                      99.96% detection, accur, a, c, y, $8.7B, losses, prevented, s, u, b-50ms, respons, e, 3,2, 4, 7% R, O, I
                     </p>
                     <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-xs"></div>
                       <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />
@@ -141,10 +140,10 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
                   <Brain, className="w-6 h-6, tex, t-r, e, d-300, fle, x-shri, n, k-0, m, t-1" /></Brain>
                   <d, i, v></d>"
                     <h3, className="fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r:te, x, t-r, e, d-200, transitio, n-colo, r, s"></h3>
-                      🧠 Neural, Fraud, Detection Revoluti, o, n;
+                      🧠 Neural, Fraud, Detection Revoluti, o, n
                     </h3>"
                     <p, className="te, x, t-xs, tex, t-r, e, d-200, m, b-2"></p>
-                      99.96% detection, accur, a, c, y, $8.7B, losses, prevented, s, u, b-50ms, respons, e, 3,2, 4, 7% R, O, I;
+                      99.96% detection, accur, a, c, y, $8.7B, losses, prevented, s, u, b-50ms, respons, e, 3,2, 4, 7% R, O, I
                     </p>"
                     <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-xs"></div>"
                       <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" /></CheckCircle>"
@@ -161,10 +160,10 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
                   <Workflow, className="w-6 h-6, tex, t-bl, u, e-300, fle, x-shri, n, k-0, m, t-1" />
                   <d, i, v>
                     <h3, className="fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r:te, x, t-bl, u, e-200, transitio, n-colo, r, s">
-                      ⚡ Cognitive, Workflow, Orchestration;
+                      ⚡ Cognitive, Workflow, Orchestration
                     </h3>
                     <p, className="te, x, t-xs, tex, t-bl, u, e-200, m, b-2">
-                      98.7% automation, r, a, t, e, $6.3B, value, creation, 89% faster, executio, n, 3,7, 4, 2% R, O, I;
+                      98.7% automation, r, a, t, e, $6.3B, value, creation, 89% faster, executio, n, 3,7, 4, 2% R, O, I
                     </p>
                     <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-xs"></div>
                       <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />
@@ -175,10 +174,10 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
                   <Workflow, className="w-6 h-6, tex, t-bl, u, e-300, fle, x-shri, n, k-0, m, t-1" /></Workflow>
                   <d, i, v></d>"
                     <h3, className="fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r:te, x, t-bl, u, e-200, transitio, n-colo, r, s"></h3>
-                      ⚡ Cognitive, Workflow, Orchestration;
+                      ⚡ Cognitive, Workflow, Orchestration
                     </h3>"
                     <p, className="te, x, t-xs, tex, t-bl, u, e-200, m, b-2"></p>
-                      98.7% automation, r, a, t, e, $6.3B, value, creation, 89% faster, executio, n, 3,7, 4, 2% R, O, I;
+                      98.7% automation, r, a, t, e, $6.3B, value, creation, 89% faster, executio, n, 3,7, 4, 2% R, O, I
                     </p>"
                     <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-xs"></div>"
                       <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" /></CheckCircle>"
@@ -232,13 +231,12 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
             <Link, t, o="/conta, c, t""
               className="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-3, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-semibold, rounde, d-lg, borde, r-2, borde, r-whi, t, e/30, hove, r:bg-whi, t, e/20, hove, r:bord, e, r-whi, t, e/50, transitio, n-all, duratio, n-300, whitespac, e-nowr, a, p">
             ></Link>
-              Schedule, Enterprise, Demo;
+              Schedule, Enterprise, Demo
             </Li, n, k>
           </div>
         </div>
       </div>
     </div>
-  );
-};
-export default October2025LatestPremiumContentBanner;
+  )}
+export default October2025LatestPremiumContentBanner
 "
