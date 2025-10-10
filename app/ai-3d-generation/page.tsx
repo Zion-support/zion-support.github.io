@@ -43,7 +43,7 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
       title: 'E-commerce',
       description: 'Generate product visualizations and AR experiences',
       icon: '🛒',
-      examples: ['Product models', 'AR try-ons', 'Virtual showrooms', 'Packaging designs']}
+      examples: ['Product models', 'AR try-ons', 'Virtual showrooms', 'Packaging designs']
     },
     {
       title: 'Education & Training',

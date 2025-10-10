@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
 };
 
-function HomePage() {
+export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}

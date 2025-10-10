@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Shield, AlertTriangle, Eye, Zap, CheckCircle, ArrowRight, Phone, Mail } from 'lucide-react';
+import {CheckCircle} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
