@@ -1,20 +1,21 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  BarChart3, 
-  Smartphone, 
-  Database, 
-  Zap, 
+import {
+  Brain,
+  Cloud,
+  Shield,
+  BarChart3,
+  Smartphone,
+  Database,
+  Zap,
   Globe,
   CheckCircle,
   ArrowRight,
   Search,
   Filter
 } from 'lucide-react';
+<<<<<<< HEAD
 const ServicesPage: React.FC = () => {
   const services = [
     // AI Services
@@ -515,258 +516,72 @@ const ServicesPage: React.FC = () => {
       category: 'IT Services'
     },
     // Micro SAAS Services
+=======
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const ServicesPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const services = [
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     {
+      id: 1,
+      title: 'AI Solutions',
+      description: 'Comprehensive artificial intelligence solutions for business automation and optimization.',
+      icon: Brain,
+      category: 'AI',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+      price: 'Starting at $5,000/month'
+    },
+    {
+      id: 2,
+      title: 'Cloud Services',
+      description: 'Scalable cloud infrastructure and migration services for modern businesses.',
+      icon: Cloud,
+      category: 'Cloud',
+      features: ['AWS/Azure/GCP', 'Cloud Migration', 'Auto-scaling', 'Disaster Recovery'],
+      price: 'Starting at $2,000/month'
+    },
+    {
+      id: 3,
+      title: 'Cybersecurity',
+      description: 'Advanced security solutions to protect your digital assets and data.',
+      icon: Shield,
+      category: 'Security',
+      features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response'],
+      price: 'Starting at $3,000/month'
+    },
+    {
+      id: 4,
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable insights with advanced analytics tools.',
+      icon: BarChart3,
+      category: 'Analytics',
+      features: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting'],
+      price: 'Starting at $1,500/month'
+    },
+    {
+      id: 5,
+      title: 'Mobile Development',
+      description: 'Custom mobile applications for iOS and Android platforms.',
       icon: Smartphone,
-      title: 'AI-Powered CRM',
-      description: 'Intelligent customer relationship management with AI insights, automated follow-ups, and predictive analytics.',
-      features: ['AI Lead Scoring', 'Automated Follow-ups', 'Predictive Analytics', 'Contact Management', 'Sales Pipeline'],
-      price: '$149/month',
-      category: 'Micro SAAS',
-      popular: true
+      category: 'Development',
+      features: ['iOS Apps', 'Android Apps', 'Cross-platform', 'UI/UX Design'],
+      price: 'Starting at $8,000/project'
     },
     {
-      icon: BarChart3,
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence with AI-powered insights, custom dashboards, and automated reporting.',
-      features: ['Real-time Analytics', 'Custom Dashboards', 'Automated Reports', 'Data Visualization', 'Predictive Insights'],
-      price: '$199/month',
-      category: 'Micro SAAS',
-      popular: true
-    },
-    {
-      icon: Code,
-      title: 'AI Content Studio',
-      description: 'Complete content creation suite with AI writing, image generation, video editing, and social media automation.',
-      features: ['AI Writing', 'Image Generation', 'Video Editing', 'Social Media Automation', 'SEO Optimization'],
-      price: '$299/month',
-      category: 'Micro SAAS',
-      popular: true
-    },
-    {
-      icon: Users,
-      title: 'AI Chatbot Builder',
-      description: 'Create intelligent chatbots for customer support, sales, and lead generation with no coding required.',
-      features: ['No-code Builder', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard', 'Custom Training'],
-      price: '$99/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Mail,
-      title: 'AI Email Marketing',
-      description: 'Automated email campaigns with AI optimization, personalization, and advanced analytics for maximum ROI.',
-      features: ['AI Optimization', 'Personalization', 'A/B Testing', 'Advanced Analytics', 'Automation Workflows'],
-      price: '$179/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Smartphone,
-      title: 'AI Mobile App Builder',
-      description: 'Build native mobile apps with AI assistance, drag-and-drop interface, and instant deployment.',
-      features: ['Drag-and-drop Builder', 'AI Code Generation', 'Instant Deployment', 'Cross-platform', 'App Store Publishing'],
-      price: '$399/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Search,
-      title: 'AI SEO Optimizer',
-      description: 'Automated SEO analysis, keyword research, content optimization, and ranking tracking with AI insights.',
-      features: ['Keyword Research', 'Content Optimization', 'Ranking Tracking', 'Competitor Analysis', 'Technical SEO'],
-      price: '$129/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: BarChart3,
-      title: 'AI Invoice Generator',
-      description: 'Automated invoice creation, payment tracking, and financial reporting with AI-powered insights.',
-      features: ['Automated Invoicing', 'Payment Tracking', 'Financial Reports', 'Tax Calculations', 'Client Portal'],
-      price: '$79/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Code,
-      title: 'AI Writing Assistant',
-      description: 'Advanced AI writing tool for blogs, emails, reports, and content creation with 50+ templates.',
-      features: ['50+ Templates', 'Multi-language Support', 'Plagiarism Check', 'SEO Optimization', 'Tone Adjustment'],
-      price: '$29/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: BarChart3,
-      title: 'Smart Analytics',
-      description: 'Real-time business analytics with AI insights, automated reports, and predictive forecasting.',
-      features: ['Real-time Analytics', 'Predictive Forecasting', 'Automated Reports', 'Custom Metrics', 'Data Integration'],
-      price: '$49/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Calendar,
-      title: 'AI Scheduler',
-      description: 'Intelligent scheduling with calendar optimization, meeting coordination, and time management.',
-      features: ['Calendar Optimization', 'Meeting Coordination', 'Time Management', 'Auto-scheduling', 'Integration APIs'],
-      price: '$19/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: BarChart3,
-      title: 'Expense Tracker',
-      description: 'AI-powered expense management with receipt scanning, categorization, and budget insights.',
-      features: ['Receipt Scanning', 'Auto-categorization', 'Budget Insights', 'Tax Preparation', 'Multi-currency'],
-      price: '$15/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: CheckSquare,
-      title: 'Task Manager Pro',
-      description: 'Advanced task management with AI prioritization, team collaboration, and progress tracking.',
-      features: ['AI Prioritization', 'Team Collaboration', 'Progress Tracking', 'Time Tracking', 'Project Templates'],
-      price: '$39/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Users,
-      title: 'CRM Lite',
-      description: 'Lightweight CRM with AI lead scoring, contact management, and sales pipeline automation.',
-      features: ['AI Lead Scoring', 'Contact Management', 'Sales Pipeline', 'Email Integration', 'Mobile App'],
-      price: '$59/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Mail,
-      title: 'Email Optimizer',
-      description: 'AI-powered email optimization with subject line suggestions, send time optimization, and A/B testing.',
-      features: ['Subject Line AI', 'Send Time Optimization', 'A/B Testing', 'Open Rate Tracking', 'Spam Analysis'],
-      price: '$25/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Globe,
-      title: 'Social Media Manager',
-      description: 'AI-driven social media management with content creation, scheduling, and performance analytics.',
-      features: ['Content Creation', 'Auto-scheduling', 'Performance Analytics', 'Multi-platform', 'Engagement Tracking'],
-      price: '$45/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Code,
-      title: 'AI Design Studio',
-      description: 'Create stunning graphics, logos, and marketing materials with AI-powered design tools.',
-      features: ['AI Design Tools', 'Logo Generation', 'Marketing Materials', 'Brand Kit', 'Template Library'],
-      price: '$35/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Globe,
-      title: 'Landing Page Builder',
-      description: 'Build high-converting landing pages with AI optimization and A/B testing capabilities.',
-      features: ['Drag-and-drop Builder', 'AI Optimization', 'A/B Testing', 'Conversion Tracking', 'Mobile Responsive'],
-      price: '$29/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Search,
-      title: 'SEO Optimizer',
-      description: 'AI-powered SEO analysis and optimization with keyword research and content suggestions.',
-      features: ['SEO Analysis', 'Keyword Research', 'Content Suggestions', 'Ranking Tracking', 'Technical Audits'],
-      price: '$49/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: BarChart3,
-      title: 'Ad Campaign Manager',
-      description: 'Automated ad campaign management with AI optimization across Google, Facebook, and LinkedIn.',
-      features: ['Multi-platform Ads', 'AI Optimization', 'Budget Management', 'Performance Tracking', 'Auto-bidding'],
-      price: '$79/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Code,
-      title: 'Code Assistant',
-      description: 'AI-powered code completion, debugging, and optimization for multiple programming languages.',
-      features: ['Code Completion', 'Debugging Help', 'Code Optimization', 'Multi-language Support', 'Documentation'],
-      price: '$39/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Settings,
-      title: 'API Builder',
-      description: 'Create and manage APIs with AI assistance, documentation generation, and testing tools.',
-      features: ['API Creation', 'Documentation Generation', 'Testing Tools', 'Version Control', 'Rate Limiting'],
-      price: '$59/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Shield,
-      title: 'Bug Tracker Pro',
-      description: 'Advanced bug tracking with AI-powered issue detection, prioritization, and resolution suggestions.',
-      features: ['AI Issue Detection', 'Priority Scoring', 'Resolution Suggestions', 'Team Collaboration', 'Integration APIs'],
-      price: '$25/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: FileText,
-      title: 'Doc Generator',
-      description: 'Automatically generate technical documentation, API docs, and user guides from code.',
-      features: ['Auto Documentation', 'API Docs', 'User Guides', 'Code Comments', 'Multiple Formats'],
-      price: '$19/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Users,
-      title: 'AI Recruitment Assistant',
-      description: 'Streamline hiring with AI-powered resume screening, candidate matching, and interview scheduling.',
-      features: ['Resume Screening', 'Candidate Matching', 'Interview Scheduling', 'Skills Assessment', 'Background Checks'],
-      price: '$199/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Shield,
-      title: 'Medical Records Manager',
-      description: 'HIPAA-compliant medical records management with AI-powered data extraction and analysis.',
-      features: ['HIPAA Compliance', 'Data Extraction', 'Medical Analysis', 'Patient Portal', 'Integration APIs'],
-      price: '$299/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: BarChart3,
-      title: 'AI Accounting Assistant',
-      description: 'Automated accounting with AI-powered bookkeeping, tax preparation, and financial reporting.',
-      features: ['Automated Bookkeeping', 'Tax Preparation', 'Financial Reports', 'Expense Tracking', 'Compliance'],
-      price: '$149/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: BarChart3,
-      title: 'Property Management AI',
-      description: 'AI-powered property management with tenant screening, maintenance scheduling, and rent optimization.',
-      features: ['Tenant Screening', 'Maintenance Scheduling', 'Rent Optimization', 'Property Analytics', 'Tenant Portal'],
-      price: '$179/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Shield,
-      title: 'Legal Document Manager',
-      description: 'AI-powered legal document management with contract analysis, compliance tracking, and risk assessment.',
-      features: ['Contract Analysis', 'Compliance Tracking', 'Risk Assessment', 'Document Templates', 'Legal Research'],
-      price: '$249/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Users,
-      title: 'Online Learning Platform',
-      description: 'AI-powered educational platform with personalized learning paths and progress tracking.',
-      features: ['Personalized Learning', 'Progress Tracking', 'Course Creation', 'Assessment Tools', 'Certification'],
-      price: '$99/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: BarChart3,
-      title: 'Supply Chain Optimizer',
-      description: 'AI-powered supply chain optimization with demand forecasting and inventory management.',
-      features: ['Demand Forecasting', 'Inventory Management', 'Supplier Analytics', 'Risk Assessment', 'Cost Optimization'],
-      price: '$399/month',
-      category: 'Micro SAAS'
+      id: 6,
+      title: 'Database Services',
+      description: 'Database design, optimization, and management services.',
+      icon: Database,
+      category: 'Database',
+      features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery'],
+      price: 'Starting at $1,000/month'
     }
   ];
+<<<<<<< HEAD
   const categories = [
     'All',
     'AI Services',
@@ -784,12 +599,18 @@ const ServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [currentPage, setCurrentPage] = React.useState(1);
   const servicesPerPage = 12;
+=======
+
+  const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Database'];
+
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    return matchesSearch && matchesCategory;
   });
+<<<<<<< HEAD
   const totalPages = Math.ceil(filteredServices.length / servicesPerPage);
   const startIndex = (currentPage - 1) * servicesPerPage;
   const endIndex = startIndex + servicesPerPage;
@@ -800,26 +621,38 @@ const ServicesPage: React.FC = () => {
   }, [selectedCategory, searchTerm]);
   return (
     <React.Fragment>
+=======
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       <Helmet>
-        <title>Services - Zion Tech Group | AI and IT Solutions</title>
-        <meta name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business. From AI solutions to cloud services and data analytics." />
-        <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group" />
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI and IT services including AI solutions, cloud services, cybersecurity, data analytics, and more." />
+        <meta name="keywords" content="services, AI solutions, cloud services, cybersecurity, data analytics, mobile development, database services" />
       </Helmet>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+      
+      <Navigation />
+      
+      <main className="pt-20">
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Our Services;
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to transform your business and drive growth.
+              Comprehensive AI and IT solutions designed to transform your business 
+              and drive growth.
             </p>
           </div>
         </section>
         {/* Search and Filter Section */}
+<<<<<<< HEAD
         <section className="py-8 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
@@ -866,13 +699,42 @@ const ServicesPage: React.FC = () => {
                     {category}
                   </button>
                 ))}
+=======
+        <section className="py-10 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row gap-4 mb-8">
+              <div className="relative flex-1">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+              <div className="relative">
+                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="pl-10 pr-8 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
+                >
+                  {categories.map(category => (
+                    <option key={category} value={category} className="bg-slate-800">
+                      {category === 'all' ? 'All Categories' : category}
+                    </option>
+                  ))}
+                </select>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               </div>
             </div>
           </div>
         </section>
         {/* Services Grid */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
             <div className="flex justify-between items-center mb-8">
               <h2 className="text-3xl font-bold text-white">
                 {selectedCategory === 'All' ? 'All Services' : `${selectedCategory}`}
@@ -931,10 +793,35 @@ const ServicesPage: React.FC = () => {
                     <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300">
                       Learn More;
   </
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service) => (
+                <div key={service.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, index) => (
+                      <li key={index} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex items-center justify-between">
+                    <span className="text-blue-400 font-semibold">{service.price}</span>
+                    <button className="flex items-center text-white hover:text-blue-400 transition-colors">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-1" />
+                    </button>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </div>
                 </div>
               ))}
             </div>
+<<<<<<< HEAD
             {/* Pagination */}
             {totalPages > 1 && (
               <div className="flex justify-center items-center mt-12 space-x-2">
@@ -967,11 +854,14 @@ const ServicesPage: React.FC = () => {
   </
               </div>
             )}
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
+<<<<<<< HEAD
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
@@ -1002,3 +892,31 @@ export default ServicesPage;
   </span>
   </h1>
   </div>
+=======
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get a customized solution.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Get Quote
+                </button>
+                <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Contact Us
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default ServicesPage;
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
