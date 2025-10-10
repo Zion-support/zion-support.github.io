@@ -13,7 +13,7 @@ export interface PerformanceMetrics {
   ttfb?: number;
   inp?: number
   }
-}
+};
 export interface ErrorReport {
     message: string,
   stack?: string;
@@ -50,8 +50,8 @@ class MonitoringService {}
         // Largest Contentful Paint;
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
-  }
-          const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
+  };
+const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
           this.reportMetric('lcp', this.metrics.lcp);
         })
@@ -152,8 +152,8 @@ class MonitoringService {}
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
       return
   }
-    }
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
+    };
+const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
     const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';
     // Keep HEAD version;
@@ -175,8 +175,8 @@ class MonitoringService {}
     }
     // Send to error tracking service (if configured);
   }
-  public getMetrics(): PerformanceMetrics {}
-    return { ...this.metrics }
+  public getMetrics(): PerformanceMetrics {};
+return { ...this.metrics }
   }
   public getErrors(): ErrorReport[] {
     return [...this.errors]
@@ -187,8 +187,8 @@ class MonitoringService {}
   }
   }
   public measureMemory(): void {
-    if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {}
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory;
+    if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {};
+const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory;
       if (memory) {
     // Keep HEAD version
   }

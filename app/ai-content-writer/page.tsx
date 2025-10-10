@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-import { CheckCircle, ArrowRight, PenTool, Zap, Users, BarChart3 } from 'lucide-react';
+import { CheckCircle, ArrowRight, PenTool, Zap, Users, BarChart3 , Eye } from 'lucide-react';
 
 const AIContentWriterPage: React.FC = () => {
   const features = [
@@ -23,23 +23,22 @@ const AIContentWriterPage: React.FC = () => {
       description: 'Create content in various formats including blogs, social media, emails, and marketing copy.',
       benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy']
     }
-  ]
-  const benefits = [
+  ];
+const benefits = [
     '10x faster content creation',
     'Improved SEO performance',
     'Consistent brand voice',
     'Multi-language support',
     'Content analytics',
     'Team collaboration'
-  ]
-
-  const stats = [
+  ];
+const stats = [
     { icon: <PenTool className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Articles Created' },
     { icon: <Zap className="w-8 h-8 text-green-500" />, value: '90%', label: 'Time Saved' },
     { icon: <Users className="w-8 h-8 text-purple-500" />, value: '500+', label: 'Happy Users' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '300%', label: 'Engagement Boost' }
-  ]
-  return (
+  ];
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>AI Content Writer | Zion Tech Group</title>
@@ -54,7 +53,6 @@ const AIContentWriterPage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             AI Content Writer
-
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Create high-quality, engaging content at scale with our advanced AI-powered writing assistant
@@ -169,7 +167,6 @@ const AIContentWriterPage: React.FC = () => {
       <Footer />
     </div>
   );
-}
-
+};
 export default AIContentWriterPage;
 

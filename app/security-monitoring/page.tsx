@@ -46,7 +46,7 @@ const SecurityMonitoringPage: React.FC = () => {
       description: 'Automated incident response and immediate notification systems to minimize security breaches.'
   }
     }
-  ]
+  ];
 const benefits = [
     '24/7 continuous security monitoring',
     'AI-powered threat detection and analysis',;
@@ -56,13 +56,13 @@ const benefits = [
     'Compliance monitoring and reporting',;
     'Expert security team support',;
     'Customizable monitoring rules';
-  ]
+  ];
 return (
     <>
       <Helmet>
         <title>Security Monitoring Services - Zion Tech Group | 24/7 Cybersecurity</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -164,6 +164,6 @@ return (
       </div>
     </>
   ),
-}
+};
 export default SecurityMonitoringPage;
 

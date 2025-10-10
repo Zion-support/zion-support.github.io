@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight } from 'lucide-react';
+import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight , Eye } from 'lucide-react';
 const EcommerceAnalyticsProPage: React.FC = () => {
   const features = [
     {
@@ -34,8 +34,8 @@ const EcommerceAnalyticsProPage: React.FC = () => {
       title: 'Conversion Tracking',
       description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
     }
-  ]
-  return (
+  ];
+return (
     <React.Fragment>
       <Helmet>
         <title>E-commerce Analytics Pro | Zion Tech Group - Advanced E-commerce Intelligence</title>
@@ -71,6 +71,6 @@ const EcommerceAnalyticsProPage: React.FC = () => {
       </div>
     </React.Fragment>
   );
-}
+};
 export default EcommerceAnalyticsProPage;
   </h1>

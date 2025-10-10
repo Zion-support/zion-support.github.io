@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Search, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, ArrowRight, CheckCircle, ExternalLink, Download, FileText, Settings, Database } from 'lucide-react';
+import { Search, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, ArrowRight, CheckCircle, ExternalLink, Download, FileText, Settings, Database , Eye } from 'lucide-react';
 
 const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -14,9 +14,8 @@ const DocsPage: React.FC = () => {
     { id: 'it-services', name: 'IT Services', icon: Cloud },
     { id: 'api', name: 'API Reference', icon: Code },
     { id: 'security', name: 'Security', icon: Shield }
-  ]
-
-  const documentation = [
+  ];
+const documentation = [
     {
       id: 1,
       title: 'Getting Started Guide',
@@ -107,20 +106,18 @@ const DocsPage: React.FC = () => {
         'Support Resources'
       ]
     }
-  ]
-
-  const quickLinks = [
+  ];
+const quickLinks = [
     { title: 'API Reference', url: '/api', icon: Code },
     { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
     { title: 'Community', url: '/community', icon: Users },
     { title: 'Support', url: '/support', icon: Shield }
-  ]
-
-  const filteredDocs = selectedCategory === 'all' 
-    ? documentation 
+  ];
+const filteredDocs = selectedCategory === 'all' 
+    ? documentation
     : documentation.filter(doc => doc.category === selectedCategory);
 
-  const searchResults = searchQuery 
+  const searchResults = searchQuery;
     ? documentation.filter(doc => 
         doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.description.toLowerCase().includes(searchQuery.toLowerCase())
@@ -348,6 +345,5 @@ const DocsPage: React.FC = () => {
       </div>
     </>
   );
-}
-
+};
 export default DocsPage;

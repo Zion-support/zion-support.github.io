@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings , Eye } from 'lucide-react';
 const AiCloudInfrastructurePage: React.FC = () => {
   const features = [
     {
@@ -30,8 +30,8 @@ const AiCloudInfrastructurePage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
-  return (
+  ];
+return (
     <React.Fragment>
       <Helmet>
         <title>AI Cloud Infrastructure - Zion Tech Group</title>
@@ -111,7 +111,7 @@ const AiCloudInfrastructurePage: React.FC = () => {
       <Footer />
     </React.Fragment>
   ),
-}
+};
 export default AiCloudInfrastructurePage;
   </button>
   </h2>

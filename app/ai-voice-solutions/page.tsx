@@ -17,7 +17,7 @@ const AiVoiceSolutionsPage: React.FC = () => {
               AI Voice Solutions
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Revolutionize customer interactions with advanced AI voice technologies including 
+              Revolutionize customer interactions with advanced AI voice technologies including
               speech recognition, natural language processing, and intelligent voice assistants.
             </p>
           </div>
@@ -111,6 +111,5 @@ const AiVoiceSolutionsPage: React.FC = () => {
       </div>
     </>
   );
-}
-
+};
 export default AiVoiceSolutionsPage;

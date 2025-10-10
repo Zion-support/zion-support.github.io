@@ -1,12 +1,11 @@
 'use client';
 import React from 'react';
-import { Loader2, Brain, Cloud, Shield, Code } from 'lucide-react';
+import { Loader2, Brain, Cloud, Shield, Code , Eye } from 'lucide-react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
-}
-
+};
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   text = 'Loading...' 
@@ -15,9 +14,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
-  }
-
-  return (
+  };
+return (
     <div className="flex flex-col items-center justify-center p-8">
       <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-500`} />
       {text && (
@@ -25,8 +23,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       )}
     </div>
   );
-}
-
+};
 export const PageLoader: React.FC = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
     <div className="text-center">

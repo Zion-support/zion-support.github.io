@@ -11,7 +11,7 @@ export interface UseEnhancedPerformanceOptions {
   trackPerformance?: boolean;
   trackAnalytics?: boolean
   }
-}
+};
 export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
     const {
     component = 'Unknown',;
@@ -27,7 +27,7 @@ useEffect(() => {
     if (trackAnalytics) {
       analytics.trackCustomEvent('Component', 'Mounted', component)
   }
-    }
+    };
 return () => {
     // Track component unmount duration;
       if (trackPerformance) {
@@ -84,8 +84,8 @@ const trackUserAction = useCallback(;
     [component, trackAnalytics]
   );
 const measureOperation = useCallback(;
-    (operationName: string) => {}
-      const _markName = `${component}-${operationName}`;
+    (operationName: string) => {};
+const _markName = `${component}-${operationName}`;
       const _startTime = performance.now();
 return {
     end: () => {
@@ -97,7 +97,7 @@ if (trackPerformance) {
               duration,;
               duration > 1000 ? 'slow' : 'fast';
             );
-          }
+          };
 return duration;
         },;
       },
@@ -109,5 +109,5 @@ return {
     measureOperation,
   }
   }
-}
+};
 export default useEnhancedPerformance;

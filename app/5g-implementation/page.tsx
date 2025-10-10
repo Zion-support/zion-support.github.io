@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
+import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart , Eye } from 'lucide-react';
 const FiveGImplementationPage: React.FC = () => {
   const features = [
     {
@@ -40,8 +40,8 @@ const FiveGImplementationPage: React.FC = () => {
       description: 'Advanced analytics and reporting for 5G network performance and optimization.',
       benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']
     }
-  ]
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>5G Network Implementation - Zion Tech Group | AI & IT Solutions</title>
@@ -131,6 +131,6 @@ const FiveGImplementationPage: React.FC = () => {
       </div>
     </>
   );
-}
+};
 export default FiveGImplementationPage;
 

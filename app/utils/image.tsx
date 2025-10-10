@@ -4,7 +4,7 @@ import React from 'react';
 import React, { useState, useCallback } from 'react';
 interface ImageProps {
     src: string,
-    alt: string
+    alt: string,
   }
 interface ImageProps {}
 
@@ -30,8 +30,8 @@ interface ImageProps {}
   style?: React.CSSProperties;
   onLoad?: () => void;
   onError?: () => void;}
-}
-export const Image: React.FC<ImageProps>= ({}
+};
+export const Image: React.FC<ImageProps>= ({};
 export const Image: React.FC<ImageProps> = ({}
   src,;
 export const Image: React.FC<ImageProps> = ({
@@ -52,8 +52,8 @@ export const Image: React.FC<ImageProps> = ({
   onError,
   }
   ...props}
-}) => {}
-  const [, setIsLoaded] = useState(false);
+}) => {};
+const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const handleLoad = useCallback(() => {}
     setIsLoaded(true);
@@ -69,8 +69,8 @@ export const Image: React.FC<ImageProps> = ({
       position: 'absolute',
       top: 0,
       left: 0,
-  }
-  const imageStyle: React.CSSProperties = {}
+  };
+const imageStyle: React.CSSProperties = {}
     ...style,;
     ...(fill && {}
       position: 'absolute',
@@ -85,15 +85,15 @@ export const Image: React.FC<ImageProps> = ({
     </ImageProps>
     return (</ImageProps>
   }
-  if (hasError) {}
-    return (
+  if (hasError) {};
+return (
       <div}
-  if (hasError) {}
-    return(<div}
+  if (hasError) {};
+return(<div}
 'use client';
 import React, { useState, useCallback } from 'react';
 interface ImageProps {/* TODO: Fix JSX expression */}
-}
+};
 export const,;
   Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -117,8 +117,8 @@ export const,;
         <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
       </div>
     ),
-  }
-  return(<img;
+  };
+return(<img;
   return (<img />
       src={src}
       alt={alt}
@@ -140,11 +140,11 @@ export default Image</img>
       {...props})
     />);
   );
-}
+};
 export default Image;
     />);
   );
-}
+};
 export default Image;
 
 "`;

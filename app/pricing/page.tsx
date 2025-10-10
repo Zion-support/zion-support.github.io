@@ -3,7 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
+import { CheckCircle, Star, ArrowRight, Zap , Eye } from 'lucide-react';
 
 const PricingPage: React.FC = () => {
   const plans = [
@@ -19,7 +19,7 @@ const PricingPage: React.FC = () => {
         'Monthly Reports',
         'Basic Analytics Dashboard'
       ],
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
@@ -35,7 +35,7 @@ const PricingPage: React.FC = () => {
         'API Access',
         'Training Sessions'
       ],
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -52,11 +52,10 @@ const PricingPage: React.FC = () => {
         'On-site Training',
         'SLA Guarantee'
       ],
-      popular: false
+      popular: false,
     }
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
@@ -81,7 +80,7 @@ const PricingPage: React.FC = () => {
                 <div
                   key={index}
                   className={`bg-white/5 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
-                    plan.popular 
+                    plan.popular
                       ? 'border-cyan-400/50 scale-105' 
                       : 'border-white/10 hover:border-cyan-400/30'
                   }`}
@@ -134,6 +133,5 @@ const PricingPage: React.FC = () => {
       </div>
     </>
   );
-}
-
+};
 export default PricingPage;

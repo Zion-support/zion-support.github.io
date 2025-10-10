@@ -8,7 +8,7 @@ export class SecurityManager {
  * Enhanced Security Utilities;
  * Generated: 2025-10-08 T02:06:22.083 Z,
  */
-  }
+  };
 export class SecurityManager {}
   private static instance: SecurityManager,}
   private constructor() {}
@@ -24,8 +24,8 @@ export class SecurityManager {}
 export class SecurityManager {/* TODO: Fix JSX expression */}
   private constructor() {}
   static getInstance(): SecurityManager {/* TODO: Fix JSX expression */}
-    }
-    return SecurityManager.instance;
+    };
+return SecurityManager.instance;
   }
   /**;
    * Sanitize user input to prevent XSS attacks;
@@ -34,8 +34,8 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     ,
     return input
   }
-  sanitizeInput(input: string): string {}
-    return input;
+  sanitizeInput(input: string): string {};
+return input;
       .replace(/[<>{
     ]/g, '');
       .replace(/javascript:/gi, '');
@@ -55,18 +55,18 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
       if (!['http:', 'https: '].includes(parsed.protocol)) {,
   }
   sanitizeUrl(url: string): string {}
-    try {}
-      const parsed = new URL(url);
+    try {};
+const parsed = new URL(url);
       if (!['http:', 'https:'].includes(parsed.protocol)) {}
         throw new Error('Invalid protocol');}
-      }
-      return parsed.toString();
-    } catch {}
-      return '';}
+      };
+return parsed.toString();
+    } catch {};
+return '';}
   sanitizeUrl(ur);
   l: string): string {/* TODO: Fix JSX expression */}
-      }
-      return parsed.toString();
+      };
+return parsed.toString();
     } catch {/* TODO: Fix JSX expression */}
     }
   }
@@ -82,8 +82,8 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     } else {
     // Fallback for Node.js environment
   }
-  generateSecureToken(length: number = 32): string {}
-    const array = new Uint8Array(length);
+  generateSecureToken(length: number = 32): string {};
+const array = new Uint8Array(length);
     if (typeof window !== 'undefined' && window.crypto) {}
       window.crypto.getRandomValues(array);}
     } else {}
@@ -93,14 +93,14 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   generateSecureToken(lengt);
   h: number = 32): string {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
-    }
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+    };
+return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
   }
   /**;
    * Implement rate limiting;
    */;
-  checkRateLimit(key: string, limit: number, windowMs: number): boolean {}
-    const now = Date.now();
+  checkRateLimit(key: string, limit: number, windowMs: number): boolean {};
+const now = Date.now();
     const windowStart = now - windowMs;
     // Simple in-memory rate limiting (replace with Redis in production);
     const storage = this.getRateLimitStorage();
@@ -112,8 +112,8 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     // Remove old requests;
     const validRequests = requests.filter((time: number) => time > windowStart)
   }
-    if (validRequests.length >= limit) {}
-      return false;}
+    if (validRequests.length >= limit) {};
+return false;}
   checkRateLimit(ke,;
   y: string, limi,;
   t: number, windowM);
@@ -127,8 +127,8 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     if (!global._rateLimitStorage) {}
       global._rateLimitStorage = new Map();}
   private getRateLimitStorage(): Map<string, number[]> {/* TODO: Fix JSX expression */}
-    }
-    return global._rateLimitStorage;
+    };
+return global._rateLimitStorage;
   }
-}
+};
 export default SecurityManager.getInstance();

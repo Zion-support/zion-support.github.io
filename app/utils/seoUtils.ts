@@ -11,19 +11,19 @@
   modifiedTime?: string;
   section?: string;
   tags?: string[]
-}
+};
 export class SEOManager {
     private config: SEOConfig,
 constructor(config: SEOConfig) {
-    this.config = config
+    this.config = config;
   }
   }
 public updateConfig(newConfig: Partial<SEOConfig>): void {}
     this.config = { ...this.config, ...newConfig }
     this.applyConfig();
   }
-public getConfig(): SEOConfig {}
-    return { ...this.config }
+public getConfig(): SEOConfig {};
+return { ...this.config }
   }
 private applyConfig(): void {
     if (typeof document === 'undefined') return;
@@ -74,8 +74,8 @@ private applyConfig(): void {
   }
 private updateMetaTag(name: string, content: string): void {
     if (typeof document === 'undefined') return
-  }
-    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+  };
+let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
     if (!meta) {
     meta = document.createElement('meta');
       meta.name = name;
@@ -128,8 +128,8 @@ twitterTags.forEach(tag => {
   }
 private updateMetaTagByProperty(property: string, content: string): void {
     if (typeof document === 'undefined') return
-  }
-    let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
+  };
+let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
     if (!meta) {
     meta = document.createElement('meta');
       meta.setAttribute('property', property);
@@ -141,7 +141,7 @@ private updateMetaTagByProperty(property: string, content: string): void {
 private addMetaTag(name: string, content: string): void {
     if (typeof document === 'undefined') return;
 const meta = document.createElement('meta')
-    meta.name = name
+    meta.name = name;
     meta.content = content,
     document.head.appendChild(meta)
   }
@@ -153,11 +153,11 @@ export const generateMetaDescription = (content: string, maxLength: number = 160
   if (cleanContent.length <= maxLength) {
     return cleanContent
   }
-  }
-  return cleanContent.substring(0, maxLength - 3) + '...';
+  };
+return cleanContent.substring(0, maxLength - 3) + '...';
 }
 })
-}
+};
 export const addStructuredData = (data: any): void => {
     if (typeof document === 'undefined') return;
 const script = document.createElement('script')

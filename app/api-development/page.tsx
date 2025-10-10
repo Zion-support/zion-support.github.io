@@ -17,7 +17,7 @@ const ApiDevelopmentPage: React.FC = () => {
               API Development
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Build robust, scalable APIs that power your applications with our comprehensive 
+              Build robust, scalable APIs that power your applications with our comprehensive
               API development services including RESTful APIs, GraphQL, and microservices.
             </p>
           </div>
@@ -111,6 +111,5 @@ const ApiDevelopmentPage: React.FC = () => {
       </div>
     </>
   );
-}
-
+};
 export default ApiDevelopmentPage;

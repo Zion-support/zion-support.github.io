@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Home, Users, DollarSign, BarChart, Shield, Zap } from 'lucide-react';
+import { Home, Users, DollarSign, BarChart, Shield, Zap , Eye } from 'lucide-react';
 const PropertyManagementAIPage: React.FC = () => {
   const features = [
     { icon: Home, title: 'Property Portfolio Management', description: 'Comprehensive management of multiple properties with AI insights.' },
@@ -10,8 +10,8 @@ const PropertyManagementAIPage: React.FC = () => {
     { icon: BarChart, title: 'Financial Analytics', description: 'Advanced financial reporting and property performance analytics.' },
     { icon: Shield, title: 'Maintenance Tracking', description: 'Predictive maintenance and automated work order management.' },
     { icon: Zap, title: 'Automation', description: 'Automated rent collection, lease renewals, and property operations.' }
-  ]
-  return (
+  ];
+return (
     <React.Fragment>
       <Helmet>
         <title>Property Management AI | Zion Tech Group - Intelligent Real Estate Management</title>
@@ -41,5 +41,5 @@ const PropertyManagementAIPage: React.FC = () => {
       </div>
     </React.Fragment>
   );
-}
+};
 export default PropertyManagementAIPage;

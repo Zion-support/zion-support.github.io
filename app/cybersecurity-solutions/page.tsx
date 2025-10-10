@@ -17,7 +17,7 @@ const CybersecuritySolutionsPage: React.FC = () => {
               Cybersecurity Solutions
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Protect your organization with comprehensive cybersecurity solutions including 
+              Protect your organization with comprehensive cybersecurity solutions including
               threat detection, vulnerability assessment, and 24/7 security monitoring.
             </p>
           </div>
@@ -111,6 +111,5 @@ const CybersecuritySolutionsPage: React.FC = () => {
       </div>
     </>
   );
-}
-
+};
 export default CybersecuritySolutionsPage;

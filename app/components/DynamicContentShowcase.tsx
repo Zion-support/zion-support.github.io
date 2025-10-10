@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award , Eye } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,9 +26,8 @@ const DynamicContentShowcase: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale effortlessly across multiple regions with automatic load balancing'
     }
-  ]
-
-  const benefits = [
+  ];
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -37,29 +36,28 @@ const DynamicContentShowcase: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-
-  const testimonials = [
+  ];
+const testimonials = [
     {
       name: 'Sarah Johnson',
       company: 'TechCorp Inc.',
       role: 'CTO',
       content: 'This solution transformed our operations completely. The AI insights are incredible.',
-      rating: 5
+      rating: 5,
     },
     {
       name: 'Michael Chen',
       company: 'DataFlow Systems',
       role: 'CEO',
       content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
-      rating: 5
+      rating: 5,
     },
     {
       name: 'Emily Rodriguez',
       company: 'CloudFirst Solutions',
       role: 'VP Engineering',
       content: 'Outstanding security features and seamless integration. Perfect for our needs.',
-      rating: 5
+      rating: 5,
     }
   ]
 
@@ -132,6 +130,5 @@ const DynamicContentShowcase: React.FC = () => {
       </div>
     </div>
   );
-}
-
+};
 export default DynamicContentShowcase;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Settings, ArrowRight } from 'lucide-react';
+import { Settings, ArrowRight , Eye } from 'lucide-react';
 const MicroSaaSPage: React.FC = () => {
     const serviceName = 'expense-tracker';
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
@@ -9,7 +9,7 @@ return (
       <Helmet>
   }
         <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
         <link>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -50,5 +50,5 @@ return (
       </div>
     </>
   );
-}
+};
 export default MicroSaaSPage;

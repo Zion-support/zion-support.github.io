@@ -4,7 +4,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield , Eye } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
   const microSaasTools = [
@@ -13,55 +13,53 @@ const MicroSaasPage: React.FC = () => {
       description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
       features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content scheduling'],
       price: '$29/month',
-      icon: Zap
+      icon: Zap,
     },
     {
       title: 'Analytics Dashboard',
       description: 'Comprehensive analytics and reporting for your business metrics and KPIs.',
       features: ['Real-time data', 'Custom reports', 'Data visualization', 'Export capabilities'],
       price: '$49/month',
-      icon: Star
+      icon: Star,
     },
     {
       title: 'Security Monitor',
       description: 'Advanced security monitoring and threat detection for your applications.',
       features: ['Real-time monitoring', 'Threat detection', 'Automated alerts', 'Compliance reporting'],
       price: '$39/month',
-      icon: Shield
+      icon: Shield,
     },
     {
       title: 'Task Manager Pro',
       description: 'AI-powered task management with intelligent prioritization and scheduling.',
       features: ['Smart prioritization', 'Team collaboration', 'Progress tracking', 'Deadline management'],
       price: '$19/month',
-      icon: Clock
+      icon: Clock,
     }
-  ]
-
-  const features = [
+  ];
+const features = [
     {
       title: 'Rapid Deployment',
       description: 'Get your micro SaaS solution up and running in days, not months.',
-      icon: Zap
+      icon: Zap,
     },
     {
       title: 'Scalable Architecture',
       description: 'Built to handle growth from startup to enterprise scale.',
-      icon: Star
+      icon: Star,
     },
     {
       title: 'AI-Powered',
       description: 'Leverage cutting-edge AI to provide intelligent features and automation.',
-      icon: CheckCircle
+      icon: CheckCircle,
     },
     {
       title: 'Secure & Compliant',
       description: 'Enterprise-grade security and compliance built-in from day one.',
-      icon: Shield
+      icon: Shield,
     }
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>Micro SaaS Solutions | Zion Tech Group</title>
@@ -147,6 +145,5 @@ const MicroSaasPage: React.FC = () => {
       <Footer />
     </>
   );
-}
-
+};
 export default MicroSaasPage;

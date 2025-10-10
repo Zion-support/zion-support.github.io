@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
+import { ChevronRight, Home , Eye } from 'lucide-react';
 
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
@@ -9,9 +9,8 @@ const Breadcrumb: React.FC = () => {
   // Don't show breadcrumb on home page
   if (location.pathname === '/') {
     return null;
-  }
-
-  const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
+  };
+const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
   
   const breadcrumbItems = [
     { name: 'Home', path: '/', icon: Home }
@@ -49,6 +48,5 @@ const Breadcrumb: React.FC = () => {
       </div>
     </nav>
   );
-}
-
+};
 export default Breadcrumb;

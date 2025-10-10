@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, ArrowRight, CheckCircle, Star, ExternalLink } from 'lucide-react';
+import { Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, ArrowRight, CheckCircle, Star, ExternalLink , Eye } from 'lucide-react';
 
 const ApiPage: React.FC = () => {
   const apiEndpoints = [
@@ -22,7 +22,7 @@ const ApiPage: React.FC = () => {
             response: {
               response: "Hello! I'm here to help you with any questions or tasks you might have.",
               confidence: 0.95,
-              tokens_used: 25
+              tokens_used: 25,
             }
           }
         },
@@ -143,9 +143,8 @@ const ApiPage: React.FC = () => {
         }
       ]
     }
-  ]
-
-  const authenticationMethods = [
+  ];
+const authenticationMethods = [
     {
       name: 'API Key',
       description: 'Simple API key authentication',
@@ -164,15 +163,13 @@ const ApiPage: React.FC = () => {
       example: 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
       security: 'High'
     }
-  ]
-
-  const rateLimits = [
+  ];
+const rateLimits = [
     { tier: 'Free', requests: '1,000/month', burst: '10/minute' },
     { tier: 'Pro', requests: '50,000/month', burst: '100/minute' },
     { tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute' }
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>API Reference - Zion Tech Group</title>
@@ -442,6 +439,5 @@ const ApiPage: React.FC = () => {
       </div>
     </>
   );
-}
-
+};
 export default ApiPage;

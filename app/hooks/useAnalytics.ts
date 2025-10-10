@@ -4,7 +4,7 @@ interface AnalyticsEvent {
   event_label: string,
   value?: number
   }
-}
+};
 export const useAnalytics = (;
   const trackEvent = useCallback((eventName: string, parameters: AnalyticsEvent) => {
     ) => {

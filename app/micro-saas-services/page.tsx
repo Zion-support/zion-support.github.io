@@ -39,7 +39,7 @@ export interface MicroSaasService {
     features: string[]
   }
   }
-}
+};
 export const microSaasServices: MicroSaasService[] = [
   // AI-Powered Productivity Tools,
   {

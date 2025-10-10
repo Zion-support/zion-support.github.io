@@ -40,7 +40,7 @@ const AccessibilityPage: React.FC = () => {
       description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
     }
-  ]
+  ];
 const standards = [
     {
       name: 'WCAG 2.1 AA',
@@ -62,9 +62,8 @@ const standards = [
       description: 'European accessibility standard for ICT products and services',
       status: 'Fully Compliant'
     }
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
@@ -187,6 +186,6 @@ const standards = [
       </div>
     </>
   );
-}
+};
 export default AccessibilityPage;
 

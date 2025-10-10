@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
+import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key , Eye } from 'lucide-react';
 
 const TermsPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024';
@@ -47,15 +47,13 @@ const TermsPage: React.FC = () => {
       icon: Scale,
       content: 'These terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States.'
     }
-  ]
-
-  const contactInfo = {
+  ];
+const contactInfo = {
     email: 'legal@ziontechgroup.com',
     phone: '+1 (302) 464-0950',
     address: '364 E Main St STE 1008, Middletown, DE 19709'
-  }
-
-  return (
+  };
+return (
     <>
       <Helmet>
         <title>Terms of Service - Zion Tech Group</title>
@@ -143,7 +141,7 @@ const TermsPage: React.FC = () => {
               <div>
                 <h3 className="text-lg font-semibold text-white mb-3">Changes to Terms</h3>
                 <p className="text-gray-300">
-                  We reserve the right to modify these terms at any time. We will notify users of any material changes by posting 
+                  We reserve the right to modify these terms at any time. We will notify users of any material changes by posting
                   the new terms on this page and updating the "Last updated" date.
                 </p>
               </div>
@@ -228,6 +226,5 @@ const TermsPage: React.FC = () => {
       </div>
     </>
   );
-}
-
+};
 export default TermsPage;

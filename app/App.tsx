@@ -226,5 +226,5 @@ const App: React.FC = () => {
       </HelmetProvider>
     </ErrorBoundary>
   );
-}
+};
 export default App;

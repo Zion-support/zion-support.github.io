@@ -10,7 +10,7 @@ interface SEOOptimizerProps {
   twitterCard?: string;
   structuredData?: object;
   children: React.ReactNode
-  }
+  };
 const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
@@ -91,10 +91,10 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
         "https://twitter.com/ziontechgroup",
         "https://linkedin.com/company/ziontechgroup"
       ]
-    }
-    return structuredData || defaultStructuredData;
-  }
-  return (
+    };
+return structuredData || defaultStructuredData;
+  };
+return (
     <React.Fragment>
       <Helmet>
         <title>{title}</title>
@@ -146,6 +146,6 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
       )}
     </React.Fragment>
   );
-}
+};
 export default AdvancedSEOOptimizerNew;
   </SEOOptimizerProps>

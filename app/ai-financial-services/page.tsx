@@ -111,6 +111,5 @@ const AiFinancialServicesPage: React.FC = () => {
       </div>
     </>
   );
-}
-
+};
 export default AiFinancialServicesPage;

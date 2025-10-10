@@ -57,7 +57,7 @@ const AboutPage: React.FC = () => {
                   <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                     To empower businesses with cutting-edge AI and IT solutions that drive innovation, 
-                    efficiency, and growth. We believe technology should be accessible, powerful, and 
+                    efficiency, and growth. We believe technology should be accessible, powerful, and
                     transformative for organizations of all sizes.
                   </p>
                   <div className="space-y-4">
@@ -220,6 +220,5 @@ const AboutPage: React.FC = () => {
       <Footer />
     </>
   );
-}
-
+};
 export default AboutPage;

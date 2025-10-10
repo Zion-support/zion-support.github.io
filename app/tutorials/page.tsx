@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, ArrowRight, CheckCircle, ExternalLink, Download } from 'lucide-react';
+import { Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, ArrowRight, CheckCircle, ExternalLink, Download , Eye } from 'lucide-react';
 
 const TutorialsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -13,9 +13,8 @@ const TutorialsPage: React.FC = () => {
     { id: 'saas', name: 'Micro SaaS', icon: Zap },
     { id: 'security', name: 'Security', icon: Shield },
     { id: 'integration', name: 'Integration', icon: Code }
-  ]
-
-  const tutorials = [
+  ];
+const tutorials = [
     {
       id: 1,
       title: 'Getting Started with AI Chat API',
@@ -154,10 +153,9 @@ const TutorialsPage: React.FC = () => {
         ]
       }
     }
-  ]
-
-  const filteredTutorials = selectedCategory === 'all' 
-    ? tutorials 
+  ];
+const filteredTutorials = selectedCategory === 'all' 
+    ? tutorials
     : tutorials.filter(tutorial => tutorial.category === selectedCategory);
 
   const featuredTutorials = tutorials.filter(tutorial => tutorial.rating >= 4.8).slice(0, 3);
@@ -543,6 +541,5 @@ const TutorialsPage: React.FC = () => {
       </div>
     </>
   );
-}
-
+};
 export default TutorialsPage;

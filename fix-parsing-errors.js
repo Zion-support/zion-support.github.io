@@ -1,151 +1,100 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix emoji characters in JSX
-function fixEmojis(content) {
-  const emojiMap = {
-    '🎧': 'headphones',
-    '📈': 'trending-up',
-    '💰': 'dollar-sign',
-    '👥': 'users',
-    '📧': 'Email:',
-    '📍': 'Address:',
-    '🚀': 'rocket',
-    '⚡': 'zap',
-    '🔒': 'lock',
-    '💡': 'lightbulb',
-    '🎯': 'target',
-    '📊': 'bar-chart',
-    '🔧': 'settings',
-    '🌟': 'star',
-    '💼': 'briefcase',
-    '🎨': 'palette',
-    '📱': 'smartphone',
-    '💻': 'laptop',
-    '🌐': 'globe',
-    '🔍': 'search',
-    '📝': 'edit',
-    '✅': 'check',
-    '❌': 'x',
-    '⚠️': 'alert-triangle',
-    'ℹ️': 'info',
-    '🎉': 'party-popper',
-    '🔥': 'flame',
-    '💪': 'muscle',
-    '🎪': 'circus-tent',
-    '🎭': 'theater-masks',
-    '🎨': 'art-palette',
-    '🎵': 'music',
-    '🎬': 'film',
-    '🎮': 'gamepad',
-    '🎲': 'dice',
-    '🎯': 'bullseye',
-    '🎪': 'circus-tent',
-    '🎨': 'palette',
-    '🎵': 'music',
-    '🎬': 'film',
-    '🎮': 'gamepad',
-    '🎲': 'dice',
-    '🎯': 'target',
-    '🎪': 'circus-tent',
-    '🎨': 'palette',
-    '🎵': 'music',
-    '🎬': 'film',
-    '🎮': 'gamepad',
-    '🎲': 'dice',
-    '🎯': 'target'
-  };
-
-  let fixed = content;
-  for (const [emoji, replacement] of Object.entries(emojiMap)) {
-    fixed = fixed.replace(new RegExp(emoji, 'g'), replacement);
-  }
-  return fixed;
-}
-
-// Function to fix common JSX parsing issues
-function fixJSXIssues(content) {
-  let fixed = content;
-  
-  // Fix unclosed JSX elements by checking for common patterns
-  // This is a basic fix - more sophisticated parsing would be needed for complex cases
-  
-  // Fix common emoji issues in JSX
-  fixed = fixEmojis(fixed);
-  
-  // Fix common syntax issues
-  fixed = fixed.replace(/\{\s*'([^']*)'\s*\}/g, '"$1"'); // Fix single quotes in JSX expressions
-  fixed = fixed.replace(/\{\s*"([^"]*)"\s*\}/g, '"$1"'); // Normalize quotes
-  
-  return fixed;
-}
-
-// Function to check and fix JSX structure
-function fixJSXStructure(content) {
-  const lines = content.split('\n');
-  let fixed = content;
-  
-  // Count opening and closing div tags
-  const openDivs = (content.match(/<div/g) || []).length;
-  const closeDivs = (content.match(/<\/div>/g) || []).length;
-  
-  if (openDivs > closeDivs) {
-    console.log(`Warning: Found ${openDivs - closeDivs} unclosed div tags`);
-    // This is a basic check - more sophisticated parsing would be needed
-  }
-  
-  return fixed;
-}
-
-// Main function to process files
-async function processFiles() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'App.tsx'
-  ];
-  
-  let processedCount = 0;
-  let errorCount = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { 
-      ignore: [
-        'node_modules/**',
-        'dist/**',
-        'build/**',
-        '**/*.d.ts',
-        '**/node_modules/**'
-      ]
-    });
-    
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        let fixed = content;
-        
-        // Apply fixes
-        fixed = fixJSXIssues(fixed);
-        fixed = fixJSXStructure(fixed);
-        
-        // Only write if content changed
-        if (fixed !== content) {
-          fs.writeFileSync(file, fixed, 'utf8');
-          console.log(`Fixed: ${file}`);
-          processedCount++;
-        }
-      } catch (error) {
-        console.error(`Error processing ${file}:`, error.message);
-        errorCount++;
+// Common patterns to fix
+const fixes = [
+  // Fix semicolons in arrays
+  {
+    pattern: /(\s*'[^']*',\s*;)/g,
+    replacement: '$1'.replace(';', '')
+  },
+  // Fix missing semicolons after arrays/objects
+  {
+    pattern: /(\]\s*)(const|let|var|function|return|export|import)/g,
+    replacement: '];\n$2'
+  },
+  // Fix missing semicolons after object declarations
+  {
+    pattern: /(\}\s*)(const|let|var|function|return|export|import)/g,
+    replacement: '};\n$2'
+  },
+  // Fix missing closing tags in meta elements
+  {
+    pattern: /<meta>\s*<meta>/g,
+    replacement: '<meta name="description" content="AI-powered solutions" />\n        <meta name="keywords" content="AI, artificial intelligence, business solutions" />'
+  },
+  // Fix missing closing tags for single meta elements
+  {
+    pattern: /<meta>\s*<\/Helmet>/g,
+    replacement: '<meta name="description" content="AI-powered solutions" />\n      </Helmet>'
+  },
+  // Fix missing function declarations
+  {
+    pattern: /^(\s*const\s+\w+\s*=\s*useState)/gm,
+    replacement: 'const Component: React.FC = () => {\n  $1'
+  },
+  // Fix missing imports for Eye icon
+  {
+    pattern: /import.*from 'lucide-react';/,
+    replacement: (match) => {
+      if (!match.includes('Eye')) {
+        return match.replace('}', ', Eye }');
       }
+      return match;
     }
+  },
+  // Fix missing commas in object properties
+  {
+    pattern: /(\w+):\s*(\w+)\s*$/gm,
+    replacement: '$1: $2,'
   }
-  
-  console.log(`\nProcessed ${processedCount} files with ${errorCount} errors`);
+];
+
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
 }
 
-// Run the script
-processFiles().catch(console.error);
+// Find all TypeScript/JavaScript files
+const files = await glob('app/**/*.{ts,tsx,js,jsx}', {
+  ignore: [
+    '**/node_modules/**',
+    '**/dist/**',
+    '**/.next/**',
+    '**/backup*/**',
+    '**/disabled*/**',
+    '**/disabled/**'
+  ]
+});
+
+console.log(`Found ${files.length} files to check...`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} files`);

@@ -1,85 +1,152 @@
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { glob } from 'glob';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Get all files with errors;
-const getAllFilesWithErrors = () => {
-  const srcDir = path.join(__dirname, 'src');
-  const files = [];
-  
-  const scanDirectory = (dir) => {
-    const items = fs.readdirSync(dir);
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        scanDirectory(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
+// More specific patterns to fix
+const fixes = [
+  // Fix missing commas in object properties
+  {
+    pattern: /(\w+):\s*(\w+)\s*$/gm,
+    replacement: '$1: $2,'
+  },
+  // Fix missing commas after object properties in arrays
+  {
+    pattern: /(\s*benefits:\s*\[[^\]]*\])\s*$/gm,
+    replacement: '$1,'
+  },
+  // Fix missing closing braces in object definitions
+  {
+    pattern: /(\s*benefits:\s*\[[^\]]*\])\s*$/gm,
+    replacement: '$1\n    }'
+  },
+  // Fix missing semicolons after array declarations
+  {
+    pattern: /(\]\s*)(const|let|var|function|return|export|import)/g,
+    replacement: '];\n$2'
+  },
+  // Fix missing semicolons after object declarations
+  {
+    pattern: /(\}\s*)(const|let|var|function|return|export|import)/g,
+    replacement: '};\n$2'
+  },
+  // Fix missing closing tags in JSX fragments
+  {
+    pattern: /<>\s*$/gm,
+    replacement: '<>'
+  },
+  // Fix missing closing tags for meta elements
+  {
+    pattern: /<meta>\s*$/gm,
+    replacement: '<meta name="description" content="AI-powered solutions" />'
+  },
+  // Fix missing function declarations
+  {
+    pattern: /^(\s*const\s+\w+\s*=\s*useState)/gm,
+    replacement: 'const Component: React.FC = () => {\n  $1'
+  },
+  // Fix missing imports for Eye icon
+  {
+    pattern: /import.*from 'lucide-react';/,
+    replacement: (match) => {
+      if (!match.includes('Eye')) {
+        return match.replace('}', ', Eye }');
       }
+      return match;
     }
-  };
-  
-  scanDirectory(srcDir);
-  return files;
-};
-
-// Fix all remaining syntax errors;
-const fixRemainingErrors = () => {
-  const files = getAllFilesWithErrors();
-  let fixedCount = 0;
-  
-  for (const filePath of files) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      let modified = false;
-      
-      // Fix component names with spaces or special characters;
-      const componentNameMatch = content.match(/const\s+([A-Za-z0-9\s\-]+)Page: \s*React\.FC/);
-      if (componentNameMatch) {,
-        const oldName = componentNameMatch[1];,
-        const newName = oldName;
-          .replace(/\s+/g, '')
-          .replace(/\-/g, '')
-          .replace(/^([a-z])/, (match, letter) => letter.toUpperCase());
-        
-        if (oldName !== newName) {
-          content = content.replace(new RegExp(`const\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC`);
-          content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page`, 'g'), `export default ${newName}Page`);
-          modified = true;
-        }
-      }
-      
-      // Fix any remaining TODO comments that might cause issues;
-      content = content.replace(/\/\/\s*TODO:.*$/gm, '');
-      content = content.replace(/{\s*\/\/\s*TODO:.*?}/g, '{}');
-      content = content.replace(/\[\s*\/\/\s*TODO:.*?]/g, '[]');
-      content = content.replace(/\(\s*\/\/\s*TODO:.*?\)/g, '()');
-      
-      // Fix any malformed JSX;
-      content = content.replace(/\/\/\s*[^/]/g, '');
-      content = content.replace(/<[^>]*\/\/[^>]*>/g, (match) => match.replace(/\/\/.*/, ''));
-      
-      // Fix any incomplete function calls or objects;
-      content = content.replace(/{\s*}\s*$/gm, '{}');
-      content = content.replace(/\[\s*\]\s*$/gm, '[]');
-      content = content.replace(/\(\s*\)\s*$/gm, '()');
-      
-      if (modified) {
-        fs.writeFileSync(filePath, content);
-        console.log(`Fixed: ${path.relative(__dirname, filePath)}`);
-        fixedCount++;
-      }
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
-    }
+  },
+  // Fix missing closing parentheses in function calls
+  {
+    pattern: /(\w+)\s*$/gm,
+    replacement: '$1'
+  },
+  // Fix missing semicolons in variable declarations
+  {
+    pattern: /(\w+)\s*=\s*(\w+)\s*$/gm,
+    replacement: '$1 = $2;'
   }
-  
-  console.log(`Fixed ${fixedCount} files!`);
-};
+];
 
-fixRemainingErrors();
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Apply fixes
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+
+    // Additional specific fixes for common patterns
+    const specificFixes = [
+      // Fix missing commas in object properties
+      {
+        pattern: /(\s*benefits:\s*\[[^\]]*\])\s*$/gm,
+        replacement: '$1,\n    }'
+      },
+      // Fix missing semicolons after array declarations
+      {
+        pattern: /(\]\s*)(const|let|var|function|return|export|import)/g,
+        replacement: '];\n$2'
+      },
+      // Fix missing semicolons after object declarations
+      {
+        pattern: /(\}\s*)(const|let|var|function|return|export|import)/g,
+        replacement: '};\n$2'
+      },
+      // Fix missing closing tags in JSX fragments
+      {
+        pattern: /<>\s*$/gm,
+        replacement: '<>'
+      },
+      // Fix missing closing tags for meta elements
+      {
+        pattern: /<meta>\s*$/gm,
+        replacement: '<meta name="description" content="AI-powered solutions" />'
+      }
+    ];
+
+    specificFixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Find all TypeScript/JavaScript files
+const files = await glob('app/**/*.{ts,tsx,js,jsx}', {
+  ignore: [
+    '**/node_modules/**',
+    '**/dist/**',
+    '**/.next/**',
+    '**/backup*/**',
+    '**/disabled*/**',
+    '**/disabled/**'
+  ]
+});
+
+console.log(`Found ${files.length} files to check...`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} files`);

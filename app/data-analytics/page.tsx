@@ -47,7 +47,7 @@ const DataAnalyticsPage: React.FC = () => {
       description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
   }
     }
-  ]
+  ];
 const benefits = [
     'Make data-driven business decisions',
     'Identify new opportunities and trends',;
@@ -57,13 +57,13 @@ const benefits = [
     'Comply with data regulations',;
     'Real-time insights and reporting',;
     'Custom analytics solutions';
-  ]
+  ];
 return (
     <>
       <Helmet>
         <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -165,6 +165,6 @@ return (
       </div>
     </>
   ),
-}
+};
 export default DataAnalyticsPage;
 

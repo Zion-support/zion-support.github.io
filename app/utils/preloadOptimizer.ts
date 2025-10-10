@@ -5,7 +5,7 @@
 export const preloadCriticalResources = useCallback((...args) => {
     if (typeof window === 'undefined') return;
   // Preload critical fonts
-  }
+  };
 export const preloadCriticalResources = useCallback((...args) => {}
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
@@ -16,13 +16,13 @@ export const preloadCriticalResources = useCallback((...args) => {}
   fontPreloads.forEach(href => {
     )
   }
-  fontPreloads.forEach(href => {)}
-    const link = document.createElement('link');
+  fontPreloads.forEach(href => {)};
+const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'style',;
     link.href = href;
     link.crossOrigin = 'anonymous',;
-    document.head.appendChild(link)}
+    document.head.appendChild(link)};
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   })
   // Preload critical images;
@@ -34,18 +34,18 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   criticalImages.forEach(src => {
     )
   }
-  criticalImages.forEach(src => {)}
-    const link = document.createElement('link');
+  criticalImages.forEach(src => {)};
+const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';
     link.href = src;
     document.head.appendChild(link)}
   })
-}
+};
 export const preloadRoute = useCallback((...args) => {
   if (typeof window === 'undefined') return;
   // Preload route-specific resources;
-  const routeResources = {}
+  const routeResources = {};
 export const preloadRoute = useCallback((...args) => {}
   if (typeof window === 'undefined') return;
   // Preload route-specific resources;
@@ -53,20 +53,20 @@ export const preloadRoute = useCallback((...args) => {}
     '/blog': ['/api/blog/posts', '/images/blog-hero.webp'],;
     '/services': ['/api/services', '/images/services-hero.webp'],;
     '/contact': ['/api/contact', '/images/contact-hero.webp']}
-  }
-  const resources = routeResources[route as keyof typeof routeResources]
+  };
+const resources = routeResources[route as keyof typeof routeResources]
   if (resources) {
     resources.forEach(resource => {)
   }
   if (resources) {}
-    resources.forEach(resource => {)}
-      const link = document.createElement('link');
+    resources.forEach(resource => {)};
+const link = document.createElement('link');
       link.rel = 'prefetch';
       link.href = resource;
       document.head.appendChild(link)}
     })
   }
-}
+};
 export const optimizeImages = useCallback((...args) => {
     if (typeof window === 'undefined') return;
   // Add loading="lazy" to images below the fold;
@@ -81,7 +81,7 @@ export const optimizeImages = useCallback((...args) => {
       entries.forEach(entry => {);
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
-          if (img.dataset['src']) {}
+          if (img.dataset['src']) {};
 export const optimizeImages = useCallback((...args) => {}
   if (typeof window === 'undefined') return;
   // Add loading="lazy" to images below the fold;
@@ -90,11 +90,11 @@ export const optimizeImages = useCallback((...args) => {}
     img.setAttribute('loading', 'lazy')}
   })
   // Add intersection observer for lazy loading;
-  if ('IntersectionObserver' in window) {}
-    const imageObserver = new IntersectionObserver((entries) => {}
+  if ('IntersectionObserver' in window) {};
+const imageObserver = new IntersectionObserver((entries) => {}
       entries.forEach(entry => {)}
-        if (entry.isIntersecting) {}
-          const img = entry.target as HTMLImageElement;
+        if (entry.isIntersecting) {};
+const img = entry.target as HTMLImageElement;
           if (img.dataset['src']) {}
             img['src'] = img.dataset['src']
             img.removeAttribute('data-src');
@@ -102,15 +102,15 @@ export const optimizeImages = useCallback((...args) => {}
   ]
   criticalImages.forEach(src => {/* TODO: Fix JSX expression */})
   })
-}
+};
 export const preloadRoute = (rout);
   e: string) => {/* TODO: Fix JSX expression */}
-  }
-  const resources = routeResources[route as keyof typeof routeResources]
+  };
+const resources = routeResources[route as keyof typeof routeResources]
   if (resources) {/* TODO: Fix JSX expression */}
     })
   }
-}
+};
 export const optimizeImages = () => {/* TODO: Fix JSX expression */}
   })
   // Add intersection observer for lazy loading;
@@ -122,7 +122,7 @@ export const optimizeImages = () => {/* TODO: Fix JSX expression */}
     const lazyImages = document.querySelectorAll('img[data-src]');
     lazyImages.forEach(img => imageObserver.observe(img));
   }
-}
+};
 export const optimizeThirdPartyScripts = useCallback((...args) => {
     if (typeof window === 'undefined') return;
   // Defer non-critical scripts;
@@ -133,7 +133,7 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {
   })
   // Load analytics after page load;
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {}
+    document.addEventListener('DOMContentLoaded', () => {};
 export const optimizeThirdPartyScripts = useCallback((...args) => {}
   if (typeof window === 'undefined') return;
   // Defer non-critical scripts;
@@ -149,16 +149,16 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {}
   } else {}
     loadAnalytics()}
   }
-}
+};
 const loadAnalytics = useCallback((...args) => {
     // Load Google Analytics after page load
-  }
+  };
 const loadAnalytics = useCallback((...args) => {}
   // Load Google Analytics after page load;
   const gaScript = document.createElement('script');
   gaScript.async = true;
   gaScript['src'] = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID',
-  document.head.appendChild(gaScript)}
+  document.head.appendChild(gaScript)};
 export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */}
   })
   // Load analytics after page load;
@@ -166,6 +166,6 @@ export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */}
     })
   } else {/* TODO: Fix JSX expression */}
   }
-}
+};
 const loadAnalytics = () => {/* TODO: Fix JSX expression */}
 }

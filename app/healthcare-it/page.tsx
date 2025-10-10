@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+import { CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight , Eye } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 icon: Heart,
       title: 'HIPAA Compliance',
@@ -39,9 +39,9 @@ icon: Heart,
       title: 'Healthcare Analytics',
       description: 'Comprehensive analytics and reporting for healthcare operations and patient outcomes.',
       benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']
-  }
     }
-  ]
+  ];
+];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
       <SEOOptimizer>

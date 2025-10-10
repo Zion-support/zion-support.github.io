@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe , Eye } from 'lucide-react';
 const BlockchainWeb3Page: React.FC = () => {
     const features = [
     {
@@ -27,14 +27,14 @@ const BlockchainWeb3Page: React.FC = () => {
       title: 'Global Access',
       description: 'Access blockchain services from anywhere in the world with global connectivity.',
       benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']
-  }
     }
-  ]
+  ];
+];
 return (
     <>
       <Helmet>
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div>
         <div className="container mx-auto px-4 py-16"></div>
@@ -79,5 +79,5 @@ return (
       </div>
     </>
   );
-}
+};
 export default BlockchainWeb3Page;

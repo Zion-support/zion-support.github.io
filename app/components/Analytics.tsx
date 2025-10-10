@@ -6,12 +6,12 @@ interface AnalyticsProps {
   enableErrorTracking?: boolean;
   enableUserBehaviorTracking?: boolean
   }
-}
+};
 const Analytics: React.FC<AnalyticsProps> = ({
     enableGoogleAnalytics = true,
   enablePerformanceMonitoring = true,;
   enableErrorTracking = true,;
-  enableUserBehaviorTracking = true
+  enableUserBehaviorTracking = true;
   }
 }) => {
     useEffect(() => {
@@ -54,10 +54,10 @@ gtag('js', new Date());
     gtag('config', 'GA_MEASUREMENT_ID', {
     page_title: document.title,
       page_location: window.location.href,
-      send_page_view: true
+      send_page_view: true,
   }
     })
-  }
+  };
 const initializePerformanceMonitoring = (;
     if ('PerformanceObserver' in window) {
     // Monitor Core Web Vitals;
@@ -91,7 +91,7 @@ observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layo
         }
       })
     }
-  }
+  };
 const initializeErrorTracking = (;
     // Track JavaScript errors;
     window.addEventListener('error', (event) => {
@@ -127,7 +127,7 @@ const initializeErrorTracking = (;
         })
       }
     }, true);
-  }
+  };
 const initializeUserBehaviorTracking = (;
     // Track page views;
     trackEvent('page_view', 'page_view', {
@@ -190,7 +190,7 @@ if (tagName === 'a') {
   }
       })
     })
-  }
+  };
 const trackEvent = (;
     if (typeof window !== 'undefined' && 'gtag' in window) {
     (window as any).gtag('event', action, {
@@ -203,7 +203,7 @@ const trackEvent = (;
         value: typeof value === 'number' ? value : undefined,}
       })
     }
-  }
+  };
 return null;
 }
 // Extend Window interface for gtag;
@@ -214,7 +214,7 @@ declare global {
     gtag: (...args: any[]) => void
   }
   }
-}
+};
 export default Analytics;
 // Analytics Provider for context;
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {

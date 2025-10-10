@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Users, Search, Brain, Target, CheckCircle, ArrowRight, Zap, Shield, BarChart } from 'lucide-react';
+import { Users, Search, Brain, Target, CheckCircle, ArrowRight, Zap, Shield, BarChart , Eye } from 'lucide-react';
 const AIRecruitmentAssistantPage: React.FC = () => {
   const features = [
     {
@@ -34,8 +34,8 @@ const AIRecruitmentAssistantPage: React.FC = () => {
       title: 'Automated Screening',
       description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
     }
-  ]
-  return (
+  ];
+return (
     <React.Fragment>
       <Helmet>
         <title>AI Recruitment Assistant | Zion Tech Group - Intelligent Hiring Solutions</title>
@@ -71,6 +71,6 @@ const AIRecruitmentAssistantPage: React.FC = () => {
       </div>
     </React.Fragment>
   );
-}
+};
 export default AIRecruitmentAssistantPage;
   </h1>

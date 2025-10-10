@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp , Eye } from 'lucide-react';
 const BusinessIntelligencePage: React.FC = () => {
   const features = [
     {
@@ -24,8 +24,8 @@ icon: Brain,
       title: 'Global Analytics',
       description: 'Worldwide business intelligence deployment and support'
     }
-  ]
-  const benefits = [
+  ];
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -34,8 +34,8 @@ icon: Brain,
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-  return (
+  ];
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Business Intelligence | Zion Tech Group</title>
@@ -121,7 +121,7 @@ icon: Brain,
       </section>
     </div>
   ),
-}
+};
 export default BusinessIntelligencePage;
   </button>
   </button>

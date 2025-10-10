@@ -15,7 +15,7 @@ const refreshStatus = async () => {
     setLastUpdated(new Date());
     setIsRefreshing(false)
   }
-  }
+  };
 const services = [
     {
     name: 'API Services',
@@ -66,7 +66,7 @@ const services = [
       description: 'System monitoring and alerts'
   }
     }
-  ]
+  ];
 const incidents = [
     {
     id: 1,
@@ -89,7 +89,7 @@ const incidents = [
       affectedServices: ['Database', 'API Services']
   }
     }
-  ]
+  ];
 const getStatusIcon = (;
     switch (status) {
     case 'operational':;
@@ -104,10 +104,10 @@ const getStatusIcon = (;
   return (
     $3
   )
-  }
-        return <Clock>}
+  };
+return <Clock>}
     }
-  }
+  };
 const getStatusColor = (;
     switch (status) {
     case 'operational':;
@@ -120,10 +120,10 @@ const getStatusColor = (;
   return (
     $3
   )
-  }
-        return 'text-gray-400';}
+  };
+return 'text-gray-400';}
     }
-  }
+  };
 const getSeverityColor = (;
     switch (severity) {
     case 'critical':;
@@ -136,10 +136,10 @@ const getSeverityColor = (;
   return (
     $3
   )
-  }
-        return 'bg-gray-500/20 text-gray-400 border-gray-500/50';}
+  };
+return 'bg-gray-500/20 text-gray-400 border-gray-500/50';}
     }
-  }
+  };
 const overallStatus = services.every(service => service.status === 'operational');
     ? 'operational';
     : services.some(service => service.status === 'outage');

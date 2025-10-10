@@ -1,39 +1,37 @@
 'use client';
 
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Shield, Star, Users , Eye } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
   const features = [
     {
       title: 'AI-Powered Solutions',
       description: 'Leverage cutting-edge AI to automate and optimize your business processes.',
-      icon: Zap
+      icon: Zap,
     },
     {
       title: 'Enterprise Security',
       description: 'Bank-level security and compliance to protect your data and operations.',
-      icon: Shield
+      icon: Shield,
     },
     {
       title: 'Proven Results',
       description: 'Join 500+ companies that have transformed their operations with our solutions.',
-      icon: Star
+      icon: Star,
     },
     {
       title: 'Expert Support',
       description: '24/7 support from our team of AI and IT specialists.',
-      icon: Users
+      icon: Users,
     }
-  ]
-
-  const benefits = [
+  ];
+const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-
-  return (
+  ];
+return (
     <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
@@ -85,6 +83,5 @@ const ContentPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
-}
-
+};
 export default ContentPromotionBanner;

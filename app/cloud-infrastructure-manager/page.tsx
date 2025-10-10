@@ -48,7 +48,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {
       description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
   }
     }
-  ]
+  ];
 const benefits = [
     'Centralized cloud infrastructure management',
     'Automated scaling and optimization',;
@@ -58,13 +58,13 @@ const benefits = [
     'Easy deployment and configuration',;
     'Multi-cloud support',;
     'Expert technical support';
-  ]
+  ];
 return (
     <>
       <Helmet>
         <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -166,6 +166,6 @@ return (
       </div>
     </>
   ),
-}
+};
 export default CloudInfrastructureManagerPage;
 

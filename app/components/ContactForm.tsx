@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle , Eye } from 'lucide-react';
 
 interface FormData {
-  name: string,
-  email: string,
-  company: string,
-  phone: string,
-  service: string,
-  message: string,
+  name: string;
+  email: string;
+  company: string;
+  phone: string;
+  service: string;
+  message: string;
 }
 
 interface FormStatus {
   type: 'idle' | 'loading' | 'success' | 'error';
-  message: string,
-}
+  message: string;
+};
+const ContactForm: React.FC = () => {
 
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -22,12 +23,12 @@ interface FormStatus {
     phone: '',
     service: '',
     message: ''
-  })
+  });
 
   const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
     message: ''
-  })
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -35,11 +36,10 @@ interface FormStatus {
       ...prev,
       [name]: value
     }));
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  };
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus({ type: 'loading', message: 'Sending message...' })
+    setStatus({ type: 'loading', message: 'Sending message...' });
 
     try {
       // Simulate API call
@@ -65,9 +65,8 @@ interface FormStatus {
         message: 'Sorry, there was an error sending your message. Please try again.'
       })
     }
-  }
-
-  const services = [
+  };
+const services = [
     'AI Solutions',
     'Web Development',
     'Mobile App Development',
@@ -76,9 +75,8 @@ interface FormStatus {
     'Cybersecurity',
     'IT Consulting',
     'Other'
-  ]
-
-  return (
+  ];
+return (
     <div className="max-w-2xl mx-auto p-6">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -218,6 +216,5 @@ interface FormStatus {
         </div>
     </div>
   );
-}
-
+};
 export default ContactForm;

@@ -10,7 +10,7 @@ interface SEOHeadProps {
   twitterCard?: string;
   structuredData?: object
   }
-}
+};
 const SEOHead: React.FC<SEOHeadProps> = ({
     title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',;
@@ -21,8 +21,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = 'summary_large_image',;
   structuredData
   }
-}) => {}
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+}) => {};
+const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 const defaultStructuredData = {
     "@context": "https: //schema.org",
@@ -49,36 +49,36 @@ const defaultStructuredData = {
       "https: //www.linkedin.com/company/zion-tech-group",
       "https: //twitter.com/ziontechgroup"
     ],
-  }
+  };
 return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta>
-      <meta>
-      <meta>
-      <meta>
-      <meta>
+      <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="AI-powered solutions" />
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 {/* Open Graph Meta Tags */}
-      <meta>
-      <meta>
-      <meta>
-      <meta>
-      <meta>
-      <meta>
-      <meta>
+      <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="AI-powered solutions" />
       {/* Twitter Card Meta Tags */}
-      <meta>
-      <meta>
-      <meta>
-      <meta>
+      <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       {/* Additional SEO Meta Tags */}
-      <meta>
-      <meta>
-      <meta>
-      <meta>
+      <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
 
       {/* Structured Data */}
       <script>
@@ -86,6 +86,6 @@ return (
       </script>
     </Helmet>
   );
-}
+};
 export default SEOHead;
 

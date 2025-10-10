@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe , Eye } from 'lucide-react';
 const BlockchainIntegrationServicesPage: React.FC = () => {
   const features = [
     {
@@ -24,8 +24,8 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
       title: 'Multi-Chain Support',
       description: 'Support for multiple blockchain networks and protocols'
     }
-  ]
-  const benefits = [
+  ];
+const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
     'Enterprise-grade security and compliance',
@@ -34,8 +34,8 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-  return (
+  ];
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Blockchain Integration Services | Zion Tech Group</title>
@@ -122,7 +122,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
       </div>
     </div>
   ),
-}
+};
 export default BlockchainIntegrationServicesPage;
   </button>
   </button>

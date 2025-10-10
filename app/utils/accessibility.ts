@@ -1,12 +1,12 @@
 // Accessibility utilities for the application;
 export interface AccessibilityConfig {
     enableHighContrast: boolean;
-  enableScreenReader: boolean
-  enableKeyboardNavigation: boolean
+  enableScreenReader: boolean,
+  enableKeyboardNavigation: boolean,
   fontSize: 'small' | 'medium' | 'large',
   colorScheme: 'light' | 'dark' | 'auto'
   }
-}
+};
 export const defaultAccessibilityConfig: AccessibilityConfig = {
     enableHighContrast: false,
   enableScreenReader: true,
@@ -14,19 +14,19 @@ export const defaultAccessibilityConfig: AccessibilityConfig = {
   fontSize: 'medium',
   colorScheme: 'auto',
   }
-}
+};
 export class AccessibilityManager {
     private config: AccessibilityConfig,
 constructor(config: AccessibilityConfig = defaultAccessibilityConfig) {
-    this.config = config
+    this.config = config;
   }
   }
 public updateConfig(newConfig: Partial<AccessibilityConfig>): void {}
     this.config = { ...this.config, ...newConfig }
     this.applyConfig();
   }
-public getConfig(): AccessibilityConfig {}
-    return { ...this.config }
+public getConfig(): AccessibilityConfig {};
+return { ...this.config }
   }
 private applyConfig(): void {
     if (typeof document === 'undefined') return;
@@ -64,15 +64,15 @@ const element = document.querySelector(selector) as HTMLElement
       element.focus(),
       return true
   }
-    }
-    return false;
+    };
+return false;
   }
 public trapFocus(container: HTMLElement): () => void {
     const focusableElements = container.querySelectorAll(,
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     ) as NodeListOf<HTMLElement>
-const firstElement = focusableElements[0]
-    const lastElement = focusableElements[focusableElements.length - 1]
+const firstElement = focusableElements[0];
+const lastElement = focusableElements[focusableElements.length - 1];
 const handleTabKey = (;
       if (e.key !== 'Tab') return;
 if (e.shiftKey) {
@@ -99,7 +99,7 @@ return () => {
   }
     }
   }
-}
+};
 export const accessibilityManager = new AccessibilityManager();
 // Utility functions;
 export const isAccessible = (element: HTMLElement): boolean => {
@@ -108,19 +108,19 @@ export const isAccessible = (element: HTMLElement): boolean => {
   const isInteractive = element.tagName === 'BUTTON' || element.tagName === 'A' || element.hasAttribute('tabindex'),
 return isInteractive && (hasAriaLabel || hasTextContent)
   }
-}
+};
 export const addAriaLabel = (element: HTMLElement, label: string): void => {
     element.setAttribute('aria-label', label)
   }
-}
+};
 export const addAriaDescribedBy = (element: HTMLElement, descriptionId: string): void => {
     element.setAttribute('aria-describedby', descriptionId)
   }
-}
+};
 export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0): void => {
     element.setAttribute('tabindex', tabIndex.toString())
   }
-}
+};
 export const removeElementFocus = (element: HTMLElement): void => {
     element.setAttribute('tabindex', '-1')
   }

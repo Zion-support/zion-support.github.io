@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap , Eye } from 'lucide-react';
 const BlockchainPage: React.FC = () => {
   const features = [
     {
@@ -24,8 +24,8 @@ const BlockchainPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide blockchain deployment and support for international businesses'
     }
-  ]
-  const benefits = [
+  ];
+const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',
     'Enterprise-grade security and compliance',
@@ -34,8 +34,8 @@ const BlockchainPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-  return (
+  ];
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Blockchain Solutions | Zion Tech Group</title>
@@ -245,12 +245,12 @@ const BlockchainPage: React.FC = () => {
               Contact our blockchain experts for a free consultation and custom blockchain strategy development
   </
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">
                 📞 +1 302 464 0950
   </
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 ✉️ kleber@ziontechgroup.com,
@@ -264,7 +264,7 @@ const BlockchainPage: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 export default BlockchainPage;
   </a>
   </a>

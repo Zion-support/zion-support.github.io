@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock , Eye } from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {
   const services = [
@@ -31,8 +31,8 @@ const CloudServicesPage: React.FC = () => {
       features: ['Identity management', 'Data encryption', 'Compliance auditing', 'Threat detection']
 
     }
-  ]
-  const benefits = [
+  ];
+const benefits = [
 
     'Reduced infrastructure costs by up to 40%',
     'Improved scalability and flexibility',
@@ -42,9 +42,8 @@ const CloudServicesPage: React.FC = () => {
     'Disaster recovery and backup solutions',
     'Global availability and performance',
     'Expert cloud architecture guidance'
-  ]
-
-  const pricing = [
+  ];
+const pricing = [
     {
       name: 'Starter',
       price: '$2,999',
@@ -71,7 +70,7 @@ const CloudServicesPage: React.FC = () => {
         'Up to 25 users',
         'Custom integrations'
       ],
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -88,8 +87,8 @@ const CloudServicesPage: React.FC = () => {
       ]
     }
 
-  ]
-  return (
+  ];
+return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -270,7 +269,7 @@ const CloudServicesPage: React.FC = () => {
     </div>
 
   ),
-}
+};
 export default CloudServicesPage;
   </button>
   </button>

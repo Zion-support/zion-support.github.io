@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart } from 'lucide-react';
+import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart , Eye } from 'lucide-react';
 
 const CommunityPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -11,9 +11,8 @@ const CommunityPage: React.FC = () => {
     { icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
     { icon: Calendar, value: '12', label: 'Events Monthly' },
     { icon: Star, value: '4.9', label: 'Average Rating' }
-  ]
-
-  const events = [
+  ];
+const events = [
     {
       title: 'AI Development Workshop',
       date: '2024-02-15',
@@ -38,36 +37,34 @@ const CommunityPage: React.FC = () => {
       attendees: 200,
       description: 'Expert panel on scaling SaaS businesses'
     }
-  ]
-
-  const forums = [
+  ];
+const forums = [
     {
       name: 'AI Services',
       description: 'Discuss AI development, machine learning, and automation',
       posts: 1250,
-      members: 1800
+      members: 1800,
     },
     {
       name: 'IT Services',
       description: 'Cloud infrastructure, DevOps, and system administration',
       posts: 980,
-      members: 1200
+      members: 1200,
     },
     {
       name: 'Micro SaaS',
       description: 'Building and scaling micro SaaS applications',
       posts: 750,
-      members: 900
+      members: 900,
     },
     {
       name: 'General Discussion',
       description: 'General tech discussions and community updates',
       posts: 2100,
-      members: 3000
+      members: 3000,
     }
-  ]
-
-  const benefits = [
+  ];
+const benefits = [
     {
       icon: Users,
       title: 'Network with Peers',
@@ -88,9 +85,8 @@ const CommunityPage: React.FC = () => {
       title: 'Recognition',
       description: 'Showcase your projects and get community recognition'
     }
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>Community - Zion Tech Group</title>
@@ -178,9 +174,9 @@ const CommunityPage: React.FC = () => {
               <div className="cyber-card-enhanced p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Welcome to Our Community</h2>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  Our community is a place where developers, entrepreneurs, and tech enthusiasts come together 
-                  to share knowledge, collaborate on projects, and support each other's growth. Whether you're 
-                  just starting out or you're a seasoned professional, you'll find value in our diverse and 
+                  Our community is a place where developers, entrepreneurs, and tech enthusiasts come together
+                  to share knowledge, collaborate on projects, and support each other's growth. Whether you're
+                  just starting out or you're a seasoned professional, you'll find value in our diverse and
                   welcoming community.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -396,6 +392,5 @@ const CommunityPage: React.FC = () => {
       </div>
     </>
   );
-}
-
+};
 export default CommunityPage;

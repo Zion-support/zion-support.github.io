@@ -47,7 +47,7 @@ const ProcessAutomationPage: React.FC = () => {
       description: 'Track and optimize your automated processes with real-time analytics and reporting.'
   }
     }
-  ]
+  ];
 const benefits = [
     'Reduce manual work and human errors',
     'Increase operational efficiency',;
@@ -57,13 +57,13 @@ const benefits = [
     'Enhance employee productivity',;
     '24/7 automated operations',;
     'Custom automation solutions';
-  ]
+  ];
 return (
     <>
       <Helmet>
         <title>Process Automation Services - Zion Tech Group | Workflow Automation</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -165,6 +165,6 @@ return (
       </div>
     </>
   ),
-}
+};
 export default ProcessAutomationPage;
 

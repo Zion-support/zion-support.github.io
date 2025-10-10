@@ -30,22 +30,22 @@ const AiFraudDetectionPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  }
     }
-  ]
+  ];
+];
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',;
     'Improve decision-making with AI insights',;
     'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
-  ]
+  ];
 return (
     <>
       <Helmet>
         <title>Ai Fraud Detection - Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900"></div>
@@ -160,6 +160,6 @@ return (
       <Footer>
     </>
   ),
-}
+};
 export default AiFraudDetectionPage;
 

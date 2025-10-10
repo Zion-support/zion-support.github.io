@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings , Eye } from 'lucide-react';
 const AiAnalyticsPage: React.FC = () => {
   const features = [
     {
@@ -31,7 +31,7 @@ title: 'Real-Time Dashboards',
       benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
     },
     {
-      icon: Eye,
+      icon: Globe,
       title: 'Visual Analytics',
       description: 'Transform complex data into intuitive visualizations and interactive charts.',
       benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']
@@ -42,14 +42,14 @@ title: 'Real-Time Dashboards',
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
-  ]
+  ];
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
   const useCases = [
     {
       title: 'Business Intelligence',
@@ -81,8 +81,8 @@ title: 'Real-Time Dashboards',
       description: 'Identify and mitigate business risks proactively',
       icon: '🛡️'
     }
-  ]
-  return (
+  ];
+return (
     <React.Fragment>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
@@ -162,7 +162,7 @@ title: 'Real-Time Dashboards',
       <Footer />
     </React.Fragment>
   ),
-}
+};
 export default AiAnalyticsPage;
   </button>
   </h2>

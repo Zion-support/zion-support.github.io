@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Smartphone, Monitor, Cloud } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Smartphone, Monitor, Cloud , Eye } from 'lucide-react';
 const BusinessAppsPage: React.FC = () => {
   const features = [
     {
@@ -39,8 +39,8 @@ title: 'AI-Powered Business Apps',
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international business applications'
     }
-  ]
-  const benefits = [
+  ];
+const benefits = [
 'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -49,8 +49,8 @@ title: 'AI-Powered Business Apps',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-  return (
+  ];
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Business Apps | Zion Tech Group</title>
@@ -152,7 +152,7 @@ title: 'AI-Powered Business Apps',
       </div>
     </div>
   ),
-}
+};
 export default BusinessAppsPage;
   </button>
   </button>

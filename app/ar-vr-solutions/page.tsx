@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp , Eye } from 'lucide-react';
 const PagePage: React.FC = () => {
     const features = [
     {
@@ -29,14 +29,14 @@ const PagePage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  }
     }
-  ]
+  ];
+];
 return (
     <>
       <Helmet>
         <title>Page - Zion Tech Group</title>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
       </Helmet>
       <Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -126,6 +126,6 @@ return (
       <Footer>
     </>
   ),
-}
+};
 export default PagePage;
 

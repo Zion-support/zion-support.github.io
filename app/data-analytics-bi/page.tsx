@@ -17,7 +17,7 @@ const DataAnalyticsBiPage: React.FC = () => {
               Data Analytics & Business Intelligence
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your data into actionable insights with our comprehensive data analytics 
+              Transform your data into actionable insights with our comprehensive data analytics
               and business intelligence solutions for data-driven decision making.
             </p>
           </div>
@@ -111,6 +111,5 @@ const DataAnalyticsBiPage: React.FC = () => {
       </div>
     </>
   );
-}
-
+};
 export default DataAnalyticsBiPage;

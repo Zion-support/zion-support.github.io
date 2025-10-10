@@ -37,71 +37,67 @@ const PrivacyPage: React.FC = () => {
         'System configuration information'
       ]
     }
-  ]
-
-  const purposes = [
+  ];
+const purposes = [
     {
       title: 'Service Delivery',
       description: 'To provide and maintain our AI and IT services',
-      icon: CheckCircle
+      icon: CheckCircle,
     },
     {
       title: 'Communication',
       description: 'To respond to inquiries and provide customer support',
-      icon: Mail
+      icon: Mail,
     },
     {
       title: 'Security',
       description: 'To protect against fraud and ensure system security',
-      icon: Shield
+      icon: Shield,
     },
     {
       title: 'Improvement',
       description: 'To analyze usage patterns and improve our services',
-      icon: Eye
+      icon: Eye,
     }
-  ]
-
-  const rights = [
+  ];
+const rights = [
     {
       title: 'Access',
       description: 'Request access to your personal data',
-      icon: Eye
+      icon: Eye,
     },
     {
       title: 'Rectification',
       description: 'Correct inaccurate or incomplete data',
-      icon: FileText
+      icon: FileText,
     },
     {
       title: 'Erasure',
       description: 'Request deletion of your personal data',
-      icon: AlertTriangle
+      icon: AlertTriangle,
     },
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
-      icon: Database
+      icon: Database,
     },
     {
       title: 'Restriction',
       description: 'Limit how we process your data',
-      icon: Lock
+      icon: Lock,
     },
     {
       title: 'Objection',
       description: 'Object to certain types of processing',
-      icon: Shield
+      icon: Shield,
     }
-  ]
-
-  const contactInfo = {
+  ];
+const contactInfo = {
     email: 'privacy@ziontechgroup.com',
     phone: '+1 (302) 464-0950',
     address: '364 E Main St STE 1008, Middletown, DE 19709'
-  }
-
-  return (
+  };
+return (
     <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
@@ -123,7 +119,7 @@ const PrivacyPage: React.FC = () => {
               </h1>
             </div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Your privacy is important to us. This policy explains how we collect, use, and protect your personal information 
+              Your privacy is important to us. This policy explains how we collect, use, and protect your personal information
               when you use our AI and IT services.
             </p>
             <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
@@ -210,7 +206,7 @@ const PrivacyPage: React.FC = () => {
               <div>
                 <h3 className="text-lg font-semibold text-white mb-3">We Do Not Sell Your Data</h3>
                 <p className="text-gray-300">
-                  We do not sell, trade, or rent your personal information to third parties. Your data is only shared 
+                  We do not sell, trade, or rent your personal information to third parties. Your data is only shared
                   in the following limited circumstances:
                 </p>
               </div>
@@ -375,6 +371,5 @@ const PrivacyPage: React.FC = () => {
       </div>
     </>
   );
-}
-
+};
 export default PrivacyPage;

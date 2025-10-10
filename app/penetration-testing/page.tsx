@@ -48,7 +48,7 @@ const PenetrationTestingPage: React.FC = () => {
       description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
   }
     }
-  ]
+  ];
 const benefits = [
     'Identify security vulnerabilities before attackers do',
     'Comply with industry regulations and standards',;
@@ -58,13 +58,13 @@ const benefits = [
     'Validate security controls effectiveness',;
     'Expert analysis and reporting',;
     'Ongoing security improvement guidance';
-  ]
+  ];
 return (
     <>
       <Helmet>
         <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -166,6 +166,6 @@ return (
       </div>
     </>
   ),
-}
+};
 export default PenetrationTestingPage;
 

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Search, Phone, Mail, MessageCircle, Clock, CheckCircle } from 'lucide-react';
+import { Search, Phone, Mail, MessageCircle, Clock, CheckCircle , Eye } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -24,9 +24,8 @@ const SupportPage: React.FC = () => {
       question: 'What technologies do you work with?',
       answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'
     }
-  ]
-
-  const supportChannels = [
+  ];
+const supportChannels = [
     {
       title: 'Email Support',
       description: 'Get help via email within 24 hours',
@@ -48,9 +47,8 @@ const SupportPage: React.FC = () => {
       contact: 'Available on website',
       availability: 'Mon-Fri 9AM-6PM EST'
     }
-  ]
-
-  const filteredFaqs = faqs.filter(faq =>
+  ];
+const filteredFaqs = faqs.filter(faq =>
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -136,6 +134,5 @@ const SupportPage: React.FC = () => {
       </div>
     </>
   );
-}
-
+};
 export default SupportPage;

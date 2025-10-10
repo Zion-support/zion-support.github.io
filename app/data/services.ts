@@ -278,7 +278,7 @@ export const microSAASServices = [
     users: '18,000+',
   }
     freeTrial: '7 days'}
-]
+];
 export const aiServices = [
   {
     title: 'Machine Learning Solutions',
@@ -400,7 +400,7 @@ export const aiServices = [
     users: '600+',
   }
     freeTrial: '30 days'}
-]
+];
 export const itServices = [
   {
     title: 'Cloud Migration Services',
@@ -492,7 +492,7 @@ export const itServices = [
     users: '200+',
   }
     freeTrial: '30 days'}
-]
+];
 export const specializedServices = [
   {
     title: 'Quantum Computing Solutions',
@@ -554,7 +554,7 @@ export const specializedServices = [
     users: '400+',
   }
     freeTrial: '30 days'}
-]
+];
 export interface Service {
     id: string,
   name: string,
@@ -587,7 +587,7 @@ export interface Service {
     currency: string,
   }
   }
-}
+};
 export const services: Service[] = [
   // AI Services,
   {
@@ -1242,7 +1242,7 @@ export const services: Service[] = [
       starting: 5000,
       currency: 'USD',
       period: 'month',
-      custom: true
+      custom: true,
   },
     benefits: [,
       'Exponential computational power',;
@@ -1289,7 +1289,7 @@ export const services: Service[] = [
       starting: 2999,
       currency: 'USD',
       period: 'month',
-      custom: true
+      custom: true,
   },
     benefits: [,
       'Decentralized solutions',;
@@ -1364,7 +1364,7 @@ export const services: Service[] = [
   }
     }
   }
-]
+];
 export const serviceCategories = [
   {
     id: 'ai',
@@ -1399,7 +1399,7 @@ export const serviceCategories = [
     bgColor: 'bg-pink-500/10'
   }
   }
-]
+];
 export const contactInfo = {
     phone: '+1 (302) 464-0950',
   email: 'kleber@ziontechgroup.com',

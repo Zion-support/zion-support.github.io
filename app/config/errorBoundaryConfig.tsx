@@ -191,8 +191,8 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
   if (error.message.includes('validation')) {
     return 'validation'
   }
-  }
-  return 'default';
+  };
+return 'default';
 }
 /**;
  * Format error for logging;
@@ -208,5 +208,5 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',
   }
   }
-}
+};
 export default getErrorBoundaryConfig;

@@ -5,8 +5,8 @@
 /**;
  * Generate unique ID for aria-describedby and aria-labelledby;
  */;
-export function generateId(prefix = 'a11y'): string {}
-  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+export function generateId(prefix = 'a11y'): string {};
+return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 }
 /**;
  * Announce message to screen readers;
@@ -82,8 +82,8 @@ export function makeKeyboardAccessible(;
     tabindex?: number
   }
   } = {}
-): () => void {}
-  const { role = 'button', tabindex = 0 } = options;
+): () => void {};
+const { role = 'button', tabindex = 0 } = options;
 element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
 const handleKeyDown = (;
@@ -109,14 +109,14 @@ return () => {
  */;
 export function getContrastRatio(color1: string, color2: string): number {
     const getLuminance = (color: string): number => {
-    const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0]
-    const [r, g, b] = rgb.map(c => {
+    const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
+const [r, g, b] = rgb.map(c => {
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
   }
     })
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
-  }
+  };
 const lum1 = getLuminance(color1);
   const lum2 = getLuminance(color2);
   const brightest = Math.max(lum1, lum2);
@@ -194,7 +194,7 @@ export function createAccessibleTooltip(;
   placement: 'top' | 'bottom' | 'left' | 'right' = 'top';
 ): () => void {
     const tooltip = document.createElement('div')
-  tooltip.textContent = content
+  tooltip.textContent = content;
   tooltip.className = 'tooltip',
   tooltip.setAttribute('role', 'tooltip');
   tooltip.style.position = 'absolute';
@@ -231,7 +231,7 @@ switch (placement) {) => {
         tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;
         break;
     }
-  }
+  };
 const hideTooltip = (;) => {
     return (
     $3

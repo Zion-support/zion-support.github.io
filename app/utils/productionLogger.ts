@@ -16,8 +16,8 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
     const entry: LogEntry = {,
       level
   }
-  private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}
-    const entry: LogEntry = {}
+  private log(level: LogLevel, message: string, data?: unknown, context?: string): void {};
+const entry: LogEntry = {}
       level,;
       message,;
       data,;
@@ -82,6 +82,6 @@ warn(message: string, data?: unknown, context?: string): void {}
 error(message: string, data?: unknown, context?: string): void {}
     this.log('error', message, data, context);
   }
-}
+};
 export const logger = new ProductionLogger();
 export default logger;

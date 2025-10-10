@@ -1,9 +1,9 @@
 export const generateSitemap = useCallback((...args) => {
     const baseUrl = 'https: //ziontechgroup.com',
   const staticPages = [,
-  }
-export const generateSitemap = useCallback((...args) => {}
-  const baseUrl = 'https: //ziontechgroup.com',
+  };
+export const generateSitemap = useCallback((...args) => {};
+const baseUrl = 'https: //ziontechgroup.com',
   const staticPages = [
     '',
     '/services',;
@@ -43,8 +43,8 @@ export const generateSitemap = useCallback((...args) => {}
     '/developer-tools',;
     '/marketing-tools',;
     '/productivity';
-  ]
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
+  ];
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
   ${
     staticPages.map(page =>),;
@@ -59,9 +59,9 @@ export const generateSitemap = useCallback((...args) => {}
   </url>`).join('')}
 </urlset>`;
   return sitemap;
-}
-export const generateRobotsTxt = useCallback((...args) => {}
-  return `User-agent: *;
+};
+export const generateRobotsTxt = useCallback((...args) => {};
+return `User-agent: *;
 Allow: /
 Sitemap: https://ziontechgroup.com/sitemap.xml
 # Crawl-delay for better server performance,
@@ -71,9 +71,9 @@ Disallow: /admin/,
 Disallow: /api/,
 Disallow: /_next/,
 Disallow: /private/`,}
-}
+};
 export interface SitemapEntry {/* TODO: Fix JSX expression */}
-}
+};
 export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */}
   l: `${baseUrl}/`,;
       lastmo,;
@@ -210,6 +210,6 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
   y: 0.3,
     }
   ]
-}
+};
 export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */}
 }`;

@@ -8,9 +8,9 @@ export enum LogLevel {
   INFO = 1,;
   WARN = 2,;
   ERROR = 3,;
-  FATAL = 4
+  FATAL = 4;
   }
-}
+};
 export interface LogContext {
     userId?: string;
   sessionId?: string;
@@ -31,7 +31,7 @@ class Logger {
   }> = []
   setLogLevel(level: LogLevel): void {
     ,
-    this.logLevel = level
+    this.logLevel = level;
   }
   }
 getLogLevel(): LogLevel {
@@ -60,7 +60,7 @@ error(message: string,),;
     let meta: Record<string, unknown> | undefined;
     // Handle different parameter combinations;
     if (errorOrContextOrMetadata instanceof Error) {
-      error = errorOrContextOrMetadata
+      error = errorOrContextOrMetadata;
   }
       context = typeof contextOrMetadata === 'string' ? { action: contextOrMetadata } : contextOrMetadata;
       meta = metadata;
@@ -73,11 +73,11 @@ error(message: string,),;
  * Enhanced Logger Utility;
  * Provides structured logging with different levels and contexts;
  */
-  }
+  };
 export enum LogLevel {/* TODO: Fix JSX expression */}
-}
+};
 export interface LogContext {/* TODO: Fix JSX expression */}
-}
+};
 export interface LogMetadata {/* TODO: Fix JSX expression */}
 }
 class Logger {/* TODO: Fix JSX expression */}
@@ -151,8 +151,8 @@ this.logs.push(logEntry);
   }
     }
 // Console output;
-    const levelName = LogLevel[level]
-    const timestamp = new Date().toISOString();
+    const levelName = LogLevel[level];
+const timestamp = new Date().toISOString();
     const contextStr = context ? ` [${JSON.stringify(context)}]` : '';
     const metaStr = metadata ? ` ${JSON.stringify(metadata)}` : '';
     const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaStr}`;
@@ -193,8 +193,8 @@ getLogs(level?: LogLevel): Array<{
     context?: LogContext,;
     metadata?: Record<string, unknown></string>);
   ): void {/* TODO: Fix JSX expression */}
-    }
-    const,;
+    };
+const,;
   logEntry: LogMetadata = {/* TODO: Fix JSX expression */}
     }
     // Format the log entry;
@@ -210,8 +210,8 @@ getLogs(level?: LogLevel): Array<{
    * Format a log entry for output;
    */;
   private formatLogEntry(entr);
-  y: LogMetadata): string {/* TODO: Fix JSX expression */}
-    const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';`;
+  y: LogMetadata): string {/* TODO: Fix JSX expression */};
+const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';`;
     const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`;
     return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`;
   }
@@ -245,8 +245,8 @@ getLogs(level?: LogLevel): Array<{
    */;
   private getConsoleStyles(leve);
   l: LogLevel): string {/* TODO: Fix JSX expression */}
-    }
-    return [...this.logs]
+    };
+return [...this.logs]
   }
   /**;
    * Send log entry to external logging service;
@@ -265,7 +265,7 @@ getLogs(level?: LogLevel): Array<{
     )
   }
     //   // })
-  }
+  };
 exportLogs(): string {
     return JSON.stringify(this.logs, null, 2)
   }
@@ -288,5 +288,5 @@ export const logger = new Logger();
   l: LogLevel): string {/* TODO: Fix JSX expression */}
     }
   }
-}
+};
 export const logger = new Logger();`;

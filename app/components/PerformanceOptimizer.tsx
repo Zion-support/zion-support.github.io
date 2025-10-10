@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState, useCallback } from 'react';
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+import { Settings, Zap, CheckCircle, AlertTriangle , Eye } from 'lucide-react';
 
 interface PerformanceOptimizerProps {
     children: React.ReactNode;
@@ -8,14 +8,13 @@ interface PerformanceOptimizerProps {
   enableLazyLoading?: boolean
   enablePreloading?: boolean,
   enableCodeSplitting?: boolean
-  }
-
+  };
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
   children, 
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
-  enableCodeSplitting = true
+  enableCodeSplitting = true;
 }) => {
     const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizations, setOptimizations] = useState<string[]>([]);
@@ -129,7 +128,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
-  enableCodeSplitting = true
+  enableCodeSplitting = true;
 }) => {
     useEffect(() => {
     // Preload critical resources
@@ -214,6 +213,5 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   return null;
 
-}
-
+};
 export default PerformanceOptimizer;

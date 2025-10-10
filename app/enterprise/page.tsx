@@ -41,9 +41,9 @@ const EnterprisePage: React.FC = () => {
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
-  }
     }
-  ]
+  ];
+];
 const solutions = [
     {
     title: 'Enterprise Resource Planning',
@@ -68,9 +68,9 @@ const solutions = [
       description: 'Automate complex business processes to improve efficiency and reduce errors.',
       icon: Zap,
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
-  }
     }
-  ]
+  ];
+];
 const benefits = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',;
@@ -80,13 +80,13 @@ const benefits = [
     'Scale with business growth',;
     'Integrate with existing systems',;
     'Provide 24/7 support and monitoring';
-  ]
+  ];
 const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },;
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },;
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },;
     { number: '24/7', label: 'Support Available', icon: Clock }
-  ]
+  ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer>
@@ -218,6 +218,6 @@ return (
       <Footer>
     </div>
   ),
-}
+};
 export default EnterprisePage;
 

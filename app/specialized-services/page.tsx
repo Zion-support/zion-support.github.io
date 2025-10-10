@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe , Eye } from 'lucide-react';
 const PagePage: React.FC = () => {
     const features = [
     {
@@ -84,7 +84,7 @@ const PagePage: React.FC = () => {
       </section>
     </div>
   ),
-}
+};
 export default PagePage;
 
 import Navigation from '../components/Navigation';
@@ -112,18 +112,16 @@ const SpecializedServicesPage: React.FC = () => {
       title: 'Global Scalability',
       description: 'Scale your operations worldwide with our robust infrastructure'
     }
-  ]
-
-  const benefits = [
+  ];
+const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce operational costs by 30%',
     'Improve decision-making with real-time insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with cutting-edge technology',
     'Ensure 99.9% uptime and reliability'
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>Specialized Services - Zion Tech Group</title>
@@ -226,7 +224,6 @@ const SpecializedServicesPage: React.FC = () => {
       <Footer />
     </>
   ),
-}
-
+};
 export default SpecializedServicesPage;
 

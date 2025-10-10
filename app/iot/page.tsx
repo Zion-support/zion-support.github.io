@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
+import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles , Eye } from 'lucide-react';
 const IoTPage: React.FC = () => {
     const iotServices = [
     {
@@ -136,14 +136,14 @@ const IoTPage: React.FC = () => {
       technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']
   }
     }
-  ]
-const categories = [...new Set(iotServices.map(service => service.category))]
+  ];
+const categories = [...new Set(iotServices.map(service => service.category))];
 return (
     <>
       <Helmet>
         <title>IoT Services - Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50"></div>
         {/* Hero Section */}</div>
@@ -369,6 +369,6 @@ return (
       </div>
     </>
   );
-}
+};
 export default IoTPage;
 

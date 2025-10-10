@@ -11,7 +11,7 @@ interface PerformanceMetrics {
 interface PerformanceMonitorProps {
     onMetricsUpdate?: (metrics: PerformanceMetrics) => void,
   enableRealTimeMonitoring?: boolean
-  }
+  };
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
@@ -29,8 +29,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof PerformanceObserver === 'undefined') return;
     const observers: PerformanceObserver[] = []
     // Measure First Contentful Paint (FCP)
-    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || []
-    const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null
+    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
+const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
       try {
@@ -98,9 +98,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
     // Measure Time to First Byte (TTFB)
     try {
-      const navigationEntries = performance.getEntriesByType?.('navigation') || []
-      const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
-      const ttfb = navigationEntry
+      const navigationEntries = performance.getEntriesByType?.('navigation') || [];
+const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
+      const ttfb = navigationEntry;
         ? navigationEntry.responseStart - navigationEntry.requestStart
         : null;
       // Measure Memory Usage
@@ -231,8 +231,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     recommendations.push(
         'Time to First Byte is slow. Optimize server response time.'
       )
-  }
-    return recommendations;
+  };
+return recommendations;
   }, [metrics]);
   const _recommendations = getPerformanceRecommendations();
   if (process.env.NODE_ENV === 'development') {
@@ -266,9 +266,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         )}
       </div>
     );
-  }
-  return null;
-}
+  };
+return null;
+};
 export default AdvancedPerformanceMonitor;
   </PerformanceMetrics>
   </PerformanceMonitorProps>

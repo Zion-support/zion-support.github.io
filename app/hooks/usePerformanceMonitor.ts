@@ -22,9 +22,8 @@ export const usePerformanceMonitor = () => {
       monitorWebVitals();
     } else {
       window.addEventListener('load', monitorWebVitals);
-    }
-
-    return () => {
+    };
+return () => {
       window.removeEventListener('load', monitorWebVitals);
     }
   }, []);

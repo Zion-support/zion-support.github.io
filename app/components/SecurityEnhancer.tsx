@@ -5,7 +5,7 @@ import React, { useEffect } from 'react';
 interface SecurityEnhancerProps {
     children: React.ReactNode
   }
-}
+};
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
     useEffect(() => {
     // Security enhancement logic;
@@ -43,6 +43,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
 enhanceSecurity();
   }, []);
 return <>{children}</>
-}
+};
 export default SecurityEnhancer;
 

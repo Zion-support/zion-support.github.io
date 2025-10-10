@@ -3,17 +3,17 @@ import React, { useEffect, useState, useCallback } from 'react';
 interface PerformanceOptimizerProps {
     children: React.ReactNode,
   enableOptimizations?: boolean
-  }
+  };
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
-  enableOptimizations = true
+  enableOptimizations = true;
 }) => {
   const [isOptimized, setIsOptimized] = useState(false);
   const [optimizationMetrics, setOptimizationMetrics] = useState({
     imagesOptimized: 0,
     scriptsOptimized: 0,
     cssOptimized: 0,
-    totalSavings: 0
+    totalSavings: 0,
   })
   const optimizeImages = useCallback(() => {
     if (typeof window === 'undefined') return;
@@ -108,7 +108,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           padding: '10px',
           borderRadius: '5px',
           fontSize: '12px',
-          zIndex: 1000
+          zIndex: 1000,
         }}>
           <div>Images: {optimizationMetrics.imagesOptimized}</div>
           <div>Scripts: {optimizationMetrics.scriptsOptimized}</div>
@@ -118,6 +118,6 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       )}
     </div>
   );
-}
+};
 export default AdvancedPerformanceOptimizer;
   </PerformanceOptimizerProps>

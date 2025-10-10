@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe , Eye } from 'lucide-react';
 const ARVRPlatformPage: React.FC = () => {
   const features = [
     {
@@ -24,8 +24,8 @@ const ARVRPlatformPage: React.FC = () => {
       title: 'Cross-Platform Support',
       description: 'Deploy across multiple devices and platforms for maximum reach and accessibility'
     }
-  ]
-  const benefits = [
+  ];
+const benefits = [
     'Advanced AR/VR technology integration',
     'Real-time 3D rendering and interaction',
     'Enterprise-grade security and compliance',
@@ -34,8 +34,8 @@ const ARVRPlatformPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-  return (
+  ];
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AR/VR Platform | Zion Tech Group</title>
@@ -137,7 +137,7 @@ Experience the power of our AR/VR platform solutions for your business.
       </section>
     </div>
   ),
-}
+};
 export default ARVRPlatformPage;
   </button>
   </button>

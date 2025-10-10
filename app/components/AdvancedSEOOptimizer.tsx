@@ -11,8 +11,7 @@ interface SEOOptimizerProps {
   twitterCard?: string;
   structuredData?: object;
   children: React.ReactNode;
-}
-
+};
 const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
@@ -105,21 +104,18 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         "https://twitter.com/ziontechgroup",
         "https://linkedin.com/company/ziontechgroup"
       ]
-    }
-
-    return structuredData || defaultStructuredData;
-  }
-
-  const _trackPageView = (config: SEOData) => {
+    };
+return structuredData || defaultStructuredData;
+  };
+const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
         page_location: config.canonicalUrl,
       })
     }
-  }
-
-  const _trackPerformanceMetrics = () => {
+  };
+const _trackPerformanceMetrics = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       window.addEventListener('load', () => {
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -132,8 +128,8 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         }
       })
     }
-  }
-  return (
+  };
+return (
     <>
       <Helmet>
         <title>{title}</title>
@@ -235,6 +231,5 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     {children}
   </>
   );
-}
-
+};
 export default AdvancedSEOOptimizer;

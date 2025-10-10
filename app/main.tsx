@@ -24,7 +24,7 @@ const MainPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
   }
     }
-  ]
+  ];
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',;
@@ -34,13 +34,13 @@ const benefits = [
     'Easy integration with existing systems',;
     'Cost-effective pricing plans',;
     'Proven track record of success';
-  ]
+  ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Main | Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8"></section>
@@ -143,6 +143,6 @@ return (
       </section>
     </div>
   ),
-}
+};
 export default MainPage;
 

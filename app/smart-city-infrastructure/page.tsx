@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database , Eye } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -59,9 +59,8 @@ const PagePage: React.FC = () => {
       description: 'Worldwide deployment and support for international smart city projects'
 
     }
-  ]
-
-  const smartCityServices = [
+  ];
+const smartCityServices = [
     {
       icon: Building,
       title: 'Smart Buildings',
@@ -132,7 +131,7 @@ const PagePage: React.FC = () => {
       </section>
     </div>
   ),
-}
+};
 export default PagePage;
 
   const benefits = [
@@ -144,9 +143,8 @@ export default PagePage;
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>Smart City Infrastructure - Zion Tech Group</title>
@@ -294,7 +292,6 @@ export default PagePage;
       <Footer />
     </>
   ),
-}
-
+};
 export default SmartCityInfrastructurePage;
 

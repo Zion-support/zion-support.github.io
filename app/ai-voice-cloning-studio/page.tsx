@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings , Eye } from 'lucide-react';
 const AiVoiceCloningStudioPage: React.FC = () => {
     const features = [
     {
@@ -29,22 +29,22 @@ const AiVoiceCloningStudioPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  }
     }
-  ]
+  ];
+];
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',;
     'Improve decision-making with AI insights',;
     'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
-  ]
+  ];
 return (
     <>
       <Helmet>
         <title>Ai Voice Cloning Studio - Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900"></div>
@@ -159,6 +159,6 @@ return (
       <Footer>
     </>
   ),
-}
+};
 export default AiVoiceCloningStudioPage;
 

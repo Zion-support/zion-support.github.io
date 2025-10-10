@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react';
+import { Search, Calendar, User, Clock, ArrowRight , Eye } from 'lucide-react';
 
 const BlogPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -48,11 +48,9 @@ const BlogPage: React.FC = () => {
       category: 'Development',
       image: '/images/blog/micro-saas.jpg'
     }
-  ]
-
-  const categories = ['All', 'AI & Technology', 'Cloud Computing', 'Security', 'Development']
-
-  const filteredPosts = blogPosts.filter(post => 
+  ];
+const categories = ['All', 'AI & Technology', 'Cloud Computing', 'Security', 'Development'];
+const filteredPosts = blogPosts.filter(post => 
     post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
     post.category.toLowerCase().includes(searchQuery.toLowerCase())
@@ -155,6 +153,5 @@ const BlogPage: React.FC = () => {
       </div>
     </>
   );
-}
-
+};
 export default BlogPage;

@@ -35,7 +35,7 @@ export interface AppConfig {
     enableXSSProtection: boolean,
   }
   }
-}
+};
 const config: AppConfig = {
     app: {
     name: 'Zion Tech Group',
@@ -79,7 +79,7 @@ for (const key of keys) {
     } else {}
       throw new Error(`Configuration key "${keyPath}" not found`);
     }
-  }
+  };
 return value as T;
 }
 /**;
@@ -109,5 +109,5 @@ export function isProduction(): boolean {
 export function isDevelopment(): boolean {
     return config.app.environment === 'development'
   }
-}
+};
 export default config;

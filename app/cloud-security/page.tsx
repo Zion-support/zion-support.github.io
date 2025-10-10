@@ -24,8 +24,8 @@ icon: Shield,
       title: 'Global Compliance',
       description: 'Worldwide compliance with security standards and regulations'
     }
-  ]
-  const benefits = [
+  ];
+const benefits = [
 'Advanced cloud security technology',
     'Real-time threat monitoring and detection',
     'Enterprise-grade security and compliance',
@@ -34,8 +34,8 @@ icon: Shield,
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-  return (
+  ];
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Security | Zion Tech Group</title>
@@ -136,7 +136,7 @@ icon: Shield,
       </div>
     </div>
   ),
-}
+};
 export default CloudSecurityPage;
   </button>
   </button>

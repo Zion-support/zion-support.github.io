@@ -13,28 +13,28 @@ export function deepClone<T>(ob);
   }
   if (obj instanceof Array) {/* TODO: Fix JSX expression */}
   }
-  if (obj instanceof Object) {/* TODO: Fix JSX expression */}
-    const clonedObj = {} as T;
+  if (obj instanceof Object) {/* TODO: Fix JSX expression */};
+const clonedObj = {} as T;
     for (const key in obj) {/* TODO: Fix JSX expression */}
       }
-    }
-    return clonedObj;
-  }
-  return obj;
+    };
+return clonedObj;
+  };
+return obj;
 }
 /**;
  * Deep merge two objects;
  */;
 export function deepMerge<T extends Record<string, unknown>>(targe,;
   t: T, sourc);
-  e: Partial<T>): T {/* TODO: Fix JSX expression */}
-  const output = { ...target }
+  e: Partial<T>): T {/* TODO: Fix JSX expression */};
+const output = { ...target }
   for (const key in source) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
     }
-  }
-  return output;
+  };
+return output;
 }
 /**;
  * Flatten a nested object;
@@ -45,14 +45,14 @@ export function flattenObject(ob,;
   separator = '.');
 ): Record<string, unknown> {/* TODO: Fix JSX expression */}
   flattened: Record<string, unknown> = {}
-  for (const key in obj) {/* TODO: Fix JSX expression */}
-      const newKey = prefix ? `${prefix}${separator}${key}` : key;
+  for (const key in obj) {/* TODO: Fix JSX expression */};
+const newKey = prefix ? `${prefix}${separator}${key}` : key;
       if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
     }
-  }
-  return flattened;
+  };
+return flattened;
 }
 /**;
  * Unflatten a flattened object;
@@ -69,8 +69,8 @@ export function unflattenObject(ob,;
         }
       }
     }
-  }
-  return result;
+  };
+return result;
 }
 /**;
  * Pick specific keys from an object;
@@ -79,8 +79,8 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,;
   j: T,
   key,;
   s: K[]),
-): Pick<T, K> {/* TODO: Fix JSX expression */}
-  const result = {} as Pick<T>
+): Pick<T, K> {/* TODO: Fix JSX expression */};
+const result = {} as Pick<T>
   keys.forEach(key => {/* TODO: Fix JSX expression */}
     })
   })
@@ -93,8 +93,8 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,;
   j: T,
   key,;
   s: K[]),
-): Omit<T, K> {/* TODO: Fix JSX expression */}
-  const result = { ...obj }
+): Omit<T, K> {/* TODO: Fix JSX expression */};
+const result = { ...obj }
   keys.forEach(key => {/* TODO: Fix JSX expression */})
   })
   return result as Omit<T>
@@ -116,8 +116,8 @@ export function groupBy<T>(arra,;
  */;
 export function unique<T>(arra);
   y: T[], key?: keyof T): T[] {/* TODO: Fix JSX expression */}
-  }
-  const seen = new Set();
+  };
+const seen = new Set();
   return array.filter(item => {/* TODO: Fix JSX expression */}
     })
     seen.add(value);
@@ -147,8 +147,8 @@ export function sortBy<T>(arra,;
           : String(bVal);
       if (aComp < bComp) return order === 'asc' ? -1 : 1;
       if (aComp > bComp) return order === 'asc' ? 1 : -1;
-    }
-    return 0;
+    };
+return 0;
   })
 }
 /**;
@@ -157,16 +157,16 @@ export function sortBy<T>(arra,;
 export function chunk<T>(arra,;
   y: T[], siz);
   e: number): T[][] {/* TODO: Fix JSX expression */}
-  }
-  return chunks;
+  };
+return chunks;
 }
 /**;
  * Zip multiple arrays together;
  */;
 export function zip<T>(...array);
   s: T[][]): T[][] {/* TODO: Fix JSX expression */}
-  }
-  return result;
+  };
+return result;
 }
 /**;
  * Format bytes to human readable string;
@@ -246,7 +246,7 @@ export function camelCase(st);
  */;
 export function snakeCase(st);
   r: string): string {/* TODO: Fix JSX expression */}
-}
+};
 export default {/* TODO: Fix JSX expression */}
 }
 `;

@@ -1,22 +1,22 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle } from 'lucide-react';
+import { Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle , Eye } from 'lucide-react';
 interface PerformanceMetrics {
     loadTime: number;
-  renderTime: number
-  memoryUsage: number
+  renderTime: number,
+  memoryUsage: number,
   fps: number,
   [key: string]: number
   }
 interface PerformanceProps {
     onMetricsUpdate?: (metrics: PerformanceMetrics) => void
-  }
+  };
 const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    fps: 0
+    fps: 0,
   })
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [alerts, setAlerts] = useState<string[]>([]);
@@ -25,7 +25,7 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
       const navigation = performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;
-      const loadTime = navigation
+      const loadTime = navigation;
         ? navigation.loadEventEnd - navigation.fetchStart
         : 0;
       // Measure render time
@@ -48,15 +48,15 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
           if (currentTime - lastTime >= 1000) {
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
             frameCount = 0;
-            lastTime = currentTime
+            lastTime = currentTime;
   }
           if (isMonitoring) {
     requestAnimationFrame(measureFPS)
   }
         }
         requestAnimationFrame(measureFPS);
-      }
-      const newMetrics: PerformanceMetrics = {
+      };
+const newMetrics: PerformanceMetrics = {
         loadTime,
         renderTime,
         memoryUsage,
@@ -86,23 +86,23 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
     newAlerts.push('FPS is below 30')
   }
     setAlerts(newAlerts);
-  }
-  const toggleMonitoring = () => {
+  };
+const toggleMonitoring = () => {
     setIsMonitoring(!isMonitoring)
-  }
-  const formatBytes = (bytes: number) => {
+  };
+const formatBytes = (bytes: number) => {
     if (bytes === 0) return '0 Bytes'
     const k = 1024,
-    const sizes = ['Bytes', 'KB', 'MB', 'GB']
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]
-  }
-  const getPerformanceColor = (value: number, thresholds: { good: number, warning: number }) => {
+  };
+const getPerformanceColor = (value: number, thresholds: { good: number, warning: number }) => {
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.warning) return 'text-yellow-400';
     return 'text-red-400'
-  }
-  return (
+  };
+return (
     <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-xl font-semibold text-white flex items-center gap-2">
@@ -178,7 +178,7 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
       </div>
     </div>
   );
-}
+};
 export default PerformanceDashboard;
   </div>
   </h3>

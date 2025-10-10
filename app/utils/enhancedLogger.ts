@@ -17,8 +17,8 @@ export enum LogLevel {
   INFO = 1,;
   WARN = 2,;
   ERROR = 3,;
-  FATAL = 4
-  }
+  FATAL = 4;
+  };
 export enum LogLevel {/* TODO: Fix JSX expression */}
 }
 /**;
@@ -45,7 +45,7 @@ export interface LogEntry {
   sessionId?: string;
   /** Environment (development, production, etc.) */;
   environment?: string
-  }
+  };
 export interface LogEntry {/* TODO: Fix JSX expression */}
 }
 /**;
@@ -68,7 +68,7 @@ export interface LoggerConfig {
   enablePerformance: boolean,
   /** Environment name */,;
   environment: string,
-  }
+  };
 export interface LoggerConfig {/* TODO: Fix JSX expression */}
 }
 /**;
@@ -82,7 +82,7 @@ const defaultConfig: LoggerConfig = {
   maxLogs: 1000,
   enablePerformance: true,
   }
-  environment: process.env['NODE_ENV'] || 'development'}
+  environment: process.env['NODE_ENV'] || 'development'};
 const,;
   defaultConfig: LoggerConfig = {/* TODO: Fix JSX expression */}
 }
@@ -134,8 +134,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   }
   public static getInstance(config?: Partial<LoggerConfig>): EnhancedLogger {/* TODO: Fix JSX expression */}
     } else if (config) {/* TODO: Fix JSX expression */}
-    }
-    return EnhancedLogger.instance;
+    };
+return EnhancedLogger.instance;
   }
   /**;
    * Reset singleton instance (mainly for testing);
@@ -233,8 +233,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     data?: Record<string, unknown>);
     error?: Error);
     source?: string;
-  ): void {}
-    const logData = { ...data }
+  ): void {};
+const logData = { ...data }
     if (error) {
     logData.error = {
         name: error.name
@@ -255,8 +255,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     data?: Record<string, unknown>,;
     error?: Error,;
     source?: string;);
-  ): void {/* TODO: Fix JSX expression */}
-    const logData = { ...data }
+  ): void {/* TODO: Fix JSX expression */};
+const logData = { ...data }
     if (error) {/* TODO: Fix JSX expression */}
       }
     }
@@ -274,8 +274,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     data?: Record<string, unknown>);
     error?: Error);
     source?: string;
-  ): void {}
-    const logData = { ...data }
+  ): void {};
+const logData = { ...data }
     if (error) {
     logData.error = {
         name: error.name
@@ -288,8 +288,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     data?: Record<string, unknown>,;
     error?: Error,;
     source?: string;);
-  ): void {/* TODO: Fix JSX expression */}
-    const logData = { ...data }
+  ): void {/* TODO: Fix JSX expression */};
+const logData = { ...data }
     if (error) {/* TODO: Fix JSX expression */}
       }
     }
@@ -334,8 +334,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     if (!startTime) {}
       this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger');
       return undefined;
-    }
-    const duration = performance.now() - startTime;
+    };
+const duration = performance.now() - startTime;
     this.performanceMarks.delete(markName);
     this.info(`Performance: ${markName}`);
       {}
@@ -344,8 +344,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   e: string, data?: Record<string, unknown>): number | undefined {/* TODO: Fix JSX expression */}`;
       this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger');
       return undefined;
-    }
-    const duration = performance.now() - startTime;
+    };
+const duration = performance.now() - startTime;
     this.performanceMarks.delete(markName);`;
     this.info(`Performanc,`;
   e: ${markName}`,;
@@ -446,8 +446,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     ,
     const levelName = LogLevel[entry.level],;
     const timestamp = entry.timestamp.toISOString(),
-  }
-    const source = entry.source ? ` [${entry.source}]` : '';
+  };
+const source = entry.source ? ` [${entry.source}]` : '';
     const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
     if (this.config.enableStructured) {
     const structuredLog = {
@@ -590,8 +590,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @private;
    * @returns Unique log identifier;
    */;
-  private generateLogId(): string {}
-    return `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  private generateLogId(): string {};
+return `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   private generateLogId(): string {/* TODO: Fix JSX expression */}`;
     return `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
@@ -621,8 +621,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   private getSessionId(): string | undefined {/* TODO: Fix JSX expression */}`;
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         sessionStorage.setItem('sessionId', sessionId);
-      }
-      return sessionId;
+      };
+return sessionId;
     } catch {/* TODO: Fix JSX expression */}
     }
   }
@@ -637,8 +637,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
       return this.logs.filter(log => log.level === level)
   }
   public getLogs(level?: LogLevel): LogEntry[] {/* TODO: Fix JSX expression */}
-    }
-    return [...this.logs]
+    };
+return [...this.logs]
   }
   /**;
    * Get logs by source;
@@ -663,9 +663,9 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     byLevel: Record<string>
     bySource: Record<string, number>
   }
-  } {}
-    const byLevel: Record<string, number> = {}
-    const bySource: Record<string, number> = {}
+  } {};
+const byLevel: Record<string, number> = {};
+const bySource: Record<string, number> = {}
     this.logs.forEach(log => {
     );
       const levelName = LogLevel[log.level]);
@@ -683,8 +683,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     }
   public getStatistics(): {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
-  byLevel: Record<string, number> = {}
-    const,;
+  byLevel: Record<string, number> = {};
+const,;
   bySource: Record<string, number> = {}
     this.logs.forEach(log => {/* TODO: Fix JSX expression */}
       })

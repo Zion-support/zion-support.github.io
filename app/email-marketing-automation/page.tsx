@@ -46,7 +46,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
       description: 'Behavior-based triggers and workflows to send the right message at the right time.'
   }
     }
-  ]
+  ];
 const benefits = [
     'Increase email engagement rates',
     'Automate repetitive marketing tasks',;
@@ -56,13 +56,13 @@ const benefits = [
     'Improve customer retention',;
     'Generate more qualified leads',;
     'Save time and resources';
-  ]
+  ];
 return (
     <>
       <Helmet>
         <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -164,6 +164,6 @@ return (
       </div>
     </>
   ),
-}
+};
 export default EmailMarketingAutomationPage;
 

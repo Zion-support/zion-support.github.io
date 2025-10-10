@@ -10,8 +10,7 @@ interface SEOHeadProps {
   structuredData?: any;
   ogImage?: string;
   twitterCard?: string;
-}
-
+};
 const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
@@ -58,6 +57,5 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       )}
     </Helmet>
   );
-}
-
+};
 export default SEOHead;

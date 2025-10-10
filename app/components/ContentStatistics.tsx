@@ -1,23 +1,22 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock , Eye } from 'lucide-react';
 
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
     clients: 0,
     projects: 0,
     satisfaction: 0,
-    years: 0
+    years: 0,
   })
 
   const targetCounters = {
     clients: 500,
     projects: 1000,
     satisfaction: 99,
-    years: 10
-  }
-
-  const statistics = [
+    years: 10,
+  };
+const statistics = [
     {
       icon: Users,
       value: counters.clients,
@@ -46,9 +45,8 @@ const ContentStatistics: React.FC = () => {
       suffix: '+',
       color: 'text-yellow-400'
     }
-  ]
-
-  const achievements = [
+  ];
+const achievements = [
     {
       icon: Brain,
       title: 'AI Innovation',
@@ -73,10 +71,9 @@ const ContentStatistics: React.FC = () => {
 
   useEffect(() => {
     const timers = Object.keys(targetCounters).map(key => {
-      const target = targetCounters[key as keyof typeof targetCounters]
-      const duration = 2000; // 2 seconds
+      const target = targetCounters[key as keyof typeof targetCounters];
+const duration = 2000; // 2 seconds
       const increment = target / (duration / 16); // 60fps
-      
       return setInterval(() => {
         setCounters(prev => {
           const current = prev[key as keyof typeof prev]
@@ -85,8 +82,8 @@ const ContentStatistics: React.FC = () => {
               ...prev,
               [key]: Math.min(current + increment, target)
             }
-          }
-          return prev;
+          };
+return prev;
         })
       }, 16);
     })
@@ -140,6 +137,5 @@ const ContentStatistics: React.FC = () => {
       </div>
     </div>
   );
-}
-
+};
 export default ContentStatistics;

@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-import { CheckCircle, ArrowRight, Zap, Shield, Users, BarChart3 } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Shield, Users, BarChart3 , Eye } from 'lucide-react';
 
 const AIApiManagementPage: React.FC = () => {
 
@@ -24,10 +24,9 @@ const AIApiManagementPage: React.FC = () => {
       title: 'Automated Documentation',
       description: 'Generate and maintain comprehensive API documentation automatically with AI-powered analysis.',
       benefits: ['Auto-generated docs', 'Interactive examples', 'Version management', 'Developer portal']
-
     }
-  ]
-  const benefits = [
+  ];
+const benefits = [
 
     'Reduced API downtime by 95%',
     '50% faster API response times',
@@ -35,16 +34,15 @@ const AIApiManagementPage: React.FC = () => {
     'Real-time performance monitoring',
     'Intelligent load balancing',
     'Cost optimization insights'
-  ]
-
-  const stats = [
+  ];
+const stats = [
     { icon: <Zap className="w-8 h-8 text-blue-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Shield className="w-8 h-8 text-green-500" />, value: '100%', label: 'Security' },
     { icon: <Users className="w-8 h-8 text-purple-500" />, value: '10K+', label: 'APIs Managed' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
 
-  ]
-  return (
+  ];
+return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -62,7 +60,6 @@ const AIApiManagementPage: React.FC = () => {
 
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             AI-Powered API Management
-
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Intelligent API management with AI-driven monitoring, security, and optimization for enterprise-grade performance
@@ -174,7 +171,6 @@ const AIApiManagementPage: React.FC = () => {
       <Footer />
     </div>
   ),
-}
-
+};
 export default AIApiManagementPage;
 

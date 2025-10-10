@@ -53,7 +53,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Customer Service',
       popular: true,
-      icon: MessageSquare
+      icon: MessageSquare,
     },
     {
       id: 'ai-content',
@@ -76,7 +76,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Content',
       popular: true,
-      icon: Brain
+      icon: Brain,
     },
     {
       id: 'ai-analytics',
@@ -99,7 +99,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Analytics',
       popular: false,
-      icon: BarChart
+      icon: BarChart,
     },
     {
       id: 'ai-vision',
@@ -122,7 +122,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Computer Vision',
       popular: false,
-      icon: Eye
+      icon: Eye,
     },
     {
       id: 'ai-voice',
@@ -145,7 +145,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Voice AI',
       popular: false,
-      icon: Mic
+      icon: Mic,
     },
     {
       id: 'ai-automation',
@@ -168,7 +168,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Automation',
       popular: true,
-      icon: Zap
+      icon: Zap,
     },
     {
       id: 'ai-fraud-detection',
@@ -191,7 +191,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Security',
       popular: true,
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'ai-predictive-maintenance',
@@ -214,7 +214,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Industrial AI',
       popular: false,
-      icon: Settings
+      icon: Settings,
     },
     {
       id: 'ai-personalization',
@@ -237,7 +237,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Marketing',
       popular: true,
-      icon: Target
+      icon: Target,
     },
     {
       id: 'ai-supply-chain',
@@ -260,7 +260,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Supply Chain',
       popular: false,
-      icon: Box
+      icon: Box,
     },
     {
       id: 'ai-healthcare-diagnostics',
@@ -283,7 +283,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Healthcare',
       popular: false,
-      icon: Heart
+      icon: Heart,
     },
     {
       id: 'ai-financial-modeling',
@@ -306,7 +306,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Finance',
       popular: true,
-      icon: TrendingUp
+      icon: TrendingUp,
     },
     {
       id: 'ai-nlp-processing',
@@ -329,7 +329,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Language Processing',
       popular: false,
-      icon: FileText
+      icon: FileText,
     },
     {
       id: 'ai-robotic-process',
@@ -352,7 +352,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Automation',
       popular: true,
-      icon: Cpu
+      icon: Cpu,
     },
     {
       id: 'ai-customer-insights',
@@ -375,7 +375,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Customer Analytics',
       popular: true,
-      icon: Users
+      icon: Users,
     },
     {
       id: 'ai-quality-assurance',
@@ -398,7 +398,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Software Testing',
       popular: false,
-      icon: CheckCircle
+      icon: CheckCircle,
     },
     {
       id: 'ai-energy-optimization',
@@ -421,7 +421,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Energy',
       popular: false,
-      icon: Zap
+      icon: Zap,
     },
     {
       id: 'ai-hr-analytics',
@@ -444,7 +444,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Human Resources',
       popular: false,
-      icon: Users
+      icon: Users,
     },
     {
       id: 'ai-blockchain-analytics',
@@ -467,7 +467,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Blockchain',
       popular: false,
-      icon: Link
+      icon: Link,
     },
     {
       id: 'ai-edge-computing',
@@ -490,7 +490,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Edge Computing',
       popular: false,
-      icon: Server
+      icon: Server,
     },
     {
       id: 'ai-video-analysis',
@@ -516,7 +516,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Computer Vision',
       popular: true,
-      icon: Eye
+      icon: Eye,
     },
     {
       id: 'ai-speech-synthesis',
@@ -542,7 +542,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Voice AI',
       popular: true,
-      icon: Mic
+      icon: Mic,
     },
     {
       id: 'ai-recommendation-engine',
@@ -568,7 +568,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Personalization',
       popular: true,
-      icon: Target
+      icon: Target,
     },
     {
       id: 'ai-sentiment-analysis',
@@ -594,7 +594,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Language Processing',
       popular: true,
-      icon: Heart
+      icon: Heart,
     },
     {
       id: 'ai-chatbot-enterprise',
@@ -620,7 +620,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Customer Service',
       popular: true,
-      icon: MessageSquare
+      icon: MessageSquare,
     },
     {
       id: 'ai-content-moderation',
@@ -646,7 +646,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Content Moderation',
       popular: false,
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'ai-predictive-modeling',
@@ -672,7 +672,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Analytics',
       popular: true,
-      icon: BarChart
+      icon: BarChart,
     },
     {
       id: 'ai-document-intelligence',
@@ -698,7 +698,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Document Processing',
       popular: true,
-      icon: FileText
+      icon: FileText,
     },
     {
       id: 'ai-conversation-analytics',
@@ -724,7 +724,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Customer Analytics',
       popular: true,
-      icon: Users
+      icon: Users,
     },
     {
       id: 'ai-supply-chain-ai',
@@ -750,7 +750,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Supply Chain',
       popular: false,
-      icon: Box
+      icon: Box,
     },
     {
       id: 'ai-healthcare-diagnostics',
@@ -776,7 +776,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Healthcare',
       popular: false,
-      icon: Heart
+      icon: Heart,
     },
     {
       id: 'ai-financial-forecasting',
@@ -802,7 +802,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Finance',
       popular: true,
-      icon: TrendingUp
+      icon: TrendingUp,
     },
     {
       id: 'ai-iot-analytics',
@@ -828,7 +828,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'IoT & Analytics',
       popular: false,
-      icon: Cpu
+      icon: Cpu,
     },
     {
       id: 'ai-conversational-ai',
@@ -854,7 +854,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Conversational AI',
       popular: true,
-      icon: MessageCircle
+      icon: MessageCircle,
     },
     {
       id: 'ai-automated-testing',
@@ -880,7 +880,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Software Testing',
       popular: true,
-      icon: CheckCircle
+      icon: CheckCircle,
     },
     {
       id: 'ai-knowledge-management',
@@ -906,7 +906,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Knowledge Management',
       popular: false,
-      icon: FileText
+      icon: FileText,
     },
     {
       id: 'ai-customer-churn',
@@ -932,7 +932,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Customer Analytics',
       popular: true,
-      icon: Users
+      icon: Users,
     },
     {
       id: 'ai-automated-reporting',
@@ -958,7 +958,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Reporting & Analytics',
       popular: true,
-      icon: BarChart
+      icon: BarChart,
     },
     {
       id: 'ai-voice-assistant',
@@ -984,7 +984,7 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Voice AI',
       popular: true,
-      icon: Mic
+      icon: Mic,
     },
     {
       id: 'ai-content-generation',
@@ -1010,11 +1010,10 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Content Generation',
       popular: true,
-      icon: FileText
+      icon: FileText,
     }
-  ]
-
-  const categories = [
+  ];
+const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length },
     { id: 'Content', name: 'Content', count: services.filter(s => s.category === 'Content').length },
@@ -1043,9 +1042,8 @@ const AiServicesPage: React.FC = () => {
     { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
     { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
     { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
-  ]
-
-  const filteredServices = services.filter(service => 
+  ];
+const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
   );
 
@@ -1184,6 +1182,5 @@ const AiServicesPage: React.FC = () => {
       <Footer />
     </>
   );
-}
-
+};
 export default AiServicesPage;

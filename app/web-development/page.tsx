@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud, Phone } from 'lucide-react';
+import { Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud, Phone , Eye } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -14,7 +14,7 @@ const technologies = [
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },;
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },;
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ]
+  ];
 const process = [
     {
     step: '01',
@@ -41,9 +41,8 @@ const process = [
       icon: Shield,
   }
     }
-  ]
+  ];
 return(<>
-
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group";
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.";
@@ -94,45 +93,42 @@ const WebDevelopmentPage: React.FC = () => {
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
       color: 'text-gray-400'
     }
-  ]
-
-  const technologies = [
+  ];
+const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
     { name: 'Python/Django', icon: Globe, description: 'Backend development' },
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ]
-
-  const process = [
+  ];
+const process = [
     {
       step: '01',
       title: 'Discovery & Planning',
       description: 'We analyze your requirements and create a detailed project plan',
-      icon: BarChart
+      icon: BarChart,
     },
     {
       step: '02',
       title: 'Design & Prototyping',
       description: 'Create wireframes and prototypes to visualize your solution',
-      icon: Code
+      icon: Code,
     },
     {
       step: '03',
       title: 'Development',
       description: 'Build your web application using modern technologies and best practices',
-      icon: Globe
+      icon: Globe,
     },
     {
       step: '04',
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
-      icon: Shield
+      icon: Shield,
     }
-  ]
-
-  return (
+  ];
+return (
     <>
       <SEOOptimizer
         title="Web Development Services - Zion Tech Group"
@@ -449,7 +445,6 @@ const WebDevelopmentPage: React.FC = () => {
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   Call +1 302 464 0950
-
                 </a>
               </div>
             </div>
@@ -469,13 +464,12 @@ const WebDevelopmentPage: React.FC = () => {
         <Footer>
       </div>,;
     </>);
-}
+};
 export default WebDevelopmentPage;
 
       </div>
     </>
   );
-}
-
+};
 export default WebDevelopmentPage;
 

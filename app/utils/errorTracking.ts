@@ -4,7 +4,7 @@
  * Provides comprehensive error tracking with categorization and analytics;
  */;
 export enum ErrorSeverity {/* TODO: Fix JSX expression */}
-}
+};
 export enum ErrorCategory {
     Network = 'network',;
   Validation = 'validation',;
@@ -13,7 +13,7 @@ export enum ErrorCategory {
   Configuration = 'configuration',;
   ExternalService = 'external_service'
   }
-}
+};
 export interface ErrorMetadata {
     category: ErrorCategory,
   severity: ErrorSeverity,
@@ -26,7 +26,7 @@ export interface ErrorMetadata {
   userAgent?: string;,;
   url?: string
   }
-}
+};
 export interface TrackedError {
     id: string,
   message: string,
@@ -48,8 +48,8 @@ static getInstance(): ErrorTrackingService {
     if (!ErrorTrackingService.instance) {
       ErrorTrackingService.instance = new ErrorTrackingService()
   }
-    }
-    return ErrorTrackingService.instance;
+    };
+return ErrorTrackingService.instance;
   }
 private setupGlobalErrorHandlers(): void {
     if (typeof window === 'undefined') return;
@@ -135,16 +135,16 @@ trackError(error: Error),
         logger.error('Failed to report error to external service', { error: err.message })
       })
 export enum ErrorCategory {/* TODO: Fix JSX expression */}
-}
+};
 export interface ErrorMetadata {/* TODO: Fix JSX expression */}
-}
+};
 export interface TrackedError {/* TODO: Fix JSX expression */}
 }
 class ErrorTrackingService {/* TODO: Fix JSX expression */}
   }
   static getInstance(): ErrorTrackingService {/* TODO: Fix JSX expression */}
-    }
-    return ErrorTrackingService.instance;
+    };
+return ErrorTrackingService.instance;
   }
   /**;
    * Set up global error handlers;
@@ -169,8 +169,8 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
   a: Partial<ErrorMetadata> & {/* TODO: Fix JSX expression */}
   y: ErrorSeverity })
   ): string {/* TODO: Fix JSX expression */}
-    }
-    const existingError = this.errors.get(errorId);
+    };
+const existingError = this.errors.get(errorId);
     if (existingError) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
       }
@@ -186,25 +186,25 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
     })
     // Send to external service if critical;
     if (metadata.severity === ErrorSeverity.Critical) {/* TODO: Fix JSX expression */}
-    }
+    };
 return errorId;
   }
 private generateErrorId(message: string): string {
     ,
     const timestamp = Date.now().toString(36),;
     const hash = this.simpleHash(message),
-  }
-    return `err_${timestamp}_${hash}`;
+  };
+return `err_${timestamp}_${hash}`;
   }
 private simpleHash(str: string): string {
-    let hash = 0
+    let hash = 0;
     for (let i = 0; i < str.length, i++) {
       const char = str.charCodeAt(i),;
       hash = ((hash << 5) - hash) + char;
       hash = hash & hash // Convert to 32-bit integer
   }
-    }
-    return Math.abs(hash).toString(36);
+    };
+return Math.abs(hash).toString(36);
   }
 addListener(listener: (error: TrackedError) => void): void {
     ,
@@ -265,8 +265,8 @@ getErrors(): TrackedError[] {
   }
 getErrorById(id: string): TrackedError | undefined {
     ,
-  }
-    return this.errors.get(id)}
+  };
+return this.errors.get(id)}
 clearErrors(): void {
     this.errors.clear()
   }
@@ -278,8 +278,8 @@ getErrorStats(): {
   }
   } {
     const errors = this.getErrors()
-  }
-    const byCategory: Record<ErrorCategory, number> = {} as Record<ErrorCategory>
+  };
+const byCategory: Record<ErrorCategory, number> = {} as Record<ErrorCategory>
     const bySeverity: Record<ErrorSeverity, number> = {} as Record<ErrorSeverity>
     // Initialize counters;
     Object.values(ErrorCategory).forEach(category => {
@@ -343,8 +343,8 @@ export const errorTracking = ErrorTrackingService.getInstance();
    * Get error statistics;
    */;
   getStatistics(): {/* TODO: Fix JSX expression */}
-  } {/* TODO: Fix JSX expression */}
-    const byCategory = {} as Record<ErrorCategory>
+  } {/* TODO: Fix JSX expression */};
+const byCategory = {} as Record<ErrorCategory>
     const bySeverity = {} as Record<ErrorSeverity>
     errors.forEach(error => {/* TODO: Fix JSX expression */})
     })
@@ -365,19 +365,19 @@ export const errorTracking = ErrorTrackingService.getInstance();
       }
     }
   }
-}
+};
 export const errorTracking = ErrorTrackingService.getInstance();
 export default ErrorTrackingService;
 // Export convenience functions for easier testing and usage;
 export const trackError = (erro);
   r: Error, options?: Partial<Omit<ErrorMetadata, 'timestamp'>>) => {/* TODO: Fix JSX expression */}
   })
-}
+};
 export const getErrorStatistics = () => {/* TODO: Fix JSX expression */}
   }));
   return {/* TODO: Fix JSX expression */}
   }
-}
+};
 export const clearErrorHistory = () => errorTracking.clearErrors();
 export const addErrorListener = (listene,;
   r: (erro)

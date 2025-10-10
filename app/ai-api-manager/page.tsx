@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-import { CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3 } from 'lucide-react';
+import { CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3 , Eye } from 'lucide-react';
 
 const AIApiManagerPage: React.FC = () => {
 
@@ -25,25 +25,22 @@ const AIApiManagerPage: React.FC = () => {
       description: 'Enterprise-grade security with automated compliance monitoring and threat detection.',
       benefits: ['Threat detection', 'Compliance monitoring', 'Security scanning', 'Access control']
     }
-  ]
-
-  const benefits = [
+  ];
+const benefits = [
     'Centralized API management',
     'Real-time performance monitoring',
     'Advanced security features',
     'Comprehensive analytics',
     'Easy integration',
     '24/7 support'
-  ]
-
-  const stats = [
+  ];
+const stats = [
     { icon: <Settings className="w-8 h-8 text-blue-500" />, value: '500+', label: 'APIs Managed' },
     { icon: <Zap className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Security' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '60%', label: 'Efficiency Gain' }
-  ]
-
-  return (
+  ];
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>AI API Manager | Zion Tech Group</title>
@@ -60,7 +57,6 @@ const AIApiManagerPage: React.FC = () => {
 
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             AI API Manager
-
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Comprehensive API management platform with AI-powered insights, security, and optimization
@@ -174,7 +170,6 @@ const AIApiManagerPage: React.FC = () => {
       <Footer />
     </div>
   ),
-}
-
+};
 export default AIApiManagerPage;
 

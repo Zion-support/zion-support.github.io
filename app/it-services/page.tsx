@@ -53,7 +53,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud',
       popular: true,
-      icon: Cloud
+      icon: Cloud,
     },
     {
       id: 'cybersecurity',
@@ -77,7 +77,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Security',
       popular: true,
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'devops',
@@ -101,7 +101,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'DevOps',
       popular: false,
-      icon: Settings
+      icon: Settings,
     },
     {
       id: 'database-management',
@@ -125,7 +125,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Database',
       popular: false,
-      icon: Database
+      icon: Database,
     },
     {
       id: 'mobile-development',
@@ -149,7 +149,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Development',
       popular: false,
-      icon: Smartphone
+      icon: Smartphone,
     },
     {
       id: 'web-development',
@@ -173,7 +173,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Development',
       popular: false,
-      icon: Globe
+      icon: Globe,
     },
     {
       id: 'network-infrastructure',
@@ -197,7 +197,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Networking',
       popular: false,
-      icon: Wifi
+      icon: Wifi,
     },
     {
       id: 'data-center-services',
@@ -221,7 +221,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Data Center',
       popular: false,
-      icon: Server
+      icon: Server,
     },
     {
       id: 'it-consulting',
@@ -245,7 +245,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Consulting',
       popular: true,
-      icon: Users
+      icon: Users,
     },
     {
       id: 'managed-services',
@@ -269,7 +269,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Managed Services',
       popular: true,
-      icon: Settings
+      icon: Settings,
     },
     {
       id: 'api-development',
@@ -293,7 +293,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'API Development',
       popular: false,
-      icon: Code
+      icon: Code,
     },
     {
       id: 'ecommerce-solutions',
@@ -317,7 +317,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'E-commerce',
       popular: true,
-      icon: ShoppingCart
+      icon: ShoppingCart,
     },
     {
       id: 'enterprise-software',
@@ -341,7 +341,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Software Development',
       popular: false,
-      icon: Monitor
+      icon: Monitor,
     },
     {
       id: 'it-support',
@@ -365,7 +365,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Support',
       popular: true,
-      icon: Headphones
+      icon: Headphones,
     },
     {
       id: 'cloud-security',
@@ -389,7 +389,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Security',
       popular: false,
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'data-analytics',
@@ -413,7 +413,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Data Analytics',
       popular: true,
-      icon: BarChart
+      icon: BarChart,
     },
     {
       id: 'disaster-recovery',
@@ -437,7 +437,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Disaster Recovery',
       popular: false,
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'it-audit',
@@ -461,7 +461,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Compliance',
       popular: false,
-      icon: CheckCircle
+      icon: CheckCircle,
     },
     {
       id: 'cloud-native-development',
@@ -487,7 +487,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Development',
       popular: true,
-      icon: Cloud
+      icon: Cloud,
     },
     {
       id: 'ai-integration-services',
@@ -513,7 +513,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'AI Integration',
       popular: true,
-      icon: Brain
+      icon: Brain,
     },
     {
       id: 'blockchain-development',
@@ -539,7 +539,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Blockchain',
       popular: false,
-      icon: Link
+      icon: Link,
     },
     {
       id: 'iot-development',
@@ -565,7 +565,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'IoT Development',
       popular: true,
-      icon: Wifi
+      icon: Wifi,
     },
     {
       id: 'mobile-app-development',
@@ -591,7 +591,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Mobile Development',
       popular: true,
-      icon: Smartphone
+      icon: Smartphone,
     },
     {
       id: 'e-commerce-development',
@@ -617,7 +617,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'E-commerce',
       popular: true,
-      icon: ShoppingCart
+      icon: ShoppingCart,
     },
     {
       id: 'api-development-advanced',
@@ -643,7 +643,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'API Development',
       popular: true,
-      icon: Code
+      icon: Code,
     },
     {
       id: 'data-engineering',
@@ -669,7 +669,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Data Engineering',
       popular: true,
-      icon: Database
+      icon: Database,
     },
     {
       id: 'cybersecurity-advanced',
@@ -695,7 +695,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cybersecurity',
       popular: true,
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'cloud-migration-advanced',
@@ -721,7 +721,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Migration',
       popular: true,
-      icon: Cloud
+      icon: Cloud,
     },
     {
       id: 'devops-advanced',
@@ -747,7 +747,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'DevOps',
       popular: true,
-      icon: Settings
+      icon: Settings,
     },
     {
       id: 'machine-learning-ops',
@@ -773,7 +773,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'MLOps',
       popular: true,
-      icon: Cpu
+      icon: Cpu,
     },
     {
       id: 'enterprise-integration',
@@ -799,7 +799,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Integration',
       popular: true,
-      icon: Link
+      icon: Link,
     },
     {
       id: 'performance-optimization',
@@ -825,7 +825,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Performance',
       popular: true,
-      icon: Zap
+      icon: Zap,
     },
     {
       id: 'disaster-recovery-advanced',
@@ -851,7 +851,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Disaster Recovery',
       popular: false,
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'compliance-automation',
@@ -877,7 +877,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Compliance',
       popular: true,
-      icon: CheckCircle
+      icon: CheckCircle,
     },
     {
       id: 'cloud-cost-optimization',
@@ -903,7 +903,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Optimization',
       popular: true,
-      icon: TrendingUp
+      icon: TrendingUp,
     },
     {
       id: 'security-automation',
@@ -929,7 +929,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Security Automation',
       popular: true,
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'data-visualization',
@@ -955,7 +955,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Data Visualization',
       popular: true,
-      icon: BarChart
+      icon: BarChart,
     },
     {
       id: 'workflow-automation',
@@ -981,7 +981,7 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Automation',
       popular: true,
-      icon: Settings
+      icon: Settings,
     },
     {
       id: 'cloud-native-security',
@@ -1007,11 +1007,10 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Security',
       popular: true,
-      icon: Shield
+      icon: Shield,
     }
-  ]
-
-  const categories = [
+  ];
+const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Cloud', name: 'Cloud', count: services.filter(s => s.category === 'Cloud').length },
     { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length },
@@ -1045,9 +1044,8 @@ const ItServicesPage: React.FC = () => {
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
     { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
     { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
-  ]
-
-  const filteredServices = services.filter(service => 
+  ];
+const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
   );
 
@@ -1186,6 +1184,5 @@ const ItServicesPage: React.FC = () => {
       <Footer />
     </>
   );
-}
-
+};
 export default ItServicesPage;

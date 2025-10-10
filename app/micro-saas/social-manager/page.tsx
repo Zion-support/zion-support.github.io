@@ -1,12 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Share2, ArrowRight } from 'lucide-react';
+import { Share2, ArrowRight , Eye } from 'lucide-react';
 const SocialMediaManagerPage: React.FC = () => {
     return (
     <>,
       <Helmet>
         <title>Social Media Manager | Zion Tech Group - AI Social Media Automation</title>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
         <link>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -49,6 +49,6 @@ const SocialMediaManagerPage: React.FC = () => {
     </>,
   )
   }
-}
+};
 export default SocialMediaManagerPage;
 

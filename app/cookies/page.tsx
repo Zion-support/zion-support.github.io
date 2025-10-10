@@ -17,7 +17,7 @@ const CookiesPage: React.FC = () => {
         'Load balancing cookies',
         'User interface customization'
       ],
-      required: true
+      required: true,
     },
     {
       type: 'Analytics Cookies',
@@ -29,7 +29,7 @@ const CookiesPage: React.FC = () => {
         'User behavior analysis',
         'Performance monitoring'
       ],
-      required: false
+      required: false,
     },
     {
       type: 'Functional Cookies',
@@ -41,7 +41,7 @@ const CookiesPage: React.FC = () => {
         'User preferences',
         'Form data storage'
       ],
-      required: false
+      required: false,
     },
     {
       type: 'Marketing Cookies',
@@ -53,34 +53,32 @@ const CookiesPage: React.FC = () => {
         'Email marketing tracking',
         'Campaign performance'
       ],
-      required: false
+      required: false,
     }
-  ]
-
-  const purposes = [
+  ];
+const purposes = [
     {
       title: 'Website Functionality',
       description: 'Ensure the website works correctly and securely',
-      icon: Shield
+      icon: Shield,
     },
     {
       title: 'User Experience',
       description: 'Remember your preferences and settings',
-      icon: Settings
+      icon: Settings,
     },
     {
       title: 'Analytics',
       description: 'Understand how users interact with our site',
-      icon: Database
+      icon: Database,
     },
     {
       title: 'Marketing',
       description: 'Deliver relevant content and advertisements',
-      icon: Eye
+      icon: Eye,
     }
-  ]
-
-  return (
+  ];
+return (
     <>
       <Helmet>
         <title>Cookie Policy - Zion Tech Group</title>
@@ -118,7 +116,7 @@ const CookiesPage: React.FC = () => {
               <div>
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   Cookies are small text files that are stored on your device when you visit our website. 
-                  They help us provide you with a better experience by remembering your preferences and 
+                  They help us provide you with a better experience by remembering your preferences and
                   understanding how you use our site.
                 </p>
                 <div className="bg-slate-800 rounded-lg p-6">
@@ -258,7 +256,7 @@ const CookiesPage: React.FC = () => {
             <h2 className="text-2xl font-bold text-white mb-6">Third-Party Cookies</h2>
             <div className="space-y-6">
               <p className="text-gray-300">
-                We may use third-party services that set their own cookies. These services help us provide 
+                We may use third-party services that set their own cookies. These services help us provide
                 better functionality and analytics. Here are the main third-party cookies we use:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -379,6 +377,5 @@ const CookiesPage: React.FC = () => {
       </div>
     </>
   );
-}
-
+};
 export default CookiesPage;

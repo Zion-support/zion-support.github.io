@@ -4,10 +4,10 @@ import { useAnalytics } from './EnhancedAnalytics';
 
 interface AccessibilitySettings {
     highContrast: boolean;
-  reducedMotion: boolean
+  reducedMotion: boolean,
   fontSize: 'small' | 'medium' | 'large'
   screenReader: boolean,
-  keyboardNavigation: boolean
+  keyboardNavigation: boolean,
   }
 
 interface EnhancedAccessibilityProps {
@@ -16,21 +16,20 @@ interface EnhancedAccessibilityProps {
   enableScreenReaderSupport?: boolean
   enableHighContrast?: boolean,
   enableFocusManagement?: boolean
-  }
-
+  };
 const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   children,
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
-  enableFocusManagement = true
+  enableFocusManagement = true;
 }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',
     screenReader: false,
-    keyboardNavigation: false
+    keyboardNavigation: false,
   })
 
   const analytics = useAnalytics();
@@ -43,20 +42,20 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     setSettings(prev => ({
       ...prev,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
+      highContrast: prefersHighContrast,
     }));
 
     // Apply initial accessibility settings
     applyAccessibilitySettings({
       ...settings,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
+      highContrast: prefersHighContrast,
     })
 
     // Track accessibility usage
     analytics?.track('accessibility_initialized', {
       reduced_motion: prefersReducedMotion,
-      high_contrast: prefersHighContrast
+      high_contrast: prefersHighContrast,
     })
   }, []);
 
@@ -87,9 +86,8 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   } else {
     root.classList.remove('screen-reader-optimized')
   }
-  }
-
-  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
+  };
+const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
     const updatedSettings = { ...settings, ...newSettings }
     setSettings(updatedSettings);
     applyAccessibilitySettings(updatedSettings);
@@ -135,9 +133,8 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       if (target && target.classList) {
         target.classList.add('focus-visible');
       }
-    }
-
-    const handleFocusOut = (event: FocusEvent) => {
+    };
+const handleFocusOut = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
       
       // Remove focus styling
@@ -181,7 +178,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   }, [settings]);
 
   return (
-    <div 
+    <div
       className={`accessibility-wrapper ${settings.highContrast ? 'high-contrast' : ''} ${settings.reducedMotion ? 'reduced-motion' : ''}`}
       data-font-size={settings.fontSize}
       data-screen-reader={settings.screenReader}
@@ -189,6 +186,5 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       {children}
     </div>
   );
-}
-
+};
 export default EnhancedAccessibility;

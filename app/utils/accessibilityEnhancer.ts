@@ -189,9 +189,8 @@ const AccessibilityEnhancerPage: React.FC = () => {
     const activeElement = document.activeElement as HTMLElement;
     const menuItems = Array.from(
       activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || []
-    ) as HTMLElement[]
-    
-    const currentIndex = menuItems.indexOf(activeElement);
+    ) as HTMLElement[];
+const currentIndex = menuItems.indexOf(activeElement);
     
     if (currentIndex === -1) return;
     
@@ -396,7 +395,6 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
     'Proven track record of success'
   ]
 >>>>>>> cursor/fix-errors-and-merge-to-main-00a6
-
 // Export utility functions
 export const announceToScreenReader = (message: string) => {
   accessibilityEnhancer.announce(message);
@@ -405,12 +403,10 @@ export const announceToScreenReader = (message: string) => {
 <<<<<<< HEAD
 export const updateFocusableElements = () => {
   accessibilityEnhancer.updateFocusableElements();
-}
-
+};
 export const focusFirstElement = () => {
   accessibilityEnhancer.focusFirst();
-}
-
+};
 export const focusLastElement = () => {
   accessibilityEnhancer.focusLast();
 }

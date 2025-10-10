@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Mail, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, CheckCircle, AlertCircle , Eye } from 'lucide-react';
 
 const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -46,9 +46,8 @@ const ContentNewsletterSignup: React.FC = () => {
         </button>
       </div>
     );
-  }
-
-  return (
+  };
+return (
     <div className="bg-slate-800/50 rounded-lg p-8">
       <div className="text-center mb-6">
         <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -104,6 +103,5 @@ const ContentNewsletterSignup: React.FC = () => {
       </div>
     </div>
   );
-}
-
+};
 export default ContentNewsletterSignup;

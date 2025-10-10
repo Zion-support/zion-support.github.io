@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
+import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield , Eye } from 'lucide-react';
 const AIAnalyticsDashboardPage: React.FC = () => {
     const features = [
     {
@@ -34,7 +34,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       description: 'Monitor KPIs and business objectives with automated alerts.'
   }
     }
-  ]
+  ];
 const benefits = [
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',;
@@ -42,19 +42,19 @@ const benefits = [
     'Automated report generation',;
     'Multi-platform data integration',;
     'Mobile-responsive design';
-  ]
+  ];
 const metrics = [
     { label: 'Data Sources', value: '50+', icon: BarChart },;
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },;
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },;
     { label: 'User Satisfaction', value: '4.9/5', icon: Star }
-  ]
+  ];
 return (
     <>
       <Helmet>
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
         <link>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -200,6 +200,6 @@ return (
       </div>
     </>
   ),
-}
+};
 export default AIAnalyticsDashboardPage;
 

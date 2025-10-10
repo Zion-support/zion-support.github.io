@@ -4,11 +4,10 @@ import React from 'react';
 interface StructuredDataProps {
   type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness';
   data?: Record<string, unknown>;
-}
-
+};
 const StructuredData: React.FC<StructuredDataProps> = ({ 
   type = 'Organization', 
-  data 
+  data
 }) => {
   const getDefaultData = () => {
     switch (type) {
@@ -165,9 +164,8 @@ const StructuredData: React.FC<StructuredDataProps> = ({
       default:
         return {}
     }
-  }
-
-  const structuredData = data || getDefaultData();
+  };
+const structuredData = data || getDefaultData();
 
   return (
     <script
@@ -177,6 +175,5 @@ const StructuredData: React.FC<StructuredDataProps> = ({
       }}
     />
   );
-}
-
+};
 export default StructuredData;

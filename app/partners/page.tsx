@@ -4,7 +4,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
+import { CheckCircle, ArrowRight, ExternalLink , Eye } from 'lucide-react';
 
 const PartnersPage: React.FC = () => {
   const partners = [
@@ -44,34 +44,31 @@ const PartnersPage: React.FC = () => {
       description: 'Partner for IT service management and workflow automation',
       category: 'IT Management'
     }
-  ]
-
-  const benefits = [
+  ];
+const benefits = [
     {
       title: 'Certified Expertise',
       description: 'Our team holds certifications from leading technology partners',
-      icon: CheckCircle
+      icon: CheckCircle,
     },
     {
       title: 'Priority Support',
       description: 'Get priority access to partner resources and support channels',
-      icon: CheckCircle
+      icon: CheckCircle,
     },
     {
       title: 'Latest Technology',
       description: 'Access to cutting-edge tools and early release features',
-      icon: CheckCircle
+      icon: CheckCircle,
     },
     {
       title: 'Cost Optimization',
       description: 'Leverage partner pricing and volume discounts for your projects',
-      icon: CheckCircle
+      icon: CheckCircle,
     }
-  ]
-
-  const categories = ['All', 'Cloud & AI', 'Hardware & AI', 'Business Software', 'IT Management']
-
-  return (
+  ];
+const categories = ['All', 'Cloud & AI', 'Hardware & AI', 'Business Software', 'IT Management'];
+return (
     <>
       <Helmet>
         <title>Partners | Zion Tech Group</title>
@@ -160,6 +157,5 @@ const PartnersPage: React.FC = () => {
       <Footer />
     </>
   );
-}
-
+};
 export default PartnersPage;

@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from 'lucide-react';
+import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server , Eye } from 'lucide-react';
 const EdgeComputingPage: React.FC = () => {
     const features = [
     {
@@ -41,9 +41,9 @@ const EdgeComputingPage: React.FC = () => {
       title: 'Edge Infrastructure',
       description: 'Robust infrastructure designed for edge computing requirements and scalability.',
       benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
-  }
     }
-  ]
+  ];
+];
 const services = [
     {
     icon: '⚡',
@@ -66,7 +66,7 @@ const services = [
       description: 'Mobile edge computing for 5G and mobile applications'
   }
     }
-  ]
+  ];
 const benefits = [
     'Ultra-Low Latency',
     'Reduced Bandwidth Costs',;
@@ -74,7 +74,7 @@ const benefits = [
     'Enhanced Security',;
     'Real-time Processing',;
     'Global Scalability';
-  ]
+  ];
 const useCases = [
     {
     title: 'Autonomous Vehicles',
@@ -107,13 +107,13 @@ const useCases = [
       icon: '🎮'
   }
     }
-  ]
+  ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
       <Helmet>
         <title>Edge Computing Solutions | Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation>
       {/* Hero Section */}
@@ -265,6 +265,6 @@ return (
       <Footer>
     </div>
   ),
-}
+};
 export default EdgeComputingPage;
 

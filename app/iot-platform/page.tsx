@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight , Eye } from 'lucide-react';
 },;
     {
     icon: Clock,
@@ -13,7 +13,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
   },
     {}
     }
-  ]
+  ];
 return (
             <p>
               Our IoT platform provides everything you need to build, deploy, and scale;
@@ -95,6 +95,6 @@ return (
       <Footer>
 </div>
   );
-}
+};
 export default PagePage;
 

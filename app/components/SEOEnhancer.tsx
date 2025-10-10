@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe , Eye } from 'lucide-react';
 
 const SEOEnhancer: React.FC = () => {
   const features = [
@@ -25,9 +25,8 @@ const SEOEnhancer: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-  ]
-
-  const benefits = [
+  ];
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -36,9 +35,8 @@ const SEOEnhancer: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-
-  return (
+  ];
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>SEOEnhancer | Zion Tech Group</title>
@@ -142,7 +140,6 @@ const SEOEnhancer: React.FC = () => {
       </section>
     </div>
   );
-}
-
+};
 export default SEOEnhancer;
 

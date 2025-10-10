@@ -50,7 +50,7 @@ export interface AppConfig {
     enableNetwork: boolean,
   }
   }
-}
+};
 const defaultConfig: AppConfig = {
     environment: 'development'
   api: {
@@ -107,16 +107,16 @@ private loadEnvironmentConfig(): void {
     if (env === 'production') {
       this.config.logging.level = 'error';
       this.config.logging.enableConsole = false;
-      this.config.features.enableAnalytics = true
+      this.config.features.enableAnalytics = true;
   }
     } else if (env === 'staging') {
     this.config.logging.level = 'warn';
-      this.config.logging.enableConsole = true
+      this.config.logging.enableConsole = true;
   }
     }
   }
-public getConfig(): AppConfig {}
-    return { ...this.config }
+public getConfig(): AppConfig {};
+return { ...this.config }
   }
 public updateConfig(updates: Partial<AppConfig>): void {
     ,
@@ -181,7 +181,7 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
   loggin,;
   g: {/* TODO: Fix JSX expression */}
   }
-}
+};
 const,;
   defaultConfig: AppConfig = {/* TODO: Fix JSX expression */},
   feature,;
@@ -195,7 +195,7 @@ const,;
   loggin,;
   g: {/* TODO: Fix JSX expression */}
   }
-}
+};
 const,;
   developmentConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */},
   feature,;
@@ -203,7 +203,7 @@ const,;
   loggin,;
   g: {/* TODO: Fix JSX expression */}
   }
-}
+};
 const,;
   stagingConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */},
   feature,;
@@ -211,7 +211,7 @@ const,;
   loggin,;
   g: {/* TODO: Fix JSX expression */}
   }
-}
+};
 const,;
   productionConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */},
   feature,;
@@ -221,7 +221,7 @@ const,;
   securit,;
   y: {/* TODO: Fix JSX expression */}
   }
-}
+};
 const,;
   testConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */},
   feature,;
@@ -229,14 +229,14 @@ const,;
   loggin,;
   g: {/* TODO: Fix JSX expression */}
   }
-}
+};
 export class ConfigManager {/* TODO: Fix JSX expression */}
-  overrides: Partial<AppConfig> = {}
-  constructor() {/* TODO: Fix JSX expression */}
+  overrides: Partial<AppConfig> = {};
+constructor() {/* TODO: Fix JSX expression */}
   }
   static getInstance(): ConfigManager {/* TODO: Fix JSX expression */}
-    }
-    return ConfigManager.instance;
+    };
+return ConfigManager.instance;
   }
   /**;
    * Detect current environment;
@@ -246,14 +246,14 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
       if (nodeEnv === 'test') return 'test';
       if (nodeEnv === 'production') return 'production';
       if (nodeEnv === 'development') return 'development';
-    }
-    return 'development';
+    };
+return 'development';
   }
   /**;
    * Load configuration based on environment;
    */;
-  private loadConfig(): AppConfig {/* TODO: Fix JSX expression */}
-    let config = { ...defaultConfig }
+  private loadConfig(): AppConfig {/* TODO: Fix JSX expression */};
+let config = { ...defaultConfig }
     switch (this.environment) {/* TODO: Fix JSX expression */}
     }
     // Apply overrides;
@@ -265,8 +265,8 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    */;
   private mergeConfig(bas,;
   e: AppConfig, overrid);
-  e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */}
-    const result = { ...base } as AppConfig;
+  e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */};
+const result = { ...base } as AppConfig;
     (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(ke);
   y: K) => {/* TODO: Fix JSX expression */}
             result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
@@ -290,8 +290,8 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   y: K,
     nestedKey?: NK;);
   ): AppConfig[K] | AppConfig[K][NK] {/* TODO: Fix JSX expression */}
-    }
-    return this.config[key]
+    };
+return this.config[key]
   }
   /**;
    * Set configuration value;
@@ -337,14 +337,14 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
       loggin,;
   g: {/* TODO: Fix JSX expression */}
       }
-    }
-    return defaultValues[key]
+    };
+return defaultValues[key]
   }
   /**;
    * Get full configuration;
    */;
-  getConfig(): AppConfig {/* TODO: Fix JSX expression */}
-    return { ...this.config }
+  getConfig(): AppConfig {/* TODO: Fix JSX expression */};
+return { ...this.config }
   }
   /**;
    * Get environment;
@@ -372,8 +372,8 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**;
    * Get API configuration;
    */;
-  getAPIConfig() {/* TODO: Fix JSX expression */}
-    return { ...this.config.api }
+  getAPIConfig() {/* TODO: Fix JSX expression */};
+return { ...this.config.api }
   }
   /**;
    * Update API configuration;
@@ -432,8 +432,8 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
     }
     // Validate security configuration;
     if (this.config.security.maxRequestsPerMinute < 1) {/* TODO: Fix JSX expression */}
-    }
-    return {/* TODO: Fix JSX expression */}
+    };
+return {/* TODO: Fix JSX expression */}
     }
   }
 }

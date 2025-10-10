@@ -8,8 +8,7 @@ interface AnimatedCounterProps {
   prefix?: string;
   suffix?: string;
   className?: string;
-}
-
+};
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end,
   duration = 2000,
@@ -52,6 +51,5 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       {prefix}{count.toLocaleString()}{suffix}
     </span>
   );
-}
-
+};
 export default AnimatedCounter;

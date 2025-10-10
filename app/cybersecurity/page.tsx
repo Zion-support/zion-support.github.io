@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-]
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe , Eye } from 'lucide-react';
+];
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',;
@@ -15,8 +15,8 @@ const benefits = [
   ]
 <Helmet>
         <title>Page | Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
             </div>
           </div>
@@ -96,6 +96,6 @@ const benefits = [
       </section>
     </div>
   ),
-}
+};
 export default PagePage;
 

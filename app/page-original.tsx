@@ -2,7 +2,7 @@
 import React from 'react';
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock , Eye } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -25,8 +25,8 @@ const preloadComponents = (;
   return (
     $3
   )
-  }
-      import('./components/ContentCarousel');}
+  };
+import('./components/ContentCarousel');}
     }, 100);
   }
 }

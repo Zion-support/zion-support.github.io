@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
+import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight , Eye } from 'lucide-react';
 const FinancialITPage: React.FC = () => {
     const features = [
     {
@@ -41,9 +41,9 @@ const FinancialITPage: React.FC = () => {
       title: 'Financial Analytics',
       description: 'Comprehensive analytics and reporting for financial operations and compliance.',
       benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']
-  }
     }
-  ]
+  ];
+];
 const services = [
     {
     icon: '🏦',
@@ -66,7 +66,7 @@ const services = [
       description: 'Cybersecurity and data protection solutions'
   }
     }
-  ]
+  ];
 const benefits = [
     'SOX Compliance Ready',
     'Bank-level Security',;
@@ -74,13 +74,13 @@ const benefits = [
     'Regulatory Compliance',;
     'Fraud Prevention',;
     'Advanced Analytics';
-  ]
+  ];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>
       <Helmet>
         <title>Financial IT Solutions | Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation>
       {/* Hero Section */}
@@ -214,6 +214,6 @@ return (
       <Footer>
     </div>
   ),
-}
+};
 export default FinancialITPage;
 

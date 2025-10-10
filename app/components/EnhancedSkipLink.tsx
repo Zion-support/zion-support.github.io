@@ -18,6 +18,5 @@ const EnhancedSkipLink: React.FC = () => {
       Skip to main content
     </a>
   );
-}
-
+};
 export default EnhancedSkipLink;

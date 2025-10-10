@@ -8,8 +8,7 @@ interface SEOOptimizerProps {
   keywords?: string[]
   canonicalUrl?: string;
   structuredData?: object;
-}
-
+};
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title,
   description,
@@ -46,6 +45,5 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       )}
     </Helmet>
   );
-}
-
+};
 export default SEOOptimizer;

@@ -1,6 +1,5 @@
 
 <<<<<<< HEAD
-
 =======
 const NextPage: React.FC = () => {
   const features = [
@@ -24,9 +23,8 @@ const NextPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-  ]
-
-  const benefits = [
+  ];
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -35,9 +33,8 @@ const NextPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-
-  return (
+  ];
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Next.d | Zion Tech Group</title>
@@ -100,15 +97,13 @@ const NextPage: React.FC = () => {
     yahoo?: string;
     other?: Record<string, string>;
   }
-}
-
+};
 export interface MetadataRoute {
   url: string,
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
-}
-
+};
 export interface MetadataRouteSitemap extends MetadataRoute {
   url: string,
   lastModified?: string | Date;
@@ -224,8 +219,7 @@ export interface NextPageProps {
       </section>
     </div>
   );
-}
-
+};
 export default NextPage;
 
 // Client components types
@@ -280,7 +274,6 @@ declare module 'next' {
       name?: string;
     }
   }
-}
-
+};
 export {}
 >>>>>>> cursor/fix-errors-and-merge-to-main-00a6

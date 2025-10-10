@@ -1,90 +1,114 @@
-#!/usr/bin/env node;
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to process a file;
-function processFile(filePath) {
+function fixFile(filePath) {
   try {
-    // Fix malformed closing tags;
-    if (content.includes('</div>}')) {
-function processFile(filePath) {/* TODO: Fix JSX expression */}
-    if (content.includes('</div>}')) {/* TODO: Fix JSX expression */}
-      content = content.replace(/<\/div>\}/g, '}');
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix extra closing braces in object definitions
+    const extraBracePattern = /(\s*benefits:\s*\[[^\]]*\])\s*}\s*}\s*$/gm;
+    if (extraBracePattern.test(content)) {
+      content = content.replace(extraBracePattern, '$1\n    }\n  ];');
       modified = true;
     }
 
-    // Fix malformed closing tags with semicolons;
-    if (content.includes('</div>;')) {
-      content = content.replace(/<\/div>;/g, ';');
+    // Fix missing commas in object properties
+    const missingCommaPattern = /(\s*benefits:\s*\[[^\]]*\])\s*}\s*$/gm;
+    if (missingCommaPattern.test(content)) {
+      content = content.replace(missingCommaPattern, '$1\n    }');
       modified = true;
     }
 
-    // Fix malformed closing tags with commas;
-    if (content.includes('</div>,') && !content.includes('</div>, ')) {
-      content = content.replace(/<\/div>,/g, ',');
+    // Fix missing semicolons after array declarations
+    const missingSemicolonPattern = /(\]\s*)(const|let|var|function|return|export|import)/g;
+    if (missingSemicolonPattern.test(content)) {
+      content = content.replace(missingSemicolonPattern, '];\n$2');
       modified = true;
     }
 
-    // Fix unterminated regular expressions;
-    if (content.includes('const regex = /')) {
-      content = content.replace(/const regex = \/([^/]*)$/gm, 'const regex = /$1/;');
+    // Fix missing semicolons after object declarations
+    const missingObjectSemicolonPattern = /(\}\s*)(const|let|var|function|return|export|import)/g;
+    if (missingObjectSemicolonPattern.test(content)) {
+      content = content.replace(missingObjectSemicolonPattern, '};\n$2');
       modified = true;
     }
 
-    // Fix malformed object properties;
-    if (content.includes('const config = {')) {
-      // Look for lines that might be missing colons;
-      for (let i = 0; i < lines.length; i++) {
-        // Fix lines that look like property assignments but are missing colons;
-        if (line.match(/^\s*[a-zA-Z_][a-zA-Z0-9_]*\s+[a-zA-Z_][a-zA-Z0-9_]*\s*$/)) {
-          line = line.replace(
-            /^(\s*[a-zA-Z_][a-zA-Z0-9 _]*)\s+([a-zA-Z_][a-zA-Z0-9 _]*)\s*$/,
-            '$1: $2,'
-          );
-          modified = true;
-        }
-    if (content.includes('</div>;')) {/* TODO: Fix JSX expression */}
+    // Fix missing closing tags in JSX fragments
+    const jsxFragmentPattern = /<>\s*$/gm;
+    if (jsxFragmentPattern.test(content)) {
+      content = content.replace(jsxFragmentPattern, '<>');
+      modified = true;
     }
 
-    // Fix malformed closing tags with commas;
-    if (content.includes('</div>,') && !content.includes('</div>, ')) {/* TODO: Fix JSX expression */}
+    // Fix missing closing tags for meta elements
+    const metaTagPattern = /<meta>\s*$/gm;
+    if (metaTagPattern.test(content)) {
+      content = content.replace(metaTagPattern, '<meta name="description" content="AI-powered solutions" />');
+      modified = true;
     }
 
-    // Fix unterminated regular expressions;
-    if (content.includes('const regex = /')) {/* TODO: Fix JSX expression */}
+    // Fix missing function declarations
+    const functionPattern = /^(\s*const\s+\w+\s*=\s*useState)/gm;
+    if (functionPattern.test(content)) {
+      content = content.replace(functionPattern, 'const Component: React.FC = () => {\n  $1');
+      modified = true;
     }
 
-    // Fix malformed object properties;
-    if (content.includes('const config = {/* TODO: Fix JSX expression */}
-        })
-        newLines.push(line);
-      }
-      if (modified) {/* TODO: Fix JSX expression */}
-      }
+    // Fix missing imports for Eye icon
+    const eyeImportPattern = /import.*from 'lucide-react';/;
+    if (eyeImportPattern.test(content) && !content.includes('Eye')) {
+      content = content.replace(eyeImportPattern, (match) => {
+        return match.replace('}', ', Eye }');
+      });
+      modified = true;
     }
 
-    if (modified) {/* TODO: Fix JSX expression */}
+    // Fix missing closing parentheses in function calls
+    const functionCallPattern = /(\w+)\s*$/gm;
+    if (functionCallPattern.test(content)) {
+      content = content.replace(functionCallPattern, '$1');
+      modified = true;
     }
 
+    // Fix missing semicolons in variable declarations
+    const variablePattern = /(\w+)\s*=\s*(\w+)\s*$/gm;
+    if (variablePattern.test(content)) {
+      content = content.replace(variablePattern, '$1 = $2;');
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
     return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Main execution;
-async function main() {
-  // Find all TypeScript/JavaScript files in app directory;
-  files.forEach(file => {)
-    if (processFile(file)) {
-      fixedCount++;
-    }
-async function main() {/* TODO: Fix JSX expression */}
-}
-  // Find all TypeScript/JavaScript files in app directory;
-  files.forEach(file => {/* TODO: Fix JSX expression */}
-    })
-  });
+// Find all TypeScript/JavaScript files
+const files = await glob('app/**/*.{ts,tsx,js,jsx}', {
+  ignore: [
+    '**/node_modules/**',
+    '**/dist/**',
+    '**/.next/**',
+    '**/backup*/**',
+    '**/disabled*/**',
+    '**/disabled/**'
+  ]
+});
 
+console.log(`Found ${files.length} files to check...`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
 }
 
-main().catch(console.error);
+console.log(`Fixed ${fixedCount} files`);
