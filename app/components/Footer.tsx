@@ -4,6 +4,13 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
+  
+  const contactInfo = {
+    phone: '+1 (302) 464-0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008, Middletown, DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
 
   const serviceCategories = [
     {
@@ -150,26 +157,26 @@ const Footer: React.FC = memo(() => {
 
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3 text-gray-300 group">
+              <div className="flex items-center space-x-3 text-gray-300 group cyber-card p-3 rounded-lg">
                 <Phone className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                 <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors font-medium">
-                  +1 (302) 464-0950
+                  {contactInfo.phone}
                 </a>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300 group">
+              <div className="flex items-center space-x-3 text-gray-300 group cyber-card p-3 rounded-lg">
                 <Mail className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors font-medium">
-                  kleber@ziontechgroup.com
+                <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors font-medium">
+                  {contactInfo.email}
                 </a>
               </div>
-              <div className="flex items-start space-x-3 text-gray-300 group">
+              <div className="flex items-start space-x-3 text-gray-300 group cyber-card p-3 rounded-lg">
                 <MapPin className="w-4 h-4 text-cyan-400 mt-0.5 group-hover:text-cyan-300 transition-colors" />
                 <div>
                   <div className="font-medium">364 E Main St STE 1008</div>
                   <div>Middletown, DE 19709</div>
                 </div>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300 group">
+              <div className="flex items-center space-x-3 text-gray-300 group cyber-card p-3 rounded-lg">
                 <Clock className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                 <div>
                   <div className="font-medium">Mon - Fri: 9:00 AM - 6:00 PM EST</div>

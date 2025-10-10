@@ -14,7 +14,8 @@ const microSAASServices = [
     features: ["Smart Scheduling", "Risk Prediction", "Team Optimization", "Progress Tracking"],
     category: "Productivity",
     popular: true,
-    icon: BarChart
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-project-manager"
   },
   {
     name: "AI Analytics Dashboard",
@@ -23,7 +24,8 @@ const microSAASServices = [
     features: ["Real-time Analytics", "Predictive Insights", "Custom Reports", "Data Visualization"],
     category: "Analytics",
     popular: true,
-    icon: Target
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-analytics"
   },
   {
     name: "AI Customer Support Bot",
@@ -32,7 +34,8 @@ const microSAASServices = [
     features: ["24/7 Support", "Multi-language", "Sentiment Analysis", "Escalation Management"],
     category: "Support",
     popular: false,
-    icon: Users
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-customer-support"
   },
   {
     name: "AI Content Generator",
@@ -41,7 +44,48 @@ const microSAASServices = [
     features: ["Content Creation", "SEO Optimization", "Multi-format", "Brand Voice"],
     category: "Content",
     popular: true,
-    icon: Zap
+    icon: Zap,
+    link: "https://ziontechgroup.com/ai-content-generator"
+  },
+  {
+    name: "AI Invoice Generator",
+    description: "Automated invoice creation with smart templates and payment tracking",
+    price: "$49/mo",
+    features: ["Auto Generation", "Payment Tracking", "Multi-currency", "Tax Calculation"],
+    category: "Finance",
+    popular: false,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-invoice-generator"
+  },
+  {
+    name: "AI Expense Tracker",
+    description: "Smart expense management with receipt scanning and categorization",
+    price: "$39/mo",
+    features: ["Receipt Scanning", "Auto Categorization", "Budget Alerts", "Tax Reports"],
+    category: "Finance",
+    popular: false,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-expense-tracker"
+  },
+  {
+    name: "AI Lead Generation",
+    description: "Automated lead finding and qualification with AI-powered prospecting",
+    price: "$299/mo",
+    features: ["Lead Discovery", "Qualification", "Contact Info", "CRM Integration"],
+    category: "Sales",
+    popular: true,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-lead-generation"
+  },
+  {
+    name: "AI Logo Designer",
+    description: "Professional logo creation with AI-powered design and brand guidelines",
+    price: "$89/mo",
+    features: ["Auto Design", "Brand Guidelines", "Multiple Formats", "Unlimited Revisions"],
+    category: "Design",
+    popular: false,
+    icon: Zap,
+    link: "https://ziontechgroup.com/ai-logo-designer"
   }
 ];
 
@@ -53,7 +97,8 @@ const aiServices = [
     features: ["Molecular Modeling", "Drug Interaction Analysis", "Clinical Trial Optimization", "Patent Research"],
     category: "Healthcare AI",
     enterprise: true,
-    icon: Brain
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-drug-discovery-pro"
   },
   {
     name: "AI Climate Solutions Pro",
@@ -62,7 +107,8 @@ const aiServices = [
     features: ["Carbon Analysis", "Weather Prediction", "Sustainability Planning", "Emission Tracking"],
     category: "Environmental AI",
     enterprise: false,
-    icon: Globe
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-climate-solutions-pro"
   },
   {
     name: "AI Space Technology Pro",
@@ -71,7 +117,8 @@ const aiServices = [
     features: ["Satellite Operations", "Mission Planning", "Data Analysis", "Orbital Mechanics"],
     category: "Space Technology",
     enterprise: true,
-    icon: Rocket
+    icon: Rocket,
+    link: "https://ziontechgroup.com/ai-space-technology-pro"
   },
   {
     name: "AI Financial Crime Detection Pro",
@@ -80,7 +127,48 @@ const aiServices = [
     features: ["Fraud Detection", "Risk Assessment", "Compliance Monitoring", "Transaction Analysis"],
     category: "Financial AI",
     enterprise: false,
-    icon: Shield
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-financial-crime-detection-pro"
+  },
+  {
+    name: "AI Agricultural Intelligence Pro",
+    description: "Smart farming solutions with precision agriculture and crop optimization",
+    price: "$1,800/mo",
+    features: ["Crop Monitoring", "Yield Prediction", "Pest Detection", "Soil Analysis"],
+    category: "Agricultural AI",
+    enterprise: false,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-agricultural-intelligence-pro"
+  },
+  {
+    name: "AI Energy Grid Management Pro",
+    description: "Intelligent energy distribution and grid optimization for smart cities",
+    price: "$3,500/mo",
+    features: ["Grid Optimization", "Load Balancing", "Renewable Integration", "Predictive Maintenance"],
+    category: "Energy AI",
+    enterprise: true,
+    icon: Activity,
+    link: "https://ziontechgroup.com/ai-energy-grid-management-pro"
+  },
+  {
+    name: "AI Legal Research Pro",
+    description: "Advanced legal research and case analysis with AI-powered document processing",
+    price: "$2,200/mo",
+    features: ["Case Analysis", "Document Review", "Precedent Research", "Contract Analysis"],
+    category: "Legal AI",
+    enterprise: false,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-legal-research-pro"
+  },
+  {
+    name: "AI Autonomous Systems Pro",
+    description: "Self-driving and autonomous vehicle technology with advanced AI algorithms",
+    price: "$6,000/mo",
+    features: ["Autonomous Navigation", "Object Detection", "Path Planning", "Safety Systems"],
+    category: "Autonomous AI",
+    enterprise: true,
+    icon: Rocket,
+    link: "https://ziontechgroup.com/ai-autonomous-systems-pro"
   }
 ];
 
@@ -91,7 +179,8 @@ const itServices = [
     price: "$2,500/mo",
     features: ["Zero Downtime", "Security Audit", "Performance Optimization", "24/7 Support"],
     category: "Cloud Services",
-    icon: Globe
+    icon: Globe,
+    link: "https://ziontechgroup.com/cloud-migration"
   },
   {
     name: "Cybersecurity Suite",
@@ -99,7 +188,8 @@ const itServices = [
     price: "$1,800/mo",
     features: ["Threat Detection", "Vulnerability Scanning", "Incident Response", "Compliance"],
     category: "Security",
-    icon: Shield
+    icon: Shield,
+    link: "https://ziontechgroup.com/cybersecurity-suite"
   },
   {
     name: "IT Infrastructure Design",
@@ -107,7 +197,8 @@ const itServices = [
     price: "$3,000/mo",
     features: ["Architecture Design", "Scalability Planning", "Performance Tuning", "Monitoring"],
     category: "Infrastructure",
-    icon: Settings
+    icon: Settings,
+    link: "https://ziontechgroup.com/it-infrastructure-design"
   },
   {
     name: "24/7 IT Support",
@@ -115,7 +206,44 @@ const itServices = [
     price: "$1,200/mo",
     features: ["24/7 Support", "Remote Monitoring", "Quick Response", "Proactive Maintenance"],
     category: "Support",
-    icon: Clock
+    icon: Clock,
+    link: "https://ziontechgroup.com/it-support"
+  },
+  {
+    name: "Database Services",
+    description: "Advanced database management, optimization, and migration services",
+    price: "$1,500/mo",
+    features: ["Database Design", "Performance Tuning", "Migration Services", "Backup Solutions"],
+    category: "Database",
+    icon: Database,
+    link: "https://ziontechgroup.com/database-services"
+  },
+  {
+    name: "Mobile Development",
+    description: "Native and cross-platform mobile app development for iOS and Android",
+    price: "$2,200/mo",
+    features: ["Native Apps", "Cross-platform", "UI/UX Design", "App Store Optimization"],
+    category: "Development",
+    icon: Globe,
+    link: "https://ziontechgroup.com/mobile-development"
+  },
+  {
+    name: "IT Training",
+    description: "Comprehensive IT training programs for your team and organization",
+    price: "$800/mo",
+    features: ["Custom Training", "Certification Prep", "Hands-on Labs", "Progress Tracking"],
+    category: "Training",
+    icon: Users,
+    link: "https://ziontechgroup.com/it-training"
+  },
+  {
+    name: "GDPR Compliance",
+    description: "Complete GDPR compliance solutions and data protection services",
+    price: "$1,100/mo",
+    features: ["Compliance Audit", "Data Mapping", "Privacy Policies", "Training Programs"],
+    category: "Compliance",
+    icon: Shield,
+    link: "https://ziontechgroup.com/gdpr-compliance"
   }
 ];
 
@@ -158,43 +286,44 @@ const HomePage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-20 overflow-hidden matrix-bg particles">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="cyber-grid absolute inset-0 opacity-30"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text float-animation">
             AI-Powered Enterprise Solutions
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto hologram">
             Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.
           </p>
           
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+              <button className="btn-cyber py-4 px-8 text-lg flex items-center pulse-glow">
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+              <button className="btn-secondary py-4 px-8 text-lg border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                 Watch Demo
               </button>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">300%</div>
+              <div className="text-center cyber-card p-6 float-animation">
+                <div className="text-4xl font-bold text-cyan-400 mb-2 neon-text">300%</div>
                 <div className="text-gray-400">Average ROI</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-400 mb-2">70%</div>
+              <div className="text-center cyber-card p-6 float-animation" style={{animationDelay: '1s'}}>
+                <div className="text-4xl font-bold text-purple-400 mb-2 neon-text">70%</div>
                 <div className="text-gray-400">Cost Reduction</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-pink-400 mb-2">90%</div>
+              <div className="text-center cyber-card p-6 float-animation" style={{animationDelay: '2s'}}>
+                <div className="text-4xl font-bold text-pink-400 mb-2 neon-text">90%</div>
                 <div className="text-gray-400">Efficiency Gains</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
+              <div className="text-center cyber-card p-6 float-animation" style={{animationDelay: '3s'}}>
+                <div className="text-4xl font-bold text-green-400 mb-2 neon-text">99.9%</div>
                 <div className="text-gray-400">Uptime Guarantee</div>
               </div>
             </div>
@@ -244,9 +373,12 @@ const HomePage: React.FC = () => {
                     
                     <div className="text-center">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                      <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
+                      <a 
+                        href={service.link}
+                        className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-sm"
+                      >
                         Learn More →
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -299,9 +431,12 @@ const HomePage: React.FC = () => {
                     
                     <div className="text-center">
                       <div className="text-3xl font-bold text-white mb-4">{service.price}</div>
-                      <button className="bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all">
+                      <a 
+                        href={service.link}
+                        className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                      >
                         Get Started
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -341,9 +476,12 @@ const HomePage: React.FC = () => {
                     
                     <div className="text-center">
                       <div className="text-lg font-bold text-white mb-2">{service.price}</div>
-                      <button className="text-green-400 hover:text-green-300 font-semibold text-sm transition-colors">
+                      <a 
+                        href={service.link}
+                        className="inline-block bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold px-4 py-2 rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 text-sm"
+                      >
                         Learn More →
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -353,44 +491,56 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+        <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 matrix-bg">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto hologram">
               Contact us today for a free consultation and discover how our AI and IT solutions can revolutionize your operations.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
+              <div className="text-center cyber-card p-6 float-animation">
                 <div className="text-2xl mb-2">📞</div>
                 <h3 className="text-lg font-bold text-white mb-2">Phone</h3>
-                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
                   +1 (302) 464-0950
                 </a>
               </div>
               
-              <div className="text-center">
+              <div className="text-center cyber-card p-6 float-animation" style={{animationDelay: '1s'}}>
                 <div className="text-2xl mb-2">✉️</div>
                 <h3 className="text-lg font-bold text-white mb-2">Email</h3>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>
               
-              <div className="text-center">
+              <div className="text-center cyber-card p-6 float-animation" style={{animationDelay: '2s'}}>
                 <div className="text-2xl mb-2">📍</div>
                 <h3 className="text-lg font-bold text-white mb-2">Location</h3>
                 <p className="text-cyan-400 font-medium">
-                  Middletown, DE
+                  364 E Main St STE 1008<br />
+                  Middletown, DE 19709
                 </p>
               </div>
             </div>
             
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-              Get Free Consultation
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a 
+                href="tel:+13024640950"
+                className="btn-cyber py-4 px-8 text-lg pulse-glow"
+              >
+                Call Now: +1 (302) 464-0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com"
+                className="btn-secondary py-4 px-8 text-lg"
+              >
+                Email Us
+              </a>
+            </div>
           </div>
         </section>
 
