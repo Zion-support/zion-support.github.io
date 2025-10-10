@@ -53,33 +53,30 @@ const BlogPage: React.FC = () => {
     },
     {
       id: '3',
-      title: 'Cybersecurity Trends for 2024',
-      excerpt: 'Stay ahead of the latest cybersecurity threats and protection strategies.',
+      title: 'Blockchain Security: What You Need to Know',
+      excerpt: 'Understanding the security implications and best practices for blockchain implementations.',
       content: 'Full article content...',
       author: 'Alex Thompson',
       date: '2024-01-05',
       readTime: '6 min read',
-      category: 'Cybersecurity',
-      tags: ['Security', 'Trends', 'Protection'],
-      image: '/images/blog/cybersecurity.jpg',
+      category: 'Blockchain',
+      tags: ['Blockchain', 'Security', 'Cryptocurrency'],
+      image: '/images/blog/blockchain-security.jpg',
       featured: true
-    },
-    {
-      id: '4',
-      title: 'Building Scalable Web Applications',
-      excerpt: 'Learn the principles and techniques for creating applications that can handle millions of users.',
-      content: 'Full article content...',
-      author: 'Emma Wilson',
-      date: '2024-01-01',
-      readTime: '8 min read',
-      category: 'Development',
-      tags: ['Web Development', 'Scalability', 'Architecture'],
-      image: '/images/blog/scalable-apps.jpg',
-      featured: false
     }
   ];
 
-  const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development'];
+  const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Blockchain', 'Cybersecurity', 'DevOps'];
+
+  const displayPosts = filteredPosts.length > 0 ? filteredPosts : blogPosts;
+
+  const handleSearch = (term: string) => {
+    setSearchTerm(term);
+  };
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+  };
 
   useEffect(() => {
     let filtered = blogPosts;
@@ -125,11 +122,28 @@ const BlogPage: React.FC = () => {
                 <input
                   type="text"
                   placeholder="Search articles..."
-                  value={searchQuery}
+                  value={searchTerm}
                   onChange={(e) => handleSearch(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-2 mb-8">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => handleCategoryChange(category)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                    selectedCategory === category
+                      ? 'bg-purple-600 text-white'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
             </div>
           </div>
         </section>
@@ -149,94 +163,83 @@ const BlogPage: React.FC = () => {
                         <User className="w-4 h-4" />
                         <span>{post.author}</span>
                       </div>
-                      <button className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
-                        <span>Read More</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg h-64 flex items-center justify-center">
-                    <div className="text-6xl">📊</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Blog Posts Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Latest Articles</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.filter(post => !post.featured).map((post) => (
-                <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group">
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg h-48 flex items-center justify-center mb-6">
-                    <div className="text-4xl">📝</div>
-                  </div>
-                  <div className="flex items-center space-x-2 mb-4">
-                    <Tag className="w-4 h-4 text-cyan-400" />
-                    <span className="text-cyan-400 text-sm font-medium">{post.category}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <div className="flex items-center space-x-1">
-                      <User className="w-4 h-4" />
-                      <span>{post.author}</span>
+                      <div className="flex items-center space-x-1">
+                        <Calendar className="w-4 h-4" />
+                        <span>{post.date}</span>
+                      </div>
                     </div>
                     <div className="flex items-center space-x-1">
                       <Clock className="w-4 h-4" />
                       <span>{post.readTime}</span>
                     </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400 text-sm">
-                      {new Date(post.date).toLocaleDateString()}
-                    </span>
-                    <button className="flex items-center space-x-1 text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
-                      <span>Read</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
+                  
+                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg h-64 flex items-center justify-center mb-4">
+                    <div className="text-6xl">📊</div>
                   </div>
+                  
+                  <div className="mb-4">
+                    <span className="inline-block bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-xs font-medium">
+                      {post.category}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">
+                    {post.title}
+                  </h3>
+                  
+                  <p className="text-gray-300 mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {post.tags.map((tag) => (
+                      <span key={tag} className="inline-flex items-center space-x-1 text-xs text-cyan-400">
+                        <Tag className="w-3 h-3" />
+                        <span>{tag}</span>
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <button className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
+                    <span>Read More</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
                 </article>
               ))}
             </div>
+
+            {displayPosts.length === 0 && (
+              <div className="text-center py-12">
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold text-white mb-2">No articles found</h3>
+                <p className="text-gray-300">Try adjusting your search or filter criteria.</p>
+              </div>
+            )}
           </div>
         </section>
 
         {/* Newsletter Signup */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Stay Updated
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Subscribe to our newsletter for the latest AI and IT insights delivered to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
-              />
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
-                Subscribe
-              </button>
-            </div>
-                </article>
-              ))}
-            </div>
-            
-            {searchResults.length === 0 && searchQuery && (
-              <div className="text-center py-12">
-                <p className="text-gray-400 text-lg">No articles found matching your search criteria.</p>
+            <div className="bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Stay Updated
+              </h2>
+              <p className="text-xl text-white/90 mb-8">
+                Get the latest tech insights delivered to your inbox
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+                />
+                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Subscribe
+                </button>
               </div>
-            )}
+            </div>
           </div>
         </section>
       </div>
@@ -245,4 +248,3 @@ const BlogPage: React.FC = () => {
 };
 
 export default BlogPage;
-
