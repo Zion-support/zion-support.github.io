@@ -1,9 +1,10 @@
 'use client';
-/**;
- * Comprehensive Test Runner and Testing Utilities;
- * Provides advanced testing capabilities, mocking, and test automation;
- */;
+/**
+ * Comprehensive Test Runner and Testing Utilities
+ * Provides advanced testing capabilities, mocking, and test automation
+ */
 import React, { ReactElement, useCallback } from 'react';
+<<<<<<< HEAD
 // Test result types;
 <<<<<<< HEAD
 export interface PerformanceMetrics {
@@ -63,10 +64,18 @@ export interface TestConfig {;
     enableAccessibility: boolean;
 // Test result types;}
 export interface PerformanceMetrics {}
+=======
+import { render, RenderOptions } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
+
+// Test result types
+export interface PerformanceMetrics {
+>>>>>>> cursor/analyze-improve-and-deploy-application-0f89
   renderTime: number;
   memoryUsage: number;
-  timestamp: string;}
+  timestamp: string;
 }
+<<<<<<< HEAD
 export interface CoverageMetrics {}
   statements: number;
   branches: number;
@@ -282,42 +291,74 @@ interface TestSuite {}
   afterAll: (() => void | Promise<void>)[],
   beforeEach: (() => void | Promise<void>)[],
 =======
+=======
+
+export interface CoverageMetrics {
+>>>>>>> cursor/analyze-improve-and-deploy-application-0f89
   statements: number;
   branches: number;
   functions: number;
   lines: number;
-  uncovered: string[];}
 }
-interface TestSuite {}
+
+// Test configuration interface
+export interface TestConfig {
+  timeout: number;
+  retries: number;
+  parallel: boolean;
+  coverage: boolean;
+}
+
+// Default test configuration
+export const defaultTestConfig: TestConfig = {
+  timeout: 5000,
+  retries: 3,
+  parallel: true,
+  coverage: true
+};
+
+interface TestResult {
+  name: string;
+  status: 'passed' | 'failed' | 'skipped';
+  duration: number;
+  error?: string;
+}
+
+interface AssertionResult {
+  passed: boolean;
+  message: string;
+  expected?: unknown;
+  actual?: unknown;
+}
+
+interface CoverageResult {
+  statements: number;
+  branches: number;
+  functions: number;
+  lines: number;
+}
+
+interface TestSuite {
   name: string;
   tests: Test[];
+<<<<<<< HEAD
   beforeAll: (() => void | Promise<void>)[],;
   afterAll: (() => void | Promise<void>)[],;
   beforeEach: (() => void | Promise<void>)[],;
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   afterEach: (() => void | Promise<void>)[];}
+=======
+  beforeEach?: () => void;
+  afterEach?: () => void;
+>>>>>>> cursor/analyze-improve-and-deploy-application-0f89
 }
-interface Test {;
-  name: string,;
-  fn: () => void | Promise<void>,;
-  timeout?: number;
-  skip?: boolean;}
-  only?: boolean;}
-}
-export class TestRunner {;
-  private static instance: TestRunner,;
-  private config: TestConfig,;
-  private suites: TestSuite[] = [];
-  private currentSuite: TestSuite | null = null</void>;
-  private results: TestResult[] = []</void>;
-  private testResults: Array<{,;}
-interface Test {}
+
+interface Test {
   name: string;
   fn: () => void | Promise<void>;
   timeout?: number;
-  skip?: boolean;
-  only?: boolean;}
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export class TestRunner {
   private static instance: TestRunner,
@@ -359,94 +400,135 @@ export class TestRunner {}
   private testResults: Array<{}
     name: string;
     status: 'passed' | 'failed' | 'skipped',;
+=======
+
+export class TestRunner {
+  private tests: Test[] = [];
+  private suites: TestSuite[] = [];
+  private isRunning: boolean = false;
+  private config: TestConfig = defaultTestConfig;
+
+  constructor(config?: Partial<TestConfig>) {
+    if (config) {
+      this.config = { ...defaultTestConfig, ...config };
+    }
+  }
+
+  // Add a test to the runner
+  addTest(name: string, fn: () => void | Promise<void>, timeout?: number): void {
+    this.tests.push({ name, fn, timeout: timeout || this.config.timeout });
+  }
+
+  // Add a test suite
+  addSuite(suite: TestSuite): void {
+    this.suites.push(suite);
+  }
+
+  // Run all tests
+  async runTests(): Promise<TestResult[]> {
+    if (this.isRunning) {
+      throw new Error('Test runner is already running');
+    }
+
+    this.isRunning = true;
+    const results: TestResult[] = [];
+
+    try {
+      // Run individual tests
+      for (const test of this.tests) {
+        const result = await this.runSingleTest(test);
+        results.push(result);
+      }
+
+      // Run test suites
+      for (const suite of this.suites) {
+        for (const test of suite.tests) {
+          if (suite.beforeEach) {
+            suite.beforeEach();
+          }
+          
+          const result = await this.runSingleTest(test);
+          results.push(result);
+          
+          if (suite.afterEach) {
+            suite.afterEach();
+          }
+        }
+      }
+    } finally {
+      this.isRunning = false;
+    }
+
+    return results;
+  }
+
+  // Run a single test
+  private async runSingleTest(test: Test): Promise<TestResult> {
+    const startTime = performance.now();
+    
+    try {
+      await Promise.race([
+        test.fn(),
+        new Promise((_, reject) => 
+          setTimeout(() => reject(new Error('Test timeout')), test.timeout)
+        )
+      ]);
+      
+      const duration = performance.now() - startTime;
+      return {
+        name: test.name,
+        status: 'passed',
+        duration
+      };
+    } catch (error) {
+      const duration = performance.now() - startTime;
+      return {
+        name: test.name,
+        status: 'failed',
+        duration,
+        error: error instanceof Error ? error.message : String(error)
+      };
+    }
+  }
+
+  // Get test statistics
+  getStats(results: TestResult[]): {
+    total: number;
+    passed: number;
+    failed: number;
+    skipped: number;
+>>>>>>> cursor/analyze-improve-and-deploy-application-0f89
     duration: number;
-    error?: string;}
-  }> = [];
-  private isRunning: boolean = false;
-  private startTime: number = 0;
-  constructor(config: Partial<TestConfig>= {}) {;
-  private currentSuite: TestSuite | null = null;
-  private results: TestResult[] = [];
-  private testResults: Array<{;
-    name: string,;
-    status: 'passed' | 'failed' | 'skipped',;
-    duration: number,;}
-    error?: string;}
-  }> = [];
-  private isRunning: boolean = false;
-  private startTime: number = 0;
-  constructor(config: Partial<TestConfig> = {}) {;
-    this.config = {;}
-  constructor(config: Partial<TestConfig> = {}) {}
-    this.config = {}
-      ...defaultTestConfig,;
-      timeout: 5000,;
-      retries: 0,;
-      parallel: false,;
-      verbose: false,;
-      coverage: false,;
-      watch: false,;
-      bail: false,;
-      reporter: 'console';
-      outputDir: './test-results',;
-      includePattern: [,;
-        '**/*.test.ts',;
-        '**/*.test.tsx',;
-        '**/*.spec.ts',;
-        '**/*.spec.tsx'],;
-      excludePattern: ['**/node_modules/**', '**/dist/**'],;
-      ...config}
-    }</TestConfig>;
-  }</TestConfig>;
-  static getInstance(config?: Partial<TestConfig>): TestRunner {;}
-    if (!TestRunner.instance) {}
+  } {
+    const total = results.length;
+    const passed = results.filter(r => r.status === 'passed').length;
+    const failed = results.filter(r => r.status === 'failed').length;
+    const skipped = results.filter(r => r.status === 'skipped').length;
+    const duration = results.reduce((sum, r) => sum + r.duration, 0);
+
+    return { total, passed, failed, skipped, duration };
   }
-  static getInstance(config?: Partial<TestConfig>): TestRunner {}
-    if (!TestRunner.instance) {}
-      TestRunner.instance = new TestRunner(config);}
-    }
-    return TestRunner.instance;
-  }
-  // Custom render function with providers;
-  customRender(</TestConfig>;
-    ui: ReactElement)</TestConfig>;
-    options?: Omit<RenderOptions, 'wrapper'>): RenderResult {}
-    const AllTheProviders = useCallback((...args) => {</RenderOptions>;}
-      return (<BrowserRouter>}</BrowserRouter>;
-          {children}</BrowserRouter>;
-        </BrowserRouter>;
-  // Custom render function with providers;
-  customRender(ui: ReactElement),;
-    options?: Omit<RenderOptions, 'wrapper'>;
-  ): RenderResult {}
-    const AllTheProviders = useCallback((...args) => {;}
-      return(<BrowserRouter>});
-          {children});
-        </BrowserRouter>);
-  customRender();
-    ui: ReactElement,;
-    options?: Omit<RenderOptions, 'wrapper'>;
-  ): RenderResult {}
-    const AllTheProviders = useCallback((...args) => {}
-      return (;
-        <BrowserRouter>}
-          {children}
-        </BrowserRouter>;
-      );
-    }
-    return render(ui, { wrapper: AllTheProviders, ...options });
-// Test result types;
-export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
-export interface CoverageMetrics {/* TODO: Fix JSX expression */}
-}
-// Test configuration interface;
-export interface TestConfig {/* TODO: Fix JSX expression */}
-}
-// Default test configuration;
-export const,;
-  defaultTestConfig: TestConfig = {/* TODO: Fix JSX expression */}
+
+// Custom render function with providers
+const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <BrowserRouter>
+      {children}
+    </BrowserRouter>
+  );
 };
+
+const customRender = (
+  ui: ReactElement,
+  options?: Omit<RenderOptions, 'wrapper'>
+) => {
+  if (typeof window !== 'undefined') {
+    return render(ui, { wrapper: AllTheProviders, ...options });
+  }
+  return render(ui, { wrapper: AllTheProviders, ...options });
+};
+<<<<<<< HEAD
 interface TestResult {/* TODO: Fix JSX expression */}
 }
 interface AssertionResult {/* TODO: Fix JSX expression */}
@@ -2213,558 +2295,38 @@ export const useTestRunner = () => {/* TODO: Fix JSX expression */}
     }
   }, [testRunner]);
   return {/* TODO: Fix JSX expression */}
+=======
+
+// Performance testing utilities
+export const measurePerformance = (fn: () => void): PerformanceMetrics => {
+  const startTime = performance.now();
+  const startMemory = (performance as any).memory?.usedJSHeapSize || 0;
+  
+  fn();
+  
+  const endTime = performance.now();
+  const endMemory = (performance as any).memory?.usedJSHeapSize || 0;
+  
+  return {
+    renderTime: endTime - startTime,
+    memoryUsage: endMemory - startMemory,
+    timestamp: new Date().toISOString()
+>>>>>>> cursor/analyze-improve-and-deploy-application-0f89
   };
 };
-// Test utilities;
-export const testUtils = {/* TODO: Fix JSX expression */}
-  t: string }> = [];
-    for (let i = 0; i < count; i++) {/* TODO: Fix JSX expression */}`;
-  e: `Mock ${type} ${i + 1}`,;
-        descriptio,`;
-  n: `This is a mock ${type} item`,;
-        createdA,;
-  t: new Date().toISOString(),;
-        updatedA,;
-  t: new Date().toISOString();
-      });
-    }
-    return mockData;
-  },;
-  // Wait for element to appear,;
-  waitForElement: (selecto,;
-  r: string, timeou);
-  t: number = 5000) => {/* TODO: Fix JSX expression */}
+
+// Mock utilities
+export const createMock = <T extends Record<string, any>>(overrides: Partial<T> = {}): T => {
+  return new Proxy({} as T, {
+    get(target, prop) {
+      if (prop in overrides) {
+        return overrides[prop as keyof T];
       }
-      const observer = new MutationObserver(() => {/* TODO: Fix JSX expression */}
-        }
-      });
-      observer.observe(document.body, {/* TODO: Fix JSX expression */});
-      });
-      setTimeout(() => {/* TODO: Fix JSX expression */}`;
-        reject(new Error(`Element ${selector} not found within ${timeout}ms`));
-      }, timeout);
-    });
-  },;
-  // Simulate user interaction,;
-  simulateUserInteraction: async (elemen,;
-  t: HTMLElement, actio);
-  n: string) => {/* TODO: Fix JSX expression */}
-  s: true }));
-        }
-        break;
-      defaul,;
-  t:`;
-        throw new Error(`Unknown)`;
-  action: ${action}`);
+      return jest.fn();
     }
-  }
-}
-export default TestRunner;
-/**;
- * Assertion utilities;
- */;
-export class Assert {}
-  /**;
-   * Assert that a value is truthy;
-   */;
-  public static assertTrue(value: unknown, message?: string): void {}
-    if (!value) {`}
-      throw new Error(message || `Expected ${value} to be truthy`);
-export class Assert {/* TODO: Fix JSX expression */}`;
-      throw new Error(message || `Expected ${value} to be truthy`);
-    }
-  }
-  /**;
-   * Assert that a value is falsy;
-   */;
-  public static assertFalse(value: unknown, message?: string): void {}
-    if (value) {`}
-      throw new Error(message || `Expected ${value} to be falsy`);
-  public static assertFalse(valu);
-  e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`;
-      throw new Error(message || `Expected ${value} to be falsy`);
-    }
-  }
-  /**;
-   * Assert that two values are equal;
-   */;
-  public static assertEquals(;
-  public static assertEquals();
-    actual: unknown,;
-    expected: unknown);
-    message?: string;
-  ): void {;
-  public static assertEquals(actual: unknown),;
-    expected: unknown),;
-    message?: string;}
-  ): void {): void {}
-    if (actual !== expected) {`}
-      throw new Error(message || `Expected ${actual} to equal ${expected}`);
-  public static assertEquals(actua,;
-  l: unknown,;
-    expecte,;
-  d: unknown,;
-    message?: string;);
-  ): void {/* TODO: Fix JSX expression */}`;
-      throw new Error(message || `Expected ${actual} to equal ${expected}`);
-    }
-  }
-  /**;
-   * Assert that two values are not equal;
-   */;
-  public static assertNotEquals(;
-  public static assertNotEquals();
-    actual: unknown,;
-    expected: unknown);
-    message?: string;
-  ): void {;
-  public static assertNotEquals(actual: unknown),;
-    expected: unknown),;
-    message?: string;}
-  ): void {): void {}
-    if (actual === expected) {`}
-      throw new Error(message || `Expected ${actual} to not equal ${expected}`);
-  public static assertNotEquals(actua,;
-  l: unknown,;
-    expecte,;
-  d: unknown,;
-    message?: string;);
-  ): void {/* TODO: Fix JSX expression */}`;
-      throw new Error(message || `Expected ${actual} to not equal ${expected}`);
-    }
-  }
-  /**;
-   * Assert that a value is null;
-   */;
-  public static assertNull(value: unknown, message?: string): void {}
-    if (value !== null) {`}
-      throw new Error(message || `Expected ${value} to be null`);
-  public static assertNull(valu);
-  e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`;
-      throw new Error(message || `Expected ${value} to be null`);
-    }
-  }
-  /**;
-   * Assert that a value is not null;
-   */;
-  public static assertNotNull(value: unknown, message?: string): void {}
-    if (value === null) {`}
-      throw new Error(message || `Expected ${value} to not be null`);
-  public static assertNotNull(valu);
-  e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`;
-      throw new Error(message || `Expected ${value} to not be null`);
-    }
-  }
-  /**;
-   * Assert that a value is undefined;
-   */;
-  public static assertUndefined(value: unknown, message?: string): void {}
-    if (value !== undefined) {`}
-      throw new Error(message || `Expected ${value} to be undefined`);
-  public static assertUndefined(valu);
-  e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`;
-      throw new Error(message || `Expected ${value} to be undefined`);
-    }
-  }
-  /**;
-   * Assert that a value is not undefined;
-   */;
-  public static assertNotUndefined(value: unknown, message?: string): void {}
-    if (value === undefined) {`}
-      throw new Error(message || `Expected ${value} to not be undefined`);
-  public static assertNotUndefined(valu);
-  e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`;
-      throw new Error(message || `Expected ${value} to not be undefined`);
-    }
-  }
-  /**;
-   * Assert that a value throws an error;
-   */;
-  public static assertThrows();
-    fn: () => void,;
-    expectedError?: string | RegExp;
-  ): void {}
-    try {}
-      fn();
-  public static assertThrows(;
-    fn: () => void;
-    expectedError?: string | RegExp;
-  ): void {,;
-    try {,;
-      fn(),;}
-      throw new Error('Expected function to throw an error');}
-    } catch (error) {;
-      if (expectedError) {;
-        const errorMessage = (error as Error).message;
-        if (typeof expectedError === 'string') {;
-          if (!errorMessage.includes(expectedError)) {;}
-            throw new Error(`});
-              `Expected error message to contain "${expectedError}", but got "${errorMessage}");
-            );
-          }
-        } else {;
-          if (!expectedError.test(errorMessage)) {;}
-            throw new Error(`});
-              `Expected error message to match ${expectedError}, but got "${errorMessage}");
-    } catch (error) {}
-      if (expectedError) {}
-        const errorMessage = (error as Error).message;
-        if (typeof expectedError === 'string') {}
-          if (!errorMessage.includes(expectedError)) {}
-            throw new Error(`});
-              `Expected error message to contain "${expectedError}", but got "${errorMessage}";
-            );
-          }
-        } else {}
-          if (!expectedError.test(errorMessage)) {}
-            throw new Error(`});
-              `Expected error message to match ${expectedError}, but got "${errorMessage}";
-            );
-  public static assertThrows(f);
-  n: () => void,;
-    expectedError?: string | RegExp;
-  ): void {/* TODO: Fix JSX expression */}
-    } catch (error) {/* TODO: Fix JSX expression */}"`;
-              `Expected error message to contain "${expectedError}", but got "${errorMessage}"`;
-            );
-          }
-        } else {/* TODO: Fix JSX expression */}"`;
-              `Expected error message to match ${expectedError}, but got "${errorMessage}"`;
-            );
-          }
-        }
-      }
-    }
-  }
-  /**;
-   * Assert that a value does not throw an error;
-   */;
-  public static assertDoesNotThrow(fn: () => void): void {,;
-    try {,;}
-      fn();}
-    } catch (error) {;}
-  public static assertDoesNotThrow(fn: () => void): void {}
-    try {}
-      fn();}
-    } catch (error) {}
-      throw new Error(`});
-        `Expected function not to throw, but it threw: ${(error as Error).message}
-      );
-  public static assertDoesNotThrow(f);
-  n: () => void): void {/* TODO: Fix JSX expression */}
-    } catch (error) {/* TODO: Fix JSX expression */}`;
-  threw: ${(error as Error).message}`;
-      );
-    }
-  }
-  /**;
-   * Assert that a value is an instance of a class;
-   */;
-  public static assertInstanceOf(;
-    value: unknown);
-    constructor: new (...args: unknown[]) => unknown,;
-    message?: string;
-  ): void {;
-    if (!(value instanceof constructor)) {;}
-      throw new Error(`});
-    message || `Expected ${value} to be an instance of ${constructor.name}
-  public static assertInstanceOf(value: unknown);
-    constructor: new (...args: unknown[]) => unknown;
-    message?: string;
-  ): void {,;
-    if (!(value instanceof constructor)) {,;}
-      throw new Error(`});
-        message || `Expected ${value} to be an instance of ${constructor.name});
-  public static assertInstanceOf();
-    value: unknown,;
-    constructor: new (...args: unknown[]) => unknown,;
-    message?: string;
-  ): void {}
-    if (!(value instanceof constructor)) {}
-      throw new Error(`});
-        message || `Expected ${value} to be an instance of ${constructor.name}
-      );
-  public static assertInstanceOf(valu,;
-  e: unknown,;
-    constructo,;
-  r: new (...arg);
-  s: unknown[]) => unknown,;
-    message?: string;
-  ): void {/* TODO: Fix JSX expression */}`;
-        message || `Expected ${value} to be an instance of ${constructor.name}`;
-      );
-    }
-  }
-  /**;
-   * Assert that a value is an array;
-   */;
-  public static assertArray(value: unknown, message?: string): void {}
-    if (!Array.isArray(value)) {`}
-      throw new Error(message || `Expected ${value} to be an array`);
-  public static assertArray(valu);
-  e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`;
-      throw new Error(message || `Expected ${value} to be an array`);
-    }
-  }
-  /**;
-   * Assert that a value is a string;
-   */;
-  public static assertString(value: unknown, message?: string): void {}
-    if (typeof value !== 'string') {`}
-      throw new Error(message || `Expected ${value} to be a string`);
-  public static assertString(valu);
-  e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`;
-      throw new Error(message || `Expected ${value} to be a string`);
-    }
-  }
-  /**;
-   * Assert that a value is a number;
-   */;
-  public static assertNumber(value: unknown, message?: string): void {}
-    if (typeof value !== 'number') {`}
-      throw new Error(message || `Expected ${value} to be a number`);
-  public static assertNumber(valu);
-  e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`;
-      throw new Error(message || `Expected ${value} to be a number`);
-    }
-  }
-  /**;
-   * Assert that a value is a boolean;
-   */;
-  public static assertBoolean(value: unknown, message?: string): void {}
-    if (typeof value !== 'boolean') {`}
-      throw new Error(message || `Expected ${value} to be a boolean`);
-  public static assertBoolean(valu);
-  e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`;
-      throw new Error(message || `Expected ${value} to be a boolean`);
-    }
-  }
-  /**;
-   * Assert that a value is an object;
-   */;
-  public static assertObject(value: unknown, message?: string): void {}
-    if (typeof value !== 'object' || value === null || Array.isArray(value)) {`}
-      throw new Error(message || `Expected ${value} to be an object`);
-  public static assertObject(valu);
-  e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`;
-      throw new Error(message || `Expected ${value} to be an object`);
-    }
-  }
-  /**;
-   * Assert that a value is a function;
-   */;
-  public static assertFunction(value: unknown, message?: string): void {}
-    if (typeof value !== 'function') {`}
-      throw new Error(message || `Expected ${value} to be a function`);
-  public static assertFunction(valu);
-  e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`;
-      throw new Error(message || `Expected ${value} to be a function`);
-    }
-  }
-}
-/**;
- * Mock utilities;
- */;
-class Mock {;
-  private static mocks: Map<string, unknown>= new Map();}
-class Mock {}
-  private static mocks: Map<string, unknown> = new Map();
-  /**;
-   * Create a mock function;
-   */;
-  public static fn();
-    implementation?: (...args: unknown[]) => unknown;
-  public static fn(;
-    implementation?: (...args: unknown[]) => unknown;
-  ): MockFunction {;
-    const calls: unknown[][] = [];
-    const mockFn = useCallback((...args) => {,;
-      calls.push(args),;
-      if (implementation) {,;
-  public static fn();
-    implementation?: (...args: unknown[]) => unknown;}
-  ): MockFunction {}
-    const calls: unknown[][] = [];
-    const mockFn = useCallback((...args) => {}
-      calls.push(args);
-      if (implementation) {}
-        return implementation(...args);}
-      }
-      return undefined;
-    }
-    (mockFn as MockFunction).mock = {}
-      calls,;
-      results: [],;
-      instances: []}
-    }
-    return mockFn as MockFunction;
-  }
-  /**;
-   * Create a mock object</string>;
-   */</<<<string>public</string></<<string>static</string> object<T extends Record<string, unknown>>(</T></<<<T>overrides</T>: Partial<T>= {}
-  ): T {}
-    return new Proxy({} as T, {);
-    get(target, prop) {;
-   * Create a mock object;
-   */;
-  public static object<T extends Record<string, unknown>>(;}
-    overrides: Partial<T> = {}
-  ): T {}
-    return new Proxy({} as T, {);
-      get(target, prop) {;
-        if (prop in overrides) {;}
-    return new Proxy({} as T, {)}
-      get(target, prop) {}
-        if (prop in overrides) {}
-          return overrides[prop as keyof T];}
-        }
-        return Mock.fn();
-class Mock {/* TODO: Fix JSX expression */}
-      }
-      return undefined;
-    };
-    (mockFn as MockFunction).mock = {/* TODO: Fix JSX expression */}
-    };
-    return mockFn as MockFunction;
-  }
-  /**;
-   * Create a mock object;
-   */;
-  public static object<T extends Record<string, unknown>>(override,;
-  s: Partial<T> = {});
-  ): T {/* TODO: Fix JSX expression */}
-    return new Proxy({} as T, {/* TODO: Fix JSX expression */}
-        });
-        return Mock.fn();
-      }
-    });
-  }
-  /**;
-   * Create a mock class</T>;
-   */</T>;
-  public static class<T extends new (...args: unknown[]) =>unknown>(,</T>;
-    constructor: T,</T>;
-   * Create a mock class;
-   */;
-  public static class<T extends new (...args: unknown[]) => unknown>(,;
-    constructor: T,;
-    overrides: Partial<InstanceType<T>> = {}
-  ): MockFunction {</InstanceType>;
-    const mockFn = Mock.fn((...args) => {</InstanceType>;}
-      const instance = new constructor(...args) as InstanceType<T>return Object.assign(instance as object, overrides);}
-  ): MockFunction {}
-    const mockFn = Mock.fn((...args) => {}
-      const instance = new constructor(...args) as InstanceType<T>;
-      return Object.assign(instance as object, overrides);}
-    });
-    return mockFn;
-  }
-  /**;
-   * Create a spy</T>;
-   */</<<<T>public</T></<<T>static</T> spyOn<T extends object, K extends keyof T>(</T></<<T>object</T>: T,;
-    method: K;
-  ): MockFunction {;
-    const original = object[method]</<<<T>const</T></<<T>mockFn</T> = Mock.fn()</T>;}
-    (object as Record<string, unknown>)[method as string] = mockFn;}</strin>;
-    (mockFn as MockFunction & { mockRestore: () => void }).mockRestore = () => {</string>;
-   * Create a spy;
-   */;
-  public static spyOn<T extends object, K extends keyof T>(;
-    object: T,;
-    method: K,;
-  ): MockFunction {,;
-    const original = object[method],;
-    const mockFn = Mock.fn(),;}
-    (object as Record<string, unknown>)[method as string] = mockFn;}
-    (mockFn as MockFunction & { mockRestore: () => void }).mockRestore = () => {;}
-  ): MockFunction {}
-    const original = object[method];
-    const mockFn = Mock.fn();
-    (object as Record<string, unknown>)[method as string] = mockFn;}
-    (mockFn as MockFunction & { mockRestore: () => void }).mockRestore = () => {}
-      (object as Record<string, unknown>)[method as string] = original;}
-    }
-   * Create a mock class;
-   */;
-  public static class<T extends new (...arg);
-  s: unknown[]) => unknown>(constructo,;
-  r: T,;
-    override,;
-  s: Partial<InstanceType<T>> = {});
-  ): MockFunction {/* TODO: Fix JSX expression */}
-    });
-    return mockFn;
-  }
-  /**;
-   * Create a spy;
-   */;
-  public static spyOn<T extends object, K extends keyof T>(objec,;
-  t: T,;
-    metho,;
-  d: K;);
-  ): MockFunction {/* TODO: Fix JSX expression */}
-  e: () => void }).mockRestore = () => {/* TODO: Fix JSX expression */}
-    };
-    return mockFn as MockFunction;
-  }
-  /**;
-   * Clear all mocks;
-   */;
-  public static clearAllMocks(): void {}
-    this.mocks.clear();}
-  public static clearAllMocks(): void {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Reset all mocks;
-   */;
-  public static resetAllMocks(): void {}
-    this.mocks.clear();}
-  public static resetAllMocks(): void {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Restore all mocks;
-   */;
-  public static restoreAllMocks(): void {}
-    this.mocks.clear();}
-  }
-}
-interface MockFunction {;
-  (...args: unknown[]): unknown,;
-    mock: {;
-    calls: unknown[][],;}
-interface MockFunction {}
-  (...args: unknown[]): unknown;
-  mock: {}
-    calls: unknown[][];
-    results: unknown[];
-  (...args: unknown[]): unknown;
-  mock: {,;
-    calls: unknown[][],;
-    results: unknown[],;}
-    instances: unknown[];}
-  }
-}
-// Export test runner and utilities;
-export const testRunner = new TestRunner();
-export { Mock }
-export type {}
-  TestResult,;
-  TestSuite,;
-  Test,;
-  AssertionResult,;
-  CoverageResult}</string>;
-}</string>;
-  public static restoreAllMocks(): void {/* TODO: Fix JSX expression */}
-  }
-}
-interface MockFunction {/* TODO: Fix JSX expression */}
-  };
-}
-// Export test runner and utilities;
-export const testRunner = new TestRunner();
-export { Mock };
-export type {/* TODO: Fix JSX expression */}
+  });
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 "`
   </T>
@@ -2816,3 +2378,35 @@ export type {/* TODO: Fix JSX expression */}
 =======
 "`;
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+=======
+
+// Assertion utilities
+export const expect = (actual: unknown) => ({
+  toBe: (expected: unknown): AssertionResult => ({
+    passed: actual === expected,
+    message: `Expected ${actual} to be ${expected}`,
+    expected,
+    actual
+  }),
+  toEqual: (expected: unknown): AssertionResult => ({
+    passed: JSON.stringify(actual) === JSON.stringify(expected),
+    message: `Expected ${JSON.stringify(actual)} to equal ${JSON.stringify(expected)}`,
+    expected,
+    actual
+  }),
+  toBeTruthy: (): AssertionResult => ({
+    passed: Boolean(actual),
+    message: `Expected ${actual} to be truthy`,
+    actual
+  }),
+  toBeFalsy: (): AssertionResult => ({
+    passed: !actual,
+    message: `Expected ${actual} to be falsy`,
+    actual
+  })
+});
+
+// Export everything
+export * from '@testing-library/react';
+export { customRender as render };
+>>>>>>> cursor/analyze-improve-and-deploy-application-0f89

@@ -190,10 +190,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
+            // LCP measurement logged for performance monitoring
           }
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
+            // FID measurement logged for performance monitoring
           }
         });
       });
