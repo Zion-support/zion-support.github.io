@@ -226,10 +226,8 @@ const filteredArticles = getCurrentArticles().filter(article =>
                   
                   <button className="w-full text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors flex items-center justify-center">
                     Read Article
-                    <ArrowRight className="w-4 h-4 ml-1" />
-
-          {/* Resources */}
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+                    <ArrowRight className="w-4 h-4 ml-1">{/* Resources */}
+            </ArrowRight><h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Additional Resources
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {resources.map((resource, index) => (
@@ -273,18 +271,15 @@ const filteredArticles = getCurrentArticles().filter(article =>
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                <MessageSquare className="w-5 h-5 mr-2" />
-                Contact Support
-              </a>
+                <MessageSquare className="w-5 h-5 mr-2">Contact Support
+              </a></a>
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
+                <Phone className="w-4 h-4 mr-2">(302) 464-0950
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
-                Email Us
-      <Footer />
+                </Phone><Mail className="w-4 h-4 mr-2">Email Us
+      </Mail><Footer />
     </React.Fragment>
   return (
     <div>Coming Soon</div>
@@ -401,13 +396,10 @@ const categories = [
 
           </a>
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
+                <Phone className="w-4 h-4 mr-2">(302) 464-0950;
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
-
-                Email Us;
-      <Footer /></Footer>
+                </Phone><Mail className="w-4 h-4 mr-2">Email Us;
+      </Mail><Footer /></Footer>
     </React.Fragment>
 export default HelpPage;
 

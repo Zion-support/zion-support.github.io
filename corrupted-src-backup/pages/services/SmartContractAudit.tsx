@@ -323,18 +323,18 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
         <title>Smart, Contract, Audit - Zion, Tech, Group | Blockchain, Security, Experts</title>
         <me, t, a;
   na, m, e="descripti, o, n"
-          content="Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects. 5-10, day, delivery." /><meta name="keywor, d, s" content="smart, contract, audit, blockchain, securit, y, DeFi, audi, t, NFT, audi, t, smart, contract, security, vulnerability, assessmen, t, blockchain, complianc, e" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/sma, r, t-contra, c, t-aud, i, t/>"
-  return (<React.Fragment>
+          content="Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects. 5-10, day, delivery." /><meta name="keywor, d, s" content="smart, contract, audit, blockchain, securit, y, DeFi, audi, t, NFT, audi, t, smart, contract, security, vulnerability, assessmen, t, blockchain, complianc, e" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/sma, r, t-contra, c, t-aud, i, t>"
+  return (</link><React.Fragment>
       <Helmet></Helmet>
         <title>Smart, Contract, Audit - Zion, Tech, Group | Blockchain, Security, Experts</title>
         <me, t, a;"
   na, m, e="descripti, o, n""
-          content="Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects. 5-10, day, delivery." /><meta name="keywor, d, s" content="smart, contract, audit, blockchain, securit, y, DeFi, audi, t, NFT, audi, t, smart, contract, security, vulnerability, assessmen, t, blockchain, complianc, e" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/sma, r, t-contra, c, t-aud, i, t/>""
+          content="Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects. 5-10, day, delivery." /><meta name="keywor, d, s" content="smart, contract, audit, blockchain, securit, y, DeFi, audi, t, NFT, audi, t, smart, contract, security, vulnerability, assessmen, t, blockchain, complianc, e" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/sma, r, t-contra, c, t-aud, i, t>""
           content="Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects. 5-10, day, delivery."
          />"
-        <meta name="keywor, d, s" content="smart, contract, audit, blockchain, securit, y, DeFi, audi, t, NFT, audi, t, smart, contract, security, vulnerability, assessmen, t, blockchain, complianc, e" />";"
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/sma, r, t-contra, c, t-aud, i, t" />";
-      </Helmet>
+        </link><meta name="keywor, d, s" content="smart, contract, audit, blockchain, securit, y, DeFi, audi, t, NFT, audi, t, smart, contract, security, vulnerability, assessmen, t, blockchain, complianc, e">";"
+        </meta><link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/sma, r, t-contra, c, t-aud, i, t">";
+      </link></Helmet>
       <Head, e, r   /></Head>"
       <main, className="m, i, n-h-screen, b, g-whi, t, e">";
         {/* Hero, Sectio, n */}
@@ -403,9 +403,9 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
   r: bg-r, e, d-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >"
                   <Phone, className="w-5 h-5, m, r-2  /></Phone>"
-                  <Phone, className="w-5 h-5, m, r-2" />";
+                  <Phone, className="w-5 h-5, m, r-2">";
                   Request, Quot, e;
-                </a>
+                </Phone></a>
                 <a;
   hr, e, f="#prici, n, g"
                   classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e;
@@ -416,8 +416,8 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                 >
                   View, Pricin, g;"
                   <Link, className="w-5 h-5, m, l-2  /></Link>"
-                  <Link, className="w-5 h-5, m, l-2" />";
-                </a>
+                  <Link, className="w-5 h-5, m, l-2">";
+                </Link></a>
               </d, i, v>
             </d, i, v>
           </d, i, v>
@@ -475,8 +475,8 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">";"
               <div, className="te, x, t-cent, e, r">";"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-4">";"
-                  <Shield, className="w-8 h-8, tex, t-r, e, d-6, 0, 0" />";
-                </d, i, v>"
+                  <Shield, className="w-8 h-8, tex, t-r, e, d-6, 0, 0">";
+                </Shield></d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">99.8% Detection, Rat, e</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Indust, r, y-leading, vulnerability, detection</p>";
               </d, i, v>
@@ -491,8 +491,8 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                   <Clock, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0  /></Clock>"
               <div, className="te, x, t-cent, e, r">";"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4">";"
-                  <Clock, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0" />";
-                </d, i, v>"
+                  <Clock, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0">";
+                </Clock></d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">5-10, Day, Delivery</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Fast, turnaround, guaranteed</p>";
               </d, i, v>
@@ -507,8 +507,8 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                   <Users, className="w-8 h-8, tex, t-yell, o, w-6, 0, 0  /></Users>"
               <div, className="te, x, t-cent, e, r">";"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-yell, o, w-100, rounde, d-full, m, b-4">";"
-                  <Users, className="w-8 h-8, tex, t-yell, o, w-6, 0, 0" />";
-                </d, i, v>"
+                  <Users, className="w-8 h-8, tex, t-yell, o, w-6, 0, 0">";
+                </Users></d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">50+ Audits, Complete, d</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Proven, track, record of, succes, s</p>";
               </d, i, v>
@@ -523,8 +523,8 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                   <CheckCircle, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  /></CheckCircle>"
               <div, className="te, x, t-cent, e, r">";"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";"
-                  <CheckCircle, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";
-                </d, i, v>"
+                  <CheckCircle, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0">";
+                </CheckCircle></d, i, v>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">1, 0, 0% Complian, c, e</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Meet, all, regulatory standar, d, s</p>";
               </d, i, v>
@@ -603,8 +603,8 @@ const, Ico, n = aud, i, t.ic, o, n;
 );
 }";
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-6">";
-                      <Icon, className="w-8 h-8, tex, t-r, e, d-6, 0, 0" />";
-                    </d, i, v>
+                      <Icon, className="w-8 h-8, tex, t-r, e, d-6, 0, 0">";
+                    </Icon></d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{aud, i, t.tit, l, e}</h3>";)
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{aud, i, t.descripti, o, n}</p>";)
                     <div, className="mb-4">";)
@@ -612,8 +612,8 @@ const, Ico, n = aud, i, t.ic, o, n;
                 return (</div>
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-6">";</div>
-                      <Icon, className="w-8 h-8, tex, t-r, e, d-6, 0, 0" />";
-                    </d, i, v>
+                      <Icon, className="w-8 h-8, tex, t-r, e, d-6, 0, 0">";
+                    </Icon></d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{aud, i, t.tit, l, e}</h3>";
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{aud, i, t.descripti, o, n}</p>";
                     <div, className="mb-4">";</div>
@@ -640,8 +640,8 @@ const, Ico, n = aud, i, t.ic, o, n;
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-6">";"
-                      <Icon, className="w-8 h-8, tex, t-r, e, d-6, 0, 0" />";
-                    </d, i, v>"
+                      <Icon, className="w-8 h-8, tex, t-r, e, d-6, 0, 0">";
+                    </Icon></d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{aud, i, t.tit, l, e}</h3>";"
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{aud, i, t.descripti, o, n}</p>";"
                     <div, className="mb-4">";"
@@ -649,8 +649,8 @@ const, Ico, n = aud, i, t.ic, o, n;
                       <ul, className="spa, c, e-y-1">";
                         {/* TODO: Fix JSX expression */}"
                           <li, ke, y={vulnInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";"
-                            <AlertTriangle, className="w-4 h-4, tex, t-oran, g, e-500, m, r-2, fle, x-shri, n, k-0" />";"
-                            <span, className="te, x, t-gr, a, y-7, 0, 0">{vu, l, n}</sp, a, n>";
+                            <AlertTriangle, className="w-4 h-4, tex, t-oran, g, e-500, m, r-2, fle, x-shri, n, k-0">";"
+                            </AlertTriangle><span, className="te, x, t-gr, a, y-7, 0, 0">{vu, l, n}</sp, a, n>";
                           </li>)
                         ))}
                       </ul>
@@ -769,8 +769,8 @@ const, Ico, n = featu, r, e.ic, o, n;
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
-                      <CheckCircle, className="w-4 h-4, m, r-1  />)
-            <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
+                      <CheckCircle, className="w-4 h-4, m, r-1>)
+            </CheckCircle><div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
 return (
@@ -783,7 +783,7 @@ const, Ico, n = featu, r, e.ic, o, n;
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
-  g:gr, i, d-co, l, s-3, ga, p-8"></div>";
+  g:gr, i, d-co, l, s-3, ga, p-8">>";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
 return (
 ;
@@ -793,8 +793,8 @@ const, Ico, n = featu, r, e.ic, o, n;
 );
 }";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">";</div>
-                      <Icon, className="w-6 h-6, tex, t-r, e, d-6, 0, 0" />";
-                    </d, i, v>
+                      <Icon, className="w-6 h-6, tex, t-r, e, d-6, 0, 0">";
+                    </Icon></d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";</div>
@@ -815,14 +815,14 @@ const, Ico, n = featu, r, e.ic, o, n;
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">";"
-                      <Icon, className="w-6 h-6, tex, t-r, e, d-6, 0, 0" />";
-                    </d, i, v>"
+                      <Icon, className="w-6 h-6, tex, t-r, e, d-6, 0, 0">";
+                    </Icon></d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";"
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";"
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";"
-                      <CheckCircle, className="w-4 h-4, m, r-1" />";
+                      <CheckCircle, className="w-4 h-4, m, r-1">";
                       {featu, r, e.benef, i, t})
-                    </d, i, v>)
+                    </CheckCircle></d, i, v>)
                   </d, i, v>)
                 )})}
             </d, i, v>
@@ -900,8 +900,8 @@ const, Ico, n = featu, r, e.ic, o, n;
                         <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0  /></CheckCircle>"
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>"
                       <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";"
-                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0" />";"
-                        <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>";
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0">";"
+                        </CheckCircle><span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>";
                       </li>
                     ))}
                   </ul>
@@ -937,8 +937,8 @@ pl, a, n.popul, a, r;
               >
                 Contact, our, Security Te, a, m;"
                 <Link, className="w-4 h-4, m, l-1  /></Link>"
-                <Link, className="w-4 h-4, m, l-1" />";
-              </a>
+                <Link, className="w-4 h-4, m, l-1">";
+              </Link></a>
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -993,9 +993,9 @@ pl, a, n.popul, a, r;
                   <div, className="flex, item, s-center, m, b-4">";
                     {/* TODO: Fix JSX expression */}"
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>"
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
+                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t">";
                     ))}
-                  </d, i, v>"
+                  </Star></d, i, v>"
                   <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";"
                     "{testimoni, a, l.conte, n, t}"
                   </blockquo, t, e>
@@ -1052,9 +1052,9 @@ pl, a, n.popul, a, r;
   r: bg-r, e, d-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >"
                 <Phone, className="w-5 h-5, m, r-2  /></Phone>"
-                <Phone, className="w-5 h-5, m, r-2" />";
+                <Phone, className="w-5 h-5, m, r-2">";
                 Request, Free, Quote;
-              </a>
+              </Phone></a>
               <a;
   hr, e, f="/ca, s, e-studi, e, s"
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e;
@@ -1065,8 +1065,8 @@ pl, a, n.popul, a, r;
               >
                 View, Audit, Reports;"
                 <Link, className="w-5 h-5, m, l-2  /></Link>"
-                <Link, className="w-5 h-5, m, l-2" />";
-              </a>
+                <Link, className="w-5 h-5, m, l-2">";
+              </Link></a>
             </d, i, v>
           </d, i, v>
         </secti, o, n>

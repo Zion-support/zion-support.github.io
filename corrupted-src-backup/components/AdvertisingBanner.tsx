@@ -91,7 +91,7 @@ const,
         >
           {ctaText}
         </a>
-      </div>
+      >
     </div>
   )};
 

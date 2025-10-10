@@ -203,9 +203,8 @@ icon$5: Award,
                   className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
               <button className="px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hover:bg-slate-700 transition-colors flex items-center">
-                <Filter className="w-5 h-5 mr-2" />
-                Filters
-              </button>
+                <Filter className="w-5 h-5 mr-2">Filters
+              </Filter></button>
 
             {/* Category Tabs */}
             <div className="flex flex-wrap justify-center gap-4">
@@ -237,9 +236,8 @@ icon$5: Award,
                         <h3 className="text-lg font-semibold text-white">{item.name}</h3>
                         {item.verified && (
                           <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
-                            <CheckCircle className="w-3 h-3 text-white" />
-                        )}
-                      <p className="text-gray-300 text-sm mb-2">{item.description}</p>
+                            <CheckCircle className="w-3 h-3 text-white">)}
+                      </CheckCircle><p className="text-gray-300 text-sm mb-2">{item.description}</p>
                       <div className="flex items-center text-sm text-gray-400 mb-2">
                         <span className="mr-2">{item.category}</span>
                         {item.vendor && <span>• {item.vendor}</span>}
@@ -250,9 +248,8 @@ icon$5: Award,
                         <ul className="space-y-1">
                           {item.features.map((feature, index) => (
                             <li key={index} className="text-sm text-gray-300 flex items-start">
-                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                              {feature}
-                            </li>
+                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0">{feature}
+                            </CheckCircle></li>
                         </ul>
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center">
@@ -286,10 +283,8 @@ icon$5: Award,
 
                   <button className="w-full mt-4 bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors flex items-center justify-center">
                     {activeCategory === 'talent' ? 'Contact' : 'Add to Cart'}
-                    <ArrowRight className="w-4 h-4 ml-2" />
-
-          {/* Benefits */}
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+                    <ArrowRight className="w-4 h-4 ml-2">{/* Benefits */}
+            </ArrowRight><h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Why Choose Our Marketplace?
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
@@ -309,20 +304,16 @@ icon$5: Award,
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                <ShoppingCart className="w-5 h-5 mr-2" />
-                Start Shopping
-              </a>
+                <ShoppingCart className="w-5 h-5 mr-2">Start Shopping
+              </a></a>
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
+                <Phone className="w-4 h-4 mr-2">(302) 464-0950
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
-                Email Us
-      <Footer />
-  return (
-    <div>Coming Soon</div>
+                </Phone><Mail className="w-4 h-4 mr-2">Email Us
+      </Mail><Footer>return (
+    </Footer><div>Coming Soon</div>
 
   )};
   const [activeCategory, setActiveCategory] = useState('products');
@@ -442,13 +433,10 @@ const categories = [
 
           </a>
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
+                <Phone className="w-4 h-4 mr-2">(302) 464-0950;
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
-
-                Email Us;
-      <Footer /></Footer>
+                </Phone><Mail className="w-4 h-4 mr-2">Email Us;
+      </Mail><Footer /></Footer>
 export default MarketplacePage;
 
 

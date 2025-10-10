@@ -52,32 +52,32 @@ async function main() {/* TODO: Fix JSX expression */}
         content = templateFix;
         modified = true}
 
-      //6. Fix unclosed input tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button;
+      //6. Fix unclosed input tags: <input\n...\n\n<button -> <input\n...\n>\n\n</input><button;
       const inputFix = content.replace(
         /<input([^>]*?)\n\s*\n\s*<button/g;
-        '<input$1\n/>\n\n<button'
+        '<input$1\n>\n\n</button><button'
       );
       if (inputFix !== content) {,
         content = inputFix;
         modified = true}
 
-      //7. Fix unclosed br tags: <br> -> <br />,
+      //7. Fix unclosed br tags: <br> -> <br>,
       //5. Fix template literal,
   syntax: ${/* TODO: Fix JSX expression */}
       }
 
       //6. Fix unclosed input,
-  tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button></button>;
+  tags: </br><input\n...\n\n<button -> <input\n...\n>\n\n</input><button></button>;
 const inputFix = content.replace()
         /<input([^>]*?)\n\s*\n\s*<button/g,
-        '<input$1\n/>\n\n<button'
+        '<input$1\n>\n\n</button><button'
       );
       if (inputFix !== content) {/* TODO: Fix JSX expression */}
       }
 
       //7. Fix unclosed br,
   tags: <br> -> <br /></br>
-      //       const brFix = content.replace(/<br>/g, '<br />');
+      //       const brFix = content.replace(/<br>/g, '<br>');
       if (brFix !== content) {/* TODO: Fix JSX expression */}
       }
 
@@ -90,3 +90,4 @@ const inputFix = content.replace()
   //   }
 
 // main().catch(console.error);
+</br>

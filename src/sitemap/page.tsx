@@ -264,7 +264,7 @@ const blogCategories = [
                 >
                   Request Demo
                 </Link>
-              </div>
+              >
             </div>
           </section>
         </main>

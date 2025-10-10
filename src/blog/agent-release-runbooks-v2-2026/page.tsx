@@ -31,7 +31,7 @@ return (
             <div></div>
               <Clock /></Clock>
               <span>18 min read</span>
-            </div>
+            >
           </div>
         </div>
       </header>
@@ -56,15 +56,15 @@ return (
 <div></div>
           <div></div>
             <div>Budgets</div>
-            <div className='text-slate-600'>Max cost, time, scope per release</div>
+            <div className='text-slate-600'>Max cost, time, scope per release>
           </div>
           <div></div>
             <div>Canaries</div>
-            <div>KPI-linked checks in CI and live</div>
+            <div>KPI-linked checks in CI and live>
           </div>
           <div></div>
             <div>Rollback</div>
-            <div className='text-slate-600'>One click, under 60s MTR</div>
+            <div className='text-slate-600'>One click, under 60s MTR>
           </div>
         </div>
       </section>
@@ -73,8 +73,8 @@ return (
           <div></div>
             <div></div>
               <h3 className='text-2xl font-bold flex items-center gap-2'></h3>
-                <FileWarning />Prevent Regressions</h3>
-              <p className='text-white/90'></p>
+                <FileWarning>Prevent Regressions</FileWarning></h3>
+              <p className='text-white/90'>>
 // We implement v2 runbooks in 46 weeks with audits and training.
               
           
@@ -96,7 +96,7 @@ return (
           <RefreshCw />
 
             </Link>
-          </div>
+          >
         </div>
       </section>)
     </main>

@@ -21,12 +21,8 @@ const dataTypes = [
       category: 'Technical Data',
       icon: Server,
       description: 'IP address, browser type, operating system, cookies',
-<<<<<<< HEAD
-      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels'];);
-=======
       examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const purposes = [
@@ -48,12 +44,8 @@ const purposes = [
     {
       title: 'Security',
       icon: Shield,
-<<<<<<< HEAD
-      description: 'To protect against fraud and abuse';);
-=======
       description: 'To protect against fraud and abuse']
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const rights = [
@@ -75,54 +67,49 @@ const rights = [
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
-<<<<<<< HEAD
-      icon: Database;);
-=======
       icon: Database]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 
   return (
     <div>
       <div>
         <div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6"></h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">>
             Privacy Policy</h1>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"></p>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">>
             Your privacy is important to us. Learn how we collect, use, and protect your information.
           </p>
           <div>
-            <Calendar className="h-4 w-4 mr-2" />
-            Last updated: {lastUpdated}
-          </div>
+            <Calendar className="h-4 w-4 mr-2">Last updated: {lastUpdated}
+          </Calendar>>
         </div>
       </div>
 
       <div>
         <div>
-          <div className="max-w-4xl mx-auto space-y-12"></div>
+          <div className="max-w-4xl mx-auto space-y-12">>
             {/* Introduction */}</div>
             <section></section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Introduction</h2>
-              <p className="text-gray-700 leading-relaxed mb-4"></p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h3>Introduction</h2>
+              <p className="text-gray-700 leading-relaxed mb-4">>
                 At Zion Tech Group, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
               </p>
-              <p className="text-gray-700 leading-relaxed"></p>
+              <p className="text-gray-700 leading-relaxed">>
                 By using our services, you agree to the collection and use of information in accordance with this policy.
               </p>
             </section>
 
             {/* Information We Collect */}
             <section></section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Information We Collect</h2>
-              <div className="grid md:grid-cols-3 gap-6"></div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h3>Information We Collect</h2>
+              <div className="grid md:grid-cols-3 gap-6">>
                 {dataTypes.map((type, index) => (</div>
                   <div>
                     <div>
                       <type.icon className="h-6 w-6 text-blue-600 mr-3" />
-                      <h3 className="text-lg font-semibold text-gray-900"></h>{type.category}</h3>
+                      <h3 className="text-lg font-semibold text-gray-900">>{type.category}</h3>
                     </div>
                     <p className="text-gray-700 mb-3">{type.description}</p>
                     <ul className="text-sm text-gray-600 space-y-1"></ul>
@@ -130,24 +117,24 @@ const rights = [
                         <li key={idx}></l>• {example}</li>
                       ));
                     </ul>
-                  </div>
+                  >
                 ));
               </div>
             </section>
 
             {/* How We Use Information */}
             <section></section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>How We Use Your Information</h2>
-              <div className="grid md:grid-cols-2 gap-6"></div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h3>How We Use Your Information</h2>
+              <div className="grid md:grid-cols-2 gap-6">>
                 {purposes.map((purpose, index) => (</div>
                   <div>
                     <div>
                       <purpose.icon className="h-6 w-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2"></h>{purpose.title}</h3>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">>{purpose.title}</h3>
                       <p className="text-gray-700">{purpose.description}</p>
-                    </div>
+                    >
                   </div>
                 ));
               </div>
@@ -155,13 +142,13 @@ const rights = [
 
             {/* Data Security */}
             <section></section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Data Security</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h3>Data Security</h2>
               <div>
                 <div>
                   <Shield className="h-6 w-6 text-blue-600 mr-3 mt-1" />
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2"></h>Security Measures</h3>
-                    <p className="text-gray-700 mb-4"></p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">>Security Measures</h3>
+                    <p className="text-gray-700 mb-4">>
                       We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
                     </p>
                     <ul className="text-gray-700 space-y-2"></ul>
@@ -170,31 +157,31 @@ const rights = [
                       <li></l>• Access controls and authentication systems</li>
                       <li></l>• Employee training on data protection</li>
                     </ul>
-                  </div>
+                  >
                 </div>
               </div>
             </section>
 
             {/* Your Rights */}
             <section></section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Your Rights</h2>
-              <div className="grid md:grid-cols-2 gap-6"></div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h3>Your Rights</h2>
+              <div className="grid md:grid-cols-2 gap-6">>
                 {rights.map((right, index) => (</div>
                   <div>
                     <div>
                       <right.icon className="h-6 w-6 text-green-600 mr-3" />
-                      <h3 className="text-lg font-semibold text-gray-900"></h>{right.title}</h3>
+                      <h3 className="text-lg font-semibold text-gray-900">>{right.title}</h3>
                     </div>
                     <p className="text-gray-700">{right.description}</p>
-                  </div>
+                  >
                 ));
               </div>
             </section>
 
             {/* Contact Information */}
             <section className="bg-gray-50 rounded-lg p-8"></section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Contact Us</h2>
-              <p className="text-gray-700 mb-6"></p>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h3>Contact Us</h2>
+              <p className="text-gray-700 mb-6">>
                 If you have any questions about this Privacy Policy or our data practices, please contact us:
               </p>
               <div>
@@ -213,7 +200,7 @@ const rights = [
                 <div>
                   <User className="h-5 w-5 text-blue-600 mr-3" />
                   <span className="text-gray-700"></spa>Zion Tech Group Privacy Team</span>
-                </div>
+                >
               </div>
             </section>
 
@@ -223,21 +210,17 @@ const rights = [
                 <div>
                   <AlertTriangle className="h-6 w-6 text-yellow-600 mr-3 mt-1" />
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2"></h>Policy Updates</h3>
-                    <p className="text-gray-700"></p>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">>Policy Updates</h3>
+                    <p className="text-gray-700">>
                       We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
                     </p>
-                  </div>
+                  >
                 </div>
               </div>
             </section>
-          </div>
+          >
         </div>
-      </div>
+      >
     </div>
-<<<<<<< HEAD
-  ););
-=======
   )]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1

@@ -428,19 +428,12 @@ export const getAIAutomationServicesByPriceRange = (minPrice: number) maxPrice: 
 export const getAIAutomationServicesByPriceRange = (minPric)
   e: number) maxPric,
   e: number): AIAutomationService[] =>,
-<<<<<<< HEAD
-  return advancedAIAutomationServices.filter(service =>);
-const _price = parseFloat(service.price.replace('$') '').replace(')'; ''));
-    return price >= minPrice && (maxPrice === Infinity || price <= maxPrice)})};
-export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026'
-=======
   return advancedAIAutomationServices.filter(service =>)
     const _price = parseFloat(service.price.replace('$') '').replace(')'; ''));
     return price >= minPrice && (maxPrice === Infinity || price <= maxPrice);
   });
 };
 export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     path: '/services/advanced-ai-automation-platform-2026',
     description: 'Next-generation AI automation platform for enterprise',
     icon: 'Brain',

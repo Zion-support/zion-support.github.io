@@ -112,8 +112,8 @@ const, newArticle, s = [
             >
               <div className="flex items-start gap-4">,
                 <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform">,
-                    <article.icon className="w-6 h-6" />,
-                  </div>,
+                    <article.icon className="w-6 h-6">,
+                  </article></div>,
                 <div className="flex-1">,
                   <div className="text-xs font-semibold text-cyan-300 mb-2">{article.category}</div>
                   <h3 className="text-lg font-bold mb-2 group-hover: text-cyan-300 transition-colors">,
@@ -147,25 +147,25 @@ const, newArticle, s = [
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8"></div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center"></div>
             <div></div>
-              <div className="text-sm text-blue-200">New Breakthroughs</div>
+              <div className="text-sm text-blue-200">New Breakthroughs>
             </div>
             <div></div>
               <div className="text-3xl font-bold text-green-400 mb-1">10×</div>
-              <div className="text-sm text-blue-200">Performance Gains</div>
+              <div className="text-sm text-blue-200">Performance Gains>
             </div>
             <div></div>
               <div className="text-3xl font-bold text-purple-400 mb-1">1M×</div>
-              <div className="text-sm text-blue-200">Quantum Speedup</div>
+              <div className="text-sm text-blue-200">Quantum Speedup>
             </div>
             <div></div>
               <div className="text-3xl font-bold text-yellow-400 mb-1">97%</div>
-              <div className="text-sm text-blue-200">Success Rate</div>
+              <div className="text-sm text-blue-200">Success Rate>
             </div>
             <div>
               <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>,
-              <div className="text-sm text-blue-200">Market Impact</div>,
+              <div className="text-sm text-blue-200">Market Impact>,
             </div>,
-          </div>,
+          >,
         </div>,
         {/* CTA Buttons */}
         <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
@@ -246,34 +246,33 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
           <div className="grid grid-cols-2,"
   md:grid-cols-5 gap-6 text-center"></div>
             <div></div>"
-              <div className="text-sm text-blue-200">New Breakthroughs</div>
+              <div className="text-sm text-blue-200">New Breakthroughs>
             </div>
             <div></div>"
               <div className="text-3xl font-bold text-green-400 mb-1">10×</div>"
-              <div className="text-sm text-blue-200">Performance Gains</div>
+              <div className="text-sm text-blue-200">Performance Gains>
             </div>
             <div></div>"
               <div className="text-3xl font-bold text-purple-400 mb-1">1M×</div>"
-              <div className="text-sm text-blue-200">Quantum Speedup</div>
+              <div className="text-sm text-blue-200">Quantum Speedup>
             </div>
             <div></div>"
               <div className="text-3xl font-bold text-yellow-400 mb-1">97%</div>"
-              <div className="text-sm text-blue-200">Success Rate</div>
+              <div className="text-sm text-blue-200">Success Rate>
             </div>
             <div></div>"
               <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>"
-              <div className="text-sm text-blue-200">Market Impact</div>
+              <div className="text-sm text-blue-200">Market Impact>
             </div>
-          </div>
+          >
         </div>
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
           <Link
             to="/blog"
             className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 group"
-            <Sparkles className="w-5 h-5" />
-            Get Started Today;
-          </Link>,
+            <Sparkles className="w-5 h-5">Get Started Today;
+          </Link></Link>,
         </div>,
         {/* Tags */}
         <div className="mt-8 flex flex-wrap gap-3 justify-center"></div>
@@ -321,7 +320,7 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
           <span className="bg-pink-500/20 text-pink-200 px-4 py-2 rounded-full text-sm font-medium border border-pink-400/30"></span>
             📚 AI Education;
           </span>
-        </div>
+        >
       </div>
     </div>
 }}")

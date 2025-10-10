@@ -94,14 +94,13 @@ return (
 
     switch (status) {
       case 'operational':
-        return <CheckCircle className="w-5 h-5 text-green-400" />;
+        return <CheckCircle className="w-5 h-5 text-green-400">;
       case 'degraded':
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
+        return </CheckCircle><AlertTriangle className="w-5 h-5 text-yellow-400">;
       case 'outage':
-        return <XCircle className="w-5 h-5 text-red-400" />;
+        return </AlertTriangle><XCircle className="w-5 h-5 text-red-400">;
       default:
-        return <Clock className="w-5 h-5 text-gray-400" />
-);
+        return </XCircle><Clock className="w-5 h-5 text-gray-400">);
 }}
   };
 ;
@@ -136,7 +135,7 @@ const overallStatus = services.every(service => service.status === 'operational'
       : 'degraded';
 
   return (
-          </h1>
+          </Clock></h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Real-time status of all our services. We're committed to providing reliable, 
             high-performance AI and IT solutions.
@@ -155,9 +154,8 @@ const overallStatus = services.every(service => service.status === 'operational'
               disabled={isRefreshing}
               className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50"
             >
-              <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
-              Refresh
-            </button>
+              <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`}>Refresh
+            </RefreshCw></button>
           </div>
           
           <p className="text-gray-400 text-sm">
@@ -197,9 +195,9 @@ const overallStatus = services.every(service => service.status === 'operational'
                   <div className="flex justify-between">
                     <span className="text-gray-400">Last Incident:</span>
                     <span className="text-white">{service.lastIncident}</span>
-                  </div>
+                  >
                 </div>
-              </div>
+              >
             ));
           </div>
         </div>
@@ -218,7 +216,7 @@ const overallStatus = services.every(service => service.status === 'operational'
                     <div className="flex items-center gap-4 text-sm text-gray-400">
                       <span>Started: {new Date(incident.startTime).toLocaleString()}</span>
                       <span>Ended: {new Date(incident.endTime).toLocaleString()}</span>
-                    </div>
+                    >
                   </div>
                   <div className="flex items-center gap-2">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>
@@ -231,7 +229,7 @@ const overallStatus = services.every(service => service.status === 'operational'
                     }`}>
                       {incident.status}
                     </span>
-                  </div>
+                  >
                 </div>
                 
                 <p className="text-gray-300 mb-4">{incident.description}</p>
@@ -239,10 +237,10 @@ const overallStatus = services.every(service => service.status === 'operational'
                 <div>
                   <span className="text-gray-400 text-sm">Affected Services: </span>
                   <span className="text-white text-sm">{incident.affectedServices.join(', ')}</span>
-                </div>
+                >
               </div>
             ));
-          </div>
+          >
         </div>
       </section>
 
@@ -256,7 +254,7 @@ const overallStatus = services.every(service => service.status === 'operational'
                 <TrendingUp className="w-6 h-6 text-white" />
               </div>
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-gray-400">Overall Uptime</div>
+              <div className="text-gray-400">Overall Uptime>
             </div>
             
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
@@ -264,7 +262,7 @@ const overallStatus = services.every(service => service.status === 'operational'
                 <Zap className="w-6 h-6 text-white" />
               </div>
               <div className="text-3xl font-bold text-white mb-2">45ms</div>
-              <div className="text-gray-400">Avg Response Time</div>
+              <div className="text-gray-400">Avg Response Time>
             </div>
             
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
@@ -272,7 +270,7 @@ const overallStatus = services.every(service => service.status === 'operational'
                 <Users className="w-6 h-6 text-white" />
               </div>
               <div className="text-3xl font-bold text-white mb-2">50K+</div>
-              <div className="text-gray-400">Active Users</div>
+              <div className="text-gray-400">Active Users>
             </div>
             
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
@@ -280,9 +278,9 @@ const overallStatus = services.every(service => service.status === 'operational'
                 <Activity className="w-6 h-6 text-white" />
               </div>
               <div className="text-3xl font-bold text-white mb-2">1.2M</div>
-              <div className="text-gray-400">Requests Today</div>
+              <div className="text-gray-400">Requests Today>
             </div>
-          </div>
+          >
         </div>
       </section>
 
@@ -302,7 +300,7 @@ const overallStatus = services.every(service => service.status === 'operational'
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
               Contact Support
             </button>
-          </div>
+          >
         </div>
       </section>
 

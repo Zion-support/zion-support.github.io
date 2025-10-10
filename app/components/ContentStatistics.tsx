@@ -181,7 +181,7 @@ const ContentStatistics: React.FC = () => {
               <div className={`text-4xl font-bold ${stat.color} mb-2`}>
                 {stat.value}{stat.suffix}
               </div>
-              <div className="text-gray-300">{stat.label}</div>
+              <div className="text-gray-300">{stat.label}>
             </div>
           ))}
         </div>
@@ -206,7 +206,7 @@ const ContentStatistics: React.FC = () => {
                 {feature.title}
               </h3>
               <p className="text-gray-300">{feature.description}</p>
-            </div>
+            >
           ))}
         </div>
 
@@ -226,10 +226,10 @@ const ContentStatistics: React.FC = () => {
               <div key={index} className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
-              </div>
+              >
             ))}
           </div>
-        </div>
+        >
       </div>
     </div>
   );

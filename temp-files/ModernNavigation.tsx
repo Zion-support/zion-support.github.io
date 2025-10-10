@@ -62,8 +62,8 @@ const,
           {/* Mobile Menu Button */}"
           <button onClick={() => setIsOpen(!isOpen)} className="m,"
   d:hidden text-gray-700">"
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+            {isOpen ? <X className="w-6 h-6">: </X><Menu className="w-6 h-6">}
+          </Menu></button>
         </div>
 
         {/* Mobile Navigation */}
@@ -90,7 +90,7 @@ const,
                 {item.name}
               </Link>
             ))}
-          </div>
+          >
         )}
       </div>
     </nav>

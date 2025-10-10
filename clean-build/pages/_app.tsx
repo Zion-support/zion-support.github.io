@@ -10,8 +10,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
       </Head>)
-      <Component {...pageProps} />)
-    </React.Fragment>)
+      <Component {...pageProps}>)
+    </Component></React.Fragment>)
 export default function App({ Component, pageProps }: AppProps) {/* TODO: Fix JSX expression */}
       <Component {...pageProps} /></Component>
     </React.Fragment>

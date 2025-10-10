@@ -154,7 +154,7 @@ const achievements = [
                   <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                 </a>
               ))}
-            </div>
+            >
           </div>
 
           {/* Micro SAAS Solutions */}
@@ -167,9 +167,8 @@ const achievements = [
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {service.name}
-                  </Link>
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity">{service.name}
+                  </ArrowRight></Link>
                   <p className="text-xs text-gray-500 ml-5">{service.description}</p>
                 </li>
               ))}
@@ -194,9 +193,8 @@ const achievements = [
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {service.name}
-                  </Link>
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity">{service.name}
+                  </ArrowRight></Link>
                   <p className="text-xs text-gray-500 ml-5">{service.description}</p>
                 </li>
               ))}
@@ -223,9 +221,8 @@ const achievements = [
           {/* AI & IT Services */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-6 neon-text flex items-center">
-              <Brain className="w-5 h-5 mr-2 text-purple-400" />
-              AI & IT Services
-            </h4>
+              <Brain className="w-5 h-5 mr-2 text-purple-400">AI & IT Services
+            </Brain></h4>
             <div className="space-y-4">
               <div>
                 <h5 className="text-sm font-semibold text-purple-400 mb-2">AI Services</h5>
@@ -240,7 +237,7 @@ const achievements = [
                       <span>{service.name}</span>
                     </Link>
                   ))}
-                </div>
+                >
               </div>
               <div>
                 <h5 className="text-sm font-semibold text-blue-400 mb-2">IT Services</h5>
@@ -255,9 +252,9 @@ const achievements = [
                       <span>{service.name}</span>
                     </Link>
                   ))}
-                </div>
+                >
               </div>
-            </div>
+            >
           </div>
         </div>
 
@@ -269,30 +266,30 @@ const achievements = [
               <Phone className="w-5 h-5 text-cyan-400" />
               <div>
                 <div className="text-white font-medium">{contactInfo.phone}</div>
-                <div className="text-gray-400 text-sm">Call us anytime</div>
+                <div className="text-gray-400 text-sm">Call us anytime>
               </div>
             </div>
             <div className="flex items-center space-x-3">
               <Mail className="w-5 h-5 text-cyan-400" />
               <div>
                 <div className="text-white font-medium">{contactInfo.email}</div>
-                <div className="text-gray-400 text-sm">Email us</div>
+                <div className="text-gray-400 text-sm">Email us>
               </div>
             </div>
             <div className="flex items-center space-x-3">
               <MapPin className="w-5 h-5 text-cyan-400" />
               <div>
                 <div className="text-white font-medium">Middletown, DE</div>
-                <div className="text-gray-400 text-sm">{contactInfo.address}</div>
+                <div className="text-gray-400 text-sm">{contactInfo.address}>
               </div>
             </div>
             <div className="flex items-center space-x-3">
               <Clock className="w-5 h-5 text-cyan-400" />
               <div>
                 <div className="text-white font-medium">{contactInfo.hours}</div>
-                <div className="text-gray-400 text-sm">Business hours</div>
+                <div className="text-gray-400 text-sm">Business hours>
               </div>
-            </div>
+            >
           </div>
         </div>
 
@@ -349,9 +346,9 @@ const achievements = [
               <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all text-sm">
                 Subscribe
               </button>
-            </div>
+            >
           </div>
-        </div>
+        >
       </div>
 
       {/* Bottom Bar */}
@@ -384,9 +381,9 @@ const achievements = [
               <div className="flex items-center space-x-2">
                 <Globe className="w-4 h-4 text-blue-400" />
                 <span>Global Reach</span>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
       </div>
     </footer>

@@ -51,10 +51,8 @@ import SEOOptimizer from '../components/SEOOptimizer';
         description="Comprehensive healthcare IT solutions including HIPAA compliance, patient data security, and system integration for healthcare organizations."
         keywords="healthcare IT, HIPAA compliance, patient data security, EHR integration, healthcare analytics, medical technology"
       />
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      <Navigation>{/* Hero Section */}
+      </Navigation><section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -73,7 +71,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
             <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Learn More
             </button>
-</div>
+>
         </div>
       </section>
 
@@ -90,7 +88,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
-              </div>
+              >
             ));
           </div>
         </div>
@@ -116,7 +114,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
 
-              </div>
+              >
             ));
           </div>
         </div>
@@ -128,7 +126,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">
               View Case Studies
             </button>
-          </div>
+          >
         </div>
       </section>
 

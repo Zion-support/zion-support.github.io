@@ -36,8 +36,8 @@ const value = match;)
     content = content.replace(/\s*\/>\s*<\/Link>/g, '</Link>');
 
     //Fix malformed <br> tags that should be self-closing;
-    content = content.replace(/<br\s*>\s*<\/br>/g, '<br />');
-    content = content.replace(/<br\s*>\s*$/gm, '<br />');
+    content = content.replace(/<br\s*>\s*<\/br>/g, '<br>');
+    content = content.replace(/</br><br\s*>\s*$/gm, '<br>');
 
     //Fix unterminated regular expressions in array/object literals;
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
@@ -70,7 +70,7 @@ const value = match;)
     });
 
     //Fix specific patterns where /> appears before other elements;
-    content = content.replace(/\s*\/>\s*<(\w+)/g, ' <$1');
+    content = content.replace(/\s*\/>\s*</br><(\w+)/g, ' <$1');
     content = content.replace(/\s*\/>\s*<\/(\w+)>/g, '</$1>');
 
     //Fix malformed JSX attributes;

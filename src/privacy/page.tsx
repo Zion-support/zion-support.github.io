@@ -99,9 +99,9 @@ const securityMeasures = [
               <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">Transparent</span>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
       </section>
 
@@ -116,7 +116,7 @@ const securityMeasures = [
               <p className="text-sm text-gray-400 mt-2">
                 This privacy policy may be updated from time to time. We will notify you of any changes.
               </p>
-            </div>
+            >
           </div>
         </div>
       </section>
@@ -136,7 +136,7 @@ const securityMeasures = [
                 By using our website or services, you agree to the collection and use of information in accordance with 
                 this policy. If you do not agree with the terms of this Privacy Policy, please do not access the site.
               </p>
-            </div>
+            >
           </div>
         </div>
       </section>
@@ -159,15 +159,14 @@ const securityMeasures = [
                     <ul className="space-y-1">
                       {type.examples.map((example, exampleIndex) => (
                         <li key={exampleIndex} className="text-sm text-gray-400 flex items-center">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {example}
-                        </li>
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0">{example}
+                        </CheckCircle></li>
                       ))}
                     </ul>
-                  </div>
+                  >
                 </div>
               ))}
-            </div>
+            >
           </div>
         </div>
       </section>
@@ -207,9 +206,9 @@ const securityMeasures = [
                 <p className="text-gray-300">
                   To comply with legal obligations, resolve disputes, and enforce our agreements.
                 </p>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
       </section>
 
@@ -226,10 +225,10 @@ const securityMeasures = [
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{measure}</span>
-                </div>
+                >
               ))}
             </div>
-          </div>
+          >
         </div>
       </section>
 
@@ -244,10 +243,10 @@ const securityMeasures = [
                   <right.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{right.title}</h3>
                   <p className="text-gray-300 text-sm">{right.description}</p>
-                </div>
+                >
               ))}
             </div>
-          </div>
+          >
         </div>
       </section>
 
@@ -271,16 +270,15 @@ const securityMeasures = [
               <div className="flex items-center justify-center space-x-3">
                 <Globe className="w-5 h-5 text-cyan-400" />
                 <span className="text-white">Middletown, DE</span>
-              </div>
+              >
             </div>
             <a
               href="/contact"
               className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
             >
-              <Mail className="w-5 h-5 mr-2" />
-              Contact Us
-            </a>
-          </div>
+              <Mail className="w-5 h-5 mr-2">Contact Us
+            </Mail></a>
+          >
         </div>
       </section>
     </div>

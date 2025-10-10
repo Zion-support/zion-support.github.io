@@ -19,9 +19,7 @@ const criticalFiles = [
     },
     {
       path: '/workspace/src/vite-env.d.ts',
-      content: `/// <reference types="vite/client" />
-
-interface ImportMetaEnv {
+      content: `/// <reference types="vite/client">interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string;
   readonly VITE_APP_DESCRIPTION: string;
   readonly VITE_APP_URL: string;
@@ -44,7 +42,7 @@ export default function RootLayout({
   children}: {
   children: React.ReactNode}) {
   return (
-    <html lang="en">
+    </reference><html lang="en">
       <head>
         <Analytics />
       </head>

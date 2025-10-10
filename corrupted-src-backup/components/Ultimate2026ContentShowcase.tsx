@@ -188,8 +188,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p">";</div>
             <moti, o, n.d, i, v
   anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}
-              transiti, o, n={{ durati, o, n: 5, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";
-            ></moti>
+              transiti, o, n={{ durati, o, n: 5, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";></moti>
               <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Sparkles>
             </moti, o, n.d, i, v>
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-bl, u, e-5, 0, 0/30"></div>
@@ -197,14 +196,12 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
               <span, className="te, x, t-sm, fon, t-bold, tex, t-whi, t, e">ULTIMATE, 2026, CONTENT SHOWCA, S, E</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-4, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-yell, o, w-4, 0, 0/30"></div>
-              <Target, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-        {/* Head, e, r */}"
-        <div, className="te, x, t-center, m, b-20">";"
+              <Target, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e>{/* Head, e, r */}"
+        </Target><div, className="te, x, t-center, m, b-20">";"
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p">";
             <moti, o, n.d, i, v;
   anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}"
-              transiti, o, n={{ durati, o, n: 5, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";
-            ></moti>"
+              transiti, o, n={{ durati, o, n: 5, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";></moti>"
               <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Sparkles>
             </moti, o, n.d, i, v>"
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-bl, u, e-5, 0, 0/30"></div>"
@@ -220,25 +217,25 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
             Ultimate, 202, 6;
           </h2>
           <h3, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"</h3>
-              <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0" />";
-            </moti, o, n.d, i, v>
+              <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0">";
+            </Sparkles></moti, o, n.d, i, v>
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-bl, u, e-5, 0, 0/30">";</div>
-              <Award, className="w-5 h-5, tex, t-bl, u, e-4, 0, 0" />";
-              <span, className="te, x, t-sm, fon, t-bold, tex, t-whi, t, e">ULTIMATE, 2026, CONTENT SHOWCA, S, E</sp, a, n>";
+              <Award, className="w-5 h-5, tex, t-bl, u, e-4, 0, 0">";
+              </Award><span, className="te, x, t-sm, fon, t-bold, tex, t-whi, t, e">ULTIMATE, 2026, CONTENT SHOWCA, S, E</sp, a, n>";
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-4, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-yell, o, w-4, 0, 0/30">";</div>
-              <Target, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
-          </h2>"
+              <Target, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e">";
+          </Target></h2>"
           <h3, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">""
-              <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0" />";
-            </moti, o, n.d, i, v>"
+              <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0">";
+            </Sparkles></moti, o, n.d, i, v>"
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-bl, u, e-5, 0, 0/30">";"
-              <Award, className="w-5 h-5, tex, t-bl, u, e-4, 0, 0" />";"
-              <span, className="te, x, t-sm, fon, t-bold, tex, t-whi, t, e">ULTIMATE, 2026, CONTENT SHOWCA, S, E</sp, a, n>";
+              <Award, className="w-5 h-5, tex, t-bl, u, e-4, 0, 0">";"
+              </Award><span, className="te, x, t-sm, fon, t-bold, tex, t-whi, t, e">ULTIMATE, 2026, CONTENT SHOWCA, S, E</sp, a, n>";
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-4, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-yell, o, w-4, 0, 0/30">";"
-              <Target, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";"
-              <span, className="te, x, t-sm, fon, t-bold, tex, t-yell, o, w-3, 0, 0">6, MASTERCLASS, GUIDES</sp, a, n>";
+              <Target, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e">";"
+              </Target><span, className="te, x, t-sm, fon, t-bold, tex, t-yell, o, w-3, 0, 0">6, MASTERCLASS, GUIDES</sp, a, n>";
             </d, i, v>
           </d, i, v>"
           <h2, className="te, x, t-7xl, m, d: te, x, t-8xl, fon, t-extrabold, m, b-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
@@ -272,20 +269,20 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
               <span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Enterprise, Scal, e</sp, a, n>
           <div, className="flex, item, s-center, justif, y-center, ga, p-12, tex, t-center, fle, x-wr, a, p">";</div>
             <div, className="flex, item, s-center, ga, p-3">";</div>
-              <Brain, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0" />";
-              <span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Me, t, a-Cognitive, A, I</sp, a, n>";
+              <Brain, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0">";
+              </Brain><span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Me, t, a-Cognitive, A, I</sp, a, n>";
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-3">";</div>
-              <Shield, className="w-8 h-8, tex, t-bl, u, e-4, 0, 0" />";
-              <span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Zero, Trust, Security</sp, a, n>";
+              <Shield, className="w-8 h-8, tex, t-bl, u, e-4, 0, 0">";
+              </Shield><span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Zero, Trust, Security</sp, a, n>";
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-3">";</div>
-              <Rocket, className="w-8 h-8, tex, t-cy, a, n-4, 0, 0" />";
-              <span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Autonomous, System, s</sp, a, n>";
+              <Rocket, className="w-8 h-8, tex, t-cy, a, n-4, 0, 0">";
+              </Rocket><span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Autonomous, System, s</sp, a, n>";
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-3">";</div>
-              <Users, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0" />";
-          </p>"
+              <Users, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0">";
+          </Users></p>"
           <div, className="flex, item, s-center, justif, y-center, ga, p-12, tex, t-center, fle, x-wr, a, p"></div>"
             <div, className="flex, item, s-center, ga, p-3"></div>"
               <Brain, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0  /></Brain>"
@@ -304,20 +301,20 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
               <span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Enterprise, Scal, e</sp, a, n>"
           <div, className="flex, item, s-center, justif, y-center, ga, p-12, tex, t-center, fle, x-wr, a, p">";"
             <div, className="flex, item, s-center, ga, p-3">";"
-              <Brain, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0" />";"
-              <span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Me, t, a-Cognitive, A, I</sp, a, n>";
+              <Brain, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0">";"
+              </Brain><span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Me, t, a-Cognitive, A, I</sp, a, n>";
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-3">";"
-              <Shield, className="w-8 h-8, tex, t-bl, u, e-4, 0, 0" />";"
-              <span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Zero, Trust, Security</sp, a, n>";
+              <Shield, className="w-8 h-8, tex, t-bl, u, e-4, 0, 0">";"
+              </Shield><span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Zero, Trust, Security</sp, a, n>";
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-3">";"
-              <Rocket, className="w-8 h-8, tex, t-cy, a, n-4, 0, 0" />";"
-              <span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Autonomous, System, s</sp, a, n>";
+              <Rocket, className="w-8 h-8, tex, t-cy, a, n-4, 0, 0">";"
+              </Rocket><span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Autonomous, System, s</sp, a, n>";
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-3">";"
-              <Users, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0" />";"
-              <span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Enterprise, Scal, e</sp, a, n>";
+              <Users, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0">";"
+              </Users><span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Enterprise, Scal, e</sp, a, n>";
             </d, i, v>
           </d, i, v>
         </d, i, v>
@@ -354,8 +351,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                     <Star, className="w-4 h-4, fil, l-curre, n, t  />
                 <div, className="absolu, t, e -t, o, p-4 -rig, h, t-4 z-20">";</div>
                   <div, className="flex, item, s-center, ga, p-1, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-black, tex, t-sm, fon, t-bold, shado, w-xl">";</div>
-                    <Star, className="w-4 h-4, fil, l-curre, n, t" />";
-                    <sp, a, n>FEATUR, E, D</sp, a, n>
+                    <Star, className="w-4 h-4, fil, l-curre, n, t">";
+                    </Star><sp, a, n>FEATUR, E, D</sp, a, n>
                   </d, i, v>
                 </d, i, v>
               )}
@@ -393,8 +390,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                       <div, className="flex, item, s-center, ga, p-1, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-500, t, o-pi, n, k-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg"></div>
                         <TrendingUp, className="w-3 h-3  />
                       <div, className="flex, item, s-center, ga, p-1, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-500, t, o-pi, n, k-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg">";</div>
-                        <TrendingUp, className="w-3 h-3" />";
-                        <sp, a, n>TRENDI, N, G</sp, a, n>
+                        <TrendingUp, className="w-3 h-3">";
+                        </TrendingUp><sp, a, n>TRENDI, N, G</sp, a, n>
                       </d, i, v>
                     )}
                     {/* TODO: Fix JSX expression */}
@@ -446,9 +443,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                 {/* Meta, Inf, o */}
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-400, m, b-8, p, b-6, borde, r-b, borde, r-whi, t, e/15"></div>
                   <span, className="flex, item, s-center, ga, p-2"></span>
-                    <Zap, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  />
-                    {conte, n, t.readTi, m, e}
-                  </sp, a, n>
+                    <Zap, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0>{conte, n, t.readTi, m, e}
+                  </Zap></sp, a, n>
                   <sp, a, n>{new, Dat, e(conte, n, t.da, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sho, r, t', d, a, y: 'numer, i, c', ye, a, r: 'numer, i, c' })}</sp, a, n>;
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-400, m, b-8, p, b-6, borde, r-b, borde, r-whi, t, e/15">";</div>
                   <span, className="flex, item, s-center, ga, p-2">";</span>
@@ -461,9 +457,9 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                   <sp, a, n>{new, Dat, e(conte, n, t.da, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sho, r, t', d, a, y: 'numer, i, c', ye, a, r: 'numer, i, c' })}</sp, a, n>;"
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-400, m, b-8, p, b-6, borde, r-b, borde, r-whi, t, e/15">";"
                   <span, className="flex, item, s-center, ga, p-2">";"
-                    <Zap, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0" />";
+                    <Zap, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0">";
                     {conte, n, t.readTi, m, e}
-                  </sp, a, n>
+                  </Zap></sp, a, n>
                   <sp, a, n>{new, Dat, e(conte, n, t.da, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sho, r, t', d, a, y: 'numer, i, c', ye, a, r: 'numer, i, c' })}</sp, a, n>';
                 </d, i, v>
                 {/* CTA, Butto, n */}
@@ -476,9 +472,9 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
   r:-transla, t, e-y-2"
                 >
                   <sp, a, n>Access, Masterclas, s</sp, a, n>"
-                  <Link, className="w-5 h-5, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0/>""
-                  <Link, className="w-5 h-5, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />";
-                </a>
+                  <Link, className="w-5 h-5, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0>""
+                  </Link><Link, className="w-5 h-5, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0">";
+                </Link></a>
               </d, i, v>
             </moti, o, n.d, i, v>
           ))}
@@ -557,16 +553,16 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-cent, e, r">"</div>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-center, m, b-12">";</div>
                 <div, className="flex, item, s-center, ga, p-3, tex, t-bl, u, e-3, 0, 0">";</div>
-                  <DollarSign, className="w-6 h-6" />";
-                  <span, className="te, x, t-lg, fon, t-semibo, l, d">$50, 0, M+ Proven, Saving, s</sp, a, n>";
+                  <DollarSign, className="w-6 h-6">";
+                  </DollarSign><span, className="te, x, t-lg, fon, t-semibo, l, d">$50, 0, M+ Proven, Saving, s</sp, a, n>";
                 </d, i, v>
                 <div, className="flex, item, s-center, ga, p-3, tex, t-purp, l, e-3, 0, 0">";</div>
-                  <Users, className="w-6 h-6" />";
-                  <span, className="te, x, t-lg, fon, t-semibo, l, d">5, 0, 0+ Enterprise, Client, s</sp, a, n>";
+                  <Users, className="w-6 h-6">";
+                  </Users><span, className="te, x, t-lg, fon, t-semibo, l, d">5, 0, 0+ Enterprise, Client, s</sp, a, n>";
                 </d, i, v>
                 <div, className="flex, item, s-center, ga, p-3, tex, t-cy, a, n-3, 0, 0">";</div>
-                  <Award, className="w-6 h-6" />";
-                  <span, className="te, x, t-lg, fon, t-semibo, l, d">Industry, Leading, Results</sp, a, n>";
+                  <Award, className="w-6 h-6">";
+                  </Award><span, className="te, x, t-lg, fon, t-semibo, l, d">Industry, Leading, Results</sp, a, n>";
                 </d, i, v>
               </d, i, v>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-cent, e, r">";</div>
@@ -591,27 +587,26 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-cent, e, r">""
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-center, m, b-12">";"
                 <div, className="flex, item, s-center, ga, p-3, tex, t-bl, u, e-3, 0, 0">";"
-                  <DollarSign, className="w-6 h-6" />";"
-                  <span, className="te, x, t-lg, fon, t-semibo, l, d">$50, 0, M+ Proven, Saving, s</sp, a, n>";
+                  <DollarSign, className="w-6 h-6">";"
+                  </DollarSign><span, className="te, x, t-lg, fon, t-semibo, l, d">$50, 0, M+ Proven, Saving, s</sp, a, n>";
                 </d, i, v>"
                 <div, className="flex, item, s-center, ga, p-3, tex, t-purp, l, e-3, 0, 0">";"
-                  <Users, className="w-6 h-6" />";"
-                  <span, className="te, x, t-lg, fon, t-semibo, l, d">5, 0, 0+ Enterprise, Client, s</sp, a, n>";
+                  <Users, className="w-6 h-6">";"
+                  </Users><span, className="te, x, t-lg, fon, t-semibo, l, d">5, 0, 0+ Enterprise, Client, s</sp, a, n>";
                 </d, i, v>"
                 <div, className="flex, item, s-center, ga, p-3, tex, t-cy, a, n-3, 0, 0">";"
-                  <Award, className="w-6 h-6" />";"
-                  <span, className="te, x, t-lg, fon, t-semibo, l, d">Industry, Leading, Results</sp, a, n>";
+                  <Award, className="w-6 h-6">";"
+                  </Award><span, className="te, x, t-lg, fon, t-semibo, l, d">Industry, Leading, Results</sp, a, n>";
                 </d, i, v>
               </d, i, v>"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-cent, e, r">";"
                 <a, titl, e="Internal, lin, k""
                   hr, e, f="/conta, c, t""
                   classNa, m, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hov, e,"
-  r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"
-                ></a>"
+  r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"></a>"
                   <Rocket, className="w-6 h-6  /></Rocket>"
-                  <Rocket, className="w-6 h-6" />";
-                  <sp, a, n>Start, Your, Transformation</sp, a, n>
+                  <Rocket, className="w-6 h-6">";
+                  </Rocket><sp, a, n>Start, Your, Transformation</sp, a, n>
                 </a>
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/bl, o, g"
@@ -620,12 +615,11 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                 <a, titl, e="Internal, lin, k""
                   hr, e, f="/bl, o, g""
                   classNa, m, e="bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r: bg-bl, u, e-500, hov, e,"
-  r:te, x, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"
-                ></a>
+  r:te, x, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"></a>
                   <sp, a, n>Explore, All, Masterclasses</sp, a, n>"
                   <Link, className="w-6 h-6  /></Link>"
-                  <Link, className="w-6 h-6" />";
-                </a>
+                  <Link, className="w-6 h-6">";
+                </Link></a>
               </d, i, v>
             </d, i, v>
           </d, i, v>

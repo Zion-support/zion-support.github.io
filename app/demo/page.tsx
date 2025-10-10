@@ -58,16 +58,14 @@ const DemoPage: React.FC = () => {const demos = [
                   <ul className="space-y-2 mb-6">
                     {demo.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0">{feature}
+                      </CheckCircle></li>
                     ));
                   </ul>
                   <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
-                    <Play className="w-4 h-4 mr-2" />
-                    Watch Demo
-                  </button>
-                </div>
+                    <Play className="w-4 h-4 mr-2">Watch Demo
+                  </Play></button>
+                >
               ));
             </div>
           </div>
@@ -87,7 +85,7 @@ const DemoPage: React.FC = () => {const demos = [
                 Schedule Demo
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
-            </div>
+            >
           </div>
         </section>
       </div>

@@ -276,11 +276,11 @@ let, scor, e = iss, u, e.sco, r, e;)
   const, getIssueIco, n = (ty, p, e: stri, n, g) => {/* TODO: Fix JSX expression */}
 }
 ca, s, e 'err, o, r':';"
-retu, r, n <XCircle, className="w-5 h-5, tex, t-r, e, d-6, 0, 0" />;";
+retu, r, n <XCircle, className="w-5 h-5, tex, t-r, e, d-6, 0, 0">;";
 ca, s, e 'warni, n, g':';"
-retu, r, n <AlertTriangle, className="w-5 h-5, tex, t-yell, o, w-6, 0, 0" />;";
+retu, r, n </XCircle><AlertTriangle, className="w-5 h-5, tex, t-yell, o, w-6, 0, 0">;";
 defau, l, t:"
-retu, r, n <CheckCircle, className="w-5 h-5, tex, t-bl, u, e-6, 0, 0" />;"}};
+retu, r, n </AlertTriangle><CheckCircle, className="w-5 h-5, tex, t-bl, u, e-6, 0, 0">;"}};
   const, getImpactColo, r = (impa, c, t: stri, n, g) => {
 swit, c, h (impa, c, t) {
 ca, s, e 'hi, g, h':
@@ -316,7 +316,7 @@ const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TOD
   const, impact, s = ['a, l, l', 'hi, g, h', 'medi, u, m', 'l, o, w'];';
   useEffe, c, t(() => {/* TODO: Fix JSX expression */}
   }, []);
-  return(<div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-6xl, m, x-au, t, o">";
+  return(</CheckCircle><div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-6xl, m, x-au, t, o">";
       <div, className="flex, justif, y-between, item, s-center, m, b-6">";
   return (
     <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6, ma, x-w-6xl, m, x-au, t, o">";</div>
@@ -332,9 +332,9 @@ const, filteredIssue, s = repo, r, t?.issu, e, s.filt, e, r(iss, u, e => {/* TOD
           <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2"></h2>"
             <Search, className="w-6 h-6  /></Search>"
           <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2">";"
-            <Search, className="w-6 h-6" />";
+            <Search, className="w-6 h-6">";
             SEO, Audit, Dashboard;
-          </h2>"
+          </Search></h2>"
           <p, className="te, x, t-gr, a, y-600, m, t-1">Comprehensive, SEO, analysis and, optimization, recommendations</p>";
         </d, i, v>
         <butt, o, n;
@@ -357,7 +357,7 @@ Analyzi, n, g...)
 ) : (
 <React.Fragment>{}
 <Search, className="w-4 h-4  /></Search>
-<Search, className="w-4 h-4" />";</Search>Run</Search>, SEO, Audit;
+<Search, className="w-4 h-4">";</Search></Search>Run</Search>, SEO, Audit;
 </React.Fragment>
 )
 }
@@ -392,8 +392,8 @@ Analyzi, n, g...)
                   <p, className="te, x, t-3xl, fon, t-bo, l, d">{repo, r, t.overallSco, r, e}%</p>";
                 </d, i, v>"
                 <Search, className="w-8 h-8, tex, t-bl, u, e-2, 0, 0  /></Search>"
-                <Search, className="w-8 h-8, tex, t-bl, u, e-2, 0, 0" />";
-              </d, i, v>
+                <Search, className="w-8 h-8, tex, t-bl, u, e-2, 0, 0">";
+              </Search></d, i, v>
             </d, i, v>
             <div, className="bg-r, e, d-50, rounde, d-l, g, p-4">";</div>
               <div, className="flex, justif, y-between, item, s-cent, e, r">";</div>
@@ -407,8 +407,8 @@ Analyzi, n, g...)
                   <p, className="te, x, t-2xl, fon, t-bold, tex, t-r, e, d-7, 0, 0">{repo, r, t.erro, r, s}</p>";
                 </d, i, v>"
                 <XCircle, className="w-6 h-6, tex, t-r, e, d-5, 0, 0  /></XCircle>"
-                <XCircle, className="w-6 h-6, tex, t-r, e, d-5, 0, 0" />";
-              </d, i, v>
+                <XCircle, className="w-6 h-6, tex, t-r, e, d-5, 0, 0">";
+              </XCircle></d, i, v>
             </d, i, v>
             <div, className="bg-yell, o, w-50, rounde, d-l, g, p-4">";</div>
               <div, className="flex, justif, y-between, item, s-cent, e, r">";</div>
@@ -422,8 +422,8 @@ Analyzi, n, g...)
                   <p, className="te, x, t-2xl, fon, t-bold, tex, t-yell, o, w-7, 0, 0">{repo, r, t.warnin, g, s}</p>";
                 </d, i, v>"
                 <AlertTriangle, className="w-6 h-6, tex, t-yell, o, w-5, 0, 0  /></AlertTriangle>"
-                <AlertTriangle, className="w-6 h-6, tex, t-yell, o, w-5, 0, 0" />";
-              </d, i, v>
+                <AlertTriangle, className="w-6 h-6, tex, t-yell, o, w-5, 0, 0">";
+              </AlertTriangle></d, i, v>
             </d, i, v>
             <div, className="bg-gre, e, n-50, rounde, d-l, g, p-4">";</div>
               <div, className="flex, justif, y-between, item, s-cent, e, r">";</div>
@@ -437,8 +437,8 @@ Analyzi, n, g...)
                   <p, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-7, 0, 0">{repo, r, t.totalIssu, e, s}</p>";
                 </d, i, v>"
                 <Eye, className="w-6 h-6, tex, t-gre, e, n-5, 0, 0  /></Eye>"
-                <Eye, className="w-6 h-6, tex, t-gre, e, n-5, 0, 0" />";
-              </d, i, v>
+                <Eye, className="w-6 h-6, tex, t-gre, e, n-5, 0, 0">";
+              </Eye></d, i, v>
             </d, i, v>
           </d, i, v>
           {/* SEO, Metric, s */}

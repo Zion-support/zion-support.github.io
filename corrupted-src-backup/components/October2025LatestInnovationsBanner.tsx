@@ -22,7 +22,7 @@ return (
             <span, className="te, x, t-lg, fon, t-bold, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-3, 0, 0">
               BREAKING, OCTOBER, 1, 20, 2, 5: LATEST, AI, INNOVATIONS;
             </sp, a, n>
-            <Zap, className="h-5 w-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";</Zap>
+            <Zap, className="h-5 w-5, tex, t-yell, o, w-400, animat, e-pul, s, e">";</Zap></Zap>
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-white, m, b-4">"</h2>
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-4, 0, 0"></span>
@@ -43,12 +43,12 @@ return (
         {/* Head, e, r */}</div>
         <div, className="te, x, t-center, m, b-8">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-4">";</div>
-            <Zap, className="h-5 w-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
-            <span, className="te, x, t-lg, fon, t-bold, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-3, 0, 0">";
+            <Zap, className="h-5 w-5, tex, t-yell, o, w-400, animat, e-pul, s, e">";
+            </Zap><span, className="te, x, t-lg, fon, t-bold, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-3, 0, 0">";
               BREAKING, OCTOBER, 1, 20, 2, 5: LATEST, AI, INNOVATIONS;
             </sp, a, n>
-            <Zap, className="h-5 w-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
-          </d, i, v>
+            <Zap, className="h-5 w-5, tex, t-yell, o, w-400, animat, e-pul, s, e">";
+          </Zap></d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-white, m, b-4">";</h2>
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-4, 0, 0">";
               3, Revolutionary, AI Breakthroug, h, s;
@@ -92,12 +92,12 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
         {/* Head, e, r */}"
         <div, className="te, x, t-center, m, b-8">";"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-4">";"
-            <Zap, className="h-5 w-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";"
-            <span, className="te, x, t-lg, fon, t-bold, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-3, 0, 0">";
+            <Zap, className="h-5 w-5, tex, t-yell, o, w-400, animat, e-pul, s, e">";"
+            </Zap><span, className="te, x, t-lg, fon, t-bold, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-3, 0, 0">";
               BREAKING, OCTOBER, 1, 20, 2, 5: LATEST, AI, INNOVATIONS;
             </sp, a, n>"
-            <Zap, className="h-5 w-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
-          </d, i, v>"
+            <Zap, className="h-5 w-5, tex, t-yell, o, w-400, animat, e-pul, s, e">";
+          </Zap></d, i, v>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-white, m, b-4">";"
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-4, 0, 0">";
               3, Revolutionary, AI Breakthroug, h, s;
@@ -129,10 +129,10 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
   r:shad, o, w-emera, l, d-5, 0, 0/20"
           >
             <div, className="absolute, to, p-4, righ, t-4"></div>
-              <Shield, className="h-8 w-8, tex, t-emera, l, d-400, grou, p-hov, e, r: anima, t, e-pul, s, e/>"
-            <div, className="absolute, to, p-4, righ, t-4">";</div>
-              <Shield, className="h-8 w-8, tex, t-emera, l, d-400, grou, p-hov, e, r: anima, t, e-pul, s, e" />";
-            </d, i, v>
+              <Shield, className="h-8 w-8, tex, t-emera, l, d-400, grou, p-hov, e, r: anima, t, e-pul, s, e>"
+            </Shield><div, className="absolute, to, p-4, righ, t-4">";</div>
+              <Shield, className="h-8 w-8, tex, t-emera, l, d-400, grou, p-hov, e, r: anima, t, e-pul, s, e">";
+            </Shield></d, i, v>
             <div, className="mb-4">";</div>
               <span, className="inli, n, e-block, b, g-emera, l, d-5, 0, 0/20, tex, t-emera, l, d-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, m, b-3">";
                 AI, GOVERNANC, E;
@@ -161,10 +161,10 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
             </ul>
             <div, className="flex, item, s-center, tex, t-emera, l, d-400, fon, t-semibold, grou, p-ho, v, e;
   r: g, a, p-3, transitio, n-a, l, l">"
-              Read, Full, Guide</div> <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-            <div, className="flex, item, s-center, tex, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
-              Read, Full, Guide</div> <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
-            </d, i, v>
+              Read, Full, Guide</div> <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m>"
+            </Link><div, className="flex, item, s-center, tex, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
+              Read, Full, Guide</div> <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m">";
+            </Link></d, i, v>
           </Li, n, k>
           {/* Ca, r, d;
   2: Quantum, A, I */}
@@ -174,10 +174,10 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
   r:shad, o, w-viol, e, t-5, 0, 0/20"
           >
             <div, className="absolute, to, p-4, righ, t-4"></div>
-              <Zap, className="h-8 w-8, tex, t-viol, e, t-400, grou, p-hov, e, r: anima, t, e-pul, s, e/>"
-            <div, className="absolute, to, p-4, righ, t-4">";</div>
-              <Zap, className="h-8 w-8, tex, t-viol, e, t-400, grou, p-hov, e, r: anima, t, e-pul, s, e" />";
-            </d, i, v>
+              <Zap, className="h-8 w-8, tex, t-viol, e, t-400, grou, p-hov, e, r: anima, t, e-pul, s, e>"
+            </Zap><div, className="absolute, to, p-4, righ, t-4">";</div>
+              <Zap, className="h-8 w-8, tex, t-viol, e, t-400, grou, p-hov, e, r: anima, t, e-pul, s, e">";
+            </Zap></d, i, v>
             <div, className="mb-4">";</div>
               <span, className="inli, n, e-block, b, g-viol, e, t-5, 0, 0/20, tex, t-viol, e, t-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, m, b-3">";
                 QUANTUM, A, I;
@@ -205,10 +205,10 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
               </li>
             </ul>
             <div, className="flex, item, s-center, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"
-              Explore, Quantum, AI</div> <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-            <div, className="flex, item, s-center, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
-              Explore, Quantum, AI</div> <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
-            </d, i, v>
+              Explore, Quantum, AI</div> <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m>"
+            </Link><div, className="flex, item, s-center, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
+              Explore, Quantum, AI</div> <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m">";
+            </Link></d, i, v>
           </Li, n, k>
           {/* Ca, r, d;
   3: Enterprise, Orchestratio, n */}
@@ -218,10 +218,10 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
   r:shad, o, w-indi, g, o-5, 0, 0/20"
           >
             <div, className="absolute, to, p-4, righ, t-4"></div>
-              <Building2, className="h-8 w-8, tex, t-indi, g, o-400, grou, p-hov, e, r: anima, t, e-pul, s, e/>"
-            <div, className="absolute, to, p-4, righ, t-4">";</div>
-              <Building2, className="h-8 w-8, tex, t-indi, g, o-400, grou, p-hov, e, r: anima, t, e-pul, s, e" />";
-            </d, i, v>
+              <Building2, className="h-8 w-8, tex, t-indi, g, o-400, grou, p-hov, e, r: anima, t, e-pul, s, e>"
+            </Building2><div, className="absolute, to, p-4, righ, t-4">";</div>
+              <Building2, className="h-8 w-8, tex, t-indi, g, o-400, grou, p-hov, e, r: anima, t, e-pul, s, e">";
+            </Building2></d, i, v>
             <div, className="mb-4">";</div>
               <span, className="inli, n, e-block, b, g-indi, g, o-5, 0, 0/20, tex, t-indi, g, o-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, m, b-3">";
                 ENTERPRISE, A, I;
@@ -250,8 +250,8 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
             </ul>
             <div, className="flex, item, s-center, tex, t-indi, g, o-400, fon, t-semibold, grou, p-ho, v, e;
   r: g, a, p-3, transitio, n-a, l, l">"
-              Discover, Platfor, m</div> <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-            <div, className="flex, item, s-center, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
+              Discover, Platfor, m</div> <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m>"
+            </Link><div, className="flex, item, s-center, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
               Discover, Platfor, m <ArrowRight, className="h-4 w-4, m, l-2, grou, p-ho, v, e;
               Discover, Platfor, m</div> <ArrowRight, className="h-4 w-4, m, l-2, grou, p-ho, v, e
         {/* Feature, Card, s */}"
@@ -262,13 +262,12 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
           <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-governan, c, e-complian, c, e-framewo, r, k-enterpri, s, e""
             classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-emera, l, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
-  r:shad, o, w-emera, l, d-5, 0, 0/20"
-          ></Li>"
+  r:shad, o, w-emera, l, d-5, 0, 0/20"></Li>"
             <div, className="absolute, to, p-4, righ, t-4"></div>"
-              <Shield, className="h-8 w-8, tex, t-emera, l, d-400, grou, p-hov, e, r: anima, t, e-pul, s, e/>""
-            <div, className="absolute, to, p-4, righ, t-4">";"
-              <Shield, className="h-8 w-8, tex, t-emera, l, d-400, grou, p-hov, e, r: anima, t, e-pul, s, e" />";
-            </d, i, v>"
+              <Shield, className="h-8 w-8, tex, t-emera, l, d-400, grou, p-hov, e, r: anima, t, e-pul, s, e>""
+            </Shield><div, className="absolute, to, p-4, righ, t-4">";"
+              <Shield, className="h-8 w-8, tex, t-emera, l, d-400, grou, p-hov, e, r: anima, t, e-pul, s, e">";
+            </Shield></d, i, v>"
             <div, className="mb-4">";"
               <span, className="inli, n, e-block, b, g-emera, l, d-5, 0, 0/20, tex, t-emera, l, d-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, m, b-3">";
                 AI, GOVERNANC, E;
@@ -295,23 +294,22 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
             </ul>"
             <div, className="flex, item, s-center, tex, t-emera, l, d-400, fon, t-semibold, grou, p-ho, v, e,"
   r: g, a, p-3, transitio, n-a, l, l">""
-              Read, Full, Guide <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
-            <div, className="flex, item, s-center, tex, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";"
-              Read, Full, Guide <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
-            </d, i, v>
+              Read, Full, Guide <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m>""
+            </Link><div, className="flex, item, s-center, tex, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";"
+              Read, Full, Guide <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m">";
+            </Link></d, i, v>
           </Li, n, k>
           {/* TODO: Fix JSX expression */}
   2: Quantum, A, I */}
           <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-quant, u, m-enhanc, e, d-ai-hybr, i, d-syste, m, s""
             classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-viol, e, t-9, 0, 0/30, t, o-cy, a, n-9, 0, 0/30, border, border-viol, e, t-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-viol, e, t-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
-  r:shad, o, w-viol, e, t-5, 0, 0/20"
-          ></Li>"
+  r:shad, o, w-viol, e, t-5, 0, 0/20"></Li>"
             <div, className="absolute, to, p-4, righ, t-4"></div>"
-              <Zap, className="h-8 w-8, tex, t-viol, e, t-400, grou, p-hov, e, r: anima, t, e-pul, s, e/>""
-            <div, className="absolute, to, p-4, righ, t-4">";"
-              <Zap, className="h-8 w-8, tex, t-viol, e, t-400, grou, p-hov, e, r: anima, t, e-pul, s, e" />";
-            </d, i, v>"
+              <Zap, className="h-8 w-8, tex, t-viol, e, t-400, grou, p-hov, e, r: anima, t, e-pul, s, e>""
+            </Zap><div, className="absolute, to, p-4, righ, t-4">";"
+              <Zap, className="h-8 w-8, tex, t-viol, e, t-400, grou, p-hov, e, r: anima, t, e-pul, s, e">";
+            </Zap></d, i, v>"
             <div, className="mb-4">";"
               <span, className="inli, n, e-block, b, g-viol, e, t-5, 0, 0/20, tex, t-viol, e, t-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, m, b-3">";
                 QUANTUM, A, I;
@@ -337,23 +335,22 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
               </li>
             </ul>"
             <div, className="flex, item, s-center, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">""
-              Explore, Quantum, AI <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
-            <div, className="flex, item, s-center, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";"
-              Explore, Quantum, AI <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
-            </d, i, v>
+              Explore, Quantum, AI <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m>""
+            </Link><div, className="flex, item, s-center, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";"
+              Explore, Quantum, AI <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m">";
+            </Link></d, i, v>
           </Li, n, k>
           {/* TODO: Fix JSX expression */}
   3: Enterprise, Orchestratio, n */}
           <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-autonomo, u, s-enterpri, s, e-orchestrati, o, n-platfo, r, m""
             classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/30, t, o-amb, e, r-9, 0, 0/30, border, border-indi, g, o-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-indi, g, o-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
-  r:shad, o, w-indi, g, o-5, 0, 0/20"
-          ></Li>"
+  r:shad, o, w-indi, g, o-5, 0, 0/20"></Li>"
             <div, className="absolute, to, p-4, righ, t-4"></div>"
-              <Building2, className="h-8 w-8, tex, t-indi, g, o-400, grou, p-hov, e, r: anima, t, e-pul, s, e/>""
-            <div, className="absolute, to, p-4, righ, t-4">";"
-              <Building2, className="h-8 w-8, tex, t-indi, g, o-400, grou, p-hov, e, r: anima, t, e-pul, s, e" />";
-            </d, i, v>"
+              <Building2, className="h-8 w-8, tex, t-indi, g, o-400, grou, p-hov, e, r: anima, t, e-pul, s, e>""
+            </Building2><div, className="absolute, to, p-4, righ, t-4">";"
+              <Building2, className="h-8 w-8, tex, t-indi, g, o-400, grou, p-hov, e, r: anima, t, e-pul, s, e">";
+            </Building2></d, i, v>"
             <div, className="mb-4">";"
               <span, className="inli, n, e-block, b, g-indi, g, o-5, 0, 0/20, tex, t-indi, g, o-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, m, b-3">";
                 ENTERPRISE, A, I;
@@ -380,11 +377,11 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
             </ul>"
             <div, className="flex, item, s-center, tex, t-indi, g, o-400, fon, t-semibold, grou, p-ho, v, e,"
   r: g, a, p-3, transitio, n-a, l, l">""
-              Discover, Platfor, m <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
-            <div, className="flex, item, s-center, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";"
+              Discover, Platfor, m <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m>""
+            </Link><div, className="flex, item, s-center, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";"
               Discover, Platfor, m <ArrowRight, className="h-4 w-4, m, l-2, grou, p-ho, v, e,"
-  r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
-            </d, i, v>
+  r: transla, t, e-x-1, transitio, n-transfo, r, m">";
+            </ArrowRight></d, i, v>
           </Li, n, k>
         </d, i, v>
         {/* CTA, Butto, n */}
@@ -399,12 +396,11 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
           <Li, n, k;"
   to="/bl, o, g""
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, hove, r: fr, o, m-indi, g, o-500, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-full, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
-  r:shad, o, w-indi, g, o-5, 0, 0/50"
-          ></Li>
+  r:shad, o, w-indi, g, o-5, 0, 0/50"></Li>
             <sp, a, n>Explore, All, Latest AI, Innovation, s</sp, a, n>"
             <Link, className="h-5 w-5  /></Link>"
-            <Link, className="h-5 w-5" />";
-          </Li, n, k>
+            <Link, className="h-5 w-5">";
+          </Link></Li, n, k>
         </d, i, v>
         {/* Bottom, Inf, o */}
         <div, className="mt-8, tex, t-cent, e, r"></div>

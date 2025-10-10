@@ -543,7 +543,7 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
           </button>
           )}
       {lastUpdate && ()}"
-          <p className="text-sm text-gray-500 mb-4"></p>
+          <p className="text-sm text-gray-500 mb-4">>
           Last,
   updated: {lastUpdate.toLocaleTimeString()}
         </p>

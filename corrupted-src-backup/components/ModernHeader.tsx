@@ -170,8 +170,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 <Li, n, k;
   to={it, e, m.hr, e, f}
   to={it, e, m.hr, e, f}"
-                  classNa, m, e="te, x, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, transitio, n-colors, fon, t-medium, flex, items-cent, e, r"
-                ></Li>
+                  classNa, m, e="te, x, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, transitio, n-colors, fon, t-medium, flex, items-cent, e, r"></Li>
                   {it, e, m.na, m, e}
                   {it, e, m.dropdo, w, n && (
                     <svg, className="w-4 h-4, m, l-1" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">
@@ -180,8 +179,8 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                   {/* TODO: Fix JSX expression */}"
                       <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M19, 9, l-7 7-7-7  /></path>"
                     <svg, className="w-4 h-4, m, l-1" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">";"
-                      <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M19, 9, l-7 7-7-7" />";
-                    </s, v, g>
+                      <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M19, 9, l-7 7-7-7">";
+                    </path></s, v, g>
                   )}
                 </Li, n, k>
                 {/* Dropdown, Men, u */}
@@ -198,8 +197,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
                         to={dropdownIt, e, m.hr, e, f}"
                         classNa, m, e="block, p, x-4, p, y-2, tex, t-sm, tex, t-gr, a, y-700, hove, r: bg-gr, a, y-100, hov, e,"
-  r:te, x, t-bl, u, e-600, transitio, n-colo, r, s"
-                      ></Li>
+  r:te, x, t-bl, u, e-600, transitio, n-colo, r, s"></Li>
                         {dropdownIt, e, m.na, m, e}
                       </Li, n, k>
                     ))}
@@ -220,16 +218,14 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <a, titl, e="Internal, lin, k""
               hr, e, f="te,"
   l: +130246409, 5, 0""
-              classNa, m, e="te, x, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, transitio, n-colors, fon, t-medi, u, m"
-            ></a>
+              classNa, m, e="te, x, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, transitio, n-colors, fon, t-medi, u, m"></a>
               +1, 302, 464 09, 5, 0;
             </a>
             <Li, n, k;
   to="/conta, c, t"
             <Li, n, k;"
   to="/conta, c, t""
-              classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medi, u, m"
-            ></Li>
+              classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medi, u, m"></Li>
               Gette, d;
             </Li, n, k>
           </d, i, v>
@@ -244,34 +240,30 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   classNa, m, e="w-6 h-6"
               fi, l, l="no, n, e"
               stro, k, e="currentCol, o, r"
-              viewB, o, x="0, 0, 24 24"
-            ></s>
+              viewB, o, x="0, 0, 24 24"></s>
               {isMenuOp, e, n ? (
                 <pa, t, h;
   strokeLinec, a, p="rou, n, d"
                   strokeLinejo, i, n="rou, n, d"
                   strokeWid, t, h={2}
-                  d="M6, 18L18, 6M6 6l12, 1, 2  />
-              ) : (
-                <pa, t, h;
+                  d="M6, 18L18, 6M6 6l12, 1, 2>) : (
+                </pa><pa, t, h;
               ) : (</p>
                 <pa, t, h 
   strokeLinec, a, p="rou, n, d"
                   strokeLinejo, i, n="rou, n, d"
                   strokeWid, t, h={2}
-                  d="M4, 6h16M4, 12h16M4 18h, 1, 6  />
-  onCli, c, k={() => setIsMenuOp, e, n(!isMenuOp, e, n)}"
+                  d="M4, 6h16M4, 12h16M4 18h, 1, 6>onCli, c, k={() => setIsMenuOp, e, n(!isMenuOp, e, n)}"
             classNa, m, e="m,
   d: hidde, n, p-2, rounde, d-md, tex, t-gr, a, y-700, hove, r:te, x, t-bl, u, e-600, hov, e,"
   r:bg-gr, a, y-100, transitio, n-colo, r, s""
             ar, i, a-lab, e, l="Toggle, men, u"
           >
-            <s, v, g;"
+            </pa><s, v, g;"
   classNa, m, e="w-6 h-6""
               fi, l, l="no, n, e""
               stro, k, e="currentCol, o, r""
-              viewB, o, x="0, 0, 24 24"
-            ></s>
+              viewB, o, x="0, 0, 24 24"></s>
               {/* TODO: Fix JSX expression */}
                   strokeWid, t, h={2}"
                   d="M6, 18L18, 6M6 6l12, 1, 2  /></pa>
@@ -344,8 +336,7 @@ isMenuOp, e, n && (
               <div, className="px-4, p, y-2, borde, r-t, borde, r-gr, a, y-200, m, t-2">";"
                 <a, titl, e="Internal, lin, k""
                   hr, e, f="t, e, l: +130246409, 5, 0""
-                  classNa, m, e="block, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, transitio, n-colors, fon, t-medium, m, b-2"
-                ></a>
+                  classNa, m, e="block, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, transitio, n-colors, fon, t-medium, m, b-2"></a>
                   +1, 302, 464 09, 5, 0;
                 </a>
                 <Li, n, k;

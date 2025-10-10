@@ -33,7 +33,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
         {price && (
-          <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>);
+          <div className="text-3xl font-bold text-blue-600 mb-2">{price}>);
       </div>
 
       <ul className="space-y-3 mb-6">

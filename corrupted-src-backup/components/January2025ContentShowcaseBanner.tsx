@@ -23,7 +23,7 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
           <h2, classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h2>
             <span, classNam, e='bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></span>
               Complete, AI, Knowledge H, u, b;
-          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12'></p>
+          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12'>>
             Access, the, most comprehensive, collection, of AI, insig, h, t, s,
             breakthrough, technologie, s, and, proven, enterprise strategi, e, s.
             Everything, you, need to, master, AI transformation, in, one pla, c, e.
@@ -59,9 +59,8 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
             <div, classNam, e='relati, v, e'></div>
               <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6'></div>
                 <div, classNam, e='p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl'></div>
-                  <Award, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
-                View, All, Case Studi, e, s;
-                <Link, classNam, e='w-4 h-4' />
+                  <Award, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0'>View, All, Case Studi, e, s;
+                </Award><Link, classNam, e='w-4 h-4' />
                   <Award, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' /></Award>
                 View, All, Case Studi, e, s;
                 <Link, classNam, e='w-4 h-4' /></Link>
@@ -74,18 +73,16 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
             <div, classNam, e='relati, v, e'></div>
               <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6'></div>
                 <div, classNam, e='p-3, b, g-bl, u, e-5, 0, 0/20, rounde, d-xl'></div>
-                  <BookOpen, classNam, e='w-8 h-8, tex, t-bl, u, e-4, 0, 0' />
-                Read, All, Articles;
-                <Link, classNam, e='w-4 h-4' />
-        {/* Statis, t, i, c, s */}
-        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-12, border, border-whi, t, e/20, m, b-16'></div>
+                  <BookOpen, classNam, e='w-8 h-8, tex, t-bl, u, e-4, 0, 0'>Read, All, Articles;
+                </BookOpen><Link, classNam, e='w-4 h-4'>{/* Statis, t, i, c, s */}
+        </Link><div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-12, border, border-whi, t, e/20, m, b-16'></div>
           <h3, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12'>
                   <BookOpen, classNam, e='w-8 h-8, tex, t-bl, u, e-4, 0, 0' /></BookOpen>
                 Read, All, Articles;
                 <Link, classNam, e='w-4 h-4' /></Link>
         {/* Statis, t, i, c, s */}
         <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-12, border, border-whi, t, e/20, m, b-16'></div>
-          <h3, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12'></h3>
+          <h3, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12'>>
             Content, Library, Overview;
           </h3>
           <div, classNam, e='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8'></div>
@@ -101,8 +98,7 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
             <div, classNam, e = 'flex, item, s-center, justif, y-betwe, e, n'></div>
               <span, classNam, e='te, x, t-pi, n, k-400, fon, t-medi, u, m'>15, min, read</sp, a, n>
               <Link, t, o='/bl, o, g/ai-quant, u, m-neur, a, l-fusi, o, n-<20, 2, 5'
-                classNa, m, e='te, x, t-pi, n, k-400, hove, r: te, x, t-pi, n, k-3, 0, 0'
-              ></Link>
+                classNa, m, e='te, x, t-pi, n, k-400, hove, r: te, x, t-pi, n, k-3, 0, 0'></Link>
                 <Link, classNam, e='w-4 h-4' /></Link>
               </Li, n, k>
             </d, i, v>
@@ -115,8 +111,7 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
             <div, classNam, e='flex, item, s-center, justif, y-betwe, e, n'></div>
               <span, classNam, e='te, x, t-emera, l, d-400, fon, t-medi, u, m'>12, min, read</sp, a, n>
               <Link, t, o='/bl, o, g/autonomo, u, s-enterpri, s, e-me, s, h-<20, 2, 5'
-                classNa, m, e='te, x, t-emera, l, d-400, hove, r:te, x, t-emera, l, d-3, 0, 0'
-              ></Link>
+                classNa, m, e='te, x, t-emera, l, d-400, hove, r:te, x, t-emera, l, d-3, 0, 0'></Link>
                 <Link, classNam, e='w-4 h-4' /></Link>
         {/* Call, to, Acti, o, n */}
         <div, classNam, e = 'te, x, t-cent, e, r'></div>
@@ -124,12 +119,10 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
             <Link, t, o='/resourc, e, s'
               classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, hove, r:fr, o, m-pi, n, k-600, hove, r:to-purp, l, e-600, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-1, 0, 5'
             >
-              <BookOpen, classNam, e='w-5 h-5' />
-              Explore, Complete, Library;
-              <Users, classNam, e='w-5 h-5' />
-              classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, hove, r:fr, o, m-pi, n, k-600, hove, r:to-purp, l, e-600, transitio, n-all, duratio, n-300, transform, hove,
+              <BookOpen, classNam, e='w-5 h-5'>Explore, Complete, Library;
+              </BookOpen><Users, classNam, e='w-5 h-5'>classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-purp, l, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, hove, r:fr, o, m-pi, n, k-600, hove, r:to-purp, l, e-600, transitio, n-all, duratio, n-300, transform, hove,
   r:sca, l, e-1, 0, 5'
-            ></Link>
+            ></Users></Link>
               <BookOpen, classNam, e='w-5 h-5' /></BookOpen>
               Explore, Complete, Library;
               <Users, classNam, e='w-5 h-5' /></Users>

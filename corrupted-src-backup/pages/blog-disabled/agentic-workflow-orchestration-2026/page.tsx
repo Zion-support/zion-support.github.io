@@ -10,12 +10,10 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
           Agentic, Workflow, Orchestration 20, 2, 6 — Budg, e, t, s, Canari, e, s, Rollba, c, k;
         </title>
         <meta, nam, e = 'description'
-          conte, n, t='Agentic, Workflow, Orchestration 20, 2, 6 - Budg, e, t, s, Canari, e, s, Rollback, strategie, s'
-        />)
-        <link, re, l = 'canonic, a, l')
-          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/agent i c-workfl o w-orchestrati o n-20 2 6')
-        />),
-      </Helm, e, t>
+          conte, n, t='Agentic, Workflow, Orchestration 20, 2, 6 - Budg, e, t, s, Canari, e, s, Rollback, strategie, s'>)
+        </meta><link, re, l = 'canonic, a, l')
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/agent i c-workfl o w-orchestrati o n-20 2 6')>),
+      </link></Helm, e, t>
 
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
@@ -34,7 +32,7 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
           <Link, t, o='/<bl, o, g' className='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
             ← Back, to, Blog;
           </Li, n, k>
-        </div>
+        >
       </div>
     </d, i, v > );
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}

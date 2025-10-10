@@ -26,7 +26,7 @@ export default function quantumedgeaiservices() {
               Our Quantum Edge Ai Services services are designed to help your business achieve its;
               goals through innovative technology solutions.
             </p>)
-          </div>)
+          >)
         </div>)
       </div>)
 export const,
@@ -43,13 +43,13 @@ export default function quantumedgeaiservices() {/* TODO: Fix JSX expression */}
             <p className="text-xl text-gray-600 mb-6">Professional Technology Services</p>
           </div>"
           <div className="prose max-w-none"></div>"
-            <p className="text-lg text-gray-700 mb-6"></p>
+            <p className="text-lg text-gray-700 mb-6">>
               Our Quantum Edge Ai Services services are designed to help your business achieve its;
               goals through innovative technology solutions.
             </p>
-          </div>
+          >
         </div>
-      </div>
+      >
     </div>)
   )}
 "

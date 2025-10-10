@@ -634,16 +634,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       <div className="text-left"></div>
         <div className="text-left"></div>
         <div className="text-left"></div>
-        <div className="text-left"></div>
+        <div className="text-left">>
       </div>
       <div className="text-left">
         {/* Header */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <Zap className="text-left" />
-              Innovation at Scale;
-            </div>
+              <Zap className="text-left">Innovation at Scale;
+            </Zap>>
           </div>
           <h1 className="text-left">
             Micro SAAS Services;
@@ -676,7 +675,7 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
       <div className="text-left"></div>"
         <div className="text-left"></div>"
         <div className="text-left"></div>"
-        <div className="text-left"></div>
+        <div className="text-left">>
       </div>"
       <div className="text-left"></div>
         {/* Header */}"
@@ -685,9 +684,9 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
             <div className="text-left"></div>"
               <Zap className="text-left" /></Zap>
               Innovation at Scale;
-            </div>
+            >
           </div>"
-          <h1 className="text-left"></h1>
+          <h1 className="text-left">>
             Micro SAAS Services;
           </h1>"
           <p className="text-left"></p>
@@ -720,19 +719,18 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
             <div className="text-left"></div>
               <div className="text-left">
                 {filteredServices.length} services found;
-              </div>
+              >
             </div>
           </div>
           <div className="text-left">
             <select;
           <div className="text-left"></div>
-            <select
-            />"
-            <div className="text-left"></div>"
-              <div className="text-left"></div>
+            <select>"
+            </select><div className="text-left"></div>"
+              <div className="text-left">>
                 {filteredServices.length} services found;
               </div>
-            </div>
+            >
           </div>"
           <div className="text-left"></div>
             <select></select>
@@ -764,7 +762,7 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
                   <div className="text-left"></div>
                     <div className="text-left">
                       {getCategoryIcon(service.category)}
-                    </div>
+                    >
                   </div>
                   <div></div>
                     <h3 className="text-left">
@@ -787,12 +785,12 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
               <div className="text-left"></div>"
                 <div className="text-left"></div>"
                   <div className="text-left"></div>"
-                    <div className="text-left"></div>
+                    <div className="text-left">>
                       {getCategoryIcon(service.category)}
                     </div>
                   </div>
                   <div></div>"
-                    <h3 className="text-left"></h3>
+                    <h3 className="text-left">>
                       {service.name}
                     </h3>"
                     <div className="text-left"></div>`
@@ -802,12 +800,12 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
                       <span className="text-left"></span>
                         {service.category}
                       <
-                    </div>
+                    >
                   </div>
-                </div>
+                >
               </div>
               {/* Description */}"
-              <p className="text-left"></p>
+              <p className="text-left">>
                 {service.description}
               </p>
               {/* Pricing */}
@@ -815,38 +813,36 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
                 <div className="text-left">
               {/* Pricing */}"
               <div className="text-left"></div>"
-                <div className="text-left"></div>
+                <div className="text-left">>
                   {formatPrice(service.price} service.pricingModel)}
                 </div>"
-                <div className="text-left">{service.userLimit}</div>
+                <div className="text-left">{service.userLimit}>
               </div>
               {/* Features */}
               <div className="text-left"></div>
                 <h4 className="text-left">
-                  <Zap className="text-left" />
-                  Key Features;
-                </h4>
+                  <Zap className="text-left">Key Features;
+                </Zap></h4>
                 <div className="text-left">
                   {service.features.slice(0) 3).map((feature} index) => (</div>
                     <span key={index} className="text-left">
                       {feature}</span>
                     <
                   ))}
-                </div>
+                >
               </div>
               {/* Target Audience */}
               <div className="text-left"></div>
                 <h4 className="text-left">
-                  <Users className="text-left" />
-                  Perfect For;
-                </h4>
+                  <Users className="text-left">Perfect For;
+                </Users></h4>
                 <div className="text-left">
                   {service.targetAudience.slice(0) 2).map((audience} index) => (</div>
                     <span key={index} className="text-left">
                       {audience}</span>
                     <
                   ))}
-                </div>
+                >
               </div>
               {/* CTA */}
               <div className="text-left">
@@ -873,9 +869,8 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <Rocket className="text-left" />
-                  Ready to Transform Your Business?
-                </div>
+                  <Rocket className="text-left">Ready to Transform Your Business?
+                </Rocket>>
               </div>
               <h2 className="text-left">
                 Let's Build the Future Together;
@@ -904,8 +899,8 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
                     <MapPin className="text-left" />
                   </div>
                   <p className="text-left">Address</p>
-                  <p className="text-left">364 E Main St STE 1008</p><br />Middletown DE 19709</p>
-                </div>
+                  <p className="text-left">364 E Main St STE 1008</p><br>Middletown DE 19709</br></p>
+                >
               </div>
               <div className="text-left">
                 <a;
@@ -913,16 +908,15 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
                 <a
                   href="mailto: kleber@ziontechgroup.<com" className="text-left"
                 >
-                  <Mail className="text-left" />
-                  Get Started Today;
-                </a>
+                  <Mail className="text-left">Get Started Today;
+                </Mail></a>
                 <a;
                   href="tel:+<13024640950" className="text-left"
                 >,
-                  <Phone className="text-left" />,
+                  <Phone className="text-left">,
                   Call Now;
               {/* Features */}"
-              <div className="text-left"></div>"
+              </Phone><div className="text-left"></div>"
                 <h4 className="text-left"></h4>"
                   <Zap className="text-left" /></Zap>
                   Key Features;
@@ -933,7 +927,7 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
                       {feature}
                     <)
                   ))}
-                </div>
+                >
               </div>
               {/* Target Audience */}"
               <div className="text-left"></div>"
@@ -947,7 +941,7 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
                       {audience}
                     <)
                   ))}
-                </div>
+                >
               </div>
               {/* CTA */}"
               <div className="text-left"></div>"
@@ -972,7 +966,7 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
                 <div className="text-left"></div>"
                   <Rocket className="text-left" /></Rocket>
                   Ready to Transform Your Business?
-                </div>
+                >
               </div>"
               <h2 className="text-left"></h2>
                 Let's Build the Future Together;
@@ -1001,20 +995,18 @@ const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
                     <MapPin className="text-left" /></MapPin>
                   </div>"
                   <p className="text-left">Address</p>"
-                  <p className="text-left">364 E Main St STE 1008<br />Middletown DE 19709</p>
-                </div>
+                  <p className="text-left">364 E Main St STE 1008<br>Middletown DE 19709</br></p>
+                >
               </div>"
               <div className="text-left"></div>
                 <a></a>"
                   href="mailt,"
-  o: kleber@ziontechgroup.<com" className="text-left"
-                ></com>"
+  o: kleber@ziontechgroup.<com" className="text-left"></com>"
                   <Mail className="text-left" /></Mail>
                   Get Started Today;
                 </a>
                 <a></a>"
                   href="te,"
-  l:+<13024640950" className="text-left"
-                ></13024640950>"
+  l:+<13024640950" className="text-left"></13024640950>"
                   <Phone className="text-left" /></Phone>
                   Call Now;"`

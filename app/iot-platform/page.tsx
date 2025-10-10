@@ -22,7 +22,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
           </div>
                   ));
                 </ul>
-</div>
+>
             ));
           </div>
         </div>
@@ -47,7 +47,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
                 <div className="text-4xl mb-4">{useCase.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
-              </div>
+              >
             ));
           </div>
         </div>
@@ -73,7 +73,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-              </div>
+              >
             ));
           </div>
         </div>
@@ -88,7 +88,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo
             </button>
-          </div>
+          >
         </div>
       </section>
 

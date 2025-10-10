@@ -75,9 +75,9 @@ const structuredData = {
                     to={item.href}
                     className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 flex items-center",
                   >,
-                    {index === 0 && <Home className="w-4 h-4 mr-1" />}
+                    {index === 0 && <Home className="w-4 h-4 mr-1">}
                     {item.name}
-                  </Link>
+                  </Home></Link>
                 )}
               </li>
             ))}

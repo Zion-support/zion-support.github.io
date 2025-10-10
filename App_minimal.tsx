@@ -15,10 +15,9 @@ return (
           <Navigation />
           <main>
             <Routes>
-              <Route path="/" element={<HomePage />
-);
+              <Route path="/" element={<HomePage>);
 }} />
-            </Routes>
+            </Route></Routes>
           </main>
           <Footer />
         </div>

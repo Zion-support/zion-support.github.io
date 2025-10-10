@@ -2,8 +2,7 @@
 // 1. Add ARIA labels to interactive elements
 // Example JSX:
 // <button aria-label="Close dialog">×</button>
-// <input aria-describedby="email-help" type="email" />
-// <div id="email-help">Enter your email address</div>
+// <input aria-describedby="email-help" type="email">// </input><div id="email-help">Enter your email address</div>
 
 // 2. Implement focus management;
 const trapFocus = (element) => {;
@@ -67,10 +66,8 @@ const focusableElements = element.querySelectorAll(
 //   <fieldset>
 //     <legend>Contact Information</legend>
 //     <label htmlFor="email">Email:</label>
-//     <input id="email" type="email" required />
-//     <label htmlFor="phone">Phone:</label>
-//     <input id="phone" type="tel" />
-//   </fieldset>
+//     <input id="email" type="email" required>//     </input><label htmlFor="phone">Phone:</label>
+//     <input id="phone" type="tel">//   </input></fieldset>
 // </form>
 
 // 8. Color contrast and visual indicators

@@ -62,10 +62,8 @@ const,
 
             <a
               href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              <Phone className="w-4 h-4 mr-2" />
-
-// (302) 464-0950;
-          </a>
+              <Phone className="w-4 h-4 mr-2">// (302) 464-0950;
+          </a></a>
           </div>
         </section>
         {/* Services Grid */}"

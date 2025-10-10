@@ -171,10 +171,10 @@ $4}
             {/* Left Side - Login Form */}"
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50"></div>"
               <div className="text-center mb-8"></div>"
-                <h1 className="text-3xl font-bold text-white mb-2 neon-text"></h1>
+                <h1 className="text-3xl font-bold text-white mb-2 neon-text">>
 // Welcome Back;
           </h1>"
-                <p className="text-gray-300"></p>
+                <p className="text-gray-300">>
 // Sign in to your account to access your AI and IT services;
           </p>
               </div>"
@@ -203,7 +203,7 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
           
           
           
-          </div>
+          >
                 </div>
 
                 <div>
@@ -226,9 +226,9 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                       onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
                     >
-                      {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                    </button>
-                  </div>
+                      {showPassword ? <EyeOff className="w-5 h-5">: </EyeOff><Eye className="w-5 h-5">}
+                    </Eye></button>
+                  >
                 </div>
 
                 <div className="flex items-center justify-between">
@@ -257,7 +257,7 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                 >
                   {isLoading ? (
                     <div className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">>
                       Signing In...
                     </div>
                   ) : (
@@ -298,7 +298,7 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                     </svg>
                     Facebook
                   </button>
-                </div>
+                >
               </div>
             </div>
 
@@ -350,9 +350,9 @@ type="button" onClick={() => setShowPassword(!showPassword)}
 
 // >
                       {showPassword ?}"
-          <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                    </button>
-                  </div>
+          <EyeOff className="w-5 h-5">: </EyeOff><Eye className="w-5 h-5">}
+                    </Eye></button>
+                  >
 
                 </div>
                 <div className="flex items-center justify-between">
@@ -365,17 +365,8 @@ type="checkbox" name="rememberMe"
                       className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded,
   focus:ring-cyan-400,"
   focus:ring-2"
-// />
-                    
-          
-          
-          
-          
-          
-          
-          
-          "
-          <span className="ml-2 text-sm text-gray-300">Remember me</span>
+/>"</input>
+          </input><span className="ml-2 text-sm text-gray-300">Remember me</span>
                   </label>
 
                   <a
@@ -402,7 +393,7 @@ type="submit" disabled={isLoading}
 // >
                   {isLoading ? ()}"
           <div className="flex items-center justify-center"></div>"
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">>
 // Signing In...
                     
           
@@ -441,7 +432,7 @@ type="submit" disabled={isLoading}
                 </p>
               </div>"
               <div className="mt-8 pt-6 border-t border-gray-700"></div>"
-                <p className="text-center text-sm text-gray-400 mb-4"></p>
+                <p className="text-center text-sm text-gray-400 mb-4">>
                   Or continue with;
                 </p>"
                 <div className="grid grid-cols-2 gap-3"></div>"
@@ -463,7 +454,7 @@ type="submit" disabled={isLoading}
                     </svg>
 // Facebook
           </button>
-                </div>
+                >
               </div>
             </div>
             {/* Right Side - Features */}"
@@ -472,7 +463,7 @@ type="submit" disabled={isLoading}
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text"></h2>
 // Access Your AI & IT Services;
           </h2>"
-                <p className="text-xl text-gray-300 mb-8"></p>
+                <p className="text-xl text-gray-300 mb-8">>
 // Sign in to manage your AI services, view analytics, and access all your;
 //                   enterprise solutions in one place.
                 
@@ -495,7 +486,7 @@ type="submit" disabled={isLoading}
                     <div></div>"
                       <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>"
                       <p className="text-gray-300">{feature.description}</p>
-                    </div>
+                    >
                   </div>
                 ))}
               </div>
@@ -516,7 +507,7 @@ type="submit" disabled={isLoading}
                   <ArrowRight className="w-4 h-4 ml-1" />
               </div>"
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div>"
-                <h3 className="text-lg font-semibold text-white mb-3"></h3>
+                <h3 className="text-lg font-semibold text-white mb-3">>
 // New to Zion Tech Group?
                 
           
@@ -528,7 +519,7 @@ type="submit" disabled={isLoading}
           
           
           </h3>"
-                <p className="text-gray-300 mb-4"></p>
+                <p className="text-gray-300 mb-4">>
 // Join thousands of businesses already using our AI and IT solutions;
 //                   to transform their operations.
                 
@@ -549,9 +540,9 @@ type="submit" disabled={isLoading}
 //                   Create your account;"
           <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
                 </a>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
       </div>
 

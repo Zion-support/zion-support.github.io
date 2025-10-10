@@ -158,11 +158,11 @@ titl,
   lg:px-8"></div>"
             <div className="text-center"></div>"
               <h1 className="text-4xl,"
-  md:text-6xl font-bold mb-6"></h1>
+  md:text-6xl font-bold mb-6">>
 // IoT & Edge Computing Services;
           </h1>"
               <p className="text-xl,"
-  md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto"></p>
+  md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto">>
 // Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions;
           </p>"
               <div className="flex flex-col,"

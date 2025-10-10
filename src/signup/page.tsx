@@ -185,47 +185,41 @@ return (
                         onChange={handleInputChange}
                         required
                         className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your first name"
-                      />
-                      Last Name
+                        placeholder="Enter your first name">Last Name
                         name="lastName"
                         value={formData.lastName}
                         placeholder="Enter your last name"
 
                     Email Address
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      type="email"
+                    </input><Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5">type="email"
                       name="email"
                       value={formData.email}
                       placeholder="Enter your email"
 
                     Company Name
-                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      name="company"
+                    </Mail><Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5">name="company"
                       value={formData.company}
                       placeholder="Enter your company name"
 
                     Phone Number
-                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      type="tel"
+                    </Building><Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5">type="tel"
                       name="phone"
                       value={formData.phone}
                       placeholder="Enter your phone number"
 
                     Password
-                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      type={showPassword ? 'text' : 'password'}
+                    </Phone><Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5">type={showPassword ? 'text' : 'password'}
                       name="password"
                       value={formData.password}
                       className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Create a password"
-                    <button
+                    </Lock><button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
                     >
-                      {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                    </button>
+                      {showPassword ? <EyeOff className="w-5 h-5">: </EyeOff><Eye className="w-5 h-5">}
+                    </Eye></button>
 
                     Confirm Password
                       type={showConfirmPassword ? 'text' : 'password'}
@@ -233,9 +227,9 @@ return (
                       value={formData.confirmPassword}
                       placeholder="Confirm your password"
                       onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                      {showConfirmPassword ? <EyeOff className="w-5 h-5">: </EyeOff><Eye className="w-5 h-5">}
 
-                <div className="space-y-4">
+                </Eye><div className="space-y-4">
                   <label className="flex items-start">
                       type="checkbox"
                       name="agreeToTerms"
@@ -243,10 +237,10 @@ return (
             {/* Left Side - Signup Form */}
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50"></div>"
               <div className="text-center mb-8"></div>"
-                <h1 className="text-3xl font-bold text-white mb-2 neon-text"></h1>
+                <h1 className="text-3xl font-bold text-white mb-2 neon-text">>
 // Create Your Account;
           </h1>"
-                <p className="text-gray-300"></p>
+                <p className="text-gray-300">>
 // Join thousands of businesses transforming with AI and IT solutions;
           </p>
               </div>"
@@ -265,41 +259,35 @@ type="text" name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
 // required
-className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your first name"
-/>
-                      Last Name;
+className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your first name">Last Name;
                         name="lastName" value={formData.lastName}
                         placeholder="Enter your last name" Email Address;
-          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      type="email" name="email"
+          </input><Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5">type="email" name="email"
                       value={formData.email}
                       placeholder="Enter your email" Company Name;
-                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      name="company" value={formData.company}
+                    </Mail><Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5">name="company" value={formData.company}
                       placeholder="Enter your company name" Phone Number;
-                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      type="tel" name="phone"
+                    </Building><Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5">type="tel" name="phone"
                       value={formData.phone}
                       placeholder="Enter your phone number" Password;
-                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      type={showPassword ? 'text' : 'password'}
+                    </Phone><Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5">type={showPassword ? 'text' : 'password'}
                       name="password" value={formData.password}
                       className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Create a password"
-                    <button
+                    </Lock><button
                       type="button" onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
 
 // >
                       {showPassword ?}"
-          <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                    </button>
+          <EyeOff className="w-5 h-5">: </EyeOff><Eye className="w-5 h-5">}
+                    </Eye></button>
 Confirm Password;
 
                       type={showConfirmPassword ? 'text' : 'password'}
                       name="confirmPassword" value={formData.confirmPassword}
                       placeholder="Confirm your password" onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                <div className="space-y-4">
+                      {showConfirmPassword ? <EyeOff className="w-5 h-5">: </EyeOff><Eye className="w-5 h-5">}
+                </Eye><div className="space-y-4">
                   <label className="flex items-start">
                       type="checkbox" name="agreeToTerms"
                       checked={formData.agreeToTerms}
@@ -363,10 +351,9 @@ Confirm Password;
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0">{benefit}
 
-              <div className="text-center">
+              </CheckCircle><div className="text-center">
                 <p className="text-gray-400 text-sm mb-4">
                   Trusted by 1000+ companies worldwide
                 <div className="flex justify-center items-center space-x-6 opacity-60">
@@ -431,7 +418,7 @@ Join thousands of businesses already using our AI and IT solutions;
                       <p className="text-gray-300">{feature.description}</p>
                 ))}"
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div>"
-                <h3 className="text-lg font-semibold text-white mb-4"></h3>
+                <h3 className="text-lg font-semibold text-white mb-4">>
                   What You,
   Get:
                 </h3>"

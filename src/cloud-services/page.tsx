@@ -126,7 +126,7 @@ return (
                     </li>
                   ))}
                 </ul>
-              </div>
+              >
             ))}
           </div>
         </section>
@@ -142,7 +142,7 @@ return (
                   <CheckCircle className="w-8 h-8 text-white" /></CheckCircle>
                 </div>"
                 <p className="text-white font-medium">{benefit}</p>
-              </div>
+              >
             ))}
           </div>
         </section>
@@ -160,7 +160,7 @@ return (
           
           
           </h2>"
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">>
 // Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.
           
           

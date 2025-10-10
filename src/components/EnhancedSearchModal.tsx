@@ -195,11 +195,8 @@ const getTypeColor = (type: string) => {
       {/* Backdrop */}
       <div
         className="fixed inset-0 bg-black/50 backdrop-blur-sm"
-        onClick={onClose}
-      />
-      
-      {/* Modal */}
-      <div className="relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20">
+        onClick={onClose}>{/* Modal */}
+      </div><div className="relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20">
         {/* Header */}
         <div className="flex items-center p-4 border-b border-cyan-400/20">
           <Search className="w-5 h-5 text-cyan-400 mr-3" />
@@ -226,9 +223,8 @@ const getTypeColor = (type: string) => {
               {/* Recent Searches */}
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
-                  <Clock className="w-4 h-4 mr-2" />
-                  Recent Searches
-                </h3>
+                  <Clock className="w-4 h-4 mr-2">Recent Searches
+                </Clock></h3>
                 <div className="flex flex-wrap gap-2">
                   {recentSearches.map((search, index) => (
                     <button
@@ -239,15 +235,14 @@ const getTypeColor = (type: string) => {
                       {search}
                     </button>
                   ))}
-                </div>
+                >
               </div>
 
               {/* Popular Searches */}
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
-                  <TrendingUp className="w-4 h-4 mr-2" />
-                  Popular Searches
-                </h3>
+                  <TrendingUp className="w-4 h-4 mr-2">Popular Searches
+                </TrendingUp></h3>
                 <div className="flex flex-wrap gap-2">
                   {popularSearches.map((search, index) => (
                     <button
@@ -258,7 +253,7 @@ const getTypeColor = (type: string) => {
                       {search}
                     </button>
                   ))}
-                </div>
+                >
               </div>
             </div>
           )}
@@ -268,7 +263,7 @@ const getTypeColor = (type: string) => {
             <div className="p-4">
               {isSearching ? (
                 <div className="flex items-center justify-center py-8">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div>
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400">>
                 </div>
               ) : results.length > 0 ? (
                 <div className="space-y-2">
@@ -303,7 +298,7 @@ const getTypeColor = (type: string) => {
                             {result.lastModified && (
                               <span>Updated {result.lastModified}</span>
                             )}
-                          </div>
+                          >
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400" />
                       </div>
@@ -319,13 +314,13 @@ const getTypeColor = (type: string) => {
                   </p>
                   <div className="text-sm text-gray-500 mt-4">
                     Popular searches: AI Analytics, Quantum Computing, Workflow Automation
-                  </div>
+                  >
                 </div>
               )}
-            </div>
+            >
           )}
         </div>
-      </div>
+      >
     </div>
   )};
 

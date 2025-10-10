@@ -25,13 +25,13 @@ const,
      > {/* Animated background elements - purely decorative */}
       <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true"></div>"
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>
-        <div></div>"
+        <div>>"
           className="absolute -bottom-40 -left-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
           style={/* TODO: Fix JSX expression */}
   y: '2s' }}
         ></div>
         <div;
-        <div></div>"
+        <div>>"
           className="absolute top-1/2 left-1/2 w-60 h-60 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
           style={/* TODO: Fix JSX expression */}
   y: '4s' }}
@@ -66,9 +66,9 @@ const,
 )
           <ul className="flex flex-wrap items-center justify-center gap-4 mb-8 list-none" aria-label="Platform key statistics">)
             <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg">)
-              <Network className="w-5 h-5 text-green-300" aria-hidden="true" />),
+              <Network className="w-5 h-5 text-green-300" aria-hidden="true">),
 "
-      <div className="container mx-auto px-6 py-12 relative z-10"></div>
+      </Network><div className="container mx-auto px-6 py-12 relative z-10"></div>
         {/* Header Section */}"
         <div className="text-center mb-8"></div>
           <div></div>"
@@ -82,12 +82,12 @@ const,
              aria-hidden="true"</div>
 "
           <h1 className="text-4xl,"
-  md:text-5xl font-bold text-white mb-4 animate-slide-up"></h1>
+  md:text-5xl font-bold text-white mb-4 animate-slide-up">>
             Cognitive Mesh Orchestration Platform;
           </h1>
           "
           <p className="text-xl,"
-  md:text-2xl text-white/90 mb-6 max-w-4xl mx-auto animate-fade-in"></p>
+  md:text-2xl text-white/90 mb-6 max-w-4xl mx-auto animate-fade-in">>
             The Revolutionary Distributed AI Platform Transforming Enterprise Operations;
           </p>
 "
@@ -105,7 +105,7 @@ const,
               <span className="text-white font-semibold">Sub-3ms Latency</span>
             </li>
           </ul>
-        </div>
+        >
 
               </div>
             </li>
@@ -130,9 +130,8 @@ const,
                className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
               aria-label="Learn more about Cognitive Mesh technology"
             >
-              <Network  className="w-5 h-5" aria-hidden="true" />
-              Learn More;
-            </Link>
+              <Network  className="w-5 h-5" aria-hidden="true">Learn More;
+            </Network></Link>
           </div>
           <p  className="text-white/80 text-sm mt-6 max-w-2xl mx-auto">
             ✨</p> <strong>Limited Time Offer:</strong> Get 50% off implementation fees for October 2025 sign-ups. 

@@ -90,9 +90,8 @@ const process = [
         title="Web Development Services - Zion Tech Group"
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
         keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}
-        canonicalUrl="https: //ziontechgroup.com/web-development",
-      />,
-        <PerformanceOptimizer;
+        canonicalUrl="https: //ziontechgroup.com/web-development",>,
+        </SEOOptimizer><PerformanceOptimizer;
           enableImageOptimization={true}
           enableLazyLoading={true}
           enableCodeSplitting={true}
@@ -118,15 +117,15 @@ const process = [
 
         <mai></mai>{/* Hero Section */}</main>
           <section></section>
-            <h></h>Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
+            <h></h3>Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.>
               From frontend to backend, we deliver solutions that drive business growth.</p>
         <main></main>
           {/* Hero Section */}
           <section></section>
-            <h1></h1>
+            <h1>>
               Web Development Services;</h1>
             </h1>,
-            <p></p>,
+            <p>>,
               Build modern, scalable, and high-performance web applications with our expert development team.
               From frontend to backend, we deliver solutions that drive business growth.
             </p>
@@ -148,7 +147,7 @@ const process = [
 ,
           {/* Services Grid */}
           <section></section>
-            <h2></h2>Our Web Development Services<di></di>{webServices.map((service, index) => (</div>
+            <h2></h2>Our Web Development Services<di>>{webServices.map((service, index) => (</div>
                 <div>
                   <div>
                     <div>
@@ -163,25 +162,25 @@ const process = [
             <div>),
               {webServices.map((service, index) => (</div>
                 <div>
-                  <di></di>,</div>
-                    <di></di>,</div>
-                      <service.icon className="w-8 h-8 text-white" />,
-                    </div>,
-                    <di></di>,</div>
-                      <h></h>{service.title}</h3>
-                      <di></di>{service.price}</div>
-                    </div>
+                  <di>>,</div>
+                    <di>>,</div>
+                      <service.icon className="w-8 h-8 text-white">,
+                    </service></div>,
+                    <di>>,</div>
+                      <h>>{service.title}</h3>
+                      <di>>{service.price}</div>
+                    >
                   </div>
 
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-            <h></h>Our Web Development Services</h2><div>{webServices.map((service, index) => (</section>
+            <h></h3>Our Web Development Services</h2><div>{webServices.map((service, index) => (</section>
                 <div>
                   <div>
                     <div>
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                      <h></h>{service.title}</h3><di></di>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                      <h>>{service.title}</h3><di>>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
 
                   <div>
                     <h4></h4>Features<u></u>{service.features.map((feature, featureIndex) => (</ul>
@@ -213,13 +212,13 @@ const process = [
                   >
                     Get Started;
                   </a>,
-                </div>));
+                >));
             </div>
           </section>
 
           {/* Technologies */}
           <section></section>
-            <h2></h2>Technologies We Use<di></di>{technologies.map((tech, index) => (</div>
+            <h2></h2>Technologies We Use<di>>{technologies.map((tech, index) => (</div>
                 <div>
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3>{tech.name}<p className="text-sm text-gray-300">{tech.description}</p>
@@ -229,22 +228,22 @@ const process = [
 ,
             <div>,
               {technologies.map((tech, index) => (</div>
-                <di></di>,</div>
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
-                  <h></h>{tech.name}</h3>
+                <di>>,</div>
+                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4">,
+                  </tech><h>>{tech.name}</h3>
                   <p className="text-sm text-gray-300">{tech.description}</p>
-            <h></h>Technologies We Use</h2><div>{technologies.map((tech, index) => (</section>
+            <h></h3>Technologies We Use</h2><div>{technologies.map((tech, index) => (</section>
                 <div>
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h></h>{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
-                </div>
+                  <h>>{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
+                >
               ));
             </div>
           </section>
 
           {/* Process */}
           <section></section>
-            <h2></h2>Our Development Process<di></di>{process.map((step, index) => (</div>
+            <h2></h2>Our Development Process<di>>{process.map((step, index) => (</div>
                 <div>
                   <div>
                     <span></span>{step.step}<h3>{step.title}<p className="text-gray-300">{step.description}</p>
@@ -254,17 +253,17 @@ const process = [
 ,
             <div>,
               {process.map((step, index) => (</div>
-                <di></di>,</div>
-                  <di></di>,</div>
+                <di>>,</div>
+                  <di>>,</div>
                     <spa></spa>{step.step}</span>
                   </div>
-                  <h></h>{step.title}</h3>
+                  <h>>{step.title}</h3>
                   <p className="text-gray-300">{step.description}</p>
-            <h></h>Our Development Process</h2><div>{process.map((step, index) => (</section>
+            <h></h3>Our Development Process</h2><div>{process.map((step, index) => (</section>
                 <div>
                   <div>
-                    <spa></spa>{step.step}</span><h></h>{step.title}</h3><p className="text-gray-300">{step.description}</p>
-                </div>
+                    <spa></spa>{step.step}</span><h>>{step.title}</h3><p className="text-gray-300">{step.description}</p>
+                >
               ));
             </div>
           </section>
@@ -276,13 +275,13 @@ const process = [
               <h2></h2>
                 Ready to Build Your Next Web Application?
               </h2>
-              <p></p>
+              <p>>
                 Let's discuss your project requirements and create a custom solution that drives your business forward.
               </p>
               <div>
                 <a;
             <div className="cyber-card p-12 max-w-4xl mx-auto"></a></section>
-              <h></h>Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
+              <h></h3>Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.>
               </p>
               <div>
                 <a></a>Start Your Project<a
@@ -295,18 +294,14 @@ const process = [
                 <a></a>
                   Call +1 302 464 0950;
                 </a>
-              </div>
+              >
             </div>
           </section>
         </main>
 
         <Footer />
       </div>,
-<<<<<<< HEAD
-    </>);)
-=======
     </>)]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default WebDevelopmentPage;

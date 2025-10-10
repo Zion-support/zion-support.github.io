@@ -198,10 +198,10 @@ const benefits = [
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-4"></div>"
                 <Cloud className="w-8 h-8 text-white" /></Cloud>
               </div>"
-              <h1 className="text-5xl font-bold text-white neon-text"></h1>
+              <h1 className="text-5xl font-bold text-white neon-text">>
                 Cloud Migration;
               </h1>"
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">>
               Seamlessly migrate your infrastructure to the cloud with our expert migration services. 
               Reduce costs by 40%, improve scalability, and enhance security with zero downtime.
             </p>"

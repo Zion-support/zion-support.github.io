@@ -50,14 +50,9 @@ import React from 'react';
 export const emergingTechServices2026: EmergingTechService2026[] = [;
   // Quantum Computing Services;
 ];,
-<<<<<<< HEAD
-  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular)};
-    id: 'ai-digital-twin-platform'
-=======
   return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
 };
     id: 'ai-digital-twin-platform',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'AI Digital Twin Platform',
     tagline: 'Intelligent digital twin creation and simulation with AI-powered insights',
     price: '$349',

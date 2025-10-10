@@ -306,8 +306,8 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
               aria-pressed={settings.highContrast}
 // >
               {settings.highContrast ?}"
-          <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
-            </button></div>)
+          <Eye className="w-4 h-4">: </Eye><EyeOff className="w-4 h-4">}
+            </EyeOff></button></div>)
         )}"
 <div className="flex items-center justify-between"><span className="text-sm">Large Text</span><button></button>`
             onClick={toggleLargeText} className={`flex items-center px-3 py-1 rounded ${}
@@ -323,8 +323,8 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
               aria-pressed={settings.reducedMotion}
 // >
               {settings.reducedMotion ?}"
-          <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-            </button></div>)
+          <VolumeX className="w-4 h-4">: </VolumeX><Volume2 className="w-4 h-4">}
+            </Volume2></button></div>)
         )}
         {enableScreenReader && (}"
 <div className="flex items-center justify-between"><span className="text-sm">Screen Reader</span><button></button>`

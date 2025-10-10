@@ -100,9 +100,8 @@ Transform your business with cutting-edge computer vision technology. From objec
 //               Get Started;
           </a>
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-<Eye className="w-5 h-5" />
-              +1 302 464 0950;
-          </div>
+<Eye className="w-5 h-5">+1 302 464 0950;
+          </Eye></div>
         </section>
 );
 }
@@ -121,7 +120,7 @@ Transform your business with cutting-edge computer vision technology. From objec
   hover:scale-105 transition-all duration-300"></div>"
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto"></div>"
                   <feature.icon className="w-8 h-8 text-white" /></feature>"
-                <h3 className="text-xl font-bold text-white mb-4 text-center neon-text"></h3>
+                <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">>
                   {feature.title}
                 </h3>"
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed"></p>
@@ -205,10 +204,8 @@ Ready to See the Future?"
 
                 Start Your Vision Journey;
                 href="/demo" className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
-                <Camera className="w-5 h-5" />
-
-                Request Demo;
-      </main>
+                <Camera className="w-5 h-5">Request Demo;
+      </Camera></main>
       <Footer /></Footer>
 
     </div>

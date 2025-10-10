@@ -92,8 +92,7 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
             <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-cogniti, v, e-orchestrati, o, n-breakthrou, g, h""
               classNa, m, e="bloc, k, w-full, b, g-white, tex, t-cy, a, n-600, hove, r: bg-yell, o, w-400, hov, e,"
-  r:te, x, t-black, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, tex, t-center, transitio, n-a, l, l"
-            ></Li>
+  r:te, x, t-black, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, tex, t-center, transitio, n-a, l, l"></Li>
               Read, Revolutionary, Guide →
             </Li, n, k>"
             <div, className="mt-4, tex, t-center, tex, t-sm, tex, t-whi, t, e/80">";
@@ -145,8 +144,7 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
             <Li, n, k;"
   to="/ca, s, e-studi, e, s/cogniti, v, e-orchestrati, o, n-84-billi, o, n-succe, s, s""
               classNa, m, e="bloc, k, w-full, b, g-white, tex, t-te, a, l-600, hove, r: bg-yell, o, w-400, hov, e,"
-  r:te, x, t-black, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, tex, t-center, transitio, n-a, l, l"
-            ></Li>
+  r:te, x, t-black, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, tex, t-center, transitio, n-a, l, l"></Li>
               Vi, e, w $84.7B, Success, Story →
             </Li, n, k>"
             <div, className="mt-4, tex, t-center, tex, t-sm, tex, t-whi, t, e/80">";
@@ -192,8 +190,7 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
             <Li, n, k;"
   to="/servic, e, s/cogniti, v, e-orchestrati, o, n-platfo, r, m-servic, e, s""
               classNa, m, e="bloc, k, w-full, b, g-white, tex, t-purp, l, e-600, hove, r: bg-yell, o, w-400, hov, e,"
-  r:te, x, t-black, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, tex, t-center, transitio, n-a, l, l"
-            ></Li>
+  r:te, x, t-black, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, tex, t-center, transitio, n-a, l, l"></Li>
               Getted, Today →
             </Li, n, k>"
             <div, className="mt-4, tex, t-center, tex, t-sm, tex, t-whi, t, e/80">";
@@ -222,16 +219,14 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
             <a, titl, e="Internal, lin, k""
               hr, e, f="te,"
   l: +130246409, 5, 0""
-              classNa, m, e="bg-black, tex, t-white, hove, r: bg-gr, a, y-800, fon, t-bold, p, y-4, p, x-8, rounde, d-lg, tex, t-lg, transitio, n-all, inlin, e-blo, c, k"
-            ></a>
+              classNa, m, e="bg-black, tex, t-white, hove, r: bg-gr, a, y-800, fon, t-bold, p, y-4, p, x-8, rounde, d-lg, tex, t-lg, transitio, n-all, inlin, e-blo, c, k"></a>
               📞 Ca, l, l +1, 302, 464 09, 5, 0;
             </a>
             <Li, n, k;
   to="/conta, c, t"
             <Li, n, k;"
   to="/conta, c, t""
-              classNa, m, e="bg-white, tex, t-black, hove, r: bg-gr, a, y-100, fon, t-bold, p, y-4, p, x-8, rounde, d-lg, tex, t-lg, transitio, n-a, l, l"
-            ></Li>
+              classNa, m, e="bg-white, tex, t-black, hove, r: bg-gr, a, y-100, fon, t-bold, p, y-4, p, x-8, rounde, d-lg, tex, t-lg, transitio, n-a, l, l"></Li>
               📧 Schedule, Free, Consultation;
             </Li, n, k>
           </d, i, v>

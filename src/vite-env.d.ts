@@ -8,8 +8,7 @@
           
           
           
-          <reference types="vite/client" />
-interface ImportMetaEnv {// TODO: Add content}
+          <reference types="vite/client">interface ImportMetaEnv {// TODO: Add content}
 }
 
   readonly DEV: boolean;
@@ -21,3 +20,4 @@ interface ImportMeta {// TODO: Add content}
 
   readonly env: ImportMetaEnv}
 
+</reference>

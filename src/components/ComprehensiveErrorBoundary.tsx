@@ -192,10 +192,10 @@ constructor(props: ErrorBoundaryProps) {
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
           <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center"></div>"
             <div className="text-6xl mb-6"></div>"
-            <h1 className="text-3xl font-bold text-white mb-4"></h1>
+            <h1 className="text-3xl font-bold text-white mb-4">>
 // Oops! Something went wrong;
           </h1>"
-            <p className="text-gray-300 mb-6"></p>
+            <p className="text-gray-300 mb-6">>
 // We encountered an unexpected error. Our team has been notified and is working to fix it.
             
           
@@ -274,7 +274,7 @@ constructor(props: ErrorBoundaryProps) {
                 </pre>
               </details>
             )}
-          </div>
+          >
         </div>
 
       )}

@@ -62,13 +62,13 @@ Expected Efficiency Gain (%)
                   <option value={24}>24 months</option>
                 </select>
             <div className='bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl'></div>
-              <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'></h3>
+              <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>>
 // Your ROI Projection;
           </h3>
               <div className='text-center'></div>
                 <div className='text-6xl font-bold text-blue-600 mb-4'></div>
                   {roi.toFixed(0)}%
-                <p className='text-gray-600 text-sm'></p>
+                <p className='text-gray-600 text-sm'>>
                   Expected return on investment over {timeframe} months;
                 </p>
     </section>

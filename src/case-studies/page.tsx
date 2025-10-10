@@ -79,9 +79,8 @@ const caseStudies = [
         <header className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <Link to="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
-            </Link>
+              <ArrowLeft className="w-4 h-4 mr-2">Back to Home
+            </ArrowLeft></Link>
           </div>
         </header>
         {/* Hero Section */}
@@ -98,7 +97,7 @@ const caseStudies = [
                 Discover how leading companies across industries have transformed their operations 
                 and achieved remarkable ROI with our cutting-edge AI technology.
               </p>
-            </div>
+            >
           </div>
         </section>
         {/* Case Studies Grid */}
@@ -114,7 +113,7 @@ const caseStudies = [
                         <h3 className="text-2xl font-bold text-gray-900 mb-1">{study.title}</h3>
                         <p className="text-blue-600 font-semibold">{study.company}</p>
                         <p className="text-gray-500 text-sm">{study.industry}</p>
-                      </div>
+                      >
                     </div>
                     <p className="text-gray-600 mb-6">{study.description}</p>
                     <div className="mb-6">
@@ -130,7 +129,7 @@ const caseStudies = [
                       <div className="grid grid-cols-2 gap-4">
                         <div className="text-center p-3 bg-green-50 rounded-lg">
                           <div className="text-2xl font-bold text-green-600">{study.results.roi}</div>
-                          <div className="text-sm text-gray-600">ROI</div>
+                          <div className="text-sm text-gray-600">ROI>
                         </div>
                         <div className="text-center p-3 bg-blue-50 rounded-lg">
                           <div className="text-2xl font-bold text-blue-600">
@@ -138,9 +137,9 @@ const caseStudies = [
                           </div>
                           <div className="text-sm text-gray-600">
                             {Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}
-                          </div>
+                          >
                         </div>
-                      </div>
+                      >
                     </div>
                     <div className="flex items-center justify-between">
                       <Link 
@@ -152,12 +151,12 @@ const caseStudies = [
                       <div className="flex items-center text-green-600">
                         <CheckCircle className="w-4 h-4 mr-1" />
                         <span className="text-sm font-semibold">Verified Results</span>
-                      </div>
+                      >
                     </div>
-                  </div>
+                  >
                 </div>
               ))}
-            </div>
+            >
           </div>
         </section>
         {/* Stats Section */}
@@ -174,21 +173,21 @@ const caseStudies = [
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">300%+</div>
-                <div className="text-gray-600">Average ROI</div>
+                <div className="text-gray-600">Average ROI>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-green-600 mb-2">150+</div>
-                <div className="text-gray-600">Projects Completed</div>
+                <div className="text-gray-600">Projects Completed>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-600 mb-2">95%</div>
-                <div className="text-gray-600">Client Satisfaction</div>
+                <div className="text-gray-600">Client Satisfaction>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-orange-600 mb-2">$50M+</div>
-                <div className="text-gray-600">Cost Savings Generated</div>
+                <div className="text-gray-600">Cost Savings Generated>
               </div>
-            </div>
+            >
           </div>
         </section>
         {/* CTA Section */}
@@ -214,7 +213,7 @@ const caseStudies = [
               >
                 View Our Services
               </Link>
-            </div>
+            >
           </div>
         </section>
       </div>

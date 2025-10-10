@@ -8,12 +8,10 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
       <Helm, e, t>
         <title>Ai, 2025, Oct 01, Runtime, Rollback V2</title>
         <meta, nam, e='description'
-          conte, n, t='Learn, about, ai 2025, oct, 01 runtime, rollback, v2 and, how, it can, benefit, your enterpri, s, e.'
-        />)
-        <link, re, l='canonic, a, l')
-          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-01-runti m e-rollba c k-v2')
-        />),
-      </Helm, e, t>
+          conte, n, t='Learn, about, ai 2025, oct, 01 runtime, rollback, v2 and, how, it can, benefit, your enterpri, s, e.'>)
+        </meta><link, re, l='canonic, a, l')
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-01-runti m e-rollba c k-v2')>),
+      </link></Helm, e, t>
 
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>

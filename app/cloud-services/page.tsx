@@ -60,8 +60,6 @@ const benefits = [
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Transform your business with our comprehensive cloud services and AI-powered solutions.
               </p>
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Services | Zion Tech Group</title>
@@ -69,10 +67,8 @@ const benefits = [
         <meta name="keywords" content="cloud services, cloud infrastructure, cloud solutions, Zion Tech Group" />
       </Helmet>
 
-      <Navigation />
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <Navigation>{/* Hero Section */}
+      </Navigation><section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -94,8 +90,7 @@ const benefits = [
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-            </div>
+            >
           </div>
         </section>
 
@@ -110,7 +105,7 @@ const benefits = [
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </div>
+                >
               ));
             </div>
           </div>
@@ -125,7 +120,7 @@ const benefits = [
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
-                </div>
+                >
               ));
             </div>
           </div>
@@ -143,21 +138,17 @@ const benefits = [
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Us
-                </button>
+                  <Phone className="w-5 h-5 mr-2">Call Us
+                </Phone></button>
                 <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                  <Mail className="w-5 h-5 mr-2" />
-                  Email Us
-                </button>
-              </div>
+                  <Mail className="w-5 h-5 mr-2">Email Us
+                </Mail></button>
+              >
             </div>
           </div>
         </section>
       </div>
     </>
-<<<<<<< HEAD
-=======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -178,7 +169,7 @@ const benefits = [
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
+              >
             ))}
           </div>
         </div>
@@ -201,7 +192,7 @@ const benefits = [
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
+              >
             ))}
           </div>
         </div>
@@ -224,14 +215,13 @@ const benefits = [
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Learn More
               </button>
-            </div>
+            >
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
       <Footer />
-    </div>
+    >
   );
 }
 export default CloudServicesPage;

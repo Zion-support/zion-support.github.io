@@ -59,20 +59,19 @@ const BlockchainWeb3Page: React.FC = () => {const features = [
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
-                  </div>
+                  >
                 </div>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-                      {benefit}
-                    </li>
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3">{benefit}
+                    </CheckCircle></li>
                   ));
                 </ul>
-              </div>
+              >
             ));
           </div>
-        </div>
+        >
       </div>
     </React.Fragment>)
 export default BlockchainWeb3Page;

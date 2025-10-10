@@ -104,7 +104,7 @@ return (
         <div className="max-w-7xl mx-auto text-center"></div>"
           <h1 className="text-4xl,
   sm:text-5xl,"
-  md:text-6xl font-bold text-white mb-6"></h1>
+  md:text-6xl font-bold text-white mb-6">>
 // AI Analytics Tools;
 
           </h1>
@@ -115,7 +115,7 @@ return (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>
-              <div className="text-gray-300">Analytics Tools</div>
+              <div className="text-gray-300">Analytics Tools>
             </div>
               <div className="text-3xl font-bold text-green-400 mb-2">$179</div>
               <div className="text-gray-300">Starting Price</div>
@@ -154,9 +154,8 @@ return (
                   <ul className="space-y-2">
                     {tool.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0">{feature}
+                      </CheckCircle></li>
                     ))}
                   </ul>
                 <div className="text-center">
@@ -176,7 +175,7 @@ return (
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
 
-              <div className="text-gray-300">Analytics Tools</div>
+              <div className="text-gray-300">Analytics Tools>
             </div>"
               <div className="text-3xl font-bold text-green-400 mb-2">$179</div>"
               <div className="text-gray-300">Starting Price</div>"

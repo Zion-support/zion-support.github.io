@@ -24,9 +24,8 @@ return (
           <Link, t, o='/ca, s, e-studi, e, s'
             className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           >
-            <ArrowLeft, className='w-4 h-4, m, r-2' />
-            Back, to, Case Studi, e, s;
-              <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>18-month, engagemen, t</sp, a, n>
+            <ArrowLeft, className='w-4 h-4, m, r-2'>Back, to, Case Studi, e, s;
+              </ArrowLeft><span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>18-month, engagemen, t</sp, a, n>
             </div>
 
             <h1, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
@@ -56,14 +55,14 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
             </p> {/* Key, Metrics, Banner */ }
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'></div>
               <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r'></div>
-                <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'></div>
+                <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>>
                   $12, 7, M;
                 </div>
                 <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'></div>
                   Annual, Value, Created;
                 </d, i, v>
                     <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'></h3>
-                    <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'></h3>
+                    <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>>
                       Company, Overvie, w;
                     </h3>
                     <ul, className='spa, c, e-y-2'></ul>
@@ -91,11 +90,10 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                         <strong, className='te, x, t-zi, o, n-cy, a, n'>Reven, u, e:</st, r, o, n, g>{' '}
                         $2.4B, annuall, y;
                       </li>
-                  <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
-                  ></div>
+                  <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'></div>
                     <div, className='flex, item, s-start, ga, p-3, m, b-4'></div>
                       <div, className='te, x, t-3, x, l'>{initiati, v, e.ic, o, n}</div>
-                      <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-whi, t, e'></h3>
+                      <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-whi, t, e'>>
                         {initiati, v, e.title}
                       </h3>)
                     </div>)
@@ -178,13 +176,13 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                   <p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'></p>
                     "Our, partnership, with Zion, Tech, Group has, been, transformational. They, did, n't, just, implement AI, technolog, y—they, helped, us reimagine, our, entire business, mode, l. T, h, e $127M, in, annual value, is, significan, t, but, the, strategic positioning, and, capabilities we've, built, are;"
                     invaluab, l, e. We're, now, leading the, industry, in AI-powered, bankin, g."
-                      <div, className='te, x, t-white, fon, t-semibo, l, d'></div>
+                      <div, className='te, x, t-white, fon, t-semibo, l, d'>>
                         Chief, Technology, Officer;
                       </div>
-                      <div, className='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'></div>
+                      <div, className='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'>>
                         Client, Company;
                       </div>
-                    </div>
+                    >
                   </div>
                 </div>
 
@@ -196,11 +194,9 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                     of, chasing, fraud."
                     Schedule, Consultatio, n;
                     Schedule, Consultatio, n</p>
-                    <Zap, classNam, e='w-5 h-5' />
-                    Schedule, Consultatio, n;
-                    <Zap, className='w-5 h-5' />
-}}
-                  <p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'></p>"
+                    <Zap, classNam, e='w-5 h-5'>Schedule, Consultatio, n;
+                    </Zap><Zap, className='w-5 h-5'>}}
+                  </Zap><p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'></p>"
                     "The, fraud, detection platform, alone, paid for, the, entire;
                     initiati, v, e. Going, from 8% fraud, rates, to less, than, 1% was, gam, e-changi, n, g. Our, customers, are happ, i, e, r, our, losses, are;
                     down, 9, 2%, and, our, team can, focus, on strategic, work, instead;"

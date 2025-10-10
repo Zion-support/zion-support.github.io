@@ -195,7 +195,7 @@ featur, e, d: fal, s, e}
           <h2, className="te, x, t-6xl, m, d:te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
             Revolutionary, 2026, Content;
           </h2>"
-          <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>
+          <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">>
             Experience, the, future of, AI, with breakthrough, technologies, that are, reshaping, enterprise operatio, n, s. 
             Me, t, a-cognitive, A, I, quant, u, m-neural, convergenc, e, and, autonomous, systems achieving, unprecedented, performance.
           </p>
@@ -299,11 +299,11 @@ featur, e, d: fal, s, e}
                   </sp, a, n>
                 </d, i, v>
                 {/* Tit, l, e */}"
-                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r:te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t"></h3>
+                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r:te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">>
                   {conte, n, t.tit, l, e}
                 </h3>
                 {/* Descripti, o, n */}"
-                <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relaxed, tex, t-sm"></p>
+                <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relaxed, tex, t-sm">>
                   {conte, n, t.descripti, o, n}
                 </p>
                 {/* Impact, Badg, e */}
@@ -315,9 +315,8 @@ featur, e, d: fal, s, e}
                 {/* Meta, Inf, o */}
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10"></div>
                   <span, className="flex, item, s-center, ga, p-2"></span>
-                    <Zap, className="w-4 h-4, tex, t-purp, l, e-4, 0, 0"  />
-                {/* Impact, Badg, e */}"
-                <div, className="mb-6"></div>"
+                    <Zap, className="w-4 h-4, tex, t-purp, l, e-4, 0, 0">{/* Impact, Badg, e */}"
+                </Zap><div, className="mb-6"></div>"
                   <div, className="inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-sm, fon, t-bold, border, border-purp, l, e-5, 0, 0/30"></div>
                     🚀 {conte, n, t.impa, c, t}
                   </d, i, v>
@@ -401,10 +400,10 @@ featur, e, d: fal, s, e}
         <div, className="te, x, t-cent, e, r"></div>"
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-bl, u, e-500, t, o-cy, a, n-5, 0, 0"></div>"
             <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10"></div>"
-              <h3, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4"></h3>
+              <h3, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">>
                 Ready, for, the AI, Revolutio, n?
               </h3>"
-              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-auto, tex, t-lg"></p>
+              <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-auto, tex, t-lg">>
                 Join, the, elite group, of, forward-thinking, organizations, implementing these, breakthrough, technologies. 
                 Get, exclusive, access to, implementation, guides, case, studie, s, and, expert, consultations.
               </p>
@@ -415,8 +414,7 @@ featur, e, d: fal, s, e}
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>"
                 <a, titl, e="Internal, lin, k""
                   hr, e, f="/conta, c, t""
-                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
-                ></a>"
+                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"></a>"
                   <Rocket, className="w-5 h-5"  /></Rocket>
                   <sp, a, n>Start, Your, Revolution</sp, a, n>
                 </a>
@@ -427,8 +425,7 @@ featur, e, d: fal, s, e}
                 <a, titl, e="Internal, lin, k""
                   hr, e, f="/bl, o, g""
                   classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hov, e,"
-  r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
-                ></a>
+  r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"></a>
                   <sp, a, n>Explore, All, Breakthroughs</sp, a, n>"
                   <Link, className="w-5 h-5"  /></Link>
                 </a>

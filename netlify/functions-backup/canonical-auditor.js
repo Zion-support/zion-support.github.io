@@ -9,14 +9,9 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: Canonical auditor executed successfully)
-<<<<<<< HEAD
-        timestamp: new Date().toISOString();
-function: 'canonical-auditor'
-=======
         timestamp: new Date().toISOString()
         function: 'canonical-auditor',
         source:
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         source: event.source || 'unknown',
         auditing: {,
           status: 'active',

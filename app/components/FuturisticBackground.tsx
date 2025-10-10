@@ -59,7 +59,7 @@ const FuturisticBackgroundPage: React.FC = () => {const features = [
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 Learn More
               </button>
-            </div>
+            >
           </div>
         </section>
 
@@ -87,12 +87,11 @@ const FuturisticBackgroundPage: React.FC = () => {const features = [
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2">{benefit}
+                        </CheckCircle></li>
                       ));
                     </ul>);
-                </div>
+                >
               ));
             </div>
           </div>
@@ -115,7 +114,7 @@ const FuturisticBackgroundPage: React.FC = () => {const features = [
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
-              </div>
+              >
             </div>
           </div>
         </section>

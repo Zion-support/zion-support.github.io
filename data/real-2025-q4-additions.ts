@@ -75,19 +75,6 @@ const contact =
       'Partnership analytics'],
     roi: 'Increase attributed sales 1025% with optimized partnerships.',
     competitors: ['Refersion', 'LeadDyno', 'Tapfiliate'],
-<<<<<<< HEAD
-    marketSize: '$1.5B affiliate software'
-    growthRate: '15% YoY';
-variant: 'ai-futuristic'
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Server-side tracking with webhook ingestion and fraud-scoring pipeline.'
-    launchDate: '2025-10-01'
-    market_size: '$1.5B affiliate software'
-    growth_rate: '15% YoY';
-variant: 'ai - futuristic'
-    contact_info: contact;
-=======
     marketSize: '$1.5B affiliate software',
     growthRate: '15% YoY',
     variant: 'ai-futuristic',
@@ -101,7 +88,6 @@ variant: 'ai - futuristic'
     variant: 'ai - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Server - side tracking with webhook ingestion and fraud - scoring pipeline.',
@@ -219,18 +205,11 @@ varian,
     use_cases: ['Transcripts', 'SEO summaries', 'Episode search'],
     roi: 'Save 48 hours per episode and improve SEO traffic.',
     competitors: ['Otter', 'Descript', 'Rev'],
-<<<<<<< HEAD
-    market_size: '$500M transcription tools'
-    growth_rate: '20% YoY';
-variant: 'ai - futuristic'
-    contact_info: contact;
-=======
     market_size: '$500M transcription tools',
     growth_rate: '20% YoY',
     variant: 'ai - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Batch transcription queue with GPU support, diarization and summarization pipeline.',
@@ -418,18 +397,11 @@ varian,
     use_cases: ['Leads', 'Follow - ups', 'Deal tracking'],
     roi: 'Increase follow - through and close rates 1020% via reminders.',
     competitors: ['HubSpot Starter', 'Zoho CRM', 'Pipedrive'],
-<<<<<<< HEAD
-    market_size: '$5B SMB CRM'
-    growth_rate: '12% YoY';
-variant: 'ai - futuristic'
-    contact_info: contact;
-=======
     market_size: '$5B SMB CRM',
     growth_rate: '12% YoY',
     variant: 'ai - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'PWA with offline storage, task reminders, and webhook - based integrations.',
@@ -437,14 +409,9 @@ variant: 'ai - futuristic'
     customers:
         customers: 210;
     rating: 4 && 4.5;
-<<<<<<< HEAD
-    reviews: 77},
-    id: 'returns - automation - saas'
-=======
     reviews: 77;
   },
     id: 'returns - automation - saas',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Ecommerce Returns Automation',
     tagline: 'Self - serve returns portal and automated labels',
     price: '$49',
@@ -633,18 +600,11 @@ varian,
     use_cases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
     roi: 'Reduce support tickets ~30% and speed refunds.',
     competitors: ['Loop Returns', 'Returnly'],
-<<<<<<< HEAD
-    market_size: '$800M returns software'
-    growth_rate: '18% YoY';
-variant: 'ai - futuristic'
-    contact_info: contact;
-=======
     market_size: '$800M returns software',
     growth_rate: '18% YoY',
     variant: 'ai - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Webhook - driven order sync, label / provider adapters.',
@@ -822,18 +782,11 @@ varian,
     use_cases: ['IT support', 'SLA management', 'Client reporting'],
     roi: 'Faster resolution, less toil; better client satisfaction.',
     competitors: ['Zendesk', 'Freshdesk', 'HaloPSA'],
-<<<<<<< HEAD
-    market_size: '$10B helpdesk software'
-    growth_rate: '10% YoY';
-variant: 'ai - futuristic'
-    contact_info: contact;
-=======
     market_size: '$10B helpdesk software',
     growth_rate: '10% YoY',
     variant: 'ai - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Email ingestion, rules engine, and portal with RBAC.',
@@ -873,18 +826,11 @@ export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     use_cases: ['Support copilots, Internal search, Drafting with review'],
     roi: 'Ship copilots 3 x faster with governance baked in.',
     competitors: ['LangChain + custom, LlamaIndex + custom, Guardrails AI'],
-<<<<<<< HEAD
-    market_size: '$30B+ AI tooling'
-    growth_rate: '45% YoY';
-variant: 'ai - futuristic'
-    contact_info: contact;
-=======
     market_size: '$30B+ AI tooling',
     growth_rate: '45% YoY',
     variant: 'ai - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Pipelines, policies, eval harness, cost and latency budgets.',
@@ -892,14 +838,9 @@ variant: 'ai - futuristic'
     customers:
         customers: 18;
     rating: 4 && 4.8;
-<<<<<<< HEAD
-    reviews: 11},
-    id: 'edge - personalization - engine'
-=======
     reviews: 11;
   },
     id: 'edge - personalization - engine',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Edge Personalization Engine',
     tagline: 'Real - time content and pricing personalization at the edge',
     price: '$249',
@@ -1140,18 +1081,11 @@ varian,
     use_cases: ['Transcripts', 'SEO summaries', 'Episode search'],
     roi: 'Save 48 hours per episode and improve SEO traffic.',
     competitors: ['Otter', 'Descript', 'Rev'],
-<<<<<<< HEAD
-    market_size: '$500M transcription tools'
-    growth_rate: '20% YoY';
-variant: 'ai - futuristic'
-    contact_info: contact;
-=======
     market_size: '$500M transcription tools',
     growth_rate: '20% YoY',
     variant: 'ai - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Batch transcription queue with GPU support, diarization and summarization pipeline.',
@@ -1212,18 +1146,11 @@ varian,
     use_cases: ['Leads', 'Follow - ups', 'Deal tracking'],
     roi: 'Increase follow - through and close rates 1020% via reminders.',
     competitors: ['HubSpot Starter', 'Zoho CRM', 'Pipedrive'],
-<<<<<<< HEAD
-    market_size: '$5B SMB CRM'
-    growth_rate: '12% YoY';
-variant: 'ai - futuristic'
-    contact_info: contact;
-=======
     market_size: '$5B SMB CRM',
     growth_rate: '12% YoY',
     variant: 'ai - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'PWA with offline storage, task reminders, and webhook - based integrations.',
@@ -1276,18 +1203,11 @@ varian,
     use_cases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
     roi: 'Reduce support tickets ~30% and speed refunds.',
     competitors: ['Loop Returns', 'Returnly'],
-<<<<<<< HEAD
-    market_size: '$800M returns software'
-    growth_rate: '18% YoY';
-variant: 'ai - futuristic'
-    contact_info: contact;
-=======
     market_size: '$800M returns software',
     growth_rate: '18% YoY',
     variant: 'ai - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Webhook - driven order sync, label / provider adapters.',
@@ -1338,18 +1258,11 @@ varian,
     use_cases: ['IT support', 'SLA management', 'Client reporting'],
     roi: 'Faster resolution, less toil; better client satisfaction.',
     competitors: ['Zendesk', 'Freshdesk', 'HaloPSA'],
-<<<<<<< HEAD
-    market_size: '$10B helpdesk software'
-    growth_rate: '10% YoY';
-variant: 'ai - futuristic'
-    contact_info: contact;
-=======
     market_size: '$10B helpdesk software',
     growth_rate: '10% YoY',
     variant: 'ai - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Email ingestion, rules engine, and portal with RBAC.',
@@ -1551,18 +1464,11 @@ varian,
     use_cases: ['Homepage variants, Pricing tests, Onsite promos'],
     roi: 'Lift conversion by 515% via real - time variants.',
     competitors: ['Uniform, Optimizely, Cloudflare Workers + DIY'],
-<<<<<<< HEAD
-    market_size: '$5B experimentation'
-    growth_rate: '12% YoY';
-variant: 'edge - futuristic'
-    contact_info: contact;
-=======
     market_size: '$5B experimentation',
     growth_rate: '12% YoY',
     variant: 'edge - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Rules engine, audience traits, edge execution and analytics.',
@@ -1709,14 +1615,9 @@ variant: 'dev - futuristic',
     customers:
         customers: 27;
     rating: 4 && 4.7;
-<<<<<<< HEAD
-    reviews: 16},
-    id: 'real - time - log - anomaly - guard'
-=======
     reviews: 16;
   },
     id: 'real - time - log - anomaly - guard',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Real - time Log Anomaly Guard',
     tagline: 'Detect anomalies and regressions with LLM - assisted alerts',
     price: '$129',
@@ -2992,17 +2893,11 @@ variant: 'holographic - futuristic',
     customers:
         customers: 14;
     rating: 4 && 4.5;
-<<<<<<< HEAD
-    reviews: 10},
-    id: 'secure - webhook - relay'
-    customers: 14;
-=======
     reviews: 10;
   },
     id: 'secure - webhook - relay',
     customers:
         customers: 14;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     rating: 4.5;
     reviews: 10;
     ico,
@@ -4072,18 +3967,11 @@ export const,
       'Partnership analytics'],
     roi: 'Increase attributed sales 1025% with optimized partnerships.',
     competitors: ['Refersion', 'LeadDyno', 'Tapfiliate'],
-<<<<<<< HEAD
-    marketSize: '$1.5B affiliate software'
-    growthRate: '15% YoY';
-variant: 'ai-futuristic'
-    contactInfo: contact;
-=======
     marketSize: '$1.5B affiliate software',
     growthRate: '15% YoY',
     variant: 'ai-futuristic',
     contactInfo:
         contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: 'Server-side tracking with webhook ingestion and fraud-scoring pipeline.',
     launchDate: '2025-10-01',

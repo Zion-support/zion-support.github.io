@@ -107,16 +107,15 @@ const featuredPosts = [
           >
             Back to Blog;)
           </a>)
-        </div>)
+        >)
       </div>)
     )}
 
   return(<div className="min-h-screen bg-gray-50">
   return (
     <div className="min-h-screen bg-gray-50"></div>
-      <Header />
-      {/* Article Header */}
-      <div className="bg-white border-b"></div>
+      <Header>{/* Article Header */}
+      </Header><div className="bg-white border-b"></div>
         <div className="container mx-auto px-4 py-12"></div>
           <div className="max-w-4xl mx-auto"></div>
             <div className="text-sm text-blue-600 font-semibold mb-2">{currentPost.category}</div>
@@ -137,7 +136,7 @@ const featuredPosts = [
           <div className="max-w-4xl mx-auto"></div>"
             <div className="text-sm text-blue-600 font-semibold mb-2">{currentPost.category}</div>"
             <h1 className="text-4xl,"
-  md:text-5xl font-bold text-gray-900 mb-4"></h1>
+  md:text-5xl font-bold text-gray-900 mb-4">>
               {currentPost.title}
             </h1>"
             <p className="text-xl text-gray-600 mb-6">{currentPost.description}</p>"
@@ -147,9 +146,9 @@ const featuredPosts = [
               <span>{currentPost.date}</span>"
               <span className="mx-2">•</span>
               <span>{currentPost.readTime}</span>
-            </div>
+            >
           </div>
-        </div>
+        >
       </div>
 
       {/* Article Content */}
@@ -165,7 +164,7 @@ const featuredPosts = [
           <div className="bg-white rounded-lg shadow-lg p-8"></div>"
             <div className="prose prose-lg max-w-none"></div>
               <h2>Introduction</h2>
-              <p></p>
+              <p>>
                 Welcome to our comprehensive guide on {currentPost.title}. This article will provide;
                 you with detailed insights, practical implementation strategies, and real-world;
                 examples to help you understand and leverage this cutting-edge technology.
@@ -181,7 +180,7 @@ const featuredPosts = [
 
               <h2>Implementation Strategy</h2>
               <p>
-              <p></p>
+              <p>>
                 Implementing {currentPost.title} requires careful planning and execution. Our team;
                 of experts has developed proven methodologies that ensure successful deployment and;
                 maximum value extraction.
@@ -189,7 +188,7 @@ const featuredPosts = [
 
               <h2>Real-World Applications</h2>
               <p>
-              <p></p>
+              <p>>
                 Many leading organizations have already implemented {currentPost.title} with;
                 remarkable results. Case studies show consistent improvements in efficiency, cost;
                 reduction, and competitive advantage.
@@ -197,14 +196,14 @@ const featuredPosts = [
 
               <h2>Conclusion</h2>
               <p>
-              <p></p>
+              <p>>
                 {currentPost.title} represents a significant opportunity for organizations looking;
                 to stay ahead in today's competitive landscape. With proper implementation and;
                 expert guidance, the benefits can be transformative.
               </p>
-            </div>
+            >
           </div>
-        </div>
+        >
       </div>
 
       {/* Related Posts */}
@@ -226,8 +225,7 @@ const featuredPosts = [
               {featuredPosts.slice(0, 3).map((post, index) => (</div>
                 <div
                   key={index}
-                  className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow"
-                ></div>
+                  className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow"></div>
                   <div className="text-sm text-blue-600 font-semibold mb-2">{post.category}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{post.title}</h3>
                   <p className="text-gray-600 mb-4">{post.description}</p>
@@ -270,12 +268,12 @@ const featuredPosts = [
                   >
                     Read More →
                   </a>
-                </div>)
+                >)
               ))}
             </div>
-          </div>
+          >
         </div>
-      </div>
+      >
     </div>
   )}
 "`

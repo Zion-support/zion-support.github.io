@@ -75,9 +75,7 @@ $4})
       loading={priority ? 'eager' : 'lazy'}
       onLoad={handleLoad}
       onError={handleError}
-      {...props}
-    />
-  )};
+      {...props}>)};
 export default Image;
 
 
@@ -105,7 +103,7 @@ const,
   onError?: () => void}
 
 export const Image: React.FC;
-          <ImageProps> = ({// TODO: Add content}
+          </img><ImageProps> = ({// TODO: Add content}
 
 }
 //   src,

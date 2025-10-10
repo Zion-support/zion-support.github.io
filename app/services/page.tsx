@@ -849,7 +849,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                       onChange={(e) => setSearchTerm(e.target.value);
                       className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
                     />
-                  </div>
+                  >
                 </div>
                 <div className="md:w-64">
                   <div className="relative">
@@ -865,7 +865,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                         </option>
                       ));
                     </select>
-                  </div>
+                  >
                 </div>
               </div>
               
@@ -883,7 +883,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                     {category}
                   </button>
                 ));
-              </div>
+              >
             </div>
           </div>
         </section>
@@ -916,7 +916,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                       <span className="inline-block bg-white/10 text-cyan-400 text-xs px-2 py-1 rounded-full mb-2">
                         {service.category}
                       </span>
-                    </div>
+                    >
                   </div>
                   
                   <p className="text-gray-300 mb-6 leading-relaxed">
@@ -928,9 +928,8 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                     <ul className="space-y-2">
                       {service.features.slice(0, 4).map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0">{feature}
+                        </CheckCircle></li>
                       ));
                       {service.features.length > 4 && (
                         <li className="text-gray-400 text-sm">
@@ -941,7 +940,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                   
                   <div className="mb-6">
                     <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                    <div className="text-sm text-gray-300">Contact for custom pricing</div>
+                    <div className="text-sm text-gray-300">Contact for custom pricing>
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-3">
@@ -952,7 +951,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                     <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300">
                       Learn More
                     </button>
-                  </div>
+                  >
                 </div>
               ));
             </div>
@@ -991,7 +990,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                 >
                   Next
                 </button>
-              </div>);
+              >);
           </div>
         </section>
 
@@ -1011,7 +1010,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
               <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">
                 View Portfolio
               </button>
-            </div>
+            >
           </div>
         </section>
       </div>

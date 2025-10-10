@@ -21,28 +21,27 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
             <div, classNam, e = 'grid, gri, d-co, l, s-2, ga, p-4, m, b-6'></div>
               <div, className='bg-whi, t, e/1, 0, p-3, rounde, d-lg'></div>
                 <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>$5.4B</div>
-                <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>Operational, Saving, s</div>
+                <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>Operational, Saving, s>
               </div>
               <div, className='bg-whi, t, e/1, 0, p-3, rounde, d-lg'></div>
                 <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>99.9, 9, 9%</div>
-                <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>Uptime, Achieve, d</div>
+                <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>Uptime, Achieve, d>
               </div>
               <div, className='bg-whi, t, e/1, 0, p-3, rounde, d-lg'></div>
                 <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>2.3, mi, n</div>
                 <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>
                   Mean, Time, to Resolution;
-                </div>
+                >
               </div>
               <div, className='bg-whi, t, e/1, 0, p-3, rounde, d-lg'></div>
                 <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>94%</div>
                 <div, className='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>
                   Au, t, o-Resolution, Rat, e;
-                </div>
+                >
               </div>
             </div>
             <Link, t, o='/bl, o, g/ai-20, 2, 5-octob, e, r-2-agent, i, c-se, l, f-heali, n, g-infrastructu, r, e-<revoluti, o, n'
-              className='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: fr, o, m-purp, l, e-600, hove, r:to-pi, n, k-600, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl'
-            ></Link>Read</Link>, Complete, Guide + Fortune, 500, Case Stu, d, y →
+              className='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: fr, o, m-purp, l, e-600, hove, r:to-pi, n, k-600, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl'></Link>Read</Link>, Complete, Guide + Fortune, 500, Case Stu, d, y →
             </Li, n, k>
           </div>
           <div, className='fl, e, x-1'></div>
@@ -72,9 +71,9 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
                   <sp, a, n>Cro</n>, s, s-cloud, orchestration, and optimizati, o, n</sp, a, n>
                 </li>
               </ul>
-            </div>
+            >
           </div>)
-        </div>)
+        >)
       </div>)
     </d, i, v > );
 export default function October2025SelfHealingSpotlightBann, e, r() {/* TODO: Fix JSX expression */}

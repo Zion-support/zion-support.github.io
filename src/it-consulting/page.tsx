@@ -40,10 +40,10 @@ const consultingServices = [
           <div className="max-w-7xl mx-auto"></div>"
             <div className="text-center mb-16"></div>"
               <h1 className="text-4xl,"
-  md:text-6xl font-bold text-gray-900 mb-6"></h1>
+  md:text-6xl font-bold text-gray-900 mb-6">>
                 IT Consulting Services;
               </h1>"
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">>
                 Transform your business with expert IT consulting. We provide strategic guidance, 
                 digital transformation, and technology solutions that drive growth and efficiency.
               </p>
@@ -60,7 +60,7 @@ const consultingServices = [
                     <div>
                       <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
                       <p className="text-gray-600">{service.description}</p>
-                    </div>
+                    >
                   </div>
                   
                   <div className="mb-6">
@@ -68,10 +68,8 @@ const consultingServices = [
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-gray-600">
-                          <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-
-                          {feature}
-                        </li>)
+                          <CheckCircle className="w-5 h-5 text-green-500 mr-2">{feature}
+                        </CheckCircle></li>)
                       ))}
                     </ul>
 
@@ -80,9 +78,8 @@ const consultingServices = [
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-gray-600">
-                          <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
-                          {benefit}
-                        </li>
+                          <ArrowRight className="w-5 h-5 text-blue-500 mr-2">{benefit}
+                        </ArrowRight></li>
                       ))}
                     </ul>
 
@@ -93,9 +90,8 @@ const consultingServices = [
 
                         <li key={idx} className="flex items-center">
 
-                          <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
-                          {benefit}
-                        </li>
+                          <ArrowRight className="w-5 h-5 text-blue-500 mr-2">{benefit}
+                        </ArrowRight></li>
                       ))}
 
                     </ul>
@@ -105,10 +101,10 @@ const consultingServices = [
                       <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
                         Get Started
                       </button>
-                    </div>
+                    >
 
                   </div>
-                </div>
+                >
               ))}
             </div>
 
@@ -124,15 +120,12 @@ const consultingServices = [
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
-                  <Phone className="w-5 h-5 inline mr-2" />
-
-                  Call Us
-                </button>
+                  <Phone className="w-5 h-5 inline mr-2">Call Us
+                </Phone></button>
                 <button className="bg-gray-600 text-white py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors">
-                  <Mail className="w-5 h-5 inline mr-2" />
-                  Email Us
-                </button>
-              </div>
+                  <Mail className="w-5 h-5 inline mr-2">Email Us
+                </Mail></button>
+              >
             </div>
           </section>
 

@@ -34,15 +34,15 @@ function App() {/* TODO: Fix JSX expression */}
         <Router></Router>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes></Routes>
-              <Route path="/" element={<Home />} />"
-              <Route path="/about" element={<About />} />"
-              <Route path="/services" element={<Services />} />"
-              <Route path="/blog" element={<Blog />} />"
-              <Route path="/contact" element={<Contact />} />"
-              <Route path="/team" element={<Team />} />"
-              <Route path="/privacy" element={<Privacy />} />"
-              <Route path="/terms" element={<Terms />} />
-            </Routes>)
+              <Route path="/" element={<Home>} />"
+              </Route><Route path="/about" element={<About>} />"
+              </Route><Route path="/services" element={<Services>} />"
+              </Route><Route path="/blog" element={<Blog>} />"
+              </Route><Route path="/contact" element={<Contact>} />"
+              </Route><Route path="/team" element={<Team>} />"
+              </Route><Route path="/privacy" element={<Privacy>} />"
+              </Route><Route path="/terms" element={<Terms>} />
+            </Route></Routes>)
           </Suspense>)
         </Router>)
       </div>)
@@ -96,7 +96,7 @@ class ErrorBoundary extends React.Component<
               >
                 Try again;
               </button>
-            </div>
+            >
           </div>))}
 
     return this.props.children}

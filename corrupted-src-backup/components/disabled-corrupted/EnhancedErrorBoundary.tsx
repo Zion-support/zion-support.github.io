@@ -193,7 +193,7 @@ const errorDetails = {
               <h2 className='mt-6 text-3xl font-extrabold text-gray-900'></h2>
                 Oops! Something went wrong;
               </h2>
-              <p className='mt-2 text-sm text-gray-600'></p>
+              <p className='mt-2 text-sm text-gray-600'>>
                 We're sorry, but something unexpected happened. Our team has;
                 been notified.
               </p>
@@ -281,7 +281,7 @@ const errorDetails = {
                 >
                   Go Back;
                 </button>
-              </div>
+              >
             </div>
 
             {this.props.showDetails && this.state.error && (
@@ -305,7 +305,7 @@ const errorDetails = {
                 </div>
               </details>
             )}
-          </div>
+          >
         </div>
       )}
 

@@ -234,9 +234,8 @@ const caseStudies = [
                       <ul className="space-y-1">
                         {solution.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                            {feature}
-                          </li>
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0">{feature}
+                          </CheckCircle></li>
                       </ul>
                     
                       <div className="text-sm font-semibold text-green-400 mb-1">Environmental Impact:</div>
@@ -310,13 +309,11 @@ const caseStudies = [
                 Get Free Assessment
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
+                <Phone className="w-4 h-4 mr-2">(302) 464-0950
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
-                Email Us
-      <Footer />
+                </Phone><Mail className="w-4 h-4 mr-2">Email Us
+      </Mail><Footer />
     </React.Fragment>
   )};
 
@@ -590,10 +587,10 @@ const caseStudies = [,
           {/* Header */}"
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
-  md:text-5xl font-bold text-white mb-6 neon-text"></h1>
+  md:text-5xl font-bold text-white mb-6 neon-text">>
 // Green IT Solutions;
           </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">>
 // Transform your IT infrastructure into a sustainable, environmentally friendly system;
               that reduces costs while protecting our planet.
             
@@ -763,12 +760,10 @@ Benefits of Green IT;"
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Assessment;
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
+                <Phone className="w-4 h-4 mr-2">(302) 464-0950;
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
-                Email Us;
-      <Footer />
+                </Phone><Mail className="w-4 h-4 mr-2">Email Us;
+      </Mail><Footer />
 
     </div>
   )};

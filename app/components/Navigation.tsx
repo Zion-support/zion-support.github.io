@@ -189,11 +189,10 @@ const emergingTech = [
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
-                      ))}
+                    ))}
                   </div>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
             {/* IT Services Dropdown */}
             <div className="relative group">
               <button
@@ -223,9 +222,8 @@ const emergingTech = [
                       </Link>
                       ))}
                   </div>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
             {/* Micro SAAS Dropdown */}
             <div className="relative group">
               <button
@@ -255,9 +253,8 @@ const emergingTech = [
                       </Link>
                       ))}
                   </div>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
             {/* Emerging Technologies Dropdown */}
             <div className="relative group">
               <button
@@ -287,9 +284,8 @@ const emergingTech = [
                       </Link>
                       ))}
                   </div>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
             <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
@@ -330,9 +326,9 @@ const emergingTech = [
               className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6">:</X> <Menu className="w-6 h-6">}</Menu>
             </button>
-          </div>
+          >
         </div>
         {/* Mobile Menu */}
         {isOpen && (
@@ -372,7 +368,7 @@ const emergingTech = [
                     >
                       View All AI Services →
                     </Link>
-                  </div>
+                  >
                 )}
               </div>
               {/* Mobile IT Services */}
@@ -399,7 +395,7 @@ const emergingTech = [
                         {service.name}
                       </Link>
                       ))}
-                  </div>
+                  >
                 )}
               </div>
               {/* Mobile Micro SAAS */}
@@ -433,7 +429,7 @@ const emergingTech = [
                     >
                       View All Micro SAAS →
                     </Link>
-                  </div>
+                  >
                 )}
               </div>
               <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
@@ -470,9 +466,9 @@ const emergingTech = [
                 <div className="flex items-center space-x-2 text-gray-400">
                   <MapPin className="w-4 h-4" />
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
+                >
               </div>
-            </div>
+            >
           </div>
         )}
       </div>

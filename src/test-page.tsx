@@ -36,10 +36,10 @@ const _features = [];
         {/* Hero Section */}"
         <section className="py-20 px-4"></section>"
           <div className="max-w-6xl mx-auto text-center"></div>"
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></h1>
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">>
               testtsx;
             </h1>"
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">>
               Advanced testtsx solutions powered by AI and cutting-edge technology;
             </p>"
             <div className="flex flex-col,"
@@ -54,7 +54,7 @@ const _features = [];
                 View Demo;
 
               </a>
-            </div>
+            >
           </div>
         </section>
 
@@ -71,13 +71,11 @@ const _features = [];
                   <ul className="text-sm text-gray-400 space-y-1">
                     {feature.benefits.map((benefit, idx) => (}
                       <li key={idx} className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-
-                        {benefit}
-                      </li>)
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2">{benefit}
+                      </CheckCircle></li>)
                     ))}
                   </ul>
-                </div>
+                >
               ))}
             </div>
           </div>

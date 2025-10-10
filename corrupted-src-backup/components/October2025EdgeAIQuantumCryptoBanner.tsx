@@ -20,11 +20,11 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
             </h2>
             <p, className="te, x, t-lg, m, d: te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-6">"</p>
           <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">";</div>
-            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e" />";
-            <span, className="te, x, t-lg, m, d: te, x, t-xl, fon, t-bold, tex, t-cy, a, n-400, uppercase, tracking-wid, e, r">";
+            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e">";
+            </Sparkles><span, className="te, x, t-lg, m, d: te, x, t-xl, fon, t-bold, tex, t-cy, a, n-400, uppercase, tracking-wid, e, r">";
               🚀 JUST, RELEASED, OCTOBER 1, 20, 2, 5: Revolutionary, Technology, Guides;
             </sp, a, n>
-            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e" />";</Sparkles>
+            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e">";</Sparkles></Sparkles>
           </d, i, v>
           {/* Main, Conten, t */}
           <div, className="te, x, t-center, m, b-8">";</div>
@@ -49,12 +49,12 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
             </h2>"
             <p, className="te, x, t-lg, m, d: te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-6">""
           <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">";"
-            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e" />";"
-            <span, className="te, x, t-lg, m, d: te, x, t-xl, fon, t-bold, tex, t-cy, a, n-400, uppercase, tracking-wid, e, r">";
+            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e">";"
+            </Sparkles><span, className="te, x, t-lg, m, d: te, x, t-xl, fon, t-bold, tex, t-cy, a, n-400, uppercase, tracking-wid, e, r">";
               🚀 JUST, RELEASED, OCTOBER 1, 20, 2, 5: Revolutionary, Technology, Guides;
             </sp, a, n>"
-            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e" />";
-          </d, i, v>
+            <Sparkles, className="w-6 h-6, tex, t-cy, a, n-400, animat, e-pul, s, e">";
+          </Sparkles></d, i, v>
           {/* Main, Conten, t */}"
           <div, className="te, x, t-center, m, b-8">";"
             <h2, className="te, x, t-3xl, m, d: te, x, t-5xl, fon, t-extrabold, tex, t-white, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
@@ -105,8 +105,8 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
   r:shad, o, w-2, x, l">";"
               <div, className="flex, item, s-center, ga, p-4, m, b-4">";"
                 <div, className="bg-cy, a, n-5, 0, 0/2, 0, p-3, rounde, d-lg">";"
-                  <Zap, className="w-8 h-8, tex, t-cy, a, n-4, 0, 0" />";
-                </d, i, v>
+                  <Zap, className="w-8 h-8, tex, t-cy, a, n-4, 0, 0">";
+                </Zap></d, i, v>
                 <d, i, v></d>"
                   <h3, className="te, x, t-2xl, fon, t-bold, tex, t-cy, a, n-4, 0, 0">AI, at, the Edge, with, 5G</h3>";"
                   <p, className="te, x, t-cy, a, n-300, tex, t-sm">Ult, r, a-Low, Latency, Real-Time, Intelligenc, e</p>";
@@ -147,12 +147,11 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
               <Li, n, k;"
   to="/bl, o, g/ai-ed, g, e-computi, n, g-5g-networ, k, s-20, 2, 5""
                 classNa, m, e="bg-cy, a, n-500, hove, r: bg-cy, a, n-600, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e,"
-  r:sca, l, e-1, 0, 5"
-              ></Li>
+  r:sca, l, e-1, 0, 5"></Li>
                 Read, Edge, AI Gui, d, e;"
                 <Link, className="w-4 h-4  /></Link>"
-                <Link, className="w-4 h-4" />";
-              </Li, n, k>
+                <Link, className="w-4 h-4">";
+              </Link></Li, n, k>
             </d, i, v>
             {/* Quant, u, m-Safe, Cryptography, Card */}
             <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e;
@@ -176,8 +175,8 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
             <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2, x, l">";"
               <div, className="flex, item, s-center, ga, p-4, m, b-4">";"
                 <div, className="bg-purp, l, e-5, 0, 0/2, 0, p-3, rounde, d-lg">";"
-                  <Shield, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0" />";
-                </d, i, v>
+                  <Shield, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0">";
+                </Shield></d, i, v>
                 <d, i, v></d>"
                   <h3, className="te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-4, 0, 0">Quant, u, m-Safe, Cryptograph, y</h3>";"
                   <p, className="te, x, t-purp, l, e-300, tex, t-sm">Protect, Against, Q-Day, with, PQC</p>";
@@ -210,12 +209,11 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
               <Li, n, k;"
   to="/bl, o, g/quant, u, m-sa, f, e-cryptograp, h, y-implementati, o, n-20, 2, 5""
                 classNa, m, e="bg-purp, l, e-500, hove, r: bg-purp, l, e-600, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e,"
-  r:sca, l, e-1, 0, 5"
-              ></Li>
+  r:sca, l, e-1, 0, 5"></Li>
                 Read, Quantum, Security Gui, d, e;"
                 <Link, className="w-4 h-4  /></Link>"
-                <Link, className="w-4 h-4" />";
-              </Li, n, k>
+                <Link, className="w-4 h-4">";
+              </Link></Li, n, k>
             </d, i, v>
           </d, i, v>
           {/* Key, Metrics, Section */}
@@ -279,24 +277,22 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
             <Li, n, k;"
   to="/bl, o, g""
               classNa, m, e="bg-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-purp, l, e-500, hove, r: fr, o, m-cy, a, n-600, hove, r:to-purp, l, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hov, e,"
-  r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2"
-            ></Li>"
+  r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2"></Li>"
               <Sparkles, className="w-5 h-5  /></Sparkles>"
-              <Sparkles, className="w-5 h-5" />";
+              <Sparkles, className="w-5 h-5">";
               Explore, All, Guides;
-            </Li, n, k>
+            </Sparkles></Li, n, k>
             <Li, n, k;
   to="/conta, c, t"
               classNa, m, e="bord, e, r-2, borde, r-cy, a, n-400, tex, t-cy, a, n-400, hove, r: bg-cy, a, n-400, hove, r:te, x, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hov, e;
             <Li, n, k;"
   to="/conta, c, t""
               classNa, m, e="bord, e, r-2, borde, r-cy, a, n-400, tex, t-cy, a, n-400, hove, r: bg-cy, a, n-400, hove, r:te, x, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hov, e,"
-  r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2"
-            ></Li>"
+  r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2"></Li>"
               <Link, className="w-5 h-5  /></Link>"
-              <Link, className="w-5 h-5" />";
+              <Link, className="w-5 h-5">";
               Get, Expert, Consultation;
-            </Li, n, k>
+            </Link></Li, n, k>
           </d, i, v>
         </d, i, v>
       </d, i, v>

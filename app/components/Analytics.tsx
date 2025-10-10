@@ -171,8 +171,7 @@ export default Analytics;
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 return (
     <React.Fragment>
-      <Analytics />
-);
+      <Analytics>);
 }
       {children}
-    </React.Fragment>);
+    </Analytics></React.Fragment>);

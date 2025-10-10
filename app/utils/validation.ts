@@ -7,13 +7,9 @@ export interface ValidationResult {
   isValid: boolean,
   error?: string;
   errors?: string[];,
-<<<<<<< HEAD
-export interface ValidationResult {/* TODO: Fix JSX expression */});;);
-=======
 export interface ValidationResult {/* TODO: Fix JSX expression */});]
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Email validation with length check;
  */
@@ -281,12 +277,8 @@ let digit = parseInt(cleaned[i], 10);
       if (digit > 9) {
         digit -= 9;
   
-<<<<<<< HEAD
-  for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */});;);
-=======
   for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     }
     sum += digit;
     isEven = !isEven});
@@ -339,13 +331,9 @@ export function sanitizeHTML(html: string): string {
     .replace(/'/g, '&#x27;')
     .replace(/\//g, '&#x2F;')
 export function sanitizeHTML(htm)
-<<<<<<< HEAD
-  l: string): string {/* TODO: Fix JSX expression */});;);
-=======
   l: string): string {/* TODO: Fix JSX expression */});]
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Composite validation;
  */
@@ -361,12 +349,8 @@ export function validateComposite(valu,
   validator,
   s: Array<(va),
   l: unknown) => ValidationResult>
-<<<<<<< HEAD
-): ValidationResult {/* TODO: Fix JSX expression */});;);
-=======
 ): ValidationResult {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   return {/* TODO: Fix JSX expression */}
   d: true }});
@@ -404,13 +388,7 @@ export {
   isRequired,
   isValidPassword,
   sanitizeInput});
-<<<<<<< HEAD
-} from './validators'
-export {/* TODO: Fix JSX expression */});;)
-} from './validators';"`
-=======
 } from './validators';
 export {/* TODO: Fix JSX expression */});]
     } from './validators';"`
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }

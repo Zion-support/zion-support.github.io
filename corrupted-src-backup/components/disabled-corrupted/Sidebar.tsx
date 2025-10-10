@@ -58,14 +58,13 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
       <div, className='spa, c, e-y-6'></div>
         {/* TODO: Fix JSX expression */}
           <div, ke, y = {sectionInd, e, x }></div>
-            <h3, className='te, x, t-sm, fon, t-semibold, tex, t-gr, a, y-900, uppercase, tracking-wide, m, b-3'></h3>
+            <h3, className='te, x, t-sm, fon, t-semibold, tex, t-gr, a, y-900, uppercase, tracking-wide, m, b-3'>>
               {secti, o, n.title}
             </h3>
             <nav, className='spa, c, e-y-1'></nav>
               {/* TODO: Fix JSX expression */}
                 <Link, ke, y = { linkIn, d, e, x  }, to={ li, n, k.pa, t, h } className={/* TODO: Fix JSX expression */}
-                   }`}
-                ></Link>
+                   }`}></Link>
                   {li, n, k.lab, e, l}
                 </Li, n, k>)
               ))}
@@ -80,7 +79,7 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
           ></Link>
             Gette, d;
           </Li, n, k>
-        </div>
+        >
       </div>
     </a, s, i, d, e>
   )};

@@ -74,18 +74,11 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions'];
     roi: 'Reduce content creation time by 80% and increase engagement by 40%',
     competitors: ['Jasper, Copy && Copy.ai, Writesonic, ContentBot'];
-<<<<<<< HEAD
-    marketSize: '$8 B+ content marketing market'
-    growthRate: '180% YoY';
-variant: 'ai-futuristic'
-    contactInfo: contact;
-=======
     marketSize: '$8 B+ content marketing market',
     growthRate: '180% YoY',
     variant: 'ai-futuristic',
     contactInfo:
         contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: 'Cloud-native SaaS platform with enterprise SSO and custom integrations',
     launchDate: '2024-08-01',
@@ -113,18 +106,11 @@ variant: 'ai-futuristic'
     use_cases: ['Blog writing, Social media content, Marketing copy, Product descriptions'];
     roi: 'Reduce content creation time by 80% and increase engagement by 40%',
     competitors: ['Jasper, Copy.ai, Writesonic, ContentBot'];
-<<<<<<< HEAD
-    market_size: '$8 B+ content marketing market'
-    growth_rate: '180% YoY';
-variant: 'ai - futuristic'
-    contact_info: contact;
-=======
     market_size: '$8 B+ content marketing market',
     growth_rate: '180% YoY',
     variant: 'ai - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Cloud - native SaaS platform with enterprise SSO and custom integrations',
     launch_date: '2024 - 08 - 01',
@@ -176,18 +162,11 @@ variant: 'ai - futuristic'
     use_cases: ['Enterprise security, Government compliance, Financial security, Healthcare security'];
     roi: 'Reduce security incidents by 90% and compliance costs by 60%',
     competitors: ['Okta, Ping Identity, ForgeRock, CyberArk'];
-<<<<<<< HEAD
-    market_size: '$25 B+ identity and access management market'
-    growth_rate: '140% YoY';
-variant: 'cybersecurity - futuristic'
-    contact_info: contact;
-=======
     market_size: '$25 B+ identity and access management market',
     growth_rate: '140% YoY',
     variant: 'cybersecurity - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Enterprise - grade zero - trust platform with custom integrations and 24 / 7 support',
     launch_date: '2024 - 07 - 01',
@@ -242,18 +221,11 @@ variant: 'cybersecurity - futuristic'
     use_cases: ['CI / CD automation, Testing automation, Infrastructure management, Performance optimization'];
     roi: 'Reduce deployment time by 70% and increase team productivity by 50%',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'];
-<<<<<<< HEAD
-    market_size: '$18 B+ DevOps tools market'
-    growth_rate: '160% YoY';
-variant: 'devops - futuristic'
-    contact_info: contact;
-=======
     market_size: '$18 B+ DevOps tools market',
     growth_rate: '160% YoY',
     variant: 'devops - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Cloud - native DevOps platform with enterprise integrations and AI - powered optimization',
     launch_date: '2024 - 06 - 01',
@@ -308,18 +280,11 @@ variant: 'devops - futuristic'
     use_cases: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation'];
     roi: 'Reduce latency by 80% and improve operational efficiency by 45%',
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'];
-<<<<<<< HEAD
-    market_size: '$12 B+ edge computing market'
-    growth_rate: '220% YoY';
-variant: 'edge - futuristic'
-    contact_info: contact;
-=======
     market_size: '$12 B+ edge computing market',
     growth_rate: '220% YoY',
     variant: 'edge - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Industrial - grade edge computing platform with custom hardware support',
     launch_date: '2024 - 05 - 01',
@@ -374,18 +339,11 @@ variant: 'edge - futuristic'
     use_cases: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies'];
     roi: 'Improve diagnostic accuracy by 25% and reduce reading time by 60%',
     competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];
-<<<<<<< HEAD
-    market_size: '$28 B+ medical imaging market'
-    growth_rate: '190% YoY';
-variant: 'healthcare - futuristic'
-    contact_info: contact;
-=======
     market_size: '$28 B+ medical imaging market',
     growth_rate: '190% YoY',
     variant: 'healthcare - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'FDA - cleared medical imaging platform with enterprise integrations',
     launch_date: '2024 - 04 - 01',
@@ -437,18 +395,11 @@ variant: 'healthcare - futuristic'
     use_cases: ['Risk assessment, Fraud detection, Compliance monitoring, Portfolio management'];
     roi: 'Reduce risk losses by 40% and compliance costs by 50%',
     competitors: ['RiskMetrics, Bloomberg Risk, MSCI, S & P Global'];
-<<<<<<< HEAD
-    market_size: '$32 B+ risk management market'
-    growth_rate: '170% YoY';
-variant: 'financial - futuristic'
-    contact_info: contact;
-=======
     market_size: '$32 B+ risk management market',
     growth_rate: '170% YoY',
     variant: 'financial - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Enterprise - grade risk management platform with real - time data feeds',
     launch_date: '2024 - 03 - 01',
@@ -500,18 +451,11 @@ variant: 'financial - futuristic'
     use_cases: ['K - 12 education, Higher education, Corporate training, Skills development'];
     roi: 'Improve learning outcomes by 35% and reduce dropout rates by 50%',
     competitors: ['Coursera, Udemy, Khan Academy, Duolingo'];
-<<<<<<< HEAD
-    market_size: '$15 B+ edtech market'
-    growth_rate: '200% YoY';
-variant: 'education - futuristic'
-    contact_info: contact;
-=======
     market_size: '$15 B+ edtech market',
     growth_rate: '200% YoY',
     variant: 'education - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Cloud - native learning platform with AI - powered personalization',
     launch_date: '2024 - 02 - 01',
@@ -563,18 +507,11 @@ variant: 'education - futuristic'
     use_cases: ['Inventory management, Demand forecasting, Logistics optimization, Supplier management'];
     roi: 'Reduce inventory costs by 30% and improve delivery times by 40%',
     competitors: ['SAP Ariba, Oracle SCM, Blue Yonder, Manhattan Associates'];
-<<<<<<< HEAD
-    market_size: '$22 B+ supply chain management market'
-    growth_rate: '160% YoY';
-variant: 'logistics - futuristic'
-    contact_info: contact;
-=======
     market_size: '$22 B+ supply chain management market',
     growth_rate: '160% YoY',
     variant: 'logistics - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Enterprise supply chain platform with AI optimization and real - time tracking',
     launch_date: '2024 - 01 - 01',
@@ -629,18 +566,11 @@ variant: 'logistics - futuristic'
     use_cases: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting'];
     roi: 'Reduce energy costs by 25% and improve sustainability metrics by 40%',
     competitors: ['Schneider Electric, Siemens, GE Digital, ABB'];
-<<<<<<< HEAD
-    market_size: '$18 B+ energy management market'
-    growth_rate: '180% YoY';
-variant: 'energy - futuristic'
-    contact_info: contact;
-=======
     market_size: '$18 B+ energy management market',
     growth_rate: '180% YoY',
     variant: 'energy - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Industrial energy management platform with AI optimization and IoT integration',
     launch_date: '2023 - 12 - 01',

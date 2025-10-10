@@ -9,14 +9,9 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: Link and health scheduler executed successfully)
-<<<<<<< HEAD
-        timestamp: new Date().toISOString();
-function: 'link-and-health-scheduler'
-=======
         timestamp: new Date().toISOString()
         function: 'link-and-health-scheduler',
         source:
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         source: event.source || 'unknown',
         scheduling: {,
           status: 'active',

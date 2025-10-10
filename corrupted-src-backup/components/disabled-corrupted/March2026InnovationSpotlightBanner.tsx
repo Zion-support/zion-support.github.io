@@ -6,9 +6,8 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
     }]; return(<div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
-        <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
-  ]; return (
-    <div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n'>
+        <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'>]; return (
+    </div><div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}</div>
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
@@ -21,7 +20,7 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
          /></div>
         <div, classNam, e = 'absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
           sty, l, e={{ animationDel, a, y: ', 4, s' }}
-         /></div>
+         />>
       </div>
       <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'>
         {/* Header, Sectio, n */}</div>
@@ -43,7 +42,7 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
           <h2, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>
             The, Innovation, Revolution;
           </h2>
-          <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'></p>
+          <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'>>
             Witness, the, most revolutionary, technological, breakthroughs of, our, time. These, innovations, are reshaping, reality, itself and, creating, unprecedented opportunities, for, human advanceme, n, t.
           </p>
           {/* Innovation, St, a, t, s */}
@@ -72,15 +71,15 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
               })
             ].m, a, p((st, a, t, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-cent, e, r'></div>
                 <div, className='te, x, t-4xl, m, b-2'>{st, a, t.ic, o, n}</div>
-                <div, className='te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-1'></div>
+                <div, className='te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-1'>>
                   {st, a, t.val, u, e}
                 </div>
-                <div, className='te, x, t-gr, a, y-400, tex, t-sm, fon, t-medi, u, m'></div>
+                <div, className='te, x, t-gr, a, y-400, tex, t-sm, fon, t-medi, u, m'>>
                   {st, a, t.lab, e, l}
                 </div>
               </di, v>)
             ))}
-          </div>
+          >
         </div>
         {/* Innovation, Card, s */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
@@ -102,34 +101,32 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
                /></div>
               <div, classNam, e = 'relativ, e, p-8'></div>
                 {/* Innovation, Ico, n */}
-                <div, className='te, x, t-6xl, m, b-6, tex, t-center, grou, p-hov, e, r: anima, t, e-pul, s, e'></div>
+                <div, className='te, x, t-6xl, m, b-6, tex, t-center, grou, p-hov, e, r: anima, t, e-pul, s, e'>>
                   {innovati, o, n.ic, o, n}
                 </div>
                 {/* Tit, l, e */}
-                <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tight, tex, t-cent, e, r'></h3>
+                <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tight, tex, t-cent, e, r'>>
                   {innovati, o, n.t, i, t, l, e}
                 </h3>
                 {/* Descripti, o, n */}
-                <p, classNam, e = 'te, x, t-gr, a, y-400, m, b-6, tex, t-center, leadin, g-relax, e, d'></p>
+                <p, classNam, e = 'te, x, t-gr, a, y-400, m, b-6, tex, t-center, leadin, g-relax, e, d'>>
                   {innovati, o, n.description}
                 </p>
                 {/* Impa, c, t */}
-                <div, className='te, x, t-center, m, b-6' ></div> <div, classNam, e = { `inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, te, x, t-white, tex, t-sm, fon, t-bo, l, d`}
+                <div, className='te, x, t-center, m, b-6'></div> <div, classNam, e = { `inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, te, x, t-white, tex, t-sm, fon, t-bo, l, d`}
                   >
                 {/* Impa, c, t */}`
-                <div, className='te, x, t-center, m, b-6' > <div, classNam, e = { `inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, te, x, t-white, tex, t-sm, fon, t-bo, l, d`}
-                  ></div>
+                <div, className='te, x, t-center, m, b-6' > <div, classNam, e = { `inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, te, x, t-white, tex, t-sm, fon, t-bo, l, d`}>>
                     ", Impa, c, t: {innovati, o, n.imp, a, c, t}
                   </div>
                 </d, i, v > {/* CTA, Butto, n */}`
                 <a, hre, f = {`/innovatio, n, s/${innovati, o, n.title.toLowerC, a, s, e().repla, c, e(/\s+/g, '-')}`}`
                   classNa, m, e = { `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,`
-  r:-transla, t, e-y-, 1`}
-                ></a>
+  r:-transla, t, e-y-, 1`}></a>
                   <sp, a, n>Explore, Innovatio, n</sp, a, n>
                   <Link, classNam, e = 'w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' /></Link>
                 </a>
-              </div>
+              >
             </div>
           ))}
         </div>
@@ -140,10 +137,10 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
               Revolutionary, Success, Stories;
             </h3>
             <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-2xl, m, x-au, t, o'>
-            <h3, className='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4'></h3>
+            <h3, className='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4'>>
               Revolutionary, Success, Stories;
             </h3>
-            <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-2xl, m, x-au, t, o'></p>
+            <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-2xl, m, x-au, t, o'>>
               See, how, our innovations, are, transforming industries, and, creating;
               unprecedented, valu, e.
             </p>
@@ -165,49 +162,47 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
               <div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-cent, e, r'></div>
                 <div, className='te, x, t-purp, l, e-400, m, b-4, flex, justify-cent, e, r'>
             ].m, a, p((sto, r, y, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-cent, e, r'></div>
-                <div, className='te, x, t-purp, l, e-400, m, b-4, flex, justify-cent, e, r'></div>
+                <div, className='te, x, t-purp, l, e-400, m, b-4, flex, justify-cent, e, r'>>
                   {sto, r, y.ic, o, n}
                 </div>
                 <h4, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'></h4>
                   {sto, r, y.company}
                 </h4>
-                <p, className='te, x, t-purp, l, e-400, fon, t-semibold, m, b-1'></p>
+                <p, className='te, x, t-purp, l, e-400, fon, t-semibold, m, b-1'>>
                   {sto, r, y.achieveme, n, t}
                 </p>
                 <p, className='te, x, t-gr, a, y-400, tex, t-sm'>{sto, r, y.reven, u, e}</p>
               </di, v>)
             ))}
-          </div>
+          >
         </div>
         {/* CTA, Sectio, n */}
         <div, classNam, e = 'te, x, t-cent, e, r'></div>
           <div, className='inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-indi, g, o-500, t, o-bl, u, e-5, 0, 0'></div>
             <div, className='bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10'></div>
               <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
-              <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'></h3>
+              <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>>
                 Join, the, Innovation Revoluti, o, n;
               </h3>
-              <p, className='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'></p>
+              <p, className='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'>>
                 Be, part, of the, futur, e. Get, exclusive, access to, revolutionary, innovation, s, early, research, insights, and, transformative, technologies that, are, reshaping our, worl, d.
               </p>
               <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
                 <a, hre, f='/innovatio, n, s'
-                  className='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-indi, g, o-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'
-                ></a>
+                  className='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-indi, g, o-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'></a>
                   <Rocket, className='w-5 h-5' /></Rocket>
                   <sp, a, n>Explore, All, Innovations</sp, a, n>
                 </a>
                 <a, hre, f='/conta, c, t'
-                  className='bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2'
-                ></a>
+                  className='bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2'></a>
                   <sp, a, n>Partner, With, Us</sp, a, n>
                   <Link, className='w-5 h-5' /></Link>
                 </a>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
-      </div>
+      >
     </div>
   )};
 export default March2026InnovationSpotlightBanner;

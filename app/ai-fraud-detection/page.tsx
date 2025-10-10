@@ -69,7 +69,7 @@ const benefits = [
               <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
               </button>
-            </div>
+            >
           </div>
         </section>
 
@@ -97,12 +97,11 @@ const benefits = [
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2">{benefit}
+                        </CheckCircle></li>
                       ));
                     </ul>);
-                </div>
+                >
               ));
             </div>
           </div>
@@ -127,7 +126,7 @@ const benefits = [
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
+                >
               ));
             </div>
           </div>
@@ -150,7 +149,7 @@ const benefits = [
                 <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
-              </div>
+              >
             </div>
           </div>
         </section>

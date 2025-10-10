@@ -50,9 +50,9 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">"</h2>
         <div, className="te, x, t-center, m, b-16">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-whi, t, e/20, t, o-whi, t, e/10, backdro, p-bl, u, r-md, p, x-8, p, y-3, rounde, d-full, m, b-8, border, border-whi, t, e/30">";</div>
-            <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e" />";
+            <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e">";
         {/* Header, Sectio, n */}"
-        <div, className="te, x, t-center, m, b-16"></div>"
+        </Zap><div, className="te, x, t-center, m, b-16"></div>"
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-whi, t, e/20, t, o-whi, t, e/10, backdro, p-bl, u, r-md, p, x-8, p, y-3, rounde, d-full, m, b-8, border, border-whi, t, e/30"></div>"
             <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  /></Zap>"
             <span, className="te, x, t-white, fon, t-bold, tex, t-lg, trackin, g-wi, d, e"></span>
@@ -63,17 +63,16 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">""
         <div, className="te, x, t-center, m, b-16">";"
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-whi, t, e/20, t, o-whi, t, e/10, backdro, p-bl, u, r-md, p, x-8, p, y-3, rounde, d-full, m, b-8, border, border-whi, t, e/30">";"
-            <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e" />";"
-            <span, className="te, x, t-white, fon, t-bold, tex, t-lg, trackin, g-wi, d, e">";
+            <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e">";"
+            </Zap><span, className="te, x, t-white, fon, t-bold, tex, t-lg, trackin, g-wi, d, e">";
               🚀 NEW, BREAKTHROUGH, CONTENT · OCTOBE, R, 2, 20, 2, 5;
             </sp, a, n>"
-            <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e" />";
-          </d, i, v>"
+            <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e">";
+          </Zap></d, i, v>"
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">";
             Ne, x, t-Generation, Enterprise, AI;</h2>
-            <br />
-            Ne, x, t-Generation, Enterprise, AI;
-            <br /></br>"
+            <br>Ne, x, t-Generation, Enterprise, AI;
+            </br><br /></br>"
             <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-purp, l, e-300, tex, t-transparent, b, g-cl, i, p-te, x, t">";
               Systems, That, Transform Operatio, n, s;
             </sp, a, n>
@@ -115,8 +114,8 @@ const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
                     <Icon, className="w-8 h-8, tex, t-whi, t, e  />
                 <div, className="flex, item, s-start, ga, p-4, m, b-6">";</div>
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-4, rounde, d-xl, shado, w-lg`}>`;`</div>
-                    <Icon, className="w-8 h-8, tex, t-whi, t, e" />";
-                  </d, i, v>
+                    <Icon, className="w-8 h-8, tex, t-whi, t, e">";
+                  </Icon></d, i, v>
                   <div, className="fl, e, x-1">";</div>
                     <div, className="te, x, t-xs, tex, t-purp, l, e-300, m, b-2, fon, t-semibold, uppercase, tracking-wid, e, r">";
                       {conte, n, t.catego, r, y}
@@ -136,8 +135,8 @@ const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
                     <Icon, className="w-8 h-8, tex, t-whi, t, e  /></Icon>"
                 <div, className="flex, item, s-start, ga, p-4, m, b-6">";`
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-4, rounde, d-xl, shado, w-lg`}>`;`"
-                    <Icon, className="w-8 h-8, tex, t-whi, t, e" />";
-                  </d, i, v>"
+                    <Icon, className="w-8 h-8, tex, t-whi, t, e">";
+                  </Icon></d, i, v>"
                   <div, className="fl, e, x-1">";"
                     <div, className="te, x, t-xs, tex, t-purp, l, e-300, m, b-2, fon, t-semibold, uppercase, tracking-wid, e, r">";
                       {conte, n, t.catego, r, y}
@@ -185,8 +184,8 @@ const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
                       <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  /></TrendingUp>"
                       <span, className="leadi, n, g-relax, e, d">{highlig, h, t}</sp, a, n>"
                     <li, ke, y={i, d, x} classNa, m, e="flex, item, s-start, ga, p-2, tex, t-xs, tex, t-purp, l, e-2, 0, 0">";"
-                      <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />";"
-                      <span, className="leadi, n, g-relax, e, d">{highlig, h, t}</sp, a, n>";
+                      <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0">";"
+                      </TrendingUp><span, className="leadi, n, g-relax, e, d">{highlig, h, t}</sp, a, n>";
                     </li>
                   ))}
                 </ul>"
@@ -199,8 +198,8 @@ const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
                   <Link, className="w-5 h-5  /></Link>"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yell, o, w-300, fon, t-bold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
                   Read, Full, Guide;"
-                  <Link, className="w-5 h-5" />";
-                </d, i, v>
+                  <Link, className="w-5 h-5">";
+                </Link></d, i, v>
               </Li, n, k>
             )})}
         </d, i, v>
@@ -211,16 +210,16 @@ const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
             <h3, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e"></h3>
         <div, className="bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l">";</div>
           <div, className="flex, item, s-center, ga, p-4, m, b-6, justif, y-cent, e, r">";</div>
-            <Target, className="w-1, 0, h-10, tex, t-yell, o, w-3, 0, 0" />";
+            <Target, className="w-1, 0, h-10, tex, t-yell, o, w-3, 0, 0">";
         {/* CTA, Sectio, n */}"
-        <div, className="bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l"></div>"
+        </Target><div, className="bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l"></div>"
           <div, className="flex, item, s-center, ga, p-4, m, b-6, justif, y-cent, e, r"></div>"
             <Target, className="w-1, 0, h-10, tex, t-yell, o, w-3, 0, 0  /></Target>"
             <h3, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e"></h3>"
         <div, className="bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l">";"
           <div, className="flex, item, s-center, ga, p-4, m, b-6, justif, y-cent, e, r">";"
-            <Target, className="w-1, 0, h-10, tex, t-yell, o, w-3, 0, 0" />";"
-            <h3, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">";
+            <Target, className="w-1, 0, h-10, tex, t-yell, o, w-3, 0, 0">";"
+            </Target><h3, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">";
               Ready, to, Transform Your, Enterprise, AI?
             </h3>
           </d, i, v>"
@@ -240,25 +239,23 @@ const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n;
             <Li, n, k;"
   to="/conta, c, t""
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: fr, o, m-yell, o, w-300, hove, r:to-oran, g, e-400, transitio, n-all, shado, w-lg, hove, r:shad, o, w-2xl, hov, e,"
-  r:sca, l, e-1, 0, 5"
-            ></Li>"
+  r:sca, l, e-1, 0, 5"></Li>"
               <Target, className="w-6 h-6  /></Target>
               Get, Free, Enterprise Assessme, n, t;"
               <Link, className="w-6 h-6  /></Link>"
-              <Target, className="w-6 h-6" />";
+              <Target, className="w-6 h-6">";
               Get, Free, Enterprise Assessme, n, t;"
-              <Link, className="w-6 h-6" />";
-            </Li, n, k>
+              </Target><Link, className="w-6 h-6">";
+            </Link></Li, n, k>
             <Li, n, k;
   to="/bl, o, g"
             <Li, n, k;"
   to="/bl, o, g""
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/30, tex, t-white, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"
-            ></Li>
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/30, tex, t-white, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"></Li>
               Explore, All, Articles;"
               <Link, className="w-6 h-6  /></Link>"
-              <Link, className="w-6 h-6" />";
-            </Li, n, k>
+              <Link, className="w-6 h-6">";
+            </Link></Li, n, k>
           </d, i, v>
         </d, i, v>
         {/* Stats, Ba, r */}

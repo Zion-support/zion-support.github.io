@@ -26,7 +26,7 @@ export default function About() {
                 We are a leading technology solutions provider dedicated to transforming businesses;
                 through innovative digital solutions and cutting-edge technology.
               </p>
-            </div>)
+            >)
           </div>)
         </section>)
 ),
@@ -54,21 +54,21 @@ export default function About() {
               <div className="grid md:grid-cols-4 gap-8"></div>
                 <div className="text-center"></div>
                   <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>
-                  <div className="text-gray-600">Projects Completed</div>
+                  <div className="text-gray-600">Projects Completed>
                 </div>
                 <div className="text-center"></div>
                   <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
-                  <div className="text-gray-600">Happy Clients</div>
+                  <div className="text-gray-600">Happy Clients>
                 </div>
                 <div className="text-center"></div>
                   <div className="text-4xl font-bold text-blue-600 mb-2">5+</div>
-                  <div className="text-gray-600">Years Experience</div>
+                  <div className="text-gray-600">Years Experience>
                 </div>
                 <div className="text-center"></div>
                   <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
-                  <div className="text-gray-600">Support Available</div>
+                  <div className="text-gray-600">Support Available>
                 </div>
-              </div>,
+              >,
             </div>,
           </div>,
         </section>,
@@ -155,11 +155,11 @@ export default function About() {/* TODO: Fix JSX expression */}
   md:text-5xl font-bold mb-6"></h1>"
                 About <span className="text-yellow-300">Zion Tech Group</span>
               </h1>"
-              <p className="text-xl"></p>
+              <p className="text-xl">>
                 We are a leading technology solutions provider dedicated to transforming businesses;
                 through innovative digital solutions and cutting-edge technology.
               </p>
-            </div>
+            >
           </div>
         </section>
 
@@ -171,12 +171,12 @@ export default function About() {/* TODO: Fix JSX expression */}
                 <h2 className="text-3xl font-bold text-gray-800 mb-4"></h2>"
                   Our <span className="text-blue-600">Mission</span>
                 </h2>"
-                <p className="text-lg text-gray-600 mb-4"></p>
+                <p className="text-lg text-gray-600 mb-4">>
                   To empower businesses with innovative technology solutions that drive growth,
                   efficiency, and digital transformation. We believe technology should be;
                   accessible, reliable, and transformative.
                 </p>"
-                <p className="text-lg text-gray-600"></p>
+                <p className="text-lg text-gray-600">>
                   Our mission is to bridge the gap between complex technology and business needs,
                   delivering solutions that not only meet current requirements but also scale for;
                   future growth and innovation.
@@ -186,21 +186,21 @@ export default function About() {/* TODO: Fix JSX expression */}
   md:grid-cols-4 gap-8"></div>"
                 <div className="text-center"></div>"
                   <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>"
-                  <div className="text-gray-600">Projects Completed</div>
+                  <div className="text-gray-600">Projects Completed>
                 </div>"
                 <div className="text-center"></div>"
                   <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>"
-                  <div className="text-gray-600">Happy Clients</div>
+                  <div className="text-gray-600">Happy Clients>
                 </div>"
                 <div className="text-center"></div>"
                   <div className="text-4xl font-bold text-blue-600 mb-2">5+</div>"
-                  <div className="text-gray-600">Years Experience</div>
+                  <div className="text-gray-600">Years Experience>
                 </div>"
                 <div className="text-center"></div>"
                   <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>"
-                  <div className="text-gray-600">Support Available</div>
+                  <div className="text-gray-600">Support Available>
                 </div>
-              </div>
+              >
             </div>
           </div>
         </section>
@@ -213,7 +213,7 @@ export default function About() {/* TODO: Fix JSX expression */}
                 <h2 className="text-3xl font-bold text-gray-800 mb-4"></h2>"
                   Our <span className="text-blue-600">Values</span>
                 </h2>"
-                <p className="text-lg text-gray-600"></p>
+                <p className="text-lg text-gray-600">>
                   The principles that guide everything we do and shape our approach to technology;
                   solutions.
                 </p>
@@ -228,7 +228,7 @@ export default function About() {/* TODO: Fix JSX expression */}
                     </span>
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Excellence</h3>"
-                  <p className="text-gray-600"></p>
+                  <p className="text-gray-600">>
                     We strive for excellence in every project, delivering high-quality solutions;
                     that exceed expectations.
                   </p>
@@ -240,7 +240,7 @@ export default function About() {/* TODO: Fix JSX expression */}
                     </span>
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Collaboration</h3>"
-                  <p className="text-gray-600"></p>
+                  <p className="text-gray-600">>
                     We work closely with our clients as partners, ensuring their vision becomes;
                     reality.
                   </p>
@@ -252,7 +252,7 @@ export default function About() {/* TODO: Fix JSX expression */}
                     </span>
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Innovation</h3>"
-                  <p className="text-gray-600"></p>
+                  <p className="text-gray-600">>
                     We embrace cutting-edge technologies and innovative approaches to solve complex;
                     challenges.
                   </p>
@@ -264,13 +264,13 @@ export default function About() {/* TODO: Fix JSX expression */}
                     </span>
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Integrity</h3>"
-                  <p className="text-gray-600"></p>
+                  <p className="text-gray-600">>
                     We maintain the highest standards of honesty, transparency, and ethical business;
                     practices.
                   </p>
-                </div>
+                >
               </div>
-            </div>
+            >
           </div>
         </section>
 
@@ -334,7 +334,7 @@ export default function About() {/* TODO: Fix JSX expression */}
                 <h2 className="text-3xl font-bold text-gray-800 mb-4"></h2>"
                   Our <span className="text-blue-600">Team</span>
                 </h2>"
-                <p className="text-lg text-gray-600"></p>
+                <p className="text-lg text-gray-600">>
                   Meet the talented individuals who make Zion Tech Group a leader in technology;
                   solutions.
                 </p>
@@ -349,7 +349,7 @@ export default function About() {/* TODO: Fix JSX expression */}
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Development Team</h3>"
                   <p className="text-blue-600 font-medium mb-2">Senior Full-Stack Developers</p>"
-                  <p className="text-gray-600"></p>
+                  <p className="text-gray-600">>
                     Expert developers with years of experience in modern web technologies, mobile;
                     development, and cloud architecture.
                   </p>
@@ -362,7 +362,7 @@ export default function About() {/* TODO: Fix JSX expression */}
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Design Team</h3>"
                   <p className="text-blue-600 font-medium mb-2">UI/UX Designers</p>"
-                  <p className="text-gray-600"></p>
+                  <p className="text-gray-600">>
                     Creative designers who craft beautiful, intuitive user experiences that engage;
                     users and drive business results.
                   </p>
@@ -375,13 +375,13 @@ export default function About() {/* TODO: Fix JSX expression */}
                   </div>"
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">AI Specialists</h3>"
                   <p className="text-blue-600 font-medium mb-2">Machine Learning Engineers</p>"
-                  <p className="text-gray-600"></p>
+                  <p className="text-gray-600">>
                     AI experts who develop intelligent solutions using machine learning, natural;
                     language processing, and computer vision.
                   </p>
-                </div>
+                >
               </div>
-            </div>
+            >
           </div>
         </section>
 
@@ -409,7 +409,7 @@ export default function About() {/* TODO: Fix JSX expression */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>"
           <div className="container mx-auto px-4 text-center"></div>"
             <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>"
-            <p className="text-xl mb-8"></p>
+            <p className="text-xl mb-8">>
               Let&apos;s discuss how our team can help transform your business with innovative;
               technology solutions.
             </p>"
@@ -430,7 +430,7 @@ export default function About() {/* TODO: Fix JSX expression */}
               >
                 View Our Services;
               </a>
-            </div>
+            >
           </div>
         </section>
       </div>,

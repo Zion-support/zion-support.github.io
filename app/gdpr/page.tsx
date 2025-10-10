@@ -15,7 +15,7 @@ const benefits = [
     'Proven track record of success'
   ];
 
-          </div>
+          >
         </div>
       </section>
 
@@ -29,12 +29,12 @@ const benefits = [
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
-          </div>
+          >
 
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
+              >
             ));
           </div>
         </div>

@@ -41,8 +41,8 @@ const toggleMenu = () => {
             onClick={toggleMenu}
             className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+            {isMenuOpen ? <X className="w-6 h-6">: </X><Menu className="w-6 h-6">}
+          </Menu></button>
         </div>
 
         {/* Mobile Navigation */}
@@ -62,7 +62,7 @@ const toggleMenu = () => {
                 Contact
               </Link>
             </nav>
-          </div>
+          >
         )}
       </div>
     </header>

@@ -70,9 +70,9 @@ const interval = setInterval(updateMetrics, 1000);
             <div className="flex justify-between">
               <span className="text-gray-600">FPS:</span>
               <span className="font-mono">{metrics?.fps.toFixed(1)}</span>
-            </div>
+            >
           </div>
-        </div>
+        >
       )}
     </div>
   )};

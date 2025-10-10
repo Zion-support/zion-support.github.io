@@ -2,14 +2,6 @@
 import https from 'https';
 ;
 const makeGitHubRequest = (path) => {
-<<<<<<< HEAD
-  return new Promise((resolve, reject) => {;
-const options = {
-      hostname: 'api.github.com'
-      path: path;
-      method: 'GET'
-      headers: {,
-=======
   return new Promise((resolve, reject) => {
     const options = {
       hostname: 'api.github.com',
@@ -18,7 +10,6 @@ const options = {
       method: 'GET',
       headers:
         headers: {,
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         'User-Agent': 'Zion-App-Automation',
         Accept: 'application/vnd.github.v3+json'}};
 ;

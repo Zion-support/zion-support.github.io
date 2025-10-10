@@ -25,10 +25,10 @@ const bgColorClasses = {/* TODO: Fix JSX expression */}
       <div className="text-4xl,
   sm:text-5xl mb-4,"
   sm:mb-6 text-center cyber-scan-line" aria-hidden="true"></div>"
-        {typeof Icon === 'string' ? Icon : <Icon className="w-12 h-12 mx-auto" />}
-      </div>
+        {typeof Icon === 'string' ? Icon : <Icon className="w-12 h-12 mx-auto">}
+      </Icon></div>
       
-      <h3></h3>`
+      <h3>>`
         id={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}"
         className="text-xl,
   sm:text-2xl font-bold text-white mb-3,"
@@ -39,7 +39,7 @@ const bgColorClasses = {/* TODO: Fix JSX expression */}
       "
       <p className="text-gray-300 mb-4,
   sm:mb-6 text-center leading-relaxed text-sm,"
-  sm:text-base"></p>
+  sm:text-base">>
         {description}
       </p>
       "
@@ -75,16 +75,16 @@ const bgColorClasses = {/* TODO: Fix JSX expression */}
               +{technologies.length - 4}
             </span>
           )}
-        </div>
+        >
       </div>
       "
       <div className="text-center mb-4"></div>"
         <div className="text-lg,"
-  sm:text-2xl font-bold text-cyan-400 mb-2 neon-text" aria-label="Starting price"></div>
+  sm:text-2xl font-bold text-cyan-400 mb-2 neon-text" aria-label="Starting price">>
           {price}
         </div>"
         <div className="text-xs text-gray-400">Categor,
-  y: {category}</div>
+  y: {category}>
       </div>
       
       <a></a>

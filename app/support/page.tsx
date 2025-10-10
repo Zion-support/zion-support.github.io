@@ -41,7 +41,7 @@ const PagePage: React.FC = () => {
                 Learn More
                 <ArrowRight className="w-5 h-5" />
               </Link>
-            </div>
+            >
           </div>
         </section>
 
@@ -70,7 +70,7 @@ const PagePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Custom Solutions</h3>
                 <p className="text-gray-300">Tailored Page solutions for your specific requirements</p>
-              </div>
+              >
             </div>
           </div>
         </section>
@@ -90,17 +90,15 @@ const PagePage: React.FC = () => {
                   href="tel:+13024640950"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300"
                 >
-                  <Phone className="w-5 h-5" />
-                  Call Now
-                </a>
+                  <Phone className="w-5 h-5">Call Now
+                </Phone></a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300"
                 >
-                  <Mail className="w-5 h-5" />
-                  Email Us
-                </a>
-              </div>
+                  <Mail className="w-5 h-5">Email Us
+                </Mail></a>
+              >
             </div>
           </div>
         </section>

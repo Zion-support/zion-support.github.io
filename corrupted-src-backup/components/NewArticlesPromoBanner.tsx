@@ -11,8 +11,8 @@ varia, n, t = 'def, a, u, l, t',
     retu, r, n(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}>
         <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
           <div, classNam, e="flex, item, s-center, ga, p-3">)
-            <BookOpen, classNam, e="w-6 h-6, tex, t-whi, t, e" />)
-          <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">)
+            <BookOpen, classNam, e="w-6 h-6, tex, t-whi, t, e">)
+          </BookOpen><div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">)
             { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (
     retu, r, n (
       <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}></div>
@@ -21,16 +21,13 @@ varia, n, t = 'def, a, u, l, t',
             <BookOpen, classNam, e="w-6 h-6, tex, t-whi, t, e" />
           <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">
             { featuredArticl, e, s.m, a, p((arti, c, l, e) = > (</div>
-              <div, ke, y = { artic, l, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
-              ></div>
+              <div, ke, y = { artic, l, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"></div>
                 <div, classNam, e="flex, item, s-center, ga, p-2, m, b-3"></div>
                   <TrendingUp, classNam, e="w-5 h-5, tex, t-gre, e, n-3, 0, 0" />
                   <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-3, 0, 0">{artic, l, e.cate, g, o, r, y}</sp, a, n>
-                    Re, a, d <Link, classNam, e="w-4 h-4" />
-              View, All, Articles;
-              <Link, classNam, e="w-5 h-5" />
-  if (varia, n, t = == 'featu, r, e, d') {
-    retu, r, n(<div, classNam, e = {`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}>
+                    Re, a, d <Link, classNam, e="w-4 h-4">View, All, Articles;
+              </Link><Link, classNam, e="w-5 h-5">if (varia, n, t = == 'featu, r, e, d') {
+    retu, r, n(</Link><div, classNam, e = {`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}>
         <div, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-60, 0, p-6">
           <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
             <div, classNam, e="flex, item, s-center, ga, p-3">
@@ -68,8 +65,7 @@ const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> =
             <BookOpen, classNam, e="w-6 h-6, tex, t-whi, t, e" /></BookOpen>"
           <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-6"></div>
             {/* TODO: Fix JSX expression */}"
-              <div, ke, y = { artic, l, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
-              ></div>"
+              <div, ke, y = { artic, l, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"></div>"
                 <div, classNam, e="flex, item, s-center, ga, p-2, m, b-3"></div>"
                   <TrendingUp, classNam, e="w-5 h-5, tex, t-gre, e, n-3, 0, 0" /></TrendingUp>"
                   <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-3, 0, 0">{artic, l, e.cate, g, o, r, y}</sp, a, n>"

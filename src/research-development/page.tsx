@@ -762,7 +762,7 @@ $4}
           {/* Header */}"
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
-  md:text-5xl font-bold text-white mb-6 neon-text"></h1>
+  md:text-5xl font-bold text-white mb-6 neon-text">>
 // Research & Development;
 
           </h1>
@@ -802,10 +802,10 @@ $4}
               ))}
             </div>"
             <div className="text-center"></div>"
-              <p className="text-gray-300 max-w-2xl mx-auto"></p>
+              <p className="text-gray-300 max-w-2xl mx-auto">>
                 {researchAreas.find(area => area.id === activeTab)?.description}
               </p>
-            </div>
+            >
           </div>
 
           {/* Research Projects */}
@@ -823,7 +823,7 @@ $4}
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
                       <p className="text-gray-300 text-sm mb-4">{project.description}</p>
-                    </div>
+                    >
                   </div>
                   
                   <div className="grid grid-cols-2 gap-4 mb-4">
@@ -834,19 +834,19 @@ $4}
                         project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'
                       }`}>
                         {project.status}
-                      </div>
+                      >
                     </div>
                     <div>
                       <div className="text-sm text-gray-400 mb-1">Timeline</div>
-                      <div className="text-sm text-white">{project.timeline}</div>
+                      <div className="text-sm text-white">{project.timeline}>
                     </div>
                     <div>
                       <div className="text-sm text-gray-400 mb-1">Team</div>
-                      <div className="text-sm text-white">{project.team}</div>
+                      <div className="text-sm text-white">{project.team}>
                     </div>
                     <div>
                       <div className="text-sm text-gray-400 mb-1">Funding</div>
-                      <div className="text-sm text-white">{project.funding}</div>
+                      <div className="text-sm text-white">{project.funding}>
                     </div>
                   </div>
                   
@@ -872,7 +872,7 @@ $4}
                     <div className="flex-1"></div>"
                       <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>"
                       <p className="text-gray-300 text-sm mb-4">{project.description}</p>
-                    </div>
+                    >
                   </div>"
                   <div className="grid grid-cols-2 gap-4 mb-4"></div>
                     <div></div>"
@@ -882,7 +882,7 @@ $4}
   O: Add content}
                         project.status === 'Completed' ? 'text-green-400' :
                         project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'`
-                      }`}></div>
+                      }`}>>
                         {project.status}
                       
           
@@ -897,15 +897,15 @@ $4}
                     </div>
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Timeline</div>"
-                      <div className="text-sm text-white">{project.timeline}</div>
+                      <div className="text-sm text-white">{project.timeline}>
                     </div>
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Team</div>"
-                      <div className="text-sm text-white">{project.team}</div>
+                      <div className="text-sm text-white">{project.team}>
                     </div>
                     <div></div>"
                       <div className="text-sm text-gray-400 mb-1">Funding</div>"
-                      <div className="text-sm text-white">{project.funding}</div>
+                      <div className="text-sm text-white">{project.funding}>
                     </div>
                   </div>
                   <div></div>"
@@ -919,10 +919,10 @@ $4}
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  >
                 </div>
               ))}
-            </div>
+            >
           </div>
 
           {/* Publications */}
@@ -985,10 +985,10 @@ $4}
 // >
 //                         Read Paper;
           </a>
-                    </div>
+                    >
                   </div>
                 ))}
-              </div>
+              >
             </div>
           </div>
 
@@ -1019,7 +1019,7 @@ $4}
                   </div>"
                   <h3 className="text-lg font-semibold text-white mb-2">{achievement.title}</h3>"
                   <p className="text-gray-300 text-sm">{achievement.description}</p>
-                </div>
+                >
               ))}
             </div>
           </div>
@@ -1038,29 +1038,26 @@ $4}
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
               >
-                <BookOpen className="w-5 h-5 mr-2" />
-                Start Collaboration
-              </a>
+                <BookOpen className="w-5 h-5 mr-2">Start Collaboration
+              </BookOpen></a>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
               >
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-              </a>
+                <Phone className="w-4 h-4 mr-2">(302) 464-0950
+              </Phone></a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
               >
-                <Mail className="w-4 h-4 mr-2" />
-                Email Us
-              </a>
+                <Mail className="w-4 h-4 mr-2">Email Us
+              </Mail></a>
           {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
             <h2 className="text-2xl font-bold text-white mb-4"></h2>
 // Collaborate With Our Research Team;
           </h2>"
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">>
 // Interested in collaborating on cutting-edge research? We welcome partnerships with;
               universities, research institutions, and industry leaders.
             
@@ -1125,9 +1122,9 @@ $4}
           <Mail className="w-4 h-4 mr-2" /></Mail>
 // Email Us;
           </a>
-            </div>
+            >
           </div>
-        </div>
+        >
       </div>
 
       <Footer />

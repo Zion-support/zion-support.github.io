@@ -18,30 +18,30 @@ const CookiesPage: React.FC = () => {
         <main className="pt-20"></main>
           <div>
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8"></h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">>
                 Cookie Policy</h1>
               </h1>
               
               <div>
-                <p className="text-xl text-gray-600 mb-8"></p>
+                <p className="text-xl text-gray-600 mb-8">>
                   Last updated: {new Date().toLocaleDateString();
                 </p>
                 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4"></h>What Are Cookies</h2>
-                <p className="text-gray-700 mb-6"></p>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4"></h3>What Are Cookies</h2>
+                <p className="text-gray-700 mb-6">>
                   Cookies are small text files that are placed on your computer or mobile device when you visit our website.
                 </p>
                 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4"></h>How We Use Cookies</h2>
-                <p className="text-gray-700 mb-6"></p>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4"></h3>How We Use Cookies</h2>
+                <p className="text-gray-700 mb-6">>
                   We use cookies to improve your experience on our website, analyze site traffic, and personalize content.
                 </p>
                 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4"></h>Managing Cookies</h2>
-                <p className="text-gray-700 mb-6"></p>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4"></h3>Managing Cookies</h2>
+                <p className="text-gray-700 mb-6">>
                   You can control and/or delete cookies as you wish through your browser settings.
                 </p>
-              </div>
+              >
             </div>
           </div>
         </main>
@@ -49,11 +49,7 @@ const CookiesPage: React.FC = () => {
         <Footer />
       </div>
     </>
-<<<<<<< HEAD
-  );)
-=======
   )]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default CookiesPage;

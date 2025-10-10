@@ -96,7 +96,7 @@ const standards = [
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 Learn More
               </button>
-            </div>
+            >
           </div>
         </section>
 
@@ -128,12 +128,11 @@ const standards = [
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-                        {benefit}
-                      </li>
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0">{benefit}
+                      </CheckCircle></li>
                     ));
                   </ul>
-                </div>
+                >
               ));
             </div>
           </div>
@@ -165,7 +164,7 @@ const standards = [
                   <span className="inline-block px-4 py-2 bg-green-500/20 text-green-400 text-sm rounded-full font-semibold">
                     {standard.status}
                   </span>
-                </div>
+                >
               ));
             </div>
           </div>
@@ -188,7 +187,7 @@ const standards = [
                 <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Contact Us
                 </button>
-              </div>
+              >
             </div>
           </div>
         </section>

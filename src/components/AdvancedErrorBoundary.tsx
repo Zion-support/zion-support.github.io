@@ -116,7 +116,7 @@ const errorReport: ErrorReport = {
                 <p className="text-sm text-gray-500">
                   We're sorry, but something unexpected happened.
                 </p>
-              </div>
+              >
             </div>
             
             {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -149,7 +149,7 @@ const errorReport: ErrorReport = {
                 Error ID: {this.state.errorId}
               </p>
             )}
-          </div>
+          >
         </div>
       )}
 

@@ -9,13 +9,9 @@ interface OptimizedLoadingSpinnerProps {
   text?: string;
   className?: string;
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
-<<<<<<< HEAD
-  fullScreen?: boolean;);
-=======
   fullScreen?: boolean]
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></OptimizedLoadingSpinnerProps> = memo(
   ({
     size = 'md',;
@@ -23,15 +19,9 @@ variant = 'spinner',
     text = 'Loading...',
     className = '',
     color = 'blue',
-<<<<<<< HEAD
-    fullScreen = false,;)
-}); => {;
-const sizeClasses = useMemo(
-=======
     fullScreen = false,]
     }); => {
     const sizeClasses = useMemo(
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       () => ({
         xs: 'h-3 w-3',
         sm: 'h-4 w-4',
@@ -69,14 +59,12 @@ return (
 switch (variant) {
         case 'dots':
           return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'></div>
+            <div className='flex space-x-1' role='status' aria-label='Loading'>>
               {[0, 1, 2].map(i => (</div>
                 <div
                   key={i}
                   className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                />
-              ));</div>
+                  style={{ animationDelay: `${i * 0.1}s` }}>));</div></div>
           );
 
         case 'pulse':
@@ -84,12 +72,10 @@ switch (variant) {
             <div
               className={`${baseClasses} rounded-full animate-pulse`}
               role='status'
-              aria-label='Loading'
-            />
-          );
+              aria-label='Loading'>);
 
         case 'skeleton':
-          return (</div>
+          return (</div></div>
             <div>
               <div>
               <div>
@@ -98,7 +84,7 @@ switch (variant) {
 
         case 'bars':
           return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'></div>
+            <div className='flex space-x-1' role='status' aria-label='Loading'>>
               {[0, 1, 2, 3].map(i => (</div>
                 <div
                   key={i}
@@ -106,9 +92,7 @@ switch (variant) {
                   style={{
                     height: `${12 + i * 4}px`,
                     animationDelay: `${i * 0.1}s`,]
-    }}
-                />
-              ));</div>
+    }}>));</div></div>
           );
 
         case 'spinner':
@@ -117,38 +101,25 @@ switch (variant) {
             <div
               className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
               role='status'
-              aria-label='Loading'
-            />
-<<<<<<< HEAD
-          ););
-    }, [size, variant, color, sizeClasses, colorClasses]);
-const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;)
-}, [fullScreen, className]);
-=======
-          )]
+              aria-label='Loading'>)]
     }
     }, [size, variant, color, sizeClasses, colorClasses]);
 
     const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`]
     }, [fullScreen, className]);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
-    return (</div>
+    return (</div></div>
       <div>
-        <div className='text-center'></div>
+        <div className='text-center'>>
           {renderSpinner}
           {text && (</div>
-            <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}></p>
+            <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>>
               {text}
             </p>
           );
         </div>
-<<<<<<< HEAD
-    ););
-=======
     )]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 );
 
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'

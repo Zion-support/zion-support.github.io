@@ -101,9 +101,9 @@ const serviceLevels = [
               <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">Transparent</span>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
       </section>
 
@@ -118,7 +118,7 @@ const serviceLevels = [
               <p className="text-sm text-gray-400 mt-2">
                 These terms may be updated from time to time. Continued use of our services constitutes acceptance of any changes.
               </p>
-            </div>
+            >
           </div>
         </div>
       </section>
@@ -136,10 +136,10 @@ const serviceLevels = [
                     <h3 className="text-xl font-bold text-white">{section.title}</h3>
                   </div>
                   <p className="text-gray-300 text-sm">{section.content}</p>
-                </div>
+                >
               ))}
             </div>
-          </div>
+          >
         </div>
       </section>
 
@@ -156,10 +156,10 @@ const serviceLevels = [
                 <div key={index} className="flex items-start space-x-3">
                   <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300">{use}</span>
-                </div>
+                >
               ))}
             </div>
-          </div>
+          >
         </div>
       </section>
 
@@ -189,7 +189,7 @@ const serviceLevels = [
                   ))}
                 </tbody>
               </table>
-            </div>
+            >
           </div>
         </div>
       </section>
@@ -219,9 +219,9 @@ const serviceLevels = [
                 <p className="text-gray-300">
                   Late payments may result in service suspension. A late fee of 1.5% per month may be applied to overdue accounts.
                 </p>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
       </section>
 
@@ -251,9 +251,9 @@ const serviceLevels = [
                   Upon termination, your right to use our services ceases immediately. 
                   We will retain your data for 90 days after termination for recovery purposes.
                 </p>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
       </section>
 
@@ -278,9 +278,9 @@ const serviceLevels = [
               <div className="flex items-center justify-center space-x-3">
                 <FileText className="w-5 h-5 text-cyan-400" />
                 <span className="text-white">English Language</span>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
       </section>
 
@@ -304,16 +304,15 @@ const serviceLevels = [
               <div className="flex items-center justify-center space-x-3">
                 <Globe className="w-5 h-5 text-cyan-400" />
                 <span className="text-white">Middletown, DE</span>
-              </div>
+              >
             </div>
             <a
               href="/contact"
               className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
             >
-              <Mail className="w-5 h-5 mr-2" />
-              Contact Us
-            </a>
-          </div>
+              <Mail className="w-5 h-5 mr-2">Contact Us
+            </Mail></a>
+          >
         </div>
       </section>
     </div>

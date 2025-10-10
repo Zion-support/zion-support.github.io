@@ -32,14 +32,13 @@ const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */
                     <Users, classNam, e="w-4 h-4" />
                     <span, classNam, e="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s</sp, a, n>
                   <Link, classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
-              <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r" ></div> <div, classNam, e = { `${st, a, t.co, l, o, r }, mb-2, flex, justify-cent, e, r`}></div>
+              <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r"></div> <div, classNam, e = { `${st, a, t.co, l, o, r }, mb-2, flex, justify-cent, e, r`}></div>
               <p, classNam, e="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">
                 Be, among, the first, to, access revolutionary, AI, insight, s, breakthrough, researc, h,</p> 
                   <Rocket, classNam, e="w-5 h-5" />
-                  <Link, classNam, e="w-5 h-5" />
-}}}
+                  <Link, classNam, e="w-5 h-5">}}}
     {/* TODO: Fix JSX expression */}
-        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>"
+        </Link><div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>"
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} /></div>"
           <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
             Revolutionary, Content, Just Releas, e, d;

@@ -149,14 +149,12 @@ const DynamicContentShowcase: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-              <Play className="w-5 h-5" />
-              Start Demo
-            </button>
+              <Play className="w-5 h-5">Start Demo
+            </Play></button>
             <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <ArrowRight className="w-5 h-5" />
-              Learn More
-            </button>
-          </div>
+              <ArrowRight className="w-5 h-5">Learn More
+            </ArrowRight></button>
+          >
         </div>
       </section>
 
@@ -188,14 +186,14 @@ const DynamicContentShowcase: React.FC = () => {
                     {feature.stats.map((stat, statIndex) => (
                       <div key={statIndex} className="text-center">
                         <div className="text-lg font-bold text-white">{stat.value}</div>
-                        <div className="text-gray-400 text-xs">{stat.label}</div>
+                        <div className="text-gray-400 text-xs">{stat.label}>
                       </div>
                     ))}
-                  </div>
+                  >
                 )}
               </div>
             ))}
-          </div>
+          >
         </div>
       </section>
 
@@ -216,7 +214,7 @@ const DynamicContentShowcase: React.FC = () => {
               <div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-lg rounded-lg p-4 border border-white/10">
                 <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
-              </div>
+              >
             ))}
           </div>
         </div>
@@ -238,9 +236,8 @@ const DynamicContentShowcase: React.FC = () => {
             <div className="text-center">
               <div className="flex justify-center mb-4">
                 {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current">))}
+              </Star></div>
               <p className="text-xl text-white mb-6 italic">
                 "{testimonials[currentIndex].content}"
               </p>
@@ -249,9 +246,9 @@ const DynamicContentShowcase: React.FC = () => {
               </div>
               <div className="text-gray-300">
                 {testimonials[currentIndex].role}, {testimonials[currentIndex].company}
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
       </section>
     </div>

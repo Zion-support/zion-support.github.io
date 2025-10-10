@@ -71,10 +71,10 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
     <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">";"
       <div, className="te, x, t-center, m, b-8">";"
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">";"
-          <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e" />";"
-          <h2, className="te, x, t-4xl, fon, t-bo, l, d">OCTOBER, 2025, MEGA LAUN, C, H</h2>";"
-          <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
-        </d, i, v>"
+          <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e">";"
+          </Sparkles><h2, className="te, x, t-4xl, fon, t-bo, l, d">OCTOBER, 2025, MEGA LAUN, C, H</h2>";"
+          <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e">";
+        </Sparkles></d, i, v>"
         <p, className="te, x, t-xl, tex, t-purp, l, e-100, m, b-2">";
           7, Revolutionary, Articles on, AI, Autonomous Infrastructu, r, e, Multimodal, A, I & Enterprise, Solution, s;
         </p>"
@@ -125,12 +125,11 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
         <Li, n, k;"
   to="/bl, o, g""
           classNa, m, e="bg-white, tex, t-purp, l, e-600, hove, r: bg-purp, l, e-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e,"
-  r:sca, l, e-1, 0, 5"
-        ></Li>
+  r:sca, l, e-1, 0, 5"></Li>
           Read, All, 7 Articl, e, s;"
           <Link, className="w-5 h-5  /></Link>"
-          <Link, className="w-5 h-5" />";
-        </Li, n, k>
+          <Link, className="w-5 h-5">";
+        </Link></Li, n, k>
       </d, i, v>
     </d, i, v>
   )};

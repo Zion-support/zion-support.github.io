@@ -134,20 +134,12 @@ export const,
       'Neuralink ($10)000+/month)',
       'Kernel ($50)000+/month)',
       'Synchron'],
-<<<<<<< HEAD
-    marketSize: '$1 && 1.5B BCI market'
-    growthRate: '300% annual growth';
-variant: 'quantum-neural-advanced'
-    contactInfo: unknown;
-    color: 'from - purple - 600 to - indigo - 700'
-=======
     marketSize: '$1 && 1.5B BCI market',
     growthRate: '300% annual growth',
     variant: 'quantum-neural-advanced',
     contactInfo:
         contactInfo: unknown;
     color: 'from - purple - 600 to - indigo - 700',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / quantum - ai - brain - computer - interface',
     market_position: unknown;
@@ -214,20 +206,12 @@ varian,
       'Neuralink ($10) 000+/month)',
       'Kernel ($50) 000+/month)',
       'Synchron'],
-<<<<<<< HEAD
-    market_size: '$1.5B BCI market'
-    growth_rate: '300% annual growth';
-variant: 'quantum - neural - advanced'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$1.5B BCI market',
     growth_rate: '300% annual growth',
     variant: 'quantum - neural - advanced',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -371,20 +355,12 @@ varian,
       'Waymo ($50) 000+/month)',
       'Cruise ($100) 000+/month)',
       'Tesla FSD'],
-<<<<<<< HEAD
-    market_size: '$556B autonomous vehicle market'
-    growth_rate: '250% annual growth';
-variant: 'ai - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$556B autonomous vehicle market',
     growth_rate: '250% annual growth',
     variant: 'ai - futuristic',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -522,20 +498,12 @@ varian,
       'Insitro ($100M+ funding)',
       'Recursion ($2B+ funding)',
       'Atomwise'],
-<<<<<<< HEAD
-    market_size: '$150B AI in healthcare'
-    growth_rate: '250% annual growth';
-variant: 'holographic - matrix'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$150B AI in healthcare',
     growth_rate: '250% annual growth',
     variant: 'holographic - matrix',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -673,20 +641,12 @@ varian,
       'Renaissance Technologies ($100B+ AUM)',
       'Two Sigma ($60B+ AUM)',
       'Citadel'],
-<<<<<<< HEAD
-    market_size: '$15T algorithmic trading'
-    growth_rate: '150% annual growth';
-variant: 'quantum - cyberpunk'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$15T algorithmic trading',
     growth_rate: '150% annual growth',
     variant: 'quantum - cyberpunk',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -824,20 +784,12 @@ varian,
       'SpaceX Starlink ($99 / month)',
       'OneWeb ($50 / month)',
       'Planet Labs'],
-<<<<<<< HEAD
-    market_size: '$469B space economy'
-    growth_rate: '400% annual growth';
-variant: 'quantum - space'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$469B space economy',
     growth_rate: '400% annual growth',
     variant: 'quantum - space',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -977,20 +929,12 @@ varian,
       'Meta ($1000+/month)',
       'Roblox ($500+/month)',
       'Decentraland'],
-<<<<<<< HEAD
-    market_size: '$800B metaverse market'
-    growth_rate: '300% annual growth';
-variant: 'holographic - neural'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$800B metaverse market',
     growth_rate: '300% annual growth',
     variant: 'holographic - neural',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1123,20 +1067,12 @@ varian,
       'Research robotics'],
     roi: '400% ROI within 18 months through increased efficiency and reduced errors',
     competitors: ['ABB ($50) 000+/month)', 'KUKA ($100) 000+/month)', 'FANUC'],
-<<<<<<< HEAD
-    market_size: '$200B industrial robotics'
-    growth_rate: '200% annual growth';
-variant: 'quantum - robotics'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$200B industrial robotics',
     growth_rate: '200% annual growth',
     variant: 'quantum - robotics',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1280,20 +1216,12 @@ varian,
       'CrowdStrike ($5000+/month)',
       'Palo Alto Networks ($10000+/month)',
       'SentinelOne'],
-<<<<<<< HEAD
-    market_size: '$200B cybersecurity market'
-    growth_rate: '180% annual growth';
-variant: 'quantum - cyberpunk'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$200B cybersecurity market',
     growth_rate: '180% annual growth',
     variant: 'quantum - cyberpunk',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1431,20 +1359,12 @@ varian,
       'Traditional ISPs',
       'Security providers',
       'Network equipment vendors'],
-<<<<<<< HEAD
-    market_size: '$100B quantum internet market'
-    growth_rate: '400% annual growth';
-variant: 'quantum - entanglement'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$100B quantum internet market',
     growth_rate: '400% annual growth',
     variant: 'quantum - entanglement',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1612,20 +1532,12 @@ varian,
       'SAP ($5000+/month)',
       'Oracle ($8000+/month)',
       'Manhattan Associates'],
-<<<<<<< HEAD
-    market_size: '$300B supply chain management'
-    growth_rate: '200% annual growth';
-variant: 'quantum - matrix'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$300B supply chain management',
     growth_rate: '200% annual growth',
     variant: 'quantum - matrix',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},

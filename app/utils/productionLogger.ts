@@ -49,12 +49,8 @@ const entry: LogEntry = {,
     if (this.isProduction && level === 'error') {
     // In production, send critical errors to monitoring service
     if (this.isProduction && level === 'error') {}
-<<<<<<< HEAD
-      this.sendToMonitoring(entry););
-=======
       this.sendToMonitoring(entry)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
 
   private sendToMonitoring(entry: LogEntry): void {,
@@ -78,15 +74,6 @@ const entry: LogEntry = {,
   }
 
   debug(message: string, data?: unknown, context?: string): void {}
-<<<<<<< HEAD
-    this.log('debug', message, data, context););
-  info(message: string, data?: unknown, context?: string): void {}
-    this.log('info', message, data, context););
-  warn(message: string, data?: unknown, context?: string): void {}
-    this.log('warn', message, data, context););
-  error(message: string, data?: unknown, context?: string): void {}
-    this.log('error', message, data, context););
-=======
     this.log('debug', message, data, context)]
     }
 
@@ -101,7 +88,6 @@ const entry: LogEntry = {,
   error(message: string, data?: unknown, context?: string): void {}
     this.log('error', message, data, context)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 
 export const logger = new ProductionLogger()

@@ -22,11 +22,11 @@ const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + 
               <Settings className="w-4 h-4" />
               <span>{title}</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text"></h1>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">>
               {title} </h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"></spa> Solution</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">>
               Powerful {title.toLowerCase(); micro SaaS solution designed for modern businesses.
             </p>
             <div>
@@ -37,28 +37,24 @@ const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + 
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all"></button>
                 View Demo
               </button>
-            </div>
+            >
           </div>
         </section>
 
         <section className="py-16 px-4"></section>
           <div>
             <div>
-              <h2 className="text-4xl font-bold text-white mb-4"></h>Coming Soon</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+              <h2 className="text-4xl font-bold text-white mb-4"></h3>Coming Soon</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">>
                 We're developing powerful {title.toLowerCase(); solutions. Stay tuned for updates!
               </p>
-            </div>
+            >
           </div>
         </section>
       </div>
     </>
-<<<<<<< HEAD
-  );)
-=======
   )]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default MicroSaaSPage;
 }

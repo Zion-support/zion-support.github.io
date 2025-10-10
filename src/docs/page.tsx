@@ -210,7 +210,7 @@ const getDifficultyColor = (difficulty: string) => {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
-              </div>
+              >
             </div>
           </section>
 
@@ -276,7 +276,7 @@ const getDifficultyColor = (difficulty: string) => {
                           {doc.difficulty}
                         </span>
                         <span className="text-gray-400 text-xs">{doc.readTime}</span>
-                      </div>
+                      >
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors">
@@ -299,7 +299,7 @@ const getDifficultyColor = (difficulty: string) => {
                     <span className="text-gray-500 text-xs">
                       {doc.category}
                     </span>
-                  </div>
+                  >
                 </div>
               ))}
             </div>
@@ -319,17 +319,15 @@ const getDifficultyColor = (difficulty: string) => {
                   to="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center"
                 >
-                  <MessageSquare className="w-5 h-5 mr-2" />
-                  Contact Our Team
-                </Link>
+                  <MessageSquare className="w-5 h-5 mr-2">Contact Our Team
+                </MessageSquare></Link>
                 <Link
                   to="/demo"
                   className="cyber-button-secondary px-8 py-4 text-lg font-semibold inline-flex items-center justify-center"
                 >
-                  <Play className="w-5 h-5 mr-2" />
-                  Request Demo
-                </Link>
-              </div>
+                  <Play className="w-5 h-5 mr-2">Request Demo
+                </Play></Link>
+              >
             </div>
           </section>
         </main>

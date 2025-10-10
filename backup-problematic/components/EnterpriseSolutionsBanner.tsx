@@ -11,7 +11,7 @@ export default function EnterpriseSolutionsBanner() {
           <p className="text-xl mb-8">
             Transform your business with our comprehensive AI and IT solutions;
           </p>)
-        </div>)
+        >)
       </div>)
     </div>)
 export default function EnterpriseSolutionsBanner() {/* TODO: Fix JSX expression */}
@@ -22,10 +22,10 @@ export default function EnterpriseSolutionsBanner() {/* TODO: Fix JSX expression
   lg:px-8"></div>"
         <div className="text-center"></div>"
           <h2 className="text-4xl font-bold mb-4">Enterprise Solutions</h2>"
-          <p className="text-xl mb-8"></p>
+          <p className="text-xl mb-8">>
             Transform your business with our comprehensive AI and IT solutions;
           </p>
-        </div>
+        >
       </div>
     </div>)
   )}

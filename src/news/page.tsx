@@ -111,7 +111,7 @@ const stats = [
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <stat.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+                  <div className="text-gray-300">{stat.label}>
                 </div>
               ))}
             </div>
@@ -135,13 +135,12 @@ const stats = [
                         <span className="text-gray-400 text-sm">{article.readTime}</span>
                       </div>
                       <div className="flex items-center text-gray-400 text-sm">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        {new Date(article.date).toLocaleDateString('en-US', { 
+                        <Calendar className="w-4 h-4 mr-2">{new Date(article.date).toLocaleDateString('en-US', { 
                           year: 'numeric', 
                           month: 'long', 
                           day: 'numeric' 
                         })}
-                      </div>
+                      </Calendar>>
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 hover:text-cyan-400 transition-colors">
@@ -180,13 +179,12 @@ const stats = [
                         <span className="text-gray-400 text-xs">{article.readTime}</span>
                       </div>
                       <div className="flex items-center text-gray-400 text-xs">
-                        <Calendar className="w-3 h-3 mr-1" />
-                        {new Date(article.date).toLocaleDateString('en-US', { 
+                        <Calendar className="w-3 h-3 mr-1">{new Date(article.date).toLocaleDateString('en-US', { 
                           month: 'short', 
                           day: 'numeric',
                           year: 'numeric'
                         })}
-                      </div>
+                      </Calendar>>
                     </div>
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3 hover:text-cyan-400 transition-colors">

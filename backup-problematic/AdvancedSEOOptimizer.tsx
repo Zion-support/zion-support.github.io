@@ -256,32 +256,31 @@ const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
  return(<Helmet>)
  {/* Basic Meta Tags */})
  <title>{seoData.title}</title>)
- <meta name="description" content={seoData.description} />)
- <meta name="keywords" content={seoData.keywords.join(', ')} />
- <link rel="canonical" href={seoData.canonicalUrl} />
- {/* Open Graph Tags */}
+ <meta name="description" content={seoData.description}>)
+ </meta><meta name="keywords" content={seoData.keywords.join(', ')} />
+ <link rel="canonical" href={seoData.canonicalUrl}>{/* Open Graph Tags */}
  {enableOpenGraph && (
- <React.Fragment>
+ </link><React.Fragment>
  <meta property="og:title" content={seoData.title} />
- <meta property="og: image:height" content="630" />,
- <meta property="og:site_name" content="Zion Tech Group" />,
- <meta property="og:locale" content="en_US" />,
- </React.Fragment>)}
+ <meta property="og: image:height" content="630">,
+ </meta><meta property="og:site_name" content="Zion Tech Group">,
+ </meta><meta property="og:locale" content="en_US">,
+ </meta></React.Fragment>)}
 
  {/* Twitter Card Tags */}
  {enableTwitterCards && (
  <React.Fragment>
- <meta name="twitter: card" content="summary_large_image" />,
- <meta name="twitter:title" content={seoData.title} />
+ <meta name="twitter: card" content="summary_large_image">,
+ </meta><meta name="twitter:title" content={seoData.title} />
  <meta name="twitter:description" content={seoData.description} />
  <meta name="twitter:image" content={seoData.ogImage} />
- <meta name="twitter: site" content="@ziontechgroup" />,
- <meta name="twitter:creator" content="@ziontechgroup" />,
- </React.Fragment>)}
+ <meta name="twitter: site" content="@ziontechgroup">,
+ </meta><meta name="twitter:creator" content="@ziontechgroup">,
+ </meta></React.Fragment>)}
 
  {/* Additional SEO Meta Tags */}
- <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" />,
- <meta name="googlebot" content="index, follow" />
+ <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1">,
+ </meta><meta name="googlebot" content="index, follow" />
  <meta name="bingbot" content="index, follow" />
  <meta name="author" content="Zion Tech Group" />
  <meta name="publisher" content="Zion Tech Group" />
@@ -290,8 +289,7 @@ const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
  <meta name="revisit-after" content="7 days" />
  <meta name="distribution" content="global" />
  <meta name="rating" content="general" />
- <meta name="theme-color" content="#4F46E5" />
- return (<Helmet></Helmet>
+ <meta name="theme-color" content="#4F46E5">return (</meta><Helmet></Helmet>
  {/* Basic Meta Tags */}
  <title>{seoData.title}</title>"
  <meta name="description" content={seoData.description} /></meta>")
@@ -356,17 +354,16 @@ const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
  )}
 
  {/* Preconnect to external domains for performance */}
- <link rel="preconnect" href="https: //fonts.googleapis.com" />,
- <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
- <link rel="preconnect" href="https://www.google-analytics.com" />,
- <link rel="preconnect" href="https://www.googletagmanager.com" />,
+ <link rel="preconnect" href="https: //fonts.googleapis.com">,
+ </link><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous">,
+ </link><link rel="preconnect" href="https://www.google-analytics.com">,
+ </link><link rel="preconnect" href="https://www.googletagmanager.com">,
 ,
  {/* DNS Prefetch for better performance */}
- <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+ </link><link rel="dns-prefetch" href="//fonts.googleapis.com" />
  <link rel="dns-prefetch" href="//www.google-analytics.com" />
- <link rel="dns-prefetch" href="//www.googletagmanager.com" />
- {/* Preconnect to external domains for performance */}"
- <link rel="preconnect" href="http,"
+ <link rel="dns-prefetch" href="//www.googletagmanager.com">{/* Preconnect to external domains for performance */}"
+ </link><link rel="preconnect" href="http,"
   s://fonts.googleapis.com" /></link>"
  <link rel="preconnect" href="http,"
   s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"

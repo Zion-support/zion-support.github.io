@@ -203,9 +203,8 @@ const useCases = [
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-gray-300 flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-// AI Analytics Services;
-          </h1>
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0">// AI Analytics Services;
+          </CheckCircle></h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
           </p>
@@ -309,13 +308,11 @@ const useCases = [
                 Get Free Consultation
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
+                <Phone className="w-4 h-4 mr-2">(302) 464-0950
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
-                Email Us
-      <Footer />
+                </Phone><Mail className="w-4 h-4 mr-2">Email Us
+      </Mail><Footer />
     </React.Fragment>
   )};
 
@@ -386,12 +383,10 @@ export default AIAnalyticsPage;
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Consultation;
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
+                <Phone className="w-4 h-4 mr-2">(302) 464-0950;
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
-                Email Us;
-      <Footer />
+                </Phone><Mail className="w-4 h-4 mr-2">Email Us;
+      </Mail><Footer />
 
     </div>
   )};

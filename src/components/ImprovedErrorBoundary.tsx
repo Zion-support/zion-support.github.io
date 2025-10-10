@@ -241,7 +241,7 @@ p: Date.now(),
           <div style={styles.content}></div>
             <div style={styles.icon}></div>
             <h1 style={styles.title}>Oops! Something went wrong</h1>
-            <p style={styles.message}></p>
+            <p style={styles.message}>>
               We're sorry for the inconvenience. The application encountered an unexpected error.
             </p>
             {process.env['NODE_ENV'] === 'development' && this.state.error && ()}
@@ -318,12 +318,12 @@ p: Date.now(),
                 This error has occurred {this.state.errorCount} times
 
             {this.state.errorCount > 1 && ()}
-          <p style={styles.errorCount}></p>
+          <p style={styles.errorCount}>>
                 This error has occurred {this.state.errorCount} times;
 
               </p>
             )}
-          </div>
+          >
         </div>
       )}
     return this.props.children}

@@ -80,11 +80,10 @@ const svg = `
   if (hasError) {
     return(<div;
         className={`bg-slate-800 flex items-center justify-center ${className}`}
-        style={{ width, height }}
-      ></div>
+        style={{ width, height }}></div>
         <div className="text-gray-400 text-center"></div>
           <div className="text-4xl mb-2">⚠️</div>
-          <div className="text-sm">Image failed to load</div>)
+          <div className="text-sm">Image failed to load>)
         </div>)
       </div>)
     )}

@@ -63,8 +63,7 @@ const benefits = [
               Learn More
           </div>
       
-      <Footer />
-  )};
+      <Footer>)};
 
 
 export default $1;
@@ -221,7 +220,7 @@ const stats = [
   ];
 
   return (
-    <React.Fragment>
+    </Footer><React.Fragment>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing</title>
         <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." />
@@ -249,17 +248,15 @@ const stats = [
                   href="tel:+13024640950"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
-                  (302) 464-0950
-                </a>
+                  <Phone className="w-5 h-5 mr-2">(302) 464-0950
+                </Phone></a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg"
                 >
-                  <Mail className="w-5 h-5 mr-2" />
-                  Get Quote
-                </a>
-              </div>
+                  <Mail className="w-5 h-5 mr-2">Get Quote
+                </Mail></a>
+              >
             </div>
           </div>
         </section>
@@ -274,10 +271,10 @@ const stats = [
                     <stat.icon className="w-8 h-8" />
                   </div>
                   <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+                  <div className="text-gray-300">{stat.label}>
                 </div>
               ))}
-            </div>
+            >
           </div>
         </section>
 
@@ -303,7 +300,7 @@ const stats = [
                     {service.popular && (
                       <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">
                         Most Popular
-                      </div>
+                      >
                     )}
                   </div>
 
@@ -315,9 +312,8 @@ const stats = [
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                          {feature}
-                        </li>
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0">{feature}
+                        </CheckCircle></li>
                       ))}
                     </ul>
                   </div>
@@ -329,12 +325,12 @@ const stats = [
                         <div key={tier} className="flex justify-between items-center p-3 bg-slate-800/50 rounded-lg">
                           <div>
                             <div className="text-white font-semibold capitalize">{tier}</div>
-                            <div className="text-sm text-gray-400">{details.features[0]}</div>
+                            <div className="text-sm text-gray-400">{details.features[0]}>
                           </div>
                           <div className="text-right">
-                            <div className="text-cyan-400 font-bold">{details.price}{details.period}</div>
+                            <div className="text-cyan-400 font-bold">{details.price}{details.period}>
                           </div>
-                        </div>
+                        >
                       ))}
                     </div>
                   </div>
@@ -352,10 +348,10 @@ const stats = [
                     >
                       Learn More
                     </a>
-                  </div>
+                  >
                 </div>
               ))}
-            </div>
+            >
           </div>
         </section>
 
@@ -373,17 +369,15 @@ const stats = [
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                Call (302) 464-0950
-              </a>
+                <Phone className="w-5 h-5 mr-2">Call (302) 464-0950
+              </Phone></a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg"
               >
-                <Mail className="w-5 h-5 mr-2" />
-                Email Us
-              </a>
-            </div>
+                <Mail className="w-5 h-5 mr-2">Email Us
+              </Mail></a>
+            >
           </div>
         </section>
       </div>

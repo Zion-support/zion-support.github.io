@@ -101,9 +101,9 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"</h2>
         <div, className="text-center mb-12">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6">";</div>
-            <Brain, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" />";
+            <Brain, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e">";
         {/* Head, e, r */}"
-        <div, className="text-center mb-12"></div>"
+        </Brain><div, className="text-center mb-12"></div>"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6"></div>"
             <Brain, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e  /></Brain>"
             <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">FRESH, INSIGHT, S | October, 202, 5</sp, a, n>
@@ -111,8 +111,8 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">""
         <div, className="text-center mb-12">";"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6">";"
-            <Brain, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" />";"
-            <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">FRESH, INSIGHT, S | October, 202, 5</sp, a, n>";
+            <Brain, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e">";"
+            </Brain><span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">FRESH, INSIGHT, S | October, 202, 5</sp, a, n>";
           </d, i, v>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">";
             Latest, AI, Breakthroughs & Innovatio, n, s;
@@ -176,8 +176,8 @@ const, Ico, n = artic, l, e.ic, o, n;
                 </d, i, v>
                 {/* Conte, n, t */}"
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">""
-                  <Icon, className="w-8 h-8, tex, t-whi, t, e" />";
-                </d, i, v>
+                  <Icon, className="w-8 h-8, tex, t-whi, t, e">";
+                </Icon></d, i, v>
                 {/* Conte, n, t */}"
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">";
                   {artic, l, e.tit, l, e}
@@ -188,23 +188,23 @@ const, Ico, n = artic, l, e.ic, o, n;
                 {/* Read, More, Link */}
                 <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"</div>
                   <sp, a, n>Read, Articl, e</sp, a, n>
-                  <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-                <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";</div>
+                  <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m>"
+                </Link><div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";</div>
                   <sp, a, n>Read, Articl, e</sp, a, n>
                   <ArrowRight, className="w-5 h-5, grou, p-ho, v, e;
-  r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
-                </d, i, v>
+  r: transla, t, e-x-1, transitio, n-transfo, r, m">";
+                </ArrowRight></d, i, v>
                 {/* Hover, Gradient, Effect */})
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-3, 0, 0`}></d, i, v>`;`)
                 {/* Read, More, Link */}"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                   <sp, a, n>Read, Articl, e</sp, a, n>"
-                  <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
-                <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
+                  <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m>""
+                </Link><div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
                   <sp, a, n>Read, Articl, e</sp, a, n>"
                   <ArrowRight, className="w-5 h-5, grou, p-ho, v, e,"
-  r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
-                </d, i, v>
+  r: transla, t, e-x-1, transitio, n-transfo, r, m">";
+                </ArrowRight></d, i, v>
                 {/* Hover, Gradient, Effect */}`
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-3, 0, 0`}></d, i, v>`;`
               </Li, n, k>)
@@ -222,12 +222,11 @@ const, Ico, n = artic, l, e.ic, o, n;
           <Li, n, k;"
   to="/bl, o, g""
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-bl, u, e-700, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-semibold, transitio, n-all, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hov, e,"
-  r:sca, l, e-1, 0, 5"
-          ></Li>
+  r:sca, l, e-1, 0, 5"></Li>
             <sp, a, n>Explore, All, AI Insigh, t, s</sp, a, n>"
             <Link, className="w-5 h-5  /></Link>"
-            <Link, className="w-5 h-5" />";
-          </Li, n, k>
+            <Link, className="w-5 h-5">";
+          </Link></Li, n, k>
         </d, i, v>
       </d, i, v>
     </secti, o, n>

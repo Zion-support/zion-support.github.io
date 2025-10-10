@@ -17,13 +17,13 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
           {/* Hero Section */}"
           <section className="text-center mb-16"></section>"
             <h1 className="text-4xl,"
-  md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
+  md:text-6xl font-bold text-white mb-6 neon-text cyber-text">>
               AI Project Management;
             </h1>"
-            <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
+            <p className="text-xl text-cyan-400 mb-8 font-medium">>
               Intelligent project management powered by AI;
             </p>"
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">>
               Revolutionize your project management with AI-driven insights, predictive analytics, and automated resource optimization that delivers projects 40% faster and 30% under budget.
             </p>
           </section>
@@ -37,7 +37,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🔮</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Predictive Analytics</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   AI predicts project risks, delays, and resource needs with 90% accuracy to keep projects on track.
                 </p>
               </div>
@@ -45,7 +45,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">⚡</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Smart Task Allocation</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   Automatically assign tasks to the right team members based on skills, workload, and availability.
                 </p>
               </div>
@@ -53,7 +53,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">📊</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Real-time Insights</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   Get instant visibility into project health, team performance, and budget utilization.
                 </p>
               </div>
@@ -61,7 +61,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🎯</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Resource Optimization</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   AI optimizes resource allocation to maximize efficiency and minimize project costs.
                 </p>
               </div>
@@ -69,7 +69,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🚨</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Risk Management</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   Proactive risk identification and mitigation strategies powered by machine learning.
                 </p>
               </div>
@@ -77,10 +77,10 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">📈</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Performance Tracking</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   Advanced metrics and KPIs to track team productivity and project success rates.
                 </p>
-              </div>
+              >
             </div>
           </section>
 
@@ -128,7 +128,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                   <li>Custom AI training</li>
                 </ul>"
                 <a href="/contact" className="cyber-button w-full">Contact Sales</a>
-              </div>
+              >
             </div>
           </section>
 
@@ -160,14 +160,14 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                 <div className="text-4xl font-bold text-yellow-400 mb-4">85%</div>"
                 <h3 className="text-xl font-bold text-white mb-2">Team Productivity</h3>"
                 <p className="text-gray-300">85% increase in team productivity</p>
-              </div>
+              >
             </div>
           </section>
 
           {/* CTA Section */}"
           <section className="text-center"></section>"
             <h2 className="text-3xl font-bold text-white mb-6">Transform Your Project Management Today</h2>"
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">>
               Join 1,000+ teams using our AI project management solutions to deliver better projects faster and more efficiently.
             </p>"
             <div className="flex flex-col,"
@@ -187,6 +187,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
         </main>
         
         <Footer /></Footer>
-      </div>
+      >
     </div>
   )}"

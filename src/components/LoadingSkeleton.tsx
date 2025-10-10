@@ -83,7 +83,7 @@ export const,
           <div className="space-y-3"></div>
     {/* TODO: Fix JSX expression */}
   h: items }).map((_, index) => ("
-<div key={index} className="flex items-center space-x-3"><Skeleton height="40px" width="40px" rounded /><div className="flex-1 space-y-2"><Skeleton height="16px" width="80%" /><Skeleton height="14px" width="60%" /></div></div>)
+<div key={index} className="flex items-center space-x-3"><Skeleton height="40px" width="40px" rounded /><div className="flex-1 space-y-2"><Skeleton height="16px" width="80%" /><Skeleton height="14px" width="60%" /></div>>)
     ))}
   </div>
 );
@@ -121,7 +121,7 @@ export const,
           "
           <Skeleton key={colIndex} height="16px" /></Skeleton>
         ))}
-      </div>
+      >
     ))}
   </div>
 );

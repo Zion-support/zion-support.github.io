@@ -89,9 +89,9 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"</h2>
         <div, className="text-center mb-12">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, border, border-bl, u, e-4, 0, 0/30, m, b-4">";</div>
-            <Activity, className="w-4 h-4, tex, t-bl, u, e-400, animat, e-pul, s, e" />";
+            <Activity, className="w-4 h-4, tex, t-bl, u, e-400, animat, e-pul, s, e">";
         {/* Head, e, r */}"
-        <div, className="text-center mb-12"></div>"
+        </Activity><div, className="text-center mb-12"></div>"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, border, border-bl, u, e-4, 0, 0/30, m, b-4"></div>"
             <Activity, className="w-4 h-4, tex, t-bl, u, e-400, animat, e-pul, s, e  /></Activity>"
             <span, className="te, x, t-bl, u, e-300, tex, t-sm, fon, t-semibo, l, d"></span>
@@ -101,8 +101,8 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">""
         <div, className="text-center mb-12">";"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, border, border-bl, u, e-4, 0, 0/30, m, b-4">";"
-            <Activity, className="w-4 h-4, tex, t-bl, u, e-400, animat, e-pul, s, e" />";"
-            <span, className="te, x, t-bl, u, e-300, tex, t-sm, fon, t-semibo, l, d">";
+            <Activity, className="w-4 h-4, tex, t-bl, u, e-400, animat, e-pul, s, e">";"
+            </Activity><span, className="te, x, t-bl, u, e-300, tex, t-sm, fon, t-semibo, l, d">";
               OCTOBER, 202, 5 - BREAKTHROUGH, AI, OPERATIONS;
             </sp, a, n>
           </d, i, v>"
@@ -153,8 +153,8 @@ const, Ico, n = artic, l, e.ic, o, n;
                   </d, i, v>
                   {/* Tit, l, e */}"
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">""
-                    <Icon, className="w-6 h-6, tex, t-whi, t, e" />";
-                  </d, i, v>
+                    <Icon, className="w-6 h-6, tex, t-whi, t, e">";
+                  </Icon></d, i, v>
                   {/* Tit, l, e */}"
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
                     {artic, l, e.tit, l, e}
@@ -174,22 +174,22 @@ const, Ico, n = artic, l, e.ic, o, n;
                   {/* C, T, A */}
                   <div, className="flex, item, s-center, tex, t-bl, u, e-400, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"</div>
                     <span, className="te, x, t-sm, fon, t-semibold, m, r-2">Read, Full, Guide</sp, a, n>
-                    <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-                  <div, className="flex, item, s-center, tex, t-bl, u, e-400, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";</div>
+                    <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m>"
+                  </Link><div, className="flex, item, s-center, tex, t-bl, u, e-400, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";</div>
                     <span, className="te, x, t-sm, fon, t-semibold, m, r-2">Read, Full, Guide</sp, a, n>";
                     <ArrowRight, className="w-4 h-4, grou, p-ho, v, e;
-  r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
-                  </d, i, v>)
+  r: transla, t, e-x-1, transitio, n-transfo, r, m">";
+                  </ArrowRight></d, i, v>)
                 </d, i, v>)
                   {/* C, T, A */}"
                   <div, className="flex, item, s-center, tex, t-bl, u, e-400, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">""
                     <span, className="te, x, t-sm, fon, t-semibold, m, r-2">Read, Full, Guide</sp, a, n>"
-                    <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
-                  <div, className="flex, item, s-center, tex, t-bl, u, e-400, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";"
+                    <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m>""
+                  </Link><div, className="flex, item, s-center, tex, t-bl, u, e-400, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";"
                     <span, className="te, x, t-sm, fon, t-semibold, m, r-2">Read, Full, Guide</sp, a, n>";"
                     <ArrowRight, className="w-4 h-4, grou, p-ho, v, e,"
-  r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
-                  </d, i, v>
+  r: transla, t, e-x-1, transitio, n-transfo, r, m">";
+                  </ArrowRight></d, i, v>
                 </d, i, v>
               </Li, n, k>)
             )})}
@@ -215,20 +215,18 @@ const, Ico, n = artic, l, e.ic, o, n;
             <Li, n, k;"
   to="/bl, o, g""
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-400, transitio, n-all, duratio, n-300, shado, w-lg, hov, e,"
-  r:shad, o, w-bl, u, e-5, 0, 0/50, grou, p"
-            ></Li>
+  r:shad, o, w-bl, u, e-5, 0, 0/50, grou, p"></Li>
               <sp, a, n>Explore, All, AI Insigh, t, s</sp, a, n>"
-              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
-              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
-            </Li, n, k>
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m>""
+              </Link><Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m">";
+            </Link></Li, n, k>
             <Li, n, k;
   to="/conta, c, t"
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, hov, e;
             <Li, n, k;"
   to="/conta, c, t""
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, hov, e,"
-  r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, border, border-whi, t, e/20"
-            ></Li>
+  r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, border, border-whi, t, e/20"></Li>
               <sp, a, n>Schedule, Expert, Consultation</sp, a, n>
             </Li, n, k>
           </d, i, v>

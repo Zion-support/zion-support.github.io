@@ -18,9 +18,8 @@ const, March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression
   return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}
       <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
-        <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
-  return (
-    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">";
+        <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'>return (
+    </div><div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}</div>
       <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
         <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
@@ -70,7 +69,7 @@ const, March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression
               <div, classNam, e = 'relativ, e, p-8'></div>
                 <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tight, tex, t-cent, e, r'>
                   {innovati, o, n.t, i, t, l, e}</h3>
-                <div, classNam, e='te, x, t-center, m, b-6' ></div> <div, classNam, e = { `inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, te, x, t-white, tex, t-sm, fon, t-bo, l, d`}
+                <div, classNam, e='te, x, t-center, m, b-6'></div> <div, classNam, e = { `inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, te, x, t-white, tex, t-sm, fon, t-bo, l, d`}
                   >
                     ", Impa, c, t: {innovati, o, n.imp, a, c, t}</div>
                   <Link, classNam, e = 'w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' />
@@ -91,13 +90,12 @@ const, March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression
               <div, classNam, e = 'relativ, e, p-8'></div>
                 <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tight, tex, t-cent, e, r'></h3>
                   {innovati, o, n.t, i, t, l, e}`
-                <div, classNam, e='te, x, t-center, m, b-6' > <div, classNam, e = { `inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, te, x, t-white, tex, t-sm, fon, t-bo, l, d`}
-                  ></div>"
+                <div, classNam, e='te, x, t-center, m, b-6' > <div, classNam, e = { `inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, te, x, t-white, tex, t-sm, fon, t-bo, l, d`}></div>"
                     ", Impa, c, t: {innovati, o, n.imp, a, c, t}
                   <Link, classNam, e = 'w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' /></Link>
         <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-indi, g, o-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-purp, l, e-5, 0, 0/20, m, b-16'></div>
           <div, classNam, e='te, x, t-center, m, b-12'></div>
-            <h3, classNam, e='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4'></h3>
+            <h3, classNam, e='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4'>>
               Revolutionary, Success, Stories,
   company: 'NeuroTech, Glo, b, a, l',
                 achieveme, n, t: '5, 0, 0% Cognitive, Enhanceme, n, t',
@@ -109,7 +107,6 @@ const, March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression
                },
               <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
                 <a, hre, f='/innovatio, n, s'
-                  classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-indi, g, o-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'
-                ></a>
+                  classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-indi, g, o-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'></a>
                   <Rocket, classNam, e='w-5 h-5' /></Rocket>
                   <Link, classNam, e='w-5 h-5' /></Link>")`

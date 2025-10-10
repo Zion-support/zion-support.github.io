@@ -66,7 +66,7 @@ const easeOutQuart = 1 - Math.pow(1 - progress, 4);
     }}, [isVisible, end, duration]);
 
   return (
-    <div ref={counterRef} className={className}></di>
+    <div ref={counterRef} className={className}>>
       {prefix}{count.toLocaleString()}{suffix}
     </div>
   )};

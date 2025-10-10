@@ -96,14 +96,12 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
                 {IconCompone, n, t  && <IconComponent, classNam, e='w-4 h-4' / >   }
         <h2, classNam, e = {/* TODO: Fix JSX expression */}
            }
-        `}
-        ></h2>
+        `}></h2>
           {title}
         </h2 > {/* Descripti, o, n */}
         <p, classNam, e = {/* TODO: Fix JSX expression */}
            }`
-        `}
-        ></p>
+        `}>>
           {description}
         </p>
         {/* Featured, Item, s */}
@@ -126,11 +124,10 @@ varia, n, t === 'me, g, a'
                   <div, classNam, e = 'fl, e, x-1, mi, n-w-0'></div>
                     <div, classNam, e='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
                       {it, e, m.category}</div>
-                  <Link, classNam, e = 'fl, e, x-shri, n, k-0 w-5 h-5, tex, t-purp, l, e-400, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opaci, t, y' />
-        {/* TODO: Fix JSX expression */}
+                  <Link, classNam, e = 'fl, e, x-shri, n, k-0 w-5 h-5, tex, t-purp, l, e-400, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opaci, t, y'>{/* TODO: Fix JSX expression */}
                }`
           `}
-          ></div>
+          ></Link></div>
             {/* TODO: Fix JSX expression */}
               <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } classNa, m, e='group, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, hove, r: bg-whi, t, e/10, border, border-whi, t, e/10, rounde, d-l, g, p-4, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg'
                   <div, classNam, e = 'fl, e, x-1, mi, n-w-0'></Link>

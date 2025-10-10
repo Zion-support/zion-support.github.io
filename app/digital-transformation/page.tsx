@@ -1,18 +1,12 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const PagePage: React.FC = () => {const features = [
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const PagePage: React.FC = () => {
   const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -50,18 +44,6 @@ const PagePage: React.FC = () => {
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
-<<<<<<< HEAD
-;
-const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-=======
 
   const benefits = [
     'Transform your business with AI technology',
@@ -70,7 +52,6 @@ const benefits = [
     'Optimize business processes and workflows',
     'Reduce costs through intelligent automation',
     'Gain competitive advantage with advanced technology'
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 
   return (
@@ -82,10 +63,8 @@ const benefits = [
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
+        <Navigation>{/* Hero Section */}
+        </Navigation><section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -109,7 +88,7 @@ const benefits = [
                   <span>Learn More</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
-              </div>
+              >
             </div>
           </div>
         </section>
@@ -139,16 +118,9 @@ const benefits = [
                       </li>
                     ))}
                   </ul>
-                </div>
-<<<<<<< HEAD
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ));
-=======
+                >
               ))}
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </section>
 
@@ -170,9 +142,6 @@ const benefits = [
                   ))}
                 </ul>
               </div>
-<<<<<<< HEAD
-            ));
-=======
               <div className="relative">
                 <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
                   <div className="text-center">
@@ -186,24 +155,20 @@ const benefits = [
                     <div className="grid grid-cols-2 gap-4 text-center">
                       <div>
                         <div className="text-3xl font-bold text-cyan-400">99.9%</div>
-                        <div className="text-gray-300 text-sm">Uptime</div>
+                        <div className="text-gray-300 text-sm">Uptime>
                       </div>
                       <div>
                         <div className="text-3xl font-bold text-purple-400">50ms</div>
-                        <div className="text-gray-300 text-sm">Response Time</div>
+                        <div className="text-gray-300 text-sm">Response Time>
                       </div>
-                    </div>
+                    >
                   </div>
-                </div>
+                >
               </div>
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+            >
           </div>
         </section>
 
-<<<<<<< HEAD
-}
-=======
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
@@ -227,7 +192,7 @@ const benefits = [
                   <span>View Pricing</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
-              </div>
+              >
             </div>
           </div>
         </section>
@@ -238,5 +203,4 @@ const benefits = [
   );
 };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default PagePage;

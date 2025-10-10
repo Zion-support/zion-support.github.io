@@ -57,7 +57,7 @@ const AboutPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.
               </p>
-            </div>
+            >
           </div>
         </section>
 
@@ -91,7 +91,7 @@ const AboutPage: React.FC = () => {
                     <Settings className="w-5 h-5" />
                     <span>Our Services</span>
                   </a>
-                </div>
+                >
               </div>
               <div className="relative">
                 <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
@@ -123,11 +123,11 @@ const AboutPage: React.FC = () => {
                       </div>
                       <h3 className="text-white font-semibold mb-2">Global Reach</h3>
                       <p className="text-gray-300 text-sm">25+ countries</p>
-                    </div>
+                    >
                   </div>
-                </div>
+                >
               </div>
-            </div>
+            >
           </div>
         </section>
 
@@ -194,7 +194,7 @@ const AboutPage: React.FC = () => {
                 <p className="text-gray-300">
                   We are dedicated to fostering growth for our clients, our team, and our community through innovative solutions and strategic partnerships.
                 </p>
-              </div>
+              >
             </div>
           </div>
         </section>
@@ -238,7 +238,7 @@ const AboutPage: React.FC = () => {
                 <p className="text-gray-300 text-sm">
                   Strategic thinker focused on business transformation and digital innovation across industries.
                 </p>
-              </div>
+              >
             </div>
           </div>
         </section>
@@ -266,17 +266,13 @@ const AboutPage: React.FC = () => {
                   <Settings className="w-5 h-5" />
                   <span>Explore Services</span>
                 </a>
-              </div>
+              >
             </div>
           </div>
         </section>
       </div>
     </>
-<<<<<<< HEAD
-);)
-=======
   );
 };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default AboutPage;

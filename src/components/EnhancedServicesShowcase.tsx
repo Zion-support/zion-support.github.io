@@ -54,22 +54,20 @@ const CategoryIcon = getCategoryIcon(service.category);
             <h3 className="text-xl font-bold text-white mt-1 neon-text">
               {service.name}
             </h3>
-          </div>
+          >
         </div>
         <div className="flex space-x-2">
           {service.popular && (
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center">
-              <Star className="w-3 h-3 mr-1" />
-              Popular
-            </span>
+              <Star className="w-3 h-3 mr-1">Popular
+            </Star></span>
           )}
           {service.new && (
             <span className="bg-gradient-to-r from-green-400 to-cyan-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center">
-              <Sparkles className="w-3 h-3 mr-1" />
-              New
-            </span>
+              <Sparkles className="w-3 h-3 mr-1">New
+            </Sparkles></span>
           )}
-        </div>
+        >
       </div>
 
       {/* Description */}
@@ -80,15 +78,13 @@ const CategoryIcon = getCategoryIcon(service.category);
       {/* Key Features */}
       <div className="mb-4">
         <h4 className="text-sm font-semibold text-cyan-400 mb-2 flex items-center">
-          <CheckCircle className="w-4 h-4 mr-2" />
-          Key Features
-        </h4>
+          <CheckCircle className="w-4 h-4 mr-2">Key Features
+        </CheckCircle></h4>
         <ul className="space-y-1">
           {service.features.slice(0, 3).map((feature, idx) => (
             <li key={idx} className="text-xs text-gray-300 flex items-center">
-              <div className="w-1 h-1 bg-cyan-400 rounded-full mr-2 flex-shrink-0" />
-              {feature}
-            </li>
+              <div className="w-1 h-1 bg-cyan-400 rounded-full mr-2 flex-shrink-0">{feature}
+            </div></li>
           ))}
           {service.features.length > 3 && (
             <li className="text-xs text-cyan-400">
@@ -101,14 +97,13 @@ const CategoryIcon = getCategoryIcon(service.category);
       {/* Benefits */}
       <div className="mb-4">
         <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">
-          <TrendingUp className="w-4 h-4 mr-2" />
-          Key Benefits
-        </h4>
+          <TrendingUp className="w-4 h-4 mr-2">Key Benefits
+        </TrendingUp></h4>
         <div className="grid grid-cols-2 gap-2">
           {service.benefits.slice(0, 2).map((benefit, idx) => (
             <div key={idx} className="text-xs text-gray-300 bg-slate-800/50 rounded px-2 py-1">
               {benefit}
-            </div>
+            >
           ))}
         </div>
       </div>
@@ -123,14 +118,14 @@ const CategoryIcon = getCategoryIcon(service.category);
             {service.marketPrice && (
               <div className="text-xs text-gray-400">
                 Market: ${service.marketPrice.min}-${service.marketPrice.max}
-              </div>
+              >
             )}
           </div>
           <div className="text-right">
             <div className="text-xs text-cyan-400 font-medium">Starting Price</div>
-            <div className="text-xs text-gray-400">per {service.pricing.period}</div>
+            <div className="text-xs text-gray-400">per {service.pricing.period}>
           </div>
-        </div>
+        >
       </div>
 
       {/* Contact Actions */}
@@ -139,27 +134,24 @@ const CategoryIcon = getCategoryIcon(service.category);
           href={`tel:${contactInfo.phone}`}
           className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group"
         >
-          <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-          Call Now
-        </a>
+          <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform">Call Now
+        </Phone></a>
         <div className="grid grid-cols-2 gap-2">
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="bg-slate-800 text-cyan-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group"
           >
-            <Mail className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
-            Email
-          </a>
+            <Mail className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform">Email
+          </Mail></a>
           <a
             href={service.contact.demo}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-slate-800 text-purple-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group"
           >
-            <ExternalLink className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
-            Demo
-          </a>
-        </div>
+            <ExternalLink className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform">Demo
+          </ExternalLink></a>
+        >
       </div>
 
       {/* Use Cases */}
@@ -171,7 +163,7 @@ const CategoryIcon = getCategoryIcon(service.category);
               {useCase}
             </span>
           ))}
-        </div>
+        >
       </div>
     </div>
   )};
@@ -212,25 +204,25 @@ const popularServices = services.filter(service => service.popular);
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <div>
                   <div className="text-white font-medium">{contactInfo.phone}</div>
-                  <div className="text-gray-400 text-sm">Call us anytime</div>
+                  <div className="text-gray-400 text-sm">Call us anytime>
                 </div>
               </div>
               <div className="flex items-center justify-center space-x-2">
                 <Mail className="w-5 h-5 text-cyan-400" />
                 <div>
                   <div className="text-white font-medium">{contactInfo.email}</div>
-                  <div className="text-gray-400 text-sm">Email us</div>
+                  <div className="text-gray-400 text-sm">Email us>
                 </div>
               </div>
               <div className="flex items-center justify-center space-x-2">
                 <ExternalLink className="w-5 h-5 text-cyan-400" />
                 <div>
                   <div className="text-white font-medium">{contactInfo.website}</div>
-                  <div className="text-gray-400 text-sm">Visit our site</div>
+                  <div className="text-gray-400 text-sm">Visit our site>
                 </div>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
 
         {/* Category Filter */}
@@ -264,9 +256,8 @@ const popularServices = services.filter(service => service.popular);
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {filteredServices.map((service, index) => (
-            <ServiceCard key={service.id} service={service} index={index} />
-          ))}
-        </div>
+            <ServiceCard key={service.id} service={service} index={index}>))}
+        </ServiceCard></div>
 
         {/* Popular Services Section */}
         {selectedCategory === 'all' && (
@@ -290,10 +281,10 @@ const popularServices = services.filter(service => service.popular);
                     >
                       Call Now →
                     </a>
-                  </div>
+                  >
                 </div>
               ))}
-            </div>
+            >
           </div>
         )}
 
@@ -310,18 +301,16 @@ const popularServices = services.filter(service => service.popular);
               href={`tel:${contactInfo.phone}`}
               className="cyber-button inline-flex items-center justify-center px-8 py-3"
             >
-              <Phone className="w-5 h-5 mr-2" />
-              Call {contactInfo.phone}
-            </a>
+              <Phone className="w-5 h-5 mr-2">Call {contactInfo.phone}
+            </Phone></a>
             <a
               href={`mailto:${contactInfo.email}?subject=Free Consultation Request`}
               className="cyber-button inline-flex items-center justify-center px-8 py-3"
               style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
             >
-              <Mail className="w-5 h-5 mr-2" />
-              Get Free Consultation
-            </a>
-          </div>
+              <Mail className="w-5 h-5 mr-2">Get Free Consultation
+            </Mail></a>
+          >
         </div>
       </div>
     </section>

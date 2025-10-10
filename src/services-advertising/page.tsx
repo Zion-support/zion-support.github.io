@@ -28,9 +28,8 @@ export default function ServicesAdvertisingPage() {
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
-          </Link>
+            <ArrowLeft className="w-4 h-4 mr-2">Back to Home
+          </ArrowLeft></Link>
         </div>
       </header>
       {/* Hero Section */}"
@@ -44,11 +43,11 @@ export default function ServicesAdvertisingPage() {
               <Target className="w-4 h-4 mr-2" /></Target>
 AI-Powered Advertising Solutions;"
             <h1 className="text-4xl,"
-  md:text-6xl font-bold mb-6"></h1>
+  md:text-6xl font-bold mb-6">>
 // AI Advertising Services;
           </h1>"
             <p className="text-xl,"
-  md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto"></p>
+  md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">>
 // Revolutionize Your Marketing with 300% ROI Guaranteed;
           </p>"
             <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto"></p>
@@ -70,11 +69,10 @@ AI-Powered Advertising Solutions;"
                 href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
 // >
 //                 Start Free Consultation;
-          <ArrowRight className="w-4 h-4 ml-2" />
-href="#services" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+          <ArrowRight className="w-4 h-4 ml-2">href="#services" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
 
                 View Our Services;
-      </section>
+      </ArrowRight></section>
       {/* Key Metrics */}"
       <section className="py-16 bg-white"></section>"
         <div className="max-w-7xl mx-auto px-4,

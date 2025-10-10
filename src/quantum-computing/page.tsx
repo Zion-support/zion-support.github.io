@@ -68,9 +68,9 @@ return (
                 <div className="bg-white/10 p-4 rounded-lg">
                   <h4 className="text-lg font-semibold text-purple-400 mb-2">Supply Chain</h4>
                   <p className="text-gray-300">Optimize complex logistics and supply chain networks</p>
-                </div>
+                >
               </div>
-            </div>
+            >
           </div>
 
           <div className="text-center">
@@ -88,7 +88,7 @@ return (
               >
                 Schedule Consultation
               </a>
-            </div>
+            >
           </div>
         </div>
       </main>

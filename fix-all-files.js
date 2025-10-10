@@ -44,7 +44,7 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
     <div className={\`${fileName.toLowerCase()} \${className}\`}></div>
       {children || (
         <div className="p-4"></div>
-          <h3 className="text-lg font-semibold mb-2"></h>
+          <h3 className="text-lg font-semibold mb-2"></h3>
             ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/([A-Z])/g, ' $1').trim()}
           </h3>
           <p className="text-gray-600">

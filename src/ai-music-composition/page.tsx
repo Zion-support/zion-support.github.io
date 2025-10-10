@@ -89,10 +89,9 @@ const pricingPlans = [
                   href="#demo"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
-                  <Play className="w-5 h-5" />
-                  Listen to Samples
-                </a>
-              </div>
+                  <Play className="w-5 h-5">Listen to Samples
+                </Play></a>
+              >
             </div>
           </section>
 
@@ -107,7 +106,7 @@ const pricingPlans = [
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                     <h3 className="text-lg font-semibold text-white">{feature}</h3>
-                  </div>
+                  >
                 </div>
               ))}
             </div>
@@ -125,7 +124,7 @@ const pricingPlans = [
                     <Zap className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
-                </div>
+                >
               ))}
             </div>
           </section>
@@ -142,7 +141,7 @@ const pricingPlans = [
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
-                      </div>
+                      >
                     </div>
                   )}
                   <div className="text-center mb-6">
@@ -150,14 +149,13 @@ const pricingPlans = [
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
                       <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
+                    >
                   </div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0">{feature}
+                      </CheckCircle></li>
                     ))}
                   </ul>
                   <a
@@ -170,7 +168,7 @@ const pricingPlans = [
                   >
                     Get Started
                   </a>
-                </div>
+                >
               ))}
             </div>
           </section>
@@ -197,7 +195,7 @@ const pricingPlans = [
                 >
                   <span>Call +1 302 464 0950</span>
                 </a>
-              </div>
+              >
             </div>
           </section>
         </main>

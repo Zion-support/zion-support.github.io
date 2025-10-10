@@ -111,9 +111,7 @@ $4})}, 100)};
           error={this.state.error}
           errorInfo={this.state.errorInfo}
           errorId={this.state.errorId}
-          onRetry={this.handleRetry}
-        />
-      )}
+          onRetry={this.handleRetry}>)}
     return this.props.children}
 }
 interface ErrorFallbackProps {
@@ -121,7 +119,7 @@ interface ErrorFallbackProps {
   errorInfo: ErrorInfo | null;
   errorId: string;
   onRetry: () => void}
-const ErrorFallback = memo<ErrorFallbackProps>(
+const ErrorFallback = memo</ErrorFallback><ErrorFallbackProps>(
   ({ error, errorInfo, errorId, onRetry }) => (
     <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>
       <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center'>
@@ -140,7 +138,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
                 d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z'
               />
             </svg>
-          </div>
+          >
         </div>
 
 
@@ -198,7 +196,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
 
                     {errorInfo.componentStack}
                   </pre>
-                </div>
+                >
               )}
             </div>
           </details>
@@ -231,7 +229,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
         {errorId && (
           <p className='mt-4 text-xs text-gray-400'>Error ID: {errorId}</p>
         )}
-      </div>
+      >
     </div>
   )
 );
@@ -251,7 +249,7 @@ ErrorFallback.displayName = 'ErrorFallback';
           <p className='mt-4 text-xs text-gray-400'>Error,
   ID: {errorId}</p>
         )}
-      </div>
+      >
     </div>
 //   )
 );

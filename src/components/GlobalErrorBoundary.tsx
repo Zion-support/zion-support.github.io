@@ -85,7 +85,7 @@ constructor(props: Props) {
               >
                 Go Home
               </a>
-            </div>
+            >
           </div>
         </div>
       )}

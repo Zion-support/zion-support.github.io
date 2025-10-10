@@ -145,20 +145,12 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Zscaler',
       'Okta',
       'CyberArk'],
-<<<<<<< HEAD
-    market_size: '$45B cybersecurity market'
-    growth_rate: '110% annual growth';
-variant: 'cyberpunk'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$45B cybersecurity market',
     growth_rate: '110% annual growth',
     variant: 'cyberpunk',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -169,14 +161,9 @@ variant: 'cyberpunk'
     customers:
         customers: 800;
     rating: 4 && 4.9;
-<<<<<<< HEAD
-    reviews: 400},
-    id: 'edge - computing - platform'
-=======
     reviews: 400;
   },
     id: 'edge - computing - platform',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Edge Computing Platform',
     tagline: 'Distributed computing at the network edge',
     price: '$299',
@@ -315,20 +302,12 @@ varian,
       'Google Cloud IoT Edge',
       'FogHorn',
       'ClearBlade'],
-<<<<<<< HEAD
-    market_size: '$15B edge computing market'
-    growth_rate: '180% annual growth';
-variant: 'quantum'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$15B edge computing market',
     growth_rate: '180% annual growth',
     variant: 'quantum',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -339,14 +318,9 @@ variant: 'quantum'
     customers:
         customers: 1500;
     rating: 4 && 4.8;
-<<<<<<< HEAD
-    reviews: 750},
-    id: 'quantum - computing - as - a-service'
-=======
     reviews: 750;
   },
     id: 'quantum - computing - as - a-service',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Quantum Computing as a Service',
     tagline: 'Access to quantum computing power',
     price: '$999',
@@ -484,20 +458,12 @@ varian,
       'Google Quantum',
       'Rigetti',
       'D - Wave'],
-<<<<<<< HEAD
-    market_size: '$8B quantum computing market'
-    growth_rate: '250% annual growth';
-variant: 'quantum - advanced'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$8B quantum computing market',
     growth_rate: '250% annual growth',
     variant: 'quantum - advanced',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -651,20 +617,12 @@ varian,
       'Corda',
       'Quorum',
       'Multichain'],
-<<<<<<< HEAD
-    market_size: '$19B blockchain market'
-    growth_rate: '160% annual growth';
-variant: 'quantum - blockchain'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$19B blockchain market',
     growth_rate: '160% annual growth',
     variant: 'quantum - blockchain',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -820,20 +778,12 @@ varian,
       'CircleCI',
       'GitHub Actions',
       'Azure DevOps'],
-<<<<<<< HEAD
-    market_size: '$12B DevOps market'
-    growth_rate: '130% annual growth';
-variant: 'cyberpunk'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$12B DevOps market',
     growth_rate: '130% annual growth',
     variant: 'cyberpunk',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1073,14 +1023,9 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     customers:
         customers: 800;
     rating: 4.9;
-<<<<<<< HEAD
-    reviews: 400}
-    id: 'edge-computing-platform'
-=======
     reviews: 400;
   }
     id: 'edge-computing-platform',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Edge Computing Platform',
     tagline: 'Distributed computing at the network edge',
     price: '$299',
@@ -1206,15 +1151,9 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'FogHorn'
       'ClearBlade'
     ]
-<<<<<<< HEAD
-    marketSize: '$15B edge computing market'
-    growthRate: '180% annual growth',;
-variant: 'quantum',
-=======
     marketSize: '$15B edge computing market',
     growthRate: '180% annual growth',
     variant: 'quantum',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: targetAudience: unknown;
     marketSiz,
   e: '$15B edge computing market'
@@ -1266,15 +1205,9 @@ varian,
       'Rigetti'
       'D-Wave'
     ]
-<<<<<<< HEAD
-    marketSize: '$8B quantum computing market'
-    growthRate: '250% annual growth',;
-variant: 'quantum-advanced',
-=======
     marketSize: '$8B quantum computing market',
     growthRate: '250% annual growth',
     variant: 'quantum-advanced',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: marketPosition: unknown;
       'Competitive with Hyperledger Fabric ($free), Ethereum Enterprise ($variable), and Corda ($variable). Our advantage: Better enterprise features, support, and integration capabilities.'
     targetAudience: 'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Energy companies, Real estate',
@@ -1339,15 +1272,9 @@ varian,
       'Quorum'
       'Multichain'
     ]
-<<<<<<< HEAD
-    marketSize: '$19B blockchain market'
-    growthRate: '160% annual growth',;
-variant: 'quantum-blockchain',
-=======
     marketSize: '$19B blockchain market',
     growthRate: '160% annual growth',
     variant: 'quantum-blockchain',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: marketPosition: unknown;
       'Competitive with GitLab ($19-99), Jenkins ($free), and CircleCI ($15-300). Our advantage: Better automation, comprehensive features, and competitive pricing.'
     targetAudience: 'Development teams, DevOps engineers, IT operations, Software companiestups, Enterprises',
@@ -1415,18 +1342,11 @@ varian,
       'GitHub Actions'
       'Azure DevOps'
     ]
-<<<<<<< HEAD
-    marketSize: '$12B DevOps market'
-    growthRate: '130% annual growth';
-variant: 'cyberpunk'
-    contactInfo: mobile: '+1 302 464 0950'
-=======
     marketSize: '$12B DevOps market',
     growthRate: '130% annual growth',
     variant: 'cyberpunk',
     contactInfo:
         contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}

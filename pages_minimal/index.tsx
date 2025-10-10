@@ -30,14 +30,14 @@ export default function index() {
               <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
                 ENTERPRISE;
               </span>
-            </div>
+            >
           </div>
           <div className="prose max-w-none"></div>
             <p className="text-lg text-gray-700 mb-6">
               This page is currently under development. Please check back soon for the complete;
               content.
             </p>)
-          </div>)
+          >)
         </div>)
       </div>)
 export const,
@@ -62,16 +62,16 @@ export default function index() {/* TODO: Fix JSX expression */}
               <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"></span>
                 ENTERPRISE;
               </span>
-            </div>
+            >
           </div>"
           <div className="prose max-w-none"></div>"
-            <p className="text-lg text-gray-700 mb-6"></p>
+            <p className="text-lg text-gray-700 mb-6">>
               This page is currently under development. Please check back soon for the complete;
               content.
             </p>
-          </div>
+          >
         </div>
-      </div>
+      >
     </div>)
   )}
 "

@@ -92,16 +92,14 @@ class ErrorBoundary extends Component<Props, State>
                 onClick={this.handleRetry}
                 className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
-                <RefreshCw className="w-4 h-4" />
-                Try Again;
-              </button>,
+                <RefreshCw className="w-4 h-4">Try Again;
+              </RefreshCw></button>,
               <button;
                 onClick={this.handleGoHome}
                 className="bg-gray-600 hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
-                <Home className="w-4 h-4" />
-                Go Home;
-              </button>,
+                <Home className="w-4 h-4">Go Home;
+              </Home></button>,
             </div>,
             <button;
               onClick={() => window.location.reload()}
@@ -143,7 +141,7 @@ class ErrorBoundary extends Component<Props, State>
             >
               Or refresh the page;
             </button>
-          </div>,
+          >,
         </div>)}
 
     return this.props.children}

@@ -10324,7 +10324,7 @@ const categories = [
         <div className="max-w-7xl mx-auto text-center"></div>"
           <h1 className="text-4xl,
   sm:text-5xl,"
-  md:text-6xl font-bold text-white mb-6"></h1>
+  md:text-6xl font-bold text-white mb-6">>
 // Micro SAAS Solutions;
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
@@ -10334,19 +10334,19 @@ const categories = [
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-              <div className="text-gray-300">Applications</div>
+              <div className="text-gray-300">Applications>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-green-400 mb-2">$49</div>
-              <div className="text-gray-300">Starting Price</div>
+              <div className="text-gray-300">Starting Price>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-              <div className="text-gray-300">Support</div>
+              <div className="text-gray-300">Support>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime</div>
+              <div className="text-gray-300">Uptime>
             </div>
           </div>
           {/* Contact Info */}
@@ -10365,15 +10365,15 @@ const categories = [
             </div>"
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
               <div className="text-3xl font-bold text-green-400 mb-2">$49</div>"
-              <div className="text-gray-300">Starting Price</div>
+              <div className="text-gray-300">Starting Price>
             </div>"
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
               <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>"
-              <div className="text-gray-300">Support</div>
+              <div className="text-gray-300">Support>
             </div>"
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
               <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>"
-              <div className="text-gray-300">Uptime</div>
+              <div className="text-gray-300">Uptime>
             </div>
           </div>
           {/* Contact Info */}"
@@ -10393,9 +10393,9 @@ const categories = [
               <div className="flex items-center space-x-2"></div>"
                 <MapPin className="w-5 h-5" /></MapPin>"
                 <span className="text-white font-medium">Middletown, DE</span>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
       </section>
       {/* Services Grid */}
@@ -10419,16 +10419,15 @@ const categories = [
                   </div>
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
                     {service.category}
-                  </div>
+                  >
                 </div>
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0">{feature}
+                      </CheckCircle></li>
                     ))}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
@@ -10442,9 +10441,8 @@ const categories = [
                   <ul className="space-y-1">
                     {service.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
-                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
-      {/* Services Grid */}"
-      <section className="py-16 px-4"></section>"
+                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0">{/* Services Grid */}"
+      </TrendingUp><section className="py-16 px-4"></section>"
         <div className="max-w-7xl mx-auto"></div>"
           <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
 // Choose Your Perfect AI Tools;
@@ -10467,7 +10465,7 @@ const categories = [
                     <span className="text-sm text-gray-500">Marke,
   t: {service.marketPrice}</span>
                   </div>"
-                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block"></div>
+                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">>
                     {service.category}
                   </div>
                 </div>"
@@ -10515,7 +10513,7 @@ const categories = [
                         {tech}
                       </span>
                     ))}
-                  </div>
+                  >
                 </div>
                 <div className="text-center">
                   <a
@@ -10536,13 +10534,13 @@ const categories = [
 // >
 //                     Get Started Now;
           </a>"
-                  <p className="text-xs text-gray-500 mt-2"></p>
+                  <p className="text-xs text-gray-500 mt-2">>
                     {service.contactInfo}
                   </p>
-                </div>
+                >
               </div>
             ))}
-          </div>
+          >
         </div>
       </section>
       {/* CTA Section */}
@@ -10573,7 +10571,7 @@ const categories = [
           <h2 className="text-3xl font-bold text-white mb-6"></h2>
 // Ready to Transform Your Business?
           </h2>"
-          <p className="text-xl text-purple-100 mb-8"></p>
+          <p className="text-xl text-purple-100 mb-8">>
 // Get started with our micro SAAS solutions today and see the difference AI can make.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -10587,7 +10585,7 @@ const categories = [
 // >
 //               Email Us;
           </a>
-          </div>
+          >
         </div>
       </section>
     </div>

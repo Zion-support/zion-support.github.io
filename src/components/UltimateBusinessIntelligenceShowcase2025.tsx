@@ -59,8 +59,7 @@ readingTimereadingTime: '45 min read',
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div
           className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: '2s' }}
-        ></div>
+          style={{ animationDelay: '2s' }}>>
           className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '1s' }}
       </div>
@@ -228,11 +227,11 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
                 <span className="text-gray-400 text-sm">{item.type}</span>
               {/* Title */}"
               <h3 className="text-xl font-bold text-white mb-4 group-hove,"
-  r:text-cyan-400 transition-colors"></h3>
+  r:text-cyan-400 transition-colors">>
                 {item.title}
               </h3>
               {/* Description */}"
-              <p className="text-gray-300 mb-6 text-sm leading-relaxed"></p>
+              <p className="text-gray-300 mb-6 text-sm leading-relaxed">>
                 {item.description}
               </p>
               {/* Metrics */}

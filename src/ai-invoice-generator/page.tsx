@@ -149,16 +149,14 @@ const useCases = [
                   href="#pricing"
                   className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 inline-flex items-center"
                 >
-                  <Calculator className="w-5 h-5 mr-2" />
-                  Start Free Trial
-                </a>
+                  <Calculator className="w-5 h-5 mr-2">Start Free Trial
+                </Calculator></a>
                   href="#demo"
                   className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 inline-flex items-center"
-                  <Eye className="w-5 h-5 mr-2" />
-                  Watch Demo
+                  <Eye className="w-5 h-5 mr-2">Watch Demo
               
               {/* Key Stats */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+              </Eye><div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
                   <div className="text-gray-300">Time Saved</div>
@@ -189,9 +187,8 @@ const useCases = [
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0">{benefit}
+                        </CheckCircle></li>
                       ))}
                     </ul>
 
@@ -275,12 +272,10 @@ const useCases = [
                 Start your free trial today and experience the difference.
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   href="/contact"
-                  <Phone className="w-5 h-5 mr-2" />
-                  Get Free Consultation
+                  <Phone className="w-5 h-5 mr-2">Get Free Consultation
                   href="tel:+13024640950"
-                  <Phone className="w-4 h-4 mr-2" />
-                  (302) 464-0950
-        </main>
+                  </Phone><Phone className="w-4 h-4 mr-2">(302) 464-0950
+        </Phone></main>
         
         <Footer />
     </React.Fragment>

@@ -242,7 +242,7 @@ const serviceCategories = [
                               View All →
                             </Link>
                           )}
-                        </div>
+                        >
                       </div>
                     ))}
                   </div>
@@ -254,10 +254,10 @@ const serviceCategories = [
                     >
                       View All Services
                     </Link>
-                  </div>
+                  >
                 </div>
               )}
-            </div>
+            >
           </div>
 
           {/* Contact Info */}
@@ -292,9 +292,8 @@ const serviceCategories = [
               className="cyber-button inline-flex items-center"
               onClick={closeAllMenus}
             >
-              <Phone className="w-4 h-4 mr-2" />
-              (302) 464-0950
-            </Link>
+              <Phone className="w-4 h-4 mr-2">(302) 464-0950
+            </Phone></Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -304,9 +303,9 @@ const serviceCategories = [
               className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
+              {isOpen ? <X className="w-6 h-6">: </X><Menu className="w-6 h-6">}
+            </Menu></button>
+          >
         </div>
 
         {/* Mobile menu */}
@@ -352,8 +351,8 @@ const serviceCategories = [
                               href={service.path}
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1"
                             >
-                              {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
-                            </Link>
+                              {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1">} {service.name}
+                            </service></Link>
                           ))}
                           <Link
                             href="/services"
@@ -361,10 +360,10 @@ const serviceCategories = [
                           >
                             View All →
                           </Link>
-                        </div>
+                        >
                       </div>
                     ))}
-                  </div>
+                  >
                 </div>
               </div>
 
@@ -398,8 +397,8 @@ const serviceCategories = [
             className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-300"
             aria-label="Toggle menu"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+            {isOpen ? <X className="w-6 h-6">: </X><Menu className="w-6 h-6">}
+          </Menu></button>
         </div>
 
         {/* Mobile Menu */}
@@ -427,10 +426,9 @@ const serviceCategories = [
                 className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
                 onClick={closeAllMenus}
               >
-                <Phone className="w-4 h-4 inline mr-2" />
-                (302) 464-0950
-              </a>
-            </div>
+                <Phone className="w-4 h-4 inline mr-2">(302) 464-0950
+              </Phone></a>
+            >
           </div>
         )}
       </div>

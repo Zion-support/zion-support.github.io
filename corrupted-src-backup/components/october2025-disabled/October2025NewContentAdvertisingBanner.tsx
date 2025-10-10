@@ -29,7 +29,7 @@ export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: F
                 🔥 JUST, RELEASE, D • OCTOBER, 202, 5 🔥
               </sp, a, n>"
               <Sparkles, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-sp, i, n" /></Sparkles>
-            </div>
+            >
           </div>
           {/* Main, Headlin, e */}
           <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-black, m, b-6, leadin, g-tig, h, t"></h2>
@@ -40,22 +40,22 @@ export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: F
               3, Revolutionary, AI Breakthroug, h, s;
             </sp, a, n>
           </h2>"
-          <p, className="te, x, t-3xl, m, d:te, x, t-4xl, tex, t-white, fon, t-bold, m, b-8"></p>
+          <p, className="te, x, t-3xl, m, d:te, x, t-4xl, tex, t-white, fon, t-bold, m, b-8">>
             Transform, Your, Enterprise Tod, a, y!
           </p>
           {/* Key, Value, Pro, p, s */}
           <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12"></div>
             <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, backdro, p-bl, u, r-s, m, p-6, rounde, d-2xl, border, border-cy, a, n-5, 0, 0/30"></div>
               <div, className="te, x, t-5xl, fon, t-black, tex, t-cy, a, n-300, m, b-2">$26.8B</div>
-              <div, className="te, x, t-xl, tex, t-white, fon, t-semibo, l, d">Combined, Enterprise, Value</div>
+              <div, className="te, x, t-xl, tex, t-white, fon, t-semibo, l, d">Combined, Enterprise, Value>
             </div>
             <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, backdro, p-bl, u, r-s, m, p-6, rounde, d-2xl, border, border-pi, n, k-5, 0, 0/30"></div>
               <div, className="te, x, t-5xl, fon, t-black, tex, t-pi, n, k-300, m, b-2">1, 0, 0,00, 0, x</div>
-              <div, classNam, e = "te, x, t-xl, tex, t-white, fon, t-semibo, l, d">Performance, Improvemen, t</div>
+              <div, classNam, e = "te, x, t-xl, tex, t-white, fon, t-semibo, l, d">Performance, Improvemen, t>
             </div>
             <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, backdro, p-bl, u, r-s, m, p-6, rounde, d-2xl, border, border-gre, e, n-5, 0, 0/30"></div>
               <div, className="te, x, t-5xl, fon, t-black, tex, t-gre, e, n-300, m, b-2">99.9, 9, 7%</div>
-              <div, className="te, x, t-xl, tex, t-white, fon, t-semibo, l, d">System, Uptim, e</div>
+              <div, className="te, x, t-xl, tex, t-white, fon, t-semibo, l, d">System, Uptim, e>
             </div>
           </div>
           {/* Content, Highlight, s */}
@@ -67,15 +67,15 @@ export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: F
           <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12"></div>"
             <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, backdro, p-bl, u, r-s, m, p-6, rounde, d-2xl, border, border-cy, a, n-5, 0, 0/30"></div>"
               <div, className="te, x, t-5xl, fon, t-black, tex, t-cy, a, n-300, m, b-2">$26.8B</div>"
-              <div, className="te, x, t-xl, tex, t-white, fon, t-semibo, l, d">Combined, Enterprise, Value</div>
+              <div, className="te, x, t-xl, tex, t-white, fon, t-semibo, l, d">Combined, Enterprise, Value>
             </div>"
             <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, backdro, p-bl, u, r-s, m, p-6, rounde, d-2xl, border, border-pi, n, k-5, 0, 0/30"></div>"
               <div, className="te, x, t-5xl, fon, t-black, tex, t-pi, n, k-300, m, b-2">1, 0, 0,00, 0, x</div>"
-              <div, classNam, e = "te, x, t-xl, tex, t-white, fon, t-semibo, l, d">Performance, Improvemen, t</div>
+              <div, classNam, e = "te, x, t-xl, tex, t-white, fon, t-semibo, l, d">Performance, Improvemen, t>
             </div>"
             <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, backdro, p-bl, u, r-s, m, p-6, rounde, d-2xl, border, border-gre, e, n-5, 0, 0/30"></div>"
               <div, className="te, x, t-5xl, fon, t-black, tex, t-gre, e, n-300, m, b-2">99.9, 9, 7%</div>"
-              <div, className="te, x, t-xl, tex, t-white, fon, t-semibo, l, d">System, Uptim, e</div>
+              <div, className="te, x, t-xl, tex, t-white, fon, t-semibo, l, d">System, Uptim, e>
             </div>
           </div>
           {/* Content, Highlight, s */}"
@@ -102,7 +102,7 @@ export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: F
                   <div, className="w-2 h-2, b, g-gre, e, n-400, rounde, d-full, animat, e-pul, s, e" <h3, className="te, x, t-xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0">Neur, a, l-Symbolic, Reasonin, g</h3>
                 </div>"
                 <p, className="te, x, t-gr, a, y-3, 0, 0">Explainable, AI, with hum, a, n-like, logical, reasoning capabiliti, e, s</p>
-              </div>
+              >
             </div>
           </div>
           {/* Urgen, t, C, T, A */}
@@ -114,19 +114,17 @@ export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: F
               <Link, t, o="/conta, c, t"
           {/* Urgen, t, C, T, A */}"
           <div, classNam, e = "flex, fle, x-col, item, s-center, ga, p-6"></div>"
-            <p, className="te, x, t-2xl, tex, t-yell, o, w-300, fon, t-bold, animat, e-pul, s, e"></p>
+            <p, className="te, x, t-2xl, tex, t-yell, o, w-300, fon, t-bold, animat, e-pul, s, e">>
               ⚡ Limited, Tim, e: Free, Enterprise, Assessment ⚡
             </p>"
             <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4"></div>"
               <Link, t, o="/conta, c, t""
-                className="group, inlin, e-flex, item, s-center, ga, p-3, p, x-10, p, y-5, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, tex, t-sla, t, e-900, fon, t-black, tex, t-xl, rounde, d-xl, hove, r:fr, o, m-yell, o, w-400, hove, r:to-oran, g, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-110, hove, r:shad, o, w-2xl, hove, r:shad, o, w-yell, o, w-5, 0, 0/50"
-              ></Link>
+                className="group, inlin, e-flex, item, s-center, ga, p-3, p, x-10, p, y-5, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, tex, t-sla, t, e-900, fon, t-black, tex, t-xl, rounde, d-xl, hove, r:fr, o, m-yell, o, w-400, hove, r:to-oran, g, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-110, hove, r:shad, o, w-2xl, hove, r:shad, o, w-yell, o, w-5, 0, 0/50"></Link>
                 <sp, a, n>GET, STARTED, NOW</sp, a, n>"
                 <Link, className="w-6 h-6, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m" /></Link>
               </Li, n, k>"
               <Link, t, o="/bl, o, g""
-                className="inli, n, e-flex, item, s-center, ga, p-3, p, x-10, p, y-5, b, g-sla, t, e-7, 0, 0/50, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, tex, t-xl, rounde, d-xl, borde, r-2, borde, r-whi, t, e/30, hove, r:bg-sla, t, e-6, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"
-              ></Link>"
+                className="inli, n, e-flex, item, s-center, ga, p-3, p, x-10, p, y-5, b, g-sla, t, e-7, 0, 0/50, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, tex, t-xl, rounde, d-xl, borde, r-2, borde, r-whi, t, e/30, hove, r:bg-sla, t, e-6, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"></Link>"
                 <Sparkles, className="w-6 h-6" /></Sparkles>
                 <sp, a, n>READ, ALL, 3 GUID, E, S</sp, a, n>
               </Li, n, k>
@@ -137,9 +135,9 @@ export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: F
             <div, className="flex, item, s-center, ga, p-2, tex, t-gre, e, n-400, tex, t-lg, fon, t-semibo, l, d"></div>"
               <TrendingUp, className="w-5 h-5" /></TrendingUp>
               <sp, a, n>Trusted, by, 500+ Fortune, 500, Companies</sp, a, n>
-            </div>
+            >
           </div>
-        </div>
+        >
       </div>
     </sec, t, i, o, n>
   )}

@@ -154,7 +154,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
           </secti, o, n>"
           <section, className="mb-12"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">The, AI, DevOps Architectu, r, e</h2>"
-            <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6"></p>
+            <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">>
               Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, laye, r,
   s: </p>"
             <div, className="spa, c, e-y-6"></div>"
@@ -235,7 +235,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
           </secti, o, n>"
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Re, a, l-World, Impac, t: FinTech, Success, Story</h2>""
-            <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6"></p>
+            <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">>
               A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platfor,
   m: </p>"
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">""
@@ -415,7 +415,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
           <section, className="mb-12"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">ROI, Calculato, r</h2>"
             <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20"></div>"
-              <p, className="te, x, t-gr, a, y-300, m, b-6"></p>
+              <p, className="te, x, t-gr, a, y-300, m, b-6">>
                 For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: </p>"
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">"
                 <d, i, v></d>"

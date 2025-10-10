@@ -102,7 +102,7 @@ const values = [
                   <span className="text-gray-300">24/7 support and maintenance</span>
                 </li>
               </ul>
-            </div>
+            >
           </div>
 
           {/* Right Content - Stats */}
@@ -115,7 +115,7 @@ const values = [
                   </div>
                   <div className="text-gray-400 text-sm">
                     {stat.label}
-                  </div>
+                  >
                 </div>
               ))}
             </div>
@@ -129,12 +129,12 @@ const values = [
                   <div key={index} className="flex items-center justify-between">
                     <span className="text-gray-300">{skill}</span>
                     <div className="w-24 bg-gray-700 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-cyan-400 to-purple-500 h-2 rounded-full" style={{ width: '95%' }}></div>
+                      <div className="bg-gradient-to-r from-cyan-400 to-purple-500 h-2 rounded-full" style={{ width: '95%' }}>>
                     </div>
-                  </div>
+                  >
                 ))}
               </div>
-            </div>
+            >
           </div>
         </div>
 
@@ -155,7 +155,7 @@ const values = [
                 <p className="text-gray-400 leading-relaxed">
                   {value.description}
                 </p>
-              </div>
+              >
             ))}
           </div>
         </div>
@@ -191,9 +191,9 @@ const values = [
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">IT Consultants</h4>
               <p className="text-gray-400 text-sm">Cloud & Infrastructure Experts</p>
-            </div>
+            >
           </div>
-        </div>
+        >
       </div>
     </section>
   )}

@@ -74,7 +74,7 @@ const filteredDocs = docCategories.map(category => ({
       />
       <Navigation />
       
-            </div>
+            >
           </div>
         </div>
       </section>
@@ -103,7 +103,7 @@ const filteredDocs = docCategories.map(category => ({
                   Read More
                   <ArrowRight className="w-4 h-4" />
                 </a>
-              </div>
+              >
             ));
           </div>
         </div>
@@ -123,7 +123,7 @@ const filteredDocs = docCategories.map(category => ({
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
                     <p className="text-gray-300">{category.description}</p>
-                  </div>
+                  >
                 </div>
                 
                 <div className="space-y-4">
@@ -144,10 +144,10 @@ const filteredDocs = docCategories.map(category => ({
                       </div>
                     </a>
                   ));
-                </div>
+                >
               </div>
             ));
-          </div>
+          >
         </div>
       </section>
 
@@ -167,7 +167,7 @@ const filteredDocs = docCategories.map(category => ({
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
               Join Community
             </button>
-          </div>
+          >
         </div>
       </section>
 

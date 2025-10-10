@@ -38,7 +38,7 @@ $4};
       <div className="flex flex-col items-center space-y-4">
         <div className="relative">
           <div className={spinnerClasses}></div>
-          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div>
+          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20">>
         </div>
         {text && (
           <p className="text-sm text-gray-300 animate-pulse">{text}</p>
@@ -101,7 +101,7 @@ const,
       <div className="flex flex-col items-center space-y-4"></div>"
         <div className="relative"></div>
           <div className={spinnerClasses}></div>"
-          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div>
+          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20">>
         </div>
         {text && ()}"
           <p className="text-sm text-gray-300 animate-pulse">{text}</p>

@@ -314,7 +314,7 @@ const _paintEntry = entry as PerformancePaintTiming;
               <span className={`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}`}></span>`
                 {metrics.TTFB ? `${Math.round(metrics.TTFB)}ms` : 'N/A'}
               </span>
-            </div>
+            >
           </div>
 
           {/* Budget Status */}
@@ -344,7 +344,7 @@ const _paintEntry = entry as PerformancePaintTiming;
               </span>
             </div>
             {/* TODO: Fix JSX expression */}
-                  <div key={index}>• {violation}</div>
+                  <div key={index}>• {violation}>
                 ))}
               </div>
             )}
@@ -388,9 +388,9 @@ const _paintEntry = entry as PerformancePaintTiming;
               <span className="ml-2 text-blue-600"></span>
                 {performanceOptimizer.shouldUseWebP() ? 'YES' : 'NO'}
               </span>
-            </div>
+            >
           </div>
-        </div>
+        >
       )}
     </div>
   )};

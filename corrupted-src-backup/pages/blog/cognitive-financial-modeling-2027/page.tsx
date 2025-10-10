@@ -8,12 +8,10 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
       <Helm, e, t>
         <title>Cognitive, Financial, Modeling 20, 2, 7</title>
         <meta, nam, e='description'
-          conte, n, t='Learn, about, cognitive financial, modeling, 2027 and, how, it can, benefit, your enterpri, s, e.'
-        />)
-        <link, re, l='canonic, a, l')
-          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/cogniti v e-financi a l-modeli n g-20 2 7')
-        />),
-      </Helm, e, t>
+          conte, n, t='Learn, about, cognitive financial, modeling, 2027 and, how, it can, benefit, your enterpri, s, e.'>)
+        </meta><link, re, l='canonic, a, l')
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/cogniti v e-financi a l-modeli n g-20 2 7')>),
+      </link></Helm, e, t>
 
       <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>

@@ -11,7 +11,7 @@ const fixes = [
   //Fix JSX syntax issues;
   {
     pattern: /<br\s*\/?>/g;
-    replacement: '<br />'},
+    replacement: '<br>'},
   //Fix unescaped > in JSX;
   {
     pattern: /{'>'}/g,
@@ -30,7 +30,7 @@ const fixes = [
     replacement: '$1 = $2, $3'},
   //Fix JSX closing tags;
   {
-    pattern: /<(\w+)\s*([^>]*)\s*>\s*<\/\1>/g;
+    pattern: /</br><(\w+)\s*([^>]*)\s*>\s*<\/\1>/g;
     replacement: '<$1 $2 />'},
   //Fix missing commas in arrays;
   {

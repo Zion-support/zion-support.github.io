@@ -2072,15 +2072,6 @@ export const,
     customers:
         customers: 75;
     rating: 4.4;
-<<<<<<< HEAD
-    reviews: 19},
-    id: 'auto-email-followups'
-    name: 'Automated Email Followups'
-    tagline: 'Cadence sequences for leads with AI personalization'
-    description: 'Consistent multi-touch follow-ups with AI-personalized snippets from CRM context and recent events.'
-    category: 'Sales'
-    price: unknown;
-=======
     reviews: 19;
   },
     id: 'auto-email-followups',
@@ -2090,7 +2081,6 @@ export const,
     category: 'Sales',
     price:
         price: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       monthly: 49;
       yearly: 490;
       currency: 'USD',
@@ -2702,14 +2692,9 @@ export const,
     customers:
         customers: 19;
     rating: 4.6;
-<<<<<<< HEAD
-    reviews: 6}];
-    id: 'ai-legal-document-generator'
-=======
     reviews: 6;
   }];
     id: 'ai-legal-document-generator',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'AI Legal Document Generator',
     tagline: 'Generate legally compliant documents in seconds with AI',
     price: '$89',
@@ -4475,15 +4460,6 @@ export const,
     customers:
         customers: 75;
     rating: 4.4;
-<<<<<<< HEAD
-    reviews: 19}
-    id: 'auto-email-followups'
-    name: 'Automated Email Followups'
-    tagline: 'Cadence sequences for leads with AI personalization'
-    description: 'Consistent multi-touch follow-ups with AI-personalized snippets from CRM context and recent events.'
-    category: 'Sales'
-    price: monthly: 49;
-=======
     reviews: 19;
   }
     id: 'auto-email-followups',
@@ -4493,7 +4469,6 @@ export const,
     category: 'Sales',
     price:
         price: monthly: 49;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       yearly: 490;
       currency: 'USD',
       trialDays: 7;
@@ -5772,17 +5747,6 @@ launch_date: '2024 - 12 - 10',
 customers:
         customers: 95;
 rating: 4 && 4.6;
-<<<<<<< HEAD
-reviews: 22};
-marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'
-competitors: ['AsanaClickUpNotion'];
-techStack: ['Next && Next.jsPrismaPostgreSQL'];
-realImplementation: true;
-implementationDetails: 'Template JSON schemas, rules engine, import/export.'
-reviews: 22}
-market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'
-competitors: ['AsanaClickUpNotion'];
-=======
 reviews: 22;
 };
 marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.',
@@ -5797,7 +5761,6 @@ reviews:
 market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.',
 competitors:
         competitors: ['AsanaClickUpNotion'];
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 tech_stack: ['Next.jsPrismaPostgreSQL'];
 real_implementation: true;
 implementation_details: 'Template JSON schemas, rules engine, import / export.',
@@ -11748,15 +11711,6 @@ export const,
     customers:
         customers: 75;
     rating: 4.4;
-<<<<<<< HEAD
-    reviews: 19}
-    id: 'auto-email-followups'
-    name: 'Automated Email Followups'
-    tagline: 'Cadence sequences for leads with AI personalization'
-    description: 'Consistent multi-touch follow-ups with AI-personalized snippets from CRM context and recent events.'
-    category: 'Sales'
-    price: monthly: 49;
-=======
     reviews: 19;
   }
     id: 'auto-email-followups',
@@ -11766,7 +11720,6 @@ export const,
     category: 'Sales',
     price:
         price: monthly: 49;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       yearly: 490;
       currency: 'USD',
       trialDays: 7;
@@ -12988,12 +12941,6 @@ competitors:
         competitors: ['AsanaClickUpNotion'];
 techStack: ['Next && Next.jsPrismaPostgreSQL'];
 realImplementation: true;
-<<<<<<< HEAD
-implementationDetails: 'Template JSON schemas, rules engine, import/export.'
-reviews: 22}
-market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'
-competitors: ['AsanaClickUpNotion'];
-=======
 implementationDetails: 'Template JSON schemas, rules engine, import/export.',
 reviews:
         reviews: 22;
@@ -13001,7 +12948,6 @@ reviews:
 market_position: 'Alternative to Notion templates + Asana. Faster to start with curated flows.',
 competitors:
         competitors: ['AsanaClickUpNotion'];
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 tech_stack: ['Next.jsPrismaPostgreSQL'];
 real_implementation: true;
 implementation_details: 'Template JSON schemas, rules engine, import / export.',

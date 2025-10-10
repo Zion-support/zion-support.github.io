@@ -122,7 +122,7 @@ const services = [
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
-              </div>
+              >
             </div>
           ))}
         </div>
@@ -149,9 +149,9 @@ const services = [
               >
                 Call Now
               </a>
-            </div>
+            >
           </div>
-        </div>
+        >
       </div>
     </section>
   )}

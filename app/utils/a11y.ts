@@ -250,9 +250,5 @@ const focusableElements = container.querySelectorAll(
     );
 const firstFocusable = focusableElements[0] as HTMLElement;
     firstFocusable?.focus();
-<<<<<<< HEAD
-}
-=======
   }
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1

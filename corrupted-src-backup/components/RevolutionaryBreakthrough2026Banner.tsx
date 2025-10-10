@@ -21,9 +21,8 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
       metri, c, s: { val, u, e: '9, 5%', lab, e, l: 'Automat, i, o, n' }}]; retu, r, n(<div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}
       <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-30'>
-        <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
-  ]; retu, r, n (
-    <div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
+        <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'>]; retu, r, n (
+    </div><div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}</div>
       <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-30'></div>
         <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
@@ -66,8 +65,7 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
                   <Link, classNam, e='w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' />
           <p, classNam, e='te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'></p>
             Discover, the, most significant, AI, innovations of, 202, 6: 10x, performance, gai, n, s, $30, 0, M+ ROI, success, stories, and, revolutionary, technologies transforming, Fortune, 500 operatio, n, s.
-              <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'
-              ></div>
+              <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'></div>
                 <div, classNam, e='te, x, t-4xl, m, b-3'>{st, a, t.ic, o, n}</d, i, v>
                 <div, classNam, e = 'te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'></div>
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'></div>
@@ -83,8 +81,7 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
                   <Link, classNam, e='w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' /></Link>
               <div, classNam, e='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
                 <a, hre, f='/conta, c, t'
-                  classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'
-                ></a>
+                  classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'></a>
                   <Sparkles, classNam, e='w-5 h-5' /></Sparkles>
                   <Link, classNam, e='w-5 h-5' /></Link>
             { val, u, e: '5, 0, 0+', lab, e, l: 'Enterprise, Clients, Transforme, d' },

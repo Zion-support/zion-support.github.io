@@ -72,14 +72,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     useCases: ["Continuous integration and deployment", "Infrastructure monitoring", "Performance optimization", "Security automation", "Disaster recovery"],
     roi: "Average customer reduces DevOps overhead by 60% and improves deployment frequency by 300% within 4 months.",
     competitors: ["GitLab", "Jenkins", "CircleCI", "GitHub Actions", "Azure DevOps"],
-<<<<<<< HEAD
-    marketSize: "$8.2B market"
-    growthRate: "20.1% annual growth";
-variant: "ai-futuristic"
-    contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com",
-=======
     marketSize: '$8.2B market',
     growthRate: '20.1% annual growth',
     variant: 'ai-futuristic',
@@ -87,7 +79,6 @@ variant: "ai-futuristic"
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup.com"},
     realImplementation: true;

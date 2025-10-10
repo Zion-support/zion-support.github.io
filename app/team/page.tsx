@@ -18,19 +18,19 @@ const TeamPage: React.FC = () => {
         <main className="pt-20"></main>
           <div>
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8"></h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">>
                 Our Team</h1>
               </h1>
               
               <div>
-                <p className="text-xl text-gray-600 mb-8"></p>
+                <p className="text-xl text-gray-600 mb-8">>
                   Meet the experts behind our success.
                 </p>
                 
-                <p className="text-gray-700 mb-6"></p>
+                <p className="text-gray-700 mb-6">>
                   Coming soon - stay tuned to meet our team!
                 </p>
-              </div>
+              >
             </div>
           </div>
         </main>
@@ -38,12 +38,8 @@ const TeamPage: React.FC = () => {
         <Footer />
       </div>
     </>
-<<<<<<< HEAD
-  );)
-=======
   )]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default TeamPage;
 }

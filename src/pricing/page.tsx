@@ -168,10 +168,8 @@ const getColorClasses = (color: string) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
+      <Navigation>{/* Hero Section */}
+      </Navigation><section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Simple <span className="text-cyan-400">Pricing</span>
@@ -215,7 +213,7 @@ const colors = getColorClasses(plan.color);
                       <div className="flex items-baseline justify-center">
                         <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
                         <span className="text-gray-600 ml-1">{plan.period}</span>
-                      </div>
+                      >
                     </div>
 
                     <div className="mb-8">
@@ -254,10 +252,10 @@ const colors = getColorClasses(plan.color);
                     >
                       {plan.cta}
                     </Link>
-                  </div>
+                  >
                 </div>
               )})}
-          </div>
+          >
         </div>
       </section>
 
@@ -280,10 +278,10 @@ const colors = getColorClasses(plan.color);
                 <div className="flex items-baseline justify-between">
                   <span className="text-2xl font-bold text-cyan-600">{addOn.price}</span>
                   <span className="text-gray-600 text-sm">{addOn.period}</span>
-                </div>
+                >
               </div>
             ))}
-          </div>
+          >
         </div>
       </section>
 
@@ -303,7 +301,7 @@ const colors = getColorClasses(plan.color);
               <div key={index} className="bg-gray-50 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </div>
+              >
             ))}
           </div>
         </div>
@@ -331,7 +329,7 @@ const colors = getColorClasses(plan.color);
             >
               Schedule Demo
             </Link>
-          </div>
+          >
         </div>
       </section>
 

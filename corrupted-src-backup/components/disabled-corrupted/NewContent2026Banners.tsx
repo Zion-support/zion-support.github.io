@@ -28,14 +28,14 @@
               >
                 AI, FinTech, Transformation;
               </Li, n, k>
-            </div>
+            >
           </div>
           <Link, t, o='/<bl, o, g'
             className='bg-whi, t, e/20, hove, r:bg-whi, t, e/30, tex, t-white, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s'
           >
             Explore, All, Content →
           </Li, n, k>)
-        </div>)
+        >)
       </div>)
     </d, i, v > )}
 
@@ -71,7 +71,7 @@
             >
               Read, Security, Guide;
             </Li, n, k>
-          </div>)
+          >)
         </div>)
       </div>)
     </d, i, v > )}
@@ -101,17 +101,17 @@
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-2xl, m, b-2'>📝</div>
               <div, className='fo, n, t-semibo, l, d'>Text, Processin, g</div>
-              <div, className='te, x, t-sm, opacit, y-90'>N, L, P & Document, A, I</div>
+              <div, className='te, x, t-sm, opacit, y-90'>N, L, P & Document, A, I>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-2xl, m, b-2'>🖼️</div>
               <div, className='fo, n, t-semibo, l, d'>Computer, Visio, n</div>
-              <div, className='te, x, t-sm, opacit, y-90'>Ima, g, e & Video, Analysi, s</div>
+              <div, className='te, x, t-sm, opacit, y-90'>Ima, g, e & Video, Analysi, s>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-2xl, m, b-2'>🎵</div>
               <div, className='fo, n, t-semibo, l, d'>Audio, Processin, g</div>
-              <div, className='te, x, t-sm, opacit, y-90'>Spee, c, h & Sound, A, I</div>
+              <div, className='te, x, t-sm, opacit, y-90'>Spee, c, h & Sound, A, I>
             </div>
           </div>
           <Link, t, o='/servic, e, s/ai-multimod, a, l-<enterpri, s, e'
@@ -119,7 +119,7 @@
           >
             Explore, Multimodal, AI →
           </Li, n, k>)
-        </div>)
+        >)
       </div>)
     </d, i, v > )}
 
@@ -148,17 +148,17 @@
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>80%</div>
               <div, className='fo, n, t-semibo, l, d'>Energy, Reductio, n</div>
-              <div, className='te, x, t-sm, opacit, y-90'>Through, AI, optimization</div>
+              <div, className='te, x, t-sm, opacit, y-90'>Through, AI, optimization>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>$2M+</div>
               <div, className='fo, n, t-semibo, l, d'>Annual, Saving, s</div>
-              <div, className='te, x, t-sm, opacit, y-90'>From, green, tech</div>
+              <div, className='te, x, t-sm, opacit, y-90'>From, green, tech>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>1, 0, 0%</div>
               <div, className='fo, n, t-semibo, l, d'>Carbon, Neutra, l</div>
-              <div, className='te, x, t-sm, opacit, y-90'>AI, operation, s</div>
+              <div, className='te, x, t-sm, opacit, y-90'>AI, operation, s>
             </div>
           </div>
           <Link, t, o='/bl, o, g/ai-sustainabili, t, y-gre, e, n-te, c, h-<20, 2, 6'
@@ -166,7 +166,7 @@
           >
             Read, Sustainability, Guide →
           </Li, n, k>)
-        </div>)
+        >)
       </div>)
     </d, i, v > )}
 
@@ -222,7 +222,7 @@
           >
             View, All, Latest Conte, n, t →
           </Li, n, k>)
-        </div>)
+        >)
       </div>)
     </d, i, v > )}
 
@@ -253,16 +253,16 @@
 
               <div, className='te, x, t-sm, opacit, y-90'>
                 Se, l, f-healing, infrastructur, e;
-              </div>
+              >
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-3, 0, 0'>90%</div>
               <div, className='fo, n, t-semibo, l, d'>Cost, Reductio, n</div>
-              <div, className='te, x, t-sm, opacit, y-90'>Intelligent, optimizatio, n</div>
+              <div, className='te, x, t-sm, opacit, y-90'>Intelligent, optimizatio, n>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='fo, n, t-semibo, l, d'>Touch, Operation, s</div>
-              <div, className='te, x, t-sm, opacit, y-90'>Fully, automate, d</div>
+              <div, className='te, x, t-sm, opacit, y-90'>Fully, automate, d>
             </div>
           </div>
           <Link, t, o='/bl, o, g/ai-autonomo, u, s-clo, u, d-operatio, n, s-<20, 2, 6'
@@ -270,7 +270,7 @@
           >
             Read, Complete, Guide →
           </Li, n, k>)
-        </div>)
+        >)
       </div>)
     </d, i, v > )}
 
@@ -300,24 +300,23 @@
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>95%</div>
 
-              <div, className='te, x, t-sm, opacit, y-90'>Process, efficienc, y</div>
+              <div, className='te, x, t-sm, opacit, y-90'>Process, efficienc, y>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>$5M+</div>
               <div, className='fo, n, t-semibo, l, d'>Annual, Saving, s</div>
-              <div, className='te, x, t-sm, opacit, y-90'>Cost, reductio, n</div>
+              <div, className='te, x, t-sm, opacit, y-90'>Cost, reductio, n>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0'>99.9%</div>
 
-              <div, className='te, x, t-sm, opacit, y-90'>Transaction, processin, g</div>
+              <div, className='te, x, t-sm, opacit, y-90'>Transaction, processin, g>
             </div>
           </div>
           <Link, t, o='/bl, o, g/ai-finte, c, h-transformati, o, n-<20, 2, 6'
-            className='bg-white, tex, t-gre, e, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
-          ></Link>Read</Link>, FinTech, Guide →
+            className='bg-white, tex, t-gre, e, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'></Link>Read</Link>, FinTech, Guide →
           </Li, n, k>
-        </div>
+        >
       </div>
     </d, i, v > )}
 
@@ -347,17 +346,17 @@
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-oran, g, e-3, 0, 0'>98%</div>
               <div, className='fo, n, t-semibo, l, d'>Automation, Rat, e</div>
-              <div, className='te, x, t-sm, opacit, y-90'>Process, automatio, n</div>
+              <div, className='te, x, t-sm, opacit, y-90'>Process, automatio, n>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-oran, g, e-3, 0, 0'>3, 0, 0%</div>
 
-              <div, className='te, x, t-sm, opacit, y-90'>Performance, gain, s</div>
+              <div, className='te, x, t-sm, opacit, y-90'>Performance, gain, s>
             </div>
             <div, className='bg-whi, t, e/10, rounde, d-l, g, p-4'></div>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-oran, g, e-3, 0, 0'>$8M</div>
               <div, className='fo, n, t-semibo, l, d'>Annual, RO, I</div>
-              <div, className='te, x, t-sm, opacit, y-90'>Return, on, investment</div>
+              <div, className='te, x, t-sm, opacit, y-90'>Return, on, investment>
             </div>
           </div>
           <Link, t, o='/ca, s, e-studi, e, s/ai-reta, i, l-automati, o, n-<20, 2, 6'
@@ -365,7 +364,7 @@
           >
             View, Case, Study →
           </Li, n, k>)
-        </div>)
+        >)
       </div>)
     </d, i, v > )}
 
@@ -417,7 +416,7 @@
           >
             Explore, All, Content →
           </Li, n, k>)
-        </div>)
+        >)
       </div>)
     </d, i, v > );
 // Latest Content 2026 Banner export function LatestContent2026Bann e r() {/* TODO: Fix JSX expression */}

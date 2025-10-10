@@ -104,9 +104,8 @@ const stats = [
               <ul className="space-y-2">
                 {feature.benefits.map((benefit, benefitIndex) => (
                   <li key={benefitIndex} className="flex items-center text-gray-300">
-                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                    {benefit}
-                  </li>
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2">{benefit}
+                  </CheckCircle></li>
               </ul>
 
           <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans</h2>
@@ -139,8 +138,7 @@ const stats = [
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               View Case Studies
       
-      <Footer />
-  )};
+      <Footer>)};
 
 
 export default $1;
@@ -150,3 +148,4 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, MessageSquare, Headphones, Globe, Languages } from 'lucide-react';
 
 export default AICustomerSupportBotPage;
+</Footer>

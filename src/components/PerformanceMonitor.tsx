@@ -122,7 +122,7 @@ const timeoutId = setTimeout(() => {
       <div>FID: {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'Measuring...'}</div>
       <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}</div>
       <div>FCP: {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'Measuring...'}</div>
-      <div>TTFB: {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'Measuring...'}</div>
+      <div>TTFB: {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'Measuring...'}>
     </div>
   )};
 

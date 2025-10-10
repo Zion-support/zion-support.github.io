@@ -338,11 +338,11 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
   D: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
           <div>CL,
   S: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-          <div></div>
+          <div>>
             TTF,`
   B: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
           </div>
-          <div></div>
+          <div>>
             Memor,
   y:{' '}
             {metrics.memory}`
@@ -361,7 +361,7 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
                 <li key={index}>• {rec}</li>)
               ))}
             </ul>
-          </div>
+          >
         )}
       </div>
     )}

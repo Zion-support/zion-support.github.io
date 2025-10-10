@@ -90,7 +90,7 @@ const,
           <div className={`h-48 bg-gradient-to-br ${getCategoryColor(category)} flex items-center justify-center relative`}></div>
         <div className="text-center text-white"></div>"
           <div className="text-6xl mb-2">{image}</div>"
-          <div className="text-sm font-medium opacity-90">{category}</div>
+          <div className="text-sm font-medium opacity-90">{category}>
         </div>
         {/* Featured Badge */}
         {featured && ()}"
@@ -104,10 +104,10 @@ const,
         {stats && ()}"
           <div className="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-2"></div>"
             <div className="text-center"></div>"
-              <div className="text-lg font-bold text-white"></div>
+              <div className="text-lg font-bold text-white">>
                 {formatNumber(stats.views)}
               </div>"
-              <div className="text-xs text-white opacity-90">views</div>
+              <div className="text-xs text-white opacity-90">views>
             </div>
           </div>
         )}
@@ -116,7 +116,7 @@ const,
           <span className="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium"></span>
             {readTime}
           </span>
-        </div>
+        >
       </div>
       {/* Content */}"
       <div className="p-6"></div>"
@@ -125,10 +125,10 @@ const,
             {category}
           </span>
         </div>"
-        <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2"></h3>
+        <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">>
           {title}
         </h3>"
-        <p className="text-gray-600 mb-4 line-clamp-3"></p>
+        <p className="text-gray-600 mb-4 line-clamp-3">>
           {excerpt || description}
         </p>
         {/* Stats Row */}
@@ -147,7 +147,7 @@ const,
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></path>
                 </svg>"
                 <span className="text-green-600 font-medium">{stats.engagement}% engagement</span>
-              </div>
+              >
             </div>
           </div>
         )}
@@ -164,7 +164,7 @@ const,
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></path>
             </svg>
           </Link>
-        </div>
+        >
       </div>
     </article>
   )};

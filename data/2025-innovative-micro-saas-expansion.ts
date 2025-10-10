@@ -161,20 +161,12 @@ export const,
       roi: 'Average customer sees 300% ROI within 3 months through improved retention and reduced churn.',
       competitors: [,
         'Gainsight, Totango, ChurnZero, CustomerSuccessBox, Vitally'],
-<<<<<<< HEAD
-      marketSize: '$1 && 1.2B market'
-      growthRate: '22 && 22.5% annual growth';
-variant: 'ai-autonomous'
-      contactInfo: unknown;
-      color: 'from - blue - 600 to - cyan - 500'
-=======
       marketSize: '$1 && 1.2B market',
       growthRate: '22 && 22.5% annual growth',
       variant: 'ai-autonomous',
       contactInfo:
         contactInfo: unknown;
       color: 'from - blue - 600 to - cyan - 500',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / services / ai - customer - success - automation',
       market_position: unknown;
@@ -235,20 +227,12 @@ varian,
       competitor,
   s: [,
         'Gainsight, Totango, ChurnZero, CustomerSuccessBox, Vitally'],
-<<<<<<< HEAD
-      market_size: '$1.2B market'
-      growth_rate: '22.5% annual growth';
-variant: 'ai - autonomous'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
       market_size: '$1.2B market',
       growth_rate: '22.5% annual growth',
       variant: 'ai - autonomous',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -387,20 +371,12 @@ varian,
         'Document processing, Form automation, Data extraction, Compliance management, Workflow automation'],
       roi: 'Average customer saves 15 hours per week and sees 400% ROI through automation and efficiency gains.',
       competitors: ['UiPath, Automation Anywhere, Blue Prism, Kofax, ABBYY'],
-<<<<<<< HEAD
-      market_size: '$2.8B market'
-      growth_rate: '19.8% annual growth';
-variant: 'ai - autonomous'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
       market_size: '$2.8B market',
       growth_rate: '19.8% annual growth',
       variant: 'ai - autonomous',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -495,20 +471,12 @@ varian,
         'Inventory tracking, Demand forecasting, Supplier management, Multi-location operations, E-commerce integration'],
       roi: 'Average customer reduces inventory costs by 25% and sees 350% ROI within 6 months.',
       competitors: ['TradeGecko, Zoho Inventory, Fishbowl, Cin7, Unleashed'],
-<<<<<<< HEAD
-      marketSize: '$3 && 3.1B market'
-      growthRate: '16 && 16.9% annual growth';
-variant: 'ai-autonomous'
-      contactInfo: unknown;
-      color: 'from - orange - 600 to - red - 500'
-=======
       marketSize: '$3 && 3.1B market',
       growthRate: '16 && 16.9% annual growth',
       variant: 'ai-autonomous',
       contactInfo:
         contactInfo: unknown;
       color: 'from - orange - 600 to - red - 500',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / services / smart - inventory - management - system',
       market_position: unknown;
@@ -565,20 +533,12 @@ varian,
         'Inventory tracking, Demand forecasting, Supplier management, Multi - location operations, E - commerce integration'],
       roi: 'Average customer reduces inventory costs by 25% and sees 350% ROI within 6 months.',
       competitors: ['TradeGecko, Zoho Inventory, Fishbowl, Cin7, Unleashed'],
-<<<<<<< HEAD
-      market_size: '$3.1B market'
-      growth_rate: '16.9% annual growth';
-variant: 'ai - autonomous'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
       market_size: '$3.1B market',
       growth_rate: '16.9% annual growth',
       variant: 'ai - autonomous',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -718,20 +678,12 @@ varian,
         'Candidate screening, Job posting, Interview scheduling, Skill assessment, Compliance tracking'],
       roi: 'Average customer reduces time - to - hire by 60% and sees 250% ROI through efficiency gains.',
       competitors: ['Greenhouse, Lever, BambooHR, Workday, ADP'],
-<<<<<<< HEAD
-      market_size: '$2.3B market'
-      growth_rate: '18.2% annual growth';
-variant: 'ai - autonomous'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
       market_size: '$2.3B market',
       growth_rate: '18.2% annual growth',
       variant: 'ai - autonomous',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -828,20 +780,12 @@ varian,
         'Project planning, Resource management, Risk assessment, Team collaboration, Progress tracking'],
       roi: 'Average customer improves project success rate by 35% and sees 300% ROI through better management.',
       competitors: ['Asana, Monday && Monday.com, Jira, Trello, Basecamp'],
-<<<<<<< HEAD
-      marketSize: '$4 && 4.2B market'
-      growthRate: '20 && 20.1% annual growth';
-variant: 'ai-autonomous'
-      contactInfo: unknown;
-      color: 'from - indigo - 600 to - blue - 500'
-=======
       marketSize: '$4 && 4.2B market',
       growthRate: '20 && 20.1% annual growth',
       variant: 'ai-autonomous',
       contactInfo:
         contactInfo: unknown;
       color: 'from - indigo - 600 to - blue - 500',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / services / intelligent - project - management - hub',
       market_position: unknown;
@@ -898,20 +842,12 @@ varian,
         'Project planning, Resource management, Risk assessment, Team collaboration, Progress tracking'],
       roi: 'Average customer improves project success rate by 35% and sees 300% ROI through better management.',
       competitors: ['Asana, Monday.com, Jira, Trello, Basecamp'],
-<<<<<<< HEAD
-      market_size: '$4.2B market'
-      growth_rate: '20.1% annual growth';
-variant: 'ai - autonomous'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
       market_size: '$4.2B market',
       growth_rate: '20.1% annual growth',
       variant: 'ai - autonomous',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},

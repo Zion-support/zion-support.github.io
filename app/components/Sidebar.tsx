@@ -18,37 +18,12 @@ import {
   Phone,
   Mail,
   MapPin,
-<<<<<<< HEAD
-  Clock;)
-} from 'lucide-react';
-;
-const Sidebar: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
-const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']));
-const location = useLocation();
-=======
   Clock]
     } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
   useEffect(() => {;
 const handleResize = () => {
       if (window.innerWidth >= 1024) {
-<<<<<<< HEAD
-        setIsOpen(false););
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);)
-}, []);
-const toggleSection = (section: string) => {;
-const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(section)) {
-      newExpanded.delete(section);)
-} else {
-      newExpanded.add(section););
-    setExpandedSections(newExpanded););
-const navigationSections = [
-=======
         setIsOpen(false)]
     }
     };
@@ -68,7 +43,6 @@ const navigationSections = [
     };
 
   const navigationSections = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       title: 'Main',
       items: [
@@ -149,25 +123,17 @@ const navigationSections = [
         { name: 'API Docs', path: '/api-docs', icon: Code },
         { name: 'Support', path: '/support', icon: Users },
         { name: 'Status', path: '/status', icon: Settings },
-<<<<<<< HEAD
-      ];);
-=======
       ]]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
-<<<<<<< HEAD
-    hours: 'Mon-Fri 9AM-6PM EST';);
-=======
     hours: 'Mon-Fri 9AM-6PM EST']
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return (
     <React.Fragment>
       {/* Mobile Menu Button */}
@@ -183,7 +149,7 @@ const contactInfo = {
       {isOpen && (
         <div 
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-          onClick={() =></div> setIsOpen(false);
+          onClick={() =>> setIsOpen(false);
         />
       );
 
@@ -191,7 +157,7 @@ const contactInfo = {
       <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
         isOpen ? 'translate-x-0' : '-translate-x-full']
     } lg:translate-x-0 lg:static lg:z-auto`}></aside>
-        <div className="flex flex-col h-full"></div>
+        <div className="flex flex-col h-full">>
           {/* Header */}</div>
           <div className="flex items-center justify-between p-6 border-b border-slate-700/50"></div>
             <Link to="/" className="flex items-center space-x-3" onClick={() =></Link> setIsOpen(false);>
@@ -199,7 +165,7 @@ const contactInfo = {
                 <Brain className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h2 className="text-xl font-bold text-white cyber-text"></h>Zion Tech Group</h2>
+                <h2 className="text-xl font-bold text-white cyber-text"></h3>Zion Tech Group</h2>
                 <p className="text-xs text-cyan-400">AI & IT Solutions</p>
               </div>
             </Link>
@@ -224,13 +190,12 @@ const contactInfo = {
                     <span>{section.title}</span>
                     {section.key && (
                       expandedSections.has(section.key) ? 
-                        <ChevronDown className="w-4 h-4" /> : 
-                        <ChevronRight className="w-4 h-4" />
-                    );
-                  </button>
+                        <ChevronDown className="w-4 h-4">: 
+                        </ChevronDown><ChevronRight className="w-4 h-4">);
+                  </ChevronRight></button>
                   
                   {(!section.key || expandedSections.has(section.key)) && (
-                    <div className="ml-4 space-y-1"></div>
+                    <div className="ml-4 space-y-1">>
                       {section.items.map((item, itemIndex) => (</div>
                         <Link
                           key={itemIndex}
@@ -246,7 +211,7 @@ const contactInfo = {
                           <span>{item.name}</span>
                         </Link>
                       ));
-                    </div>
+                    >
                   );
                 </div>
               ));
@@ -255,7 +220,7 @@ const contactInfo = {
 
           {/* Contact Info */}
           <div className="border-t border-slate-700/50 p-6"></div>
-            <h3 className="text-sm font-semibold text-cyan-400 mb-4"></h>Contact Information</h3>
+            <h3 className="text-sm font-semibold text-cyan-400 mb-4">>Contact Information</h3>
             <div className="space-y-3 text-sm text-gray-300"></div>
               <div className="flex items-center space-x-3"></div>
                 <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0" />
@@ -272,18 +237,13 @@ const contactInfo = {
               <div className="flex items-center space-x-3"></div>
                 <Clock className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <span className="text-xs"></spa>{contactInfo.hours}</span>
-              </div>
+              >
           </div>
       </aside>
     </>
-<<<<<<< HEAD
-  ););
-Sidebar.displayName = 'Sidebar'
-=======
   )]
     };
 
 Sidebar.displayName = 'Sidebar';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default Sidebar;

@@ -8,7 +8,7 @@ const patterns = [
       {
         //Fix CheckCircleIcon and similar patterns;
         pattern: /(<CheckCircleIcon[^>]*>)\s*<span/g;
-        replacement: '$1 />\n                  <span'},
+        replacement: '$1>\n                  </span><span'},
       {
         //Fix other icon patterns;
         pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<[^/]/g;

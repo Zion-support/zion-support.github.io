@@ -3,16 +3,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-;
-const PagePage: React.FC = () => {const features = [
-=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const PagePage: React.FC = () => {
   const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -69,10 +63,8 @@ const PagePage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
+        <Navigation>{/* Hero Section */}
+        </Navigation><section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -96,7 +88,7 @@ const PagePage: React.FC = () => {
                   <span>Learn More</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
-              </div>
+              >
             </div>
           </div>
         </section>
@@ -116,19 +108,6 @@ const PagePage: React.FC = () => {
                   <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-cyan-400" />
                   </div>
-<<<<<<< HEAD
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ));
-                    </ul>);
-=======
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-6">{feature.description}</p>
                   <ul className="space-y-2">
@@ -139,8 +118,7 @@ const PagePage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-                </div>
+                >
               ));
             </div>
           </div>
@@ -177,17 +155,17 @@ const PagePage: React.FC = () => {
                     <div className="grid grid-cols-2 gap-4 text-center">
                       <div>
                         <div className="text-3xl font-bold text-cyan-400">99.9%</div>
-                        <div className="text-gray-300 text-sm">Uptime</div>
+                        <div className="text-gray-300 text-sm">Uptime>
                       </div>
                       <div>
                         <div className="text-3xl font-bold text-purple-400">50ms</div>
-                        <div className="text-gray-300 text-sm">Response Time</div>
+                        <div className="text-gray-300 text-sm">Response Time>
                       </div>
-                    </div>
+                    >
                   </div>
-                </div>
+                >
               </div>
-            </div>
+            >
           </div>
         </section>
 
@@ -214,20 +192,15 @@ const PagePage: React.FC = () => {
                   <span>View Pricing</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
-              </div>
+              >
             </div>
           </div>
         </section>
 
         <Footer />
       </div>
-<<<<<<< HEAD
-      <Footer />
-    </React.Fragment>)
-=======
     </>
   );
 };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default PagePage;

@@ -26,7 +26,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
           </div>
           <div className="ml-3">
             <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
-          </div>
+          >
         </div>
         <div className="mb-4">
           <p className="text-sm text-gray-600 mb-2">An unexpected error occurred:</p>
@@ -47,7 +47,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
           >
             Reload page
           </button>
-        </div>
+        >
       </div>
     </div>
   )}
@@ -79,7 +79,8 @@ constructor(props: AppErrorBoundaryProps) {
 
   render() {
     if (this.state.hasError && this.state.error) {
-      return <ErrorFallback error={this.state.error} resetError={this.resetError} />}
+      return <ErrorFallback error={this.state.error} resetError={this.resetError}>}
 
     return this.props.children}
 }
+</ErrorFallback>

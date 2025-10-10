@@ -72,16 +72,10 @@
   5: "ttfb"})valu,
   e: Math.round(metrics.fcp || 0),non_interactio,"
   n: 'true'; ; if (process.env['NODE_ENV'] = == "production") {/* TODO: Fix JSX expression */}"
-<<<<<<< HEAD
-  p: Date.now()} metrics}; metrics})}).catch(console.error)} } ; return () => {; fcpObserver.disconnect()}}} lcpObserver.disconnect()} fidObserver.disconnect()} clsObserver.disconnect()} fmpObserver.disconnect()} window.removeEventListener("beforeunload")sendMetrics)}"},[])} retur,
-  n: 'null,"
-  export: default PerformanceMonitor'," window.removeEventListener("beforeunload")sendMetrics)}},[])} return null export default PerformanceMonitor;" return null; export default PerformanceMonitor;; metho,"
-=======
   p: Date.now()} metrics}; metrics})}).catch(console.error)} ;} ; return () => {; fcpObserver.disconnect()}}} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect();} window.removeEventListener("beforeunload")sendMetrics)}"},[]);} retur,
   n: 'null,',
   export:
         export: default PerformanceMonitor'," window.removeEventListener("beforeunload")sendMetrics)}},[]);} return null export default PerformanceMonitor;" return null; export default PerformanceMonitor;; metho,"
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   d: "POST",header,"
   s: {"}; "Content-Type": "application/json"},bod,
   y: JSON.stringify({) ur} l: 'window.location.href')timestam,"

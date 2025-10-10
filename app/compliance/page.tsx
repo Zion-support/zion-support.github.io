@@ -67,7 +67,7 @@ const CompliancePage: React.FC = () => {const complianceStandards = [
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{standard.title}</h3>
                   <p className="text-gray-300">{standard.description}</p>
-                </div>
+                >
               ));
             </div>
           </div>
@@ -86,13 +86,11 @@ const CompliancePage: React.FC = () => {const complianceStandards = [
               <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
                 Contact Compliance Team
               </button>
-            </div>
+            >
           </div>
         </section>
       </div>
     </>
-<<<<<<< HEAD
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Shield, FileCheck, Lock, Award } from 'lucide-react';
@@ -140,10 +138,8 @@ const CompliancePage: React.FC = () => {
         <meta name="keywords" content="compliance, security compliance, regulatory compliance, data protection, Zion Tech Group" />
       </Helmet>
 
-      <Navigation />
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <Navigation>{/* Hero Section */}
+      </Navigation><section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -165,7 +161,7 @@ const CompliancePage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-            </div>
+            >
           </div>
         </div>
       </section>
@@ -190,7 +186,7 @@ const CompliancePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
+              >
             ))}
           </div>
         </div>
@@ -213,7 +209,7 @@ const CompliancePage: React.FC = () => {
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
+              >
             ))}
           </div>
         </div>
@@ -236,9 +232,8 @@ const CompliancePage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Learn More
               </button>
-            </div>
+            >
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         </div>
       </section>
 

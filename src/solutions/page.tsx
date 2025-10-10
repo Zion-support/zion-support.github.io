@@ -654,10 +654,10 @@ $4}
           {/* Header */}"
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
-  md:text-5xl font-bold text-white mb-6 neon-text"></h1>
+  md:text-5xl font-bold text-white mb-6 neon-text">>
 // Our Solutions;
           </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">>
 // Comprehensive technology solutions designed to transform your business operations;
 //               and drive innovation across every aspect of your organization.
             
@@ -702,10 +702,10 @@ $4}
               ))}
             </div>"
             <div className="text-center"></div>"
-              <p className="text-gray-300 max-w-2xl mx-auto"></p>
+              <p className="text-gray-300 max-w-2xl mx-auto">>
                 {solutionCategories.find(cat => cat.id === activeTab)?.description}
               </p>
-            </div>
+            >
           </div>
 
           {/* Solutions Grid */}
@@ -720,7 +720,7 @@ $4}
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
                       <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
-                    </div>
+                    >
                   </div>
                   
                   <div className="mb-4">
@@ -728,9 +728,8 @@ $4}
                     <ul className="space-y-1">
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-          {/* Solutions Grid */}"
-          <div className="mb-16"></div>"
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0">{/* Solutions Grid */}"
+          </CheckCircle><div className="mb-16"></div>"
             <div className="grid grid-cols-1,"
   md:grid-cols-2 gap-8"></div>
               {solutions[activeTab as keyof typeof solutions].map((solution, index) => ()}"
@@ -743,7 +742,7 @@ $4}
                     <div className="flex-1"></div>"
                       <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>"
                       <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
-                    </div>
+                    >
                   </div>"
                   <div className="mb-4"></div>"
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
@@ -770,7 +769,7 @@ $4}
                       <ArrowRight className="w-4 h-4 ml-1" />
                   </div>"
                   <div className="flex items-center justify-between"></div>`
-                    <div className={`text-lg font-bold ${solution.color}`}></div>
+                    <div className={`text-lg font-bold ${solution.color}`}>>
                       {solution.pricing}
                     </div>
 
@@ -781,10 +780,10 @@ $4}
 //                       Learn More;"
           <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
                     </a>
-                  </div>
+                  >
                 </div>
               ))}
-            </div>
+            >
           </div>
 
           {/* Benefits Section */}
@@ -823,7 +822,7 @@ $4}
                   </div>"
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>"
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
-                </div>
+                >
               ))}
             </div>
           </div>
@@ -842,23 +841,20 @@ $4}
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                Get Free Consultation
-              </a>
+                <Phone className="w-5 h-5 mr-2">Get Free Consultation
+              </Phone></a>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
               >
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-              </a>
+                <Phone className="w-4 h-4 mr-2">(302) 464-0950
+              </Phone></a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
               >
-                <Mail className="w-4 h-4 mr-2" />
-                Email Us
-              </a>
+                <Mail className="w-4 h-4 mr-2">Email Us
+              </Mail></a>
           {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
             <h2 className="text-2xl font-bold text-white mb-4"></h2>
@@ -873,7 +869,7 @@ $4}
           
           
           </h2>"
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">>
 // Get a free consultation and discover how our solutions can revolutionize your operations;
 //               and drive unprecedented growth.
             
@@ -938,9 +934,9 @@ $4}
           <Mail className="w-4 h-4 mr-2" /></Mail>
 // Email Us;
           </a>
-            </div>
+            >
           </div>
-        </div>
+        >
       </div>
 
       <Footer />

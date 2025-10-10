@@ -10,18 +10,11 @@ import {
   MapPin,
   Clock,
   Send,
-<<<<<<< HEAD
-  CheckCircle;)
-} from 'lucide-react';
-;
-const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
-=======
   CheckCircle]
     } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     name: '',
     email: '',
     company: '',
@@ -29,20 +22,6 @@ phone: '',
     service: '',
     budget: '',
     timeline: '',
-<<<<<<< HEAD
-    message: '';)
-});
-const [isSubmitting, setIsSubmitting] = useState(false);
-const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;
-const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value;)
-}););)
-}, []);
-const handleSubmit = async (e: React.FormEvent) => {
-=======
     message: '']
     });;
 
@@ -58,7 +37,6 @@ const handleSubmit = async (e: React.FormEvent) => {
     }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -75,14 +53,6 @@ const handleSubmit = async (e: React.FormEvent) => {
         service: '',
         budget: '',
         timeline: '',
-<<<<<<< HEAD
-        message: '';)
-});;)
-} catch (error) {
-      setSubmitStatus('error');)
-} finally {
-      setIsSubmitting(false););
-=======
         message: '']
     });]
     } catch (error) {
@@ -90,7 +60,6 @@ const handleSubmit = async (e: React.FormEvent) => {
     } finally {
       setIsSubmitting(false)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   };
 ;
 const services = [
@@ -128,12 +97,8 @@ const contactInfo = [
       icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-<<<<<<< HEAD
-      description: 'Eastern Time';);
-=======
       description: 'Eastern Time']
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 
   return (
@@ -154,7 +119,7 @@ const contactInfo = [
                 {' '}Touch
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               Ready to transform your business? Let's discuss your project and explore 
               how our AI and IT solutions can help you achieve your goals.
             </p>
@@ -165,7 +130,7 @@ const contactInfo = [
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
             {/* Contact Form */}
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></div>
-              <h2 className="text-3xl font-bold text-white mb-6"></h>Send us a Message</h2>
+              <h2 className="text-3xl font-bold text-white mb-6"></h3>Send us a Message</h2>
               
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>
@@ -197,7 +162,7 @@ const contactInfo = [
                         className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="Your full name"
                       />
-                    </div>
+                    >
                   </div>
                   
                   <div>
@@ -215,7 +180,7 @@ const contactInfo = [
                         className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="your@email.com"
                       />
-                    </div>
+                    >
                   </div>
                 </div>
 
@@ -234,7 +199,7 @@ const contactInfo = [
                         className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="Your company"
                       />
-                    </div>
+                    >
                   </div>
                   
                   <div>
@@ -251,7 +216,7 @@ const contactInfo = [
                         className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="+1 (555) 123-4567"
                       />
-                    </div>
+                    >
                   </div>
                 </div>
 
@@ -265,8 +230,7 @@ const contactInfo = [
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-                    ></select>
+                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"></select>
                       <option value=""></optio>Select a service</option>
                       {services.map((service) => (
                         <option key={service} value={service}></option>
@@ -274,7 +238,7 @@ const contactInfo = [
                         </option>
                       ));
                     </select>
-                  </div>
+                  >
                 </div>
 
                 <div>
@@ -292,14 +256,13 @@ const contactInfo = [
                       className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
                       placeholder="Tell us about your project, goals, or any questions you have..."
                     />
-                  </div>
+                  >
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
-                ></button>
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"></button>
                   {isSubmitting ? (
                     <>
                       <div>
@@ -318,8 +281,8 @@ const contactInfo = [
             {/* Contact Information */}
             <div className="space-y-8"></div>
               <div>
-                <h2 className="text-3xl font-bold text-white mb-6"></h>Contact Information</h2>
-                <p className="text-lg text-gray-300 mb-8"></p>
+                <h2 className="text-3xl font-bold text-white mb-6"></h3>Contact Information</h2>
+                <p className="text-lg text-gray-300 mb-8">>
                   We're here to help! Reach out to us through any of these channels 
                   and we'll get back to you as soon as possible.
                 </p>
@@ -329,8 +292,8 @@ const contactInfo = [
               {/* Contact Information */}
               <div className="space-y-8"></div>
                 <div>
-                  <h2 className="text-3xl font-bold text-white mb-6"></h>Get in Touch</h2>
-                  <p className="text-gray-300 mb-8"></p>
+                  <h2 className="text-3xl font-bold text-white mb-6"></h3>Get in Touch</h2>
+                  <p className="text-gray-300 mb-8">>
                     We're here to help you transform your business with cutting-edge AI and technology solutions.
                   </p>
                 </div>
@@ -341,17 +304,17 @@ const contactInfo = [
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
-<h3 className="text-lg font-semibold text-white mb-1"></h3>
+<h3 className="text-lg font-semibold text-white mb-1">>
                         {info.title}
                       </h3>
-                      <p className="text-cyan-400 font-medium mb-1"></p>
+                      <p className="text-cyan-400 font-medium mb-1">>
                         {info.details}
                       </p>
-                      <p className="text-gray-300 text-sm"></p>
+                      <p className="text-gray-300 text-sm">>
                         {info.description}
                       </p>
 
-                    </div>
+                    >
                   </div>
 
                   <div className="flex items-center"></div>
@@ -359,9 +322,9 @@ const contactInfo = [
                       <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white"></h>Email</h3>
+                      <h3 className="text-lg font-semibold text-white">>Email</h3>
                       <p className="text-gray-300">info@ziontechgroup.com</p>
-                    </div>
+                    >
                   </div>
 
                   <div className="flex items-center"></div>
@@ -369,9 +332,9 @@ const contactInfo = [
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white"></h>Address</h3>
-                      <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
-                    </div>
+                      <h3 className="text-lg font-semibold text-white">>Address</h3>
+                      <p className="text-gray-300">123 Tech Street<br>San Francisco, CA 94105</br></p>
+                    >
                   </div>
 
                   <div className="flex items-center"></div>
@@ -379,23 +342,19 @@ const contactInfo = [
                       <Clock className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white"></h>Business Hours</h3>
-                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
-                    </div>
+                      <h3 className="text-lg font-semibold text-white">>Business Hours</h3>
+                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM</br></p>
+                    >
                   </div>
-                </div>
+                >
               </div>
-            </div>
+            >
           </div>
         </section>
-      </div>
+      >
 </div>
 
-<<<<<<< HEAD
-  );)
-=======
   )]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ContactPage;

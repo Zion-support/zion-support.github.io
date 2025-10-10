@@ -17,13 +17,13 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
           {/* Hero Section */}"
           <section className="text-center mb-16"></section>"
             <h1 className="text-4xl,"
-  md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
+  md:text-6xl font-bold text-white mb-6 neon-text cyber-text">>
               AI Inventory Management;
             </h1>"
-            <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
+            <p className="text-xl text-cyan-400 mb-8 font-medium">>
               Intelligent inventory optimization powered by AI;
             </p>"
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">>
               Revolutionize your inventory management with AI that predicts demand, optimizes stock levels, and automates reordering to reduce costs by 40% while eliminating stockouts.
             </p>
           </section>
@@ -37,7 +37,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🔮</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Demand Forecasting</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   AI predicts future demand with 95% accuracy using historical data, seasonality, and market trends.
                 </p>
               </div>
@@ -45,7 +45,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">📦</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Automated Reordering</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   Automatically reorder products when stock levels reach optimal thresholds to prevent stockouts.
                 </p>
               </div>
@@ -53,7 +53,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">📊</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Real-time Analytics</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   Get instant insights into inventory performance, turnover rates, and optimization opportunities.
                 </p>
               </div>
@@ -61,7 +61,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🎯</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Stock Optimization</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   AI optimizes stock levels to minimize carrying costs while maintaining service levels.
                 </p>
               </div>
@@ -69,7 +69,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🚨</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Alert System</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   Get notified about low stock, overstock, slow-moving items, and other critical inventory issues.
                 </p>
               </div>
@@ -77,10 +77,10 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">📱</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Mobile Access</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   Manage inventory on-the-go with our mobile app for barcode scanning and real-time updates.
                 </p>
-              </div>
+              >
             </div>
           </section>
 
@@ -128,7 +128,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
                   <li>Custom AI training</li>
                 </ul>"
                 <a href="/contact" className="cyber-button w-full">Contact Sales</a>
-              </div>
+              >
             </div>
           </section>
 
@@ -160,7 +160,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
                 <div className="text-4xl font-bold text-yellow-400 mb-4">60%</div>"
                 <h3 className="text-xl font-bold text-white mb-2">Time Saved</h3>"
                 <p className="text-gray-300">60% reduction in inventory management time</p>
-              </div>
+              >
             </div>
           </section>
 
@@ -192,14 +192,14 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
                 <div className="text-4xl mb-4">🚚</div>"
                 <h3 className="text-xl font-bold text-white mb-4">Distribution</h3>"
                 <p className="text-gray-300">Streamline distribution center operations with AI-powered inventory management.</p>
-              </div>
+              >
             </div>
           </section>
 
           {/* CTA Section */}"
           <section className="text-center"></section>"
             <h2 className="text-3xl font-bold text-white mb-6">Optimize Your Inventory Today</h2>"
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">>
               Join 3,000+ businesses using our AI inventory management system to reduce costs and eliminate stockouts.
             </p>"
             <div className="flex flex-col,"
@@ -219,6 +219,6 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
         </main>
         
         <Footer /></Footer>
-      </div>
+      >
     </div>
   )}"

@@ -84,10 +84,8 @@ const benefits = [
         <meta name="keywords" content="financial IT, SOX compliance, banking solutions, financial security, Zion Tech Group" />
       </Helmet>
       
-      <Navigation />
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      <Navigation>{/* Hero Section */}
+      </Navigation><section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -109,7 +107,7 @@ const benefits = [
             <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo
             </button>
-          </div>
+          >
         </div>
       </section>
 
@@ -134,12 +132,11 @@ const benefits = [
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0">{benefit}
+                    </CheckCircle></li>
                   ));
                 </ul>
-              </div>
+              >
             ));
           </div>
         </div>
@@ -163,7 +160,7 @@ const benefits = [
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
-              </div>
+              >
             ));
           </div>
         </div>
@@ -188,7 +185,7 @@ const benefits = [
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-              </div>
+              >
             ));
           </div>
         </div>
@@ -208,7 +205,7 @@ const benefits = [
             <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Contact Sales
             </button>
-          </div>
+          >
         </div>
       </section>
 

@@ -17,7 +17,7 @@ import Footer from '../components/Footer';
 // AI Email Assistant;
           </h1>"
           <p className="text-xl,"
-  md:text-2xl text-cyan-400 mb-8 font-medium neon-glow"></p>
+  md:text-2xl text-cyan-400 mb-8 font-medium neon-glow">>
 // Smart Email Management with AI-Powered Intelligence;
 
           </p>
@@ -52,7 +52,7 @@ import Footer from '../components/Footer';
             <div className="cyber-card hologram-card p-6"></div>"
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Smart Responses</h3>"
-              <p className="text-gray-300"></p>
+              <p className="text-gray-300">>
 // AI-powered email responses that understand context and tone, automatically generating;
 //                 professional replies based on your communication style.
               
@@ -69,7 +69,7 @@ import Footer from '../components/Footer';
             <div className="cyber-card hologram-card p-6"></div>"
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Intelligent Scheduling</h3>"
-              <p className="text-gray-300"></p>
+              <p className="text-gray-300">>
 // Automatically schedule meetings, set reminders, and manage your calendar based on;
 //                 email content and your availability preferences.
               
@@ -86,7 +86,7 @@ import Footer from '../components/Footer';
             <div className="cyber-card hologram-card p-6"></div>"
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Priority Sorting</h3>"
-              <p className="text-gray-300"></p>
+              <p className="text-gray-300">>
 // AI analyzes email importance and urgency, automatically organizing your inbox;
 //                 with smart priority levels and categorization.
               
@@ -103,7 +103,7 @@ import Footer from '../components/Footer';
             <div className="cyber-card hologram-card p-6"></div>"
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Auto Follow-ups</h3>"
-              <p className="text-gray-300"></p>
+              <p className="text-gray-300">>
                 Automated follow-up sequences for sales, customer service, and project management;
 // with personalized timing and content.
               
@@ -120,7 +120,7 @@ import Footer from '../components/Footer';
             <div className="cyber-card hologram-card p-6"></div>"
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Analytics Dashboard</h3>"
-              <p className="text-gray-300"></p>
+              <p className="text-gray-300">>
 // Track email performance, response times, and engagement metrics with detailed;
 //                 analytics and insights.
               
@@ -137,7 +137,7 @@ import Footer from '../components/Footer';
             <div className="cyber-card hologram-card p-6"></div>"
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Enterprise Security</h3>"
-              <p className="text-gray-300"></p>
+              <p className="text-gray-300">>
 // Bank-level encryption and security protocols ensure your email data remains;
 //                 private and protected at all times.
               
@@ -150,7 +150,7 @@ import Footer from '../components/Footer';
           
           
           </p>
-            </div>
+            >
           </div>
         </section>
         {/* Pricing Section */}"
@@ -204,7 +204,7 @@ import Footer from '../components/Footer';
               <a href="/contact" className="cyber-button w-full text-center"></a>
 // Contact Sales;
           </a>
-            </div>
+            >
           </div>
         </section>
         {/* Contact Section */}"
@@ -221,7 +221,7 @@ import Footer from '../components/Footer';
           
           
           </h2>"
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">>
 // Contact us today to schedule a free demo and see how our AI Email Assistant;
 //             can revolutionize your business communication.
           

@@ -55,7 +55,7 @@ export default function HeroSection() {
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Innovation</h3>
               <p className="text-gray-400 text-sm">Leading-edge technology and digital transformation</p>
-            </div>
+            >
           </div>
 
           {/* CTA Buttons */}
@@ -78,28 +78,28 @@ export default function HeroSection() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-16">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-cyan-400 neon-pulse">500+</div>
-              <div className="text-gray-400 text-sm mt-2">Projects Completed</div>
+              <div className="text-gray-400 text-sm mt-2">Projects Completed>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-purple-400 neon-pulse">50+</div>
-              <div className="text-gray-400 text-sm mt-2">Happy Clients</div>
+              <div className="text-gray-400 text-sm mt-2">Happy Clients>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-green-400 neon-pulse">99%</div>
-              <div className="text-gray-400 text-sm mt-2">Success Rate</div>
+              <div className="text-gray-400 text-sm mt-2">Success Rate>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-yellow-400 neon-pulse">24/7</div>
-              <div className="text-gray-400 text-sm mt-2">Support</div>
+              <div className="text-gray-400 text-sm mt-2">Support>
             </div>
-          </div>
+          >
         </div>
       </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-pulse"></div>
+          <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-pulse">>
         </div>
       </div>
     </section>

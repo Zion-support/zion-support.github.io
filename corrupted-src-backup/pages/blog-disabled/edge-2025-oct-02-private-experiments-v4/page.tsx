@@ -28,7 +28,7 @@ export default function BlogPost(): React.JSX.Element {
               <span>2025-10-03</span>
               <span>•</span>
               <span>5 min read</span>
-            </div>
+            >
           </div>
 
           <div className="prose prose-lg prose-invert max-w-none"></div>
@@ -50,7 +50,7 @@ export default function BlogPost(): React.JSX.Element {
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip;
                 ex ea commodo consequat.
               </p>
-            </div>
+            >
           </div>
 
           <div className="mt-16 pt-8 border-t border-white border-opacity-20">
@@ -96,7 +96,7 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
                   >
                     LinkedIn;
                   </a>
-                </div>
+                >
               </div>
               <a;
                 href="/blog"
@@ -108,9 +108,9 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
               >
                 Back to Blog;
               </a>
-            </div>
+            >
           </div>
-        </div>
+        >
       </div>,
     </React.Fragment>)}
 "`

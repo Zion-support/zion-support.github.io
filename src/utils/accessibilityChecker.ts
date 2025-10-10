@@ -301,7 +301,7 @@ const alt = img.getAttribute('alt');
           message: `Image ${index + 1} is missing alt text`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add descriptive alt text to the image',
-          codeExample: '<img src="..." alt="Description of image" />'
+          codeExample: '<img src="..." alt="Description of image">'
         })}
       // Check for empty alt on decorative images without role
       if (alt === '' && role !== 'presentation') {
@@ -318,7 +318,7 @@ const alt = img.getAttribute('alt');
           
           
           "
-          <img src="..." alt="Description of image" />'
+          </img><img src="..." alt="Description of image">'
         })
   )
       }
@@ -337,7 +337,7 @@ const alt = img.getAttribute('alt');
           message: `Image ${index + 1} has empty alt without role="presentation"`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add role="presentation" to decorative images',
-          codeExample: '<img src="..." alt="" role="presentation" />'
+          codeExample: '</img><img src="..." alt="" role="presentation">'
         })}
     })}
   /**
@@ -368,8 +368,7 @@ const level = parseInt(heading.tagName.charAt(1));
           
           
           "
-          <img src="..." alt="" role="presentation" />
-);
+          </img><img src="..." alt="" role="presentation">);
 }'
         })
   )
@@ -514,7 +513,7 @@ const links = element.querySelectorAll('a');
           message: `Link ${index + 1} has no accessible text`,
           element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Add descriptive text or aria-label to the link',
-          codeExample: '<Link to="..." aria-label="Description">...</Link>'
+          codeExample: '</img><Link to="..." aria-label="Description">...</Link>'
         })}
       // Check for generic link text
       if (text && ['click here', 'read more', 'more', 'link'].includes(text.toLowerCase())) {
@@ -734,7 +733,7 @@ const label = id ? element.querySelector(`label[for="${id}"]`) : null;
           message: `Form control ${index + 1} (${input.tagName.toLowerCase()}) has no label`,
           element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"]`,
           fix: 'Associate a label with the form control',
-          codeExample: '<label for="email">Email:</label><input id="email" name="email" />'
+          codeExample: '<label for="email">Email:</label><input id="email" name="email">'
         })}
     });
           codeExample: '
@@ -747,8 +746,8 @@ const label = id ? element.querySelector(`label[for="${id}"]`) : null;
           
           
           "
-          <label for="email">Emai,"
-  l:</label><input id="email" name="email" />'
+          </input><label for="email">Emai,"
+  l:</label><input id="email" name="email">'
         }
   )
       }
@@ -853,7 +852,7 @@ const tabindex = el.getAttribute('tabindex');
           message: `Interactive ${el.tagName.toLowerCase()} is not keyboard focusable`,
           element: el.tagName.toLowerCase(),
           fix: 'Remove tabindex="-1" or use tabindex="0"',
-          codeExample: '<button tabindex="0">Accessible button</button>'
+          codeExample: '</input><button tabindex="0">Accessible button</button>'
         })}
     });
     // Check for divs/spans with onclick but no keyboard handler;

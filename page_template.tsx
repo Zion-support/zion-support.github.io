@@ -57,10 +57,9 @@ return (
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                <Phone className="w-5 h-5" />
-                +1 302 464 0950;
-              </a>
-            </div>
+                <Phone className="w-5 h-5">+1 302 464 0950;
+              </Phone></a>
+            >
           </div>,
         </section>,
 ,
@@ -81,8 +80,8 @@ return (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover: border-cyan-400/60 transition-all duration-300">,
-                <CheckCircle className="w-8 h-8 text-green-400 mb-4" />,
-          </div>
+                <CheckCircle className="w-8 h-8 text-green-400 mb-4">,
+          </CheckCircle></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (</div>
@@ -90,7 +89,7 @@ return (
                 <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature}</h3>
                 <p className="text-gray-300">Advanced {feature.toLowerCase()} capabilities powered by AI</p>
-              </div>
+              >
             ))}
           </div>
         </section>
@@ -111,14 +110,14 @@ return (
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover: border-purple-400/60 transition-all duration-300">,
-                <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <TrendingUp className="w-8 h-8 text-purple-400 mb-4">,
+          </TrendingUp><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
                 <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
                 <p className="text-gray-300">Measurable improvement in your business metrics</p>
-              </div>
+              >
             ))}
           </div>
         </section>
@@ -151,7 +150,7 @@ return (
               >
                 Get Started;
               </a>
-            </div>
+            >
           </div>,
         </section>,
 ,
@@ -192,17 +191,15 @@ return (
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709;
-                364 E Main St STE 1008</p><br />
-                Middletown DE 19709
-              </p>
-            </div>
+                364 E Main St STE 1008<br>Middletown DE 19709;
+                364 E Main St STE 1008</br></p><br>Middletown DE 19709
+              </br></p>
+            >
           </div>
         </section>
       </main>
 
-      <Footer />,
-    </div>)};
+      <Footer>,
+    </Footer></div>)};
 
 export default PageTemplate;

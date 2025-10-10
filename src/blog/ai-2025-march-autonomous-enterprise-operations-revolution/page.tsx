@@ -21,7 +21,7 @@ return (
           >
             Contact Us
           </Link>
-        </div>
+        >
       </div>
       <Footer />
     </div>

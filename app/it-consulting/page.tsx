@@ -72,15 +72,6 @@ import {
   Smartphone as SmartphoneIcon2, Laptop as LaptopIcon,
   Tablet as TabletIcon, Headphones as HeadphonesIcon2,
   Keyboard as KeyboardIcon, Mouse as MouseIcon,
-<<<<<<< HEAD
-  Webcam as WebcamIcon, Speaker as SpeakerIcon;)
-} from 'lucide-react';
-;
-const ITConsultingPage: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState('all');
-const [searchTerm, setSearchTerm] = useState('');
-;
-const itServices = [
-=======
   Webcam as WebcamIcon, Speaker as SpeakerIcon]
     } from 'lucide-react';
 
@@ -89,7 +80,6 @@ const ITConsultingPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const itServices = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // IT Infrastructure Services
     {
       id: 'it-infrastructure-design',
@@ -409,12 +399,8 @@ const ITConsultingPage: React.FC = () => {
       support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
-<<<<<<< HEAD
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits';);
-=======
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits']
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const categories = [
@@ -439,7 +425,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
     });;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">>
       {/* Hero Section */}</div>
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid"></section>
         <div>
@@ -447,33 +433,29 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
           <h1></h1>
             Professional <span className="holographic-text"></spa>IT Services</span>
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow"></p>
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">>
             Comprehensive IT solutions designed to optimize your technology infrastructure, 
             enhance security, and drive business growth. Expert consulting and implementation.
           </p>
           <div>
             <a
               href="tel:+13024640950"
-              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
-            ></a>
-              <Phone className="w-5 h-5 inline mr-2" />
-              Call (302) 464-0950
-            </a>
+              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"></a>
+              <Phone className="w-5 h-5 inline mr-2">Call (302) 464-0950
+            </Phone></a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
-            ></a>
-              <Mail className="w-5 h-5 inline mr-2" />
-              Get IT Consultation
-            </a>
-          </div>
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50"></a>
+              <Mail className="w-5 h-5 inline mr-2">Get IT Consultation
+            </Mail></a>
+          >
         </div>
       </section>
 
       {/* Search and Filter Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
         <div>
-          <div className="flex flex-col lg:flex-row gap-6 mb-8"></div>
+          <div className="flex flex-col lg:flex-row gap-6 mb-8">>
             {/* Search */}</div>
             <div>
               <div>
@@ -485,7 +467,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                   onChange={(e) => setSearchTerm(e.target.value);
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
-              </div>
+              >
             </div>
             
             {/* Category Filter */}
@@ -501,11 +483,11 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                   </option>
                 ));
               </select>
-            </div>
+            >
           </div>
 
           {/* Category Pills */}
-          <div className="flex flex-wrap gap-2 mb-8"></div>
+          <div className="flex flex-wrap gap-2 mb-8">>
             {categories.map((category) => (</div>
               <button
                 key={category.id}
@@ -519,14 +501,14 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                 {category.name}
               </button>
             ));
-          </div>
+          >
         </div>
       </section>
 
       {/* Services Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
         <div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">>
             {filteredServices.map((service) => (</div>
               <div>
                 <div>
@@ -534,17 +516,17 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                     <service.icon className="w-12 h-12" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-white"></di>{service.price}</div>
-                    <div className="text-sm text-gray-400"></di>starting price</div>
-                  </div>
+                    <div className="text-2xl font-bold text-white">>{service.price}</div>
+                    <div className="text-sm text-gray-400">>starting price</div>
+                  >
                 </div>
                 
-                <h3 className="text-xl font-bold text-white mb-3 neon-glow"></h>{service.name}</h3>
+                <h3 className="text-xl font-bold text-white mb-3 neon-glow">>{service.name}</h3>
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                 
                 <div>
                   <div>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h>Key Features:</h4>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h3>Key Features:</h4>
                     <ul className="space-y-1"></ul>
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300"></li>
@@ -556,7 +538,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                   </div>
                   
                   <div>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h>Benefits:</h4>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h3>Benefits:</h4>
                     <ul className="space-y-1"></ul>
                       {service.benefits.slice(0, 2).map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300"></li>
@@ -565,7 +547,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                         </li>
                       ));
                     </ul>
-                  </div>
+                  >
                 </div>
 
                 <div>
@@ -580,7 +562,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                   <div>
                     <span className="text-gray-400"></spa>Target:</span>
                     <span className="text-white"></spa>{service.targetAudience}</span>
-                  </div>
+                  >
                 </div>
 
                 {service.caseStudy && (
@@ -594,21 +576,18 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                     href={service.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                  ></a>
+                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"></a>
                     Get Free Consultation
                   </a>
                   <a
                     href="tel:+13024640950"
-                    className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                  ></a>
-                    <Phone className="w-4 h-4 inline mr-2" />
-                    Call for Quote
-                  </a>
-                </div>
+                    className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></a>
+                    <Phone className="w-4 h-4 inline mr-2">Call for Quote
+                  </Phone></a>
+                >
               </div>
             ));
-          </div>
+          >
         </div>
       </section>
 
@@ -618,34 +597,26 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse"></h2>
             Ready to Optimize Your IT Infrastructure?
           </h2>
-          <p className="text-xl text-cyan-400 mb-8 neon-glow"></p>
+          <p className="text-xl text-cyan-400 mb-8 neon-glow">>
             Our certified IT professionals deliver reliable, secure, and scalable solutions. 
             All services include free consultations and ongoing support.
           </p>
           <div>
             <a
               href="tel:+13024640950"
-              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
-            ></a>
-              <Phone className="w-5 h-5" />
-              Call (302) 464-0950
-            </a>
+              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"></a>
+              <Phone className="w-5 h-5">Call (302) 464-0950
+            </Phone></a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
-            ></a>
-              <Mail className="w-5 h-5" />
-              Get Custom IT Strategy
-            </a>
-          </div>
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50"></a>
+              <Mail className="w-5 h-5">Get Custom IT Strategy
+            </Mail></a>
+          >
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );)
-=======
   )]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ITConsultingPage;

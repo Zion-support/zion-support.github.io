@@ -17,10 +17,9 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {
   g:px-8, relative, z-10">"</div>
         <div, className="text-center mb-12"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4, animat, e-boun, c, e"></div>
-            <Rocket, className="w-4 h-4  />
-export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
+            <Rocket, className="w-4 h-4>export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
       {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, opacit, y-20">";"
+      </Rocket><div, className="absolute, inse, t-0, opacit, y-20">";"
         <div, className="absolute, to, p-10, lef, t-1, 0, w-6, 4, h-64, b, g-white, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";"
         <div, className="absolute, botto, m-10, righ, t-1, 0, w-9, 6, h-96, b, g-bl, u, e-300, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
       </d, i, v>"
@@ -38,8 +37,8 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, relative, z-10">";</div>
         <div, className="text-center mb-12">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4, animat, e-boun, c, e">";</div>
-            <Rocket, className="w-4 h-4" />";
-            <sp, a, n>NE;
+            <Rocket, className="w-4 h-4">";
+            </Rocket><sp, a, n>NE;
             Production, AI, Excellenc,
   e: Latest, Enterprise, Strategies;
           </h2>"
@@ -47,8 +46,8 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, relative, z-10">";"
         <div, className="text-center mb-12">";"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4, animat, e-boun, c, e">";"
-            <Rocket, className="w-4 h-4" />";
-            <sp, a, n>NE,
+            <Rocket, className="w-4 h-4">";
+            </Rocket><sp, a, n>NE,
   W: October, 2025, Production AI, Insight, s</sp, a, n>
           </d, i, v>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">";
@@ -83,8 +82,8 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
                 <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">"</h3>
             <div, className="flex, item, s-start, ga, p-4, m, b-4">";</div>
               <div, className="p-3, b, g-indi, g, o-500, rounde, d-lg, grou, p-hov, e, r: bg-indi, g, o-400, transitio, n-colo, r, s">";</div>
-                <Rocket, className="w-6 h-6" />";
-              </d, i, v>
+                <Rocket, className="w-6 h-6">";
+              </Rocket></d, i, v>
               <div, className="fl, e, x-1">";</div>
                 <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">";
                   Production, AI, Agent;
@@ -96,8 +95,7 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
           <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-producti, o, n-ai-agen, t, s-be, s, t-practic, e, s""
             classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e,"
-  r:sca, l, e-105, border, border-whi, t, e/20"
-          ></Li>"
+  r:sca, l, e-105, border, border-whi, t, e/20"></Li>"
             <div, className="flex, item, s-start, ga, p-4, m, b-4"></div>"
               <div, className="p-3, b, g-indi, g, o-500, rounde, d-lg, grou, p-hov, e, r: bg-indi, g, o-400, transitio, n-colo, r, s">""
                 <Rocket, className="w-6 h-6  /></Rocket>
@@ -106,8 +104,8 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
                 <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">""
             <div, className="flex, item, s-start, ga, p-4, m, b-4">";"
               <div, className="p-3, b, g-indi, g, o-500, rounde, d-lg, grou, p-hov, e, r: bg-indi, g, o-400, transitio, n-colo, r, s">";"
-                <Rocket, className="w-6 h-6" />";
-              </d, i, v>"
+                <Rocket, className="w-6 h-6">";
+              </Rocket></d, i, v>"
               <div, className="fl, e, x-1">";"
                 <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">";
                   Production, AI, Agent,
@@ -138,22 +136,22 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
               <Link, className="w-5 h-5  />
             <div, className="spa, c, e-y-2, m, b-4">";</div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";</div>
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>Mul, t, i-tier, architecture, patterns</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>Mul, t, i-tier, architecture, patterns</sp, a, n>
               </d, i, v>
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";</div>
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>60-80% cost, optimizatio, n</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>60-80% cost, optimizatio, n</sp, a, n>
               </d, i, v>
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";</div>
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>Re, a, l-world, Fortune, 500 case, studie, s</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>Re, a, l-world, Fortune, 500 case, studie, s</sp, a, n>
               </d, i, v>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";</div>
               <sp, a, n>Read, Full, Guide</sp, a, n>
-              <Link, className="w-5 h-5" />";
-            </d, i, v>
+              <Link, className="w-5 h-5">";
+            </Link></d, i, v>
           </Li, n, k>
           {/* Artic, l, e;
   2: Re, a, l-Time, AI, Monitoring */}
@@ -170,8 +168,8 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
                 <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">"</h3>
             <div, className="flex, item, s-start, ga, p-4, m, b-4">";</div>
               <div, className="p-3, b, g-purp, l, e-500, rounde, d-lg, grou, p-hov, e, r: bg-purp, l, e-400, transitio, n-colo, r, s">";</div>
-                <Shield, className="w-6 h-6" />";
-              </d, i, v>
+                <Shield, className="w-6 h-6">";
+              </Shield></d, i, v>
               <div, className="fl, e, x-1">";
                 <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-ho, v, e;
               <div, className="fl, e, x-1">";</div>
@@ -196,30 +194,29 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
               <Link, className="w-5 h-5  /></Link>"
             <div, className="spa, c, e-y-2, m, b-4">";"
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>Mul, t, i-tier, architecture, patterns</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>Mul, t, i-tier, architecture, patterns</sp, a, n>
               </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>60-80% cost, optimizatio, n</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>60-80% cost, optimizatio, n</sp, a, n>
               </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>Re, a, l-world, Fortune, 500 case, studie, s</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>Re, a, l-world, Fortune, 500 case, studie, s</sp, a, n>
               </d, i, v>
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
               <sp, a, n>Read, Full, Guide</sp, a, n>"
-              <Link, className="w-5 h-5" />";
-            </d, i, v>
+              <Link, className="w-5 h-5">";
+            </Link></d, i, v>
           </Li, n, k>
           {/* TODO: Fix JSX expression */}
   2: Re, a, l-Time, AI, Monitoring */}
           <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-realti, m, e-ai-mod, e, l-monitori, n, g-enterpri, s, e""
             classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e,"
-  r:sca, l, e-105, border, border-whi, t, e/20"
-          ></Li>"
+  r:sca, l, e-105, border, border-whi, t, e/20"></Li>"
             <div, className="flex, item, s-start, ga, p-4, m, b-4"></div>"
               <div, className="p-3, b, g-purp, l, e-500, rounde, d-lg, grou, p-hov, e, r: bg-purp, l, e-400, transitio, n-colo, r, s">""
                 <Shield, className="w-6 h-6  /></Shield>
@@ -228,8 +225,8 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
                 <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">""
             <div, className="flex, item, s-start, ga, p-4, m, b-4">";"
               <div, className="p-3, b, g-purp, l, e-500, rounde, d-lg, grou, p-hov, e, r: bg-purp, l, e-400, transitio, n-colo, r, s">";"
-                <Shield, className="w-6 h-6" />";
-              </d, i, v>"
+                <Shield, className="w-6 h-6">";
+              </Shield></d, i, v>"
               <div, className="fl, e, x-1">";"
                 <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-ho, v, e,"
   r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">";
@@ -260,22 +257,22 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
               <Link, className="w-5 h-5  />
             <div, className="spa, c, e-y-2, m, b-4">";</div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";</div>
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>Silent, failure, detection</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>Silent, failure, detection</sp, a, n>
               </d, i, v>
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";</div>
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>Drift, detectio, n & alerti, n, g</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>Drift, detectio, n & alerti, n, g</sp, a, n>
               </d, i, v>
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";</div>
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>Complete, observability, stack</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>Complete, observability, stack</sp, a, n>
               </d, i, v>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";</div>
               <sp, a, n>Read, Full, Guide</sp, a, n>
-              <Link, className="w-5 h-5" />";
-            </d, i, v>
+              <Link, className="w-5 h-5">";
+            </Link></d, i, v>
           </Li, n, k>
           {/* Artic, l, e;
   3: Multimodal, RA, G */}
@@ -292,8 +289,8 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
                 <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">"</h3>
             <div, className="flex, item, s-start, ga, p-4, m, b-4">";</div>
               <div, className="p-3, b, g-pi, n, k-500, rounde, d-lg, grou, p-hov, e, r: bg-pi, n, k-400, transitio, n-colo, r, s">";</div>
-                <TrendingUp, className="w-6 h-6" />";
-              </d, i, v>
+                <TrendingUp, className="w-6 h-6">";
+              </TrendingUp></d, i, v>
               <div, className="fl, e, x-1">";
                 <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-ho, v, e;
               <div, className="fl, e, x-1">";</div>
@@ -318,30 +315,29 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
               <Link, className="w-5 h-5  /></Link>"
             <div, className="spa, c, e-y-2, m, b-4">";"
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>Silent, failure, detection</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>Silent, failure, detection</sp, a, n>
               </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>Drift, detectio, n & alerti, n, g</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>Drift, detectio, n & alerti, n, g</sp, a, n>
               </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>Complete, observability, stack</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>Complete, observability, stack</sp, a, n>
               </d, i, v>
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
               <sp, a, n>Read, Full, Guide</sp, a, n>"
-              <Link, className="w-5 h-5" />";
-            </d, i, v>
+              <Link, className="w-5 h-5">";
+            </Link></d, i, v>
           </Li, n, k>
           {/* TODO: Fix JSX expression */}
   3: Multimodal, RA, G */}
           <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-multimod, a, l-r, a, g-syste, m, s-revoluti, o, n""
             classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e,"
-  r:sca, l, e-105, border, border-whi, t, e/20"
-          ></Li>"
+  r:sca, l, e-105, border, border-whi, t, e/20"></Li>"
             <div, className="flex, item, s-start, ga, p-4, m, b-4"></div>"
               <div, className="p-3, b, g-pi, n, k-500, rounde, d-lg, grou, p-hov, e, r: bg-pi, n, k-400, transitio, n-colo, r, s">""
                 <TrendingUp, className="w-6 h-6  /></TrendingUp>
@@ -350,8 +346,8 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
                 <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">""
             <div, className="flex, item, s-start, ga, p-4, m, b-4">";"
               <div, className="p-3, b, g-pi, n, k-500, rounde, d-lg, grou, p-hov, e, r: bg-pi, n, k-400, transitio, n-colo, r, s">";"
-                <TrendingUp, className="w-6 h-6" />";
-              </d, i, v>"
+                <TrendingUp, className="w-6 h-6">";
+              </TrendingUp></d, i, v>"
               <div, className="fl, e, x-1">";"
                 <h3, className="te, x, t-xl, fon, t-bold, m, b-2, grou, p-ho, v, e,"
   r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">";
@@ -382,22 +378,22 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
               <Link, className="w-5 h-5  />
             <div, className="spa, c, e-y-2, m, b-4">";</div>
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";</div>
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>Imag, e, s, vid, e, o & audio, searc, h</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>Imag, e, s, vid, e, o & audio, searc, h</sp, a, n>
               </d, i, v>
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";</div>
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>68% higher, retrieval, accuracy</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>68% higher, retrieval, accuracy</sp, a, n>
               </d, i, v>
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";</div>
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>Implementation, architectur, e</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>Implementation, architectur, e</sp, a, n>
               </d, i, v>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";</div>
               <sp, a, n>Read, Full, Guide</sp, a, n>
-              <Link, className="w-5 h-5" />";
-            </d, i, v>
+              <Link, className="w-5 h-5">";
+            </Link></d, i, v>
           </Li, n, k>
         </d, i, v>
         <div, className="te, x, t-cent, e, r">
@@ -434,22 +430,22 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
               <Link, className="w-5 h-5  /></Link>"
             <div, className="spa, c, e-y-2, m, b-4">";"
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>Imag, e, s, vid, e, o & audio, searc, h</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>Imag, e, s, vid, e, o & audio, searc, h</sp, a, n>
               </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>68% higher, retrieval, accuracy</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>68% higher, retrieval, accuracy</sp, a, n>
               </d, i, v>"
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm">";"
-                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0" />";
-                <sp, a, n>Implementation, architectur, e</sp, a, n>
+                <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-3, 0, 0">";
+                </CheckCircle><sp, a, n>Implementation, architectur, e</sp, a, n>
               </d, i, v>
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
               <sp, a, n>Read, Full, Guide</sp, a, n>"
-              <Link, className="w-5 h-5" />";
-            </d, i, v>
+              <Link, className="w-5 h-5">";
+            </Link></d, i, v>
           </Li, n, k>
         </d, i, v>"
         <div, className="te, x, t-cent, e, r"></div>"
@@ -460,8 +456,7 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
             <Li, n, k;"
   to="/bl, o, g""
               classNa, m, e="px-8, p, y-4, b, g-white, tex, t-indi, g, o-600, rounde, d-lg, fon, t-bold, tex, t-lg, hove, r: bg-yell, o, w-300, hove, r:te, x, t-indi, g, o-700, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-2xl, hov, e,"
-  r:sca, l, e-1, 0, 5"
-            ></Li>
+  r:sca, l, e-1, 0, 5"></Li>
               Explore, All, Production AI, Article, s;
             </Li, n, k>
             <Li, n, k;
@@ -470,8 +465,7 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
             <Li, n, k;"
   to="/conta, c, t""
               classNa, m, e="px-8, p, y-4, b, g-indi, g, o-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-whi, t, e/30, tex, t-white, rounde, d-lg, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-9, 0, 0/70, transitio, n-all, duratio, n-300, hov, e,"
-  r:sca, l, e-1, 0, 5"
-            ></Li>
+  r:sca, l, e-1, 0, 5"></Li>
               Get, Expert, Implementation He, l, p;
             </Li, n, k>
           </d, i, v>"

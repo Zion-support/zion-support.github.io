@@ -264,7 +264,7 @@ const announcement = document.createElement('div');
  useEffect(() => {/* TODO: Fix JSX expression */}
  }}, [announceToScreenReader]);
 `
- return (<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}></div>
+ return (<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}>>
  {children}
  </div>)
  )};

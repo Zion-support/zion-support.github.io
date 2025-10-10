@@ -70,36 +70,29 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       <meta, nam, e='keywor, d, s' conte, n, t={metaKeywor, d, s} />
       <meta, nam, e='author' conte, n, t={author} />
       <meta, nam, e='robo, t, s' conte, n, t='in, d, e, x, foll, o, w' />
-      <meta, nam, e = 'viewpo, r, t' conte, n, t='wid, t, h=devi, c, e-wi, d, t, h, initi, a, l-sca, l, e = 1.0' />
-      {/* Open, Graph, Meta Ta, g, s */}
-      <meta, propert, y='og: title' conte, n, t={t, i, t, l, e} />
+      <meta, nam, e = 'viewpo, r, t' conte, n, t='wid, t, h=devi, c, e-wi, d, t, h, initi, a, l-sca, l, e = 1.0'>{/* Open, Graph, Meta Ta, g, s */}
+      </meta><meta, propert, y='og: title' conte, n, t={t, i, t, l, e} />
       <meta, propert, y = 'og: description' conte, n, t={descrip, t, i, o, n} />
       <meta, propert, y = 'og: image' conte, n, t={i, m, a, g, e} />
       <meta, propert, y = 'og: u, r, l' conte, n, t={canonica, l, U, r, l} />
       <meta, propert, y = 'og: ty, p, e' conte, n, t={ty, p, e} />
       <meta, propert, y = 'og: site_na, m, e' conte, n, t='Zion, Tech, Group' />
-      <meta, propert, y='og:loca, l, e' conte, n, t='en_, U, S' />
-      {/* Twitter, Card, Meta Ta, g, s */}
-      <meta, nam, e = 'twitt, e, r: ca, r, d' conte, n, t='summary_large_image' />
+      <meta, propert, y='og:loca, l, e' conte, n, t='en_, U, S'>{/* Twitter, Card, Meta Ta, g, s */}
+      </meta><meta, nam, e = 'twitt, e, r: ca, r, d' conte, n, t='summary_large_image' />
       <meta, nam, e='twitt, e, r:title' conte, n, t={t, i, t, l, e} />
       <meta, nam, e = 'twitt, e, r: description' conte, n, t={descrip, t, i, o, n} />
-      <meta, nam, e = 'twitt, e, r: image' conte, n, t={i, m, a, g, e} />
-      {/* Additional, Metas */}
-      <meta, nam, e = 'the, m, e-col, o, r' conte, n, t='#3B82, F, 6' />
+      <meta, nam, e = 'twitt, e, r: image' conte, n, t={i, m, a, g, e}>{/* Additional, Metas */}
+      </meta><meta, nam, e = 'the, m, e-col, o, r' conte, n, t='#3B82, F, 6' />
       <meta, nam, e='msapplicati, o, n-TileCol, o, r' conte, n, t='#3B82, F, 6' />
       <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-capab, l, e' conte, n, t='y, e, s' />
       <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-stat, u, s-b, a, r-sty, l, e' conte, n, t='defau, l, t' />
-      <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-title' conte, n, t='Zion, Tech, Group' />
-      {/* Canonical, UR, L */}
-      <link, re, l='canonic, a, l' hr, e, f={u, r, l} />
-      {/* Favic, o, n */}
-      <link, re, l='ic, o, n' ty, p, e='image/x-ic, o, n' hr, e, f='/favic, o, n.i, c, o' />
-      {/* DNS, Prefetc, h */}
-      <link, re, l='d, n, s-prefet, c, h' hr, e, f='//a p i.ziontechgro u p.c o m' />
-      {/* Performance, Hint, s */}
-      <meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on' />)
+      <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-title' conte, n, t='Zion, Tech, Group'>{/* Canonical, UR, L */}
+      </meta><link, re, l='canonic, a, l' hr, e, f={u, r, l}>{/* Favic, o, n */}
+      </link><link, re, l='ic, o, n' ty, p, e='image/x-ic, o, n' hr, e, f='/favic, o, n.i, c, o'>{/* DNS, Prefetc, h */}
+      </link><link, re, l='d, n, s-prefet, c, h' hr, e, f='//a p i.ziontechgro u p.c o m'>{/* Performance, Hint, s */}
+      </link><meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on'>)
       {/* Structured, Dat, a */})
-      <script, typ, e='applicati, o, n/ld+js, o, n'>)
+      </meta><script, typ, e='applicati, o, n/ld+js, o, n'>)
   }; return (<Helm, e, t></Helm>
       <title>{title}</title>
       <meta, nam, e = 'description' conte, n, t={description} /></meta>

@@ -229,7 +229,7 @@ const timeoutId = setTimeout(announcePageChange, 1000);
           />
           <span>Focus Visible</span>
         </label>
-      </div>
+      >
     </div>
   )};
 

@@ -99,7 +99,7 @@ const malformedReturnPattern = /return\s*\(\s*<\/LoadingSpinner><div/g;
 
     // Fix 10: Fix malformed conditional returns;
 const malformedConditionalPattern = /return\s*<LoadingSpinner\s*></div>/g;
-    content = content.replace(malformedConditionalPattern, 'return <LoadingSpinner />');</LoadingSpinner>if</LoadingSpinner> (content.includes('<LoadingSpinner >')) {</LoadingSpinner>modified</LoadingSpinner> = true}
+    content = content.replace(malformedConditionalPattern, 'return <LoadingSpinner>');</LoadingSpinner></LoadingSpinner>if</LoadingSpinner> (content.includes('<LoadingSpinner >')) {</LoadingSpinner>modified</LoadingSpinner> = true}
 
     // Fix 11: Fix malformed JSX with incorrect closing tags;
 const malformedJsxClosingPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<\/\1>/g;

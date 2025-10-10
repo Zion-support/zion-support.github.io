@@ -24,8 +24,8 @@ if (!container) {/* TODO: Fix JSX expression */}
 ;
 const _root = createRoot(container);
 root.render(<React.StrictMode>)
-    <App />)
-root.render(<React.StrictMode></React>
+    <App>)
+root.render(</App><React.StrictMode></React>
     <App /></App>
   </React.StrictMode>)
 );

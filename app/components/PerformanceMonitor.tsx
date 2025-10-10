@@ -80,13 +80,8 @@ const navigationEntry = performance.getEntriesByType('navigation')[0] as Perform
       }, 10000);
     };
 
-<<<<<<< HEAD
-    // Show performance panel after 3 seconds;
-const timer = setTimeout(() => setIsVisible(true), 3000);
-=======
     // Show performance panel after 3 seconds
     const timer = setTimeout(() => setIsVisible(true), 3000);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return () => clearTimeout(timer);
   }, []);
 
@@ -305,13 +300,10 @@ const getScoreText = (value: number | null, thresholds: { good: number; needsImp
           ×
         </button>
       </div>
-<<<<<<< HEAD
-=======
     // Resource timing analysis
     const analyzeResources = () => {
       const resources = performance.getEntriesByType('resource');
       const slowResources = resources.filter((resource: any) => resource.duration > 1000);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       
       if (slowResources.length > 0) {
         // console.warn removed for production
@@ -376,9 +368,6 @@ const logMetrics = () => {
             <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
               {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
             </span>
-<<<<<<< HEAD
-          </div>);
-=======
           </div>
         )}
 
@@ -392,7 +381,7 @@ const logMetrics = () => {
             </span>
             <div className="text-xs text-gray-500">
               {getScoreText(metrics.fcp, { good: 1800, needsImprovement: 3000 })}
-            </div>
+            >
           </div>
         </div>
 
@@ -405,7 +394,7 @@ const logMetrics = () => {
             </span>
             <div className="text-xs text-gray-500">
               {getScoreText(metrics.lcp, { good: 2500, needsImprovement: 4000 })}
-            </div>
+            >
           </div>
         </div>
 
@@ -418,7 +407,7 @@ const logMetrics = () => {
             </span>
             <div className="text-xs text-gray-500">
               {getScoreText(metrics.fid, { good: 100, needsImprovement: 300 })}
-            </div>
+            >
           </div>
         </div>
 
@@ -431,7 +420,7 @@ const logMetrics = () => {
             </span>
             <div className="text-xs text-gray-500">
               {getScoreText(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}
-            </div>
+            >
           </div>
         </div>
 
@@ -444,9 +433,9 @@ const logMetrics = () => {
             </span>
             <div className="text-xs text-gray-500">
               {getScoreText(metrics.ttfb, { good: 800, needsImprovement: 1800 })}
-            </div>
+            >
           </div>
-        </div>
+        >
       </div>
 
       <div className="mt-4 pt-3 border-t border-gray-200">
@@ -456,8 +445,7 @@ const logMetrics = () => {
         >
           Refresh Metrics
         </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-      </div>
+      >
     </div>
   );
         if (metrics.fcp) gtag('event', 'web_vitals', { metric_name: 'FCP', metric_value: Math.round(metrics.fcp) });
@@ -480,7 +468,7 @@ const timeoutId = setTimeout(logMetrics, 5000);
   return null;
 };
 
-          </div>);
+          >);
       </div>
     </div>)
 export default PerformanceMonitor;

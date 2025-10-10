@@ -40,12 +40,8 @@ const EnterprisePage: React.FC = () => {const features = [
       icon: Settings,
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
-<<<<<<< HEAD
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'];);
-=======
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const solutions = [
@@ -71,12 +67,8 @@ const solutions = [
       title: 'Workflow Automation',
       description: 'Automate complex business processes to improve efficiency and reduce errors.',
       icon: Zap,
-<<<<<<< HEAD
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management'];);
-=======
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const benefits = [
@@ -104,20 +96,18 @@ const stats = [
         description="Comprehensive enterprise-grade solutions for large-scale business operations."
         keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
       />
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden"></section>
+      <Navigation>{/* Hero Section */}
+      </Navigation><section className="relative py-20 px-4 overflow-hidden"></section>
         <div>
         <div>
         <div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">>
             Enterprise</h1>
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent"></span>
               Solutions
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">>
             Comprehensive enterprise-grade solutions designed for large-scale business operations. 
             Transform your organization with cutting-edge technology and expert implementation.
           </p>
@@ -129,7 +119,7 @@ const stats = [
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
               View Case Studies
             </button>
-          </div>
+          >
         </div>
       </section>
 
@@ -142,9 +132,9 @@ const stats = [
                 <div className="flex justify-center mb-4"></div>
                   <stat.icon className="w-12 h-12 text-purple-400" />
                 </div>
-                <div className="text-3xl font-bold text-white mb-2"></di>{stat.number}</div>
-                <div className="text-gray-300 text-sm"></di>{stat.label}</div>
-              </div>
+                <div className="text-3xl font-bold text-white mb-2">>{stat.number}</div>
+                <div className="text-gray-300 text-sm">>{stat.label}</div>
+              >
             ));
           </div>
         </div>
@@ -157,25 +147,24 @@ const stats = [
             <h2 className="text-4xl font-bold text-white mb-4"></h2>
               Enterprise-Grade Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               Built for scale, security, and performance to meet the demands of large organizations.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                   <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white"></h>{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-white">>{feature.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2"></ul>
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400"></li>
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2">{benefit}
+                    </CheckCircle></li>
                   ));
                 </ul>
-              </div>
+              >
             ));
           </div>
         </div>
@@ -184,7 +173,7 @@ const stats = [
             <h2 className="text-4xl font-bold text-white mb-4"></h2>
               Comprehensive Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">>
               End-to-end enterprise solutions that address every aspect of your business operations.
             </p>
           </div>
@@ -192,7 +181,7 @@ const stats = [
                     </li>
                   ));
                 </ul>
-              </div>
+              >
             ));
           </div>
         </div>
@@ -201,9 +190,9 @@ const stats = [
       {/* Benefits Section */}
       <section className="py-20 px-4"></section>
                 </button>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
       </section>
 
@@ -213,7 +202,7 @@ const stats = [
           <h2 className="text-4xl font-bold text-white mb-6"></h2>
             Ready to Transform Your Enterprise?
           </h2>
-          <p className="text-xl text-gray-300 mb-8"></p>
+          <p className="text-xl text-gray-300 mb-8">>
             Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
           </p>
           <div>
@@ -224,17 +213,13 @@ const stats = [
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
               Learn More
             </button>
-          </div>
+          >
         </div>
       </section>
 
       <Footer />
     </div>
-<<<<<<< HEAD
-  );)
-=======
   )]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default EnterprisePage;

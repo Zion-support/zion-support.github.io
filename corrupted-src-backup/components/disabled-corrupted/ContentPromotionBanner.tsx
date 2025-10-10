@@ -35,17 +35,15 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
             <Link, t, o="/bl, o, g" 
               className="bg-white, tex, t-indi, g, o-700, hove, r: bg-indi, g, o-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg"
             >
-              <BookOpen, className="w-5 h-5" />
-              Explore, All, Articles;
-              <Link, className="w-5 h-5" />
+              <BookOpen, className="w-5 h-5">Explore, All, Articles;
+              </BookOpen><Link, className="w-5 h-5" />
             </Li, n, k>
             <Link, t, o="/ca, s, e-studi, e, s" 
               className="bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"
             >
-              <Zap, className="w-5 h-5" />
-              View, Case, Studies;
-            </Li, n, k>
-          </div>
+              <Zap, className="w-5 h-5">View, Case, Studies;
+            </Zap></Li, n, k>
+          >
         </div>)
         {/* Featured, Content, Car, d, s */})
         <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">)
@@ -67,7 +65,7 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
   ]; return (<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n"></div>
       {/* Background, Patt, e, r, n */}"
       <div, classNam, e = "absolute, inse, t-0, opacit, y-10"></div>"
-        <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/20, t, o-transpare, n, t" /></div>
+        <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/20, t, o-transpare, n, t" />>
       </div>"
       <div, className="relativ, e, z-10"></div>"
         <div, className="flex, fle, x-col, l, g: fl, e, x-row, l, g:ite, m, s-center, l, g:justi, f, y-between, ga, p-8"></div>"
@@ -80,26 +78,24 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
             <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, m, b-4"></h2>
               Latest, from Zion Insigh, t, s;
             </h2>"
-            <p, className="te, x, t-whi, t, e/90, tex, t-lg, leadin, g-relax, e, d"></p>
+            <p, className="te, x, t-whi, t, e/90, tex, t-lg, leadin, g-relax, e, d">>
               Fresh, articles, on AI, automat, i, o, n, cloud, securit, y, and, developer, productivity. 
               Stay, ahead, with expert, analysis, and practical, guide, s.
             </p>
           </div>"
           <div, classNam, e = "flex, fle, x-col, ga, p-4"></div>"
             <Link, t, o="/bl, o, g" "
-              className="bg-white, tex, t-indi, g, o-700, hove, r: bg-indi, g, o-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg"
-            ></Link>"
+              className="bg-white, tex, t-indi, g, o-700, hove, r: bg-indi, g, o-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg"></Link>"
               <BookOpen, className="w-5 h-5" /></BookOpen>
               Explore, All, Articles;"
               <Link, className="w-5 h-5" /></Link>
             </Li, n, k>"
             <Link, t, o="/ca, s, e-studi, e, s" "
-              className="bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"
-            ></Link>"
+              className="bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"></Link>"
               <Zap, className="w-5 h-5" /></Zap>
               View, Case, Studies;
             </Li, n, k>
-          </div>
+          >
         </div>
         {/* Featured, Content, Car, d, s */}"
         <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3"></div>
@@ -112,7 +108,7 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
                 {/* TODO: Fix JSX expression */})
                   </s, p, a, n  > )  }
               </div>"
-              <h3, classNam, e = "fo, n, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2"></h3>
+              <h3, classNam, e = "fo, n, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2">>
                 {it, e, m.title}
               </h3>
               <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>
@@ -131,14 +127,14 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
         <div, classNam, e = "mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, p, t-8, borde, r-t, borde, r-whi, t, e/20"></div>
           <div, className="te, x, t-cent, e, r"></div>
             <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">50+</div>
-            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Articles, Publishe, d</div>
+            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Articles, Publishe, d>
           </div>
           <div, className="te, x, t-cent, e, r"></div>
             <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">1, 0, K+</div>
-            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Monthly, Reader, s</div>
+            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Monthly, Reader, s>
           </div>
           <div, className="te, x, t-cent, e, r"></div>
-            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Expert, Author, s</div>
+            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Expert, Author, s>
           </div>
           <div, className="te, x, t-cent, e, r"></div>
             <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">4.9★</div>
@@ -146,20 +142,20 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
         <div, classNam, e = "mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, p, t-8, borde, r-t, borde, r-whi, t, e/20"></div>"
           <div, className="te, x, t-cent, e, r"></div>"
             <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">50+</div>"
-            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Articles, Publishe, d</div>
+            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Articles, Publishe, d>
           </div>"
           <div, className="te, x, t-cent, e, r"></div>"
             <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">1, 0, K+</div>"
-            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Monthly, Reader, s</div>
+            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Monthly, Reader, s>
           </div>"
           <div, className="te, x, t-cent, e, r"></div>"
-            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Expert, Author, s</div>
+            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Expert, Author, s>
           </div>"
           <div, className="te, x, t-cent, e, r"></div>"
             <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">4.9★</div>"
-            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Reader, Ratin, g</div>
+            <div, className="te, x, t-sm, tex, t-whi, t, e/80">Reader, Ratin, g>
           </div>
-        </div>
+        >
       </div>
     </div>
   )}"

@@ -20,7 +20,7 @@ return (
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced autonomous systems solutions for modern businesses.
             </p>
-          </div>
+          >
         </div>
       </div>
     </React.Fragment>

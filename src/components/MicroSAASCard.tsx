@@ -73,7 +73,7 @@ return (
         </div>"
         <div className="text-xs text-gray-400 mb-4"></div>"
           <span className="bg-gray-800 px-2 py-1 rounded">{service.category}</span>
-        </div>
+        >
       </div>"
       <div className="space-y-4"></div>
         <div></div>"
@@ -109,7 +109,7 @@ return (
                 {tech}
               </span>
             ))}
-          </div>
+          >
         </div>"
         <div className="pt-4"></div>
           <a></a>
@@ -123,7 +123,7 @@ return (
           <ArrowRight className="w-4 h-4 ml-2" /></ArrowRight>
           </a>"
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>
-        </div>
+        >
       </div>
     </div>
   )};

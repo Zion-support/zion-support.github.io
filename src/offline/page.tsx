@@ -30,10 +30,10 @@ const,
         <div className="w-16 h-16 mx-auto mb-6 bg-orange-500/20 rounded-full flex items-center justify-center"></div>"
           <WifiOff className="w-8 h-8 text-orange-400" /></WifiOff>
         </div>"
-        <h1 className="text-2xl font-bold text-white mb-4"></h1>
+        <h1 className="text-2xl font-bold text-white mb-4">>
 // You're Offline;
           </h1>"
-        <p className="text-gray-300 mb-6"></p>
+        <p className="text-gray-300 mb-6">>
           It looks like you're not connected to the internet. Please check your connection and try again.
         </p>"
         <div className="space-y-3"></div>

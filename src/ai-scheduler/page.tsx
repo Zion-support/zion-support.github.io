@@ -119,9 +119,8 @@ const testimonials = [
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
             >
-              <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
-            </a>
+              <Phone className="w-5 h-5 mr-2">Call: (302) 464-0950
+            </Phone></a>
             <Link 
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
@@ -189,9 +188,8 @@ const testimonials = [
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0">{feature}
+                    </CheckCircle></li>
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'

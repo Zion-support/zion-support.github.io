@@ -9,14 +9,9 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: Dead code report executed successfully)
-<<<<<<< HEAD
-        timestamp: new Date().toISOString();
-function: 'dead-code-report'
-=======
         timestamp: new Date().toISOString()
         function: 'dead-code-report',
         source:
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         source: event.source || 'unknown',
         report: {,
           status: 'generated',

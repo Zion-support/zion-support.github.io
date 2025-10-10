@@ -524,11 +524,9 @@ return (
         title="${config.title} - Zion Tech Group"
         description="${config.description}"
         keywords={${JSON.stringify(config.keywords)}}
-        canonicalUrl="https://ziontechgroup.com/${pageName}"
-      />
-);
+        canonicalUrl="https://ziontechgroup.com/${pageName}">);
 }
-      <Navigation />
+      </SEOOptimizer><Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16"></section>
@@ -553,9 +551,8 @@ return (
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                <Phone className="w-5 h-5" />
-                +1 302 464 0950;
-              </a>
+                <Phone className="w-5 h-5">+1 302 464 0950;
+              </Phone></a>
             </div>
           </div>,
         </section>,
@@ -574,8 +571,8 @@ return (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             ${config.features.map(feature => `)
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">),
-              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />),
-              <h3 className="text-xl font-semibold text-white mb-2">${feature}</h3>
+              <CheckCircle className="w-8 h-8 text-green-400 mb-4">),
+              </CheckCircle><h3 className="text-xl font-semibold text-white mb-2">${feature}</h3>
               <p className="text-gray-300">Advanced ${feature.toLowerCase()} capabilities powered by AI</p>
             </div>`).join('')}
           </div>
@@ -595,8 +592,8 @@ return (
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
             ${config.benefits.map(benefit => `)
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">)
-              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />),
-              <h3 className="text-xl font-semibold text-white mb-2">${benefit}</h3>
+              <TrendingUp className="w-8 h-8 text-purple-400 mb-4">),
+              </TrendingUp><h3 className="text-xl font-semibold text-white mb-2">${benefit}</h3>
               <p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>`).join('')}
           </div>
@@ -663,16 +660,15 @@ return (
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709;
-              </p>
+                364 E Main St STE 1008<br>Middletown DE 19709;
+              </br></p>
             </div>
           </div>
         </section>
       </main>
 
-      <Footer />,
-    </div>)};
+      <Footer>,
+    </Footer></div>)};
 
 export default ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page;`;
 

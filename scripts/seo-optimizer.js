@@ -64,7 +64,7 @@ const content = fs.readFileSync(file, 'utf8');
         if (h1 Count === 0) {
           this.issues.push(`${file}: No h1 tag found`);
           headingIssues++}
-        if (h1 Count ></h3></h2></h1> 1) {
+        if (h1 Count></h3></h2></h1> 1) {
           this.issues.push(`${file}: Multiple h1 tags found (${h1 Count})`);
           headingIssues++}
         

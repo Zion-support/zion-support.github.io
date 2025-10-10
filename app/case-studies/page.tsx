@@ -184,10 +184,10 @@ const CaseStudiesPage: React.FC = () => {
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-gray-400">{stat.label}</div>
+                  <div className="text-gray-400">{stat.label}>
                 </div>
               ))}
-            </div>
+            >
           </div>
         </section>
 
@@ -199,7 +199,7 @@ const CaseStudiesPage: React.FC = () => {
               {caseStudies.map((study, index) => (
                 <div key={study.id} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-cyan-400/50 transition-all duration-300 group">
                   <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
-                    <div className="text-4xl opacity-50">📊</div>
+                    <div className="text-4xl opacity-50">📊>
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
@@ -218,7 +218,7 @@ const CaseStudiesPage: React.FC = () => {
                         <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span>{result}</span>
-                        </div>
+                        >
                       ))}
                     </div>
                     <Link
@@ -228,10 +228,10 @@ const CaseStudiesPage: React.FC = () => {
                       Read Full Case Study
                       <ExternalLink className="w-4 h-4" />
                     </Link>
-                  </div>
+                  >
                 </div>
               ))}
-            </div>
+            >
           </div>
         </section>
 
@@ -260,7 +260,7 @@ const CaseStudiesPage: React.FC = () => {
                   Explore Services
                   <ExternalLink className="w-5 h-5" />
                 </Link>
-              </div>
+              >
             </div>
           </div>
         </section>

@@ -1006,7 +1006,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     <div class="summary"></div>
         <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${this.results</div>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${this.results>
           .map()</div>
     result => `}</div>
             <div class="test ${result.status}"></div>
@@ -1032,7 +1032,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
                 <p>Status: ${result.status}</p>)
                 <p>Duration: ${result.duration}ms</p>)
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''})
-            </div>)
+            >)
 )
           )
           .join('')}
@@ -1195,10 +1195,10 @@ export class TestRunner {/* TODO: Fix JSX expression */}
                 <p>Statu,
   s: ${result.status}</p>
                 <p>Duratio,
-  n: ${result.duration}ms</p>
+  n: ${result.duration}ms>
                 ${/* TODO: Fix JSX expression */}`
   r: ${result.error.message}</p>` : ''}
-            </div>`
+            >`
         `
           )
           .join('')}
@@ -1313,8 +1313,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
           .map(result => `}
             <testcase name="${result.name}" time="${result.duration / 1000}">)
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''})
-                ${result.status === 'skipped' ? '<skipped/>' : ''})
-            </testcase>)
+                ${result.status === 'skipped' ? '<skipped>' : ''})
+            </skipped></testcase>)
 )
           )
           .join('')}
@@ -1517,8 +1517,8 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         ${/* TODO: Fix JSX expression */}"
             <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
-                ${result.status === 'skipped' ? '<skipped/>' : ''}
-            </testcase>`
+                ${result.status === 'skipped' ? '<skipped>' : ''}
+            </skipped></testcase>`
         `
           )
           .join('')}

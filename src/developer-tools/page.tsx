@@ -68,10 +68,8 @@ $4}
         <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        {/* Hero Section */}
-        <section className="pt-24 pb-16 px-4">
+        <Navigation>{/* Hero Section */}
+        </Navigation><section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
               Developer Tools
@@ -84,19 +82,19 @@ $4}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">60%</div>
-                <div className="text-gray-300">Productivity Boost</div>
+                <div className="text-gray-300">Productivity Boost>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
-                <div className="text-gray-300">Tools Available</div>
+                <div className="text-gray-300">Tools Available>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <div className="text-3xl font-bold text-purple-400 mb-2">10K+</div>
-                <div className="text-gray-300">Active Developers</div>
+                <div className="text-gray-300">Active Developers>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Uptime</div>
+                <div className="text-gray-300">Uptime>
               </div>
             </div>
 
@@ -233,10 +231,10 @@ $4}
           <div className="max-w-7xl mx-auto text-center"></div>"
             <h1 className="text-4xl,
   sm:text-5xl,"
-  md:text-6xl font-bold text-white mb-6"></h1>
+  md:text-6xl font-bold text-white mb-6">>
 // Developer Tools;
           </h1>"
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">>
 // AI-powered development tools that accelerate your coding workflow and improve productivity;
           </p>
             {/* Stats */}"
@@ -244,19 +242,19 @@ $4}
   md:grid-cols-4 gap-6 mb-12"></div>"
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
                 <div className="text-3xl font-bold text-cyan-400 mb-2">60%</div>"
-                <div className="text-gray-300">Productivity Boost</div>
+                <div className="text-gray-300">Productivity Boost>
               </div>"
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
                 <div className="text-3xl font-bold text-green-400 mb-2">50+</div>"
-                <div className="text-gray-300">Tools Available</div>
+                <div className="text-gray-300">Tools Available>
               </div>"
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
                 <div className="text-3xl font-bold text-purple-400 mb-2">10K+</div>"
-                <div className="text-gray-300">Active Developers</div>
+                <div className="text-gray-300">Active Developers>
               </div>"
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
                 <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>"
-                <div className="text-gray-300">Uptime</div>
+                <div className="text-gray-300">Uptime>
               </div>
             </div>
             {/* Contact Info */}"
@@ -276,9 +274,9 @@ $4}
                 <div className="flex items-center space-x-2"></div>"
                   <MapPin className="w-5 h-5" /></MapPin>"
                   <span className="text-white font-medium">Middletown, DE</span>
-                </div>
+                >
               </div>
-            </div>
+            >
           </div>
         </section>
 
@@ -300,7 +298,7 @@ $4}
                   </div>
                   
                   <div className="mb-6">
-                    <div className="text-2xl font-bold text-green-600 mb-4">{tool.price}</div>
+                    <div className="text-2xl font-bold text-green-600 mb-4">{tool.price}>
                   </div>
 
                   <div className="mb-6">
@@ -308,9 +306,8 @@ $4}
                     <ul className="space-y-2">
                       {tool.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-        {/* Tools Grid */}"
-        <section className="py-16 px-4"></section>"
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0">{/* Tools Grid */}"
+        </CheckCircle><section className="py-16 px-4"></section>"
           <div className="max-w-7xl mx-auto"></div>"
             <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
 // Our Developer Tools;
@@ -330,7 +327,7 @@ $4}
                     <p className="text-gray-600 text-sm">{tool.description}</p>
                   </div>"
                   <div className="mb-6"></div>"
-                    <div className="text-2xl font-bold text-green-600 mb-4">{tool.price}</div>
+                    <div className="text-2xl font-bold text-green-600 mb-4">{tool.price}>
                   </div>"
                   <div className="mb-6"></div>"
                     <h4 className="font-semibold text-gray-900 mb-3">Key,
@@ -383,10 +380,10 @@ $4}
 // >
 //                       Get Started Now;
           </a>
-                  </div>
+                  >
                 </div>
               ))}
-            </div>
+            >
           </div>
         </section>
 
@@ -412,7 +409,7 @@ $4}
               >
                 Email Us
               </a>
-            </div>
+            >
           </div>
         </section>
 
@@ -434,7 +431,7 @@ $4}
           
           
           </h2>"
-            <p className="text-xl text-purple-100 mb-8"></p>
+            <p className="text-xl text-purple-100 mb-8">>
 // Join thousands of developers who have accelerated their productivity with our AI-powered tools.
             
           
@@ -459,7 +456,7 @@ $4}
 // >
 //                 Email Us;
           </a>
-            </div>
+            >
           </div>
         </section>
       </main>

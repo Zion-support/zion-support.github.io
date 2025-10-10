@@ -9,14 +9,9 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         'Access-Control-Allow-Origin': '*'}
       },
       body: JSON.stringify({message: License compliance auditor executed successfully)
-<<<<<<< HEAD
-        timestamp: new Date().toISOString();
-function: 'license-compliance-auditor'
-=======
         timestamp: new Date().toISOString()
         function: 'license-compliance-auditor',
         source:
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         source: event.source || 'unknown',
         audit: {,
           status: 'active',

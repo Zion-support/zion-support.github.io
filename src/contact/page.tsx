@@ -193,7 +193,7 @@ const faqs = [
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">Provide a detailed proposal</span>
-              </div>
+              >
             </div>
           </div>
           <div className="mt-8">
@@ -201,10 +201,9 @@ const faqs = [
               href="/"
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
             >
-              <ArrowRight className="w-5 h-5 mr-2" />
-              Back to Home
-            </a>
-          </div>
+              <ArrowRight className="w-5 h-5 mr-2">Back to Home
+            </ArrowRight></a>
+          >
         </div>
       </div>
     )}
@@ -231,9 +230,9 @@ const faqs = [
               <div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">
                 <Mail className="w-5 h-5 text-purple-400" />
                 <span className="text-white font-medium">{contactInfo.email}</span>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
       </section>
 
@@ -273,7 +272,7 @@ const faqs = [
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                       placeholder="your@email.com"
                     />
-                  </div>
+                  >
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -302,7 +301,7 @@ const faqs = [
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                       placeholder="+1 (555) 123-4567"
                     />
-                  </div>
+                  >
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -337,7 +336,7 @@ const faqs = [
                         <option key={index} value={range}>{range}</option>
                       ))}
                     </select>
-                  </div>
+                  >
                 </div>
 
                 <div>
@@ -384,9 +383,8 @@ const faqs = [
                     </React.Fragment>
                   ) : (
                     <React.Fragment>
-                      <Send className="w-5 h-5 mr-2" />
-                      Send Message
-                    </React.Fragment>
+                      <Send className="w-5 h-5 mr-2">Send Message
+                    </Send></React.Fragment>
                   )}
                 </button>
               </form>
@@ -401,30 +399,30 @@ const faqs = [
                     <Phone className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                     <div>
                       <div className="text-white font-medium">{contactInfo.phone}</div>
-                      <div className="text-gray-400 text-sm">Call us anytime</div>
+                      <div className="text-gray-400 text-sm">Call us anytime>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <Mail className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
                     <div>
                       <div className="text-white font-medium">{contactInfo.email}</div>
-                      <div className="text-gray-400 text-sm">Email us</div>
+                      <div className="text-gray-400 text-sm">Email us>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <MapPin className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                     <div>
                       <div className="text-white font-medium">Middletown, DE</div>
-                      <div className="text-gray-400 text-sm">{contactInfo.address}</div>
+                      <div className="text-gray-400 text-sm">{contactInfo.address}>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <Clock className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
                     <div>
                       <div className="text-white font-medium">{contactInfo.hours}</div>
-                      <div className="text-gray-400 text-sm">Business hours</div>
+                      <div className="text-gray-400 text-sm">Business hours>
                     </div>
-                  </div>
+                  >
                 </div>
               </div>
 
@@ -446,7 +444,7 @@ const faqs = [
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">Enterprise Security</span>
-                  </div>
+                  >
                 </div>
               </div>
 
@@ -457,19 +455,17 @@ const faqs = [
                     href="/consultation"
                     className="block w-full bg-cyan-500 text-white py-3 px-4 rounded-lg font-medium hover:bg-cyan-600 transition-colors text-center"
                   >
-                    <Calendar className="w-5 h-5 inline mr-2" />
-                    Schedule Free Consultation
-                  </a>
+                    <Calendar className="w-5 h-5 inline mr-2">Schedule Free Consultation
+                  </Calendar></a>
                   <a
                     href="/demo"
                     className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-medium hover:bg-cyan-400 hover:text-white transition-colors text-center"
                   >
-                    <MessageSquare className="w-5 h-5 inline mr-2" />
-                    Request Demo
-                  </a>
-                </div>
+                    <MessageSquare className="w-5 h-5 inline mr-2">Request Demo
+                  </MessageSquare></a>
+                >
               </div>
-            </div>
+            >
           </div>
         </div>
       </section>
@@ -506,9 +502,9 @@ const faqs = [
                     <Clock className="w-4 h-4 text-yellow-400" />
                     <span className="text-gray-300 text-sm">{office.hours}</span>
                   </div>
-                  <div className="text-cyan-400 text-sm font-medium">{office.timezone}</div>
+                  <div className="text-cyan-400 text-sm font-medium">{office.timezone}>
                 </div>
-              </div>
+              >
             ))}
           </div>
         </div>
@@ -531,10 +527,10 @@ const faqs = [
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
-                </div>
+                >
               ))}
             </div>
-          </div>
+          >
         </div>
       </section>
     </div>

@@ -181,7 +181,7 @@ const searchResults = searchQuery
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
-              </div>
+              >
             </div>
           </section>
 
@@ -197,7 +197,7 @@ const searchResults = searchQuery
                   <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3>
                   <p className="text-gray-300 mb-4">{channel.description}</p>
                   <div className="text-cyan-400 font-semibold mb-2">{channel.contact}</div>
-                  <div className="text-gray-400 text-sm">{channel.availability}</div>
+                  <div className="text-gray-400 text-sm">{channel.availability}>
                 </div>
               ))}
             </div>
@@ -237,7 +237,7 @@ const searchResults = searchQuery
                 <div key={faq.id} className="cyber-card p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                </div>
+                >
               ))}
             </div>
           </section>
@@ -281,17 +281,15 @@ const searchResults = searchQuery
                   href="tel:+13024640950"
                   className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call (302) 464-0950
-                </a>
+                  <Phone className="w-5 h-5 mr-2">Call (302) 464-0950
+                </Phone></a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button-secondary px-8 py-4 text-lg font-semibold inline-flex items-center justify-center"
                 >
-                  <Mail className="w-5 h-5 mr-2" />
-                  Send Email
-                </a>
-              </div>
+                  <Mail className="w-5 h-5 mr-2">Send Email
+                </Mail></a>
+              >
             </div>
           </section>
         </main>

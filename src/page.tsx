@@ -134,7 +134,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+    <div className="h-4 bg-gray-200 rounded w-5/6">>
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
@@ -653,25 +653,13 @@ const specializedServices = [
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Performance Optimizer */}
-      <PerformanceOptimizer />
-      
-      {/* SEO Optimizer */}
-      <SEOOptimizer />
-      
-      {/* Accessibility Enhancer */}
-      <AccessibilityEnhancer />
-      
-      {/* Analytics */}
-      <Analytics />
-      
-      {/* Security Enhancer */}
-      <SecurityEnhancer />
-
-      {/* Navigation */}
-      <Navigation />
-
-      {/* Hero Section with Futuristic Design */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <PerformanceOptimizer>{/* SEO Optimizer */}
+      </PerformanceOptimizer><SEOOptimizer>{/* Accessibility Enhancer */}
+      </SEOOptimizer><AccessibilityEnhancer>{/* Analytics */}
+      </AccessibilityEnhancer><Analytics>{/* Security Enhancer */}
+      </Analytics><SecurityEnhancer>{/* Navigation */}
+      </SecurityEnhancer><Navigation>{/* Hero Section with Futuristic Design */}
+      </Navigation><section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
@@ -709,7 +697,7 @@ const specializedServices = [
               <div className="flex items-center text-pink-400 text-lg">
                 <MapPin className="w-6 h-6 mr-2" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
+              >
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105">
@@ -726,9 +714,9 @@ const specializedServices = [
                 <div className="text-4xl mb-4">🎯</div>
                 <h3 className="text-xl font-bold text-white mb-2">90% Efficiency</h3>
                 <p className="text-gray-300">Gains with our AI solutions</p>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
       </section>
 
@@ -752,7 +740,7 @@ const specializedServices = [
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg">
                       🔥 POPULAR
-                    </div>
+                    >
                   </div>
                 )}
                 
@@ -778,7 +766,7 @@ const specializedServices = [
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
                       Save {service.savings}
                     </span>
-                  </div>
+                  >
                 </div>
                 
                 <div className="mb-6">
@@ -786,9 +774,8 @@ const specializedServices = [
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0">{feature}
+                      </CheckCircle></li>
                     ))}
                   </ul>
                 </div>
@@ -812,10 +799,10 @@ const specializedServices = [
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
-                </div>
+                >
               </div>
             ))}
-          </div>
+          >
         </div>
       </section>
 
@@ -857,7 +844,7 @@ const specializedServices = [
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
                       Save {service.savings}
                     </span>
-                  </div>
+                  >
                 </div>
                 
                 <div className="mb-6">
@@ -865,9 +852,8 @@ const specializedServices = [
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0">{feature}
+                      </CheckCircle></li>
                     ))}
                   </ul>
                 </div>
@@ -891,10 +877,10 @@ const specializedServices = [
                     Contact Us
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
-                </div>
+                >
               </div>
             ))}
-          </div>
+          >
         </div>
       </section>
 
@@ -936,7 +922,7 @@ const specializedServices = [
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
                       Save {service.savings}
                     </span>
-                  </div>
+                  >
                 </div>
                 
                 <div className="mb-6">
@@ -944,9 +930,8 @@ const specializedServices = [
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0">{feature}
+                      </CheckCircle></li>
                     ))}
                   </ul>
                 </div>
@@ -970,10 +955,10 @@ const specializedServices = [
                     Call Now
                     <Phone className="w-4 h-4 ml-2" />
                   </a>
-                </div>
+                >
               </div>
             ))}
-          </div>
+          >
         </div>
       </section>
 
@@ -1015,7 +1000,7 @@ const specializedServices = [
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
                       Save {service.savings}
                     </span>
-                  </div>
+                  >
                 </div>
                 
                 <div className="mb-6">
@@ -1023,9 +1008,8 @@ const specializedServices = [
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0">{feature}
+                      </CheckCircle></li>
                     ))}
                   </ul>
                 </div>
@@ -1049,10 +1033,10 @@ const specializedServices = [
                     {service.contact.startsWith('+') ? 'Call Now' : 'Email Us'}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
-                </div>
+                >
               </div>
             ))}
-          </div>
+          >
         </div>
       </section>
 
@@ -1092,10 +1076,9 @@ const specializedServices = [
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709
-              </p>
-            </div>
+                364 E Main St STE 1008<br>Middletown DE 19709
+              </br></p>
+            >
           </div>
         </div>
       </section>

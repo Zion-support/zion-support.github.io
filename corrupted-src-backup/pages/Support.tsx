@@ -120,10 +120,10 @@ const, Suppor, t: Rea, c, t.FC = () =>
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8"></div>"
             <div, className="te, x, t-cent, e, r"></div>"
               <h1, className="te, x, t-4x, l, m,"
-  d:te, x, t-5xl, fon, t-bold, m, b-6"></h1>
+  d:te, x, t-5xl, fon, t-bold, m, b-6">>
                 Support, Cente, r;
               </h1>"
-              <p, className="te, x, t-xl, m, b-8, ma, x-w-3xl, m, x-au, t, o"></p>
+              <p, className="te, x, t-xl, m, b-8, ma, x-w-3xl, m, x-au, t, o">>
                 Get, help, when you, need, it. Our, expert, support team, is, here 24/7, to, assist you, with, any questions, or, issues.
               </p>
               {/* Search, Ba, r */}
@@ -168,7 +168,7 @@ const, Suppor, t: Rea, c, t.FC = () =>
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
                 Get, Suppor, t;
               </h2>"
-              <p, className="te, x, t-xl, tex, t-gr, a, y-6, 0, 0"></p>
+              <p, className="te, x, t-xl, tex, t-gr, a, y-6, 0, 0">>
                 Choose, the, support channel, that, works best, for, you;
               </p>
             </d, i, v>
@@ -190,10 +190,10 @@ const, Suppor, t: Rea, c, t.FC = () =>
                     <div, className="w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4"></div>"
                       <chann, e, l .icon, className="h-8 w-8, tex, t-bl, u, e-6, 0, 0"  /></chann>
                     </d, i, v>"
-                    <h3, className="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-2"></h3>
+                    <h3, className="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-2">>
                       {chann, e, l.tit, l, e}
                     </h3>"
-                    <p, className="te, x, t-gr, a, y-600, m, b-4"></p>
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">>
                       {chann, e, l.descripti, o, n}
                     </p>
                     <div, className="spa, c, e-y-2, tex, t-sm, tex, t-gr, a, y-500, m, b-4"></div>
@@ -235,7 +235,7 @@ const, Suppor, t: Rea, c, t.FC = () =>
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
                 Frequently, Asked, Questions;
               </h2>"
-              <p, className="te, x, t-xl, tex, t-gr, a, y-6, 0, 0"></p>
+              <p, className="te, x, t-xl, tex, t-gr, a, y-6, 0, 0">>
                 Find, quick, answers to, common, questions;
               </p>
             </d, i, v>
@@ -273,10 +273,10 @@ const, Suppor, t: Rea, c, t.FC = () =>
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8"></div>"
           <div, className="te, x, t-cent, e, r"></div>"
             <h1, className="te, x, t-4x, l, m,"
-  d:te, x, t-6xl, fon, t-bold, m, b-6"></h1>
+  d:te, x, t-6xl, fon, t-bold, m, b-6">>
               We're, Here, to He, l, p;
             </h1>"
-            <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3xl, m, x-au, t, o"></p>
+            <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3xl, m, x-au, t, o">>
               Get, the, support you, need, to succeed, with, our AI, solution, s. 
               Our, expert, team is, ready, to help, you, every step, of, the w, a, y.
             </p>
@@ -353,10 +353,10 @@ const, Suppor, t: Rea, c, t.FC = () =>
             <div, className="spa, c, e-y-6"></div>
               {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-gr, a, y-50, rounde, d-l, g, p-6"></div>"
-                  <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-3"></h3>
+                  <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-3">>
                     {f, a, q.questi, o, n}
                   </h3>"
-                  <p, className="te, x, t-gr, a, y-6, 0, 0"></p>
+                  <p, className="te, x, t-gr, a, y-6, 0, 0">>
                     {f, a, q.answ, e, r}
                   </p>
                 </d, i, v>
@@ -385,7 +385,7 @@ const, Suppor, t: Rea, c, t.FC = () =>
             <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4"></h2>
               Still, Need, Help?
             </h2>"
-            <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3xl, m, x-au, t, o"></p>
+            <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3xl, m, x-au, t, o">>
               C, a, n't, find, what y, o, u're, looking, for? Our, support, team is, ready, to help, you, with any, questions, or issu, e, s.
             </p>
             <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r">
@@ -397,8 +397,7 @@ const, Suppor, t: Rea, c, t.FC = () =>
             <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>
               <Li, n, k;"
   to="/conta, c, t""
-                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-transparent, tex, t-base, fon, t-medium, rounde, d-md, tex, t-bl, u, e-600, b, g-white, hove, r:bg-gr, a, y-50, transitio, n-colo, r, s"
-              ></Li>
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-transparent, tex, t-base, fon, t-medium, rounde, d-md, tex, t-bl, u, e-600, b, g-white, hove, r:bg-gr, a, y-50, transitio, n-colo, r, s"></Li>
                 Contact, Suppor, t;"
                 <MessageCircle, className="ml-2 h-5 w-5"  /></MessageCircle>
               </Li, n, k>
@@ -408,8 +407,7 @@ const, Suppor, t: Rea, c, t.FC = () =>
               <Li, n, k;"
   to="/documentati, o, n""
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-white, tex, t-base, fon, t-medium, rounde, d-md, tex, t-white, hov, e,"
-  r:bg-whi, t, e/10, transitio, n-colo, r, s"
-              ></Li>
+  r:bg-whi, t, e/10, transitio, n-colo, r, s"></Li>
                 View, Documentatio, n;"
                 <BookOpen, className="ml-2 h-5 w-5"  /></BookOpen>
               </Li, n, k>

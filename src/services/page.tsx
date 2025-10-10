@@ -218,10 +218,8 @@ const stats = [
         description="Comprehensive AI and IT solutions including AI services, automation, cybersecurity, cloud services, and micro SAAS applications. Starting from $39/month."
         keywords="AI services, IT solutions, micro SAAS, automation, cybersecurity, cloud services, business intelligence"
       />
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-24 pb-16">
+      <Navigation>{/* Hero Section */}
+      </Navigation><section className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -235,16 +233,15 @@ const stats = [
                 href="tel:+13024640950"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
               >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (302) 464-0950
-              </a>
+                <Phone className="h-5 w-5 mr-2">Call (302) 464-0950
+              </Phone></a>
               <Link
                 to="/contact"
                 className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Get Free Consultation
               </Link>
-            </div>
+            >
           </div>
         </div>
       </section>
@@ -260,10 +257,10 @@ const stats = [
                 </div>
                 <div className="text-gray-300 text-sm md:text-base">
                   {stat.label}
-                </div>
+                >
               </div>
             ))}
-          </div>
+          >
         </div>
       </section>
 
@@ -296,9 +293,8 @@ const stats = [
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      {feature}
-                    </li>
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2">{feature}
+                    </CheckCircle></li>
                   ))}
                 </ul>
                 <div className="text-center">
@@ -309,10 +305,10 @@ const stats = [
                   >
                     Learn More
                   </Link>
-                </div>
+                >
               </div>
             ))}
-          </div>
+          >
         </div>
       </section>
 
@@ -345,9 +341,8 @@ const stats = [
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      {feature}
-                    </li>
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2">{feature}
+                    </CheckCircle></li>
                   ))}
                 </ul>
                 <div className="text-center">
@@ -358,10 +353,10 @@ const stats = [
                   >
                     Learn More
                   </Link>
-                </div>
+                >
               </div>
             ))}
-          </div>
+          >
         </div>
       </section>
 
@@ -394,9 +389,8 @@ const stats = [
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      {feature}
-                    </li>
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2">{feature}
+                    </CheckCircle></li>
                   ))}
                 </ul>
                 <div className="text-center">
@@ -407,10 +401,10 @@ const stats = [
                   >
                     Learn More
                   </Link>
-                </div>
+                >
               </div>
             ))}
-          </div>
+          >
         </div>
       </section>
 
@@ -433,7 +427,7 @@ const stats = [
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
-              </div>
+              >
             ))}
           </div>
         </div>
@@ -454,16 +448,15 @@ const stats = [
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors hover:bg-gray-100 flex items-center justify-center"
               >
-                <Phone className="h-5 w-5 mr-2" />
-                Call (302) 464-0950
-              </a>
+                <Phone className="h-5 w-5 mr-2">Call (302) 464-0950
+              </Phone></a>
               <Link
                 to="/contact"
                 className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Get Free Consultation
               </Link>
-            </div>
+            >
           </div>
         </div>
       </section>

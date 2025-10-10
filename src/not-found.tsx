@@ -45,7 +45,7 @@ const popularPages = [
           <h1 className="text-9xl font-bold text-white/20 mb-4">
             404
           </h1>
-          <div className="text-6xl mb-4">🔍</div>
+          <div className="text-6xl mb-4">🔍>
         </div>
         {/* Error Message */}
         <div className="mb-12">
@@ -81,17 +81,15 @@ const popularPages = [
             to="/"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
           >
-            <Home className="w-4 h-4 mr-2" />
-            Go Home
-          </Link>
+            <Home className="w-4 h-4 mr-2">Go Home
+          </Home></Link>
           <Link
             to="/contact"
             className="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-300"
           >
-            <Phone className="w-4 h-4 mr-2" />
-            Contact Support
-          </Link>
-        </div>
+            <Phone className="w-4 h-4 mr-2">Contact Support
+          </Phone></Link>
+        >
       </div>
     </div>
   )}

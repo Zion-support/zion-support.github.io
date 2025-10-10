@@ -214,20 +214,12 @@ export const,
   s: [,
         'Basic content generation tools',
         'Traditional CMS platforms'],
-<<<<<<< HEAD
-      market_size: '$50B+ market'
-      growth_rate: '250%+ annual growth';
-variant: 'saas - content'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
       market_size: '$50B+ market',
       growth_rate: '250%+ annual growth',
       variant: 'saas - content',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -372,20 +364,12 @@ varian,
         'Customer service'],
       roi: 'Sales teams report 400%+ ROI through improved lead quality and conversion rates.',
       competitors: ['Basic CRM platforms', 'Traditional sales tools'],
-<<<<<<< HEAD
-      market_size: '$80B+ market'
-      growth_rate: '300%+ annual growth';
-variant: 'saas - crm'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
       market_size: '$80B+ market',
       growth_rate: '300%+ annual growth',
       variant: 'saas - crm',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -532,20 +516,12 @@ varian,
         'Financial analysis'],
       roi: 'Enterprises report 500%+ ROI through improved decision - making and operational efficiency.',
       competitors: ['Basic analytics tools', 'Traditional BI platforms'],
-<<<<<<< HEAD
-      market_size: '$100B+ market'
-      growth_rate: '350%+ annual growth';
-variant: 'saas - intelligence'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
       market_size: '$100B+ market',
       growth_rate: '350%+ annual growth',
       variant: 'saas - intelligence',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -696,20 +672,12 @@ varian,
   s: [,
         'Basic e - commerce tools',
         'Traditional analytics platforms'],
-<<<<<<< HEAD
-      market_size: '$60B+ market'
-      growth_rate: '280%+ annual growth';
-variant: 'saas - ecommerce'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
       market_size: '$60B+ market',
       growth_rate: '280%+ annual growth',
       variant: 'saas - ecommerce',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -853,20 +821,12 @@ varian,
         'Talent optimization'],
       roi: 'HR departments report 300%+ ROI through improved efficiency and better talent management.',
       competitors: ['Basic HR platforms', 'Traditional recruitment tools'],
-<<<<<<< HEAD
-      market_size: '$40B+ market'
-      growth_rate: '250%+ annual growth';
-variant: 'saas - hr'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
       market_size: '$40B+ market',
       growth_rate: '250%+ annual growth',
       variant: 'saas - hr',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1012,20 +972,12 @@ varian,
         'Strategic planning'],
       roi: 'Financial institutions report 450%+ ROI through improved analysis and risk management.',
       competitors: ['Basic financial tools', 'Traditional analytics platforms'],
-<<<<<<< HEAD
-      market_size: '$90B+ market'
-      growth_rate: '320%+ annual growth';
-variant: 'saas - financial'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
       market_size: '$90B+ market',
       growth_rate: '320%+ annual growth',
       variant: 'saas - financial',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1176,20 +1128,12 @@ varian,
   s: [,
         'Basic supply chain tools',
         'Traditional inventory management'],
-<<<<<<< HEAD
-      market_size: '$70B+ market'
-      growth_rate: '300%+ annual growth';
-variant: 'saas - supply - chain'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
       market_size: '$70B+ market',
       growth_rate: '300%+ annual growth',
       variant: 'saas - supply - chain',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1337,20 +1281,12 @@ varian,
   s: [,
         'Basic marketing tools',
         'Traditional automation platforms'],
-<<<<<<< HEAD
-      market_size: '$55B+ market'
-      growth_rate: '280%+ annual growth';
-variant: 'saas - marketing'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
       market_size: '$55B+ market',
       growth_rate: '280%+ annual growth',
       variant: 'saas - marketing',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1496,20 +1432,12 @@ varian,
   s: [,
         'Basic project management tools',
         'Traditional planning platforms'],
-<<<<<<< HEAD
-      market_size: '$45B+ market'
-      growth_rate: '250%+ annual growth';
-variant: 'saas - project'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
       market_size: '$45B+ market',
       growth_rate: '250%+ annual growth',
       variant: 'saas - project',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1656,18 +1584,11 @@ export const,
         'Basic project management tools'
         'Traditional planning platforms'
       ]
-<<<<<<< HEAD
-      marketSize: '$45 B+ market'
-      growthRate: '250%+ annual growth';
-variant: 'saas-project'
-      contactInfo: mobile: '+1 302 464 0950'
-=======
       marketSize: '$45 B+ market',
       growthRate: '250%+ annual growth',
       variant: 'saas-project',
       contactInfo:
         contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup.com'}

@@ -22,7 +22,7 @@ export default function CaseStudy(): React.JSX.Element {
               <span>By Zion Tech Group Team</span>
               <span>•</span>
               <span>2025-01-01</span>
-            </div>
+            >
           </div>
 
           <div className="prose prose-lg prose-invert max-w-none"></div>
@@ -44,7 +44,7 @@ export default function CaseStudy(): React.JSX.Element {
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip;
                 ex ea commodo consequat.
               </p>
-            </div>
+            >
           </div>
 
           <div className="mt-16 pt-8 border-t border-white border-opacity-20">
@@ -90,7 +90,7 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
                   >
                     LinkedIn;
                   </a>
-                </div>
+                >
               </div>
               <a;
                 href="/"
@@ -102,9 +102,9 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
               >
                 Back to Home;
               </a>
-            </div>
+            >
           </div>
-        </div>
+        >
       </div>,
     </React.Fragment>)}
 "`

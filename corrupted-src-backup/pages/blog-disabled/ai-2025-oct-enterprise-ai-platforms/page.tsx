@@ -8,12 +8,10 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
       <Helm, e, t>
         <title>Enterprise, AI, Platforms 20, 2, 5: Architec, t, u, r, e, SL, A, s, and, RO, I</title>
         <meta, nam, e = 'description'
-          conte, n, t='Enterprise, AI, Platforms 20, 2, 5: Architec, t, u, r, e, SL, A, s, and, ROI, for modern, AI, infrastructure'
-        />)
-        <link, re, l = 'canonic, a, l')
-          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-enterpri s e-ai-platfor m s')
-        />),
-      </Helm, e, t>
+          conte, n, t='Enterprise, AI, Platforms 20, 2, 5: Architec, t, u, r, e, SL, A, s, and, ROI, for modern, AI, infrastructure'>)
+        </meta><link, re, l = 'canonic, a, l')
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-enterpri s e-ai-platfor m s')>),
+      </link></Helm, e, t>
 
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
@@ -33,7 +31,7 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
           <Link, t, o='/<bl, o, g' className='te, x, t-cy, a, n-300, hove, r: underli, n, e'>
             ← Back, to, Blog;
           </Li, n, k>
-        </div>
+        >
       </div>
     </d, i, v > );
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}

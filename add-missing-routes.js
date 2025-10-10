@@ -21,8 +21,7 @@ const generateRouteStatement = (route) => {
 return (
 ;
 const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
-  return `            <Route path="${route}" element={<${componentName} />
-);
+  return `            <Route path="${route}" element={<${componentName}>);
 }} />`};
 
 // Generate all import statements;
@@ -52,3 +51,4 @@ fs.writeFileSync('/workspace/src/App.tsx', newAppContent);
 
 // console.log removed for production
 // console.log removed for production
+</Route>

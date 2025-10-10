@@ -103,7 +103,7 @@ const,
         <div className="metric-card"></div>
           <h3>Conversion Rate</h3>"
           <p className="metric-value">{analytics.conversionRate.toFixed(1)}%</p>
-        </div>
+        >
       </div>
     </div>
   )};

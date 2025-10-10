@@ -39,9 +39,8 @@ export default function OptimizedHomePage() {// TODO: Add content}
       <AccessibilityEnhancer>
         <div />
       </AccessibilityEnhancer>
-      <PerformanceMonitor />
-      {/* Main Content */}
-      <main className="relative">
+      <PerformanceMonitor>{/* Main Content */}
+      </PerformanceMonitor><main className="relative">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-20"></div>

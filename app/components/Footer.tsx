@@ -2,7 +2,7 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
-const Footer: React.FC = memo(() => {;
+const Footer: React.FC = memo(() => {
 const currentYear = new Date().getFullYear();
 const aiServices = [
     { name: 'AI Solutions', url: '/ai-services', description: 'Comprehensive AI solutions' },
@@ -98,9 +98,8 @@ const contactInfo = {
           {/* AI Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Brain className="w-5 h-5 mr-2" />
-              AI Services
-            </h3>
+              <Brain className="w-5 h-5 mr-2">AI Services
+            </Brain></h3>
             <ul className="space-y-2">
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
@@ -125,9 +124,8 @@ const contactInfo = {
           {/* IT Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Cloud className="w-5 h-5 mr-2" />
-              IT Services
-            </h3>
+              <Cloud className="w-5 h-5 mr-2">IT Services
+            </Cloud></h3>
             <ul className="space-y-2">
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
@@ -152,9 +150,8 @@ const contactInfo = {
           {/* Micro SAAS */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Code className="w-5 h-5 mr-2" />
-              Micro SAAS
-            </h3>
+              <Code className="w-5 h-5 mr-2">Micro SAAS
+            </Code></h3>
             <ul className="space-y-2">
               {microSaasServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
@@ -179,9 +176,8 @@ const contactInfo = {
           {/* Emerging Technologies */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Zap className="w-5 h-5 mr-2" />
-              Emerging Tech
-            </h3>
+              <Zap className="w-5 h-5 mr-2">Emerging Tech
+            </Zap></h3>
             <ul className="space-y-2">
               {emergingTech.map((service, index) => (
                 <li key={index}>
@@ -198,9 +194,8 @@ const contactInfo = {
           {/* Company & Support */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Users className="w-5 h-5 mr-2" />
-              Company
-            </h3>
+              <Users className="w-5 h-5 mr-2">Company
+            </Users></h3>
             <ul className="space-y-2 mb-6">
               {companyLinks.map((link, index) => (
                 <li key={index}>
@@ -252,27 +247,27 @@ const contactInfo = {
               </div>
             </div>
           </div>
-        </div>
-        <div className="mt-8 pt-8 border-t border-gray-700">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-gray-400 mb-4 md:mb-0">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
-            <div className="flex space-x-6">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy
-              </a>
-              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service
-              </a>
-              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy
-              </a>
+          <div className="mt-8 pt-8 border-t border-gray-700">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <div className="text-sm text-gray-400 mb-4 md:mb-0">
+                © {currentYear} Zion Tech Group. All rights reserved.
+              </div>
+              <div className="flex space-x-6">
+                <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                  Privacy Policy
+                </a>
+                <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                  Terms of Service
+                </a>
+                <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                  Cookie Policy
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
-  )});
+      </footer>
+    );
+  };
 Footer.displayName = 'Footer'
 export default Footer;

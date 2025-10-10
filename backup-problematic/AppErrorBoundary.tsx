@@ -31,7 +31,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
           </div>
           <div className="ml-3"></div>
             <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
-          </div>
+          >
         </div>
         <div className="mb-4">
           <p className="text-sm text-gray-600 mb-2">An unexpected error occurred: </p>,
@@ -60,7 +60,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
           </div>"
           <div className="ml-3"></div>"
             <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
-          </div>
+          >
         </div>"
         <div className="mb-4"></div>"
           <p className="text-sm text-gray-600 mb-2">An unexpected error,
@@ -90,7 +90,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
           >
             Reload page;
           </button>
-        </div>
+        >
       </div>,
     </div>)}
 
@@ -128,8 +128,8 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
   r: undefined })}
 
   render() {/* TODO: Fix JSX expression */}
-      return <ErrorFallback error={this.state.error} resetError={this.resetError} />}
+      return <ErrorFallback error={this.state.error} resetError={this.resetError}>}
 
     return this.props.children}
 }
-"
+"</ErrorFallback>

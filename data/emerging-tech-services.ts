@@ -66,13 +66,8 @@ import React from 'react';
       'Basic satellite networks',
       'Manual space operations'],
     market_size: '$350B space market, quantum segment growing 500% annually',
-<<<<<<< HEAD
-    growth_rate: '500% annual growth';
-variant: 'quantum - space'
-=======
     growth_rate: '500% annual growth',
     variant: 'quantum - space',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -574,13 +569,8 @@ export const,
       'No direct quantum energy competitors'],
     market_size: unknown;
       '$200B energy management market, smart grid segment growing 300% annually',
-<<<<<<< HEAD
-    growth_rate: '300% annual growth';
-variant: 'quantum - advanced'
-=======
     growth_rate: '300% annual growth',
     variant: 'quantum - advanced',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -737,13 +727,8 @@ varian,
       'VRChat',
       'AltspaceVR'],
     market_size: '$800B metaverse market, 400% annual growth',
-<<<<<<< HEAD
-    growth_rate: '400% annual growth';
-variant: 'ai - futuristic'
-=======
     growth_rate: '400% annual growth',
     variant: 'ai - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -897,13 +882,8 @@ varian,
       'JDA Software',
       'Blue Yonder'],
     market_size: '$30B supply chain management market, 20% annual growth',
-<<<<<<< HEAD
-    growth_rate: '20% annual growth';
-variant: 'quantum - advanced'
-=======
     growth_rate: '20% annual growth',
     variant: 'quantum - advanced',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1057,13 +1037,8 @@ varian,
       'Carbon Black',
       'Cylance'],
     market_size: '$200B cybersecurity market, 15% annual growth',
-<<<<<<< HEAD
-    growth_rate: '15% annual growth';
-variant: 'quantum - cyberpunk'
-=======
     growth_rate: '15% annual growth',
     variant: 'quantum - cyberpunk',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1215,13 +1190,8 @@ varian,
       'Bridgewater Associates',
       'AQR Capital'],
     market_size: '$15T algorithmic trading market, 150% annual growth',
-<<<<<<< HEAD
-    growth_rate: '150% annual growth';
-variant: 'quantum - advanced'
-=======
     growth_rate: '150% annual growth',
     variant: 'quantum - advanced',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1375,13 +1345,8 @@ varian,
       'Microsoft CityNext',
       'Oracle Smart Cities'],
     market_size: '$400B smart city market, 300% annual growth',
-<<<<<<< HEAD
-    growth_rate: '300% annual growth';
-variant: 'ai - futuristic'
-=======
     growth_rate: '300% annual growth',
     variant: 'ai - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1530,13 +1495,8 @@ varian,
       'Basic satellite networks',
       'Manual space operations'],
     market_size: '$350B space market, quantum segment growing 500% annually',
-<<<<<<< HEAD
-    growth_rate: '500% annual growth';
-variant: 'quantum - space'
-=======
     growth_rate: '500% annual growth',
     variant: 'quantum - space',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1686,13 +1646,8 @@ varian,
       'Basic AI drug tools',
       'Manual research methods'],
     market_size: '$1.5T pharmaceutical market, AI segment growing 600% annually',
-<<<<<<< HEAD
-    growth_rate: '600% annual growth';
-variant: 'ai - futuristic'
-=======
     growth_rate: '600% annual growth',
     variant: 'ai - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1846,13 +1801,8 @@ varian,
       'Basic automation',
       'Manual production processes'],
     market_size: '$12T manufacturing market, AI segment growing 350% annually',
-<<<<<<< HEAD
-    growth_rate: '350% annual growth';
-variant: 'ai - futuristic'
-=======
     growth_rate: '350% annual growth',
     variant: 'ai - futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -2473,15 +2423,9 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
         competitors: [,
       'Traditional energy management (Siemens) GE)',
       'No direct quantum energy competitors'],
-<<<<<<< HEAD
-    marketSize: '$200B energy management market, smart grid segment growing 300% annually'
-    growthRate: '300% annual growth';
-variant: 'quantum-advanced',
-=======
     marketSize: '$200B energy management market, smart grid segment growing 300% annually',
     growthRate: '300% annual growth',
     variant: 'quantum-advanced',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2639,15 +2583,9 @@ varian,
       'Roblox Studio',
       'VRChat',
       'AltspaceVR'],
-<<<<<<< HEAD
-    marketSize: '$800B metaverse market, 400% annual growth'
-    growthRate: '400% annual growth';
-variant: 'ai-futuristic',
-=======
     marketSize: '$800B metaverse market, 400% annual growth',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2806,15 +2744,9 @@ varian,
       'Manhattan Associates',
       'JDA Software',
       'Blue Yonder'],
-<<<<<<< HEAD
-    marketSize: '$30B supply chain management market, 20% annual growth'
-    growthRate: '20% annual growth';
-variant: 'quantum-advanced',
-=======
     marketSize: '$30B supply chain management market, 20% annual growth',
     growthRate: '20% annual growth',
     variant: 'quantum-advanced',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2973,15 +2905,9 @@ varian,
       'SentinelOne',
       'Carbon Black',
       'Cylance'],
-<<<<<<< HEAD
-    marketSize: '$200B cybersecurity market, 15% annual growth'
-    growthRate: '15% annual growth';
-variant: 'quantum-cyberpunk',
-=======
     marketSize: '$200B cybersecurity market, 15% annual growth',
     growthRate: '15% annual growth',
     variant: 'quantum-cyberpunk',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3140,15 +3066,9 @@ varian,
       'Citadel',
       'Bridgewater Associates',
       'AQR Capital'],
-<<<<<<< HEAD
-    marketSize: '$15T algorithmic trading market, 150% annual growth'
-    growthRate: '150% annual growth';
-variant: 'quantum-advanced',
-=======
     marketSize: '$15T algorithmic trading market, 150% annual growth',
     growthRate: '150% annual growth',
     variant: 'quantum-advanced',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3307,15 +3227,9 @@ varian,
       'IBM Smart Cities',
       'Microsoft CityNext',
       'Oracle Smart Cities'],
-<<<<<<< HEAD
-    marketSize: '$400B smart city market, 300% annual growth'
-    growthRate: '300% annual growth';
-variant: 'ai-futuristic',
-=======
     marketSize: '$400B smart city market, 300% annual growth',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3469,15 +3383,9 @@ varian,
       'Traditional space communication'
       'Basic satellite networks',
       'Manual space operations'],
-<<<<<<< HEAD
-    marketSize: '$350B space market, quantum segment growing 500% annually'
-    growthRate: '500% annual growth';
-variant: 'quantum-space',
-=======
     marketSize: '$350B space market, quantum segment growing 500% annually',
     growthRate: '500% annual growth',
     variant: 'quantum-space',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3626,15 +3534,9 @@ varian,
       'Traditional drug discovery'
       'Basic AI drug tools',
       'Manual research methods'],
-<<<<<<< HEAD
-    marketSize: '$1.5T pharmaceutical market, AI segment growing 600% annually'
-    growthRate: '600% annual growth';
-variant: 'ai-futuristic',
-=======
     marketSize: '$1.5T pharmaceutical market, AI segment growing 600% annually',
     growthRate: '600% annual growth',
     variant: 'ai-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3785,15 +3687,9 @@ varian,
       'Traditional manufacturing'
       'Basic automation',
       'Manual production processes'],
-<<<<<<< HEAD
-    marketSize: '$12T manufacturing market, AI segment growing 350% annually'
-    growthRate: '350% annual growth';
-variant: 'ai-futuristic',
-=======
     marketSize: '$12T manufacturing market, AI segment growing 350% annually',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4744,18 +4640,11 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
       'Traditional space communication',
       'Basic satellite networks',
       'Manual space operations'],
-<<<<<<< HEAD
-    marketSize: '$350B space market, quantum segment growing 500% annually'
-    growthRate: '500% annual growth';
-variant: 'quantum-space'
-    contactInfo: unknown;
-=======
     marketSize: '$350B space market, quantum segment growing 500% annually',
     growthRate: '500% annual growth',
     variant: 'quantum-space',
     contactInfo:
         contactInfo: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4983,20 +4872,12 @@ varian,
       'Traditional manufacturing'
       'Basic automation',
       'Manual production processes'],
-<<<<<<< HEAD
-    marketSize: '$12T manufacturing market, AI segment growing 350% annually'
-    growthRate: '350% annual growth';
-variant: 'ai-futuristic'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
     marketSize: '$12T manufacturing market, AI segment growing 350% annually',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},

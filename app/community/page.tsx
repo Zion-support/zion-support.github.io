@@ -7,8 +7,6 @@ const CommunityPage: React.FC = () => {const communityFeatures = [
       icon: Users,
       title: 'Expert Network',
       description: 'Connect with industry professionals and AI experts from around the world.'
-<<<<<<< HEAD
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Users, MessageCircle, Calendar, Award } from 'lucide-react';
@@ -19,7 +17,6 @@ const CommunityPage: React.FC = () => {
       icon: Users,
       title: 'Expert Community',
       description: 'Connect with industry experts and like-minded professionals'
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     },
     {
       icon: MessageCircle,
@@ -30,15 +27,12 @@ const CommunityPage: React.FC = () => {
       icon: Calendar,
       title: 'Events & Webinars',
       description: 'Join our regular events, workshops, and educational sessions.'
-<<<<<<< HEAD
-=======
       description: 'Share insights and learn from community discussions'
     },
     {
       icon: Calendar,
       title: 'Events & Workshops',
       description: 'Participate in exclusive events and training sessions'
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     },
     {
       icon: Award,
@@ -75,9 +69,6 @@ const CommunityPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Connect with like-minded professionals, share knowledge, and grow together in the world of AI and technology.
             </p>
-<<<<<<< HEAD
-            ));
-=======
       description: 'Get recognized for your contributions and achievements'
     }
   ];
@@ -101,10 +92,8 @@ const CommunityPage: React.FC = () => {
         <meta name="keywords" content="community, networking, AI professionals, IT community, Zion Tech Group" />
       </Helmet>
 
-      <Navigation />
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <Navigation>{/* Hero Section */}
+      </Navigation><section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -126,7 +115,7 @@ const CommunityPage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-            </div>
+            >
           </div>
         </div>
       </section>
@@ -151,9 +140,8 @@ const CommunityPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
+              >
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </section>
 
@@ -168,7 +156,7 @@ const CommunityPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </div>
+                >
               ));
             </div>
           </div>
@@ -187,13 +175,11 @@ const CommunityPage: React.FC = () => {
               <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
                 Join Community
               </button>
-            </div>
+            >
           </div>
         </section>
       </div>
     </>
-<<<<<<< HEAD
-=======
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -211,9 +197,8 @@ const CommunityPage: React.FC = () => {
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
+              >
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </div>
       </section>
@@ -235,13 +220,13 @@ const CommunityPage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Learn More
               </button>
-            </div>
+            >
           </div>
         </div>
       </section>
 
       <Footer />
-    </div>
+    >
   );
 }
 export default CommunityPage;

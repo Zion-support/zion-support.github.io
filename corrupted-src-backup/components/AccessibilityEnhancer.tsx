@@ -192,7 +192,7 @@ const _announcement = document.createElement('div');
         >
           {isReducedMotion ? '🏃' : '🚶'} Motion;
         </button>
-      </div>
+      >
 
       {children}
     </div>

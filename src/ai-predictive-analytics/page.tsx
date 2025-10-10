@@ -61,9 +61,8 @@ const features = [
               href="tel:+13024640950"
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              <TrendingUp className="w-5 h-5" />
-              +1 302 464 0950
-            </a>
+              <TrendingUp className="w-5 h-5">+1 302 464 0950
+            </TrendingUp></a>
           </div>
         </section>
 
@@ -87,12 +86,11 @@ const features = [
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
-                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0">{benefit}
+                    </CheckCircle></li>
                   ))}
                 </ul>
-              </div>
+              >
             ))}
           </div>
         </section>

@@ -57,9 +57,8 @@ const certifications = [];
     
 
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <Navigation />
-        {/* Header */}
-        <section className="bg-white shadow-sm border-b">
+        <Navigation>{/* Header */}
+        </Navigation><section className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex items-center">
               <Link
@@ -90,7 +89,7 @@ const certifications = [];
               <h2 className="text-3xl font-bold text-gray-900 mb-4"></h2>
 // Our Commitment to Compliance;
           </h2>"
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto"></p>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">>
 // At Zion Tech Group, we maintain the highest standards of compliance and security.
                 Our certifications and adherence to industry standards ensure your data is protected;
 //                 and our services meet the most stringent requirements.
@@ -152,11 +151,10 @@ Compliance Areas;"
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
         </main>
 
-        <Footer />
-
-  )};
+        <Footer>)};
 
 
 export default CompliancePage;
 
 
+</Footer>

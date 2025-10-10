@@ -89,7 +89,7 @@ export const,
       <Suspense;
         fallback={
           <div className='flex items-center justify-center py-16'></Suspense>
-            <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>}
+            <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'>>}
           </div>}
         }
       >
@@ -125,7 +125,7 @@ export const,
               aria-label={`Go to banner ${index + 1}`}
             />
           ))}
-        </button></div>
+        </button>>
       )}
     </div>
   )};

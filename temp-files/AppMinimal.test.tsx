@@ -8,10 +8,9 @@ return (
 
   it('renders without crashing', () => {;
 const MockAppMinimal = () => <div>Zion Tech Group</div>;
-    render(<MockAppMinimal />);
+    render(<MockAppMinimal>);
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
-    render(<App />
-);
+    render(</MockAppMinimal><App>);
 });
     // Just check that the component renders without throwing an error
-    expect(true).toBe(true)})});
+    expect(true).toBe(true)})});</App>

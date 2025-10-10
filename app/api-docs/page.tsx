@@ -111,10 +111,8 @@ const filteredEndpoints = apiEndpoints.map(category => ({
         description="Complete API documentation for Zion Tech Group's AI and IT solutions. Explore endpoints, authentication, and integration guides."
         keywords="API documentation, REST API, AI API, cloud API, integration, developer tools, API reference"
       />
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
+      <Navigation>{/* Hero Section */}
+      </Navigation><section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             API Documentation
@@ -162,7 +160,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({
               <button className="text-purple-400 hover:text-purple-300 font-medium">
                 Start Building →
               </button>
-            </div>
+            >
           </div>
         </div>
       </section>
@@ -181,7 +179,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
                     <p className="text-gray-300">{category.description}</p>
-                  </div>
+                  >
                 </div>
                 
                 <div className="space-y-6">
@@ -204,14 +202,12 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                         >
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
                             <React.Fragment>
-                              <Check className="w-4 h-4" />
-                              Copied!
-                            </React.Fragment>
+                              <Check className="w-4 h-4">Copied!
+                            </Check></React.Fragment>
                           ) : (
                             <React.Fragment>
-                              <Copy className="w-4 h-4" />
-                              Copy
-                            </React.Fragment>);
+                              <Copy className="w-4 h-4">Copy
+                            </Copy></React.Fragment>);
                         </button>
                       </div>
                       
@@ -221,13 +217,13 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                         <pre className="text-gray-300 text-sm">
                           <code>{endpoint.code}</code>
                         </pre>
-                      </div>
+                      >
                     </div>
                   ));
-                </div>
+                >
               </div>
             ));
-          </div>
+          >
         </div>
       </section>
 
@@ -247,7 +243,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
               View SDKs
             </button>
-          </div>
+          >
         </div>
       </section>
 

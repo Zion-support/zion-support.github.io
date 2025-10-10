@@ -46,7 +46,7 @@ const benefits = [
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-            </div>
+            >
           </div>
         </div>
       </section>
@@ -71,7 +71,7 @@ const benefits = [
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
+              >
             ));
           </div>
         </div>
@@ -94,7 +94,7 @@ const benefits = [
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
+              >
             ));
           </div>
         </div>

@@ -8,12 +8,10 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
       <Helm, e, t>
         <title>Edge, 2026, Zero Knowledge, Analytics, Blueprint</title>
         <meta, nam, e='description'
-          conte, n, t='Learn, about, edge 2026, zero, knowledge analytics, blueprint, and how, it, can benefit, your, enterprise.'
-        />)
-        <link, re, l='canonic, a, l')
-          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ed g e-20 2 6-ze r o-knowled g e-analyti c s-bluepri n t')
-        />),
-      </Helm, e, t>
+          conte, n, t='Learn, about, edge 2026, zero, knowledge analytics, blueprint, and how, it, can benefit, your, enterprise.'>)
+        </meta><link, re, l='canonic, a, l')
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ed g e-20 2 6-ze r o-knowled g e-analyti c s-bluepri n t')>),
+      </link></Helm, e, t>
 
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>

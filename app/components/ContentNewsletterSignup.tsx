@@ -9,17 +9,11 @@ interface ContentNewsletterSignupProps {
   buttonText?: string;
   features?: Array<{
     icon: React.ComponentType<{ className?: string }>;
-<<<<<<< HEAD
-    text: string;)
-}>;
-  onSubscribe?: (email: string) => void;);
-=======
     text: string]
     }>;
   onSubscribe?: (email: string) => void]
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
@@ -40,16 +34,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
     },
     {
       icon: Globe,
-<<<<<<< HEAD
-      text: "Global community access";);
-  ],
-  onSubscribe;)
-}); => {;
-const [email, setEmail] = useState('');
-const [isSubscribed, setIsSubscribed] = useState(false);
-const [isLoading, setIsLoading] = useState(false);
-const handleSubmit = async (e: React.FormEvent) => {
-=======
       text: "Global community access"]
     }
   ],
@@ -60,7 +44,6 @@ const handleSubmit = async (e: React.FormEvent) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     e.preventDefault();
     if (!email) return;
 
@@ -71,16 +54,6 @@ const handleSubmit = async (e: React.FormEvent) => {
         await onSubscribe(email)]
     } else {
         // Simulate API call
-<<<<<<< HEAD
-        await new Promise(resolve => setTimeout(resolve, 1000)););
-      setIsSubscribed(true);
-      setEmail('');)
-} catch (error) {
-      // console.error removed for production
-)
-} finally {
-      setIsLoading(false););
-=======
         await new Promise(resolve => setTimeout(resolve, 1000))]
     }
       
@@ -91,7 +64,6 @@ const handleSubmit = async (e: React.FormEvent) => {
     } finally {
       setIsLoading(false)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   };
 
   if (isSubscribed) {
@@ -104,7 +76,7 @@ const handleSubmit = async (e: React.FormEvent) => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
             Welcome to Our Community!
           </h2>
-          <p className="text-xl text-blue-100 mb-8"></p>
+          <p className="text-xl text-blue-100 mb-8">>
             Thank you for subscribing. You'll receive our latest insights and updates soon.
           </p>
           <button
@@ -113,15 +85,11 @@ const handleSubmit = async (e: React.FormEvent) => {
           >
             Subscribe another email
           </button>
-        </div>
+        >
       </div>
-<<<<<<< HEAD
-    ););
-=======
     )]
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return (
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4"></div>
       <div className="max-w-6xl mx-auto"></div>
@@ -131,7 +99,7 @@ const handleSubmit = async (e: React.FormEvent) => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               {title}
             </h2>
-            <p className="text-xl text-blue-100 mb-8"></p>
+            <p className="text-xl text-blue-100 mb-8">>
               {subtitle}
             </p>
             
@@ -142,7 +110,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                     <feature.icon className="w-4 h-4 text-white" />
                   </div>
                   <span className="text-blue-100"></spa>{feature.text}</span>
-                </div>
+                >
               ));
             </div>
           </div>
@@ -168,8 +136,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               <button
                 type="submit"
                 disabled={isLoading || !email}
-                className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"
-              ></button>
+                className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"></button>
                 {isLoading ? (
                   <>
                     <div>
@@ -183,20 +150,16 @@ const handleSubmit = async (e: React.FormEvent) => {
                 );
               </button>
               
-              <p className="text-sm text-blue-200 text-center"></p>
+              <p className="text-sm text-blue-200 text-center">>
                 We respect your privacy. Unsubscribe at any time.
               </p>
             </form>
-          </div>
+          >
         </div>
-      </div>
+      >
     </div>
-<<<<<<< HEAD
-  );)
-=======
   )]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ContentNewsletterSignup;
 }

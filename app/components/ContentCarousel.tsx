@@ -106,7 +106,7 @@ const ContentCarousel: React.FC = () => {
                   <p className="text-gray-300">
                     {slides[currentSlide].description}
                   </p>
-                </div>
+                >
               </div>
             </div>
 
@@ -115,7 +115,7 @@ const ContentCarousel: React.FC = () => {
                 <div key={index} className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                   <span className="text-gray-300">{feature}</span>
-                </div>
+                >
               ))}
             </div>
           </div>
@@ -145,7 +145,7 @@ const ContentCarousel: React.FC = () => {
                 }`}
               />
             ))}
-          </div>
+          >
         </div>
 
         {/* Benefits Section */}
@@ -158,10 +158,10 @@ const ContentCarousel: React.FC = () => {
               <div key={index} className="flex items-center gap-3 bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-lg p-4">
                 <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
-              </div>
+              >
             ))}
           </div>
-        </div>
+        >
       </div>
     </div>
   );

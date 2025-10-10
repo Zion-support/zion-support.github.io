@@ -253,7 +253,7 @@ const handleSecurityEvent = useCallback((event: string, data: any) => {
             <div>CSP Violations: {metrics.cspViolations}</div>
             <div>XSS Attempts: {metrics.xssAttempts}</div>
             <div>CSRF Attempts: {metrics.csrfAttempts}</div>
-            <div>Suspicious Activity: {metrics.suspiciousActivity}</div>
+            <div>Suspicious Activity: {metrics.suspiciousActivity}>
           </div>
         </div>
       )}

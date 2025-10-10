@@ -179,10 +179,10 @@ const MicroSaasPage: React.FC = () => {
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
-                  <div className="text-gray-500 text-xs mt-1">{stat.description}</div>
+                  <div className="text-gray-500 text-xs mt-1">{stat.description}>
                 </div>
               ))}
-            </div>
+            >
           </div>
         </section>
 
@@ -202,7 +202,7 @@ const MicroSaasPage: React.FC = () => {
                   {category}
                 </button>
               ))}
-            </div>
+            >
           </div>
         </section>
 
@@ -218,7 +218,7 @@ const MicroSaasPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </div>
+                >
               ))}
             </div>
           </div>
@@ -245,9 +245,8 @@ const MicroSaasPage: React.FC = () => {
                   {product.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
-                        <Star className="w-3 h-3 fill-current" />
-                        Most Popular
-                      </div>
+                        <Star className="w-3 h-3 fill-current">Most Popular
+                      </Star>>
                     </div>
                   )}
                   
@@ -263,7 +262,7 @@ const MicroSaasPage: React.FC = () => {
                     <div className="text-gray-400 text-sm">{product.users}</div>
                     <div className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full mt-2">
                       {product.category}
-                    </div>
+                    >
                   </div>
                   
                   <ul className="space-y-3 mb-6">
@@ -283,7 +282,7 @@ const MicroSaasPage: React.FC = () => {
                     Start Free Trial
                     <ArrowRight className="w-4 h-4" />
                   </button>
-                </div>
+                >
               ))}
             </div>
           </div>
@@ -299,10 +298,10 @@ const MicroSaasPage: React.FC = () => {
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
-                  </div>
+                  >
                 ))}
               </div>
-            </div>
+            >
           </div>
         </section>
 
@@ -337,7 +336,7 @@ const MicroSaasPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Scale & Grow</h3>
                 <p className="text-gray-300">Upgrade when you're ready and scale your usage as your business grows.</p>
-              </div>
+              >
             </div>
           </div>
         </section>
@@ -358,16 +357,15 @@ const MicroSaasPage: React.FC = () => {
                   to="/contact"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 transform hover:scale-105"
                 >
-                  <Zap className="w-5 h-5" />
-                  Start Free Trial
-                </Link>
+                  <Zap className="w-5 h-5">Start Free Trial
+                </Zap></Link>
                 <Link
                   to="/pricing"
                   className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300"
                 >
                   View All Plans
                 </Link>
-              </div>
+              >
             </div>
           </div>
         </section>

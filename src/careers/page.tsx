@@ -144,10 +144,8 @@ const culture = [
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
+      <Navigation>{/* Hero Section */}
+      </Navigation><section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Join Our <span className="text-cyan-400">Team</span>
@@ -168,7 +166,7 @@ const culture = [
             >
               Contact Us
             </Link>
-          </div>
+          >
         </div>
       </section>
 
@@ -191,7 +189,7 @@ const culture = [
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
-              </div>
+              >
             ))}
           </div>
         </div>
@@ -224,23 +222,23 @@ const culture = [
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-600 mb-2">50+</div>
-                  <div className="text-gray-600">Team Members</div>
+                  <div className="text-gray-600">Team Members>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-600 mb-2">15+</div>
-                  <div className="text-gray-600">Years Experience</div>
+                  <div className="text-gray-600">Years Experience>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-600 mb-2">25+</div>
-                  <div className="text-gray-600">Countries</div>
+                  <div className="text-gray-600">Countries>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-green-600 mb-2">99%</div>
-                  <div className="text-gray-600">Satisfaction</div>
+                  <div className="text-gray-600">Satisfaction>
                 </div>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
       </section>
 
@@ -264,22 +262,18 @@ const culture = [
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">{position.title}</h3>
                       <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
                         <span className="flex items-center">
-                          <Briefcase className="w-4 h-4 mr-1" />
-                          {position.department}
-                        </span>
+                          <Briefcase className="w-4 h-4 mr-1">{position.department}
+                        </Briefcase></span>
                         <span className="flex items-center">
-                          <MapPin className="w-4 h-4 mr-1" />
-                          {position.location}
-                        </span>
+                          <MapPin className="w-4 h-4 mr-1">{position.location}
+                        </MapPin></span>
                         <span className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {position.type}
-                        </span>
+                          <Clock className="w-4 h-4 mr-1">{position.type}
+                        </Clock></span>
                         <span className="flex items-center">
-                          <Users className="w-4 h-4 mr-1" />
-                          {position.experience}
-                        </span>
-                      </div>
+                          <Users className="w-4 h-4 mr-1">{position.experience}
+                        </Users></span>
+                      >
                     </div>
                     <Link
                       to="/contact"
@@ -297,9 +291,8 @@ const culture = [
                       <ul className="space-y-2">
                         {position.requirements.map((req, index) => (
                           <li key={index} className="flex items-start text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                            {req}
-                          </li>
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0">{req}
+                          </CheckCircle></li>
                         ))}
                       </ul>
                     </div>
@@ -308,17 +301,16 @@ const culture = [
                       <ul className="space-y-2">
                         {position.benefits.map((benefit, index) => (
                           <li key={index} className="flex items-start text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
-                            {benefit}
-                          </li>
+                            <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0">{benefit}
+                          </CheckCircle></li>
                         ))}
                       </ul>
-                    </div>
+                    >
                   </div>
-                </div>
+                >
               </div>
             ))}
-          </div>
+          >
         </div>
       </section>
 
@@ -344,7 +336,7 @@ const culture = [
             >
               Meet Our Team
             </Link>
-          </div>
+          >
         </div>
       </section>
 

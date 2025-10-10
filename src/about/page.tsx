@@ -181,7 +181,7 @@ const teamMembers = [
               We combine deep technical expertise with innovative thinking
               to deliver solutions that drive real business value.
             </p>
-          </div>
+          >
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -204,7 +204,7 @@ const teamMembers = [
             <Shield className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-white mb-2">Secure & Reliable</h3>
             <p className="text-gray-300">Enterprise-grade security</p>
-          </div>
+          >
         </div>
 
         {/* Stats Section */}
@@ -218,10 +218,10 @@ const teamMembers = [
                   </div>
                   <div className="text-gray-600 font-medium">
                     {stat.label}
-                  </div>
+                  >
                 </div>
               ))}
-            </div>
+            >
           </div>
         </section>
 
@@ -255,7 +255,7 @@ const teamMembers = [
                   helping organizations across all industries achieve digital transformation 
                   and sustainable growth in the age of artificial intelligence.
                 </p>
-              </div>
+              >
             </div>
           </div>
         </section>
@@ -284,7 +284,7 @@ const teamMembers = [
                   <p className="text-gray-600">
                     {value.description}
                   </p>
-                </div>
+                >
               ))}
             </div>
           </div>
@@ -308,7 +308,7 @@ const teamMembers = [
                   <div className="h-64 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                     <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
                       <Users className="w-16 h-16 text-gray-600" />
-                    </div>
+                    >
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -320,10 +320,10 @@ const teamMembers = [
                     <p className="text-gray-600">
                       {member.bio}
                     </p>
-                  </div>
+                  >
                 </div>
               ))}
-            </div>
+            >
           </div>
         </section>
 
@@ -349,7 +349,7 @@ const teamMembers = [
               >
                 Join Our Team
               </Link>
-            </div>
+            >
           </div>
         </section>
       </div>
@@ -388,9 +388,9 @@ const teamMembers = [
               <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
                 <Globe className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">Global Reach</span>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
       </section>
       {/* Mission & Vision */}
@@ -417,7 +417,7 @@ const teamMembers = [
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300">Drive sustainable innovation and growth</p>
-                </div>
+                >
               </div>
             </div>
             <div>
@@ -443,11 +443,11 @@ const teamMembers = [
                   <div className="flex items-center space-x-3">
                     <Users className="w-5 h-5 text-green-400" />
                     <span className="text-gray-300">Collaboration & Respect</span>
-                  </div>
+                  >
                 </div>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
       </section>
       {/* Values */}
@@ -469,7 +469,7 @@ const teamMembers = [
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
-              </div>
+              >
             ))}
           </div>
         </div>
@@ -502,10 +502,10 @@ const teamMembers = [
                       {skill}
                     </span>
                   ))}
-                </div>
+                >
               </div>
             ))}
-          </div>
+          >
         </div>
       </section>
       {/* Achievements */}
@@ -530,10 +530,10 @@ const teamMembers = [
                 </div>
                 <div className="text-gray-300 font-medium">
                   {achievement.label}
-                </div>
+                >
               </div>
             ))}
-          </div>
+          >
         </div>
       </section>
       {/* Timeline */}
@@ -557,13 +557,13 @@ const teamMembers = [
                       <div className="text-cyan-400 font-bold text-lg mb-2">{item.year}</div>
                       <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
                       <p className="text-gray-300">{item.description}</p>
-                    </div>
+                    >
                   </div>
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"></div>
-                  <div className="w-1/2"></div>
+                  <div className="w-1/2">>
                 </div>
               ))}
-            </div>
+            >
           </div>
         </div>
       </section>
@@ -581,17 +581,15 @@ const teamMembers = [
               href="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
-              <MessageSquare className="w-5 h-5 mr-2" />
-              Get Started Today
-            </a>
+              <MessageSquare className="w-5 h-5 mr-2">Get Started Today
+            </MessageSquare></a>
             <a
               href="/consultation"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
             >
-              <Calendar className="w-5 h-5 mr-2" />
-              Free Consultation
-            </a>
-          </div>
+              <Calendar className="w-5 h-5 mr-2">Free Consultation
+            </Calendar></a>
+          >
         </div>
       </section>
     </div>

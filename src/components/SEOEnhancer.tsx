@@ -30,10 +30,10 @@ const finalStructuredData = structuredData || defaultStructuredData;
         <meta name="distribution" content="global" /></meta>"
         <meta name="rating" content="general" /></meta>
         {/* Canonical URL */}"
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl}>}
 
         {/* Open Graph Tags */}"
-        <meta property="o,"
+        </link><meta property="o,"
   g:type" content={ogType} /></meta>"
         <meta property="o,"
   g:title" content={title} /></meta>"

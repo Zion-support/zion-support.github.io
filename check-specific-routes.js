@@ -34,9 +34,8 @@ const generateRouteStatement = (route) => {
 return (
 ;
 const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
-  return `            <Route path="${route}" element={<${componentName} />
-);
-}} />`;</Route>
+  return `            <Route path="${route}" element={<${componentName}>);
+}} />`;</Route></Route>
 };
 
 if (missingRoutes.length > 0) {

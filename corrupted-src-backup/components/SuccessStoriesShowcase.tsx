@@ -32,7 +32,7 @@ const, storie, s = [
     {
       company: 'FinanceFirst Bank',
       industry: 'Financial Services',
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className="w-8 h-8">,
       result: "99.95% Fraud Detection",
       description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",
       metrics: [,
@@ -41,7 +41,7 @@ const, storie, s = [
         "95% fewer false positives"
       ],
       color: "from-purple-500 to-pink-500",
-        </div>,
+        </Users></div>,
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">,
           {stories.map((story, index) => (
             <div;
@@ -55,8 +55,7 @@ key={index}
           {stories.map((story, index) => (</div>
             <div
 key={index}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"
-            ></div>
+              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"></div>
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>
                 <div className="flex items-center gap-3 mb-4">
                   {story.icon}</div>
@@ -77,9 +76,9 @@ key={index}
                   <div></div>"
                     <h3 className="font-bold text-xl">{story.company}</h3>"
                     <p className="text-sm opacity-90">{story.industry}</p>
-                  </div>
+                  >
                 </div>"
-                <div className="text-3xl font-bold">{story.result}</div>
+                <div className="text-3xl font-bold">{story.result}>
               </div>
               <div className="p-6"></div>
                 <p className="text-gray-600 mb-6">{story.description}</p>
@@ -92,7 +91,7 @@ key={index}
                   Read Full Story;
                   <Link className="w-4 h-4" />
                 </Link>
-              </div>
+              >
             </div>
             View All Success Stories;
             <Link className="w-6 h-6" />
@@ -108,12 +107,12 @@ key={index}
                   Read Full Story;"
                   <Link className="w-4 h-4" /></Link>
                 </Link>
-              </div>
+              >
             </div>
             View All Success Stories;"
             <Link className="w-6 h-6" /></Link>
           </Link>
-        </div>
+        >
       </div>
     </section>
 }}}}"`

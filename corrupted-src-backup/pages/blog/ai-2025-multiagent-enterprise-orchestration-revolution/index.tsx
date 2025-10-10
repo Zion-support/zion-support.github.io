@@ -21,12 +21,10 @@ return (
           conte, n, t='Discover, how, multi-agent, AI, orchestration is, revolutionizing, enterprises. Achieve, 9, 7.8% automa, t, i, o, n, $84, 7, M+ value, creatio, n, and, 8, 9% cost, reduction, with coordinated, AI, agent tea, m, s.'
         /></meta>
         <meta, nam, e = 'keywor, d, s'
-          conte, n, t='mul, t, i-agent, syste, m, s, AI, orchestratio, n, autonomous, agent, s, agent, collaboratio, n, enterprise, A, I, AI, automatio, n, agent, swarm, s'
-        />)
-        <link, re, l = 'canonic, a, l')
-          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-multiage n t-enterpri s e-orchestrati o n-revoluti o n')
-        />),
-      </Helm, e, t>
+          conte, n, t='mul, t, i-agent, syste, m, s, AI, orchestratio, n, autonomous, agent, s, agent, collaboratio, n, enterprise, A, I, AI, automatio, n, agent, swarm, s'>)
+        </meta><link, re, l = 'canonic, a, l')
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-multiage n t-enterpri s e-orchestrati o n-revoluti o n')>),
+      </link></Helm, e, t>
 
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
         <Head, e, r / >
@@ -53,8 +51,7 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {/* TODO: Fix JSX ex
             {/* Breadc, r, u, m, b */}
             <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'></nav>
               <Link, t, o='/'
-                className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s'
-              ></Link>
+                className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s'></Link>
                 Ho, m, e;
               </Li, n, k>
               <span, className='te, x, t-purp, l, e-4, 0, 0'></span>/</sp, a, n>
@@ -104,15 +101,15 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {/* TODO: Fix JSX ex
                   10, 0, 0+
                 </div>
                 <div, className='te, x, t-sm, tex, t-purp, l, e-2, 0, 0'>
-                <div, className='te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-1'></div>
+                <div, className='te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-1'>>
                   10, 0, 0+
                 </div>
-                <div, className='te, x, t-sm, tex, t-purp, l, e-2, 0, 0'></div>
+                <div, className='te, x, t-sm, tex, t-purp, l, e-2, 0, 0'>>
                   Coordinated, Agent, s;
                 </div>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
 
         {/* Main, Cont, e, n, t */}
@@ -120,9 +117,8 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {/* TODO: Fix JSX ex
           <div, className='prose, pros, e-lg, pros, e-invert, ma, x-w-no, n, e'></div>
             <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-12'></div>
               <h2, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-3'></h2>
-                <Target, className='w-8 h-8, tex, t-yell, o, w-4, 0, 0' />
-                Executive, Summar, y;
-              </h2>
+                <Target, className='w-8 h-8, tex, t-yell, o, w-4, 0, 0'>Executive, Summar, y;
+              </Target></h2>
               <p, className='te, x, t-purp, l, e-100, leadin, g-relax, e, d'>
                 The, enterprise, landscape is, witnessing, an unprecedented, transformation, with the, emergence, of mul, t, i-agent, AI, orchestration syste, m, s. Organizations, deploying, coordinated AI, agent, teams are, achiev, i, n, g{' '}</p>
                 <strong, classNam, e = 'te, x, t-gre, e, n-3, 0, 0'>
@@ -157,9 +153,8 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {/* TODO: Fix JSX ex
                         <stro, n, g>Resilient, architectur, e:</stro, n, g> Bui, l, t-in, redundancy, and fault, toleranc, e;
                       </sp, a, n>
                 <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'></h2>
-                  <Users, classNam, e='w-8 h-8, tex, t-bl, u, e-4, 0, 0' />
-                  Re, a, l-World, Enterprise, Applications;
-                    <li, className='flex, item, s-start, ga, p-3, tex, t-purp, l, e-1, 0, 0'>
+                  <Users, classNam, e='w-8 h-8, tex, t-bl, u, e-4, 0, 0'>Re, a, l-World, Enterprise, Applications;
+                    </Users><li, className='flex, item, s-start, ga, p-3, tex, t-purp, l, e-1, 0, 0'>
                       <span, className='te, x, t-r, e, d-400, m, t-1'>✗</sp, a, n>
                       <sp, a, n>
                         <stro, n, g>Limited, adaptabilit, y:</stro, n, g> Cannot, dynamically, reconfigure for, new, challenges;
@@ -170,9 +165,8 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {/* TODO: Fix JSX ex
                         <stro, n, g>Resilient, architectur, e:</stro, n, g> Bui, l, t-in, redundancy, and fault, toleranc, e;
                       </sp, a, n>
                 <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'></h2>
-                  <Users, className='w-8 h-8, tex, t-bl, u, e-4, 0, 0' />
-                  Re, a, l-World, Enterprise, Applications;
-                      <div, classNam, e = 'mb-4'>
+                  <Users, className='w-8 h-8, tex, t-bl, u, e-4, 0, 0'>Re, a, l-World, Enterprise, Applications;
+                      </Users><div, classNam, e = 'mb-4'>
                   Re, a, l-World, Enterprise, Applications
 
                       <div, classNam, e = 'mb-4'></div>
@@ -186,8 +180,7 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {/* TODO: Fix JSX ex
                           Results, Achieve, d: </p>,
                         <div, className='grid, gri, d-co, l, s-2, ga, p-2'>
                           { applicati, o, n.results.m, a, p((re, s, u, l, t, i) = > (</div>
-                            <div, ke, y = { , i  }, classNa, m, e = 'te, x, t-sm, tex, t-purp, l, e-100, flex, items-center, ga, p-2'
-                            ></div>
+                            <div, ke, y = { , i  }, classNa, m, e = 'te, x, t-sm, tex, t-purp, l, e-100, flex, items-center, ga, p-2'></div>
                               <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />
                       <li, classNam, e='flex, justif, y-between, p, t-3, borde, r-t, borde, r-r, e, d-5, 0, 0/30'>
                       <sp, a, n></sp>
@@ -215,19 +208,18 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {/* TODO: Fix JSX ex
                   <Users, className='w-8 h-8, tex, t-bl, u, e-4, 0, 0' /></Users>
                   Re, a, l-World, Enterprise, Applications;
                       <div, classNam, e = 'mb-4'></div>
-                        <p, className='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-300, m, b-2'></p>
+                        <p, className='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-300, m, b-2'>>
                           Agent, Team, Configuratio,
   n: </p>
                         <ul, className='spa, c, e-y-1, tex, t-sm, tex, t-purp, l, e-1, 0, 0'></ul>
                           {/* TODO: Fix JSX expression */}
                             <li, ke, y = { , i  }, classNa, m, e = 'flex, item, s-center, ga, p-2'></li>
                               <span, classNam, e='te, x, t-bl, u, e-4, 0, 0'>•</sp, a, n>
-                        <p, classNam, e = 'te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-300, m, b-2'></p>
+                        <p, classNam, e = 'te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-300, m, b-2'>>
                           Results, Achieve, d: </p>
                         <div, className='grid, gri, d-co, l, s-2, ga, p-2'></div>
                           {/* TODO: Fix JSX expression */}
-                            <div, ke, y = { , i  }, classNa, m, e = 'te, x, t-sm, tex, t-purp, l, e-100, flex, items-center, ga, p-2'
-                            ></div>
+                            <div, ke, y = { , i  }, classNa, m, e = 'te, x, t-sm, tex, t-purp, l, e-100, flex, items-center, ga, p-2'></div>
                               <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-400, fle, x-shri, n, k-0' /></CheckCircle>
                       <li, classNam, e='flex, justif, y-between, p, t-3, borde, r-t, borde, r-r, e, d-5, 0, 0/30'></li>
                         <span, classNam, e='fo, n, t-bo, l, d'>Tot, a, l:</sp, a, n>
@@ -258,19 +250,17 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {/* TODO: Fix JSX ex
             <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'></h2>
               Ready, to, Deploy Mul, t, i-Agent, Orchestratio, n?
             </h2>
-            <p, className='te, x, t-purp, l, e-100, m, b-6, ma, x-w-2xl, m, x-au, t, o'></p>
+            <p, className='te, x, t-purp, l, e-100, m, b-6, ma, x-w-2xl, m, x-au, t, o'>>
               Zion, Tech, Group's, Mult, i-Agent, Orchestration, Platform enables, rapid, deployment of, enterpris, e-grade, agent, systems. Achieve, 9, 7.8%
               automation, rates, and $84, 7, M+ in, annual, value creati, o, n.
                 Schedule, Assessmen, t;
                 Schedule, Assessmen, t</p>
-                <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-                Schedule, Assessmen, t;
-                <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-                Schedule, Assessmen, t;
-                <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
+                <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m'>Schedule, Assessmen, t;
+                </Link><Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m'>Schedule, Assessmen, t;
+                </Link><Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
                 Schedule, Assessmen, t;
                 <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
-            </div>
+            >
           </div>
 
           {/* Related, Cont, e, n, t */}

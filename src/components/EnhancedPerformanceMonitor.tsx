@@ -412,10 +412,10 @@ Report:', report)}, [metrics, enableReporting, calculatePerformanceScore, analyz
             <span>TTF,
   B:</span>
             <span>{metrics.ttfb.toFixed(0)}ms</span>
-          </div>
+          >
         )}
       </div>"
-      <div className="mt-2 text-gray-400 text-xs"></div>
+      <div className="mt-2 text-gray-400 text-xs">>
 // Press Ctrl+Shift+P to toggle;
           </div>
     </div>

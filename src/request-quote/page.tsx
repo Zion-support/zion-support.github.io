@@ -157,7 +157,7 @@ $4}
                   <div className="flex items-center">
                     <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3</div>
                     <span className="text-gray-300">Schedule a call to discuss your project</span>
-                  </div>
+                  >
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -165,19 +165,17 @@ $4}
                   href="/contact"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Contact Us
-                </a>
+                  <Phone className="w-5 h-5 mr-2">Contact Us
+                </Phone></a>
                 <a
                   href="/"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 >
-                  <ArrowRight className="w-4 h-4 mr-2" />
-                  Back to Home
-                </a>
-              </div>
+                  <ArrowRight className="w-4 h-4 mr-2">Back to Home
+                </ArrowRight></a>
+              >
             </div>
-          </div>
+          >
         </div>
         <Footer />
       </React.Fragment>
@@ -234,7 +232,7 @@ $4}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your email"
                       />
-                    </div>
+                    >
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -263,7 +261,7 @@ $4}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your phone number"
                       />
-                    </div>
+                    >
                   </div>
 
                   {/* Project Information */}
@@ -317,7 +315,7 @@ $4}
                           <option key={index} value={timeline}>{timeline}</option>
                         ))}
                       </select>
-                    </div>
+                    >
                   </div>
 
                   <div>
@@ -373,7 +371,7 @@ $4}
                   >
                     {isSubmitting ? (
                       <div className="flex items-center justify-center">
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">>
                         Submitting...
                       </div>
                     ) : (
@@ -381,7 +379,7 @@ $4}
                     )}
                   </button>
                 </form>
-              </div>
+              >
             </div>
 
             {/* Sidebar */}
@@ -398,10 +396,10 @@ $4}
                       <div>
                         <h4 className="text-sm font-semibold text-white mb-1">{benefit.title}</h4>
                         <p className="text-xs text-gray-300">{benefit.description}</p>
-                      </div>
+                      >
                     </div>
                   ))}
-                </div>
+                >
               </div>
 
               {/* Why Choose Us */}
@@ -416,10 +414,10 @@ $4}
                       <div>
                         <h4 className="text-sm font-semibold text-white mb-1">{item.title}</h4>
                         <p className="text-xs text-gray-300">{item.description}</p>
-                      </div>
+                      >
                     </div>
                   ))}
-                </div>
+                >
               </div>
 
               {/* Contact Info */}
@@ -649,7 +647,7 @@ $4}
               <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>"
                 <CheckCircle className="w-10 h-10 text-green-400" /></CheckCircle>
               </div>"
-              <h1 className="text-4xl font-bold text-white mb-6 neon-text"></h1>
+              <h1 className="text-4xl font-bold text-white mb-6 neon-text">>
 // Quote Request Submitted!
               
           
@@ -661,7 +659,7 @@ $4}
           
           
           </h1>"
-              <p className="text-xl text-gray-300 mb-8"></p>
+              <p className="text-xl text-gray-300 mb-8">>
                 Thank you for your interest in our services. We've received your quote request;
 // and will get back to you within 24 hours with a detailed proposal.
               
@@ -688,7 +686,7 @@ $4}
                   <div className="flex items-center"></div>"
                     <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3</div>"
                     <span className="text-gray-300">Schedule a call to discuss your project</span>
-                  </div>
+                  >
                 </div>
 
               </div>
@@ -726,9 +724,9 @@ $4}
           <ArrowRight className="w-4 h-4 mr-2" /></ArrowRight>
 // Back to Home;
           </a>
-              </div>
+              >
             </div>
-          </div>
+          >
         </div>
       </div>
       <Footer />
@@ -746,7 +744,7 @@ $4}
           {/* Header */}"
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
-  md:text-5xl font-bold text-white mb-6 neon-text"></h1>
+  md:text-5xl font-bold text-white mb-6 neon-text">>
 // Request a Quote;
 
           </h1>
@@ -826,7 +824,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           
-          </div>
+          >
                   </div>"
                   <div className="grid grid-cols-1,"
   md:grid-cols-2 gap-6"></div>
@@ -873,7 +871,7 @@ type="tel" name="phone"
           
           
           
-          </div>
+          >
                   </div>
                   {/* Project Information */}
                   <div></div>"
@@ -965,7 +963,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           <option key={index} value={timeline}>{timeline}</option>
                         ))}
                       </select>
-                    </div>
+                    >
                   </div>
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
@@ -1055,7 +1053,7 @@ type="submit" disabled={isSubmitting}
 // >
                     {isSubmitting ? ()}"
           <div className="flex items-center justify-center"></div>"
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">>
 // Submitting...
                       
           
@@ -1081,7 +1079,7 @@ type="submit" disabled={isSubmitting}
           
           </button>
                 </form>
-              </div>
+              >
             </div>
             {/* Sidebar */}"
             <div className="space-y-8"></div>
@@ -1097,10 +1095,10 @@ type="submit" disabled={isSubmitting}
                       <div></div>"
                         <h4 className="text-sm font-semibold text-white mb-1">{benefit.title}</h4>"
                         <p className="text-xs text-gray-300">{benefit.description}</p>
-                      </div>
+                      >
                     </div>
                   ))}
-                </div>
+                >
               </div>
               {/* Why Choose Us */}"
               <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"></div>"
@@ -1114,15 +1112,15 @@ type="submit" disabled={isSubmitting}
                       <div></div>"
                         <h4 className="text-sm font-semibold text-white mb-1">{item.title}</h4>"
                         <p className="text-xs text-gray-300">{item.description}</p>
-                      </div>
+                      >
                     </div>
                   ))}
-                </div>
+                >
               </div>
               {/* Contact Info */}"
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div>"
                 <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?</h3>"
-                <p className="text-gray-300 text-sm mb-4"></p>
+                <p className="text-gray-300 text-sm mb-4">>
 // For urgent inquiries or immediate assistance, contact us directly.
                 
           

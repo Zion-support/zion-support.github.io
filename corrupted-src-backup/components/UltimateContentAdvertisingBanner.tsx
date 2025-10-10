@@ -78,8 +78,7 @@ const, advertisingFeature, s = [
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p">";</div>
             <moti, o, n.d, i, v
   anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}
-              transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";
-            ></moti>
+              transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";></moti>
               <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Sparkles>
             </moti, o, n.d, i, v>
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-purp, l, e-5, 0, 0/30"></div>
@@ -87,14 +86,12 @@ const, advertisingFeature, s = [
               <span, className="te, x, t-sm, fon, t-bold, tex, t-whi, t, e">ULTIMATE, CONTENT, ADVERTISING</sp, a, n>
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-4, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-yell, o, w-4, 0, 0/30"></div>
-              <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-        {/* Head, e, r */}"
-        <div, className="te, x, t-center, m, b-20">";"
+              <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e>{/* Head, e, r */}"
+        </Zap><div, className="te, x, t-center, m, b-20">";"
           <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p">";
             <moti, o, n.d, i, v;
   anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}"
-              transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";
-            ></moti>"
+              transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}";></moti>"
               <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  /></Sparkles>
             </moti, o, n.d, i, v>"
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-purp, l, e-5, 0, 0/30"></div>"
@@ -110,25 +107,25 @@ const, advertisingFeature, s = [
             Ultimate, Conten, t;
           </h2>
           <h3, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-8, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"</h3>
-              <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0" />";
-            </moti, o, n.d, i, v>
+              <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0">";
+            </Sparkles></moti, o, n.d, i, v>
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-purp, l, e-5, 0, 0/30">";</div>
-              <Rocket, className="w-5 h-5, tex, t-purp, l, e-4, 0, 0" />";
-              <span, className="te, x, t-sm, fon, t-bold, tex, t-whi, t, e">ULTIMATE, CONTENT, ADVERTISING</sp, a, n>";
+              <Rocket, className="w-5 h-5, tex, t-purp, l, e-4, 0, 0">";
+              </Rocket><span, className="te, x, t-sm, fon, t-bold, tex, t-whi, t, e">ULTIMATE, CONTENT, ADVERTISING</sp, a, n>";
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-4, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-yell, o, w-4, 0, 0/30">";</div>
-              <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
-          </h2>"
+              <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e">";
+          </Zap></h2>"
           <h3, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-8, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">""
-              <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0" />";
-            </moti, o, n.d, i, v>"
+              <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0">";
+            </Sparkles></moti, o, n.d, i, v>"
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-purp, l, e-5, 0, 0/30">";"
-              <Rocket, className="w-5 h-5, tex, t-purp, l, e-4, 0, 0" />";"
-              <span, className="te, x, t-sm, fon, t-bold, tex, t-whi, t, e">ULTIMATE, CONTENT, ADVERTISING</sp, a, n>";
+              <Rocket, className="w-5 h-5, tex, t-purp, l, e-4, 0, 0">";"
+              </Rocket><span, className="te, x, t-sm, fon, t-bold, tex, t-whi, t, e">ULTIMATE, CONTENT, ADVERTISING</sp, a, n>";
             </d, i, v>"
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-4, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-yell, o, w-4, 0, 0/30">";"
-              <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";"
-              <span, className="te, x, t-sm, fon, t-bold, tex, t-yell, o, w-3, 0, 0">LIMITED, TIME, ACCESS</sp, a, n>";
+              <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e">";"
+              </Zap><span, className="te, x, t-sm, fon, t-bold, tex, t-yell, o, w-3, 0, 0">LIMITED, TIME, ACCESS</sp, a, n>";
             </d, i, v>
           </d, i, v>"
           <h2, className="te, x, t-7xl, m, d: te, x, t-8xl, fon, t-extrabold, m, b-8, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
@@ -151,16 +148,16 @@ const, advertisingFeature, s = [
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">LIMITED, TIM, E: Exclusive, Early, Access to, 2026, Content</sp, a, n>"
           <div, className="inli, n, e-block, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-r, e, d-5, 0, 0/30, m, b-12">";</div>
             <div, className="flex, item, s-center, ga, p-3">";</div>
-              <Clock, className="w-6 h-6, tex, t-r, e, d-400, animat, e-pul, s, e" />";
+              <Clock, className="w-6 h-6, tex, t-r, e, d-400, animat, e-pul, s, e">";
           {/* Urgency, Banne, r */}"
-          <div, className="inli, n, e-block, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-r, e, d-5, 0, 0/30, m, b-12"></div>"
+          </Clock><div, className="inli, n, e-block, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-r, e, d-5, 0, 0/30, m, b-12"></div>"
             <div, className="flex, item, s-center, ga, p-3"></div>"
               <Clock, className="w-6 h-6, tex, t-r, e, d-400, animat, e-pul, s, e  /></Clock>"
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">LIMITED, TIM, E: Exclusive, Early, Access to, 2026, Content</sp, a, n>""
           <div, className="inli, n, e-block, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-r, e, d-5, 0, 0/30, m, b-12">";"
             <div, className="flex, item, s-center, ga, p-3">";"
-              <Clock, className="w-6 h-6, tex, t-r, e, d-400, animat, e-pul, s, e" />";"
-              <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">LIMITED, TIM, E: Exclusive, Early, Access to, 2026, Content</sp, a, n>";
+              <Clock, className="w-6 h-6, tex, t-r, e, d-400, animat, e-pul, s, e">";"
+              </Clock><span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">LIMITED, TIM, E: Exclusive, Early, Access to, 2026, Content</sp, a, n>";
             </d, i, v>
           </d, i, v>
         </d, i, v>
@@ -266,12 +263,11 @@ const, advertisingFeature, s = [
               </h3>"
               <div, className="flex, item, s-center, justif, y-center, ga, p-2, m, b-6">";
                 {[...Arr, a, y(5)].m, a, p((_, i) => (</div>
-                  <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t  />
-                {/* TODO: Fix JSX expression */}"
-                  <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>"
-                  <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
+                  <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t>{/* TODO: Fix JSX expression */}"
+                  </Star><Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>"
+                  <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t">";
                 ))}"
-                <span, className="te, x, t-gr, a, y-300, tex, t-lg, m, l-2">5.0/5.0, Ratin, g</sp, a, n>";
+                </Star><span, className="te, x, t-gr, a, y-300, tex, t-lg, m, l-2">5.0/5.0, Ratin, g</sp, a, n>";
               </d, i, v>
             </d, i, v>
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-8">"</div>
@@ -365,16 +361,16 @@ const, advertisingFeature, s = [
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-cent, e, r">"</div>
               <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";</div>
                 <div, className="flex, item, s-center, ga, p-3, tex, t-gre, e, n-4, 0, 0">";</div>
-                  <CheckCircle, className="w-6 h-6" />";
-                  <span, className="te, x, t-lg, fon, t-semibo, l, d">Exclusive, Early, Access</sp, a, n>";
+                  <CheckCircle, className="w-6 h-6">";
+                  </CheckCircle><span, className="te, x, t-lg, fon, t-semibo, l, d">Exclusive, Early, Access</sp, a, n>";
                 </d, i, v>
                 <div, className="flex, item, s-center, ga, p-3, tex, t-bl, u, e-4, 0, 0">";</div>
-                  <CheckCircle, className="w-6 h-6" />";
-                  <span, className="te, x, t-lg, fon, t-semibo, l, d">Expert, Consultation, s</sp, a, n>";
+                  <CheckCircle, className="w-6 h-6">";
+                  </CheckCircle><span, className="te, x, t-lg, fon, t-semibo, l, d">Expert, Consultation, s</sp, a, n>";
                 </d, i, v>
                 <div, className="flex, item, s-center, ga, p-3, tex, t-purp, l, e-4, 0, 0">";</div>
-                  <CheckCircle, className="w-6 h-6" />";
-                  <span, className="te, x, t-lg, fon, t-semibo, l, d">Fortune, 500, Case Studi, e, s</sp, a, n>";
+                  <CheckCircle, className="w-6 h-6">";
+                  </CheckCircle><span, className="te, x, t-lg, fon, t-semibo, l, d">Fortune, 500, Case Studi, e, s</sp, a, n>";
                 </d, i, v>
               </d, i, v>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-cent, e, r">";</div>
@@ -399,27 +395,26 @@ const, advertisingFeature, s = [
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-cent, e, r">""
               <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";"
                 <div, className="flex, item, s-center, ga, p-3, tex, t-gre, e, n-4, 0, 0">";"
-                  <CheckCircle, className="w-6 h-6" />";"
-                  <span, className="te, x, t-lg, fon, t-semibo, l, d">Exclusive, Early, Access</sp, a, n>";
+                  <CheckCircle, className="w-6 h-6">";"
+                  </CheckCircle><span, className="te, x, t-lg, fon, t-semibo, l, d">Exclusive, Early, Access</sp, a, n>";
                 </d, i, v>"
                 <div, className="flex, item, s-center, ga, p-3, tex, t-bl, u, e-4, 0, 0">";"
-                  <CheckCircle, className="w-6 h-6" />";"
-                  <span, className="te, x, t-lg, fon, t-semibo, l, d">Expert, Consultation, s</sp, a, n>";
+                  <CheckCircle, className="w-6 h-6">";"
+                  </CheckCircle><span, className="te, x, t-lg, fon, t-semibo, l, d">Expert, Consultation, s</sp, a, n>";
                 </d, i, v>"
                 <div, className="flex, item, s-center, ga, p-3, tex, t-purp, l, e-4, 0, 0">";"
-                  <CheckCircle, className="w-6 h-6" />";"
-                  <span, className="te, x, t-lg, fon, t-semibo, l, d">Fortune, 500, Case Studi, e, s</sp, a, n>";
+                  <CheckCircle, className="w-6 h-6">";"
+                  </CheckCircle><span, className="te, x, t-lg, fon, t-semibo, l, d">Fortune, 500, Case Studi, e, s</sp, a, n>";
                 </d, i, v>
               </d, i, v>"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-cent, e, r">";"
                 <a, titl, e="Internal, lin, k""
                   hr, e, f="/conta, c, t""
                   classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-xl, hov, e,"
-  r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"
-                ></a>"
+  r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"></a>"
                   <Rocket, className="w-6 h-6  /></Rocket>"
-                  <Rocket, className="w-6 h-6" />";
-                  <sp, a, n>Get, Started, Today</sp, a, n>
+                  <Rocket, className="w-6 h-6">";
+                  </Rocket><sp, a, n>Get, Started, Today</sp, a, n>
                 </a>
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/bl, o, g"
@@ -428,12 +423,11 @@ const, advertisingFeature, s = [
                 <a, titl, e="Internal, lin, k""
                   hr, e, f="/bl, o, g""
                   classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r: bg-purp, l, e-500, hov, e,"
-  r:te, x, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"
-                ></a>
+  r:te, x, t-white, fon, t-bold, p, y-6, p, x-12, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"></a>
                   <sp, a, n>Explore, Content, Library</sp, a, n>"
                   <Link, className="w-6 h-6  /></Link>"
-                  <Link, className="w-6 h-6" />";
-                </a>
+                  <Link, className="w-6 h-6">";
+                </Link></a>
               </d, i, v>
             </d, i, v>
           </d, i, v>

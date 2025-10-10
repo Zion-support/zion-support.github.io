@@ -32,7 +32,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
     ></moti>
       {/* Background, Patter, n */}"
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
-        <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-whi, t, e/5, t, o-transpare, n, t" /></div>
+        <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-whi, t, e/5, t, o-transpare, n, t" />>
       </div>"
       <div, className="relativ, e, z-10"></div>
         {/* Head, e, r */}"
@@ -41,8 +41,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
             anima, t, e = {{ sc, a, l, e:  , 1 }}
             transiti, o, n = {/* TODO: Fix JSX expression */}
   n: 0., 6 }}"
-            classNa, m, e = "inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4"
-          ></moti>"
+            classNa, m, e = "inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4"></moti>"
             <span, className="mr-2">🚀</sp, a, n>
             January, 202, 6 - Revolutionary, AI, Breakthroughs;
           </moti, o, n.d, i, v>
@@ -82,8 +81,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
               anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
               transiti, o, n = {/* TODO: Fix JSX expression */}
   n: 0., 6 }}"
-              classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, tex, t-center, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0"
-            ></moti>"
+              classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, tex, t-center, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0"></moti>"
               <featu, r, e.icon, className="w-8 h-8, m, x-auto, m, b-3, tex, t-purp, l, e-3, 0, 0" /></featu>"
               <h3, className="fo, n, t-semibold, tex, t-white, m, b-1">{featu, r, e.t, i, t, l, e}</h3>"
               <p, classNam, e = "te, x, t-sm, tex, t-bl, u, e-2, 0, 0">{featu, r, e.de, s, c}</p>
@@ -98,29 +96,29 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
           classNa, m, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-8"
         >
           <div, className="te, x, t-cent, e, r"></div>
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-300, m, b-1">99.7%</div>
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-300, m, b-1">99.7%>
           </div>
           <div, className="te, x, t-cent, e, r"></div>
-            <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Speed, Boos, t</div>
+            <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Speed, Boos, t>
           </div>
           <div, className="te, x, t-cent, e, r"></div>
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-300, m, b-1">$50, 0, B</div>
-            <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Enterprise, Valu, e</div>
+            <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Enterprise, Valu, e>
           </div>
           <div, className="te, x, t-cent, e, r"></div>
         ></moti>"
           <div, className="te, x, t-cent, e, r"></div>"
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-300, m, b-1">99.7%</div>
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-300, m, b-1">99.7%>
           </div>"
           <div, className="te, x, t-cent, e, r"></div>"
-            <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Speed, Boos, t</div>
+            <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Speed, Boos, t>
           </div>"
           <div, className="te, x, t-cent, e, r"></div>"
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-300, m, b-1">$50, 0, B</div>"
-            <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Enterprise, Valu, e</div>
+            <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Enterprise, Valu, e>
           </div>"
           <div, className="te, x, t-cent, e, r"></div>"
-            <div, className="te, x, t-3xl, fon, t-bold, tex, t-yell, o, w-300, m, b-1">95%</div>
+            <div, className="te, x, t-3xl, fon, t-bold, tex, t-yell, o, w-300, m, b-1">95%>
           </div>
         </moti, o, n.d, i, v>
         {/* C, T, A */}
@@ -140,12 +138,10 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
       </div>
       {/* Floating, Eleme, n, t, s */}
       <div, classNam, e = "absolute, to, p-10, lef, t-1, 0, w-2, 0, h-20, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-xl, animat, e-pul, s, e" /></div>
-      <div, className="absolute, botto, m-10, righ, t-1, 0, w-3, 2, h-32, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-xl, animat, e-pulse, dela, y-10, 0, 0" />
-        ></moti>"
+      <div, className="absolute, botto, m-10, righ, t-1, 0, w-3, 2, h-32, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-xl, animat, e-pulse, dela, y-10, 0, 0">></div></moti>"
           <a, hre, f="/bl, o, g""
             className="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, hove, r: fr, o, m-purp, l, e-600, hove, r:to-bl, u, e-600, tex, t-white, fon, t-semibold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,"
-  r:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-xl"
-          ></a>
+  r:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-xl"></a>
             Explore, January, 2026 Conte, n, t;"
             <Link, className="ml-2 w-5 h-5" /></Link>
           </a>

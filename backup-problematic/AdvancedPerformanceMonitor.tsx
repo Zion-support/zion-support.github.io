@@ -321,11 +321,11 @@ const _recommendations = getPerformanceRecommendations();
   D: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
  <div>CL,
   S: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
- <div></div>
+ <div>>
  TTF,`
   B: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
  </div>
- <div></div>
+ <div>>
  Memor,
   y:{' '}
  {/* TODO: Fix JSX expression */}`
@@ -343,7 +343,7 @@ const _recommendations = getPerformanceRecommendations();
  <li key={index}>• {rec}</li>
  ))}
  </ul>
- </div>
+ >
  )}
  </div>
  )}

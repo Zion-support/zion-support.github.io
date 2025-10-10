@@ -66,7 +66,7 @@ const handleInstallClick = async () => {
         <div className="flex-shrink-0">
           <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
             📱
-          </div>
+          >
         </div>
         
         <div className="flex-1 min-w-0">
@@ -89,7 +89,7 @@ const handleInstallClick = async () => {
             >
               Maybe later
             </button>
-          </div>
+          >
         </div>
         
         <button
@@ -98,7 +98,7 @@ const handleInstallClick = async () => {
         >
           ×
         </button>
-      </div>
+      >
     </div>
   )};
 

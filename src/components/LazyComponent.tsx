@@ -15,7 +15,7 @@ const DefaultFallback = () => (
   </div>
 );
 ;
-const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children</DefaultFallback> 
+const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback>,</DefaultFallback></DefaultFallback>children</DefaultFallback> 
 }) => {
 return (
 
@@ -92,8 +92,8 @@ export const _withLazyLoading = {};
           
           
           
-          <Suspense fallback={fallback || <LoadingSpinner />}>
-      <Component {...props} /></Component>
+          <Suspense fallback={fallback || <LoadingSpinner>}>
+      </Suspense><Component {...props} /></Component>
     </Suspense>
   )};
 // Lazy component wrapper with intersection observer;
@@ -112,7 +112,7 @@ const,
           
           
           
-          <LoadingSpinner />,
+          <LoadingSpinner>,
   delay = 0,
   threshold = 0.1,
   rootMargin = '50px')
@@ -122,7 +122,7 @@ const,
   const [isVisible, setIsVisible] = React.useState(false);
   const [isLoaded, setIsLoaded] = React.useState(false);
   const elementRef = React.useRef;
-          <HTMLDivElement>(null);
+          </LoadingSpinner><HTMLDivElement>(null);
   React.useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content}
 }
@@ -205,8 +205,8 @@ export const createLazyComponent = {};
           
           
           
-          <Suspense fallback={fallback || <LoadingSpinner />}>
-      <LazyComponent {...props} /></LazyComponent>
+          <Suspense fallback={fallback || <LoadingSpinner>}>
+      </Suspense><LazyComponent {...props} /></LazyComponent>
     </Suspense>
   )};
 // Critical resource preloader;

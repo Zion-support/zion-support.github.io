@@ -43,7 +43,7 @@ error:', error, errorInfo);
             <div className="mb-6"></div>"
               <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" /></AlertTriangle>"
               <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong</h1>"
-              <p className="text-gray-300 mb-6"></p>
+              <p className="text-gray-300 mb-6">>
                 We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
               </p>
             </div>
@@ -116,7 +116,7 @@ error:', error, errorInfo);
                   (302) 464-0950;
                 </a>
               </p>
-            </div>
+            >
           </div>
         </div>
       )}

@@ -145,7 +145,7 @@ const BlogPage: React.FC = () => {
                   </option>
                 ))}
               </select>
-            </div>
+            >
           </div>
         </section>
 
@@ -158,7 +158,7 @@ const BlogPage: React.FC = () => {
                 {featuredPosts.map((post) => (
                   <article key={post.id} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-cyan-400/50 transition-all duration-300 group">
                     <div className="aspect-video bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
-                      <div className="text-6xl opacity-50">📝</div>
+                      <div className="text-6xl opacity-50">📝>
                     </div>
                     <div className="p-6">
                       <div className="flex items-center gap-2 mb-3">
@@ -185,11 +185,11 @@ const BlogPage: React.FC = () => {
                           Read More
                           <ArrowRight className="w-4 h-4" />
                         </Link>
-                      </div>
+                      >
                     </div>
                   </article>
                 ))}
-              </div>
+              >
             </div>
           </section>
         )}
@@ -202,7 +202,7 @@ const BlogPage: React.FC = () => {
               {filteredPosts.map((post) => (
                 <article key={post.id} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-cyan-400/50 transition-all duration-300 group">
                   <div className="aspect-video bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
-                    <div className="text-4xl opacity-50">📝</div>
+                    <div className="text-4xl opacity-50">📝>
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
@@ -236,7 +236,7 @@ const BlogPage: React.FC = () => {
                           #{tag}
                         </span>
                       ))}
-                    </div>
+                    >
                   </div>
                 </article>
               ))}
@@ -244,7 +244,7 @@ const BlogPage: React.FC = () => {
             {filteredPosts.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-gray-400 text-lg">No articles found matching your criteria.</p>
-              </div>
+              >
             )}
           </div>
         </section>

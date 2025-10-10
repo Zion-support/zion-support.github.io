@@ -14,7 +14,7 @@ export const PageLoader: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 export const ComponentLoader: React.FC = () => {
   return (
     <div className="flex items-center justify-center p-8">
@@ -24,14 +24,14 @@ export const ComponentLoader: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 export const ServiceCardSkeleton: React.FC = () => {
   return (
     <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 animate-pulse">
       <div className="h-4 bg-slate-700 rounded mb-4"></div>
       <div className="h-3 bg-slate-700 rounded mb-2"></div>
       <div className="h-3 bg-slate-700 rounded mb-4"></div>
-      <div className="h-8 bg-slate-700 rounded"></div>
+      <div className="h-8 bg-slate-700 rounded">>
     </div>
   );
 }
@@ -41,7 +41,7 @@ export const ContentSkeleton: React.FC = () => {
       <div className="h-6 bg-slate-700 rounded mb-4"></div>
       <div className="h-4 bg-slate-700 rounded mb-2"></div>
       <div className="h-4 bg-slate-700 rounded mb-2"></div>
-      <div className="h-4 bg-slate-700 rounded"></div>
+      <div className="h-4 bg-slate-700 rounded">>
     </div>
   );
 };

@@ -99,10 +99,10 @@ const consoleSpy = jest
       .mockImplementation(() => {});
 ;
 let shouldThrow = true;
-    const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
+    const TestComponent = () => <ThrowError shouldThrow={shouldThrow}>;
 
     render(
-      <MemoryRouter>
+      </ThrowError><MemoryRouter>
         <AdvancedErrorBoundary enableRetry={true}>
           <TestComponent />
         </AdvancedErrorBoundary>
@@ -140,10 +140,9 @@ return (
     render(
       <MemoryRouter>
         <HelmetProvider>
-          <AdvancedSEOOptimizer seoData={mockSEOData} />
-);
+          <AdvancedSEOOptimizer seoData={mockSEOData}>);
 }
-          <div>Test content</div>
+          </AdvancedSEOOptimizer><div>Test content</div>
         </HelmetProvider>
       </MemoryRouter>
     );
@@ -156,10 +155,9 @@ return (
     render(
       <MemoryRouter>
         <HelmetProvider>
-          <AdvancedSEOOptimizer seoData={mockSEOData} />
-);
+          <AdvancedSEOOptimizer seoData={mockSEOData}>);
 }
-        </HelmetProvider>
+        </AdvancedSEOOptimizer></HelmetProvider>
       </MemoryRouter>
     );
 

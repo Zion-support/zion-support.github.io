@@ -80,7 +80,7 @@ const ContentPromotionBanner: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-white/80 text-sm">{feature.description}</p>
-              </div>
+              >
             ))}
           </div>
 
@@ -89,7 +89,7 @@ const ContentPromotionBanner: React.FC = () => {
               <div key={index} className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-white flex-shrink-0" />
                 <span className="text-white/90">{benefit}</span>
-              </div>
+              >
             ))}
           </div>
 
@@ -98,9 +98,9 @@ const ContentPromotionBanner: React.FC = () => {
               Get Started Today
               <ArrowRight className="w-5 h-5" />
             </button>
-          </div>
+          >
         </div>
-      </div>
+      >
     </div>
   );
 };

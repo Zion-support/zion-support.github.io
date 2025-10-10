@@ -127,13 +127,9 @@ const mergedSEOData = { ...defaultSEOData, ...seoData };
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="format-detection" content="telephone=no,address=no,email=no" />
-      <meta name="color-scheme" content="dark light" />
-
-      {/* Canonical URL */}
-      <link rel="canonical" href={mergedSEOData.canonical} />
-
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={mergedSEOData.ogType} />
+      <meta name="color-scheme" content="dark light">{/* Canonical URL */}
+      </meta><link rel="canonical" href={mergedSEOData.canonical}>{/* Open Graph / Facebook */}
+      </link><meta property="og:type" content={mergedSEOData.ogType} />
       <meta property="og:url" content={mergedSEOData.canonical} />
       <meta property="og:title" content={mergedSEOData.title} />
       <meta property="og:description" content={mergedSEOData.description} />
@@ -141,42 +137,30 @@ const mergedSEOData = { ...defaultSEOData, ...seoData };
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-
-      {/* Twitter */}
-      <meta property="twitter:card" content={mergedSEOData.twitterCard} />
+      <meta property="og:locale" content="en_US">{/* Twitter */}
+      </meta><meta property="twitter:card" content={mergedSEOData.twitterCard} />
       <meta property="twitter:url" content={mergedSEOData.canonical} />
       <meta property="twitter:title" content={mergedSEOData.title} />
       <meta property="twitter:description" content={mergedSEOData.description} />
       <meta property="twitter:image" content={mergedSEOData.ogImage} />
       <meta property="twitter:creator" content="@ziontechgroup" />
-      <meta property="twitter:site" content="@ziontechgroup" />
-
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#0f172a" />
+      <meta property="twitter:site" content="@ziontechgroup">{/* Additional SEO Meta Tags */}
+      </meta><meta name="theme-color" content="#0f172a" />
       <meta name="msapplication-TileColor" content="#0f172a" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-
-      {/* Favicon */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group">{/* Favicon */}
+      </meta><link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="icon" type="image/png" href="/favicon.png" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/manifest.json" />
-
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="manifest" href="/manifest.json">{/* Preconnect to external domains */}
+      </link><link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-
-      {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com">{/* DNS Prefetch for performance */}
+      </link><link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-
-      {/* Structured Data */}
-      <script type="application/ld+json">
+      <link rel="dns-prefetch" href="//www.googletagmanager.com">{/* Structured Data */}
+      </link><script type="application/ld+json">
         {JSON.stringify(mergedSEOData.structuredData)}
       </script>
 

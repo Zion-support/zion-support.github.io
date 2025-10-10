@@ -150,20 +150,12 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Performance optimization'],
     roi: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.',
     competitors: ['SpaceX Starlink', 'OneWeb', 'Basic satellite services'],
-<<<<<<< HEAD
-    market_size: '$469B space economy'
-    growth_rate: '400% annual growth';
-variant: 'space - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$469B space economy',
     growth_rate: '400% annual growth',
     variant: 'space - futuristic',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -308,20 +300,12 @@ varian,
       'Efficiency optimization'],
     roi: 'Optimize satellite operations and reduce operational costs by 40%. ROI through efficiency gains and improved service quality.',
     competitors: ['Traditional satellite management', 'Basic monitoring tools'],
-<<<<<<< HEAD
-    market_size: '$150B satellite services market'
-    growth_rate: '300% annual growth';
-variant: 'space - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$150B satellite services market',
     growth_rate: '300% annual growth',
     variant: 'space - futuristic',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -466,20 +450,12 @@ varian,
       'Safety planning'],
     roi: 'Protect valuable satellites and reduce insurance costs by 30%. ROI through risk mitigation and asset protection.',
     competitors: ['Basic debris tracking', 'Manual monitoring'],
-<<<<<<< HEAD
-    market_size: '$50B space safety market'
-    growth_rate: '250% annual growth';
-variant: 'space - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$50B space safety market',
     growth_rate: '250% annual growth',
     variant: 'space - futuristic',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -622,20 +598,12 @@ varian,
       'Safety planning'],
     roi: 'Prevent satellite damage and reduce operational disruptions. ROI through risk mitigation and operational continuity.',
     competitors: ['Basic weather data', 'Manual monitoring'],
-<<<<<<< HEAD
-    market_size: '$30B space weather market'
-    growth_rate: '200% annual growth';
-variant: 'space - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$30B space weather market',
     growth_rate: '200% annual growth',
     variant: 'space - futuristic',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -778,20 +746,12 @@ varian,
       'Performance analysis'],
     roi: 'Improve launch success rates and reduce mission costs by 25%. ROI through operational efficiency and mission success.',
     competitors: ['Basic coordination', 'Manual planning'],
-<<<<<<< HEAD
-    market_size: '$20B launch services market'
-    growth_rate: '180% annual growth';
-variant: 'space - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$20B launch services market',
     growth_rate: '180% annual growth',
     variant: 'space - futuristic',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -934,20 +894,12 @@ varian,
       'Global coordination'],
     roi: 'Optimize ground station operations and reduce network costs by 35%. ROI through efficiency gains and improved reliability.',
     competitors: ['Basic management', 'Manual coordination'],
-<<<<<<< HEAD
-    market_size: '$25B ground station market'
-    growth_rate: '220% annual growth';
-variant: 'space - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$25B ground station market',
     growth_rate: '220% annual growth',
     variant: 'space - futuristic',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1090,20 +1042,12 @@ varian,
       'Data exploration'],
     roi: 'Accelerate research and discovery through comprehensive data access and AI analysis. ROI through research efficiency and insights.',
     competitors: ['Basic data access', 'Manual research'],
-<<<<<<< HEAD
-    market_size: '$15B space research market'
-    growth_rate: '180% annual growth';
-variant: 'space - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$15B space research market',
     growth_rate: '180% annual growth',
     variant: 'space - futuristic',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1246,20 +1190,12 @@ varian,
       'Market making'],
     roi: 'Create new revenue streams through space asset trading and reduce transaction costs by 50%.',
     competitors: ['Manual contracts', 'Traditional procurement'],
-<<<<<<< HEAD
-    market_size: '$100B space services market'
-    growth_rate: '300% annual growth';
-variant: 'space - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$100B space services market',
     growth_rate: '300% annual growth',
     variant: 'space - futuristic',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1270,14 +1206,9 @@ variant: 'space - futuristic'
     customers:
         customers: 30;
     rating: 5 && 5.0;
-<<<<<<< HEAD
-    reviews: 15},
-    id: 'space - education - platform'
-=======
     reviews: 15;
   },
     id: 'space - education - platform',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Space Education & Training Platform',
     tagline: 'Learn space technology and operations with interactive courses',
     price: '$299',
@@ -1408,20 +1339,12 @@ varian,
       'Personal development'],
     roi: 'Accelerate space education and career development through interactive learning. ROI through skill development and career advancement.',
     competitors: ['Basic education', 'Traditional courses'],
-<<<<<<< HEAD
-    market_size: '$8B space education market'
-    growth_rate: '200% annual growth';
-variant: 'space - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
     market_size: '$8B space education market',
     growth_rate: '200% annual growth',
     variant: 'space - futuristic',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1764,18 +1687,11 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Efficiency optimization'],
     roi: 'Optimize satellite operations and reduce operational costs by 40%. ROI through efficiency gains and improved service quality.',
     competitors: ['Traditional satellite management', 'Basic monitoring tools']
-<<<<<<< HEAD
-    marketSize: '$150 B satellite services market'
-    growthRate: '300% annual growth';
-variant: 'space-futuristic'
-    contactInfo: marketPosition: unknown;
-=======
     marketSize: '$150 B satellite services market',
     growthRate: '300% annual growth',
     variant: 'space-futuristic',
     contactInfo:
         contactInfo: marketPosition: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       'Revolutionary technology with no direct competitors. Basic debris tracking exists but lacks AI-powered risk assessment. Our advantage: Comprehensive monitoring and avoidance.',
     targetAudience:,
       'Efficiency optimization'
@@ -1827,18 +1743,11 @@ varian,
       'Safety planning'],
     roi: 'Protect valuable satellites and reduce insurance costs by 30%. ROI through risk mitigation and asset protection.',
     competitors: ['Basic debris tracking', 'Manual monitoring']
-<<<<<<< HEAD
-    marketSize: '$50 B space safety market'
-    growthRate: '250% annual growth';
-variant: 'space-futuristic'
-    contactInfo: marketPosition: unknown;
-=======
     marketSize: '$50 B space safety market',
     growthRate: '250% annual growth',
     variant: 'space-futuristic',
     contactInfo:
         contactInfo: marketPosition: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       'Revolutionary technology with no direct competitors. Basic space weather data exists but lacks predictive capabilities. Our advantage: AI-powered forecasting and impact assessment.',
     targetAudience:,
       'Safety planning'
@@ -1890,18 +1799,11 @@ varian,
       'Safety planning'],
     roi: 'Prevent satellite damage and reduce operational disruptions. ROI through risk mitigation and operational continuity.',
     competitors: ['Basic weather data', 'Manual monitoring']
-<<<<<<< HEAD
-    marketSize: '$30 B space weather market'
-    growthRate: '200% annual growth';
-variant: 'space-futuristic'
-    contactInfo: marketPosition: unknown;
-=======
     marketSize: '$30 B space weather market',
     growthRate: '200% annual growth',
     variant: 'space-futuristic',
     contactInfo:
         contactInfo: marketPosition: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       'Revolutionary technology with no direct competitors. Basic launch coordination exists but lacks precision timing. Our advantage: Advanced coordination and optimization.',
     targetAudience:,
       'Safety planning'
@@ -1953,18 +1855,11 @@ varian,
       'Performance analysis'],
     roi: 'Improve launch success rates and reduce mission costs by 25%. ROI through operational efficiency and mission success.',
     competitors: ['Basic coordination', 'Manual planning']
-<<<<<<< HEAD
-    marketSize: '$20 B launch services market'
-    growthRate: '180% annual growth';
-variant: 'space-futuristic'
-    contactInfo: marketPosition: unknown;
-=======
     marketSize: '$20 B launch services market',
     growthRate: '180% annual growth',
     variant: 'space-futuristic',
     contactInfo:
         contactInfo: marketPosition: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       'Revolutionary technology with no direct competitors. Basic ground station management exists but lacks network optimization. Our advantage: Global coordination and optimization.',
     targetAudience:,
       'Performance analysis'
@@ -2016,18 +1911,11 @@ varian,
       'Global coordination'],
     roi: 'Optimize ground station operations and reduce network costs by 35%. ROI through efficiency gains and improved reliability.',
     competitors: ['Basic management', 'Manual coordination']
-<<<<<<< HEAD
-    marketSize: '$25 B ground station market'
-    growthRate: '220% annual growth';
-variant: 'space-futuristic'
-    contactInfo: marketPosition: unknown;
-=======
     marketSize: '$25 B ground station market',
     growthRate: '220% annual growth',
     variant: 'space-futuristic',
     contactInfo:
         contactInfo: marketPosition: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       'Revolutionary technology with no direct competitors. Basic data access exists but lacks AI analysis. Our advantage: Comprehensive data and AI-powered insights.',
     targetAudience:,
       'Global coordination'
@@ -2079,18 +1967,11 @@ varian,
       'Data exploration'],
     roi: 'Accelerate research and discovery through comprehensive data access and AI analysis. ROI through research efficiency and insights.',
     competitors: ['Basic data access', 'Manual research']
-<<<<<<< HEAD
-    marketSize: '$15 B space research market'
-    growthRate: '180% annual growth';
-variant: 'space-futuristic'
-    contactInfo: marketPosition: unknown;
-=======
     marketSize: '$15 B space research market',
     growthRate: '180% annual growth',
     variant: 'space-futuristic',
     contactInfo:
         contactInfo: marketPosition: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       'Revolutionary technology with no direct competitors. Traditional space services use manual contracts. Our advantage: Automated trading and secure marketplace.',
     targetAudience:,
       'Data exploration'
@@ -2142,18 +2023,11 @@ varian,
       'Market making'],
     roi: 'Create new revenue streams through space asset trading and reduce transaction costs by 50%.',
     competitors: ['Manual contracts', 'Traditional procurement']
-<<<<<<< HEAD
-    marketSize: '$100 B space services market'
-    growthRate: '300% annual growth';
-variant: 'space-futuristic'
-    contactInfo: marketPosition: unknown;
-=======
     marketSize: '$100 B space services market',
     growthRate: '300% annual growth',
     variant: 'space-futuristic',
     contactInfo:
         contactInfo: marketPosition: unknown;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       'Revolutionary technology with no direct competitors. Basic space education exists but lacks interactivity. Our advantage: Interactive courses and real-world simulations.',
     targetAudience:,
       'Market making'
@@ -2205,15 +2079,9 @@ varian,
       'Personal development'],
     roi: 'Accelerate space education and career development through interactive learning. ROI through skill development and career advancement.',
     competitors: ['Basic education', 'Traditional courses']
-<<<<<<< HEAD
-    marketSize: '$8 B space education market'
-    growthRate: '200% annual growth';
-variant: 'space-futuristic',
-=======
     marketSize: '$8 B space education market',
     growthRate: '200% annual growth',
     variant: 'space-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',

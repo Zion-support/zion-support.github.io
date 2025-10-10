@@ -8,12 +8,10 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
       <Helm, e, t>
         <title>Enterprise, RAG, Security v2 — Au, t, h-Aw, a, r, e, Fre, s, h, Sign, e, d</title>
         <meta, nam, e = 'description'
-          conte, n, t='Au, t, h-scoped, retriev, a, l, freshness, window, s, prompt, firewall, s, and, signed, outputs that, keep, answers correct, and, compliant.'
-        />)
-        <link, re, l = 'canonic, a, l')
-          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-01-enterpri s e-r a g-securi t y-v2')
-        />),
-      </Helm, e, t>
+          conte, n, t='Au, t, h-scoped, retriev, a, l, freshness, window, s, prompt, firewall, s, and, signed, outputs that, keep, answers correct, and, compliant.'>)
+        </meta><link, re, l = 'canonic, a, l')
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-01-enterpri s e-r a g-securi t y-v2')>),
+      </link></Helm, e, t>
 
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>

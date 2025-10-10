@@ -60,10 +60,10 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
             <span, className="bg-cl, i, p-text, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0"></span>"
         <div, className="text-center mb-12">";"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, m, b-6, animat, e-bounce, shado, w-2, x, l">";"
-            <Sparkles, className="w-5 h-5, animat, e-sp, i, n" />";
-            <sp, a, n>OCTOBER, 202, 5 - JUST, PUBLISHE, D</sp, a, n>"
-            <Sparkles, className="w-5 h-5, animat, e-sp, i, n" />";
-          </d, i, v>
+            <Sparkles, className="w-5 h-5, animat, e-sp, i, n">";
+            </Sparkles><sp, a, n>OCTOBER, 202, 5 - JUST, PUBLISHE, D</sp, a, n>"
+            <Sparkles, className="w-5 h-5, animat, e-sp, i, n">";
+          </Sparkles></d, i, v>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">";</h2>
           </d, i, v>"
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">";"
@@ -112,8 +112,8 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
             <div, className="flex, item, s-start, ga, p-4, m, b-6">";</div>
               <div, className="fl, e, x-shri, n, k-0">";</div>
                 <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-2xl, flex, items-center, justif, y-center, shado, w-lg, transform, group-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">";</div>
-                  <Cloud, className="w-9 h-9, tex, t-whi, t, e" />";
-                </d, i, v>
+                  <Cloud, className="w-9 h-9, tex, t-whi, t, e">";
+                </Cloud></d, i, v>
               </d, i, v>
               <div, className="fl, e, x-1">";</div>
                 <div, className="flex, item, s-center, ga, p-2, m, b-3">";</div>
@@ -130,8 +130,8 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
             <div, className="flex, item, s-start, ga, p-4, m, b-6">";"
               <div, className="fl, e, x-shri, n, k-0">";"
                 <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-2xl, flex, items-center, justif, y-center, shado, w-lg, transform, group-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">";"
-                  <Cloud, className="w-9 h-9, tex, t-whi, t, e" />";
-                </d, i, v>
+                  <Cloud, className="w-9 h-9, tex, t-whi, t, e">";
+                </Cloud></d, i, v>
               </d, i, v>"
               <div, className="fl, e, x-1">";"
                 <div, className="flex, item, s-center, ga, p-2, m, b-3">";"
@@ -235,14 +235,14 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
                   <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  />
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">";</div>
-                  <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />";
+                  <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5">";
               {/* TODO: Fix JSX expression */}"
-                <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>"
+                </CheckCircle><div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>"
                   <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircle>"
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>"
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">";"
-                  <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />";"
-                  <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>";
+                  <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5">";"
+                  </CheckCircle><span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>";
                 </d, i, v>
               ))}
             </d, i, v>
@@ -253,13 +253,12 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
   to={multiCloudConte, n, t.c, t, a.li, n, k}"
               classNa, m, e="flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,
   r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
-  r:shad, o, w-cy, a, n-5, 0, 0/50, grou, p"
-            ></Li>"
+  r:shad, o, w-cy, a, n-5, 0, 0/50, grou, p"></Li>"
               <span, className="te, x, t-lg">{multiCloudConte, n, t.c, t, a.te, x, t}</sp, a, n>"
-              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>""
-              <span, className="te, x, t-lg">{multiCloudConte, n, t.c, t, a.te, x, t}</sp, a, n>";"
-              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
-            </Li, n, k>
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m>""
+              </Link><span, className="te, x, t-lg">{multiCloudConte, n, t.c, t, a.te, x, t}</sp, a, n>";"
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m">";
+            </Link></Li, n, k>
           </d, i, v>
           {/* Conversational, AI, Card */}
           <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, vi, a-pi, n, k-6, 0, 0/20, t, o-ro, s, e-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
@@ -277,8 +276,8 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
             <div, className="flex, item, s-start, ga, p-4, m, b-6">";</div>
               <div, className="fl, e, x-shri, n, k-0">";</div>
                 <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-600, rounde, d-2xl, flex, items-center, justif, y-center, shado, w-lg, transform, group-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">";</div>
-                  <MessageSquare, className="w-9 h-9, tex, t-whi, t, e" />";
-                </d, i, v>
+                  <MessageSquare, className="w-9 h-9, tex, t-whi, t, e">";
+                </MessageSquare></d, i, v>
               </d, i, v>
               <div, className="fl, e, x-1">";</div>
                 <div, className="flex, item, s-center, ga, p-2, m, b-3">";</div>
@@ -293,8 +292,8 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
             <div, className="flex, item, s-start, ga, p-4, m, b-6">";"
               <div, className="fl, e, x-shri, n, k-0">";"
                 <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-600, rounde, d-2xl, flex, items-center, justif, y-center, shado, w-lg, transform, group-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">";"
-                  <MessageSquare, className="w-9 h-9, tex, t-whi, t, e" />";
-                </d, i, v>
+                  <MessageSquare, className="w-9 h-9, tex, t-whi, t, e">";
+                </MessageSquare></d, i, v>
               </d, i, v>"
               <div, className="fl, e, x-1">";"
                 <div, className="flex, item, s-center, ga, p-2, m, b-3">";"
@@ -398,14 +397,14 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
                   <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5  />
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">";</div>
-                  <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" />";
+                  <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5">";
               {/* TODO: Fix JSX expression */}"
-                <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>"
+                </CheckCircle><div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>"
                   <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircle>"
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>"
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">";"
-                  <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" />";"
-                  <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>";
+                  <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5">";"
+                  </CheckCircle><span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>";
                 </d, i, v>
               ))}
             </d, i, v>
@@ -416,13 +415,12 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
   to={conversationalAIConte, n, t.c, t, a.li, n, k}"
               classNa, m, e="flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,
   r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
-  r:shad, o, w-purp, l, e-5, 0, 0/50, grou, p"
-            ></Li>"
+  r:shad, o, w-purp, l, e-5, 0, 0/50, grou, p"></Li>"
               <span, className="te, x, t-lg">{conversationalAIConte, n, t.c, t, a.te, x, t}</sp, a, n>"
-              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>""
-              <span, className="te, x, t-lg">{conversationalAIConte, n, t.c, t, a.te, x, t}</sp, a, n>";"
-              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
-            </Li, n, k>
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m>""
+              </Link><span, className="te, x, t-lg">{conversationalAIConte, n, t.c, t, a.te, x, t}</sp, a, n>";"
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m">";
+            </Link></Li, n, k>
           </d, i, v>
         </d, i, v>
         {/* Combined, Value, Proposition */}
@@ -445,8 +443,8 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">";"
             <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";"
               <div, className="flex, item, s-center, justif, y-center, m, b-3">";"
-                <Award, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0" />";
-              </d, i, v>"
+                <Award, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0">";
+              </Award></d, i, v>"
               <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">3, 4, 0%+</d, i, v>";"
               <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Combined, RO, I</d, i, v>";
             </d, i, v>
@@ -466,8 +464,8 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
                 <TrendingUp, className="w-1, 0, h-10, tex, t-gre, e, n-4, 0, 0  /></TrendingUp>"
             <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";"
               <div, className="flex, item, s-center, justif, y-center, m, b-3">";"
-                <TrendingUp, className="w-1, 0, h-10, tex, t-gre, e, n-4, 0, 0" />";
-              </d, i, v>"
+                <TrendingUp, className="w-1, 0, h-10, tex, t-gre, e, n-4, 0, 0">";
+              </TrendingUp></d, i, v>"
               <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">$26, 2, M+</d, i, v>";"
               <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Total, Saving, s</d, i, v>";
             </d, i, v>
@@ -487,8 +485,8 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
                 <Zap, className="w-1, 0, h-10, tex, t-cy, a, n-4, 0, 0  /></Zap>"
             <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";"
               <div, className="flex, item, s-center, justif, y-center, m, b-3">";"
-                <Zap, className="w-1, 0, h-10, tex, t-cy, a, n-4, 0, 0" />";
-              </d, i, v>"
+                <Zap, className="w-1, 0, h-10, tex, t-cy, a, n-4, 0, 0">";
+              </Zap></d, i, v>"
               <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">5.1x</d, i, v>";"
               <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Avg, Efficienc, y</d, i, v>";
             </d, i, v>
@@ -508,8 +506,8 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
                 <Sparkles, className="w-1, 0, h-10, tex, t-purp, l, e-4, 0, 0  /></Sparkles>"
             <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";"
               <div, className="flex, item, s-center, justif, y-center, m, b-3">";"
-                <Sparkles, className="w-1, 0, h-10, tex, t-purp, l, e-4, 0, 0" />";
-              </d, i, v>"
+                <Sparkles, className="w-1, 0, h-10, tex, t-purp, l, e-4, 0, 0">";
+              </Sparkles></d, i, v>"
               <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">Fortune, 10, 0</d, i, v>";"
               <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Proven, Result, s</d, i, v>";
             </d, i, v>
@@ -539,8 +537,7 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
   to="/conta, c, t""
               classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, vi, a-bl, u, e-600, t, o-purp, l, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:v, i, a-bl, u, e-500, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,
   r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
-  r:shad, o, w-bl, u, e-5, 0, 0/50, tex, t-lg"
-            ></Li>
+  r:shad, o, w-bl, u, e-5, 0, 0/50, tex, t-lg"></Li>
               Schedule, Free, Assessment;
             </Li, n, k>
             <Li, n, k;
@@ -550,8 +547,7 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
   to="/bl, o, g""
               classNa, m, e="px-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,
   r:sca, l, e-105, borde, r-2, borde, r-whi, t, e/30, hov, e,"
-  r:bord, e, r-whi, t, e/50, tex, t-lg"
-            ></Li>
+  r:bord, e, r-whi, t, e/50, tex, t-lg"></Li>
               Explore, All, Insights;
             </Li, n, k>
           </d, i, v>

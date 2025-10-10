@@ -81,17 +81,16 @@ const faqs = [
                   >
                     <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
                     {openItems.includes(index) ? (
-                      <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />);
-                  </button>
+                      <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0">) : (
+                      </ChevronUp><ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0">);
+                  </ChevronDown></button>
                   {openItems.includes(index) && (
                     <div className="px-6 pb-4">
                       <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                    </div>);
+                    >);
                 </div>
               ));
-            </div>
+            >
           </div>
         </section>
       </div>

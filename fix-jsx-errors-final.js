@@ -18,12 +18,12 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
       return match});
 
     //Fix malformed <br> tags;
-    content = content.replace(/<br\s*>\s*<\/br>/g, '<br />');
-    content = content.replace(/<br\s*>\s*$/gm, '<br />');
+    content = content.replace(/<br\s*>\s*<\/br>/g, '<br>');
+    content = content.replace(/</br><br\s*>\s*$/gm, '<br>');
 
     //Fix backticks after JSX tags;
     //Fix backticks after JSX tags;`
-    content = content.replace(/<(\w+)`/g, '<$1');
+    content = content.replace(/</br><(\w+)`/g, '<$1');
 
     //Fix specific patterns where /> appears in wrong places;
     content = content.replace(/\s*\/>\s*<(\w+)/g, ' <$1');

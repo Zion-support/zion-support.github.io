@@ -26,18 +26,16 @@ return (
         title="${title} - Zion Tech Group"
         description="${description}"
         keywords={['${category}', 'AI', 'Technology', 'Solutions', 'Enterprise']}
-        canonicalUrl="https://ziontechgroup.com${route}"
-      />
-);
-}</SEOOptimizer>
+        canonicalUrl="https://ziontechgroup.com${route}">);
+}</SEOOptimizer></SEOOptimizer>
       <PerformanceOptimizer /></PerformanceOptimizer>
       <AccessibilityEnhancer enableKeyboardNavigation enableScreenReaderSupport enableHighContrast enableFocusManagement enableSkipLinks></AccessibilityEnhancer>
         <div /></div>
       </AccessibilityEnhancer>
       
-      <Navigation />)
+      <Navigation>)
       {/* Hero Section */})
-      <section className="relative py-20 overflow-hidden">)
+      </Navigation><section className="relative py-20 overflow-hidden">)
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,
         ,
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">,
@@ -71,24 +69,24 @@ return (
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-400/10 transition-all duration-300">,
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">,
-                <Zap className="w-6 h-6 text-white" />,
-              </div>,
+                <Zap className="w-6 h-6 text-white">,
+              </Zap></div>,
               <h3 className="text-xl font-bold text-white mb-3">Advanced Technology</h3>,
               <p className="text-gray-300">Cutting-edge ${category.toLowerCase()} solutions powered by AI and machine learning.</p>
             </div>
             
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover: border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-400/10 transition-all duration-300">,
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">,
-                <Shield className="w-6 h-6 text-white" />,
-              </div>,
+                <Shield className="w-6 h-6 text-white">,
+              </Shield></div>,
               <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>,
               <p className="text-gray-300">Bank-level security and compliance for all your ${category.toLowerCase()} needs.</p>
             </div>
             
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover: border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-400/10 transition-all duration-300">,
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">,
-                <BarChart className="w-6 h-6 text-white" />,
-              </div>,
+                <BarChart className="w-6 h-6 text-white">,
+              </BarChart></div>,
               <h3 className="text-xl font-bold text-white mb-3">Real-time Analytics</h3>,
               <p className="text-gray-300">Comprehensive insights and analytics for your ${category.toLowerCase()} operations.</p>
             </div>
@@ -117,8 +115,8 @@ return (
         </div>
       </section>
 
-      <Footer />,
-    </div>)};
+      <Footer>,
+    </Footer></div>)};
 
 export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page;
 `;

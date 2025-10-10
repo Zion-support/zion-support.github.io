@@ -11,7 +11,7 @@ const, featuredConten, t = [
       reade, r, s: '18, 0, K+','
       bad, g, e: 'BREAKTHROU, G, H','
       gradie, n, t: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0','
-      ic, o, n: <Brain, className="w-6 h-6/>,"</Brain>li</Brain>
+      ic, o, n: <Brain, className="w-6 h-6>,"</Brain></Brain>li</Brain>
 );
 }, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-networ, k, s','
       descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g}
@@ -24,7 +24,7 @@ const, featuredConten, t = [
       reade, r, s: '15, 6, K+','
       bad, g, e: 'FEATUR, E, D','
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0','
-      ic, o, n: <Zap, className="w-6 h-6/>,"</Zap>li</Zap>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-f, e, b-quant, u, m-computi, n, g','
+      ic, o, n: <Zap, className="w-6 h-6>,"</Zap></Zap>li</Zap>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-f, e, b-quant, u, m-computi, n, g','
       descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times}
     {
       id: 3;
@@ -35,7 +35,7 @@ const, featuredConten, t = [
       reade, r, s: '20, 3, K+','
       bad, g, e: 'REVOLUTIONA, R, Y','
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0','
-      ic, o, n: <Sparkles, className="w-6 h-6/>,"
+      ic, o, n: <Sparkles, className="w-6 h-6>,"
       li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s',';
 const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression */}
       descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g}
@@ -50,7 +50,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
       reade, r, s: '18, 0, K+',';
       bad, g, e: 'BREAKTHROU, G, H',';
       gradie, n, t: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0',';
-      ic, o, n: <Brain, className="w-6 h-6" />,";</Brain>li</Brain>, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-networ, k, s',';
+      ic, o, n: </Sparkles><Brain, className="w-6 h-6">,";</Brain></Brain>li</Brain>, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-networ, k, s',';
       descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g'
     }
     {
@@ -62,7 +62,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
       reade, r, s: '15, 6, K+',';
       bad, g, e: 'FEATUR, E, D',';
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0',';
-      ic, o, n: <Zap, className="w-6 h-6" />,";</Zap>li</Zap>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-f, e, b-quant, u, m-computi, n, g',';
+      ic, o, n: <Zap, className="w-6 h-6">,";</Zap></Zap>li</Zap>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-f, e, b-quant, u, m-computi, n, g',';
       descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times'
     }
     {
@@ -74,7 +74,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
       reade, r, s: '20, 3, K+',';
       bad, g, e: 'REVOLUTIONA, R, Y',';
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0',';
-      ic, o, n: <Sparkles, className="w-6 h-6" />,";</Sparkles>li</Sparkles>, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s',';
+      ic, o, n: <Sparkles, className="w-6 h-6">,";</Sparkles></Sparkles>li</Sparkles>, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s',';
       descripti, o, n: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learni, n, g'
     }
   ];
@@ -174,8 +174,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
                 EXCLUSIVE, FEBRUARY, OFFER;"
               <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>"
                 <a, hre, f="/subscri, b, e""
-                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-bl, u, e-600, hove, r:fr, o, m-emera, l, d-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
-                ></a>"
+                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-bl, u, e-600, hove, r:fr, o, m-emera, l, d-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"></a>"
                   <Sparkles, classNam, e="w-5 h-5" /></Sparkles>"
                   <Link, classNam, e="w-5 h-5" /></Link>"
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o"></div>"

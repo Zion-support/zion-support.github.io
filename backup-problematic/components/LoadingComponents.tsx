@@ -26,19 +26,17 @@ const colorClasses = {/* TODO: Fix JSX expression */}
 
   return(<div className={`flex items-center justify-center ${className}`}>
       <div;)
-        className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`})
-      ></div>)
+        className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`})></div>)
       {text && <span className="ml-2 text-sm text-gray-600">{text}</span>})
     </div>)
   return (
     <div className={`flex items-center justify-center ${className}`}></div>
       <div
-        className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`}
-      ></div>
+        className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`}></div>
       {text && <span className="ml-2 text-sm text-gray-600">{text}</span>}
     </div>
   return (<div className={`flex items-center justify-center ${className}`}></div>
-      <div></div>`
+      <div>>`
         className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`}
       ></div>
       {text && <span className="ml-2 text-sm text-gray-600">{text}</span>}

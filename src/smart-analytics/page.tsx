@@ -135,9 +135,8 @@ const pricingPlans = [
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0">{feature}
+                    </CheckCircle></li>
                 </ul>
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
                     plan.popular
@@ -276,9 +275,8 @@ return (
                 <Mail className="w-5 h-5 mr-2 text-cyan-400" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
                   kleber@ziontechgroup.com
-                <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
-+1 (302) 464-0950;
-                <Mail className="w-5 h-5 mr-2 text-cyan-400" />
+                <MapPin className="w-5 h-5 mr-2 text-cyan-400">+1 (302) 464-0950;
+                </MapPin><Mail className="w-5 h-5 mr-2 text-cyan-400" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
                   kleber@ziontechgroup.com;
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />

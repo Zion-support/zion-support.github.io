@@ -61,7 +61,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
                   </div>
                 </Link>
               ));
-            </div>
+            >
           </div>
         </section>
       </div>

@@ -8,8 +8,7 @@ describe('Component Tests', () => {
 return (
 
   test('LoadingSpinner renders correctly', () => {
-    render(<LoadingSpinner />
-);
+    render(<LoadingSpinner>);
 });
     expect(screen.getByRole('status')).toBeInTheDocument()});
 
@@ -17,7 +16,7 @@ return (
 return (
 
     render(
-      <HelmetProvider>
+      </LoadingSpinner><HelmetProvider>
         <SEOEnhancer />
       </HelmetProvider>
 );

@@ -20,13 +20,13 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
           {/* Hero Section */}"
           <section className="text-center mb-16"></section>"
             <h1 className="text-4xl,"
-  md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
+  md:text-6xl font-bold text-white mb-6 neon-text cyber-text">>
               AI Data Visualization;
             </h1>"
-            <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
+            <p className="text-xl text-cyan-400 mb-8 font-medium">>
               Transform data into actionable insights with AI;
             </p>"
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">>
               Turn complex data into beautiful, interactive visualizations with AI-powered insights that help you make data-driven decisions faster and more accurately.
             </p>
           </section>
@@ -40,7 +40,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🎨</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Auto-Generated Charts</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   AI automatically selects the best chart types and creates stunning visualizations from your data.
                 </p>
               </div>
@@ -48,7 +48,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🔍</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Smart Insights</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   AI analyzes your data and provides intelligent insights, trends, and recommendations.
                 </p>
               </div>
@@ -56,7 +56,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">📱</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Interactive Dashboards</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   Create responsive, interactive dashboards that work perfectly on all devices.
                 </p>
               </div>
@@ -64,7 +64,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🤖</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Natural Language Queries</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   Ask questions in plain English and get instant visual answers from your data.
                 </p>
               </div>
@@ -72,7 +72,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">⚡</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Real-time Updates</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   Visualizations update automatically as new data comes in, keeping insights current.
                 </p>
               </div>
@@ -80,10 +80,10 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🔮</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Predictive Analytics</h3>"
-                <p className="text-gray-300 text-center"></p>
+                <p className="text-gray-300 text-center">>
                   AI predicts future trends and outcomes based on historical data patterns.
                 </p>
-              </div>
+              >
             </div>
           </section>
 
@@ -131,7 +131,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                   <li>Custom AI training</li>
                 </ul>"
                 <a href="/contact" className="cyber-button w-full">Contact Sales</a>
-              </div>
+              >
             </div>
           </section>
 
@@ -163,14 +163,14 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                 <div className="text-4xl mb-4">⚙️</div>"
                 <h3 className="text-xl font-bold text-white mb-4">Operations</h3>"
                 <p className="text-gray-300">Monitor operational metrics and optimize business processes with data insights.</p>
-              </div>
+              >
             </div>
           </section>
 
           {/* CTA Section */}"
           <section className="text-center"></section>"
             <h2 className="text-3xl font-bold text-white mb-6">Start Visualizing Your Data Today</h2>"
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">>
               Join 2,000+ companies using our AI data visualization platform to make better decisions with their data.
             </p>"
             <div className="flex flex-col,"
@@ -190,6 +190,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
         </main>
         
         <Footer /></Footer>
-      </div>
+      >
     </div>
   )}"

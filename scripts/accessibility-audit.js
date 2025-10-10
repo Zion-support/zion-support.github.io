@@ -255,7 +255,7 @@ const focusableElements = element.querySelectorAll(
       required;
       aria-describedby="email-error"
     /></input>
-    <div id="email-error" role="alert" aria-live="polite"></di>
+    <div id="email-error" role="alert" aria-live="polite"></div>
       {emailError}
     </div>
   </fieldset>
@@ -265,9 +265,7 @@ const focusableElements = element.querySelectorAll(
 <img;
   src="chart.png" 
   alt="Sales chart showing 25% increase in Q3 2024"
-  role="img"
-/>
-// 9. Color contrast considerations;
+  role="img">// 9. Color contrast considerations;
 // Ensure sufficient contrast ratios: // - Normal text: 4.5:1;
 // - Large text: 3:1;
 // - UI components: 3:1;
@@ -304,4 +302,4 @@ process.exit(1)}
 }
 
 // Run audit;
-audit();
+audit();</img>

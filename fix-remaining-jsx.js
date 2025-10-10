@@ -14,7 +14,7 @@ const lines = content.split('\n');
 let line = lines[i];
       
       // Check if this is a self-closing div followed by content
-      if (line.includes('<div') && line.includes('/>') && i + 1 < lines.length) {;
+      if (line.includes('<div') && line.includes('>') && i + 1 </div>< lines.length) {;
 const nextLine = lines[i + 1];
         // If next line starts with whitespace and has content, fix the div
         if (nextLine.trim() && (nextLine.includes('<') || nextLine.includes('{') || nextLine.includes('}'))) {

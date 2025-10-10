@@ -35,8 +35,8 @@ const, October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expressio
             <span, className="te, x, t-white, fon, t-semibold, tex, t-sm"></span>
         <div, className="text-center mb-12">";</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-2, rounde, d-full, m, b-6">";</div>
-            <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
-            <span, className="te, x, t-white, fon, t-semibold, tex, t-sm">";
+            <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e">";
+            </Zap><span, className="te, x, t-white, fon, t-semibold, tex, t-sm">";
               NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5;
             </sp, a, n>
           </d, i, v>
@@ -48,8 +48,8 @@ const, October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expressio
             <span, className="te, x, t-white, fon, t-semibold, tex, t-sm"></span>"
         <div, className="text-center mb-12">";"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-2, rounde, d-full, m, b-6">";"
-            <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";"
-            <span, className="te, x, t-white, fon, t-semibold, tex, t-sm">";
+            <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e">";"
+            </Zap><span, className="te, x, t-white, fon, t-semibold, tex, t-sm">";
               NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5;
             </sp, a, n>
           </d, i, v>"
@@ -93,8 +93,8 @@ return (</div>
                     <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"</h3>
                 <div, className="flex, item, s-start, ga, p-4, m, b-4">";</div>
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-3, rounde, d-lg`}>`;`</div>
-                    <Icon, className="w-6 h-6, tex, t-whi, t, e" />";
-                  </d, i, v>
+                    <Icon, className="w-6 h-6, tex, t-whi, t, e">";
+                  </Icon></d, i, v>
                   <div, className="fl, e, x-1">";</div>
                     <div, className="te, x, t-xs, tex, t-bl, u, e-300, m, b-2">{conte, n, t.catego, r, y}</d, i, v>";
         {/* Content, Card, s */}"
@@ -114,8 +114,8 @@ return (</div>
                     <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">""
                 <div, className="flex, item, s-start, ga, p-4, m, b-4">";`
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-3, rounde, d-lg`}>`;`"
-                    <Icon, className="w-6 h-6, tex, t-whi, t, e" />";
-                  </d, i, v>"
+                    <Icon, className="w-6 h-6, tex, t-whi, t, e">";
+                  </Icon></d, i, v>"
                   <div, className="fl, e, x-1">";"
                     <div, className="te, x, t-xs, tex, t-bl, u, e-300, m, b-2">{conte, n, t.catego, r, y}</d, i, v>";"
                     <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
@@ -155,8 +155,8 @@ return (</div>
                     <li, ke, y={i, d, x} classNa, m, e="flex, item, s-start, ga, p-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0"></li>"
                       <TrendingUp, className="w-3 h-3, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  /></TrendingUp>"
                     <li, ke, y={i, d, x} classNa, m, e="flex, item, s-start, ga, p-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0">";"
-                      <TrendingUp, className="w-3 h-3, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />";
-                      <sp, a, n>{highlig, h, t}</sp, a, n>
+                      <TrendingUp, className="w-3 h-3, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0">";
+                      </TrendingUp><sp, a, n>{highlig, h, t}</sp, a, n>
                     </li>
                   ))}
                 </ul>"
@@ -169,8 +169,8 @@ return (</div>
                   <Link, className="w-4 h-4  /></Link>"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
                   Read, Full, Article;"
-                  <Link, className="w-4 h-4" />";
-                </d, i, v>
+                  <Link, className="w-4 h-4">";
+                </Link></d, i, v>
               </Li, n, k>
             )})}
         </d, i, v>
@@ -194,18 +194,16 @@ return (</div>
           <div, className="flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r">";
             <Li, n, k;"
   to="/conta, c, t""
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-bl, u, e-900, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r: bg-bl, u, e-50, transitio, n-colo, r, s"
-            ></Li>
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-bl, u, e-900, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r: bg-bl, u, e-50, transitio, n-colo, r, s"></Li>
               Schedule, Free, Consultation;"
               <Link, className="w-5 h-5  /></Link>"
-              <Link, className="w-5 h-5" />";
-            </Li, n, k>
+              <Link, className="w-5 h-5">";
+            </Link></Li, n, k>
             <Li, n, k;
   to="/bl, o, g"
             <Li, n, k;"
   to="/bl, o, g""
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s"
-            ></Li>
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s"></Li>
               Explore, All, Articles;
             </Li, n, k>
           </d, i, v>
