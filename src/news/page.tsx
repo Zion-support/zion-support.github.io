@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, ArrowRight, Star, Users, TrendingUp, Award, Globe, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -76,94 +76,21 @@ const NewsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      <main className="relative z-10">
-        {/* Hero Section */}
-        <section className="py-20 px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              News & Updates
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Stay informed about the latest developments, partnerships, and innovations at Zion Tech Group
-            </p>
-          </div>
-        </section>
-
-        {/* News Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {newsItems.map((item) => (
-                <article
-                  key={item.id}
-                  className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300 ${
-                    item.featured ? 'ring-2 ring-cyan-400' : ''
-                  }`}
-                >
-                  {item.featured && (
-                    <div className="flex items-center gap-2 mb-4">
-                      <Star className="w-4 h-4 text-yellow-400" />
-                      <span className="text-yellow-400 text-sm font-semibold">Featured</span>
-                    </div>
-                  )}
-                  
-                  <div className="text-4xl mb-4">{item.image}</div>
-                  
-                  <div className="flex items-center gap-2 mb-3">
-                    {getCategoryIcon(item.category)}
-                    <span className="text-cyan-400 text-sm font-medium">{item.category}</span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors">
-                    {item.title}
-                  </h3>
-                  
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {item.summary}
-                  </p>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-gray-400 text-sm">
-                      <Calendar className="w-4 h-4" />
-                      <span>{new Date(item.date).toLocaleDateString()}</span>
-                    </div>
-                    <button className="flex items-center gap-1 text-cyan-400 hover:text-white transition-colors">
-                      <span className="text-sm">Read More</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Newsletter Signup */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Stay Updated
-              </h2>
-              <p className="text-gray-300 mb-6">
-                Subscribe to our newsletter for the latest news, updates, and insights from Zion Tech Group.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg bg-slate-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                />
-                <button className="px-6 py-3 bg-cyan-400 text-slate-900 font-semibold rounded-lg hover:bg-cyan-300 transition-colors">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">News</h1>
+          <p className="text-gray-300 mb-8">Coming Soon - Advanced news solutions</p>
+          <Link 
+            to="/contact" 
+            className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
+          >
+            Contact Us
+          </Link>
+        </div>
+      </div>
       <Footer />
     </div>
   );
 };
+
 export default NewsPage;

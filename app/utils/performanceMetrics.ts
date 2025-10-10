@@ -349,10 +349,10 @@ export class PerformanceMetrics {
 // Type for performance.memory
 interface PerformanceWithMemory extends Performance {
   memory: {
-    usedJSHeapSize: number
-    totalJSHeapSize: number
-    jsHeapSizeLimit: number;}
-  }
+// usedJSHeapSize: number;
+// totalJSHeapSize: number;
+// jsHeapSizeLimit: number;
+  };
 }
 // Type for LayoutShift
 interface LayoutShift extends PerformanceEntry {

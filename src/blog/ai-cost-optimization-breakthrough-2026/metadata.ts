@@ -19,7 +19,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%',
-    description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.',
+    description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains.',
     images: ['https://ziontechgroup.com/images/ai-cost-optimization-2026.jpg']
   },
   robots: {

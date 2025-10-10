@@ -1,126 +1,166 @@
 'use client';
-import React, { useEffect } from 'react';
 
-interface PerformanceOptimizerProps {
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enableCodeSplitting?: boolean;
-  enablePrefetching?: boolean;
-  enableCriticalCSS?: boolean;
-  enableResourceHints?: boolean;
+import React, { useEffect, useCallback } from 'react';
+import { logger } from '../utils/logger';
+
+interface PerformanceMetrics {
+  lcp: number;
+  fid: number;
+  cls: number;
+  fcp: number;
+  ttfb: number;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enableCodeSplitting = true,
-  enablePrefetching = true,
-  enableCriticalCSS = true,
-  enableResourceHints = true,
-}) => {
-  useEffect(() => {
+export const PerformanceOptimizer: React.FC = () => {
+  const collectWebVitals = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    // Image optimization
-    if (enableImageOptimization) {
-      const images = document.querySelectorAll('img');
-      images.forEach((img) => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
-        // Add fetchpriority for above-the-fold images
-        if (img.getBoundingClientRect().top < window.innerHeight) {
-          img.setAttribute('fetchpriority', 'high');
+    // Collect Core Web Vitals
+    const vitals: PerformanceMetrics = {
+      lcp: 0,
+      fid: 0,
+      cls: 0,
+      fcp: 0,
+      ttfb: 0,
+    };
+
+    // LCP - Largest Contentful Paint
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      vitals.lcp = lastEntry.startTime;
+      logger.info('LCP measured', { lcp: vitals.lcp });
+    });
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // FID - First Input Delay
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        vitals.fid = entry.processingStart - entry.startTime;
+        logger.info('FID measured', { fid: vitals.fid });
+      });
+    });
+    fidObserver.observe({ entryTypes: ['first-input'] });
+
+    // CLS - Cumulative Layout Shift
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (!(entry as any).hadRecentInput) {
+          clsValue += (entry as any).value;
+          vitals.cls = clsValue;
+          logger.info('CLS measured', { cls: vitals.cls });
         }
       });
-    }
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
 
-    // Prefetch critical resources
-    if (enablePrefetching) {
-      const prefetchLinks = [
-        '/services',
-        '/contact',
-        '/ai-solutions',
-        '/it-services',
-        '/about',
-        '/blog',
-      ];
-
-      prefetchLinks.forEach((href) => {
-        const existingLink = document.querySelector(`link[href="${href}"]`);
-        if (!existingLink) {
-          const link = document.createElement('link');
-          link.rel = 'prefetch';
-          link.href = href;
-          document.head.appendChild(link);
-        }
+    // FCP - First Contentful Paint
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        vitals.fcp = entry.startTime;
+        logger.info('FCP measured', { fcp: vitals.fcp });
       });
+    });
+    fcpObserver.observe({ entryTypes: ['paint'] });
+
+    // TTFB - Time to First Byte
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigationEntry) {
+      vitals.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+      logger.info('TTFB measured', { ttfb: vitals.ttfb });
     }
 
-    // Add resource hints
-    if (enableResourceHints) {
-      const dnsPrefetchDomains = [
-        'fonts.googleapis.com',
-        'fonts.gstatic.com',
-        'cdnjs.cloudflare.com',
-      ];
-
-      dnsPrefetchDomains.forEach((domain) => {
-        const existingLink = document.querySelector(`link[href="//${domain}"]`);
-        if (!existingLink) {
-          const link = document.createElement('link');
-          link.rel = 'dns-prefetch';
-          link.href = `//${domain}`;
-          document.head.appendChild(link);
-        }
-      });
-    }
-
-    // Preload critical fonts
-    if (enableCriticalCSS) {
-      const fontPreloads = [
-        {
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
-          as: 'style',
+    // Send metrics to analytics
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'web_vitals', {
+        event_category: 'Performance',
+        event_label: 'Core Web Vitals',
+        value: Math.round(vitals.lcp),
+        custom_map: {
+          lcp: vitals.lcp,
+          fid: vitals.fid,
+          cls: vitals.cls,
+          fcp: vitals.fcp,
+          ttfb: vitals.ttfb,
         },
-      ];
+      });
+    }
+  }, []);
 
-      fontPreloads.forEach((font) => {
-        const existingLink = document.querySelector(`link[href="${font.href}"]`);
-        if (!existingLink) {
-          const link = document.createElement('link');
-          link.rel = 'preload';
-          link.href = font.href;
-          link.as = font.as;
-          document.head.appendChild(link);
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
         }
       });
+    });
+
+    images.forEach((img) => imageObserver.observe(img));
+  }, []);
+
+  const preloadCriticalResources = useCallback(() => {
+    // Preload critical fonts
+    const fontLink = document.createElement('link');
+    fontLink.rel = 'preload';
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
+    fontLink.as = 'style';
+    document.head.appendChild(fontLink);
+
+    // Preload critical images
+    const criticalImages = [
+      '/logo.png',
+      '/og-image.svg',
+    ];
+
+    criticalImages.forEach((src) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = src;
+      link.as = 'image';
+      document.head.appendChild(link);
+    });
+  }, []);
+
+  const optimizeThirdPartyScripts = useCallback(() => {
+    // Defer non-critical scripts
+    const scripts = document.querySelectorAll('script[src]');
+    scripts.forEach((script) => {
+      if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
+        script.setAttribute('defer', '');
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    // Collect performance metrics after page load
+    if (document.readyState === 'complete') {
+      collectWebVitals();
+    } else {
+      window.addEventListener('load', collectWebVitals);
     }
 
-    // Performance monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            // LCP measurement - could be sent to analytics
-            if (process.env.NODE_ENV === 'development') {
-              }
-          }
-          if (entry.entryType === 'first-input') {
-            const fidEntry = entry as any;
-            // FID measurement - could be sent to analytics
-            if (process.env.NODE_ENV === 'development') {
-              }
-          }
-        });
-      });
+    // Optimize images
+    optimizeImages();
 
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-    }
-  }, [enableImageOptimization, enableLazyLoading, enableCodeSplitting, enablePrefetching, enableCriticalCSS, enableResourceHints]);
+    // Preload critical resources
+    preloadCriticalResources();
+
+    // Optimize third-party scripts
+    optimizeThirdPartyScripts();
+
+    return () => {
+      window.removeEventListener('load', collectWebVitals);
+    };
+  }, [collectWebVitals, optimizeImages, preloadCriticalResources, optimizeThirdPartyScripts]);
 
   return null;
 };

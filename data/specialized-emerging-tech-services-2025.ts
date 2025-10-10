@@ -99,7 +99,6 @@ const contact =
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
   }
 ];
-import { ServiceVariant } from '../types/service-variants';
 export interface SpecializedEmergingTechService {;
   id: string;
   name: string;

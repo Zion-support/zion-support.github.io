@@ -1,8 +1,22 @@
-import React, { memo, useMemo, Suspense } from 'react';
-import {HelmetProvider} from 'react-helmet-async';
-import EnhancedSEO from './src/components/EnhancedSEO';
-import PerformanceMonitor from './src/components/PerformanceMonitor';
-import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
+
+import React, { memo, Suspense, useMemo } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
+import Navigation from './app/components/Navigation';
+import Footer from './app/components/Footer';
+import FuturisticHero from './app/components/FuturisticHero';
+import ServiceCard from './app/components/ServiceCard';
+import ContentCarousel from './app/components/ContentCarousel';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import SEOOptimizer from './app/components/SEOOptimizer';
+
+// Lazy load pages for better performance
+const AboutPage = React.lazy(() => import('./app/about/page'));
+const ContactPage = React.lazy(() => import('./app/contact/page'));
+const PricingPage = React.lazy(() => import('./app/pricing/page'));
+const AIServicesPage = React.lazy(() => import('./app/ai-services/page'));
+const ITServicesPage = React.lazy(() => import('./app/it-services/page'));
+const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
@@ -68,11 +82,11 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     return { hasError: true, error };
   }
 
-  override componentDidCatch() {
+  override componentDidCatch(_error: Error, _errorInfo: React.ErrorInfo) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
        
-      // console.error('App Error Boundary caught an error');
+      // // console.error('App Error Boundary caught an error:', _error, _errorInfo);
     }
   }
 
@@ -141,25 +155,58 @@ export default function App() {
   return (
     <ErrorBoundary>
       <HelmetProvider>
-        <EnhancedSEO structuredData={structuredData} />
-        <PerformanceMonitor />
-        <AccessibilityEnhancer />
-        <div className="min-h-screen bg-white">
-          <main id="main-content" role="main" aria-label="Main content">
+        <Helmet>
+          <title>Zion Tech Group - AI & IT Solutions</title>
+          <meta
+            name="description"
+            content="Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology."
+          />
+          <meta
+            name="keywords"
+            content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services"
+          />
+          <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
+          <meta
+            property="og:description"
+            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://ziontechgroup.com" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
+          <meta
+            name="twitter:description"
+            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
+          />
+          <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+        </Helmet>
+        <Router>
+          <div className="min-h-screen bg-slate-900 cyber-grid">
+            <Navigation />
             <Suspense fallback={<LoadingSpinner />}>
-              <UnifiedContentPromotion />
+              <Routes>
+                <Route path="/" element={
+                  <>
+                    <FuturisticHero />
+                    <UnifiedContentPromotion />
+                    <InteractiveAIROICalculator />
+                    <ContentShowcase />
+                    <InteractiveContentShowcase2026 />
+                  </>
+                } />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/pricing" element={<PricingPage />} />
+                <Route path="/ai-services" element={<AIServicesPage />} />
+                <Route path="/it-services" element={<ITServicesPage />} />
+                <Route path="/micro-saas" element={<MicroSaasPage />} />
+              </Routes>
             </Suspense>
-            <Suspense fallback={<LoadingSpinner />}>
-              <InteractiveAIROICalculator />
-            </Suspense>
-            <Suspense fallback={<LoadingSpinner />}>
-              <ContentShowcase />
-            </Suspense>
-            <Suspense fallback={<LoadingSpinner />}>
-              <InteractiveContentShowcase2026 />
-            </Suspense>
-          </main>
-        </div>
+            <Footer />
+            <PerformanceMonitor />
+            <SEOOptimizer />
+          </div>
+        </Router>
       </HelmetProvider>
     </ErrorBoundary>
   );

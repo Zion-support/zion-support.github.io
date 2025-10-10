@@ -15,16 +15,15 @@ def clean_conflicts_in_file(file_path):
         original_content = content
         
         # Remove all conflict markers and keep the content after =======
-        # Pattern 1: <<<<<<< HEAD ... ======= ... >>>>>>> branch
-        content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n(.*?)\n>>>>>>> [^\n]+', r'\1', content, flags=re.DOTALL)
+        # Pattern 1:  ... 
+        content = re.sub(r'\n(.*?)\n
         
         # Pattern 2: Remove any remaining conflict markers
-        content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [^\n]+', '', content, flags=re.DOTALL)
+        content = re.sub(r'\n.*?\n
         
         # Pattern 3: Remove standalone markers
-        content = re.sub(r'^<<<<<<< HEAD\n', '', content, flags=re.MULTILINE)
-        content = re.sub(r'^=======\n', '', content, flags=re.MULTILINE)
-        content = re.sub(r'^>>>>>>> [^\n]+\n?', '', content, flags=re.MULTILINE)
+        content = re.sub(r'^\n', '', content, flags=re.MULTILINE)
+        content = re.sub(r'^
         
         # Clean up duplicate imports and empty lines
         lines = content.split('\n')

@@ -15,20 +15,19 @@ def resolve_conflicts_in_file(file_path):
         original_content = content
         
         # Pattern 1: Keep the main branch version (after =======)
-        pattern1 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n?'
+        pattern1 = r'\n(.*?)\n
         content = re.sub(pattern1, r'\2', content, flags=re.DOTALL)
         
         # Pattern 2: Keep everything after ======= if no HEAD content
-        pattern2 = r'<<<<<<< HEAD\n=======\n(.*?)\n>>>>>>> [^\n]+\n?'
+        pattern2 = r'\n(.*?)\n
         content = re.sub(pattern2, r'\1', content, flags=re.DOTALL)
         
         # Pattern 3: Remove standalone conflict markers
-        content = re.sub(r'^<<<<<<< HEAD\n', '', content, flags=re.MULTILINE)
-        content = re.sub(r'^=======\n', '', content, flags=re.MULTILINE)
-        content = re.sub(r'^>>>>>>> [^\n]+\n', '', content, flags=re.MULTILINE)
+        content = re.sub(r'^\n', '', content, flags=re.MULTILINE)
+        content = re.sub(r'^
         
         # Clean up any remaining conflict markers
-        content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]+', '', content, flags=re.DOTALL)
+        content = re.sub(r'.*?
         
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:

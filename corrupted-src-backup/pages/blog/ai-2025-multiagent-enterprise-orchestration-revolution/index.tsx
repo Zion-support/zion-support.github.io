@@ -1,6 +1,5 @@
 import React from 'react';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-import { Link } from 'react-router-dom';
 impo, r, t { Bra, i, n } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Use, r, s } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
@@ -9,7 +8,6 @@ impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t';
-import Header, from '../../../componen, t, s/Head, e, r';
 
 const MultiAgentEnterpriseOrchestratio, n: React.FC = () => { 
   return (
@@ -199,3 +197,4 @@ const MultiAgentEnterpriseOrchestratio, n: React.FC = () => {
                 </div>
                 <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'>
                   Fortune, 20, Telecom: $4.7B, Cognitive, Transformation
+}}}

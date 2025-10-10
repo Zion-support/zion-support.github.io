@@ -15,7 +15,6 @@ const options = {
 };
 
 // const req = https.get(options, res => {
-  let _data = '';
 
   res.on('data', chunk => {
     data += chunk;
@@ -23,7 +22,6 @@ const options = {
 
   res.on('end', () => {
     try {
-      const _prs = JSON.parse(data);
       //       prs.forEach((pr, index) => {
         //         //         //         //         //         //         });
 

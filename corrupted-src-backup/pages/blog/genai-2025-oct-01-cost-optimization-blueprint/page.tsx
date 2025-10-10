@@ -22,3 +22,4 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           can, benefit, your enterpri, s, e.
         </p>
         <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
+}

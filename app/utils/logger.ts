@@ -137,9 +137,19 @@ class Logger {
     }
     return [...this.logs]
   }
-
-  clearLogs(): void {
-    this.logs = []
+  /**
+   * Send log entry to external logging service
+   */
+  private sendToLoggingService(entry: LogMetadata): void {
+    // In a real application, you would send this to your logging service
+    // For example: Sentry, LogRocket, DataDog, etc.
+    // Example implementation:
+    // fetch('/api/logs', {
+    //   method: 'POST',
+    //   headers: {// 'Content-Type': 'application/json'},
+    //   body: JSON.stringify(entry)
+    // }).catch(err => {
+    //   // });
   }
 
   exportLogs(): string {

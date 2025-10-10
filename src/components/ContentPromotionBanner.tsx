@@ -1,16 +1,26 @@
 import React from 'react';
-const ContentPromotionBanner: React.FC = () => {
+
+interface ContentPromotionBannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function ContentPromotionBanner({ 
+  className = '', 
+  children 
+}: ContentPromotionBannerProps) {
   return (
-    <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-4">
-      <div className="container mx-auto text-center">
-        <p className="text-sm font-medium">
-          🚀 <strong>New:</strong> AI-Powered Business Intelligence Dashboard - 
-          <a href="/business-intelligence" className="underline hover:no-underline ml-1">
-            Learn More →
-          </a>
-        </p>
-      </div>
+    <div className={`contentpromotionbanner ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">
+            Content Promotion Banner
+          </h3>
+          <p className="text-gray-600">
+            Component content will be added here.
+          </p>
+        </div>
+      )}
     </div>
   );
-};
-export default ContentPromotionBanner;
+}

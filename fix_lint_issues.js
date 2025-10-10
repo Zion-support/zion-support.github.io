@@ -10,8 +10,6 @@ import { fileURLToPath } from 'url';
 // Function to fix common lint issues in a file
 function fixLintIssues(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
     
     // Skip if not a source file
     if (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts') && !filePath.endsWith('.js') && !filePath.endsWith('.jsx')) {
@@ -37,8 +35,6 @@ function fixLintIssues(filePath) {
     
     // Fix 3: Remove unused lucide-react imports
     if (lucideMatch) {
-      const _imports = lucideMatch[1].split(',').map(imp => imp.trim());
-      const _usedImports = imports.filter(imp => content.includes(imp));
       if (usedImports.length === 0) {
         modified = true;
       } else if (usedImports.length < imports.length) {
@@ -47,11 +43,8 @@ function fixLintIssues(filePath) {
     }
     
     // Fix 4: Remove unused variables (simple cases)
-    const _lines = content.split('\n');
-    const _fixedLines = [];
     
     for (let i = 0; i < lines.length; i++) {
-      const _line = lines[i];
       
       // Skip lines that are just unused variable declarations
       if (line.match(/^\s*const\s+\w+\s*=\s*[^;]+;\s*$/) && 
@@ -141,14 +134,10 @@ function fixLintIssues(filePath) {
 // Function to recursively fix lint issues
 function fixAllLintIssues(_dir) {
   try {
-    const _files = fs.readdirSync(dir);
-    let _fixedCount = 0;
     
     for (const file of files) {
-      const _filePath = path.join(dir, file);
       
       try {
-        const _stat = fs.statSync(filePath);
         
         if (stat.isDirectory()) {
           // Skip certain directories

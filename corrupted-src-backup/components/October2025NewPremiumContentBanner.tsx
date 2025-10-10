@@ -1,5 +1,3 @@
-import React from "react";
-import React from "react";';
 const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
   return (
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, p, y-16, overflo, w-hidd, e, n">";

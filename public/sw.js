@@ -1,22 +1,21 @@
-// Service Worker for Zion Tech Group
 const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_CACHE = 'static-v1';
 const DYNAMIC_CACHE = 'dynamic-v1';
 
-// Files to cache immediately
-const STATIC_FILES = [
+// Static assets to cache
+const STATIC_ASSETS = [
   '/',
-  '/index.html',
-  '/manifest.json',
-  '/offline.html'
+  '/main.tsx',
+  '/globals.css',
+  '/manifest.json'
 ];
 
-// Install event - cache static files
+// Install event - cache static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        return cache.addAll(STATIC_FILES);
+        return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
         return self.skipWaiting();
@@ -30,11 +29,13 @@ self.addEventListener('activate', (event) => {
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
-          cacheNames.map((cacheName) => {
-            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+          cacheNames
+            .filter((cacheName) => {
+              return cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE;
+            })
+            .map((cacheName) => {
               return caches.delete(cacheName);
-            }
-          })
+            })
         );
       })
       .then(() => {
@@ -53,21 +54,23 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Skip external requests
-  if (url.origin !== location.origin) {
+  // Skip chrome-extension and other non-http requests
+  if (!url.protocol.startsWith('http')) {
     return;
   }
 
   event.respondWith(
     caches.match(request)
       .then((cachedResponse) => {
+        // Return cached version if available
         if (cachedResponse) {
           return cachedResponse;
         }
 
+        // Otherwise fetch from network
         return fetch(request)
           .then((response) => {
-            // Don't cache if not a valid response
+            // Don't cache non-successful responses
             if (!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             }
@@ -86,19 +89,19 @@ self.addEventListener('fetch', (event) => {
           .catch(() => {
             // Return offline page for navigation requests
             if (request.mode === 'navigate') {
-              return caches.match('/offline.html');
+              return caches.match('/');
             }
           });
       })
   );
 });
 
-// Background sync for analytics
+// Background sync for offline form submissions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
     event.waitUntil(
-      // Send any queued analytics data
-      sendQueuedData()
+      // Handle offline form submissions
+      handleOfflineSubmissions()
     );
   }
 });
@@ -107,8 +110,8 @@ self.addEventListener('sync', (event) => {
 self.addEventListener('push', (event) => {
   const options = {
     body: event.data ? event.data.text() : 'New update available!',
-    icon: '/icon-192.png',
-    badge: '/icon-192.png',
+    icon: '/icon-192x192.png',
+    badge: '/badge-72x72.png',
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
@@ -117,13 +120,13 @@ self.addEventListener('push', (event) => {
     actions: [
       {
         action: 'explore',
-        title: 'Explore',
-        icon: '/icon-192.png'
+        title: 'View Details',
+        icon: '/icon-192x192.png'
       },
       {
         action: 'close',
         title: 'Close',
-        icon: '/icon-192.png'
+        icon: '/icon-192x192.png'
       }
     ]
   };
@@ -133,7 +136,7 @@ self.addEventListener('push', (event) => {
   );
 });
 
-// Notification click
+// Handle notification clicks
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
 
@@ -144,8 +147,10 @@ self.addEventListener('notificationclick', (event) => {
   }
 });
 
-// Helper function to send queued data
-async function sendQueuedData() {
-  // Implementation for sending queued analytics data
-  console.log('Sending queued data...');
+// Helper function for offline form submissions
+async function handleOfflineSubmissions() {
+  // Implementation for handling offline form submissions
+  // This would typically involve storing form data in IndexedDB
+  // and syncing when back online
+  console.log('Handling offline submissions...');
 }

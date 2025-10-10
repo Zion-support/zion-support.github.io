@@ -18,7 +18,7 @@ for file in $conflict_files; do
         
         # Use sed to resolve conflicts by keeping the main branch version (after =======)
         # and removing conflict markers
-        sed -i '/^<<<<<<< HEAD/,/^=======/d; /^>>>>>>> main/d' "$file"
+        sed -i '/^/d; /^
         
         echo "Resolved conflicts in $file"
     else

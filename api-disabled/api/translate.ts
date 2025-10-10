@@ -1,5 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
 
 const _openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 

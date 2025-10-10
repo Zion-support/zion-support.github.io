@@ -4,10 +4,51 @@
  * Tools to improve search engine optimization
  */
 // Generate meta tags
-export const generateMetaTags = useCallback((...args) => {
-  
-  return tags
-}
+export const generateMetaTags = (data: {
+// title: string;
+// description: string;
+// keywords?: string;
+// canonical?: string;
+// ogTitle?: string;
+// ogDescription?: string;
+// ogImage?: string;
+// twitterCard?: string;
+// twitterTitle?: string;
+// twitterDescription?: string;
+// twitterImage?: string;
+}) => {
+  const tags = [
+    { name: 'title', content: data.title },
+    { name: 'description', content: data.description },
+    { name: 'keywords', content: data.keywords || '' },
+    { name: 'robots', content: 'index, follow' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { name: 'author', content: 'Zion Holdings' },
+    { name: 'canonical', content: data.canonical || '' },
+    { property: 'og:title', content: data.ogTitle || data.title },
+    {
+      property: 'og:description',
+      content: data.ogDescription || data.description
+    },
+    { property: 'og:image', content: data.ogImage || '/og-image.jpg' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:site_name', content: 'Zion Holdings' },
+    {
+      name: 'twitter:card',
+      content: data.twitterCard || 'summary_large_image'
+    },
+    { name: 'twitter:title', content: data.twitterTitle || data.title },
+    {
+      name: 'twitter:description',
+      content: data.twitterDescription || data.description
+    },
+    {
+      name: 'twitter:image',
+      content: data.twitterImage || data.ogImage || '/og-image.jpg'
+    },
+  ];
+  return tags;
+};
 // SEO Config interface
 interface SEOConfig {
   title: string
@@ -49,7 +90,15 @@ const defaultSEOConfig: SEOConfig = {
   author: 'Zion Holdings'
 }
 // Generate structured data
-export const generateStructuredData = useCallback((...args) => {
+export const generateStructuredData = (data: {
+// type: 'Organization' | 'WebSite' | 'Article' | 'Service';
+// name: string;
+// description: string;
+// url?: string;
+// logo?: string;
+// sameAs?: string[];
+// [key: string]: unknown;
+}) => {
   const baseStructure = {
     '@context': 'https://schema.org',
     '@type': data.type,
@@ -231,7 +280,15 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`
   }
 }
 // Generate structured data with type-specific properties
-export const generateAdvancedStructuredData = useCallback((...args) => {
+export const generateAdvancedStructuredData = (data: {
+// type: 'Organization' | 'WebSite' | 'Article' | 'Service';
+// name: string;
+// description: string;
+// url?: string;
+// logo?: string;
+// sameAs?: string[];
+// [key: string]: unknown;
+}) => {
   const baseStructure = {
     '@context': 'https://schema.org',
     '@type': data.type,
@@ -246,8 +303,8 @@ export const generateAdvancedStructuredData = useCallback((...args) => {
     return {
       ...baseStructure,
       address: {
-        '@type': 'PostalAddress',
-        addressCountry: 'US'}
+// '@type': 'PostalAddress',
+// addressCountry: 'US'
       },
       contactPoint: {
         '@type': 'ContactPoint',
@@ -312,8 +369,8 @@ ${disallowRules}
 Sitemap: ${sitemapUrl}`
 }
 // SEO validation
-export const validateSEOData = useCallback((...args) => {
-  const issues: string[] = []
+export const validateSEOData = (data: {// title: string; description: string; url: string}) => {
+  const issues: string[] = [];
   // Check title length
   if (data.title.length < 30) {
     issues.push('Title is too short (recommended: 30-60 characters)');}

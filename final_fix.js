@@ -1,11 +1,8 @@
-import { execSync } from 'child_process';
 import fs from 'fs';
-import path from 'path';
 
 // // 1. Fix test imports properly
 // // const appMinimalTestPath = '/workspace/__tests__/AppMinimal.test.tsx';
 if (fs.existsSync(appMinimalTestPath)) {
-  let _content = fs.readFileSync(appMinimalTestPath, 'utf8');
 
   // Fix jest imports - use the correct import
   content = content.replace(
@@ -25,7 +22,6 @@ if (fs.existsSync(appMinimalTestPath)) {
 
 blogPages.forEach(pagePath => {
   if (fs.existsSync(pagePath)) {
-    let _content = fs.readFileSync(pagePath, 'utf8');
 
     // Remove publishedTime from metadata completely
     content = content.replace(/\s+publishedTime: ['"][^'"]*['"],?\s*/g, '');
@@ -42,7 +38,6 @@ blogPages.forEach(pagePath => {
 
 openGraphPages.forEach(pagePath => {
   if (fs.existsSync(pagePath)) {
-    let _content = fs.readFileSync(pagePath, 'utf8');
 
     // Fix authors format to use string array
     content = content.replace(
@@ -57,7 +52,6 @@ openGraphPages.forEach(pagePath => {
 // 4. Fix Calculator import - use a different icon
 // // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';
 if (fs.existsSync(calculatorPagePath)) {
-  let _content = fs.readFileSync(calculatorPagePath, 'utf8');
 
   // Replace Calculator with CalculatorIcon
   content = content.replace(/import \{ CalculatorIcon \}/, 'import { Calculator }');
@@ -69,7 +63,6 @@ if (fs.existsSync(calculatorPagePath)) {
 // 5. Fix AnalyticsTracker dataLayer type conflict
 // // const analyticsTrackerPath = '/workspace/app/components/AnalyticsTracker.tsx';
 if (fs.existsSync(analyticsTrackerPath)) {
-  let _content = fs.readFileSync(analyticsTrackerPath, 'utf8');
 
   // Fix dataLayer type to match existing declarations
   content = content.replace(/dataLayer: unknown\[\];/, 'dataLayer: unknown[];');
@@ -80,7 +73,6 @@ if (fs.existsSync(analyticsTrackerPath)) {
 // 6. Fix SystemMonitor - remove performanceEnhancer calls
 // // const systemMonitorPath = '/workspace/app/components/SystemMonitor.tsx';
 if (fs.existsSync(systemMonitorPath)) {
-  let _content = fs.readFileSync(systemMonitorPath, 'utf8');
 
   // Replace performanceEnhancer calls with direct implementations
   content = content.replace(
@@ -101,3 +93,4 @@ if (fs.existsSync(systemMonitorPath)) {
   //     }
 
 // 
+}}

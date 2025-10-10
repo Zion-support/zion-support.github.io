@@ -15,8 +15,5 @@ const addAltText = () => {
 };
 
 // Run accessibility improvements
-addARIALabels();
-improveKeyboardNavigation();
-addAltText();
 
 // 

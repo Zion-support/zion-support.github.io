@@ -1,5 +1,4 @@
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-import { Link } from 'react-router-dom';
 
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
@@ -30,3 +29,4 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           <Link, t, o='/bl, o, g' className='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
             ← Back, to, Blog
           </Li, n, k>
+}
