@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
 'use client';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3826,6 +3829,7 @@ export default function MicroSaasPage() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const microSaasServices = [
     {
       category: 'AI-Powered Business Tools',
@@ -4352,6 +4356,10 @@ const MicroSaasPage: React.FC = () => {
   }, []);
 
   const microSaasServices = [
+=======
+export default function MicroSaasPage() {
+  const [activeTab, setActiveTab] = useState('overview');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
     {
       id: 1,
       name: 'AI Project Manager Pro',
@@ -4868,6 +4876,7 @@ const MicroSaasPage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
   const categories = ['all', ...new Set(microSaasServices.map(service => service.category))];
 
   const filteredServices = microSaasServices.filter(service => {
@@ -4947,6 +4956,8 @@ const MicroSaasPage: React.FC = () => {
     }
   ];
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -5979,10 +5990,14 @@ export default function MicroSAASPage() {
                 </button>
               </div>
             )}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-05c4
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7601,6 +7616,34 @@ export default MicroSAASPage;orage', 'Multi-device Sync', 'Team Sharing', '2FA I
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-98cd
           </div>
           </div>
+=======
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+              Need a Custom Solution?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Don't see what you're looking for? We can create a custom micro SAAS solution tailored to your specific needs.
+            </p>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-cyan-400 text-slate-900 rounded-lg hover:bg-cyan-300 transition-colors font-semibold text-lg"
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors font-semibold text-lg"
+              >
+                Call (302) 464-0950
+              </a>
+            </div>
+          </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
         </section>
       </main>
       
@@ -7624,6 +7667,7 @@ export default MicroSAASPage;
   );
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
 =======
 =======
@@ -7703,3 +7747,5 @@ export default MicroSaasPage;
 =======
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-05c4
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2

@@ -850,6 +850,7 @@ const Navigation: React.FC = () => {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1053,6 +1054,10 @@ const Navigation: React.FC = () => {
   };
 
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-b3bb
+=======
+  };
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'

@@ -168,6 +168,7 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       category: 'Analytics',
 =======
       name: 'AI Drug Discovery Pro',
@@ -954,6 +955,8 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
       id: 29,
       name: 'AI Sports Analytics Pro',
       description: 'Advanced sports analytics with performance prediction, injury prevention, and tactical analysis',
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
       icon: Target,
 <<<<<<< HEAD
       features: [
@@ -5900,8 +5903,18 @@ export default function AIServicesPage() {
               }`}
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+=======
+              {service.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    Most Popular
+                  </span>
+                </div>
+              )}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
               
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-6">
@@ -5923,6 +5936,7 @@ export default function AIServicesPage() {
                 </p>
                 
                 <div className="mb-6">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
                   <div className="flex items-center space-x-2">
                     {service.popular && (
@@ -6149,6 +6163,10 @@ export default function AIServicesPage() {
                   <div className="flex items-center text-yellow-400">
                     <Star className="w-4 h-4 fill-current" />
                     <span className="ml-1 text-sm font-medium">{service.rating}</span>
+=======
+                  <div className="text-3xl font-bold text-gray-900 mb-2">
+                    {service.price}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0dd2
                   </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fd
                 </div>
