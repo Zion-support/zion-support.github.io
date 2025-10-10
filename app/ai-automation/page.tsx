@@ -109,8 +109,15 @@ const AIAutomationPage: React.FC = () => {
     }
   ];
 
+  const stats = [
+    { icon: CheckCircle, value: '80%', label: 'Efficiency Increase' },
+    { icon: Clock, value: '60%', label: 'Time Savings' },
+    { icon: Shield, value: 'Zero', label: 'Human Error' },
+    { icon: Zap, value: '24/7', label: 'Operation' }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>AI Automation - Intelligent Process Automation | Zion Tech Group</title>
         <meta name="description" content="Transform your business with intelligent process automation. Achieve 80% efficiency increase and 60% time savings with AI-powered automation." />

@@ -45,7 +45,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     gtag('config', GA_MEASUREMENT_ID, {
       page_title: document.title,
       page_location: window.location.href,
-      send_page_view: true,
+      send_page_view: true
+    });
 
     // Enhanced ecommerce tracking
     gtag('config', GA_MEASUREMENT_ID, {
@@ -54,7 +55,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         'custom_parameter_2': 'service_type',
         'custom_parameter_3': 'user_type'
       }
-
+    });
   }, [enableGoogleAnalytics]);
 
   // Google Tag Manager setup

@@ -36,6 +36,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.setState({
       error,
       errorInfo
+    });
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
